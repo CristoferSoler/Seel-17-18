@@ -1,12 +1,48 @@
 % !TeX spellcheck = en_GB
 \chapter{Main Objectives}
 \section{Overview}
+
+The goal of this project is to design, implement and provide a guidance Platform for development Country, e.g. Afghanistan. 
+Taking the circumstances in such development Country in account, the platform should provide the users of IT-Systems with the knowledge to assure the sustainability of IT-Systems in their countries.
+Besides providing general information of the IT-Systems, the platform should provide, similar as in the “BSI Grundschutzkatalog”, information aiming to localize and solve problematics that may occur to the IT-Systems as a result of a human error, technical failure or a catastrophe etc.
+
+
 \section{Wiki}
+
+Considering the limited availability of IT-specialists in most of the development countries, and after reviewing the possible ways to design and provide the platform, our team consider it convenient to create an open Platform in which people can collaboratively add, edit, delete or archive content (Wiki). 
+This should allow the platform to constantly grow and stay relevant to the current circumstances. 
+This anyway shouldn’t mean that everyone can write whatever content for everybody to read. 
+To assure that we have to set rules and access permission levels.
+
+
 \section{Archive}
+
+The archive stores information that is no longer up-to-date but could be still relevant for some user. 
+For example: If users are looking for a problem such as a - no longer supported operating system - and there are no information in the Wiki regarding this problem, he could find older approaches in the archive.
+
+
 \section{User types}
+
+
 \section{BSI Catalog}
+
+
 \section{Search function}
 \label{search_function}
+
+Text search function has to give visitors / users of the platform a possibility to provide a free-text search request. 
+Visitors / users have also the opportunity to narrow their search request to get a more accurate result. 
+The following options are available: "All", "News", "Module", "Thread", "Safeguard", "Archive". Choices should be available as a dropdown list.
+
+The search field should be well placed on the home page. 
+The system should have a function "Back to the search results". 
+The search function should have fault tolerance, as well as ability to deal with synonyms. 
+Fault tolerance means that the user will get the result even if he misspells spelling mistakes or if he uses singular or plural. 
+While a non-fault-tolerant search will let the visitor go nowhere, the system should nevertheless display the appropriate results.
+In addition Search functions, which also master synonyms, do even more. 
+For example, the system should derive results from the search input "laptop" in which the word "notebook" appears and for this purpose access an extensive database of words of the same meaning. 
+The automatic completion of search terms is very welcome.
+
 
 \section{Wizard}
 \label{wizard}
@@ -23,7 +59,7 @@ As a last section before the always present bottom section is an overview of int
 Equally visible as the tutorials should be the offer to use the wizard to help and find security gaps and other system flaws.
 Both the tutorials and the wizard are aimed at users of no or little knowledge or overview of the BSI catalogue.
 For detailed explanations see section~\ref{tutorials} for the tutorials and section~\ref{wizard} for the wizard.
-
+ 
 \section{Top Section}
 \label{top_section}
 
@@ -32,14 +68,15 @@ It should feature the following items whose order and wording might be changed a
 \begin{itemize}
     \item Home/Frontpage
     \item News
-    \item Browse the BSI catalogue
+    \item Browse the BSI catalogue/Wiki (????)
     \item Tutorials
     \item Wizard
-    \item Login
+    \item Search
+    \item Login 
         .
 \end{itemize}
 
-\section{Tutorials}
+\section{Tutoria ls}
 \label{tutorials}
 
 Tutorials should call unexperienced users' attention to the most important points in the BSI catalogue when developing, building or maintaining an IT infrastructure.
