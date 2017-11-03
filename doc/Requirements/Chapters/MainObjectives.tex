@@ -8,9 +8,18 @@ Considering the limited availability of IT-specialists in most of the developmen
 
 \section{Archive}
 \label{archive}
-The archive stores\todo{this sounds like the reader already know what you are talking about. Please write a short introduction} information that is no longer up-to-date but could be still relevant for some user. For example: If users are looking for a problem such as a - no longer supported operating system - and there are no information in the Wiki regarding this problem, he could find older approaches in the archive. 
+The Website should always be up to date, but we also want to offer the possibility to look up the old content. For this we need an archive,
+the archive stores information that is no longer up-to-date but could be still relevant for some user. For example: If users are looking for a problem such as a - no longer supported operating system - and there are no information in the Wiki regarding this problem, he could find older approaches in the archive. 
 \section{User types}
-\todo[inline]{missing content}
+In the following section will be discussed the different user roles and their functions. We decided to create 4 types of users with different user rights. This is illustrated in the appendix by the use case diagrams. 
+\\
+\textbf{Guest}, the guest has the possibility to browse and search in the archive and also in the wiki. The search can be refine with several options (more information about the search in the text search section). If the guest is not sure how to find his problem he can use the Wizard (more information in the Wizard section). In the wiki are news from different topics which the guest can check out.
+
+\textbf{User}, every registered user can write articles in the wiki and change them with the functions: create content and edit content. They also can edit their profile. The content manager can proceed to use all functions of the guest.
+
+\textbf{Moderator} (Mod), will be appointed for a specific topic for example “b2 infrastructure”. The mod is responsible for moderating articles, which means to delete wrong or inappropriate content or make it recognizable for users that the article is unverified. They create the news and they are also responsible - if necessary - to ban content manager. The Mod can proceed to use all functions of the user.
+
+\textbf{Admin}, the admin is responsible for appointing the Mods and remove them if necessary. He also manages the topics, which means creating new topics, removes old ones and controls that each topic got a Mod. For new topics or new mods, the admin sets new permissions or changes them. One of the most important tasks is to update the BSI catalog as soon as a new one is available and to move the old one to the archive. The admin can use all functions of the Mod.
 \section{BSI Catalog}
 The English version of the BSI catalogue has been published in a single PDF file. This makes browsing, or even searching a specific problem, a difficult task for beginners. Therefore the BSI Catalogue should be added as an "locked" Article, only modifiable by Administrators.
 \\\\
