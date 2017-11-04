@@ -33,8 +33,17 @@ For example: if users are looking for a problem such as a no longer supported op
 
 \section{User Types} 
 \label{user_types}
+First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
+However, building a wiki-like platform about IT-Security for developing countries comes also with big responsibility about the content it will provide. 
+If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, would present a major security risk for any layman reading it. 
+Admins will have enough workload so we need another team of volunteers, like moderators (mods), who will check content and remove, modify or label it as unsafe if necessary. 
+Moderators will be appointed by admins and will be responsible for policy enforcement for specific topics. 
+Further, users who would like to publish and/or modify content will need to register to the platform and be logged in. 
+All other users who are not logged in will be considered as guests and will only be able to "read only" content. 
+These multiple user roles are needed to create a trustworthy platform. 
+\\
 In the following section will be discussed the different user roles and their functions. 
-We decided to create four types of users with different user rights. 
+%We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
 \\
 \textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki\todo[inline]{do we distinguish between wiki and catalogue or do we always also mean the catalogue when we just say wiki? compare to: the archive is just another part of the wiki}. 
@@ -63,9 +72,9 @@ The admin can use all functions mods can use.
 \section{BSI Catalogue}
 The English version of the BSI catalogue has been published in a single PDF file. 
 This makes browsing, or even searching a specific problem, a difficult task for beginners. 
-Therefore the BSI catalogue should be added as an "locked" article\todo[inline]{whats an article? where? part of wiki; really only admins?} , only modifiable by administrators.
+Therefore the BSI catalogue should be added as "locked" content to the wiki,\todo[inline]{whats an article? where? part of wiki; really only admins?} only modifiable by administrators.
 \\\\
-In fact, converting catalogues in articles by hand would be an interminable task\todo[inline]{not true; I would change that 'interminable'} . 
+In fact, converting catalogues in articles by hand would be an extended task. 
 Accordingly, a parser is needed. 
 This parser will analyse the PDF file and create the article automatically. 
 Further, the BSI provides cross-reference tables of the catalogue. 
@@ -132,12 +141,12 @@ It should feature the following items whose order and wording might be changed a
 \end{itemize}
 
 
-\section{Tutorials}
-\label{tutorials}
+%\section{Tutorials}
+%\label{tutorials}
 
-Tutorials should call unexperienced users' attention to the most important points in the BSI catalogue when developing, building or maintaining an IT infrastructure.
-They could briefly explain mayor points of the BSI catalogue and indicate next steps.
-The simplest tutorial could simply introduce the usage and goal of the website and its subservices.
-The tutorials are not meant to be a rewrite - i.e. the BSI catalogue for dummies - but thought of as a quick overview and guiding introduction into the matter.
-They are part of the wiki and as such created and maintained by content manager and linked by mods.
-\todo[inline]{to remove?}
+%Tutorials should call unexperienced users' attention to the most important points in the BSI catalogue when developing, building or maintaining an IT infrastructure.
+%They could briefly explain mayor points of the BSI catalogue and indicate next steps.
+%The simplest tutorial could simply introduce the usage and goal of the website and its subservices.
+%The tutorials are not meant to be a rewrite - i.e. the BSI catalogue for dummies - but thought of as a quick overview and guiding introduction into the matter.
+%They are part of the wiki and as such created and maintained by content manager and linked by mods.
+%\todo[inline]{to remove?}
