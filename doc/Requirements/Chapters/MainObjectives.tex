@@ -1,6 +1,5 @@
 % !TeX spellcheck = en_GB
 \chapter{Main Objectives}
-
 \todo[inline]{we have to be careful with our terminology across different sections: what is the wiki? what is an article? anything in the wiki or just user created content?, what are 'information' in our case?, what is a 'problem'? what are 'users' outside of the user type section? what's a topic?}
 \todo[inline]{each section if applicable should explain why? who? what? where? how?}
 
@@ -41,7 +40,7 @@ Moderators will be appointed by admins and will be responsible for policy enforc
 Further, users who would like to publish and/or modify content will need to register to the platform and be logged in. 
 All other users who are not logged in will be considered as guests and will only be able to "read only" content. 
 These multiple user roles are needed to create a trustworthy platform. 
-\\
+\\\\
 In the following section will be discussed the different user roles and their functions. 
 %We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
@@ -72,20 +71,28 @@ The admin can use all functions mods can use.
 \section{BSI Catalogue}
 The English version of the BSI catalogue has been published in a single PDF file. 
 This makes browsing, or even searching a specific problem, a difficult task for beginners. 
-Therefore the BSI catalogue should be added as "locked" content to the wiki,\todo[inline]{whats an article? where? part of wiki; really only admins?} only modifiable by administrators.
+Therefore the BSI catalogue should be added as "locked" content to the wiki,\todo[inline]{whats an article -> changed word "article" to "content"? where? part of wiki; really only admins?} only modifiable by administrators.
 \\\\
 In fact, converting catalogues in articles by hand would be an extended task. 
 Accordingly, a parser is needed. 
 This parser will analyse the PDF file and create the article automatically. 
 Further, the BSI provides cross-reference tables of the catalogue. 
-These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how?}
+These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
 
 
 \section{Text Search}
 \label{search_function}
 A text search function allows users of the platform to make a free text search request and browse the results containing the key-words. 
-Users should also have the opportunity to narrow down their search request by selecting a specific topic\todo[inline]{maybe 'domain' would be better here} in which they would like to find results. 
-These topic are: "All", "News", "Module", "Threats", "Counter-Measures", "Archive".\todo[inline]{briefly explain what those 'topics' mean } 
+Users should also have the opportunity to narrow down their search request by selecting a specific domain \todo[inline]{maybe 'domain' would be better here?-DONE} in which they would like to find results:
+\begin{itemize}
+\item "All": counts as every domain
+\item "News": domain where news are published
+\item "Module": modules of the BSI Grundschutzkatalog
+\item "Threats": threats of the BSI Grundschtzkatalog
+\item "Measures": measures of the BSI Grundschutzkatalog
+\item "Archive": archived content (no longer visible in the wiki)
+\end{itemize}
+\todo[inline]{briefly explain what those 'topics' mean-DONE } 
 Choices should be available as a dropdown list.
 \\\\
 The search field should be well placed on the home page. 
