@@ -33,33 +33,38 @@ For example: if users are looking for a problem such as a no longer supported op
 \section{User Types} 
 \label{user_types}
 First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
-However, building a wiki-like platform about IT-Security for developing countries comes also with big responsibility about the content it will provide. 
-If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, would present a major security risk for any layman reading it. 
+However, building a wiki-like platform about IT-Security for developing countries comes also with the big responsibility of the content it will provide. 
+If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, it would present a major security risk for any layman reading it. 
 Admins will have enough workload so we need another team of volunteers, like moderators (mods), who will check content and remove, modify or label it as unsafe if necessary. 
 Moderators will be appointed by admins and will be responsible for policy enforcement for specific topics. 
 Further, users who would like to publish and/or modify content will need to register to the platform and be logged in. 
-All other users who are not logged in will be considered as guests and will only be able to "read only" content. 
+All other users who are not logged in will be considered as guests and will only be able to read content. 
 These multiple user roles are needed to create a trustworthy platform. 
 \\\\
-In the following section will be discussed the different user roles and their functions. 
+The following section will discuss the different user roles and their functions. 
 %We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
 \\
 \textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki, which includes the BSI catalogue. The search can be refined with several options (more information about the search in the text search section~\ref{search_function}) 
-If guests are not sure how to find their problems they can use the wizard (more information in the Wizard section~\ref{wizard}). 
+If guests are not sure how to find their problems they can use the wizard (more information in the wizard section~\ref{wizard}). 
 The wiki contains news from different topics which guests can check out.
 \\
-\textbf{User}, every registered user (registed by Email address and a password)can write articles in the wiki and change them with the functions: create content and edit content. Created content can be linked in a certain part of the BSI catalogue. If the BSI catalogue updated, users who have linked content get a notification to adjust this link to the new BSI catalogue or to archive it.
+\textbf{User}, every registered user (registed by email address and a password) can write articles in the wiki and change them with the functions: create content and edit content. 
+Created content can be linked in a certain part of the BSI catalogue. 
+If the BSI catalogue updates, users who have linked content get a notification to transfer this link to the new BSI catalogue or to archive the linked wiki article with it.
 They can also edit their profile. 
 After a User has logged in, he can still use the functions of a guest.
 \\
-\textbf{Moderator} (mod), mods will be appointed for a specific topic, topics are the sub-sections of the three main parts "Bausteinkatalog", "Gefährdungskataloge" and "Maßnahmenkataloge", for example “G4 Technisches Versagen” which includes hazards for technical failure. The mod is responsible for the certain topic, what means moderating the content for this topic. Moderating content means to delete wrong or inappropriate content or make it recognizable for website users that the content is unverified. \todo[inline]{topics?} .  
-The Mod manage the news which means they can show certain news on the Frontpage to get more attention or delete/change incorrect news. Mods are also responsible, if necessary, to ban users. 
+\textbf{Moderator} (mod), mods will be appointed for a specific topic, topics are the sub-sections of the three main parts "Bausteinkatalog", "Gefährdungskataloge" and "Maßnahmenkataloge", for example “G4 Technisches Versagen” which includes hazards for technical failure. 
+The mod is responsible for a certain topic, what means he has to moderate the content for this topic. 
+Moderating content means to delete wrong or inappropriate content or make it recognizable for guests that the content is unverified. \todo[inline]{topics?} .  
+Mods manage the news which means they can show certain news on the home page to get more attention or delete/change incorrect news. 
+Mods are also responsible, if necessary, to ban users. 
 Mods can use all functions users can use.
 \\
 \textbf{Administrator} (admin), the admin is responsible for appointing the mods and remove them if necessary. He also manages the topics, which means controlling that each topic got a mod for larger topics, if necessary, more. 
 For new topics or new mods, the admin sets or changes permissions them like banning users, assign topics and manage news. \todo[inline]{is there missing one?}
-One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the Website, if one is prevented.
+One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the website in case one is non-available.
 The admin can use all functions mods can use. 
 
 
@@ -78,7 +83,7 @@ These amend the useful links inside each subsection and could be used to recomme
 \section{Text Search}
 \label{search_function}
 A text search function allows users of the platform to make a free text search request and browse the results containing the key-words. 
-Users should also have the opportunity to narrow down their search request by selecting a specific domain \todo[inline]{maybe 'domain' would be better here?-DONE} in which they would like to find results:
+Users should also have the opportunity to narrow down their search request by selecting a specific domain in which they would like to find results:
 \begin{itemize}
 \item "All": counts as every domain
 \item "News": domain where news are published
@@ -87,7 +92,7 @@ Users should also have the opportunity to narrow down their search request by se
 \item "Measures": measures of the BSI Grundschutzkatalog
 \item "Archive": archived content (no longer visible in the wiki)
 \end{itemize}
-\todo[inline]{briefly explain what those 'topics' mean-DONE } 
+ 
 Choices should be available as a dropdown list.
 \\\\
 The search field should be well placed on the home page. 
@@ -117,12 +122,12 @@ The search offers the full functionality as described in section~\ref{search_fun
 As a last section before the always present bottom section is an overview of introductory tutorials on how to implement the guidelines of the BSI catalogue while developing, building and maintaining a basic IT system.
 Equally visible as the tutorials should be the offer to use the wizard to help and find security gaps and other system flaws.
 Both the tutorials and the wizard are aimed at users of no or little knowledge or overview of the BSI catalogue.
-For detailed explanations see section~\ref{tutorials} for the tutorials and section~\ref{wizard} for the wizard.
+For detailed explanations of the wizard see section~\ref{wizard}.
 The bottom section shows links to items as contact, legal notice, possibly FAQ and copyright.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Pictures/frontpage_mockup}
+    \includegraphics[width=0.9\textwidth]{Pictures/frontpage_mockup}
     \caption{Schematic Frontpage Design}
 \end{figure}
  
