@@ -12,14 +12,15 @@ dicOfContent = os.getcwd() + '/content/'
 
 
 def sendRequestToYandex(header,text):
-    if(len(text)< 10000):
-        r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
-                          "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
-        yandexResponseText = r["text"][0]
-        writeFile(header, yandexResponseText)
-
-    else:
-        print("Tooo long")
+    #if(len(text)< 10000):
+    #    r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
+    #                      "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
+    #    yandexResponseText = r["text"][0]
+    #    writeFile(header, yandexResponseText)
+    #
+    #else:
+    #    print("Tooo long")
+    writeFile(header,text)
 
 
 # alle Links die unter einer h2 Headline aufgelistet sind
@@ -87,22 +88,28 @@ class bsiSpider(sc.Spider):
         print(headline)
 
         headers = content.xpath('h2')
-        if len(headers) != 0:
+        if (len(headers) != 0):
             beschreibung = headers[0].xpath('./text()').extract()[0]
 
-            for ps in headers[0].xpath('following-sibling::p'):
+            for ps in headers[0].xpath('following-sibling::p|following-sibling::ul'):
                 if(ps.extract() == headers[1].xpath('following-sibling::p')[0].extract()):
                    break
                 else:
-                    #Beschreibungstext
-                    beschreibung_content = beschreibung_content + ps.xpath('./text()').extract()[0].strip()
+                    if(ps.xpath('local-name()') == 'ul'):
+                        print('Raphaela ')
+                        lis = ps.xpath('child:li')
+                        for li in lis:
+                            beschreibung_content = beschreibung_content + "- " + li.select("string()").extract()[0].strip()
+                    else:
+                        beschreibung_content = beschreibung_content + ps.select("string()").extract()[0].strip()
+
             #print(beschreibung)
-            sendRequestToYandex(headline,beschreibung_content)
+            sendRequestToYandex(headline, beschreibung_content)
             #print(massnahme)
             #print(massnahmeContent)
         else:
             print(beschreibung)
-            beschreibung_content= beschreibung_content + content.xpath('h1')[0].xpath('following::p/text()').extract()[0].strip()
+            beschreibung_content = beschreibung_content + content.xpath('h1')[0].xpath('following::p/text()').extract()[0].strip()
             print(beschreibung_content)
 
         headerh3 = content.xpath('h3/text()')
