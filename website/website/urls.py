@@ -18,5 +18,4 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls), # default admin handler
-    url(r'^model/', include("model.urls")), # whenever user requests model/ it's going to take him to the page included here
 ]
