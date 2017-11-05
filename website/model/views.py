@@ -3,8 +3,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Component, ComponentGroup
-from .serializer import ComponentGroupSerializer
+from .models import  Component, ComponentGroup, ThreatCatalogue, Threat, CountermeasureCatalogue, Countermeasure, Responsible, Role, LifecyclePhase
+from .serializer import  ComponentSerializer, ComponentGroupSerializer, ThreatCatalogueSerializer, ThreatSerializer, CountermeasureCatalogueSerializer, CountermeasureSerializer, ResponsibleSerializer, RoleSerializer, LifecyclePhaseSerializer
 
 # Create your views here.
 
@@ -20,86 +20,98 @@ class ComponentGroupList(APIView):
     def post(self):
         pass
 
-# def index(request):
-#     return HttpResponse("<h1>this will be default model")
+#Lists all componentList or create a new one
+#Component/
+class ComponentList(APIView):
+    
+    def get(self, request):
+        component = Component.objects.all()
+        serializer = ComponentSerializer(component, many=True)
+        return Response(serializer.data)
 
-# def componenGrouptDetail(request):
-#     #connect to db and get ComponentGroup data
-#     all_componentGroups = ComponentGroup.objects.all()
-#     html = ''
-#     for componentGroup in all_componentall_componentGroups:
-#         url = '/BSI/' + str(componentGroup.id) + '/'
-#         html += '<a href="#"' + url + '">' + componentGroup.name +'</a><br>'
-#     return HttpResponse(html)
+    def post(self):
+        pass
 
-# def componentDetail(request):
-#     #connect to db and get Component data
-#     all_component = Component.objects.all()
-#     html = ''
-#     for component in all_component:
-#         url = '/BSI/' + str(component.id) + '/'
-#         html += '<a href="#"' + url + '">' +component.name +'</a><br>'
-#     return HttpResponse(html)
+#Lists all ThreatCatalogue or create a new one
+#ThreatCatalogue/
+class ThreatCatalogueList(APIView):
+    
+    def get(self, request):
+        threatCatalogue = ThreatCatalogue.objects.all()
+        serializer = ThreatCatalogueSerializer(threatCatalogue, many=True)
+        return Response(serializer.data)
 
-# def threatCatalogueDetail(request):
-#     #connect to db and get ThreatCatalogue data
-#     all_threatCatalogues = ThreatCatalogue.objects.all()
-#     html = ''
-#     for threatCatalogue in all_threatCatalogues:
-#         url = '/BSI/' + str(threatCatalogue.id) + '/'
-#         html += '<a href="#"' + url + '">' +threatCatalogue.name +'</a><br>'
-#     return HttpResponse(html)
+    def post(self):
+        pass
 
-# def threatDetail(request):
-#     #connect to db and get Threat data
-#     all_threats = Threat.objects.all()
-#     html = ''
-#     for threat in all_threats:
-#         url = '/BSI/' + str(threat.id) + '/'
-#         html += '<a href="#"' + url + '">' +threat.name +'</a><br>'
-#     return HttpResponse(html)
+#Lists all Threat or create a new one
+#Threat/
+class ThreatList(APIView):
+    
+    def get(self, request):
+        threat = Threat.objects.all()
+        serializer = ThreatSerializer(threat, many=True)
+        return Response(serializer.data)
 
-# def CountermeasureCatalogueDetail(request):
-#     #connect to db and get CountermeasureCatalogue data
-#     all_countermeasureCatalogues = CountermeasureCatalogue.objects.all()
-#     html = ''
-#     for countermeasureCatalogue in all_countermeasureCatalogues:
-#         url = '/BSI/' + str(countermeasureCatalogue.id) + '/'
-#         html += '<a href="#"' + url + '">' + countermeasureCatalogue.name +'</a><br>'
-#     return HttpResponse(html)
+    def post(self):
+        pass
 
-# def responsibleDetail(request):
-#     #connect to db and get Responsible data
-#     all_Responsiblities = Responsible.objects.all()
-#     html = ''
-#     for responsiblity in all_Responsiblities:
-#         url = '/BSI/' + str(responsiblity.role) + '/'
-#         html += '<a href="#"' + url + '">' + responsiblity.countermeasure +'</a><br>'
-#     return HttpResponse(html)
+#Lists all CountermeasureCatalogue or create a new one
+#CountermeasureCatalogue/
+class CountermeasureCatalogueList(APIView):
+    
+    def get(self, request):
+        countermeasureCatalogue = CountermeasureCatalogue.objects.all()
+        serializer = CountermeasureCatalogueSerializer(countermeasureCatalogue, many=True)
+        return Response(serializer.data)
 
-# def checkingDetail(request):
-#     #connect to db and get Checking data
-#     all_checkings = Checking.objects.all()
-#     html = ''
-#     for cheking in all_checkings:
-#         url = '/BSI/' + str(cheking.description) + '/'
-#         html += '<a href="#"' + url + '">' + cheking.countermeasure +'</a><br>'
-#     return HttpResponse(html)
+    def post(self):
+        pass
 
-# def role(request):
-#     #connect to db and get role data
-#     all_roles = Role.objects.all()
-#     html = ''
-#     for role in  all_roles:
-#         url = '/BSI/' + str(role.name) + '/'
-#         html += '<a href="#"' + url + '">' + role.description +'</a><br>'
-#     return HttpResponse(html)
+#Lists all Countermeasure or create a new one
+#Countermeasure/
+class CountermeasureList(APIView):
+    
+    def get(self, request):
+        countermeasure = Countermeasure.objects.all()
+        serializer = CountermeasureSerializer(countermeasure, many=True)
+        return Response(serializer.data)
 
-# def lifecyclePhase(request):
-#     #connect to db and get Responsible data
-#     all_lifeCyclePhases = lifecyclePhase.objects.all()
-#     html = ''
-#     for lifeCyclephase in  all_lifeCyclePhases:
-#         url = '/BSI/' + str(lifeCyclephase.id) + '/'
-#         html += '<a href="#"' + url + '">' + lifeCyclephase.name + '</a><br>'
-#     return HttpResponse(html)
+    def post(self):
+        pass
+
+#Lists all Responsible or create a new one
+#Responsible/
+class ResponsibleList(APIView):
+    
+    def get(self, request):
+        responsible = Responsible.objects.all()
+        serializer = ResponsibleSerializer(responsible, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+#Lists all Role or create a new one
+#Role/
+class RoleList(APIView):
+    
+    def get(self, request):
+        role = Role.objects.all()
+        serializer = RoleSerializer(role, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
+
+#Lists all LifecyclePhase or create a new one
+#LifecyclePhase/
+class LifecyclePhaseList(APIView):
+    
+    def get(self, request):
+        lifecyclePhase = LifecyclePhase.objects.all()
+        serializer = LifecyclePhaseSerializer(lifecyclePhase, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
