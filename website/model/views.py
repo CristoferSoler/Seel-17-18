@@ -1,21 +1,24 @@
 from django.http import HttpResponse
-from .models import ComponentGroup
-from .models import Component
-from .models import ThreatCatalogue
-from .models import Threat
-from .models import CountermeasureCatalogue
-from .models import Countermeasure
-from .models import Responsible
-from .models import ResponsibleInit
-from .models import ResponsibleImpl
-from .models import Checking
-from .models import Role
-from .models import LifecyclePhase
-
+from django.shortcuts import get_object_or_404
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import Component, ComponentGroup
+from .serializer import ComponentGroupSerializer
 
 # Create your views here.
 
-# connect to the database is here
+#Lists all ComponentGroupList or create a new one
+#ComponentGroups/
+class ComponentGroupList(APIView):
+    
+    def get(self, request):
+        componentGroups = ComponentGroup.objects.all()
+        serializer = ComponentGroupSerializer(componentGroups, many=True)
+        return Response(serializer.data)
+
+    def post(self):
+        pass
 
 # def index(request):
 #     return HttpResponse("<h1>this will be default model")
