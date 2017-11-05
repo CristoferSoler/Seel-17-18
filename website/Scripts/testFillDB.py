@@ -67,6 +67,9 @@ def insertDummy(conn):
         print(error)
  
 if __name__ == '__main__':
-    conn = connect()
-    emptyTables(conn)
-    insertDummy(conn)
+    try:
+        conn = connect()
+        emptyTables(conn)
+        insertDummy(conn)
+    finally:
+        conn.close()
