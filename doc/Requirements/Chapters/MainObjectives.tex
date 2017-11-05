@@ -45,27 +45,22 @@ In the following section will be discussed the different user roles and their fu
 %We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
 \\
-\textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki\todo[inline]{do we distinguish between wiki and catalogue or do we always also mean the catalogue when we just say wiki? compare to: the archive is just another part of the wiki}. 
-The search can be refined with several options (more information about the search in the text search section~\ref{search_function}). 
+\textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki, which includes the BSI catalogue. The search can be refined with several options (more information about the search in the text search section~\ref{search_function}) 
 If guests are not sure how to find their problems they can use the wizard (more information in the Wizard section~\ref{wizard}). 
 The wiki contains news from different topics which guests can check out.
-
-\textbf{User}, every registered\todo[inline]{how does a user register? important for how to effectively ban them} user can write articles in the wiki and change them with the functions: create content and edit content. 
+\\
+\textbf{User}, every registered user (registed by Email address and a password)can write articles in the wiki and change them with the functions: create content and edit content. Created content can be linked in a certain part of the BSI catalogue. If the BSI catalogue updated, users who have linked content get a notification to adjust this link to the new BSI catalogue or to archive it.
 They can also edit their profile. 
-Users can use all functions guests can use.
-\todo[inline]{they have to login}
-
-\textbf{Moderator} (mod), mods will be appointed for a specific topic for example “b2 infrastructure”\todo[inline]{too brief; what exactly are topics and where are they/where relevant? catalogue, content, news, archive?, see BSI catalogue section where is written that only admins can edit the catalogue; appointed to a topic means they can still edit content from different topics?} . 
-Mods are responsible for moderating articles, which means to delete wrong or inappropriate content or make it recognizable for users\todo[inline]{for user type users or website users?} that the article is unverified. 
-They create the news\todo[inline]{didn't we say users can create news but only mods can put them on the homepage?}  and they are also responsible - if necessary - to ban users. 
+After a User has logged in, he can still use the functions of a guest.
+\\
+\textbf{Moderator} (mod), mods will be appointed for a specific topic, topics are the sub-sections of the three main parts "Bausteinkatalog", "Gefährdungskataloge" and "Maßnahmenkataloge", for example “G4 Technisches Versagen” which includes hazards for technical failure. The mod is responsible for the certain topic, what means moderating the content for this topic. Moderating content means to delete wrong or inappropriate content or make it recognizable for website users that the content is unverified. \todo[inline]{topics?} .  
+The Mod manage the news which means they can show certain news on the Frontpage to get more attention or delete/change incorrect news. Mods are also responsible, if necessary, to ban users. 
 Mods can use all functions users can use.
-
-\textbf{Administrator} (admin), the admin is responsible for appointing the mods and remove them if necessary. 
-He also manages the topics\todo[inline]{what, where} , which means creating new topics, removing old ones and controlling that each topic got a mod. 
-For new topics or new mods, the admin sets new permissions \todo[inline]{what are the possible permissions}or changes them. 
-One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive. 
-The admin can use all functions mods can use.
-\todo[inline]{how many admins do we suggest, how many mods? redundancy}
+\\
+\textbf{Administrator} (admin), the admin is responsible for appointing the mods and remove them if necessary. He also manages the topics, which means controlling that each topic got a mod for larger topics, if necessary, more. 
+For new topics or new mods, the admin sets or changes permissions them like banning users, assign topics and manage news. \todo[inline]{is there missing one?}
+One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the Website, if one is prevented.
+The admin can use all functions mods can use. 
 
 
 \section{BSI Catalogue}
