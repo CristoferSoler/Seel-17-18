@@ -1,4 +1,4 @@
-# Rest API Guide for the initial tables we have tables #
+# Rest API Guide for the initial tables #
 
 - Lists all ComponentGroupList or create a new one
      `http://127.0.0.1:8000/ComponentGroups/`
