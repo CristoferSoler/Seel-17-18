@@ -1,24 +1,24 @@
 from django.http import HttpResponse
-# from .models import ComponentGroup
-# from .models import Component
-# from .models import ThreatCatalogue
-# from .models import Threat
-# from .models import CountermeasureCatalogue
-# from .models import Countermeasure
-# from .models import Responsible
-# from .models import ResponsibleInit
-# from .models import ResponsibleImpl
-# from .models import Checking
-# from .models import Role
-# from .models import LifecyclePhase
+from .models import ComponentGroup
+from .models import Component
+from .models import ThreatCatalogue
+from .models import Threat
+from .models import CountermeasureCatalogue
+from .models import Countermeasure
+from .models import Responsible
+from .models import ResponsibleInit
+from .models import ResponsibleImpl
+from .models import Checking
+from .models import Role
+from .models import LifecyclePhase
 
 
 # Create your views here.
 
 # connect to the database is here
 
-def index(request):
-    return HttpResponse("<h1>this will be default model")
+# def index(request):
+#     return HttpResponse("<h1>this will be default model")
 
 # def componenGrouptDetail(request):
 #     #connect to db and get ComponentGroup data
