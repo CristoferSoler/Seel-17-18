@@ -1,9 +1,9 @@
 % !TeX spellcheck = en_GB
 \chapter{Main Objectives}
-\todo[inline]{we have to be careful with our terminology across different sections: what is the wiki? what is an article? anything in the wiki or just user created content?, what are 'information' in our case?, what is a 'problem'? what are 'users' outside of the user type section? what's a topic?}
-\todo[inline]{each section if applicable should explain why? who? what? where? how?}
+\todo[inline]{Charlie: we have to be careful with our terminology across different sections: what are 'information' in our case?, what is a 'problem'? }
+\todo[inline]{Charlie: each section if applicable should explain why? who? what? where? how?}
 
-\section{Overview}
+\section{Overview} 
 The goal of this project is to design, implement and provide a guidance platform for the developing country Afghanistan. 
 Taking the circumstances in such a developing country in account, the platform should provide the users of IT-systems with the knowledge to assure the sustainability of IT-systems in their countries. 
 Besides providing general information on IT-systems, the platform should provide, similar to the “BSI Grundschutzkatalog”, information aiming to localize and solve problems that may occur in the IT-systems as a result of a human error, technical failure or a catastrophe etc. 
@@ -18,20 +18,51 @@ Besides providing general information on IT-systems, the platform should provide
 \section{Wiki} 
 Considering the limited availability of IT-specialists in most of the developing countries, and after reviewing the possible ways to design and provide the platform, our team considers it convenient to create an open platform on which people can collaboratively add, edit, delete or archive content, similar to Wikipedia. 
 This should allow the platform to constantly grow and stay relevant to current circumstances. 
-However, this should not mean that everyone can write whatever content for everybody to read. 
+The user created content beyond the BSI catalogue could make remarks about national peculiarities that do not play a role in Germany, aid further understanding or offer updates on more recent developments.
+However, this should not mean that everyone can simply write any potentially false content for everybody to read. 
 To assure that we have to set rules and access permission levels (see section~\ref{user_types}). 
-\todo[inline]{this explanation should be more detailed; how is the archive related to the wiki?, how is created content linked to the catalogue? in general, what is part of the wiki?}
+Concretely the wiki should have the following parts:
+\begin{itemize}
+    \item News
+    \item BSI catalogue
+    \item Articles
+    \item Archive
+\end{itemize}
+which will be further explained in next subsections.
+In general, it should be possible to link from any page in the wiki to any other page. 
 
-\section{Archive}
+
+\subsection{News}
+
+
+\subsection{BSI Catalogue}
+\label{BSIc}
+The BSI catalogue spans over 5000 pages which makes browsing, or even searching a specific information, a difficult task for beginners. 
+Converting such a big text volume into wiki content by hand would be an extended task. 
+Accordingly, a parser is needed. 
+This parser will crawl and analyse the BSI Grundschutzkatalog website and create and sort the content automatically. 
+The BSI catalogue is the most restrictive part in the wiki and should \todo[inline]{Charlie: really only admins?} only be modifiable by administrators.
+\\\\
+While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
+\begin{comment}
+Further, the BSI provides cross-reference tables of the catalogue. 
+These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
+\end{comment}
+
+
+\subsection{Archive}
 \label{archive}
-The website should always be up-to-date but we also want to offer the possibility to look up the old content.
-For this we need an archive.
-The archive stores information \todo[inline]{precisely what kind of information} that is no longer up-to-date but could still be relevant for some users. 
-For example: if users are looking for a problem such as a no longer supported operating system and there are no information in the wiki regarding this problem, the user could find older approaches in the archive. 
-\todo[inline]{what happens to content pages in the wiki which were linked to the catalogue? do they get archived?}
+The website should always present up-to-date information for interested guests.
+Sometimes though a person might be interested in information on older systems which are not covered anymore in the most recent version of the BSI catalogue but in older versions.
+Those older versions and ideally their related wiki content should be available in the archive. 
+On the matter of the related content see section~\ref{archive_relcon}.
 
-\section{User Types} 
+For example: if users are looking for an information on a no longer supported operating system and there are none in the wiki regarding this problem, the user could find older approaches in the archive. 
+
+
+\subsection{User Types} 
 \label{user_types}
+\todo[inline]{Charlie: can we put the extended user type table here too, please? Updating was missing}
 First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
 However, building a wiki-like platform about IT-Security for developing countries comes also with the big responsibility of the content it will provide. 
 If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, it would present a major security risk for any layman reading it. 
@@ -57,7 +88,7 @@ After a User has logged in, he can still use the functions of a guest.
 \\
 \textbf{Moderator} (mod), mods will be appointed for a specific topic, topics are the sub-sections of the three main parts "Bausteinkatalog", "Gefährdungskataloge" and "Maßnahmenkataloge", for example “G4 Technisches Versagen” which includes hazards for technical failure. 
 The mod is responsible for a certain topic, what means he has to moderate the content for this topic. 
-Moderating content means to delete wrong or inappropriate content or make it recognizable for guests that the content is unverified. \todo[inline]{topics?} .  
+Moderating content means to delete wrong or inappropriate content or make it recognizable for guests that the content is unverified.  
 Mods manage the news which means they can show certain news on the home page to get more attention or delete/change incorrect news. 
 Mods are also responsible, if necessary, to ban users. 
 Mods can use all functions users can use.
@@ -66,18 +97,6 @@ Mods can use all functions users can use.
 For new topics or new mods, the admin sets or changes permissions them like banning users, assign topics and manage news. \todo[inline]{is there missing one?}
 One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the website in case one is non-available.
 The admin can use all functions mods can use. 
-
-
-\section{BSI Catalogue}
-The English version of the BSI catalogue has been published in a single PDF file. 
-This makes browsing, or even searching a specific problem, a difficult task for beginners. 
-Therefore the BSI catalogue should be added as "locked" content to the wiki,\todo[inline]{whats an article -> changed word "article" to "content"? where? part of wiki; really only admins?} only modifiable by administrators.
-\\\\
-In fact, converting catalogues in articles by hand would be an extended task. 
-Accordingly, a parser is needed. 
-This parser will analyse the PDF file and create the article automatically. 
-Further, the BSI provides cross-reference tables of the catalogue. 
-These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
 
 
 \section{Text Search}
@@ -103,7 +122,8 @@ While a non-fault-tolerant search will let the visitor go nowhere, the system sh
 In addition, search functions which also master synonyms, do even more. 
 For example, the system should derive results from the search input "laptop" in which the word "notebook" appears and for this purpose access an extensive database of words of the same meaning. 
 The automatic completion of search terms is very welcome.
- 
+  
+
 \section{Wizard}
 \label{wizard}
 Beginners who are not familiar with the terminology may have a hard time finding solutions to problems they encounter. 
