@@ -11,7 +11,8 @@ textFormat = 'plain'
 dicOfContent = os.getcwd() + '/content/'
 
 
-def sendRequestToYandex(header,text):
+
+def sendRequestToYandex(header, text):
     #if(len(text)< 10000):
     #    r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
     #                      "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
@@ -20,7 +21,7 @@ def sendRequestToYandex(header,text):
     #
     #else:
     #    print("Tooo long")
-    writeFile(header,text)
+    writeFile(header, text)
 
 
 # alle Links die unter einer h2 Headline aufgelistet sind
@@ -41,7 +42,7 @@ def get_links(response, h2Headline):
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
 
-def writeFile(title,content):
+def writeFile(title, content):
 
     f = open(dicOfContent + title +'.txt', 'w')
     f.write(title+'\n')
@@ -90,18 +91,21 @@ class bsiSpider(sc.Spider):
         headers = content.xpath('h2')
         if (len(headers) != 0):
             beschreibung = headers[0].xpath('./text()').extract()[0]
-
-            for ps in headers[0].xpath('following-sibling::p|following-sibling::ul'):
-                if(ps.extract() == headers[1].xpath('following-sibling::p')[0].extract()):
-                   break
-                else:
-                    if(ps.xpath('local-name()') == 'ul'):
-                        print('Raphaela ')
-                        lis = ps.xpath('child:li')
-                        for li in lis:
-                            beschreibung_content = beschreibung_content + "- " + li.select("string()").extract()[0].strip()
+            for header in headers:
+                if header.xpath('following-sibling::p')[0].extract() == headers[1].xpath('following-sibling::p')[0].extract():
+                    continue
+                for ps in header.xpath('following-sibling::p|following-sibling::ul|following-sibling::h2'):
+                    if("h2" not in ps.extract()):
+                        if (ps.xpath('local-name()') == 'ul'):
+                            print('Raphaela ')
+                            lis = ps.xpath('child:li')
+                            for li in lis:
+                                beschreibung_content = beschreibung_content + "- " + li.select("string()").extract()[
+                                    0].strip()
+                        else:
+                            beschreibung_content = beschreibung_content + ps.select("string()").extract()[0].strip()
                     else:
-                        beschreibung_content = beschreibung_content + ps.select("string()").extract()[0].strip()
+                        break
 
             #print(beschreibung)
             sendRequestToYandex(headline, beschreibung_content)
