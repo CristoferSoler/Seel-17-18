@@ -1,0 +1,34 @@
+\select@language {american}
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {chapter}{\numberline {2}Main Objectives}{5}
+\contentsline {section}{\numberline {2.1}Wiki}{5}
+\contentsline {subsection}{\numberline {2.1.1}News}{6}
+\contentsline {subsection}{\numberline {2.1.2}BSI Catalogue}{6}
+\contentsline {subsection}{\numberline {2.1.3}Archive}{6}
+\contentsline {subsection}{\numberline {2.1.4}User Types}{7}
+\contentsline {section}{\numberline {2.2}Text Search}{8}
+\contentsline {section}{\numberline {2.3}Wizard}{8}
+\contentsline {section}{\numberline {2.4}Home Page}{9}
+\contentsline {section}{\numberline {2.5}Top Section}{9}
+\contentsline {chapter}{\numberline {3}Secondary Objectives}{11}
+\contentsline {section}{\numberline {3.1}API for BSI Catalog}{11}
+\contentsline {section}{\numberline {3.2}Labels}{11}
+\contentsline {section}{\numberline {3.3}Automatically showing News on Home Page}{11}
+\contentsline {section}{\numberline {3.4}User Access to BSI Catalogue Pages}{11}
+\contentsline {section}{\numberline {3.5}Automatically archiving News}{12}
+\contentsline {section}{\numberline {3.6}Archiving old Articles}{12}
+\contentsline {subsection}{\numberline {3.6.1}User Prompt to relink Article}{12}
+\contentsline {subsection}{\numberline {3.6.2}Auto-Archiving}{12}
+\contentsline {section}{\numberline {3.7}Extended Wizard}{12}
+\contentsline {chapter}{\numberline {A}Glossar}{13}
+\contentsline {paragraph}{\nonumberline Guest -}{13}
+\contentsline {paragraph}{\nonumberline User -}{13}
+\contentsline {paragraph}{\nonumberline Mod -}{13}
+\contentsline {paragraph}{\nonumberline Admin -}{13}
+\contentsline {paragraph}{\nonumberline (Wiki) Content -}{13}
+\contentsline {paragraph}{\nonumberline Article -}{13}
+\contentsline {paragraph}{\nonumberline (Wiki) Label -}{13}
+\contentsline {paragraph}{\nonumberline (Wiki) Topic -}{13}
+\contentsline {paragraph}{\nonumberline Threat -}{13}
+\contentsline {paragraph}{\nonumberline Safeguard -}{13}
+\contentsline {chapter}{\numberline {B}Use case diagrams}{14}
