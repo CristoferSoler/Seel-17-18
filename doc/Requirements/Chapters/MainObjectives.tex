@@ -1,8 +1,11 @@
 % !TeX spellcheck = en_GB
 \chapter{Main Objectives}
-\todo[inline]{Charlie: we have to be careful with our terminology across different sections: what are 'information' in our case?, what is a 'problem'? }
+\begin{comment}
+Generally valid: leave it here for us.
+\todo[inline]{Charlie: we have to be careful with our terminology across different sections}
 \todo[inline]{Charlie: each section if applicable should explain why? who? what? where? how?}
-
+\end{comment}
+'
 \section{Overview} 
 The goal of this project is to design, implement and provide a guidance platform for the developing country Afghanistan. 
 Taking the circumstances in such a developing country in account, the platform should provide the users of IT-systems with the knowledge to assure the sustainability of IT-systems in their countries. 
@@ -12,10 +15,10 @@ Besides providing general information on IT-systems, the platform should provide
     \centering
     \includegraphics[scale=0.3]{Pictures/ConceptSketch}
     \caption{Abstract System Design}
-\end{figure}
+\end{figure} 
 
 
-\section{Wiki} 
+\section{Wiki } 
 Considering the limited availability of IT-specialists in most of the developing countries, and after reviewing the possible ways to design and provide the platform, our team considers it convenient to create an open platform on which people can collaboratively add, edit, delete or archive content, similar to Wikipedia. 
 This should allow the platform to constantly grow and stay relevant to current circumstances. 
 The user created content beyond the BSI catalogue could make remarks about national peculiarities that do not play a role in Germany, aid further understanding or offer updates on more recent developments.
@@ -33,7 +36,9 @@ In general, it should be possible to link from any page in the wiki to any other
 
 
 \subsection{News}
-
+News are written by users but have to be approved by mods.
+If a mod approves a news article it is automatically published on the home page.
+The mod can decide to make a news article an important news article.
 
 \subsection{BSI Catalogue}
 \label{BSIc}
@@ -41,7 +46,7 @@ The BSI catalogue spans over 5000 pages which makes browsing, or even searching 
 Converting such a big text volume into wiki content by hand would be an extended task. 
 Accordingly, a parser is needed. 
 This parser will crawl and analyse the BSI Grundschutzkatalog website and create and sort the content automatically. 
-The BSI catalogue is the most restrictive part in the wiki and should \todo[inline]{Charlie: really only admins?} only be modifiable by administrators.
+The BSI catalogue is the most restrictive part in the wiki and should only be modifiable by administrators.
 \\\\
 While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
 \begin{comment}
@@ -62,7 +67,6 @@ For example: if users are looking for an information on a no longer supported op
 
 \subsection{User Types} 
 \label{user_types}
-\todo[inline]{Charlie: can we put the extended user type table here too, please? Updating was missing}
 First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
 However, building a wiki-like platform about IT-Security for developing countries comes also with the big responsibility of the content it will provide. 
 If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, it would present a major security risk for any layman reading it. 
