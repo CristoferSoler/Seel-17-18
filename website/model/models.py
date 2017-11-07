@@ -1,4 +1,3 @@
-from abc import ABC
 from django.db import models
 
 
@@ -62,7 +61,8 @@ class Responsible(models.Model):
     role = models.ForeignKey('Role', blank=False)
     cm = models.ForeignKey('Countermeasure', blank=False)
 
-    def __init__(self, role, countermeasure):
+    def __init__(self, role, countermeasure, *args, **kwargs):
+        super().__init__(*args, **kwargs)
         role = role
         countermeasure = countermeasure
 
