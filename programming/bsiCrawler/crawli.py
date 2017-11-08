@@ -45,8 +45,18 @@ def get_links(response, h2Headline):
             return links
 def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom):
     f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
-    json = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":"' + description_content + '"}'
-    f.write(json)
+    jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":"' + description_content + '"},"recommendations":{"h2":"' +  recom_header + '","content":"'+ recom_content + '","subheaders":['
+    for i in range(0, len(recom)):
+        subHeaderObject = '{"h3":"' + recom[i][0] + '", "content":"' + recom[i][1] + '"}'
+        jsonPart1  = jsonPart1 + subHeaderObject
+        if(i == len(recom)-1):
+            break
+        else:
+            jsonPart1 = jsonPart1 + ','
+
+    jsonPart1 = jsonPart1 + ']}}'
+
+    f.write(jsonPart1)
     f.close()
 
 
@@ -106,8 +116,18 @@ class bsiSpider(sc.Spider):
                 else:
                     break
 
+            plannung = False
+
             for h3 in h3Headers:
                 h3_head = h3.select("string()").extract()[0].strip()
+
+                for rec in recom:
+                    if('Planung und Konzeption' in rec[0] and 'Planung und Konzeption' in h3.extract() ):
+                        plannung = True
+                        break
+                if(plannung):
+                    break
+
                 h3_content = ''
                 for ps in h3.xpath(
                         'following-sibling::p|following-sibling::ul|following-sibling::h3'):
