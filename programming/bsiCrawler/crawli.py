@@ -1,6 +1,8 @@
 import scrapy as sc
 import requests as req
 import os
+import re
+import json
 
 #Yandex Parameter
 APIKey = 'trnsl.1.1.20171104T205815Z.06e73f15109112a3.dabfe16a4052f8e8beb0d0263b8f6db5d71130b3'
@@ -12,7 +14,7 @@ dicOfContent = os.getcwd() + '/content/'
 
 
 
-def sendRequestToYandex(header, text):
+def sendRequestToYandex(text):
     #if(len(text)< 10000):
     #    r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
     #                      "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
@@ -21,7 +23,7 @@ def sendRequestToYandex(header, text):
     #
     #else:
     #    print("Tooo long")
-    writeFile(header, text)
+    return text
 
 
 # alle Links die unter einer h2 Headline aufgelistet sind
@@ -41,12 +43,10 @@ def get_links(response, h2Headline):
             for li in lis:
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
-
-def writeFile(title, content):
-
-    f = open(dicOfContent + title +'.txt', 'w')
-    f.write(title+'\n')
-    f.write(content)
+def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom):
+    f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
+    json = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":"' + description_content + '"}'
+    f.write(json)
     f.close()
 
 
@@ -76,70 +76,60 @@ class bsiSpider(sc.Spider):
 
     def parse_following_urls(self, response):
 
-        headline = ''
-        beschreibung = ''
-        beschreibung_content = ''
-        massnahme = ''
-        massnahmeContent = ''
-
         SET_SELCTOR = '#content'
-
         content = response.css(SET_SELCTOR)
-        headline = content.xpath('h1/text()').extract()[0].strip()
-        print(headline)
+
+        h1 = content.xpath('h1/text()').extract()[0].strip()
 
         headers = content.xpath('h2')
+
+        description_content = ''
+        recom_content = ''
+        recom = []
+
         if (len(headers) != 0):
-            beschreibung = headers[0].xpath('./text()').extract()[0]
-            for header in headers:
-                if header.xpath('following-sibling::p')[0].extract() == headers[1].xpath('following-sibling::p')[0].extract():
-                    continue
-                for ps in header.xpath('following-sibling::p|following-sibling::ul|following-sibling::h2'):
-                    if("h2" not in ps.extract()):
-                        if (ps.xpath('local-name()') == 'ul'):
-                            print('Raphaela ')
-                            lis = ps.xpath('child:li')
-                            for li in lis:
-                                beschreibung_content = beschreibung_content + "- " + li.select("string()").extract()[
-                                    0].strip()
-                        else:
-                            beschreibung_content = beschreibung_content + ps.select("string()").extract()[0].strip()
+            description_h2 = headers[0].xpath('./text()').extract()[0]
+
+            for ps in headers[0].xpath(
+                    'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
+                if ("h2" not in ps.extract()):
+                    description_content = description_content + ps.select("string()").extract()[0].strip()
+                else:
+                    break
+
+            h3Headers = headers[2].xpath('following-sibling::h3')
+            recom_header = headers[2].xpath('./text()').extract()[0]
+            for ps in headers[2].xpath(
+                    'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
+                if ("h3" not in ps.extract()):
+                    recom_content = recom_content + ps.select("string()").extract()[0].strip()
+                else:
+                    break
+
+            for h3 in h3Headers:
+                h3_head = h3.select("string()").extract()[0].strip()
+                h3_content = ''
+                for ps in h3.xpath(
+                        'following-sibling::p|following-sibling::ul|following-sibling::h3'):
+                    if ("h3" not in ps.extract()):
+                        h3_content = h3_content + ps.select("string()").extract()[0].strip()
                     else:
                         break
 
-            #print(beschreibung)
-            sendRequestToYandex(headline, beschreibung_content)
-            #print(massnahme)
-            #print(massnahmeContent)
-        else:
-            print(beschreibung)
-            beschreibung_content = beschreibung_content + content.xpath('h1')[0].xpath('following::p/text()').extract()[0].strip()
-            print(beschreibung_content)
+                recom_tupel = (h3_head,h3_content)
+                recom.append(recom_tupel)
 
-        headerh3 = content.xpath('h3/text()')
-        headerh3xpath = content.xpath('h3')
-        numberofh3 = len(headerh3)
+            h1 = sendRequestToYandex(h1).replace("\"","")
+            description_h2 = sendRequestToYandex(description_h2).replace("\"","")
+            description_content = sendRequestToYandex(description_content).replace("\"","")
 
-        allP = headers[2].xpath('following-sibling::p')
+            recom_header = sendRequestToYandex(recom_header).replace("\"","")
+            recom_content = sendRequestToYandex(recom_content).replace("\"","")
 
-        #for i in range(1,len(allP)):
+            for i in range(0, len(recom)):
+                recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"",""), sendRequestToYandex(recom[i][1]).replace("\"",""))
 
-            #print(ps.extract())
-            #for i in range(0, numberofh3):
-             #   #print('test')
-                #print(headerh3[i])
-              #  if (headerh3[i].extract().strip() in 'Planung und Konzeption'):
-               #     #print('test1')
-                #    if (ps.extract() == headerh3xpath[i].xpath('following-sibling::p')[0].extract()):
-                 #       break
-                  #  else:
-                   #     print(ps.xpath('text()').extract()[0])
-                    #    break
-                        # Beschreibungstext
-                        #massnahmeContent = massnahmeContent + ps.xpath('/text()').extract()[0].strip()
-
-        #print(massnahme)
-        #print(massnahmeContent)
+            writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom)
 
         print("-----------------------------------------")
 
