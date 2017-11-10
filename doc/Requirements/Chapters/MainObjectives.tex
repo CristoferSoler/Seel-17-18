@@ -1,9 +1,13 @@
 % !TeX spellcheck = en_GB
 \chapter{Main Objectives}
-\todo[inline]{we have to be careful with our terminology across different sections: what is the wiki? what is an article? anything in the wiki or just user created content?, what are 'information' in our case?, what is a 'problem'? what are 'users' outside of the user type section? what's a topic?}
-\todo[inline]{each section if applicable should explain why? who? what? where? how?}
+\begin{comment}
+Generally valid: leave it here for us.
+\todo[inline]{Charlie: we have to be careful with our terminology across different sections}
+\todo[inline]{Charlie: each section if applicable should explain why? who? what? where? how?}
 
-\section{Overview}
+\end{comment}
+
+\section{Overview} 
 The goal of this project is to design, implement and provide a guidance platform for the developing country Afghanistan. 
 Taking the circumstances in such a developing country in account, the platform should provide the users of IT-systems with the knowledge to assure the sustainability of IT-systems in their countries. 
 Besides providing general information on IT-systems, the platform should provide, similar to the “BSI Grundschutzkatalog”, information aiming to localize and solve problems that may occur in the IT-systems as a result of a human error, technical failure or a catastrophe etc. 
@@ -12,78 +16,105 @@ Besides providing general information on IT-systems, the platform should provide
     \centering
     \includegraphics[scale=0.3]{Pictures/ConceptSketch}
     \caption{Abstract System Design}
-\end{figure}
+\end{figure} 
 
 
-\section{Wiki} 
+\section{Wiki } 
 Considering the limited availability of IT-specialists in most of the developing countries, and after reviewing the possible ways to design and provide the platform, our team considers it convenient to create an open platform on which people can collaboratively add, edit, delete or archive content, similar to Wikipedia. 
 This should allow the platform to constantly grow and stay relevant to current circumstances. 
-However, this should not mean that everyone can write whatever content for everybody to read. 
+The user created content beyond the BSI catalogue could make remarks about national peculiarities that do not play a role in Germany, aid further understanding or offer updates on more recent developments.
+However, this should not mean that everyone can simply write any potentially false content for everybody to read. 
 To assure that we have to set rules and access permission levels (see section~\ref{user_types}). 
-\todo[inline]{this explanation should be more detailed; how is the archive related to the wiki?, how is created content linked to the catalogue? in general, what is part of the wiki?}
+Concretely the wiki should have the following parts:
+\begin{itemize}
+    \item News
+    \item BSI catalogue
+    \item Articles
+    \item Archive
+\end{itemize}
+which will be further explained in next subsections.
+In general, it should be possible to link from any page in the wiki to any other page. 
 
-\section{Archive}
+
+\subsection{News}
+News are written by users but have to be approved by mods.
+If a mod approves a news article it is automatically published on the home page.
+The mod can decide to make a news article an important news article.
+
+\subsection{BSI Catalogue}
+\label{BSIc}
+The BSI catalogue spans over 5000 pages which makes browsing, or even searching a specific information, a difficult task for beginners. 
+Converting such a big text volume into wiki content by hand would be an extended task. 
+Accordingly, a parser is needed. 
+This parser will crawl and analyse the BSI Grundschutzkatalog website and create and sort the content automatically. 
+The BSI catalogue is the most restrictive part in the wiki and should only be modifiable by administrators.
+\\\\
+While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
+\begin{comment}
+Further, the BSI provides cross-reference tables of the catalogue. 
+These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
+\end{comment}
+
+
+\subsection{Archive}
 \label{archive}
-The website should always be up-to-date but we also want to offer the possibility to look up the old content.
-For this we need an archive.
-The archive stores information \todo[inline]{precisely what kind of information} that is no longer up-to-date but could still be relevant for some users. 
-For example: if users are looking for a problem such as a no longer supported operating system and there are no information in the wiki regarding this problem, the user could find older approaches in the archive. 
-\todo[inline]{what happens to content pages in the wiki which were linked to the catalogue? do they get archived?}
+The website should always present up-to-date information for interested guests.
+Sometimes though a person might be interested in information on older systems which are not covered anymore in the most recent version of the BSI catalogue but in older versions.
+Those older versions and ideally their related wiki content should be available in the archive. 
+On the matter of the related content see section~\ref{archive_relcon}.
 
-\section{User Types} 
+For example: if users are looking for an information on a no longer supported operating system and there are none in the wiki regarding this problem, the user could find older approaches in the archive. 
+
+
+\subsection{User Types} 
 \label{user_types}
+
 First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
-However, building a wiki-like platform about IT-Security for developing countries comes also with big responsibility about the content it will provide. 
-If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, would present a major security risk for any layman reading it. 
+However, building a wiki-like platform about IT-Security for developing countries comes also with the big responsibility of the content it will provide. 
+If everybody could publish and/or modify content without checks or labels for flaws, or malicious informations, it would present a major security risk for any layman reading it. 
 Admins will have enough workload so we need another team of volunteers, like moderators (mods), who will check content and remove, modify or label it as unsafe if necessary. 
 Moderators will be appointed by admins and will be responsible for policy enforcement for specific topics. 
 Further, users who would like to publish and/or modify content will need to register to the platform and be logged in. 
-All other users who are not logged in will be considered as guests and will only be able to "read only" content. 
+All other users who are not logged in will be considered as guests and will only be able to read content. 
 These multiple user roles are needed to create a trustworthy platform. 
 \\\\
-In the following section will be discussed the different user roles and their functions. 
+The following section will discuss the different user roles and their functions. 
 %We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
-\\
-\textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki\todo[inline]{do we distinguish between wiki and catalogue or do we always also mean the catalogue when we just say wiki? compare to: the archive is just another part of the wiki}. 
-The search can be refined with several options (more information about the search in the text search section~\ref{search_function}). 
-If guests are not sure how to find their problems they can use the wizard (more information in the Wizard section~\ref{wizard}). 
-The wiki contains news from different topics which guests can check out.
-
-\textbf{User}, every registered\todo[inline]{how does a user register? important for how to effectively ban them} user can write articles in the wiki and change them with the functions: create content and edit content. 
-They can also edit their profile. 
-Users can use all functions guests can use.
-\todo[inline]{they have to login}
-
-\textbf{Moderator} (mod), mods will be appointed for a specific topic for example “b2 infrastructure”\todo[inline]{too brief; what exactly are topics and where are they/where relevant? catalogue, content, news, archive?, see BSI catalogue section where is written that only admins can edit the catalogue; appointed to a topic means they can still edit content from different topics?} . 
-Mods are responsible for moderating articles, which means to delete wrong or inappropriate content or make it recognizable for users\todo[inline]{for user type users or website users?} that the article is unverified. 
-They create the news\todo[inline]{didn't we say users can create news but only mods can put them on the homepage?}  and they are also responsible - if necessary - to ban users. 
-Mods can use all functions users can use.
-
-\textbf{Administrator} (admin), the admin is responsible for appointing the mods and remove them if necessary. 
-He also manages the topics\todo[inline]{what, where} , which means creating new topics, removing old ones and controlling that each topic got a mod. 
-For new topics or new mods, the admin sets new permissions \todo[inline]{what are the possible permissions}or changes them. 
-One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive. 
-The admin can use all functions mods can use.
-\todo[inline]{how many admins do we suggest, how many mods? redundancy}
-
-
-\section{BSI Catalogue}
-The English version of the BSI catalogue has been published in a single PDF file. 
-This makes browsing, or even searching a specific problem, a difficult task for beginners. 
-Therefore the BSI catalogue should be added as "locked" content to the wiki,\todo[inline]{whats an article -> changed word "article" to "content"? where? part of wiki; really only admins?} only modifiable by administrators.
 \\\\
-In fact, converting catalogues in articles by hand would be an extended task. 
-Accordingly, a parser is needed. 
-This parser will analyse the PDF file and create the article automatically. 
-Further, the BSI provides cross-reference tables of the catalogue. 
-These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
+\textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki, which includes the BSI catalogue. The search can be refined with several options (more information about the search in the text search section~\ref{search_function}) 
+If guests are not sure how to find their problems they can use the wizard (more information in the wizard section~\ref{wizard}). 
+The wiki contains news from different topics which guests can check out.
+\\\\
+\textbf{User}, every registered user (registed by email address and a password) can write articles in the wiki and change them with the functions: create content and edit content. 
+Created content can be linked in a certain part of the BSI catalogue. 
+If the BSI catalogue updates, users who have linked content get a notification to transfer this link to the new BSI catalogue or to archive the linked wiki article with it.
+They can also edit their profile. 
+After a User has logged in, he can still use the functions of a guest.
+\\\\
+\textbf{Moderator} (mod), mods are managing the content published by the users.
+Managing or Moderating content means to delete wrong or inappropriate content or make checked content recognizable for guests that the content is verified.  
+Mods manage the news which means they can show certain news on the home page to get more attention or delete/change incorrect news. 
+Mods are also responsible, if necessary, to ban users. 
+Mods can use all functions users can use.
+\\\\
+\textbf{Administrator} (admin), the admin sets or changes permissions like banning users, assign topics and manage news.
+One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the website in case one is non-available.
+The admin can use all functions mods can use. 
+\\\\
+The table \ref{fig:usertypes} shows the rights of each user.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Pictures/user_types}
+    \label{fig:usertypes}
+    \caption{user rights table}
+\end{figure}
 
 \section{Text Search}
 \label{search_function}
 A text search function allows users of the platform to make a free text search request and browse the results containing the key-words. 
-Users should also have the opportunity to narrow down their search request by selecting a specific domain \todo[inline]{maybe 'domain' would be better here?-DONE} in which they would like to find results:
+Users should also have the opportunity to narrow down their search request by selecting a specific domain in which they would like to find results:
 \begin{itemize}
 \item "All": counts as every domain
 \item "News": domain where news are published
@@ -92,7 +123,7 @@ Users should also have the opportunity to narrow down their search request by se
 \item "Measures": measures of the BSI Grundschutzkatalog
 \item "Archive": archived content (no longer visible in the wiki)
 \end{itemize}
-\todo[inline]{briefly explain what those 'topics' mean-DONE } 
+ 
 Choices should be available as a dropdown list.
 \\\\
 The search field should be well placed on the home page. 
@@ -103,7 +134,8 @@ While a non-fault-tolerant search will let the visitor go nowhere, the system sh
 In addition, search functions which also master synonyms, do even more. 
 For example, the system should derive results from the search input "laptop" in which the word "notebook" appears and for this purpose access an extensive database of words of the same meaning. 
 The automatic completion of search terms is very welcome.
- 
+  
+
 \section{Wizard}
 \label{wizard}
 Beginners who are not familiar with the terminology may have a hard time finding solutions to problems they encounter. 
@@ -122,13 +154,13 @@ The search offers the full functionality as described in section~\ref{search_fun
 As a last section before the always present bottom section is an overview of introductory tutorials on how to implement the guidelines of the BSI catalogue while developing, building and maintaining a basic IT system.
 Equally visible as the tutorials should be the offer to use the wizard to help and find security gaps and other system flaws.
 Both the tutorials and the wizard are aimed at users of no or little knowledge or overview of the BSI catalogue.
-For detailed explanations see section~\ref{tutorials} for the tutorials and section~\ref{wizard} for the wizard.
+For detailed explanations of the wizard see section~\ref{wizard}.
 The bottom section shows links to items as contact, legal notice, possibly FAQ and copyright.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[scale=0.3]{Pictures/frontpage_mockup}
-    \caption{Schematic Frontpage Design}
+    \includegraphics[width=0.9\textwidth]{Pictures/frontpage_mockup}
+    \caption{Schematic Home Page Design}
 \end{figure}
  
 \section{Top Section} 
@@ -137,13 +169,13 @@ The bottom section shows links to items as contact, legal notice, possibly FAQ a
 The top section is an always present area at the top of each subpage that connects the different services and allows for quick access.
 It should feature the following items whose order and wording might be changed appropriately:
 \begin{itemize}
-    \item Home/Frontpage
+    \item Home Page
     \item News
     \item Browse the BSI catalogue
     \item Tutorials
     \item Wizard
     \item Search
-    \item Login 
+    \item Login  
         . 
 \end{itemize}
 
