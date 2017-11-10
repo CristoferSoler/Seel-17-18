@@ -19,6 +19,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from model import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls), # default admin handler
+<<<<<<< HEAD
     url(r'^ComponentGroups/', views.ComponentGroupList.as_view()), # ComponentGroups handler
     url(r'^Component/', views.ComponentList.as_view()), # Component handler
     url(r'^ThreatCatalogue/', views.ThreatCatalogueList.as_view()), # ThreatCatalogue handler
@@ -28,6 +29,9 @@ urlpatterns = [
     url(r'^Responsible/', views.ResponsibleList.as_view()), # Responsible handler
     url(r'^Role/', views.RoleList.as_view()), # Role handler
     url(r'^LifecyclePhase/', views.LifecyclePhaseList.as_view()), # LifecyclePhase handler
+=======
+    url(r'^BSIArticle/', views.BSIArticleList.as_view()), # BSI article handler
+>>>>>>> 3e556736b8a57ffb1aa106f31046089b47abd21d
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
