@@ -75,13 +75,13 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        #for b in urlsB:
-        #    yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        for b in urlsB:
+            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        for b in urlsG:
-            yield sc.Request(b, callback=self.parseLinkListG, dont_filter=True)
+        for g in urlsG:
+            yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
 
-    def parseLinkList(self, response,functionName):
+    def parseLinkList(self, response):
         siteUrl = []
         SET_SELECTOR = '.RichTextIntLink.Basepage'
         for link in response.css(SET_SELECTOR):
@@ -113,7 +113,12 @@ class bsiSpider(sc.Spider):
 
         for content in contentOfPage:
             if('h3' not in content.extract()):
-                contents = contents + content.select('string()').extract()[0].strip()
+                if(len(content.xpath('child::li'))!=0):
+                    for li in content.xpath('child::li'):
+                        print('Liste')
+                        contents = contents + "- " + li.select('string()').extract()[0].strip()
+                else:
+                    contents = contents + content.select('string()').extract()[0].strip()
             else:
                 break
 
@@ -155,13 +160,6 @@ class bsiSpider(sc.Spider):
 
             for h3 in h3Headers:
                 h3_head = h3.select("string()").extract()[0].strip()
-
-                for rec in recom:
-                    if('Planung und Konzeption' in rec[0] and 'Planung und Konzeption' in h3.extract() ):
-                        plannung = True
-                        break
-                if(plannung):
-                    break
 
                 h3_content = ''
                 for ps in h3.xpath(
