@@ -135,9 +135,11 @@ class bsiSpider(sc.Spider):
                         h3_content = h3_content + ps.select("string()").extract()[0].strip()
                     else:
                         break
-
-                recom_tupel = (h3_head,h3_content)
-                recom.append(recom_tupel)
+                if (h3_content != ''):
+                    recom_tupel = (h3_head, h3_content)
+                    recom.append(recom_tupel)
+                else:
+                    break
 
             h1 = sendRequestToYandex(h1).replace("\"","")
             description_h2 = sendRequestToYandex(description_h2).replace("\"","")
