@@ -3,8 +3,8 @@ from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import  Component, ComponentGroup, ThreatCatalogue, Threat, CountermeasureCatalogue, Countermeasure, Responsible, Role, LifecyclePhase
-from .serializer import  ComponentSerializer, ComponentGroupSerializer, ThreatCatalogueSerializer, ThreatSerializer, CountermeasureCatalogueSerializer, CountermeasureSerializer, ResponsibleSerializer, RoleSerializer, LifecyclePhaseSerializer
+from .models import  Component, ComponentGroup, ThreatCatalogue, Threat, CountermeasureCatalogue, Countermeasure, Responsible, Role, LifecyclePhase, BSIArticle
+from .serializer import  ComponentSerializer, ComponentGroupSerializer, ThreatCatalogueSerializer, ThreatSerializer, CountermeasureCatalogueSerializer, CountermeasureSerializer, ResponsibleSerializer, RoleSerializer, LifecyclePhaseSerializer, BSIArticleSerializer
 
 # Create your views here.
 
@@ -115,3 +115,10 @@ class LifecyclePhaseList(APIView):
 
     def post(self):
         pass
+
+# Lists all BSI catalog
+# BSIArticle/
+class BSIArticleList(APIView):
+    def get(self, request):
+        bsi_arts = BSIArticle.objects.all()
+        serializer = BSIArticleSerializer(bsi_arts, many=True)

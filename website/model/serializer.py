@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Component, ComponentGroup, ThreatCatalogue, Threat, CountermeasureCatalogue, Countermeasure, Responsible, Role, LifecyclePhase
+from .models import Component, ComponentGroup, ThreatCatalogue, Threat, CountermeasureCatalogue, Countermeasure, Responsible, Role, LifecyclePhase, BSIArticle 
 
 class ComponentGroupSerializer(serializers.ModelSerializer):
     class Meta:
@@ -54,3 +54,15 @@ class LifecyclePhaseSerializer(serializers.ModelSerializer):
         model = LifecyclePhase
         fields = ('id', 'name')
         #fields = '__all__'
+
+class BSIArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BSIArticle
+        fields = ('id', 'location', 'article_type')
+        # fields = '__all__'
+
+class BSIArticleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = BSIArticle
+        fields = ('id', 'location', 'article_type')
+        # fields = '__all__'
