@@ -1,5 +1,5 @@
+from rest_framework import serializers
 from .models import BSIArticle
-
 
 class BSIArticleSerializer(serializers.ModelSerializer):
     class Meta:
