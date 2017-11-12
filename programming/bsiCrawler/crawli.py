@@ -43,7 +43,7 @@ def get_links(response, h2Headline):
             for li in lis:
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
-def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom):
+def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText):
     f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
     jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":"' + description_content + '"},"recommendations":{"h2":"' +  recom_header + '","content":"'+ recom_content + '","subheaders":['
     for i in range(0, len(recom)):
@@ -54,7 +54,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
         else:
             jsonPart1 = jsonPart1 + ','
 
-    jsonPart1 = jsonPart1 + ']}}'
+    jsonPart1 = jsonPart1 + '], "wholeText": "' + wholeText + '"}}'
 
     f.write(jsonPart1)
     f.close()
@@ -156,8 +156,6 @@ class bsiSpider(sc.Spider):
                 else:
                     break
 
-            plannung = False
-
             for h3 in h3Headers:
                 h3_head = h3.select("string()").extract()[0].strip()
 
@@ -174,6 +172,7 @@ class bsiSpider(sc.Spider):
                 else:
                     break
 
+            wholeText = ''
             h1 = sendRequestToYandex(h1).replace("\"","")
             description_h2 = sendRequestToYandex(description_h2).replace("\"","")
             description_content = sendRequestToYandex(description_content).replace("\"","").replace("\n","")
@@ -181,9 +180,11 @@ class bsiSpider(sc.Spider):
             recom_header = sendRequestToYandex(recom_header).replace("\"","")
             recom_content = sendRequestToYandex(recom_content).replace("\"","").replace("\n","")
 
+            wholeText = h1 + " " + description_content + " " + recom_content
+
             for i in range(0, len(recom)):
                 recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"","").replace("\n",""), sendRequestToYandex(recom[i][1]).replace("\"","").replace("\n",""))
-
-            writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom)
+                wholeText = wholeText + recom[i][1]
+            writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText)
 
 
