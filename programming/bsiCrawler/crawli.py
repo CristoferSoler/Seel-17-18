@@ -59,6 +59,12 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
     f.write(jsonPart1)
     f.close()
 
+def writeThreadJSON(h1,content):
+    f = open(dicOfContent + re.sub('/', '-', h1) + '.json', 'w')
+    content =re.sub('\n',' ' , content)
+    jsonPart1 = '{"h1":"' + h1 + '","content":"'+ content + '"}'
+    f.write(jsonPart1)
+    f.close()
 
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
@@ -69,20 +75,49 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        for b in urlsB:
-            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        #for b in urlsB:
+        #    yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
+        for b in urlsG:
+            yield sc.Request(b, callback=self.parseLinkListG, dont_filter=True)
 
-    def parseLinkList(self, response):
+    def parseLinkList(self, response,functionName):
         siteUrl = []
         SET_SELECTOR = '.RichTextIntLink.Basepage'
         for link in response.css(SET_SELECTOR):
             siteUrl.append("https://www.bsi.bund.de/" + link.xpath('@href').extract()[0])
-        #print(len(siteUrl))
-        #print('-----------')
 
         for link in siteUrl:
             yield sc.Request(link, callback=self.parse_following_urls, dont_filter=True)
+
+    def parseLinkListG(self, response):
+        siteUrl = []
+        SET_SELECTOR = '.RichTextIntLink.Basepage'
+        for link in response.css(SET_SELECTOR):
+            siteUrl.append("https://www.bsi.bund.de/" + link.xpath('@href').extract()[0])
+
+        for link in siteUrl:
+            yield sc.Request(link, callback=self.parse_following_urls_of_G, dont_filter=True)
+
+    def parse_following_urls_of_G(self,response):
+        SET_SELCTOR = '#content'
+        content = response.css(SET_SELCTOR)
+
+        h1 = content.xpath('h1/text()').extract()[0].strip()
+
+        h3 = content.xpath('h3')
+
+        contentOfPage = content.xpath('h1').xpath('following-sibling::p|following-sibling::ul')
+
+        contents = ''
+
+        for content in contentOfPage:
+            if('h3' not in content.extract()):
+                contents = contents + content.select('string()').extract()[0].strip()
+            else:
+                break
+
+        writeThreadJSON(h1,contents)
 
     def parse_following_urls(self, response):
 
@@ -141,15 +176,14 @@ class bsiSpider(sc.Spider):
 
             h1 = sendRequestToYandex(h1).replace("\"","")
             description_h2 = sendRequestToYandex(description_h2).replace("\"","")
-            description_content = sendRequestToYandex(description_content).replace("\"","")
+            description_content = sendRequestToYandex(description_content).replace("\"","").replace("\n","")
 
             recom_header = sendRequestToYandex(recom_header).replace("\"","")
-            recom_content = sendRequestToYandex(recom_content).replace("\"","")
+            recom_content = sendRequestToYandex(recom_content).replace("\"","").replace("\n","")
 
             for i in range(0, len(recom)):
-                recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"",""), sendRequestToYandex(recom[i][1]).replace("\"",""))
+                recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"","").replace("\n",""), sendRequestToYandex(recom[i][1]).replace("\"","").replace("\n",""))
 
             writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom)
 
-        print("-----------------------------------------")
 
