@@ -8,7 +8,7 @@ def exampleSearch():
         results = searcher.search(query)
 
         if(len(results) != 0):
-            print(results[0])
+            print(results[0]['id'])
         else:
             print('No hints')
 
