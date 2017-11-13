@@ -1,16 +1,16 @@
 import Vue from 'vue';
 import App from './App.vue';
 import VueRouter from 'vue-router';
-import Navbar from './Components/Navbar.vue';
-import Footer from './Components/Footer.vue';
-import Search from './Components/Search.vue';
+import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
+import Search from './components/Search.vue';
 import Home from './Home.vue';
 import Signup from './Signup.vue';
 import Login from './Login.vue';
-import SearchAdv from './Components/Search-adv.vue';
-import News from './Components/News.vue';
-import NewsImp from './Components/News-Imp.vue';
-import TutorList from './Components/Tutorial-list.vue';
+import SearchAdv from './components/Search-adv.vue';
+import News from './components/News.vue';
+import NewsImp from './components/News-Imp.vue';
+import TutorList from './components/Tutorial-list.vue';
 
 
 Vue.use(VueRouter);
