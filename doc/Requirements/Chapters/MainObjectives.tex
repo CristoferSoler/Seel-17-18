@@ -50,10 +50,24 @@ This parser will crawl and analyse the BSI Grundschutzkatalog website and create
 The BSI catalogue is the most restrictive part in the wiki and should only be modifiable by administrators.
 \\\\
 While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
-\begin{comment}
-Further, the BSI provides cross-reference tables of the catalogue. 
-These amend the useful links inside each subsection and could be used to recommend cross-referenced counter-measures to specific threats.\todo[inline]{how? -> i don't know yet}
-\end{comment}
+\\\\
+\begin{tcolorbox}[breakable,colback=red!10,colframe=red!40!black,title=UPDATE 13/11/2017]
+The tree view adopts the structure as also found in pdf versions of the BSI catalogue. 
+See Appendix~\ref{appendix_bsi}.\\
+The tree view should not automatically expand or collapse itself without direct guest manipulation.
+This means for instance, that when a guest, clicks on the link of a threat on a building block page that the tree view does not expand to show this threat.
+Merely the highlighted row in the tree view changes to the new item.
+If the item is hidden in a collapsed level the highlighted row should change colour.
+\\
+BSI pages which show building blocks should be displayed slightly modified from their appearance in the catalogue.
+Instead of listing threats and measures seperately in lists, it should be obvious only after a quick glance which measures corresponds to which threats.
+For this, cross-reference tables provided by the BSI should be used.
+These tables clearly assign each threat its measures.
+Thus, those pages show firstly the related text to the building block.
+Then a dropdown menu which allows the guest to sort the linked threats and measures by either threats or measures.
+Lastly, a tree view where the first level are layers, the second level the category by which the tree is sorted and the third level the other category.
+See Appendix~\ref{appendix_bsi} for examples.
+\end{tcolorbox}
 
 
 \subsection{Archive}
