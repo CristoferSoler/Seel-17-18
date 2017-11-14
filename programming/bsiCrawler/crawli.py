@@ -122,10 +122,40 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
     f.write(jsonPart1)
     f.close()
 
-def writeThreadJSON(h1,content):
+def writeThreadJSON(h1,content,listOfExpample):
     f = open(dicOfContent + re.sub('/', '-', h1) + '.json', 'w')
-    content =re.sub('\n',' ' , content)
-    jsonPart1 = '{"h1":"' + h1 + '","content":"'+ content + '"}'
+    jsonPart1 = '{"h1":"' + h1 + '","content":['\
+
+    for i in range(0,len(content)):
+        if (isinstance(content[i], list)):
+            jsonPart1 += '['
+            for j in range(0, len(content[i])):
+                if (j == len(content[i]) - 1):
+                    jsonPart1 += '"' + content[i][j] + '"]'
+                else:
+                    jsonPart1 += '"' + content[i][j] + '",'
+
+            if (i == len(content) - 1):
+                break
+            else:
+                    jsonPart1 += ','
+        else:
+            if (i == len(content) - 1):
+                jsonPart1 += '"' + content[i] + '"'
+            else:
+                jsonPart1 += '"' + content[i] + '",'
+    jsonPart1 +=']'
+    if(len(listOfExpample) != 0):
+        jsonPart1 += ',"subheaders":['
+
+    for i in range(0, len(listOfExpample)):
+        if (i == len(listOfExpample) - 1):
+            jsonPart1 += '"' + listOfExpample[i] + '"]'
+        else:
+            jsonPart1 += '"' + listOfExpample[i] + '",'
+
+    jsonPart1 += '}'
+
     f.write(jsonPart1)
     f.close()
 
@@ -138,11 +168,14 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        for b in urlsB:
-            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        #for b in urlsB:
+         #   yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
         #for g in urlsG:
         #    yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
+
+        for m in urlsM:
+            yield sc.Request(m, callback=self.parseLinkListG, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
@@ -166,26 +199,37 @@ class bsiSpider(sc.Spider):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
 
-        h1 = content.xpath('h1/text()').extract()[0].strip()
+        h1 = content.xpath('h1/text()').extract()[0].strip().replace("\"","").replace("\n","")
 
         h3 = content.xpath('h3')
 
-        contentOfPage = content.xpath('h1').xpath('following-sibling::p|following-sibling::ul')
+        contentOfPage = content.xpath('h1').xpath('following-sibling::p|following-sibling::ul|following-sibling::h3|following-sibling::h2')
 
-        contents = ''
+        contents = []
 
         for content in contentOfPage:
+            if ('h2' in content.extract()):
+                break
+
             if('h3' not in content.extract()):
                 if(len(content.xpath('child::li'))!=0):
+                    ul = []
                     for li in content.xpath('child::li'):
-                        print('Liste')
-                        contents = contents + "- " + li.select('string()').extract()[0].strip()
+                        ul.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
+                    contents.append(ul)
                 else:
-                    contents = contents + content.select('string()').extract()[0].strip()
+                    contents.append(content.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
             else:
                 break
 
-        writeThreadJSON(h1,contents)
+        listOfExample = []
+        if(len(h3.xpath('following-sibling::ul')) != 0):
+            ul = h3.xpath('following-sibling::ul')[0]
+            listOfExample = []
+            for li in ul.xpath('child::li'):
+                listOfExample.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
+
+        writeThreadJSON(h1,contents,listOfExample)
 
     def parse_following_urls(self, response):
 
