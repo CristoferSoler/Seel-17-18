@@ -1,9 +1,11 @@
 from whoosh.qparser import QueryParser
 from whoosh.index import *
+from whoosh.analysis import *
 
 def exampleSearch():
     index = open_dir("index")
     with index.searcher() as searcher:
+
         query = QueryParser("content", index.schema).parse(sys.argv[1])
         results = searcher.search(query)
 

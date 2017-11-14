@@ -15,14 +15,14 @@ dicOfContent = os.getcwd() + '/content/'
 
 
 def sendRequestToYandex(text):
-    #if(len(text)< 10000):
-    #    r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
-    #                      "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
-    #    yandexResponseText = r["text"][0]
-    #    writeFile(header, yandexResponseText)
-    #
-    #else:
-    #    print("Tooo long")
+    '''if(len(text)< 10000):
+        r = req.post("https://translate.yandex.net/api/v1.5/tr.json/translate?key=" + APIKey +
+                          "&text=" + text + "&lang=" + lang + "&format=" + textFormat).json()
+        yandexResponseText = r["text"][0]
+        #writeFile(header, yandexResponseText)
+
+    else:
+        print("Tooo long")'''
     return text
 
 
@@ -45,16 +45,79 @@ def get_links(response, h2Headline):
             return links
 def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText):
     f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
-    jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":"' + description_content + '"},"recommendations":{"h2":"' +  recom_header + '","content":"'+ recom_content + '","subheaders":['
+    jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":['
+
+    for i in range(0,len(description_content)):
+        if (isinstance(description_content[i], list)):
+            jsonPart1 += '"ul":['
+            for j in range(0, len(description_content[i])):
+                if (j == len(description_content[i]) - 1):
+                    jsonPart1 += '"' + description_content[i][j] + '"]'
+                else:
+                    jsonPart1 += '"' + description_content[i][j] + '",'
+
+            if (i == len(description_content) - 1):
+                break
+            else:
+                    jsonPart1 += ','
+        else:
+            if (i == len(description_content) - 1):
+                jsonPart1 += '"' + description_content[i] + '"'
+            else:
+                jsonPart1 += '"' + description_content[i] + '",'
+
+    jsonPart1 += ']' + '},"recommendations":{"h2":"' +  recom_header + '","content":['
+
+    for i in range(0,len(recom_content)):
+        if (isinstance(recom_content[i], list)):
+            jsonPart1 += '"ul":['
+            for j in range(0, len(recom_content[i])):
+                if (j == len(recom_content[i]) - 1):
+                    jsonPart1 += '"' + recom_content[i][j] + '"]'
+                else:
+                    jsonPart1 += '"' + recom_content[i][j] + '",'
+
+            if (i == len(recom_content) - 1):
+                break
+            else:
+                    jsonPart1 += ','
+        else:
+            if (i == len(recom_content) - 1):
+                jsonPart1 += '"' + recom_content[i] + '"'
+            else:
+                jsonPart1 += '"' + recom_content[i] + '",'
+
+    jsonPart1 +=  '],"subheaders":['
     for i in range(0, len(recom)):
-        subHeaderObject = '{"h3":"' + recom[i][0] + '", "content":"' + recom[i][1] + '"}'
+        subHeaderObject = '{"h3":"' + recom[i][0] + '", "content":['
+
+        for j in range(0, len(recom[i][1])):
+            if (isinstance(recom[i][1][j], list)):
+                subHeaderObject += '"ul":['
+                for k in range(0, len(recom[i][1][j])):
+                    if (j == len(recom[i][1][j]) - 1):
+                        subHeaderObject += '"' + recom[i][1][j][k] + '"]'
+                    else:
+                        subHeaderObject += '"' + recom[i][1][j][k] + '",'
+
+                if (i == len(recom[i][1][j]) - 1):
+                    break
+                else:
+                    subHeaderObject += ','
+            else:
+                if (i == len(recom[i][1]) - 1):
+                    subHeaderObject += '"' + recom[i][1][j] + '"'
+                else:
+                    subHeaderObject += '"' + recom[i][1][j] + '",'
+
+        subHeaderObject += ']}'
         jsonPart1  = jsonPart1 + subHeaderObject
         if(i == len(recom)-1):
             break
         else:
             jsonPart1 = jsonPart1 + ','
 
-    jsonPart1 = jsonPart1 + '], "wholeText": "' + wholeText + '"}}'
+    jsonPart1 = jsonPart1 + ']}, "wholeText": "' + wholeText + '"}'
 
     f.write(jsonPart1)
     f.close()
@@ -78,8 +141,8 @@ class bsiSpider(sc.Spider):
         for b in urlsB:
             yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        for g in urlsG:
-            yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
+        #for g in urlsG:
+        #    yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
@@ -133,17 +196,25 @@ class bsiSpider(sc.Spider):
 
         headers = content.xpath('h2')
 
-        description_content = ''
-        recom_content = ''
+        description_content = []
+        recom_content = []
         recom = []
 
         if (len(headers) != 0):
             description_h2 = headers[0].xpath('./text()').extract()[0]
 
+            #Beschreibung
             for ps in headers[0].xpath(
                     'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
                 if ("h2" not in ps.extract()):
-                    description_content = description_content + ps.select("string()").extract()[0].strip()
+                    if (len(ps.xpath('child::li')) != 0):
+                        ul = []
+                        for li in ps.xpath('child::li'):
+                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                        description_content.append(ul)
+
+                    else:
+                        description_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
                 else:
                     break
 
@@ -152,27 +223,45 @@ class bsiSpider(sc.Spider):
             for ps in headers[2].xpath(
                     'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
                 if ("h3" not in ps.extract()):
-                    recom_content = recom_content + ps.select("string()").extract()[0].strip()
+                    if (len(ps.xpath('child::li')) != 0):
+                        ul = []
+                        for li in ps.xpath('child::li'):
+                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                        recom_content.append(ul)
+
+                    else:
+                        recom_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
                 else:
                     break
 
             for h3 in h3Headers:
                 h3_head = h3.select("string()").extract()[0].strip()
 
-                h3_content = ''
+                h3_content = []
                 for ps in h3.xpath(
                         'following-sibling::p|following-sibling::ul|following-sibling::h3'):
                     if ("h3" not in ps.extract()):
-                        h3_content = h3_content + ps.select("string()").extract()[0].strip()
+                        if (len(ps.xpath('child::li')) != 0):
+                            ul = []
+                            for li in ps.xpath('child::li'):
+                                ul.append(
+                                    li.select("string()").extract()[0].strip().replace("\"", "").replace("\n", ""))
+                            h3_content.append(ul)
+
+                        else:
+                            h3_content.append(ps.select("string()").extract()[0].strip().replace("\"", "").replace("\n", ""))
                     else:
                         break
-                if (h3_content != ''):
+
+                if (len(h3_content) != 0):
                     recom_tupel = (h3_head, h3_content)
                     recom.append(recom_tupel)
                 else:
                     break
 
+
             wholeText = ''
+            '''
             h1 = sendRequestToYandex(h1).replace("\"","")
             description_h2 = sendRequestToYandex(description_h2).replace("\"","")
             description_content = sendRequestToYandex(description_content).replace("\"","").replace("\n","")
@@ -185,6 +274,7 @@ class bsiSpider(sc.Spider):
             for i in range(0, len(recom)):
                 recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"","").replace("\n",""), sendRequestToYandex(recom[i][1]).replace("\"","").replace("\n",""))
                 wholeText = wholeText + recom[i][1]
-            writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText)
+            '''
+            writeComponentJSON(h1.replace("\"",""), description_h2.replace("\"",""), description_content, recom_header.replace("\"",""), recom_content, recom,wholeText)
 
 
