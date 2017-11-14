@@ -49,7 +49,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
 
     for i in range(0,len(description_content)):
         if (isinstance(description_content[i], list)):
-            jsonPart1 += '"ul":['
+            jsonPart1 += '['
             for j in range(0, len(description_content[i])):
                 if (j == len(description_content[i]) - 1):
                     jsonPart1 += '"' + description_content[i][j] + '"]'
@@ -70,7 +70,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
 
     for i in range(0,len(recom_content)):
         if (isinstance(recom_content[i], list)):
-            jsonPart1 += '"ul":['
+            jsonPart1 += '['
             for j in range(0, len(recom_content[i])):
                 if (j == len(recom_content[i]) - 1):
                     jsonPart1 += '"' + recom_content[i][j] + '"]'
@@ -93,7 +93,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
 
         for j in range(0, len(recom[i][1])):
             if (isinstance(recom[i][1][j], list)):
-                subHeaderObject += '"ul":['
+                subHeaderObject += '['
                 for k in range(0, len(recom[i][1][j])):
                     if (j == len(recom[i][1][j]) - 1):
                         subHeaderObject += '"' + recom[i][1][j][k] + '"]'
@@ -105,7 +105,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
                 else:
                     subHeaderObject += ','
             else:
-                if (i == len(recom[i][1]) - 1):
+                if (j == len(recom[i][1]) - 1):
                     subHeaderObject += '"' + recom[i][1][j] + '"'
                 else:
                     subHeaderObject += '"' + recom[i][1][j] + '",'
