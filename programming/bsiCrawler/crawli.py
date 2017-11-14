@@ -168,11 +168,11 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        #for b in urlsB:
-         #   yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        for b in urlsB:
+           yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        #for g in urlsG:
-        #    yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
+        for g in urlsG:
+            yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
 
         for m in urlsM:
             yield sc.Request(m, callback=self.parseLinkListG, dont_filter=True)
