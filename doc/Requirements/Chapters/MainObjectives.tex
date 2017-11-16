@@ -32,9 +32,22 @@ Concretely the wiki should have the following parts:
     \item Articles
     \item Archive
 \end{itemize}
-which will be further explained in next subsections.
-In general, it should be possible to link from any page in the wiki to any other page. 
+which will be further explained in the next subsections.
+\begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
+In general, it should be possible to link from any page in the wiki to any other page (see Secondary Objectives~\ref{2nd_bsi_link} for special requirements regarding the BSI catalogue). 
+Generell wiki behaviour as found on i.e. wikipedia.org applies:
+\begin{itemize}
+    \item each word on any page can only link to one other page at a time,
+    \item users who collaboratively work on the same wiki page can edit or delete each others links
+        .
+\end{itemize}
+\end{tcolorbox}
 
+\begin{comment}
+What is different from wikipedia is the way links are shown on BSI catalogue pages.
+While normal articles and news have normal word links - that means a word has a different colour, usually blue, to indicate that it is a link - BSI pages should have markers on the side which contain the links.
+This is thought to improve the readability of the BSI catalogue and to underline its quality as an official source as opposed to user created wiki content.
+\end{comment}
 
 \subsection{News}
 News are written by users but have to be approved by mods.
@@ -48,6 +61,9 @@ Converting such a big text volume into wiki content by hand would be an extended
 Accordingly, a parser is needed. 
 This parser will crawl and analyse the BSI Grundschutzkatalog website and create and sort the content automatically. 
 The BSI catalogue is the most restrictive part in the wiki and should only be modifiable by administrators.
+\begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
+    Should users find any mistakes on the pages of the BSI, i.e. something is translated badly, the users have to inform an administrator who has to correct the text in question.
+\end{tcolorbox}
 \\\\
 While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
 \\\\
