@@ -247,7 +247,7 @@ def translate():
 
             print(jsonFile)
         else:
-            return
+            print("Kommt später")
 
 if __name__ == '__main__':
     translate()
