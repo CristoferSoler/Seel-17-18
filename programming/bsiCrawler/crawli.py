@@ -95,7 +95,7 @@ def writeComponentJSON(h1, description_h2, description_content, recom_header, re
             if (isinstance(recom[i][1][j], list)):
                 subHeaderObject += '['
                 for k in range(0, len(recom[i][1][j])):
-                    if (j == len(recom[i][1][j]) - 1):
+                    if (k == len(recom[i][1][j]) - 1):
                         subHeaderObject += '"' + recom[i][1][j][k] + '"]'
                     else:
                         subHeaderObject += '"' + recom[i][1][j][k] + '",'
