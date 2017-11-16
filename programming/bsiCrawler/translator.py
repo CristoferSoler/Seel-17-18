@@ -1,8 +1,9 @@
 import json
 from googletrans import Translator
+import os
 
-directory = '/Users/Jonathan/PycharmProjects/Seel-17-18/programming/bsiCrawler/content/'
-
+directoryContent = '/Users/Jonathan/PycharmProjects/Seel-17-18/programming/bsiCrawler/content/'
+directory = '/Users/Jonathan/PycharmProjects/Seel-17-18/programming/bsiCrawler/content'
 def generateText(object):
     text = []
     for ob in object:
@@ -21,46 +22,52 @@ def translate():
         'translate.google.com',
         'translate.google.co.kr',
         'translate.google.de',
+        'translate.google.at',
+        'translate.google.pl',
     ])
-    descriptionEn = []
 
-    jsonFile = json.load(open(directory + 'B 1.1 Organisation.json'))
-    print(jsonFile)
-    h1DE = jsonFile['h1']
-    descriptionDE = jsonFile['description']['content']
-    recomContentDE = jsonFile['recommendations']['content']
-    subHeadersDEList = jsonFile['recommendations']['subheaders']
-    subheaderDEList1 = []
-    for subHeader in subHeadersDEList:
-        subheaderDEList1.append((subHeader['h3'],subHeader['content']))
+    for file in os.listdir(directory):
+        filename = os.fsdecode(file)
+        first = " ".join(filename.split(" ", 1)[:1])
+        if(first == 'B'):
+            jsonFile = json.load(open(directoryContent + filename))
+            print(jsonFile)
+            h1DE = jsonFile['h1']
+            descriptionDE = jsonFile['description']['content']
+            recomContentDE = jsonFile['recommendations']['content']
+            subHeadersDEList = jsonFile['recommendations']['subheaders']
+            subheaderDEList1 = []
+            for subHeader in subHeadersDEList:
+                subheaderDEList1.append((subHeader['h3'],subHeader['content']))
 
 
-    h1EN = translator.translate(h1DE, dest='en', src='de').text
+            h1EN = translator.translate(h1DE, dest='en', src='de').text
 
-    descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
-    descriptionEn = generateText(descriptionENObject)
+            descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
+            descriptionEn = generateText(descriptionENObject)
 
-    recomContentENObject = translator.translate(recomContentDE, dest='en', src='de')
-    recomContentEN = generateText(recomContentENObject)
+            recomContentENObject = translator.translate(recomContentDE, dest='en', src='de')
+            recomContentEN = generateText(recomContentENObject)
 
-    subheaderEN = []
-    for el in subheaderDEList1:
-        translateObject = []
-        translateObject.append(el[0])
-        translateObject.append(el[1])
-        translateObjectResponse = translator.translate(translateObject, dest='en', src='de')
-        subheaderEN.append((translateObjectResponse[0].text,generateText(translateObjectResponse[1])))
+            subheaderEN = []
+            for el in subheaderDEList1:
+                translateObject = []
+                translateObject.append(el[0])
+                translateObject.append(el[1])
+                translateObjectResponse = translator.translate(translateObject, dest='en', src='de')
+                subheaderEN.append((translateObjectResponse[0].text,generateText(translateObjectResponse[1])))
 
-    jsonFile['h1'] = h1EN
-    jsonFile['description']['content'] = descriptionEn
-    jsonFile['recommendations']['content'] = recomContentEN
+            jsonFile['h1'] = h1EN
+            jsonFile['description']['content'] = descriptionEn
+            jsonFile['recommendations']['content'] = recomContentEN
 
-    for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
-        jsonFile['recommendations']['subheaders'][i]['h1'] = subheaderEN[i][0]
-        jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
+            for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
+                jsonFile['recommendations']['subheaders'][i]['h1'] = subheaderEN[i][0]
+                jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
 
-    print(jsonFile)
-
+            print(jsonFile)
+        else:
+            return
 
 if __name__ == '__main__':
     translate()
