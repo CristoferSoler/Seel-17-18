@@ -6,8 +6,8 @@ from multiprocessing import Pool
 import threading
 
 
-directoryContent = './test/'
-directory = './test'
+directoryContent = './content/'
+directory = './content'
 def generateText(object):
     text = []
     for ob in object:
@@ -77,16 +77,14 @@ def translate(file):
 
 if __name__ == '__main__':
     files = os.listdir(directory)
-    start = time.time()
-    for file in files:
-        translate(file)
-    print("Normal: ", time.time() - start)
+    #start = time.time()
+    #for file in files:
+    #    translate(file)
+    #print("Normal: ", time.time() - start)
 
-    start = time.time()
+   # start = time.time()
 
     N = len(files)
-
-
 
     def task_wrapper(i):
         translate(files[i])
