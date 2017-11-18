@@ -5,6 +5,7 @@ import time
 from multiprocessing import Pool
 import re
 import codecs
+import io
 
 urls = [
         'translate.google.com',
@@ -64,8 +65,8 @@ def translate(fileJSON):
         if(first == 'B'):
             print(filename)
             test = directoryContent + fileJSON
-
-            jsonFile = json.load(codecs.open(test, 'r', 'utf-8-sig'))
+            with io.open(test, 'r', encoding='unicode_escape') as f:
+                jsonFile = json.load(f)
             h1DE = jsonFile['h1']
             descriptionDE = jsonFile['description']['content']
             recomContentDE = jsonFile['recommendations']['content']

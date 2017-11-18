@@ -44,10 +44,6 @@ def get_links(response, h2Headline):
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
 def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText):
-    if(h1 == 'B 3.301 Sicherheitsgateway (Firewall)'):
-        print('----------------------')
-        print(recom)
-        print('-----------------------')
     f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
     jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":['
 
@@ -175,14 +171,14 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        for b in urlsB:
-           yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        #for b in urlsB:
+        #   yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        '''for g in urlsG:
+        for g in urlsG:
             yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
 
         for m in urlsM:
-            yield sc.Request(m, callback=self.parseLinkListG, dont_filter=True)'''
+            yield sc.Request(m, callback=self.parseLinkListG, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
