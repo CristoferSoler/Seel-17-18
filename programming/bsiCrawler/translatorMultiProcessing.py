@@ -1,11 +1,11 @@
 import json
 from googletrans import Translator
 import os
-import time
 from multiprocessing import Pool
 import re
-import codecs
 import io
+import time
+import progressbar
 
 urls = [
         'translate.google.com',
@@ -31,6 +31,9 @@ urls = [
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
 directory = './content'
+
+#def checkStatus(filesLenght):
+#    with progressbar.ProgressBar(max_value=filesLenght) as bar:
 
 def check15k(list):
     size = 0
