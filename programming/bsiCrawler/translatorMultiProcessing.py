@@ -117,7 +117,8 @@ def translate(fileJSON):
         else:
             print(fileJSON)
             test = directoryContent + fileJSON
-            jsonFile = json.load(open(test))
+            with io.open(test, 'r', encoding='unicode_escape') as f:
+                jsonFile = json.load(f)
             h1DE = jsonFile['h1']
             descriptionDE = jsonFile['content']
 
