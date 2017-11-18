@@ -6,6 +6,27 @@ from multiprocessing import Pool
 import re
 import codecs
 
+urls = [
+        'translate.google.com',
+        'translate.google.co.kr',
+        'translate.google.de',
+        'translate.google.at',
+        'translate.google.pl',
+        'translate.google.af',
+        'translate.google.am',
+        'translate.google.ba',
+        'translate.google.ae',
+        'translate.google.ad',
+        'translate.google.be',
+        'translate.google.bf',
+        'translate.google.bg',
+        'translate.google.ba',
+        'translate.google.bi',
+        'translate.google.bj',
+        'translate.google.bs',
+        'translate.google.by',
+      ]
+
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
 directory = './content'
@@ -34,67 +55,95 @@ def generateText(object):
 
 
 def translate(fileJSON):
-    translator = Translator(service_urls=[
-        'translate.google.com',
-        'translate.google.co.kr',
-        'translate.google.de',
-        'translate.google.at',
-        'translate.google.pl',
-    ])
+    translator = Translator(service_urls=urls)
 
 
     filename = os.fsdecode(fileJSON)
     first = " ".join(filename.split(" ", 1)[:1])
-    if(first == 'B'):
-        print(filename)
-        test = directoryContent + fileJSON
+    if filename.endswith('.json'):
+        if(first == 'B'):
+            print(filename)
+            test = directoryContent + fileJSON
+
+            jsonFile = json.load(codecs.open(test, 'r', 'utf-8-sig'))
+            h1DE = jsonFile['h1']
+            descriptionDE = jsonFile['description']['content']
+            recomContentDE = jsonFile['recommendations']['content']
+            subHeadersDEList = jsonFile['recommendations']['subheaders']
+            subheaderDEList1 = []
+            for subHeader in subHeadersDEList:
+                subheaderDEList1.append((subHeader['h3'],subHeader['content']))
 
 
-        jsonFile = json.load(codecs.open(test, 'r', 'utf-8-sig'))
-        h1DE = jsonFile['h1']
-        descriptionDE = jsonFile['description']['content']
-        recomContentDE = jsonFile['recommendations']['content']
-        subHeadersDEList = jsonFile['recommendations']['subheaders']
-        subheaderDEList1 = []
-        for subHeader in subHeadersDEList:
-            subheaderDEList1.append((subHeader['h3'],subHeader['content']))
+            h1EN = translator.translate(h1DE, dest='en', src='de').text
+
+            if(check15k(descriptionDE)):
+                descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
+                descriptionEn = generateText(descriptionENObject)
+            else:
+                descriptionEn = descriptionDE
 
 
-        h1EN = translator.translate(h1DE, dest='en', src='de').text
+            if (check15k(recomContentDE)):
+                recomContentENObject = translator.translate(recomContentDE, dest='en', src='de')
+                recomContentEN = generateText(recomContentENObject)
+            else:
+                recomContentEN = recomContentDE
 
-        if(check15k(descriptionDE)):
-            descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
-            descriptionEn = generateText(descriptionENObject)
+            subheaderEN = []
+            for el in subheaderDEList1:
+                translateObject = []
+                translateObject.append(el[0])
+                translateObject.append(el[1])
+                translateObjectResponse = translator.translate(translateObject, dest='en', src='de')
+                subheaderEN.append((translateObjectResponse[0].text,generateText(translateObjectResponse[1])))
+
+            jsonFile['h1'] = h1EN
+            jsonFile['description']['content'] = descriptionEn
+            jsonFile['recommendations']['content'] = recomContentEN
+
+            for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
+                jsonFile['recommendations']['subheaders'][i]['h3'] = subheaderEN[i][0]
+                jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
+
+            f = open(directoryContentEN + re.sub('/','-',h1EN) + '.json', 'w')
+            f.write(json.dumps(jsonFile))
+            f.close()
+
         else:
-            descriptionEn = descriptionDE
+            print(fileJSON)
+            test = directoryContent + fileJSON
+            jsonFile = json.load(open(test))
+            h1DE = jsonFile['h1']
+            descriptionDE = jsonFile['content']
 
 
-        if (check15k(recomContentDE)):
-            recomContentENObject = translator.translate(recomContentDE, dest='en', src='de')
-            recomContentEN = generateText(recomContentENObject)
-        else:
-            recomContentEN = recomContentDE
+            h1EN = translator.translate(h1DE, dest='en', src='de').text
+            if (check15k(descriptionDE)):
+                descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
+                descriptionEn = generateText(descriptionENObject)
+            else:
+                descriptionEn = descriptionDE
 
-        subheaderEN = []
-        for el in subheaderDEList1:
-            translateObject = []
-            translateObject.append(el[0])
-            translateObject.append(el[1])
-            translateObjectResponse = translator.translate(translateObject, dest='en', src='de')
-            subheaderEN.append((translateObjectResponse[0].text,generateText(translateObjectResponse[1])))
+            try:
+                subHeaderDE = jsonFile['subheaders']
+                if (check15k(subHeaderDE)):
+                    subHeaderENObject = translator.translate(subHeaderDE, dest='en', src='de')
+                    subHeaderEN = generateText(subHeaderENObject)
+                else:
+                    subHeaderEN = subHeaderDE
 
-        jsonFile['h1'] = h1EN
-        jsonFile['description']['content'] = descriptionEn
-        jsonFile['recommendations']['content'] = recomContentEN
+                jsonFile['subheaders'] = subHeaderEN
 
-        for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
-            jsonFile['recommendations']['subheaders'][i]['h3'] = subheaderEN[i][0]
-            jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
+            except:
+                 pass
 
-        f = open(directoryContentEN + re.sub('/','-',h1EN) + '.json', 'w')
-        f.write(json.dumps(jsonFile))
-        f.close()
+            jsonFile['h1'] = h1EN
+            jsonFile['content'] = descriptionEn
 
+            f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.json', 'w')
+            f.write(json.dumps(jsonFile))
+            f.close()
         #time.sleep(3)
     #else:
         #print("Kommt später")
