@@ -19,7 +19,7 @@ Besides providing general information on IT-systems, the platform should provide
 \end{figure} 
 
 
-\section{Wiki } 
+\section{Wiki} 
 Considering the limited availability of IT-specialists in most of the developing countries, and after reviewing the possible ways to design and provide the platform, our team considers it convenient to create an open platform on which people can collaboratively add, edit, delete or archive content, similar to Wikipedia. 
 This should allow the platform to constantly grow and stay relevant to current circumstances. 
 The user created content beyond the BSI catalogue could make remarks about national peculiarities that do not play a role in Germany, aid further understanding or offer updates on more recent developments.
@@ -35,19 +35,43 @@ Concretely the wiki should have the following parts:
 which will be further explained in the next subsections.
 \begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
 In general, it should be possible to link from any page in the wiki to any other page (see Secondary Objectives~\ref{2nd_bsi_link} for special requirements regarding the BSI catalogue). 
-Generell wiki behaviour as found on i.e. wikipedia.org applies:
+General wiki behaviour as found on i.e. wikipedia.org applies:
 \begin{itemize}
     \item each word on any page can only link to one other page at a time,
-    \item users who collaboratively work on the same wiki page can edit or delete each others links
+    \item users who collaboratively work on the same wiki page can edit or delete each others text or links,
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
+    \item each page should have a history page where different versions of the page over time can be checked,
+    \item it is possible to retrieve a list of all users who ever worked on a given page in the wiki
+\end{tcolorbox}
         .
 \end{itemize}
 \end{tcolorbox}
 
-\begin{comment}
-What is different from wikipedia is the way links are shown on BSI catalogue pages.
-While normal articles and news have normal word links - that means a word has a different colour, usually blue, to indicate that it is a link - BSI pages should have markers on the side which contain the links.
-This is thought to improve the readability of the BSI catalogue and to underline its quality as an official source as opposed to user created wiki content.
-\end{comment}
+
+\subsection{Links}
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
+Links are represented in two ways which slightly differ in the domains of news, articles and catalogue.
+A link can be:
+\begin{enumerate}
+    \item \ldots a text link where the linked page directly comments on a word or phrase.
+                \begin{comment}
+        \begin{enumerate}
+            \item On article and news pages these are word links which means a single word is highlighted and represents the link.
+
+            \item On BSI catalogue pages a link belongs to a word but is displayed at the right of the text.
+                The word is not highlighted, instead there is a small but obvious mark next to the line of the text.
+                This mark could be a small uni-coloured area or a symbol and each line that has a link has a mark next to it.
+                When guests hover with their mouse over the mark a small pop-up should appear informing the guests which word of the text line links to which other page.
+                The other page should be given by its title not URL.
+                If a text line contains several links they are aggregated in a single mark.
+                This is thought to improve the readability of the BSI catalogue and to underline its quality as an official source as opposed to user created wiki content.
+        \end{enumerate}
+                \end{comment}
+    \item \ldots a bottom page link in section called 'See also' after the page content that is commenting on the wider scope of the whole page. 
+        News have no bottom page links.
+        .
+\end{enumerate}
+\end{tcolorbox}
 
 \subsection{News}
 News are written by users but have to be approved by mods.
@@ -64,9 +88,11 @@ The BSI catalogue is the most restrictive part in the wiki and should only be mo
 \begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
     Should users find any mistakes on the pages of the BSI, i.e. something is translated badly, the users have to inform an administrator who has to correct the text in question.
 \end{tcolorbox}
-\\\\
+\bigskip
+
 While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
-\\\\
+\bigskip
+
 \begin{tcolorbox}[breakable,colback=red!10,colframe=red!40!black,title=UPDATE 13/11/2017]
 The tree view adopts the structure as also found in pdf versions of the BSI catalogue. 
 See Appendix~\ref{appendix_bsi}.\\
@@ -86,7 +112,7 @@ See Appendix~\ref{appendix_bsi} for examples.
 \end{tcolorbox}
 
 
-\subsection{Archive}
+\subsection{Archive} 
 \label{archive}
 The website should always present up-to-date information for interested guests.
 Sometimes though a person might be interested in information on older systems which are not covered anymore in the most recent version of the BSI catalogue but in older versions.
@@ -94,6 +120,49 @@ Those older versions and ideally their related wiki content should be available 
 On the matter of the related content see section~\ref{archive_relcon}.
 
 For example: if users are looking for an information on a no longer supported operating system and there are none in the wiki regarding this problem, the user could find older approaches in the archive. 
+
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
+Content in the archive can not be edited.
+It stays as it is since the moment it is moved to the archive.
+\end{tcolorbox}
+
+
+\subsection{Updating the BSI Catalogue}
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
+Updating the BSI catalogue to a newer version happens in three phases:
+\begin{enumerate}
+    \item before the update: an admininistrator decides to update and performs the necessary action,
+    \item during the update: re-linking of pages,
+    \item after the update: the website is up-to-date again and old content is in the archive 
+\end{enumerate}
+
+About 1., the update can only be kicked-off by an administrator.
+The necessary action should be as simple as possible. 
+\begin{comment}
+Ideally the admin just has to click a button.
+\end{comment}
+\bigskip
+
+About 2., during this phase the website will be in a hybrid state.
+While the current catalogue is still available via 'Browse BSI' in the Top Section (see section~\ref{top_section}) the new catalogue will be advertised in the news section on the landing page.
+It should stick to the top of the news list and be marked as important news.
+With the end of phase 1 of the update users get a notification that articles they worked on in the past have to be re-linked.
+This means all the articles which are linked to the BSI catalogue and which therefore are to be considered outdated until proven otherwise by a user.
+At the same time there should be a page in the forum or wiki visable to all users that lists all the articles in question which have not been re-linked yet.
+With the end of phase 2 all pages which link to the catalogue that gets archived are moved to the archive as well.
+Pages which were re-linked to the new catalogue are copied versions.
+This is necessary because articles in the wiki could be edited to reflect real world changes. 
+Those edits then still apply to the new BSI catalogue but might not apply for older versions.
+Therefore, for every BSI catalogue version since the article was written and as long as it got re-linked the archive contains the same pages again which are not identical ones.
+\medskip
+
+The news section on the landing page should also link to a change log page that informs about dropped, inserted and altered catalogue parts. 
+\bigskip
+
+About 3., after a certain time - i.e. 30 days - the admin might choose to complete the process.
+The catalogue which up to now was accessible via 'Browse BSI' gets pushed into the archive including its wiki articles.
+The new catalogue gets is linked to the top section and the important news on the landing page can slowly drop down as other news come in.
+\end{tcolorbox}
 
 
 \subsection{User Types} 
@@ -106,32 +175,35 @@ Admins will have enough workload so we need another team of volunteers, like mod
 Moderators will be appointed by admins and will be responsible for policy enforcement for specific topics. 
 Further, users who would like to publish and/or modify content will need to register to the platform and be logged in. 
 All other users who are not logged in will be considered as guests and will only be able to read content. 
-These multiple user roles are needed to create a trustworthy platform. 
-\\\\
 The following section will discuss the different user roles and their functions. 
 %We decided to create four types of users with different user rights. 
 This is illustrated in the appendix by the use case diagrams. 
-\\\\
+\bigskip
+
 \textbf{Guest}, the guests have the possibility to browse and search in the archive and also in the wiki, which includes the BSI catalogue. The search can be refined with several options (more information about the search in the text search section~\ref{search_function}) 
 If guests are not sure how to find their problems they can use the wizard (more information in the wizard section~\ref{wizard}). 
 The wiki contains news from different topics which guests can check out.
-\\\\
+\bigskip
+
 \textbf{User}, every registered user (registed by email address and a password) can write articles in the wiki and change them with the functions: create content and edit content. 
 Created content can be linked in a certain part of the BSI catalogue. 
 If the BSI catalogue updates, users who have linked content get a notification to transfer this link to the new BSI catalogue or to archive the linked wiki article with it.
 They can also edit their profile. 
 After a User has logged in, he can still use the functions of a guest.
-\\\\
+\bigskip
+
 \textbf{Moderator} (mod), mods are managing the content published by the users.
 Managing or Moderating content means to delete wrong or inappropriate content or make checked content recognizable for guests that the content is verified.  
 Mods manage the news which means they can show certain news on the home page to get more attention or delete/change incorrect news. 
 Mods are also responsible, if necessary, to ban users. 
 Mods can use all functions users can use.
-\\\\
+\bigskip
+
 \textbf{Administrator} (admin), the admin sets or changes permissions like banning users, assign topics and manage news.
 One of the most important tasks of the admin is to update the BSI catalogue as soon as a new one is available and to move the old one to the archive.  There should be two admins for the website in case one is non-available.
 The admin can use all functions mods can use. 
-\\\\
+\bigskip
+
 The table \ref{fig:usertypes} shows the rights of each user.
 
 \begin{figure}[h]
@@ -155,7 +227,8 @@ Users should also have the opportunity to narrow down their search request by se
 \end{itemize}
  
 Choices should be available as a dropdown list.
-\\\\
+\bigskip
+
 The search field should be well placed on the home page. 
 The system should have a function "Back to the search results". 
 The search function should have fault tolerance, as well as the ability to deal with synonyms. 
@@ -193,7 +266,7 @@ The bottom section shows links to items as contact, legal notice, possibly FAQ a
     \caption{Schematic Home Page Design}
 \end{figure}
  
-\section{Top Section} 
+\section{Top Section}  
 \label{top_section}
 
 The top section is an always present area at the top of each subpage that connects the different services and allows for quick access.
