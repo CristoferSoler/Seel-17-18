@@ -6,6 +6,7 @@ import re
 import io
 import time
 import progressbar
+from threading import Thread
 
 urls = [
         'translate.google.com',
@@ -13,7 +14,6 @@ urls = [
         'translate.google.de',
         'translate.google.at',
         'translate.google.pl',
-        'translate.google.af',
         'translate.google.am',
         'translate.google.ba',
         'translate.google.ae',
@@ -31,9 +31,20 @@ urls = [
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
 directory = './content'
+directoryEN = './contentEn'
+fertig = False
 
-#def checkStatus(filesLenght):
-#    with progressbar.ProgressBar(max_value=filesLenght) as bar:
+def checkStatus(filesLenght):
+    bar = progressbar.ProgressBar(max_value=filesLenght).start()
+
+    while (fertig != True):
+        files = os.listdir(directoryEN)
+        bar.update(len(files))
+        time.sleep(0.1)
+
+    bar.finish()
+    return
+
 
 def check15k(list):
     size = 0
@@ -60,13 +71,11 @@ def generateText(object):
 
 def translate(fileJSON):
     translator = Translator(service_urls=urls)
-
-
     filename = os.fsdecode(fileJSON)
     first = " ".join(filename.split(" ", 1)[:1])
     if filename.endswith('.json'):
+        #translate all components
         if(first == 'B'):
-            print(filename)
             test = directoryContent + fileJSON
             with io.open(test, 'r', encoding='unicode_escape') as f:
                 jsonFile = json.load(f)
@@ -77,7 +86,6 @@ def translate(fileJSON):
             subheaderDEList1 = []
             for subHeader in subHeadersDEList:
                 subheaderDEList1.append((subHeader['h3'],subHeader['content']))
-
 
             h1EN = translator.translate(h1DE, dest='en', src='de').text
 
@@ -114,53 +122,59 @@ def translate(fileJSON):
             f.write(json.dumps(jsonFile))
             f.close()
 
+        #transalte all thread and counter measures
         else:
-            print(fileJSON)
-            test = directoryContent + fileJSON
-            with io.open(test, 'r', encoding='unicode_escape') as f:
-                jsonFile = json.load(f)
-            h1DE = jsonFile['h1']
-            descriptionDE = jsonFile['content']
-
-
-            h1EN = translator.translate(h1DE, dest='en', src='de').text
-            if (check15k(descriptionDE)):
-                descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
-                descriptionEn = generateText(descriptionENObject)
-            else:
-                descriptionEn = descriptionDE
-
             try:
-                subHeaderDE = jsonFile['subheaders']
-                if (check15k(subHeaderDE)):
-                    subHeaderENObject = translator.translate(subHeaderDE, dest='en', src='de')
-                    subHeaderEN = generateText(subHeaderENObject)
+                test = directoryContent + fileJSON
+                with io.open(test, 'r', encoding='unicode_escape') as f:
+                    jsonFile = json.load(f)
+
+                h1DE = jsonFile['h1']
+                descriptionDE = jsonFile['content']
+
+                h1EN = translator.translate(h1DE, dest='en', src='de').text
+                if (check15k(descriptionDE)):
+                    descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
+                    descriptionEn = generateText(descriptionENObject)
                 else:
-                    subHeaderEN = subHeaderDE
+                    descriptionEn = descriptionDE
 
-                jsonFile['subheaders'] = subHeaderEN
+                try:
+                    subHeaderDE = jsonFile['subheaders']
+                    if (check15k(subHeaderDE)):
+                        subHeaderENObject = translator.translate(subHeaderDE, dest='en', src='de')
+                        subHeaderEN = generateText(subHeaderENObject)
+                    else:
+                        subHeaderEN = subHeaderDE
 
-            except:
-                 pass
+                    jsonFile['subheaders'] = subHeaderEN
 
-            jsonFile['h1'] = h1EN
-            jsonFile['content'] = descriptionEn
+                except:
+                     pass
 
-            f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.json', 'w')
-            f.write(json.dumps(jsonFile))
-            f.close()
-        #time.sleep(3)
-    #else:
-        #print("Kommt später")
+                jsonFile['h1'] = h1EN
+                jsonFile['content'] = descriptionEn
+
+                f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.json', 'w')
+                f.write(json.dumps(jsonFile))
+                f.close()
+            except :
+                pass
+                print(fileJSON)
+
 
 if __name__ == '__main__':
     files = os.listdir(directory)
-    #start = time.time()
-    #for file in files:
-    #    translate(file)
-    #print("Normal: ", time.time() - start)
 
+    #add progressbar
+    t = Thread(target=checkStatus, args=(len(files),))
+    t.start()
+
+    #start Multiprocessing
     start = time.time()
     pool = Pool()
     pool.map(translate, files)
+    fertig = True
+    t.join()
     print("MultiProcessing: ", time.time() - start)
+    print('Finished')

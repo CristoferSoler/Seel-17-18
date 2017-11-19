@@ -1,8 +1,9 @@
 import scrapy as sc
-import requests as req
 import os
 import re
-import json
+
+#TODO
+#- einzelene Unterkapitel auslesen
 
 #Yandex Parameter
 APIKey = 'trnsl.1.1.20171104T205815Z.06e73f15109112a3.dabfe16a4052f8e8beb0d0263b8f6db5d71130b3'
@@ -171,8 +172,8 @@ class bsiSpider(sc.Spider):
         urlsG = get_links(response,'Gefährdungskataloge')
         urlsM = get_links(response,'Maßnahmenkataloge')
 
-        #for b in urlsB:
-        #   yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+        for b in urlsB:
+           yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
         for g in urlsG:
             yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
@@ -218,10 +219,10 @@ class bsiSpider(sc.Spider):
                 if(len(content.xpath('child::li'))!=0):
                     ul = []
                     for li in content.xpath('child::li'):
-                        ul.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
+                        ul.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
                     contents.append(ul)
                 else:
-                    contents.append(content.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
+                    contents.append(content.select('string()').extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
             else:
                 break
 
@@ -230,7 +231,7 @@ class bsiSpider(sc.Spider):
             ul = h3.xpath('following-sibling::ul')[0]
             listOfExample = []
             for li in ul.xpath('child::li'):
-                listOfExample.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n",""))
+                listOfExample.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
 
         writeThreadJSON(h1,contents,listOfExample)
 
@@ -257,11 +258,11 @@ class bsiSpider(sc.Spider):
                     if (len(ps.xpath('child::li')) != 0):
                         ul = []
                         for li in ps.xpath('child::li'):
-                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
                         description_content.append(ul)
 
                     else:
-                        description_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                        description_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
                 else:
                     break
 
@@ -273,11 +274,11 @@ class bsiSpider(sc.Spider):
                     if (len(ps.xpath('child::li')) != 0):
                         ul = []
                         for li in ps.xpath('child::li'):
-                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                            ul.append(li.select("string()").extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
                         recom_content.append(ul)
 
                     else:
-                        recom_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n",""))
+                        recom_content.append(ps.select("string()").extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
                 else:
                     break
 
@@ -292,11 +293,11 @@ class bsiSpider(sc.Spider):
                             ul = []
                             for li in ps.xpath('child::li'):
                                 ul.append(
-                                    li.select("string()").extract()[0].strip().replace("\"", "").replace("\n", ""))
+                                    li.select("string()").extract()[0].strip().replace("\"", "").replace("\n", "").replace("\\","/"))
                             h3_content.append(ul)
 
                         else:
-                            h3_content.append(ps.select("string()").extract()[0].strip().replace("\"", "").replace("\n", ""))
+                            h3_content.append(ps.select("string()").extract()[0].strip().replace("\"", "").replace("\n", "").replace("\\","/"))
                     else:
                         break
 
@@ -322,6 +323,6 @@ class bsiSpider(sc.Spider):
                 recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"","").replace("\n",""), sendRequestToYandex(recom[i][1]).replace("\"","").replace("\n",""))
                 wholeText = wholeText + recom[i][1]
             '''
-            writeComponentJSON(h1.replace("\"",""), description_h2.replace("\"",""), description_content, recom_header.replace("\"",""), recom_content, recom,wholeText)
+            writeComponentJSON(h1.replace("\"","").replace("\\","/"), description_h2.replace("\"","").replace("\\","/"), description_content, recom_header.replace("\"","").replace("\\","/"), recom_content, recom,wholeText)
 
 
