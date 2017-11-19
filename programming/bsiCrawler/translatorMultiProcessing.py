@@ -36,10 +36,15 @@ fertig = False
 
 def checkStatus(filesLenght):
     bar = progressbar.ProgressBar(max_value=filesLenght).start()
-
+    files = os.listdir(directoryEN)
+    lastFile = len(files)
     while (fertig != True):
         files = os.listdir(directoryEN)
-        bar.update(len(files))
+        if(lastFile != len(files)):
+            bar.update(len(files))
+            lastFile = len(files)
+        else:
+            pass
         time.sleep(0.1)
 
     bar.finish()
@@ -132,7 +137,14 @@ def translate(fileJSON):
                 h1DE = jsonFile['h1']
                 descriptionDE = jsonFile['content']
 
-                h1EN = translator.translate(h1DE, dest='en', src='de').text
+                #Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
+                first = " ".join(filename.split(" ", 2)[:2])
+                secound = filename.split(" ", 2)[2]
+                firstEN = translator.translate(first, dest='en', src='de').text
+                secoundEN =  translator.translate(secound, dest='en', src='de').text
+                h1EN = firstEN.replace(",",".") + " " + secoundEN
+
+
                 if (check15k(descriptionDE)):
                     descriptionENObject = translator.translate(descriptionDE, dest='en', src='de')
                     descriptionEn = generateText(descriptionENObject)
