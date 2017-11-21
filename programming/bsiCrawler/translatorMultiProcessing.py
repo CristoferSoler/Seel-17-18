@@ -8,6 +8,16 @@ import time
 import progressbar
 from threading import Thread
 
+def content_from_list(content):
+    mdFilePart = ''
+    for den in content:
+        if (not isinstance(den, list)):
+            mdFilePart += den + '\n\n'
+        else:
+            for li in den:
+                mdFilePart += '* ' + li + '\n'
+            mdFilePart += '\n\n'
+    return mdFilePart + '\n\n'
 urls = [
         'translate.google.com',
         'translate.google.co.kr',
@@ -53,7 +63,7 @@ directoryEN = './contentEn'
 fertig = False
 
 def checkStatus(filesLenght):
-    bar = progressbar.ProgressBar(max_value=filesLenght).start()
+    bar = progressbar.ProgressBar(maxval=filesLenght).start()
     files = os.listdir(directoryEN)
     lastFile = len(files)
     while (fertig != True):
@@ -96,6 +106,7 @@ def translate(fileJSON):
     translator = Translator(service_urls=urls)
     filename = os.fsdecode(fileJSON)
     first = " ".join(filename.split(" ", 1)[:1])
+    mdFile = ''
     if filename.endswith('.json'):
         #translate all components
         if(first == 'B'):
@@ -133,16 +144,29 @@ def translate(fileJSON):
                 translateObjectResponse = translator.translate(translateObject, dest='en', src='de')
                 subheaderEN.append((translateObjectResponse[0].text,generateText(translateObjectResponse[1])))
 
-            jsonFile['h1'] = h1EN
-            jsonFile['description']['content'] = descriptionEn
-            jsonFile['recommendations']['content'] = recomContentEN
 
-            for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
-                jsonFile['recommendations']['subheaders'][i]['h3'] = subheaderEN[i][0]
-                jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
+            mdFile += '#' + h1EN + '\n'
+            mdFile += '## Description \n'
+            mdFile += content_from_list(descriptionEn)
 
-            f = open(directoryContentEN + re.sub('/','-',h1EN) + '.json', 'w')
-            f.write(json.dumps(jsonFile))
+            mdFile += '## Countermeasures \n'
+            mdFile += content_from_list(recomContentEN)
+
+            for sub in subheaderEN:
+                mdFile += '###' + subheaderEN[0] + '\n'
+                mdFile += content_from_list(subheaderEN[1])
+
+            #jsonFile['h1'] = h1EN
+            #jsonFile['description']['content'] = descriptionEn
+            #jsonFile['recommendations']['content'] = recomContentEN
+
+
+            #for i in range(0,len(jsonFile ['recommendations']['subheaders'])):
+             #   jsonFile['recommendations']['subheaders'][i]['h3'] = subheaderEN[i][0]
+              #  jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
+
+            f = open(directoryContentEN + re.sub('/','-',h1EN) + '.md', 'w')
+            f.write(mdFile)
             f.close()
 
         #transalte all thread and counter measures
@@ -169,6 +193,9 @@ def translate(fileJSON):
                 else:
                     descriptionEn = descriptionDE
 
+                mdFile += '#' + h1EN + '\n'
+                # mdFile += '## Description \n'
+                mdFile += content_from_list(descriptionEn)
                 try:
                     subHeaderDE = jsonFile['subheaders']
                     if (check15k(subHeaderDE)):
@@ -177,16 +204,20 @@ def translate(fileJSON):
                     else:
                         subHeaderEN = subHeaderDE
 
-                    jsonFile['subheaders'] = subHeaderEN
+
+                    mdFile += "## Examples \n"
+                    array = []
+                    array.append(subHeaderEN)
+                    print(array)
+                    mdFile += content_from_list(array)
 
                 except:
                      pass
+                #jsonFile['h1'] = h1EN
+                #jsonFile['content'] = descriptionEn
 
-                jsonFile['h1'] = h1EN
-                jsonFile['content'] = descriptionEn
-
-                f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.json', 'w')
-                f.write(json.dumps(jsonFile))
+                f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.md', 'w')
+                f.write(mdFile)
                 f.close()
             except :
                 pass
