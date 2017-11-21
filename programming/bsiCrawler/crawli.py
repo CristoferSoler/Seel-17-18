@@ -209,6 +209,9 @@ class bsiSpider(sc.Spider):
 
         contentOfPage = content.xpath('h1').xpath('following-sibling::p|following-sibling::ul|following-sibling::h3|following-sibling::h2')
 
+        if not contentOfPage:
+            return
+
         contents = []
 
         for content in contentOfPage:
