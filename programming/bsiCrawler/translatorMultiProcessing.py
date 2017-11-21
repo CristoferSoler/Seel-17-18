@@ -180,8 +180,8 @@ def translate(fileJSON):
                 descriptionDE = jsonFile['content']
 
                 #Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-                first = " ".join(filename.split(" ", 2)[:2])
-                secound = filename.split(" ", 2)[2]
+                first = " ".join(h1DE.split(" ", 2)[:2])
+                secound = h1DE.split(" ", 2)[2]
                 firstEN = translator.translate(first, dest='en', src='de').text
                 secoundEN =  translator.translate(secound, dest='en', src='de').text
                 h1EN = firstEN.replace(",",".") + " " + secoundEN
@@ -208,7 +208,6 @@ def translate(fileJSON):
                     mdFile += "## Examples \n"
                     array = []
                     array.append(subHeaderEN)
-                    print(array)
                     mdFile += content_from_list(array)
 
                 except:
