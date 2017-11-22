@@ -153,8 +153,8 @@ def translate(fileJSON):
             mdFile += content_from_list(recomContentEN)
 
             for sub in subheaderEN:
-                mdFile += '###' + subheaderEN[0] + '\n'
-                mdFile += content_from_list(subheaderEN[1])
+                mdFile += '###' + sub[0] + '\n'
+                mdFile += content_from_list(sub[1])
 
             #jsonFile['h1'] = h1EN
             #jsonFile['description']['content'] = descriptionEn
