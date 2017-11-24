@@ -1,4 +1,4 @@
-"""website URL Configuration
+"""bsiwiki URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -13,13 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import include, url
+from django.conf.urls import url
 from django.contrib import admin
-from rest_framework.urlpatterns import format_suffix_patterns
-from model import views
+from wiki.urls import get_pattern as get_wiki_pattern
+from django_nyt.urls import get_pattern as get_nyt_pattern
 
 urlpatterns = [
-    url(r'^BSIArticle/', views.BSIArticleList.as_view()), # BSI article handler
+    url(r'^admin/', admin.site.urls),
+    url(r'^notifications/', get_nyt_pattern()),
+    url(r'', get_wiki_pattern()),
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
