@@ -1,3 +1,6 @@
 <ul>
-    <li><a href="#">TEXT GOES HERE</a></li>
+
+    {% for art in all_articles %}
+        <li><a href="#">{{ art.modified }}</a></li>
+        {% endfor %}
 </ul>
