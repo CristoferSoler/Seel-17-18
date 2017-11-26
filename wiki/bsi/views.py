@@ -1,4 +1,3 @@
-from msilib.schema import ListView
 
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -17,4 +16,3 @@ def index(request):
         'all_articles':all_articles,
     }
     return HttpResponse(template.render(context, request))
-
