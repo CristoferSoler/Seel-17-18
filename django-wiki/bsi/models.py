@@ -10,6 +10,17 @@ class ArticleAttr(models.Model):
     reference_id = models.ForeignKey(Article, blank=True, related_name='is_linked_to')
     bsi_id = models.CharField(max_length=10, blank=True)
 
+    def isThreat(self):
+        return bsi_id.startswith('G')
+    def isComponent(self):
+        return bsi_id.startswith('B')
+    def isCountermeasure(self):
+        return bsi_id.startswith('M')
+    def isBSIArticle(self):
+        return bool(bsi_id);
+    def isUserArticle(self):
+        return not bsi_id;
+
 @receiver(post_save, sender=Article)
 def create_article_attr(sender, instance, created, **kwargs):
     if created:
