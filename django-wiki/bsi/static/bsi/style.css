@@ -1,0 +1,37 @@
+footer {
+    min-height: 50px;
+    padding: 20px 0 10px 0;
+}
+
+footer .menu li a {
+    font-family: Roboto;
+    color: rgb(6, 128, 209);
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer .menu li a:hover {
+    color: #7dabdb;
+}
+
+.jumbotron-margin {
+    margin-top: 70px;
+}
+
+.navbar-default {
+    background-color: #1b4f84;
+    border-color: #4d8fc8;
+}
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-text {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+
