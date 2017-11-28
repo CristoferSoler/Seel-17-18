@@ -189,7 +189,7 @@ class bsiSpider(sc.Spider):
             first = " ".join(text.split(" ", 1)[:1])
             secound = text.split(" ", 1)[1]
             secoundEN = translator.translate(secound, dest='en', src='de').text
-            text = first.first.replace(',','.') + " " + secoundEN
+            text = first.replace(',','.') + " " + secoundEN
             tree['Maßnahmenkataloge'][h1En].append(text)
 
     #Fertig mit dem Auslesen der Struktur
