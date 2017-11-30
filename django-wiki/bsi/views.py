@@ -20,7 +20,7 @@ def index(request):
 def login(request):
     all_articles = Article.objects.all()
 
-    template = loader.get_template('bsi/login.html')
+    template = loader.get_template('bsi/loginRegister.html')
     context = {
         'all_articles':all_articles,
     }
