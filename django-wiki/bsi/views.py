@@ -16,3 +16,12 @@ def index(request):
         'all_articles':all_articles,
     }
     return HttpResponse(template.render(context, request))
+
+def login(request):
+    all_articles = Article.objects.all()
+
+    template = loader.get_template('bsi/login.html')
+    context = {
+        'all_articles':all_articles,
+    }
+    return HttpResponse(template.render(context, request))
