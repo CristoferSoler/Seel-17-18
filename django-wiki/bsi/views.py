@@ -18,6 +18,16 @@ def index(request):
     template = loader.get_template('bsi/index.html')
     context = {
         'all_articles':all_articles,
+    }  
+    return HttpResponse(template.render(context, request))
+
+
+def bsicatalog(request):
+    all_articles = Article.objects.all()
+
+    template = loader.get_template('bsi/article.html')
+    context = {
+        'all_articles':all_articles,
     }
     return HttpResponse(template.render(context, request))
 
