@@ -21,15 +21,18 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def login(request):
-    all_articles = Article.objects.all()
-
-    template = loader.get_template('bsi/loginRegister.html')
-    context = {
-        'all_articles':all_articles,
-    }
-    return HttpResponse(template.render(context, request))
-
+def signin(request):
+    if request.method == 'POST':
+        userObj = request.POST.cleaned_data
+        username = userObj['username']
+        password = userObj['password']
+        user = authenticate(username=username, password=password)
+        login(request, user)
+    else:
+        all_articles = Article.objects.all()
+        template = loader.get_template('bsi/loginRegister.html')
+        context = {'all_articles': all_articles}
+        return HttpResponse(template.render(context, request))
 
 @login_required
 def home(request):
@@ -65,8 +68,8 @@ def signup(request):
             password =  userObj['password']
             if not (User.objects.filter(username=username).exists() or User.objects.filter(email=email).exists()):
                 User.objects.create_user(username, email, password)
-                user = authenticate(username = username, password = password)
-                login(user)
+                user = authenticate(username=username, password = password)
+                login(request=request, user=user)
                 return HttpResponseRedirect('/')
             else:
                 raise forms.ValidationError('Looks like a username with that email or password already exists')
