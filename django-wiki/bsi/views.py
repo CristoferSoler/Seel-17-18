@@ -82,7 +82,7 @@ def signup(request):
                 login(request=request, user=user)
                 return HttpResponseRedirect('/')
             else:
-                raise forms.ValidationError('Looks like a username with that email or password already exists')
+                raise forms.ValidationError('Looks like a username with that email or   password already exists')
 
     else:
         #form = UserRegistrationForm()
