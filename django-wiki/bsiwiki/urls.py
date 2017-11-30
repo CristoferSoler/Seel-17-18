@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^wiki/', get_wiki_pattern()),
-    url(r'^bsi/', include('bsi.urls'))
+    url(r'^', include('bsi.urls'))
 ]
