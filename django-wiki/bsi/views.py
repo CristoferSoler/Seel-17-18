@@ -16,3 +16,4 @@ def index(request):
         'all_articles':all_articles,
     }
     return HttpResponse(template.render(context, request))
+

@@ -1,0 +1,89 @@
+{% extends 'bsi/base.html'%}
+
+<!--{% load wiki_tags i18n humanize %}-->
+
+
+<!--{% block wiki_pagetitle %}{% trans "Search results for:" %} {{ search_query }}{% endblock %}-->
+
+{% block bsi_contents %}
+<div class="container">
+    <h1 class="page-header">
+        <!--{% trans "Search results for:" %} {{ search_query }}-->
+    </h1>
+    <div class="form-group">
+            <p class="lead">
+        <div class="input-group">
+            <input type="search" value="" class="form-control" name="text"> <!--value="{{ search_query }}" -->
+            <div class="input-group-btn bs-dropdown-to-select-group">
+                <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
+                    <span data-bind="bs-drp-sel-label">All</span>
+                    <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu" style="">
+                    <li data-value="1">
+                        <a href="#">All</a>
+                    </li>
+                    <li data-value="2">
+                        <a href="#">Modules</a>
+                    </li>
+                    <li data-value="3">
+                        <a href="#">Threats</a>
+                    </li>
+                    <li data-value="4">
+                        <a href="#">Measures</a>
+                    </li>
+                    <li data-value="5">
+                        <a href="#">Archive</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+         <!--<p>{% blocktrans with paginator.object_list.count as cnt %}Your search returned <strong>{{ cnt }}</strong> results.{% endblocktrans %}</p>-->
+         <div class="clearfix"></div>
+        </p>
+    </div>
+   
+    <table class="table table-striped">
+        <tr>
+            <th style="width: 55%">Title</th>
+            <!-- trans -->
+            <th>Category</th>
+            <th>Last modified</th>
+
+        </tr>
+        <!--{% for article in articles %}
+    {% block wiki_search_loop %}
+    {% include "wiki/includes/searchresult.html" %}
+    {% endblock %}
+    {% empty%}-->
+        <tr>
+            <td colspan="100">
+                <em>There are no articles in this level</em>
+            </td>
+        </tr>
+        <!-- {% endfor %}-->
+    </table>
+</div>
+<!--{% include "wiki/includes/pagination.html" %}-->
+
+<script>
+        $(document).ready(function(e){
+        $( document ).on( 'click', '.bs-dropdown-to-select-group .dropdown-menu li', function( event ) {
+            var $target = $( event.currentTarget );
+            $target.closest('.bs-dropdown-to-select-group')
+                .find('[data-bind="bs-drp-sel-value"]').val($target.attr('data-value'))
+                .end()
+                .children('.dropdown-toggle').dropdown('toggle');
+            $target.closest('.bs-dropdown-to-select-group')
+                .find('[data-bind="bs-drp-sel-label"]').text($target.context.textContent);
+            return false;
+        });
+    });
+    </script>
+    
+
+{% endblock %}

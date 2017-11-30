@@ -11,11 +11,12 @@ footer .menu li a {
 }
 
 footer .menu li a:hover {
-    color: #7dabdb;
+    color: #ffffff;
 }
 
 .jumbotron-margin {
     margin-top: 70px;
+    margin-bottom: 100px;
 }
 
 .navbar-default {
@@ -31,7 +32,27 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
+.navbar-default .navbar-brand>li>a {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #77c1fd;
+}
+
+.nav > li > a:hover{
+  color:#ffffff;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #77c1fd;
+}
+
+
 .navbar-default .navbar-nav>li>a {
     color: #ffffff;
 }
+
 
