@@ -111,9 +111,11 @@ def translate(fileJSON):
         #translate all components
         if(first == 'B'):
             test = directoryContent + fileJSON
-            with io.open(test, 'r', encoding='unicode_escape') as f:
+            with io.open(test, 'r', encoding='utf-8') as f:
                 jsonFile = json.load(f)
+
             h1DE = jsonFile['h1']
+            #print(h1DE)
             descriptionDE = jsonFile['description']['content']
             recomContentDE = jsonFile['recommendations']['content']
             subHeadersDEList = jsonFile['recommendations']['subheaders']
@@ -173,7 +175,7 @@ def translate(fileJSON):
         else:
             try:
                 test = directoryContent + fileJSON
-                with io.open(test, 'r', encoding='unicode_escape') as f:
+                with io.open(test, 'r', encoding='utf-8') as f:
                     jsonFile = json.load(f)
 
                 h1DE = jsonFile['h1']

@@ -1,10 +1,19 @@
-#BSI Crawler
-### Install needed software for the crawler 
+#Readme
+### Overview
+    crawli.py fetch all the bsi content
+    crawliTree.py fetch the treeview 
+    translatorMultiProcessing.py translate the bsi content into md files
+### Software for the crawler 
      python3: apt-get install python3.6
      pip3: sudo apt-get -y install python3-pip
      pip3: install scrapy
-###How to start the crawler
+     pip3 install progressbar2
+     pip3 install googletrans
+###How to start
     scrapy runspider crawli.py
+    scrapy runspider crawliTree.py
+    python3 translatorMultiProcessing.py
+    
 ###JSON Format for components
 ````json
 { "h1": "Title",
