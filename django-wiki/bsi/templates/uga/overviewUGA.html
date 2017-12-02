@@ -1,26 +1,40 @@
 <script src="../../static/bsi/js/jquery.min.js"></script>
-
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
 {% extends 'bsi/base.html'%} {% block bsi_contents %}
 <div class="container margin-container">
      <div class="jumbotron-margin">
-         <h2>User Generated Articles</h2>
+         <h1 class="page-header">User Generated Articles</h1>
          <div class="jumbotron">
              {% if user.is_authenticated %}
                <span>
                    <span>Add a new UG article</span>
                    <a href="#" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
              {%else%}
-                <a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+                <span>Add a new UG article</span>
+                <a  data-toggle="tooltip" title="Please Log in!" disabled href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
              {%endif%}
-
+                   <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Article Name</th>
+                            <th>Author</th>
+                            <th>Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
                         {%for article in articles%}
-                             <div>
-                                 <span>{{article.name}}</span>
-                                 <span>{{article.user}}</span>
-                                 <span>{{article.date}}</span>
-                                </div>
-
+                          <tr>
+                              <th>{{article.name}}</th>
+                              <th>{{article.user}}</th>
+                              <th>{{article.date}}</th>
+                          </tr>
                         {%endfor%}
+                        </tbody>
+                      </table>
 
              {% if articles.has_other_pages %}
               <ul class="pagination">
@@ -47,3 +61,5 @@
      </div>
 </div>
 {%endblock%}
+
+
