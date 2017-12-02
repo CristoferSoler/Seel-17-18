@@ -91,7 +91,8 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 
-LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
+#LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
+LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
