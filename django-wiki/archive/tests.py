@@ -4,13 +4,14 @@ from wiki.models import Article, ArticleRevision, URLPath, Site
 from archive.models import ArchiveTransaction
 
 
-# Create your tests here.
 class ArchiveTestCase(TestCase):
+    """
+
+    """
     def setUp(self):
         ArchiveTestCase.createArticle(rev_title="root", article_type=Article, parent=None, slug=None)
         ArchiveTestCase.createArticle(rev_title="subarticle1", article_type=Article, parent=URLPath.objects.filter(slug=None)[0], slug="subarticle1")
         ArchiveTestCase.createArticle(rev_title="archive", article_type=Article, parent=URLPath.objects.filter(slug=None)[0], slug="archive")
-        # todo create archive here <- implement create function in models or views
 
     def test_article_moved_to_archive(self):
 
