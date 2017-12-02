@@ -4,22 +4,31 @@ from wiki.models import Article, URLPath
 
 # Create your models here.
 
-class ArchivedArticle(models.Model):
-    article = models.OneToOneField('Article', verbose_name=_('archived article'),
-                                   blank=True, null=True, related_name='archived',
-                                   help_text=_(
-                                       'Article that has been archived.'), on_delete=models.CASCADE, )
+# class ArchivedArticle(models.Model):
+#     article = models.OneToOneField('Article', verbose_name=_('archived article'),
+#                                    blank=True, null=True, related_name='archived',
+#                                    help_text=_(
+#                                        'Article that has been archived.'), on_delete=models.CASCADE, )
+#
+#     archive = models.OneToOneField('Archive', verbose_name=_('related archive'),
+#                                    blank=False, null=False, related_name='belongig_to',
+#                                    help_text=_(
+#                                        'Archive which contains this archived article.'), on_delete=models.CASCADE, )
+#
 
-    archive = models.OneToOneField('Archive', verbose_name=_('related archive'),
-                                   blank=False, null=False, related_name='belongig_to',
-                                   help_text=_(
-                                       'Archive which contains this archived article.'), on_delete=models.CASCADE, )
+class Archive(Article):
+    def archiveArticle(self, article):
+        """
 
+        """
 
-class Archive(models.Model):
-    created = models.DateTimeField(
-        auto_now_add=True,
-        verbose_name=_('created'),
-    )
+        article.urlpath.parent = self.urlpath
+        # article.urlpath.slug = form.cleaned_data['slug']
+        article.urlpath.save()
 
-    url = URLPath.create_urlpath()
+        # Reload url path from database
+        article.urlpath = models.URLPath.objects.get(pk=article.urlpath.pk)
+
+        # Use a copy of ourself (to avoid cache) and update article links again
+        for ancestor in models.Article.objects.get(pk=article.pk).ancestor_objects():
+            ancestor.article.clear_cache()
