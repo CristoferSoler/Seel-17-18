@@ -96,9 +96,15 @@ def create_article_with_revision(site, parent, slug, content, rev_title, rev_kwa
         slug=slug,
         article=article)
     article.add_object_relation(newpath)
+    if not slug:
+        slug = '/'
+    print('Created article at ', slug)
 
 if __name__ == '__main__':
-    # Article.objects.all().delete()
+
+    # Article.objects.all().delete() # thats horribly slow
+    root_kwargs = {'content': '', 'user_message': 'Crawler input', 'ip_address': 'None'}
+    create_article_with_revision(site = Site.objects.get_current(),parent=None, slug=None, content='', rev_title='Root', rev_kwargs=root_kwargs)
     insert_BSI_db()
     # finally:
 #     conn.close()

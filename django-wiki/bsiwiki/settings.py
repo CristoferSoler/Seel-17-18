@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'wiki.plugins.images',
     'wiki.plugins.macros',
     'wiki.plugins.links',
+    'bsiwiki',
+    'bsi',
 ]
 
 MIDDLEWARE = [
