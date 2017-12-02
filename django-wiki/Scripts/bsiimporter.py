@@ -1,8 +1,10 @@
 import argparse
 import django
 import ConfigParser
+import win32com.client
 from os.environ import setdefault
 from os.path import listdir, isfile, isdir, join
+
 from wiki.models import Article, URLPath, Site, ArticleRevision
 
 
@@ -108,6 +110,15 @@ def appendThreatMeasureRelation(file):
     # TODO
     return
 
+#Calling Macro to get cross reference relation tables
+def generateComponentsThreatsMeasuresRelation(excelFolderDir, macroFileDir, txtFolderDir):
+    xl = win32com.client.Dispatch("Excel.Application")
+    xl.Visible = True
+    Path = macroFileDir # "Cross Reference.xlsm"
+    xl.Workbooks.Open(Filename=Path)
+    param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
+    param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
+    xl.Application.Run("Extraction", param1, param2)
 
 def cleanUp():
     # TODO remove all temp dirs and update files in current dirs
