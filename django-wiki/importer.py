@@ -8,13 +8,16 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
 from wiki.models import Article, URLPath, Site, ArticleRevision
+from bsiwiki import settings
+
+
 # from website import model
 
 def BSI_db_import(folder_location):
     BSI_description = []
     file_description = []
 
-    for dirpath, dirnames, filenames in os.walk(r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\content'):
+    for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
         for filename in [f for f in filenames if f.endswith(".json")]:
             # get the drive and the filepath
             # drive, path_and_file = os.path.splitdrive(os.path.join(dirpath, filename))
@@ -47,7 +50,7 @@ def BSI_db_import(folder_location):
 def insert_BSI_db():
     # BSI_description = BSI_db_import(r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\content')
 
-    for dirpath, dirnames, filenames in os.walk(r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\content'):
+    for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
         for filename in [f for f in filenames if f.endswith(".json")]:
             # get the drive and the filepath
             # drive, path_and_file = os.path.splitdrive(os.path.join(dirpath, filename))
