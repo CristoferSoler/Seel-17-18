@@ -68,3 +68,6 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'bsi/account/register.html', {'form': form})
+
+def create(request):
+    return render(request, 'bsi/create_article.html')
