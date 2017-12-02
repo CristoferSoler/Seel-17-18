@@ -1,0 +1,49 @@
+<script src="../../static/bsi/js/jquery.min.js"></script>
+
+{% extends 'bsi/base.html'%} {% block bsi_contents %}
+<div class="container margin-container">
+     <div class="jumbotron-margin">
+         <h2>User Generated Articles</h2>
+         <div class="jumbotron">
+             {% if user.is_authenticated %}
+               <span>
+                   <span>Add a new UG article</span>
+                   <a href="#" class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+             {%else%}
+                <a href="#" class="btn btn-primary btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+             {%endif%}
+
+                        {%for article in articles%}
+                             <div>
+                                 <span>{{article.name}}</span>
+                                 <span>{{article.user}}</span>
+                                 <span>{{article.date}}</span>
+                                </div>
+
+                        {%endfor%}
+
+             {% if articles.has_other_pages %}
+              <ul class="pagination">
+                {% if articles.has_previous %}
+                  <li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&laquo;</span></li>
+                {% endif %}
+                {% for i in articles.paginator.page_range %}
+                  {% if articles.number == i %}
+                    <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                  {% else %}
+                    <li><a href="?page={{ i }}">{{ i }}</a></li>
+                  {% endif %}
+                {% endfor %}
+                {% if articles.has_next %}
+                  <li><a href="?page={{ articles.next_page_number }}">&raquo;</a></li>
+                {% else %}
+                  <li class="disabled"><span>&raquo;</span></li>
+                {% endif %}
+              </ul>
+            {% endif %}
+         </div>
+     </div>
+</div>
+{%endblock%}
