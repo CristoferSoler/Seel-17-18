@@ -55,7 +55,6 @@ class UserRegistrationForm(forms.Form):
         widget=forms.PasswordInput()
     )
 
-
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
