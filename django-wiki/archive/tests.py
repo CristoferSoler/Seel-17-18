@@ -1,20 +1,22 @@
 from django.db.models.base import ModelBase
 from django.test import TestCase
 from wiki.models import Article, ArticleRevision, URLPath, Site
-from archive.models import ArchiveTransaction
+from archive.models import Archive, ArchiveTransaction
 
 
 class ArchiveTestCase(TestCase):
     """
-
+    In this test case a root, a normal article and an archive are created. The test creates a transaction that puts the normal article into the archive.
+    The test fails if the parent of the normal article is not the archive in the end.
     """
+
     def setUp(self):
-        ArchiveTestCase.createArticle(rev_title="root", article_type=Article, parent=None, slug=None)
-        ArchiveTestCase.createArticle(rev_title="subarticle1", article_type=Article, parent=URLPath.objects.filter(slug=None)[0], slug="subarticle1")
-        ArchiveTestCase.createArticle(rev_title="archive", article_type=Article, parent=URLPath.objects.filter(slug=None)[0], slug="archive")
+        rev_kwargs = {'content': '', 'user_message': 'ArchiveTestCase.setUp', 'ip_address': 'None'}
+        root = URLPath.create_urlpath(parent=None, slug=None, title='root', **rev_kwargs)
+        URLPath.create_urlpath(parent=root, slug='subarticle1', title='subarticle1', **rev_kwargs)
+        Archive.get_or_create(slug='2017')
 
     def test_article_moved_to_archive(self):
-
         # get test sub article
         # article_id = URLPath.objects.filter(slug='subarticle1').values_list('article')[0]
         article = URLPath.objects.get(slug='subarticle1').article
@@ -32,37 +34,24 @@ class ArchiveTestCase(TestCase):
         self.assertTrue(parent == root, "article 'parent' should be the root")
 
         # get archive
-        archive_path = URLPath.objects.get(slug='archive')
-        archive = archive_path.article
+        archive = Archive.get_archive_by_slug(slug='2017')
 
         # archive article
-        transaction = ArchiveTransaction.create(archive_path)
+        transaction = ArchiveTransaction.create(archive)
         transaction.archive(URLPath.objects.get(slug='subarticle1'))
 
-        parent = URLPath.objects.get(slug='subarticle1').parent.article
+        parent = URLPath.objects.get(slug='subarticle1').parent
 
         # parent of sub article should be archive
-        self.assertTrue(parent == archive, "article 'archive' should be the parent")
+        self.assertTrue(parent == archive.archive_url, "article '2017' should be the parent")
 
+    def test_get_or_create_archive(self):
+        number_of_urls = URLPath.objects.filter(slug='2017').count()
+        self.assertTrue(number_of_urls == 1, "There should be only one archive")
 
+        # get the same archive again
+        Archive.get_or_create(slug='2017')
 
-    @classmethod
-    def createArticle(cls, article_type, rev_title, parent, slug):
-        revision_kwargs = {'content': 'content', 'user_message': 'Crawler input', 'ip_address': 'None'}
-
-        site = Site.objects.get_current()
-
-        article_kwargs = {}
-        # article_cls = ModelBase(article_type, (), {})
-        article = article_type(**article_kwargs)
-        # test = Article(**article_kwargs)
-        article.add_revision(ArticleRevision(title=rev_title, **revision_kwargs),
-                             save=True)
-        article.save()
-        newpath = URLPath.objects.create(
-            site=site,
-            parent=parent,
-            slug=slug,
-            article=article)
-
-        article.add_object_relation(newpath)
+        # still there should be only one archive
+        number_of_urls = URLPath.objects.filter(slug='2017').count()
+        self.assertTrue(number_of_urls == 1, "There should be only one archive")
