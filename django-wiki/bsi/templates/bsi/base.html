@@ -54,7 +54,7 @@
                     </li>
                 </ul>
 
-                <form class="navbar-form navbar-right id="wiki-search-form" method="GET" action="{% url 'wiki:search' %}">
+                <form class="navbar-form navbar-right id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                     <div class="form-group">
                         <input type="search" class="form-control search-query" name="q" placeholder="" />
                     </div>
@@ -70,7 +70,13 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
+                    <li>
+                    <a href="{% url 'password_change' %}">
+                      <i class="fa fa-gear"></i>
+                      Account Settings
+                    </a>
+                   </li>
+                    <li>
                     <a href="{% url 'logout' %}">
                       <i class="fa fa-power-off"></i>
                       Log out

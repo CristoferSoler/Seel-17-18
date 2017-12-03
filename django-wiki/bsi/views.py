@@ -12,6 +12,18 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django import forms
 
+class BSISearchView(SearchView):
+    template_name = "bsi/search.html"
+    
+    def dispatch(self, request, *args, **kwargs):
+        return super(BSISearchView, self).dispatch(request, *args, **kwargs)
+
+    def get_queryset(self):
+        return super(BSISearchView, self).get_queryset()
+
+    def get_context_data(self, **kwargs):
+        return super(BSISearchView, self).get_context_data(**kwargs)
+
 
 
 class SearchViewM(SearchView):

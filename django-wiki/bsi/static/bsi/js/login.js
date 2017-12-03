@@ -15,4 +15,19 @@
 		e.preventDefault();
 	});
 
+	var error = "{{error}}";
+	console.log('Halo')
+	if(error) {
+		$('#login-form-link').removeClass('active');
+		$('#register-form-link').addClass('active');
+		e.preventDefault();
+	}
 });
+
+
+function registerError (error){
+	if(error){
+		$('#login-form-link').removeClass('active');
+		$('#register-form-link').addClass('active');
+	}
+};
