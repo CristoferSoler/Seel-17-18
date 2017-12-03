@@ -5,7 +5,7 @@ footer {
 
 footer .menu li a {
     font-family: Roboto;
-    color: rgb(6, 128, 209);
+    color:  #1b4f84;
     padding: 10px;
     text-decoration: none;
 }
@@ -28,26 +28,11 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
-.navbar-default .navbar-text {
-    color: #ffffff;
-}
 
-.navbar-default .navbar-brand>li>a {
-    color: #ffffff;
-}
-
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-  color: #77c1fd;
-}
-
-.nav > li > a:hover{
-  color:#ffffff;
-}
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #77c1fd;
+  color: grey;
 }
 
 
@@ -90,41 +75,7 @@ footer .menu li a:hover {
 }
 
 /* FOR DEMO ONLY */
-body {
-    background-color: rgb(255, 255, 255);
-    font-size: 16px;
-}
 
-header {
-    background: url('https://unsplash.imgix.net/photo-1427955569621-3e494de2b1d2?fit=crop&fm=jpg&h=700&q=75&w=1050') no-repeat center bottom;
-    background-size: cover;
-    margin-bottom: 30px;
-    min-height: 320px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-header:after {
-    bottom: 0px;
-    box-shadow: 0px -0px 10px 10px rgb(255, 255, 255);
-    content: '';
-    height: 0px;
-    left: 0px;
-    width: 100%;
-    position: absolute;
-}
-header .col-xs-12 {
-    height: 320px;
-}
-
-header .alert-info {
-    background-color: rgba(156, 39, 176, 0.7);
-}
-
-.title {
-    font-weight: 700;
-    margin-top: 0px;
-}
 
 p.small.text-muted {
     margin-bottom: 0px;
@@ -143,3 +94,40 @@ p.small.text-muted {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+
+section {
+  padding: 130px 0;
+    display: flex;
+}
+
+.center-items {
+    display: flex;
+    align-items: center;
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem; }
+  .features-icons .features-icons-item {
+    max-width: 50rem;
+    position: center;
+
+   }
+    .features-icons .features-icons-item .features-icons-icon {
+      height: 7rem; }
+      .features-icons .features-icons-item .features-icons-icon i {
+        font-size: 6rem; }
+    .features-icons .features-icons-item:hover .features-icons-icon i {
+      font-size: 5rem; }

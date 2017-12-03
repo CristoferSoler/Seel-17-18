@@ -1,15 +1,15 @@
 {% extends 'bsi/base.html'%} {% block bsi_contents %}
-<div class="container margin-container">
-    <div class="jumbotron jumbotron-margin text-center">
-            {% load staticfiles %}
-        <img src="{% static 'bsi/images/github_icon.png' %}" />
-        <p>We provide the advanced search to quick get result of the right BSI Catalog</p>
-        <div class="container">
+
+       <header class="bg-primary text-white">
+      <div class="container text-center">
+        <h1>Welcome to the Seel page</h1>
+        <p class="lead">We provide the advanced search to quick get result of the right BSI Catalog</p>
+          <div class="container">
                 <div class="row">
                     <form id="wiki-search-form-big" method="GET" action="{% url 'wiki:search' %}">
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="search" value="" class="form-control" name="q" placeholder="Search BSI article">
+                                <input type="search" value="" class="form-control form-control-lg" name="q" placeholder="Search BSI article">
                                 <div class="input-group-btn bs-dropdown-to-select-group">
                                     <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select" data-toggle="dropdown">
                                         <span data-bind="bs-drp-sel-label">All</span>
@@ -27,16 +27,43 @@
                                 </div>
                             </div>
                         </br>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-warning">Submit</button>
 
                         </div>
                 </form>
                 </div>
             </div>
-    </div>
+      </div>
+    </header>
 
-   
-</div>
+<section class="features-icons bg-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 center-items">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-magic-wand m-auto text-primary"></i>
+              </div>
+              <h3>Wizard</h3>
+              <p class="lead mb-0">We help you to find the right BSI catalog through wizard!</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="icon-directions m-auto text-primary"></i>
+              </div>
+              <h3>Tutorials</h3>
+              <p class="lead mb-0">stuck with the problem? go to the tutorials!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
 <script>
     $(document).ready(function(e){
     $( document ).on( 'click', '.bs-dropdown-to-select-group .dropdown-menu li', function( event ) {

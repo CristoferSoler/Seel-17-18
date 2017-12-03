@@ -14,6 +14,8 @@
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/style.css' %}" />
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
     <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
+     <!--Icon -->
+    <link href="{% static "bsi/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
 </head>
 
@@ -29,7 +31,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SEEL</a>
+                <a class="navbar-brand" href="/">SEEL</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,16 +42,16 @@
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="{% url 'bsicatalog'%}">BSI Catalog</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="{% url 'ugarticles'%}">UG Articles</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#">Tutorials</a>
                     </li>
-                    <li>
+                    <li class="">
                         <a href="#">Wizard</a>
                     </li>
                 </ul>
@@ -138,3 +140,10 @@
 </body>
 
 </html>
+
+<script>
+   $(document).ready(function() {
+  $('li.active').removeClass('active');
+  $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+});
+</script>
