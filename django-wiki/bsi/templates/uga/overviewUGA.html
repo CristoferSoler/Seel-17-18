@@ -17,6 +17,9 @@ $(document).ready(function(){
      <div class="jumbotron-margin">
          <h1 class="page-header">User Generated Articles</h1>
          <div class="jumbotron">
+           <p class="text-center" style="font-size: 15px">This section was created for publications of articles about the topics of the BSI. There is the opportunity
+               to link the articles to the threads, components and counter measures. This is only possible if the user is
+               logged in.</p>
            <div id="toolbar" class="btn-group">
                 {% if user.is_authenticated %}
                    <a href="#" class="btn btn-default"><span class="glyphicon glyphicon-plus"></span></a>
