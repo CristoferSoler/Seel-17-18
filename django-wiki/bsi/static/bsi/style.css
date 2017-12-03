@@ -14,9 +14,8 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
-.jumbotron-margin {
-    margin-top: 70px;
-    margin-bottom: 100px;
+.margin-after-nav{
+    margin-top: 60px;
 }
 
 .navbar-default {
@@ -122,7 +121,7 @@ section {
   padding-bottom: 7rem; }
   .features-icons .features-icons-item {
     max-width: 50rem;
-    position: center;
+
 
    }
     .features-icons .features-icons-item .features-icons-icon {
