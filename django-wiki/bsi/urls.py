@@ -16,3 +16,5 @@ urlpatterns = [
     url(r'^bsicatalog/', views.bsicatalog, name='bsicatalog'),
     url(r'^ugarticles/',ugaViews.overviewUGA, name='ugarticles')
 ]
+
+
