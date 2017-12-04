@@ -39,11 +39,6 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
-.margin-article{
-    margin-top: 70px;
-}
-
-
 
 /*for article content */
 @import url(//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css);
