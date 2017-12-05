@@ -5,14 +5,20 @@ from django.template import loader
 # from bsi.core.paginator import WikiPaginator
 from wiki.models.article import Article
 #from wiki.tests.test_views import SearchViewTest
+<<<<<<< HEAD
 from wiki.views.article import SearchView
 from wiki.views.article import ArticleView
+=======
+from wiki.views.article import SearchView, Create
+from wiki import forms
+>>>>>>> origin/templates
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django import forms
 from wiki.views.mixins import ArticleMixin
+from wiki.models.urlpath import URLPath
 
 
 class BSIArticleView(ArticleView):
@@ -23,6 +29,13 @@ class BSIArticleView(ArticleView):
 
     def get_context_data(self, **kwargs):
         return ArticleMixin.get_context_data(self, **kwargs)
+
+class UGACreate(Create):
+    template_name = 'bsi/create_article.html'
+    def dispatch(self, request, article, *args, **kwargs):
+        return super(UGACreate, self).dispatch(request, article, *args, **kwargs)
+
+
 
 class BSISearchView(SearchView):
     template_name = "bsi/search.html"
