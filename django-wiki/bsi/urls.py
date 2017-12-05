@@ -3,12 +3,9 @@ from . import views
 from . import ugaViews
 from django.contrib.auth import views as auth_views
 from wiki.views import article
-<<<<<<< HEAD
 from . import ugaViews
 from .views import BSISearchView
 from .views import BSIArticleView
-=======
->>>>>>> origin/templates
 
 article_create_view_class = article.Create
 
