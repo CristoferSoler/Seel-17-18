@@ -6,11 +6,23 @@ from django.template import loader
 from wiki.models.article import Article
 #from wiki.tests.test_views import SearchViewTest
 from wiki.views.article import SearchView
+from wiki.views.article import ArticleView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django import forms
+from wiki.views.mixins import ArticleMixin
+
+
+class BSIArticleView(ArticleView):
+    template_name = "bsi/article.html"
+
+    def dispatch(self, request, article, *args, **kwargs):
+        return super(BSIArticleView, self).dispatch(request, article, *args, **kwargs)
+
+    def get_context_data(self, **kwargs):
+        return ArticleMixin.get_context_data(self, **kwargs)
 
 class BSISearchView(SearchView):
     template_name = "bsi/search.html"
