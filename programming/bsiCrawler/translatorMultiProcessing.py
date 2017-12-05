@@ -111,7 +111,7 @@ def translate(fileJSON):
         #translate all components
         if(first == 'B'):
             test = directoryContent + fileJSON
-            with io.open(test, 'r', encoding='utf-8') as f:
+            with io.open(test, 'r', encoding='utf-8', errors='ignore') as f:
                 jsonFile = json.load(f)
 
             h1DE = jsonFile['h1']
@@ -167,7 +167,7 @@ def translate(fileJSON):
              #   jsonFile['recommendations']['subheaders'][i]['h3'] = subheaderEN[i][0]
               #  jsonFile['recommendations']['subheaders'][i]['content'] = subheaderEN[i][1]
 
-            f = open(directoryContentEN + re.sub('/','-',h1EN) + '.md', 'w')
+            f = open(directoryContentEN + re.sub('/','-',h1EN) + '.md', 'w',  errors='ignore')
             f.write(mdFile)
             f.close()
 
@@ -175,7 +175,7 @@ def translate(fileJSON):
         else:
             try:
                 test = directoryContent + fileJSON
-                with io.open(test, 'r', encoding='utf-8') as f:
+                with io.open(test, 'r', encoding='utf-8',  errors='ignore') as f:
                     jsonFile = json.load(f)
 
                 h1DE = jsonFile['h1']
@@ -217,7 +217,7 @@ def translate(fileJSON):
                 #jsonFile['h1'] = h1EN
                 #jsonFile['content'] = descriptionEn
 
-                f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.md', 'w')
+                f = open(directoryContentEN + re.sub('/', '-', h1EN) + '.md', 'w', errors='ignore')
                 f.write(mdFile)
                 f.close()
             except :

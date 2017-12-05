@@ -1,6 +1,6 @@
 import argparse
 import django
-import ConfigParser
+import configparser
 import win32com.client
 from os.environ import setdefault
 from os.path import listdir, isfile, isdir, join
