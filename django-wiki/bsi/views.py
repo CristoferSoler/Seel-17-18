@@ -25,19 +25,6 @@ class BSISearchView(SearchView):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
 
-
-class SearchViewM(SearchView):
-    def get_queryset(self):
-        super(self)
-
-    def dispatch(self, request, *args, **kwargs):
-        super(self, request, *args, **kwargs)
-
-    def get_context_data(self, **kwargs):
-        super(self, **kwargs)
-
-
-
 def index(request):
     all_articles = Article.objects.all()
 
