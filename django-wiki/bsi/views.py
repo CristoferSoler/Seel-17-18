@@ -5,13 +5,10 @@ from django.template import loader
 # from bsi.core.paginator import WikiPaginator
 from wiki.models.article import Article
 #from wiki.tests.test_views import SearchViewTest
-<<<<<<< HEAD
 from wiki.views.article import SearchView
 from wiki.views.article import ArticleView
-=======
 from wiki.views.article import SearchView, Create
 from wiki import forms
->>>>>>> origin/templates
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
