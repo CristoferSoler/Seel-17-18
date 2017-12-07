@@ -6,7 +6,7 @@ from django.template import loader
 from wiki.models.article import Article
 #from wiki.tests.test_views import SearchViewTest
 from wiki.views.article import SearchView
-from wiki.views.article import ArticleView
+from wiki.views.article import ArticleView, CreateRootView
 from wiki.views.article import SearchView, Create
 from wiki import forms
 from django.contrib.auth.decorators import login_required
@@ -20,6 +20,11 @@ from wiki.views.mixins import ArticleMixin
 from wiki.models.urlpath import URLPath
 
 
+class CreateRoot(CreateRootView):
+    template_name="uga/create-root.html"
+    def dispatch(self, request, *args, **kwargs):
+        return super(CreateRoot, self).dispatch(request, *args, **kwargs)
+
 class BSIArticleView(ArticleView):
     template_name = "bsi/article.html"
 
@@ -30,22 +35,11 @@ class BSIArticleView(ArticleView):
         return ArticleMixin.get_context_data(self, **kwargs)
 
 class UGACreate(Create):
-    form_class = forms.CreateForm
     template_name = 'uga/create_article.html'
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
-        print(request + ',' + kwargs)
         return super(UGACreate, self).dispatch(request, article, *args, **kwargs)
-
-    def get_form(self, form_class=None):
-        return super(UGACreate, self).get_form(self)
-
-    def form_valid(self, form):
-        return super(UGACreate, self).form_valid(form)
-
-    def get_success_url(self):
-        return redirect('index', self.newpath.path)
 
 class BSISearchView(SearchView):
     template_name = "bsi/search.html"
