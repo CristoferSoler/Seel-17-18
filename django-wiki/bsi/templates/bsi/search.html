@@ -48,7 +48,11 @@
     <tr>
       <td>
         {% for urlpath in article.urlpath_set.all %}
+<<<<<<< Updated upstream
         <a href="{% url 'bsiarticle' path=urlpath.path  %}">{{ article.current_revision.title }}
+=======
+        <a href="{% url 'bsiarticle' path=urlpath.path %}">{{ article.current_revision.title }}
+>>>>>>> Stashed changes
           <br />
           <small class="muted">/{{ urlpath.path }}</small>
         </a>
