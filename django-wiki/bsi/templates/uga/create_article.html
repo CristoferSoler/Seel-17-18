@@ -1,6 +1,6 @@
 
 {% extends "bsi/base.html" %}
-{% load bsi_tags i18n sekizai_tags static %}
+{% load wiki_tags i18n sekizai_tags static %}
 
 
 {% block bsi_pagetitle %}{% trans "Add new article" %}{% endblock %}
@@ -27,7 +27,7 @@
   {% endif %}
   </script>
   {% endaddtoblock %}
-
+<div class="container margin-after-nav">
   <!--{% include "wiki/includes/editormedia.html" %} -->
   <h1 class="page-header">{% trans "Add new article" %}</h1>
 
@@ -47,5 +47,5 @@
       </div>
     </div>
   </form>
-
+ </div>
 {% endblock %}
