@@ -36,11 +36,10 @@ class BSIArticleView(ArticleView):
         return ArticleMixin.get_context_data(self, **kwargs)
 
 class UGACreate(Create):
-    template_name = 'uga/create-root.html'
+    template_name = 'uga/create_article.html'
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
-        print(kwargs)
         return super(UGACreate, self).dispatch(request, article, *args, **kwargs)
 
 class BSISearchView(SearchView):
