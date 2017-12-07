@@ -1,5 +1,6 @@
 from django.db import models
-from wiki.models.article import Article
+#from wiki.models.article import Article
+from wiki.models import Article, URLPath, Site, ArticleRevision
 
 
 # Create your models here.
@@ -20,6 +21,5 @@ class BSI(models.Model):
 
     def isCountermeasure(self):
         return self.bsi_id.startswith('M')
-
 
 
