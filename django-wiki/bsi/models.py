@@ -20,3 +20,6 @@ class BSI(models.Model):
 
     def isCountermeasure(self):
         return self.bsi_id.startswith('M')
+
+
+
