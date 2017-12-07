@@ -13,11 +13,10 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
-from wiki.decorators import get_article
+from .decorators import get_article
 from django.utils.decorators import method_decorator
 from django import forms
 from wiki.views.mixins import ArticleMixin
-from wiki.models.urlpath import URLPath
 
 
 class CreateRoot(CreateRootView):
@@ -35,10 +34,11 @@ class BSIArticleView(ArticleView):
         return ArticleMixin.get_context_data(self, **kwargs)
 
 class UGACreate(Create):
-    template_name = 'uga/create_article.html'
+    template_name = 'uga/create-root.html'
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
+        print(kwargs)
         return super(UGACreate, self).dispatch(request, article, *args, **kwargs)
 
 class BSISearchView(SearchView):

@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from wiki.models import URLPath
+
 from . import views
 from . import ugaViews
 from django.contrib.auth import views as auth_views
@@ -18,7 +20,7 @@ urlpatterns = [
     url(r'^create-root/$', CreateRoot.as_view(), name='root_create'),
     url(r'^search/', BSISearchView.as_view(), name='bsisearch'),
     url(r'^article/', BSIArticleView.as_view(), name='bsiarticle'),
-    url(r'^(?P<path>.+/|)create/', UGACreate.as_view(), {'template_name':'uga/create_article.html'}, name='create'),
+    url(r'^(?P<path>.+/|)_createArticle/$', UGACreate.as_view(), name='create'),
     url(r'ugarticles/',ugaViews.overviewUGA, name='ugarticles'),
     url(r'changePassword/', auth_views.password_change, {'template_name': 'bsi/account/accountsSettings.html'}, name='password_change'),
     url(r'^accounts/password/change/done/$', auth_views.password_change_done, {'template_name': 'bsi/account/passwordChangeDone.html'}, name='password_change_done'),

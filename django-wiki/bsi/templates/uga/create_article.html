@@ -1,11 +1,11 @@
 
 {% extends "bsi/base.html" %}
-{% load wiki_tags i18n sekizai_tags static %}
+{% load bsi_tags i18n sekizai_tags static %}
 
 
-{% block wiki_pagetitle %}{% trans "Add new article" %}{% endblock %}
+{% block bsi_pagetitle %}{% trans "Add new article" %}{% endblock %}
 
-{% block wiki_contents %}
+{% block bsi_contents %}
 
   {% addtoblock "js" %}
   <script type="text/javascript" src="{% static "admin/js/urlify.js" %}"></script>
