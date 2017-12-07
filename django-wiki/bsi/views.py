@@ -9,8 +9,7 @@ from wiki.views.article import SearchView
 from wiki.views.article import ArticleView, CreateRootView
 from wiki.views.article import SearchView, Create
 from wiki import forms
-=======
->>>>>>> Stashed changes
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
@@ -55,10 +54,6 @@ class BSISearchView(SearchView):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 def index(request):
     all_articles = Article.objects.all()
 
