@@ -48,8 +48,17 @@ class Archive(models.Model):
         if not archives:
             raise Http404("No archive found that matches the specified slug: ", slug)
         if archives.count() > 1:
-            raise IntegrityError("Duplicate keys! There are " + str(archives.count()) + " archives with the same name: ", slug)
+            raise IntegrityError(
+                "Duplicate keys! There are " + str(archives.count()) + " archives with the same name: ", slug)
         return archives[0]
+
+    @classmethod
+    def get_archive_root(cls):
+        try:
+            root = URLPath.objects.get(slug='archive')
+        except:
+            return None
+        return root
 
     def __str__(self):
         return self.archive_url.slug

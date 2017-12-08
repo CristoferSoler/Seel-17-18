@@ -1,3 +1,5 @@
 from django.contrib import admin
+from archive.models import Archive
 
-# Register your models here.
+# for testing/debugging archive, enable the admin panel like the following
+# admin.site.register(Archive)
