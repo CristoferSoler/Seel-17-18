@@ -8,7 +8,8 @@
 {% block bsi_contents %}
 
   {% addtoblock "js" %}
-  <script type="text/javascript" src="{% static "admin/js/urlify.js" %}"></script>
+
+  <script type="text/javascript" src="{% static "django-wiki/bsi/static/bsi/js/urlify.js" %}"></script>
   <script type="text/javascript">
   {% if not create_form.slug.value %}
   //<![CDATA[
@@ -36,7 +37,7 @@
     <div class="form-group form-actions">
       <div class="col-lg-2"></div>
       <div class="col-lg-10">
-        <a href="{% url 'wiki:get' path=parent_urlpath.path %}" class="btn btn-default">
+        <a href="{% url 'index' %}" class="btn btn-default">
           <span class="fa fa-arrow-left"></span>
           {% trans "Go back" %}
         </a>

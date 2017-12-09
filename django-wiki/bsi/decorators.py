@@ -12,7 +12,7 @@ from django.utils.http import urlquote
 from six.moves import filter
 from wiki.conf import settings
 from wiki.core.exceptions import NoRootURL
-from wiki.models import URLPath, Article
+from wiki.models import URLPath, Article,Site
 
 
 def response_forbidden(request, article, urlpath):
@@ -65,24 +65,24 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
     def wrapper(request, *args, **kwargs):
 
         #path = kwargs.pop('path', None)
-
+        site = Site.objects.get_current()
         path = 'uga/'
-        print(path)
+        parent = URLPath.objects.get(slug='uga')
 
         article_id = kwargs.pop('article_id', None)
 
-        print(request)
-        print(kwargs)
+        #print('Request: ' + request)
+        #print('Kwargs: ' + kwargs)
 
         urlpath = None
-        print(path)
+        #print('Path: ' + path)
 
         # fetch by urlpath.path
         if path is not None:
             try:
                 urlpath = URLPath.get_by_path(path, select_related=True)
-
-                #print(urlpath)
+                #urlpath = URLPath.create_urlpath(parent,'/' )
+                print(urlpath)
             except NoRootURL:
                 return redirect('root_create')
             except URLPath.DoesNotExist:
@@ -111,6 +111,7 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             if urlpath.article:
                 # urlpath is already smart about prefetching items on article
                 # (like current_revision), so we don't have to
+                print('test')
                 article = urlpath.article
             else:
                 # Be robust: Somehow article is gone but urlpath exists...
@@ -168,7 +169,7 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             return response_forbidden(request, article, urlpath)
 
         kwargs['urlpath'] = urlpath
-
+        print('hello1')
         return func(request, article, *args, **kwargs)
 
     if func:

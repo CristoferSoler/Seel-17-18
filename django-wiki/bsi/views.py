@@ -33,7 +33,7 @@ class UGACreate(Create):
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
-        return super(UGACreate, self).dispatch(request, article, *args, **kwargs)
+        return super(Create, self).dispatch(request, article, *args, **kwargs)
 
 class BSIArticleView(ArticleView):
     template_name = "bsi/article.html"
