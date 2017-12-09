@@ -75,22 +75,26 @@ class ArchiveTransaction(models.Model):
                                         blank=False, null=False, related_name='root_archive_of',
                                         on_delete=models.CASCADE, )
 
+    urlpath = models.OneToOneField('wiki.URLPath', verbose_name='urlpath to transfer',
+                                   blank=False, null=True, related_name='urlpath_of',
+                                   on_delete=models.CASCADE, )
+
     @classmethod
-    def create(cls, archive):
-        return cls(archive_root=archive)
+    def create(cls, archive, urlpath):
+        return cls(archive_root=archive, urlpath=urlpath)
 
     @transaction.atomic
-    def archive(self, urlpath_of_archived_article):
+    def archive(self):
         # set archive root as new parent of the specified urlpath
-        urlpath_of_archived_article.parent = self.archive_root.archive_url
-        urlpath_of_archived_article.save()
+        self.urlpath.parent = self.archive_root.archive_url
+        self.urlpath.save()
 
         # Reload url path form database
-        urlpath_of_archived_article = URLPath.objects.get(pk=urlpath_of_archived_article.pk)
+        urlpath_of_archived_article = URLPath.objects.get(pk=self.urlpath.pk)
 
         # Use a copy of ourself (to avoid cache) and update article links again
         for ancestor in Article.objects.get(pk=urlpath_of_archived_article.article.pk).ancestor_objects():
             ancestor.article.clear_cache()
 
     def __str__(self):
-        return 'transaction into ' + self.archive_root.__str__()
+        return 'transaction of ' + self.urlpath.__str__() + ' into ' + self.archive_root.__str__()

@@ -37,8 +37,8 @@ class ArchiveTestCase(TestCase):
         archive = Archive.get_archive_by_slug(slug='2017')
 
         # archive article
-        transaction = ArchiveTransaction.create(archive)
-        transaction.archive(URLPath.objects.get(slug='subarticle1'))
+        transaction = ArchiveTransaction.create(archive=archive, urlpath=URLPath.objects.get(slug='subarticle1'))
+        transaction.archive()
 
         parent = URLPath.objects.get(slug='subarticle1').parent
 
