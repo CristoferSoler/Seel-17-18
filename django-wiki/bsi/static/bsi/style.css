@@ -1,0 +1,127 @@
+footer {
+    min-height: 50px;
+    padding: 20px 0 10px 0;
+}
+
+footer .menu li a {
+    font-family: Roboto;
+    color:  #1b4f84;
+    padding: 10px;
+    text-decoration: none;
+}
+
+footer .menu li a:hover {
+    color: #ffffff;
+}
+
+.margin-after-nav{
+    margin-top: 60px;
+}
+
+.navbar-default {
+    background-color: #1b4f84;
+    border-color: #4d8fc8;
+}
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+
+
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: grey;
+}
+
+
+.navbar-default .navbar-nav>li>a {
+    color: #ffffff;
+}
+
+
+/*for article content */
+@import url(//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css);
+@import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css);
+
+/* WHAT YOU NEED */
+.fading-side-menu.affix-top {
+    opacity: 1;
+    transition: opacity 1s
+}
+.fading-side-menu.affix {
+    top: 11.5px;
+}
+.fading-side-menu.affix {
+    opacity: 0.2;
+    transition: opacity 5s
+}
+.fading-side-menu.affix:hover {
+    opacity: 1;
+    transition: opacity 0.3s
+}
+/* RECOMMENDED STYLING BUT NOT REQUIRED */
+.fading-side-menu a {
+    color: rgb(102, 102, 102);
+}
+.fading-side-menu a .fa {
+    padding-right:15px;
+}
+
+/* FOR DEMO ONLY */
+
+
+p.small.text-muted {
+    margin-bottom: 0px;
+}
+
+.lead {
+    font-style: italic;
+}
+
+.no-margin {
+    margin: 0px !important;
+}
+
+.vertical-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+header {
+  padding: 154px 0 100px;
+}
+
+@media (min-width: 992px) {
+  header {
+    padding: 156px 0 100px;
+  }
+}
+
+
+section {
+  padding: 130px 0;
+    display: flex;
+}
+
+.center-items {
+    display: flex;
+    align-items: center;
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem; }
+  .features-icons .features-icons-item {
+    max-width: 50rem;
+
+
+   }
+    .features-icons .features-icons-item .features-icons-icon {
+      height: 7rem; }
+      .features-icons .features-icons-item .features-icons-icon i {
+        font-size: 6rem; }
+    .features-icons .features-icons-item:hover .features-icons-icon i {
+      font-size: 5rem; }
