@@ -275,6 +275,8 @@ class bsiSpider(sc.Spider):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
 
+
+
         h1 = content.xpath('h1/text()').extract()[0].strip()
 
         headers = content.xpath('h2').extract()
