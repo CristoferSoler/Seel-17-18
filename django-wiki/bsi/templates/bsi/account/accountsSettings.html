@@ -1,0 +1,21 @@
+<script src="../../static/bsi/js/jquery.min.js"></script>
+<script src="../../static/bsi/js/login.js"></script>>
+
+{% extends 'bsi/base.html'%}
+{% block title %}Login{% endblock %}
+{% block bsi_contents %}
+<div class="container margin-container">
+    <div class="jumbotron-margin">
+
+        <h1 class="page-header">Password Reset</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-danger">Reset</button>
+        </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
