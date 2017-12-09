@@ -48,6 +48,8 @@ INSTALLED_APPS = [
     'wiki.plugins.images',
     'wiki.plugins.macros',
     'wiki.plugins.links',
+    'bsiwiki',
+    'bsi',
     'bsi.apps.BsiConfig',
 ]
 
@@ -91,6 +93,8 @@ SITE_ID = 1
 WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
+# Overwrite according to your crawler content folder
+CRAWLER_DIRECTORY = r'C:\githubRepo\Seel-17-18\programming\bsiCrawler\contentEn'
 
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'
