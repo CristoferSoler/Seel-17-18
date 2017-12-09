@@ -16,3 +16,18 @@ To develop in our wiki each working group creates a new branch out of the branch
 * templates
 * importer
 
+### Errors
+
+#### HTTPError root article missing
+This error is simple. You need a root article to actually use the search.
+For this you have to log in as a user. You can create a superuser (admin)
+through the terminal. Just type in
+    
+    python manage.py createsuperuser
+
+After that just run the server, log in and visit
+    
+    localhost:8000/wiki/
+    
+Here you can create a root article. Do that and you are good to go. Now you can
+use every search bar :D 
