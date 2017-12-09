@@ -44,6 +44,7 @@ def get_links(response, h2Headline):
             for li in lis:
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
+
 def writeComponentJSON(h1, description_h2, description_content, recom_header, recom_content, recom,wholeText):
     f = open(dicOfContent + re.sub('/','-',h1) + '.json', 'w')
     jsonPart1 = '{"h1":"' + h1 + '", "description": { "h2":"' +  description_h2 +'", "content":['
@@ -163,23 +164,51 @@ def writeThreadJSON(h1,content,listOfExpample):
     f.write(jsonPart1)
     f.close()
 
+
+def allUnderH2(list):
+    returnList = []
+    for el in list:
+        if "h2" not in el.extract():
+            returnList.append(el)
+        else:
+            return returnList
+
+    return returnList
+
+
+def getContentOfH2(h2):
+
+    return 'test'
+
+    '''
+    for element in allElementsUnderH2:
+        if ("h2" not in element.extract()):
+
+        else:
+            break
+'''
+
+
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
-    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKataloge/itgrundschutzkataloge_node.html']
+    #startpage to crawl
+    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
     def parse(self, response):
+        #get all links under Bausteine, Elementare Gefährdungen und Umsetzungshinweise
+        urlsG = get_links(response,'Elementare Gefährdungen')
         urlsB = get_links(response,'Bausteine')
-        urlsG = get_links(response,'Gefährdungskataloge')
-        urlsM = get_links(response,'Maßnahmenkataloge')
+        urlsU = get_links(response,'Umsetzungshinweise')
+
+        #go to every link
+        #for g in urlsG:
+        #   yield sc.Request(g, callback=self.parseLinkList, dont_filter=True)
 
         for b in urlsB:
            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        for g in urlsG:
-            yield sc.Request(g, callback=self.parseLinkListG, dont_filter=True)
-
-        for m in urlsM:
-            yield sc.Request(m, callback=self.parseLinkListG, dont_filter=True)
+        #for u in urlsU:
+         #  yield sc.Request(u, callback=self.parseLinkListG, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
@@ -240,20 +269,68 @@ class bsiSpider(sc.Spider):
 
     def parse_following_urls(self, response):
 
+        #getElementsString = 'following-sibling::p | following-sibling::ul|following-sibling::h2|following-sibling::h3|following-sibling::h4'
+        getAllh2h3 = 'following-sibling::h2|following-sibling::h3|following-sibling::p'
+
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
 
         h1 = content.xpath('h1/text()').extract()[0].strip()
 
-        headers = content.xpath('h2')
-
+        headers = content.xpath('h2').extract()
+        print(headers)
+        #delete the first h2 headline because it is the Schnellübersicht
+        headers1 = headers.pop(0)
         description_content = []
         recom_content = []
         recom = []
 
-        if (len(headers) != 0):
-            description_h2 = headers[0].xpath('./text()').extract()[0]
+        page = {'title': h1,'h2':[]}
 
+        #description_h2 = headers[0].xpath('./text()').extract()[0]
+        if (len(headers1) != 0):
+            for h2 in headers1:
+
+                h2Element = {'h2Title': h2.xpath('./text()').extract()[0],'content':[],'h3':[],}
+
+                h2elementsHeadlines = h2.xpath(getAllh2h3)
+                for el in h2elementsHeadlines:
+                    #alle h3 Headlines
+                    if "h2" not in el.extract():
+                        #check ob h3 element kommt oder conent unter h2
+                        if "h3" in el.extract():
+                            h3Element = {'title': h3El.xpath('./text()').extract()[0], 'content': [], 'h4': []}
+                            for h3El in el.xpath('following-sibling::h3|following-sibling::h4|following-sibling::p|following-sibling::ul'):
+                                #check ob h3 oder inhalt unter h3 kommt
+                                if "h3" not in h3El.extract():
+                                    #schauen ob h4 headline kommt oder h3 inhalt
+                                    if "h4" not in h3El.extract():
+                                        #h3 zusammenbauen
+                                        if (len(h3El.xpath('child::li')) != 0):
+                                            ul = []
+                                            for li in h3El.xpath('child::li'):
+                                                ul.append(li.select("string()").extract()[0].strip().replace("\"", "").replace("\n", "").replace("\\", "/"))
+                                            h3Element['content'].append(ul)
+
+                                        else:
+                                            h3Element['content'].append(h3El.select("string()").extract()[0].strip().replace("\"", "").replace("\n", "").replace("\\", "/"))
+                                    else:
+                                        # h4 zusammenbauen
+                                        continue
+
+                                else:
+                                    #zum nächsten h3 gehen und h3 zu h2 adden
+                                    continue
+
+                        else:
+                            #content unter h2 Headline hinzufügen
+                           h2Element['content'].append(el.select("string()").extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
+                    else:
+                        #zum nächsten h2 gehen
+                        page['h2'].append(h2Element)
+                        continue
+
+            '''
             #Beschreibung
             for ps in headers[0].xpath(
                     'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
@@ -312,7 +389,7 @@ class bsiSpider(sc.Spider):
 
 
             wholeText = ''
-            '''
+            
             h1 = sendRequestToYandex(h1).replace("\"","")
             description_h2 = sendRequestToYandex(description_h2).replace("\"","")
             description_content = sendRequestToYandex(description_content).replace("\"","").replace("\n","")
@@ -325,7 +402,7 @@ class bsiSpider(sc.Spider):
             for i in range(0, len(recom)):
                 recom[i] = (sendRequestToYandex(recom[i][0]).replace("\"","").replace("\n",""), sendRequestToYandex(recom[i][1]).replace("\"","").replace("\n",""))
                 wholeText = wholeText + recom[i][1]
-            '''
+            
             writeComponentJSON(h1.replace("\"","").replace("\\","/"), description_h2.replace("\"","").replace("\\","/"), description_content, recom_header.replace("\"","").replace("\\","/"), recom_content, recom,wholeText)
-
+            '''
 
