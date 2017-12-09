@@ -39,13 +39,14 @@ def create_article_with_revision(site, parent, slug, content, rev_title, rev_kwa
     article = Article(**article_kwargs)
     article.add_revision(ArticleRevision(title=rev_title, **rev_kwargs), save=True)
     article.save()
-    newpath = URLPath.objects.create(
-        site=site,
-        parent=parent,
-        slug=slug,
-        article=article)
-    article.add_object_relation(newpath)
-    bsiArt = BSI(article=article, bsi_id=slug)
+    newpath = URLPath.create_urlpath(parent=parent, slug=slug, title=rev_title, **rev_kwargs)
+   # newpath = URLPath.objects.create(
+   #     site=site,
+   #     parent=parent,
+   #     slug=slug,
+    #    article=article)
+    #article.add_object_relation(newpath)
+    bsiArt = BSI(url = newpath)
     bsiArt.save()
     if not slug:
         slug = '/'

@@ -9,17 +9,18 @@ class UGA(models.Model):
 
 
 class BSI(models.Model):
-    article = models.OneToOneField(Article, on_delete=models.CASCADE, primary_key=True)
-    bsi_id = models.CharField(max_length=10, blank=True)
+   # article = models.OneToOneField(Article, on_delete=models.CASCADE, primary_key=True)
+    #bsi_id = models.CharField(max_length=10, blank=True)
+    url = models.OneToOneField('wiki.URLPath')
     references = models.ManyToManyField(UGA, blank=True, related_name='is_linked_to')
 
     def isThreat(self):
-        return self.bsi_id.startswith('G')
+        return self.url.slug.startswith('G')
 
     def isComponent(self):
-        return self.bsi_id.startswith('B')
+        return self.url.slug.startswith('B')
 
     def isCountermeasure(self):
-        return self.bsi_id.startswith('M')
+        return self.url.slug.startswith('M')
 
 
