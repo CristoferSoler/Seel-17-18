@@ -16,6 +16,9 @@ textFormat = 'plain'
 dicOfContent = os.getcwd() + '/content/'
 
 directoryContent = './md/'
+directoryContentComponent = '/B/'
+directoryContentNotes = '/H/'
+directoryContentThreats = '/T/'
 
 def sendRequestToYandex(text):
     '''if(len(text)< 10000):
@@ -203,14 +206,14 @@ class bsiSpider(sc.Spider):
         urlsU = get_links(response,'Umsetzungshinweise')
 
         #go to every link
-        #for g in urlsG:
-        #   yield sc.Request(g, callback=self.parseLinkList, dont_filter=True)
+        for g in urlsG:
+           yield sc.Request(g, callback=self.parseLinkList_G, dont_filter=True)
 
         for b in urlsB:
            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
-        #for u in urlsU:
-         #  yield sc.Request(u, callback=self.parseLinkListG, dont_filter=True)
+        for u in urlsU:
+           yield sc.Request(u, callback=self.parseLinkList_H, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
@@ -221,7 +224,16 @@ class bsiSpider(sc.Spider):
         for link in siteUrl:
             yield sc.Request(link, callback=self.parse_following_urls, dont_filter=True)
 
-    def parseLinkListG(self, response):
+    def parseLinkList_H(self, response):
+        siteUrl = []
+        SET_SELECTOR = '.RichTextIntLink.Basepage'
+        for link in response.css(SET_SELECTOR):
+            siteUrl.append("https://www.bsi.bund.de/" + link.xpath('@href').extract()[0])
+
+        for link in siteUrl:
+            yield sc.Request(link, callback=self.parse_following_urls_H, dont_filter=True)
+
+    def parseLinkList_G(self, response):
         siteUrl = []
         SET_SELECTOR = '.RichTextIntLink.Basepage'
         for link in response.css(SET_SELECTOR):
@@ -232,6 +244,21 @@ class bsiSpider(sc.Spider):
 
     def parse_following_urls_of_G(self,response):
         SET_SELCTOR = '#content'
+        content = response.css(SET_SELCTOR)
+        h1 = content.xpath('h1/text()').extract()[0].strip()
+
+        h1Element = content.xpath('h1')
+        h2Element = content.xpath('h2')
+        # h2Element = h2Element.pop(0)
+
+        allRelatedContentHTML = h1Element[0].xpath(
+            '.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li').extract()
+        allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
+
+        f = open(directoryContent + '/' + directoryContentThreats + re.sub('/', '-', h1) + '.md', 'w')
+        f.write(md(allRelatedContentOneStringHTML))
+        f.close()
+        '''SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
 
         h1 = content.xpath('h1/text()').extract()[0].strip().replace("\"","").replace("\n","")
@@ -268,6 +295,24 @@ class bsiSpider(sc.Spider):
                 listOfExample.append(li.select('string()').extract()[0].strip().replace("\"","").replace("\n","").replace("\\","/"))
 
         writeThreadJSON(h1,contents,listOfExample)
+        '''
+
+    def parse_following_urls_H(self, response):
+
+        SET_SELCTOR = '#content'
+        content = response.css(SET_SELCTOR)
+        h1 = content.xpath('h1/text()').extract()[0].strip()
+
+        h1Element = content.xpath('h1')
+        h2Element = content.xpath('h2')
+        #h2Element = h2Element.pop(0)
+
+        allRelatedContentHTML = h2Element[1].xpath('.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li').extract()
+        allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
+
+        f = open(directoryContent + '/' + directoryContentNotes + re.sub('/', '-', h1) + '.md', 'w')
+        f.write(md(allRelatedContentOneStringHTML))
+        f.close()
 
     def parse_following_urls(self, response):
 
@@ -282,7 +327,7 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h2Element[1].xpath('.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li').extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
 
-        f = open(directoryContent + re.sub('/', '-', h1) + '.md', 'w')
+        f = open(directoryContent + '/' + directoryContentComponent + re.sub('/', '-', h1) + '.md', 'w')
         f.write(md(allRelatedContentOneStringHTML))
         f.close()
 

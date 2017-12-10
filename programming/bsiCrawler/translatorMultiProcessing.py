@@ -86,7 +86,7 @@ def check15k(list):
     listOf15kElement = []
 
     for line in splitList:
-        if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement)+ len(line)))< 13999):
+        if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 4999):
             listOf15kElement.append(line)
 
         else:
