@@ -1,6 +1,8 @@
 import scrapy as sc
 import os
 import re
+import functools
+from markdownify import markdownify as md
 
 #TODO
 #- einzelene Unterkapitel auslesen
@@ -13,7 +15,7 @@ textFormat = 'plain'
 #Other Costant
 dicOfContent = os.getcwd() + '/content/'
 
-
+directoryContent = './md/'
 
 def sendRequestToYandex(text):
     '''if(len(text)< 10000):
@@ -269,18 +271,26 @@ class bsiSpider(sc.Spider):
 
     def parse_following_urls(self, response):
 
-        #getElementsString = 'following-sibling::p | following-sibling::ul|following-sibling::h2|following-sibling::h3|following-sibling::h4'
-        getAllh2h3 = 'following-sibling::h2|following-sibling::h3|following-sibling::p'
-
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
-
-
-
         h1 = content.xpath('h1/text()').extract()[0].strip()
 
-        headers = content.xpath('h2').extract()
-        print(headers)
+        h1Element = content.xpath('h1')
+        h2Element = content.xpath('h2')
+        #h2Element = h2Element.pop(0)
+
+        allRelatedContentHTML = h2Element[1].xpath('.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li').extract()
+        allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
+
+        f = open(directoryContent + re.sub('/', '-', h1) + '.md', 'w')
+        f.write(md(allRelatedContentOneStringHTML))
+        f.close()
+
+        #
+        # headers = content.xpath('h2').extract()
+
+
+        '''print(headers)
         #delete the first h2 headline because it is the Schnellübersicht
         headers1 = headers.pop(0)
         description_content = []
@@ -332,7 +342,7 @@ class bsiSpider(sc.Spider):
                         page['h2'].append(h2Element)
                         continue
 
-            '''
+            
             #Beschreibung
             for ps in headers[0].xpath(
                     'following-sibling::p|following-sibling::ul|following-sibling::h2|following-sibling::h3'):
