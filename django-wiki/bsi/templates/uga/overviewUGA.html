@@ -52,9 +52,9 @@ $(document).ready(function(){
                 <tbody>
                 {%for article in articles%}
                   <tr>
-                      <td class="col-xs-7">{{article.name}}</td> <!-- todo add link to article -->
-                      <td class="col-xs-3">{{article.user}}</td>
-                      <td class="col-xs-2">{{article.date}}</td>
+                      <td class="col-xs-7"><a href="{% url 'wiki:get' path=article.path %}">{{ article.article.current_revision.title }}</a></td> <!-- todo add link to article -->
+                      <td class="col-xs-3">{{article.article.owner}}</td>
+                      <td class="col-xs-2">{{article.article.created}}</td>
                   </tr>
                 {%endfor%}
                 </tbody>
