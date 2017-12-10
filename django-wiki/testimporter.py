@@ -1,5 +1,6 @@
 import os
 import django
+import win32com.client
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
@@ -121,4 +122,3 @@ article4.add_object_relation(newpath)
 bsiArt = BSI(article=article4, bsi_id='M2.4231')
 bsiArt.save()
 #bsiArt.references.add(ugaArt)
-

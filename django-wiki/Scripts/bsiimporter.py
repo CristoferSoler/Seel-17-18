@@ -2,12 +2,16 @@ import argparse
 import django
 import configparser
 import win32com.client
-from os.environ import setdefault
+import  os
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
 from os.path import listdir, isfile, isdir, join
 
-from wiki.models import Article, URLPath, Site, ArticleRevision
 
-
+txtFolderDir = './Cross_Reference_Files/'
+excelFolderDir = './Cross_Reference_Tables/'
+macroFileDir = './Cross Reference 2018.xlsm/'
 def readConfig(varname):
     configParser = ConfigParser.RawConfigParser()
     configParser.read("config.cfg")
@@ -110,8 +114,9 @@ def appendThreatMeasureRelation(file):
     # TODO
     return
 
+
 #Calling Macro to get cross reference relation tables
-def generateComponentsThreatsMeasuresRelation(excelFolderDir, macroFileDir, txtFolderDir):
+def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
     xl = win32com.client.Dispatch("Excel.Application")
     xl.Visible = True
     Path = macroFileDir # "Cross Reference.xlsm"
@@ -128,8 +133,8 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-    bsiDir, file = parseArgs()
-
-    setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
-    django.setup()
-    main(bsiDir, file)
+    generateComponentsThreatsMeasuresRelation()
+    #bsiDir, file = parseArgs()
+    #setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+    #django.setup()
+    #main(bsiDir, file)
