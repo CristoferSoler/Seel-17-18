@@ -2,11 +2,14 @@ import argparse
 import django
 import configparser
 import win32com.client
-import  os
+import os
+import sys
 
+sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
-from os.path import listdir, isfile, isdir, join
+from os.path import  isfile, isdir, join
+from os import listdir
 
 
 txtFolderDir = './Cross_Reference_Files/'
@@ -133,8 +136,9 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-    generateComponentsThreatsMeasuresRelation()
+    #generateComponentsThreatsMeasuresRelation()
     #bsiDir, file = parseArgs()
     #setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
     #django.setup()
     #main(bsiDir, file)
+    print("worked!")
