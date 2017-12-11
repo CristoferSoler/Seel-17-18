@@ -59,7 +59,9 @@ urls = [
 
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
-directory = './md/B'
+directoryC = './md/C'
+directoryN = './md/N'
+directoryT = './md/T'
 directoryEN = './mdEn'
 fertig = False
 
@@ -101,22 +103,40 @@ def translate(fileMD):
     translator = Translator(service_urls=urls)
 
     filename = os.fsdecode(fileMD)
+    dir = ''
+    print(filename)
     filenameEn = translator.translate(filename, dest='en', src='de').text
+    if not os.path.exists(directoryEN):
+        os.makedirs(directoryEN)
 
-    f = open(directory + '/' + fileMD)
+    name=''
+    try:
+        f = open(directoryC + '/' + fileMD)
+        dir += 'C/'
+    except:
+        try:
+            f = open(directoryN + '/' + fileMD)
+            dir += 'N/'
+        except:
+            f = open(directoryT + '/' + fileMD)
+            dir += 'T/'
+
+    if not os.path.exists(directoryEN + dir):
+        os.makedirs(directoryEN + '/' +dir)
+
     contentOfMdDE = f.read()
     listOf15k = check15k(contentOfMdDE)
-
     textEl = ''
     for el in listOf15k:
+        print(el)
         textEl += translator.translate(el, dest='en', src='de').text
 
-    f = open(directoryEN + '/' + re.sub('/', '-', filenameEn),'w' )
+    f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w' )
     f.write(textEl)
     f.close()
 
 
-if __name__ == '__main__':
+'''if __name__ == '__main__':
     files = os.listdir(directory)
 
     #add progressbar
@@ -131,3 +151,4 @@ if __name__ == '__main__':
     t.join()
     print("MultiProcessing: ", time.time() - start)
     print('Finished')
+'''

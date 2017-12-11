@@ -16,8 +16,8 @@ textFormat = 'plain'
 dicOfContent = os.getcwd() + '/content/'
 
 directoryContent = './md/'
-directoryContentComponent = '/B/'
-directoryContentNotes = '/H/'
+directoryContentComponent = '/C/'
+directoryContentNotes = '/N/'
 directoryContentThreats = '/T/'
 
 def sendRequestToYandex(text):
