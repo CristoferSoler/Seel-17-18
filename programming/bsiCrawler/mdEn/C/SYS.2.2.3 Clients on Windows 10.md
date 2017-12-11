@@ -55,7 +55,7 @@ The functional scope and the supply of functional changes of a Windows 10 versio
 
 #### SYS.2.2.3.A3 Appropriate patch and change management
 
-To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system, it MUST be checked whether all the requirements from the IT-Grundschutz and the internal specifications are still met.
+To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system, it MUST be checked whether all requirements from the IT-Grundschutz and the internal specifications are still met.
 
 #### SYS.2.2.3.A4 telemetry and privacy settings
 

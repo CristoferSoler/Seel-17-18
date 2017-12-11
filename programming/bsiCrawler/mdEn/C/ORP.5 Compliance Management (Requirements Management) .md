@@ -35,8 +35,8 @@ Due to the misconduct of persons, it can happen that information worth protectin
 * The manager of a department suspects an employee to work with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
 ### 2 3 Inadequate identification check of communication partnersIn personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
 
-* An employee receives an e-mail from an alleged friend of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
-* A man in a blue jacket with a mounting case gains access to the data center after mumbling something about "water pipes".
+* An employee receives an e-mail from an alleged acquaintance of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
+* A man in a blue suit with a mounting case gains access to the data center after mumbling something about "water pipes".
 ### 2 4 Accidental disclosure of internal information
 
 When passing on information, it happens again and again that in addition to the desired information inadvertently also other information is transmitted. This may result in confidential, appropriate information falling into the wrong hands. examples for this are
@@ -46,7 +46,7 @@ When passing on information, it happens again and again that in addition to the 
 3 requirements
 ---------------
 
-The following are specific requirements for * Compliance Management *. Basically, the Change Manager (Compliance Manager) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+The following are specific requirements for * compliance management *. Basically, the Change Manager (Compliance Manager) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -58,7 +58,7 @@ The institution MUST have a process in place to identify all relevant legal, con
 
 The statutory and contractual requirements relevant to the individual areas of the institution SHOULD be worked out in a structured overview. The documentation MUST be kept up to date. The requirements identified as security-relevant MUST be incorporated in the planning and design of business processes, applications and IT systems, or in the procurement of new components.
 
-#### ORP.5.A2 Compliance with legal frameworks [Supervisors, Head of Organization, Institution Management]
+#### ORP.5.A2 Observance of legal framework conditions [Supervisors, Head of Organization, Institution Management]
 
 Managers who have the legal responsibility for the local institution MUST ensure compliance with legal requirements. The responsibilities and responsibilities for compliance with legal requirements MUST be defined.
 

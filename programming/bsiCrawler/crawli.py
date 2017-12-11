@@ -18,6 +18,7 @@ directoryContentNotes = '/N/'
 directoryContentThreats = '/T/'
 xpathString = '.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li'
 
+
 #get all links under a h2Headline what can be Elemetare Gefährdungen, Bausteine and Umsetzungshinweise
 def get_links(response, h2Headline):
     links = []

@@ -100,9 +100,9 @@ The editions Standard and Datacenter are equivalent from a security point of vie
 
 ** Features of the Essentials Edition **
 
-Foundation and Essentials in Windows 2012 are not intended to run within a full domain. Although this is now technically possible for Essentials with Windows Server 2012 R2, its features are primarily aimed at smaller institutions that use only a single server to run all functions. This is in contrast to the established practice in larger IT environments of running as few services per server as possible to resolve dependencies and spread risk, a trend that is becoming more prevalent as virtualization increases.
+Foundation and Essentials in Windows 2012 are not intended to run within a full domain. Although this is now technically possible for Essentials with Windows Server 2012 R2, its features are primarily aimed at smaller institutions that use only a single server to run all functions. This is in contrast to the established practice in larger IT environments of running as few services as possible per server to resolve dependencies and spread risk, a trend that is becoming more prevalent as virtualization increases.
 
-The Essentials Edition offers a number of features that can simplify the setup without further configuration:
+The Essentials Edition offers a number of features that can simplify setup without further configuration:
 
 * Add to the domain
  Essentials makes it easy to add machines to the domain that are located remotely. All it takes is a new employee to access the / connect path on the Essentials remote access website.
@@ -110,11 +110,11 @@ The Essentials Edition offers a number of features that can simplify the setup w
  There is a preconfigured VPN client available. The user can also activate auto dial-in so that he is always connected to the corporate or government network.
 * Server StorageFor locations such as user home directories, you can simply create shared folders on another server on the same network. This can be an automatic alert when the directories exceed a certain size.
 * Health Report
- A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as on the smartphone.
+ A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as the smartphone.
 * BranchCache
  The BranchCache mechanism can already be activated in Essentials, which increases the availability of data in remote locations through caching. It also reduces bandwidth usage across the WAN.
 * Remote Web Access
- Many features of Windows Server 2012 Essentials can be remotely accessed and controlled through a web interface (Remote Web Access), which has also been streamlined in R2 and optimized for use with tablets and similar devices.
+ Many features of Windows Server 2012 Essentials can be remotely accessed and controlled through a web interface (Remote Web Access), which has been streamlined in R2 and optimized for use with tablets and similar devices.
 ** Microsoft Azure Online Backup **In Windows Server 2012, Microsoft's cloud storage solution Azure Online Backup is already integrated into Essentials and can be easily activated. All you have to do is install the corresponding Add-in in the Essentials Dashboard and create an account (depending on the storage volume). In R2 is not even an add-in necessary, here can be done directly by clicking the registration with Azure.
 
 While this is a very easy way to generate regular backups of the data stored on the server, this feature should not be lightly activated, but at best after a comprehensive study of the topics of the building blocks OPS.2.2 cloud usage and OPS.1.16 data protection and a trade-off between confidentiality, availability and various providers.

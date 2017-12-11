@@ -68,7 +68,7 @@ In a hard disk encryption (such as Trusted Disk), an attacker z. For example, yo
 
 Certificates serve to bind a public cryptographic key to a person. This binding of the key to the name of the person is in turn cryptographically secured by means of a digital signature often from a trusted third party.
 
-These certificates are then used by third parties to check digital signatures of the person named in the certificate or to send this person encrypted data with the key recorded in the certificate.
+These certificates are then used by third parties to check the digital signatures of the person named in the certificate or to send this person encrypted data with the key recorded in the certificate.
 
 If such a certificate is forged, digital signatures are incorrectly verified as correct and associated with the person in the certificate, or data is encrypted and sent with a potentially insecure key.
 

@@ -7,7 +7,7 @@ In addition to Windows, more and more client operating systems Linux or less oft
 
 Linux is free software and is developed by the open source community. In addition, there are providers who combine the Linux kernel and the various software components to a distribution and maintain, and offer other services. Often derivatives are used for the distributions Ubuntu, Debian, Red Hat Enterprise Linux SUSE Linux Enterprise. In addition, there are custom Linux distributions for specific applications and devices, such as Qubes OS, which seeks to achieve a high level of security through virtualization, IGEL Linux as a thin client, LibreElec for use with a Home Theater PC (HTPC) or Kali Linux , a distribution specializing in security, computer forensics and penetration testing. In addition, clients can also start live distributions without changing the existing operating system.
 
-The market share of the operating system Linux on clients has increased in recent years, in special operating environments continue to use "classic" Unix systems in various derivatives. The amount of pre-selected software packages of a standard installation of common Linux distributions, or the Unix derivatives, increases the attack surface, at the same time offer unix-like operating systems but also extensive protection mechanisms. Typically, such an IT system is networked and operates as a client in a client-server network. Since clients are often operated for security reasons under Unix or Linux and as with all clients can not be trusted to correct user behavior, the protection of unix-like clients is of particular importance.
+The market share of the operating system Linux on clients has increased in recent years, in special operating environments continue to use "classic" Unix systems in various derivatives. The amount of pre-selected software packages of a standard installation of common Linux distributions, or the Unix derivatives, increases the attack surface, at the same time offer unix-like operating systems but also extensive protection mechanisms. Typically, such an IT system is networked and operates as a client in a client-server network. Since clients are often operated under Unix or Linux for security reasons and as with all clients can not be trusted to correct user behavior, the protection of unix-like clients is of particular importance.
 
 ### 1.2 Objective
 
@@ -15,7 +15,7 @@ The goal of this module is to protect information that is created, edited, store
 
 ### 1.3 Delimitation
 
-This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the module SYS.2.4 client under Apple OS X.
+This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the block SYS.2.4 client under Apple OS X.
 
 If the client is not to be managed by itself, but is managed by a third party, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account.
 

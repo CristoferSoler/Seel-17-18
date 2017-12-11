@@ -93,7 +93,7 @@ When booting, the integrity of the (pre-) bootloader to the kernel SHOULD be che
 
 #### SYS.1.3.A10 Prevention of spread when exploiting vulnerabilities
 
-Services and applications SHOULD be secured with individual security policies (for example, AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
+Services and applications SHOULD be secured with individual security policies (eg with AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
 
 #### SYS.1.3.A11 Use of the security mechanisms of NFS
 

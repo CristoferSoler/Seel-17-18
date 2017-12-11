@@ -145,7 +145,7 @@ In principle, the automatic encryption of all data carriers should be preferred 
  
 + The implemented encryption algorithm should meet the requirements of the institution.
 + The key management must harmonize with the functionality of the teleworking computer. In particular, fundamental differences of the algorithms are to be considered: Symmetric methods use a secret key for encryption and decryption, asymmetric methods use a public key for encryption and a private (secret) for decryption.
-+ The teleworking computer must securely manage the safety-critical parameters such as keys. Thus, keys (even those that are no longer used) must never be stored unprotected, that is, readable on the teleworking computer.
++ The teleworking computer must securely manage the safety-critical parameters such as keys. For example, keys (even those that are no longer used) must never be stored unprotected, that is, readable on the teleworking computer.
 
 
  
@@ -158,7 +158,7 @@ In principle, the automatic encryption of all data carriers should be preferred 
 
  
 * The telework calculator should have ** boot protection ** to prevent unauthorized booting from removable media.
-* It should be possible to restrict the ** user environment ** of the teleworking computer ** **. The administrator should be able to specify which programs the teleworker can execute, which peripheral devices can be used and which changes the teleworker may make to the system. In addition, the teleworker settings that are necessary for safe operation should not change unauthorized and not allowed to play third-party software without permission.
+* It should be possible to restrict the ** user environment ** of the teleworking computer ** **. The administrator should be able to specify which programs the teleworker can execute, which peripheral devices can be used and which changes the teleworker may make to the system. In addition, the teleworker settings that are necessary for safe operation should not change unauthorized and can not play unauthorized third-party software.
 * Depending on the operating system installed and other existing protection mechanisms of the teleworking computer, it must be checked whether virus protection programs should be used. If this is the case, a virus check must be carried out before importing data from removable media, before transferring data media or when sending and receiving data.
 * If the teleworking computer should be administered via ** Remote Administration **, it must be ensured that remote administration can only be carried out in an authorized way. In the remote maintenance, authentication of the remote maintenance personnel, the encryption of the transmitted data and a logging of the administration processes must be ensured.From the above functionalities, it is necessary to select those which are required due to the security requirements of the teleworking computers and which are possible according to the protection requirement. Based on these functionalities then a suitable operating system must be selected as a platform. If this does not support all required functionalities, additional products must be used. In this case, as far as possible all telework computers of an institution should be equipped in the same way in order to facilitate care and maintenance and to be able to bring similar systems together as client groups. The overall system must be configured by the administrators in such a way that maximum security can be achieved.
 

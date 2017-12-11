@@ -112,11 +112,11 @@ If an institution uses the network-capable Common Unix Printing System (CUPS) pr
 
 The access to the configuration of printers, copiers and multifunction devices SHOULD be limited. If administrators configure the devices remotely, they should be protected by authentication and an encrypted connection. Likewise, all unnecessary functions of printers, copiers and multifunction devices SHOULD be turned off.
 
-#### SYS.4.1.A8 Supply and Control of Consumables [Internal Service, User]Printers, copiers, and multifunction devices rely on consumer goods such as paper or toner to work. The supply of these consumables SHOULD be ensured. The disposal of consumer goods SHOULD be regulated. The responsibilities for this should be regulated and communicated.
+#### SYS.4.1.A8 Supply and Control of Consumables [Internal Service, User]Printers, copiers, and multifunction devices rely on consumer goods such as paper or toner to work. The supply of these consumables SHOULD be ensured. The disposal of consumables SHOULD be regulated. The responsibilities for this should be regulated and communicated.
 
 #### SYS.4.1.A9 Logging on printers, copiers and multifunction devices
 
-Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those in charge should comply with applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
+Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which time periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those in charge should comply with applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
 
 #### SYS.4.1.A10 Use of network-capable document scanners
 
@@ -124,7 +124,7 @@ If network-enabled scanners are used, only authorized persons should be able to 
 
 #### SYS.4.1.A11 Network separation when using multifunction devices
 
-If an institution uses multifunction devices that connect directly to the telephone network, SHOULD check if the fax and modem functionality of the devices can be turned off. If this function is nevertheless used, then uncontrolled data connections between the LAN and external networks should be reliably prevented. Network-compatible printers, multifunctional devices and also document scanners SHOULD be connected in a separate network segment, which is especially separated from external networks.
+If an institution uses multifunction devices that connect directly to the telephone network, SHOULD verify that the fax and modem capabilities of the devices can be turned off. If this function is nevertheless used, then uncontrolled data connections between the LAN and external networks should be reliably prevented. Network-compatible printers, multifunctional devices and also document scanners SHOULD be connected in a separate network segment, which is especially separated from external networks.
 
 #### SYS.4.1.A12 Proper Disposal of Protected Equipment [Home Technician, User]
 
