@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from wiki.models import URLPath
 from wiki.urls import get_pattern as get_wiki_pattern
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from django.contrib.auth import views as auth_views
 from bsi import views
+from .init import init
 
 urlpatterns = [
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
@@ -34,3 +36,9 @@ urlpatterns = [
     url(r'^wiki/', get_wiki_pattern()),
     url(r'^', include('bsi.urls')),
 ]
+
+"""
+if necessary, this init function creates a root article, uga, bsi and archive head articles (below root).
+todo this is not the best place to put a startup script because dummy threads may run it over time :/
+"""
+init()
