@@ -1,12 +1,8 @@
-import json
 from googletrans import Translator
 import os
-from multiprocessing import Pool
 import re
-import io
 import time
 import progressbar
-from threading import Thread
 import functools
 
 def content_from_list(content):
@@ -19,6 +15,7 @@ def content_from_list(content):
                 mdFilePart += '* ' + li + '\n'
             mdFilePart += '\n\n'
     return mdFilePart + '\n\n'
+
 urls = [
         'translate.google.com',
         'translate.google.co.kr',
@@ -54,8 +51,7 @@ urls = [
         'translate.google.gp',
         'translate.google.hr',
         'translate.google.ht',
-        'translate.google.hu',
-      ]
+        'translate.google.hu',]
 
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
@@ -70,10 +66,15 @@ def checkStatus(filesLenght):
     files = os.listdir(directoryEN)
     lastFile = len(files)
     while (fertig != True):
-        files = os.listdir(directoryEN)
-        if(lastFile != len(files)):
-            bar.update(len(files))
-            lastFile = len(files)
+
+        filesC = os.listdir(directoryC)
+        filesN = os.listdir(directoryN)
+        filesT = os.listdir(directoryT)
+
+        lenFiles = len(filesC) + len(filesN) + len(filesT)
+        if(lastFile != lenFiles):
+            bar.update(lenFiles)
+            lastFile = lenFiles
         else:
             pass
         time.sleep(0.1)
@@ -128,21 +129,3 @@ def translate(fileMD):
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)
     f.close()
-
-
-'''if __name__ == '__main__':
-    files = os.listdir(directory)
-
-    #add progressbar
-    t = Thread(target=checkStatus, args=(len(files),))
-    t.start()
-
-    #start Multiprocessing
-    start = time.time()
-    pool = Pool()
-    pool.map(translate, files)
-    fertig = True
-    t.join()
-    print("MultiProcessing: ", time.time() - start)
-    print('Finished')
-'''

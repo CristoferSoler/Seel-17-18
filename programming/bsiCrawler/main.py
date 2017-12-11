@@ -1,17 +1,38 @@
-from scrapy import cmdline
-import os
 from multiprocessing import Pool
-import time
 from threading import Thread
 from translatorMultiProcessing import checkStatus, translate
+import os, shutil
+import time
 
+'''
+This module is the main module for retrieving data from the BSI. It generates all necessary folder structures, 
+retrieves the content from the BSI and translates it into English.
+'''
 
-if __name__ == "__main__":
+def deleteAllFilesInDirectory(directory):
+    for the_file in os.listdir(directory):
+        file_path = os.path.join(directory, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(e)
 
+def main():
+    #directorys to store the content of the bsi
     directoryC = './md/C'
     directoryT = './md/T'
     directoryN = './md/N'
 
+    print('Getting Started with Data from the BSI')
+    print('Delete all Files of the md directory')
+    deleteAllFilesInDirectory('./md')
+    deleteAllFilesInDirectory('./mdEN')
+    print('Deleting is is completed')
+
+    print('Missing folder structures are created.')
     if not os.path.exists('./md'):
         os.makedirs('./md')
 
@@ -35,21 +56,20 @@ if __name__ == "__main__":
 
     if not os.path.exists(directoryN):
         os.makedirs(directoryN)
-    #
-    cmdline.execute("scrapy runspider crawli.py --nolog".split())
+
+    print('Missing folder structures have been created.')
+
+    os.system("scrapy runspider crawli.py --nolog")
+
+    #start translation with Multiprocessing
+    print('Start the translation')
     files = os.listdir(directoryC)
     files.extend(os.listdir(directoryT))
     files.extend(os.listdir(directoryN))
-    # add progressbar
-    start = time.time()
-    print("MultiProcessing: ", time.time() - start)
-    t = Thread(target=checkStatus, args=(len(files),))
-    t.start()
 
-    # start Multiprocessing
-    start = time.time()
     pool = Pool()
     pool.map(translate, files)
-    fertig = True
-    t.join()
-    print('Finished')
+    print('Translation is finished')
+
+if __name__ == "__main__":
+    main()
