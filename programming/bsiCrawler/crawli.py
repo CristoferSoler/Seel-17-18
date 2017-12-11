@@ -200,6 +200,7 @@ class bsiSpider(sc.Spider):
     start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
     def parse(self, response):
+        print('Start Crawling the content of the BSI')
         #get all links under Bausteine, Elementare Gefährdungen und Umsetzungshinweise
         urlsG = get_links(response,'Elementare Gefährdungen')
         urlsB = get_links(response,'Bausteine')
@@ -463,3 +464,7 @@ class bsiSpider(sc.Spider):
             writeComponentJSON(h1.replace("\"","").replace("\\","/"), description_h2.replace("\"","").replace("\\","/"), description_content, recom_header.replace("\"","").replace("\\","/"), recom_content, recom,wholeText)
             '''
 
+    def closed(self, reason):
+        print('Crawler is finshed')
+        print('Start the translation of the bsi content to english')
+        #übersetzung einbaune
