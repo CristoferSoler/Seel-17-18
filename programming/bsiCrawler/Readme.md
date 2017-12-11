@@ -1,5 +1,9 @@
 #Readme
+    This Python program is able to crawl and translate the contents of the 
+    BSI Compendium into English. The scrapy library was used for crawling and googleTrans
+    for translating. The selected output format is Markdown. 
 ### Overview
+    main.py start the progress
     crawli.py fetch all the bsi content
     crawliTree.py fetch the treeview 
     translatorMultiProcessing.py translate the bsi content into md files
@@ -10,9 +14,7 @@
      pip3 install progressbar2
      pip3 install googletrans
 ###How to start
-    scrapy runspider crawli.py
-    scrapy runspider crawliTree.py
-    python3 translatorMultiProcessing.py
+     python3 main.py
     
 ###JSON Format for components
 ````json
