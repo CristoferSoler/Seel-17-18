@@ -4,6 +4,7 @@ import re
 import functools
 from markdownify import markdownify as md
 
+
 '''
 This module collects roughly the data from the BSI.
 For this purpose, the crawler receives a start address and goes through all links from this address under 
