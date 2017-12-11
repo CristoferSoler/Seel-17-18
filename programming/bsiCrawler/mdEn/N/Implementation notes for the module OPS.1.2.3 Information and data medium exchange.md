@@ -286,7 +286,7 @@ If only the integrity of the data to be transmitted is to be ensured for the exc
 
 ** suitable key management **
 
-The use of cryptographic security mechanisms (eg encryption, digital signature) requires the confidential, integrity and authentic generation, distribution and installation of appropriate keys. Keys that have come to the attention of unauthorized persons who have been misrepresented in distribution or even come from an uncontrolled source (this also applies to the key agreement between communication partners) can compromise the cryptographic security mechanism as well as bad quality keys that have been improperly generated , Qualitatively good keys are usually generated using suitable key generators. For key management, the following points should be noted:
+The use of cryptographic security mechanisms (eg encryption, digital signature) requires the confidential, integrity and authentic generation, distribution and installation of appropriate keys. Keys that have come to the attention of unauthorized persons who have been corrupted in distribution or even come from an uncontrolled source (this also applies to the key agreement between communication partners) can compromise the cryptographic security mechanism as well as bad quality keys that have been improperly generated , Qualitatively good keys are usually generated using suitable key generators. For key management, the following points should be noted:
 
 * Key generation: Key generation should be done in a secure environment using appropriate key generators.
 * Key separation: Cryptographic keys should, if possible, serve only one purpose. In particular, keys other than encryption should always be used for encryption.

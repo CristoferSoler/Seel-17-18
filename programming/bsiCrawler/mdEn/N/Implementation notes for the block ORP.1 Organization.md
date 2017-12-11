@@ -137,7 +137,7 @@ Before assigning access rights to persons, the vulnerable rooms of a building mu
 
 It then has to be determined which person needs which access right to perform the function. The function separation (ORP.1 M4 separation of functions between operational and controlling tasks) has to be considered. Unnecessary access rights are to be avoided.
 
-In order to minimize the number of persons entitled to access a room, the principle of separation of functions should be taken into account. To prevent z. B. a separate storage of IT spare parts and data carriers the unauthorized access of a maintenance technician to the disk.
+In order to minimize the number of persons authorized to enter a room, the principle of separation of functions should be taken into account. To prevent z. B. a separate storage of IT spare parts and data carriers the unauthorized access of a maintenance technician to the disk.
 
 The allocation and withdrawal of access authorizations must be documented. When withdrawing an access authorization, the return of the means of access must be guaranteed. In addition, it must be documented which conflicts have occurred in the allocation of access authorizations to persons. There may be grounds for conflict because people perceive functions that conflict with the separation of functions with regard to the access authorizations, or because of spatial necessities.
 
@@ -303,7 +303,7 @@ A regulated ** test procedure before use ** of the equipment avoids various haza
 * New software and new preformatted media should be tested with a computer virus protection program.
 * Test runs of new software should be performed on special test systems so that they can be put into operation smoothly.
 * Compatibility of new hardware and software components with existing ones should be verified prior to procurement to prevent mis-purchases.
-It is only with the help of an ** Inventory Management ** of the equipment used, it is possible to determine the consumption and promptly required reorders. In addition, Inventory Management allows for completeness checks, review of the use of unauthorized software, or detection of resource theft. This requires a clear ** identification ** of the essential equipment with clear identification features (eg grouped consecutive inventory numbers). In addition, the serial numbers of existing devices such as monitors, printers, hard drives, etc. should be documented so that they can be identified after a theft.
+It is only with the help of ** Inventory Management ** of the equipment used that it is possible to determine the consumption and to arrange reorders that are required in due time. In addition, Inventory Management allows for completeness checks, review of the use of unauthorized software, or detection of resource theft. This requires a clear ** identification ** of the essential equipment with clear identification features (eg grouped consecutive inventory numbers). In addition, the serial numbers of existing devices such as monitors, printers, hard drives, etc. should be documented so that they can be identified after a theft.
 
 For inventory management, resources must be listed in inventories. Such an inventory must be able to provide information about:
 
@@ -313,7 +313,7 @@ For inventory management, resources must be listed in inventories. Such an inven
 * Warehousing,
 * Handing out regulations and
 * Maintenance contracts, maintenance intervals.
-In order to prevent the misuse of data, the deletion or destruction of resources must be regulated. In particular, the handling of waste paper is to be regulated. There must be appropriate disposal options for consumer goods with higher protection requirements, eg. B. so-called shredders or shredders for paper. Everything else is described in the module CON.6 Deleting and Destroying.
+In order to prevent the misuse of data, the deletion or destruction of resources must be regulated. In particular, the handling of waste paper must be regulated. There must be appropriate disposal options for consumer goods with higher protection requirements, eg. B. so-called shredders or shredders for paper. Everything else is described in the block CON.6 Deleting and Destroying.
 
 #### ORP.1.M9 Proper Disposal of Protected Equipment [Employees, Information Security Officer (ISB)]
 
@@ -321,9 +321,9 @@ Equipment or material (eg printer paper, magnetic tapes, hard disks, CD-ROM, DVD
 
 The nature of the disposal of vulnerable material should be regulated in a specific safety policy. In the institution, the necessary disposal facilities such as shredders must be available.
 
-If material that is in need of protection is collected prior to disposal, the collection should be kept locked and protected against unauthorized access.
+If material that is in need of protection is collected before disposal, the collection must be kept locked and protected against unauthorized access.
 
-Insofar as no environmentally sound and safe disposal can be carried out in the company or in the authority, the companies entrusted with it must be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites. It should be checked regularly if the disposal process is reliable.#### ORP.1.M10 Responding to security breaches [Information Security Officer (ISB)]
+Insofar as no environmentally sound and safe disposal can be carried out in the company or in the authority, companies engaged to do so must be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites. It should be checked regularly if the disposal process is reliable.#### ORP.1.M10 Responding to security breaches [Information Security Officer (ISB)]
 
 It is necessary to define the response to breaches of the security policy in order to ensure a clear and immediate response.
 

@@ -109,7 +109,7 @@ The duties and responsibilities of employees SHOULD be documented in an appropri
 
 #### ORP.2.A9 Training of employees
 
-Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the tasks assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
+Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
 
 All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD be trained separately and used within the area of ​​activity as multipliers for the remaining employees.
 
@@ -121,7 +121,7 @@ From the point of view of information security, measures SHOULD be taken to ensu
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### ORP.2.A11 Safety culture analysis (CIA)The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
+#### ORP.2.A11 Safety Culture Analysis (CIA)The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 

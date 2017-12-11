@@ -441,11 +441,11 @@ If a renewal or modernization of the IT cabling is planned, it is necessary to a
 
 The internal documentation covers all records relating to the installation and operation of IT cabling. For internal documentation, it should be prepared and maintained so extensively that the operation and future development are best supported.
 
-The external documentation is the label of terminals to support the operation. In the interests of protection against sabotage and other malicious interference, the externally visible documentation of the cabling (eg the labeling of power sockets and cable ends) should be as economical as possible. Here, the goal is to give as little clues as possible to a potential attacker while at the same time providing IT personnel with the necessary markings required for proper and traceable patching and networking.Medium and large cabling projects require the use of suitable documentation software. For this reason, specifications about file formats and thus about the program and version of the software to be used must already be made in the planning phase. This ensures that the contractor can deliver his documentation in a form that the client can immediately use. Similarly, naming convention requirements should be made for the files themselves as well as for elements and structures described in the files. The version of a file should, if possible, already be recognizable by the file name, for example by the fact that each file name begins with a date of the form YYYYYMMDD.
+The external documentation is the label of terminals to support the operation. In the interests of protection against sabotage and other malicious interference, the externally visible documentation of the cabling (eg the labeling of power sockets and cable ends) should be as economical as possible. Here, the goal is to give as little clues as possible to a potential attacker while at the same time providing IT personnel with the necessary markings required for proper and traceable patching and networking.Medium and large cabling projects require the use of suitable documentation software. For this reason, specifications about file formats and thus about the program and version of the software to be used must already be made in the planning phase. This ensures that the contractor can provide his documentation in a form that the client can immediately use. Similarly, naming convention requirements should be made for the files themselves as well as for elements and structures described in the files. The version of a file should, if possible, already be recognizable by the file name, for example by the fact that each file name begins with a date of the form YYYYYMMDD.
 
 Also for the naming conventions and markings in the documents clear specifications are to be made. For example, it is to be agreed how different classes of routed copper cables are to be distinguished in drawings (example: L123-cu6a = line 123, copper, CAT 6a).
 
-A problem often arises with room numbers: the architect usually awards these in the planning phase. These room numbers are also used in the planning and execution of the IT cabling. If the user introduces a different system for the marking and labeling of rooms after taking over the building, this can lead to ambiguity, to impairment of the operation or to other security problems.
+A problem often arises with room numbers: the architect usually awards these in the planning phase. These room numbers are also used in the planning and execution of IT cabling. If the user introduces a different system for the marking and labeling of rooms after taking over the building, this can lead to ambiguity, to impairment of the operation or to other security problems.
 
 For example, inconsistencies in room numbering can lead to cable connections to wrong rooms and thus between the wrong IT systems.
 
@@ -457,7 +457,7 @@ The documentation of the IT cabling consists of:
 * Route, cable routing and location of junction boxes per floor,
 * Room plans for all technical rooms of the IT cabling with cabinet position and possibly feeding points of foreign networks,
 * Cabinet view plans with cabinet installations and patch plans,
-* Certificates of conformity for the orderly execution,
+* Certificates of conformity regarding the orderly execution,
 * Delivery information, measurement protocols and acceptance tests.
 This documentation is the basis and essential part of the acceptance of the product by the client.
 

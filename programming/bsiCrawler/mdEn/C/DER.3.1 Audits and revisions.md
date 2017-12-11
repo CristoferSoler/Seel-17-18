@@ -113,7 +113,7 @@ The size of the audit / audit team SHOULD be the same as the audit area. In part
 
 The neutrality of the audit team SHOULD be ensured. In addition, the auditors should also be independent. If external service providers are used as auditors or auditors, they SHOULD check their independence and commit them to secrecy.
 
-#### DER.3.1.A10 Creation of an audit or audit plan [audit team leader]Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted as needed. Minor revisions SHOULD be planned using the revision list.
+#### DER.3.1.A10 Creation of an audit or audit plan [audit team leader]Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted if necessary. Minor revisions SHOULD be planned using the revision list.
 
 Sufficient resources should be allocated to the audit / audit team.
 
@@ -129,7 +129,7 @@ There should be an initial interview between the audit team or audit team and th
 
 #### DER.3.1.A13 Inspection and verification of documents [audit team]
 
-The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
+The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
 
 #### DER.3.1.A14 Selection of samples [audit team]
 
@@ -145,7 +145,7 @@ Together with the contact persons, the audit team SHOULD develop the schedule fo
 
 #### DER.3.1.A17 Conducting the on-site inspection [audit team]
 
-At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended as needed until the situation is clarified. After the audit, the audit team SHOULD conduct a final meeting, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
+At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended according to requirements until the situation has been clarified. After the audit, the audit team SHOULD conduct a final meeting, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
 
 #### DER.3.1.A18 conducting interviews [audit team]
 

@@ -157,7 +157,7 @@ The lock screen provides users with a variety of ways to view information from f
 
 Table: Using the "Restrictions on iOS" configuration option - Lock screen
 
-The safeguarding of AirPlay is subjectively deepened in the measure SYS.3.2.3.M16. Along with the release of the message center and the "Today" view, users should be made aware of the use of the information that can be acquired, and a recommendation be made as to which widgets should not be activated with which content.
+The safeguarding of AirPlay is subjectively deepened in the measure SYS.3.2.3.M16. Along with the release of the message center and the "today" view, users should be made aware of the use of the information that can be acquired, and a recommendation be made as to which widgets should not be activated with which content.
 
 Siri
 
@@ -169,7 +169,7 @@ If there are blind and visually impaired people in the user group, the operation
 
 Unified Communication
 
-The marketing term Unified Communication (UC) summarizes all configuration recommendations for Apple's built-in apps, such as FaceTime and iMessage for video and message chats.
+The marketing term Unified Communication (UC) summarizes all configuration recommendations for Apple's built-in apps, such as FaceTime and iMessage for video and messaging.
 
 Table: Using the "Restrictions on iOS" configuration option - Unified Communication
 

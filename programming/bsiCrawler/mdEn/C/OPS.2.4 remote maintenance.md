@@ -58,11 +58,11 @@ Unauthorized persons or third parties are allowed to use the components of the r
 
 ### 2 11 Use of online services for remote maintenance
 
-In addition to remote maintenance, in which an administrator establishes a direct data connection to the institution to be administered, so-called online services can also be used. Here, the IT systems to be administrated connect to the servers of a third-party provider and the administrators can access the IT systems to be administered via a web browser or similar.
+In addition to remote maintenance, in which an administrator establishes a direct data connection to the institution to be administered, so-called online services can also be used. In this case, the IT systems to be administrated connect to the servers of a third-party provider and the administrators can access the IT systems to be administered via a web browser or similar.
 
 Since the communication is not encrypted end-to-end and access takes place via a third party, the data exchange could be read directly. In addition, the IT systems could also be administered by unauthorized persons by changing the data connection. If the IT systems automatically establish a data connection to the online service at system startup and the access data are known, the IT system could be accessed directly.
 
-In order to establish a connection to the online service, often no administrative rights to the IT systems to be administered are needed, the administrator then only needs one browser. Users without administrative rights can thus initiate remote access unauthorized.
+In order to establish a connection to the online service, often no administrative rights are required on the IT systems to be administrated, the administrator then only needs one browser. Users without administrative rights can thus initiate remote access unauthorized.
 
 3 requirements
 ---------------

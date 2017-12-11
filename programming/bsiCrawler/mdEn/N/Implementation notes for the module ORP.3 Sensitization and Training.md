@@ -175,11 +175,11 @@ This audience must also support and be committed to the institution's informatio
 
 ** ** new hires
 
-This target group has so far had no contact with the organization's information security. For this reason, the contents of information security must be effectively communicated within the scope of the initial information and employees must be obliged to do so. Procedures that incorporate this step into the welcome process have proven useful.
+This target group has so far had no contact with the organization's information security. For this reason, the contents of information security must be effectively communicated within the framework of the initial information and employees must be obliged to do so. Procedures that incorporate this step into the welcome process have proven useful.
 
 #### ORP.3.M6 Planning and Conducting Information Security Education and Training
 
-An information security training program should provide employees with all the information and skills needed to implement the institution's security policies and measures.
+An information security training program should provide employees with all the information and skills required to implement security policies and measures in place within the institution.
 
 Once the information security training objectives for the institution have been identified, as well as relevant target groups and their specific training needs have been identified (see ORP.3.M5 Analysis of Awareness and Training Awareness Ranges), the specific training modules and content must be planned and implemented accordingly, by: Target groups are trained according to this plan.
 
@@ -191,7 +191,7 @@ The following aspects should be considered:
 * Which specific work environments with their information security requirements and which associated measures must be taken into account, eg. B. Processes, procedures, tasks and roles including possible changes?
 ** Possible training content **
 
-In the following, a structure and important contents of training modules are presented by way of example, which, according to the aspects presented, still have to be processed in terms of roles and resources. For many areas, training offers from appropriate providers are available, if internal planning and implementation in the institution is not possible.
+In the following, a structure and important contents of training modules are presented by way of example, which, according to the aspects presented, still have to be processed in terms of roles and resources. For many areas, training offers from appropriate providers are available if internal planning and implementation in the institution is not possible.
 
 The modules initially differ only by topic. Each module can be carried out in an adapted content depth. This depends on which work environment or section of an employee's career the module is intended for.The content of the training should be established on the basis of the analysis developed in action ORP.3.M4 Conception of an information security training and awareness-raising program and regularly reviewed and adjusted to maximize the effectiveness of the training. In addition, all components of the IT-Grundschutz Compendium that are relevant for the respective information network should be checked to see whether the necessary measures were not only arranged but also trained.
 

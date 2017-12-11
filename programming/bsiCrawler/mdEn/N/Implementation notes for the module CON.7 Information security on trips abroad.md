@@ -120,7 +120,7 @@ In order to protect the display of notebooks, tablets or smartphones and thus th
 
 #### CON.7.M5 Using Screen / Code Lock [User]Using a screen / code lock prevents third parties from accessing data on mobile devices, such as mobile devices. B. notebooks or mobile phones can access. For this an appropriate code or a secure device password must be used.
 
-The period after which a screen lock automatically activates due to a lack of user input should not go below or below certain limits. The period should not be too tight, so that the screen lock does not start after a brief pause for thought. Under no circumstances may this period be too long so that the user's absence can not be exploited by third parties. A reasonable default is a 10-minute period for notebooks and 2 minutes for other mobile devices. The ISB should set the latency requirements that reflect the security requirements of each IT system and its environment of use. These requirements should be enforced as centrally as possible on the terminals, for example via group policies or an MDM.
+The period after which a screen lock automatically activates due to a lack of user input should not fall below or exceed certain limits. The period should not be too tight, so that the screen lock does not start after a brief pause for thought. Under no circumstances may this period be too long so that the user's absence can not be exploited by third parties. A reasonable default is a 10-minute period for notebooks and 2 minutes for other mobile devices. The ISB should set the latency requirements that reflect the security requirements of each IT system and its environment of use. These requirements should be enforced as centrally as possible on the terminals, for example via group policies or an MDM.
 
 #### CON.7.M6 Timely loss report [user, emergency officer]
 
@@ -131,7 +131,7 @@ Laptops, smartphones, tablets, PDAs, and similar devices, as well as portable me
 * Access data such as passwords: All access data of the affected IT systems must be changed immediately.
 * Information classified as confidential (eg, patient records): All affected areas (eg, department, customers, etc.) must be notified to take appropriate action.
 * In addition, VPN access, machine or client certificates as well as computer and user accounts should also be blocked. If available, logon attempts or intrusion attempts should also be detected and prevented by appropriate monitoring.
-If mobile devices with a wireless connection are lost, measures should be taken to block, delete and locate mobile devices. Most mobile device management solutions offer these features. Clear rules must be defined in advance and appropriate measures must be taken immediately in consultation with the user whose terminal device was lost (see SYS.3.2.2 Mobile Device Management).
+If mobile devices with a wireless connection are lost, measures should be taken to block, delete and locate mobile devices. Most mobile device management solutions offer these features. For this purpose, clear rules must be defined in advance and appropriate measures must be taken immediately in consultation with the user whose terminal device was lost (see SYS.3.2.2 Mobile Device Management).
 
 If the missing notebook or smartphone reappears, it should be examined for possible tampering, eg. For example, whether screws have been opened or seals removed or the weight has changed from the original state. If the user himself does not have the necessary options for this or if there is a suspicion of manipulation, the respective device should no longer be used and handed over to a specialist for further examination. There should be a clear regulation as to how to locate the device during the journey. For a mobile storage device, the requirement of CON.7.M9 Secure Mobile Media Handling should be applied to ensure there are no malicious programs or malicious software on the recovered media.
 
@@ -290,7 +290,7 @@ When purchasing mechanical fuses, it is important to choose a good lock that has
 * Master Key System: Each device backup has an individual key, but can also be opened by a master key. This has the advantage that the expense of key management is lower. But it has the disadvantage that such systems are more expensive to buy.
 Most notebooks, but also many other devices, have a small opening marked with a chain or lock icon ("Kensington Lock"). This opening (approximately 3 x 7 mm) is located on the side or rear of the device. There is a wide range of cable retainers and other products that use this opening for securing devices.
 
-In the case of cable fuses, a cable loop must then be placed around a solid object near the device, and the associated lock must be pulled through the resulting tab and locked.
+In the case of cable fuses, a cable loop must then be placed around a solid object in the vicinity of the device, and the associated lock must be pulled through the resulting tab and closed.
 
 For devices that do not have this opening or where it is not strong enough, there are backup products where a sturdy plate is glued to the device. At this then the security cable is attached.
 
