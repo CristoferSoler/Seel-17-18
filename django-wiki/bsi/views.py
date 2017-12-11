@@ -1,32 +1,30 @@
 from django.contrib.auth.models import User
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
-#from .models import <tableName>
+# from .models import <tableName>
 # from bsi.core.paginator import WikiPaginator
 from wiki.models.article import Article
-#from wiki.tests.test_views import SearchViewTest
+# from wiki.tests.test_views import SearchViewTest
 from wiki.views.article import SearchView
 from wiki.views.article import ArticleView, CreateRootView
 from wiki.views.article import SearchView, Create
-from wiki import forms
 
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from wiki.decorators import get_article
-#from .decorators2 import get_bsiarticle
+# from .decorators2 import get_bsiarticle
 from django.utils.decorators import method_decorator
 
-from django import forms
 from wiki.views.mixins import ArticleMixin
 
 
 class CreateRoot(CreateRootView):
-    template_name="uga/create-root.html"
+    template_name = "uga/create-root.html"
+
     def dispatch(self, request, *args, **kwargs):
         return super(CreateRoot, self).dispatch(request, *args, **kwargs)
-
 
 
 class UGACreate(Create):
@@ -35,6 +33,7 @@ class UGACreate(Create):
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
         return super(Create, self).dispatch(request, article, *args, **kwargs)
+
 
 class BSIArticleView(ArticleView):
     template_name = "bsi/article.html"
@@ -72,7 +71,7 @@ def index(request):
 
     template = loader.get_template('bsi/index.html')
     context = {
-        'all_articles':all_articles,
+        'all_articles': all_articles,
     }
     return HttpResponse(template.render(context, request))
 
@@ -82,7 +81,7 @@ def bsicatalog(request):
 
     template = loader.get_template('bsi/article.html')
     context = {
-        'all_articles':all_articles,
+        'all_articles': all_articles,
     }
     return HttpResponse(template.render(context, request))
 
@@ -91,24 +90,6 @@ def bsicatalog(request):
 def home(request):
     return render(request, 'home.html')
 
-
-class UserRegistrationForm(forms.Form):
-    username = forms.CharField(
-        required=True,
-        label='Username',
-        max_length=32
-    )
-    email = forms.CharField(
-        required=True,
-        label='Email',
-        max_length=32,
-    )
-    password = forms.CharField(
-        required=True,
-        label='Password',
-        max_length=32,
-        widget=forms.PasswordInput()
-    )
 
 def register(request):
     if request.method == 'POST':
@@ -123,6 +104,7 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'bsi/account/register.html', {'form': form})
+
 
 def create(request):
     return render(request, 'bsi/create_article.html')
