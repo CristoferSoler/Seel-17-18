@@ -36,7 +36,7 @@ if __name__ == "__main__":
     if not os.path.exists(directoryN):
         os.makedirs(directoryN)
     #
-    #cmdline.execute("scrapy runspider crawli.py --nolog".split())
+    cmdline.execute("scrapy runspider crawli.py --nolog".split())
     files = os.listdir(directoryC)
     files.extend(os.listdir(directoryT))
     files.extend(os.listdir(directoryN))
