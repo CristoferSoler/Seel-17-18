@@ -28,7 +28,6 @@ if __name__ == "__main__":
     files = os.listdir(directoryC)
     files.extend(os.listdir(directoryT))
     files.extend(os.listdir(directoryN))
-    print(files)
     # add progressbar
     start = time.time()
     print("MultiProcessing: ", time.time() - start)

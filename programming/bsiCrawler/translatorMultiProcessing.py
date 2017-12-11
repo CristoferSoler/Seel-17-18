@@ -104,12 +104,9 @@ def translate(fileMD):
 
     filename = os.fsdecode(fileMD)
     dir = ''
-    print(filename)
     filenameEn = translator.translate(filename, dest='en', src='de').text
     if not os.path.exists(directoryEN):
         os.makedirs(directoryEN)
-
-    name=''
     try:
         f = open(directoryC + '/' + fileMD)
         dir += 'C/'
@@ -121,14 +118,13 @@ def translate(fileMD):
             f = open(directoryT + '/' + fileMD)
             dir += 'T/'
 
-    if not os.path.exists(directoryEN + dir):
-        os.makedirs(directoryEN + '/' +dir)
+    if not os.path.exists(directoryEN + '/' + dir):
+        os.makedirs(directoryEN + '/' + dir)
 
     contentOfMdDE = f.read()
     listOf15k = check15k(contentOfMdDE)
     textEl = ''
     for el in listOf15k:
-        print(el)
         textEl += translator.translate(el, dest='en', src='de').text
 
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w' )
