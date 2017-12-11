@@ -14,9 +14,9 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from wiki.decorators import get_article
-# from .decorators2 import get_bsiarticle
 from django.utils.decorators import method_decorator
 
+from django import forms
 from wiki.views.mixins import ArticleMixin
 
 
