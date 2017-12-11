@@ -88,13 +88,15 @@ def check15k(list):
     listOf15kElement = []
 
     for line in splitList:
-        if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 4999):
+        if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
             listOf15kElement.append(line)
 
         else:
             listOf15k.append('\n'.join(listOf15kElement))
 
             listOf15kElement = [line]
+
+    listOf15k.append('\n'.join(listOf15kElement))
 
     return listOf15k
 
@@ -105,8 +107,7 @@ def translate(fileMD):
     filename = os.fsdecode(fileMD)
     dir = ''
     filenameEn = translator.translate(filename, dest='en', src='de').text
-    if not os.path.exists(directoryEN):
-        os.makedirs(directoryEN)
+
     try:
         f = open(directoryC + '/' + fileMD)
         dir += 'C/'
@@ -118,16 +119,13 @@ def translate(fileMD):
             f = open(directoryT + '/' + fileMD)
             dir += 'T/'
 
-    if not os.path.exists(directoryEN + '/' + dir):
-        os.makedirs(directoryEN + '/' + dir)
-
     contentOfMdDE = f.read()
     listOf15k = check15k(contentOfMdDE)
     textEl = ''
     for el in listOf15k:
         textEl += translator.translate(el, dest='en', src='de').text
 
-    f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w' )
+    f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)
     f.close()
 

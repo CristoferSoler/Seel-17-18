@@ -15,6 +15,18 @@ if __name__ == "__main__":
     if not os.path.exists('./md'):
         os.makedirs('./md')
 
+    if not os.path.exists('./mdEn'):
+        os.makedirs('./mdEn')
+
+    if not os.path.exists('./mdEn/C'):
+        os.makedirs('./mdEn/C')
+
+    if not os.path.exists('./mdEn/N'):
+        os.makedirs('./mdEn/N')
+
+    if not os.path.exists('./mdEn/T'):
+        os.makedirs('./mdEn/T')
+
     if not os.path.exists(directoryC):
         os.makedirs(directoryC)
 
