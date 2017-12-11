@@ -59,7 +59,7 @@ urls = [
 
 directoryContentEN = './contentEn/'
 directoryContent = './content/'
-directory = './md'
+directory = './md/B'
 directoryEN = './mdEn'
 fertig = False
 
@@ -91,6 +91,7 @@ def check15k(list):
 
         else:
             listOf15k.append('\n'.join(listOf15kElement))
+
             listOf15kElement = [line]
 
     return listOf15k
