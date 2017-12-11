@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'wiki.plugins.macros',
     'wiki.plugins.links',
     'bsi',
-    'bsiwiki'
+    'archive',
 ]
 
 MIDDLEWARE = [
@@ -67,7 +67,7 @@ ROOT_URLCONF = 'bsiwiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./../bsi/templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -81,7 +81,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'sekizai.context_processors.sekizai',
 
-
             ],
         },
     },
@@ -93,7 +92,7 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'/Users/macbook/Seel-17-18/programming/bsiCrawler/contentEn'
+CRAWLER_DIRECTORY = r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\contentEn'
 
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'
