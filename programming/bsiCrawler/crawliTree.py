@@ -41,7 +41,7 @@ urls = [
         'translate.google.hu',
       ]
 
-tree = {'Bausteine': {}, 'Gefährdungskataloge': {}, 'Maßnahmenkataloge': {}}
+tree = {'Bausteine': {}, 'Elementare Gefährdungen': {}, 'Umsetzungshinweise': {}}
 translator = Translator(service_urls=urls)
 
 def generateParent(name):
@@ -91,16 +91,7 @@ def get_links(response, h2Headline):
             for li in lis:
                 text = li.xpath('child::a').xpath('text()').extract()[0].strip()
 
-                if(h2Headline != 'Bausteine'):
-                    # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-                    first = " ".join(text.split(" ", 1)[:1])
-                    secound = text.split(" ", 1)[1]
-                    print(secound)
-                    secoundEN = translator.translate(secound, dest='en', src='de').text
-                    text = first + " " + secoundEN
-                    print(text)
-                else:
-                    text = translator.translate(text, dest='en', src='de').text
+                text = translator.translate(text, dest='en', src='de').text
                 tree.get(h2Headline)[text] = []
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
@@ -108,12 +99,12 @@ def get_links(response, h2Headline):
 
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
-    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKataloge/itgrundschutzkataloge_node.html']
+    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
     def parse(self, response):
         urlsB = get_links(response, 'Bausteine')
-        urlsG = get_links(response, 'Gefährdungskataloge')
-        urlsM = get_links(response, 'Maßnahmenkataloge')
+        urlsG = get_links(response, 'Elementare Gefährdungen')
+        urlsM = get_links(response, 'Umsetzungshinweise')
 
         for b in urlsB:
             yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
@@ -130,12 +121,7 @@ class bsiSpider(sc.Spider):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
-
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        print(h1)
         h1En = translator.translate(h1, dest='en', src='de').text
-        print(h1En)
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
@@ -148,23 +134,13 @@ class bsiSpider(sc.Spider):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
-
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        first = " ".join(h1.split(" ", 1)[:1])
-        secound = h1.split(" ", 1)[1]
-        secoundEN = translator.translate(secound, dest='en', src='de').text
-        h1En = first.replace(',','.') + " " + secoundEN
+        h1En = translator.translate(h1, dest='en', src='de').text
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
-            # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-            first = " ".join(text.split(" ", 1)[:1])
-            secound = text.split(" ", 1)[1]
-            secoundEN = translator.translate(secound, dest='en', src='de').text
-            text = first + " " + secoundEN
+            text = translator.translate(text, dest='en', src='de').text
 
-            tree['Gefährdungskataloge'][h1En].append(text)
+            tree['Elementare Gefährdunge'][h1En].append(text)
 
 
     def parseLinkListM(self, response):
@@ -172,30 +148,19 @@ class bsiSpider(sc.Spider):
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
 
-        #Deutsche Dummköpfe
-        if('M 4 Hard- und Software' == h1):
-            h1 = 'M 4 Hardware und Software'
+        h1En = translator.translate(h1, dest='en', src='de').text
 
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        first = " ".join(h1.split(" ", 1)[:1])
-        secound = h1.split(" ", 1)[1]
-        secoundEN = translator.translate(secound, dest='en', src='de').text
-        h1En = first.replace(',','.') + " " + secoundEN
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
-            # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-            first = " ".join(text.split(" ", 1)[:1])
-            secound = text.split(" ", 1)[1]
-            secoundEN = translator.translate(secound, dest='en', src='de').text
-            text = first.replace(',','.') + " " + secoundEN
-            tree['Maßnahmenkataloge'][h1En].append(text)
+
+            text = translator.translate(text, dest='en', src='de').text
+            tree['Umsetzungshinweise'][h1En].append(text)
 
     #Fertig mit dem Auslesen der Struktur
     def closed(self, reason):
         # manuelle Übersetzung, weil google anders übersetzt
         tree['Components'] = tree.pop('Bausteine')
-        tree['Threads'] = tree.pop('Gefährdungskataloge')
-        tree['Counter Measuers'] = tree.pop('Maßnahmenkataloge')
+        tree['Elementary hazards'] = tree.pop('Elementare Gefährdungen')
+        tree['implementation notes'] = tree.pop('Umsetzungshinweise')
         generateTree(json.dumps(tree))
