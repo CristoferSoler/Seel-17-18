@@ -14,6 +14,7 @@ import os
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -98,6 +99,9 @@ CRAWLER_DIRECTORY = r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\
 LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
+
+# from bsiwiki.WikiPattern import WikiPattern
+# URL_CONFIG_CLASS = WikiPattern
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases

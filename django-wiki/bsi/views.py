@@ -1,23 +1,17 @@
-from django.contrib.auth.models import User
-from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
+from django.http import Http404
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.template import loader
-# from .models import <tableName>
-# from bsi.core.paginator import WikiPaginator
+from django.utils.decorators import method_decorator
+from wiki.decorators import get_article
 from wiki.models.article import Article
-# from wiki.tests.test_views import SearchViewTest
-from wiki.views.article import SearchView
 from wiki.views.article import ArticleView, CreateRootView
 from wiki.views.article import SearchView, Create
 
-from django.contrib.auth.decorators import login_required
-from django.contrib.auth import login, authenticate
-from django.contrib.auth.forms import UserCreationForm
-from django.shortcuts import render, redirect
-from wiki.decorators import get_article
-from django.utils.decorators import method_decorator
-
-from django import forms
-from wiki.views.mixins import ArticleMixin
+from bsi.ugaViews import overview_uga
 
 
 class CreateRoot(CreateRootView):
@@ -35,11 +29,29 @@ class UGACreate(Create):
         return super(Create, self).dispatch(request, article, *args, **kwargs)
 
 
-class BSIArticleView(ArticleView):
-    template_name = "bsi/article.html"
+class WikiArticleView(ArticleView):
 
     @method_decorator(get_article(can_read=True))
     def dispatch(self, request, article, *args, **kwargs):
+        """
+        The dispatch method decides which template is used to display an article. Depending from its parent (uga or bsi) different templates will be used.
+        """
+        urlpath = kwargs.get('urlpath')
+        if not urlpath:
+            raise Http404("No urlpath specified")
+        path = urlpath.path
+        slug = urlpath.slug
+
+        if path.startswith('uga') and slug.__str__() == 'uga':
+            self.template_name = "uga/overview_uga.html"
+            return overview_uga(request)
+        elif path.startswith('uga'):
+            self.template_name = "uga/article.html"
+        elif path.startswith('bsi'):
+            self.template_name = "bsi/article.html"
+        elif path.startswith('news'):
+            """ todo set news template """
+
         return super(
             ArticleView,
             self).dispatch(
@@ -47,10 +59,6 @@ class BSIArticleView(ArticleView):
             article,
             *args,
             **kwargs)
-
-    def get_context_data(self, **kwargs):
-        kwargs['selected_tab'] = 'view'
-        return ArticleMixin.get_context_data(self, **kwargs)
 
 
 class BSISearchView(SearchView):
