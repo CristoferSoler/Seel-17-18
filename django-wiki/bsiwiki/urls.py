@@ -20,7 +20,6 @@ from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
 
 from bsi import views
-from .init import init
 
 urlpatterns = [
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
@@ -37,9 +36,3 @@ urlpatterns = [
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
     url(r'^', get_pattern()),
 ]
-
-"""
-if necessary, this init function creates a root article, uga, bsi and archive head articles (below root).
-todo this is not the best place to put a startup script because dummy threads may run it over time :/
-"""
-init()
