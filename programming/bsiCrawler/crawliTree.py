@@ -77,8 +77,7 @@ def generateTree(tree):
 
         bootstrapTree.append(dummy)
 
-    print(bootstrapTree)
-    f = open('bsiTreeBootstrap' + '.txt', 'w')
+    f = open('treeview/bsiTree' + '.txt', 'w')
     treeJson = json.dumps(bootstrapTree)
     f.write(treeJson)
     f.close()

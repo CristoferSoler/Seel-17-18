@@ -48,6 +48,9 @@ def main():
     if not os.path.exists('./mdEn/T'):
         os.makedirs('./mdEn/T')
 
+    if not os.path.exists('./treeview'):
+        os.makedirs('./treeview')
+
     if not os.path.exists(directoryC):
         os.makedirs(directoryC)
 
@@ -70,6 +73,10 @@ def main():
     pool = Pool()
     pool.map(translate, files)
     print('Translation is finished')
+
+    print('Generate treeview of the BSI')
+    os.system("scrapy runspider crawliTree.py --nolog")
+    print('Generation of the treeview is finshed')
 
 if __name__ == "__main__":
     main()
