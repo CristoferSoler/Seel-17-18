@@ -92,10 +92,9 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\contentEn'
+CRAWLER_DIRECTORY = r'C:\Users\Peter\projects\Seel-17-18\programming\bsiCrawler\content'
 
-#LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
-LOGIN_REDIRECT_URL = 'index'
+LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
@@ -126,9 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
