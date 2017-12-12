@@ -1,0 +1,34 @@
+<script src="../../static/bsi/js/jquery.min.js"></script>
+<script src="../../static/bsi/js/login.js"></script>>
+
+{% extends 'bsi/base.html'%} {% block bsi_contents %}
+<div class="container margin-container">
+     <div class=" jumbotron-margin text-center">
+    	<h1 class="page-header">Register</h1>
+		 <form id="register-form" action="{% url 'register' %}" method="post" role="form" style="display: block;">
+			{% csrf_token %}
+				{% for field in form %}
+				  <p>
+					{{ field.label_tag }} <br>
+					{{ field }}
+					{% if field.help_text %}
+					<br>
+					  <small style="color: grey">{{ field.help_text }}</small>
+					<br>
+					{% endif %}
+					{% for error in field.errors %}
+					  <p style="color: red">{{ error }}</p>
+					{% endfor %}
+				  </p>
+				{% endfor %}
+			<div class="form-group">
+				<div class="row">
+					<div class="col-sm-6 col-sm-offset-3">
+						<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary btn-mg" value="Register Now">
+					</div>
+				</div>
+			</div>
+		</form>
+	 </div>
+</div>
+{% endblock %}
