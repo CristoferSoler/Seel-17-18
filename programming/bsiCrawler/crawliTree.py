@@ -58,7 +58,7 @@ def generateParent(name):
 def generateChild(name):
     return {'text': name}
 
-
+#generate json format tree
 def generateTree(tree):
     bootstrapTree = []
 
@@ -83,8 +83,7 @@ def generateTree(tree):
     f.write(treeJson)
     f.close()
 
-
-# alle Links unter Bausteine, Gegenmaßnahmen und Maßnahmen holen
+#extract allt he links under components, Elementary hazards and implementation notes
 def get_links(response, h2Headline):
     links = []
 
@@ -106,12 +105,13 @@ def get_links(response, h2Headline):
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
 
-
+#crawller to get the treeview
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
     start_urls = [
         'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
+    #get all sublines under components, Elementary hazards and implementation notes
     def parse(self, response):
         urlsB = get_links(response, 'Bausteine')
         urlsG = get_links(response, 'Elementare Gefährdungen')
@@ -126,7 +126,7 @@ class bsiSpider(sc.Spider):
         for m in urlsM:
             yield sc.Request(m, callback=self.parseLinkListM, dont_filter=True)
 
-    # folgende 3 Funktionen extrahieren die Links aus den Unterseiten
+    # get all links form the components
     def parseLinkList(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
@@ -145,6 +145,7 @@ class bsiSpider(sc.Spider):
 
             tree['Bausteine'][h1En].append(text)
 
+    # get all headlines from the Elementary hazards
     def parseLinkListG(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
@@ -162,6 +163,7 @@ class bsiSpider(sc.Spider):
 
             tree['Elementare Gefährdungen'][h1En].append(text)
 
+    # get all headline form the implementation notes
     def parseLinkListM(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
