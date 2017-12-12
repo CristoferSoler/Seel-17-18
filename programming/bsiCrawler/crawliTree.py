@@ -172,7 +172,7 @@ class bsiSpider(sc.Spider):
         if (h1 == 'APP- Anwendungen'):
             h1 = h1.replace('-', ':')
 
-        if (h1 == 'CON: Konzeption und Vorgehensweisen'):
+        if (h1 == 'CON: Konzepte und Vorgehensweisen'):
             h1 = 'CON: Konzeption und Vorgehensweise'
 
         h1En = translator.translate(h1, dest='en', src='de').text
