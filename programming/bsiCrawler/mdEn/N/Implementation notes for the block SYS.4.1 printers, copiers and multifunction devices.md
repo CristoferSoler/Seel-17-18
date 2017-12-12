@@ -513,7 +513,7 @@ The print job that was created by an application and should be output to a print
 
 
 - Multiple physical printers are addressed via a logical printer. In addition to the advantage of higher print performance (it can be printed in parallel), another printer can be accessed without major configuration overhead if one fails. It is recommended that only devices with similar properties be grouped together.
-- A physical printer is addressed by multiple logical printers, each installed on different print servers. This is useful when using multiple print servers. If one print server fails, it is easy to switch to another print server, so printing can continue without much configuration.
+- A physical printer is addressed by multiple logical printers, each installed on different print servers. This is useful when using multiple print servers. If one print server fails, it is easy to switch to another print server so that printing can continue without much configuration.
 - Furthermore, logical printers can be used to assign a separate printer name to a physical printer with several different settings. For example, for a physical printer, two logical printers can be defined: one for simplex and one for duplex printing. All logical printers must be documented.
 
 

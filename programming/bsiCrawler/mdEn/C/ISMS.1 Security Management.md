@@ -72,13 +72,13 @@ The management level MUST assume overall responsibility for information security
 
 The CA must define the information security responsibilities and provide the appropriate people with the necessary skills and resources. The management level MUST regularly be informed about the status of information security, in particular MUST be informed about possible risks and consequences due to lack of security measures.
 
-#### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]The security process MUST be initiated and established by the management. Appropriate security objectives and an information security strategy MUST be defined and documented. It is necessary to develop conceptual specifications and organizational frameworks to enable the proper and secure handling of information within all business processes of the company or the authority.
+#### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]The security process MUST be initiated and established by the management. Appropriate security objectives and an information security strategy MUST be defined and documented. It is necessary to develop conceptual guidelines and organizational frameworks to enable the proper and secure handling of information within all business processes of the company or the authority.
 
 The security strategy and objectives MUST be borne and held by the institution's leadership. Security objectives and strategy MUST be regularly reviewed to see if they are up to date, appropriate and effective.
 
 #### ISMS.1.A3 Creation of an information security guideline [Head of Institution]
 
-The governance level MUST adopt an overarching information security guideline that describes the importance of information security, security objectives, key aspects of the security strategy, and the information security governance structure. The security policy MUST have a clear scope. The information security policy MUST explain the security objectives and the relation of the security objectives to the business objectives and tasks of the institution.
+The governance level MUST pass an overall information security guideline describing the importance of information security, the security objectives, the key aspects of the security strategy, and the information security governance structure. The security policy MUST have a clear scope. The information security policy MUST explain the security objectives and the relation of the security objectives to the business objectives and tasks of the institution.
 
 The information security guideline MUST be disclosed to all employees and other members of the institution. It SHOULD be updated regularly.
 
@@ -90,7 +90,7 @@ The Information Security Officer MUST be involved early in all major projects, a
 
 #### ISMS.1.A5 Contract drafting when ordering an external information security officer [institutional management]
 
-If the role of Information Security Officer can not be filled by an internal employee, an external information security officer MUST be appointed. The service contract must include all tasks of the Information Security Officer and the associated rights and obligations. The contract MUST include an appropriate confidentiality agreement. The external information security officer MUST have the necessary qualifications. The contract MUST ensure a controlled termination of the contractual relationship including the transfer of tasks to the client.
+If the role of Information Security Officer can not be filled by an internal employee, an external information security officer MUST be appointed. The service contract concluded for this MUST include all tasks of the Information Security Officer as well as the associated rights and obligations. The contract MUST include an appropriate confidentiality agreement. The external information security officer MUST have the necessary qualifications. The contract MUST ensure a controlled termination of the contractual relationship, including the transfer of the tasks to the client.
 
 #### ISMS.1.A6 Establishment of a suitable organizational structure for information security [Institutional Management]
 

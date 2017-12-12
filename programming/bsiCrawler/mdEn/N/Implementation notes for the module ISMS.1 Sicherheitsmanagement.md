@@ -59,7 +59,7 @@ The security objectives should be carefully determined at the beginning of each 
 
 When implementing security measures, a compromise between cost and effort usually has to be found. It should therefore be transparent which information and business processes contribute to the performance of the task and what value is assigned to them in order to formulate appropriate security goals.
 
-The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the deliberations.
+The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the consultations.
 
 A detailed description of how and in which depth the security strategy and objectives should be recorded can be found in the BSI standard 100-2 Approach to IT-Grundschutz.Security objectives and strategy need to be reviewed regularly to see if they are up to date and appropriate. In particular, changes in basic conditions, business processes or the IT environment, the security objectives and strategy must be reviewed and possibly adjusted.
 

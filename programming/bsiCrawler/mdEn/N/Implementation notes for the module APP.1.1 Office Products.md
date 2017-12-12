@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Office products have long been an integral part of the standard IT equipment in the office environment. Editing documents digitally and creating calculations and presentations on the PC has greatly changed the office routine. Accordingly, most employees view office products as basic IT equipment. Precisely because of the widespread use of Office products, these are also used as an attack path, for example, to spread malicious software using macros in Office documents.
+Office products have long been an integral part of the standard IT equipment in the office environment. Editing documents digitally and creating calculations and presentations on the PC has greatly changed the office routine. Accordingly, most employees view office products as basic IT equipment. Especially because of the widespread use of Office products, these are also used as a route to attack, for example, using macros in Office documents spread malware.
 
 Therefore, security measures should be planned and implemented for safe use of Office products, which are appropriate to the protection needs of the institution.
 
@@ -13,7 +13,7 @@ Unless otherwise stated, the following implementation notes refer to Microsoft O
 
 ** planning and conception **
 
-In the planning and design phase, principles should be defined as to how Office products are to be used in the institution and what requirements the institution has for Office products. In this way, suitable office products should be selected for the institution and the requirements of the employees (see APP.1.1.M5 Selection of Suitable Office Products). It should also be defined in the planning and design phase how to handle active content (eg macros) in Office documents (see APP.1.1.M2 Restricting Active Content) and if enhancements to the selected Office products to be used (APP.1.1.M11 Regulated use of extensions for office products).
+In the planning and design phase, principles should be defined as to how Office products are to be used in the institution and what requirements the institution has for Office products. In this way, suitable office products should be selected for the institution and the requirements of the employees (see APP.1.1.M5 Selection of Suitable Office Products). It should also be defined in the planning and design phase how to handle active content (eg macros) in Office documents (see APP.1.1.M2 Restricting Active Content) and if enhancements to the selected Office products to be used (APP.1.1.M11 Regulated use of extensions for Office products).
 
 **Procurement**
 
@@ -21,7 +21,7 @@ License management plays an important role in the procurement of office products
 
 **Implementation**
 
-Before deploying to the institution, new versions of Office products should be tested (see APP.1.1.M6 Testing New Versions of Office Products) to ensure that the institution's existing work equipment (such as templates or forms) as well work correctly with the new version. Depending on the established principles on how to work within the institution with Office products, the software used must be configured differently. During the configuration it should be ensured that the most uniform configuration of Office products has been implemented in all workplaces of the institution.
+Before deploying to the institution, new versions of Office products should be tested (see APP.1.1.M6 Testing New Versions of Office Products) to ensure that the institution's existing work equipment (eg, document templates or forms) as well work correctly with the new version. Depending on the established principles of how to work within the institution with Office products, the software used must be configured differently. During the configuration it should be ensured that the most uniform configuration of Office products has been implemented in all workplaces of the institution.
 
 **Business**
 
@@ -111,7 +111,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### APP.1.1.M5 Selection of suitable Office products
 
-The functions of the Office products should be based on the needs of the users. To ensure this, future users of Office products should be properly involved in the selection process. For example, it makes sense that the criteria for the selection of office products should be set up jointly by IT operations and users. For a new procurement, a market analysis by the IT department should be carried out beforehand to define a preselection.Based on the market analysis and user experience, a requirements catalog should be created to support the selection of suitable Office products among the various alternatives. The requirements can be divided into the two classes MUST requirements and DESIRED requirements. Mandatory requirements must be met by the Office product available for selection in order to get a closer look. TARGET requests are optional, but they are used to choose between several Office products in the nearer selection. TARGET requests may also be weighted to indicate the order of requirements. This allows the Office products to be selected that meet all the MUST requirements and score the most points in the TARGET requirements.
+The functions of the Office products should be based on the needs of the users. To ensure this, future users of Office products should be properly involved in the selection process. For example, it makes sense that the criteria for the selection of office products should be set up jointly by IT operations and users. For a new procurement, a market analysis by the IT department should be carried out beforehand to define a preselection.Based on the market analysis and user experience, a requirements catalog should be created to support the selection of the right Office products among the various alternatives. The requirements can be divided into the two classes MUST requirements and DESIRED requirements. Mandatory requirements must be met by the Office product available for selection in order to get a closer look. TARGET requests are optional, but they are used to choose between several Office products in the nearer selection. TARGET requests may also be weighted to indicate the order of requirements. This allows the Office products to be selected that meet all the MUST requirements and score the most points in the TARGET requirements.
 
 The following table shows an example analysis of the requirements analysis.
 
@@ -159,7 +159,7 @@ Deviations from the installation instructions and in particular the standard con
 
 If users are to install the software themselves, at least the pilot installation should be accompanied by a selected typical user by the IT department to verify the understandability of the installation instructions. The installation instructions should be updated and improved based on the findings from the pilot installation as well as further feedback from the users.Both before and after installing software, a full backup should be performed. The first backup can be used to recover a consolidated touchdown point during subsequent installation problems. After the successful installation, a complete data backup should be carried out again so that it can be restored to the state after successful installation of the product in the event of later problems.
 
-Since office products are usually installed in almost all workstations in an institution, it is recommended that the configuration be managed centrally. There are several options for this depending on the operating system used on the workstations:
+Since Office products are usually installed in almost all workstations of an institution, it is recommended to centrally administer the configuration. There are several options for this depending on the operating system used on the workstations:
 
 * In the Windows environment, the uniform configuration of the Office products can generally be distributed to the workplaces by means of group policies.
 * In the Mac OS and Unix environment, a single configuration can be managed with configuration management applications.

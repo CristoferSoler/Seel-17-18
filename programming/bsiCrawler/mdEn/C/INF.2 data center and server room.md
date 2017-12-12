@@ -30,7 +30,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Incorrect planning
 
-If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to a faulty design or if the energy supply at the selected location is insufficient.
+If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to incorrect design or if the energy supply at the selected location is insufficient.
 
 ### 2 2 Unauthorized accessLack of access controls or these are insufficient, increases the risk that unauthorized persons enter the data center and there negligent, z. B. due to lack of expertise, or intentionally cause damage. Attackers can so z. For example, stealing sensitive data, stealing devices or manipulating servers. Inadequate access controls thus have a particular impact on the availability, confidentiality and integrity of data or IT components.
 
@@ -227,11 +227,11 @@ To ensure the availability of a data center, the UPS systems SHOULD be redundant
 
 #### INF.2.A26 Redundant design of emergency power systems (A)
 
-In the case of increased protection requirements, emergency power supply systems SHOULD be designed redundantly. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
+In the case of increased protection requirements, emergency power supply systems SHOULD be redundantly designed. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-With the employees of the institution SHOULD be carried out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+The staff of the institution SHOULD have regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 

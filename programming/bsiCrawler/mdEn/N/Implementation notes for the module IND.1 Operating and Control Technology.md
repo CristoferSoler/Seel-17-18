@@ -531,7 +531,7 @@ In addition, attention must be paid to the applicable data protection regulation
 
 ** Monitoring and evaluation **
 
-To ensure safe operation, a suitable infrastructure for operational monitoring of system operation should be designed, implemented and operated. The monitoring should include not only the operational availability and utilization monitoring of services, systems and networks but also the evaluation of security-relevant events.
+To ensure safe operation, a suitable infrastructure for operational monitoring of system operation should be designed, implemented and operated. The monitoring should include not only the operational availability and utilization monitoring of services, systems and networks, but also the evaluation of security-relevant events.
 
 This will usually not happen if the logs are spread across a variety of systems. Therefore, a central log server should be set up. This must be suitably embedded in the zone concept (see IND.1.M5 Development of a suitable zone concept). If necessary, multiple log servers are required to maintain the separation of the zones.The incoming logs must be systematically evaluated so that the appropriate response can be triggered if necessary. In the case of a manageable number of systems, this can be done on a random basis, with at least one (role) responsibility and one frequency (depending on the protection requirement, eg weekly) to be determined. With a larger OT infrastructure, only an at least semi-automated evaluation will allow to detect critical events.
 
@@ -777,7 +777,7 @@ According to IND.1.M7 Establishment of an Authorization Management applies: Auth
 
 ** Automated evaluation **
 
-It makes sense to automate the compilation of the effective authorizations while carrying out an evaluation. Thus, changes (deltas) could be reported or deviations from a standard or target state can be specially represented.
+It makes sense to automate the compilation of the effective authorizations while carrying out an evaluation. Thus, changes (deltas) could be reported or deviations from a standard or target state can be displayed specially.
 
 ** Logging of critical activities **
 
@@ -787,11 +787,11 @@ In the first case, the likelihood of reducing the likelihood of others improving
 
 #### IND.1.M16 Greater Foreclosure of Zones (IA)
 
-Interfaces to zones with high or very high protection requirements may require more isolation than is possible with Layer-4 firewall systems or the often limited scope for securing OT components. In particular for external interfaces of the OT and office network, the interfaces should be subject to a safety assessment.
+Interfaces to zones with high or very high protection requirements may require more isolation than is possible with Layer-4 firewall systems or the often limited scope for securing OT components. In particular for external interfaces of the OT and Office network, the interfaces should be subject to a security assessment.
 
 The safety assessment should be carried out taking into account the design of the respective interface on the basis of elementary hazards. In this procedure, the relevant elementary hazards must first be determined and the respective interface must be examined for adequate protection. From this point of view, it may be necessary to discard interfaces or additionally protect them against the identified threats if the established security measures do not adequately cover the identified threats.
 
-The protection measures required in each case result from the risk assessment and may also require adjustments to the communicating OT components such as hardening, antivirus protection, patch management or the award of minimum legal requirements. Due to the often limited possibilities of action there, such protective measures can also be implemented on an interface system. For this purpose, the construction of a DMZ can be considered.The communication between the security areas considered (such as external access to the OT) is terminated in this DMZ by application layer gateways (ALG) such as proxy or data transfer server. Specific content checks on the gateway, such as checking for malicious programs or data format checks (eg XML checking through a web application firewall or protocol checks by industrial firewalls), can be carried out by the firewall systems, ensuring that only predefined communication paths are possible and desired communication direction of the connection structure is observed. The ALGs can be specially hardened and enforce the safety requirements for the zone without the need for adjustments to the OT components. Such a DMZ infrastructure can be used depending on the environmental requirements per interface or for multiple interfaces.
+The protection measures required in each case result from the risk assessment and may also require adjustments to the communicating OT components such as hardening, antivirus protection, patch management or the awarding of minimum legal requirements. Due to the often limited possibilities of action there, such protective measures can also be implemented on an interface system. For this purpose, the construction of a DMZ can be considered.The communication between the security areas considered (such as external access to the OT) is terminated in this DMZ by application layer gateways (ALG) such as proxy or data transfer server. Specific content checks on the gateway, such as checking for malicious programs or data format checks (eg XML checking through a web application firewall or protocol checks by industrial firewalls), can be carried out by the firewall systems, ensuring that only predefined communication paths are possible and desired communication direction of the connection structure is observed. The ALGs can be specially hardened and enforce the safety requirements for the zone without the need for adjustments to the OT components. Such a DMZ infrastructure can be used depending on the environmental requirements per interface or for multiple interfaces.
 
 #### IND.1.M17 Regular Security Check (I)
 

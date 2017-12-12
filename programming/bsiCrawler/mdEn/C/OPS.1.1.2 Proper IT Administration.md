@@ -66,7 +66,7 @@ If employees are to perform administrative tasks within the IT environment, they
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
 * Role separation of administrative and controlling roles (e.g., revision) MUST be made.
-The administrators and their representatives MUST have sufficient time to perform their duties diligently. All administrators and their representatives MUST receive sufficient training opportunities
+The administrators and their representatives MUST have sufficient time to perform their duties carefully. All administrators and their representatives MUST receive sufficient training opportunities
 
 These requirements MUST also be met when administrative tasks are delegated to third parties.
 
@@ -74,11 +74,11 @@ These requirements MUST also be met when administrative tasks are delegated to t
 
 For all administrative tasks and responsibilities, substitution arrangements MUST be made.
 
-It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, corresponding emergency users with administration rights SHOULD be set up.
+It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, appropriate emergency users with administration rights SHOULD be set up.
 
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]
 
-As employees assume administrative responsibilities within the IT environment, they MUST be trained in their work, particularly in the existing IT architecture and the IT systems and applications they are responsible for. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.These requirements MUST also be met when administrative tasks are delegated to third parties.
+When employees take over administrative tasks within the IT environment, they MUST BE in their activities, particularly in the existing IT architecture and be briefed by them take care of IT systems and applications. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.These requirements MUST also be met when administrative tasks are delegated to third parties.
 
 #### OPS.1.1.2.A4 Termination as IT Administrator [Head of Human Resources]
 

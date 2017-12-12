@@ -72,7 +72,7 @@ In the following, the most important decisions for a cleanup strategy are descri
 * The governing body must prepare and agree on a timetable for the cleanup. In this case, the responsible z. For example, make sure that the institution remains functional or that the failures are as short as possible.
 * The governing body should establish guidelines on whether and how backup data can be used. Backups that were created before the APT attack can usually be used. If the point of attack can not be determined with certainty or if only newer backups are available, the data to be backed up must be determined in a targeted manner. Installations and configurations should be rebuilt manually.
 * If the analysis reveals that the attacker exploited operational or application software errors, it should be agreed with the manufacturer or internal developers when and how to correct them. If it is not possible to remedy the vulnerabilities in a timely manner and there are no other safeguards, the application should not continue for the time being.
-* If subnets are cleared, the governing body decides when and how to reopen the accesses to these networks.* After IT systems and networks have been put back into service, functional tests should be performed to verify that all applications are ready for use. The management committee then decides which temporary alternative solutions are to be dissolved or taken over permanently.
+* If subnets are cleared, the governing body decides when and how to reopen the accesses to these networks.* After IT systems and networks have been put back into service, it should be checked by functional tests, if all applications are ready for use again. The management committee then decides which temporary alternative solutions are to be dissolved or taken over permanently.
 #### DER.2.3.M3 Isolation of affected network sections
 
 The cleanup activities begin with the affected network areas being isolated. The goal is to completely deprive the attacker of access to the IT environment. This should be done in one go if possible so that the attacker does not notice prematurely that he has been discovered and may be able to take countermeasures. Therefore, the network sections must be isolated in a concerted action, the so-called cut-off.
@@ -120,7 +120,7 @@ However, it should be avoided to punish successfully attacked employees. The qua
 
 #### DER.2.3.M6 Return to productive operation
 
-After the cleanup work is completed, the decoupled IT environment should be returned to production. So that the cleansing restricts the availability as little as possible, this step can be done step by step for individual network segments. In this case, however, it must be absolutely certain that uncleaned network sections are in no way connected with already cleared ones.
+After the cleanup work is completed, the decoupled IT environment should be returned to production. So that the cleansing restricts the availability as little as possible, this step can be done step by step for individual network segments. In this case, however, it must be absolutely certain that uncleaned network sections will in no case be connected to already cleared ones.
 
 It is often only possible to distribute new passwords and access data to end users at this stage. Increased support requests are expected (see DER.2.3.M4 * Blocking and changing access data and cryptographic keys *). Again, a gradual restart can reduce the requests or distribute them over time. If possible, functional tests should be performed before restarting productive operation to avoid support requests or error symptoms misinterpreted as attack symptoms.
 
@@ -160,7 +160,7 @@ The governing body and all staff responsible for the clean-up should therefore h
 
 It is not necessary to replace all lost communication channels. An easy way is to have face-to-face meetings and close collaboration between the governing body and direct supporters.
 
-Usually, it is not possible to build a parallel communication infrastructure in addition to the ongoing investigation and cleanup activities. Therefore, communication services of third parties are often used in such a situation. When selecting a suitable communication channel, care must be taken to ensure that the confidentiality and integrity of the communication is as well protected as possible.
+It is usually not possible to build a parallel communication infrastructure in addition to the ongoing investigation and cleanup activities. Therefore, communication services of third parties are often used in such a situation. When selecting a suitable communication channel, care must be taken to ensure that the confidentiality and integrity of the communication is as well protected as possible.
 
 ### 2.3 Measures for increased protection requirements
 
@@ -174,7 +174,7 @@ In an APT attack, attackers can also manipulate the IT systems beyond the usual 
 * Firmware of system components (eg CPU, GPU, additional hardware),
 * not directly affected additional components (eg remote maintenance solutions such as ILO)
 * Firmware of power supplies and embedded devices (eg UPS),
-* safety-critical settings of the software mentioned (eg undocumented options and options not available in maintenance programs).
+* Security-critical settings of the software mentioned (eg undocumented options and options not available in the maintenance programs).
 Since there are often only limited access to these components via the firmware itself, an attacker can easily disguise his manipulations.However, this kind of attack is time consuming, technically and organisationally complex for the attacker. In addition, he must have extensive access to the IT system and adapt the attack strongly to the respective target platform. Such an attack vector is unlikely, but can not be ruled out in an APT attack.
 
 Such manipulations can only be detected by an institution with great effort and special knowledge. Since the self-assessment of the components can not be trusted, the settings and firmware files must be extracted and analyzed independently of the running component.

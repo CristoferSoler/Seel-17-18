@@ -306,7 +306,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### APP.3.6.M21 Hidden Master (CIA)
 
-A so-called hidden master configuration ensures that the primary advertising DNS server is not accessible from the outside and is not visible in the DNS zone data. Requests will only be answered by at least two secondary Advertising DNS servers, which will retrieve their data via a secure line from the hidden primary advertising DNS server.
+A so-called hidden master configuration ensures that the primary advertising DNS server is not accessible from the outside and is not visible in the DNS zone data. Requests will only be answered by at least two secondary Advertising DNS servers, which will retrieve their data via a secured line from the hidden primary advertising DNS server.
 
 #### APP.3.6.M22 Connection of DNS servers via different providers [IT manager] (IA)
 

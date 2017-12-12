@@ -77,7 +77,7 @@ In addition, it should be ensured that substitution regulations also exist for e
 
 At the end of the contract, a regular handover of the work results and the documents and resources received must take place. In addition, all established access, access and access authorizations and access rights must be withdrawn or deleted. In addition, the person making the withdrawal should be explicitly informed that the obligation to maintain secrecy also remains after the end of the activity.
 
-Third-party personnel to be deployed at short notice or once a single time is to be treated like visitors. D. H. For example, the stay in security-relevant areas is only allowed in the company of employees of the authority or the company.
+Third-party personnel to be employed at short notice or once is to be treated as visitor, ie. H. For example, the stay in security-relevant areas is only allowed in the company of employees of the authority or the company.
 
 #### ORP.2.M5 Confidentiality agreements for the use of outside personnel
 

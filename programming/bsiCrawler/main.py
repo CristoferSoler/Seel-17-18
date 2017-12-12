@@ -29,7 +29,7 @@ def main():
     print('Getting Started with Data from the BSI')
     print('Delete all Files of the md directory')
     deleteAllFilesInDirectory('./md')
-    deleteAllFilesInDirectory('./mdEN')
+    deleteAllFilesInDirectory('./mdEn')
     print('Deleting is is completed')
 
     print('Missing folder structures are created.')

@@ -97,7 +97,7 @@ It should be checked as randomly as possible whether the regulations for the tra
 
 ** Sensitization of users **The smaller and lighter IT systems become, the more frivolous experience has shown. Therefore, employees should be made aware of the value of mobile IT systems and the value of information stored on them. As mobile IT systems offer a wide range of variants and combinations, they should be informed first and foremost about the specific hazards and measures of the devices they use. This can affect both smartphones and tablets or laptops with their respective different interfaces.
 
-Employees should also be advised that they should not exchange confidential information with anyone on the move and should not talk about it on the go while hearing or being seen by outsiders. In particular, the identity of each communication partner should be questioned against detailed information. Users should be made aware of the building block requirements of * ORP.3 Information Security and Information Security *.
+Employees should also be advised that they should not exchange confidential information with anyone on the move and should not talk about it on the road while hearing or being seen by outsiders. In particular, the identity of each communication partner should be questioned against detailed information. Users should be made aware of the building block requirements of * ORP.3 Information Security and Information Security *.
 
 #### INF.9.M3 Access and Access Protection [Staff]
 
