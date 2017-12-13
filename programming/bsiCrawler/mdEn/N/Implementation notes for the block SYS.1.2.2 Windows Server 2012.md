@@ -64,7 +64,8 @@ Because Windows Server 2012 (R2) is a complex operating system with a variety of
 
 Windows Server 2012 is available in four editions designed and optimized for different applications:
 
-* Foundation+ Basic server features
+* Foundation
++ Basic server features
 + no virtualization
 
 
@@ -115,7 +116,8 @@ The Essentials Edition offers a number of features that can simplify setup witho
  The BranchCache mechanism can already be activated in Essentials, which increases the availability of data in remote locations through caching. It also reduces bandwidth usage across the WAN.
 * Remote Web Access
  Many features of Windows Server 2012 Essentials can be remotely accessed and controlled through a web interface (Remote Web Access), which has been streamlined in R2 and optimized for use with tablets and similar devices.
-** Microsoft Azure Online Backup **In Windows Server 2012, Microsoft's cloud storage solution Azure Online Backup is already integrated into Essentials and can be easily activated. All you have to do is install the corresponding Add-in in the Essentials Dashboard and create an account (depending on the storage volume). In R2 is not even an add-in necessary, here can be done directly by clicking the registration with Azure.
+** Microsoft Azure Online Backup **
+In Windows Server 2012, Microsoft's cloud storage solution Azure Online Backup is already integrated into Essentials and can be easily activated. All you have to do is install the corresponding Add-in in the Essentials Dashboard and create an account (depending on the storage volume). In R2 is not even an add-in necessary, here can be done directly by clicking the registration with Azure.
 
 While this is a very easy way to generate regular backups of the data stored on the server, this feature should not be lightly activated, but at best after a comprehensive study of the topics of the building blocks OPS.2.2 cloud usage and OPS.1.16 data protection and a trade-off between confidentiality, availability and various providers.
 
@@ -149,7 +151,8 @@ Roles, role services, and features must always be installed as sparingly as poss
 
 ** Server Core **
 
-Server Core is a minimal installation option for Windows Server (including 2012 and 2012 R2) that provides a server environment with limited functionality and lower maintenance requirements.Since Windows Server 2012, you can switch between Full Server and Server Core without reinstalling.
+Server Core is a minimal installation option for Windows Server (including 2012 and 2012 R2) that provides a server environment with limited functionality and lower maintenance requirements.
+Since Windows Server 2012, you can switch between Full Server and Server Core without reinstalling.
 
 Main differences are the lack of the complete Windows shell and an extremely limited graphical user interface (GUI), which is limited to a command prompt with PowerShell support.
 
@@ -194,7 +197,8 @@ In addition, as part of Windows PowerShell Core Modules, Microsoft offers collec
 * PowerShell Cmdlets for the Best Practice Analyzer
 ** User Account Control (UAC) **
 
-User Account Control (UAC) was introduced in Windows Vista. It ensures that an increase in rights is required for administrative tasks. Until then, most users had worked as administrators, with the potential for malicious software.If an administrator logs in with UAC enabled, he works with restricted rights. Only after confirmation in a special dialog box does an application receive administrative permissions. In the background, rights are increased by changing the identity. The UAC is thus the basis for the sandboxing of programs and directories under Windows. It regulates the granting of privileges to processes and isolates processes and windows that run on the same desktop with different rights.
+User Account Control (UAC) was introduced in Windows Vista. It ensures that an increase in rights is required for administrative tasks. Until then, most users had worked as administrators, with the potential for malicious software.
+If an administrator logs in with UAC enabled, he works with restricted rights. Only after confirmation in a special dialog box does an application receive administrative permissions. In the background, rights are increased by changing the identity. The UAC is thus the basis for the sandboxing of programs and directories under Windows. It regulates the granting of privileges to processes and isolates processes and windows that run on the same desktop with different rights.
 
 With Windows Server 2012 and Windows 7, the UAC has been refined to make it easier to manage the configuration and messages.
 
@@ -216,7 +220,8 @@ In the following, those important security mechanisms, i. H. Security techniques
 
 Windows Server 2012 (R2) already comes with a set of resources and tools that can and should be used for backup. These should complement each other in a meaningful way with the security features of other IT systems and third-party products, ideally covering them in the sense of a defense-in-depth and never canceling or weakening each other.
 
-Not several essential functions per ** server **The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). This is more about making functionally independent units technically independent of each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
+Not several essential functions per ** server **
+The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). This is more about making functionally independent units technically independent of each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
 
 S ** ecurity Baseline ** and SCM
 
@@ -266,7 +271,8 @@ If the institution does not already have a security-compliant security template,
 
 
  
-The adjustment should be based on GPOs for the intended role of Server 2012 (R2). All settings should be thoroughly tested before rolling out to productive systems, otherwise malfunctions can easily occur.It should be checked after each major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, since there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
+The adjustment should be based on GPOs for the intended role of Server 2012 (R2). All settings should be thoroughly tested before rolling out to productive systems, otherwise malfunctions can easily occur.
+It should be checked after each major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, since there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
 
 For further information, see also module APP.2.2 Active Directory.
 
@@ -300,7 +306,8 @@ Windows Defender was a pure anti-spyware solution before Windows Server 2012 and
 
 Windows Defender should remain enabled until an alternative full-featured antivirus solution is installed. Several anti-virus programs (including Windows Defender) in parallel may only be operated if the recommendations of both manufacturers expressly permit this, as a rule this is not the case. In addition, each virus scanner increases potential vulnerabilities and the attack surface of the server.
 
-#### SYS.1.2.2.M6 Secure Authentication and Authorization in Windows Server 2012Authentication and authorization play important roles as two basic security techniques in various places in Windows Server 2012 (R2). The following principles can serve as general guidelines for the realization:
+#### SYS.1.2.2.M6 Secure Authentication and Authorization in Windows Server 2012
+Authentication and authorization play important roles as two basic security techniques in various places in Windows Server 2012 (R2). The following principles can serve as general guidelines for the realization:
 
 * Restrict and protect privileged domain accounts
 
@@ -343,7 +350,8 @@ Wherever possible, MSA should be used for service accounts, as well as the Manag
 
 ** LSA - ** Protection in Windows Server 2012 R2
 
-The Local Security Authority (LSA), which includes the Local Security Authority Server Service (LSASS) process, authenticates users to local and network logons and enforces local security policies. Windows 8.1 and Windows Server 2012 R2 provide additional protection mechanisms that make it difficult to read memory and inject code. This increases protection for credentials stored and managed in the LSA, such as pass-the-hash attacks. Smartcard data including PINs are also stored there.To do this, enter a DWORD (32-bit) of the name "RunAsPPL" with content "1" in the registry under "HKEY \ _LOCAL MACHINE> SYSTEM> CurrentControlSet> Control> Lsa" and restart the server. Alternatively, this can also be done via a GPO (Computer Configuration> Windows Settings> Hive> ** HKEY \ _LOCAL \ _MACHINE> SYSTEM \ CurrentControlSet \ Control \ Lsa) **.
+The Local Security Authority (LSA), which includes the Local Security Authority Server Service (LSASS) process, authenticates users to local and network logons and enforces local security policies. Windows 8.1 and Windows Server 2012 R2 provide additional protection mechanisms that make it difficult to read memory and inject code. This increases protection for credentials stored and managed in the LSA, such as pass-the-hash attacks. Smartcard data including PINs are also stored there.
+To do this, enter a DWORD (32-bit) of the name "RunAsPPL" with content "1" in the registry under "HKEY \ _LOCAL MACHINE> SYSTEM> CurrentControlSet> Control> Lsa" and restart the server. Alternatively, this can also be done via a GPO (Computer Configuration> Windows Settings> Hive> ** HKEY \ _LOCAL \ _MACHINE> SYSTEM \ CurrentControlSet \ Control \ Lsa) **.
 
 To check the successful setup, look for the following WinInit event in the Event Viewer under Windows Logs> System: "LSASS.exe was started as a protected process with level: 4".
 
@@ -371,7 +379,8 @@ In addition, there is the possibility of anonymized upload of results in exchang
 
 The Baseline Security Analyzer provides an efficient way to detect a variety of common, security-related misconfigurations.
 
-First, it checks for missing security-related updates (and only those) on Windows, Windows components such as Internet Explorer, IIS, other Microsoft products, such as SQL Server, and Office macro settings. The updates are queried via the Windows Update Agent, which has been available on all systems since Windows 2000 Service Pack 3. When testing for so-called "less-secure settings", also known as Vulnerability Assessment (VA), it is checked against a database of registry and file settings. For example, a VA might indicate that the permissions in a directory under / www / root are too laxThe executor needs local admin rights on the server to be scanned and the administrative shares must be activated.
+First, it checks for missing security-related updates (and only those) on Windows, Windows components such as Internet Explorer, IIS, other Microsoft products, such as SQL Server, and Office macro settings. The updates are queried via the Windows Update Agent, which has been available on all systems since Windows 2000 Service Pack 3. The test for so-called "less-secure settings", also known as Vulnerability Assessment (VA), is checked against a database of registry and file settings. For example, a VA might indicate that the permissions in a directory under / www / root are too lax
+The executor needs local admin rights on the server to be scanned and the administrative shares must be activated.
 
 ** Security Configuration Wizard **
 
@@ -403,7 +412,8 @@ Today's hardware and compatibility are generally reasonable enough that there is
 
 ** ** AppLocker
 
-AppLocker provides policy-driven access control for applications and other executables. This allows certain applications to be allowed while blocking others. Windows Server 2012 added the ability to define rules for application packages, allowing the configuration of AppLocker for apps from the Windows Store. Since R2, it has been possible to monitor and record runtime information of processes that can be used to fine tune AppLocker (audit mode). This should be used to prevent failures, including locking out administrators from the system.AppLocker is a powerful tool to significantly hinder the execution of malicious software. Despite various simplifications, however, there is still a considerable amount of configuration work, so that the use of AppLocker is especially recommended if there is a high degree of integrity or if the configuration of a server is relatively static. This is often the case for server systems running Windows 2012 (R2) that only have a role.
+AppLocker provides policy-driven access control for applications and other executables. This allows certain applications to be allowed while blocking others. Windows Server 2012 added the ability to define rules for application packages, allowing the configuration of AppLocker for apps from the Windows Store. Since R2, it has been possible to monitor and record runtime information of processes that can be used to fine tune AppLocker (audit mode). This should be used to prevent failures, including locking out administrators from the system.
+AppLocker is a powerful tool to significantly hinder the execution of malicious software. Despite various simplifications, however, there is still a considerable amount of configuration work, so that the use of AppLocker is especially recommended if there is a high degree of integrity or if the configuration of a server is relatively static. This is often the case for server systems running Windows 2012 (R2) that only have a role.
 
 ** Software Restriction Policies **
 
@@ -427,7 +437,8 @@ The WFAS can be managed by GPOs. This is recommended to keep the configuration c
 
 Also implemented by WFAS are the native IPsec features of Windows Server 2012 (R2). These should be used to ensure the identity and integrity of the connection to remote systems, as this is not possible with packet filtering alone. The secure configuration of IPsec connections is also not content of this block. It is handled in the module VPN.
 
-#### SYS.1.2.2.M10 Disk Encryption on Windows Server 2012 (C)A suitable means of protecting the confidentiality of data at rest, not during transport, is the encryption of hard disks and other data carriers. It should be noted that the data must be decrypted for processing (for example, in the case of encryption of the boot medium already during the boot process) and always remain readable until the system is shut down or put into sleep mode. With server systems often running around the clock, protection is ultimately limited, but can be helpful against physical attacks such as theft of media when combined with appropriate other measures. Windows brings with it the tool BitLocker, which is also available in Windows Server 2012 (R2) in all editions.
+#### SYS.1.2.2.M10 Disk Encryption on Windows Server 2012 (C)
+A suitable means of protecting the confidentiality of data at rest, not during transport, is the encryption of hard disks and other data carriers. It should be noted that the data must be decrypted for processing (for example, in the case of encryption of the boot medium already during the boot process) and always remain readable until the system is shut down or put into sleep mode. With server systems often running around the clock, protection is ultimately limited, but can be helpful against physical attacks such as theft of media when combined with appropriate other measures. Windows brings with it the tool BitLocker, which is also available in Windows Server 2012 (R2) in all editions.
 
 BitLocker supports device encryption on x86 and x64-based systems that meet the requirements of the Windows Hardware Certification Kit (HCK) for a TPM (Trusted Platform Module) and secure boot with so-called "Connected Stand-by" capability. The device encryption protects both the operating system and other connected hard drives. Basically, device encryption can be used with a Microsoft account or a domain account.
 
@@ -453,7 +464,8 @@ For a complete BitLocker protection, the random encryption key itself must be pr
 
 BitLocker now offers two encryption methods, "Used Disk Space Only" and "Full Volume Encryption". The former works much faster during the initial encryption because initially only the already used blocks of the partition are encrypted. Full encryption always encrypts all blocks, including free space.
 
-The following GPOs for BitLocker that enforce Used Drive Encryption or Full Volume Encryption are available in \ Computer Configuration \ Administrative Templates \ Windows Components \ BitLocker Drive Encryption* Fixed Data Drives \ Enforce drive encryption type on fixed data drives
+The following GPOs for BitLocker that enforce Used Drive Encryption or Full Volume Encryption are available in \ Computer Configuration \ Administrative Templates \ Windows Components \ BitLocker Drive Encryption
+* Fixed Data Drives \ Enforce drive encryption type on fixed data drives
 * Operating System Drives \ Enforce drive encryption type on operating system drives
 * Removable Data Drives \ Enforce drive encryption type on removable data drives
 If nothing is configured here, the administrator can decide freely if he activates BitLocker.
@@ -486,7 +498,8 @@ With Windows 8.1 and Server 2012 R2, the following enhancements to the BitLocker
 
 Unlike the previous BitLocker implementation, so-called Device Encryption, which is also based on BitLocker in the background, is automatically enabled so that the device is encrypted from the beginning. This happens as follows:
 
-During a clean installation of Windows Server 2012 R2, the server is prepared for first use. It also initializes device encryption and initially encrypts the disk of the operating system and the other disks with a key stored in plain text. The security of the data at this time corresponds to a BitLocker encryption in standby mode (Suspended), in which the key is in plain text on the hard disk.If the server is not added to a domain, it requires a Microsoft account that has been granted administrative rights on the server. Once the administrator logs in with the Microsoft account, the plain text key is deleted, a recovery key is uploaded to the Microsoft account (online), and TPM protection is created. If the recovery key is required later (for example, if the TPM is damaged), the administrator can obtain it again using a second device and the Microsoft account.
+During a clean installation of Windows Server 2012 R2, the server is prepared for first use. It also initializes device encryption and initially encrypts the disk of the operating system and the other disks with a key stored in plain text. The security of the data at this time corresponds to a BitLocker encryption in standby mode (Suspended), in which the key is in plain text on the hard disk.
+If the server is not added to a domain, it requires a Microsoft account that has been granted administrative rights on the server. Once the administrator logs in with the Microsoft account, the plaintext key is deleted, a recovery key is uploaded to the Microsoft account (online), and TPM protection is created. If the recovery key is required later (for example, if the TPM is damaged), the administrator can obtain it again using a second device and the Microsoft account.
 
 If the user logs on via a domain account, the plaintext key is not deleted until the server has entered the domain and the recovery key then successfully created has been successfully saved in the Active Directory Domain Services. The Computer Configuration \ Administrative Templates \ Windows Components \ BitLocker Drive Encryption \ Operating System Drives GPO must be enabled and the "Do not enable BitLocker until recovery information is stored in AD DS for operating system drives" option should be selected. Only then does TPM protection become active, thus completing device encryption.
 
@@ -498,7 +511,7 @@ Since Windows Server 2012 R2, there is a FIPS mode that allows BitLocker to be c
 
 ** BitLocker on virtual machines **
 
-The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or if it should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as quickly as possible after use.
+The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or if it should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as soon as possible after use.
 
 Because virtual machines do not have a TPM, the following two steps must be taken before BitLocker (which must be installed on the server) can be activated:
 
@@ -520,7 +533,8 @@ For example, by default, central events such as logins are only logged to the sy
 As a minimum requirement, the following events should be logged and evaluated by all systems:
 
 * deleting security logs,
-* Changes to critical groups such as domain administrators,* Changes to local admin groups,
+* Changes to critical groups such as domain administrators,
+* Changes to local admin groups,
 * creating and deleting local users,
 * the installation of new services, especially on domain controllers (a possible sign of malware or lateral movement by attackers).
 The first step to attack detection is the central collection of all relevant event data. Specially developed systems such as SIEM (Security Incident and Event Management) are usually expensive and expensive to set up and operate. You are not the subject of this building block. However, you can already achieve essentials with Windows Server on-board resources.
@@ -535,7 +549,7 @@ WEF can be configured with GPOs. Events can be exported in native .evtx format. 
 
 In push mode, systems automatically forward certain events to the Collector (server). Thus it is possible for administrators who are not security officers to configure additional events for the systems they are responsible for.
 
-The setup only requires a Windows server and a GPO. In addition, the network service (only the local on the respective system) must be granted read access to the protocol and the WinRM service must be started on all systems to be monitored. He does not need to be (auto) -configured, which would leave him in the listening, rather vulnerable state. If only critical events are logged, then not very large log files can be expected.
+The setup only requires a Windows server and a GPO. In addition, the network service (only the local on the respective system) must be granted read access to the protocol and the WinRM service must be started on all systems to be monitored. He does not need to be (auto) configured, which would leave him in the listening, that is more vulnerable state. If only critical events are logged, then not very large log files can be expected.
 
 Autoconfiguration is invoked on the Collector by the command "winrm qc" in an administrative prompt. Automatic start of the WinRM service should be activated on demand, the also queried automatic opening of the firewall can be done even more secure by GPO. Now incoming events can be viewed in the Eventviewer under "Subscriptions".
 
@@ -545,7 +559,8 @@ It is quite possible to collect the entirety of all domain security events in th
 
 ** Block after failed decryption attempts **
 
-User accounts can be thresholded for how many login attempts are possible before the account is locked. This is a standard procedure to hinder brute force attacks. At the same time, there is a danger that locks will be deliberately provoked to achieve denial of service.Since disk encryption is an extension of access protection to the data on hard drives, which can also be attacked by brute force, a comparable measure is possible here:
+User accounts can be thresholded for how many login attempts are possible before the account is locked. This is a standard procedure to hinder brute force attacks. At the same time, there is a danger that locks will be deliberately provoked to achieve denial of service.
+Since disk encryption is an extension of access protection to the data on hard drives, which can also be attacked by brute force, a comparable measure is possible here:
 
 Since Windows 8 and Server 2012, the "\ Computer Configuration \ Windows Settings \ Security Settings \ Local Policies \ Security Options \ Interactive logon: Machine account lockout threshold" policy allows you to automatically lock partitions after a defined number of unsuccessful attempts to log in primary key protectors. After that, the volume can only be decrypted using the recovery key. This must be entered by an authorized user in the so-called "Device Lockout Mode", in which the system automatically reboots, to gain access again. It counts faulty login attempts on both Ctrl-Alt-Entf locked systems and password-protected screensavers.
 
@@ -577,7 +592,8 @@ Since Windows Server 2012, this technique is natively available in the operating
 
 Since the topic of NIC teaming is varied and depends heavily on the concrete application scenario, only general information can be given in these implementation notes. For details on NIC teaming in Windows Server 2012 (R2), Microsoft therefore offers a "NIC Teaming User Guide".
 
-** Basic function of NIC teaming **Network adapters of the same speed can be combined into teams without additional tools as far as the manufacturers support the function. This is not possible with Bluetooth or WLAN adapters. The configuration takes place in the server manager or by PowerShell, also over the net.
+** Basic function of NIC teaming **
+Network adapters of the same speed can be combined into teams without additional tools as far as the manufacturers support the function. This is not possible with Bluetooth or WLAN adapters. The configuration takes place in the server manager or by PowerShell, also over the net.
 
 The LBFO in Windows Server 2012 can not be combined with NIC teaming from other manufacturers. If problems occur in such a case, you can use PowerShell to delete the team configuration as follows:
 
@@ -615,7 +631,8 @@ In previous releases, server certificates were required, which required complex 
 
 #### SYS.1.2.2.M13 Strong Authentication with Windows Server 2012 (CI)
 
-A role-based administration model for the administration of different server functions was to be designed and implemented. For critical services, two-factor authentication should be implemented.** Role-based administration concept **
+A role-based administration model for the administration of different server functions was to be designed and implemented. For critical services, two-factor authentication should be implemented.
+** Role-based administration concept **
 
 The distinction between administrators and ordinary users is important, but relatively crude. It disregards the fact that in reality there are different types of administrative tasks or, more generally, hierarchical and sometimes overlapping roles and responsibilities. To enforce the principle of least privilege more consistently, a finer granular role-based administration concept has to be developed. This is sensible and realistic, especially for larger institutions.
 
@@ -663,7 +680,8 @@ Additional information on threats and security measures in the "Windows Server 2
   
 
  Active Directory Security, (last accessed 05.10.2017)
- <Https://adsecurity.org/?s=laps+security>* #### [PAYNE] Windows Event Forwarding for everyone
+ <Https://adsecurity.org/?s=laps+security>
+* #### [PAYNE] Windows Event Forwarding for everyone
 
   
 

@@ -30,7 +30,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Execution of malicious code by web browser
 
-Web browsers can load data from untrusted or potentially compromised sources. Such data may contain executable code with malicious code that can exploit vulnerabilities and infect the user's device without his knowledge and thus unnoticed.This can be code that can be directly executed by the web browser, such as JavaScript. Likewise, it may also be executable code of a plug-in or an extension in the context of the browser, such as Adobe Flash, Java or components of PDF documents. Finally, it can also be code that is loaded from the Web browser to the client and executed outside of the browser process. In many cases, additional malicious software will be reloaded by the malicious code, which will then be executed on the client with the rights of the user. Failure to adequately address the basic protections of modern web browsers threatens the confidentiality, integrity, or availability of information or services of the client or the potentially connected networks.
+Web browsers can load data from untrusted or potentially compromised sources. Such data may contain executable code with malicious code that can exploit vulnerabilities and infect the user's device without his knowledge and thus unnoticed.
+This can be code that can be directly executed by the web browser, such as JavaScript. Likewise, it may also be executable code of a plug-in or an extension in the context of the browser, such as Adobe Flash, Java or components of PDF documents. Finally, it can also be code that is loaded from the Web browser to the client and executed outside of the browser process. In many cases, additional malicious software will be reloaded by the malicious code, which will then be executed on the client with the rights of the user. Failure to adequately address the basic protections of modern web browsers threatens the confidentiality, integrity, or availability of information or services of the client or the potentially connected networks.
 
 ### 2 2 Exploit Kits
 
@@ -55,7 +56,8 @@ If browsers are configured insecure, trusted data can be made available to unaut
 Errors in the administration of the web browser can lead to unsafe configuration and unsafe operation. An essential threat potential arises in the lack of timeliness and maintenance of the web browser used. In addition, browser manufacturers often do not provide security updates in a timely manner. This significantly increases the spread of exploitable vulnerabilities.
 
 3 requirements
----------------The following are the specific requirements for Web browsers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer should always be involved in strategic decisions. In addition, the Information Security Officer is responsible for ensuring that all requirements are met and verified in accordance with the security policy.
+---------------
+The following are the specific requirements for Web browsers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer should always be involved in strategic decisions. In addition, the Information Security Officer is responsible for ensuring that all requirements are met and verified in accordance with the security policy.
 
 ### 3.1 Basic requirements
 
@@ -91,7 +93,8 @@ Together with the basic requirements, the following requirements are state of th
 
 The browser SHOULD be able to be centrally configured. Central settings may NOT be changed by users. The web browser SHOULD NOT run permanently with extended privileges.
 
-#### APP.1.2.A6 Password Management in Web Browser [User]When a password manager is used in the browser, it SHOULD establish a direct and unique relationship between the web page and the password stored therefor. The password store SHOULD be protected. The passwords stored in the password manager SHOULD only be accessible after entering a master password. Authentication for password protected access SHOULD only be valid for the current session. The password manager SHOULD set the quality of the passwords according to the security policy of the institution. The stored passwords SHOULD be erasable by the user.
+#### APP.1.2.A6 Password Management in Web Browser [User]
+When a password manager is used in the browser, it SHOULD establish a direct and unique relationship between the web page and the password stored therefor. The password store SHOULD be protected. The passwords stored in the password manager SHOULD only be accessible after entering a master password. Authentication for password protected access SHOULD only be valid for the current session. The password manager SHOULD set the quality of the passwords according to the security policy of the institution. The stored passwords SHOULD be erasable by the user.
 
 #### APP.1.2.A7 Protection of data [user]
 
@@ -132,7 +135,8 @@ In the event of unresolved security problems with the web browser used, an alter
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the "Web Browser" area can be found in the following publications, among others:* #### [AbWeB] Hedging options when using web browsers
+Additional information on threats and security measures in the "Web Browser" area can be found in the following publications, among others:
+* #### [AbWeB] Hedging options when using web browsers
 
   
 

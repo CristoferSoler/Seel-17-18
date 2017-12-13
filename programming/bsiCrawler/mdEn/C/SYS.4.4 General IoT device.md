@@ -32,7 +32,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 In the development of IoT devices, the aspect of information security is typically a design goal that is not respected or only subordinate. Therefore, IoT devices could be abused again and again to gather information about the users or the field of application. So it has always come back to incidents with networked or IP-based surveillance cameras, z. B .:
 
-* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in the financial institutions through the cameras.* In 2014, video images and streams from 73,000 inadequately-protected webcams were made publicly available through the Insecam website.
+* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in the financial institutions through the cameras.
+* In 2014, video images and streams from 73,000 inadequately-protected webcams were made publicly available through the Insecam website.
 * In 2015, 8-year-old Malware Conficker infected a variety of bodycams from various police forces.
 ### 2 2 Using UPnP
 
@@ -61,7 +62,8 @@ The following requirements MUST be implemented as a priority:
 
 IoT devices MUST meet a minimum of security criteria so that they can be used in institutions. The devices MUST have update features and the manufacturer MUST offer an update process. The devices MUST allow authentication. There must NOT be hard-coded access data in the device.
 
-#### SYS.4.4.A2 authenticationTo use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such as. B. Certificate-based authentication.
+#### SYS.4.4.A2 authentication
+To use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such as. B. Certificate-based authentication.
 
 #### SYS.4.4.A3 Regular update
 
@@ -93,7 +95,8 @@ In the general security policy of the institution, the requirements for IoT devi
 
 For the safe operation of IoT devices SHOULD be planned in advance, where and how they should be used. Planning should not only concern aspects that are classically associated with the term information security, but also normal business aspects that entail security requirements. In this case, specifications for authentication, update mechanisms and network connection SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
 
-#### SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]The ISB SHOULD also be involved in procuring equipment that does not have obvious IT functionality. BEFORE OBTAINING IoT DEVICES, SHOULD DEFINE THE SAFETY REQUIREMENTS THAT THEY HAVE TO SATISFY. Procurement of IoT devices should take sufficient account of material security issues as well as software security requirements. A list of requirements SHOULD be created to evaluate the products available on the market. IoT devices with a cloud concept SHOULD NOT be procured.
+#### SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+The ISB SHOULD also be involved in procuring equipment that does not have obvious IT functionality. BEFORE OBTAINING IoT DEVICES, SHOULD DEFINE THE SAFETY REQUIREMENTS THAT THEY HAVE TO SATISFY. Procurement of IoT devices should take sufficient account of material security issues as well as software security requirements. A list of requirements SHOULD be created to evaluate the products available on the market. IoT devices with a cloud concept SHOULD NOT be procured.
 
 #### SYS.4.4.A9 Control of the use of IoT devices
 
@@ -123,7 +126,8 @@ If this is not possible on the device itself, unnecessary services should be res
 
 Before IoT devices are used in productive operation and before they are connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be documented. For deployment clearance, the installation and configuration documentation and the functionality of the IoT devices SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
 
-#### SYS.4.4.A15 Restrictive rights assignmentThe access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible on the IoT devices themselves, you should consider to regulate this on the network side.
+#### SYS.4.4.A15 Restrictive rights assignment
+The access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible on the IoT devices themselves, you should consider to regulate this on the network side.
 
 #### SYS.4.4.A16 Eliminate malware on IoT devices
 
@@ -159,7 +163,8 @@ When operating IoT devices with batteries, the regular function test and replace
 
 IoT devices SHOULD be protected against dust and dirt according to their intended use and intended location.
 
-#### SYS.4.4.A22 System Monitoring (A)The IoT devices SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the IoT devices and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel. If high availability of IoT devices is required, check if the devices used meet this requirement or if additional measures are required, such as setting up a cluster or purchasing standby devices.
+#### SYS.4.4.A22 System Monitoring (A)
+The IoT devices SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the IoT devices and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel. If high availability of IoT devices is required, check if the devices used meet this requirement or if additional measures are required, such as setting up a cluster or purchasing standby devices.
 
 #### SYS.4.4.A23 Auditing IoT Devices (CIA)
 

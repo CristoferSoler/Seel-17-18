@@ -36,7 +36,8 @@ Because of the proliferation and open architecture, Android OS devices are a pop
 
 ### 2 3 Missing updates for the Android operating system
 
-Many manufacturers ship smartphones and tablets with outdated versions of Android or do not provide regular or even no updates. As vulnerabilities in Android are regularly discovered, such devices are particularly vulnerable. This problem mainly affects cheap devices and smaller manufacturers, but also large manufacturers and premium models often do not provide sufficient security updates over a longer period of time.### 2 4 Risk concentration through a user account (Google ID) for all Google services
+Many manufacturers ship smartphones and tablets with outdated versions of Android or do not provide regular or even no updates. As vulnerabilities in Android are regularly discovered, such devices are particularly vulnerable. This problem mainly affects cheap devices and smaller manufacturers, but also large manufacturers and premium models often do not provide sufficient security updates over a longer period of time.
+### 2 4 Risk concentration through a user account (Google ID) for all Google services
 
 With Google ID, users can centrally access all Google services, including: Device management, recorded geographic locations, chat software, cloud storage, play store, music, book and movie offerings, backup, bookmarks, web page password storage, and synchronization services. Many other Internet service providers also use the Google ID to authenticate users.
 
@@ -83,7 +84,8 @@ Only the shared security apps SHOULD register as device administrators or trust 
 
 Furthermore, the "Access to usage data and access to notifications" settings should only allow allowed apps to access this sensitive data.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.4.A6 Using a Malware Protection (CIA) Product
 

@@ -26,7 +26,8 @@ Specialist applications typically process sensitive information, such as all typ
 
 If the allocation of access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
-### 2 3 Inaccessible contractual arrangements with an external service providerDue to inadequate contractual arrangements with an external service provider, especially in the creation, support of the implementation and maintenance of the application, various and serious security problems can occur. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the result may be that security measures are not implemented due to ignorance, lack of qualification or lack of resources. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and the lack of ownership due to the loss of control and oversight.
+### 2 3 Inaccessible contractual arrangements with an external service provider
+Due to inadequate contractual arrangements with an external service provider, especially in the creation, support of the implementation and maintenance of the application, various and serious security problems can occur. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the result may be that security measures are not implemented due to ignorance, lack of qualification or lack of resources. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and the lack of ownership due to the loss of control and oversight.
 
 ### 2 4 Software designation error
 
@@ -53,7 +54,8 @@ The following are specific requirements for planning, selection, procurement, co
 
 The following requirements MUST be implemented as a priority:
 
-#### CON.5.A1 Definition of required security functions of the specialist application [IT operation]For the specialist application, the necessary security functions MUST be taken into account in the professional selection and integration into the IT infrastructures and operating processes. The selection and implementation of appropriate security features in the specialized application MUST be based on the data processed in the application and, where appropriate, a complementary risk analysis. The safety functions MUST be suitably documented.
+#### CON.5.A1 Definition of required security functions of the specialist application [IT operation]
+For the specialist application, the necessary security functions MUST be taken into account in the professional selection and integration into the IT infrastructures and operating processes. The selection and implementation of appropriate security features in the specialized application MUST be based on the data processed in the application and, where appropriate, a complementary risk analysis. The safety functions MUST be suitably documented.
 
 #### CON.5.A2 Testing and approval of specialized applications [Head of IT, Data Protection Officer]
 
@@ -96,7 +98,8 @@ The e relevant requirements for the application SHOULD be documented. This docum
 
 It was intended to ensure, with a client concept, that applications and data of different customers are operated in a cleanly separated manner. This SHOULD be created by the operator of the multi-tenant application and made available to the using institutions. The required mechanisms for client separation at the service provider SHOULD be implemented sufficiently.
 
-#### CON.5.A8 Appropriate application development control [IT chief]In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, an appropriate development model, risk management and quality objectives SHOULD be considered.
+#### CON.5.A8 Appropriate application development control [IT chief]
+In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, an appropriate development model, risk management and quality objectives SHOULD be considered.
 
 #### CON.5.A9 Decommissioning Applications [IT Manager]
 
@@ -141,7 +144,8 @@ Further information on hazards and safety measures in the area "development and 
   
 
  Systems and software engineering - software life cycle processes, ISO, 02.2008
- <Https://www.iso.org/standard/43447.html>* #### [15408] Common Criteria for Information Technology Security Evaluation (ISO 15408)
+ <Https://www.iso.org/standard/43447.html>
+* #### [15408] Common Criteria for Information Technology Security Evaluation (ISO 15408)
 
   
 

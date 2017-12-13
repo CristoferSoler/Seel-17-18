@@ -40,7 +40,8 @@ Misbehavior of any type of person may interfere with the confidentiality, integr
 
 ### 2 6 Social Engineering
 
-In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.### 2 7 Carelessness in handling information
+In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.
+### 2 7 Carelessness in handling information
 
 Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
 
@@ -73,7 +74,8 @@ For the regular training of new employees, they MUST be made aware of existing r
 
 All employees MUST be explicitly required to comply with applicable laws, regulations and internal regulations. In addition, all employees MUST be noted that all information obtained during the work are intended solely for internal use, as long as they are not marked otherwise.
 
-#### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]Before the departure of an employee, a timely briefing of the successor MUST be carried out, ideally by the departing employee. If a direct handover is not possible, a detailed documentation MUST be prepared by the departing employee. In addition, any outgoing employees MUST be required to collect all documents, keys, equipment, and IDs and access privileges received as part of their duties.
+#### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]
+Before the departure of an employee, a timely briefing of the successor MUST be carried out, ideally by the departing employee. If a direct handover is not possible, a detailed documentation MUST be prepared by the departing employee. In addition, any outgoing employees MUST be required to collect all documents, keys, equipment, and IDs and access privileges received as part of their duties.
 
 The IT administration must also ensure that former employees are deprived of all access rights to IT systems or that they are adjusted when tasks change.
 
@@ -97,7 +99,8 @@ Prior to receiving External Access and access to confidential information, it MU
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of personnel. They SHOULD be implemented in principle.
 
-#### ORP.2.A6 Review of candidates in the selection of staffWhen selecting new employees, the required qualifications and skills SHOULD be precisely formulated. Subsequently, it should be checked on the basis of the documents and in the interview whether they actually exist among the candidates. Particular care should be taken to ensure that no conflicts of interest occur. In order to avoid conflicts of interest after a job change, non-competition and waiting periods should be agreed.
+#### ORP.2.A6 Review of candidates in the selection of staff
+When selecting new employees, the required qualifications and skills SHOULD be precisely formulated. Subsequently, it should be checked on the basis of the documents and in the interview whether they actually exist among the candidates. Particular care should be taken to ensure that no conflicts of interest occur. In order to avoid conflicts of interest after a job change, non-competition and waiting periods should be agreed.
 
 #### ORP.2.A7 Checking the trustworthiness of employees
 
@@ -109,7 +112,7 @@ The duties and responsibilities of employees SHOULD be documented in an appropri
 
 #### ORP.2.A9 Training of employees
 
-Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
+Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the tasks assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
 
 All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD be trained separately and used within the area of ​​activity as multipliers for the remaining employees.
 
@@ -121,7 +124,8 @@ From the point of view of information security, measures SHOULD be taken to ensu
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### ORP.2.A11 Safety Culture Analysis (CIA)The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
+#### ORP.2.A11 Safety culture analysis (CIA)
+The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 

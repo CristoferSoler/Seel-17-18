@@ -83,14 +83,34 @@ def checkStatus(filesLenght):
     return
 
 
-def check15k(list):
+def check15k(list, component):
     listOf15k = []
     splitList = list.splitlines()
     listOf15kElement = []
+    referenceList = []
+    ref = False
+    threats = False
 
     for line in splitList:
+        if(component):
+            if ('3.1 Basis-Anforderung' in line):
+                ref = True
+
+            if ('Weiterführende Literatur' in line):
+                ref = False
+
+            if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
+                threats = True
+                referenceList.append('#' + line)
+
+            if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
+                referenceList.append(line)
+
+            if(threats and '* ' in line):
+                referenceList.append(line)
+
         if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
-            listOf15kElement.append(line)
+                listOf15kElement.append(line)
 
         else:
             listOf15k.append('\n'.join(listOf15kElement))
@@ -99,7 +119,7 @@ def check15k(list):
 
     listOf15k.append('\n'.join(listOf15kElement))
 
-    return listOf15k
+    return [listOf15k, referenceList]
 
 
 def translate(fileMD):
@@ -108,10 +128,12 @@ def translate(fileMD):
     filename = os.fsdecode(fileMD)
     dir = ''
     filenameEn = translator.translate(filename, dest='en', src='de').text
+    component = False
 
     try:
         f = open(directoryC + '/' + fileMD)
         dir += 'C/'
+        component = True
     except:
         try:
             f = open(directoryN + '/' + fileMD)
@@ -121,10 +143,21 @@ def translate(fileMD):
             dir += 'T/'
 
     contentOfMdDE = f.read()
-    listOf15k = check15k(contentOfMdDE)
+    listOf15k = check15k(contentOfMdDE, component)
     textEl = ''
-    for el in listOf15k:
-        textEl += translator.translate(el, dest='en', src='de').text
+    references = ''
+
+    if(component):
+        for rf in listOf15k[1]:
+            references += translator.translate(rf, dest='en', src='de').text + '\n'
+
+    for el in listOf15k[0]:
+        textEl += translator.translate(el, dest='en', src='de').text + '\n'
+
+    if(component):
+        r = open('references/' + re.sub('/', '-', filenameEn), 'w', encoding='utf-8')
+        r.write(references)
+        r.close()
 
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)

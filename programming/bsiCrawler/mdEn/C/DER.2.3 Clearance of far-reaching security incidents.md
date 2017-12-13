@@ -26,7 +26,8 @@ It also eliminates attacks that give attackers physical access to an IT environm
 
 The following specific threats and vulnerabilities are of particular importance in the area of ​​remediation of far-reaching security incidents:
 
-### 2 1 Incomplete cleanupAPT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker has also modified the update routines and thus re-enters the system in this way.
+### 2 1 Incomplete cleanup
+APT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker has also modified the update routines and thus re-enters the system in this way.
 
 ### 2 2 Destruction of tracks
 
@@ -42,7 +43,8 @@ Since an APT attack must generally assume that the entire IT infrastructure of t
 
 When cleaning up an APT incident, various IT systems are reinstalled and networks are also temporarily isolated. As a result, compulsory fall out of IT systems and services are thus z. B. only limited or no longer available. If the cleanup takes a long time, it can lead to significant productivity losses. This, in turn, can result in significant economic losses that can even threaten corporate existence. This is especially the case if no or insufficient documentation is available for rebuilding.
 
-### 2 5 Lack of retransformation after an APT attackIn an APT attack, the attacker gains detailed knowledge of how the target environment is built and configured. For example, he knows the existing network segments, naming schemes for IT systems, user and service accounts, software and services used. This knowledge may allow the same attacker to regain access to the target environment after a cleanup. Thus, he can move very targeted, efficient and unobtrusive within the network and reach again in a short time a high degree of infection.
+### 2 5 Lack of retransformation after an APT attack
+In an APT attack, the attacker gains detailed knowledge of how the target environment is built and configured. For example, he knows the existing network segments, naming schemes for IT systems, user and service accounts, software and services used. This knowledge may allow the same attacker to regain access to the target environment after a cleanup. Thus, he can move very targeted, efficient and unobtrusive within the network and reach again in a short time a high degree of infection.
 
 3 requirements
 ---------------
@@ -71,7 +73,8 @@ On the other hand, if an institution chooses to reinstall all its IT systems, a 
 
 #### DER.2.3.A3 Isolation of affected network sections
 
-The network sections affected by an APT incident MUST be completely isolated (cut-off). In particular, the affected network sections MAY NOT be connected to the Internet. To effectively block the attacker and prevent him from blurring his tracks or even sabotaging IT systems, the network sections MUST be isolated in one fell swoop.Which sections of the network need to be isolated MUST first be determined by a forensic analysis. All affected sections MUST be identified. If this can not be ensured, all suspicious and all theoretically infected network sections MUST be isolated.
+The network sections affected by an APT incident MUST be completely isolated (cut-off). In particular, the affected network sections MAY NOT be connected to the Internet. To effectively block the attacker and prevent him from blurring his tracks or even sabotaging IT systems, the network sections MUST be isolated in one fell swoop.
+Which sections of the network need to be isolated MUST first be determined by a forensic analysis. All affected sections MUST be identified. If this can not be ensured, all suspicious and all theoretically infected network sections MUST be isolated.
 
 In order to effectively isolate network sections, all local Internet connections, e.g. B. additional DSL connections in individual subnets, as completely as possible and taken into account.
 
@@ -105,15 +108,16 @@ If possible, IT systems should already be hardened during cleanup. Measures that
 
 It SHOULD establish secure communication channels for the governing body and staff responsible for the cleanup. It SHOULD be ensured that the most secure communication channel is selected.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### DER.2.3.A9 hardware replacement of affected IT systems (CIA)
 
-In IT systems with high protection requirements SHOULD be considered to completely replace the hardware after an APT incident. Even if a suspicious behavior is observed after a cleanup of individual IT systems, eg. For example, inexplicable network traffic SHOULD the affected IT system be replaced.
+In IT systems with high protection requirements SHOULD be considered to completely replace the hardware after an APT incident. Even if a suspicious behavior is observed after a cleanup with individual IT systems, eg. For example, inexplicable network traffic SHOULD the affected IT system be replaced.
 
 #### DER.2.3.A10 Conversions to hinder a renewed attack by the same attacker (CI)
 
-To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be changed. In addition, mechanisms should be established to quickly detect a recurring attacker.
+To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be modified. In addition, mechanisms should be established to quickly detect a recurring attacker.
 
 4 Further Information
 ------------------------------
@@ -192,7 +196,8 @@ The following elementary hazards are important for the module "Cleaning up far-r
 * G 0.39 Malware
 * G 0.40 Denial of Service
 * G 0.41 Sabotage
-* G 0.42 Social engineering* G 0.43 Importing messages
+* G 0.42 Social engineering
+* G 0.43 Importing messages
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.

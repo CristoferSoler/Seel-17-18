@@ -28,7 +28,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Missing or insufficient logging
 
-In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used with individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.Furthermore, logging data must contain meaningful information. Among other things, the events that are logged depend on the protection requirements of the respective IT systems or applications. If this is disregarded, for example, when logging only to default settings of the IT systems or applications, this can lead to particularly relevant security events not being logged. Thus, attacks may not be detected.
+In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used with individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.
+Furthermore, logging data must contain meaningful information. Among other things, the events that are logged depend on the protection requirements of the respective IT systems or applications. If this is disregarded, for example, when logging only to default settings of the IT systems or applications, this can lead to particularly relevant security events not being logged. Thus, attacks may not be detected.
 
 ### 2 2 Incorrect selection of relevant logging data
 
@@ -54,7 +55,8 @@ If logging is misconfigured in IT systems, important information is not recorded
 
 Similarly, misconfigured logging may allow the logging data to be in inconsistent or proprietary formats. This may make it difficult to evaluate the logs and IT security incidents remain undetected.
 
-### 2 7 Failure of data sourcesIf IT systems in an information network no longer provide the necessary logging data, security incidents can no longer be adequately detected. The cause of data source failures can be hardware and software failures or incorrectly managed IT systems. Especially if it is not noticed that data sources have failed, this can lead to a false picture of the security situation in the institution. This allows attackers z. For example, you may go unnoticed for a long time, tapping business-critical information, or manipulating production systems.
+### 2 7 Failure of data sources
+If IT systems in an information network no longer provide the necessary logging data, security incidents can no longer be adequately detected. The cause of data source failures can be hardware and software failures or incorrectly managed IT systems. Especially if it is not noticed that data sources have failed, this can lead to a false picture of the security situation in the institution. This allows attackers z. For example, you may go unnoticed for a long time, tapping business-critical information, or manipulating production systems.
 
 ### 2 8 Insufficiently sized logging infrastructure
 
@@ -79,7 +81,8 @@ The guideline MUST be prepared by the ISB together with the responsible persons.
 
 For the IT systems and applications defined in the logging policy (see OPS.1.1.5.A1 * Creation of a security policy for logging *) MUST be designated. These MUST ensure that the logging policy is followed.
 
-#### OPS.1.1.5.A3 Configuration of logging at system and network levelAll security-relevant events of IT systems and applications MUST be logged. If the IT systems and applications defined as relevant in the logging policy have a logging function, they MUST be used. When logging is established, the manufacturer's specifications for the particular IT systems or applications MUST be followed. It must be checked in reasonable intervals, if the logging is still working correctly. The intervals MUST be defined in the logging policy. If operational and security-relevant events can not be logged on an IT system, further IT systems MUST be integrated for logging (eg events at the network level).
+#### OPS.1.1.5.A3 Configuration of logging at system and network level
+All security-relevant events of IT systems and applications MUST be logged. If the IT systems and applications defined as relevant in the logging policy have a logging function, they MUST be used. When logging is established, the manufacturer's specifications for the particular IT systems or applications MUST be followed. It must be checked in reasonable intervals, if the logging is still working correctly. The intervals MUST be defined in the logging policy. If operational and security-relevant events can not be logged on an IT system, further IT systems MUST be integrated for logging (eg events at the network level).
 
 #### OPS.1.1.5.A4 Time synchronization of the IT systems
 
@@ -103,7 +106,8 @@ Lack of logging data or unavailability of a logging IT system,
 * Operational events that indicate exceptional utilization or use of individual services.
 The logging infrastructure SHOULD be sufficiently sized so that scaling can be considered in the sense of extended logging. Sufficient technical, financial and human resources should be available. If the logging infrastructure is to be set up and operated externally, a specialized service provider SHOULD be commissioned.
 
-#### OPS.1.1.5.A7 Secure administration of logging serversThe log server network SHOULD only be administered via a separate management network (out-of-band management). An authorization concept SHOULD be created for the administration accesses. Only administrators should be able to access the log servers specifically responsible for this (see * * OPS.1.1.5.A2 * Defining roles and responsibilities *).
+#### OPS.1.1.5.A7 Secure administration of logging servers
+The log server network SHOULD only be administered via a separate management network (out-of-band management). An authorization concept SHOULD be created for the administration accesses. Only administrators should be able to access the log servers specifically responsible for this (see * * OPS.1.1.5.A2 * Defining roles and responsibilities *).
 
 #### OPS.1.1.5.A8 Archiving of logging data
 
@@ -133,7 +137,8 @@ Applications and IT systems that do not allow centralized logging SHOULD NOT be 
 
 #### OPS.1.1.5.A12 Encryption (CI)
 
-In order to transfer logging data securely, they SHOULD be encrypted. Furthermore, all stored protocols SHOULD be digitally signed. Also, archived logging data stored outside the logging infrastructure should always be stored in encrypted form. Further notes and requirements are available in the module CON.1 * Crypto Concept *.#### OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+In order to transfer logging data securely, they SHOULD be encrypted. Furthermore, all stored protocols SHOULD be digitally signed. Also, archived logging data stored outside the logging infrastructure should always be stored in encrypted form. Further notes and requirements are available in the module CON.1 * Crypto Concept *.
+#### OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
 
 With increased protection requirements, a highly available logging infrastructure SHOULD be set up.
 

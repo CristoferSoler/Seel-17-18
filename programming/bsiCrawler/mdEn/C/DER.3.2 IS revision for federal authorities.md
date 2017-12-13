@@ -32,7 +32,8 @@ Among other things, the UP Bund envisages that all federal authorities that do n
 
 The level of security of an authority depends on full and correct implementation of security measures. In particular, in the critical phase of projects or under certain circumstances, it may happen that security measures are temporarily suspended. However, some people forget to reactivate them, resulting in too low a level of security.
 
-### 2 3 Ineffective or non-economic implementation of security measuresIf security measures are implemented without taking into account certain practical aspects, the measures may be ineffective. For example, it is meaningless to lock the entrance area with turnstiles if the staff can easily enter the building through an open side entrance.
+### 2 3 Ineffective or non-economic implementation of security measures
+If security measures are implemented without taking into account certain practical aspects, the measures may be ineffective. For example, it is meaningless to lock the entrance area with turnstiles if the staff can easily enter the building through an open side entrance.
 
 Likewise, individual measures can be taken that do not make economic sense. Thus, for the protection of information with a normal confidentiality, a cleanly implemented rights and role concept is more useful and economical than a certificate authority and the subsequent certificate-based encryption of the file server.
 
@@ -65,7 +66,8 @@ Employees may fear that an IS Revison will detect bugs and try to conceal securi
 During an IS audit, various confidential information is collected by the auditors. Deficits in the information security of the audited authority are also named. However, if these deficiencies become known to unauthorized third parties, they could be used to attack the authority.
 
 3 requirements
----------------The following are specific requirements for the area of ​​IS revision for federal authorities. In principle, the person responsible for the IS audit is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for the area of ​​IS revision for federal authorities. In principle, the person responsible for the IS audit is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -103,7 +105,8 @@ In the case of an IS short revision, the mandatory inspection list from * Mandat
 
 As part of an IS audit, both a document review and an on-site inspection MUST be performed. All results of the two phases MUST be documented in writing and summarized in an IS audit report.
 
-#### DER.3.2.A8 Retention of IS audit reportsThe IS audit report and its underlying reference documents MUST be audited by the audited authority for at least 10 years from the date of notification of the report, unless otherwise required by law or regulation. It MUST be ensured that only authorized persons can access the IS audit reports and the reference documents.
+#### DER.3.2.A8 Retention of IS audit reports
+The IS audit report and its underlying reference documents MUST be audited by the audited authority for at least 10 years from the date of notification of the report, unless otherwise required by law or regulation. It MUST be ensured that only authorized persons can access the IS audit reports and the reference documents.
 
 ### 3.2 Standard requirements
 
@@ -138,7 +141,8 @@ The document review SHOULD be done on the basis of the measures defined in the t
 
 Furthermore, it should be checked whether the documents available and the decisions made therein are comprehensible. The results of the document review SHOULD be documented and, where appropriate, incorporated into the on-site inspection.
 
-#### DER.3.2.A14 Selection of target objects and measures [IS-Revision-Team]In an IS cross-sectional revision or IS partial revision, the IS audit team SHOULD use the results of the document review to select the POU target objects for on-site inspection. The module for information security management (see ISMS.1 * Security Management *) including all related requirements SHOULD always be fully tested. Further building block target objects SHOULD be selected in a risk-oriented manner according to the procedure defined in the * Information Security Revision Guide *. The selection SHOULD be documented comprehensibly in writing.
+#### DER.3.2.A14 Selection of target objects and measures [IS-Revision-Team]
+In an IS cross-sectional revision or IS partial revision, the IS audit team SHOULD use the results of the document review to select the POU target objects for on-site inspection. The module for information security management (see ISMS.1 * Security Management *) including all related requirements SHOULD always be fully tested. Further building block target objects SHOULD be selected in a risk-oriented manner according to the procedure defined in the * Information Security Revision Guide *. The selection SHOULD be documented comprehensibly in writing.
 
 In addition, the selection SHOULD consider the criticized requirements from previous IS revisions. All actions with serious security deficiencies from previous IS revisions SHOULD be considered.
 
@@ -174,7 +178,8 @@ The IS audit team was asked to randomly verify whether or to what extent the mea
 
 #### DER.3.2.A20 Follow-up of the on-site inspection [IS-Revision-Team]
 
-After the on-site inspection, the information collected SHOULD be further consolidated and evaluated. After the eventually requested documentation and additional information have been evaluated, the audited measures SHOULD be definitively evaluated.To provide the requested documentation, a sufficient time window SHOULD be granted. Documents that have not been received by the agreed end date SHOULD be considered non-existent.
+After the on-site inspection, the information collected SHOULD be further consolidated and evaluated. After the eventually requested documentation and additional information have been evaluated, the audited measures SHOULD be definitively evaluated.
+To provide the requested documentation, a sufficient time window SHOULD be granted. Documents that have not been received by the agreed end date SHOULD be considered non-existent.
 
 #### DER.3.2.A21 Creation of an IS audit report [IS audit team]
 
@@ -229,7 +234,8 @@ Additional information on threats and security measures in the area of ​​"IS
 
   
 
- BSI, Version 1.0, 09.2008[https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ISRevision/Muster\_ISRevisionshandbuch-v1\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / ISRevision / Muster_ISRevisionshandbuch-v1_pdf.pdf)
+ BSI, Version 1.0, 09.2008
+[https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ISRevision/Muster\_ISRevisionshandbuch-v1\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / ISRevision / Muster_ISRevisionshandbuch-v1_pdf.pdf)
 
  
 * #### [VSA] General administrative regulation of the Federal Ministry of the Interior on the material and organizational protection of classified information

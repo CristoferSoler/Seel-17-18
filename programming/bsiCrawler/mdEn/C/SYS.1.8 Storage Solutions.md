@@ -32,7 +32,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 Central storage solutions increase the requirements for administration. If the responsibilities for different areas are not clearly defined, this can lead to misconfiguration. For example, if a traditional network administrator administers FC (Fiber Channel, FC) switches, he may be able to access components that he is not responsible for and not trained for. Such an operation may result in FC switches not being properly configured. This could cause important services to fail because all servers attached to the FC switches can no longer access the storage systems.
 
-### 2 2 Unsafe default settings for memory componentsFrequently, memory components are shipped with a default configuration to allow the devices to get up and running quickly with as much functionality as possible. Thus, in many devices not required functions are activated, such. HTTP, Telnet and insecure SNMP versions. If storage components with insecure factory settings are used productively, they can be accessed more easily without authorization. This can lead to z. B. Services are no longer available or unauthorized access to confidential information of the institution.
+### 2 2 Unsafe default settings for memory components
+Frequently, memory components are shipped with a default configuration to allow the devices to get up and running quickly with as much functionality as possible. Thus, in many devices not required functions are activated, such. HTTP, Telnet and insecure SNMP versions. If storage components with insecure factory settings are used productively, they can be accessed more easily without authorization. This can lead to z. B. Services are no longer available or unauthorized access to confidential information of the institution.
 
 ### 2 3 Manipulation of data via the storage system
 
@@ -59,7 +60,8 @@ Complex, network-based storage solutions often consist of many components (such 
 If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
 
 3 requirements
----------------The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -101,7 +103,8 @@ Based on the institution's general security policy, a specific security policy f
 
 The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
 
-#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
+#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
+A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
 
 * Selection of suitable hardware,
 * Selection of manufacturers and suppliers,
@@ -131,7 +134,8 @@ The administrators responsible for the storage solutions SHOULD be sufficiently 
 
 #### SYS.1.8.A13 Monitoring and management of storage solutions
 
-To detect and resolve error situations and security issues, you should monitor storage solutions. All collected data SHOULD be checked as to whether the requirements of the operating manual are adhered to (see also SYS.1.8.A10 * Creation and maintenance of an operating manual *).Individual components of the storage solution and the overall system SHOULD be managed centrally. In addition, the essential messages SHOULD be filtered out to better represent them.
+To detect and resolve error situations and security issues, you should monitor storage solutions. All collected data SHOULD be checked as to whether the requirements of the operating manual are adhered to (see also SYS.1.8.A10 * Creation and maintenance of an operating manual *).
+Individual components of the storage solution and the overall system SHOULD be managed centrally. In addition, the essential messages SHOULD be filtered out to better represent them.
 
 If a storage solution is operated by an external service provider, SHOULD define and document how the contracted SLAs are monitored.
 
@@ -165,7 +169,8 @@ All used storage systems SHOULD be audited regularly. For this, a corresponding 
 
 If entire storage solutions or individual components of a storage solution are no longer needed, all existing data SHOULD be transferred to other storage solutions. A transitional phase should be planned for this. Subsequently, all user data and configuration data SHOULD be securely deleted. From all relevant documents, all references to the decommissioned storage solution SHOULD be removed.
 
-#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
+#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
+It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
 
 It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
 
@@ -228,7 +233,8 @@ Additional information on threats and security measures in the area of ​​"st
 The following elementary hazards are important for the "memory solutions" block.
 
 * G 0.8 Failure or malfunction of the power supply
-* G 0.11 Failure or disruption of service providers* G 0.15 Listening
+* G 0.11 Failure or disruption of service providers
+* G 0.15 Listening
 * G 0.16 Theft of devices, data carriers or documents
 * G 0.18 Missing planning or missing adjustment
 * G 0.19 Disclosure of information worthy of protection

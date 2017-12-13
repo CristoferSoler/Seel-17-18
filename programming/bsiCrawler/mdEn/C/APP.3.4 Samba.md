@@ -32,7 +32,8 @@ Improperly designed or missing logging in * Samba * can lead to security problem
 
 Also deficits in the emergency preparedness can lead to longer downtime of * Samba *. For example, after a successful attack, a necessary reinstallation may be delayed if installation packages are not available. Existing installation packages, in turn, can produce undesirable results if you have not used versioning of the configuration files or if the * Samba * server compilation and installation options are not kept.
 
-### 2 4 Missing adaptation of SambaTo show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of * Samba * server services.
+### 2 4 Missing adaptation of Samba
+To show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of * Samba * server services.
 
 ### 2 5 Software vulnerabilities or errors in Samba
 
@@ -54,7 +55,8 @@ If * Samba * is used as a file server on Linux systems, then the server itself i
 
 Data loss has a significant impact on IT use. If business-relevant information is destroyed or falsified, business processes and specialist tasks can be delayed or even stopped. For example, * Samba * notes that the file system properties of Windows and Unix are significantly different. Therefore, it is not always guaranteed that access rights will be maintained under Windows. It can also cause information on * Alternate Data Streams * (ADS) and DOS attributes to be lost.
 
-### 2 10 Integrity loss of sensitive information at SambaIf information is no longer integer, it can lead to many problems. In the simplest case, information can then no longer be read, so it can no longer be further processed. * Samba * itself stores important operating data in * Trivial Database * (TDB) format databases. If these databases are not adequately and consistently handled by the operating system, they can cause problems when * Samba * services are used.
+### 2 10 Integrity loss of sensitive information at Samba
+If information is no longer integer, it can lead to many problems. In the simplest case, information can then no longer be read, so it can no longer be further processed. * Samba * itself stores important operating data in * Trivial Database * (TDB) format databases. If these databases are not adequately and consistently handled by the operating system, they can cause problems when * Samba * services are used.
 
 3 requirements
 ---------------
@@ -89,7 +91,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### APP.3.4.A3 Secure configuration of the operating system for a Samba server
 
-Databases in Trivial Database (TDB) format SHOULD NOT be stored on a partition that uses ReiserFS as the file system. If a * netlogon * share is configured, unauthorized users SHOULD NOT be able to modify files in this share.The operating system of the * Samba * server SHOULD support Access Control Lists (ACLs) in conjunction with the file system used. In addition, it should be ensured that the file system is integrated with the appropriate parameters.
+Databases in Trivial Database (TDB) format SHOULD NOT be stored on a partition that uses ReiserFS as the file system. If a * netlogon * share is configured, unauthorized users SHOULD NOT be able to modify files in this share.
+The operating system of the * Samba * server SHOULD support Access Control Lists (ACLs) in conjunction with the file system used. In addition, it should be ensured that the file system is integrated with the appropriate parameters.
 
 The default settings of * SMB * * Message Signing * SHOULD be retained, provided that they do not contradict the existing security guidelines in the information network. Using a local packet filter SHOULD block ports over which the * Samba * server should be unreachable.
 
@@ -129,7 +132,8 @@ For authentication, the Heimdal Kerberos Key Distribution Center * (KDC) impleme
 
 Because external programs provide attack gates for attackers, * Samba * should only call audited and trusted external programs.
 
-#### APP.3.4.A11 Secure use of communication protocols when using a Samba serverFor a reliable network, only really needed protocols SHOULD be used on the Windows clients. If * Netware * systems need access to the * Samba * server, SHOULD consider that * Internetwork Packet Exchange * (IPX) is required. If IPv6 is used, special features should be considered.
+#### APP.3.4.A11 Secure use of communication protocols when using a Samba server
+For a reliable network, only really needed protocols SHOULD be used on the Windows clients. If * Netware * systems need access to the * Samba * server, SHOULD consider that * Internetwork Packet Exchange * (IPX) is required. If IPv6 is used, special features should be considered.
 
 #### APP.3.4.A12 Training the administrators of a Samba server
 

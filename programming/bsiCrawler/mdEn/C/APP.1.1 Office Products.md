@@ -26,7 +26,8 @@ Lack of attention to Office product requirements when procuring or customizing t
 
 If new Office products and their integration into the institution are not or insufficiently tested and released without installation instructions, it may happen that errors are not detected or that the installation parameters that are necessarily observed are not recognized or ignored. Errors in Office products that result from a missing or inadequate testing and approval process pose a significant threat to IT operations. Workflows can be significantly hampered by Office Product Errors. Incorrect updates to the Office products can lead to data loss or reduce the availability of used databases.
 
-### 2 3 Protective data in residual information in Office documentsOffice documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflow of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information, causing financial, procedural and image damage.
+### 2 3 Protective data in residual information in Office documents
+Office documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflow of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information, causing financial, procedural and image damage.
 
 ### 2 4 Obtain Office products and updates from unreliable sources
 
@@ -44,7 +45,8 @@ Depending on the intended use, it may be necessary to be able to assign Office d
 
 The integrity of Office documents may be corrupted by unintended changes or deliberate manipulation of document content. Misuse of Office products or ignorance of users when handling Office documents may result in undetected changes to documents. This is particularly problematic when it comes to documents in productive use. Working with documents that have been forged unrecognized may result in wrong business decisions or damage to the image of the institution.
 
-### 2 8 Software vulnerabilities in Office productsSoftware vulnerabilities in Office products are often not fully discovered before delivery to customers, despite intensive testing. Failure to detect these software vulnerabilities in time may result in application crashes and errors. The consequences of unresolved bugs can include incorrect calculation results or loss of integrity in documents. Software vulnerabilities or errors can also cause serious security vulnerabilities in Office products. Such vulnerabilities may be exploited by attackers to inject malicious code.
+### 2 8 Software vulnerabilities in Office products
+Software vulnerabilities in Office products are often not fully discovered before delivery to customers, despite intensive testing. Failure to detect these software vulnerabilities in time may result in application crashes and errors. The consequences of unresolved bugs can include incorrect calculation results or loss of integrity in documents. Software vulnerabilities or errors can also cause serious security vulnerabilities in Office products. Such vulnerabilities may be exploited by attackers to inject malicious code.
 
 ### 2 9 Use of unlicensed Office products
 
@@ -71,7 +73,8 @@ The following requirements MUST be implemented as a priority:
 
 When installing Office products, you MUST ensure that only unmodified copies of the original shared software are used. Updates MUST be sourced exclusively from secure sources. If checksums are offered for an Office product, they should be checked before installation. If digital signatures are available for an Office product, they should be checked before installing the package. The administrators SHOULD be informed about the meaning and significance of checksums and digital signatures. Just as with a new installation, it must be ensured during the installation of updates that the update packages are unchanged.
 
-#### APP.1.1.A2 Restricting Active Content [User]The automatic execution of embedded Active content, such as macros or ActiveX elements, MUST be disabled in the settings of all Office products used. If Active Content Execution is required for a business process, care must be taken to ensure that only Active Content from trusted sources is executed. All users MUST be educated in Active Content Danger Training and briefed on Active Content Restriction features.
+#### APP.1.1.A2 Restricting Active Content [User]
+The automatic execution of embedded Active content, such as macros or ActiveX elements, MUST be disabled in the settings of all Office products used. If Active Content Execution is required for a business process, care must be taken to ensure that only Active Content from trusted sources is executed. All users MUST be educated in Active Content Danger Training and briefed on Active Content Restriction features.
 
 #### APP.1.1.A3 Opening documents from external sources
 
@@ -97,7 +100,8 @@ New versions of Office products SHOULD be checked for compatibility with establi
 
 #### APP.1.1.A7 Installation and configuration of Office products
 
-For the office products used, a standard configuration adapted to the needs of the institution SHOULD be created and used. This configuration SHOULD be documented in an installation and configuration statement. The installation and configuration SHOULD be done according to the instruction and apply the default settings. All necessary deviations from the defined standard configuration SHOULD be comprehensibly documented and require the approval of a suitable approval authority. In the case of pilot installations, these should always be accompanied by the IT department. Before and after the installations, backups of the Office products SHOULD be performed on all affected IT systems.#### APP.1.1.A8 Version control of Office products
+For the office products used, a standard configuration adapted to the needs of the institution SHOULD be created and used. This configuration SHOULD be documented in an installation and configuration statement. The installation and configuration SHOULD be done according to the instruction and apply the default settings. All necessary deviations from the defined standard configuration SHOULD be comprehensibly documented and require the approval of a suitable approval authority. In the case of pilot installations, these should always be accompanied by the IT department. Before and after the installations, backups of the Office products SHOULD be performed on all affected IT systems.
+#### APP.1.1.A8 Version control of Office products
 
 There SHOULD be a regular check of the installed versions of Office products. This inventory of software licenses SHOULD be updated each time you install or uninstall. In addition, the different configurations of installed Office products SHOULD be documented.
 
@@ -121,7 +125,8 @@ The cloud storage features built into some Office products SHOULD be disabled. A
 
 Data from potentially insecure sources such as the Internet or e-mail attachments SHOULD automatically be opened in a protected mode where they can not be edited immediately. Only a general navigation SHOULD be enabled. This feature SHOULD NOT be disabled by the user. SHOULD use appropriate viewer applications if they are available. A list of trusted places can be defined from which content can be opened and edited immediately.
 
-#### APP.1.1.A14 Protection against subsequent changes of information [user]Depending on the intended use of documents, the existing security mechanisms in application programs SHOULD be used to restrict further handling of the created files. Employees SHOULD be advised on how these security mechanisms work and how to apply them.
+#### APP.1.1.A14 Protection against subsequent changes of information [user]
+Depending on the intended use of documents, the existing security mechanisms in application programs SHOULD be used to restrict further handling of the created files. Employees SHOULD be advised on how these security mechanisms work and how to apply them.
 
 ### 3.3 Requirements for increased protection requirements
 

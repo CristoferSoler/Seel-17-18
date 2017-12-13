@@ -36,7 +36,8 @@ An attacker can gain access to a web server to manipulate files. For example, he
 
 ### 2 3 Distributed Denial of Service (DDoS)
 
-DDoS attacks can partially or completely disable a web server. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.In addition to DDoS, other types of denial-of-service attacks can affect the availability of a website specifically for individual users by, for example, blocking individual accounts from incorrect logins. An attacker could z. For example, a user account lock could be triggered by invalid login attempts.
+DDoS attacks can partially or completely disable a web server. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.
+In addition to DDoS, other types of denial-of-service attacks can affect the availability of a website specifically for individual users by, for example, blocking individual accounts from incorrect logins. An attacker could z. For example, a user account lock could be triggered by invalid login attempts.
 
 ### 2 4 Loss of confidential data
 
@@ -75,7 +76,8 @@ After a web server has been installed, a secure basic configuration MUST be made
 
 All files on the web server, especially scripts and configuration files, MUST be protected so that they can not be read and changed without authorization.
 
-It MUST be ensured that the web server application can only access files that are within a defined directory tree (WWW root directory). Resources outside the WWW directory MUST NOT be linked or linked from it.Furthermore, functions that list directories MUST be disabled. Files that should not be changed MUST be read-only. Confidential data MUST be transmitted encrypted and stored.
+It MUST be ensured that the web server application can only access files that are within a defined directory tree (WWW root directory). Resources outside the WWW directory MUST NOT be linked or linked from it.
+Furthermore, functions that list directories MUST be disabled. Files that should not be changed MUST be read-only. Confidential data MUST be transmitted encrypted and stored.
 
 #### APP.3.2.A3 Securing file uploads and downloads
 
@@ -116,7 +118,8 @@ In order to select suitable security measures for the web server, it should be p
 
 A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
 
-#### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
+#### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.
@@ -146,7 +149,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 Web servers SHOULD be configured redundantly. The Internet connection of the web server and other IT systems, such as the web application server, SHOULD be designed to be redundant.
 
-#### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
+#### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
 
 #### APP.3.2.A17 Advanced authentication methods for web servers (CI)
 
@@ -212,7 +216,8 @@ Further information on threats and security measures in the "Web server" area ca
   
 
  Use of Transport Layer Security (TLS), Federal Office for Information Security (BSI), 2017
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)5 Appendix: Cross reference table for elementary hazards
+ [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
+5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
 The following elementary threats are important for the "Web server" building block.

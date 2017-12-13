@@ -26,7 +26,8 @@ Malicious programs provide an attacker with extensive communication and control 
 
 Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read out or manipulate data.
 
-### 2 3 Integrated cloud functionalitiesWindows 8.1 includes many features that store and synchronize data in Microsoft's cloud services. There is a risk of unconsciously (or at least carelessly) using cloud services for possibly sensitive or personal data. At the same time, data protection laws may also be violated if data is stored by third parties, especially abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up there. Thus, data of the company can be unintentionally synchronized to the employees' private devices. As another example, Windows 8 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud. This puts critical cryptographic secrets in the hands of third parties.
+### 2 3 Integrated cloud functionalities
+Windows 8.1 includes many features that store and synchronize data in Microsoft's cloud services. There is a risk of unconsciously (or at least carelessly) using cloud services for possibly sensitive or personal data. At the same time, data protection laws may also be violated if data is stored by third parties, especially abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up there. Thus, data of the company can be unintentionally synchronized to the employees' private devices. As another example, Windows 8 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud. This puts critical cryptographic secrets in the hands of third parties.
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
@@ -39,7 +40,8 @@ Windows operating systems are complex systems whose security is essentially dete
 Improper or improper use of devices, systems, and applications can also affect security in Windows, especially if existing security measures are disregarded or circumvented. Too generously granted rights, easy-to-guess passwords, insufficiently protected data carriers with backup copies or jobs that are not locked in case of temporary absence can lead to security incidents. Another consequence of improper operation of Windows systems or applications may be the accidental deletion or modification of data. It is also possible for confidential information to reach the public, for example if access rights are set incorrectly.
 
 3 requirements
----------------The following are specific requirements for the Windows 8.1 area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for the Windows 8.1 area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -77,7 +79,8 @@ In addition to authorizations on the local file system, the authorization and ac
 
 #### SYS.2.2.2.A7 Using the Windows User Account Control UAC
 
-To support restrictive rights assignment, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.#### SYS.2.2.2.A8 Using the homegroup feature [User]
+To support restrictive rights assignment, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
+#### SYS.2.2.2.A8 Using the homegroup feature [User]
 
 Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in handling homegroup permissions.
 
@@ -109,7 +112,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
-AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
+AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
+For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
 
 The implementation of the SRP and AppLocker rules SHOULD be tested on a test system or operating in the monitoring mode before being used on a productive system.
 
@@ -133,7 +137,8 @@ As part of the process of creating a security plan for an IT system running Wind
 
 The permission or the prohibition of the storage of access data in the so-called "safe" SHOULD be defined in a guideline. A ban SHOULD be technically enforced.
 
-#### SYS.2.2.2.A20 Remote access security via RDP (CIA)The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have a reasonable size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
+#### SYS.2.2.2.A20 Remote access security via RDP (CIA)
+The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have a reasonable size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
 
 #### SYS.2.2.2.A21 Using File and Registry Virtualization (CI)
 

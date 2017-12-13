@@ -28,7 +28,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 Many printers, copiers, and MFPs require a sufficient amount of consumables for smooth, uninterrupted operation. If these consumables are missing or incorrectly used, the operation process can be severely disturbed. For example, improper ink can contaminate an inkjet printer and cause the printer to malfunction. In emergencies, the agency's ability to act can be severely impaired and high follow-up costs can arise, for example if important contracts can not be printed out.
 
-### 2 2 Unauthorized access to printed documentsNetwork printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for them to print on the device, they will eventually bridge the waiting time and see what other colleagues have printed out. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
+### 2 2 Unauthorized access to printed documents
+Network printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for them to print on the device, they will eventually bridge the waiting time and see what other colleagues have printed out. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
 
 Users often do not look for causes if they do not find their printouts at the printer. Instead, they suspect IT problems and start a new print job, as they are used to the fact that with the hardware and software always problems and inexplicable phenomena occur. However, the printouts could have been taken by others as well. Likewise, it often happens that users have accidentally selected another printer on their workstation computer. Typically, users then look for their printouts on the wrong printer, can not find them, and simply start a new print job, this time on the default printer. As a result, many network printers find misprints that are not picked up.
 
@@ -48,7 +49,8 @@ Printers, copiers and multifunction devices are often not controlled locally, bu
 
 Unencrypted communication interfaces for administration form another source of danger. When accessing via HTTP or Telnet, the transmitted information is transported unprotected. In that case, an attacker could read the communication and thus, for example, the password for configuration and use it for attacks on confidentiality, availability and integrity.
 
-### 2 6 Missing power disconnectionSecurity gateways between the LAN and the Internet are often configured to enable Internet access for entire subnets. On the other hand, printers, copiers, and multifunction devices are often associated with the same subnet as the workstation PCs that print on those devices. As a result, it can happen that z. B. also the network printers can access the Internet. If the connections from and to the printers from the Internet are not rejected by the security gateways, sensitive information may be able to leave the network undesirably. Conversely, a network-capable device could also unwanted receive data from the Internet and possibly redistribute it. A network printer can thereby z. B. become a gateway for attacks from the Internet.
+### 2 6 Missing power disconnection
+Security gateways between the LAN and the Internet are often configured to enable Internet access for entire subnets. On the other hand, printers, copiers, and multifunction devices are often associated with the same subnet as the workstation PCs that print on those devices. As a result, it can happen that z. B. also the network printers can access the Internet. If the connections from and to the printers from the Internet are not rejected by the security gateways, sensitive information may be able to leave the network undesirably. Conversely, a network-capable device could also unwanted receive data from the Internet and possibly redistribute it. A network printer can thereby z. B. become a gateway for attacks from the Internet.
 
 ### 2 7 Impairment of health and the environment
 
@@ -75,7 +77,8 @@ The following are specific requirements for printers, copiers, and multifunction
 
 The following requirements MUST be implemented as a priority:
 
-#### SYS.4.1.A1 Creation of a basic concept for the use of printers, copiers and multifunctional devices [Head IT]Before procuring printers, copiers and multifunction devices, the people responsible MUST develop a basic concept for safe use. It must be governed by where the equipment may be installed, who may access it and how it should be protected from attack.
+#### SYS.4.1.A1 Creation of a basic concept for the use of printers, copiers and multifunctional devices [Head IT]
+Before procuring printers, copiers and multifunction devices, the people responsible MUST develop a basic concept for safe use. It must be governed by where the equipment may be installed, who may access it and how it should be protected from attack.
 
 #### SYS.4.1.A2 Suitable installation of printers, copiers and multifunction devices
 
@@ -112,7 +115,8 @@ If an institution uses the network-capable Common Unix Printing System (CUPS) pr
 
 The access to the configuration of printers, copiers and multifunction devices SHOULD be limited. If administrators configure the devices remotely, they should be protected by authentication and an encrypted connection. Likewise, all unnecessary functions of printers, copiers and multifunction devices SHOULD be turned off.
 
-#### SYS.4.1.A8 Supply and Control of Consumables [Internal Service, User]Printers, copiers, and multifunction devices rely on consumer goods such as paper or toner to work. The supply of these consumables SHOULD be ensured. The disposal of consumables SHOULD be regulated. The responsibilities for this should be regulated and communicated.
+#### SYS.4.1.A8 Supply and Control of Consumables [Internal Service, User]
+Printers, copiers, and multifunction devices rely on consumer goods such as paper or toner to work. The supply of these consumables SHOULD be ensured. The disposal of consumables SHOULD be regulated. The responsibilities for this should be regulated and communicated.
 
 #### SYS.4.1.A9 Logging on printers, copiers and multifunction devices
 
@@ -144,7 +148,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 It SHOULD use devices with an authentication option. This function SHOULD be activated and used.
 
-#### SYS.4.1.A15 Information Protection for Printers, Copiers and Multifunction Devices (CI)With an increased protection requirement, the printers, copiers and multifunctional devices used SHOULD store information in encrypted form. Also, print jobs should only be encrypted and transferred to the devices.
+#### SYS.4.1.A15 Information Protection for Printers, Copiers and Multifunction Devices (CI)
+With an increased protection requirement, the printers, copiers and multifunctional devices used SHOULD store information in encrypted form. Also, print jobs should only be encrypted and transferred to the devices.
 
 Furthermore, it should be ensured by suitable mechanisms that deleted data from the device memory can not be restored. Ultimately, action should also be taken to make it harder for attackers to expand internal storage components of printers, copiers, and multifunction devices.
 

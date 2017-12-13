@@ -38,7 +38,8 @@ If standard software or related updates are obtained from unreliable sources, th
 
 ### 2 4 Manipulation of data by users
 
-The data used in standard software can be manipulated in a variety of ways by users, e.g. For example, if you incorrectly or incorrectly record data incorrectly, change the content or simply delete data. As a result, all specialized processes in which the corresponding application is used are affected. Failure to detect the manipulated data will result in processing of corrupted information. In addition, security holes can be created that attackers can exploit.### 2 5 Software vulnerabilities in standard software
+The data used in standard software can be manipulated in a variety of ways by users, e.g. For example, if you incorrectly or incorrectly record data incorrectly, change the content or simply delete data. As a result, all specialized processes in which the corresponding application is used are affected. Failure to detect the manipulated data will result in processing of corrupted information. In addition, security holes can be created that attackers can exploit.
+### 2 5 Software vulnerabilities in standard software
 
 Despite intensive testing, not all vulnerabilities and defects in standard software are usually discovered before they are delivered to customers. If these are not detected in time, resulting crashes or errors can lead to far-reaching consequences. In addition, the confidentiality and integrity of the stored data and the availability of affected IT systems may be affected. Software vulnerabilities or errors can also lead to serious security vulnerabilities in standard software. These can sometimes be exploited by attackers to inject malicious code.
 
@@ -69,7 +70,8 @@ When installing standard software, you MUST ensure that it is an original unmodi
 
 #### CON.4.A2 Development of the installation instructions for standard software
 
-An installation instruction MUST be created for the selected standard software. Also suitable parameters for the configuration as well as organizational conditions for the installation of the software MUST be specified.#### CON.4.A3 Secure installation and configuration of standard software
+An installation instruction MUST be created for the selected standard software. Also suitable parameters for the configuration as well as organizational conditions for the installation of the software MUST be specified.
+#### CON.4.A3 Secure installation and configuration of standard software
 
 Approved standard software MUST be installed and configured to adhere to the appropriate installation instructions (see CON.4.A2 * Development of standard software installation instructions *). If these instructions are deviated, this MUST be approved by the supervisor. All installations MUST be performed by IT operations. It MUST be ensured that only the required program functions are installed.
 
@@ -95,7 +97,8 @@ Based on the requirements catalog (see CON4.1.A5 * Creation of a standard softwa
 
 It SHOULD be checked if new software products were delivered completely and correctly. It should at least be checked whether the delivery was ordered, for whom it is intended and whether all the necessary components are present. Also pure download software including associated license files or keys SHOULD be checked accordingly. The results of the review SHOULD be documented. Thereafter, all delivered products and licensing information SHOULD be provided with unique identifiers and included in an inventory.
 
-#### CON.4.A8 License management and version control of standard softwareLicensed standard software products used on the institution's IT systems SHOULD be licensed. To ensure this, the installed program versions and the licenses SHOULD be checked regularly. For this purpose, appropriate lists, databases or special license management programs should be used. The stock lists for the licenses SHOULD always be up to date. In addition, the different configurations of the installed standard software SHOULD be documented.
+#### CON.4.A8 License management and version control of standard software
+Licensed standard software products used on the institution's IT systems SHOULD be licensed. To ensure this, the installed program versions and the licenses SHOULD be checked regularly. For this purpose, appropriate lists, databases or special license management programs should be used. The stock lists for the licenses SHOULD always be up to date. In addition, the different configurations of the installed standard software SHOULD be documented.
 
 #### CON.4.A9 Uninstalling standard software
 
@@ -134,7 +137,8 @@ Further information on hazards and safety measures in the area "selection and us
  <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
 
  
-* #### [CC] Common Criteria for Information Technology Security Evaluation (CC)published in the series of standards ISO 15408: Information technology- Security techniques- Evaluation criteria for IT security, Version 3.1, (last accessed on 28.09.2017)
+* #### [CC] Common Criteria for Information Technology Security Evaluation (CC)
+published in the series of standards ISO 15408: Information technology- Security techniques- Evaluation criteria for IT security, Version 3.1, (last accessed on 28.09.2017)
  <Www.commoncriteriaportal.org>
 
  

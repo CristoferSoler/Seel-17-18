@@ -38,7 +38,8 @@ Every employee should be encouraged to leave their domestic workplaces tidy. Emp
 
 If an employee only briefly leaves the home office during working hours, it is sufficient to lock the room if possible and / or to lock the screen in such a way that access is only possible after successful authentication. If a room can not be closed, sensitive documents should be locked even in the case of a short absence. If an employee is absent for a longer period of time, for example when traveling on business or on vacation, he has to clean up his workplace in such a way that no data carriers or documents needing protection are left undocked. For this, the employees need sufficiently dimensioned and lockable storage options, such. B. safe roll containers with locks.
 
-Also, passwords should never be stored easily (eg on an adhesive label on the monitor or under the desk pad). Also, no trivial passwords should be used.Safety management supervisors and staff should advise employees that they need to properly clean up their domestic workplaces.
+Also, passwords should never be stored easily (eg on an adhesive label on the monitor or under the desk pad). Also, no trivial passwords should be used.
+Safety management supervisors and staff should advise employees that they need to properly clean up their domestic workplaces.
 
 #### INF.8.M2 Transportation of work material to the home workplace [Home automation]
 
@@ -69,7 +70,8 @@ To protect against unauthorized access to the home workplace z. For example, the
 * Interior and exterior doors must be locked in times when a home office is not occupied. This prevents unauthorized persons from accessing documents and IT equipment located therein. This is particularly important when domestic workplaces are located in areas with public access or access is not controlled by other means.
 * Similarly, windows and outward doors (balconies, terraces) must be closed in times when a home office is not occupied. In the cellar and ground floor and, depending on the design of the façade, also on the higher floors, open windows and doors offer burglars ideal entry points, which can also be used during the working hours of the domestic employee.
 * Doors with a blind knob on the side of the corridor do not need to be completed. The prerequisite for this, however, is that the authorized employees always carry their key to the home office with them.
-* When the computer is running, it is not necessary to lock the door if the employee only leaves the workstation for a short time and the PC can only be accessed after successful authentication. When the computer is switched off, the office can remain open if the computer can only be booted with the help of a password. The same function is fulfilled by access mechanisms based on tokens or smart cards. If documents are to be protected at the workplace, the door should be closed.Together with the basic measures, the following measures are in line with the state of the art in the field of home work.
+* When the computer is running, it is not necessary to lock the door if the employee only leaves the workstation for a short time and the PC can only be accessed after successful authentication. When the computer is switched off, the office can remain open if the computer can only be booted with the help of a password. The same function is fulfilled by access mechanisms based on tokens or smart cards. If documents are to be protected at the workplace, the door should be closed.
+Together with the basic measures, the following measures are in line with the state of the art in the field of home work.
 
 ### 2.2 Standard measures
 
@@ -107,7 +109,8 @@ Experience has shown that burglars select their goals according to how high the 
 * special lock cylinders, additional locks and latches,
 * if necessary securing of basement light shafts,
 * Closure of unused side entrances.
-Recommendations can be made by the local counseling centers of the Criminal Police.During planning, during implementation and later during operation, a qualified person should regularly assess whether the protection against burglary is consistent and that any possible attempts to overcome it are met with equivalent resistance.
+Recommendations can be made by the local counseling centers of the Criminal Police.
+During planning, during implementation and later during operation, a qualified person should regularly assess whether the protection against burglary is consistent and that any possible attempts to overcome it are met with equivalent resistance.
 
 Employees at the home workplace must be notified of the regulations and measures for burglary protection, eg doors, windows or shutters must be locked in the evening (see also INF.8.M3 * Protection against unauthorized access to the home workplace *).
 
@@ -131,7 +134,8 @@ A specific security policy should regulate how safe materials should be disposed
 
 It is also possible to have the equipment worthy of protection collected by the employee at the home workplace and to provide the disposal facilities at the institution's location for disposal.
 
-If sensitive material is collected for later disposal, it must be securely closed and protected against unauthorized access.Insofar as no environmentally sound and safe disposal can be carried out in the institution, contracted service providers shall be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites [MVED]. It should be checked regularly by the institution as to whether the disposal process of the contracted service providers is reliable.
+If sensitive material is collected for later disposal, it must be securely closed and protected against unauthorized access.
+Insofar as no environmentally sound and safe disposal can be carried out in the institution, contracted service providers shall be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites [MVED]. It should be checked regularly by the institution as to whether the disposal process of the contracted service providers is reliable.
 
 ### 2.3 Measures for increased protection requirements
 
@@ -158,7 +162,8 @@ In order to increase the protection of data carriers and IT systems with confide
 
 Depending on the industry, the technology used or other framework conditions, additional (user-defined) requirements may arise for an information network. These may include, for example, the following measures.
 
-One of the most important pillars of information security in an institution is its staff. Even the most elaborate technical safety precautions are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the values ​​and information of the institution to protect are essential for this.The security measures selected for the institution should therefore always be based on the employees. Their knowledge and handling of information and IT should be included. To assess how people behave from a safety perspective, the factors contributing to this behavior can be analyzed. Building on this, we can examine where personal and organizational security can be improved, for example through awareness-raising and information security training.
+One of the most important pillars of information security in an institution is its staff. Even the most elaborate technical safety precautions are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the values ​​and information of the institution to protect are essential for this.
+The security measures selected for the institution should therefore always be based on the employees. Their knowledge and handling of information and IT should be included. To assess how people behave from a safety perspective, the factors contributing to this behavior can be analyzed. Building on this, we can examine where personal and organizational security can be improved, for example through awareness-raising and information security training.
 
 The following aspects should be considered:
 
@@ -183,18 +188,19 @@ The security culture of an institution is strongly influenced by the industry in
 *** Applications and IT ***
 
 * Do the existing IT, ICS, and IoT components handle the business-relevant information that meets their protection needs and security requirements?
-*** *** management level* What is the management level regarding information security? Do superiors fulfill their role model function? Are there management wishes to improve security processes?
+*** *** management level
+* What is the management level regarding information security? Do superiors fulfill their role model function? Are there management wishes to improve security processes?
 *** Cultural Backgrounds ***
 
 * The cultural background can also influence the handling of information to be protected and security requirements in general. Therefore, it should be examined whether there are regional and national differences in information security management. Above all, it should also be explored what different approaches to information security exist in the different areas of the institution. Even individual departments can already develop their own rules and behavior when dealing with business-relevant information.
 *** Changes ***
 
 * All kinds of far-reaching changes for employees can change their way of handling information, business processes, IT and other devices. These include, for example, restructuring, dismissals, changes of tasks or superiors.
-If the analysis reveals that employees behave differently than it makes sense from a security point of view, there are several ways to deal with it. It can, for. For example, try to change the behavior. On the other hand, in many cases it may be simpler to redesign the security policies or workflows and make them more secure.
+If the analysis reveals that employees behave differently than it makes sense from a security point of view, there are several ways to deal with it. It can, for. For example, try to change the behavior. On the other hand, in many cases it may be easier to redesign the security policies or workflows and make them more secure.
 
-Those responsible for awareness-raising and training programs should clarify whether and to what extent they want to use their own staff or external providers as trainers. In addition, the form of training must be determined. If a program includes several awareness-raising and training activities, a training coordinator should be appointed. In addition, various offerings from training providers should have been compared, which are the best in terms of content, quality and price. The awareness-raising or training activities carried out should be evaluated by the participants and their experiences regularly evaluated internally.
+Those responsible for awareness-raising and training programs should clarify whether and to what extent they want to use their own staff or external providers as trainers. In addition, the form of training must be determined. If a program includes several awareness-raising and training activities, a training coordinator should be appointed. In addition, various offers from training providers should have been compared, which are the best in terms of content, quality and price. The awareness-raising or training activities carried out should be evaluated by the participants and regularly evaluated internally.
 
-If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers must be given the time they need to not only carry out awareness-raising and training, but also prepare and evaluate it.
+If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers need to get the time they need to not only do awareness-raising and training, but also prepare and evaluate it.
 
 For cost or qualification reasons, it may be more advantageous, at least initially, to have the training carried out by external specialists. Already in the planning phase it has to be clarified which financial resources are available for it. The external trainers should be carefully selected based on content, quality and price criteria and prepared for their task. In particular, they must be provided with the necessary institutional background.
 
@@ -203,7 +209,8 @@ External resources for awareness-raising or training also require internal resou
 * selects qualified training providers,
 * Provides learning content and methods, as well as providing the trainers with the information they need
 * coordinates internal training planning, preparation and implementation,
-* forms the communication interface between trainers and own employees,* Analyzes participant assessments and identifies appropriate improvement measures, if necessary together with the trainers.
+* forms the communication interface between trainers and own employees,
+* Analyzes participant assessments and identifies appropriate improvement measures, if necessary together with the trainers.
 The training coordination can be carried out by the information security officer or even an employee from the human resources department. The Information Security Officer and the Human Resources Department must work closely together in any case.
 
 Experience has shown that there are a number of external providers who offer appropriate awareness-raising or training in a form that meets the needs of the institution or that can be adapted with reasonable effort.
@@ -218,7 +225,8 @@ Simulation games can be made of practical examples, eg. For example, based on re
 
 As with training courses, the target group content planning is very important in these formats. The participants should be able to recognize the relevance of role-playing games and be able to benefit directly in their work environment.
 
-All efforts to make employees aware of the importance of information security should preserve a positive and constructive mood. Constant fear of security incidents can on the one hand lead to the suppression of security problems and on the other hand to panic reactions.The following examples show that simulation games can range from very easy-to-implement training exercises to complex simulation exercises. The task of the responsible planners is now to develop suitable scenarios according to the requirements of the different target groups.
+All efforts to make employees aware of the importance of information security should preserve a positive and constructive mood. Constant fear of security incidents can on the one hand lead to the suppression of security problems and on the other hand to panic reactions.
+The following examples show that simulation games can range from very easy-to-implement training exercises to complex simulation exercises. The task of the responsible planners is now to develop suitable scenarios according to the requirements of the different target groups.
 
 * Carrying employee IDs *
 
@@ -242,7 +250,8 @@ Examples of measures for teaching material safety are:
 * Quiz questionnaires with learning opportunities on training content
 * Intranet-based surveys on the content of the training courses
 * Use of team meetings etc. to discuss current aspects of information security
-* Implementation of planned or role-playing games (see ORP.3.M11 Implementation of Information Security Planning Games)* regular repetition of seminars
+* Implementation of planned or role-playing games (see ORP.3.M11 Implementation of Information Security Planning Games)
+* regular repetition of seminars
 * short notes in the intranet supplementing short lectures, z. Eg in the context of other internal events
 * additional short lectures, eg Eg in the context of other internal events
 ### 3.2 Literature

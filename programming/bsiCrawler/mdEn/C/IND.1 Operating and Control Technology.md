@@ -26,7 +26,8 @@ Depending on the purpose, industry, IT systems and technology used, as well as t
 In addition, the surrounding infrastructure of the OT - ie locations, facilities, buildings, rooms, etc. - must be modeled by building blocks that are as specific as possible in order to complement the protective effect of this building block.
 
 2 risk situation
------------------The following specific threats and vulnerabilities are of particular importance in the field of control technology:
+-----------------
+The following specific threats and vulnerabilities are of particular importance in the field of control technology:
 
 ### 2 1 Inappropriate integration of OT into the security organization
 
@@ -48,7 +49,8 @@ If the required communication channels are too broad or insufficiently secured, 
 
 Industrial control equipment can be affected by both targeted malicious software attacks and by chance malicious programs aimed at compromising office IT. Possible infection routes result from data transfers, the use of removable media and mobile devices, or the lack of segmentation or control of data traffic.
 
-On the other hand, the use of anti-virus software can also pose risks to OT if there is no manufacturer release for the environment or if fault detection and active system interventions endanger the operation. A similar disruption potential (due to the disruption of connections) can also result from the operation of network-based Intrusion Prevention Systems (IPS).In addition, the use of anti-virus software requires regular updates. If this is not guaranteed, new attacks by malicious software can not be detected. This also applies generally to attacks for which the antivirus software has no signatures.
+On the other hand, the use of anti-virus software can also pose risks to OT if there is no manufacturer release for the environment or if fault detection and active system interventions endanger the operation. A similar disruption potential (due to the disruption of connections) can also result from the operation of network-based Intrusion Prevention Systems (IPS).
+In addition, the use of anti-virus software requires regular updates. If this is not guaranteed, new attacks by malicious software can not be detected. This also applies generally to attacks for which the antivirus software has no signatures.
 
 ### 2 5 Unsafe projecting process / application development process
 
@@ -78,7 +80,8 @@ If changes to such an environment are not carefully planned, tuned, and tested i
 
 ### 2 9 Lack of life cycle concepts
 
-In addition to specific OT components, components, technologies and software from office IT, so-called commercial-off-the-shelf (COTS) products, are increasingly being used. Due to the very long lifecycles in OT, these components are generally operated much longer than usual in office IT, sometimes even beyond the manufacturer support cycles.As a result, after the manufacturer support expires, updates for vulnerabilities will no longer be available. In contrast, there are often publicly documented vulnerabilities, as well as tools that exploit these vulnerabilities. This also allows unexperienced attackers to successfully penetrate the systems. This also applies if updates are not recorded or only with great delay.
+In addition to specific OT components, components, technologies and software from office IT, so-called commercial-off-the-shelf (COTS) products, are increasingly being used. Due to the very long lifecycles in OT, these components are generally operated much longer than usual in office IT, sometimes even beyond the manufacturer support cycles.
+As a result, after the manufacturer support expires, updates for vulnerabilities will no longer be available. In contrast, there are often publicly documented vulnerabilities, as well as tools that exploit these vulnerabilities. This also allows unexperienced attackers to successfully penetrate the systems. This also applies if updates are not recorded or only with great delay.
 
 The long operating times can also lead to problems in the procurement of spare parts, if they are no longer produced by the manufacturer. This also applies to possible know-how for the care and maintenance of legacy systems that no longer exists with new employees
 
@@ -103,7 +106,8 @@ In particular, if these systems and networks are not under the control of the in
 Examples of dependencies on other systems and networks include Internet connectivity (both wired and wireless), shared infrastructure components, operations management and monitoring by service providers, or the use of cloud services.
 
 3 requirements
----------------The following are specific requirements for the area of ​​operating and control technology. Basically, ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for the area of ​​operating and control technology. Basically, ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -135,7 +139,8 @@ When using anti-virus software on OT components, it must be considered whether a
 
 Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of updating. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
 
-### 3.2 Standard requirementsTogether with the basic requirements, the following requirements correspond to the state of the art in the area of ​​operating and control technology. They SHOULD be implemented in principle.
+### 3.2 Standard requirements
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​operating and control technology. They SHOULD be implemented in principle.
 
 #### IND.1.A4 Documentation of the OT infrastructure
 
@@ -163,7 +168,8 @@ Further information is described in the module OPS.1.2.1 Change Management.
 
 #### IND.1.A7 Establish Permission Management
 
-The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
+The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.
+The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
 
 Further information is described in the module ORP.4 Identity and Authorization Management.
 
@@ -191,7 +197,8 @@ The response plan SHOULD set procedures for incident handling. It should cover t
 
 #### IND.1.A11 Secure Procurement and System Development
 
-For procurements, planning or developments of ICS, information security regulations SHOULD be made and documented. The documents SHOULD be part of the invitation to tender.In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
+For procurements, planning or developments of ICS, information security regulations SHOULD be made and documented. The documents SHOULD be part of the invitation to tender.
+In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
 
 The institution SHOULD document how the system fits in with the concepts of zoning, entitlement, vulnerability management, and antivirus protection, and adjust it if necessary. It should be regulated how the operation can be maintained if one of the partners stops providing services.
 
@@ -229,7 +236,8 @@ To enable effective verification of privileges, the institution SHOULD maintain 
 
 All critical administrative activities SHOULD be logged. The IT operation SHOULD NOT be able to erase or manipulate the logs.
 
-#### IND.1.A16 Greater foreclosure of zones (IA)For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with security check functions is required to prevent risks from external connections.
+#### IND.1.A16 Greater foreclosure of zones (IA)
+For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with security check functions is required to prevent risks from external connections.
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
@@ -297,7 +305,8 @@ Further information on hazards and safety measures in the area of ​​"control
   
 
  Establishing an industrial automation and control system security program, International Electrotechnical Commission (IEC), 2010
- <Https://webstore.iec.ch/publication/7030>* #### [WAST] Whitepaper Requirements for secure control and telecommunication systems
+ <Https://webstore.iec.ch/publication/7030>
+* #### [WAST] Whitepaper Requirements for secure control and telecommunication systems
 
   
 

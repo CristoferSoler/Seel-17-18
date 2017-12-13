@@ -32,7 +32,8 @@ If IT systems are not adequately protected against malicious programs, which als
 
 A common type of malware is ransomware. This encrypts the data of the infected IT system as well as often other data that can be reached via network shares. As a rule, the attackers use encryption methods that can not be reversed without knowing the key, thus forcing their victims to spend large sums of money. If there is no effective protection against malicious programs and no additional precautions like data backups are made, there can be significant restrictions on the availability of information as well as massive financial and image damage.
 
-### 2 3 Targeted Attacks and Social EngineeringInstitutions are often attacked with customized malicious programs. This z. B. Leading executives through social engineering methods to open malicious email attachments. Tailor-made malicious programs often can not be detected directly by virus protection programs. The human resources department of an institution, for example, can be a target, for example by malicious application documents are sent by electronic means. If the attacker has been able to infect an IT system in this way, he can spread within the institution and, for example, steal, manipulate or destroy information.
+### 2 3 Targeted Attacks and Social Engineering
+Institutions are often attacked with customized malicious programs. This z. B. Leading executives through social engineering methods to open malicious email attachments. Tailor-made malicious programs often can not be detected directly by virus protection programs. The human resources department of an institution, for example, can be a target, for example by malicious application documents are sent by electronic means. If the attacker has been able to infect an IT system in this way, he can spread within the institution and, for example, steal, manipulate or destroy information.
 
 ### 2 4 Mobile media infections
 
@@ -59,7 +60,8 @@ The following requirements MUST be implemented as a priority:
 
 It MUST be created a concept, which IT systems must be protected against malicious programs. It also MUST be noted how the protection has to be done. If no reliable protection is possible, then the identified IT systems SHOULD NOT be operated. The concept SHOULD be comprehensibly documented.
 
-#### OPS.1.1.4.A2 Use of system-specific protection mechanismsIt MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
+#### OPS.1.1.4.A2 Use of system-specific protection mechanisms
+It MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
@@ -87,7 +89,8 @@ Users MUST be regularly briefed on the threat of malware. You MUST follow the ba
 
 Together with the basic requirements, the following requirements are state-of-the-art in the field of malware protection. They SHOULD be implemented in principle.
 
-#### OPS.1.1.4.A8 Use of cloud servicesCloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
+#### OPS.1.1.4.A8 Use of cloud services
+Cloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
 
 #### OPS.1.1.4.A9 Malware infection report [user]
 
@@ -121,7 +124,8 @@ With increased protection requirements and appropriate threat status, the use an
 
 In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
 
-4 Further Information------------------------------
+4 Further Information
+------------------------------
 
 ### 4.1 Literature
 

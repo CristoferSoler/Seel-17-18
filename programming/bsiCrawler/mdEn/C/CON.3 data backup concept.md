@@ -42,7 +42,8 @@ If at the data security legal requirements, eg. For example, data protection law
 
 If institutions outsource their data protection to a cloud provider, an attacker could also access the backup data or the backup can not be restored quickly enough. As a result, data worth protecting has leaked or emergency backups have not been available in the required time.
 
-### 2 7 Insufficient storage capacityThe amount of processed and therefore also stored data is steadily increasing. If the backup media does not have enough memory, more up-to-date data may no longer be backed up or the backup software used will automatically overwrite old and possibly still necessary backups. Are those responsible not informed about this because z. For example, if monitoring is inadequate, data may be lost or only the wrong versions are available in an emergency.
+### 2 7 Insufficient storage capacity
+The amount of processed and therefore also stored data is steadily increasing. If the backup media does not have enough memory, more up-to-date data may no longer be backed up or the backup software used will automatically overwrite old and possibly still necessary backups. Are those responsible not informed about this because z. For example, if monitoring is inadequate, data may be lost or only the wrong versions are available in an emergency.
 
 ### 2 8 Insufficient data protection concept
 
@@ -81,7 +82,8 @@ Regular backups MUST be performed. At least the data MUST be backed up on a regu
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of data backup. They SHOULD be implemented in principle.
 
-#### CON.3.A6 Development of a data protection concept [Head of IT, specialist responsible]A backup concept SHOULD be created. This SHOULD be coordinated with all those responsible. It SHOULD list all the IT systems to be considered. Employees SHOULD be informed about the part of the data protection concept that concerns them. It SHOULD be checked regularly, if the data protection concept is implemented correctly.
+#### CON.3.A6 Development of a data protection concept [Head of IT, specialist responsible]
+A backup concept SHOULD be created. This SHOULD be coordinated with all those responsible. It SHOULD list all the IT systems to consider. Employees SHOULD be informed about the part of the data protection concept that concerns them. It SHOULD be checked regularly, if the data protection concept is implemented correctly.
 
 #### CON.3.A7 Procurement of a suitable data security system [Head IT, IT Operations]
 
@@ -89,7 +91,7 @@ Before a backup system is procured, a list of requirements SHOULD be created to 
 
 #### CON.3.A8 Function Tests and Recoverability Check [IT Operations]
 
-It SHOULD be tested on a regular basis, whether the backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
+It SHOULD be tested on a regular basis, whether the data backup works as desired and, above all, whether backed up data can be played back easily and in a reasonable amount of time.
 
 #### CON.3.A9 Requirements for online data backup [Head of IT, IT operation]
 
@@ -126,7 +128,7 @@ To ensure the confidentiality and integrity of the data backed up, all data SHOU
 
 ### 4.1 Literature
 
-Additional information on hazards and security measures in the area of ​​"data protection concept" can be found in the following publications, among others:
+Additional information on threats and security measures in the "data protection concept" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 
@@ -140,7 +142,8 @@ Additional information on hazards and security measures in the area of ​​"da
 
   
 
- Bitkom, 2016<Https://www.bitkom.org/noindex/Publikationen/2017/Leitfaden/170125-LF-Backup-Recovery.pdf>
+ Bitkom, 2016
+<Https://www.bitkom.org/noindex/Publikationen/2017/Leitfaden/170125-LF-Backup-Recovery.pdf>
 
  
 * #### [ISF] The Standard of Good Practice

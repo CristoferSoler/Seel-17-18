@@ -30,7 +30,8 @@ Furthermore, the module Proper IT Administration refers to the regular operation
 
 The following specific threats and vulnerabilities are of particular importance in the area of ​​proper IT administration:
 
-### 2 1 Failures due to unregulated responsibilitiesIf the IT organization has the administrative responsibilities, eg. If, for example, planning, installation, documentation, patch management and monitoring are not clearly regulated or the regulations are not known and understood to the involved employees, this may mean that security-relevant tasks from these areas are not or not systematically carried out , Typical examples are an unclear definition of the responsibilities between IT and telecommunications technology, between office IT and production facilities or between application and platform operation.
+### 2 1 Failures due to unregulated responsibilities
+If the IT organization has the administrative responsibilities, eg. If, for example, planning, installation, documentation, patch management and monitoring are not clearly regulated or the regulations are not known and understood to the involved employees, this may mean that security-relevant tasks from these areas are not or not systematically carried out , Typical examples are an unclear definition of the responsibilities between IT and telecommunications technology, between office IT and production facilities or between application and platform operation.
 
 ### 2 2 Staff shortages of core competencies
 
@@ -48,7 +49,8 @@ The privileged system access of the administrators is often the focus of attacke
 
 Administrative activities directly influence the operation of IT systems and applications. For example, ongoing user sessions can be aborted when IT systems are restarted or legitimate access is prevented when a firewall policy is customized. If such operations are performed without considering how they affect the users and without coordinating them with the affected areas, the operation can be significantly disrupted.
 
-### 2 6 Lack of information on incidentsDeficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this assumes, for example, that the target state of systems prior to the incident is documented and verifiable, or that proper unauthorized changes to systems can be distinguished on the basis of appropriate records. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
+### 2 6 Lack of information on incidents
+Deficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this assumes, for example, that the target state of systems prior to the incident is documented and verifiable, or that proper unauthorized changes to systems can be distinguished on the basis of appropriate records. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
 
 3 requirements
 ---------------
@@ -66,7 +68,7 @@ If employees are to perform administrative tasks within the IT environment, they
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
 * Role separation of administrative and controlling roles (e.g., revision) MUST be made.
-The administrators and their representatives MUST have sufficient time to perform their duties carefully. All administrators and their representatives MUST receive sufficient training opportunities
+The administrators and their representatives MUST have sufficient time to perform their duties diligently. All administrators and their representatives MUST receive sufficient training opportunities
 
 These requirements MUST also be met when administrative tasks are delegated to third parties.
 
@@ -74,11 +76,12 @@ These requirements MUST also be met when administrative tasks are delegated to t
 
 For all administrative tasks and responsibilities, substitution arrangements MUST be made.
 
-It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, appropriate emergency users with administration rights SHOULD be set up.
+It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, corresponding emergency users with administration rights SHOULD be set up.
 
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]
 
-When employees take over administrative tasks within the IT environment, they MUST BE in their activities, particularly in the existing IT architecture and be briefed by them take care of IT systems and applications. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.These requirements MUST also be met when administrative tasks are delegated to third parties.
+As employees assume administrative responsibilities within the IT environment, they MUST be trained in their work, particularly in the existing IT architecture and the IT systems and applications they are responsible for. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.
+These requirements MUST also be met when administrative tasks are delegated to third parties.
 
 #### OPS.1.1.2.A4 Termination as IT Administrator [Head of Human Resources]
 
@@ -110,7 +113,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 The powers, duties and responsibilities of IT administrators SHOULD be made mandatory in a work instruction or policy. The distribution of tasks between the individual administrators SHOULD be done in such a way that on the one hand overlaps in the responsibilities are avoided and on the other hand no administration gaps arise. The regulations SHOULD be updated regularly. The specifications SHOULD in particular exclude unauthorized changes of the IT administrators in the information network, as far as these go beyond the explicitly assigned tasks and are not necessary to avert a security incident or incident.
 
-#### OPS.1.1.2.A8 Administration of Specialist Applications [IT Operations]The basic requirements listed in this module SHOULD also be consistently implemented for employees with administrative tasks for individual specialist applications. The division of tasks between application and system administration SHOULD be clearly defined and recorded in writing. Interfaces SHOULD have defined interfaces between the persons responsible for system and specialist application administration (eg contact person, communication channels, regular exchange).
+#### OPS.1.1.2.A8 Administration of Specialist Applications [IT Operations]
+The basic requirements listed in this module SHOULD also be consistently implemented for employees with administrative tasks for individual specialist applications. The division of tasks between application and system administration SHOULD be clearly defined and recorded in writing. Interfaces SHOULD have defined interfaces between the persons responsible for system and specialist application administration (eg contact person, communication channels, regular exchange).
 
 If there is administrative intervention in the operation of the application (eg version change, maintenance window), this SHOULD be coordinated in advance with the department and take into account the needs of the department.
 
@@ -148,7 +152,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.2.A14 Administrators Security Check (CIA)
 
-In the high-security area, an additional security check SHOULD be carried out to confirm the trustworthiness of employees.#### OPS.1.1.2.A15 Distribution of administrative activities (CI)
+In the high-security area, an additional security check SHOULD be carried out to confirm the trustworthiness of employees.
+#### OPS.1.1.2.A15 Distribution of administrative activities (CI)
 
 There SHOULD be set up different administration roles for subtasks. When defining the tasks, the type of data and the existing system architecture SHOULD be taken into account.
 
@@ -213,6 +218,7 @@ The following elementary threats are important for the module "Proper IT Adminis
 * G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.33 Personnel loss
-* G 0.35 coercion, blackmail or corruption* G 0.37 denying actions
+* G 0.35 coercion, blackmail or corruption
+* G 0.37 denying actions
 * G 0.42 Social engineering
 The cross reference tables can be found in the download area due to their size.

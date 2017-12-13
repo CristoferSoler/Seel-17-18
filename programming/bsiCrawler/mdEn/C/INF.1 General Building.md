@@ -28,7 +28,8 @@ Buildings and the people and facilities inside them can be severely damaged by f
 
 For example, when PVC is burned, it produces chlorine gas, which together with the humidity and extinguishing water form hydrochloric acid. Distributing the hydrochloric acid vapors through the air conditioner can cause damage to sensitive electronic equipment located in a part of the building far from the fire.
 
-### 2 2 FlashLightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
+### 2 2 Flash
+Lightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
 
 If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the building (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
 
@@ -56,7 +57,8 @@ When constructing buildings, a large number of laws and regulations must be obse
 
 ### 2 8 Insufficient firing
 
-Every building in which IT operates is criss-crossed by a multitude of wires and cables. Fresh and sewer pipes, heating pipes, energy supply and data transmission are mentioned as examples. It is inevitable that such pipe and cable routes must cross fire walls and floors. If suitable fire barriers are not installed in such places, fires and smoke may spread uncontrollably.The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can thus expand into the area actually protected by the bulkhead.
+Every building in which IT operates is criss-crossed by a multitude of wires and cables. Fresh and sewer pipes, heating pipes, energy supply and data transmission are mentioned as examples. It is inevitable that such pipe and cable routes must cross fire walls and floors. If suitable fire barriers are not installed in such places, fires and smoke may spread uncontrollably.
+The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can thus expand into the area actually protected by the bulkhead.
 
 ### 2 9 Power failure
 
@@ -87,7 +89,8 @@ Unnecessary fire loads MUST be avoided. This includes the regular disposal of wa
 
 There MUST be a fire safety officer or a person entrusted with the task, who is also properly trained.
 
-#### INF.1.A4 fire detection in buildings [planner]Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
+#### INF.1.A4 fire detection in buildings [planner]
+Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
 
 #### INF.1.A5 Hand Fire Extinguisher
 
@@ -125,7 +128,8 @@ Employees SHOULD be instructed to close their office when absent or to close the
 
 #### INF.1.A12 key management
 
-For all keys of the building (of floors, corridors and rooms) SHOULD have a locking plan. The production, storage, administration and issuing of keys SHOULD be centrally regulated. Reserve keys SHOULD be kept and secured, but kept handy for emergencies. Unissued keys SHOULD be stored safely. Each key issue SHOULD be documented.#### INF.1.A13 Regulations for access to distribution boards
+For all keys of the building (of floors, corridors and rooms) SHOULD have a locking plan. The production, storage, administration and issuing of keys SHOULD be centrally regulated. Reserve keys SHOULD be kept and secured, but kept handy for emergencies. Unissued keys SHOULD be stored safely. Each key issue SHOULD be documented.
+#### INF.1.A13 Regulations for access to distribution boards
 
 The access to the distributors of all utilities in a building SHOULD be quickly possible if needed. The access to distributors SHOULD be limited to a narrow circle of beneficiaries.
 
@@ -173,7 +177,8 @@ Doors and windows SHOULD be selected according to the protection goals of the ar
 
 Rooms with similar protection requirements SHOULD be zoned together to treat comparable risks consistently and to reduce the cost of required security measures. A security zone concept for buildings and land SHOULD be developed and documented.
 
-#### INF.1.A24 Automatic drainage (A)All water hazard areas SHOULD be equipped with automatic drainage. The functionality of active and passive drainage systems SHOULD be checked regularly.
+#### INF.1.A24 Automatic drainage (A)
+All water hazard areas SHOULD be equipped with automatic drainage. The functionality of active and passive drainage systems SHOULD be checked regularly.
 
 #### INF.1.A25 Suitable Location Selection [Institutional Management] (A)
 
@@ -218,7 +223,8 @@ It SHOULD provide a hazard warning system appropriate to the premises and the ri
 4 Further Information
 ------------------------------
 
-### 4.1 LiteratureFurther information about hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
+### 4.1 Literature
+Further information about hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
 
 * #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
 

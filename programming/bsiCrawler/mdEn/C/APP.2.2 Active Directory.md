@@ -24,7 +24,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. The forest thus represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
 
-### 2 2 Too many or too lax relationships of trustIf trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, when the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
+### 2 2 Too many or too lax relationships of trust
+If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, when the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
 
 ### 2 3 Lack of security features due to older operating systems and domain functional level
 
@@ -46,7 +47,8 @@ By failing to systematically plan and implement the formation of and the right t
 
 So-called "legacy" (ie historical) authentication mechanisms in the area of ​​AD such as LM (LAN Manager) and NTLM (NT LAN Manager) v1 are considered insecure today and can easily be bypassed by attackers under certain conditions. This allows an attacker to gain and abuse rights without knowing, guessing or otherwise breaking user passwords, thus compromising the domain or parts of it.
 
-### 2 8 Enroll AD administrators on low trust systemsIt has to be assumed that malicious code reaches different systems such as normal workstations or servers. An attacker who gains access will be looking for other credentials that he can abuse. When privileged accounts log on to all kinds of IT systems, the attacker gains a variety of opportunities to grab the credentials and gain additional privileges, especially if the credentials are cached there.
+### 2 8 Enroll AD administrators on low trust systems
+It has to be assumed that malicious code reaches different systems such as normal workstations or servers. An attacker who gains access will be looking for other credentials that he can abuse. When privileged accounts log on to all kinds of IT systems, the attacker gains a variety of opportunities to grab the credentials and gain additional privileges, especially if the credentials are cached there.
 
 ### 2 9 Lack of supervision of privileged group membership
 
@@ -81,7 +83,8 @@ It MUST select a suitable, highest possible domain functional level. The justifi
 
 #### APP.2.2.A2 Active Directory Administration Planning [Specialists]
 
-A role-based authorization concept MUST be created. All administrative tasks and permissions SHOULD be suitably documented.In large domains, there must be a distribution of administrative users regarding service management and data management of Active Directory. In addition, the administrative tasks in the Active Directory MUST be distributed without interference according to a delegation model.
+A role-based authorization concept MUST be created. All administrative tasks and permissions SHOULD be suitably documented.
+In large domains, there must be a distribution of administrative users regarding service management and data management of Active Directory. In addition, the administrative tasks in the Active Directory MUST be distributed without interference according to a delegation model.
 
 #### APP.2.2.A3 Planning Group Policy on Windows
 
@@ -119,7 +122,8 @@ The number of Active Directory service administrators and data administrators MU
 
 The default account "Administrator" SHOULD be renamed and an unprivileged account named "Administrator" SHOULD be created. Everyday, non-administrative tasks MUST be done with unprivileged user accounts.
 
-It MUST be ensured that the administration of service administrator accounts is done exclusively by members of the service administrator group. The group "Account Operators" SHOULD be empty.Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Enterprise Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
+It MUST be ensured that the administration of service administrator accounts is done exclusively by members of the service administrator group. The group "Account Operators" SHOULD be empty.
+Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Enterprise Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
 
 The workstations for the administration of Active Directory MUST be adequately secured. For remote administration of the domain controllers, the traffic MUST be properly encrypted.
 
@@ -157,7 +161,8 @@ The Active Directory infrastructure SHOULD be monitored and logged based on nati
 
 #### APP.2.2.A12 Data backup for domain controllers
 
-There SHOULD exist a domain controller backup and restore policy. The backup software used SHOULD be explicitly released by the manufacturer for the backup of domain controllers. For the domain controllers SHOULD be set up a separate backup account with service administrator rights. The number of members of the group "Backup Operators" SHOULD be limited to the necessary level. Access to the AdminSDHolder object SHOULD be specially protected to protect permissions.The data of the domain controllers SHOULD be backed up at regular intervals. A method should be used that largely avoids obsolete objects.
+There SHOULD exist a domain controller backup and restore policy. The backup software used SHOULD be explicitly released by the manufacturer for the backup of domain controllers. For the domain controllers SHOULD be set up a separate backup account with service administrator rights. The number of members of the group "Backup Operators" SHOULD be limited to the necessary level. Access to the AdminSDHolder object SHOULD be specially protected to protect permissions.
+The data of the domain controllers SHOULD be backed up at regular intervals. A method should be used that largely avoids obsolete objects.
 
 The backup media SHOULD be stored in a suitable location. The correct procedure and the re-loading of data backups of the domain controllers SHOULD be checked at regular intervals.
 
@@ -257,7 +262,8 @@ The following elementary threats are important for the "Active Directory" block.
 * G 0.14 Spying out information (spying)
 * G 0.15 Listening
 * G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection* G 0.21 Manipulation of hardware or software
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
 * G 0.22 Manipulation of information
 * G 0.23 Unauthorized intrusion into IT systems
 * G 0.25 Failure of devices or systems

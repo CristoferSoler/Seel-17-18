@@ -24,7 +24,8 @@ The following are specific implementation notes in the area of ​​"Security M
 
 The following measures should be implemented as a priority:
 
-#### ISMS.1.M1 Assumption of overall responsibility for information security by the management level [Institutional Management]The leadership and direction of a company or a public agency and the associated management tasks involve a high level of responsibility. This responsibility not only relates to the degree of goal achievement, such as business success, but also to the early detection and minimization of potential operational risks. These include, among other risks, those resulting from inadequate information security.
+#### ISMS.1.M1 Assumption of overall responsibility for information security by the management level [Institutional Management]
+The leadership and direction of a company or a public agency and the associated management tasks involve a high level of responsibility. This responsibility not only relates to the degree of goal achievement, such as business success, but also to the early detection and minimization of potential operational risks. These include, among other risks, those resulting from inadequate information security.
 
 It is a complex task to ensure a lasting level of security. This requires a systematic approach, a continuous and targeted security process. It is up to the management level of each institution to initiate, steer and control this process. For smaller institutions, this is often done personally by a member of the management level. In medium and large institutions, the information security task is delegated to a dedicated person, the information security officer. Depending on the size and type of institution, additional persons are entrusted with security tasks, which they perform exclusively or in addition to other tasks. The overall responsibility always remains with the management level, regardless of how many people have been delegated security tasks.
 
@@ -48,7 +49,8 @@ Although the management level is responsible for achieving the security objectiv
  Absolute information security does not exist. Therefore, it is important to set the security goals so that they are achievable on the one hand with a reasonable effort (staff, time, financial resources) and on the other hand the security risks are reduced to an acceptable level.
 * Role model function
  The management level also assumes an exemplary role in the area of ​​information security. This includes, among other things, that the management level also complies with all specified safety rules. The management level must demonstrate information security.
-* Continuous improvementThe adequacy and effectiveness of all elements of safety management must be constantly reviewed. Identified weaknesses and opportunities for improvement must be resolutely resolved or implemented. It is also important to recognize future developments, changed framework conditions and potential threats at an early stage.
+* Continuous improvement
+The adequacy and effectiveness of all elements of safety management must be constantly reviewed. Identified weaknesses and opportunities for improvement must be resolutely resolved or implemented. It is also important to recognize future developments, changed framework conditions and potential threats at an early stage.
 * Communication and knowledge
  Leadership and the IS management team must motivate employees and provide adequate training and awareness-raising. Employees must above all be informed about the meaning and purpose of both technical security measures and organizational requirements. Users should be involved in the implementation planning of measures. This allows them to contribute ideas and assess the practicality of safety measures.
 #### ISMS.1.M2 Definition of security objectives and strategy [Institutional Management]
@@ -59,9 +61,10 @@ The security objectives should be carefully determined at the beginning of each 
 
 When implementing security measures, a compromise between cost and effort usually has to be found. It should therefore be transparent which information and business processes contribute to the performance of the task and what value is assigned to them in order to formulate appropriate security goals.
 
-The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the consultations.
+The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the deliberations.
 
-A detailed description of how and in which depth the security strategy and objectives should be recorded can be found in the BSI standard 100-2 Approach to IT-Grundschutz.Security objectives and strategy need to be reviewed regularly to see if they are up to date and appropriate. In particular, changes in basic conditions, business processes or the IT environment, the security objectives and strategy must be reviewed and possibly adjusted.
+A detailed description of how and in which depth the security strategy and objectives should be recorded can be found in the BSI standard 100-2 Approach to IT-Grundschutz.
+Security objectives and strategy need to be reviewed regularly to see if they are up to date and appropriate. In particular, changes in basic conditions, business processes or the IT environment, the security objectives and strategy must be reviewed and possibly adjusted.
 
 The security process can only succeed in the long term if the effectiveness and efficiency of the security strategy is regularly reviewed by senior management. The resulting improvements go into the adaptation of the security process.
 
@@ -92,7 +95,8 @@ The information security guideline should be succinctly formulated, as more than
 * The core elements of the security strategy should be mentioned.
 * The management level must demonstrate to all employees that the security policy is borne and enforced by them. Likewise, there must be lead statements for success review.
 * The organizational structure established for the implementation of the security process must be described.
-** Announcement of the information security guideline **Safety measures and organizational regulations are only followed by all employees if they recognize their purpose. The security policy must therefore be published in order to document the strategy of responsible management. This should be done so that the importance of information security becomes clear. It is important that all employees know and understand the contents of the security policy. New staff should be made aware of the information security guideline before they can access business-related information. If all employees have to confirm the knowledge of the security guideline in writing, their importance is underlined. In general, the information security guideline should be kept general enough to appeal to all employees in the different organizational areas of an institution. However, it is also possible to supplement the security guideline for specific applications or areas within an institution with content that is relevant only to a limited group of persons or that is confidential. It is advisable to move these sections to an annex to the guideline so that it can respond more flexibly and in a timely manner to necessary changes without having to adapt the general part of the guideline. If necessary, the system may be separately marked as confidential and specially protected.
+** Announcement of the information security guideline **
+Safety measures and organizational regulations are only followed by all employees if they recognize their purpose. The security policy must therefore be published in order to document the strategy of responsible management. This should be done so that the importance of information security becomes clear. It is important that all employees know and understand the contents of the security policy. New staff should be made aware of the information security guideline before they can access business-related information. If all employees have to confirm the knowledge of the security guideline in writing, their importance is underlined. In general, the information security guideline should be kept general enough to appeal to all employees in the different organizational areas of an institution. However, it is also possible to supplement the security guideline for specific applications or areas within an institution with content that is relevant only to a limited group of persons or that is confidential. It is advisable to move these sections to an annex to the guideline so that it can respond more flexibly and in a timely manner to necessary changes without having to adapt the general part of the guideline. If necessary, the system may be separately marked as confidential and specially protected.
 
 ** Security Guideline Update **
 
@@ -112,7 +116,8 @@ In any institution, regardless of size, type or industry, a person must be desig
 * To initiate and control awareness-raising and training on information security.
 The Information Security Officer must be involved in all major projects that have a significant impact on information processing, as well as in the introduction of new applications and IT systems, to ensure that security-relevant aspects are adequately addressed. These include z. For example, the procurement of IT systems or the design of IT-based business processes.
 
-The Information Security Officer must have the opportunity to report directly to senior management when needed. To ensure this, it is advisable to set up this role as a staff unit.In small institutions, the function of information security officer can also be performed by a qualified employee, among other tasks. The decisive factor is that the information security officer is given sufficient time for his tasks. Especially when setting up the security process for the first time, sufficient time resources must be planned for this purpose. Also, when planning the information security organization, a qualified representative of the information security officer must be named.
+The Information Security Officer must have the opportunity to report directly to senior management when needed. To ensure this, it is advisable to set up this role as a staff unit.
+In small institutions, the function of information security officer can also be performed by a qualified employee, among other tasks. The decisive factor is that the information security officer is given sufficient time for his tasks. Especially when setting up the security process for the first time, sufficient time resources must be planned for this purpose. Also, when planning the information security organization, a qualified representative of the information security officer must be named.
 
 ** Information Security Officer Selection **
 
@@ -124,11 +129,11 @@ The Information Security Officer must be adequately qualified and have sufficien
 * Ability to work independently
 * Assertiveness
 * Experience in project management
-#### ISMS.1.M5 Contract drafting when ordering an external information security officer [institutional director]
+#### ISMS.1.M5 Contract drafting when ordering an external information security officer [Institutional Management]
 
 If an external information security officer is appointed, the following instructions should be observed.
 
-In particular, in small companies or public authorities, it may be appropriate not to fill the role of information security officer by a separate employee, but to use the services of an external information security officer. To do this, you must first select a suitable, qualified information security expert. Information about the necessary qualifications, the function and the tasks of an information security officer can be found in the BSI Standard 100-2 and in the action ISMS.1.M4 Appointment of an Information Security Officer.
+In particular, in small companies or public authorities, it may be appropriate not to fill the role of information security officer by a separate employee, but to use the services of an external information security officer. To do this, you must first select a suitable, qualified information security expert. Information on the necessary qualifications, function and tasks of an information security officer can be found in the BSI Standard 100-2 and in the ISMS.1.M4 measure Designation of an Information Security Officer.
 
 Before appointing an external information security officer, a contract must be concluded between the service provider and the company's own institution, in which the tasks of the external information security officer and the mutual rights and obligations must be regulated as precisely as possible. It is important to ensure that the contract includes a suitable confidentiality agreement. The assignment of an external information security officer is thus a special form of outsourcing.
 
@@ -148,7 +153,8 @@ The following aspects should at least be regulated in the contract:
 * Consequences of contract violations
 * Regulations for the termination of the contractual relationship, z. B. Transfer of tasks and documents
 * Costs
-The contract requires the external information security officer to be required and able to perform his duties at least as well as an internal ISB. In addition, the contract must enable a controlled termination of the contractual relationship, including the transfer of tasks to the client.If the service of an external information security officer is used, the module OPS.2.1 Outsourcing usage must also be used. Particular attention should be paid here to the regulations for the use of external personnel.
+The contract requires the external information security officer to be required and able to perform his duties at least as well as an internal ISB. In addition, the contract must enable a controlled termination of the contractual relationship, including the transfer of tasks to the client.
+If the service of an external information security officer is used, the module OPS.2.1 Outsourcing usage must also be used. Particular attention should be paid here to the regulations for the use of external personnel.
 
 #### ISMS.1.M6 Establishment of a suitable organizational structure for information security [Head of Institution]
 
@@ -181,7 +187,8 @@ To consider the different layers of information security in an institution, the 
 * Information Security Officer
 * IT managers
 * User representatives
-* Data Protection OfficerIf necessary, representatives of the audit, the judiciary, the staff representation and the management level of the institution should be consulted.
+* Data Protection Officer
+If necessary, representatives of the audit, the judiciary, the staff representation and the management level of the institution should be consulted.
 
 ** Appointment of a responsible manager **
 
@@ -218,7 +225,8 @@ The tasks, responsibilities and competencies in security management must be comp
 
 #### ISMS.1.M7 Definition of security measures
 
-From the general security objectives and the identified protection requirements, concrete security measures are derived according to the considered information network. In order to derive concrete security measures from the security requirements of the IT-Grundschutz modules, concrete components of the IT-Grundschutz catalogs for the security requirements of an information network must be selected in order to receive a specific package of security measures as a target specification.The security concept must describe the period in which the individual measures are to be implemented and which can be implemented together in a suitable combination. In addition, measures must be prioritized according to the urgency of implementation.
+From the general security objectives and the identified protection requirements, concrete security measures are derived according to the considered information network. In order to derive concrete security measures from the security requirements of the IT-Grundschutz modules, concrete components of the IT-Grundschutz catalogs for the security requirements of an information network must be selected in order to receive a specific package of security measures as a target specification.
+The security concept must describe the period in which the individual measures are to be implemented and which can be implemented together in a suitable combination. In addition, measures must be prioritized according to the urgency of implementation.
 
 When selecting security measures, their suitability and cost-effectiveness must also be taken into account. It must be understandable why the selected measures are likely to meet the safety objectives and requirements. The documentation should therefore contain specific information on responsibilities and responsibilities as well as planned activities for inspection, audit, monitoring.
 
@@ -247,7 +255,8 @@ The BSI Standard 100-2 on the IT-Grundschutz Approach as well as the building bl
 
 Responsible persons must be named for all essential business processes, information, IT systems and applications, but also for buildings and rooms. Depending on the area and language use these responsible persons z. B. referred to as information owner, business process manager or specialist responsible. The specialists have to support the development and implementation of the security strategy.
 
-** Integration of employees in the security process **Information security affects all employees without exception. Each individual must help by responsible and quality-conscious action to avoid damage, and contribute to success. This does not only apply to permanent employees, but to all those employed within the institution, including, for example, gatekeepers and interns.
+** Integration of employees in the security process **
+Information security affects all employees without exception. Each individual must help by responsible and quality-conscious action to avoid damage, and contribute to success. This does not only apply to permanent employees, but to all those employed within the institution, including, for example, gatekeepers and interns.
 
 Likewise, people who access business processes, applications or IT systems from outside should also be included. B. mobile employees. Important safety measures that have to be taken into account in personnel management, ie starting with personnel selection and recruitment through to switching to other areas or leaving the institution, are described in the ORP.2 Personnel building block.
 
@@ -275,7 +284,8 @@ Change management deals with the planning of changes to hardware and software as
 
 Configuration management includes all the measures and structures that are required to monitor the state of the objects under consideration, starting with identification, through inventory management and updating to decommissioning.
 
-Objects viewed (configuration elements) can be entire infrastructure areas, specific applications and IT systems, but also individual components thereof (for example, documentation).As part of configuration management, processes and regulations must be introduced that describe how to manage information about the properties of the configuration items used, as well as information about security-related issues, issues, and changes related to configuration items. Typical activities include, for example, updating the list of IT systems or adapting security-relevant documentation to changes in business processes or applications. Recommendations for configuration management can be found in module OPS1.1.1 Proper IT Administration.
+Objects viewed (configuration elements) can be entire infrastructure areas, specific applications and IT systems, but also individual components thereof (for example, documentation).
+As part of configuration management, processes and regulations must be introduced that describe how to manage information about the properties of the configuration items used, as well as information about security-related issues, issues, and changes related to configuration items. Typical activities include, for example, updating the list of IT systems or adapting security-relevant documentation to changes in business processes or applications. Recommendations for configuration management can be found in module OPS1.1.1 Proper IT Administration.
 
 ### 2.2 Standard measures
 
@@ -297,7 +307,8 @@ Security management must select a risk assessment methodology that allows for th
 
 The procedure for IT-Grundschutz implicitly carries out a risk assessment for areas with normal protection requirements.
 
-However, in certain cases, for example if the considered information network contains components with high or very high protection requirements, an explicit risk analysis must be carried out. The necessary work steps are explained in BSI standards 200-2 and 200-3.The basis of every risk assessment is the description of the information and business processes to be protected. In order to get an overview of the organizational or technical structures that are important for the business processes, the information network has to be structured. In addition to the technical components, the applications and the processing information, the spatial infrastructure and networking should also be included. At the same time, the dependencies of the various components must be recorded.
+However, in certain cases, for example if the considered information network contains components with high or very high protection requirements, an explicit risk analysis must be carried out. The necessary work steps are explained in BSI standards 200-2 and 200-3.
+The basis of every risk assessment is the description of the information and business processes to be protected. In order to get an overview of the organizational or technical structures that are important for the business processes, the information network has to be structured. In addition to the technical components, the applications and the processing information, the spatial infrastructure and networking should also be included. At the same time, the dependencies of the various components must be recorded.
 
 The protection needs assessment includes the following steps:
 
@@ -319,7 +330,8 @@ On the basis of the risk situation, supplements or corrections to the security c
 
 Before the completion of a security concept, the additional measures identified in the risk analysis must be consolidated with the IT-Grundschutz measures. For all newly identified security measures, it must be checked whether they replace, supplement or impair the effectiveness of the existing measures. Subsequently, the results of the basic safety check must be completed and updated.
 
-A security concept is only effective if the measures provided for in it are also put into practice promptly. This must be planned and controlled.For this, it must be noted in which period of time the individual measures are to be implemented and which can be combined and implemented in a suitable combination. In addition, measures must be prioritized according to the urgency of implementation. The implementation planning should be recorded either in the security concept or in an attached implementation plan. This should include implementation order and responsibilities:
+A security concept is only effective if the measures provided for in it are also put into practice promptly. This must be planned and controlled.
+For this, it must be noted in which period of time the individual measures are to be implemented and which can be combined and implemented in a suitable combination. In addition, measures must be prioritized according to the urgency of implementation. The implementation planning should be recorded either in the security concept or in an attached implementation plan. This should include implementation order and responsibilities:
 
 * Priority setting (implementation order): All security measures should be prioritized according to importance and effectiveness. In principle, measures against particularly serious hazards should be given priority. This is especially important when there is little protection against these hazards. Can z. If, for financial reasons, not all measures are implemented immediately, the measures with the greatest impact should be implemented first.
 * The order of implementation should take into account possible interdependencies between measures.
@@ -338,7 +350,8 @@ The security concept is often used in practice to check specific security measur
 * It can be updated with minimal effort (this can be done using a tool).
 In addition, the individual security measures should be described sufficiently concretely, so that in case of substitution a third party can assume security-specific tasks.
 
-A security concept may include confidential information, such as: For example, information on weaknesses that have not yet been eliminated or information on measures that help prevent or overcome these measures. Such confidential information may only be disclosed to the appropriate persons. The security concept should therefore be structured in such a way that the areas that affect a broad group of addressees are separated from those that can only be passed on to a limited extent. Each employee should at least be informed about the parts of the security concept directly related to him.It is important to build a common understanding of information security in an institution. This includes the use of consistent and clear terms. Therefore, a glossary with the most important terms around information security should be created early. This glossary helps to create all security related documents. It can be published in the security concept or individually.
+A security concept may include confidential information, such as: For example, information on weaknesses that have not yet been eliminated or information on measures that help prevent or overcome these measures. Such confidential information may only be disclosed to the appropriate persons. The security concept should therefore be structured in such a way that the areas that affect a broad group of addressees are separated from those that can only be passed on to a limited extent. Each employee should at least be informed about the parts of the security concept directly related to him.
+It is important to build a common understanding of information security in an institution. This includes the use of consistent and clear terms. Therefore, a glossary with the most important terms around information security should be created early. This glossary helps to create all security related documents. It can be published in the security concept or individually.
 
 #### ISMS.1.M11 maintaining information security
 
@@ -363,7 +376,8 @@ Existing security measures should be reviewed at least once a year. In addition,
 * major organizational changes are pending (eg outsourcing),
 * the risk situation changes significantly,
 * when serious weaknesses or damage cases become known.
-** Compliance with the security concept (security audit) **In this case, it must be checked whether safety measures are actually implemented and adhered to as specified in the safety concept. It should also be examined whether technical measures have been correctly implemented and configured and whether all intended detection measures (eg evaluation of log files) are actually carried out.
+** Compliance with the security concept (security audit) **
+In this case, it must be checked whether safety measures are actually implemented and adhered to as specified in the safety concept. It should also be examined whether technical measures have been correctly implemented and configured and whether all intended detection measures (eg evaluation of log files) are actually carried out.
 
 This may show that security measures have not been implemented or that they do not work in practice. In both cases, the causes of the deviations should be determined. Possible corrective measures are - depending on the cause - in question:
 
@@ -388,7 +402,8 @@ Therefore, it is important to evaluate external sources of knowledge, such as st
 
 ** Conduct of the exams **
 
-Depending on the purpose of the examination, the scope and depth of the reviews must be specified. The security concept and the existing documentation of the security process serve as the basis for all checks.A review should be carried out by persons with appropriate qualifications. However, these individuals should not have been involved in creating the concepts to avoid operational blindness and conflicts. The examiners or auditors must be as independent and neutral as possible.
+Depending on the purpose of the examination, the scope and depth of the reviews must be specified. The security concept and the existing documentation of the security process serve as the basis for all checks.
+A review should be carried out by persons with appropriate qualifications. However, these individuals should not have been involved in creating the concepts to avoid operational blindness and conflicts. The examiners or auditors must be as independent and neutral as possible.
 
 Every check has to be planned carefully. All relevant findings and findings are to be recorded in a report. This should contain not only an evaluation but also correction suggestions. The report should be submitted to the head of the reviewed area and to the IS management team, who will need to design the next steps on this basis. Serious issues should be communicated directly to senior management, so that far-reaching decisions can be made promptly.
 
@@ -415,7 +430,8 @@ In order for the company or authority management to make the right decisions in 
 * Results of audits and data protection checks
 * Security incident reports
 * Reports on past successes and information security process issues
-Management should be kept regularly informed by the IS management team of the outcome of the reviews and the status of the IS process. Here, problems, achievements and opportunities for improvement should be pointed out.A management report should be short and concise. The following points may be relevant depending on the current situation. However, not all should be considered simultaneously in an information security management report so as not to overload it. It is therefore worth thinking about
+Management should be kept regularly informed by the IS management team of the outcome of the reviews and the status of the IS process. Here, problems, achievements and opportunities for improvement should be pointed out.
+A management report should be short and concise. The following points may be relevant depending on the current situation. However, not all should be considered simultaneously in an information security management report so as not to overload it. It is therefore worth thinking about
 
 * to what extent the requirements of the security concept are already covered in the company or in the authority,
 * where there are still gaps - and thus residual risks -
@@ -440,7 +456,8 @@ When drafting the management reports, it should be borne in mind that the reader
 
 At the end of each management report, especially in case-related reports, there should always be clearly prioritized policy proposals with realistic estimates of the expected implementation effort. This ensures that a necessary management decision can be made without unnecessary delays.
 
-The information security management report should be personally presented to senior management by a member of the IS management team. Thus, key priorities such as existing or imminent safety deficiencies can be emphasized. The member of the IS management team is also directly available for queries and further explanations, which experience has shown has accelerated the decision-making process.In addition, personal contact is also important to better prepare for leadership decisions and mitigate problems in advance. It would also be helpful if a member of the management level with the appropriate professional background and interest is available as a contact person. Personal contact offers the opportunity to establish a "small service route", the existence of which can prove advantageous in emergencies.
+The information security management report should be personally presented to senior management by a member of the IS management team. Thus, key priorities such as existing or imminent safety deficiencies can be emphasized. The member of the IS management team is also directly available for queries and further explanations, which experience has shown has accelerated the decision-making process.
+In addition, personal contact is also important to better prepare for leadership decisions and mitigate problems in advance. It would also be helpful if a member of the management level with the appropriate professional background and interest is available as a contact person. Personal contact offers the opportunity to establish a "small service route", the existence of which can prove advantageous in emergencies.
 
 ** management decisions **
 
@@ -469,7 +486,8 @@ For the top management of a public agency or a company to make the right decisio
 
 ** Security process documents **
 
-The following types of security process documentation should be created:* Top management must define and publish the information security policy of the agency or company. Among other things, this contains the security objectives and the security strategy.
+The following types of security process documentation should be created:
+* Top management must define and publish the information security policy of the agency or company. Among other things, this contains the security objectives and the security strategy.
 * The security concept describes the required security measures and defines their implementation.
 * Based on the security guideline, there are area and system-specific security guidelines and regulations for the proper and secure use of IT.
 * The essential work of the IS management team should also be documented. Eg minutes of meetings and decisions.
@@ -511,7 +529,8 @@ Important for the maintenance of the security process is the description and tim
 
 It is the task of the information security officer or the IS management team to provide always up-to-date and meaningful information security documentation. For all documentation in the context of the security process, there should therefore be a regular procedure. These include z. For example, the following points:
 
-* Documentation must be understandable. This also means that they have to be tailored to the target group. Reports to the management level have different requirements than technical documentation for administrators.* Documentation must be up to date. It must be determined who cares for them. They must be labeled and filed so that they can be found quickly if necessary. There must be information about creation date, version, sources and authors. Outdated documents must be immediately taken out of circulation and archived.
+* Documentation must be understandable. This also means that they have to be tailored to the target group. Reports to the management level have different requirements than technical documentation for administrators.
+* Documentation must be up to date. It must be determined who cares for them. They must be labeled and filed so that they can be found quickly if necessary. There must be information about creation date, version, sources and authors. Outdated documents must be immediately taken out of circulation and archived.
 * There should be a defined procedure for introducing, assessing and, if necessary, taking account of proposed changes (including the preparation of new documents).
 * In addition to the rapid transfer of information to authorized persons, on the other hand, the confidentiality of internal organization details must be ensured. Confidential contents must be classified as such and the documents must be securely stored and processed.
 When managing a multitude of security-relevant documents, document management can be helpful.
@@ -538,7 +557,8 @@ The internal security experts are often so busy with their routine activities th
 
 It must be ensured that all required security measures are implemented, be it by recourse to external or internal forces.
 
-** Resources for the Information Security Officer **Without a well-functioning organizational structure for information security, the most expensive technical solutions will not help. Experience shows that the appointment of an information security officer is the most effective security measure. After appointing a security officer, the number of security incidents in most institutions decreases significantly. In order for the information security officer to achieve a real improvement in the level of security, he must
+** Resources for the Information Security Officer **
+Without a well-functioning organizational structure for information security, the most expensive technical solutions will not help. Experience shows that the appointment of an information security officer is the most effective security measure. After appointing a security officer, the number of security incidents in most institutions decreases significantly. In order for the information security officer to achieve a real improvement in the level of security, he must
 
 * have enough time for his work,
 * Be sufficiently integrated into all business processes, specialist tasks and projects,
@@ -561,7 +581,8 @@ The security strategy should also consider economic aspects from the beginning. 
 
 When establishing security measures, the human and financial resources needed for implementation should always be specified. This includes the naming of persons responsible and other contact persons, as well as the definition of precise schedules and the materials to be procured. It is also advisable to document for all planned security measures whether the resources planned for information security were provided on time and what the reasons for project deviations were. This is the only way to achieve sustainable improvements and avoid disruptions.
 
-** Information Security Checking Resources **All safety measures must be checked regularly for their effectiveness and suitability. Again, adequate resources must be provided. In general, those who have designed safety measures should not test their effectiveness and suitability. For this purpose, external expertise can also be used to avoid operational blindness.
+** Information Security Checking Resources **
+All safety measures must be checked regularly for their effectiveness and suitability. Again, adequate resources must be provided. In general, those who have designed safety measures should not test their effectiveness and suitability. For this purpose, external expertise can also be used to avoid operational blindness.
 
 The question of whether sufficient resources are available for information security is much more difficult to answer than the review of purely technical aspects.
 
@@ -587,7 +608,8 @@ When formulating policies, it has worked well to work at different levels.
 
 First, the first level should briefly and concisely formulate the general security objectives and the security strategy in an information security guideline (see ISMS.1.M3, Guidance on Information Security). The strategy contains no technical details and is approved by the management. At the next level, basic technical safety requirements should be derived.
 
-The general security concept includes documents that describe various aspects of information security (eg a policy on internet usage or an anti-virus concept), without going into specific products.The third level describes technical details, concrete measures and product-specific settings. It contains many documents that are regularly changed and typically only read by the appropriate experts.
+The general security concept includes documents that describe various aspects of information security (eg a policy on internet usage or an anti-virus concept), without going into specific products.
+The third level describes technical details, concrete measures and product-specific settings. It contains many documents that are regularly changed and typically only read by the appropriate experts.
 
 The following figure shows the structure described here graphically.
 
@@ -641,7 +663,8 @@ The IT Baseline Protection tools provide a brief overview of which insurance com
 3 Further information
 ------------------------------
 
-### 3.1 Worth knowingSupplementary information is listed here that is not included in the measures, but nevertheless worthy of note. Currently there is no corresponding information for this module. The IT-Grundschutz hotline is happy to receive useful information at grundschutz@bsi.bund.de.
+### 3.1 Worth knowing
+Supplementary information is listed here that is not included in the measures, but nevertheless worthy of note. Currently there is no corresponding information for this module. The IT-Grundschutz hotline is happy to receive useful information at grundschutz@bsi.bund.de.
 
 ### 3.2 Literature
 

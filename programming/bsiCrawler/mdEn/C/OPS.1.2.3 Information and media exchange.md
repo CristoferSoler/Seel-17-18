@@ -36,7 +36,8 @@ Extreme temperatures and humidity can affect the proper operation of media. For 
 
 During transport or shipping, data carriers are subject to special loads. For data carriers, even minor contamination can lead to data errors. Hard disks can be destroyed by the "head crash" of the read / write head, tapes or cassettes by direct mechanical action. CD-ROMs or DVDs may become unusable due to scratching of the surface.
 
-** Data loss due to strong magnetic fields **Typical disks with magnetizable storage media are removable disks, cassettes and tapes. These data carriers are sensitive to magnetic interference, so the proximity to such radiation sources should be avoided.
+** Data loss due to strong magnetic fields **
+Typical disks with magnetizable storage media are removable disks, cassettes and tapes. These data carriers are sensitive to magnetic interference, so the proximity to such radiation sources should be avoided.
 
 ### 2 2 Not available on time
 
@@ -64,7 +65,8 @@ When passing on information, it often happens that other information is transmit
 
 Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content modification of data to the destruction of data carriers.
 
-### 2 8 Malicious programs in transferred files or on data carriersIf the work environment is insufficiently secured against malicious programs, malicious programs could be located on data media that are forwarded to external users. This could destroy or corrupt the stored data, but above all IT systems at the receiving end could be compromised. But the loss of image and the financial damage caused by malicious programs are also of great importance.
+### 2 8 Malicious programs in transferred files or on data carriers
+If the work environment is insufficiently secured against malicious programs, malicious programs could be located on data media that are forwarded to external users. This could destroy or corrupt the stored data, but above all IT systems at the receiving end could be compromised. But the loss of image and the financial damage caused by malicious programs are also of great importance.
 
 ### 2 9 Unauthorized copying of information or data media
 
@@ -109,7 +111,8 @@ In a regular exchange of information with external partners, the framework shoul
 
 #### OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
 
-The proper data medium exchange SHOULD be regulated. It SHOULD be determined how the data carriers are to be protected in their own institution, during transport and at the recipient. When choosing the shipping method, the type of data carriers and the protection requirements of the information SHOULD be taken into account. It also SHOULD specify when and how disks are physically deleted.#### OPS.1.2.3.A8 Physical deletion of media before and after use [user]
+The proper data medium exchange SHOULD be regulated. It SHOULD be determined how the data carriers are to be protected in their own institution, during transport and at the recipient. When choosing the shipping method, the type of data carriers and the protection requirements of the information SHOULD be taken into account. It also SHOULD specify when and how disks are physically deleted.
+#### OPS.1.2.3.A8 Physical deletion of media before and after use [user]
 
 Before and after a data medium exchange, previously used data carriers SHOULD be physically deleted. The employees SHOULD be provided with suitable programs for physical deletion.
 
@@ -143,7 +146,8 @@ For higher protection, a disk management SHOULD be set up to regulate access to 
 
 #### OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
 
-If information is subject to increased protection requirements, SHOULD investigate how it can be adequately protected during a data medium exchange. SHOULD use secure shipping packaging for media that identifies tampering with changes to the packaging. The consignor SHOULD inform the post office about the necessary shipping and packaging types. Basically, the data SHOULD be encrypted.#### OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+If information is subject to increased protection requirements, SHOULD investigate how it can be adequately protected during a data medium exchange. SHOULD use secure shipping packaging for media that identifies tampering with changes to the packaging. The consignor SHOULD inform the post office about the necessary shipping and packaging types. Basically, the data SHOULD be encrypted.
+#### OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
 
 Described data carriers SHOULD be stored so that only authorized users can access them. All employees involved SHOULD be made aware of the proper and safe storage and handling of data carriers.
 

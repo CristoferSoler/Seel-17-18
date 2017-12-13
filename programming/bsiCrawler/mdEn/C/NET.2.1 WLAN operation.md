@@ -30,7 +30,8 @@ In radio networks, information is transmitted by means of electromagnetic radio 
 
 Planning errors often turn out to be particularly serious, since it is easy to create comprehensive security gaps. If the use of WLANs is not or insufficiently planned, a variety of problems can arise, such as the following:
 
-* Confidential data could be read, for example if WLAN standards are used that are no longer state-of-the-art (eg WEP for encryption).* The transmission capacity may be insufficient. As a result, bandwidth-intensive applications can not be used with the required quality of service.
+* Confidential data could be read, for example if WLAN standards are used that are no longer state-of-the-art (eg WEP for encryption).
+* The transmission capacity may be insufficient. As a result, bandwidth-intensive applications can not be used with the required quality of service.
 ### 2 3 Missing or inadequate regulations for WLAN use
 
 In the case of a WLAN infrastructure that is not centrally administered, the access points in the default setting are usually preconfigured with no or only insufficient security mechanisms. For example, if an employee includes an unapproved or unsecured access point in an internal network of the institution due to a lack of regulations, he undermines virtually all the security measures taken in the LAN, such as: For example, the security gateway (firewall) protects against unauthorized external access.
@@ -51,7 +52,8 @@ In the delivery state, WLAN components are often configured so that no or only a
 
 Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
 
-### 2 8 Imitation of a valid access point (rogue access point)An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial-of-service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
+### 2 8 Imitation of a valid access point (rogue access point)
+An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial-of-service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
 
 ### 2 9 Unprotected LAN access at the access point
 
@@ -76,7 +78,8 @@ The following requirements MUST be implemented as a priority:
 
 #### NET.2.1.A1 Definition of a strategy for the use of WLANs [Head IT]
 
-Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and stipulated in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.In addition MUST be determined in the planning phase, who is responsible for the administration of the different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible persons.
+Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and stipulated in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
+In addition MUST be determined in the planning phase, who is responsible for the administration of the different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible persons.
 
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
 
@@ -114,7 +117,8 @@ When building a distribution system, it MUST be decided in principle whether to 
 
 In the event of a security incident, IT operations MUST take appropriate countermeasures (see also DER.2.1 * Incident Management *):
 
-* At the transfer point of the WLAN communication into the internal LAN, the communication SHOULD be selectively blocked per SSID, access point or even for the complete WLAN infrastructure in the event of an attack on the WLAN.* If access points have been stolen, security measures MUST be implemented to prevent the access point from being abused.
+* At the transfer point of the WLAN communication into the internal LAN, the communication SHOULD be selectively blocked per SSID, access point or even for the complete WLAN infrastructure in the event of an attack on the WLAN.
+* If access points have been stolen, security measures MUST be implemented to prevent the access point from being abused.
 * If WLAN clients have been stolen and certificate-based authentication is used, client certificates MUST be blocked.
 The possible consequences of safety-critical events MUST be investigated. Ultimately MUST be excluded that stolen devices are used without authorization to access the network of the institution.
 
@@ -150,7 +154,8 @@ For all components of the WLAN infrastructure (access points, distribution syste
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### NET.2.1.A15 Using a VPN to Secure WLANs (CI)With increased protection requirements, a VPN SHOULD be used to additionally secure the communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
+#### NET.2.1.A15 Using a VPN to Secure WLANs (CI)
+With increased protection requirements, a VPN SHOULD be used to additionally secure the communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
 
 #### NET.2.1.A16 Additional protection for the connection of WLANs to a LAN (CIA)
 

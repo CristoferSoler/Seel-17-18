@@ -5,7 +5,7 @@
 
 The procedure described in this module provides an overview of cryptographic procedures and products that can be used in an institution. It describes how, in a heterogeneous environment, both the locally stored data and the data to be transmitted can be effectively protected by cryptographic techniques and techniques. It also describes appropriate organizational and procedural requirements to ensure confidentiality, integrity and authenticity.
 
-In addition to the procedures and techniques that can be used to protect locally stored data and transmitted information, this module also describes crypto modules. A crypto module is a product that provides the security functionality set forth in the crypto concept. Such a product may consist of hardware, software, firmware or a combination thereof. In addition, components such as memory, processors, buses and power supply are necessary to implement the crypto processes. A crypto module can be used in a variety of computer or telecommunication systems to protect sensitive data or information. This is relevant in the present module only with increased protection requirements.
+In addition to the procedures and techniques that can be used to protect locally stored data and transmitted information, this module also describes crypto modules. A crypto module is a product that provides the security functionality set forth in the crypto concept. Such a product may consist of hardware, software, firmware or a combination thereof. In addition, components such as memory, processors, buses and power supply are necessary to implement the crypto processes. A crypto module can be used in various computer or telecommunication systems to protect sensitive data or information. This is relevant in the present module only with increased protection requirements.
 
 ### 1.2 Objective
 
@@ -24,13 +24,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Inadequate key management with encryption
 
-Inadequate key management could allow attackers to access encrypted data. So it may be, for example, that due to lack of regulations encrypted information together with the associated keys are on the same disk. As a result, in symmetric methods, anyone who can access the data medium or the communication channel can decrypt the information if the encryption method used is known.
+Inadequate key management could allow attackers to access encrypted data. It may be, for example, that due to lack of regulations encrypted information, including the associated keys are on the same disk. As a result, in symmetric methods, anyone who can access the data medium or the communication channel can decrypt the information if the encryption method used is known.
 
 ### 2 2 Infringement of the legal framework for the use of cryptographic procedures
 
-When institutions use cryptographic procedures and products, they must observe various legal framework conditions. For example, in some countries, cryptographic procedures may not be used without government approval. As a result, recipients abroad can not read encrypted records because they are not allowed to use the required cryptographic products, or may even be liable to prosecution.
+When institutions use cryptographic procedures and products, they must observe various legal framework conditions. For example, in some countries, cryptographic procedures may not be used without government approval. This may result in receivers abroad being unable to read encrypted records because they are not allowed to use the required cryptographic products or may even be liable to prosecution.
 
-In addition, exports of products with strong cryptography are also severely limited in many countries. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.### 2 3 Confidentiality or integrity of data due to misconduct
+In addition, in many countries, the export of products with strong cryptography is significantly limited. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.
+### 2 3 Confidentiality or integrity of data due to misconduct
 
 For example, if an institution uses a crypto-module that is either too complicated to use or not intuitive to use, users may, for convenience or pragmatic reasons, refrain from using it and instead transmit the information in plain text. This allows the transmitted information to be intercepted by attackers.
 
@@ -60,7 +61,8 @@ Even more critical can be an error in the cryptographic keys used. Even the chan
 
 If an attacker succeeds in using a crypto module unauthorized, he can manipulate critical security parameters. As a result, the cryptographic methods no longer provide sufficient security. Furthermore, an attacker can manipulate the crypto module to work correctly at first glance, but in fact be in an unsafe state. As a result, it remains undetected for a long time and can access numerous sensitive information.
 
-### 2 9 Cryptographic key compromiseThe security of cryptographic procedures depends crucially on how confidential the cryptographic keys used remain. Therefore, a potential attacker will usually try to identify the keys used. For example, he could do this by reading out volatile memory or finding unprotected keys, which are stored in a data backup, for example. If he knows the key used and the crypto method used, he can decrypt the data relatively easily.
+### 2 9 Cryptographic key compromise
+The security of cryptographic procedures depends crucially on how confidential the cryptographic keys used remain. Therefore, a potential attacker will usually try to identify the keys used. For example, he could do this by reading out volatile memory or finding unprotected keys, which are stored in a data backup, for example. If he knows the key used and the crypto method used, he can decrypt the data relatively easily.
 
 In a hard disk encryption (such as Trusted Disk), an attacker z. For example, you can use a keylogger between the keyboard and the computer to get to the password needed to decrypt the hard disk.
 
@@ -97,7 +99,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 It SHOULD be checked whether with reasonable effort an encryption of the communication connections is possible and practicable. If this is the case, communication links SHOULD be suitably encrypted.
 
-#### CON.1.A4 Appropriate key management [IT operation, specialist responsible]Cryptographic keys SHOULD always be generated using appropriate key generators and in a secure environment. A key SHOULD serve as one purpose only. In particular, different keys SHOULD be used for encryption and signature formation.
+#### CON.1.A4 Appropriate key management [IT operation, specialist responsible]
+Cryptographic keys SHOULD always be generated using appropriate key generators and in a secure environment. A key SHOULD serve as one purpose only. In particular, different keys SHOULD be used for encryption and signature formation.
 
 When keys are used, the authentic source and integrity of the key data SHOULD be checked.
 
@@ -134,7 +137,8 @@ Before a decision can be made as to which cryptographic methods and products are
 * Lifetime of cryptographic procedures and key lengths used
 * Approval of cryptographic products and
 * legal framework.
-#### CON.1.A9 Selection of a suitable cryptographic product [IT operation, specialist responsible persons] (CI)Before a cryptographic product is selected, the institution SHOULD specify what requirements the product must meet. In doing so, aspects such as functional scope, interoperability, economic efficiency as well as operating errors and malfunction safety SHOULD be considered. It SHOULD be checked if certified products should be used as a priority. Also, the future locations SHOULD be considered in the selection, as it is z. For example, there are export and import restrictions on cryptographic products.
+#### CON.1.A9 Selection of a suitable cryptographic product [IT operation, specialist responsible persons] (CI)
+Before a cryptographic product is selected, the institution SHOULD specify what requirements the product must meet. In doing so, aspects such as functional scope, interoperability, economic efficiency as well as operating errors and malfunction safety SHOULD be considered. It SHOULD be checked if certified products should be used as a priority. Also, the future locations SHOULD be considered in the selection, as it is z. For example, there are export and import restrictions on cryptographic products.
 
 #### CON.1.A10 Development of a crypto-concept (CI)
 
@@ -164,7 +168,8 @@ There should be training sessions that teach users and administrators how to han
 
 Administrators SHOULD also learn how to use tools to investigate cryptographic settings. Also they SHOULD get an overview of cryptographic basic concepts.
 
-#### CON.1.A15 Reaction to practical weakening of a crypto-method (CI)It SHOULD establish a process that can be used in case of a weakened cryptographic process to ensure the information security of the institution. It should be ensured that the weakened cryptographic process can be secured or replaced by a suitable alternative.
+#### CON.1.A15 Reaction to practical weakening of a crypto-method (CI)
+It SHOULD establish a process that can be used in case of a weakened cryptographic process to ensure the information security of the institution. It should be ensured that the weakened cryptographic process can be secured or replaced by a suitable alternative.
 
 #### CON.1.A16 Physical Protection of Cryptomodules [Head IT] (CI)
 
@@ -254,7 +259,8 @@ The following elementary threats are important for the "crypto concept" building
 * G 0.30 Unauthorized use or administration of devices and systems
 * G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
-* G 0.37 denying actions* G 0.40 Denial of Service
+* G 0.37 denying actions
+* G 0.40 Denial of Service
 * G 0.43 Importing messages
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information

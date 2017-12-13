@@ -29,7 +29,8 @@ The following specific threats and vulnerabilities are of particular importance 
 In practice, it can never be ruled out that security incidents will occur. This also applies if a large number of security measures have been implemented. Responding to acute security incidents either unresponsive or inadequate will result in major damage, including catastrophes. Examples are:
 
 * In the log files of a firewall are noticeable entries. Failure to promptly assess whether the first sign of a break-in attempt is to allow attackers to pass the firewall unnoticed and penetrate the internal network of the institution with a successful attack.
-* Vulnerabilities in the IT systems or applications used are known. If this information is not obtained on time and necessary countermeasures are not promptly initiated and implemented, these vulnerabilities can be exploited by attackers.Failure to take appropriate action to handle security incidents can result in wrong decisions in a hurry and under stress. These can be z. For example, misleading the press and causing a negative external impact, third parties being harmed by their own IT systems and claiming for damages, or no evasion or recovery measures being foreseen, thus significantly increasing the damage to the institution ,
+* Vulnerabilities in the IT systems or applications used are known. If this information is not obtained on time and necessary countermeasures are not promptly initiated and implemented, these vulnerabilities can be exploited by attackers.
+Failure to take appropriate action to handle security incidents can result in wrong decisions in a hurry and under stress. These can be z. For example, misleading the press and causing a negative external impact, third parties being harmed by their own IT systems and claiming for damages, or no evasion or recovery measures being foreseen, thus significantly increasing the damage to the institution ,
 
 ### 2 2 Unrecognized security incidents
 
@@ -45,7 +46,8 @@ Careless or non-compliant handling of security incidents may result in the inadv
 Examples for this are:
 
 * An attacker placed malicious software on a workstation, whose operation and target can only be analyzed while it is still running. For this, information about the active processes and the contents of the main memory would have to be backed up and evaluated. If the workstation is now shut down prematurely, the information from the current state can no longer be used to analyze and clarify the security incident.
-* An administrator finds a running process on a server that causes an above-average CPU usage. In addition, this process creates temporary files and sends unknown information over the Internet. If the process is terminated prematurely and the temporary files are simply deleted, it can not be determined if confidential information has been successfully stolen.* An important server is compromised because the administrator could not bring in the latest security updates as planned due to the heavy workload and a lack of maintenance window. In order to avoid possible disciplinary consequences, the administrator enters the missing updates before a security team can analyze the reason for the break-in and the damage incurred. Lack of error culture has thus prevented an analysis of the problem.
+* An administrator finds a running process on a server that causes an above-average CPU usage. In addition, this process creates temporary files and sends unknown information over the Internet. If the process is terminated prematurely and the temporary files are simply deleted, it can not be determined if confidential information has been successfully stolen.
+* An important server is compromised because the administrator could not bring in the latest security updates as planned due to the heavy workload and a lack of maintenance window. In order to avoid possible disciplinary consequences, the administrator enters the missing updates before a security team can analyze the reason for the break-in and the damage incurred. Lack of error culture has thus prevented an analysis of the problem.
 3 requirements
 ---------------
 
@@ -71,7 +73,8 @@ It must be regulated who is responsible for what happens in the event of a secur
 
 The contact persons for all types of security incidents MUST be known to the employees. Contact Information MUST always be up to date and available in a workable format.
 
-#### DER.2.1.A4 Notification of affected persons in case of security incidents [Head of IT, Emergency Representative, Press Office, Data Protection Officer, Head of Institution]A security incident MUST inform all relevant internal and external bodies in a timely manner. It MUST be checked whether the data protection officer, the works council / staff council and employees from the legal department must be involved. Likewise, the reporting requirements for authorities and regulated industries MUST be taken into account. It is also necessary to ensure that affected bodies are informed of the necessary measures.
+#### DER.2.1.A4 Notification of affected persons in case of security incidents [Head of IT, Emergency Representative, Press Office, Data Protection Officer, Head of Institution]
+A security incident MUST inform all relevant internal and external bodies in a timely manner. It MUST be checked whether the data protection officer, the works council / staff council and employees from the legal department must be involved. Likewise, the reporting requirements for authorities and regulated industries MUST be taken into account. It is also necessary to ensure that affected bodies are informed of the necessary measures.
 
 #### DER.2.1.A5 Security Incident [Head IT, IT Operations]
 
@@ -97,7 +100,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 In order for institutions to respond adequately to security incidents, an appropriate incident handling procedure SHOULD be defined. The procedures, processes and specifications for the various security incidents SHOULD be clearly regulated and suitably documented. The institutional management SHOULD implement and publish the completed procedure. The procedure SHOULD be checked and updated regularly.
 
-#### DER.2.1.A8 Structure of organizational structures for handling security incidentsFor dealing with security incidents, suitable organizational structures SHOULD be defined. Thus, a security incident team should be set up whose members can be convened according to the nature of the incident. Even if the security incident team only meets for a specific security incident, suitable members SHOULD be named in advance and instructed in their tasks. The structure of the security incident team SHOULD be updated regularly.
+#### DER.2.1.A8 Structure of organizational structures for handling security incidents
+For dealing with security incidents, suitable organizational structures SHOULD be defined. Thus, a security incident team should be set up whose members can be convened according to the nature of the incident. Even if the security incident team only meets for a specific security incident, suitable members SHOULD be named in advance and instructed in their tasks. The structure of the security incident team SHOULD be updated regularly.
 
 #### DER.2.1.A9 Definition of reporting procedures for security incidents [Head IT]
 
@@ -127,7 +131,8 @@ As part of security management, the handling of security incidents SHOULD be gov
 
 #### DER.2.1.A14 Escalation Strategy for Security Incidents [IT Leader]
 
-In addition to the communication and contact strategy (see DER.2.1.A9 * Definition of reporting procedures for security incidents *), an escalation strategy SHOULD be formulated. This SHOULD be reconciled between those responsible for troubleshooting and troubleshooting and information security management.The escalation strategy SHOULD include clear instructions on who, by what means, in what kind of identifiable or suspected security breaches, in what period of time to be involved. It should be regulated to which measures an escalation leads and which activities should be triggered.
+In addition to the communication and contact strategy (see DER.2.1.A9 * Definition of reporting procedures for security incidents *), an escalation strategy SHOULD be formulated. This SHOULD be reconciled between those responsible for troubleshooting and troubleshooting and information security management.
+The escalation strategy SHOULD include clear instructions on who, by what means, in what kind of identifiable or suspected security breaches, in what period of time to be involved. It should be regulated to which measures an escalation leads and which activities should be triggered.
 
 For the specified escalation strategy, suitable tools SHOULD be selected. These SHOULD also be suitable for confidential information. It should be ensured that the tools are also available during a security incident or emergency.
 
@@ -155,7 +160,8 @@ In addition, the management level SHOULD be informed annually about the security
 
 Responses to security incidents SHOULD be analyzed and evaluated to see if processes and operations need to be changed or evolved. In doing so, those involved in response to security incidents as well as those responsible should report on their respective experiences.
 
-It SHOULD be examined whether new developments in incident management and in forensics exist and can be incorporated into the respective documents and processes.Be aids and checklists z. For example, for service desk employees, SHOULD it be checked if they need to be expanded to include any relevant questions and information.
+It SHOULD be examined whether new developments in incident management and in forensics exist and can be incorporated into the respective documents and processes.
+Be aids and checklists z. For example, for service desk employees, SHOULD it be checked if they need to be expanded to include any relevant questions and information.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -179,7 +185,8 @@ The members of the expert team SHOULD be involved in the escalation and reportin
 
 The team of experts SHOULD be considered and integrated appropriately in the organizational structures (see DER.2.1.A8 * Structure of organizational structures for handling security incidents *). The responsibilities of the team of experts SHOULD be agreed in advance with those of the incident team (see DER.2.1.A4 * Defining responsibilities and contact persons in case of security incidents *).
 
-#### DER.2.1.A22 Security Incident Management System Review (CIA)The incident management management system SHOULD regularly review if it is still up to date and effective. Both announced and unannounced exercises SHOULD be performed. The exercises SHOULD be coordinated with the management level beforehand. It SHOULD evaluate the metrics that occur, for example, when security incidents are recorded, reported and escalated.
+#### DER.2.1.A22 Security Incident Management System Review (CIA)
+The incident management management system SHOULD regularly review if it is still up to date and effective. Both announced and unannounced exercises SHOULD be performed. The exercises SHOULD be coordinated with the management level beforehand. It SHOULD evaluate the metrics that occur, for example, when security incidents are recorded, reported and escalated.
 
 In addition, security incident management games SHOULD be conducted to promote the necessary practice.
 

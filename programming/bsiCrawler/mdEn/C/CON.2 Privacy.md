@@ -21,7 +21,8 @@ The default privacy model therefore has the following claims:
 
 * It translates data protection requirements into a catalog of warranty objectives.
 * It divides the considered procedures into the components data, IT systems and processes.
-* It takes into account the classification of data into the three protection demand levels normal, high and very high and complements them with appropriate considerations at the level of processes and IT systems.* It offers a systematically derived catalog with standardized protective measures.
+* It takes into account the classification of data into the three protection demand levels normal, high and very high and complements them with appropriate considerations at the level of processes and IT systems.
+* It offers a systematically derived catalog with standardized protective measures.
 2 risk situation
 -----------------
 
@@ -39,11 +40,12 @@ In practice, a particularly high risk for those affected is access by potentiall
 
 A further risk for both persons and responsible institutions exists if there are no standard processes for (usually only conditional) access to IT services or the transfer of data for legitimate access by third parties, or if no evidence is available Regularity of implementation, in the form of protocols and documentation.
 
-Another major danger for people is a lack of data security. Recital 75 of the DS-GVO describes the risks associated with the processing of personal data and thus the vulnerability due to unauthorized access as follows:"The risks to the rights and freedoms of natural persons - of varying likelihood and severity - may arise from the processing of personal data that could result in physical, material or immaterial damage, in particular if the processing results in discrimination, identity theft or fraud financial loss, reputational harm, loss of confidentiality of personal data subject to professional secrecy, unauthorized termination of pseudonymisation or other significant economic or social disadvantage, if the data subjects are deprived of their rights and freedoms or prevented from doing so personal data concerning racial or ethnic origin, political opinions, religious or ideological beliefs or affiliation and that data relating to genetic data, health data or sex life or criminal convictions and offenses or related safeguards are processed when assessing personal aspects, in particular when considering aspects of work performance, economic situation, health, personal preferences or Interests that relate to reliability or behavior, whereabouts or relocation, are analyzed or forecasted to create or use personal profiles when personal data of vulnerable natural persons, especially child data, are processed or when the processing involves a large amount of personal information Data and a large number of data subjects. "
+Another major danger for people is a lack of data security. Recital 75 of the DS-GVO describes the risks associated with the processing of personal data and thus the vulnerability due to unauthorized access as follows:
+"The risks to the rights and freedoms of natural persons - of varying likelihood and severity - may arise from the processing of personal data that could cause physical, material or immaterial damage, in particular if the processing results in discrimination, identity theft or fraud financial loss, reputational harm, loss of confidentiality of personal data subject to professional secrecy, unauthorized termination of pseudonymisation or other significant economic or social disadvantage, if the data subjects are deprived of their rights and freedoms or prevented from doing so personal data concerning racial or ethnic origin, political opinions, religious or ideological beliefs or affiliation and that data relating to genetic data, health data or sex life or criminal convictions and offenses or related safeguards are processed when assessing personal aspects, in particular when considering aspects of work performance, economic situation, health, personal preferences or Interests that relate to reliability or behavior, whereabouts or relocation, are analyzed or forecasted to create or use personal profiles when personal data of vulnerable natural persons, especially child data, are processed or when the processing involves a large amount of personal information Data and a large number of data subjects. "
 
 ### 2 2 Setting too low a protection requirement
 
-Another danger for persons is the establishment of an inappropriate protection requirement. A misuse of protection requirements would result in failure to comply with essential data protection requirements for the functions of a procedure and the operation of specific data protection measures. The need for protection, which is typically set by the institution itself, who is responsible for processing personal information, may be incorrect or underestimated from the point of view of individuals for a variety of reasons:
+Another danger for persons is the establishment of an inappropriate protection requirement. A misused protection requirement would result in failure to comply with essential data protection requirements for the functions of a procedure and the operation of specific data protection measures. The need for protection, which is typically set by the institution itself, who is responsible for processing personal information, may be incorrect or underestimated from the point of view of individuals for a variety of reasons:
 
 * The institution has not taken into account the privacy protection privacy protection catalog.
 * The institution did not differentiate between the risks for the implementation of the fundamental rights of the persons concerned and the risks for the institution in the identification of protection needs.
@@ -57,7 +59,8 @@ The following are specific privacy requirements. In principle, the data protecti
 
 The following requirements MUST be implemented as a priority:
 
-#### CON.2.A1 implementation standard privacy modelThe standard data protection model is the tool to set up and operate personal procedures not only securely but also in compliance with data protection laws. It therefore MUST be checked if the SDM is used. Any failure to consider the full list of protected objectives and non-application of the SDM methodology and reference measures MUST be justified.
+#### CON.2.A1 implementation standard privacy model
+The standard data protection model is the tool to set up and operate personal procedures not only securely but also in compliance with data protection laws. It therefore MUST be checked if the SDM is used. Any failure to consider the full list of protected objectives and non-application of the SDM methodology and reference measures MUST be justified.
 
 ### 3.2 Standard requirements
 

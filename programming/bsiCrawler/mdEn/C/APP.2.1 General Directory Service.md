@@ -32,7 +32,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 The security of directory services relies heavily on the security of the base operating system, and especially on file system security. Directory services can be installed and operated on a variety of operating systems, which can result in a wide variety of security settings to be made. This diversity increases the planning requirements and requires appropriate knowledge of the underlying operating system. If the resulting overall solution is very heterogeneous or complex, an insufficiently planned use of the directory service in active operation can lead to security gaps. Since directory services also make use of role-based administration of the directory database and individual administration tasks can be delegated, incorrect administration of the administration tasks runs the risk of insecure or inadequate administration of the system.
 
-### 2 2 Incorrect or inadequate planning of partitioning and replication in the directory servicePartitioning is a division of the directory data of a directory service into individual subareas (partitions). The replication of partitions of the directory service is usually used for load balancing. Furthermore, the redundancy in the data storage improves the reliability and thus increases the availability. Therefore, a suitable planning is of crucial importance here, since subsequent changes to the partition and replication settings are possible, but can sometimes cause problems. Planning the partitioning and replication of the directory service incorrectly or inadequately may result in data loss, inconsistencies in data management, poor directory service availability, overall poor system performance, and even outages.
+### 2 2 Incorrect or inadequate planning of partitioning and replication in the directory service
+Partitioning is a division of the directory data of a directory service into individual subareas (partitions). The replication of partitions of the directory service is usually used for load balancing. Furthermore, the redundancy in the data storage improves the reliability and thus increases the availability. Therefore, a suitable planning is of crucial importance here, since subsequent changes to the partition and replication settings are possible, but can sometimes cause problems. Planning the partitioning and replication of the directory service incorrectly or inadequately may result in data loss, inconsistencies in data management, poor directory service availability, overall poor system performance, and even outages.
 
 ### 2 3 Incorrect or inadequate planning of access to the directory service
 
@@ -50,7 +51,8 @@ In many usage scenarios, other applications, such as Internet or intranet applic
 
 Technical failures due to hardware or software problems may cause directory services or parts thereof to fail. As a result, the data held in the directory are temporarily inaccessible. In extreme cases, data can be lost. This can hinder business processes and internal work processes. If functional copies of the failed system parts are available, access is still possible, but depending on the selected network topology, this may only be limited.
 
-### 2 7 Compromise of directory services due to unauthorized accessIf an attacker has succeeded in successfully bypassing a necessary authentication against the directory service, he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
+### 2 7 Compromise of directory services due to unauthorized access
+If an attacker has succeeded in successfully bypassing a necessary authentication against the directory service, he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
 
 3 requirements
 ---------------
@@ -79,7 +81,8 @@ The access rights of the user and administrator groups MUST be configured and im
 
 A MUST be created for the installation, after which administration and access permissions are already configured during the installation of the directory service.
 
-#### APP.2.1.A5 Secure configuration and configuration changes of directory servicesThe directory service MUST be securely configured. For the secure configuration of a directory service infrastructure, the clients (computers and programs) MUST be included in addition to the server.
+#### APP.2.1.A5 Secure configuration and configuration changes of directory services
+The directory service MUST be securely configured. For the secure configuration of a directory service infrastructure, the clients (computers and programs) MUST be included in addition to the server.
 
 Administrative access to the directory service MUST be protected. When making configuration changes to the networked IT systems, users SHOULD be informed about maintenance in a timely manner. Before the configuration changes, backups of all affected files and directories SHOULD be made.
 
@@ -113,7 +116,8 @@ Access to the directory service SHOULD be configured according to the security p
 
 #### APP.2.1.A12 Directory Services Monitoring
 
-To monitor directory services, a surveillance concept SHOULD be designed and implemented. Directory service specific events and events of the operating system SHOULD be observed, logged and evaluated.#### APP.2.1.A13 Securing Communication with Directory Services
+To monitor directory services, a surveillance concept SHOULD be designed and implemented. Directory service specific events and events of the operating system SHOULD be observed, logged and evaluated.
+#### APP.2.1.A13 Securing Communication with Directory Services
 
 The data exchange between client and directory service server SHOULD be secured, this applies in particular to external connections. It SHOULD be defined to which data may be accessed. In the case of a service-oriented architecture (SOA), to protect service entries in a service registry, all requests to the registry should be checked for validity of the user.
 
@@ -175,7 +179,8 @@ The following elementary threats are important for the module "General directory
 * G 0.19 Disclosure of information worthy of protection
 * G 0.21 Manipulation of hardware or software
 * G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems* G 0.25 Failure of devices or systems
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.25 Failure of devices or systems
 * G 0.26 Malfunction of equipment or systems
 * G 0.27 Resource shortage
 * G 0.28 Software vulnerabilities or errors

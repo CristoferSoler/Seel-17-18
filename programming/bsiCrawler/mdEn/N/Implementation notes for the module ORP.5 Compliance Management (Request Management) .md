@@ -28,7 +28,8 @@ The identified requirements are implemented through the management processes of 
 The security requirements that the institution has established to meet the requirements must be permanently adhered to. This should be reviewed regularly (see ORP.5.A7 maintaining information security). Both your own regulations and the legal framework to which an institution is subject may change. This must be taken into account within the scope of compliance management (see ORP.5.A2 Compliance with legal framework conditions).
 
 2 measures
------------The following are specific implementation notes in the section "Compliance Management".
+-----------
+The following are specific implementation notes in the section "Compliance Management".
 
 ### 2.1 Basic measures
 
@@ -65,7 +66,8 @@ When passwords are used for authentication, the IT system should provide mechani
 * After installing or reconfiguring users, the password system should force a password change after initial login.
 More detailed information on authentication can be found in ORP.4 Identity and Permission Management.
 
-#### ORP.5.M3 Commitment of Employees to Compliance with Relevant Laws, Rules and Regulations [Supervisors, Human Resources Department]Access rights to files that are stored on the data carriers of the server must be assigned restrictively. Users are only allowed access to the files they need to complete their tasks. The access right itself is limited to the required access type (see "Allocation of access authorizations"). For example, it is rarely necessary to assign a write permission to program files.
+#### ORP.5.M3 Commitment of Employees to Compliance with Relevant Laws, Rules and Regulations [Supervisors, Human Resources Department]
+Access rights to files that are stored on the data carriers of the server must be assigned restrictively. Users are only allowed access to the files they need to complete their tasks. The access right itself is limited to the required access type (see "Allocation of access authorizations"). For example, it is rarely necessary to assign a write permission to program files.
 
 In most cases, the inheritance of rights to files in subdirectories may be accessed if an access right to the parent directory existed. As a result, top-level access (volume level) should be granted only very restrictively. In particular, when installing new software products, the assignment of rights must be subject to strict control.
 
@@ -87,7 +89,8 @@ It is necessary to check sporadically the above specifications for their correct
 
 In many complex IT systems, eg. For example, on Unix or in a network, there is an administrator role that is not restricted. Under Unix, this is the super user root, in a Novell network the SUPERVISOR or admin. Missing restrictions increase the risk of errors or misuse.
 
-In order to avoid mistakes, the super-user login should only be used if necessary; Other work should not be performed by administrators under an administrator ID, but by a personal ID. In particular, no programs of other users with administrator rights may be called. If administrative rights are required for certain activities, it is recommended to create and implement a role-based administration concept (see SYS.1.1.M14 Creation of a user and administration concept). In addition, routine system administration (for example, backup, setting up a new user) should only be menu-driven.By division of tasks, regulations and agreement it must be ensured that administrators do not inconsistent or incomplete interventions. For example, a file may not be edited and changed by several administrators at the same time, as only the last saved version will be preserved.
+In order to avoid mistakes, the super-user login should only be used if necessary; Other work should not be performed by administrators under an administrator ID, but by a personal ID. In particular, no programs of other users with administrator rights may be called. If administrative rights are required for certain activities, it is recommended to create and implement a role-based administration concept (see SYS.1.1.M14 Creation of a user and administration concept). In addition, routine system administration (for example, backup, setting up a new user) should only be menu-driven.
+By division of tasks, regulations and agreement it must be ensured that administrators do not inconsistent or incomplete interventions. For example, a file may not be edited and changed by several administrators at the same time, as only the last saved version will be preserved.
 
 For all administrators, additional user IDs should be set up that have only the limited rights administrators require to perform administrative tasks. For non-administration work, administrators must use only these additional user identifiers.
 
@@ -111,7 +114,8 @@ There are different access options to administrate servers. Depending on the typ
 
 In general, it is important to get an overview of what part of the administration of a server is normally
 
-* locally via the console,* remotely over the network, but using the standard mechanisms of the operating system, or
+* locally via the console,
+* remotely over the network, but using the standard mechanisms of the operating system, or
 * via a central network-based administration tool
 should be carried out. It is recommended to provide an overview of the various types of use, which administration activities can be carried out by which route. In particular, it is important to note whether certain activities can not normally be carried out in a particular way.
 
@@ -130,7 +134,8 @@ After the authentication has been successfully completed, the system must ensure
 
 If there is a danger of listening to lines to terminals, administrators should only work on the console so that passwords can not be intercepted. When administering Unix systems, encrypted communication can be done using the Secure Shell protocol, for example. This allows secure administration from remote workstations.
 
-#### ORP.5.M6 Instructing the staff in the safe handling of IT [Supervisors, Human Resources]The standard installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
+#### ORP.5.M6 Instructing the staff in the safe handling of IT [Supervisors, Human Resources]
+The standard installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
 
 On the one hand, checking for running services can be carried out locally with the means of the installed operating system and, on the other hand, in the case of network services, from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the system offers even more unwanted network services.
 
@@ -154,7 +159,8 @@ Similarly, terminals that are not used for a long period of time should be block
 
 If a newly created user needs his or her account for a limited time, it should only be set up for a limited time. It may be advantageous to set up accounts only for a limited period of time and to renew them at regular intervals (eg annually) if necessary.
 
-** ** QuotasEven if the procurement of an IT system has been made to ensure that it has enough storage space, storage space sooner or later becomes scarce in the event of prolonged use. On IT systems that are used by different users, the existing resources must therefore be divided so that all users can work as optimally as possible.
+** ** Quotas
+Even if the procurement of an IT system has been made to ensure that it has enough storage space, storage space sooner or later becomes scarce in the event of prolonged use. On IT systems that are used by different users, the existing resources must therefore be divided so that all users can work as optimally as possible.
 
 Often you can observe the phenomenon that users want to have more storage space than is available to them. In addition to the ever-growing storage footprint of applications, another reason is that many users are reluctant to part with old and unneeded files. If no restrictions are made on storage space limitation and archiving, there is a risk that storage space for large amounts of legacy data will be wasted or the user directories will overflow.
 
@@ -166,7 +172,8 @@ The choice of the quota volume is important. If all users are to receive the sam
 
 On the one hand, it should be determined which information should be stored where and how many versions of a file should be stored on the production system for how long.
 
-Data from completed projects should be archived in an orderly manner and should not be kept in stock on the production systems "for all cases". On the other hand, it should be determined how much storage space is made available to the various user groups and applications. In addition, a reserve should be scheduled. It also needs to be determined how users can be allocated more storage when needed. The set values ​​must be documented. They also need to be regularly reviewed and updated.Once the size of the disk quota has been determined, consideration should be given to whether and how to respond to a higher demand for disk space. This decision is influenced by the selection of a quota type. Hard quota limits are set so users will not be able to use more than their allocated storage quota. A soft quota, on the other hand, allows users to exceed the disk quota for a fixed amount of time and up to a specified limit. If the disk quota is exceeded, at least the user must be informed about this, for example by e-mail. Consideration should also be given to notifying IT operations so that they can respond to any problems that may arise. In addition, it must be determined whether and how individual users can be allocated additional storage space. This should be a regulated and comprehensible procedure. Disk quotas should not be increased "on demand".
+Data from completed projects should be archived in an orderly manner and should not be kept in stock on the production systems "for all cases". On the other hand, it should be determined how much storage space is made available to the various user groups and applications. In addition, a reserve should be scheduled. It also needs to be determined how users can be allocated more storage when needed. The set values ​​must be documented. They also need to be regularly reviewed and updated.
+Once the size of the disk quota has been determined, consideration should be given to whether and how to respond to a higher demand for disk space. This decision is influenced by the selection of a quota type. Hard quota limits are set so users will not be able to use more than their allocated storage quota. A soft quota, on the other hand, allows users to exceed the disk quota for a fixed amount of time and up to a specified limit. If the disk quota is exceeded, at least the user must be informed about this, for example by e-mail. Consideration should also be given to notifying IT operations so that they can respond to any problems that may arise. In addition, it must be determined whether and how individual users can be allocated additional storage space. This should be a regulated and comprehensible procedure. Disk quotas should not be increased "on demand".
 
 Many popular operating systems include tools to set up Disk Quotas. However, it should be checked if additional software is needed to set up and manage a disk quota.
 
@@ -180,7 +187,8 @@ It is important that patches and updates, like any other software, can only be o
 
 Security updates or patches, however, must not be prematurely recorded, but must be tested before importing. These tests should always use up-to-date, system-tuned test plans or automated tests for a consistent, meaningful result. Otherwise, if a conflict arises with other critical components or programs, such an update may cause the system to fail. If necessary, an affected system must be protected by other means until the tests are completed. It should be ensured that updates that are imported by automatic update mechanisms are also tested.
 
-Before installing an update or patch, you should always back up the system, which will allow it to recover to its original state if problems occur. This is especially true if detailed tests can not be performed due to lack of time or due to a lack of a suitable test system.In any case, it must be documented when, by whom and for what reason patches and updates were recorded. From the documentation the current patch level of the system must be able to be determined quickly at any time, in order to gain clarity as soon as the weaknesses become known as to whether the system is at risk.
+Before installing an update or patch, you should always back up the system, which will allow it to recover to its original state if problems occur. This is especially true if detailed tests can not be performed due to lack of time or due to a lack of a suitable test system.
+In any case, it must be documented when, by whom and for what reason patches and updates were recorded. From the documentation the current patch level of the system must be able to be determined quickly at any time, in order to gain clarity as soon as the weaknesses become known as to whether the system is at risk.
 
 If it is determined that a security update or patch is incompatible with another major component or program or is causing problems, it is important to consider how to proceed. If it is decided that a patch will not be installed due to the problems that have arisen, this decision must be documented in any case. In addition, it must be clear in this case which measures have been taken to prevent exploitation of the vulnerability. Such a decision must not be made by the administrators alone, but must be agreed with the supervisor and the ISB.
 
@@ -200,7 +208,8 @@ A verification of authenticity can not be done with checksums. Therefore, in man
 
 If the check reveals that it is a valid signature of the respective manufacturer, this results in a significantly higher degree of trustworthiness for the package than simply the presence of a checksum.
 
-Sometimes even the built-in software update mechanisms of the respective operating system or application software do not perform checksum comparisons. If possible, however, a checksum check should be performed on each software package before importing.Furthermore, not all checksum comparisons can be performed without the involvement of the users, since the checksums, signatures or certificates required for this purpose are not provided by the manufacturers in a uniform manner. This often requires manual verification on the manufacturer pages or customization of URLs in the patch and change software.
+Sometimes even the built-in software update mechanisms of the respective operating system or application software do not perform checksum comparisons. If possible, however, a checksum check should be performed on each software package before importing.
+Furthermore, not all checksum comparisons can be performed without the involvement of the users, since the checksums, signatures or certificates required for this purpose are not provided by the manufacturers in a uniform manner. This often requires manual verification on the manufacturer pages or customization of URLs in the patch and change software.
 
 If digital signatures are available for a software package, they should always be checked before installing the package.
 
@@ -218,7 +227,8 @@ Another aspect of verifying the authenticity of the update may be news published
 
 Only a regular and comprehensive backup reliably ensures that all stored data can be made available even in the event of malfunction, the effects of malicious software, hardware failures or (intentional or unintentional) deletions. The necessary requirements are described in the module OPS 1.1.5 Data Backup.
 
-### 2.3 Measures for increased protection requirementsThe following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
+### 2.3 Measures for increased protection requirements
+The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.5.M9 Protection against subsequent changes to information [Information Security Officer (ISB), user] (I)
 
@@ -239,7 +249,8 @@ PDF documents can be provided with access restrictions during creation. So z. Fo
 
 * Often, individual passages in a document are to be rendered unrecognizable prior to publication. A popular, but extremely error-prone method is to "blacken" text passages electronically. However, the overpainted information is in many cases easily readable. Therefore, this is absolutely necessary.
 * By using cryptographic methods, PDF documents can be signed or encrypted so that only certain users can use them.
-* PDF security policies can be created. Any user can create these for themselves or use security policies specified by the institution, which requires an Adobe Policy Server.* File ProtectionWith Adobe Acrobat, the most common application for creating and editing PDF files, you can assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption with AES provided. Care should be taken to encrypt at least 128 bits, as document protection can otherwise be easily undone. The following security features can be limited, among others:
+* PDF security policies can be created. Any user can create these for themselves or use security policies specified by the institution, which requires an Adobe Policy Server.
+* File ProtectionWith Adobe Acrobat, the most common application for creating and editing PDF files, you can assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption with AES provided. Care should be taken to encrypt at least 128 bits, as document protection can otherwise be easily undone. The following security features can be limited, among others:
 
  
 + Open the document
@@ -263,7 +274,8 @@ Basically, employees should, of course, handle all information carefully. In add
 
 Of course, the protection required by data directly affects all media on which they are stored or processed. Data with special protection requirements may be incurred in a wide variety of areas, eg. For example, fax or e-mail. There should therefore be regulations in all areas which also specify who may read, process or pass on such data. This includes, if necessary, the regular check for correctness and completeness of the data.
 
-Many information, but also applications, are subject to copyright notices or passing restrictions ("for internal use only"). All employees must be made aware that no documents, files or software may be copied without taking into account any copyright notices or license terms.Special attention must also be paid to all information that forms the basis for the task. This includes all business-relevant data, so z. For example, those data that, if lost, could incapacitate the institution that may affect the economic relationships of collaborating companies, or from whose knowledge a third party (such as a competitor) may derive financial benefits. Every agency and every company should have an overview of which data should be considered business-critical. In addition to the general due diligence requirements, special rules and regulations may apply to these data for storage, processing, transfer and destruction. This business critical information needs to be protected against loss, manipulation and falsification. Longer-term stored or archived data must be regularly tested for readability. Information that is no longer required must be reliably deleted (see also CON.7 Delete and Destroy).
+Many information, but also applications, are subject to copyright notices or passing restrictions ("for internal use only"). All employees must be made aware that no documents, files or software may be copied without taking into account any copyright notices or license terms.
+Special attention must also be paid to all information that forms the basis for the task. This includes all business-relevant data, so z. For example, those data that, if lost, could incapacitate the institution that may affect the economic relationships of collaborating companies, or from whose knowledge a third party (such as a competitor) may derive financial benefits. Every agency and every company should have an overview of which data should be considered business-critical. In addition to the general due diligence requirements, special rules and regulations may apply to these data for storage, processing, transfer and destruction. This business critical information needs to be protected against loss, manipulation and falsification. Longer-term stored or archived data must be regularly tested for readability. Information that is no longer required must be reliably deleted (see also CON.7 Delete and Destroy).
 
 #### ORP.5.M11 Survey of the legal framework for cryptographic processes and products [IT operation, person responsible for the individual applications] (CI)
 
@@ -301,7 +313,8 @@ Additional information on threats and security measures in the area of ​​com
 
   
 
- ISO, compliance management systems, 2014* #### [27002K18] ISO / IEC 27002: 2013 Chapter 18 Compliance
+ ISO, compliance management systems, 2014
+* #### [27002K18] ISO / IEC 27002: 2013 Chapter 18 Compliance
 
   
 

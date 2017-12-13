@@ -28,7 +28,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 Windows Server 2012 (R2) is a complex, modern operating system that has a large number of features and configuration options. An example is the various powerful installable server roles. Each additional feature increases the attack surface and increases the likelihood of vulnerabilities and misconfigurations. There are also many degrees of freedom in the integration into the domain and the networking with other systems and services. Although modern Windows versions bring good default settings in many areas, the basic configuration is still not the safest in any case. Inadequate planning can lead to a large number of attack vectors, which attackers can easily exploit. In addition, if key decisions are not made prior to the installation, an insecure and undefined condition begins that is difficult to resolve.
 
-### 2 2 Careless cloud useWindows Server 2012 (R2) offers the ability to use cloud services in various places without having to install any third-party software. These include, for example, Microsoft Azure Online Backup or the online storage of BitLocker recovery keys. While cloud services can offer advantages in terms of availability in particular, careless use poses risks to confidentiality and dependence on service providers. Data on cloud services can thus be put in the hands of unauthorized third parties, whether attackers or state actors. If a cloud service is discontinued by the provider, this can have a significant impact on your own business processes.
+### 2 2 Careless cloud use
+Windows Server 2012 (R2) offers the ability to use cloud services in various places without having to install any third-party software. These include, for example, Microsoft Azure Online Backup or the online storage of BitLocker recovery keys. While cloud services can offer advantages in terms of availability in particular, careless use poses risks to confidentiality and dependence on service providers. Data on cloud services can thus be put in the hands of unauthorized third parties, whether attackers or state actors. If a cloud service is discontinued by the provider, this can have a significant impact on your own business processes.
 
 ### 2 3 Incorrect administration of Windows servers
 
@@ -48,7 +49,8 @@ When data is encrypted, such as when using BitLocker or device encryption on Win
 
 Windows Server 2012 (R2) has a variety of features to help protect the integrity of information processed by the operating system. Each one of them can be fraught with weaknesses. In addition, there is often a lack of consistent configuration, not least for reasons of perceived ease of use or convenience. Information and processes can be falsified by unauthorized employees or external attackers and often even the traces are blurred. Often malware is also used to manipulate information remotely.
 
-### 2 7 Software vulnerabilities or errorsEach software has vulnerabilities, the more so for complex systems like Windows Server 2012 (R2). Vulnerabilities in components can allow an attacker to inject malicious software, execute malicious software, or bypass security features. This can z. B. cause information to be manipulated or fall into the wrong hands. Any additional installed role or feature increases the chance that vulnerabilities will occur and be detected by attackers. Not all vulnerabilities are publicly known immediately and patches are not immediately available for all known vulnerabilities. In addition, they also have to be recorded first.
+### 2 7 Software vulnerabilities or errors
+Each software has vulnerabilities, the more so for complex systems like Windows Server 2012 (R2). Vulnerabilities in components can allow an attacker to inject malicious software, execute malicious software, or bypass security features. This can z. B. cause information to be manipulated or fall into the wrong hands. Any additional installed role or feature increases the chance that vulnerabilities will occur and be detected by attackers. Not all vulnerabilities are publicly known immediately and patches are not immediately available for all known vulnerabilities. In addition, they also have to be recorded first.
 
 ### 2 8 Unauthorized acquisition or misuse of administrator rights
 
@@ -75,7 +77,8 @@ The use of Windows Server 2012 (R2) MUST be carefully planned before installatio
 
 The installation medium MUST be obtained from a demonstrably integral source. NO other than the required server roles and features or functions may be installed. If sufficient in terms of functionality, the server core variant MUST be installed. Otherwise, MUST be justified, why the server core variant is not enough. As part of the installation, the server MUST first be brought to a current patch state.
 
-#### SYS.1.2.2.A3 Secure Administration of Windows Server 2012Local administration accounts MUST have unique, secure passwords. All administrators responsible for the server system MUST be trained in the security-related aspects of Windows Server 2012 or R2 administration. You MAY NOT use administrative rights where they are not mandatory. Browsers on the server MAY NOT be used to surf the web.
+#### SYS.1.2.2.A3 Secure Administration of Windows Server 2012
+Local administration accounts MUST have unique, secure passwords. All administrators responsible for the server system MUST be trained in the security-related aspects of Windows Server 2012 or R2 administration. You MAY NOT use administrative rights where they are not mandatory. Browsers on the server MAY NOT be used to surf the web.
 
 ### 3.2 Standard requirements
 
@@ -111,7 +114,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 The local firewall SHOULD be activated for incoming and outgoing network traffic and set as strictly as possible. The identity of remote systems and the integrity of the connections to these SHOULD be cryptographically secured.
 
-#### SYS.1.2.2.A10 Disk Encryption on Windows Server 2012 (C)For Windows Server 2012 (R2) systems, the disks SHOULD be encrypted with BitLocker or another product. This SHOULD also apply to virtual machines with productive data. With higher protection requirements, not only should the TPM serve as key protection alone. The recovery password SHOULD be stored in Active Directory or another suitable secure location. For very high confidentiality or deniability requirements, Full Volume Encryption SHOULD be done.
+#### SYS.1.2.2.A10 Disk Encryption on Windows Server 2012 (C)
+For Windows Server 2012 (R2) systems, the disks SHOULD be encrypted with BitLocker or another product. This SHOULD also apply to virtual machines with productive data. With higher protection requirements, not only should the TPM serve as key protection alone. The recovery password SHOULD be stored in Active Directory or another suitable secure location. For very high confidentiality or deniability requirements, Full Volume Encryption SHOULD be done.
 
 #### SYS.1.2.2.A11 Intrusion Detection on Windows Server 2012 (CIA)
 
@@ -199,7 +203,8 @@ The following elementary threats are important for the "Windows Server 2012" bui
 * G 0.25 Failure of devices or systems
 * G 0.26 Malfunction of equipment or systems
 * G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors* G 0.29 Violation of laws or regulations
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
 * G 0.30 Unauthorized use or administration of devices and systems
 * G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions

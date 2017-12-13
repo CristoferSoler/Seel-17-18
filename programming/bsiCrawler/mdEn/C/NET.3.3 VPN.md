@@ -34,7 +34,8 @@ Even if the regular monitoring of access to the VPN was inadequately planned, at
 
 VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an insecure VPN service offered by attackers could be used by attackers to steal targeted information.
 
-### 2 3 Problems with local storage of authentication data for VPNsMany VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
+### 2 3 Problems with local storage of authentication data for VPNs
+Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
 
 ### 2 4 Insecure configuration of VPN clients for remote access
 
@@ -65,7 +66,8 @@ Before the introduction of a VPN, careful planning MUST be done. The responsibil
 
 With a VPN service provider, Service Level Agreements (SLAs) MUST be negotiated and documented in writing. It MUST be regularly checked if the VPN service provider complies with the agreed SLAs.
 
-#### NET.3.3.A3 Secure installation of VPN terminalsThe underlying operating system of the VPN platform MUST be securely configured. If an appliance is used, there must be a valid maintenance contract. It MUST be ensured that only qualified personnel install VPN components. The installation of the VPN components as well as possible deviations from the planning specifications SHOULD be documented. The functionality and the chosen security mechanisms of the VPN MUST be checked before commissioning.
+#### NET.3.3.A3 Secure installation of VPN terminals
+The underlying operating system of the VPN platform MUST be securely configured. If an appliance is used, there must be a valid maintenance contract. It MUST be ensured that only qualified personnel install VPN components. The installation of the VPN components as well as possible deviations from the planning specifications SHOULD be documented. The functionality and the chosen security mechanisms of the VPN MUST be checked before commissioning.
 
 #### NET.3.3.A4 Secure configuration of a VPN
 
@@ -109,7 +111,8 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 
 If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with a sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
-#### NET.3.3.A12 User and Access Management for Remote Access VPNsFor remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
+#### NET.3.3.A12 User and Access Management for Remote Access VPNs
+For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
 
 When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 

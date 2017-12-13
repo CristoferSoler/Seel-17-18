@@ -30,7 +30,8 @@ In the case of electronic data transmission or data carrier forwarding, it happe
 
 For most file systems, files that the user deletes are not really destroyed. Only the references to the file are deleted from the management information of the file system and the blocks belonging to the file are marked as free. However, the actual content of the blocks on the disk is retained and can be reconstructed using appropriate tools. This allows attackers to gain access to the file. B. if such data carriers are passed on to third parties or disposed of inappropriately. For example, confidential information could be leaked out.
 
-### 2 3 Unstructured data managementDue to inadequate specifications, as well as lack of training of the employees, information can be stored cluttered on used data carriers. This can lead to the fact that information can not be completely deleted, because no one knows more, what is stored in which files. Also, attackers may be able to access information unnoticed if many copies of a file exist and they exist in different directories with different protection functions. Copies are often not just stored in different directories of a volume. It is much more critical if several copies are stored on different data carriers and it is no longer clear where, what was filed and when. This problem is compounded when disks are procured remotely and are not controlled. Unstructured data management jeopardizes both the availability (working with the data) and the integrity and confidentiality.
+### 2 3 Unstructured data management
+Due to inadequate specifications, as well as lack of training of the employees, information can be stored cluttered on used data carriers. This can lead to the fact that information can not be completely deleted, because no one knows more, what is stored in which files. Also, attackers may be able to access information unnoticed if many copies of a file exist and they exist in different directories with different protection functions. Copies are often not just stored in different directories of a volume. It is much more critical if several copies are stored on different data carriers and it is no longer clear where, what was filed and when. This problem is compounded when disks are procured remotely and are not controlled. Unstructured data management jeopardizes both the availability (working with the data) and the integrity and confidentiality.
 
 ### 2 4 Confidentiality loss through paging and temporary files
 
@@ -53,7 +54,8 @@ The following requirements MUST be implemented as a priority:
 
 #### CON.6.A1 Regulation of the procedure for the deletion and destruction of information [Head of IT, Head of Organization]
 
-The institution MUST regulate the deletion and destruction of information. Depending on the organizational unit, it is necessary to regulate which information and resources may be deleted and disposed of under which conditions. Likewise, it must be determined in which spatial areas disposal and destruction facilities should be set up.In addition, it is necessary to determine in the planning phase who is responsible for the deletion and destruction of information and resources and which interfaces exist between the organizational units. Likewise, the flow of information must be regulated internally and between the institution's officers and possible outsourcing service providers.
+The institution MUST regulate the deletion and destruction of information. Depending on the organizational unit, it is necessary to regulate which information and resources may be deleted and disposed of under which conditions. Likewise, it must be determined in which spatial areas disposal and destruction facilities should be set up.
+In addition, it is necessary to determine in the planning phase who is responsible for the deletion and destruction of information and resources and which interfaces exist between the organizational units. Likewise, the flow of information must be regulated internally and between the institution's officers and possible outsourcing service providers.
 
 #### CON.6.A2 Proper disposal of equipment and information worthy of protection [Staff, Head of IT, Head of Building Services]
 
@@ -83,7 +85,8 @@ All employees SHOULD be briefed on the methods and procedures for deleting and d
 
 #### CON.6.A7 Elimination of residual information [IT operations, employees]
 
-When distributing media and files, make sure that they do not contain any so-called residual information. For this, a process in the institution SHOULD be established and documented. In order for the employees to implement it sufficiently, they SHOULD be informed about the dangers of residual and additional information in files. It SHOULD be checked randomly whether the remaining information contained in files is actually deleted.#### CON.6.A8 Policy on the Deletion and Destruction of Information [Staff, Head of IT, Data Protection Officer]
+When distributing media and files, make sure that they do not contain any so-called residual information. For this, a process in the institution SHOULD be established and documented. In order for the employees to implement it sufficiently, they SHOULD be informed about the dangers of residual and additional information in files. It SHOULD be checked randomly whether the remaining information contained in files is actually deleted.
+#### CON.6.A8 Policy on the Deletion and Destruction of Information [Staff, Head of IT, Data Protection Officer]
 
 The regulations of the institution for * * deletion and destruction SHOULD be documented in a guideline. The guideline SHOULD be known to all relevant responsible persons and employees of the institution and form the basis for their work and actions. The content of the guideline SHOULD include all used data media, applications, IT systems and other resources and information that are affected by deletion and destruction. It SHOULD regularly and randomly check if the employees comply with the policy. The guideline SHOULD be updated regularly.
 
@@ -155,6 +158,7 @@ Further information on hazards and safety measures in the area of ​​"Deletio
 The following elementary threats are important for the module "Delete and Destroy".
 
 * G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection* G 0.31 Incorrect use or administration of devices and systems
+* G 0.19 Disclosure of information worthy of protection
+* G 0.31 Incorrect use or administration of devices and systems
 * G 0.44 Unauthorized intrusion into premises
 The cross reference tables can be found in the download area due to their size.
