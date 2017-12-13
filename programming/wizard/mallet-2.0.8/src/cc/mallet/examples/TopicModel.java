@@ -14,35 +14,47 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
-
+/**
+ * Class combining mallet topic modelling + bsi compendium
+ * @author Raphael
+ *
+ */
 public class TopicModel {
 
+	/**
+	 * Main method (starting point)
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		String result = null;
+
+		//Get all files from folder passed as argument
 		File[] files = new File(args[0]).listFiles();
 
+		//Read in the CSV file which file already have been processed
 		List<File> unprocessedFiles = null;
 		try {
-			unprocessedFiles = getUnprocessedFiles(files);
+			unprocessedFiles = getUnprocessedFiles(args, files);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
+		//For each unprocessed file
 		for(File f : unprocessedFiles)  {
+			//Check if it's a directory and note a .DS_Store (had local problem with these, could be removed once on the server)
 			if(!f.isDirectory() && (!f.getName().equals(".DS_Store"))) {
 				System.out.println("File: " + f.getAbsolutePath());
 				result = null;
 				try {
+					//Get topics of this file
 					result = getTopic(f);
 				}
 				catch (Exception e) {
 					System.out.println("error with file:" + f.getName());
 					e.printStackTrace();
 				}
+				//Append results to CSV result file
 				if(result != null) {
-					// Write a loop where
-					// data (17) center (14) security (10) room (7) systems (7)
 					result = f.getAbsolutePath() + ";" + result;
 					List<String> lines = Arrays.asList(result);
 					Path file = Paths.get(args[0] + "/0/results.csv");
@@ -56,13 +68,13 @@ public class TopicModel {
 		}
 	}
 
-	private static List<File> getUnprocessedFiles(File[] files) throws IOException  {
+	private static List<File> getUnprocessedFiles(String[] args, File[] files) throws IOException  {
 
 		List<File> unprocessedFiles = new ArrayList<>();
 		List<String> processedFiles = new ArrayList<>();
 
 		System.out.println("reading allready processed files...");
-		for(String s : Files.readAllLines(new File("/Users/Raphael/Documents/1UNI/1M/SEEL/Seel-17-18/programming/bsiCrawler/mdEn/C/0/results.csv").toPath()))
+		for(String s : Files.readAllLines(new File(args[0] + "0/results.csv").toPath()))
 		{
 			processedFiles.add(s.split(";")[0]);
 		}
