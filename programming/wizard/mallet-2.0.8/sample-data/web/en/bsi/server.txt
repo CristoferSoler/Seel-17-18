@@ -1,0 +1,3 @@
+The server room serves primarily to accommodate servers, eg. As a LAN server, a Unix central computer or a server for a PBX. In addition, there may be server-specific documents, small volumes of data or other hardware (star coupler, log printer, air conditioning technology).
+
+In a server room, there is no permanently occupied workstation; it is accessed only sporadically and for short-term work. It should be noted, however, that in the server room, due to the concentration of IT equipment and data, much more damage can occur than, for example, in an office space.
