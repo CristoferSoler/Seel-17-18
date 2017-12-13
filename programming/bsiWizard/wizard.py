@@ -2,7 +2,7 @@ from dariah_topics import preprocessing
 from dariah_topics import meta
 from dariah_topics import mallet
 from dariah_topics import postprocessing
-#from dariah_topics import visualization
+from dariah_topics import visualization
 import warnings
 import shutil
 import os
@@ -64,8 +64,16 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
                         output_topic_keys= 'tutorial_supplementals/mallet_output/topic_keys.txt',
                         output_doc_topics= 'tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
-                        num_iterations=5000)
+                        num_iterations=100)
     print(malletCorpus)
+
+    topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
+    document_topics = postprocessing.show_document_topics(topics=topics,
+                                                          doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt')
+
+
+    print(document_topics)
+    #visualization.plot_doc_topics(document_topics, 0)
 
 def generateTopicTable():
     warnings.filterwarnings('ignore')
