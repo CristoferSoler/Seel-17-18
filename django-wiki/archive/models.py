@@ -1,12 +1,7 @@
 from django.db import models, IntegrityError
-from django.shortcuts import get_object_or_404
-from django.utils.decorators import method_decorator
-from wiki.decorators import get_article
 from wiki.models.urlpath import URLPath, transaction
 from wiki.models.article import Article
-from wiki.views.mixins import ArticleMixin
 from django.http import Http404
-from django.db.models import Q
 
 
 class Archive(models.Model):
@@ -19,17 +14,12 @@ class Archive(models.Model):
                                        on_delete=models.CASCADE, )
 
     @classmethod
+    @transaction.atomic
     def get_or_create(cls, slug):
-        rev_kwargs = {'content': '', 'user_message': 'Archive.create', 'ip_address': 'None'}
-        try:
-            URLPath.objects.get(slug='archive')
-        except:
-            # if root archive does not exist, it is created right here
-            URLPath.create_urlpath(parent=URLPath.objects.get(slug=None), slug='archive', title='Archive',
-                                   **rev_kwargs)
+        rev_kwargs = {'content': '', 'user_message': 'Archive.create', 'ip_address': '0.0.0.0'}
 
         # parent of each archive is the root archive article
-        parent = URLPath.objects.get(slug='archive')
+        parent = Archive.get_or_create_archive_root()
 
         # create archive with parent archive urlpath
         try:
@@ -52,17 +42,18 @@ class Archive(models.Model):
                 "Duplicate keys! There are " + str(archives.count()) + " archives with the same name: ", slug)
         return archives[0]
 
-    @classmethod
-    def get_archive_root(cls):
-        try:
-            root = URLPath.objects.get(slug='archive')
-        except:
-            return None
-        return root
-
     def __str__(self):
         return self.archive_url.slug
 
+    @classmethod
+    def get_or_create_archive_root(cls):
+        try:
+            root = URLPath.objects.get(slug='archive')
+        except URLPath.DoesNotExist:
+            rev_kwargs = {'content': '', 'user_message': 'Archive.create', 'ip_address': '0.0.0.0'}
+            root = URLPath.create_urlpath(parent=URLPath.objects.get(slug=None), slug='archive', title='Archive',
+                                   **rev_kwargs)
+        return root
 
 class ArchiveTransaction(models.Model):
     """
@@ -81,7 +72,9 @@ class ArchiveTransaction(models.Model):
 
     @classmethod
     def create(cls, archive, urlpath):
-        return cls(archive_root=archive, urlpath=urlpath)
+        transaction = cls(archive_root=archive, urlpath=urlpath)
+        transaction.save()
+        return transaction
 
     @transaction.atomic
     def archive(self):
@@ -95,6 +88,23 @@ class ArchiveTransaction(models.Model):
         # Use a copy of ourself (to avoid cache) and update article links again
         for ancestor in Article.objects.get(pk=urlpath_of_archived_article.article.pk).ancestor_objects():
             ancestor.article.clear_cache()
+
+    @classmethod
+    def get_path_by_slug(cls, archive_slug, article_slug):
+        # try to find the URLPath, given the archive slug and the article slug
+        # first check if the archive exists
+        archive = Archive.get_archive_by_slug(archive_slug)
+        # find all transactions with that archive as the root
+        trans = ArchiveTransaction.objects.filter(archive_root=archive)
+        if not trans:
+            raise Http404("No archive found that matches the specified slug: " + archive_slug)
+        for t in trans:
+            try:
+                if(t.urlpath == URLPath.objects.get(slug=article_slug)):
+                    return t.urlpath
+            except:
+                continue
+        raise Http404("No archived article found in " + archive_slug + " that matches the specified slug: " + article_slug)
 
     def __str__(self):
         return 'transaction of ' + self.urlpath.__str__() + ' into ' + self.archive_root.__str__()

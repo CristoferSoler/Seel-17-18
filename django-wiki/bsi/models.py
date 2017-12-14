@@ -1,6 +1,6 @@
 from django.db import models
 # from wiki.models.article import Article
-from wiki.models import Article, URLPath, Site, ArticleRevision
+from wiki.models import Article, URLPath, Site, ArticleRevision, ArticleForObject
 
 
 class UGA(models.Model):

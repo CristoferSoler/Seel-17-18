@@ -1,0 +1,47 @@
+{% extends 'bsi/base.html' %}
+{% block bsi_contents %}
+
+
+    <div class="container" style="margin-top:80px;">
+
+
+        <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+     <ol class="breadcrumb">
+                {% for ancestor in urlpath.cached_ancestors %}
+                    <li>
+                        <a href="{% url 'get_article' path=ancestor.path %}">{{ ancestor.article.current_revision.title|truncatechars:25 }}</a>
+                    </li>
+                {% endfor %}
+                <li class="active">{{ article.current_revision.title|truncatechars:25 }}</li>
+            </ol>
+
+    <h1 >
+          {{ article.current_revision.title }}
+          <small style="font-size: 14px;">
+            {% if urlpath.parent %}
+            <a href="{% url 'wiki:get' path=urlpath.path %}"><span class="fa fa-bookmark"></span> {{ urlpath.slug }}</a>
+            {% endif %}
+            {% if article.current_revision.locked %}
+              <span class="fa fa-lock"></span>
+            {% endif %}
+          </small>
+ </h1>
+        <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
+<hr>
+            <div>
+                {% if not preview %}
+                    {% if article.current_revision %}
+                        {{ article.get_cached_content }}
+                    {% endif %}
+                {% else %}
+                    {{ content|default:"" }}
+                {% endif %}
+            </div>
+
+            <hr>
+
+
+        </div>
+    </div>
+{% endblock %}
