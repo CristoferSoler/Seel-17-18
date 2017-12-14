@@ -1,5 +1,5 @@
 import argparse
-from os.path import isdir, join
+from os.path import isdir
 import filecmp
 import ConfigParser
 
@@ -27,30 +27,40 @@ def compare(oldDir, newDir):
 
     # compare old dir with new dir
     dircomp = filecmp.dircmp(oldDir, newDir)
-    # files that are only contained in the old dir means they are deleted
-    deleted = dircomp.left_only
-    # files that are only contained in the new dir means they are added
-    added = dircomp.right_only
-    # files that are contained in both dirs
-    commonFiles = dircomp.common_files
 
-    # look in the common files to find modified files
-    for f in commonFiles:
-        # compare both files, if they differ, it means they are modified
-        if(not filecmp.cmp(join(newDir, f), join(oldDir, f))):
-            modified.append(f)
+    # find the common dirs
+    commondirs = dircomp.common_dirs
 
-    # generate a text file to store the names to the updated files
-    generateTextFile(added, modified, deleted)
+    if(commondirs):
+        for subdir in commondirs:
+            newDirpath = newDir + "/" + subdir
+            oldDirpath = oldDir + "/" + subdir
+
+            if(isdir(newDirpath) and isdir(oldDirpath)):
+                dircomp = filecmp.dircmp(oldDirpath, newDirpath)
+
+                # files that are only contained in the old dir means they are deleted
+                deleted = dircomp.left_only
+                # files that are only contained in the new dir means they are added
+                added = dircomp.right_only
+                # files that are contained in both dirs
+                modified = dircomp.diff_files
+
+                # generate a text file to store the names to the updated files
+                generateTextFile(subdir, added, modified, deleted)
 
 
-def generateTextFile(added, modified, deleted):
+def generateTextFile(dir, added, modified, deleted):
     # create or overwrite
-    file = open(readConfig('comparator_output'), "w")
+    file = open(readConfig('comparator_output'), "a")
 
     modSym = readConfig('modified_symbol')
     addSym = readConfig('added_symbol')
     delSym = readConfig('deleted_symbol')
+    compSym = readConfig('component_symbol')
+
+    # first specify in which subdir the files reside
+    file.write(compSym + dir + "\n")
 
     # modified
     file.write(modSym + "\n")
