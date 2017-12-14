@@ -1,8 +1,9 @@
-from django.db import models
+from django.db import models , IntegrityError
 #from wiki.models.article import Article
 from wiki.models import Article, URLPath, Site, ArticleRevision, transaction
 from enumfields import EnumField
 from enumfields import Enum
+from django.http import Http404
 
 
 class BSI_Article_type(Enum):
@@ -76,7 +77,17 @@ class BSI(models.Model):
         bsi = cls(url=url, articleType=article_type)
         bsi.save()
 
+    @classmethod
+    def get_articles_by_type(cls, article_type):
+         article_urlpaths = []
+         articles = BSI.objects.filter(articleType= article_type)
+         if not articles:
+             raise Http404("No articles found that matches the specified search type: ", article_type)
+         for article in articles:
+             article_urlpaths.append(article)
+         return article_urlpaths
+
 
     def __str__(self):
-        return 'BSI article with path: ' + self.urlpath.__str__() 
+        return 'BSI article with path: ' + self.url.__str__()
 
