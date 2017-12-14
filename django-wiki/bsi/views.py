@@ -8,25 +8,10 @@ from django.template import loader
 from django.utils.decorators import method_decorator
 from wiki.decorators import get_article
 from wiki.models.article import Article
-from wiki.views.article import ArticleView, CreateRootView
-from wiki.views.article import SearchView, Create
+from wiki.views.article import ArticleView
+from wiki.views.article import SearchView
 
 from bsi.ugaViews import overview_uga
-
-
-class CreateRoot(CreateRootView):
-    template_name = "uga/create-root.html"
-
-    def dispatch(self, request, *args, **kwargs):
-        return super(CreateRoot, self).dispatch(request, *args, **kwargs)
-
-
-class UGACreate(Create):
-    template_name = 'uga/create_article.html'
-
-    @method_decorator(get_article(can_write=True, can_create=True))
-    def dispatch(self, request, article, *args, **kwargs):
-        return super(Create, self).dispatch(request, article, *args, **kwargs)
 
 
 class WikiArticleView(ArticleView):
@@ -42,11 +27,11 @@ class WikiArticleView(ArticleView):
         path = urlpath.path
         slug = urlpath.slug
 
-        if path.startswith('uga') and slug.__str__() == 'uga':
+        if path.startswith('uga') and len(path) == 4:
             self.template_name = "uga/overview_uga.html"
             return overview_uga(request)
         elif path.startswith('uga'):
-            self.template_name = "uga/article.html"
+            self.template_name = "uga/view.html"
         elif path.startswith('bsi'):
             self.template_name = "bsi/article.html"
         elif path.startswith('news'):

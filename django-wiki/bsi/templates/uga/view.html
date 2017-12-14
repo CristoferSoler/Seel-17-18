@@ -1,0 +1,14 @@
+{% extends 'uga/article.html' %}
+{% load wiki_tags %}
+
+{%  block article_menu %}
+
+    {% include "uga/includes/article_menu.html" %}
+
+{% endblock %}
+
+{% block wiki_contents_tab %}
+
+    {% wiki_render article %}
+
+{% endblock %}

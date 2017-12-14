@@ -13,17 +13,17 @@
                 <li class="active">{{ article.current_revision.title|truncatechars:25 }}</li>
             </ol>
 
-            <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
-            <h3 id="intro" class="title"> {{ article.current_revision.title }}</h3>
-
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <p class="small text-muted">This article was last
+                        modified:{{ article.current_revision.modified }}</p>
+                </li>
+                {% block article_menu %}
+                {% endblock %}
+            </ul>
             <div>
-                {% if not preview %}
-                    {% if article.current_revision %}
-                        {{ article.get_cached_content }}
-                    {% endif %}
-                {% else %}
-                    {{ content|default:"" }}
-                {% endif %}
+                {% block wiki_contents_tab %}
+                {% endblock %}
             </div>
 
             <hr>
@@ -50,8 +50,6 @@
                 </li>
             </ul>
 
-            <hr>
-            <h4>See also</h4>
         </div>
     </div>
 
