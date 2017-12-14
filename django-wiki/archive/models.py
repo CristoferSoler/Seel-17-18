@@ -106,5 +106,13 @@ class ArchiveTransaction(models.Model):
                 continue
         raise Http404("No archived article found in " + archive_slug + " that matches the specified slug: " + article_slug)
 
+    @classmethod
+    def get_all_archive_urlpaths(cls):
+            arc_urlpaths = []
+            archives = ArchiveTransaction.objects.prefetch_related('urlpath')
+            for archive in archives:
+                arc_urlpaths.append(archive.urlpath)
+            return arc_urlpaths
+
     def __str__(self):
         return 'transaction of ' + self.urlpath.__str__() + ' into ' + self.archive_root.__str__()
