@@ -4,17 +4,14 @@ from wiki.views.article import Dir, ArticleView
 from .models import Archive, ArchiveTransaction
 from .decorators import get_archive_article
 
+
 class ArchiveDir(Dir):
     template_name = "archive/archivelist.html"
 
     @method_decorator(get_archive_article(can_read=True))
     def dispatch(self, request, article, *args, **kwargs):
-        # find archive by urlpath slug, if it is not present, 404 will occur
-        path = kwargs.get('urlpath')
-        if (path != Archive.get_archive_root()):
-            Archive.get_archive_by_slug(kwargs.get('urlpath').slug)
 
-        # temp fix 
+        # temp fix
         self.filter_form = forms.DirFilterForm(request.GET)
         if self.filter_form.is_valid():
             self.query = self.filter_form.cleaned_data['query']
@@ -28,6 +25,7 @@ class ArchiveDir(Dir):
 
     def get_context_data(self, **kwargs):
         return super(ArchiveDir, self).get_context_data(**kwargs)
+
 
 class ArchiveArticleView(ArticleView):
 
