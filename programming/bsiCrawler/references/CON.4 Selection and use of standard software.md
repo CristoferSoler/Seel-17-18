@@ -1,0 +1,26 @@
+### 3.1 Basic requirements
+#### CON.4.A1 Ensure the integrity of standard software
+#### CON.4.A2 Development of the installation instructions for standard software
+#### CON.4.A3 Secure installation and configuration of standard software
+### 3.2 Standard requirements
+#### CON.4.A4 Definition of responsibilities in the area of ​​standard software [department]
+#### CON.4.A5 Creation of a requirement catalog for standard software [department]
+#### CON.4.A6 Selection of suitable standard software [department, procurement office]
+#### CON.4.A7 Verification of Delivery of Standard Software [Department]
+#### CON.4.A8 License management and version control of standard software
+#### CON.4.A9 Uninstalling standard software
+### 3.3 Requirements for increased protection requirements
+#### CON.4.A10 Implementation of Additional Security Features (CIA)
+#### CON.4.A11 Use of certified standard software (CIA)
+#### CON.4.A12 Use of encryption, checksums or digital signatures (CI)
+# 5 Annex: Cross reference table on elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.22 Manipulation of information
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

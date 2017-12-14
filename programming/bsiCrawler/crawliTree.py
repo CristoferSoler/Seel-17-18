@@ -2,54 +2,63 @@ import scrapy as sc
 import json
 from googletrans import Translator
 
+'''
+This module is responsible for generating a treeview from the BSI page layout for the overview of BSI articles. For the 
+integration, the created tree is converted to json format and saved in a txt file.
+'''
 
+# all google domains for the translation
+# every domain is randomly selected
 urls = [
-        'translate.google.com',
-        'translate.google.co.kr',
-        'translate.google.de',
-        'translate.google.at',
-        'translate.google.pl',
-        'translate.google.am',
-        'translate.google.ba',
-        'translate.google.ae',
-        'translate.google.ad',
-        'translate.google.be',
-        'translate.google.bf',
-        'translate.google.bg',
-        'translate.google.ba',
-        'translate.google.bi',
-        'translate.google.bj',
-        'translate.google.bs',
-        'translate.google.by',
-        'translate.google.cm',
-        'translate.google.cn',
-        'translate.google.ca',
-        'translate.google.cv',
-        'translate.google.fr',
-        'translate.google.fm',
-        'translate.google.ga',
-        'translate.google.ge',
-        'translate.google.gg',
-        'translate.google.gl',
-        'translate.google.es',
-        'translate.google.gy',
-        'translate.google.gr',
-        'translate.google.gp',
-        'translate.google.gp',
-        'translate.google.hr',
-        'translate.google.ht',
-        'translate.google.hu',
-      ]
+    'translate.google.com',
+    'translate.google.co.kr',
+    'translate.google.de',
+    'translate.google.at',
+    'translate.google.pl',
+    'translate.google.am',
+    'translate.google.ba',
+    'translate.google.ae',
+    'translate.google.ad',
+    'translate.google.be',
+    'translate.google.bf',
+    'translate.google.bg',
+    'translate.google.ba',
+    'translate.google.bi',
+    'translate.google.bj',
+    'translate.google.bs',
+    'translate.google.by',
+    'translate.google.cm',
+    'translate.google.cn',
+    'translate.google.ca',
+    'translate.google.cv',
+    'translate.google.fr',
+    'translate.google.fm',
+    'translate.google.ga',
+    'translate.google.ge',
+    'translate.google.gg',
+    'translate.google.gl',
+    'translate.google.es',
+    'translate.google.gy',
+    'translate.google.gr',
+    'translate.google.gp',
+    'translate.google.gp',
+    'translate.google.hr',
+    'translate.google.ht',
+    'translate.google.hu',
+]
 
-tree = {'Bausteine': {}, 'Gefährdungskataloge': {}, 'Maßnahmenkataloge': {}}
+tree = {'Bausteine': {}, 'Elementare Gefährdungen': {}, 'Umsetzungshinweise': {}}
 translator = Translator(service_urls=urls)
+
 
 def generateParent(name):
     return {'text': name, 'nodes': []}
 
+
 def generateChild(name):
     return {'text': name}
 
+#generate json format tree
 def generateTree(tree):
     bootstrapTree = []
 
@@ -68,13 +77,12 @@ def generateTree(tree):
 
         bootstrapTree.append(dummy)
 
-    print(bootstrapTree)
-    f = open('bsiTreeBootstrap' + '.txt', 'w')
+    f = open('treeview/bsiTree' + '.txt', 'w')
     treeJson = json.dumps(bootstrapTree)
     f.write(treeJson)
     f.close()
 
-#alle Links unter Bausteine, Gegenmaßnahmen und Maßnahmen holen
+#extract allt he links under components, Elementary hazards and implementation notes
 def get_links(response, h2Headline):
     links = []
 
@@ -91,29 +99,22 @@ def get_links(response, h2Headline):
             for li in lis:
                 text = li.xpath('child::a').xpath('text()').extract()[0].strip()
 
-                if(h2Headline != 'Bausteine'):
-                    # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-                    first = " ".join(text.split(" ", 1)[:1])
-                    secound = text.split(" ", 1)[1]
-                    print(secound)
-                    secoundEN = translator.translate(secound, dest='en', src='de').text
-                    text = first + " " + secoundEN
-                    print(text)
-                else:
-                    text = translator.translate(text, dest='en', src='de').text
+                text = translator.translate(text, dest='en', src='de').text
                 tree.get(h2Headline)[text] = []
                 links.append("https://www.bsi.bund.de/" + li.xpath('child::a').xpath('@href').extract()[0])
             return links
 
-
+#crawller to get the treeview
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
-    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKataloge/itgrundschutzkataloge_node.html']
+    start_urls = [
+        'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
+    #get all sublines under components, Elementary hazards and implementation notes
     def parse(self, response):
         urlsB = get_links(response, 'Bausteine')
-        urlsG = get_links(response, 'Gefährdungskataloge')
-        urlsM = get_links(response, 'Maßnahmenkataloge')
+        urlsG = get_links(response, 'Elementare Gefährdungen')
+        urlsM = get_links(response, 'Umsetzungshinweise')
 
         for b in urlsB:
             yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
@@ -124,18 +125,17 @@ class bsiSpider(sc.Spider):
         for m in urlsM:
             yield sc.Request(m, callback=self.parseLinkListM, dont_filter=True)
 
-
-    #folgende 3 Funktionen extrahieren die Links aus den Unterseiten
+    # get all links form the components
     def parseLinkList(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
 
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        print(h1)
+        # Deutsche Dummköpfe
+        if (h1 == 'CON: Konzeption und Vorgehensweisen'):
+            h1 = 'CON: Konzeption und Vorgehensweise'
+
         h1En = translator.translate(h1, dest='en', src='de').text
-        print(h1En)
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
@@ -144,58 +144,49 @@ class bsiSpider(sc.Spider):
 
             tree['Bausteine'][h1En].append(text)
 
+    # get all headlines from the Elementary hazards
     def parseLinkListG(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
 
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        first = " ".join(h1.split(" ", 1)[:1])
-        secound = h1.split(" ", 1)[1]
-        secoundEN = translator.translate(secound, dest='en', src='de').text
-        h1En = first.replace(',','.') + " " + secoundEN
+        # Deutsche Dummköpfe
+        if (h1 == 'Elementare Gefährdungen'):
+            h1 = 'Übersicht der elementaren Gefährdungen'
+
+        h1En = translator.translate(h1, dest='en', src='de').text
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
-            # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-            first = " ".join(text.split(" ", 1)[:1])
-            secound = text.split(" ", 1)[1]
-            secoundEN = translator.translate(secound, dest='en', src='de').text
-            text = first + " " + secoundEN
+            text = translator.translate(text, dest='en', src='de').text
 
-            tree['Gefährdungskataloge'][h1En].append(text)
+            tree['Elementare Gefährdungen'][h1En].append(text)
 
-
+    # get all headline form the implementation notes
     def parseLinkListM(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1').xpath('text()').extract()[0].strip()
 
-        #Deutsche Dummköpfe
-        if('M 4 Hard- und Software' == h1):
-            h1 = 'M 4 Hardware und Software'
+        # Deutsche Dummköpfe
+        if (h1 == 'APP- Anwendungen'):
+            h1 = h1.replace('-', ':')
 
-        #Deutsche Dummköpfe
-        h1 = "".join(h1.split(" ", 1))
-        first = " ".join(h1.split(" ", 1)[:1])
-        secound = h1.split(" ", 1)[1]
-        secoundEN = translator.translate(secound, dest='en', src='de').text
-        h1En = first.replace(',','.') + " " + secoundEN
+        if (h1 == 'CON: Konzepte und Vorgehensweisen'):
+            h1 = 'CON: Konzeption und Vorgehensweise'
+
+        h1En = translator.translate(h1, dest='en', src='de').text
 
         for link in response.css('.RichTextIntLink.Basepage'):
             text = link.xpath('text()').extract()[0].strip()
-            # Workaround: maybe google translate bug --> 'G 5.24 Wiederherstellung von Nachrichten'
-            first = " ".join(text.split(" ", 1)[:1])
-            secound = text.split(" ", 1)[1]
-            secoundEN = translator.translate(secound, dest='en', src='de').text
-            text = first.replace(',','.') + " " + secoundEN
-            tree['Maßnahmenkataloge'][h1En].append(text)
 
-    #Fertig mit dem Auslesen der Struktur
+            text = translator.translate(text, dest='en', src='de').text
+            tree['Umsetzungshinweise'][h1En].append(text)
+
+    # Fertig mit dem Auslesen der Struktur
     def closed(self, reason):
         # manuelle Übersetzung, weil google anders übersetzt
         tree['Components'] = tree.pop('Bausteine')
-        tree['Threads'] = tree.pop('Gefährdungskataloge')
-        tree['Counter Measuers'] = tree.pop('Maßnahmenkataloge')
+        tree['Elementary hazards'] = tree.pop('Elementare Gefährdungen')
+        tree['implementation notes'] = tree.pop('Umsetzungshinweise')
         generateTree(json.dumps(tree))
