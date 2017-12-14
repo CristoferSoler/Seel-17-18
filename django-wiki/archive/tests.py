@@ -55,3 +55,13 @@ class ArchiveTestCase(TestCase):
         # still there should be only one archive
         number_of_urls = URLPath.objects.filter(slug='2017').count()
         self.assertTrue(number_of_urls == 1, "There should be only one archive")
+
+    def test_get_all_archive_urlpaths(self):
+        archive = Archive.get_archive_by_slug(slug='2017')
+        transaction = ArchiveTransaction.create(archive=archive, urlpath=URLPath.objects.get(slug='subarticle1'))
+        transaction.archive()
+
+        articles = ArchiveTransaction.get_all_archive_urlpaths()
+        articleTest = articles[0]
+        article = URLPath.objects.get(slug='subarticle1')
+        self.assertTrue(articleTest.slug == article.slug, 'Both should be the same')
