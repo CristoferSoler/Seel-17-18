@@ -112,7 +112,7 @@ public class TopicModel {
 		//  Note that the first parameter is passed as the sum over topics, while
 		//  the second is
 		int numTopics = 100;
-		ParallelTopicModel model = new ParallelTopicModel(numTopics, 1.0, 0.01);
+            ParallelTopicModel model = new ParallelTopicModel(numTopics, 1.0, 0.01);
 
 		model.addInstances(instances);
 

@@ -28,31 +28,19 @@ def convertMDtoTxt(path):
     for file in files:
         shutil.copyfile(pathOfMd + file,pathOfTxt + file.replace('md','txt').replace(' Md','txt'))
 
-def getNamesOfFiles(list):
-    names = []
-    for file in list:
-        names.append(file.replace('.txt',''))
-    return names
+def getNameOfFile(file):
+    name = file.replace('.txt','')
+    return name
 
-def preprocessingOfFiles():
-    #get all txt files
-    files = readInFilesToPathList(path_to_corpus)
-    #get names of the files
-    fileNames = getNamesOfFiles(files)
-    #add path to files
-    filesCorpus = []
-    for file in files:
-        filesCorpus.append(pathOfTxt + file)
-
-    corpus = list(preprocessing.read_from_pathlist(filesCorpus))
+def preprocessingOfFile(file):
+    fileName = getNameOfFile(file)
+    corpus = list(preprocessing.read_from_pathlist([file]))
     tokenizedCorpus = [list(preprocessing.tokenize(document)) for document in corpus]
 
-    documentTermMatrix, document_ids, type_ids = preprocessing.create_document_term_matrix(tokenizedCorpus,
-                                                                                             fileNames,
-                                                                                             large_corpus=True)
+    documentTermMatrix = preprocessing.create_document_term_matrix(tokenizedCorpus,fileName)
     stopwords = getStopWordList()
     cleanTokenizedCorpus = list(preprocessing.remove_features(stopwords, tokenized_corpus=tokenizedCorpus))
-    return cleanTokenizedCorpus, fileNames
+    return cleanTokenizedCorpus, fileName
 
 def modelCreation(cleanTokenizedCorpus,fileNames):
     Mallet = mallet.Mallet(pathToMallet)
@@ -64,21 +52,25 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
                         output_topic_keys= 'tutorial_supplementals/mallet_output/topic_keys.txt',
                         output_doc_topics= 'tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
-                        num_iterations=100)
-    print(malletCorpus)
+                        num_iterations=1500)
+    #print(malletCorpus)
 
     topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
     document_topics = postprocessing.show_document_topics(topics=topics,
                                                           doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt')
-
 
     print(document_topics)
     #visualization.plot_doc_topics(document_topics, 0)
 
 def generateTopicTable():
     warnings.filterwarnings('ignore')
-    cleanTokenizedCorpus, fileNames  = preprocessingOfFiles()
-    modelCreation(cleanTokenizedCorpus,fileNames)
+
+    files = readInFilesToPathList(path_to_corpus)
+
+    for file in files:
+        cleanTokenizedCorpus, fileName  = preprocessingOfFile(pathOfTxt + file)
+        print(fileName)
+        modelCreation(cleanTokenizedCorpus,fileName)
 
 def main():
     convertMDtoTxt(pathOfMd)
