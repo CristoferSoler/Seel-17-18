@@ -57,7 +57,7 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
 
     topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
     document_topics = postprocessing.show_document_topics(topics=topics,
-                                                          doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt')
+                                                          doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt', num_keys=1)
 
     print(document_topics)
     #visualization.plot_doc_topics(document_topics, 0)
