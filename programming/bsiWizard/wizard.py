@@ -8,6 +8,7 @@ from dariah_topics import visualization
 import warnings
 import shutil
 import os
+import pandas
 
 pathOfMd = 'mdEn/C/'
 pathOfTxt = 'txt/'
@@ -50,11 +51,16 @@ def getSortedTopicList(topics,fileName):
 
     return topicNames
 
-def writeToCSV(document_topic,fileName):
+def preProcessingCSV(document_topic,fileName):
     #delete to first t
     topicsOfFile = getSortedTopicList(document_topic,fileName)
     csvFile.append(topicsOfFile)
+    #print(csvFile)
+
+def writeToCSV():
     print(csvFile)
+    pd = pandas.DataFrame(csvFile)
+    pd.to_csv("topics.csv")
 
 def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
@@ -83,8 +89,8 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
     document_topics = postprocessing.show_document_topics(topics=topics,
                                                           doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt', num_keys=1)
 
-
-    writeToCSV(document_topics,fileNames)
+    return document_topics
+    #preProcessingCSV(document_topics,fileNames)
 
     #print(document_topics['t'])
     #visualization.plot_doc_topics(document_topics, 0)
@@ -97,11 +103,13 @@ def generateTopicTable():
     for file in files:
         cleanTokenizedCorpus, fileName  = preprocessingOfFile(pathOfTxt + file)
         print(fileName)
-        modelCreation(cleanTokenizedCorpus,fileName)
+        document_topics = modelCreation(cleanTokenizedCorpus,fileName)
+        preProcessingCSV(document_topics, fileName)
 
 def main():
     convertMDtoTxt(pathOfMd)
     generateTopicTable()
+    writeToCSV()
 
 if __name__ == "__main__":
     main()
