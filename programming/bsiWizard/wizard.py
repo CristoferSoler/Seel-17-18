@@ -19,9 +19,9 @@ output = 'output/'
 
 csvFile = []
 
-def lemmatizeTxt():
-    files = readInFilesToPathList(path_to_corpus)
-    for file in files:
+#def lemmatizeTxt():
+#    files = readInFilesToPathList(path_to_corpus)
+#    for file in files:
 
 
 def getStopWordList():
