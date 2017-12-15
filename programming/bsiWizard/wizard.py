@@ -58,9 +58,9 @@ def preProcessingCSV(document_topic,fileName):
     #print(csvFile)
 
 def writeToCSV():
-    print(csvFile)
     pd = pandas.DataFrame(csvFile)
-    pd.to_csv("topics.csv")
+    columns = ["Name", "Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5", "Topic 6", "Topic 7", "Topic 8", "Topic 9", "Topic 10"]
+    pd.to_csv("csv/topics.csv", columns=columns)
 
 def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
@@ -82,7 +82,7 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
                         output_topic_keys= 'tutorial_supplementals/mallet_output/topic_keys.txt',
                         output_doc_topics= 'tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
-                        num_iterations=1500)
+                        num_iterations=3000)
     #print(malletCorpus)
 
     topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
