@@ -1,3 +1,5 @@
+from operator import itemgetter
+
 from dariah_topics import preprocessing
 from dariah_topics import meta
 from dariah_topics import mallet
@@ -15,6 +17,8 @@ pathToStopwordList = 'stopwordlist/en.txt'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
 
+csvFile = []
+
 def getStopWordList():
     stopwords = [line.strip() for line in open(pathToStopwordList, 'r', encoding='utf-8')]
     return stopwords
@@ -31,6 +35,26 @@ def convertMDtoTxt(path):
 def getNameOfFile(file):
     name = file.replace('.txt','')
     return name
+
+def getSortedTopicList(topics,fileName):
+    topicsCSV = topics.to_csv().splitlines()[1:]
+    unsortedTopic = []
+    for topic in topicsCSV:
+        split = topic.split(',')
+        unsortedTopic.append((split[0], float(split[1])))
+
+    sortedTopic = sorted(unsortedTopic, key=itemgetter(1), reverse=True)
+    topicNames = [fileName.replace('txt/','')]
+    for topic in sortedTopic:
+        topicNames.append(topic[0])
+
+    return topicNames
+
+def writeToCSV(document_topic,fileName):
+    #delete to first t
+    topicsOfFile = getSortedTopicList(document_topic,fileName)
+    csvFile.append(topicsOfFile)
+    print(csvFile)
 
 def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
@@ -59,7 +83,10 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
     document_topics = postprocessing.show_document_topics(topics=topics,
                                                           doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt', num_keys=1)
 
-    print(document_topics)
+
+    writeToCSV(document_topics,fileNames)
+
+    #print(document_topics['t'])
     #visualization.plot_doc_topics(document_topics, 0)
 
 def generateTopicTable():
