@@ -16,8 +16,7 @@
                         <div class="col-lg-offset-2">
                             <button class="btn btn-default" type="submit" name="preview" value="1" id="id_preview"
                                     formaction="{% url 'wiki:preview' path=urlpath.path article_id=article.id %}"
-                                    formtarget="previewWindow"
-                            >
+                                    formtarget="previewWindow">
                                 <span class="fa fa-eye"></span>
                                 {% trans "Preview" %}
                             </button>
