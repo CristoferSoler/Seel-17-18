@@ -1,12 +1,10 @@
-from django.test import TestCase
 from wiki.models import URLPath
 
 from bsi.models import BSI, UGA
-from bsi.tests.super_test_case import BsiTestCase
-from bsi.tests.urls import UrlsTestCase
+from bsi.tests.super_test_case import InitTestCase
 
 
-class UGATestCase(BsiTestCase):
+class UGATestCase(InitTestCase):
     def setUp(self):
         super(UGATestCase, self).setUp()
 

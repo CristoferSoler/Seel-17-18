@@ -4,7 +4,7 @@ from wiki.models import URLPath
 from bsi.models import BSI, UGA, BSI_Article_type
 
 
-class BsiTestCase(TestCase):
+class InitTestCase(TestCase):
     def setUp(self):
         rev_kwargs = {'content': '', 'user_message': 'BsiTestCase.setUp', 'ip_address': 'None'}
 
