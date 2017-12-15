@@ -83,10 +83,10 @@ class BSI(models.Model):
     def get_articles_by_type(cls, article_type):
         article_urlpaths = []
         articles = BSI.objects.filter(articleType=article_type)
-        if not articles:
-            raise Http404("No articles found that matches the specified search type: ", article_type)
-        for article in articles:
-            article_urlpaths.append(article)
+        if articles:
+            for article in articles:
+                article_urlpaths.append(article)
+        # return empty if nothing is found
         return article_urlpaths
 
     def __str__(self):
