@@ -1,0 +1,22 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 100,
+    "fields": {
+      "content_type" : ["wiki", "article"],
+      "codename" : "check_article",
+      "name": "Can check article"
+    }
+  },
+
+    {
+    "model": "auth.permission",
+    "pk": 101,
+    "fields": {
+      "content_type" : ["wiki", "article"],
+      "codename" : "uncheck_article",
+      "name": "Can uncheck article"
+    }
+  }
+
+]
