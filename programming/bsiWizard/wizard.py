@@ -66,7 +66,6 @@ def preProcessingCSV(document_topic,fileName):
 
 def writeToCSV():
     pd = pandas.DataFrame(csvFile)
-    #columns = ["Name", "Topic 1", "Topic 2", "Topic 3", "Topic 4", "Topic 5", "Topic 6", "Topic 7", "Topic 8", "Topic 9", "Topic 10"]
     pd.to_csv("csv/topics.csv")
 
 def preprocessingOfFile(file):
