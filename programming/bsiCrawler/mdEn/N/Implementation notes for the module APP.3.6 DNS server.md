@@ -26,7 +26,7 @@ There are different software products in the field of DNS servers. In order to m
 After planning is complete and the software is installed on the server's operating system, the DNS server must be securely set up and configured (see APP.3.6.M4 * Secure Basic Configuration of a DNS Server *, APP.3.6.M6 * Dynamic Backup DNS updates * and APP.3.6.M13 * Limitation of visibility of domain information *). In addition, responsible personnel should be trained to be sufficiently familiar with the security measures that are relevant to them (see APP.3.6.M12 * Training of Responsible Persons *).
 
 **Business**
-During operation, it is important to be aware of current security vulnerabilities in order to install any existing software updates or implement other security measures (see APP.3.6.M5 * Timely Import of Security-Related Patches and Updates *). Furthermore, packet filter rules should minimize communication between the DNS server and other DNS servers and clients (see APP.3.6.M16 * Integration of a DNS server into a "P-A-P" structure *). In order to ensure a smooth operation and to detect possible malfunctions or anomalies, it is necessary to continuously monitor the DNS server and to analyze its log data regularly (see APP.3.6.M7 * Monitoring of DNS servers * and APP.3.6.M15 * Evaluation the log data *).
+During operation, it is important to be aware of current security vulnerabilities in order to install any existing software updates or implement other security measures (see APP.3.6.M5 * Timely Import of Security-Related Patches and Updates *). Furthermore, packet filter rules should minimize communication between the DNS server and other DNS servers and clients (see APP.3.6.M16 * Integrating a DNS server into a "P-A-P" structure *). In order to ensure a smooth operation and to detect possible malfunctions or anomalies, it is necessary to continuously monitor the DNS server and to analyze its log data regularly (see APP.3.6.M7 * Monitoring of DNS servers * and APP.3.6.M15 * Evaluation the log data *).
 
 If a DNS server is configured or the DNS information is changed manually, the domain information should be backed up beforehand so that it can be restored if necessary.
 
@@ -62,7 +62,7 @@ Advertising and Resolving DNS servers perform different tasks and should therefo
 Client applications need a resolver to use DNS. This is standard integrated in the common operating systems. However, it must be ensured that the resolvers of the internal IT systems use the internal resolving DNS servers for name resolution. Under no circumstances should you consult external DNS servers by default. In addition, the DNS suffixes used by the resolvers should also be specified, for example * bsi.bund.de *. This automatically adds the rest of the domain name to the Fully Qualified Domain Name (FQDN) * hostx.bsi.bund.de * when * * name * resolves the name.
 
 #### APP.3.6.M4 Secure basic configuration of a DNS server
-Servers are attractive targets for attackers. If they manage to manipulate those servers, they can affect all services that use DNS, such as web servers, email servers, or remote administration applications. Therefore, a thorough basic configuration of DNS servers is essential.
+Servers are attractive targets for attackers. If they manage to manipulate these servers, they can affect all services that use DNS, such as web servers, email servers, or remote administration applications. Therefore, a thorough basic configuration of DNS servers is essential.
 
 ** DNS server version **
 
@@ -102,13 +102,13 @@ Those responsible must inform themselves about current security vulnerabilities 
 
 For products for which no security patches are (yet) available from the manufacturer, it must be checked in good time whether it is still responsible to use them. It will then also be necessary to examine which additional measures can be implemented in order to nevertheless protect the affected systems.
 
-Before any updates or patches are installed, always back up the system, which will restore the original state if problems occur. In advance, it must be checked on a test system whether the security updates are compatible and do not cause any errors.
+Before any updates or patches are installed, always back up the system so that it can recover to its original state if problems occur. In advance, it must be checked on a test system whether the security updates are compatible and do not cause any errors.
 
 It should be documented when, by whom and for what reason patches and updates were recorded. From the documentation, the current patch level of the system must be quickly determined at any time. In this way, those responsible can quickly become aware of whether a new vulnerability also endangers their own systems.
 
 #### APP.3.6.M6 Secure Dynamic DNS Updates
 
-To be able to use dynamic updates securely, it must be ensured that only legitimate IT systems can make changes to domain information. Furthermore, it must be determined which domain information the individual IT systems are allowed to change. To ensure that domain information is not manipulated by unauthorized IT systems using dynamic updates, there are two options:
+In order to be able to use dynamic updates securely, it must be ensured that only legitimate IT systems can make changes to domain information. Furthermore, it must be determined which domain information the individual IT systems are allowed to change. To ensure that domain information is not manipulated by unauthorized IT systems using dynamic updates, there are two options:
 
 * Restriction of authorized hosts using IP addresses,
 * Restriction of authorized hosts using TSIG (see APP.3.6.M18 Extended coverage of zone transfers).
@@ -153,14 +153,14 @@ It is therefore a concept to design how a failure can minimize the resulting con
 
 * The contingency planning for DNS servers must be integrated into the existing contingency plan.
 * A system failure can lead to data loss. Therefore, a data protection concept for the zone files has to be created. This must be integrated into the existing data protection concept.
-* In addition to the disaster recovery plan for the DNS server, there must also be an emergency plan for the underlying operating system.
+* In addition to the disaster recovery plan for the DNS server, an emergency plan must also exist for the underlying operating system.
 * A functioning internet connection is required for the operation of a DNS server for requests from the Internet.
 * The system configuration must be documented. Important tasks must be described so that in the event of an emergency, the entire system can be restored by IT staff without prior knowledge of this system configuration.
 * If the failure was the result of an attack, the vulnerability must be resolved and documented.
 * A recovery plan must be created so that the IT system (s) can be booted up again in a regulated manner.
 ### 2.2 Standard measures
 
-Together with the basic measures, the following measures correspond to the state of the art in the field of "DNS servers".
+Together with the basic measures, the following measures correspond to the state of the art in the area of ​​"DNS servers".
 
 #### APP.3.6.M10 Selection of a suitable DNS server product
 
@@ -176,7 +176,7 @@ DNS server products vary in performance and ease of use. When procuring such a p
 The hardware on which a DNS server is to be operated decisively influences the overall performance of the resulting system. It should also be considered how many requests a DNS server needs to serve on average, whether it is a resolving DNS server accepting recursive requests, or whether it is an Advertising DNS server that accepts only iterative requests and whether DNSSEC should be used.
 For DNS servers, sufficient main memory is important, which prevents the server from having to swap out memory contents to the hard disk, thus increasing response times. When using DNSSEC, it is important to ensure that processor performance is increased accordingly to maintain adequate throughput for cryptographic operations. The selected capacities for main memory and processor performance must be checked in regular operation, since the actual required capacities can only be accurately determined here.
 
-In order to avoid that foreign processes influence the DNS server, only the DNS server should be operated on the hardware used. To ward off distributed denial-of-service attacks, DNS servers should have broadband and robust network connectivity.
+In order to avoid external processes influencing the DNS server, only the DNS server should be operated on the hardware used. To ward off distributed denial-of-service attacks, DNS servers should have broadband and robust network connectivity.
 
 #### APP.3.6.M12 Training of the persons responsible [Supervisor, Head IT]
 
@@ -202,7 +202,7 @@ For training and further education, the institution should plan a sufficient bud
 
 The main function of DNS is to resolve names and IP addresses. In order to meet these requirements, DNS servers store, among other things, the assignment of names and IP addresses of all computers and network components. Part of this information needs to be published, eg. DNS server, web server, mail server, file server, VPN connection points. If this domain information were not publicly available, it would not be possible to establish a connection with domain names via the Internet to these servers.
 
-In contrast, domain information about internal computers and network components is usually not intended for the public and should therefore remain internal to the institution. Because domain information often tells you something about the function or location of the IT component in question, DNS Information Leakage is used when this information is published. The publication itself does not represent any direct damage to the information network. However, the domain information obtained can be used to prepare an attack on the information network. An attacker can gain an overview of the network, the security-related components and the worthwhile goals.
+In contrast, domain information about internal computers and network components is usually not intended for the public and should therefore remain internal to the institution. Because domain information often tells you something about the role or location of the IT component in question, DNS Information Leakage speaks when this information is published. The publication itself does not represent any direct damage to the information network. However, the domain information obtained can be used to prepare an attack on the information network. An attacker can gain an overview of the network, the security-related components and the worthwhile goals.
 
 The namespace of an information network should be divided into a public and an institution-internal area. The public part should only contain domain information (typically IP address and hostname) to make services that should be accessible from outside work well.
 Within the institution, the visibility of the information usually does not have to be limited. Which domain information is visible to the outside and which is not, should be taken into account when planning the DNS deployment.
@@ -229,7 +229,7 @@ The log files of the DNS server as well as the underlying operating system shoul
 * frequent requests for specific domain names,
 * frequent requests for domain names that do not exist,
 * frequent unauthorized recursive requests.
-Irregularities do not necessarily mean that the server is compromised. Often they also occur due to incorrect settings.
+Irregularities do not necessarily indicate that the server is compromised. Often they also occur due to incorrect settings.
 
 #### APP.3.6.M16 Integration of a DNS server into a "P-A-P" structure
 
@@ -239,11 +239,11 @@ Especially DNS server products are always a source of security problems. Due to 
 
 DNS servers require the following communication channels:
 * Resolving DNS server allowed on port 53 of the Advertising DNS server UDP
-* Advertising DNS server is allowed on all ports of Resolving DNS server UDP (only for stateless firewall necessary)
+* Advertising DNS server is allowed on all ports of Resolving DNS server UDP (only necessary with stateless firewall)
 * Resolving DNS server allowed on port 53 of its forwarder UDP
-* Forwarder is allowed on all ports of Resolving DNS server UDP (only for stateless firewall necessary)
+* Forwarder may be used on all ports of Resolving DNS server UDP (only for stateless firewall necessary)
 * External network allowed on port 53 of the Advertising DNS server UDP
-* Advertising DNS server is allowed on all ports of external DNS servers UDP and TCP (only necessary for stateless firewall)
+* Advertising DNS server is allowed on all ports of external DNS servers UDP and TCP (only necessary with stateless firewall)
 * Internal network allowed on port 53 of Resolving DNS server UDP
 * Resolving DNS server is allowed on all ports of internal network UDP (only for stateless firewall necessary)
 * Primary DNS server is allowed on port 53 of its Secondary DNS servers UDP and TCP
@@ -254,13 +254,13 @@ If only these rules are implemented, only limited communication from the Interne
 
 ** DNS server ** in a "P-A-P" structure
 
-In order to integrate DNS securely into a "P-A-P" structure, the structure shown in Figure 1, in which there is no direct connection between a client in the trusted network and a DNS server in the untrusted network (and vice versa), can be used. Two separate DNS servers are used.
+In order to integrate DNS securely into a "P-A-P" structure, the structure shown in Figure 1, in which no direct connection between a client in the trusted network and a DNS server in the untrusted network (and vice versa) takes place. Two separate DNS servers are used.
 
-The Advertising DNS server, which contains the externally available information, is placed in a DMZ of the outer packet filter. It is set up as a primary DNS server for the domain of the trusted network and contains only the absolutely necessary information, for example:
+The Advertising DNS server, which contains the externally available information, is located in a DMZ of the outer packet filter. It is set up as a primary DNS server for the domain of the trusted network and contains only the absolutely necessary information, for example:
 
 * Name and IP address of the external mail server (MX record)
 * Names and addresses of information servers that provide information to the public. In this case, a distinction must be made between the servers that are located in front of the Application Level Gateway (ALG) and those that are located behind the ALG. For the former, the address of the server itself must be entered, for the latter the address of the ALG.
-The Resolving DNS server is placed in a DMZ of the inner packet filter. It contains the information about the computers of the internal network. For computers of the internal network, the Resolving DNS server is entered as DNS server: All clients of the trusted network use only the Resolving DNS server, for Unix computers, for example, by means of entries in the file * / etc / resolv.conf. * Required a client in the trusted network domain information from the untrusted network, he makes the request to the Resolving DNS server. As a forwarder, this server uses a public DNS server (or a specially configured forwarder) for requests that involve external names. Direct access to the Resolving DNS server from the untrusted network should be prevented by packet filtering rules so that the domain information of the trusted network is only visible in the trusted network.
+The Resolving DNS server is placed in a DMZ of the inner packet filter. It contains the information about the computers of the internal network. For computers of the internal network, the Resolving DNS server is entered as DNS server: All clients of the trusted network use only the Resolving DNS server, for Unix computers, for example, by means of entries in the file * / etc / resolv.conf. * Required a client in the trusted network domain information from the untrusted network, so he makes the request to the Resolving DNS server. As a forwarder, this server uses a public DNS server (or an extra forwarder) for queries that involve external names. Direct access to the Resolving DNS server from the untrusted network should be prevented by packet filtering rules so that the domain information of the trusted network is only visible in the trusted network.
 
 The packet filter used must be configured in such a way that only the DNS service is permitted between the DNS servers. H. Port 53 as (depending on the direction in question) source or destination port. The Advertising DNS server should not allow any connections to the internal network. The server should only be administered via appropriately secured connections (eg SSH-2).
 Table 1 describes a possible access policy configuration that can be implemented using appropriate packet filter rules. It is assumed that the servers are administered via an SSH connection from the internal network and that UDP is used for DNS as the carrier protocol. Log data is transmitted via syslog to a log server.
@@ -269,7 +269,7 @@ Table 1: Access rule configuration
 
 ** Domain registration with external service provider **
 
-In this alternative, important domain information is stored at an external service provider and not provided by its own DNS server. The difference to the scenarios just described consists essentially in the omission of the Advertising DNS server. DNS queries from the external network to domain information from the internal network are not sent to the internal DNS DNS server, but to the DNS server of the external service provider and answered by this. When resolving requests for external DNS names or IP addresses, the resolving DNS server accesses a DNS server in the external network, usually operated by the Internet provider, directly across the firewall.
+In this alternative, important domain information is stored at an external service provider and not provided by its own DNS server. The difference to the scenarios just described consists essentially in the omission of the Advertising DNS server. DNS queries from the external network to domain information from the internal network are not sent to the internal DNS DNS server, but to the DNS server of the external service provider and answered by this. When resolving requests for external DNS names or IP addresses, the Resolving DNS server accesses a DNS server in the external network, usually operated by the Internet provider, directly across the firewall.
 
 Even with this integration variant, only the absolutely necessary domain information should be offered externally, such as the name and IP address of the mail server and the ALG. For particularly harmless institutions internal users, the Resolving DNS server can also be operated in the internal network, rather than in a DMZ of the inner packet filter, which facilitates the administration of the packet filter something.
 
@@ -277,9 +277,9 @@ Advantages of this variant are the low investment costs and the low complexity o
 
 #### APP.3.6.M17 Use of DNSSEC
 
-DNSSEC is designed to protect DNS against attacks, including cache poisoning attacks. This is realized by asymmetric cryptography. At DNSSEC, all zone information is signed with a private key. These signatures can be verified using the associated public key. The key pair is called a zone signing key (ZSK). If a DNSSEC-supporting resolver makes a request to a DNS server that has DNSSEC configured, the server will respond by returning the domain information containing the signatures. The resolver can use the signature and public key to verify that the domain information is correct.
+DNSSEC is designed to protect DNS against attacks, including cache poisoning attacks. This is realized by asymmetric cryptography. At DNSSEC, all zone information is signed with a private key. These signatures can be verified using the associated public key. The key pair is called a zone signing key (ZSK). If a DNSSEC-supporting resolver makes a request to a DNS server that has DNSSEC configured, the server will respond by returning the domain information with the signatures. The resolver can use the signature and public key to verify that the domain information is correct.
 
-To ensure the authenticity of the ZSK, it is signed using key-signing keys (KSK). A hash value of the public part of the KSK is transmitted to the parent domain. The parent domain uses its keys to sign the hash value and confirm the authenticity of the hash value. This creates a chain of trust. If the parent domain does not use DNSSEC, it has no keys and can not create a signature to verify the authenticity of the KSK. However, you can tell your DNS servers to trust their own keys, thus creating islands of trust. As DNSSEC becomes more prevalent, these trusted islands become larger, and thus the security level higher. DNSSEC offers the following security mechanisms:
+To ensure the authenticity of the ZSK, it is signed using key-signing keys (KSK). A hash value of the public part of the KSK is transmitted to the parent domain. The parent domain uses its keys to sign the hash value and confirm the authenticity of the hash value. This creates a chain of trust. If the parent domain does not use DNSSEC, it has no keys and can not create a signature to verify the authenticity of the KSK. However, you can tell your DNS servers to trust their own keys, thus creating trust islands (Island of Trust). As DNSSEC becomes more prevalent, these trusted islands become larger, and thus the security level higher. DNSSEC offers the following security mechanisms:
 
 * The source of DNS information is authenticated.
 * The integrity of the domain information is ensured, so domain information can no longer be manipulated because the signature makes this manipulation visible. For example, customers can be sure to communicate with the right web server or mail server.
@@ -290,7 +290,7 @@ With DNSSEC and the cryptographic operations it requires, it may be necessary to
 
 #### APP.3.6.M18 Extended coverage of zone transfers
 
-To achieve a higher level of protection, zone transfers can be secured via transaction signatures (TSIG). TSIG defines symmetric keys on the primary DNS server and the secondary DNS server (s). When a zone transfer is started, TSIG generates a hash message authentication code (HMAC) from the binary data of the request using the symmetric key and a hash function. The HMAC will be attached to the request. The secondary DNS server, which also knows the key, calculates the HMAC independently. If the number of received and calculated HMACs is the same, the zone transfer will be carried out, otherwise it will be rejected. This method also protects against IP spoofing, in contrast to IP address-based security. However, with TSIG, it should be noted that not every DNS server product has this feature. There may also be manufacturer-specific deviations in the respective implementation.
+To achieve a higher level of protection, zone transfers can be secured via transaction signatures (TSIG). TSIG defines symmetric keys on the primary DNS server and the secondary DNS server (s). When a zone transfer is started, TSIG generates a hash message authentication code (HMAC) from the binary data of the request using the symmetric key and a hash function. The HMAC will be attached to the request. The Secondary DNS server, which also knows the key, calculates the HMAC independently. If the number of received and calculated HMACs is the same, the zone transfer will be carried out, otherwise it will be rejected. This method also protects against IP spoofing, in contrast to IP address-based security. However, with TSIG, it should be noted that not every DNS server product has this feature. There may also be manufacturer-specific deviations in the respective implementation.
 
 #### APP.3.6.M19 Disposal of DNS servers
 
@@ -317,7 +317,7 @@ The contingency plan for DNS servers must be tested regularly on a regular basis
 
 #### APP.3.6.M21 Hidden Master (CIA)
 
-A so-called hidden master configuration ensures that the primary advertising DNS server is not accessible from the outside and is not visible in the DNS zone data. Requests will only be answered by at least two secondary Advertising DNS servers, which will retrieve their data via a secure line from the hidden primary advertising DNS server.
+A so-called hidden master configuration ensures that the primary advertising DNS server is not accessible from the outside and is not visible in the DNS zone data. Requests will only be answered by at least two secondary Advertising DNS servers, which will retrieve their data via a secured line from the hidden primary advertising DNS server.
 
 #### APP.3.6.M22 Connection of DNS servers via different providers [IT manager] (IA)
 
@@ -332,7 +332,7 @@ The Domain Name System (DNS) is a network service used to resolve host names of 
 
 ** domain name space **
 
-DNS is a distributed database that manages the tree-shaped domain namespace (see Figure 2). The tree consists of nodes and leaves, which are called labels. The concatenation of the labels separated by dots results in a domain name. The domain namespace is divided into different domains. The topmost level, the root, is represented as a dot and named * root *. Below are the top-level domains such as. * Com *,. * Edu *,. * De *,. * At *, then the second-level domains like. * Bund * etc.
+DNS is a distributed database that manages the tree-shaped domain namespace (see Figure 2). The tree consists of nodes and leaves, which are called labels. The concatenation of the labels separated by dots results in a domain name. The domain namespace is divided into different domains. The top level, the root, is represented as a dot and referred to as * root *. Below are the top-level domains such as. * Com *,. * Edu *,. * De *,. * At *, then the second-level domains like. * Bund * etc.
 
 The domain name space stores information about the assignment of IP addresses to domain names. DNS can be referred to as a kind of directory in computer networks whose main task is to resolve names. It is sufficient, for example, to enter the domain name * www.bsi.bund.de * in the browser, DNS will find the corresponding IP address in the domain name space and the browser can connect to the result of the search for the corresponding web server.
 
@@ -341,7 +341,7 @@ Basically, a distinction must be made between domains and zones. A zone, as show
 For each zone, at least two DNS servers are authoritative, meaning that these DNS servers manage the domain information for that zone. In addition, each DNS server knows the authoritative DNS servers for its subdomains. This means that, for example, the DNS server for * com * knows the DNS server for * example *, and can therefore refer to it with a name resolution.
 
 ** ** Resolver
-Client applications need a resolver to participate in DNS. This is often part of the operating system. If a client application requires name resolution, it makes a request to the resolver. This packs the request into a DNS-compliant packet, sends it to a DNS server, interprets the response and returns the data to the appropriate application. To increase the performance of DNS, the resolver caches the response data for a specified time. As long as the data is in the cache, the DNS server will not be interrogated again in a repeated resolution.
+Client applications need a resolver to participate in DNS. This is often part of the operating system. If a client application requires name resolution, it makes a request to the resolver. This packs the request into a DNS-compliant packet, sends it to a DNS server, interprets the response and transmits the data back to the appropriate application. To increase the performance of DNS, the resolver caches the response data for a specified time. As long as the data is in the cache, the DNS server will not be interrogated again in a repeated resolution.
 
 ** DNS server **
 
@@ -355,7 +355,7 @@ Advertising DNS servers are usually responsible for processing requests for thei
 
 Resolving DNS servers, on the other hand, usually process requests from within the institution's internal network. Once they have the domain information they need, they, like Advertising DNS servers, provide the answer. Otherwise, Resolving DNS servers will not direct to another DNS server, but will inherit the name resolution itself.
 
-DNS servers that can answer requests using their own zone information are said to be authoritative. If a DNS server receives a request that does not affect its own zone (s), and it does not have any information in the cache, a DNS server can respond in three ways:
+DNS servers that can answer requests using their own zone information are said to be authoritative. If a DNS server receives a request that is not related to its own zone (s) and does not have any information in the cache, a DNS server can respond in three ways:
 
 * Delegation Delegation means that some of the domain name space information has been swapped out to a subdomain. For example, if the DNS server receives a request for bund.de, the DNS server will forward the request to the appropriate DNS server. Since a DNS server must know all the DNS servers responsible for the delegated zones, it can forward the request directly to the responsible DNS servers.
 * Resolution via root name serversThere are a total of 13 root DNS servers. These root DNS servers have stored which DNS servers are authoritative for the top-level domains. If the data you want is outside the managed domain and there is no data in the cache, you must start a recursive resolution, starting with the root name servers. This behavior corresponds to a resolving DNS server.
@@ -373,11 +373,11 @@ Because DNS is required by many networking applications, the specification (RFC 
 
 ** Caching-Only DNS Server **
 
-The caching-only DNS server is a special case of a resolving DNS server. Typically, a DNS server, whether advertising or resolving DNS server, is authoritative for one or more zones. This means that he has read out the domain information about these zones from the master files or received them from his master DNS server via a zone transfer. Caching-only DNS servers, on the other hand, are not authoritative for any zone; they have no zones themselves. They are usually used to receive requests and perform name resolution. Caching-only DNS servers are often used as forwarders for intra-institution resolving DNS servers when they need to resolve domain information from the Internet.
+The caching-only DNS server is a special case of a resolving DNS server. Typically, a DNS server, whether advertising or resolving DNS server, is authoritative for one or more zones. This means that he has read out the domain information about these zones from the master files or received from his master DNS server via a zone transfer. Caching-only DNS servers, on the other hand, are not authoritative for any zone; they have no zones themselves. They are usually used to receive requests and perform name resolution. Caching-only DNS servers are often used as forwarders for intra-institution resolving DNS servers when they need to resolve domain information from the Internet.
 
 ### 3.2 Literature
 
-Further information about threats and security measures in the area of ​​"DNS servers" can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"DNS servers" can be found in the following publications, among others:
 
 * #### [BSICS055] Secure Deployment of DNS Services:
 

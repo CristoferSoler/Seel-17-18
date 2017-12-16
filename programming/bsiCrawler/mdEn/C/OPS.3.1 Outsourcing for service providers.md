@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-In outsourcing, outsourcing service providers take over business processes and services (eg security or cleaning staff) in whole or in part from outsourcing institutions (outsourcing customers). The operation of hardware and software can also be taken over as a service. Regardless of which services are taken over, this requires a close bond between the outsourcing service provider and the outsourcing customer. The outsourcing service provider is not spared the risks associated with the outsourcing relationship. He must implement the risk-reducing security requirements that are generally defined by the outsourcing customer (see the OPS.2.1 Outsourcing for Customers module). It is not only in the interest of the outsourcing customer, but also that of the outsourcing service provider, to provide the agreed service and to comply with the agreed security level. In case of failure to meet the requirements imposed on him sometimes threatened high penalties and, where appropriate, other legal consequences, which not only have financial implications, but also damage the reputation sustainable. The focus of this module is therefore on requirements that deal with the planning, implementation, control and management of information security aspects in the context of outsourcing from the point of view of the service provider.
+In outsourcing, outsourcing service providers take over business processes and services (eg security or cleaning staff) in whole or in part from outsourcing institutions (outsourcing customers). The operation of hardware and software can also be taken over as a service. Regardless of which services are taken over, this requires a close bond between the outsourcing service provider and the outsourcing customer. The outsourcing service provider is not spared the risks associated with the outsourcing relationship. He must implement the risk-reducing security requirements that are generally defined by the outsourcing customer (see the OPS.2.1 Outsourcing for Customers module). It is not only in the interest of the outsourcing customer, but also that of the outsourcing service provider, to provide the agreed service and to comply with the agreed security level. In case of failure to meet the requirements imposed on him sometimes threatened high penalties and, where appropriate, other legal consequences that not only have financial implications, but can also damage the reputation sustainable. The focus of this module is therefore on requirements that deal with the planning, implementation, control and management of information security aspects in the context of outsourcing from the point of view of the service provider.
 
 ### 1.2 Objective
 
@@ -22,20 +22,20 @@ The terms outsourcing and cloud have many parallels. For providers of outsourcin
 
 The following specific threats and vulnerabilities are of particular importance in outsourcing service providers:
 
-### 2 1 Failure of a Wide Area Network (WAN)
+### 2 1 Failure of a wide area network (WAN)
 
 Outsourced service providers whose services are not provided locally by the customer are highly dependent on the availability of wide area networks (WANs). For economic reasons, services are usually provided from a few central locations. The connection to the outsourcing customer takes place via wide area networks. The failure of a long-distance network can therefore lead to the outsourced service can no longer be provided.
 
 ### 2 2 Missing or inadequate information security regulations
 
-As part of an outsourcing, outsourcing service providers receive and process large amounts of information from outsourcing customers. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage, for example if responsibilities are unclear. This is the case, for example, if the regulations and instructions are not updated in the event of technical, organizational or personnel changes, such as when contacts are changed. The range of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
+As part of an outsourcing, outsourcing service providers receive and process large amounts of information from outsourcing customers. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage, for example if responsibilities are unclear. This is the case, for example, if the regulations and instructions are not updated in the event of technical, organizational or personnel changes, such as when contact persons change. The spectrum of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
 
 ### 2 3 Inappropriate access, access and access rights management
 Depending on the outsourcing plans, it may be necessary for the outsourcing customer's employees to have access, access and access rights to IT systems, information, buildings or rooms of the outsourcing service provider. If the outsourcing service provider's procurement, administration and control of these rights are poorly regulated, this can lead to far-reaching security problems. If the processes for granting the rights are too complex, it may take too long for the employees of the outsourcing customer to receive the urgently needed rights. If IT operations grant clients too many rights, they could also gain access to areas of other clients.
 
 ### 2 4 Missing or inadequate testing and approval process
 
-If an outsourcing service provider has not established a sufficient test and release process for hardware and software, this represents a considerable threat to IT operations. Existing hardware and software failures or security gaps in the configuration may not be able to do so on time recognized. Introducing new components into the operating environment without first testing them sufficiently can also result in errors or security holes from one tenant area having a negative impact on other customers.
+If an outsourcing service provider has not established a sufficient test and release procedure for hardware and software, this poses a considerable threat to IT operations. Existing hardware and software failures or security gaps in the configuration may not be able to do so on time recognized. Introducing new components into the operating environment without first testing them sufficiently can also result in errors or security vulnerabilities in one tenant area having a negative impact on other customers.
 
 If inadequate testing and release procedures lead to security incidents, the necessary protection of the customer's data is no longer guaranteed and penalties or contract terminations can occur and thus have financial consequences.
 
@@ -52,7 +52,7 @@ Insufficiently established or inadequately implemented information security mana
 It may happen that, due to inadequate contractual arrangements, an outsourcing service provider does not provide a service as required to maintain the customer's security level. If the need for protection and the resulting requirements for the security of outsourced data or systems are unknown to the outsourcing service provider, they can not be adequately protected.
 
 ### 2 8 Insufficient regulations for the end of an outsourcing
-Without sufficient and appropriate regulation for the termination of the outsourcing contract, there is a risk that the business relationship will not be dissolved without conflict. Thus it could happen that information of the customer is irrevocably deleted at the outsourcing service provider, before they were completely and correctly transferred to the customer. A premature cancellation of customer information may result in penalties for the service provider.
+Without sufficient and appropriate regulation for the termination of the outsourcing contract, there is a risk that the business relationship will not be resolved without conflict. Thus it could happen that information of the customer is irrevocably deleted at the outsourcing service provider, before they were completely and correctly transferred to the customer. A premature cancellation of customer information may result in penalties for the service provider.
 
 ### 2 9 Inadequate emergency preparedness concept for outsourcing
 
@@ -60,7 +60,7 @@ If an outsourcing service provider has only an inadequate emergency preparedness
 
 ### 2 10 Failure of the systems of an outsourcing service provider
 
-In the case of an outsourcing service provider, the IT systems and processes operated there can partially or completely fail, which also affects the outsourcing customer. In the case of inadequate client separation, the failure of a system that is not assigned to the outsourcing customer can in some circumstances mean that it can no longer call up its contractually guaranteed service. Similar problems arise when the connection between outsourcing service providers and customers fails.
+In the case of an outsourcing service provider, the IT systems and processes operated there can partially or completely fail, which also affects the outsourcing customer. In the case of inadequate client separation, the failure of a system that is not assigned to the outsourcing customer may mean that it can no longer call up its contractually guaranteed service. Similar problems arise when the connection between outsourcing service providers and customers fails.
 
 This may mean for the outsourcing service provider that, if contractually agreed, the outsourcing customer can assert claims for damages.
 
@@ -74,14 +74,14 @@ Social engineering is a way to gain unauthorized access to information or IT sys
 
 ### 2 13 Lack of multi-client capability at the outsourcing service provider
 
-Outsourcing service providers usually have many different customers who use the same resource base (IT systems, networks, personnel). If the IT systems and data of the different customers are not sufficiently separated from each other, there is a risk that one customer will be able to access the area of ​​another customer. In addition, there could be conflicts of interest with the outsourcing customer if the service provider has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
+Outsourcing service providers usually have many different customers who use the same resource base (IT systems, networks, personnel). If the IT systems and data of different customers are not sufficiently separated from one another, there is a risk that one customer will be able to access another customer's area. In addition, there could be conflicts of interest with the outsourcing customer if the service provider has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
 
 3 requirements
 ---------------
 
 The following are specific requirements for Outsourcing for Service Providers. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 The following requirements MUST be implemented as a priority:
 
 #### OPS.3.1.A1 Creation of a rough concept for the outsourcing service
@@ -106,18 +106,18 @@ It should be determined between outsourcing service providers and customers whic
 
 #### OPS.3.1.A5 Regulations for the use of the staff of the outsourcing service provider [Head of Human Resources, ISB Outsourcing Service Provider]
 
-Employees of the outsourcing service provider SHOULD be instructed in their tasks and informed about existing information security regulations of the outsourcing customer. Employees of the outsourcing service provider SHOULD be bound in writing to comply with applicable laws, regulations, confidentiality agreements and internal regulations. It SHOULD give representation arrangements in all areas.
+Employees of the outsourcing service provider SHOULD be instructed in their tasks and informed about existing information security regulations of the outsourcing customer. Employees of the Outsourcing Services Provider SHOULD be bound by the obligation to comply with applicable laws, regulations, confidentiality agreements and internal regulations. It SHOULD give representation arrangements in all areas.
 
 #### OPS.3.1.A6 Regulations for the Use of External Personnel [Head of Personnel, ISB Outsourcing Service Provider]
 
-If the outsourcing service provider uses external personnel, the outsourcing customer SHOULD be informed about this. External employees with outsourcing responsibilities SHOULD be obliged to comply with relevant laws, regulations and internal regulations in writing. They SHOULD be instructed in their tasks and especially in the safety requirements. Short-term or one-time deployed foreign personnel SHOULD be treated like visitors.
+If the outsourcing service provider uses external personnel, the outsourcing customer SHOULD be informed about this. External employees with outsourcing responsibilities SHOULD be required to be bound by the relevant laws, regulations and internal regulations in writing. They SHOULD be instructed in their tasks and especially in the safety requirements. Short-term or one-time deployed foreign personnel SHOULD be treated like visitors.
 
 #### OPS.3.1.A7 Creation of a client concept by the outsourcing service provider [ISB outsourcing service provider]
 A suitable client concept SHOULD ensure that the application and data contexts of different customers are clearly separated. The client concept SHOULD be created by the outsourcing service provider and made available to the outsourcing customer. The client concept SHOULD provide adequate security for the protection needs of the outsourcing customer. The required mechanisms for client separation at the outsourcing service provider SHOULD be implemented sufficiently.
 
 #### OPS.3.1.A8 Agreement on the connection to networks of outsourcing partners [ISB outsourcing service provider]
 
-Before the connection of a separate network to the network of the outsourcing service provider, all security-relevant aspects in an agreement SHOULD be determined in writing. It SHOULD be defined who is allowed to access the areas and services of the other network from one network. There should be a contact person on each side for both organizational and technical issues of the network connection. On both sides, all identified vulnerabilities SHOULD be eliminated and the required security level demonstrably achieved before the network connection is activated. In case of security problems on one of the two sides SHOULD be determined who should be informed about it and which escalation steps are to be initiated.
+Before the connection of a separate network to the network of the outsourcing service provider, all security-relevant aspects in an agreement SHOULD be determined in writing. It SHOULD be defined who is allowed to access the areas and services of the other network from one network. There should be a contact person on each side for both organizational and technical issues of the network connection. On both sides, all identified vulnerabilities SHOULD be eliminated and the required security level demonstrably reached before the network connection is activated. In case of security problems on one of the two sides SHOULD be determined who should be informed about it and which escalation steps are to be initiated.
 
 #### OPS.3.1.A9 Agreement on Data Exchange between the Outsourcing Partners [ISB Outsourcing Service Provider]
 
@@ -134,7 +134,7 @@ The outsourcing partners SHOULD regularly conduct joint exercises and tests to m
 Access, access and access rights SHOULD be regulated, both for outsourcing service personnel and outsourcing customers. It should also be regulated which permissions auditors and other examiners receive. It should always be awarded only as many rights as it is necessary for the task perception. It SHOULD provide a regulated procedure for the allocation, management and withdrawal of entitlements.
 
 #### OPS.3.1.A12 Change Management [IT Operations, Change Manager]
-There should be guidelines for making changes to IT components, software or configuration data. It SHOULD be stipulated that safety aspects should also be taken into account when making changes. All changes SHOULD be planned, tested, approved and documented. The nature and extent of the documentation on the changes SHOULD be coordinated and provided with the outsourcing customer. SHOOTING solutions should be worked out before changes are made. For larger, security-relevant changes, the information security management of the outsourcing institution SHOULD be involved in advance.
+There should be guidelines for making changes to IT components, software or configuration data. It SHOULD be stipulated that security aspects are also taken into account when making changes. All changes SHOULD be planned, tested, approved and documented. The nature and extent of the documentation on the changes SHOULD be coordinated and provided with the outsourcing customer. SHOOTING solutions should be worked out before changes are made. For larger, security-relevant changes, the information security management of the outsourcing institution SHOULD be involved in advance.
 
 #### OPS.3.1.A13 Secure migration for outsourcing projects
 

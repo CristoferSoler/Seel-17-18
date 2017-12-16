@@ -9,7 +9,7 @@ Homebased telework distinguishes between home-based work and alternating telewor
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose typical hazards are identified and specific requirements for teleworking are defined.
+The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose, typical hazards are identified and specific requirements for teleworking are defined.
 
 ### 1.3 Delimitation
 
@@ -40,7 +40,7 @@ But not only teleworkers can use their computer improperly, but also relatives o
 
 ### 2 4 Delays due to temporarily limited availability of teleworkers
 
-Usually, a teleworker has no fixed working hours at the teleworkstation. Only fixed times are agreed when it must be reachable. In the case of alternating teleworking, his working hours are also distributed between the teleworkstation and the in-house workplace.
+Usually, a teleworker has no fixed working hours at the teleworkstation. Only fixed times are agreed on when he must be reachable. In the case of alternating teleworking, his working hours are also distributed between the teleworkstation and the in-house workplace.
 
 If it is necessary for information to be obtained from the teleworker at short notice or for information to be passed on to the teleworker, delays may occur due to the difficult accessibility. Even if the information is sent via e-mail, it does not necessarily shorten the response time since it can not be guaranteed that the teleworker will read the e-mail in a timely manner.
 
@@ -56,14 +56,14 @@ The tasks of the teleworker are usually designed so that he can work independent
 
 ### 2 7 Non-compliance with safety measures
 
-Especially at the teleworkplace it may be due to lack of control options that employees do not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
+Especially at the teleworkplace, due to a lack of control options, employees may not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
 
 3 requirements
 ---------------
 
 The following are specific requirements for the protection of teleworking. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -74,11 +74,11 @@ All relevant aspects of teleworking MUST be regulated. For information purposes,
 
 All safety requirements that a telework computer must meet must be specified. All access and access to the institution's communication computers MUST be kept to the minimum necessary.
 
-It MUST be ensured that only authorized persons are allowed to access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
+It MUST be ensured that only authorized persons can access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
 
 #### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
 
-Safety requirements for the communication link between teleworker and institution MUST be defined. It MUST be ensured that the confidentiality, integrity and authenticity of the transmitted data is guaranteed.
+It is necessary to define safety requirements for the communication link between the teleworking computer and the institution. It MUST be ensured that the confidentiality, integrity and authenticity of the transmitted data is guaranteed.
 
 All communication protocols and security mechanisms MUST meet the defined requirements of the institution. The strength of the required security mechanisms SHOULD be based on the protection needs of the transmitted data. In addition, the authenticity of the communication partners MUST be guaranteed.
 
@@ -107,7 +107,7 @@ It SHOULD be clearly defined which communication options may be used for telewor
 
 A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changes in security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
 
-#### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
+#### OPS.1.2.4.A9 Caring and maintenance concept for teleworking stations [teleworker, IT manager, IT operations]
 
 For teleworking places, a special care and maintenance concept SHOULD be created. The following aspects SHOULD be regulated: contact person for the user service, maintenance appointments, remote maintenance, transport of the IT equipment and introduction of standard teleworking computers. In order for the teleworkers to remain operational, they should be named contact persons for hardware and software problems.
 

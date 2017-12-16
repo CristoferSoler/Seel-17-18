@@ -1,0 +1,12 @@
+### 3.1 Basic requirements
+#### INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+#### INF.10.A2 Supervision of visitors [Staff]
+#### INF.10.A3 Closed windows and doors [Staff]
+### 3.2 Standard requirements
+#### INF.10.A4 Planning of meeting, event and training rooms
+#### INF.10.A5 Flying Wiring
+#### INF.10.A6 Setting up secure network access [Head IT]
+#### INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]
+#### INF.10.A8 Creation of a proof of use for rooms
+### 3.3 Requirements for increased protection requirements
+#### INF.10.A9 Resetting Training and Presentation Computers [IT Leader] (CA)

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Standard software is understood to mean software that is offered on the market and is usually obtained from specialized dealers, for example via catalogs or online portals. It is characterized by the fact that the user can install it himself and adapt it with little effort.
+Standard software is understood to mean software that is offered on the market and is usually obtained from specialist retailers, for example via catalogs or online portals. It is characterized by the fact that the user can install it himself and adapt it with little effort.
 
 These implementation notes for the relevant module show how institutions should deal with standard software in terms of security. For example, institutions must be able to create a standard software requirement catalog, select a suitable product, install it safely, manage licenses appropriately, and safely uninstall the product.
 
@@ -19,7 +19,7 @@ When procuring standard software, it should be defined how their deliveries are 
 
 **Implementation**
 
-Before using standard software, ensure that the integrity of the installation software is guaranteed (see CON.4.M1 * Ensuring Integrity of Standard Software *). In addition, standard software should be securely installed and configured afterwards (see CON.4.M3 * Secure installation and configuration of standard software *). For each application, an installation instruction should also be provided (see CON.4.M2 * Development of the standard software installation instructions *).
+Before using standard software, ensure that the integrity of the installation software is guaranteed (see CON.4.M1 * Ensuring Integrity of Standard Software *). In addition, standard software should be securely installed and configured afterwards (see CON.4.M3 * Secure installation and configuration of standard software *). For each application an installation instruction has to be created (see CON.4.M2 * Development of the standard software installation instructions *).
 
 **Business**
 
@@ -45,7 +45,7 @@ The installation must therefore be carried out exclusively from original data me
 
 Backup copies should be made and checked from the original media. Original media and all copies must be kept secure from unauthorized access. The copies made should be numbered and included in inventories. Copies that are no longer needed should be deleted or destroyed. Also, original media and original installers must be checked for malicious software before first use.
 
-Optionally, a checksum can be created via the original data carriers or via a reference version installed during the test. Based on this, the integrity of the media used for this or the versions stored in local networks or the correct installation can be checked prior to installation. In addition, installed programs can be provided with checksums in addition to protection against unauthorized changes to the shared configuration. In this way, even infections with previously unknown malware can be detected. It can also be determined if a virus infection occurred before or after installation.
+Optionally, a checksum can be generated via the original data carriers or via a reference version installed during the test. Based on this, the integrity of the media used for this or the versions stored in local networks or the correct installation can be checked prior to installation. In addition, installed programs can be provided with checksums in addition to protection against unauthorized changes to the shared configuration. In this way, even infections with previously unknown malware can be detected. It can also be determined if a virus infection occurred before or after installation.
 
 #### CON.4.M2 Development of the installation instructions for standard software
 
@@ -96,7 +96,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### CON.4.M4 Definition of responsibilities in the area of ​​standard software [department]
 
-Before the introduction of standard software, a number of responsibilities have to be B .:
+Before the introduction of standard software, a number of responsibilities have to be regulated, such as: B .:
 
 * Who creates a requirements catalog?
 * Who chooses products?
@@ -145,7 +145,7 @@ For the selection of a suitable product, therefore, first a catalog of requireme
 
 
  
-* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information about the maximum allowable processing time should be taken. Example:
+* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information on the maximum allowable processing time should be taken. Example:
 
  
 + Other simultaneously processed processes may not be slowed down by more than 30% by the product.
@@ -214,7 +214,7 @@ Typical safety requirements that a product can fulfill are briefly explained bel
 * Identification and Authentication: To many products, there will be requirements to identify and monitor those users who have access to the product. In addition to verifying the identity of the user, it is important to verify that the user is actually the person he claims to be. This is done by providing the product with information that is permanently linked to the user.
 * Access Control: For many products, it will be necessary to ensure that users are prevented from accessing information that they do not have access to or do not want to access. It may also be necessary to prevent users from creating, modifying or deleting information without authorization.
 * Preservation of evidence: For many products, it must be ensured that users' actions are recorded. Thus, the consequences can later be assigned to the user in question and the user can be made responsible for his actions.
-* Log Evaluation: For many products, it will be necessary to ensure that sufficient information is recorded about both normal and exceptional occurrences so that it can later be determined whether security breaches actually occurred and what information or other equipment was affected.
+* Log Evaluation: For many products, it will be necessary to ensure that sufficient information is recorded about both normal and exceptional occurrences so that it can be determined later whether there have actually been any security breaches and what information or other equipment has been affected.
 * Unadulterability: For many products, it will be necessary to ensure that certain relationships between different data remain correct and that data is transferred between individual processes without modification. In addition, functions must also be provided which allow the transfer of data between individual processes, users and objects to detect or prevent losses, additions or changes, and which make it impossible to determine the alleged or actual origin or destination of the data Change data transfer.
 * Reliability: For many products, it will be necessary to ensure that time-critical tasks are performed at the exact time it is needed, not sooner or later. It will also be ensured that non-time-critical tasks can not be converted into time-critical ones. Similarly, for many products, it will be necessary to ensure that access is possible at the required moment and resources are not unnecessarily requested or retained.
 * Transmission security: This term covers all functions intended to protect the data during transmission via communication channels: authentication, access control, data confidentiality, data integrity, transmission and receipt verification. Some of these functions are realized by means of cryptographic methods.
@@ -301,7 +301,7 @@ In addition, the different configurations of the installed software should be do
 
 In order to prevent licenses from being invalidated in case of hardware defects, hardware-independent licenses should be used. This allows an IT system to be replaced with less effort if the hardware fails. If this is not possible, appropriate precautions must be taken for failure, such as agreements with the manufacturer regarding a license transfer.
 
-If it is necessary to activate a product online through a manufacturer's licensing server, the license may subsequently expire and the product be deactivated. If possible, products should be chosen that do not have to be activated online. Again, precautions are to be taken for a failure.
+If it is necessary to activate a product online through a manufacturer's licensing server, the license may subsequently expire and the product may be deactivated. If possible, products should be chosen that do not have to be activated online. Again, precautions are to be taken for a failure.
 
 If feasible and economically viable, perpetual licenses should be preferred. This can be used to prevent a functional restriction if the license has expired or the system time deviates significantly.
 
@@ -334,7 +334,7 @@ In the case of a high protection requirement, the trustworthiness of standard so
 A generally accepted basis for the evaluation and certification of products has been the harmonized "Criteria for the Assessment of the Security of Information Technology Systems (ITSEC)" since 1991, and since 1998 the "Common Criteria for the Assessment and Assessment of the Security of Information Technology" adopted worldwide, shortly Common Criteria (CC). In Germany, the BSI carries out such certifications. If the evaluation result is positive and the ITSEC framework or the Common Criteria are complied with, the BSI will issue a safety certificate for the product under investigation.
 The associated certification document indicates which function was examined with which test depth and which evaluation was performed. The test depth ranges from evaluation level E 1 (lowest test depth) to evaluation level E 6 (highest test depth) for the ITSEC or from trustworthiness level EAL 1 (lowest test depth) to trustworthiness level EAL 7 (highest test depth) for the CC. In this case, the evaluation level E 1 of the ITSEC roughly corresponds to the trustworthiness level EAL 2 of the CC, etc. In addition, the tested mechanism strength of the implementation of the security functions is specified, which represents a measure of the effort required to overcome the security functions. ITSEC and CC distinguish here the mechanism strengths low, medium and high. In addition, instructions are given as to which boundary conditions must be observed when using the product.
 
-If several products with a reasonable price / performance ratio are available for IT procurement, only those with a security certificate should be considered. In this case, security certificates should be taken into account, in particular, if the evaluated scope of functions includes (as far as possible) the minimum functionality and the mechanism strength meets the protection requirement. The higher the level of verification specified in the certificate, the more confidence in the effectiveness and correctness of the security functions can be placed on the product.
+If several products with reasonable price / performance ratio are available for IT procurement, only those with a security certificate should be considered. In this case, security certificates should be taken into account, in particular, if the evaluated scope of functions includes (as far as possible) the minimum functionality and the mechanism strength meets the protection requirement. The higher the level of verification specified in the certificate, the more confidence in the effectiveness and correctness of the security functions can be placed on the product.
 
 ** Overviews of certified products **
 
@@ -351,7 +351,7 @@ The decisive feature of an encryption method is the quality of the algorithm as 
 In order to ensure the confidentiality of the information to be transmitted, the sender's and the recipient's IT systems must adequately protect access to the encryption program. If necessary, this program should be stored on a removable medium, usually kept locked and only played back when needed and used.
 
 ** Integrity protection through checksums, encryption or digital signature formation **
-If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
+If only the integrity of the data to be transmitted is to be ensured for the exchange of data, it must be distinguished whether protection against only accidental changes, eg. B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
 
 3 Further information
 ------------------------------

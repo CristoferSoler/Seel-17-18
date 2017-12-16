@@ -41,7 +41,7 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This should avoid data loss. However, the automated replication of unencrypted data involves risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
@@ -53,17 +53,17 @@ If the network structures of different clients are separated by virtual storage 
 
 ### 2 7 Failure of components of a storage solution
 
-Complex, network-based storage solutions often consist of many components (such as FC switches, storage controllers, virtualization appliances). If components of a storage solution fail, this can lead to important applications becoming inoperable and data loss threatening.
+Complex, network-based storage often consists of many components (such as FC switches, storage controllers, virtualization appliances). If components of a storage solution fail, this can lead to important applications becoming inoperable and data loss threatening.
 
 ### 2 8 Obtaining Physical Access to SAN Switches
 
-If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
+If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be accessing the distributed zoning database to change it so that it can access the storage systems.
 
 3 requirements
 ---------------
 The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -101,7 +101,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 Based on the institution's general security policy, a specific security policy for storage solutions SHOULD be created. It should describe in a comprehensible way requirements and specifications how storage solutions can be safely planned, administered, installed, configured and operated.
 
-The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
+The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
 
 #### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
 A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:

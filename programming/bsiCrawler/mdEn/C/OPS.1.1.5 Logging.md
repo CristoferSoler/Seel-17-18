@@ -15,7 +15,7 @@ The block contains requirements with which the logging of as many security-relev
 
 The present module only considers general aspects that are necessary for adequate logging. The logging of specific IT systems or applications is not treated here, but described in the respective modules.
 
-Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
+Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. B. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
 
 The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): Both aspects are not dealt with in the logging module, or only in passing.
 
@@ -24,7 +24,7 @@ Guidelines on how to deal with personal data are regulated in the module CON.2 *
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in logging:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​logging:
 
 ### 2 1 Missing or insufficient logging
 
@@ -39,7 +39,7 @@ Furthermore, logging data can be discarded or overwritten if the memory or hard 
 
 ### 2 3 Missing time synchronization during logging
 
-If the time is not synchronized on all IT systems in an information network, the logging data may not be correlated with each other, or the correlation may lead to erroneous statements because the different timestamps of events have no common basis. Lack of time synchronization thus makes it difficult to evaluate collected logging data, especially when stored on a central log server. Furthermore, a faulty or missing time synchronization can lead to the fact that the logging can not be used to secure evidence.
+If the time is not synchronized on all IT systems in an information network, the logging data may not be correlated, or the correlation may lead to incorrect statements because the different time stamps of events have no common basis. Lack of time synchronization thus makes it difficult to evaluate collected logging data, especially when stored on a central log server. Furthermore, a faulty or missing time synchronization can lead to the fact that the logging can not be used to secure evidence.
 
 ### 2 4 Incorrect planning during logging
 
@@ -67,7 +67,7 @@ Due to the complex information networks and diverse attack scenarios, the requir
 
 The following are specific requirements for logging. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -75,7 +75,7 @@ The following requirements MUST be implemented as a priority:
 
 Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what to log. The nature and extent of the logging should be based on the protection requirements of the information.
 
-The guideline MUST be prepared by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
+The guideline MUST be compiled by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
 
 #### OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
 
@@ -90,7 +90,7 @@ The system time of all logging IT systems and applications MUST always be synchr
 
 #### OPS.1.1.5.A5 Compliance with legal framework [Information Security Officer (ISB)]
 
-When logging, the legal provisions of the current federal / state data protection laws MUST be complied with (see CON.2 * Privacy *). In addition, any personal rights or co-determination rights of employee representatives MUST be respected. It must also be ensured that all other relevant statutory provisions are observed. Logging data MUST be deleted after a specified process. It MUST be technically prevented that logging data be deleted or changed uncontrolled.
+When logging, the legal provisions of the current federal / state data protection laws MUST be adhered to (see CON.2 * Privacy *). In addition, any personal rights or co-determination rights of employee representatives MUST be respected. It must also be ensured that all other relevant statutory provisions are observed. Logging data MUST be deleted after a specified process. It MUST be technically prevented that logging data be deleted or changed uncontrolled.
 
 ### 3.2 Standard requirements
 
@@ -104,7 +104,7 @@ In addition to security-related events (see OPS.1.1.5.A3 * Configuring System-le
 
 Lack of logging data or unavailability of a logging IT system,
 * Operational events that indicate exceptional utilization or use of individual services.
-The logging infrastructure SHOULD be sufficiently sized so that scaling can be considered in the sense of extended logging. Sufficient technical, financial and human resources should be available. If the logging infrastructure is to be set up and operated externally, a specialized service provider SHOULD be commissioned.
+The logging infrastructure SHOULD be dimensioned sufficiently so that scaling can be considered in the sense of extended logging. Sufficient technical, financial and human resources should be available for this. If the logging infrastructure is to be set up and operated externally, a specialized service provider SHOULD be commissioned.
 
 #### OPS.1.1.5.A7 Secure administration of logging servers
 The log server network SHOULD only be administered via a separate management network (out-of-band management). An authorization concept SHOULD be created for the administration accesses. Only administrators should be able to access the log servers specifically responsible for this (see * * OPS.1.1.5.A2 * Defining roles and responsibilities *).

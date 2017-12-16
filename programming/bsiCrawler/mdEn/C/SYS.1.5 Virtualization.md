@@ -47,11 +47,11 @@ Bottlenecks can not only affect the storage space on hard disks or in storage ne
 
 A snapshot can be used to freeze and secure the state of a virtual machine. If such a snapshot is restored at a later time, any changes made in the meantime will be lost. As a result, already patched security vulnerabilities can be open again. In addition, open files, file transfers, or database transactions can result in inconsistent data at the time of the snapshot.
 
-In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main memory are also backed up to disk and can be recovered and analyzed in a virtual environment outside the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
+In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main storage are also backed up to disk and can be recovered and analyzed in a virtual environment outside of the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
 
 ### 2 5 Failure of the management server for virtualization systems
 
-Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to issues such as resource bottlenecks or the failure of individual virtualization servers, integrate new virtualization servers into the infrastructure, or create new virtual IT systems. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
+Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to problems such as resource bottlenecks or the failure of individual virtualization servers or integrate new virtualization servers into the infrastructure or create new virtual IT systems during this time. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
 
 ### 2 6 Misuse of guest tools
 
@@ -65,7 +65,7 @@ The virtualization software (also: hypervisor) is the central component of a vir
 
 The following are specific requirements for virtualization. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -87,7 +87,7 @@ Virtual IT systems SHOULD be configured and protected according to the security 
 
 #### SYS.1.5.A4 Secure configuration of a network for virtual infrastructures
 
-It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It also MUST be ruled out that unwanted network connections can be established via virtual IT systems that are connected to multiple networks.
+It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It MUST also be excluded that unwanted network connections can be established via virtual IT systems connected to multiple networks.
 
 Network connections between virtual IT systems and physical IT systems, as well as virtual security gateways, SHOULD be configured according to the institution's security policies.
 
@@ -169,7 +169,7 @@ All administrators of the virtual environment SHOULD be adequately trained. The 
 
 #### SYS.1.5.A19 Regular audits of the virtualization infrastructure
 
-It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be documented comprehensibly. Deviations SHOULD be corrected.
+It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be traceable documented. Deviations SHOULD be corrected.
 
 ### 3.3 Requirements for increased protection requirements
 

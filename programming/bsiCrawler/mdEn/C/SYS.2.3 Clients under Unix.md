@@ -7,7 +7,7 @@ In addition to Windows, more and more client operating systems Linux or less oft
 
 Linux is free software and is developed by the open source community. In addition, there are providers who combine the Linux kernel and the various software components to a distribution and maintain, and offer other services. Often derivatives are used for the distributions Ubuntu, Debian, Red Hat Enterprise Linux SUSE Linux Enterprise. In addition, there are custom Linux distributions for specific applications and devices, such as Qubes OS, which seeks to achieve a high level of security through virtualization, IGEL Linux as a thin client, LibreElec for use with a Home Theater PC (HTPC) or Kali Linux , a distribution specializing in security, computer forensics and penetration testing. In addition, clients can also start live distributions without changing the existing operating system.
 
-The market share of the operating system Linux on clients has increased in recent years, in special operating environments continue to use "classic" Unix systems in various derivatives. The amount of pre-selected software packages of a standard installation of common Linux distributions, or the Unix derivatives, increases the attack surface, at the same time offer unix-like operating systems but also extensive protection mechanisms. Typically, such an IT system is networked and operates as a client in a client-server network. Since clients are often operated under Unix or Linux for security reasons and as with all clients can not be trusted to correct user behavior, the protection of unix-like clients is of particular importance.
+The market share of the operating system Linux on clients has increased in recent years, in special operating environments continue to use "classic" Unix systems in various derivatives. The amount of pre-selected software packages of a standard installation of common Linux distributions, or the Unix derivatives, increases the attack surface, at the same time offer unix-like operating systems but also extensive protection mechanisms. Typically, such an IT system is networked and operates as a client in a client-server network. Since clients are often operated for security reasons under Unix or Linux and as with all clients can not be trusted to correct user behavior, the protection of unix-like clients is of particular importance.
 
 ### 1.2 Objective
 
@@ -15,7 +15,7 @@ The goal of this module is to protect information that is created, edited, store
 
 ### 1.3 Delimitation
 
-This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the block SYS.2.4 client under Apple OS X.
+This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the module SYS.2.4 client under Apple OS X.
 
 If the client is not to be managed by itself, but is managed by a third party, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account.
 
@@ -29,11 +29,11 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware
 
-Malicious programs are designed to perform unwanted and usually malicious functions. Malicious programs are usually secretly active without the knowledge and consent of the user. Malicious programs today offer an attacker extensive communication and control options and have a variety of functions. Among other things, the programs can specifically search passwords, remotely control systems, disable protection functions and spy on data. In particular, users who rely on the inherently higher security of unix-like systems are often more careless when dealing with unknown files.
+Malicious programs are designed to perform unwanted and usually malicious functions. Malicious programs are usually secretly, without the knowledge and consent of the user active. Malicious programs nowadays provide an attacker with extensive communication and control options and have a large number of functions. Among other things, the programs can specifically search passwords, remotely control systems, disable protection functions and spy on data. In particular, users who rely on the inherently higher security of unix-like systems are often more careless when dealing with unknown files.
 
 ### 2 2 Software from third party sources
 
-With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than installing finished software packages. When finished software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
+With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than install finished software packages. When ready-made software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -57,13 +57,13 @@ Because these applications are configured independently of each other, the confi
 ---------------
 The following are specific requirements for the Client section on Unix. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### SYS.2.3.A1 Authentication of administrators and users [user]
 
-To use the client, users MUST authenticate themselves to the IT system. Administrators MAY NOT log in as root during normal operation. For system administration tasks, "sudo" or a suitable alternative with appropriate logging SHOULD be used. It SHOULD prevent multiple users from logging into one device at the same time.
+To use the client, users MUST authenticate themselves to the IT system. Administrators MAY NOT log in as root during normal operation. For system administration tasks, "sudo" or a suitable alternative with appropriate logging SHOULD be used. It SHOULD prevent multiple users from logging in to a device at the same time.
 
 #### SYS.2.3.A2 Selection of a suitable distribution
 
@@ -100,7 +100,7 @@ Users' access to files and directories SHOULD always be restricted to the minimu
 
 #### SYS.2.3.A8 Use of application restriction techniques
 
-To restrict the access rights of applications to files, devices and networks SHOULD App-Armor or SELinux be used. It SHOULD use the solution best supported by the respective Unix derivative or Linux distribution. Instead of blacklisting, the necessary applications SHOULD be regulated by whitelisting. Rights Restrictions SHOULD be used in Enforcement Mode or with appropriate alternatives.
+To restrict the access rights of applications to files, devices and networks SHOULD App-Armor or SELinux be used. It SHOULD use the solution best supported by the particular Unix derivative or Linux distribution. Instead of blacklisting, the necessary applications SHOULD be regulated by whitelisting. Rights Restrictions SHOULD be used in Enforcement Mode or with appropriate alternatives.
 
 #### SYS.2.3.A9 passwords on the command line [user]
 
@@ -133,19 +133,19 @@ Peripherals SHOULD only be usable if they are run on a centrally managed whiteli
 
 #### SYS.2.3.A15 Additional protection against the execution of unwanted files (CI)
 
-Partitions and directories where users have write permissions SHOULD be mounted so that no files can be executed (/ noexec).
+Partitions and directories where users have write permission SHOULD be mounted so that no files can be executed (/ noexec).
 
 #### SYS.2.3.A16 Additional safeguarding of boot process (CIA)
 
 Bootloader and Kernel SHOULD be signed by self-controlled key material and unneeded key material should be removed.
 
-#### SYS.2.3.A17 Additional prevention of spread when exploiting vulnerabilities (CI)
+#### SYS.2.3.A17 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
 
 The use of system calls SHOULD be limited to the absolutely necessary system calls, in particular for exposed services and applications (eg by "seccomp"). The existing default profiles or rules of "SELinux", "AppArmor" as well as alternative extensions SHOULD be checked manually and, if necessary, adapted to your own security policy. If necessary, new rules or profiles SHOULD be created.
 
 #### SYS.2.3.A18 Additional Kernel Protection (CI)
 
-Special hardened kernels should use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy", "PaX").
+Special hardened kernels should use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy," "PaX").
 
 #### SYS.2.3.A19 Hard Disk or File Encryption (CI)
 

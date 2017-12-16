@@ -24,7 +24,7 @@ Cable fires can cause serious damage. Some of these consequences are, for exampl
 
 ### 2 2 Insufficient network dimensioning
 
-If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. An extension of networks is only possible to the extent permitted by the existing, laid cables or the space available for additional cables.
+If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. However, an extension of networks is only possible to the extent permitted by the existing cables laid or the space available for additional cables.
 
 ### 2 3 Insufficient documentation of the wiring
 
@@ -50,7 +50,7 @@ Listening to lines is a danger to information security that should not be neglec
 
 The following are specific requirements for IT cabling. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -71,11 +71,11 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.4.A4 Requirements Analysis for IT Cabling
 
-Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
+Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on this basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
 
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 
-The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls for acceptance can be prepared in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
+The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
 
 #### INF.4.A6 Continuous updating and revision of network documentation
 
@@ -94,7 +94,7 @@ An institution SHOULD make sure that it has internal and external documentation 
 
 #### INF.4.A10 Neutral documentation in the distributors
 
-Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indication of the type of use of the pipes. All further information MUST be listed in a revision documentation.
+Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indications as to the type of use of the pipes. All further information MUST be listed in a revision documentation.
 
 #### INF.4.A11 Control of existing connections
 
@@ -114,7 +114,7 @@ In rooms with public access or in confusing areas of a building, cables and dist
 
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 
-The power supply of the IT components SHOULD be selected so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the shape of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
+The power supply of the IT components SHOULD be chosen so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the shape of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
 
 #### INF.4.A15 Use of Cabinet Systems (IA)
 
@@ -144,7 +144,7 @@ Additional information on hazards and security measures in the area of ​​"IT
 
   
 
- Construction methods for electronic equipment, Beuth Verlag
+ Construction methods for electronic devices, Beuth Verlag
 
  
 * #### [EN50173] EN 50173: 2007

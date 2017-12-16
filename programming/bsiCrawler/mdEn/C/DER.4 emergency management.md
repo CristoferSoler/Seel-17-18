@@ -11,7 +11,7 @@ The maintenance of information security must therefore be integrated into a comp
 
 ### 1.2 Objective
 
-The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary in order to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
+The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
 
 ### 1.3 Delimitation
 
@@ -48,7 +48,7 @@ When organizational units depend on service providers, the partial or total fail
 
 Specific requirements for emergency management are listed below. In principle, the emergency officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -58,7 +58,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### DER.4.A1 Creation of an emergency manual [Information Security Officer (ISB)]
 
-It SHOULD be created an emergency manual in which the most important information about
+It SHOULD be created an emergency manual, in which the most important information to
 
 * Roll,
 * Emergency measures,
@@ -90,7 +90,7 @@ The roles for emergency management should be set appropriately to the circumstan
 
 #### DER.4.A6 Provision of adequate resources for emergency management [Institutional Management] (CIA)
 
-The financial, technical and human resources for the intended goals of emergency management SHOULD be appropriate. The emergency officer or emergency management team SHOULD have enough time for emergency management tasks.
+The financial, technical and human resources for the intended goals of the emergency management SHOULD be appropriate. The emergency officer or emergency management team SHOULD have enough time for emergency management tasks.
 
 #### DER.4.A7 Creation of an emergency concept [institutional management] (CIA)
 
@@ -106,7 +106,7 @@ It SHOULD be ensured that aspects of emergency management are taken into account
 
 #### DER.4.A10 Tests and Emergency Exercises [Head of Institution] (CIA)
 
-An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
+An exercise plan SHOULD be created so that all major emergency management plans and measures are tested and practiced regularly and on an ad hoc basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
 #### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
 
 The identified measures for emergency preparedness and response SHOULD be reviewed regularly and on an ad hoc basis. The checks SHOULD be planned so that no relevant part is left out. The results of the reviews SHOULD be evaluated and, where appropriate, implemented in corrective actions. The corrective measures SHOULD be planned and the implementation monitored.
@@ -121,21 +121,21 @@ The management level SHOULD carry out its task of regularly reviewing, evaluatin
 
 #### DER.4.A14 Regular review and improvement of emergency response [Institutional Management] (IA)
 
-All emergency measures should be reviewed regularly or in the event of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
+All emergency measures should be reviewed regularly or in the case of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
 
-It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
+It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In the case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
 
 It should be determined in the institution's management how the review activities are coordinated. In particular, reviews carried out in the area of ​​auditing, IT, security management, information security management and emergency management SHOULD be coordinated. For this purpose, it should be regulated which measures are to be checked when and by whom.
 
 #### DER.4.A15 Assessment of the Efficiency of the Emergency Management System [Institutional Management] (IA)
 
-It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​differ negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
+It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​deviate negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
 
 The management SOLLTE decide with which measures the emergency management should be further developed. All decisions of the management level SHOULD be documented and the previous records updated.
 
 #### DER.4.A16 Emergency preparedness and emergency response planning for outsourced components [Institutional Management] (IA)
 
-In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.
+In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD audit the supplier or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.
 The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
 
 4 Further Information

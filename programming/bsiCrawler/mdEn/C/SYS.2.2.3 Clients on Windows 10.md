@@ -24,7 +24,7 @@ Due to the widespread use of Windows operating systems and the backwards compati
 
 ### 2 2 Software Vulnerabilities in Windows 10
 
-Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows may be exploited by attackers to infiltrate malicious software, unauthorized read data, or tampering.
+Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read data or tampering.
 
 ### 2 3 Integrated cloud functionalities
 Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the employees' private devices. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
@@ -43,7 +43,7 @@ Improper or improper use of devices, systems, and applications can also affect s
 ---------------
 The following are specific requirements for Windows 10 protection. Basically * the IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -57,7 +57,7 @@ The functional scope and the supply of functional changes of a Windows 10 versio
 
 #### SYS.2.2.3.A3 Appropriate patch and change management
 
-To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system, it MUST be checked whether all requirements from the IT-Grundschutz and the internal specifications are still met.
+To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system, it MUST be checked whether all the requirements from the IT-Grundschutz and the internal specifications are still met.
 
 #### SYS.2.2.3.A4 telemetry and privacy settings
 
@@ -76,7 +76,7 @@ The registration on the system and the domain MAY ONLY be possible with the acco
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clients under Windows 10. They SHOULD be implemented in principle.
 
 #### SYS.2.2.3.A7 Local Security Policy
-All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other requirements of IT Baseline Protection or the organization. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
+All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other IT security or organization requirements. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
 
 #### SYS.2.2.3.A8 Central management of client security policies
 
@@ -140,7 +140,7 @@ The configuration parameters of the User Account Control (UAC) SHOULD be used fo
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.2.3.A21 Use of the Encrypting File System EFS (CI)
-Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in the correct handling of EFS.
+Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in using EFS correctly.
 
 #### SYS.2.2.3.A22 Windows PowerShell (CIA)
 

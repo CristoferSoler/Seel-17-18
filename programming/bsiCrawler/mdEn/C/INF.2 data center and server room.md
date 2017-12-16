@@ -30,18 +30,18 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Incorrect planning
 
-If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to a faulty design or if the energy supply at the selected location is insufficient.
+If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to incorrect design or if the energy supply at the selected location is insufficient.
 
 ### 2 2 Unauthorized access
 Lack of access controls or these are insufficient, increases the risk that unauthorized persons enter the data center and there negligent, z. B. due to lack of expertise, or intentionally cause damage. Attackers can so z. For example, stealing sensitive data, stealing devices or manipulating servers. Inadequate access controls thus have a particular impact on the availability, confidentiality and integrity of data or IT components.
 
 ### 2 3 Insufficient monitoring
 
-If the IT and infrastructure operated in the data center are insufficiently monitored and maintained, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring, they might be noticed too late. It is then often not possible to react in time.
+If the IT and infrastructure operated in the data center are insufficiently supervised and looked after, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring, they might be noticed too late. It is then often not possible to react in time.
 
 ### 2 4 Insufficient air conditioning in the data center
 
-IT components require a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
+IT components need a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
 
 ### 2 5 fire
 
@@ -64,14 +64,14 @@ If the power fails and there is no redundant power supply, this can lead to sign
 Dust and other contaminants in a data center can cause the technology to stop working. Due to contamination, it precipitates more often and wears out sooner.
 
 ### 2 10 Insufficient roadway dimensioning
-If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that holes for fire-rated cable glands may only be laid with cables at 60% of the cross-section. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
+If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that only 60% of the cross-section of cable penetration holes in firewalls may be covered by cables. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
 
 3 requirements
 ---------------
 
 The following are specific requirements for data center protection. Basically, the IT manager is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -108,9 +108,9 @@ In the event of an emergency, there must be suitable possibilities for disconnec
 
 In order to be able to operate IT systems reliably in accordance with the manufacturer's recommendations, it MUST be ensured that the air temperature and humidity in the IT operating range are within the prescribed limits.
 
-The actual heat load in the refrigerated areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
+The actual heat load in the cooled areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
 
-Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period of time in a time interval adapted to the situation.
+Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period in a time interval adapted to the situation.
 
 #### INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
 
@@ -135,13 +135,13 @@ A fire alarm system MUST be installed in a data center. This MUST monitor all su
 
 In a data center, a state-of-the-art extinguishing or fire prevention system MUST be installed.
 
-In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
+In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure its proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
 
 #### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
 
 All components of the technical infrastructure MUST comply with at least the recommended or standard intervals and requirements for inspection and maintenance. In order to understand when which work has been carried out, inspections and maintenance MUST be logged.
 
-Cable and pipe penetrations through fire walls MUST be checked regularly to ensure that the bulkheads are in conformity with standards and intact. The results MUST be documented.
+Cable and pipe penetrations through fire walls MUST be checked regularly to ensure that the bulkheads are compliant and intact. The results MUST be documented.
 
 #### INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
 
@@ -188,14 +188,14 @@ The air conditioning systems SHOULD be as fail-safe as possible in computer room
 
 To detect fires in data centers at a very early stage, a system for early fire detection should be installed.
 
-To prevent incipient fires from spreading further, the early fire detection SHOULD be used to automatically disconnect the power. The monitoring areas of the early fire detection as well as the areas of action of the voltage disconnection SHOULD be designed sufficiently small-scale in order to achieve a balanced relationship between the fire protection on the one hand and the DC availability on the other hand.
+To prevent incipient fires from spreading further, the early fire detection SHOULD be used to automatically disconnect the power. The monitoring areas of early fire detection as well as the areas of action of the voltage disconnection SHOULD be designed sufficiently small-scale, in order to achieve a balanced relationship between the fire protection on the one hand and the DC availability on the other hand.
 
 The system for early fire detection SHOULD comply with the current state of the art. Also it SHOULD be operated according to the specifications of the manufacturer and regularly maintained.
 
 #### INF.2.A18 Protection against water leakage [Building Services]
 
 In areas where IT equipment with central functions is located, water-bearing pipes should be avoided. For example, there should be no radiators in the data center.
-If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
+If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and that the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
 
 #### INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
 
@@ -209,9 +209,9 @@ Construction plans, route plans, circuit diagrams, escape route plans, fire brig
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### INF.2.A21 Backup data center (A)
+#### INF.2.A21 Dodge Data Center (A)
 
-A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be dimensioned so that all processes of the institution can be maintained. Also SHOULD it be always ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
+A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be sized to maintain all processes of the institution. Also SHOULD it be always ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
 
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 
@@ -219,7 +219,7 @@ When an existing data center is expanded, appropriate dust control measures shou
 
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 
-Cable trays SHOULD be carefully planned and executed. All cables SHOULD be protected against accidental mechanical stress, manipulation, eavesdropping or fire. For different types of networks, eg. As data network, network for alarm systems and power grid, separate cables should be used. If cables are routed together for different networks, it should be ensured that mutual interference is minimized. In addition, a redundant route should be sought.
+Cable trays SHOULD be carefully planned and executed. All cables SHOULD be protected against accidental mechanical stress, manipulation, eavesdropping or fire. For different network types, eg. As data network, network for alarm systems and power grid, separate cables should be used. If cables are routed together for different networks, it should be ensured that mutual interference is minimized. In addition, a redundant route should be sought.
 
 #### INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
 
@@ -238,7 +238,7 @@ In the case of increased protection requirements, emergency power supply systems
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-With the employees of the institution SHOULD be carried out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+The staff of the institution SHOULD have regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 

@@ -28,7 +28,7 @@ An institution regularly backs up its important data, especially its customer da
 
 ### 2 3 Unsuitable storage of backup volumes
 
-Backup media contain a host of valuable institutional information. If the data carriers are stored in an insecure place, an attacker (eg an innocent person) may be able to access them and steal or manipulate information worthy of protection. Similarly, backup media may become unusable due to improper storage or climatic conditions, and then become unavailable when needed.
+Backup media contain a great deal of proprietary information from the institution. If the data carriers are stored in an insecure place, an attacker (eg an innocent person) may be able to access them and steal or manipulate information worthy of protection. Similarly, backup media may become unusable due to improper storage or climatic conditions, and then become unavailable when needed.
 
 ### 2 4 Missing or insufficient documentation
 
@@ -54,7 +54,7 @@ If no adequate data protection concept is created and followed for data protecti
 
 The following are specific requirements for data protection. Basically, the information security officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -76,7 +76,7 @@ A minimum data backup concept MUST be created that determines which data backup 
 
 #### CON.3.A5 Regular data backup [IT operation]
 
-Regular backups MUST be performed. At least the data MUST be backed up on a regular basis, which can not be derived from other information. The backups created MUST be protected against third party access. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed
+Regular backups MUST be performed. At least the data MUST be backed up on a regular basis, which can not be derived from other information. The created data backups MUST be protected from third party access. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed
 
 ### 3.2 Standard requirements
 
@@ -91,7 +91,7 @@ Before a backup system is procured, a list of requirements SHOULD be created to 
 
 #### CON.3.A8 Function Tests and Recoverability Check [IT Operations]
 
-It SHOULD be tested on a regular basis, whether the data backup works as desired and, above all, whether backed up data can be played back easily and in a reasonable amount of time.
+It SHOULD be tested on a regular basis, whether the data backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
 
 #### CON.3.A9 Requirements for online data backup [Head of IT, IT operation]
 

@@ -43,13 +43,13 @@ The risk of losing important evidence increases when employees misuse forensic t
 
 The following are specific requirements for the provision of IT forensics. Basically, the information security officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
 
-If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to balance the interest of the institution with that of the employee. The company or staff council and the data protection officer MUST be involved.
+If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to weigh the interest of the institution against that of the employees. The company or staff council and the data protection officer MUST be involved.
 
 #### DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
 
@@ -92,7 +92,7 @@ In order to secure evidence, if possible, the entire volume should be forensical
 
 In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of staff for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 

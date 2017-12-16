@@ -1,0 +1,19 @@
+### 3.1 Basic requirements
+#### APP.1.1.A1 Ensure the integrity of Office products
+#### APP.1.1.A2 Restricting Active Content [User]
+#### APP.1.1.A3 Opening documents from external sources
+#### APP.1.1.A4 Securing ongoing operations of Office products
+### 3.2 Standard requirements
+#### APP.1.1.A5 Selection of suitable office products
+#### APP.1.1.A6 Testing new versions of Office products
+#### APP.1.1.A7 Installation and configuration of Office products
+#### APP.1.1.A8 Version control of Office products
+#### APP.1.1.A9 Removal of residual information before forwarding documents [User]
+#### APP.1.1.A10 End User Software Development [User]
+#### APP.1.1.A11 Regulated use of extensions for Office products
+#### APP.1.1.A12 Waiver of Cloud Storage [User]
+#### APP.1.1.A13 Using Viewer Functions [User]
+#### APP.1.1.A14 Protection against subsequent changes of information [User]
+### 3.3 Requirements for increased protection requirements
+#### APP.1.1.A15 Use of encryption and digital signatures (CI)
+#### APP.1.1.A16 Integrity check of documents (I)

@@ -34,7 +34,7 @@ When eliminating a client, it must first be ensured that all user data is saved 
 
 ** Emergency Preparedness **
 
-The necessary degree of emergency preparedness for a general client depends heavily on the individual deployment scenario. Often, as a precautionary measure for a client, it will be sufficient to back up the data regularly and to create a bootable data medium for emergencies (see SYS.1.1.M34 Integration into contingency planning). For clients with special availability requirements, it may be useful to take further action, such as having an exchange system ready.
+The necessary degree of emergency preparedness for a general client depends heavily on the individual deployment scenario. Often, as a precautionary measure for a client, it will be sufficient to back up the data regularly and create a bootable data medium for emergencies (see SYS.1.1.M34 Integration into contingency planning). For clients with special availability requirements, it may be useful to take further action, such as having an exchange system ready.
 
 2 measures
 -----------
@@ -68,7 +68,7 @@ When passwords are used for authentication, the IT system should provide mechani
 * The password change should be initiated regularly by the IT systems. The lifetime of a password should be adjustable.
 * The repetition of old passwords when changing the password should be prevented by the IT system (password history).
 * When entering the password, the password should not be displayed on the screen.
-* After installing or reconfiguring users, the password system should force a password change after initial login.
+* After installing or reconfiguring users, the password system should force a password change after the initial login.
 More detailed information on authentication can be found in ORP.4 Identity and Permission Management.
 
 #### SYS.2.1.M2 Role separation
@@ -86,11 +86,11 @@ Many products have automatic update mechanisms (autoupdate) that inform users wh
 
 Usually, auto-update IT products look for new versions or software packages every time they start their IT systems or every time they dial into the Internet on a public update server. Products provide several ways to configure the auto-update mechanism. When new IT components are put into operation, it should always be checked whether and which update mechanisms they have and how they can be configured. It should also be checked which data is transferred from the auto-update mechanism to the manufacturer. It should first be clarified in principle how these mechanisms are handled. Then it should be determined how the update functions are concretely configured in the different products. The following is an overview of different variants of these mechanisms.
 
-The complete deactivation is not offered by any software. If the institution wants to prevent the uncontrolled communication of IT components with the outside world, then packet filters must be used.
+The complete deactivation is not offered by every software. If the institution wants to prevent the uncontrolled communication of IT components with the outside world, then packet filters must be used.
 
 If a query from a public update server is not desired, many software products can be redirected to Internet addresses other than the manufacturer's, such as internal ones.
 
-Some manufacturers offer software for own operation of update servers or update mirror servers, whereby the update server in the institution is installed locally (eg Windows Server Update Services WSUS). The update server then communicates directly with the manufacturer and loads the desired updates directly from the manufacturer. The advantage of this solution is that the IT systems of an institution affected by the update do not have to communicate themselves with the manufacturer's update server, but only with the locally installed one. This allows the traffic to the outside to be minimized. With many products for update servers, the desired settings can be conveniently made via a graphical user interface (GUI). However, there are also products where the necessary settings to use local update servers or to prevent the query from a public update server are hidden or only to be prevented by packet filters or firewalls.
+Some manufacturers offer software for own operation of update servers or update mirror servers, whereby the update server in the institution is installed locally (eg Windows Server Update Services WSUS). The update server then communicates directly with the manufacturer and loads the desired updates directly from the manufacturer. The advantage of this solution is that the IT systems of an institution affected by the update do not have to communicate themselves with the manufacturer's update server, but only with the locally installed one. This allows the traffic to the outside to be minimized. With many products for update servers, the desired settings can be conveniently made via a graphical user interface (GUI). However, there are also products in which the necessary settings to use local update servers or to prevent the query from a public update server are hidden or can only be prevented by packet filters or firewalls.
 
 If public update servers are to be used, the authenticity of the update server must first be checked. In addition, it should be investigated whether time intervals or events for controlling the update request action can be set. The settings must then be made according to the defined change strategy.
 
@@ -99,7 +99,7 @@ A parallel configuration is often useful for mobile users who do not always comm
 
 Among other things, auto-update mechanisms still have to be aware of whether the changes are only downloaded to an internal IT system by the manufacturer and the installation of the change is subsequently left to the user or whether they are automatically installed immediately after downloading.
 
-In addition, it must be determined how this should be handled if the IT system has to be restarted by an update. It can be decided to restart the IT system immediately, but it can often be determined that such updates will not be installed until the IT system is shut down as scheduled.
+In addition, it must be determined how this should be handled if the IT system has to be restarted by an update. It can be decided to restart the IT system immediately, but it can often be determined that such updates will not be installed until the IT system is run down as scheduled anyway.
 
 #### SYS.2.1.M4 Regular backup
 
@@ -109,7 +109,7 @@ At least the data that can not be derived from other information must be backed 
 
 It is recommended to create a data protection concept, taking into account the requirements of the OPS.1.1.5 data backup module
 
-** Note: ** Even though users should store all work on central servers, business-related data will always be found on clients as long as they provide a way to do so. Therefore, clients must also be included in the institution's data protection concept.
+** Note: ** Even though users should store all work results on central servers, business-relevant data will always be found on clients as long as they provide a means to do so. Therefore, clients must also be included in the institution's data protection concept.
 
 Depending on the amount and importance of the data being re-stored and the possible damage caused by loss of this data, the following should be specified:
 
@@ -118,9 +118,9 @@ Depending on the amount and importance of the data being re-stored and the possi
 * Time
  Examples: at night, on Fridays in the evening
 * Number of generations to keep
- For example, full daily backup will keep the last seven backups, as well as Friday evening backups for the past two months.
+ For example, a full daily backup will keep the last seven backups, as well as Friday evening backups for the past two months.
 * Scope of the data to be backed up
- The easiest way is to specify partitions or directories that are taken into account during regular data backup. A suitable differentiation can increase clarity and save effort and costs. Example: self-created files and individual configuration files
+ The easiest way is to specify partitions or directories that are taken into account during regular data backup. A suitable differentiation can increase the clarity and save effort and costs. Example: self-created files and individual configuration files
 * Storage media (depending on the amount of data)
  Examples: tapes, DVDs or Blu-rays, hard drives, USB sticks
 * Previous deletion of media before reuse (eg for tapes or cassettes)
@@ -153,7 +153,7 @@ The period after which a screen lock activates due to missing user input should 
 Almost all operating systems contain screen locks. When using them care must be taken to activate the password prompt.
 
 #### SYS.2.1.M6 Use of virus protection programs
-Different modes of action can be used to protect against malicious programs. Programs that search IT systems for all known malicious programs have proven to be a potential tool in malware prevention in the past. Therefore, according to the requirements described in OPS1.1.4 Protection against malware, virus protection programs should be used.
+Different modes of action can be used to protect against malicious programs. Programs that search IT systems for all known malicious programs have proven to be a potential tool in malware prevention in the past. Therefore, according to the requirements described in OPS1.1.4 Protection against malicious programs, virus protection programs should be used.
 
 ** Regular examination of the entire database **
 
@@ -211,7 +211,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### SYS.2.1.M9 Setting a security policy for clients
 
-The security requirements for all clients result from the institution-wide security policy. Based on the general policy, the requirements for the given context must be specified and summarized in a security policy for the respective group of clients. In this context, it has to be examined whether, in addition to the institution-wide security guideline, further superordinate requirements such as IT guidelines, password guidelines or Internet usage guidelines must be taken into account.
+The security requirements for all clients result from the institution-wide security policy. Based on the general policy, the requirements for the given context must be specified and summarized in a security policy for the respective group of clients. In this context, it has to be examined whether, in addition to the institution-wide security guideline, further superordinate specifications such as IT guidelines, password guidelines or Internet usage guidelines must be taken into account.
 The security policy must be known to all users and other persons involved in the procurement and operation of the clients and be the basis for their work. As with all directives, their content and implementation must be regularly reviewed by a higher level audit.
 
 The security policy should specify the level of security generally to be achieved and make basic determinations. In order to improve the clarity, it may be useful to develop separate security guidelines for different fields of application.
@@ -293,7 +293,7 @@ Based on the above points, a checklist can be created that can be helpful in aud
 Responsibility for the security policy lies with security management. Changes and deviations from this may only be made in coordination with the safety management.
 When creating a security policy, it is advisable to proceed in such a way that first of all a maximum of requirements and specifications for the security of the IT systems is established. These can then be adapted to the actual circumstances. Ideally, this will ensure that all necessary aspects are taken into account. The reason for non-consideration should be documented for each deficient or weakened default in the second step.
 
-Regarding user regulations, however, it should be kept in mind that they only make sense as far as they are applicable in normal day-to-day work, but also how they can be monitored and enforced. For example, it is not expedient for access restrictions to prohibit users from accessing certain directories only in the security policy, but not to actually protect them from access by granting appropriate rights. Access restrictions that were set when the security policy was created should therefore always be enforced as far as possible via the corresponding installation and configuration guidelines for the clients.
+Regarding user regulations, however, it should be kept in mind that they only make sense as far as they are applicable in normal day-to-day work, but also how they can be monitored and enforced. For example, it is not expedient for access restrictions to prohibit users from accessing certain directories only in the security policy, but not to actually protect them from access by granting appropriate rights. Access restrictions that were set when the security policy was created should therefore always be enforced as far as possible using the appropriate installation and configuration guidelines for the clients.
 
 While the security policy is formulated for clients, it is also important to strike a balance between security (by restricting functionality and restricting user rights) and ease of use. If users are restricted by regulations that are not transparent to them, and which may even be perceived as bullying, they may in turn be tempted to circumvent these restrictions with particular creativity.
 
@@ -303,11 +303,11 @@ This differentiates the security policy for clients from the corresponding polic
 
 A basic requirement for clients to operate safely is an adequate level of planning in advance.
 
-The planning of the assignment can be carried out in several steps according to the principle of top-down design: Based on a rough concept for the overall system, concrete plans for sub-components are defined in specific sub-concepts. Planning does not only concern aspects that are classically associated with the term security, but also normal operational aspects that entail security requirements.
+The planning of the assignment can be carried out in several steps according to the principle of top-down design: Based on a rough concept for the overall system, concrete plans for sub-components are defined in specific sub-concepts. Planning does not only concern aspects that are classically associated with the term security, but also normal operational aspects that result in security requirements.
 
 In the rough concept, for example, the following typical questions should be dealt with:
 
-* What tasks should the clients perform? Which services must be accessible by the clients? Are there any special requirements for the availability of the IT systems or the confidentiality or integrity of the stored or processed data?
+* What tasks should the clients fulfill? Which services must be accessible by the clients? Are there any special requirements for the availability of the IT systems or the confidentiality or integrity of the stored or processed data?
 * Should specific hardware components be used in the IT systems? This can be important, for example, for the selection of the operating system.
 * Which hardware requirements (CPU, memory, hard disk capacity, network capacity, etc.) are based on the general requirements?
 * Is the network in which the clients are to be used a homogeneous or heterogeneous computer network?
@@ -330,7 +330,7 @@ In the planning phase, the planned division of the partitions and their size sho
 * Logging: Logging also plays an important role for clients, for example when diagnosing and resolving malfunctions or when detecting and resolving attacks. In the planning phase it should be decided which information should be logged at least and how long the log data should be stored. In addition, it must be specified whether the log data should be stored locally on the IT systems or on a central log server in the network. More detailed information can be found in the module OPS.1.1.6 Logging
 * It makes sense to specify in the planning phase how and at what times log data should be evaluated.
 * High availability: If special requirements are placed on the availability of the clients, then it should be considered in the planning phase how these requirements can be met.
-All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other persons besides the author must evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
+All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other people next to the author need to evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
 
 #### SYS.2.1.M11 Acquisition of clients
 
@@ -366,7 +366,7 @@ If it is determined that a security update or patch is incompatible with another
 Carelessly executing programs that originate from "unsafe" sources can cause considerable harm. Malware, for example, can install password-spying programs, Trojan horses, or backdoors on a client, or easily corrupt or erase data.
 Typical sources of such malware are, for example, programs that display themselves as screen savers, virus scanners or other utilities, and are sent by e-mail under fake sender addresses to many recipients. Often careless users download programs from the Internet and install them without verification.
 
-In principle, software should only be installed from well-known sources, especially if it has not been delivered on data carriers but has been downloaded from the internet, for example. This is especially true for updates or patches that are typically no longer delivered on disk. Most manufacturers and distributors offer cryptographic checksums for this purpose, which allow at least a check of the integrity of a package. The checksums are usually published on the (transport encrypted) websites of the manufacturer or sent by (signed) e-mail. To verify the integrity of a downloaded program or archive file, the published checksum is then compared to a locally generated checksum by a corresponding program.
+In principle, software should only be installed from well-known sources, especially if it has not been delivered on data carriers but has been downloaded from the internet, for example. This is especially true for updates or patches that are usually no longer delivered on disk. Most manufacturers and distributors offer cryptographic checksums for this purpose, which allow at least a check of the integrity of a package. The checksums are usually published on the (transport encrypted) websites of the manufacturer or sent by (signed) e-mail. To verify the integrity of a downloaded program or archive file, the published checksum is then compared to a locally generated checksum by a corresponding program.
 
 If checksums are offered for a software package, these should be checked before installing the package.
 
@@ -393,10 +393,10 @@ Another aspect of verifying the authenticity of the update may be news published
 
 After completing the planning of a new client and creating a security policy, you can begin installing the client.
 
-The installation and configuration of the IT system should only be performed by authorized persons (administrators or contracted service providers). Administrators of IT systems and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks. Since administrators play a key role in the functionality of the hardware and software used, the continuation of activities must be guaranteed even if administrators fail. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
+The installation and configuration of the IT system should only be carried out by authorized persons (administrators or contracted service providers). Administrators of IT systems and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks. Since administrators have a key role to play in the functionality of the hardware and software used, the continuation of activities must be guaranteed even if administrators fail. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
 
 It is recommended to first create a short installation concept according to the functional requirements of the planning and the specifications of the security guideline. In principle, it is advantageous to carry out the installation in two phases: First, a basic system is installed and configured, then the other required applications are set up. The installation programs of most operating systems support this procedure more or less well.
-The described steps do not necessarily need to be performed again for each client. This could even be counterproductive in that constant repetition increases the risk of error. It is therefore recommended that the described steps be carried out with particular care on a reference system, that the exact documentation of the necessary configurations is documented in order to obtain an adapted installation concept for the respective operating system (see SYS.2.1.M27 Setting up a reference installation for clients). It must be noted that this installation concept must also be checked and, if necessary, adapted for changes to the operating system that do not represent a completely new release (service packs, update releases or the like).
+The described steps do not necessarily need to be performed again for each client. This could even be counterproductive in that constant repetition increases the risk of error. It is therefore recommended that the described steps be carried out with particular care on a reference system, that the exact documentation of the necessary configurations is documented in order to obtain a customized installation concept for the respective operating system (see SYS.2.1.M27 Setting up a reference installation for clients). It must be noted that this installation concept must also be checked and, if necessary, adapted for changes to the operating system that do not represent a completely new release (service packs, update releases or the like).
 
 **Installation**
 
@@ -418,7 +418,7 @@ The first step in the basic configuration must therefore be to check the basic s
 Goals of a secure basic configuration should be that
 
 * the clients are protected against "simple" attacks via the network,
-* no normal user can gain access to sensitive data that is not intended for him by pure curiosity or even accidental
+* no normal user can obtain access to sensitive data that is not intended for him by pure curiosity or even random
 * no ordinary user working normally with the clients due to mere operator error or carelessness ("what happens if I delete this file?") can cause serious damage to the IT systems or other users' data, and that
 * also for the work of the system administrators the impact of smaller errors are limited as far as possible.
 The settings that should be checked and adjusted as part of the basic configuration concern in particular the following areas:
@@ -466,23 +466,23 @@ Clients with high protection requirements should be protected with a local packe
 
  
 * Monitoring
-In order to be able to react to critical system events, these can be monitored by monitoring. For this purpose, status information is usually retrieved from a central IT system on which the events are evaluated. However, the interface needed to retrieve the system events from the IT system can often change system settings of the operating system, e.g. Via SNMP (Simple Network Management Protocol). If such a modification is not desired, then these features should be disabled.
+To be able to react to critical system events, these can be monitored by monitoring. For this purpose, status information is usually retrieved from a central IT system on which the events are evaluated. However, the interface needed to retrieve the system events from the IT system can often change system settings of the operating system, e.g. Via SNMP (Simple Network Management Protocol). If such a modification is not desired, then these features should be disabled.
 * Memory protection mechanisms
  In order to protect the operating system and application against possible buffer overflows, appropriate memory protection mechanisms should be activated, as long as they are supported by the hardware (CPU) and the operating system used. For example, Executable Space Protection (ESP) can prevent programs from running out of unauthorized areas of memory.
 * Creating an integrity database
  After completing the basic configuration, it is recommended that you create an integrity database using an appropriate tool. For some operating systems, such programs are already included in the scope of a standard installation. The integrity database should not be stored on the IT systems themselves, but on a read-only medium (such as CD-R) or another secure IT system. If there is a suspicion that the IT system is being compromised, the generated checksums can be used to identify files modified by an attacker. During regular system integrity checks, this database serves as a reference for a defined, secure state of the IT systems.
-It should be documented which settings were checked in the basic configuration and if and how they were changed. The documentation must be such that, in an emergency, a person other than the actual administrator can understand what has been done without prior knowledge of the IT systems based on the documentation. Ideally, it should be possible to restore the IT systems with the help of documentation alone.
+It should be documented which settings were checked in the basic configuration and if and how they were changed. The documentation must be such that, in an emergency, someone other than the actual administrator can understand what has been done without prior knowledge of the IT systems based on the documentation. Ideally, it should be possible to restore the IT systems with the help of documentation alone.
 
 #### SYS.2.1.M16 Disabling and uninstalling unneeded components and identifiers
 
-Often, as part of the standard installation of an operating system, a larger number of user IDs, programs, services and other components are set up, which are not necessary for the operation in each case. Therefore, it should be checked in the basic configuration, which user accounts are really needed. User IDs that are not required should either be deleted or at least deactivated in such a way that it is not possible to log in to the IT system under the ID in question.
+Often, as part of the standard installation of an operating system, a larger number of user IDs, programs, services and other components are set up, which are not necessary for the operation in any case. Therefore, it should be checked in the basic configuration, which user accounts are really needed. User IDs that are not required should either be deleted or at least deactivated in such a way that no login to the IT system is possible under the ID in question.
 
 The standard installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it should therefore be checked which services and applications are installed and activated on the IT systems. Unnecessary services should be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled.
 
-On the one hand, checking for running services can be carried out locally with the means of the installed operating system and, on the other hand, in the case of network services, from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the IT systems offers even more unwanted network services.
+On the one hand, checking for running services can be carried out locally with the resources of the installed operating system and, on the other hand, in network services from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the IT systems offers even more unwanted network services.
 
 #### SYS.2.1.M17 deployment clearance
-Before clients are used in productive operation and before they are connected to a productive network, the application should be released, this must be documented. The deployment clearance is based on a test of the installation and configuration documentation and the functionality of the IT systems in a test. It is carried out by a body authorized to do so in the institution.
+Before clients are used in productive operation and before they are connected to a productive network, the application should be released. This must be documented. The deployment clearance is based on an examination of the installation and configuration documentation and the functionality of the IT systems in a test. It is carried out by a body authorized to do so in the institution.
 
 More detailed information can be found in OPS.1.1.7 Software Testing and Approvals.
 
@@ -496,12 +496,12 @@ The most common security protocol used in web browsing is SSL / TLS (Secure Sock
 * by checking the completeness and correctness of the transmitted data,
 * by checking the identity of the server and
 * optional by checking the identity of the client side.
-At the beginning of a new communication connection secured with SSL / TLS, a so-called handshake takes place between client and server. Here, the client and server communicate via the cryptographic algorithms used for key exchange, encryption and integrity assurance. In addition, client and server agree on the SSL version being used. In addition, the server sends its X.509 certificate to the client. Optionally, the client can also send the server its X.509 certificate if requested by the server. Using an asymmetric encryption method, a symmetric key is then securely exchanged. For the encryption of the actual data transmission, a symmetrical method is now used, because this allows large amounts of data to be encrypted faster. For each transaction, a different symmetric key is negotiated as the session key, which then encrypts the connection.
+At the beginning of a new communication connection secured with SSL / TLS, a so-called handshake takes place between client and server. Here, client and server communicate via the cryptographic algorithms used for key exchange, encryption and integrity assurance. In addition, client and server agree on the SSL version being used. In addition, the server sends its X.509 certificate to the client. Optionally, the client can also submit the X.509 certificate to the server if requested by the server. Using an asymmetric encryption method, a symmetric key is then securely exchanged. For the encryption of the actual data transmission, a symmetrical method is now used, because this allows large amounts of data to be encrypted faster. For each transaction, a different symmetric key is negotiated as the session key, which then encrypts the connection.
 
 For example, a user can recognize web pages that enable SSL / TLS-secured data transfer because the Internet address is extended by an "s" (https: // www ...). In addition, such websites are also marked with most popular browsers, for example, by a displayed icon (key, padlock, etc.) or by a color tag of the Internet address.
 
 The use of SSL / TLS is not limited to HTTP clients and servers. Even protocols such as SMTP, FTP, IMAP or LDAP can be cryptographically secured by SSL / TLS, but this requires that the respective clients and servers support this security function.
-SSL / TLS consists of two layers. The SSL / TLS handshake protocol works on the upper layer. This serves the client and the server to authenticate each other and negotiate a key and encryption algorithm for subsequent traffic. The lower layer, the SSL / TLS Record Protocol, which forms the interface to the TCP layer, encrypts and decrypts the actual traffic. Since SSL / TLS is based on the socket interface for accessing TCP and replaces it with a security-enhanced version, it can also be used for other services.
+SSL / TLS consists of two layers. The SSL / TLS handshake protocol works on the upper layer. This serves the client and the server to authenticate each other and to negotiate a key and encryption algorithm for subsequent traffic. The lower layer, the SSL / TLS Record Protocol, which forms the interface to the TCP layer, encrypts and decrypts the actual traffic. Since SSL / TLS is based on the socket interface for accessing TCP and replaces it with a security-enhanced version, it can also be used for other services.
 
 ** version number **
 
@@ -515,7 +515,7 @@ TLS 1.0 can be transitionally used in existing client applications if an immedia
 
 With SSL / TLS, different cryptographic algorithms with different key lengths can be used. When connecting, the client and server agree on the procedures used in the session.
 
-By selecting the products (browser, web server, plug-in, etc.) and appropriate configuration, it is important to ensure that SSL / TLS protected communication uses only algorithms and key lengths that are state of the art and security requirements of the institution. In addition, the cipher suites used should support Perfect Forward Secrecy (PFS). Further notes on algorithms and key lengths can be found in the module CON.1 Crypto Concept.
+By selecting the products (browser, web server, plug-in, etc.) and appropriate configuration, it is important to ensure that SSL / TLS protected communications use only algorithms and key lengths that are state of the art and security requirements of the institution. In addition, the cipher suites used should support Perfect Forward Secrecy (PFS). Further notes on algorithms and key lengths can be found in the module CON.1 Crypto Concept.
 
 ** ** Certificates
 
@@ -539,7 +539,7 @@ Note: When using SSL / TLS, it has to be taken into account that encrypted data 
 #### SYS.2.1.M19 Restrictive rights assignment
 
 In principle, authorizations should always be restrictive so that users can access exactly the services and data they need for their tasks. This is especially important for system files or directories.
-System files or directories are files and directories for which IT operations are responsible. These are either important for all users or serve administration purposes. System files should only have access to IT operations. Editor programs or compilers may not be used if they are not required for the task. The circle of authorized administrators should be kept as small as possible. Also directories may only provide the necessary privileges for the users. The granting of access rights to system files should always be restrictive and only in accordance with the in-house security guidelines.
+System files or directories are files and directories for which IT operations are responsible. These are either important for all users or serve administration purposes. System files should only have access to IT operations. Editor programs or compilers may not be used if they are not required for the task. The circle of authorized administrators should be kept as small as possible. Also directories may only provide the necessary privileges for the users. The granting of access rights to system files should always be restrictive and only in accordance with the in-house security policies.
 
 System files should be stored separately from application data and user files. This provides a better overview and makes it easier to create backups and to properly protect access thereto.
 
@@ -574,7 +574,7 @@ It is recommended to create administration notes for the usual routine IT operat
 * Regular integrity check with appropriate tools.
 #### SYS.2.1.M21 Prevention of unauthorized use of computer microphones and cameras
 
-Many IT systems are equipped with microphones and sometimes also with cameras. Microphones and cameras of networked clients can be used by those who have access rights to the corresponding device file. For a microphone, this would be, for example, / dev / audio for the sound card or / dev / video for a camera under Unix. Under Windows, the access rights to the corresponding keys of the registry (HKEY \ _LOCAL \ _MACHINE \ HARDWARE \.) Determine who can activate the computer microphone or the computer camera. These rights are therefore to be given with care. Access to the device file should only be possible while someone is working locally on the IT system. If existing microphones or cameras are not to be used and therefore not misused, they must, if possible, be switched off, deactivated or physically disconnected from the device.
+Many IT systems are equipped with microphones and sometimes also with cameras. Microphones and cameras of networked clients can be used by those who have access rights to the corresponding device file. For a microphone, this would be, for example, / dev / audio for the sound card or / dev / video for a camera under Unix. Under Windows, the access rights to the corresponding keys of the registry (HKEY \ _LOCAL \ _MACHINE \ HARDWARE \.) Determine who can activate the computer microphone or the computer camera. These rights must therefore be given carefully. Access to the device file should only be possible while someone is working locally on the IT system. If existing microphones or cameras are not to be used and therefore not misused, they must, if possible, be switched off, deactivated or physically disconnected from the device.
 
 If the microphone or camera is permanently installed in the client and can only be switched on and off by software, the access rights must be set in such a way that no unauthorized person can use them. This can be z. This can be done, for example, by revoking the read rights to the device files / dev / audio, / dev / video, or, under Windows, the access rights to the corresponding keys of the registry under Unix. This prevents a normal user from using the microphone or camera, but can still play audio or video files. Cameras can also be easily covered, for example with a suitable sticker.
 
@@ -590,9 +590,9 @@ Clients with a built-in microphone or camera should be removed from the room dur
 
 If an IT system or an IT application is used by several users and the individual users have different access rights to data or programs stored there, then the required protection can only be achieved by means of an access control if each user System or IT application logs off. If it is possible for a third party to continue working on an IT system or in an IT application under the identity of another, any meaningful access control is impossible. Therefore, all users must be obliged to log off from the IT system or the IT application after the task has been completed. For technical reasons (eg to close all open files), regulations should be made for logging out of IT systems and IT applications even if no access control is implemented.
 
-If it is foreseeable that only a brief interruption of the work is required, manual deactivation of the screen lock can be performed instead of logging off (see also SYS.2.1.M5 screen lock). In case of prolonged absence, the screen lock should be activated automatically.
+If it is foreseeable that only a brief interruption of the work is required, manual deactivation of the screen lock can be done instead of logging out (see also SYS.2.1.M5 screen lock). In case of prolonged absence, the screen lock should be activated automatically.
 
-Some IT systems and IT applications provide the ability to set a time period after which a user is automatically logged out of the IT system during inactivity. It should be considered whether this method is used as it can also lead to data loss. An automatic logout can z. B. in PC pools are used with strong public traffic, since a registered user can block the work with the help of the screen lock unauthorized.
+Some IT systems and IT applications provide the ability to set a time period after which a user is automatically logged out of the IT system during inactivity. It should be considered whether this method is used as it can also lead to data loss. An automatic logout can z. B. in PC pools are used with strong public traffic, since a registered user can block the workplace using the screen lock unauthorized.
 
 Depending on the workplace environment, consideration should be given to what provisions should be made for short-term absences of users. Thus, automatic activation of the screen lock should be faster in multi-user systems than those for a user, so z. B. already after five minutes.
 
@@ -622,7 +622,7 @@ However, the use of client-to-client services also has a number of disadvantages
 Depending on requirements, client-to-client services can only be used on a local network or across the Internet. The number of IT systems that can share these resources ranges from just a few, selected clients, to an unmanageable set of unknown clients. In general, however, a distinction can be made between two types of client-to-client services:
 
 * Local client-to-client services
- With local client-to-client services, individual clients can share resources with other clients in a LAN. These shares can often be managed directly by the operating system. An example of this is file and printer sharing in Windows operating systems. Access to these services can often be limited by passwords or a selection of IP addresses. Typically, these services are not used beyond the local network and are rejected at the security gateway (firewall). Because these services do not require a separate server, they can save hardware and software procurement costs.
+ With local client-to-client services, individual clients can share resources with other clients in a LAN. These shares can often be managed directly by the operating system. An example of this is file and printer sharing in Windows operating systems. Access to these services can often be limited by passwords or a selection of IP addresses. Typically these services are not used beyond the local area network and are rejected at the security gateway (firewall). Because these services do not require a separate server, they can save hardware and software procurement costs.
 * Public client-to-client services
  To exchange information with users who do not have access to the LAN, public client-to-client services can be used. For this, additional applications usually have to be installed on the respective IT system so that they can use the services provided by other clients. Since information is exchanged directly between two or more IT systems in client-to-client services, additional information about how these IT systems can be accessed is required for establishing a connection. For this reason, especially for large client-to-client networks, there should be an overview of which resources are provided to which client.
  In principle, the following types are distinguished:
@@ -631,7 +631,7 @@ Depending on requirements, client-to-client services can only be used on a local
 + Central client-to-client services
 The installed application connects to a server that manages information about other clients. To do this, the application of the client first has to transmit information about the resources that it wants to provide to the server. Only after this step can an IT system usually access information about the other logged on clients. These include, for example, the IP address, the user, and the content provided. With the help of this information, a direct connection to the remote client can be established and its resources used. If the central server fails, the contact information of the connected IT systems is no longer available and the clients can no longer establish a data connection with each other. This results in the failure of the entire client-to-client network.
 + Decentralized client-to-client services:
-Distributed client-to-client services do not require a central server that manages the connected users. The users of these services' IT systems establish data connections with each other to exchange information about the resources provided. Not only can the resources of the IT systems with which a connection is established directly be searched, but also information about other clients, who in turn have established a data connection, can be retrieved. Because each client can connect to multiple clients, a network is created that allows each client to retrieve information about the resources provided by other clients. These decentralized client-to-client services assume that the application must be set up with a client which is part of this network in order to become a member of the network. The required contact information must be known in advance. Since many networks benefit from a large amount of connected IT systems, this contact information is often published on websites.
+Distributed client-to-client services do not require a central server that manages the connected users. The users of these services' IT systems establish data connections with each other to exchange information about the resources provided. Not only can the resources of the IT systems with which a connection is established directly be searched, but also information about other clients, who in turn have established a data connection, can be retrieved. Because each client can connect to multiple clients, a network is created that allows each client to retrieve information about the resources provided by other clients. These remote client-to-client services require that the application be set up with a client which is part of this network in order to become a member of the network. The required contact information must be known in advance. Since many networks benefit from a large amount of connected IT systems, this contact information is often published on websites.
 + Hybrid client-to-client services
 Hybrid client-to-client services are similar to central client-to-client services, except that multiple independent servers can be used. As with core client-to-client services, clients provide a server with the resources they provide and contact information on how to reach them. The servers in turn share this information with other servers. If necessary, the clients can access the resources of other clients that are not managed by the same server.
 
@@ -644,7 +644,7 @@ Only a few services require client-to-client communication between IT systems. F
 * Provision of printers
  If multiple people in a LAN need access to printers, they can be centrally provisioned in the network. This can be done with the use of network-capable printers or management via print servers (see SYS.4.1 Printers, Copiers and Multifunction Devices).
 * File Sharing
- Instead of releasing memory on several clients in the LAN, the information can be stored centrally on a file server. If only users within a LAN are allowed to access the server, for example, Samba servers (see APP.3.4 Samba) or NFS servers (see SYS.1.3 server under Unix) can provide the information., General recommendations are in APP3.3 File server to find. If external users are also allowed to access the information, the information could be stored on an externally accessible web server (see APP.3.2 web server).
+ Instead of releasing memory on several clients in the LAN, the information can be stored centrally on a file server. If only users within a LAN are allowed to access the server, for example, Samba servers (see APP.3.4 Samba) or NFS servers (see SYS.1.3 server under Unix) can provide the information., General recommendations are in APP3.3 File server to find. If external users are also allowed access to the information, the information could be stored on an externally accessible web server (see APP.3.2 web server).
 * Messaging
  If you need to send text messages and not use e-mail, consider using an instant messaging server, such as Jabber. Through this server, the messages could be centrally checked for malicious software.
  Communication with external contacts can also be achieved by means of a central instant messaging server operated by the institution and accessible both internally and externally. More detailed information can be found in APP.1.5 Instant Messaging
@@ -667,7 +667,7 @@ In general, the uncontrolled flow of information from a LAN must be prevented. T
  By using local packet filters, client communication can be restricted to a few IT systems (see SYS.2.1.M28 Local Packet Filter Setup). For example, the filter rules could be set so that only servers can communicate.
  Based on the IP address of the server and the port number of the permitted service, an undesirable communication setup can be made more difficult. By using local packet filters, both the use of local and public client-to-client networks can be prevented.
 * Central filtering on the security gateway (firewall)
- In general, the security gateway should allow only the necessary communication to or from the local network, all other connections should be rejected (see NET.3.2 Firewall). If the security gateway prevents the communication of the clients from the LAN with IT systems on the Internet, the use of public client-to-client networks can be prevented.
+ In general, the security gateway should allow only the necessary communication to or from the local network, all other connections should be rejected (see NET.3.2 firewall). If the security gateway prevents the communication of the clients from the LAN with IT systems on the Internet, the use of public client-to-client networks can be prevented.
 * Directive
  In addition to technical recommendations, employees of the institution should also be prohibited from using client-to-client services. This statement can be formulated in the security policy for users.
 If client-to-client services are to be used in the institution, this must be decided by the executive level of the institution. The information security officer must be involved and the decision including the residual risks must be documented.
@@ -685,7 +685,7 @@ These dangers must be counteracted by appropriate organizational or technical se
 * Removal of drives
  Although the removal of drives for removable media (or the lack of procurement) provides the safest protection against the above-mentioned threats, but is usually associated with considerable effort. Often, a removal is not possible at all, eg. B. with memory card readers in notebooks. It should also be taken into account that the expansion may hinder the administration and maintenance of the IT system. This solution should be considered if special security requirements exist. If it is foreseeable that the drives for removable media are not needed, devices without built-in drives should be preferred when purchasing.
 * Locking drives
- For some types of drives, there are lockable plug-in devices that can help prevent uncontrolled use. Procurement should ensure that the drive locks are suitable for the existing drives and can not damage them. It should be noted that locks are not offered for all types of drives, such as built-in memory card readers. In addition, care should be taken that the locks are offered by the manufacturer with a sufficient number of different keys. The disadvantage is the procurement costs for the drive locks and the cost of the required key management. Therefore, this solution makes sense only with higher protection requirements or special security requirements.
+ For some types of drives, there are lockable plug-in devices that can help prevent uncontrolled use. Procurement should ensure that the drive locks are suitable for the existing drives and can not damage them. It should be noted that locks are not offered for all types of drives, such as built-in memory card readers. It should also be ensured that the locks are offered by the manufacturer with a sufficient number of different keys. The disadvantage is the procurement costs for the drive locks and the cost of the required key management. Therefore, this solution makes sense only with higher protection requirements or special security requirements.
 * Deactivation in the BIOS or operating system
  In the BIOS, most PCs provide options for booting from which drives. In conjunction with password protection of the BIOS settings, this can prevent the uncontrolled booting of removable media and mobile data carriers. Furthermore, the existing drives and interfaces can be disabled individually in modern operating systems.
 The client can now be difficult to use without authorization because, for example, No external software can be installed by the removable media or information can be copied to it. Disabling the drives in the BIOS or operating system has the advantage that the hardware does not need to be changed. The corresponding settings in the operating system can possibly even be made centrally. For this procedure to be effective, it must be ensured that the users do not have the permissions in the operating system to undo the deactivation of the drives.
@@ -757,13 +757,13 @@ When decommissioning a client, it must first of all be ensured that
 In particular, it is important to have an overview of what data is stored on the IT systems.
 
 * Data backup
- Before decommissioning the client, locally stored data that is still needed must be either externally backed up or archived (for example, on external hard drives, CDs or DVDs) or transferred to a backup system or a file server. After the backup, it should be checked that all data has been backed up correctly.
+ Before decommissioning the client, locally stored data that is still needed must be either externally backed up or archived (for example, on external hard drives, CDs, or DVDs) or transferred to a backup system or a file server. After the backup, it should be checked that all data has been backed up correctly.
  In this context, it may be useful to provide users with a suitable drive, such as an external CD or DVD burner, for backing up any stored local data.
  Further information on this topic can be found in SYS.2.1.M4 Regular data backup as well as the blocks OPS.1.1.5 Data backup and OPS.1.1.2 Archiving.
 * Dismiss the IT system from directory services and databases
- Any authorizations in the network that are linked to the client itself (and not to a user) must be deleted. Examples include entries on proxy servers on the security gateway or access rights to network services that are granted based on the IP address. If the client is entered in network-wide directory services or databases (for example in a Windows domain, Active Directory, NIS or similar), the associated entries must be deleted or at least the corresponding identifiers must be deactivated.
+ Any authorizations in the network that are linked to the client itself (and not to a user) must be deleted. Examples include entries on proxy servers on the security gateway or access rights to network services that are granted based on the IP address. If the client is registered in network-wide directory services or databases (for example in a Windows domain, Active Directory, NIS or similar), the associated entries must be deleted or at least the corresponding identifiers must be deactivated.
 * Delete the data on the IT system
- It must be ensured that there is no longer any information worth protecting on the hard disks. It is not enough just to reformat the disks, but they have to be completely overwritten at least once. It should be noted that neither deleting the operating system deletion nor reformatting the disks actually removes the data from the disks. With suitable software, data can be reconstructed in such cases, often without much effort.
+ It must be ensured that no more valuable information is available on the hard disks. It is not enough just to reformat the disks, but they have to be completely overwritten at least once. It should be noted that neither deleting the operating system deletion nor reformatting the disks actually removes the data from the disks. With suitable software, data can be reconstructed in such cases, often without much effort.
 SSDs can not be overwritten effectively due to wear leveling and reserve capacity, and the expected remaining life of the SSD is reduced. For SSDs, it is better to use the SECURE ERASE functionality provided by the SSD and then check the result.
 * Delete backup media
  After decommissioning the IT systems, the corresponding data backup media may also have to be deleted if the data stored on them is no longer needed.
@@ -818,7 +818,7 @@ If the user has successfully authenticated, the DEK is decrypted. With the DEK, 
 
 In general, the key length used for the encryption process used by the hard disk should be sufficiently long. Care should be taken to operate the encryption algorithm in a secure disk encryption mode. Otherwise, decryption can cause problems if the ciphertext is moved between two sectors.
 
-Before self-encrypting hard disks are procured, it should be checked whether the hard disks are compatible with the other hardware of the IT system. Furthermore, it should be checked whether the read and write rate of the selected hard disk is appropriate. In addition, it should be checked whether further boundary conditions for use in the IT system must be met. For example, very few models of self-encrypting hard drives can be integrated into an existing "single-sign-on" architecture. It should also be checked whether and how IT systems can be migrated with normal hard disks to self-encrypting hard disks (with a supplied program or via a new installation).
+Before self-encrypting hard disks are procured, it should be checked whether the hard disks are compatible with the other hardware of the IT system. Furthermore, it should be checked whether the read and write rate of the selected hard disk is appropriate. In addition, it should be checked whether further boundary conditions for use in the IT system must be met. For example, very few models of self-encrypting hard drives can be integrated into an existing single-sign-on architecture. It should also be checked whether and how IT systems can be migrated with normal hard disks to self-encrypting hard disks (with a supplied program or via a new installation).
 The installation of a self-encrypting hard disk should be done in institutions by trained administrators. To do this, they first have to create a new DEK and assign a password and create a master key that must be stored safely. The DEK start password must first be changed by the user of the client to a secure password.
 
 If a self-encrypting hard drive is repaired or should it be sold or disposed of, it must be ensured that it can not be extracted from any valuable information. To do this, the DEK should be regenerated before repair, sale or disposal, or a deletion command "ATA Secure Erase" should be executed.
@@ -833,24 +833,24 @@ For this purpose, status information is usually retrieved from a central IT syst
 
 It is recommended to create a reference installation for clients in which the basic configuration and all configuration changes, updates and patches can be pre-tested by the users before importing them to the clients. This concerns the basic settings of the IT system, security patches and updates as well as normal updates issued by the manufacturer.
 
-Additionally, such a reference installation may also be used to facilitate the installation or re-instalation of clients by appropriately cloning an appropriately preconfigured installation onto the client to be installed ("cloning"). Ideally, then only a few settings need to be adjusted. A reference installation used for cloning clients must be configured and tested with special care.
+In addition, such a reference installation may also be used to facilitate the installation or re-instalation of clients by appropriately "cloning" a suitably pre-configured installation onto the client to be installed. Ideally, then only a few settings need to be adjusted. A reference installation that is used to clone clients must be configured and tested with great care.
 
 The reference installation must be such that the essential parameters of the hardware and software platform are the same for all IT systems derived from this reference installation. This does not necessarily mean that an identical hardware and software configuration must exist on all clients. However, the configuration of different clients must be sufficiently similar in order to maintain the reference character of the installation.
 
 In addition, when testing application programs and settings that affect users on the clients, IT operations do not do so with administrator privileges, but under a user ID that has the same privileges and the same settings for the user environment as the users who should work with the IT system.
 Optionally, it may be advantageous to use different test systems for different types of tests, such as one or more IT systems for device driver or low-level program testing and operating system patches, and another for application program testing. In such a case, however, it is important to be aware that in this way certain types of interactions between operating system environment and application programs can not be covered. In the case of special demands on the security of the clients, it may therefore be necessary to use only identically equipped and configured IT systems for specific deployment scenarios.
 
-For several typical and more frequently recurring test cases, checklists should be created that can be executed during testing and that, in addition to the pure documentation of the test, can often also contribute to increasing efficiency and avoiding errors.
+For several typical and more frequently recurring test cases, checklists should be created that can be executed during testing and which, in addition to the pure documentation of the test, can often also contribute to increasing the efficiency and avoiding errors.
 
 All tests should be documented so that they can be understood at a later date. This is especially necessary when testing security updates and new device drivers where improper configuration or failure of the installation can cause the affected clients to lose access to the network or even stop booting. Especially in such cases, a meaningful documentation can significantly reduce the time required for troubleshooting.
 
 #### SYS.2.1.M31 Local packet filter (CIA) setup
 
-The entire network of an institution should be protected by an appropriate security gateway. In addition, it is recommended to set up appropriate access restrictions at application or network level on each client.
+The entire network of an institution should be protected by an appropriate security gateway. In addition, it is recommended to set up appropriate access restrictions at the application or network level on each client.
 
 A local packet filter can protect a client against attacks launched from the same subnet. In addition, such a packet filter can be used to realize a finer graded access control for individual services than is possible, for example, with packet filters only at gateways.
 
-In addition, a local packet filter can also be used to restrict outgoing network connections and thus limit the consequences of compromising the IT systems. While such protection may be disabled by an attacker after a successful compromise of the client, on the other hand, an attacker is at least hindered in this way. In this way, crucial time can be gained in the discovery and possible reactions.
+In addition, a local packet filter can also be used to restrict outgoing network connections and thus limit the consequences of compromising the IT systems. While such protection may be disabled by an attacker after a successful compromise of the client, on the other hand, an attacker is at least hindered in this way. In this way, decisive time can be gained in the discovery and possible reactions.
 
 Lastly, the log function of a local packet filter can allow certain attacks to be detected at all.
 
@@ -861,9 +861,9 @@ There are two general strategies that can be used to implement packet filtering 
 
 In contrast, the whitelist strategy blocks all types of connections that do not belong to a list of allowed services (Restrictive strategy: "Everything is forbidden, which is not explicitly allowed").
 
-The whitelist strategy offers greater security and should therefore be used in principle unless there are important reasons against it. The disadvantage lies in the fact that administration costs tend to be higher because new rules have to be defined each time the requirements change. In exceptional cases, for example if a protocol does not work on firmly defined ports, the blacklist strategy can be used.
+The whitelist strategy offers greater security and should therefore be used in principle unless there are important reasons against it. The downside is a higher administrative overhead, since new rules have to be defined each time the requirements change. In exceptional cases, for example if a protocol does not work on firmly defined ports, the blacklist strategy can be used.
 
-It is recommended that clients who have special security requirements set up a local packet filter with a basic set of rules in the basic configuration, which basically rejects all connection requests from the outside. This policy should be active when the client is connected to the network. Depending on which services are to be used by the client, after their configuration, the required protocols and ports can be unlocked.
+It is recommended that clients that have special security requirements set up a local packet filter with a basic set of rules in the basic configuration, which basically rejects all connection requests from the outside. This policy should be active when the client is connected to the network. Depending on which services are to be used by the client, after their configuration, the required protocols and ports can be unlocked.
 
 Packet filters usually allow detailed logging of network traffic. Setting up a local packet filter is therefore also useful in secure networks that are separated with a security gateway from an insecure network such as the Internet, because recovered information can be helpful in detecting attacks. However, care must be taken to ensure that no privacy policy is violated. Where appropriate, the relevant bodies (data protection officers, staff representatives or others) should be involved.
 
@@ -899,7 +899,7 @@ If it is not possible with the IT system to prevent the administrator from acces
 IT systems should have at least the following security features. If these are not available as standard, they should be retrofitted with additional security products.
 
 * Identification and authentication: There should be a lock on the IT system after a specified number of failed authentication attempts, which only the IT operation can reset. If a password is used, the password should be at least eight digits long and should not be stored unencrypted in the IT systems.
-* Rights management and control: There should be rights management and control on hard disks and files, at least between reading and writing access. For users, system access at the operating system level should not be possible.
+* Rights management and control: There should be a rights management and control on hard disks and files, with at least between reading and writing access to be distinguished. For users, system access at the operating system level should not be possible.
 * Role separation between administrator and user: There should be a clear separation between administrator and user, whereby only the administrator should be able to assign or revoke rights.
 * Logging of the processes Login, Logout and Rights violation should be possible.
 If one or more of these security features are not supported by the operating system, appropriate additional security products must be used as a substitute.
@@ -972,7 +972,7 @@ The emergency boot medium can be used for problems such as:
 Infection of the IT system with malicious programs (such as computer viruses)
 * Compromising the IT system by an attacker, or even
 * Hardware problems.
-Ideally, the emergency boot media should contain all the programs and data needed to inspect the IT system and troubleshoot problems. If necessary, different media can be created for different problem scenarios.
+Ideally, the rescue boot media should contain all the programs and data needed to inspect the IT system and troubleshoot issues. If necessary, different media can be created for different problem scenarios.
 
 The following programs are recommended as the "basic configuration" for an emergency boot medium:
 
@@ -984,9 +984,9 @@ The following programs are recommended as the "basic configuration" for an emerg
 In addition, programs can be added for further analysis, for example to forensically investigate compromised IT systems.
 It is important that all programs and libraries are loaded exclusively from the boot medium. No components of the installed IT system may be used. If a boot medium is created, it is also important to ensure that in addition to the necessary programs, there are also all the drivers needed to access the client's built-in disks. These include, for example, drivers for hard disk controllers (especially RAID controllers) and drivers for hard disk encryption or hard disk compression.
 
-If the boot media provides enough storage space, additional programs or documentation can be stored on the media. For example, it can increase the efficiency of debugging if the boot media always contains up-to-date documentation of the system configuration.
+If the boot media provides enough space, additional programs or documentation can be stored on the media. For example, it can increase the efficiency of debugging if the boot media always contains up-to-date documentation of the system configuration.
 
-The emergency boot medium itself must be free from viruses and other malicious programs. For this reason, only programs that originate from trusted sources (for example, directly from the manufacturer's CD / DVD) or whose digital signature has been checked must be used. Also, after the boot media is created and changed, it should be scanned with a virus protection program.
+The emergency boot medium itself must be free from viruses and other malicious programs. For this reason, only programs that originate from trusted sources (for example, directly from the manufacturer's CD / DVD) or whose digital signature has been checked must be used. After the boot media is created and changed, it should also be scanned with a virus protection program.
 
 It is not absolutely necessary to create a separate boot medium for each IT system. A suitably flexible boot medium can be sufficient for a large number of different IT systems. Not even the same operating system needs to be deployed on the boot medium as on the target system itself. However, for compatibility reasons, this is often beneficial. However, it must be ensured by appropriate tests that the medium really works for all clients for which it is to be used. Depending on the operating system, system-specific aspects must also be considered, which are described in the respective IT-Grundschutz modules.
 
@@ -998,7 +998,7 @@ The emergency boot media function should be tested regularly and the operation o
 
 #### SYS.2.1.M39 Uninterruptible and Stable Power Supply [Home Automation] (A)
 
-If there are increased availability requirements for clients, they should be connected to an uninterruptible power supply (UPS) so that power outages can be bypassed until either the (backup) power supply is restored or the clients shut down in an orderly manner. More detailed information about an uninterruptible and stable power supply can be found in the module and the implementation notes for the SYS.1.1 General Server.
+If there are increased availability requirements for clients, they should be connected to an uninterruptible power supply (UPS) so that power outages can be bypassed until either the (backup) power supply is restored or the clients shut down in an orderly fashion. More detailed information about an uninterruptible and stable power supply can be found in the module and the implementation notes for the SYS.1.1 General Server.
 
 #### SYS.2.1.M40 Operation Documentation
 

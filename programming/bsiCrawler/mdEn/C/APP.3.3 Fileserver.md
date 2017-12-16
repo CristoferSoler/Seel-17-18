@@ -5,7 +5,7 @@
 
 A file server (or file server) is a server in a network that centrally provides files for all authorized users or clients. The data can be used by authorized users at the same time, without this z. B. to removable media or to distribute by e-mail. By keeping the data central, the data can be structured and provided in different file versions. For file servers, rights can be assigned centrally and data backup can be done centrally.
 
-A file server usually manages mass storage devices that are connected to it via interfaces such as SCSI (Small Computer System Interface) or SAS (Serial Attached SCSI). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (Host Bus Adapter) in the server and SAN switches.
+A file server usually manages mass storage devices that are connected to it via interfaces such as SCSI (Small Computer System Interface) or SAS (Serial Attached SCSI). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (host bus adapter) in the server and SAN switches.
 
 ### 1.2 Objective
 
@@ -26,10 +26,10 @@ If a file server fails, the entire information network can be affected and thus 
 
 ### 2 2 Inadequate dimensioning of the file server
 
-If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
+If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
 
 ### 2 3 Inadequate review of dropped files
-If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can quickly spread throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
@@ -41,7 +41,7 @@ If the storage structure is not specified or the employees do not stick to it, d
 
 ### 2 6 Unsuitable installation of the file server
 
-If file servers are set up in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
+If file servers are deployed in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
 
 ### 2 7 Lack of or insufficient data protection concept
 
@@ -103,7 +103,7 @@ It SHOULD be determined a structure, according to which data are to be stored. U
 
 All storage resources of the file server SHOULD be cataloged, eg. Hard disks, flash memory, tape drives. In addition, it should be checked regularly whether the memory is still working as intended. In order to be able to react quickly in the event of bottlenecks, replacement storage tanks SHOULD be reserved.
 
-If a memory hierarchy (primary, secondary or tertiary memory) has been set up, (partially) automated memory management SHOULD be used. If data is distributed automatically, it should be checked manually on a regular basis to see if it works correctly.
+If a memory hierarchy (primary, secondary or tertiary memory) has been set up, a (partially) automated memory management SHOULD be used. If data is distributed automatically, it should be checked manually on a regular basis to see if it works correctly.
 
 Furthermore, the memories used SHOULD be included in the logging concept of the information network. The following events SHOULD at least be logged:
 
@@ -126,11 +126,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.3.A12 Encryption of the data (CI)
 
-All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malware. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malicious software. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
-For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or independent sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
 #### APP.3.3.A14 Use of Error Correction Codes (I)
 In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
@@ -140,7 +140,7 @@ In principle, error-detecting or error-correcting codes SHOULD be used to store 
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​"file servers" can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"file servers" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

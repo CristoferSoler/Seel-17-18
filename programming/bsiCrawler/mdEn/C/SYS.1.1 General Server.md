@@ -13,7 +13,7 @@ The goal of this module is to protect information that is processed, offered or 
 
 Usually, server systems are run under operating systems that have specific security requirements in each case. For common server operating systems, the IT-Grundschutz Compendium has its own modules that specify this module. The module "general server" forms the basis for the concrete building blocks on which they are based. If a specific block exists for a considered system, it must be used in addition to the module General Server. If no specific module exists for server systems used, the requirements of this module must be suitably specified.
 
-The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are likewise to be considered separately, for example by applying the corresponding concretized components.
+The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are also to be considered separately, for example by applying the corresponding concretized components.
 
 2 risk situation
 -----------------
@@ -31,11 +31,11 @@ In particular, errors in server services can have serious consequences. In the c
 ### 2 2 Data loss
 
 The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.
-If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
+If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, in particular to long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
 
 ### 2 3 Prevention of services
 
-One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. Often, this attack is associated with distributed resources, as an attacker uses these resources to the detriment of other users and prevents them from accessing the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
+One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. Often, this attack is associated with distributed resources, as an attacker consults these resources to the detriment of other users at work and can no longer access the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
 
 ### 2 4 Provision of unused operating system components and applications
 
@@ -45,20 +45,20 @@ Such unused applications and services can contain vulnerabilities. If the applic
 
 ### 2 5 overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative consequences, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
 * installed services or applications are misconfigured, unnecessarily consuming memory
 * existing storage capacities are exceeded,
-Numerous requests at the same time overstrain a system and overload the processors,
+Numerous requests at the same time overstrain a system and overload the processors
 * too much computing power is claimed by the services or
 * a large number of messages will be sent at the same time.
 3 requirements
 ---------------
 The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -91,7 +91,7 @@ The administration MUST be done via secure protocols. It SHOULD be considered, a
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
-All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably restricted for individual users, but also for applications.
+All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers SHOULD the space for the individual users, but also for applications, should be suitably limited.
 
 The decisions made SHOULD be documented in such a way that it is possible to trace the configuration and software equipment selected for the servers.
 
@@ -103,7 +103,7 @@ Unless patches are available, other appropriate measures to protect the system M
 
 #### SYS.1.1.A8 Regular backup
 
-Data backups MUST be made prior to installation and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
+Data backups MUST be made prior to installations and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
 
 #### SYS.1.1.A9 Use of virus protection programs
 
@@ -122,7 +122,7 @@ It MUST be decided which information should be logged by the server at least, ho
 * Warning messages from security systems (eg virus protection).
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general servers. They SHOULD be implemented in principle.
 
 #### SYS.1.1.A11 Setting a security policy for servers
 Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
@@ -158,7 +158,7 @@ The actual capacity of the battery and thus the support time of the UPS SHOULD b
 
 #### SYS.1.1.A16 Secure installation and basic configuration of servers
 
-Servers SHOULD be set up so that only the required services are selected during installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
+Servers SHOULD be set up so that only the required services are selected during the installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
 
 All installation steps SHOULD be documented in such a way that the installation can be reconstructed and repeated by a knowledgeable third party based on the documentation.
 
@@ -173,7 +173,7 @@ For all network services offered and used by the server, it should be checked wh
 
 #### SYS.1.1.A19 Set up local packet filter
 
-Existing local packet filters SHOULD be configured via a set of rules so that the incoming and outgoing communication is restricted to the required communication partners, communication protocols or ports and interfaces.
+Existing local packet filters SHOULD be configured via a set of rules so that the incoming and outgoing communication is limited to the required communication partners, communication protocols or ports and interfaces.
 
 #### SYS.1.1.A20 Restriction of access via networks
 
@@ -191,16 +191,16 @@ The server SHOULD be considered in the emergency management process. To this end
 
 #### SYS.1.1.A23 system monitoring
 
-The server system SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
+The server system SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.1.1.A24 security checks
 
-Server systems SHOULD undergo regular security testing that verifies compliance with security requirements and identifies any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
+Server systems SHOULD undergo regular security testing to verify compliance with security requirements and to identify any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
 When decommissioning a server SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the server. It SHOULD also be ensured that services offered by the server have been taken over by another server, if necessary.
-It SHOULD create a checklist that can be processed when a server is decommissioned. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
+It SHOULD create a checklist that can be processed when decommissioning a server. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 

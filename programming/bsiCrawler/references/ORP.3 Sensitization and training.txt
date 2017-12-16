@@ -1,0 +1,12 @@
+### 3.1 Basic requirements
+#### ORP.3.A1 Sensitization of Information Security Management [Supervisors, Institutional Management]
+#### ORP.3.A2 Contact for security questions
+#### ORP.3.A3 Instruction of the staff in the safe handling of IT [Supervisors, Human Resources, IT Operations]
+### 3.2 Standard requirements
+#### ORP.3.A4 Designing an information security awareness and training program
+#### ORP.3.A5 Analysis of target groups for awareness-raising and training programs
+#### ORP.3.A6 Planning and Conducting Information Security Education and Training
+#### ORP.3.A7 Training on how to proceed according to IT-Grundschutz
+#### ORP.3.A8 Measurement and Evaluation of Learning Success [Human Resources]
+### 3.3 Requirements for increased protection requirements
+#### ORP.3.A9 Specialized Training of Exposed Persons and Institutions (CIA)

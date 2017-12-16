@@ -32,7 +32,7 @@ If information security regulations are lacking, inadequate, unworkable or incom
 
 ### 2 4 Insufficient knowledge of regulations
 
-The determination of regulations alone does not ensure their observance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
+The establishment of regulations alone does not ensure their compliance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
 
 ### 2 5 Misconduct
 
@@ -51,7 +51,7 @@ The unauthorized use of own IT systems by employees can generally be difficult t
 
 ### 2 9 Abuse of social networks
 
-Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as here, on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed under "acquaintance" can be exploited.
+Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed in "acquaintance" can be exploited.
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
@@ -62,17 +62,17 @@ Outside and inside perpetrators can try to manipulate or destroy devices, inform
 
 The following are specific requirements for the personnel area. Basically, the HR department is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### ORP.2.A1 Regulated training of new employees [supervisors]
 
-The personnel department and the supervisor MUST ensure that new employees incorporated at the beginning of their employment in their new tasks and be informed about existing regulations, practices and procedures. Here, a checklist SHOULD be supportive.
+The HR department and supervisors MUST ensure that new employees become familiar with their new responsibilities at the beginning of their employment and are informed about existing regulations, practices and procedures. Here, a checklist SHOULD be supportive.
 
 For the regular training of new employees, they MUST be made aware of existing regulations and instructions for information security. All employees MUST be informed about information security regulations, their changes and their specific impact on a business process or work environment.
 
-All employees MUST be explicitly required to comply with applicable laws, regulations and internal regulations. In addition, all employees MUST be noted that all information obtained during the work are intended solely for internal use, as long as they are not marked otherwise.
+All employees MUST be explicitly required to comply with applicable laws, regulations and internal regulations. In addition, all employees MUST be advised that all information received during the work is for internal use only, unless otherwise indicated.
 
 #### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]
 Before the departure of an employee, a timely briefing of the successor MUST be carried out, ideally by the departing employee. If a direct handover is not possible, a detailed documentation MUST be prepared by the departing employee. In addition, any outgoing employees MUST be required to collect all documents, keys, equipment, and IDs and access privileges received as part of their duties.
@@ -89,7 +89,7 @@ Supervisors MUST ensure the establishment and maintenance of representation arra
 
 #### ORP.2.A4 Regulations for the use of external personnel
 
-In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated like visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
+In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated like visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be instructed in their tasks similar to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
 
 #### ORP.2.A5 Confidentiality agreements for the use of outside personnel
 
@@ -112,9 +112,9 @@ The duties and responsibilities of employees SHOULD be documented in an appropri
 
 #### ORP.2.A9 Training of employees
 
-Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the tasks assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
+Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
 
-All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD be trained separately and used within the area of ​​activity as multipliers for the remaining employees.
+All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD train separately and be employed within the area of ​​activity as multipliers for the remaining employees.
 
 #### ORP.2.A10 Avoidance of disturbances of the working environment
 

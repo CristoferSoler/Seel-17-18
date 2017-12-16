@@ -64,7 +64,7 @@ If security-relevant events are insufficiently logged by the web server, they ca
 
 The following are specific requirements for the Web server area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -100,7 +100,7 @@ If clients authenticate to the web server, an encrypted connection MUST be used 
 
 #### APP.3.2.A6 Timely import of security-relevant patches and updates
 
-The responsible employees MUST inform themselves regularly at various sources about current weaknesses in the web server software used and import security-relevant updates in a timely manner. Software updates and patches for web servers, as well as additional applications and enhancements MUST be sourced from trusted sources only and must be sufficiently tested before they are installed or deployed. Before any updates or patches are installed, MUST always be sure that the original state of the web server can be restored.
+The responsible employees MUST inform themselves regularly at various sources about current weaknesses in the web server software used and import security-related updates in a timely manner. Software updates and patches for web servers, as well as additional applications and enhancements MUST be sourced from trusted sources only and must be sufficiently tested before they are installed or deployed. Before any updates or patches are installed, MUST always be sure that the original state of the web server can be restored.
 
 #### APP.3.2.A7 Legal framework for web offers [Information Security Officer (ISB)]
 
@@ -119,7 +119,7 @@ In order to select suitable security measures for the web server, it should be p
 A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
-If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.
@@ -139,7 +139,7 @@ Web crawler access SHOULD be governed by the robots exclusion standard. Content 
 
 #### APP.3.2.A14 Integrity Checks and Malware Protection
 
-It SHOULD be checked regularly if the files and web content are still integer and not changed by attackers. Also, the files SHOULD be regularly checked for malware.
+It SHOULD be checked regularly if the files and web content are still integer and not changed by attackers. Also, the files SHOULD regularly be checked for malware.
 
 ### 3.3 Requirements for increased protection requirements
 

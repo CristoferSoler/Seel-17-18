@@ -3,13 +3,13 @@
 
 ### 1.1 Introduction
 
-Mobile media is used for a variety of purposes, such as transporting, storing, or using data on the move. There are many different types of portable media, including external hard drives, CD-ROMs, DVDs, memory cards, magnetic tapes and USB sticks.
+Mobile media is used for a variety of purposes, such as transporting, storing or using data on the move. There are many different types of portable media, including external hard drives, CD-ROMs, DVDs, memory cards, magnetic tapes and USB sticks.
 
 Data carriers can be classified according to whether they are read-only, write-once or rewritable. They can also be subdivided according to further criteria, for example the type of data storage (analogue or digital), how they can be processed (without technical aids, such as paper, or only with technical aids, such as DVDs) ) and their design (removable media or external data storage or data carriers integrated with other devices).
 
 ### 1.2 Objective
 
-This module shows how the information stored on mobile data carriers can be safely used and how an unauthorized transfer of information via mobile data carriers should be prevented.
+This module shows how the information stored on mobile data carriers can be safely used and how unauthorized disclosure of information via mobile data carriers should be prevented.
 
 ### 1.3 Delimitation
 
@@ -39,7 +39,7 @@ For mobile data carriers, the risk of data loss is higher than for stationary sy
 
 ### 2 4 Broken disk
 
-Mobile data carriers are susceptible to damage, errors or failures due to their size and application fields. Cause are, for example, constantly changing operating environments or mechanical effects.
+Because of their size and application fields, mobile data carriers are susceptible to damage, errors or failures. Cause are, for example, constantly changing operating environments or mechanical effects.
 
 ### 2 5 Theft
 
@@ -51,18 +51,18 @@ Mobile data carriers are used in very different environments and are therefore e
 
 ### 2 7 Spread of malware
 
-Mobile data carriers are often used to exchange data between different devices and workplaces. There is a risk that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
+Mobile data carriers are often used to exchange data between different devices and workplaces. There is a danger that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
 
 ### 2 8 Data theft with mobile data carriers
 
-Mobile data carriers, such as. As USB sticks or memory cards are usually small, unobtrusive and have a high storage capacity. Since almost all IT systems have an appropriate interface for the use of replaceable data carriers, there is a risk that they can copy large amounts of data without authorization and inconspicuity.
+Mobile data carriers, such as. As USB sticks or memory cards, are usually small, unobtrusive and have a high storage capacity. Since almost all IT systems have an appropriate interface for the use of replaceable data carriers, there is a risk that they can copy large amounts of data without authorization and inconspicuity.
 
 3 requirements
 ---------------
 
 The following are specific requirements for the protection of Mobile Media. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -81,23 +81,23 @@ If the data to be transmitted on a mobile data carrier were created or compiled 
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of mobile data carriers. They SHOULD be implemented in principle.
 
-#### SYS.3.4.A4 Creation of a policy for the safe handling of mobile data carriers [user]
+#### SYS.3.4.A4 Creation of a guideline for the safe handling of mobile data carriers [user]
 
-A policy SHOULD be created that defines how mobile media is handled. The following basic aspects SHOULD be considered:
+A policy SHOULD be created that determines how mobile media is handled. The following basic aspects SHOULD be considered:
 
 * which mobile data carriers are actually used and who can use them,
 * which data may be stored on mobile data carriers and which not,
 * how data stored on mobile data carriers is protected against unauthorized access, manipulation and loss,
-* how the data on the mobile data carriers should be deleted,
+* how the data on the mobile data carriers should be deleted
 * if and how private media may be used,
 * with which external employees or service providers data carriers may be exchanged and which safety regulations must be observed,
 how to prevent the use of mobile data carriers for the unauthorized disclosure of information and
 * how to prevent the spread of malware via mobile data carriers.
-In addition, it was intended to regulate how private mobile data carriers may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
+In addition, it should be regulated how private mobile data media may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
 
 #### SYS.3.4.A5 Control of the transport of mobile data carriers
 
-There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data media may be transported outside the home, who may take them away from home and which basic security measures must be followed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
+There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data carriers may be transported outside the home, who may take them away from home, and which basic security measures must be observed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
 
 #### SYS.3.4.A6 Disk Management [Specialists]
 
@@ -124,7 +124,7 @@ Mobile data carriers SHOULD always be completely encrypted when the need for pro
 
 #### SYS.3.4.A11 Integrity Protection by Checksums or Digital Signatures (I)
 
-In order to ensure only the integrity of confidential information when exchanging data using mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.
+In order to ensure only the integrity of confidential information when exchanging data via mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error-correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.
 
 4 Further Information
 ------------------------------

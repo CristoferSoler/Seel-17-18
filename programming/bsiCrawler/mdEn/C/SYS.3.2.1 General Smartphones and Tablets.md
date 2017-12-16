@@ -57,15 +57,15 @@ If employees are given proprietary smartphones, tablets and phablets, they may b
 
 ### 2 10 Dangers of Bring Your Own Device (BYOD)
 
-If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in an emergency, the user may not agree.
+If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in case of emergency, the user may not agree.
 
-Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
+Often IT managers can no longer check every single device brought by the employee to see if it can be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
 3 requirements
 ---------------
 The following are specific requirements for the smartphone and tablet sector. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -134,7 +134,7 @@ It SHOULD be decided whether to use screen sharing or casting. Screen sharing an
 
 #### SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
 
-All mobile devices SHOULD be protected from malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
+All mobile devices SHOULD be protected against malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
 
 #### SYS.3.2.1.A15 Deactivation of download boosters
 
@@ -150,7 +150,7 @@ The use of the SIM card of the institution SHOULD be protected by a PIN. The Sup
 
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 
-If you want to use a biometric fingerprint sensor, you should check to see if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
+When using a biometric fingerprint sensor, SHOULD it be checked if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
 
 #### SYS.3.2.1.A19 Using a language assistant
 
@@ -179,7 +179,7 @@ All applications with confidential data SHOULD be protected by an additional pas
 
 #### SYS.3.2.1.A24 Use of a closed user group (CI)
 
-The password for the access point name (APN) of a closed user group SHOULD be complex. Authentication SHOULD use the CHAP protocol.
+The password for the Access Point Name (APN) of a closed user group SHOULD be complex. Authentication SHOULD use the CHAP protocol.
 
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 

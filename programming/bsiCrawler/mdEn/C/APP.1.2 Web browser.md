@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Web browsers are application programs that retrieve, process, display, output and store (hypertext) documents, images, video, audio and other data formats from the Internet on local IT systems. Similarly, web browsers can also transfer data to the Internet. Stationary and mobile client systems are unimaginable today without a web browser, because many private and business applications use appropriate content.
+Web browsers are application programs that retrieve, process, display, output and store (hypertext) documents, images, video, audio and other data formats from the Internet, and store them on local IT systems. Similarly, web browsers can also transfer data to the Internet. Stationary and mobile client systems are unimaginable today without a web browser, because many private and business applications use appropriate content.
 
 At the same time, these contents are becoming ever more diverse on the internet. Fewer and fewer websites can do without embedded videos, animated elements, and other active content. Modern web browsers also cover a wide range of additional features by incorporating plug-ins and external libraries. There are also extensions for certain functions, data formats and content. The complexity of modern web browsers offers a high potential for serious conceptual errors and program weaknesses. Not only does it increase the potential threat of attacks from the Internet, it also poses additional risks due to programming and operating errors.
 
@@ -35,7 +35,7 @@ This can be code that can be directly executed by the web browser, such as JavaS
 
 ### 2 2 Exploit Kits
 
-Vulnerability lists and so-called exploit kits greatly facilitate the development of individual malware. Cyber ​​attacks can be automated to easily use drive-by downloads or other distribution channels without expert knowledge. Attackers can exploit known web browser vulnerabilities or any associated resource or extension to prepare for follow-up attacks or to download and install malicious code on the client.
+Vulnerability lists and so-called exploit kits greatly facilitate the development of individual malware. Cyber ​​attacks can be automated to easily use drive-by downloads or other distribution channels without expert knowledge. Attackers can exploit known Web browser vulnerabilities or any associated resource or extension to prepare for follow-up attacks or to download and install malicious code on the client.
 
 ### 2 3 Reading the Internet communication
 
@@ -45,7 +45,7 @@ Weak implementations of the necessary procedures are widespread and prevent effe
 
 ### 2 4 Loss of integrity in web browsers
 
-If browsers, plug-ins or extensions are taken from untrusted sources, malicious functions can be carried out unintentionally and unnoticed. For example, attackers can spoof components such as toolbars on web browsers to trick users into manipulated copies of web pages that cause phishing attacks. Malicious extensions can manipulate the content of the websites in question or spy on data and send it to the attacker.
+If browsers, plug-ins or extensions are taken from untrustworthy sources, malicious functions can be carried out unintentionally and unnoticed. For example, attackers can spoof components such as toolbars on web browsers to trick users into manipulated copies of web pages that cause phishing attacks. Malicious extensions can manipulate the content of the websites in question or spy on data and send it to the attacker.
 
 ### 2 5 Loss of privacy
 
@@ -59,7 +59,7 @@ Errors in the administration of the web browser can lead to unsafe configuration
 ---------------
 The following are the specific requirements for Web browsers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer should always be involved in strategic decisions. In addition, the Information Security Officer is responsible for ensuring that all requirements are met and verified in accordance with the security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 

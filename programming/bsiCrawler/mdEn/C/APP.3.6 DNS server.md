@@ -63,7 +63,7 @@ A DNS Reflection attack is a DoS attack that does not target the DNS server to w
 
 The following are specific requirements for DNS servers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -98,7 +98,7 @@ In order to operate DNS servers smoothly and to detect possible malfunctions or 
 
 #### APP.3.6.A8 Domain Name Management [IT Leader]
 
-It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control of the domains.
+It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control over the domains.
 
 #### APP.3.6.A9 Create an emergency plan for DNS servers
 
@@ -153,7 +153,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.6.A20 Assessment of the contingency plan (A)
 
-It SHOULD be checked regularly if the emergency plan is feasible.
+It SHOULD regularly be checked if the emergency plan is feasible.
 
 #### APP.3.6.A21 Hidden Master (CIA)
 
@@ -168,7 +168,7 @@ Externally accessible DNS servers SHOULD be connected via different providers.
 
 ### 4.1 Literature
 
-Further information about threats and security measures in the area of ​​"DNS servers" can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"DNS servers" can be found in the following publications, among others:
 
 * #### [BSICS055] Secure Deployment of DNS Services:
 

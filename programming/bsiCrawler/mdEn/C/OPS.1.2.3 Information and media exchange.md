@@ -14,7 +14,7 @@ The aim of this module is to secure the exchange of information between differen
 This module is always to be used if there is an exchange of information with offices outside of one's own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
-* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into consideration.
+* the exchange of information takes place with the help of data carriers. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
 The protection of network connections is covered in other components of the IT-Grundschutz Compendium. Further processing in the target IT system is not considered. In this module, the basic rules for a secure exchange of information are in the foreground, especially in the use of mobile data carriers. The reasons why there is no or no sufficiently trusted network between the affected IT systems are not considered.
 
 In addition, this module also takes into account the storage of the data on the sender and receiver system, insofar as it is directly related to the data medium exchange, as well as the handling of the data carriers before or after the transfer. This module considers mobile data carriers such. As removable disks, optical media, USB sticks and hard drives and not to forget paper documents.
@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Defective media
 
-All types of media can cause damage, errors, or failures. They become a problem when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
+All types of media can cause damage, errors, or failures. The problem arises when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
 
 ** Impermissible temperature and humidity **
 
@@ -34,7 +34,7 @@ Extreme temperatures and humidity can affect the proper operation of media. For 
 
 ** improperly packaged media **
 
-During transport or shipping, data carriers are subject to special loads. For data carriers, even minor contamination can lead to data errors. Hard disks can be destroyed by the "head crash" of the read / write head, tapes or cassettes by direct mechanical action. CD-ROMs or DVDs may become unusable due to scratching of the surface.
+During transport or shipping, data media are subject to special loads. For data carriers, even minor contamination can lead to data errors. Hard disks can be destroyed by the "head crash" of the read / write head, tapes or cassettes by direct mechanical action. CD-ROMs or DVDs may become unusable due to scratching of the surface.
 
 ** Data loss due to strong magnetic fields **
 Typical disks with magnetizable storage media are removable disks, cassettes and tapes. These data carriers are sensitive to magnetic interference, so the proximity to such radiation sources should be avoided.
@@ -77,7 +77,7 @@ If information or data carriers are exchanged or transported via an insecure tra
 
 The following are specific requirements for information and media protection protection. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -95,11 +95,11 @@ Staff MUST be informed about the framework conditions for the exchange of inform
 
 #### OPS.1.2.3.A4 Malware Protection [User]
 
-Digital data MUST be checked by both the sender and the recipient for malware. The anti-virus programs used must comply with the current state of the art.
+Digital data MUST be checked for malware both by the sender before sending and by the receiver. The anti-virus programs used must comply with the current state of the art.
 
 #### OPS.1.2.3.A5 loss report [user]
 
-It MUST be reported immediately if a data carrier is lost, stolen, or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
+It MUST be reported immediately if a data carrier is lost, stolen or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
 
 ### 3.2 Standard requirements
 
@@ -126,9 +126,9 @@ External parties SHOULD make confidentiality agreements before gaining access to
 
 #### OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
 
-Before exchanging information, the systems and products used on the transmitter and receiver side SHOULD be checked for compatibility.
+Before exchanging information, the systems and products used on the sender and receiver side SHOULD be checked for compatibility.
 
-#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [User]
+#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [user]
 
 When tagging media, SHOULD ensure that sender and recipient are immediately identifiable. The marking of the data carriers or their packaging SHOULD make the contents of the data carriers clearly identifiable to the recipient. The labeling of data carriers with information worth protecting SHOULD NOT allow any conclusions as to the nature and content of the information.
 
@@ -142,7 +142,7 @@ Confidential information SHOULD be encrypted before exchanging information. Info
 
 #### OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
 
-For higher protection, a disk management SHOULD be set up to regulate access to disks, their marking and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
+For more protection, a disk management SHOULD be set up to control disk access, tagging and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
 
 #### OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
 

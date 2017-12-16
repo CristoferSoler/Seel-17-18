@@ -5,7 +5,7 @@
 
 The importance of travel necessities has steadily increased in recent years as a result of globalization and the resulting increase in international networking between public authorities and companies. In order to be able to work outside of the regular work environment, it has become indispensable, in addition to documents in paper form also carry information technology, be it z. As notebook, smartphone, tablet, removable hard disk or USB stick. When traveling for business, especially when traveling abroad, there are a variety of information security threats and risks that do not exist in normal business operations.
 
-Each trip is fundamentally different, because of the dependency on parameters, such as the purpose of the trip (eg business meeting, conference, congress, seminar), the duration of the trip and the destination, respectively a new threat situation, also in terms of protection more business critical Information, results.
+Each trip is fundamentally different, because of the dependency on parameters, such as the purpose of the trip (eg business meeting, conference, congress, seminar), the duration of the trip and the destination, each time a new threat situation, also in terms of protection more business critical Information, results.
 
 The protection of operational information is not always easy to realize due to the constantly changing destination destinations, certain circumstances or regulatory and legal requirements. So z. For example, the legal and regulatory requirements affect entry control and thus the protection of the confidentiality of data. This shows that, depending on the type and duration of the journey and the destination, individual information security requirements arise. Political, social, religious, geographical, climatic, legal and regulatory peculiarities of individual travel destinations play a decisive role here.
 
@@ -19,7 +19,7 @@ This module serves as an orientation guide for the institution responsible for t
 
 ### 1.3 Delimitation
 
-The building block basically includes the requirements that contribute to the adequate protection of information on trips abroad. The protection of the confidentiality and integrity of sensitive information on travel has the same importance as at the headquarters of the institution.
+The building block basically includes the requirements that contribute to adequate protection of information on trips abroad. The protection of the confidentiality and integrity of sensitive information on travel has the same importance as at the headquarters of the institution.
 
 Threats and requirements that affect the local information network are not considered here.
 
@@ -42,7 +42,7 @@ In addition, the likelihood of a risk of traveling abroad depending on the count
 
 ### 2 1 Listening in and spying on information / economic espionage
 
-Espionage refers to attacks aimed at gathering, evaluating and processing information about institutions, persons, products or other target objects. Especially when traveling abroad, there are unknown sources of danger that can not be influenced by the information security management of your own institution. In principle, there are many dangers in foreign rooms and external IT environments due to the targeted interception of space calls, lines, telephone calls or data transmissions. This can be problematic, especially abroad, due to corresponding legal possibilities and is difficult for the traveler to assess.
+Espionage refers to attacks aimed at gathering, evaluating and processing information about institutions, persons, products or other target objects. Especially when traveling abroad, there are unknown sources of danger that can not be influenced by the information security management of your own institution. In principle, there are many dangers in foreign rooms and external IT environments due to the targeted interception of room calls, lines, telephone calls or data transmissions. This can be problematic, especially abroad, due to corresponding legal possibilities and difficult for the traveler to assess.
 
 This can affect both public spaces and spaces as well as conditions in other institutions, but also in institutional representations abroad. Also devices such. B. Mobile phones can be used to record or listen unnoticed conversations. In addition, many IT systems are equipped with standard microphones and cameras that can be attacked and then exploited.
 
@@ -63,11 +63,11 @@ On the other hand, foreign media may also contain malware. There is a danger her
 
 ### 2 3 Unobserved access to mobile devices
 
-Mobile devices such as notebooks, smartphones, tablets or PDAs are largely designed to enable easy data exchange with other IT systems. This can be done via a connection cable or wirelessly, z. B. via WLAN, Bluetooth or a mobile connection. Where open access to IT systems is possible when traveling abroad, attackers may be able to unobtrusively query, change or take information from mobile devices. A subsequent check or even a proof is not always possible because often the accesses are not logged accordingly
+Mobile devices such as notebooks, smartphones, tablets or PDAs are largely designed to enable easy data exchange with other IT systems. This can be done via a connection cable or wirelessly, z. B. via WLAN, Bluetooth or a mobile connection. Where open access to IT systems is possible while traveling abroad, attackers may be able to unobtrusively query, change or take information from mobile devices. A subsequent check or even a proof is not always possible because often the accesses are not logged accordingly
 
 ### 2 4 Feigning a false identity
 
-In the context of communication on the move, there is an increased risk that attackers try both personally and electronically to fake a false identity or to assume an authorized identity (technically, for example, through masquerade, spoofing, hijacking, man-in-the-game Mid-level attacks or similar). In this case, the user can be so deceived about the identity of his communication partner that he reveals information worthy of protection. He achieves a false digital identity z. Example by the spying of user ID and password, the manipulation of the sender field of a message or by the manipulation of an address in the network.
+In the context of communication on travel, there is an increased risk that attackers try both personally and electronically to fake a false identity or to assume an authorized identity (technically, for example, through masquerade, spoofing, hijacking, man-in-the-box Mid-level attacks or similar). In this case, the user can be so deceived about the identity of his communication partner that he reveals information worthy of protection. He achieves a false digital identity z. Example by the spying of user ID and password, the manipulation of the sender field of a message or by the manipulation of an address in the network.
 
 Foreign business partners do not always know an employee personally. As a result, a first-person associate who presents himself with the correct name or background knowledge may believe and provide valuable information.
 Since the security requirements for confidentiality and integrity in foreign institutions, especially foreign, buildings and rooms can never be fully ensured, there is always a residual risk that otherwise obvious things could be manipulated, such as the caller ID on the phone or the sender ID of a fax sender which can fake a false identity and information can be obtained.
@@ -76,17 +76,17 @@ Since the security requirements for confidentiality and integrity in foreign ins
 
 It can often be observed that organizational regulations and technical security procedures for portable IT systems and mobile data carriers exist in institutions, but these are again undermined by the careless handling of specifications and technology. So z. B. repeatedly observed that brought along mobile data carriers are left unattended in the meeting room or in the train compartment during breaks.
 
-In addition, gifts in the form of data carriers, such as. As USB sticks, accepted by employees and thoughtlessly connected to your own notebook. Here then there is the danger that the notebook will be infected with malicious software and thus stolen data, manipulated or encrypted and thus temporary (see 2.7 coercion, extortion, kidnapping and corruption) made unusable.
+In addition, gifts in the form of data carriers, such as. As USB sticks, accepted by employees and thoughtlessly connected to your own notebook. Here then there is the danger that the notebook will be infected with malicious software and thus stolen data, manipulated or encrypted and thus temporary (see 2.7 coercion, extortion, abduction and corruption) made unusable.
 
 In public transport or during business lunches, it can be observed again and again that people are having open discussions about business-critical information. These can then easily be overheard by outsiders and may be used to the grave disadvantage of the employee or his institution.
 
 ### 2 6 Violation of local laws or regulations
 
-When traveling abroad, deviating laws and regulations as well as additional provisions of the destination destination must be taken into account, as these may differ considerably from the national legal situation. Relevant laws and regulations (eg on data protection, information duties, liability, information access for third parties) of the destination country are often unknown to travelers or are misjudged. As a result, a large number of laws can be violated, not only domestically, but also domestically, for example, if personal data of domestic customers are transferred unprotected over public networks when traveling abroad.
+When traveling abroad, deviating laws and regulations as well as additional provisions of the destination destination must be taken into account, as these may differ considerably from the national legal situation. Relevant laws and regulations (eg on data protection, information duties, liability, information access for third parties) of the destination country are often unknown to travelers or are misjudged. As a result, a large number of laws can be violated, not only domestically, but also domestically, for example if personal data of domestic customers are transferred unprotected via public networks when traveling abroad.
 
 Coercion, blackmail, kidnapping and corruption
 
-The security of information, but also of the travelers themselves could be affected by foreign travel through coercion, extortion and in this context also kidnapping. Abroad, other security risks often arise due to political and social circumstances. Employees could be forced into a role of victim in which they are threatened with violence, in order to force them to hand over data worthy of protection. They are forced to bypass or disregard safety guidelines and measures. The focus is often on high-ranking executives or employees who enjoy a special relationship of trust.
+The security of information, but also of the travelers themselves could be affected by foreign travel through coercion, extortion and in this context also kidnapping. Abroad, other security risks often arise due to political and social circumstances. Employees could be forced into a role of victim in which they are threatened with violence in order to force them to hand over data worthy of protection. They are forced to bypass or disregard safety guidelines and measures. The focus is often on high-ranking executives or employees who enjoy a special relationship of trust.
 
 Above all, attackers aim to steal or manipulate sensitive information in order to disrupt the course of business processes or to enrich themselves and others. Political, ideological and economic goals of the attackers play a role here.
 
@@ -112,7 +112,7 @@ The following are specific requirements for information security on overseas tra
 
 In addition, the ISB is responsible for ensuring that all requirements are regularly checked in accordance with the defined security concept.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -143,11 +143,11 @@ Using a screen / code lock prevents third parties from accessing data on mobile 
 
 #### CON.7.A6 Timely loss report [User, Emergency Representative]
 
-Employees MUST report to their institution as soon as information, IT systems or data media are lost or stolen. For this, there must be clear reporting channels and contact persons within the institution. The institution MUST assess the potential effects of the loss and take appropriate countermeasures.
+Employees MUST report to their institution immediately if information, IT systems, or data carriers have been lost or stolen. For this, there must be clear reporting channels and contact persons within the institution. The institution MUST assess the potential effects of the loss and take appropriate countermeasures.
 
 #### CON.7.A7 Secure Remote Access [IT Operations, Users]
 
-In order to allow remote workers secure remote access to the institution's network, secure remote access, e.g. via VPN, set up by the IT operation. The VPN access MUST be cryptographically secured. In addition, users MUST have reasonably secure credentials to successfully authenticate themselves to the terminal and the network. Employees MUST use secure remote access for any communications that may be possible. It MUST be ensured that only authorized persons can access IT systems that have remote access. Mobile IT systems MUST be protected by a restrictively configured personal firewall as far as possible before direct connection to the Internet.
+In order to allow remote workers secure remote access to the institution's network, secure remote access, e.g. via VPN, set up by the IT operation. The VPN access MUST be cryptographically secured. In addition, users MUST have reasonably secure credentials to successfully authenticate themselves against the terminal and the network. Employees MUST use secure remote access for any communications that may be possible. It MUST be ensured that only authorized persons can access IT systems that have remote access. Mobile IT systems MUST be protected by a restrictively configured personal firewall as far as possible before direct connection to the Internet.
 #### CON.7.A8 Secure Use of Public WLANs [User]
 
 In principle, it MUST be regulated whether mobile IT systems are allowed to access the Internet directly.
@@ -156,11 +156,11 @@ Access to the institution's network via publicly available WLANs MUST be impleme
 
 #### CON.7.A9 Secure handling of mobile data carriers [user]
 
-BEFORE using mobile data MUST be checked to ensure that they are not infected with malware. Before passing on portable data media MUST ensure that no sensitive information is included. After use, the media MUST be securely deleted, especially if it is shared with others. To do this, the volume MUST be overwritten with a sufficiently secure procedure established in the institution.
+BEFORE using mobile data MUST be checked to ensure that they are not infected with malware. Before passing on portable data media MUST ensure that no sensitive information is included. After use, the media MUST be securely deleted, especially if it is shared with others. To do so, the volume MUST be overwritten with a sufficiently secure procedure established in the institution.
 
 #### CON.7.A10 Encryption of portable IT systems and data carriers [user, IT operation]
 
-To ensure that information worthy of protection can not be inspected by unauthorized third parties, it is essential to ensure that all sensitive information is protected in accordance with internal guidelines prior to departure. Mobile data carriers and clients SHOULD be encrypted before they travel. The cryptographic keys MUST be stored separately from the encrypted device. When encrypting data, the legal regulations of the target country SHOULD be observed, in particular country-specific laws for the issuing of passwords and for the decryption of data.
+To ensure that information worthy of protection can not be inspected by unauthorized third parties, it MUST be ensured before departure by the employee that all information worthy of protection is protected in accordance with the internal guidelines. Mobile data carriers and clients SHOULD be encrypted before they travel. The cryptographic keys MUST be kept separate from the encrypted device. When encrypting data, the legal regulations of the target country SHOULD be observed, in particular country-specific laws for issuing passwords and for decrypting data.
 
 #### CON.7.A11 Use of theft-fuses [user]
 
@@ -176,8 +176,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### CON.7.A13 Carrying of data and data media [IT operation, users]
 
-BEFORE you travel, you should check which data is not necessarily needed on the IT systems that are taken along, such as the notebook, tablet or smartphone. If it is not necessary to leave this data on the devices, they SHOULD be physically deleted (see CON.6.A9 Safely deleting the information on data carriers). However, if there is a need to carry sensitive data with you, this SHOULD only be done in encrypted form.
-In addition, it should be stipulated in writing which mobile data carriers may be taken on trips abroad and which security measures must be taken into account (eg protection against malware, encryption of business-critical data, storage of mobile data carriers). Employees SHOULD know and comply with these regulations prior to departure (see, inter alia, CON.6.A12 Encryption of Portable IT Systems and Data Carriers).
+BEFORE you travel, you should check which data is not necessarily needed on the IT systems that are taken along, such as the notebook, tablet or smartphone. If it is not necessary to keep this data on the devices, they SHOULD be physically deleted (see CON.6.A9 Safely deleting the information on data carriers). However, if there is a need to carry sensitive data with you, this SHOULD only be done in encrypted form.
+In addition, it should be stipulated in writing which mobile data carriers may be taken on trips abroad and which security measures should be taken into account (eg protection against malware, encryption of business-critical data, storage of mobile data carriers). Employees SHOULD know and comply with these regulations prior to departure (see, inter alia, CON.6.A12 Encryption of Portable IT Systems and Data Carriers).
 
 These safety requirements are based on the protection requirements of the data to be processed abroad and the data to be accessed.
 

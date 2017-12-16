@@ -15,7 +15,7 @@ The goal of the module is the secure operation of web applications and the prote
 
 ### 1.3 Delimitation
 
-This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not dealt with again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
+This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
 
 2 risk situation
 -----------------
@@ -50,14 +50,14 @@ Web pages and data generated and delivered by a web application may include info
 When an attacker automates a web application's capabilities, it can perform numerous operations in a short amount of time, effectively performing repetitive attacks against the web application. With the help of a repeated login process, eg B. valid combinations of user name and password systematically determined (brute force) or lists with valid user name generated (enumeration). In addition, repeated invocation of resource-intensive features (such as complex database queries) for application-level denial-of-service attacks may be abused.
 
 ### 2 8 Insufficient Session Management of Web Applications
-If an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, in a session fixation attack, an attacker can first assign a session ID from the web application and submit it to the victim (for example, via a link in an email). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
+If an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, a session fixation attack allows an attacker to first assign a session ID from the web application and submit it to the victim (for example, via a link in an e-mail). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
 
 3 requirements
 ---------------
 
 The following are specific requirements for Web application protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -65,7 +65,7 @@ The following requirements MUST be implemented as a priority:
 
 In order to access protected resources of a web application, users MUST authenticate themselves to the application. For this, a suitable authentication method MUST be selected and the selection process documented. If the so-called digest authentication method is used, the password files on the web server MUST be sufficiently protected.
 
-A central authentication component MUST be used, which has been implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
+A central authentication component MUST be used, which was implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
 
 To ensure that a valid session (session ID) was not inherited by an attacker, users must re-authenticate to critical features. Also, the web application MUST set limits for failed login attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately when the password has been reset.
 
@@ -84,9 +84,9 @@ A web application MUST allow users to explicitly end an existing session. After 
 
 #### APP.3.1.A4 Controlled integration of data and content in web applications [developer]
 
-It MUST be ensured that a web application integrates and delivers exclusively intended data and content to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, it MUST be ensured that a user can save files only in the specified path.
+It MUST be ensured that a web application incorporates only intended data and content and delivers it to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, MUST ensure that a user can save files only in the specified path.
 
-The goals of the redirect feature of a web application MUST be sufficiently limited so that users are redirected to trusted web pages only. If a user leaves the trust domain, he MUST be informed.
+The goals of the redirect feature of a web application MUST be sufficiently restricted so that users are redirected to trusted web pages only. If a user leaves the trust domain, he MUST be informed.
 
 #### APP.3.1.A5 Logging Security Events of Web Applications [Developer]
 
@@ -97,7 +97,7 @@ A web application MUST record security-relevant events with the required charact
 System administrators MUST regularly inform themselves about current vulnerabilities and import security-related updates in a timely manner. Software updates and patches for web applications MUST be obtained from trusted sources only. You MUST be tested sufficiently before the roll-out. Before any updates or patches are installed, MUST always be sure that the original state of the web application can be restored. The current patch level MUST be documented.
 
 #### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
-Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
+Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given period of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
 
 ### 3.2 Standard requirements
 
@@ -128,7 +128,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -150,7 +150,7 @@ Web pages and Web application responses SHOULD NOT contain information that coul
 * limited access to security-related documentation
 * regular deletion of unneeded files
 * secure registration by external search engines as well as the renunciation of absolute path information
-The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network. Configuration files of the web application SHOULD be stored outside the web root directory.
+The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network, be limited. Configuration files of the web application SHOULD be stored outside the web root directory.
 
 #### APP.3.1.A14 Protection of confidential data [developer]
 
@@ -167,7 +167,7 @@ All data submitted to a web application SHOULD be treated as potentially dangero
 
 #### APP.3.1.A17 Error Handling [Developer]
 
-If errors occur during the operation of a web application, they SHOULD be treated so that the web application remains in a consistent state. The following points should be considered when troubleshooting:
+If errors occur during the operation of a web application, they SHOULD be treated so that the web application remains in a consistent state. The following points should be considered in the error handling:
 
 * confidential information in error messages should be avoided
 * Error messages must be logged
@@ -211,7 +211,7 @@ To protect against denial-of-service (DoS) attacks, resource intensive operation
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
+Further information on threats and security measures in the "Web Applications" area can be found in the following publications, among others:
 
 * #### [HILWEB] Help for using the web application module
 

@@ -1,0 +1,19 @@
+### 3.1 Basic requirements
+#### SYS.4.1.A1 Creation of a basic concept for the use of printers, copiers and multifunctional devices [Head IT]
+#### SYS.4.1.A2 Suitable installation of printers, copiers and multifunction devices
+#### SYS.4.1.A3 Regular update
+### 3.2 Standard requirements
+#### SYS.4.1.A4 Planning the Use of Printers, Copiers, and Multifunction Devices [Head of IT]
+#### SYS.4.1.A5 Create user policies for handling printers, copiers, and multifunction devices
+#### SYS.4.1.A6 Safe use of CUPS
+#### SYS.4.1.A7 Restricting administration access to printers, copiers, and MFPs
+#### SYS.4.1.A8 Supply and Control of Consumables [Internal Service, User]
+#### SYS.4.1.A9 Logging on printers, copiers and multifunction devices
+#### SYS.4.1.A10 Use of network-capable document scanners
+#### SYS.4.1.A11 Network separation when using multifunction devices
+#### SYS.4.1.A12 Proper Disposal of Protected Equipment [Home Technician, User]
+#### SYS.4.1.A13 Safe decommissioning of printers, copiers and multifunction devices
+### 3.3 Requirements for increased protection requirements
+#### SYS.4.1.A14 Authentication for printers, copiers and multifunction devices (CI)
+#### SYS.4.1.A15 Information Protection for Printers, Copiers and Multifunction Devices (CI)
+#### SYS.4.1.A16 Emergency Preparedness for Printers, Copiers and Multifunction Devices

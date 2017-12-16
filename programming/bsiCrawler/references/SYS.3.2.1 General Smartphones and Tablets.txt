@@ -1,0 +1,30 @@
+### 3.1 Basic requirements
+#### SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+#### SYS.3.2.1.A2 Defining a strategy for cloud deployment
+#### SYS.3.2.1.A3 Secure basic configuration for mobile devices
+#### SYS.3.2.1.A4 Using an Access Protection [User]
+#### SYS.3.2.1.A5 Automatic updates of operating system and apps
+#### SYS.3.2.1.A6 privacy settings
+#### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+#### SYS.3.2.1.A8 No installation of apps from insecure sources
+### 3.2 Standard requirements
+#### SYS.3.2.1.A9 Use of functional extensions
+#### SYS.3.2.1.A10 Mobile Employees Policy [User]
+#### SYS.3.2.1.A11 Encryption of the file system
+#### SYS.3.2.1.A12 Use of non-personalized device name
+#### SYS.3.2.1.A13 Screensharing and casting regulations
+#### SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+#### SYS.3.2.1.A15 Deactivation of download boosters
+#### SYS.3.2.1.A16 Deactivation of unused communication interfaces [user]
+#### SYS.3.2.1.A17 Using the SIM card PIN
+#### SYS.3.2.1.A18 Using a fingerprint sensor
+#### SYS.3.2.1.A19 Using a language assistant
+#### SYS.3.2.1.A20 Select and share apps
+#### SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+#### SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+### 3.3 Requirements for increased protection requirements
+#### SYS.3.2.1.A23 Additional password for confidential applications (CI)
+#### SYS.3.2.1.A24 Use of a closed user group (CI)
+#### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+#### SYS.3.2.1.A26 Use of PIM containers (CIA)
+#### SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)

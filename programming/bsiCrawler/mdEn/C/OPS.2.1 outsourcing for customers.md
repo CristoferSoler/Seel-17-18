@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of or inadequate information security regulations
 
-An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The range of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
+An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The spectrum of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
 
 ### 2 2 Inappropriate access, access and access rights management
 
@@ -45,12 +45,12 @@ Without sufficient and appropriate regulations for the resolution of an outsourc
 
 ### 2 6 Dependence on an outsourcing service provider
 
-By opting for outsourcing, an institution always becomes dependent on the outsourcing service provider. This dependency involves the risk that know-how will be lost and that there will no longer be complete control over the outsourced processes and components. In addition, the protection needs of the outsourced business processes and information may vary, resulting in inadequate security measures. By having full control of business processes, sensitive information, resources, and IT systems, while reducing the knowledge of outsourcing customers, outsourcing service providers may no longer notice information security deficiencies.
+By opting for outsourcing, an institution always becomes dependent on the outsourcing service provider. This dependency involves the risk that know-how will be lost and that there will no longer be complete control over the outsourced processes and components. In addition, the protection needs of the outsourced business processes and information may differ, resulting in inadequate security measures. By having full control over business processes, sensitive information, resources, and IT systems while reducing the knowledge of outsourcing customers, outsourcing service providers may no longer notice information security deficiencies.
 
 This situation could be exploited by the outsourcing service provider, for example through drastic price increases and insufficient service quality.
 
 ### 2 7 Disruption of the working climate due to an outsourcing project
-Outsourcing projects are often seen as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
+Outsourcing projects are often viewed as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
 
 ### 2 8 Poor information security in the outsourcing implementation phase
 
@@ -66,14 +66,14 @@ If the IT connection between the outsourcing service provider and the outsourcin
 
 ### 2 11 Lack of multi-client capability at the outsourcing service provider
 
-Outsourcing service providers usually have many different customers who use the same resource base (eg IT systems, networks, personnel). If the IT systems and data of the different customers are not sufficiently separated from each other, there is a risk that one customer will be able to access the area of ​​another customer. In addition, there could be conflicts of interest with the outsourcing service provider if he has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
+Outsourcing service providers usually have many different customers who use the same resource base (eg IT systems, networks, personnel). If the IT systems and data of different customers are not sufficiently separated from one another, there is a risk that one customer will be able to access another customer's area. In addition, there could be conflicts of interest with the outsourcing service provider if he has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
 
 3 requirements
 ---------------
 
 The following are specific requirements for Outsourcing for Customers. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 #### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
@@ -121,7 +121,7 @@ For the regular data exchange with fixed communication partners, the necessary s
 
 #### OPS.2.1.A11 Planning and maintenance of information security in ongoing outsourcing operations [ISB Outsourcing customer]
 
-The intention was to draw up an operational concept for the outsourcing project, which also considers the safety aspects. The security concepts of the outsourcing partners SHOULD regularly be checked for up-to-dateness and consistency. The status of the agreed security measures SHOULD be checked regularly. There should be regular communication between the outsourcing partners, including coordination on changes and improvements.
+The intention was to draw up an operational concept for the outsourcing project that also considers the safety aspects. The security concepts of the outsourcing partners SHOULD regularly be checked for up-to-dateness and consistency. The status of the agreed security measures SHOULD be checked regularly. There should be regular communication between the outsourcing partners, including coordination on changes and improvements.
 The outsourcing partners SHOULD regularly conduct joint exercises and tests to maintain safety levels. Information about security risks and how to deal with them SHOULD be exchanged on a regular basis between the outsourcing partners. There SHOULD exist a process that ensures the flow of information in dealing with security incidents affecting the respective contractors.
 
 #### OPS.2.1.A12 Change Management [IT Operations, Change Manager]
@@ -134,7 +134,7 @@ For the migration phase, a security management team of qualified employees of th
 
 #### OPS.2.1.A14 Emergency Preparedness for Outsourcing [Emergency Response Officer]
 
-There SHOULD exist an emergency preparedness concept for outsourcing, which includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency preparedness concept for outsourcing, the responsibilities, contact persons and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
+There SHOULD exist an emergency preparedness concept for outsourcing, which includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency provision concept for outsourcing, the responsibilities, contacts and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
 
 #### OPS.2.1.A15 Orderly termination of an outsourcing relationship [Head of Procurement]
 
@@ -148,7 +148,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.2.1.A16 Security check of employees (CI)
 
-With external outsourcing service providers SHOULD be contractually agreed that the trustworthiness of the employed personnel is suitably checked. For this, criteria should be defined together.
+With external outsourcing service providers SHOULD be contractually agreed that the trustworthiness of the staff employed is suitably checked. For this, criteria should be defined together.
 
 4 Further Information
 ------------------------------

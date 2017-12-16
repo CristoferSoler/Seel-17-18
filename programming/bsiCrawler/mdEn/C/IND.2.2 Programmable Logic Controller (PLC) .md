@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
+A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, even a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
 
 A PLC has digital inputs and outputs, a real-time operating system (firmware) and other interfaces for Ethernet or fieldbuses. The connection to sensors and actuators takes place via the analog or digital inputs or outputs or via a fieldbus. Communication with process control systems usually takes place via the Ethernet interface and IP-based networks.
 

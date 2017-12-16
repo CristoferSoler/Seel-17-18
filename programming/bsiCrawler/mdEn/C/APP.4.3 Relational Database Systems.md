@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Database systems (DBS) are a widely used tool for organizing, creating, modifying and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
+Database systems (DBS) are a widely-used tool for organizing, creating, modifying, and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
 
 ### 1.2 Objective
 
@@ -13,9 +13,9 @@ The goal of the module is to be able to operate relational database systems safe
 
 This module describes requirements for relational database systems. Security requirements for non-relational database systems are not the subject of this module, but are listed in the module APP.4.5 * Non-relational database systems *.
 
-In order to consistently protect the information in the databases, security requirements should already be taken into account in the development of the database tables and access to the database. However, requirements for this are not listed in this module, but can be found z. In CON.3 * software development *, APP.3.1 * web applications * and APP.3.5 * web services *.
+In order to consistently protect the information in the databases, security requirements should be observed in the development of the database tables and the access to the database already in the application development. However, requirements for this are not listed in this module, but can be found z. In CON.3 * software development *, APP.3.1 * web applications * and APP.3.5 * web services *.
 
-Likewise, the module does not address hazards and requirements that affect the operating system and hardware underlying the database system. Aspects can be found in the corresponding operating system-specific building blocks of the layer IT systems, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
+Similarly, the module does not address hazards and requirements that affect the operating system and hardware underlying the database system. Aspects can be found in the corresponding operating system-specific building blocks of the layer IT systems, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
 
 2 risk situation
 -----------------
@@ -45,7 +45,7 @@ Hardware or software failure as well as human error may cause data loss in the d
 
 ### 2 6 Loss of integrity of stored data
 
-Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) are concerned.
+Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed in productive operation or not at all, not only the inconsistent data must be extensively cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) are concerned.
 
 ### 2 7 SQL injections
 
@@ -69,13 +69,13 @@ Also, an attacker could manipulate core functions (such as Data Dictionary Table
 
 The following are specific requirements for the Database Systems area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### APP.4.3.A1 Creating a Security Policy for Database Systems [Information Security Officer (ISB)]
 
-Based on the institution's general security policy, a specific security policy for database systems MUST be established, which comprehensibly describes requirements and requirements for how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+On the basis of the institution's general security policy, a specific security policy for database systems MUST be created in which comprehensible requirements and specifications are described how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 
 #### APP.4.3.A2 Installation of the database management system
 
@@ -92,7 +92,7 @@ New databases MUST be created according to a defined process. When a new databas
 
 The user and authorization concept (see ORP.4 * Identity and Authorization Management *) of the institution MUST be extended by the authorizations for roles, profiles and user groups required for database management systems.
 
-A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
+A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
 
 #### APP.4.3.A6 Change of password [responsible person]
 
@@ -147,7 +147,7 @@ The database management system SHOULD be configured to always encrypt database c
 
 #### APP.4.3.A17 Data Transfer or Migration [Specialists]
 
-If data is transferred to a database either initially or on a regular basis, it should be defined in advance how this data transfer should take place. After data has been acquired, SHOULD check if it is complete and unchanged.
+If data is transferred to a database either initially or regularly, you should define in advance how this data transfer should take place. After data has been acquired, SHOULD check if it is complete and unchanged.
 
 #### APP.4.3.A18 Monitoring the database management system
 It SHOULD define parameters, events and operating states of the database management system that are critical to safe operation. These SHOULD be monitored using a monitoring system. Thresholds SHOULD be set for all critical parameters and events. If these values ​​are exceeded, MUST be responded appropriately (eg the responsible staff must be alerted). Application-specific parameters, events and their threshold values ​​SHOULD be coordinated with those responsible for the specialized applications (see also APP.4.3.A11 * Sufficient hardware dimensioning *).

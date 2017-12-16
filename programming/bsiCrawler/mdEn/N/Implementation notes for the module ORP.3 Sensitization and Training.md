@@ -24,11 +24,11 @@ This support can begin with the explicit mandate to design appropriate programs.
 Internal and / or external staff is needed to prepare and conduct awareness raising and training activities (see 3.1.2 Selection of Trainers or External Training Providers in the Further Information).
 
 **Implementation**
-In the implementation phase, employees are assigned to the previously defined target groups and target group-specific content is selected for awareness-raising and training measures (see ORP.3.M6 Planning and Conducting Sensitivity and Information Security Training). The subject matter should be suitably taught, for example by means of simulation games (see 3.1.3 Implementation of Information Security Planning Games). Measures must also be implemented which make the contact persons responsible for safety issues known to the employees (see ORP.3.M2 contact for safety issues).
+In the implementation phase, employees are assigned to the previously defined target groups and target group-specific content is selected for awareness-raising and training measures (see ORP.3.M6 Planning and Conducting Sensitizations and Information Security Training). The subject matter should be suitably taught, for example by means of simulation games (see 3.1.3 Implementation of Information Security Planning Games). Measures must also be implemented which make the contact persons responsible for safety issues known to the employees (see ORP.3.M2 contact for safety issues).
 
 ** Operation, continuous care and development **
 
-Another important component of information security training is the handling of information technology. Especially when new techniques are introduced, employees should be informed about them at an early stage and made aware of potential dangers and safety measures.
+Another important component of information security training is the handling of information technology. Especially when new technologies are introduced, employees should be informed about them at an early stage and made aware of potential dangers and safety measures.
 
 In order to improve the presence of imparted teaching content, teaching methods can be used (see 3.1.4 Safeguarding Syllabus). It should also be checked regularly whether the awareness-raising and training measures are successful (see ORP.3.M8 Measurement and Evaluation of Learning Outcomes). If necessary, these must be adapted.
 
@@ -52,31 +52,31 @@ The most important information that must be provided to management is:
 * ** impact on business processes **
  It is important to understand the potential impact of information security incidents on business-critical processes. Dependencies on applications and IT systems, as well as Industrial Control Systems (ICS), Internet of Things (IoT), and other components are not always well-known to management. However, a list of possible security risks is usually insufficient to support management win. Balanced reasoning should also include the following points.
 * ** Legal Security Requirements **
-Laws and other legal requirements may also impose information security requirements in an institution, including, for example, privacy laws, the Social Security Code, the Commercial Code, the Civil Code, the Criminal Code, the IT Security Act, etc. Many legislative phrases regarding information security requirements are general and can be made without obligation. Concrete analysis can be used to derive concrete obligations to ensure an adequate level of safety. An institution must examine which regulations and laws can be effective.
+Laws and other legal requirements may also impose information security requirements in an institution, including, for example, privacy laws, the Social Security Code, the Commercial Code, the Civil Code, the Criminal Code, the IT Security Act, etc. Many legislative phrases regarding information security requirements are general and can be made without obligation. Concrete analysis can be used to derive concrete obligations for ensuring an appropriate level of safety. An institution has to investigate which regulations and laws can come into effect.
 * ** Advantages of a certification **
  A certification of information security processes officially confirms the high regard for information security in an institution. The confidence of the business partners and the public in the institution is thereby strengthened. Certification brings competitive advantages to sales and marketing.
 * ** Standard Information Security Practices for the Industry **
  An additional motivation for using information security standards is the behavior of other similar organizations. Information about industry standards can be obtained from industry journals, from events or through contacts with chambers and associations.
-An appropriate way to raise management awareness is to write a short report (possibly live hacking), followed by a presentation that uses current examples (external and internal) to explain the subject of information security. For example, it should be pointed out that technical measures without simultaneous human and organizational measures are pointless. In order to get the support of the management, it is helpful to show the benefits of such measures.
+An appropriate way to raise management awareness is to write a short report (possibly live hacking) followed by a presentation that uses current examples (external and internal) to explain the subject of information security. For example, it should be pointed out that technical measures without simultaneous human and organizational measures are pointless. In order to get the support of the management, it is helpful to show the benefits of such measures.
 
-Experience has shown that information security is only successfully implemented in an institution if all supervisors set a good example. It makes sense, therefore, to explicitly oblige all executives to inform and sensitize their employees to compliance with the security requirements.
+Experience has shown that information security is only successfully implemented in an institution if all superiors lead by example. It makes sense, therefore, to explicitly oblige all executives to inform and sensitize their employees to compliance with the security requirements.
 
 #### ORP.3.M2 Contact for security questions
 
-In each institution there must be contact points for security issues, both for seemingly simple as well as for complex and technical issues. These can be IT administrators, IT application managers or the information security officer.
+In each institution there must be contact points for security issues, both for seemingly simple as well as complex and technical issues. These can be IT administrators, IT application managers or the information security officer.
 
 Often the inhibition threshold to report concrete security incidents is high. However, if the Information Security Officer is already known to staff as the point of contact for general information security issues, this can break down barriers to reporting specific security issues.
 
 In addition, the institution must communicate to its employees that the reporting of security incidents does not adversely affect them and urge them to report any suspicion of a security incident promptly and, if necessary, anonymously.
 
-Since many security issues arise in the private use of IT systems, information security officers should also forward to allegedly non-official matters information, such. For example, to phishing, to the problem of computer viruses and Trojan horses in Internet use or for the protection of personal data in e-commerce. This will make employees more open to security and more acceptable to the Information Security Officer. In addition, experience shows that many supposedly private problems occur equivalently in the office as well.
+Since many security issues arise in the private use of IT systems, information security officers should also forward to allegedly non-official matters information, such. As to phishing, the problem of computer viruses and Trojan horses in the Internet use or the protection of personal data in e-commerce. This will make employees more open to security and more acceptable to the Information Security Officer. In addition, experience shows that many allegedly private problems also occur in the office.
 All employees must be familiar with the contact persons for safety issues as well as the reporting channels for security incidents. The contact details of the registration office should be published efficiently on the intranet with names, telephone numbers and e-mail addresses. Flyers that remain permanently in the workplace support sustainability.
 
 #### ORP.3.M3 Instructing the staff in the safe handling of IT [Supervisors, Human Resources, IT Operations]
 
 Many security problems arise from incorrect use or configuration of the IT. To prevent such problems, all employees and external users must be trained and trained in the safe handling of the institution's IT, ICS, and IoT components, as far as their work contexts are concerned.
 
-All users of IT, ICS and IoT components must be made aware of their rights and obligations in using them. For this, they must be provided with specific guidelines, which they must observe when dealing with the IT, ICS and IoT components. Such a guideline must describe the general conditions that exist when using the IT, ICS and IoT components under consideration and the security measures to be taken. It helps users to get clear and unambiguous information about what they should not do under any circumstances. These guidelines must be binding, understandable, current and available. In order to document the liability, it should be signed by the authorities, or at least by the persons responsible for their operation. It is also advisable to formulate it in a short and understandable manner so that it can be distributed, for example, as a poster, notepad, flyer or similar. In addition, they should be available on the intranet.
+All users of IT, ICS and IoT components must be made aware of their rights and obligations in using them. For this, they must be provided with specific guidelines, which they must observe when dealing with the IT, ICS and IoT components. Such a guideline must describe the general conditions that exist when using the IT, ICS and IoT components under consideration and the security measures to be taken. It helps users to get clear and unambiguous information about what they should not do under any circumstances. These guidelines must be binding, understandable, current and available. In order to document the liability, it should be signed by the authorities or, at least, by those responsible for their operation. It is also advisable to formulate it in a short and understandable manner so that it can be distributed, for example, as a poster, notepad, flyer or similar. In addition, they should be available on the intranet.
 
 In principle, user guidelines should only contain rules that can also be implemented and are formulated as positively and comprehensibly as possible. For example, a user policy might take place
 
@@ -84,7 +84,7 @@ In principle, user guidelines should only contain rules that can also be impleme
 
 better read as follows:
 
-"* All IT systems are delivered in a standard configuration that has been customized to your specific working conditions and provide you with maximum security.In case of problems we can guarantee a quick solution by reinstalling the default configuration, so do not change the settings! Hardware or software, please contact the user service. * "
+"* All IT systems are delivered in a standard configuration that has been customized to your specific working conditions and provide you with maximum security.In case of problems we can guarantee you a fast problem resolution by reinstalling the default configuration, so do not change the settings! Hardware or software, please contact the user service. * "
 
 Further examples of user guidelines can be found under the IT Baseline Protection Tools.
 
@@ -95,7 +95,7 @@ A user policy for general IT use should include at least the following:
 * Introduction of external data into your own home (for example USB, download or mail attachment)
 * Handling passwords
 * Prohibition of use of unauthorized software
-* Note that IT services may only be used for official purposes, or a precise description of possible exceptions to this rule, if any
+* Note that IT services may be used only for official purposes, or a precise description of possible exceptions to this rule, if any
 * Information on safe storage and installation of IT systems and data media
 * Protection against computer viruses and other malware
 * Performing backups
@@ -103,11 +103,11 @@ A user policy for general IT use should include at least the following:
 In addition to such policies, there must be clear statements about which users may access which information, to whom it may be shared, and what action will be taken in the event of a breach of these guidelines.
 When a user leaves work, they should make sure that every piece of equipment (documents, media, etc.) is kept safe. All IT systems should be protected by passwords against unauthorized access. For unattended IT systems, the computer must be locked at least.
 
-The basic configuration of all IT systems should be as limited or as slim as possible. The default configuration of workstations should include only the services needed by all users in a group. Other programs or functions may only be installed or activated if the users have been instructed in their handling and sensitized to any safety problems.
+The basic configuration of all IT systems should be as limited or as slim as possible. The default configuration of workstations should include only the services required by all users in a group. Other programs or functions may only be installed or activated if the users have been instructed in their handling and sensitized to any safety problems.
 
 Each user code should be drawn up in cooperation with representatives of all groups involved, in particular staff representatives and data protection and information security officers should be involved in good time. When changing a user order, it must be ensured that those concerned are involved again in advance. The changed user regulations must be announced to all users.
 
-The job description must include all tasks and obligations relevant to information security. This includes u. a. the commitment to in-house guidelines on information security.
+The task description must contain all tasks and obligations relevant to information security. This includes u. a. the commitment to in-house guidelines on information security.
 
 If IT, ICS or IoT systems or services are used in ways that conflict with the interests of the agency or the company, anyone who learns about them must notify their supervisors.
 
@@ -124,7 +124,7 @@ Employees are the key success factors in establishing and maintaining informatio
 The technical and organizational measures implemented as part of a security concept affect the individual employees in a variety of ways. For example, they may be forced to make regular password changes, be denied access to certain areas of the institution without authorization, have their employee ID cards clearly visible, or attend regular security training.
 
 The aim of any institution should therefore be that all employees recognize, accept and actively support the value and the need for adequate information security for the performance of their duties and the continued existence of the institution. They should respect the existing rules and measures and their behavior should help to maintain and develop information security. They should be able to recognize safety-critical situations as early as possible and to react to them correctly.
-This requires a systematic sensitization of the employees, which is to be anchored in the institution through a continuous process. Based on awareness, employees should be provided with all necessary information and skills through complementary training (see ORP.3.M3 Staff training in how to handle IT safely). Awareness and training programs are thus closely related topics that should be given high priority at all organizational levels. Management needs to support the measures so that the importance of awareness-raising measures can be recognized and the resources needed for planning, implementation and maintenance are available.
+This requires a systematic sensitization of the employees, which is to be anchored in the institution through a continuous process. Building on awareness, employees should be provided with all the necessary information and skills through complementary training (see ORP.3.M3 Staff training in how to handle IT safely). Awareness and training programs are thus closely related topics that should be given high priority at all organizational levels. Management needs to support the measures so that the importance of awareness-raising measures can be recognized and the resources needed for planning, implementation and maintenance are available.
 
 The following aspects are helpful in designing and building the awareness-raising and training program.
 
@@ -138,7 +138,7 @@ Audience analysis can be used to tailor awareness-raising to specific needs and 
 
 The awareness-raising measures are to be prepared for the target group. As a result, z. B. Impact of security incidents for the respective employees are described as practically as possible. It has also proven to be extremely effective to include examples of employees' privacy in awareness-raising programs, such as the loss of digital photos from the last vacation or a lost smartphone.
 
-Awareness campaigns can include any topic that explains why information security is important to the institution and its employees. These include z. B. relevant hazards or exemplary as well as real security incidents at which proper behavior can be trained. Care should be taken to ensure that sufficient content has a close connection to the institution as well as its framework conditions and the targeted target group. In addition, examples from similar institutions or meaningful publications may underpin the content.
+Awareness campaigns can include any topic that explains why information security is important to the institution and its employees. These include z. B. relevant hazards or exemplary as well as real security incidents at which proper behavior can be trained. It should be ensured that sufficient content has a close connection to the institution as well as its framework conditions and the target group addressed. In addition, examples from similar institutions or meaningful publications may underpin the content.
 
 Select media and methods that are closely aligned with the prevailing culture of the institution. The goal is to reach employees with reasonable costs as impressively and sustainably as possible and to sensitize them for information security. That is, employees' perceptions, emotions, and abilities for vulnerabilities and incidents in their work environment need to be strengthened so they can identify, evaluate, and respond to them at an early stage. It should be waived on pure instruction texts, detailed and detailed written regulations and an incomprehensible terminology in favor of a short and concise communication (see also ORP.3.1.3 implementation of information security game).
 Awareness and training are closely related topics that complement each other in their implementation and build on each other. Sensitization should motivate employees to act. The correct behaviors are then further supported by training. In practice, it is a great challenge to interest information security professionals and to maintain the right behavior. The clearer, more enthusiastic and more impressive the overall concept of the measures is, the more effectively the material can be processed and applied to the employee. Therefore, the curriculum must be consolidated through appropriate measures (see ORP.3.1.4 Syllabus).
@@ -178,7 +178,7 @@ Employees in this department have a high need for information about data protect
 
 In many cases, external people who work closely with or even in the institution have access to internal information, applications, or systems.
 
-This audience must also support and be committed to the institution's information security objectives and rules, as well as internal staff. This requires appropriate training, such. In the form of briefings with documented information. These measures should be carried out by the external institution in accordance with the requirements agreed with its own institution.
+This audience must also support and be committed to the institution's information security objectives and rules, as do internal staff. This requires appropriate training, such. In the form of briefings with documented information. These measures should be carried out by the external institution in accordance with the requirements agreed with its own institution.
 
 ** ** new hires
 
@@ -188,7 +188,7 @@ This target group has so far had no contact with the organization's information 
 
 An information security training program should provide employees with all the information and skills needed to implement the institution's security policies and measures.
 
-Once the information security training objectives for the institution have been identified, as well as relevant target groups and their specific training needs have been identified (see ORP.3.M5 Analysis of Awareness and Training Awareness Ranges), the specific training modules and content must be planned and implemented accordingly, by: Target groups are trained according to this plan.
+Once the information security training objectives for the institution have been identified, as well as relevant target groups and their specific training needs have been identified (see ORP.3.M5 Analysis of Awareness and Training Awareness and Training Areas), the specific training modules and content must be planned and implemented accordingly by: Target groups are trained according to this plan.
 
 The following aspects should be considered:
 
@@ -198,12 +198,12 @@ The following aspects should be considered:
 * Which specific work environments with their information security requirements and which associated measures must be taken into account, eg. B. Processes, procedures, tasks and roles including possible changes?
 ** Possible training content **
 
-In the following, a structure and important contents of training modules are presented by way of example, which, according to the aspects presented, still have to be processed in terms of roles and resources. For many areas, training offers from appropriate providers are available, if internal planning and implementation in the institution is not possible.
+In the following, a structure and important contents of training modules are presented by way of example, which, according to the aspects presented, still have to be processed in terms of roles and resources. For many areas, training offers from appropriate providers are available if internal planning and implementation in the institution is not possible.
 
 The modules initially differ only by topic. Each module can be carried out in an adapted content depth. This depends on which work environment or section of an employee's career the module is intended for.
-The content of the training should be established on the basis of the analysis developed in action ORP.3.M4 Conception of an information security training and awareness-raising program and regularly reviewed and adjusted to maximize the effectiveness of the training. In addition, all components of the IT-Grundschutz Compendium that are relevant for the respective information network should be checked to see whether the necessary measures were not only arranged but also trained.
+The content of the training should be determined on the basis of the analysis developed in action ORP.3.M4 Conception of an information security training and awareness-raising program, and should be regularly reviewed and adjusted to maximize the effectiveness of the training. In addition, all components of the IT-Grundschutz Compendium that are relevant for the respective information network should be checked to see whether the necessary measures were not only arranged but also trained.
 
-Also exemplary here the training modules were assigned to the target groups. It is indicated by "X" that the respective module for the appropriate role is recommended. An "o" identifies the optional training modules that should be decided on a case-by-case basis to determine whether the content is needed for the role in question.
+Also exemplary here the training modules were assigned to the target groups. It is indicated by "X" that the respective module for the appropriate role is recommended. An "O" indicates the optional training modules that should be decided on a case-by-case basis to determine whether the content is needed for the role in question.
 
 Module 1: Information Security Basics
 
@@ -235,7 +235,7 @@ Table: Suggested training modules per function
 
 In this example, the two modules 1 and 2 serve as basic training for all employees and are to be coordinated closely with awareness-raising measures. All other modules show which areas of specialization should also be taught depending on the subject.
 
-Depending on the type of institution, it may be useful to define other target groups and the associated training objectives (see ORP.3.M5 Analysis of target groups for awareness-raising and training programs). It is also important to involve employees who have little or nothing to do with information technology in the first place, such as: B. the security and cleaning service.
+Depending on the type of institution, it may be useful to define other target groups and the related training objectives (see ORP.3.M5 Analysis of the Target Groups for Awareness and Training Programs). It is also important to involve employees who have little or nothing to do with information technology in the first place, such as: B. the security and cleaning service.
 
 ** Module 1: Information Security Basics **
 
@@ -406,7 +406,7 @@ This training module deepens the topics covered in Module 2. In addition, it sho
 
 The following contents belong to this topic:
 
-* detailed knowledge of the requirements and risks that serve as the basis for the security concept
+* Detailed knowledge of the requirements and risks that serve as the basis for the security concept
 * Specific risks and security measures of the security concept in the areas of management, organization, infrastructure, IT operations and employees
 * Adaptation of these security measures to new technical, organizational and legal circumstances
 * Revision and maintenance of the security concept
@@ -421,7 +421,7 @@ Exemplary topics are:
  
 
  
-+ Force Majeure: Fire, Water, Explosion, Storm, Earthquake, Lightning Strike, Strike, Demonstration, etc.
++ Force Majeure: Fire, Water, Explosion, Storm, Earthquake, Lightning, Strike, Demonstration, etc.
 + Organizational deficiencies: missing or inadequate regulations, unsuitable assignment of rights, uncontrolled use of IT systems, handling of sensitive information / data carriers, etc.
 + Human error: error, negligence, curiosity, ignorance, etc.
 + Technical failure: Power failure, failure of the air conditioner, overvoltage, failure of switching elements or circuits, faults in the mechanics or electronics, etc.
@@ -542,7 +542,7 @@ The following contents belong to this topic:
 
  
 * Definition of configuration, patch and change management depending on the security goals
-* Determination of the approval criteria for operational operation
+* Definition of the approval criteria for operational operation
 * Testing and release of security mechanisms
 ** Module 8: Operational Area **
 
@@ -695,7 +695,7 @@ The following contents belong to this topic:
  
 
  
-+ Organizational measures to increase the availability (SLAs, change management, prevention of SPOF)
++ Organizational measures to increase availability (SLAs, change management, avoidance of SPOF)
 + Data backup, data recovery
 + Storage technologies
 + Network configurations to increase availability
@@ -983,7 +983,7 @@ When planning a new IT-Grundschutz training course or assessing externally provi
 
  
 + Guide as motivation for information security
-+ Web course as an introduction to IT-Grundschutz procedures
++ Web course as an introduction to the IT-Grundschutz procedures
 + Tables and forms as tools for implementation
 + Sample guidelines and profiles as sample applications
 + Tool support for the creation, management and updating of security concepts based on IT-Grundschutz. Several manufacturers offer suitable IT-Grundschutz tools for this purpose.
@@ -1009,7 +1009,7 @@ Information security learning outcomes should be measured and evaluated in relat
 
 The HR department often has good experience in evaluating training. Therefore, it is advisable to follow this procedure and to coordinate with the human resources department.
 
-To test learning success, both quantitative and qualitative aspects of awareness and training programs should be considered. The results should be used appropriately to improve the awareness and training offer.
+To test learning success, both quantitative and qualitative aspects of awareness and training programs should be considered. The results should be considered as appropriate in improving the awareness and training offer.
 
 The following options can be used for this:
 
@@ -1018,7 +1018,7 @@ The following options can be used for this:
 The documentation of all measures including a brief description of the contents and the implementation cycles provide a first overview of the scope and affected target groups of the activities carried out.
 
 ** Documentation of Participants in Sensitization or Training Measures **
-The documentation of the number of participants of training courses or the number of employees reached by awareness-raising activities per department, area, location, etc. provide an indication of the achieved penetration of the measures in the institution.
+The documentation of the number of participants of training courses or the number of employees reached by sensitization measures per department, area, location, etc., provide an indication of the achieved penetration of the measures in the institution.
 
 ** Number of inquiries to security contact persons ** (see ORP.3.M2 contact for security questions)
 
@@ -1034,7 +1034,7 @@ Knowledge tests conducted during or after a training session are proven methods 
 
 ** Knowledge test at a time interval **
 
-In order to determine the course of learning curves after training sessions, further tests can be carried out after the end of a training at fixed times. Since there is no direct link to the event, it can be difficult to motivate the participants to answer knowledge questions. To counter this, this test can also be performed in quiz form, z. B. with prices for the participants. The procedure of proving a minimum of basic knowledge each year is also widespread. WBT (Web Based Training) modules are recommended for this, ie intranet-based training modules that employees can work on at a self-determined time.
+In order to determine the course of learning curves after training sessions, further tests can be carried out after the end of a training at fixed times. Since there is no direct link to the event, it can be difficult to motivate participants to answer knowledge questions. To counteract this, this test can also be performed in quiz form, z. B. with prices for the participants. The procedure of proving a minimum of basic knowledge each year is also widespread. WBT (Web Based Training) modules are recommended for this, ie intranet-based training modules that employees can work on at a self-determined time.
 
 ** ** employee surveys
 
@@ -1042,7 +1042,7 @@ Employee interviews with standardized questionnaires can collect information on 
 
 ** Number of rule violations **
 
-Another way of assessing whether a measure was successful is to count the number of rule violations before and after the awareness-raising measures. In addition, responsible persons can place consciously and controlled security gaps and observe how coworkers handle it. For example:
+Another way of assessing whether a measure has been successful is to count the number of rule violations before and after the awareness-raising measures. In addition, responsible persons can place consciously and controlled security gaps and observe how coworkers handle it. For example:
 
 * Unauthorized persons traveling around the institution unaccompanied
 * USB sticks that are located at different locations in the institution
@@ -1092,7 +1092,7 @@ Employees involved in material and IT security related tasks should have basic k
 ### 3.1 Worth knowing
 
 Depending on the industry, the technology used or other framework conditions, additional (user-defined) requirements may arise for an information network. These may include, for example, the following measures.
-One of the most important pillars of information security in an institution is its staff. Even the most elaborate technical safety precautions are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the values ​​and information of the institution to protect are essential for this.
+One of the most important pillars of information security in an institution is its staff. Even the most complex technical safety precautions are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the values ​​and information of the institution to protect are essential for this.
 
 The security measures selected for the institution should therefore always be based on the employees. Their knowledge and handling of information and IT should be included. To assess how people behave from a safety perspective, the factors contributing to this behavior can be analyzed. Building on this, we can examine where personal and organizational security can be improved, for example through awareness-raising and information security training.
 
@@ -1100,7 +1100,7 @@ The following aspects should be considered:
 
 ** ** safety culture
 
-The term safety culture encompasses the safety-related attitudes, values ​​and fundamental convictions of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
+The term safety culture encompasses the safety-related attitudes, values ​​and fundamental beliefs of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
 
 * What is the dealings in the agency or the company with business-related information and risks in general? Is the institution more risk-oriented or risk-avoidant? Is information given more freely or restrictively?
 * What are the requirements for accuracy and precision? Are minor errors tolerable in texts, for example, because they still have to go through several tuning processes anyway? Can an input error already lead to serious damage?
@@ -1127,11 +1127,11 @@ The security culture of an institution is strongly influenced by the industry in
 ** Changes **
 
 * All kinds of far-reaching changes for employees can change their way of handling information, business processes, IT and other devices. These include, for example, restructuring, dismissals, changes of tasks or superiors.
-If the analysis reveals that employees behave differently than it makes sense from a security point of view, there are several ways to deal with it. Attempts should be made to change the behavior of employees. On the other hand, in many cases it may be simpler to redesign the security policies or workflows and make them more secure.
+If the analysis shows that employees behave differently than it makes sense from a security point of view, there are various ways to deal with it. Attempts should be made to change the behavior of employees. On the other hand, in many cases it may be easier to redesign the security policies or workflows and make them more secure.
 
-Those responsible for awareness-raising and training programs should clarify whether and to what extent they want to use their own staff or external providers as trainers. In addition, the form of training must be determined. If a program includes several awareness-raising and training activities, a training coordinator should be appointed. In addition, various offerings from training providers should have been compared, which are the best in terms of content, quality and price. The awareness-raising or training activities carried out should be evaluated by the participants and their experiences regularly evaluated internally.
+Those responsible for awareness-raising and training programs should clarify whether and to what extent they want to use their own staff or external providers as trainers. In addition, the form of training must be determined. If a program includes several awareness-raising and training activities, a training coordinator should be appointed. In addition, various offerings from training providers should have been compared, which are the best in terms of content, quality and price. The awareness-raising or training activities carried out should be evaluated by the participants and regularly evaluated internally.
 
-If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers must be given the time they need to not only carry out awareness-raising and training, but also prepare and evaluate it.
+If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers need to get the time they need to not only do awareness-raising and training, but also prepare and evaluate it.
 
 For cost or qualification reasons, it may be more advantageous, at least initially, to have the training carried out by external specialists. Already in the planning phase it has to be clarified which financial resources are available for it. The external trainers should be carefully selected based on content, quality and price criteria and prepared for their task. In particular, they must be provided with the necessary institutional background. Internal speakers can use these courses as an accompaniment to prepare for their own efforts.
 External resources for awareness-raising or training also require internal resources. It should be named a responsible training coordinator who
@@ -1145,7 +1145,7 @@ The training coordination can be carried out by the information security officer
 
 Experience has shown that there are a number of external providers who offer appropriate awareness-raising or training in a form that meets the needs of the institution or that can be adapted with reasonable effort.
 
-In awareness-raising or training activities that aim to reach more employees in several cycles, it is worthwhile thinking about a "train the trainer" concept. Here, the initial measures are carried out either by suitable internal staff or external trainers with the aim that the participants of these measures later take on a coaching role themselves. This can have a very positive effect on their own awareness and motivation for information security for these employees. In addition, they can contribute their own experiences to the training measures. Especially with training topics that include aspects of culture and certain behaviors within the institution, an internal trainer can increase the acceptance and learning of the training because of his deeper knowledge of internal processes and awareness of the participants. Insofar as the "train the trainer" concept is to be used, the initial measures must include, in addition to the intended specialist content, instructions on methodical and didactic teaching.
+In awareness-raising or training activities that aim to reach more employees in several cycles, it is worthwhile thinking about a "train the trainer" concept. Here, the initial measures are carried out either by suitable internal staff or external trainers with the aim that the participants of these measures later take on a coaching role themselves. This can have a very positive effect on their own awareness and motivation for information security for these employees. In addition, they can contribute their own experiences to the training measures. Especially with training topics that include aspects of culture and certain behaviors within the institution, an internal trainer can increase the acceptance and learning of the training because of his deeper knowledge of internal processes and awareness of the participants. Insofar as the "train the trainer" concept is to be used, the initial measures must include, in addition to the intended subject matter, instructions on methodical and didactic teaching.
 
 The awareness-raising or training activities should be finalized by the participants. These experiences should be regularly evaluated internally.
 
@@ -1164,11 +1164,11 @@ Short role-playing games allow employees to practice very well how to behave whe
 
 ** Social **
 
-In simulations, employees can practice how to behave in social engineering attacks. For this purpose, the selected target groups such. For example, IT supervisors and various groups of administrators are faced with supposedly harmless requests in a joint simulation. Only through the interdisciplinary consideration of these requests it becomes clear that there is an attack here. The aim of the simulation is to find out these relationships through appropriate exercises in order to then be able to react in a defined manner. This type of simulation can be done very well in practice through workshops with moderation materials such as pin board and moderation cards.
+In simulations, employees can practice how to behave in social engineering attacks. For this purpose, the selected target groups such. For example, IT supervisors and various groups of administrators are faced with supposedly harmless requests in a joint simulation. Only through the interdisciplinary consideration of these requests it becomes clear that there is an attack here. The aim of the simulation is to find out these relationships through appropriate exercises in order to then be able to react in a defined way. This type of simulation can be very well done in practice through workshops with moderation materials such as pin board and moderation cards.
 
 ** simulation exercises **
 
-Particularly important are simulations in which the treatment of security incidents up to emergencies is practiced. They should enable employees to perceive assigned roles and responsibilities within a scenario even under difficult conditions (tension, accumulation of instructions, unclear or often changing circumstances, lack of resources, communication problems, etc.) as safely as possible. The goal of simulations is primarily to train personal abilities using representative scenarios that can then be used in as many incidents as possible. Therefore, a simulation should be led by an experienced trainer, who discusses and deepens their experiences in a review with the participants.
+Particularly important are simulations in which the treatment of security incidents up to emergencies is practiced. They should enable employees to perceive assigned roles and responsibilities within a scenario even under difficult conditions (tension, accumulation of instructions, unclear or often changing circumstances, lack of resources, communication problems, etc.) as safely as possible. The goal of simulations is primarily to train personal abilities using representative scenarios that can then be used in as many incidents as possible. Therefore, a simulation should be led by an experienced trainer, who will discuss and deepen their experiences in a review with the participants.
 
 In the conception of awareness-raising and training programs, the provision of teaching aids is important, since only permanently present knowledge leads to the desired behavioral changes. After awareness-raising and training activities, participants are usually equipped with a lot of new knowledge and skills. If they do not retrieve or apply this knowledge after the event, they may forget it in whole or in part. In order to permanently improve the awareness of information security among employees, the content of awareness-raising and training should be regularly repeated or applied. This is supported by the Syllabus, which should be carried out both during the course, at the end of a course and thereafter.
 

@@ -11,7 +11,7 @@ Often mechanical engineering also offers remote maintenance services to detect e
 
 ### 1.2 Objective
 
-The module describes how electronically controlled, semi-automatic or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, type of construction, special purpose and location.
+The module describes how electronically controlled, semi- or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, design, special purpose and location.
 
 ### 1.3 Delimitation
 
@@ -37,7 +37,7 @@ If the interfaces of a machine are insufficiently protected, attackers can manip
 
 The following are specific requirements for the machine area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 

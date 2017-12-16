@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Standard software is understood to mean software that is offered on the market and is usually obtained from specialized dealers, for example via catalogs or online portals. It is characterized by the fact that institutions can install them themselves and adapt them with little effort.
+Standard software is understood to mean software that is offered on the market and is usually obtained from specialist retailers, for example via catalogs or online portals. It is characterized by the fact that institutions can install them themselves and adapt them with little effort.
 
 This module shows how institutions should deal with standard software from a security point of view. For example, institutions must be able to create a standard software requirement catalog, select a suitable product, install it safely, manage licenses appropriately, and safely uninstall the product.
 
@@ -34,11 +34,11 @@ Is a standard software configured incorrectly, eg. If, for example, unneeded fun
 
 ### 2 3 Obtaining standard software and updates from unreliable sources
 
-If standard software or related updates are obtained from unreliable sources, the integrity and functionality of the software can not be assured. This also applies to extensions (* plug-ins * or * add-ons *). The installation of compromised software may result in malicious code being distributed in the institution and that the software may not work as intended. In addition, the integrity and availability of IT systems may be compromised.
+If standard software or related updates are obtained from unreliable sources, the integrity and functionality of the software can not be assured. This also applies to extensions (* plug-ins * or * add-ons *). The installation of compromised software may result in malicious code being distributed throughout the institution and that the software may not function as intended. In addition, the integrity and availability of IT systems may be compromised.
 
 ### 2 4 Manipulation of data by users
 
-The data used in standard software can be manipulated in a variety of ways by users, e.g. For example, if you incorrectly or incorrectly record data incorrectly, change the content or simply delete data. As a result, all specialized processes in which the corresponding application is used are affected. Failure to detect the manipulated data will result in processing of corrupted information. In addition, security holes can be created that attackers can exploit.
+The data used in standard software can be manipulated in a variety of ways by users, e.g. For example, if you incorrectly or incorrectly record data incorrectly, change the content or simply delete. As a result, all specialized processes in which the corresponding application is used are affected. Failure to detect the manipulated data will result in processing of corrupted information. In addition, security holes can be created that attackers can exploit.
 ### 2 5 Software vulnerabilities in standard software
 
 Despite intensive testing, not all vulnerabilities and defects in standard software are usually discovered before they are delivered to customers. If these are not detected in time, resulting crashes or errors can lead to far-reaching consequences. In addition, the confidentiality and integrity of the stored data and the availability of affected IT systems may be affected. Software vulnerabilities or errors can also lead to serious security vulnerabilities in standard software. These can sometimes be exploited by attackers to inject malicious code.
@@ -49,7 +49,7 @@ If standard software without a valid software license is used, because, for exam
 
 ### 2 7 Unauthorized exercise of rights in standard software
 
-Access, access and access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. If unauthorized persons use standard software or certain functions, this may endanger the confidentiality and integrity of the information by altering, deleting or creating it improperly. Such vulnerabilities arise, for example, through incorrect rights. Affected business processes can be corrupted, inadvertently process erroneous information or disclose sensitive information.
+Access, access and access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. If unauthorized persons use standard software or certain functions, this may endanger the confidentiality and integrity of the information by altering, deleting or creating it improperly. Such vulnerabilities arise, for example, through incorrect rights. Affected business processes can be corrupted, inadvertently process incorrect information or disclose sensitive information.
 
 ### 2 8 Data loss due to incorrect use of standard software
 
@@ -60,7 +60,7 @@ Incorrect use of standard software may allow employees to accidentally delete or
 
 Specific requirements for the protection of * standard software * are listed below. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -83,7 +83,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### CON.4.A4 Definition of responsibilities in the area of ​​standard software [department]
 
-For the introduction of a standard software, the responsible persons SHOULD be named. It should at least be determined who creates a requirements catalog, selects the product, tests and releases it and who is ultimately responsible for the installation. In addition, an introduction and approval process SHOULD be defined. For the operation of standard software, technical and technical product managers SHOULD be named.
+For the introduction of a standard software, the responsible persons SHOULD be named. It should at least specify who creates a requirements catalog, selects the product, tests and releases it, and who ultimately is responsible for the installation. In addition, an introduction and approval process SHOULD be defined. For the operation of standard software, technical and technical product managers SHOULD be named.
 
 #### CON.4.A5 Creation of a requirement catalog for standard software [department]
 

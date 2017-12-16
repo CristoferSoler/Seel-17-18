@@ -33,30 +33,30 @@ If the patch and change management within the institution is poorly accepted or 
 This can reduce overall security levels and seriously disrupt IT operations. In any case, the lack of communication makes the change process inefficient, as it often requires too much time and resources to be invested. This has a negative impact on the institution's responsiveness and, in extreme cases, can lead to security vulnerabilities or important business goals being missed.
 
 ### 2 3 Poor consideration of business processes
-Incorrect changes can, among other things, affect the smooth running of business processes or even lead to the IT systems involved completely failing. Even a comprehensive test procedure can not completely rule out that a change in subsequent productive operation proves to be faulty.
+Incorrect changes can, among other things, affect the smooth running of business processes or even lead to the IT systems involved completely failing. Even a comprehensive test procedure can not completely rule out that a change in the subsequent productive operation proves to be faulty.
 
 If the impact, category or priority of a submitted business process change request is misjudged in the change process, the desired level of security may decrease. Such misjudgments occur predominantly when the IT managers and the responsible specialist departments do not adequately coordinate.
 
 ### 2 4 Insufficient resources for patch and change management
 
-Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable persons. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they will prove to be more time-consuming, for example when emergency patches need to be recorded.
+Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable people. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they will prove to be more time-consuming, for example when emergency patches need to be recorded.
 
 ### 2 5 Problems with automated distribution of patches and changes
 
 Frequently, patches and changes are not distributed manually, but centrally software-supported. If such software is used, erroneous patches and changes in the entire information network can be deployed, which can result in mass security problems. It is especially serious when many systems simultaneously install software that contains security holes.
 
-If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a certain period of time and then not all IT systems can be reached, these systems can not be updated.
+If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a specific time frame and then not all IT systems are reachable, these systems can not be updated.
 
 ### 2 6 Poor recovery options for patch and change management
 
-If patches or changes are distributed without a recovery option, or if the recovery routines of the software in use are not or not adequately effective, incorrectly updated software can not be corrected in a timely manner. This can cause important IT systems to fail and high consequential damage. In addition to the integrity of data, especially the availability is at risk here.
+If patches or changes are distributed without a recovery option, or if the recovery routines of the software in use are not or not adequately effective, incorrectly updated software can not be corrected promptly. This can cause important IT systems to fail and high consequential damage. In addition to the integrity of data, especially the availability is at risk here.
 
 ### 2 7 Poor consideration of mobile devices
 
 Mobile devices are a particular challenge for change management, as they are not always involved in the automated distribution of patches and changes due to their changing locations and their connection to wireless networks. Also, bandwidth and stable data transmission in mobile devices are not always guaranteed. If such devices are not considered separately in patch and change management, patches and changes may be incomplete, take longer to complete, and always present a security risk.
 
 ### 2 8 Inadequate emergency preparedness plan for patch and change management
-Patch and change management contributes to the technical implementation of information security in an institution. The IT systems used by this process are critical for IT operations. These include, for example, the central servers that distribute patches and changes, the databases with the current configurations of the IT systems and the backup servers for the recovery points. If, for example, the server that distributes the changes fails, any new critical updates may no longer be recorded promptly. Furthermore, missing backups of the current configurations of IT systems can mean that in an emergency it is no longer possible to ensure that important IT components can be restored to their original state as quickly as possible.
+Patch and change management contributes to the technical implementation of information security in an institution. The IT systems used by this process are critical for IT operations. These include, for example, the central servers that distribute patches and changes, the databases with the current configurations of the IT systems and the backup servers for the recovery points. If, for example, the server that distributes the changes fails, any critical updates that may appear can no longer be timely recorded. Furthermore, missing backups of the current configurations of IT systems can mean that in an emergency it is no longer possible to ensure that important IT components can be restored to their original state as quickly as possible.
 
 ### 2 9 Misjudgment of the relevance of patches and changes
 
@@ -71,7 +71,7 @@ Patch and change management often operates from a central point. Due to its expo
 
 The following are specific requirements for patch and change management. Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -113,7 +113,7 @@ It SHOULD define requirements and frameworks for selecting patch and change mana
 #### OPS.1.1.3.A9 Testing and acceptance procedure for new hardware and software [IT Manager]
 
 New hardware and software SHOULD BE tested before it is used. For this purpose only isolated test systems should be used. Also, there SHOULD be an acceptance procedure and release statement for software. The responsible person SHOULD file the release declaration in a suitable place in writing. In the event that errors are detected in the software despite the acceptance and release procedures during operation, there should be a troubleshooting procedure.
-#### OPS.1.1.3.A10 Ensuring the integrity and authenticity of software packages [Administrator]
+#### OPS.1.1.3.A10 Ensuring the Integrity and Authenticity of Software Packages [Administrator]
 
 Throughout the patching and modification process, the authenticity and integrity of software packages SHOULD be ensured. For this purpose, it should be checked whether checksums or digital signatures are available for the software packages used. Likewise, care should be taken to ensure that the necessary programs are available for review.
 

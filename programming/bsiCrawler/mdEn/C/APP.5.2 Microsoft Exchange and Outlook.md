@@ -3,9 +3,9 @@
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mail, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
-Microsoft Outlook is a client made available directly from mobile devices by installing the Microsoft Office suite or integrating with operating systems. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
+Microsoft Outlook is a client made directly available by installing the Microsoft Office suite or integrating with the operating systems of mobile devices. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
 ### 1.2 Objective
 
@@ -65,7 +65,7 @@ Many software manufacturers provide programming interfaces in their tools and ap
 
 The following are specific requirements for the Microsoft Exchange and Outlook sections. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -85,7 +85,7 @@ Before Microsoft Exchange and Outlook can be used, the use of Microsoft Exchange
 It MUST be decided with which systems and application components, as well as in which hierarchical gradation the Microsoft Exchange infrastructure should be realized. The selection MUST also decide whether to run the systems as a cloud or local service.
 
 #### APP.5.2.A3 Authorization Management
-For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as are necessary for the task fulfillment (minimum principle). It MUST be checked regularly to see if the allocated rights are still appropriate.
+For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as is necessary for the task fulfillment (minimum principle). It MUST be checked on a regular basis to see if the allocated rights are still appropriate.
 
 #### APP.5.2.A4 Access rights to Microsoft Exchange objects
 
@@ -101,7 +101,7 @@ Together with the basic requirements, the following requirements are state of th
 
 #### APP.5.2.A6 Secure installation of a Microsoft Exchange system
 
-The installation SHOULD be done on the basis of the mission planning of Microsoft Exchange and Outlook and the defined security policy (see APP.1.2.A1 Planning the Use of Microsoft Exchange and Outlook). Since Microsoft Exchange systems integrate very strongly into the Windows environment, especially in the Active Directory, the specific security guidelines should be taken into account. The systems on which Microsoft Exchange and Outlook should be installed SHOULD be properly secured.
+The installation SHOULD be done on the basis of the mission planning of Microsoft Exchange and Outlook and the defined security policy (see APP.1.2.A1 Planning the Use of Microsoft Exchange and Outlook). Because Microsoft Exchange systems integrate heavily with the Windows environment, especially the Active Directory, the specific security policies should be considered. The systems on which Microsoft Exchange and Outlook should be installed SHOULD be properly secured.
 
 #### APP.5.2.A7 Migrating from Microsoft Exchange systems
 
@@ -120,7 +120,7 @@ When using functional enhancements (for example, Microsoft Exchange Access Sync,
 
 #### APP.5.2.A10 Outlook settings
 
-Only administrators SHOULD be able to change the Outlook environment. For this purpose, a separate Outlook profile with the user-specific settings SHOULD be created for each user. Users SHOULD only be able to change user-defined settings (eg set up signature, activate absence agent). , Attachments SHOULD not be opened automatically from emails. Preview window and the car preview SHOULD be deactivated. E-mails SHOULD NOT be forwarded automatically.
+Only administrators should be able to change the Outlook environment. For this purpose, a separate Outlook profile with the user-specific settings SHOULD be created for each user. Users SHOULD only be able to change user-defined settings (eg set up signature, activate absence agent). , Attachments SHOULD not be opened automatically from emails. Preview window and the car preview SHOULD be deactivated. E-mails SHOULD NOT be forwarded automatically.
 
 #### APP.5.2.A11 Secure communication to and from Microsoft Exchange systems
 
@@ -153,14 +153,14 @@ The contents of the operating manual for Microsoft Exchange SHOULD be comprehens
 
 #### APP.5.2.A16 Creation of a contingency plan for the failure of Microsoft Exchange and Outlook [Emergency Response Officer]
 
-As part of the emergency preparedness SHOULD be designed a concept that can be minimized the consequences of a failure of the Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
+As part of the emergency preparedness SHOULD be designed a concept that can minimize the consequences of a failure of Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.5.2.A17 Encryption of Microsoft Exchange System Databases (CIA)
 
-A concept for the encryption of pst files and information store files SHOULD be created. The users SHOULD be informed about the functionality and the protection mechanisms for the encryption of pst-files. Other aspects of local pst files that should be considered when encrypting Microsoft Exchange system databases are:
+A concept for the encryption of pst files and information store files SHOULD be created. The users SHOULD be informed about the functionality and the protection mechanisms when encrypting pst-files. Other aspects of local pst files that should be considered when encrypting Microsoft Exchange system databases are:
 
 * own encryption functions,
 * Encryption levels as well

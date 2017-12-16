@@ -1,0 +1,14 @@
+### 3.1 Basic requirements
+#### SYS.3.4.A1 Raising employee awareness about the safe handling of mobile data media
+#### SYS.3.4.A2 Mobile Media Loss Report [User]
+#### SYS.3.4.A3 Backup copy of submitted data [user]
+### 3.2 Standard requirements
+#### SYS.3.4.A4 Creation of a guideline for the safe handling of mobile data carriers [user]
+#### SYS.3.4.A5 Control of the transport of mobile data carriers
+#### SYS.3.4.A6 Disk Management [Specialists]
+#### SYS.3.4.A7 Secure Disk Erase Before and After Use [Specialists]
+#### SYS.3.4.A8 Hedging drives and interfaces for removable media and external data storage
+### 3.3 Requirements for increased protection requirements
+#### SYS.3.4.A9 Control and monitoring of interfaces (CI)
+#### SYS.3.4.A10 Disk Encryption (C)
+#### SYS.3.4.A11 Integrity Protection by Checksums or Digital Signatures (I)

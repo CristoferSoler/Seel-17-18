@@ -5,7 +5,7 @@
 
 To ensure that information does not fall into the wrong hands, a regulated procedure is required to completely and reliably erase or destroy data and data carriers. Protective information stored on analog and digital media must be considered.
 
-If not or insufficiently deleted data carriers are passed on, sold or discarded, inadvertently valuable information can be passed on and considerable damage can occur. Therefore, every institution must have a procedure for secure deletion and destruction.
+If not or insufficiently deleted data carriers are passed on, sold or discarded, inadvertently valuable information can be passed on and considerable damage can occur. Therefore, each institution must have a procedure for secure deletion and destruction.
 
 ### 1.2 Objective
 
@@ -37,7 +37,7 @@ Due to inadequate specifications, as well as lack of training of the employees, 
 
 Swap files or paging partitions may contain sensitive data, such as: Passwords or cryptographic keys. However, the paging files and thus also the information contained therein are not protected because they z. B. can be read when the hard drive is removed and installed in another IT system.
 
-In addition, during operation of many applications, files are generated that are not required for productive operation (eg browser history). These files may also contain security-related information. If paging or temporary files are not securely deleted, unauthorized access to sensitive information, passwords, and keys can be exploited to gain access to other IT systems and data, to gain competitive advantage in the market, or to deliberately spy on user behavior.
+In addition, during operation of many applications, files are generated that are not required for productive operation (eg browser history). These files may also contain security-related information. If paging or temporary files are not securely deleted, unauthorized access to sensitive information, passwords, and keys can be used to gain access to other IT systems and data, to gain competitive advantage in the marketplace, or to deliberately spy on user behavior.
 
 ### 2 5 Unsuitable disposal of data media and documents
 
@@ -48,7 +48,7 @@ If media or documents are not properly disposed of, it may be possible to extrac
 
 The following are specific requirements for the Delete and Destroy area. Basically, the ISB is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -94,7 +94,7 @@ The regulations of the institution for * * deletion and destruction SHOULD be do
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### CON.6.A9 Selection of appropriate procedures for deletion or destruction of data carriers in case of increased protection requirements [Head of IT, Head of Organization] (CIA)
+#### CON.6.A9 Selection of appropriate methods for deleting or destroying data carriers with increased protection requirements [Head of IT, Head of Organization] (CIA)
 
 For extinguishing and destroying, methods should be selected that meet the increased protection requirements of information and equipment.
 
@@ -104,7 +104,7 @@ Before acquiring equipment for deleting or destroying data SHOULD create a requi
 
 #### CON.6.A11 Destruction of data media by external service providers [Head of Organization, Data Protection Officer] (CIA)
 
-On the premises of the institution, all data carriers to be destroyed SHOULD be stored securely against unauthorized access until they have been picked up by the external service provider. The removal SHOULD also be protected according to the protection requirement. The institution SHOULD have the disposal process checked regularly by trained persons.
+On the premises of the institution, all data carriers to be destroyed SHOULD be securely stored against unauthorized access until they have been picked up by the external service provider. The removal SHOULD also be protected according to the protection requirement. The institution SHOULD have the disposal process checked regularly by trained persons.
 
 In addition, the general requirements for service providers and their employees described in OPS.2.1 * Outsourcing Usage * SHOULD be implemented.
 

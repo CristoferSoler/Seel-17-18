@@ -1,0 +1,16 @@
+### 3.1 Basic requirements
+#### NET.3.3.A1 Planning the VPN deployment
+#### NET.3.3.A2 Selection of a VPN Service Provider [Information Security Officer (ISB)]
+#### NET.3.3.A3 Secure installation of VPN terminals
+#### NET.3.3.A4 Secure configuration of a VPN
+#### NET.3.3.A5 Blocking of unneeded VPN accesses
+### 3.2 Standard requirements
+#### NET.3.3.A6 Perform a VPN requirement analysis
+#### NET.3.3.A7 Planning of technical VPN realization
+#### NET.3.3.A8 Create a security policy for VPN usage
+#### NET.3.3.A9 Appropriate selection of VPN products
+#### NET.3.3.A10 Secure operation of a VPN
+#### NET.3.3.A11 Secure connection of an external network
+#### NET.3.3.A12 User and Access Management for Remote Access VPNs
+#### NET.3.3.A13 Integration of VPN components in a firewall
+### 3.3 Requirements for increased protection requirements

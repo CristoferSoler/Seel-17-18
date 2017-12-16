@@ -5,7 +5,7 @@
 
 The procedure described in this module provides an overview of cryptographic procedures and products that can be used in an institution. It describes how, in a heterogeneous environment, both the locally stored data and the data to be transmitted can be effectively protected by cryptographic techniques and techniques. It also describes appropriate organizational and procedural requirements to ensure confidentiality, integrity and authenticity.
 
-In addition to the procedures and techniques that can be used to protect locally stored data and transmitted information, this module also describes crypto modules. A crypto module is a product that provides the security functionality set forth in the crypto concept. Such a product may consist of hardware, software, firmware or a combination thereof. In addition, components such as memory, processors, buses and power supply are necessary to implement the crypto processes. A crypto module can be used in various computer or telecommunication systems to protect sensitive data or information. This is relevant in the present module only with increased protection requirements.
+In addition to the procedures and techniques that can be used to protect locally stored data and transmitted information, this module also describes crypto modules. A crypto module is a product that provides the security functionality set forth in the crypto concept. Such a product may consist of hardware, software, firmware or a combination thereof. In addition, components such as memory, processors, buses and power supply are necessary to implement the crypto processes. A crypto module can be used in a variety of computer or telecommunication systems to protect sensitive data or information. This is relevant in the present module only with increased protection requirements.
 
 ### 1.2 Objective
 
@@ -30,7 +30,7 @@ Inadequate key management could allow attackers to access encrypted data. It may
 
 When institutions use cryptographic procedures and products, they must observe various legal framework conditions. For example, in some countries, cryptographic procedures may not be used without government approval. This may result in receivers abroad being unable to read encrypted records because they are not allowed to use the required cryptographic products or may even be liable to prosecution.
 
-In addition, in many countries, the export of products with strong cryptography is significantly limited. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.
+In addition, exports of products with strong cryptography are also severely limited in many countries. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.
 ### 2 3 Confidentiality or integrity of data due to misconduct
 
 For example, if an institution uses a crypto-module that is either too complicated to use or not intuitive to use, users may, for convenience or pragmatic reasons, refrain from using it and instead transmit the information in plain text. This allows the transmitted information to be intercepted by attackers.
@@ -47,7 +47,7 @@ Crypto modules can fail due to technical defects, power failures or deliberate d
 
 ### 2 6 Unsafe cryptographic algorithms or products
 
-Unsafe or obsolete cryptographic algorithms can be broken by a potential attacker with reasonable resources. For encryption algorithms, this means that it is possible to determine the original plaintext from the encrypted text without additional information, such. As the cryptographic key used are known. If insecure cryptographic algorithms are used, attackers can circumvent the cryptographic protection and thus access sensitive information of the institution.
+Unsafe or obsolete cryptographic algorithms can be broken by a potential attacker with reasonable resources. For encryption algorithms, this means that it is possible to determine the original plaintext from the encrypted text, without additional information, such. As the cryptographic key used are known. If insecure cryptographic algorithms are used, attackers can circumvent the cryptographic protection and thus access sensitive information of the institution.
 
 Even if only secure (eg certified) products are used in an institution, communication can still be unsafe, for example if the communication partner uses non-state-of-the-art cryptographic techniques.
 
@@ -79,7 +79,7 @@ If such a certificate is forged, digital signatures are incorrectly verified as 
 
 The following are specific requirements for crypto concepts. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -112,7 +112,7 @@ Keys and certificates no longer needed SHOULD be safely deleted or destroyed. Pr
 
 #### CON.1.A6 Needs Assessment for Cryptographic Procedures and Products [IT Operations, Specialists]
 
-It SHOULD be determined for which tasks cryptographic procedures should be used. After that, the applications, IT systems and communication links that are necessary to fulfill the tasks SHOULD be identified. These SHOULD be cryptographically secured.
+It SHOULD be determined for which tasks cryptographic procedures should be used. After that, the applications, IT systems and communication links that are necessary to complete the tasks SHOULD be identified. These SHOULD be cryptographically secured.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -152,7 +152,7 @@ Furthermore, the requirements for the environment of use SHOULD be specified. If
 
 #### CON.1.A12 Secure role sharing when using crypto modules [IT operation] (CI)
 
-When configuring a crypto module, user roles SHOULD be specified. It should be verified with access control and authentication mechanisms, whether an employee is allowed to actually use the requested service. The crypto module SHOULD be configured so that the authentication information must be reentered every time the reel changes or inactivity occurs after a certain period of time.
+When configuring a crypto module, user roles SHOULD be specified. It should be verified with access control and authentication mechanisms, whether an employee may actually use the service requested. The crypto module SHOULD be configured so that the authentication information must be reentered every time the reel changes or inactivity occurs after a certain period of time.
 
 #### CON.1.A13 OS Security Requirements When Using Crypto Modules (CI)
 
@@ -177,7 +177,7 @@ It SHOULD prevent unauthorized physical access to module contents of the crypto 
 
 #### CON.1.A17 Radiation Safety [Head IT] (C)
 
-It SHOULD be investigated whether additional measures with regard to radiation safety are necessary. This SHOULD be done, in particular, when processing state classified information (VS) classified as VS-CONFIDENTIAL and higher.
+It SHOULD be investigated whether additional measures with regard to radiation safety are necessary. This SHOULD be done in particular when processing state classified information (VS) classified as VS-CONFIDENTIAL and higher.
 
 #### CON.1.A18 Cryptographic Replacement Modules [IT Leader] (CIA)
 
@@ -188,7 +188,7 @@ SHOULD spare crypto modules be kept in stock.
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the "Crypto Concept" section can be found in the following publications, among others:
+Additional information on threats and security measures in the area of ​​"crypto concept" can be found in the following publications, among others:
 
 * #### [27001A10] ISO / IEC 27001: 2013 - Annex A.10 Cryptography
 

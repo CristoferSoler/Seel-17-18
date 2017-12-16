@@ -1,0 +1,34 @@
+### 3.1 Basic requirements
+#### SYS.1.1.A1 Suitable installation [building services]
+#### SYS.1.1.A2 user authentication
+#### SYS.1.1.A3 Restrictive rights assignment
+#### SYS.1.1.A4 Role separation
+#### SYS.1.1.A5 Protection of administration interfaces
+#### SYS.1.1.A6 Deactivation of unneeded services and identifiers
+#### SYS.1.1.A7 Updates and patches for firmware, operating system and applications
+#### SYS.1.1.A8 Regular backup
+#### SYS.1.1.A9 Use of virus protection programs
+#### SYS.1.1.A10 logging
+### 3.2 Standard requirements
+#### SYS.1.1.A11 Setting a security policy for servers
+#### SYS.1.1.A12 Planning the server deployment
+#### SYS.1.1.A13 Obtaining servers
+#### SYS.1.1.A14 Creation of a user and administration concept
+#### SYS.1.1.A15 Uninterruptible and stable power supply [building services]
+#### SYS.1.1.A16 Secure installation and basic configuration of servers
+#### SYS.1.1.A17 deployment clearance
+#### SYS.1.1.A18 Encryption of communication links
+#### SYS.1.1.A19 Set up local packet filter
+#### SYS.1.1.A20 Restriction of access via networks
+#### SYS.1.1.A21 Operation documentation
+#### SYS.1.1.A22 Integration into emergency planning
+#### SYS.1.1.A23 system monitoring
+#### SYS.1.1.A24 security checks
+#### SYS.1.1.A25 Regulated decommissioning of a server
+### 3.3 Requirements for increased protection requirements
+#### SYS.1.1.A26 Multi-factor authentication (C)
+#### SYS.1.1.A27 Host-based Attack Detection (IA)
+#### SYS.1.1.A28 Redundancy (A)
+#### SYS.1.1.A29 Setting up a test environment (CIA)
+#### SYS.1.1.A30 One service per server (CIA)
+#### SYS.1.1.A31 Application whitelisting (CI)

@@ -11,7 +11,7 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described safety requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
+This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the safety requirements and threats described apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
 
 2 risk situation
 -----------------
@@ -43,13 +43,13 @@ Improper or improper use of devices, systems, and applications can also affect s
 ---------------
 The following are specific requirements for the Windows 8.1 area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### SYS.2.2.2.A1 Appropriate selection of a Windows 8.1 version
 
-The functional scope of a Windows version MUST be checked prior to procurement for operational capability and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
+The functional scope of a Windows version MUST be checked for availability before being procured and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
 
 #### SYS.2.2.2.A2 Definition of a registration procedure
 
@@ -79,18 +79,18 @@ In addition to authorizations on the local file system, the authorization and ac
 
 #### SYS.2.2.2.A7 Using the Windows User Account Control UAC
 
-To support restrictive rights assignment, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
+To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the setting of UAC SHOULD be balanced between usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
 #### SYS.2.2.2.A8 Using the homegroup feature [User]
 
-Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in handling homegroup permissions.
+Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in using homegroup permissions.
 
 #### SYS.2.2.2.A9 Privacy and Data Saving on Windows 8.1 Clients [User]
 
-If Microsoft accounts are created for the users, only absolutely necessary information about the persons should be deposited. The SmartScreen function SHOULD be reviewed and evaluated for compatibility with internal or external privacy policies. Before an application or app is released for use within the institution, SHOULD carefully examine which data applications and apps automatically submit to the Microsoft cloud. Applications SHOULD be configured so that no such data is transmitted. Apps with unwanted or unnecessarily extensive data transfer to third parties SHOULD NOT be used.
+If Microsoft accounts are created for the users, only absolutely necessary information about the persons should be deposited. The SmartScreen function SHOULD be reviewed and evaluated for compatibility with internal or external privacy policies. Before an application or app is released for use within the institution, SHOW carefully what data applications and apps will automatically submit to the Microsoft cloud. Applications SHOULD be configured so that no such data is transmitted. Apps with unwanted or unnecessarily extensive data transfer to third parties SHOULD NOT be used.
 
 #### SYS.2.2.2.A10 Integration of online accounts in the operating system
 
-The login to the IT system and the domain SHOULD only be done with an account of a self-operated directory service, such Active Directory. A local login SHOULD be reserved for administrators. When using online accounts to log in, eg. For example, a Microsoft account or accounts from other providers of identity management services SHOULD be made aware of the security of the provider and privacy.
+The registration on the IT system and the domain SHOULD only be done with an account of a self-operated directory service, such Active Directory. A local login SHOULD be reserved for administrators. When using online accounts to log in, eg. For example, a Microsoft account or accounts from other providers of identity management services SHOULD be made aware of the security of the provider and privacy.
 
 #### SYS.2.2.2.A11 Configuration of Synchronization Mechanisms in Windows 8.1
 
@@ -110,7 +110,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
 
-Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
+Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The management of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
 AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
 For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
@@ -119,7 +119,7 @@ The implementation of the SRP and AppLocker rules SHOULD be tested on a test sys
 
 #### SYS.2.2.2.A15 Encrypting the file system with EFS (CI)
 
-With increased protection requirements, the file system SHOULD be encrypted. When using the Encrypting File System (EFS), a complex password should be used to protect EFS encrypted data. In addition, EFS encrypted files SHOULD be protected by restrictive access rights. Instead of the administrator account, a dedicated account SHOULD be the recovery agent. The private key of this account SHOULD be swapped out to external disk and kept secure and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, registry encryption using syskey SHOULD be used. When using EFS, users should be trained in the correct handling of EFS.
+With increased protection requirements, the file system SHOULD be encrypted. When using the Encrypting File System (EFS), a complex password should be used to protect EFS encrypted data. In addition, EFS encrypted files SHOULD be protected by restrictive access rights. Instead of the administrator account, a dedicated account SHOULD be the recovery agent. The private key of this account SHOULD be swapped out to an external disk and kept safe and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, registry encryption using syskey SHOULD be used. When using EFS, users should be trained in using EFS correctly.
 
 #### SYS.2.2.2.A16 Using Windows PowerShell (CIA)
 
@@ -138,11 +138,11 @@ As part of the process of creating a security plan for an IT system running Wind
 The permission or the prohibition of the storage of access data in the so-called "safe" SHOULD be defined in a guideline. A ban SHOULD be technically enforced.
 
 #### SYS.2.2.2.A20 Remote access security via RDP (CIA)
-The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have a reasonable size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
+The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have an appropriate size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
 
 #### SYS.2.2.2.A21 Using File and Registry Virtualization (CI)
 
-It SHOULD be checked if the operation of legacy applications is still necessary, which require write access to critical system folders or registry keys or if they need to be run with administrator rights. If this is the case, then a strategy SHOULD be developed to convert the legacy applications still needed to secure alternatives. Until the old applications have been replaced, the use of the Windows techniques File Virtualization and Registry Virtualization SHOULD be checked for security. Additionally, Registry Virtualization SHOULD only have access to the necessary registry keys.
+It SHOULD be checked if the operation of legacy applications is still necessary, which require write access to critical system folders or registry keys, or if they need to be run with administrator rights. If this is the case, then a strategy SHOULD be developed to convert the legacy applications still needed to secure alternatives. Until the old applications have been replaced, the use of the Windows techniques File Virtualization and Registry Virtualization SHOULD be checked for security. In addition, Registry Virtualization SHOULD only have access to the necessary registry keys.
 
 4 Further Information
 ------------------------------
@@ -165,7 +165,7 @@ Further information about threats and security measures in the section "Clients 
  <Https://www.microsoft.com/en-us/download/confirmation.aspx?id=50034>
 
  
-* #### [WIN8] Information about Deployment, Deployment and Administration of Windows 8.1, Micorosoft, (last accessed on 27.09.2017)
+* #### [WIN8] Information on deployment, deployment and administration of Windows 8.1, Micorosoft, (last accessed on 27.09.2017)
 
   
 

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Specialized applications are complex applications that are designed for individual and specific technical tasks and are generally not purchased and used as standard solutions. Instead, base solutions are customized for individual use by institutions, or applications are developed entirely by third parties or the institution itself. These specialized applications include, for example, human resources management software, social data management techniques, or reporting data. Careful planning of safety measures prior to selection and commissioning of an application is essential for the level of safety achieved, as errors in planning, such as B. missing security functions during operation can not be compensated or only with high additional expenses.
+Specialized applications are complex applications that are designed for individual and specific technical tasks and are generally not purchased and used as standard solutions. Instead, base solutions are customized for individual use by institutions, or applications are developed entirely by third parties or the institution itself. Such applications include, for example, human resources management software, social data management techniques, or reporting data. Careful planning of safety measures prior to selection and commissioning of an application is essential for the achieved safety level, since errors in planning such as eg B. missing security features during operation can not be compensated or only with high additional expenses.
 
 ### 1.2 Objective
 
@@ -24,10 +24,10 @@ Specialist applications typically process sensitive information, such as all typ
 
 ### 2 2 Inappropriate access and access rights management
 
-If the allocation of access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
+If the allocation of access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hamper the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
 ### 2 3 Inaccessible contractual arrangements with an external service provider
-Due to inadequate contractual arrangements with an external service provider, especially in the creation, support of the implementation and maintenance of the application, various and serious security problems can occur. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the result may be that security measures are not implemented due to ignorance, lack of qualification or lack of resources. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and the lack of ownership due to the loss of control and oversight.
+Due to inadequate contractual arrangements with an external service provider, especially in the creation, support of the introduction and maintenance of the application, various and serious security problems can occur. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the result may be that security measures are not implemented due to ignorance, lack of qualification or lack of resources. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and failure to take responsibility due to the loss of control and oversight.
 
 ### 2 4 Software designation error
 
@@ -43,14 +43,14 @@ Many applications often include built-in undocumented features for development o
 
 ### 2 7 Missing or inadequate security measures in applications
 
-Security mechanisms or security functions are designed to ensure that the processing of information ensures confidentiality, integrity and availability to the required extent. Frequently, however, the development of an application focuses on functional functionality or the time and cost framework, so that important security mechanisms are too weak, so that they can easily be bypassed, or even completely lacking.
+Security mechanisms or security functions are designed to ensure that the processing of information ensures confidentiality, integrity and availability to the required extent. Frequently, however, the development of an application focuses on functional functionality or the time and cost framework, so that important security mechanisms are too weak, so that they can simply be bypassed, or even completely lacking.
 
 3 requirements
 ---------------
 
-The following are specific requirements for planning, selection, procurement, commissioning, operation and separation of specialized applications. Basically, the department that uses the application is responsible for fulfilling these requirements. In practice, these requirements can only be fulfilled if the IT operations managers (eg IT managers) and the information security officer (ISB) are involved or involved.
+The following are specific requirements for planning, selection, procurement, commissioning, operation and separation of specialized applications. As a matter of principle, the department using the application is responsible for fulfilling these requirements. In practice, these requirements can only be fulfilled if the IT operations managers (eg IT managers) and the information security officer (ISB) are involved or involved.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -99,11 +99,11 @@ The e relevant requirements for the application SHOULD be documented. This docum
 It was intended to ensure, with a client concept, that applications and data of different customers are operated in a cleanly separated manner. This SHOULD be created by the operator of the multi-tenant application and made available to the using institutions. The required mechanisms for client separation at the service provider SHOULD be implemented sufficiently.
 
 #### CON.5.A8 Appropriate application development control [IT chief]
-In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, an appropriate development model, risk management and quality objectives SHOULD be considered.
+In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, a suitable development model, risk management and quality objectives SHOULD be considered.
 
 #### CON.5.A9 Decommissioning Applications [IT Manager]
 
-The decommissioning of applications SHOULD be planned. It SHOULD clarify for all data which data is migrated, archived or deleted. Data that is no longer needed SHOULD be deleted safely. The decommissioning of applications and the associated IT systems and data carriers SHOULD be comprehensibly documented.
+The decommissioning of applications SHOULD be planned. It SHOULD be clarified for all data, which data is migrated, archived or deleted. Data that is no longer needed SHOULD be deleted safely. The decommissioning of applications and the associated IT systems and data carriers SHOULD be comprehensibly documented.
 
 #### CON.5.A10 Emergency Prevention for Applications [IT Leader]
 

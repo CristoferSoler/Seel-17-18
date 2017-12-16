@@ -5,7 +5,7 @@
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
 A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
@@ -33,7 +33,7 @@ In a DDoS attack on a protected network (eg TCP-SYN-Flooding, UDP Packet Storm) 
 
 ### 2 2 Manipulation
 
-If an attacker succeeds in gaining unauthorized access to a firewall system or a corresponding administration interface, he can arbitrarily manipulate files there. For example, he can change the configuration, start additional services or install malicious software. Likewise, he can record the communication connections on the manipulated system. For example, the firewall rules can be changed to access the firewall and intranet of the institution from the Internet. Furthermore, an attacker can initiate a denial of service (DoS) attack by blocking access to individual server services in the policy.
+If an attacker succeeds in gaining unauthorized access to a firewall system or a corresponding administration interface, he can manipulate files there as he sees fit. For example, he can change the configuration, start additional services or install malicious software. Likewise, he can record the communication connections on the manipulated system. For example, the firewall rules can be changed to access the firewall and intranet of the institution from the Internet. Furthermore, an attacker can initiate a denial of service (DoS) attack by blocking access to individual server services in the policy.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -52,7 +52,7 @@ An improperly configured or incorrectly operated firewall can seriously affect t
 
 The following are specific firewall requirements. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -89,7 +89,7 @@ Information about the internal configuration and operating state MUST be hidden 
 
 #### NET.3.2.A5 Restrictive rights assignment
 
-It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
+It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
 #### NET.3.2.A6 Protection of the administration interfaces
 
@@ -109,7 +109,7 @@ In the settings of the firewall, the dynamic routing MUST be deactivated, unless
 The firewall MUST be configured to log at least the following events:
 
 * denied network connections (source and destination IP addresses, source and destination ports or ICMP / ICMPv6 type, date, time),
-* Failed access to system resources due to bad authentication, lack of authority or lack of resources,
+* Failed access to system resources due to incorrect authentication, lack of authority or lack of resources,
 * Error messages of the firewall services and
 * general system error messages.
 If security proxies are used, security violations and access control list violations (ACLs or short access lists) MUST be appropriately logged: at least the type of protocol violation or violation, source and destination IP address, source and destination IP addresses Destination port, service, date and time, and connection duration (if required).
@@ -159,7 +159,7 @@ If the IPv4 or IPv6 protocol is not needed in a network segment, it SHOULD be di
 
 #### NET.3.2.A18 Administration via a separate management network
 
-Firewalls SHOULD only be administered via a separate management network (out-of-band management). Any existing administration interface via the actual data network (in-band) MUST be deactivated. Communication in the management network SHOULD be limited to a few management protocols with well-defined origins and goals via management firewalls (see NET.1.1 * network architecture and design *). The available security mechanisms of the used management protocols for authentication, integrity assurance and encryption SHOULD be activated and all insecure management protocols deactivated (see NET.1.2 * Network Management *).
+Firewalls SHOULD only be administered via a separate management network (out-of-band management). Any existing administration interface via the actual data network (in-band) MUST be deactivated. Communication in the management network SHOULD be limited to a few management protocols with well-defined origins and goals via management firewalls (see NET.1.1 * Network architecture and design *). The available security mechanisms of the used management protocols for authentication, integrity assurance and encryption SHOULD be activated and all insecure management protocols deactivated (see NET.1.2 * Network Management *).
 
 #### NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
 
@@ -169,7 +169,7 @@ At the packet filter, which protects server services reachable from less or untr
 
 At the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
 
-#### NET.3.2.A20 Securing basic internet protocols
+#### NET.3.2.A20 Securing Basic Internet Protocols
 
 To communicate to the Internet, the HTTP, SMTP, and DNS protocols, including their encrypted versions, SHOULD be routed through protocol-specific security proxies.
 
@@ -202,7 +202,7 @@ If a system crashes, SHOULD ensure that no old or faulty configurations (includi
 
 #### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
 
-To further minimize the potential for attack, an organization SHOULD outsource its firewall functionality to dedicated hardware and software.
+To further minimize the potential for attack, an institution SHOULD outsource its firewall enhancements to dedicated hardware and software.
 
 #### NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
 

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Malicious programs are programs that typically perform malicious functions on the IT system without the knowledge and consent of the user or owner of an IT system. These capabilities can cover a wide range, from espionage to ransomware, to the sabotage and destruction of information or even devices.
+Malicious programs are programs that typically perform malicious functions on the IT system without the knowledge and consent of the user or owner of an IT system. These capabilities can cover a wide range, from espionage to ransomware to sabotaging and destroying information or even devices.
 
 Malicious programs can generally occur on all operating systems and IT systems. In addition to classic IT systems such as clients and servers, these also include mobile devices such as smartphones. Network components such as routers, industrial control systems and even IoT devices, such as networked cameras, are also frequently endangered by malicious programs.
 
@@ -17,7 +17,7 @@ This module describes the procedure for creating and implementing protection aga
 
 ### 1.3 Delimitation
 
-This module describes the general requirements for protection against malicious programs. Specific requirements to protect certain IT systems of the institution against malicious programs can be found in the respective building blocks, in particular the layer SYS, for example in SYS.2.2.3 Client under Windows 10. If an identified malicious program leads to a security incident, the requirements of the Building block DER.2.1. Treatment of security incidents. The requirements of the DER.2.3 Cleanup block help to remove identified malicious programs and restore a clean state.
+This module describes the general requirements for protection against malicious programs. Specific requirements for protecting certain IT systems of the institution against malicious programs can be found in the respective building blocks, in particular the layer SYS, for example in SYS.2.2.3 Client under Windows 10. If an identified malicious program leads to a security incident, the requirements of the Building block DER.2.1. Treatment of security incidents. The requirements of the DER.2.3 Cleanup block help to remove identified malicious programs and restore a clean state.
 
 2 risk situation
 -----------------
@@ -45,14 +45,14 @@ Through malicious programs, IT systems of an institution can become part of so-c
 
 ### 2 6 Infection of production systems and IoT devices
 
-In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee machine can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
+In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point to the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can result in downtime and many other threats to the institution and its employees, including fires.
 
 3 requirements
 ---------------
 
 The following are specific requirements for malicious program protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should at least be included in all strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined IT security concept.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -61,15 +61,15 @@ The following requirements MUST be implemented as a priority:
 It MUST be created a concept, which IT systems must be protected against malicious programs. It also MUST be noted how the protection has to be done. If no reliable protection is possible, then the identified IT systems SHOULD NOT be operated. The concept SHOULD be comprehensibly documented.
 
 #### OPS.1.1.4.A2 Use of system-specific protection mechanisms
-It MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
+It MUST be examined which protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
-Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific purpose. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
+Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific purpose. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A4 Selection of a virus protection program for gateways and IT systems for data exchange [specialist responsible]
 
-For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
+For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A5 Operation of virus protection programs
 
@@ -87,7 +87,7 @@ Users MUST be regularly briefed on the threat of malware. You MUST follow the ba
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the field of malware protection. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of protection against malicious programs. They SHOULD be implemented in principle.
 
 #### OPS.1.1.4.A8 Use of cloud services
 Cloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
@@ -122,14 +122,14 @@ With increased protection requirements and appropriate threat status, the use an
 
 #### OPS.1.1.4.A15 External Consultation (CIA)
 
-In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
+When developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
 
 4 Further Information
 ------------------------------
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area of ​​"protection against malicious programs" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"protection against malware" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

@@ -19,7 +19,7 @@ This module is generally concerned with IoT devices and is intended to be applic
 
 Depending on the nature of the IoT devices, the transitions to industrial control systems (ICS systems) or embedded systems are fluid. Requirements for equipment used in production and manufacturing can be found in the building blocks of the layer IND (Industrial IT).
 
-Embedded systems are information processing systems that are integrated into a larger system or product, where they take over control, regulation and data processing tasks and are often not directly perceived by the user. For this module SYS.4.3 Embedded Systems has to be implemented.
+Embedded systems are information processing systems that are integrated into a larger system or product, where they take over control, regulation and data processing tasks and are often not directly perceived by the user. For this block SYS.4.3 Embedded Systems has to be implemented.
 
 Requirements for the radio links frequently used in the context are in the building blocks of the layer NET.2 radio networks.
 
@@ -32,7 +32,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 In the development of IoT devices, the aspect of information security is typically a design goal that is not respected or only subordinate. Therefore, IoT devices could be abused again and again to gather information about the users or the field of application. So it has always come back to incidents with networked or IP-based surveillance cameras, z. B .:
 
-* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in the financial institutions through the cameras.
+* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in financial institutions through the cameras.
 * In 2014, video images and streams from 73,000 inadequately-protected webcams were made publicly available through the Insecam website.
 * In 2015, 8-year-old Malware Conficker infected a variety of bodycams from various police forces.
 ### 2 2 Using UPnP
@@ -43,7 +43,7 @@ LAN's built-in IoT devices often connect to the Internet on their own by configu
 
 If IoT devices are not regularly patched, known vulnerabilities remain open and can be exploited for large-scale attacks. One target of an attack could be to integrate the IoT devices into a botnet. In this case, they could be used, for example, to perform Distributed Denial of Service (DDoS) attacks and to limit the availability of services.
 
-Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet independently scanned the Internet for other devices to infect them with malware and add them to the botnet.
+Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet automatically scanned the Internet for additional devices to infect them with malware and add them to the botnet.
 
 ### 2 4 espionage attacks using backdoors in IoT devices
 
@@ -54,7 +54,7 @@ At the end of September 2016, it became known that some models of surveillance c
 
 The following are specific requirements for the IoT area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -63,7 +63,7 @@ The following requirements MUST be implemented as a priority:
 IoT devices MUST meet a minimum of security criteria so that they can be used in institutions. The devices MUST have update features and the manufacturer MUST offer an update process. The devices MUST allow authentication. There must NOT be hard-coded access data in the device.
 
 #### SYS.4.4.A2 authentication
-To use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such as. B. Certificate-based authentication.
+To use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such. B. Certificate-based authentication.
 
 #### SYS.4.4.A3 Regular update
 
@@ -71,7 +71,7 @@ It MUST be checked periodically to see if the IoT devices and associated compone
 
 #### SYS.4.4.A4 Enable auto-update mechanisms
 
-Automatic update mechanisms (auto-update) MUST be enabled unless other mechanisms such as regular manual maintenance or a central software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
+Automatic update mechanisms (autoupdate) MUST be enabled unless other mechanisms such as regular manual maintenance or a centralized software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
 
 #### SYS.4.4.A5 Network access restriction
 
@@ -89,7 +89,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
 
-In the general security policy of the institution, the requirements for IoT devices SHOULD be specified. The guideline SHOULD be known to all persons involved in the procurement and operation of IoT devices and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.
+In the general security policy of the institution, the requirements for IoT devices SHOULD be specified. The policy SHOULD be known to all people involved in the procurement and operation of IoT equipment and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.
 
 #### SYS.4.4.A7 Planning the use of IoT devices
 
@@ -120,14 +120,14 @@ When IoT devices are used in conjunction with higher-level management systems, t
 
 After installation, SHOULD check which protocols, applications, and other tools are installed and enabled on the IoT devices. Unnecessary protocols, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. This applies in particular to unsafe services, such. Telnet or SNMPv1 / v2. The use of unnecessary radio interfaces, z. B. for WLAN, ZigBee, Bluetooth, SOLLTE be prevented.
 
-If this is not possible on the device itself, unnecessary services should be restricted via the security gateway (firewall). The decisions made SHOULD be documented so that it can be reconstructed which configuration was selected for the IoT devices.
+If this is not possible on the device itself, unused services SHOULD be restricted via the security gateway (firewall). The decisions made SHOULD be documented so that it can be reconstructed which configuration was selected for the IoT devices.
 
 #### SYS.4.4.A14 deployment clearance
 
 Before IoT devices are used in productive operation and before they are connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be documented. For deployment clearance, the installation and configuration documentation and the functionality of the IoT devices SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
 
 #### SYS.4.4.A15 Restrictive rights assignment
-The access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible on the IoT devices themselves, you should consider to regulate this on the network side.
+The access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible via the IoT devices themselves, it should be considered to regulate this on the network side.
 
 #### SYS.4.4.A16 Eliminate malware on IoT devices
 
@@ -147,7 +147,7 @@ Depending on whether IoT devices are administered locally, directly via the netw
 
 #### SYS.4.4.A20 Regulated decommissioning of IoT devices
 
-When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be used when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be processed when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -157,7 +157,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 It should be clarified whether IoT devices may be operated in the envisaged operating environment (protection requirements of other systems, data protection). IoT devices SHOULD be protected from theft, destruction and manipulation in the environment of use.
 
-It should be clarified if an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
+It should be clarified whether an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
 
 When operating IoT devices with batteries, the regular function test and replacement of the batteries SHOULD be regulated.
 

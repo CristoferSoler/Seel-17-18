@@ -17,11 +17,11 @@ Another major difference for OT is the high availability and integrity requireme
 
 The goal of the module is to demonstrate suitable requirements for the information security of the OT. He addresses cross-component, conceptual and architectural security requirements.
 
-The module is to be modeled and implemented across the board. Multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out, as these have different information security requirements.
+The module is to be modeled and implemented across the board. In this case, multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out since there are different requirements with regard to information security.
 
 ### 1.3 Delimitation
 
-Depending on the purpose, industry, IT systems and technology used, as well as the long service life (sometimes without updates), the configuration of the OT can vary greatly, even with comparable applications. When designing the security measures based on the requirements of this module, the existing special features must therefore be taken into account. These can have a significant influence on the design of the security concept. For this reason, the risk analysis can already be of great importance when creating a security concept for the normal protection requirement. This may require multiple use of the device for different areas.
+Depending on the purpose, industry, IT systems and technology used, as well as the long service life (sometimes without updates), the design of the OT can vary greatly, even with comparable applications. When designing the security measures based on the requirements of this module, the existing special features must therefore be taken into account. These can have a significant influence on the design of the security concept. For this reason, the risk analysis can already be of great importance when creating a security concept for the normal protection requirement. This may require multiple use of the device for different areas.
 
 In addition, the surrounding infrastructure of the OT - ie locations, facilities, buildings, rooms, etc. - must be modeled by building blocks that are as specific as possible in order to complement the protective effect of this building block.
 
@@ -43,7 +43,7 @@ The OT is used to monitor, control and automate technical processes. Disruptions
 
 Industrial control systems are increasingly rarely operated completely independently from the outside world. Modern manufacturing and manufacturing processes require an information exchange with upstream and downstream production steps and are often linked to central production planning and control systems (Manifacturing Execution System / Enterprise Resource Planning) of an institution. The electronic exchange of information requires networking of production facilities with third party networks such as office IT or the networks of partners and service providers. Requirements for interactive access from office or mobile workstations as well as operational requirements for the electronic data exchange, such as the provision of software and updates, or for the realization of remote access for a call or service providers promote networking with the outside world.
 
-If the required communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
+If the necessary communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
 
 ### 2 4 Insufficient protection against malicious programs for OT
 
@@ -54,13 +54,13 @@ In addition, the use of anti-virus software requires regular updates. If this is
 
 ### 2 5 Unsafe projecting process / application development process
 
-Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Malfunctions can arise from functional errors in the case of inadequate test and validation steps, faulty or manipulated configuration data or weak points in the software, if important safety functions such as on- and off-hook Issuance or authorization checks are implemented inadequately.
+Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Faults can arise from functional errors in the case of inadequate test and validation steps, incorrect or manipulated configuration data or weak points in the software, if important safety functions such as on- and off-hook Issuance or authorization checks are implemented inadequately.
 
 Further dangers may arise from unsafe development environments, improper storage of program code, documentation or project data, as well as from the data transfer interfaces.
 
 ### 2 6 Insecure administration concept and remote administration
 
-The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, then attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
+The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
 
 Local administrators also have privileged rights that make abusive intrusion or compromised accounts attractive to attackers.
 
@@ -89,11 +89,11 @@ The long operating times can also lead to problems in the procurement of spare p
 
 The OT components communicate with each other via various network protocols and technologies. In addition to protocols and technologies from office IT (eg Ethernet, TCP / IP, WLAN, GSM), ICS-specific protocols are used. These have not always been developed from the point of view of information security and accordingly provide, in part, no or only limited security mechanisms. Information is often transmitted in plain text and without integrity assurance or authentication.
 
-An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by faking sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
+An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by feigning sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
 
 ### 2 11 Unsafe configurations
 
-In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or trusted by other systems.
+In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or in trust with other systems.
 
 Examples of insecure configurations include the use of standard passwords, the use of system administration plaintext protocols, the operation of unneeded services, unsecured interfaces, such as: USB or Firewire ports, or disabled security features.
 
@@ -109,13 +109,13 @@ Examples of dependencies on other systems and networks include Internet connecti
 ---------------
 The following are specific requirements for the area of ​​operating and control technology. Basically, ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### IND.1.A1 Integration into the security organization
 
-An Information Security Management System (ISMS) for Operating the OT Infrastructure MUST exist either as an independent ISMS or as part of an overall ISMS, and MUST explicitly specify within its scope the definition of goals and values, processes, roles, responsibilities, and specifications for the OT include.
+An Information Security Management System (ISMS) for operating the OT infrastructure MUST exist either as an independent ISMS or as part of an overall ISMS, and MUST explicitly specify within its scope the definition of goals and values, processes, roles, responsibilities, and specifications for the OT include.
 
 The management level of the institution MUST initiate, control and control the security process. The institution MUST establish a security organization that governs the roles and responsibilities for the information security of the OT infrastructure and components.
 
@@ -135,9 +135,9 @@ Additional information is described in the ORP.3 Sensitization and Training modu
 
 In order to prevent risks from malicious programs, a concept for the protection against malicious programs MUST be created and implemented. It must consider the threatened IT systems as well as the possible infection pathways (external interfaces, removable media, service and parameterization / programming devices) and determine appropriate technical and organizational protective measures.
 
-When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection procedures MUST be considered in a risk analysis.
+When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection mechanisms MUST be considered in a risk analysis.
 
-Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of updating. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
+Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of the update. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
 
 ### 3.2 Standard requirements
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​operating and control technology. They SHOULD be implemented in principle.
@@ -169,7 +169,7 @@ Further information is described in the module OPS.1.2.1 Change Management.
 #### IND.1.A7 Establish Permission Management
 
 The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.
-The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
+The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be observed. Compliance SHOULD be reviewed and sanctioned misconduct.
 
 Further information is described in the module ORP.4 Identity and Authorization Management.
 
@@ -179,11 +179,11 @@ For initial configuration, administration and remote maintenance in OT, either s
 
 The systems and communication channels used for administration or remote maintenance should have the same level of protection as the managed OT components. All remote maintenance and monitoring SHOULD be authorized, monitored and controlled by the institution. For this, the remote maintenance access SHOULD only be activated for use and then deactivated again. This SHOULD be documented
 
-It should be ensured that it is not possible to build up unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
+It should be ensured that it is not possible to build unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
 
 #### IND.1.A9 Restrictive use of removable media and mobile devices
 
-For the use of removable media and mobile devices SHOULD regulations for handling be set up and publicized. Basically, the use of removable media and mobile devices in ICS environments SHOULD be limited. For media and devices of service providers SHOULD an approval process and a request list exist. The specifications SHOULD be known to each service provider and confirmed by them in writing.
+For the use of removable media and mobile devices SHOULD regulations for handling be set up and publicized. Basically, the use of removable media and mobile devices in ICS environments SHOULD be limited. For media and devices of service providers, an approval process and a request list SHOULD exist. The specifications SHOULD be known to each service provider and confirmed by them in writing.
 
 On the OT components, all unnecessary interfaces SHOULD be disabled. At the active interfaces, the use of certain devices or media can be restricted.
 
@@ -237,11 +237,11 @@ To enable effective verification of privileges, the institution SHOULD maintain 
 All critical administrative activities SHOULD be logged. The IT operation SHOULD NOT be able to erase or manipulate the logs.
 
 #### IND.1.A16 Greater foreclosure of zones (IA)
-For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with security check functions is required to prevent risks from external connections.
+For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with safety testing functions is required to prevent risks from external connections.
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
-By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without adjustments the ICS system are necessary.
+By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without any adjustments the ICS system are necessary.
 
 The implementation of this requirement increases perimeter security. Supplementary organizational and technical measures SHOULD be identified and implemented to further reduce the risks of intentional and accidental circumvention of the perimeter, such as the use of removable media or mobile devices.
 

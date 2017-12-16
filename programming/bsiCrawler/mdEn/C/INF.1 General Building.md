@@ -5,7 +5,7 @@
 
 Buildings form the outer physical framework for the execution of business processes. A building comprises the stationary workstations, the processed information as well as the established information technology and thus ensures an external protection for them. In addition, the infrastructure of a building often enables the execution of business processes and IT operations. Therefore, not only the building itself, so walls, ceilings, floors, roof, windows and doors to look at, but also all building-wide infrastructure and utilities such as electricity, water, gas, heating and cooling.
 
-Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional customers (citizens, customers, suppliers). If a building is used by different parties in such a way, the design and equipment of the building and the concept of use for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
+Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional users (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
 
 ### 1.2 Objective
 
@@ -24,7 +24,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 fire
 
-Buildings and the people and facilities inside them can be severely damaged by fire. In addition to direct damage caused by the fire, consequential damage must also be considered. The biggest source of danger in a fire is the toxic fire smoke. Most personal injury in a fire is caused by smoke poisoning. Even at facilities and IT systems, fire smoke can cause serious damage.
+Buildings and the people and facilities inside them can be severely damaged by fire. In addition to direct damage caused by the fire, consequential damage must also be considered. The biggest source of danger in a fire is the toxic fire smoke. Most personal injury in a fire is caused by smoke poisoning. Even in facilities and IT systems, fire smoke can cause serious damage.
 
 For example, when PVC is burned, it produces chlorine gas, which together with the humidity and extinguishing water form hydrochloric acid. Distributing the hydrochloric acid vapors through the air conditioner can cause damage to sensitive electronic equipment located in a part of the building far from the fire.
 
@@ -77,17 +77,17 @@ The following requirements MUST be implemented as a priority:
 
 Based on the planned or existing use of a building and the protection requirements of the business processes operated there, it MUST be determined how the building is to be secured. For a building, many different aspects of security MUST be respected for the protection of people in the building, the protection of assets and the IT, from fire protection to electrical systems to access control. The safety requirements from the different areas MUST be coordinated with each other.
 
-#### INF.1.A2 Adapted circuits
+#### INF.1.A2 Adjusted distribution of circuits
 
 It MUST be checked regularly whether the protection and design of the circuits still meet the actual needs.
 
 #### INF.1.A3 Compliance with fire safety regulations
 
-The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be signposted and kept open in accordance with regulations. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
+The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be properly signposted and kept open. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
 
 Unnecessary fire loads MUST be avoided. This includes the regular disposal of waste paper and packaging waste.
 
-There MUST be a fire safety officer or a person entrusted with the task, who is also properly trained.
+There MUST be a fire safety officer or a person entrusted with the task, who is also trained accordingly.
 
 #### INF.1.A4 fire detection in buildings [planner]
 Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
@@ -114,7 +114,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
 
-It SHOULD give a security concept for the building use. The security concept for the building SHOULD be coordinated with the overall security concept of the institution. It SHOULD be updated regularly.
+It SHOULD give a security concept for the use of buildings. The security concept for the building SHOULD be coordinated with the overall security concept of the institution. It SHOULD be updated regularly.
 
 Protected rooms or parts of buildings SHOULD NOT be housed in exposed or endangered areas.
 
@@ -194,11 +194,11 @@ It was intended to implement adequate anti-burglary measures adapted to local co
 
 #### INF.1.A28 Air conditioning for people (IA)
 
-In larger buildings the air supply SHOULD be provided by ventilation and air conditioning (RLT) systems. The RLT systems SHOULD be designed for the actual use of the building. You SHOULD maintain RLT systems regularly.
+In larger buildings, the air supply SHOULD be provided by ventilation and air conditioning (RLT) systems. The RLT systems SHOULD be designed for the actual use of the building. You SHOULD maintain RLT systems regularly.
 
 #### INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
 
-It SHOULD be checked whether the employees of the commissioned cleaning company use the issued keys or ID cards according to the contract. The cleaning staff SHOULD be sufficiently informed about the handling of the IT. Cleaners SHOULD be supervised in the most sensitive areas at work.
+It SHOULD be checked whether the employees of the commissioned cleaning company use the issued keys or badges according to the contract. The cleaning staff SHOULD be sufficiently informed about the handling of the IT. Cleaners SHOULD be supervised in the most sensitive areas at work.
 
 #### INF.1.A30 Selection of a suitable building (CIA)
 
@@ -224,7 +224,7 @@ It SHOULD provide a hazard warning system appropriate to the premises and the ri
 ------------------------------
 
 ### 4.1 Literature
-Further information about hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
+Additional information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
 
 * #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
 

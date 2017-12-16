@@ -30,7 +30,7 @@ If the mobile work is not or only insufficiently regulated, the institution may 
 
 ### 2 2 Impaired by changing operating environment
 
-As mobile data carriers and end devices are used in very different environments, they are exposed to a large number of threats. These include, for example, damaging environmental influences (for example, high or too low temperatures), as well as dust, moisture or transport damage.
+As mobile data carriers and end devices are used in very different environments, they are exposed to a variety of threats. These include, for example, damaging environmental influences (for example, high or too low temperatures), as well as dust, moisture or transport damage.
 
 In addition to these influences, the operating environments with their different levels of security must be taken into account. Especially smartphones, tablets, laptops and similar mobile devices are not only mobile, but can also communicate with other IT systems. In this case, for example, malicious programs can be transmitted or sensitive information can be copied. In this way, tasks may no longer be fulfilled, customer appointments may not be performed, or IT systems may be damaged.
 
@@ -39,7 +39,7 @@ It may be easier to manipulate or destroy IT systems, accessories, information a
 
 ### 2 4 Delays due to temporarily limited accessibility
 
-Most employees at the mobile workstation have no fixed working hours and are sometimes difficult to reach on the way. This can significantly delay the flow of information. Even if the information is transmitted via e-mail, the response time is not necessarily shortened because it can not be guaranteed that the mobile employee will read the e-mail in a timely manner. Depending on the situation and institution, temporary accessibility has different effects, but it can severely limit the availability of information.
+Most employees at the mobile workstation have no fixed working hours and are sometimes difficult to reach on the way. This can significantly delay the flow of information. Even if the information is transmitted via e-mail, the response time is not necessarily shortened because it can not be guaranteed that the mobile employee reads the e-mail in a timely manner. Depending on the situation and institution, temporary accessibility has different effects, but it can severely limit the availability of information.
 
 ### 2 5 Unsecured file and disk transport
 
@@ -54,11 +54,11 @@ If it is not possible to properly dispose of data carriers and documents at the 
 
 ### 2 7 Confidentiality loss of sensitive information
 
-At the mobile workstation, attackers can more easily access sensitive information stored on hard drives, removable media, or on paper, especially if they are professional. They can also listen to communication links. However, if information is read or disclosed unauthorized, it will have serious consequences for the entire institution. Among other things, the loss of confidentiality may result in the institution violating laws or creating competitive disadvantages and financial loss.
+At the mobile workstation, attackers can more easily access sensitive information stored on hard drives, removable media, or paper, especially if they are professional. They can also listen to communication links. However, if information is read or disclosed unauthorized, it will have serious consequences for the entire institution. Among other things, the loss of confidentiality may result in the institution violating laws or creating competitive disadvantages and financial loss.
 
 ### 2 8 Theft or loss of data carriers or documents
 
-The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or sometimes also from conference rooms with customers, it is easier to steal official IT and documents.
+The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or sometimes also from conference rooms to customers, it is easier to steal official IT and documents.
 In addition, IT systems or components can be lost. In addition to the purely material damage caused by the immediate loss of the mobile device, the disclosure of sensitive data (eg e-mails, notes from meetings, addresses or other documents) may result in further (financial and / or reputational) damage.
 
 ### 2 9 Lack of security awareness and carelessness in handling information
@@ -74,7 +74,7 @@ In public transport or during business lunches, it can be observed again and aga
 
 The following are specific requirements for the protection of mobile workstations. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -86,30 +86,30 @@ The institution MUST impose on its employees how mobile workplaces should be pro
 * how employees at the mobile workstation protect themselves from unwanted insights from third parties,
 * whether a permanent mains and power supply must be given and
 * which workplace environments are completely prohibited.
-#### INF.9.A2 Arrangements for mobile workplaces [Head IT, user]
+#### INF.9.A2 Arrangements for mobile workplaces [Head IT, users]
 
-For all work on the way MUST be regulated, which information outside the company or the authority may be transported and processed and which protective measures must be taken. It also MUST be clarified under which conditions employees with mobile IT systems may access internal information of their institution.
+For all work on the way MUST be regulated, which information outside the company or the authority may be transported and processed and what safeguards must be taken. It also MUST be clarified under which conditions employees with mobile IT systems may access internal information of their institution.
 
 In addition, the IT components and data carriers must be clearly regulated. It is therefore necessary to determine which IT systems and data carriers may be taken, who can take them with them and which basic security requirements must be observed. It also MUST be logged when and by whom, which mobile devices were used outside the home.
 Mobile device users MUST be made aware of the value of mobile IT systems and the value of information stored on them. You MUST be informed about the specific hazards and measures of the equipment they use. In addition, they MUST be informed about what kind of information may be processed on mobile IT systems. All users MUST be advised of the applicable regulations that must be followed by them and trained accordingly.
 
 #### INF.9.A3 Access and Access Protection [Staff]
 
-The employees MUST be informed about the regulations and measures for burglar and access protection at the mobile workplace. MUST be advised to close windows and close doors when the mobile workstation is not occupied (this is possible, for example, in hotel rooms). If this is not possible (eg on the train), the employees MUST store all documentation and IT systems in a safe place when they are absent. It MUST be ensured that unauthorized persons can not access official IT and documents at any time.
+The employees MUST be informed about the regulations and measures for burglar and access protection at the mobile workplace. MUST be advised to close windows and close doors when the mobile workstation is not occupied (this is possible, for example, in hotel rooms). If this is not possible (eg on the train), the employees MUST store all documentation and IT systems in a safe place if they are absent. It MUST be ensured that unauthorized persons can not access official IT and documents at any time.
 
 If rooms are left only briefly, the clients used MUST be locked or shut down so that they can only be used again after successful authentication.
 
 #### INF.9.A4 Working with external IT systems [supervisors, users]
 
-The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. If employees are working with external IT systems, it MUST always be ensured that all temporary data created during this process is deleted.
+The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. When employees work with third-party IT systems, it is essential to ensure that all temporary data created during this process is deleted.
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of mobile workstations. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of mobile workstation. They SHOULD be implemented in principle.
 
 #### INF.9.A5 Timely loss report [employee]
 
-Employees SHOULD immediately report to their institution if information, IT systems or data media were lost or stolen. For this purpose, there should be clear reporting channels and contact persons within the institution.
+Employees SHOULD immediately report to their institution if any information, IT systems or data media were lost or stolen. For this purpose, there should be clear reporting channels and contact persons within the institution.
 
 #### INF.9.A6 Disposal of confidential information [staff, building services]
 
@@ -120,7 +120,7 @@ Confidential information SHOULD be safely disposed of, so do not just throw it i
 For mobile work, labor law and labor protection framework conditions SHOULD be observed and regulated. All relevant points SHOULD be governed either by company agreements or by individual agreements made between the mobile employee and the employer in addition to the employment contract.
 
 #### INF.9.A8 Mobile Workplace Security Policy [IT Leader]
-All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated regularly. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current security policy.
+All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated on a regular basis. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current security policy.
 
 #### INF.9.A9 Encryption of Portable IT Systems and Media [User]
 

@@ -19,7 +19,7 @@ The focus of this module is on wired networks and data communication. However, g
 
 Specific security requirements for Virtual Private Clouds and Hybrid Clouds are not the focus of this module (see OPS.3.2 * Cloud Providers * and OPS.3.4 * Managed Security Services *).
 
-The network management is considered in the context of zoning and segmentation, all further topics of network management are dealt with in the module NET.1.2 * Network Management *.
+The network management is considered in the context of the zoning and segmentation, all further topics of the network management are treated in the building block NET.1.2 * network management *.
 
 2 risk situation
 -----------------
@@ -31,24 +31,24 @@ If the communication links are insufficiently sized or if their performance is n
 
 ### 2 2 Insufficiently secured network access
 
-Is the internal network connected to the Internet and the transition not sufficiently protected, z. For example, because no firewall is used or it is misconfigured, attackers can access and copy or manipulate the institution's sensitive information.
+Is the internal network connected to the Internet and the transition not sufficiently protected, z. For example, because no firewall is used or misconfigured, attackers can access and copy or manipulate the institution's sensitive information.
 
 ### 2 3 Improper construction of networks
 
-If a network is improperly constructed or improperly extended, unsafe network topologies and network configurations can arise. This makes it easier for attackers to find security holes, penetrate the institution's internal network and extract information, manipulate data or disrupt entire production systems. Also, attackers in a faulty network, which the security systems can only monitor to a limited extent, remain unrecognized for longer.
+If a network is improperly constructed or improperly extended, unsafe network topologies and network configurations can arise. This makes it easier for attackers to find security holes, penetrate the institution's internal network and extract information, manipulate data or disrupt entire production systems. Also, attackers in a faulty network, which the security systems can only monitor to a limited extent, remain unrecognized for a longer time.
 
 3 requirements
 ---------------
 
 The following are specific requirements for network architecture and design. Basically, the head of networks is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 
-Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed securely. The directive MUST include:
+Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed. The Directive MUST specify, inter alia:
 
 * in which cases the security zones are to be segmented and in which cases user groups or clients are to be logically or even physically separated,
 * which communication relationships and which network and application protocols are allowed,
@@ -59,7 +59,7 @@ The policy MUST be known to all network design professionals and be fundamental 
 
 #### NET.1.1.A2 Documentation of the network [IT operation]
 
-It MUST be a complete documentation of the network (including network) created and maintained sustainably. This MUST include the initial initial recording (including network performance) and any changes made to the network. Also, the logical structure of the network MUST be documented, in particular how the subnets are mapped and how the network is zoned and segmented.
+It MUST be a complete documentation of the network (including network) created and maintained. This MUST include the initial initial recording (including network performance) and any changes made to the network. Also, the logical structure of the network MUST be documented, in particular how the subnets are mapped and how the network is zoned and segmented.
 
 #### NET.1.1.A3 requirements specification for the network
 Based on the security policy (see NET.1.1.A1 * Network Security Policy *), a requirements specification for the network MUST be created and sustainably maintained. The requirements MUST be used to derive all the essential elements for network architecture and design.
@@ -152,7 +152,7 @@ Based on the network architecture, the network design for the security zones inc
 * Specifications on how to secure WAN and radio links
 * Connection of terminals to switching components, connections between network elements and use of communication protocols,
 * Redundancy mechanisms for all network elements,
-* Address concept for IPv4 and IPv6 as well as associated routing and switching concepts,
+* Address concept for IPv4 and IPv6 as well as related routing and switching concepts,
 * virtualized networks in virtualization hosts including NVO,
 * Setting up, connecting and securing private clouds as well as secure connection of virtual private clouds, hybrid clouds and public clouds,
 * Network design specifications for secure administration and monitoring of the IT infrastructure.
@@ -179,14 +179,14 @@ Segment (s) for IT systems responsible for the authentication and authorization 
 * Segment (s) for the administration of IT systems,
 * Segment (s) for monitoring and monitoring,
 * Segment (s) containing central logging including syslog server and SIEM server
-* Segment (s) for IT systems needed for basic management services
+* Segment (s) of IT systems needed for basic management services
 * Segment (s) for the management interface of the IT systems to be administered.
 The various management interfaces of the IT systems MUST be separated according to their purpose and their network placement via a stateful packet filter (firewall). The IT systems (management interface) in addition to the following affiliation SHOULD be separated via dedicated firewalls:
 
 * IT systems that are accessible from the Internet,
 * IT systems in the internal network,
 * Security components that are located between the IT systems accessible from the Internet and the internal network.
-It MUST be ensured that the segmentation can not be undermined by the management communication, i. H. a bridging of segments MUST be excluded.
+It MUST be ensured that segmentation can not be undermined by management communication, i. H. a bridging of segments MUST be excluded.
 
 #### NET.1.1.A22 Specification of the segmentation concept
 
@@ -195,15 +195,15 @@ Based on the specifications of network architecture and network design, a compre
 * Safety segments to be created initially and specifications on how to create new safety segments and how to position terminals in the safety segments.
 * Definition for the segmentation of development and test systems (staging)
 * Network access control for security segments with clients
-* Connection of network areas that are connected to the safety segments via wireless technology or leased line
+* Connection of network areas which are connected to the safety segments via radio technology or leased line
 * Connecting the virtualization hosts and virtual machines on the hosts to the security segments
 * Data center automation
 * Determination of how to integrate terminals that serve multiple security segments, eg. Load balancers, and storage and backup solutions
-Depending on the security policy and the requirement specification, SHOULD be designed for each security segment, as it should be implemented in terms of network technology. In addition, it should be determined which security functions the coupling elements must provide between the security segments (eg firewall as a stateful packet filter or IDS / IPS).
+Depending on the security policy and the requirement specification, SHOULD be designed for each security segment, as it should be implemented in terms of network technology. In addition, SHOULD specify which security features the coupling elements must provide between the security segments (for example, a firewall as a stateful packet filter or IDS / IPS).
 
 #### NET.1.1.A23 Separation of security segments
 
-IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further subdivided depending on their size and the requirements of the segmentation concept. It MUST be ensured that bridging of segments or even zones is not possible.
+IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further sub-divided depending on their size and the requirements of the segmentation concept. It MUST be ensured that no bridging of segments or even zones is possible.
 If the VLANs on a switch belong to different institutions, the separation should be either physical or encryption SHOULD be used to protect the transmitted information from unauthorized access.
 
 #### NET.1.1.A24 Secure logical separation via VLAN
@@ -218,7 +218,7 @@ A detailed and implementation planning for the network architecture and the netw
 
 #### NET.1.1.A26 Specification of operating processes for the network
 
-For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning as well as the segmentation concept affect IT operations.
+For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
 
 #### NET.1.1.A27 Integration of network architecture into contingency planning [Head IT]
 
@@ -251,7 +251,7 @@ Depending on security policy and requirement specification, security segments SH
 Depending on security policy and requirement specification, security segments of the management area SHOULD be physically separated.
 
 #### NET.1.1.A33 Network microsegmentation (CIA)
-To limit potential attacks on a small number of terminals, the network SHOULD be divided into small segments with a very similar requirement profile and protection needs. In particular, this should be taken into account for the DMZ segments.
+To limit potential attacks on a small number of terminals, the network SHOULD be divided into small segments with a very similar requirement profile and need for protection. In particular, this should be taken into account for the DMZ segments.
 
 #### NET.1.1.A34 Use of cryptographic procedures at network level (CI)
 
@@ -259,13 +259,13 @@ The security segments SHOULD be implemented on the internal network, on the extr
 
 When communicating within the internal network, extranet or DMZ over links that are not sufficiently secure for increased protection needs, the communication SHOULD be adequately encrypted at the network level.
 
-#### NET.1.1.A35 Use of Net-based DLP [Information Security Officer (ISB)] (CI)
+#### NET.1.1.A35 Deployment of Net-based DLP [Information Security Officer (ISB)] (CI)
 
 At the network level, data loss prevention (DLP) systems should be used to reduce the risk of data leakage.
 
 #### NET.1.1.A36 Separation via VLAN with very high protection requirement
 
-With very high protection requirements, NO VLANs SHOULD BE used.
+For very high protection requirements, NO VLANs SHOULD BE used.
 
 4 Further Information
 ------------------------------
@@ -290,7 +290,7 @@ Further information on hazards and security measures in the area of ​​"netwo
  [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
 
  
-* #### [TL2103] BSI TL-02103 - Version 2.0 "Technical Guideline for Organizational Telecommunication Systems with Increased Protection Needs"
+* #### [TL2103] BSI TL-02103 - Version 2.0 "Technical Guideline for Organizational Telecommunications Systems with Increased Protection Needs"
 
   
 

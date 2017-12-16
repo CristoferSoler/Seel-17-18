@@ -99,14 +99,7 @@ def check15k(list, component):
             if ('Weiterführende Literatur' in line):
                 ref = False
 
-            if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
-                threats = True
-                referenceList.append('#' + line)
-
             if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
-                referenceList.append(line)
-
-            if(threats and '* ' in line):
                 referenceList.append(line)
 
         if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
@@ -155,7 +148,7 @@ def translate(fileMD):
         textEl += translator.translate(el, dest='en', src='de').text + '\n'
 
     if(component):
-        r = open('references/' + re.sub('/', '-', filenameEn), 'w', encoding='utf-8')
+        r = open('references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
         r.write(references)
         r.close()
 
