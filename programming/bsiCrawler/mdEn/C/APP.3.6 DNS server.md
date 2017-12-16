@@ -26,7 +26,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 If a DNS server fails, the entire IT operation can be affected. Since clients and other servers of the institution are then no longer able to resolve internal and external addresses, data connections can no longer be established. Also external IT systems, eg. Mobile workers, customers, and business partners, for example, can not access the institution's servers, which typically disruptes critical business processes.
 
-### 2 2 Insufficient line capacityIf the line capacities for a DNS server are insufficient, access times to internal and external services may increase. As a result, these may only be limited or no longer usable. Also, attackers can more easily overload the DNS server with a denial-of-service (DoS) attack.
+### 2 2 Insufficient line capacity
+If the line capacities for a DNS server are insufficient, access times to internal and external services may increase. As a result, these may only be limited or no longer usable. Also, attackers can more easily overload the DNS server with a denial-of-service (DoS) attack.
 
 ### 2 3 Lack of or inadequate planning of DNS use
 
@@ -46,7 +47,8 @@ Similarly, in the case of incorrectly configured DNS servers, there is a risk th
 
 With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, it will provide the counterfeit data as an answer. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
 
-### 2 7 DNS hijackingDNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
+### 2 7 DNS hijacking
+DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
 
 ### 2 8 DNS-DoS
 
@@ -77,7 +79,8 @@ Advertising DNS servers (external requests) MUST be designed redundantly. Theref
 
 Advertising DNS servers (external requests) and resolving DNS servers (internal requests) MUST be separate on the server side. Resolvers of internal IT systems MUST use internal Resolving DNS servers to resolve names.
 
-#### APP.3.6.A4 Secure basic configuration of a DNS serverA Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
+#### APP.3.6.A4 Secure basic configuration of a DNS server
+A Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
 
 It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured to only be possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
 
@@ -109,7 +112,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 If a DNS server product is procured, care should be taken to ensure that all security requirements of the institution are properly implemented. The product SHOULD have proven its worth in practice and support the current RFC standards. It SHOULD help those responsible to create syntactically correct master files. In addition, there should be enough trained personnel for the selected DNS server product.
 
-#### APP.3.6.A11 Sufficient size of DNS serversSince the hardware of a DNS server affects the performance of the entire system, it SHOULD be sufficiently sized. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
+#### APP.3.6.A11 Sufficient size of DNS servers
+Since the hardware of a DNS server affects the performance of the entire system, it SHOULD be sufficiently sized. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
 
 #### APP.3.6.A12 Training of Responsible Persons [Supervisors, Head of IT]
 
@@ -170,7 +174,8 @@ Further information about threats and security measures in the area of ​​"DN
 
   
 
- Recommendations for Internet Service Providers (ISP) and large companies, BSI, 2013[https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_055.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_055.pdf)
+ Recommendations for Internet Service Providers (ISP) and large companies, BSI, 2013
+[https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_055.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_055.pdf)
 
  
 * #### [BSIDNSSEC] Implementation of DNSSEC

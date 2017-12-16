@@ -30,7 +30,8 @@ In particular, errors in server services can have serious consequences. In the c
 
 ### 2 2 Data loss
 
-The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
+The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.
+If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
 
 ### 2 3 Prevention of services
 
@@ -54,7 +55,8 @@ Numerous requests at the same time overstrain a system and overload the processo
 * too much computing power is claimed by the services or
 * a large number of messages will be sent at the same time.
 3 requirements
----------------The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -84,7 +86,8 @@ It MUST be ensured that identifiers with administrator rights are only used for 
 
 Depending on the type of access used (local, remote or central system management), suitable security measures MUST be taken. The methods used for administration MUST be specified in the security policy. The administration MUST be performed according to the security policy.
 
-To register users and services with the system, authentication procedures MUST be used that are appropriate to the protection needs of the servers. This should be taken into special account for administrative access. As far as possible, use should be made of central, network-based authentication services.The administration MUST be done via secure protocols. It SHOULD be considered, alternatively set up a separate administration network.
+To register users and services with the system, authentication procedures MUST be used that are appropriate to the protection needs of the servers. This should be taken into special account for administrative access. As far as possible, use should be made of central, network-based authentication services.
+The administration MUST be done via secure protocols. It SHOULD be considered, alternatively set up a separate administration network.
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
@@ -121,7 +124,8 @@ It MUST be decided which information should be logged by the server at least, ho
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
 
-#### SYS.1.1.A11 Setting a security policy for serversBased on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
+#### SYS.1.1.A11 Setting a security policy for servers
+Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
 
 #### SYS.1.1.A12 Planning the server deployment
 
@@ -160,7 +164,8 @@ All installation steps SHOULD be documented in such a way that the installation 
 
 The default settings of servers SHOULD be reviewed and, if necessary, adjusted according to the security policy. Only after the installation and the configuration is completed, the server SHOULD be connected to the internet.
 
-#### SYS.1.1.A17 deployment clearanceBefore the server system is used in productive operation and before it is connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be suitably documented. For deployment clearance, the installation and configuration documentation and system functionality SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
+#### SYS.1.1.A17 deployment clearance
+Before the server system is used in productive operation and before it is connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be suitably documented. For deployment clearance, the installation and configuration documentation and system functionality SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
 
 #### SYS.1.1.A18 Encryption of communication links
 
@@ -194,7 +199,8 @@ Server systems SHOULD undergo regular security testing that verifies compliance 
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
-When decommissioning a server SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the server. It SHOULD also be ensured that services offered by the server have been taken over by another server, if necessary.It SHOULD create a checklist that can be processed when a server is decommissioned. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
+When decommissioning a server SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the server. It SHOULD also be ensured that services offered by the server have been taken over by another server, if necessary.
+It SHOULD create a checklist that can be processed when a server is decommissioned. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -246,7 +252,8 @@ Additional information on threats and security measures in the "General Server" 
   
 
  Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>5 Appendix: Cross reference table for elementary hazards
+ <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
+5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
 The following elementary threats are important for the module "General Server".

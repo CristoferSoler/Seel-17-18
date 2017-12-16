@@ -34,7 +34,8 @@ As mobile data carriers and end devices are used in very different environments,
 
 In addition to these influences, the operating environments with their different levels of security must be taken into account. Especially smartphones, tablets, laptops and similar mobile devices are not only mobile, but can also communicate with other IT systems. In this case, for example, malicious programs can be transmitted or sensitive information can be copied. In this way, tasks may no longer be fulfilled, customer appointments may not be performed, or IT systems may be damaged.
 
-### 2 3 Manipulation or destruction of IT systems, accessories, information and software on the mobile workstationIt may be easier to manipulate or destroy IT systems, accessories, information and software that are used on a mobile device than in the institution. The mobile workstation is often accessible to third parties. Also here the central protective measures of the institution are not present, for example, porter services. If IT systems, accessories, information or software are manipulated or destroyed, the employee at the mobile workstation is often only able to work to a limited extent. In addition, destroyed IT components or software solutions may need to be replaced, which requires both financial and time resources.
+### 2 3 Manipulation or destruction of IT systems, accessories, information and software on the mobile workstation
+It may be easier to manipulate or destroy IT systems, accessories, information and software that are used on a mobile device than in the institution. The mobile workstation is often accessible to third parties. Also here the central protective measures of the institution are not present, for example, porter services. If IT systems, accessories, information or software are manipulated or destroyed, the employee at the mobile workstation is often only able to work to a limited extent. In addition, destroyed IT components or software solutions may need to be replaced, which requires both financial and time resources.
 
 ### 2 4 Delays due to temporarily limited accessibility
 
@@ -57,7 +58,8 @@ At the mobile workstation, attackers can more easily access sensitive informatio
 
 ### 2 8 Theft or loss of data carriers or documents
 
-The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or sometimes also from conference rooms with customers, it is easier to steal official IT and documents.In addition, IT systems or components can be lost. In addition to the purely material damage caused by the immediate loss of the mobile device, the disclosure of sensitive data (eg e-mails, notes from meetings, addresses or other documents) may result in further (financial and / or reputational) damage.
+The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or sometimes also from conference rooms with customers, it is easier to steal official IT and documents.
+In addition, IT systems or components can be lost. In addition to the purely material damage caused by the immediate loss of the mobile device, the disclosure of sensitive data (eg e-mails, notes from meetings, addresses or other documents) may result in further (financial and / or reputational) damage.
 
 ### 2 9 Lack of security awareness and carelessness in handling information
 
@@ -88,7 +90,8 @@ The institution MUST impose on its employees how mobile workplaces should be pro
 
 For all work on the way MUST be regulated, which information outside the company or the authority may be transported and processed and which protective measures must be taken. It also MUST be clarified under which conditions employees with mobile IT systems may access internal information of their institution.
 
-In addition, the IT components and data carriers must be clearly regulated. It is therefore necessary to determine which IT systems and data carriers may be taken, who can take them with them and which basic security requirements must be observed. It also MUST be logged when and by whom, which mobile devices were used outside the home.Mobile device users MUST be made aware of the value of mobile IT systems and the value of information stored on them. You MUST be informed about the specific hazards and measures of the equipment they use. In addition, they MUST be informed about what kind of information may be processed on mobile IT systems. All users MUST be advised of the applicable regulations that must be followed by them and trained accordingly.
+In addition, the IT components and data carriers must be clearly regulated. It is therefore necessary to determine which IT systems and data carriers may be taken, who can take them with them and which basic security requirements must be observed. It also MUST be logged when and by whom, which mobile devices were used outside the home.
+Mobile device users MUST be made aware of the value of mobile IT systems and the value of information stored on them. You MUST be informed about the specific hazards and measures of the equipment they use. In addition, they MUST be informed about what kind of information may be processed on mobile IT systems. All users MUST be advised of the applicable regulations that must be followed by them and trained accordingly.
 
 #### INF.9.A3 Access and Access Protection [Staff]
 
@@ -116,7 +119,8 @@ Confidential information SHOULD be safely disposed of, so do not just throw it i
 
 For mobile work, labor law and labor protection framework conditions SHOULD be observed and regulated. All relevant points SHOULD be governed either by company agreements or by individual agreements made between the mobile employee and the employer in addition to the employment contract.
 
-#### INF.9.A8 Mobile Workplace Security Policy [IT Leader]All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated regularly. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current security policy.
+#### INF.9.A8 Mobile Workplace Security Policy [IT Leader]
+All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated regularly. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current security policy.
 
 #### INF.9.A9 Encryption of Portable IT Systems and Media [User]
 
@@ -175,7 +179,8 @@ Further information on hazards and security measures in the area of ​​mobile
 
  
 5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------The following elementary hazards are important for the "Mobile Workplace" building block.
+-------------------------------------------------- --------
+The following elementary hazards are important for the "Mobile Workplace" building block.
 
 * G 0.14 Spying out information (spying)
 * G 0.16 Theft of devices, data carriers or documents

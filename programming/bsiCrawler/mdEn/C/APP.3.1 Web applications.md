@@ -26,7 +26,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 If a web application is developed or extended with missing or inadequate specifications and standards, this can lead to errors, quality losses or incompletely implemented functionality. Mistakes made in early stages of development are often only discovered at an advanced stage of development. In order to remedy these errors later, often the source code of the web application has to be extensively checked and corrected again. As a result, the development costs can increase significantly. In the case of basic architectural errors, the web application may even need to be completely redeveloped. In addition, if there are no requirements to implement security mechanisms, the required protection requirements of the data to be processed may possibly be violated.
 
-### 2 2 Avoiding Web application authorizationAttackers often try to access features or data from web applications that are only available to a limited group of users. If the authorization is implemented incorrectly, an attacker can gain the privileges of another user with more extensive rights and access protected areas and data. This is usually done by an attacker manipulating his inputs in a targeted manner by typing (unscheduled) commands or statements in the text boxes.
+### 2 2 Avoiding Web application authorization
+Attackers often try to access features or data from web applications that are only available to a limited group of users. If the authorization is implemented incorrectly, an attacker can gain the privileges of another user with more extensive rights and access protected areas and data. This is usually done by an attacker manipulating his inputs in a targeted manner by typing (unscheduled) commands or statements in the text boxes.
 
 ### 2 3 Inadequate validation of input and output data
 
@@ -48,7 +49,8 @@ Web pages and data generated and delivered by a web application may include info
 
 When an attacker automates a web application's capabilities, it can perform numerous operations in a short amount of time, effectively performing repetitive attacks against the web application. With the help of a repeated login process, eg B. valid combinations of user name and password systematically determined (brute force) or lists with valid user name generated (enumeration). In addition, repeated invocation of resource-intensive features (such as complex database queries) for application-level denial-of-service attacks may be abused.
 
-### 2 8 Insufficient Session Management of Web ApplicationsIf an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, in a session fixation attack, an attacker can first assign a session ID from the web application and submit it to the victim (for example, via a link in an email). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
+### 2 8 Insufficient Session Management of Web Applications
+If an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, in a session fixation attack, an attacker can first assign a session ID from the web application and submit it to the victim (for example, via a link in an email). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
 
 3 requirements
 ---------------
@@ -71,7 +73,8 @@ To ensure that a valid session (session ID) was not inherited by an attacker, us
 
 If only a limited number of users are allowed to use the web application, an authorization component MUST be used to ensure that users can only perform actions for which they are authorized. Any access to protected content and features MUST be controlled before it is executed.
 
-All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
+All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
+All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
 
 #### APP.3.1.A3 Secure Session Management [Developer]
 
@@ -93,7 +96,8 @@ A web application MUST record security-relevant events with the required charact
 
 System administrators MUST regularly inform themselves about current vulnerabilities and import security-related updates in a timely manner. Software updates and patches for web applications MUST be obtained from trusted sources only. You MUST be tested sufficiently before the roll-out. Before any updates or patches are installed, MUST always be sure that the original state of the web application can be restored. The current patch level MUST be documented.
 
-#### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
+#### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
+Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
 
 ### 3.2 Standard requirements
 
@@ -119,7 +123,8 @@ If the security mechanisms of a web application are designed and developed, they
 
 If the web application is developed by a service provider, it should be ensured that this service provider implements the necessary security requirements during development and that the client can access the source text at any time.
 
-#### APP.3.1.A10 Acceptance and release of web applications [Head IT]Before web applications or extensions that have been developed either on their own or on behalf of them, are to be taken over into live operation, they SHOULD be accepted. This also applies to standard software that is adapted for the specific application. The results of the software acceptance procedure SHOULD be documented. After acceptance, the web application SHOULD be formally released. If errors are detected during operation, there should be a troubleshooting procedure.
+#### APP.3.1.A10 Acceptance and release of web applications [Head IT]
+Before web applications or extensions that have been developed either on their own or on behalf of them, are to be taken over into live operation, they SHOULD be accepted. This also applies to standard software that is adapted for the specific application. The results of the software acceptance procedure SHOULD be documented. After acceptance, the web application SHOULD be formally released. If errors are detected during operation, there should be a troubleshooting procedure.
 
 #### APP.3.1.A11 Secure connection of background systems
 
@@ -149,7 +154,8 @@ The web application SHOULD NOT be administered from insecure networks. Administr
 
 #### APP.3.1.A14 Protection of confidential data [developer]
 
-Confidential data of a web application SHOULD be protected by secure, cryptographic algorithms. If such data is transmitted, for example, SSL / TLS encryption should be used. In addition, the HTTP post method SHOULD be used. In the case of connection errors SHOULD NOT change to an unencrypted channel on an encrypted channel.Also, the web application SHOULD guarantee by directives that client-side no sensitive data is cached. Furthermore, forms should not display confidential form data in plain text and should not be saved by the browser. Access data of the web application SHOULD be protected on the server side with cryptographic algorithms against unauthorized access (Salted Hash). Likewise, files with source code from the web application SHOULD NOT be retrievable. Also, web application configuration files SHOULD only be stored outside of the web root directory.
+Confidential data of a web application SHOULD be protected by secure, cryptographic algorithms. If such data is transmitted, for example, SSL / TLS encryption should be used. In addition, the HTTP post method SHOULD be used. In the case of connection errors SHOULD NOT change to an unencrypted channel on an encrypted channel.
+Also, the web application SHOULD guarantee by directives that client-side no sensitive data is cached. Furthermore, forms should not display confidential form data in plain text and should not be saved by the browser. Access data of the web application SHOULD be protected on the server side with cryptographic algorithms against unauthorized access (Salted Hash). Likewise, files with source code from the web application SHOULD NOT be retrievable. Also, web application configuration files SHOULD only be stored outside of the web root directory.
 
 #### APP.3.1.A15 Verification of essential changes
 
@@ -181,7 +187,8 @@ Web applications SHOULD carefully review and filter all inputs and parameters be
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### APP.3.1.A20 Use of Web Application Firewalls (CIA)To filter data at higher protocol levels, institutions SHOULD use Web Application Firewalls (WAF). If a WAF is used, the configuration SHOULD be adapted to the web application to be protected. The configuration of the WAF SHOULD be checked after every update of the web application.
+#### APP.3.1.A20 Use of Web Application Firewalls (CIA)
+To filter data at higher protocol levels, institutions SHOULD use Web Application Firewalls (WAF). If a WAF is used, the configuration SHOULD be adapted to the web application to be protected. The configuration of the WAF SHOULD be checked after every update of the web application.
 
 #### APP.3.1.A21 Prevention of Clickjacking [Developer] (CI)
 
@@ -234,7 +241,8 @@ The following elementary threats are important for the "Web applications" buildi
 * G 0.21 Manipulation of hardware or software
 * G 0.22 Manipulation of information
 * G 0.23 Unauthorized intrusion into IT systems
-* G 0.28 Software vulnerabilities or errors* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.30 Unauthorized use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.36 Identity theft
 * G 0.38 Abuse of personal data

@@ -19,7 +19,8 @@ This module contains basic requirements for operating unix-like clients on stand
 
 If the client is not to be managed by itself, but is managed by a third party, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account.
 
-The building block includes only the Unix-like operating system that is typically installed in a base installation of a Linux desktop distribution. The module includes, in particular, software that does not rely on it, such as e-mail clients or office software. Requirements for this can be found in the IT-Grundschutz Compendium layer APP.1 Client Applications. If the client has interfaces for data exchange, such. As CD / DVD, USB, Bluetooth or WLAN, the security requirements of the block SYS.3.4 Mobile data carrier must be metIt is assumed in this client module that in addition to the administrator, only an unchanged person with an interactive user account is permanently active. Clients that are used by several people, one after the other or at the same time, require additional measures, which are not dealt with in this module.
+The building block includes only the Unix-like operating system that is typically installed in a base installation of a Linux desktop distribution. The module includes, in particular, software that does not rely on it, such as e-mail clients or office software. Requirements for this can be found in the IT-Grundschutz Compendium layer APP.1 Client Applications. If the client has interfaces for data exchange, such. As CD / DVD, USB, Bluetooth or WLAN, the security requirements of the block SYS.3.4 Mobile data carrier must be met
+It is assumed in this client module that in addition to the administrator, only an unchanged person with an interactive user account is permanently active. Clients that are used by several people, one after the other or at the same time, require additional measures, which are not dealt with in this module.
 
 2 risk situation
 -----------------
@@ -53,7 +54,8 @@ Even in a standard installation, unix-like operating systems install numerous ap
 Because these applications are configured independently of each other, the configuration options may conflict with each other without being apparent from the individual settings. For example, a remote administration service may be listening on a port that is blocked by packet filtering rules, or Samba unintentionally releases its own home directory on the network. In this way, the applications can unintentionally provide additional functionality, or fail to provide critical functionality, making it difficult to complete client tasks.
 
 3 requirements
----------------The following are specific requirements for the Client section on Unix. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for the Client section on Unix. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -81,7 +83,8 @@ Those responsible MUST inform themselves about known vulnerabilities. Updates an
 
 Only required applications may be installed. Unused applications MUST be uninstalled.
 
-The integrity and authenticity of the software packages to be installed MUST always be checked. The software packages MUST be unpacked, configured and translated under an unprivileged user account. Only the last step, the actual installation of the translated program, can be done with higher privileges. The software to be installed MAY NOT be installed uncontrolled in the root file system of the server.If the software is translated from the source code then the selected parameters SHOULD be suitably documented. Based on this documentation, the source code SHOULD be able to be compiled comprehensibly and reproducibly at any time. All further installation steps SHOULD also be documented so that the configuration can be quickly reproduced in an emergency.
+The integrity and authenticity of the software packages to be installed MUST always be checked. The software packages MUST be unpacked, configured and translated under an unprivileged user account. Only the last step, the actual installation of the translated program, can be done with higher privileges. The software to be installed MAY NOT be installed uncontrolled in the root file system of the server.
+If the software is translated from the source code then the selected parameters SHOULD be suitably documented. Based on this documentation, the source code SHOULD be able to be compiled comprehensibly and reproducibly at any time. All further installation steps SHOULD also be documented so that the configuration can be quickly reproduced in an emergency.
 
 ### 3.2 Standard requirements
 
@@ -117,7 +120,8 @@ Quotas SHOULD be set up for users or services that leave enough free space for t
 
 It SHOULD ensure that appliances meet a similar level of security to clients on standard IT systems. It SHOULD document how appropriate security requirements are met with a deployed appliance. If the requirements can not be met beyond doubt, a declaration of conformity should be requested from the manufacturer.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.3.A13 Protection against unauthorized applications (CIA)
 
@@ -186,7 +190,8 @@ The following elementary threats are important for the "Clients under Unix" buil
 * G 0.23 Unauthorized intrusion into IT systems
 * G 0.25 Failure of devices or systems
 * G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems* G 0.31 Incorrect use or administration of devices and systems
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.39 Malware
 * G 0.45 data loss

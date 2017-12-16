@@ -40,7 +40,8 @@ Sub-distributions of the power supply network are often freely accessible and un
 
 The more unprotected a cable is, the greater the risk of damage. Damage does not necessarily lead to a failure of connections immediately. The accidental formation of impermissible connections is possible if, for example, cable sheaths or insulation are no longer completely intact. Damage does not necessarily have to be intentional, but may also occur unintentionally.
 
-### 2 6 Voltage fluctuations and overvoltage or undervoltageFluctuations in the supply voltage can lead to malfunctions and damage to the IT. The fluctuations range from extremely short and small events that have little or no IT impact, to total failures or destructive surges. The cause of this can arise in all areas of the power supply network, from the utility company's network to the circuit to which the respective equipment is connected.
+### 2 6 Voltage fluctuations and overvoltage or undervoltage
+Fluctuations in the supply voltage can lead to malfunctions and damage to the IT. The fluctuations range from extremely short and small events that have little or no IT impact, to total failures or destructive surges. The cause of this can arise in all areas of the power supply network, from the utility company's network to the circuit to which the respective equipment is connected.
 
 ### 2 7 Use of insufficient power strips
 
@@ -67,7 +68,8 @@ Cables, cable trays and cable trays MUST be adequately dimensioned prior to thei
 
 The installation work of the electrical wiring MUST be done carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the electrotechnical wiring MUST therefore be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When installing power cables, special care must be taken to ensure that the installation does not cause damage and that the cable routes are such as to prevent damage to the routed cables as a result of normal use of the building.
 
-### 3.2 Standard requirementsTogether with the basic requirements, the following requirements correspond to the state of the art in the area of ​​electrical wiring. They SHOULD be implemented in principle.
+### 3.2 Standard requirements
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​electrical wiring. They SHOULD be implemented in principle.
 
 #### INF.3.A4 Requirements analysis for the electrotechnical cabling
 
@@ -93,7 +95,8 @@ To avoid cable fires SHOULD TRAILS be dimensioned sufficiently. In addition, aft
 
 An institution SHOULD make sure that it has internal and external documentation for its electrotechnical cabling. The internal documentation MUST include all records related to the installation and operation of the cabling. The internal documentation SHOULD be prepared and maintained so extensively that the operation and future development are best supported. The external documentation of the wiring SHOULD be kept as neutral as possible.
 
-#### INF.3.A10 Neutral documentation in the distributorsEach distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible and MUST allow safe switching. Only existing and used connections, as well as accumulating reserve lines should be listed therein. Unless expressly required, there should be no indication of the type of use of the lines. All further information SHOULD be listed in a revision documentation.
+#### INF.3.A10 Neutral documentation in the distributors
+Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible and MUST allow safe switching. Only existing and used connections, as well as accumulating reserve lines should be listed therein. Unless expressly required, there should be no indication of the type of use of the lines. All further information SHOULD be listed in a revision documentation.
 
 #### INF.3.A11 Control of electrical equipment and connections
 
@@ -121,7 +124,8 @@ In rooms with public access or in confusing areas of a building SHOULD be consid
 
 #### INF.3.A16 Use of Cabinet Systems (A)
 
-To improve the operational safety of electrical connections and distributors, these devices SHOULD be installed or installed in cabinet systems.The IT hardware should, as far as possible, be housed in cabinet systems. These SHOULD meet the depth and width of the increasing space requirements of the built-in appliances and be equipped with appropriate additional equipment or be retrofitted at any time.
+To improve the operational safety of electrical connections and distributors, these devices SHOULD be installed or installed in cabinet systems.
+The IT hardware should, as far as possible, be housed in cabinet systems. These SHOULD meet the depth and width of the increasing space requirements of the built-in appliances and be equipped with appropriate additional equipment or be retrofitted at any time.
 
 #### INF.3.A17 firewall cadastre (A)
 

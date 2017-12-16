@@ -24,7 +24,7 @@ Considering the limited availability of IT-specialists in most of the developing
 This should allow the platform to constantly grow and stay relevant to current circumstances. 
 The user created content beyond the BSI catalogue could make remarks about national peculiarities that do not play a role in Germany, aid further understanding or offer updates on more recent developments.
 However, this should not mean that everyone can simply write any potentially false content for everybody to read. 
-To assure that we have to set rules and access permission levels (see section~\ref{sec:user_types}). 
+To assure that we have to set rules and access permission levels (see section~\ref{user_types}). 
 Concretely the wiki should have the following parts:
 \begin{itemize}
     \item News
@@ -33,18 +33,23 @@ Concretely the wiki should have the following parts:
     \item Archive
 \end{itemize}
 which will be further explained in the next subsections.
+\begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
 In general, it should be possible to link from any page in the wiki to any other page (see Secondary Objectives~\ref{2nd_bsi_link} for special requirements regarding the BSI catalogue). 
 General wiki behaviour as found on i.e. wikipedia.org applies:
 \begin{itemize}
     \item each word on any page can only link to one other page at a time,
     \item users who collaboratively work on the same wiki page can edit or delete each others text or links,
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
     \item each page should have a history page where different versions of the page over time can be checked,
     \item it is possible to retrieve a list of all users who ever worked on a given page in the wiki
+\end{tcolorbox}
         .
 \end{itemize}
+\end{tcolorbox}
 
 
 \subsection{Links}
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
 Links are represented in two ways which slightly differ in the domains of news, articles and catalogue.
 A link can be:
 \begin{enumerate}
@@ -66,26 +71,12 @@ A link can be:
         News have no bottom page links.
         .
 \end{enumerate}
+\end{tcolorbox}
 
 \subsection{News}
 News are written by users but have to be approved by mods.
 If a mod approves a news article it is automatically published on the home page.
 The mod can decide to make a news article an important news article.
-
-News should be implemented in the same best-practice way of Wikipedia. The figure \ref{fig:NewsMockUpPage} shows a mockup version of how it should look.
-One article for each month, including subsections for each day and links to previous (or future) months and years. 
-Short sentences with links to larger articles if the news are bigger.  
-The calendar on the right side, links each day to its section on the same page.
-However, news were categorized as lower priority feature by the programming group. 
-
-\begin{figure}[h] 
-    \centering
-    		\includegraphics[scale=0.5]{Pictures/NewsMockUp}
-    \caption{News mockup page}
-    	\label{fig:NewsMockUpPage}
-\end{figure} 
-
-
 
 \subsection{BSI Catalogue}
 \label{BSIc}
@@ -94,12 +85,15 @@ Converting such a big text volume into wiki content by hand would be an extended
 Accordingly, a parser is needed. 
 This parser will crawl and analyse the BSI Grundschutzkatalog website and create and sort the content automatically. 
 The BSI catalogue is the most restrictive part in the wiki and should only be modifiable by administrators.
+\begin{tcolorbox}[breakable,colback=red!12,colframe=red!40!black,title=UPDATE 15/11/2017]
     Should users find any mistakes on the pages of the BSI, i.e. something is translated badly, the users have to inform an administrator who has to correct the text in question.
+\end{tcolorbox}
 \bigskip
 
 While browsing any page of the BSI catalogue a tree view of the catalogue should be displayed at the side.
 \bigskip
 
+\begin{tcolorbox}[breakable,colback=red!10,colframe=red!40!black,title=UPDATE 13/11/2017]
 The tree view adopts the structure as also found in pdf versions of the BSI catalogue. 
 See Appendix~\ref{appendix_bsi}.\\
 The tree view should not automatically expand or collapse itself without direct guest manipulation.
@@ -115,6 +109,7 @@ Thus, those pages show firstly the related text to the building block.
 Then a dropdown menu which allows the guest to sort the linked threats and measures by either threats or measures.
 Lastly, a tree view where the first level are layers, the second level the category by which the tree is sorted and the third level the other category.
 See Appendix~\ref{appendix_bsi} for examples.
+\end{tcolorbox}
 
 
 \subsection{Archive} 
@@ -122,14 +117,18 @@ See Appendix~\ref{appendix_bsi} for examples.
 The website should always present up-to-date information for interested guests.
 Sometimes though a person might be interested in information on older systems which are not covered anymore in the most recent version of the BSI catalogue but in older versions.
 Those older versions and ideally their related wiki content should be available in the archive. 
+On the matter of the related content see section~\ref{archive_relcon}.
 
 For example: if users are looking for an information on a no longer supported operating system and there are none in the wiki regarding this problem, the user could find older approaches in the archive. 
 
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
 Content in the archive can not be edited.
 It stays as it is since the moment it is moved to the archive.
+\end{tcolorbox}
 
 
 \subsection{Updating the BSI Catalogue}
+\begin{tcolorbox}[breakable,colback=red!14,colframe=red!40!black,title=UPDATE 19/11/2017]
 Updating the BSI catalogue to a newer version happens in three phases:
 \begin{enumerate}
     \item before the update: an admininistrator decides to update and performs the necessary action,
@@ -150,9 +149,6 @@ It should stick to the top of the news list and be marked as important news.
 With the end of phase 1 of the update users get a notification that articles they worked on in the past have to be re-linked.
 This means all the articles which are linked to the BSI catalogue and which therefore are to be considered outdated until proven otherwise by a user.
 At the same time there should be a page in the forum or wiki visable to all users that lists all the articles in question which have not been re-linked yet.
-The old catalogue and its articles should be locked during the update. 
-This means that nobody should be able to edit them.
-New edits should be performed on the new catalogue and its articles.
 With the end of phase 2 all pages which link to the catalogue that gets archived are moved to the archive as well.
 Pages which were re-linked to the new catalogue are copied versions.
 This is necessary because articles in the wiki could be edited to reflect real world changes. 
@@ -166,10 +162,11 @@ The news section on the landing page should also link to a change log page that 
 About 3., after a certain time - i.e. 30 days - the admin might choose to complete the process.
 The catalogue which up to now was accessible via 'Browse BSI' gets pushed into the archive including its wiki articles.
 The new catalogue gets is linked to the top section and the important news on the landing page can slowly drop down as other news come in.
+\end{tcolorbox}
 
 
 \subsection{User Types} 
-\label{sec:user_types}
+\label{user_types}
 
 First of all, the platform will need one or multiple administrators (admins) who will update the platform from a technical perspective and ensure that policies are being respected. 
 However, building a wiki-like platform about IT-Security for developing countries comes also with the big responsibility of the content it will provide. 
@@ -263,6 +260,11 @@ Both the tutorials and the wizard are aimed at users of no or little knowledge o
 For detailed explanations of the wizard see section~\ref{wizard}.
 The bottom section shows links to items as contact, legal notice, possibly FAQ and copyright.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Pictures/frontpage_mockup}
+    \caption{Schematic Home Page Design}
+\end{figure}
  
 \section{Top Section}  
 \label{top_section}

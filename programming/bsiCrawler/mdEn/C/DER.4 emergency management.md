@@ -32,7 +32,8 @@ If employees fail, z. Eg by germs in the canteen, pandemic, death or strike, the
 
 If components of an IT system fail, eg. B. by defective hardware or power failure, the entire IT operation can be disturbed. As a result, the availability of the respective information and thus of the respective business process is at risk. In addition, important information needed for recovery operations may not be available.
 
-### 2 3 Failure of a Wide Area Network (WAN)The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
+### 2 3 Failure of a Wide Area Network (WAN)
+The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
 
 ### 2 4 Failure of a building
 
@@ -74,7 +75,8 @@ The processes in the security management SHOULD be coordinated with the emergenc
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).#### DER.4.A3 Definition of Scope and Emergency Management Strategy [Institutional Management] (CIA)
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+#### DER.4.A3 Definition of Scope and Emergency Management Strategy [Institutional Management] (CIA)
 
 The scope of the emergency management system SHOULD be clearly defined. The institution's management SHOULD set out an emergency management strategy that sets out the goals and the level of risk acceptance.
 
@@ -104,7 +106,8 @@ It SHOULD be ensured that aspects of emergency management are taken into account
 
 #### DER.4.A10 Tests and Emergency Exercises [Head of Institution] (CIA)
 
-An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.#### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
+An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
+#### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
 
 The identified measures for emergency preparedness and response SHOULD be reviewed regularly and on an ad hoc basis. The checks SHOULD be planned so that no relevant part is left out. The results of the reviews SHOULD be evaluated and, where appropriate, implemented in corrective actions. The corrective measures SHOULD be planned and the implementation monitored.
 
@@ -132,7 +135,8 @@ The management SOLLTE decide with which measures the emergency management should
 
 #### DER.4.A16 Emergency preparedness and emergency response planning for outsourced components [Institutional Management] (IA)
 
-In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
+In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.
+The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
 
 4 Further Information
 ------------------------------
@@ -243,4 +247,5 @@ The following elementary hazards are important for the module "Emergency Managem
 
 * G 0.18 Missing planning or missing adjustment
 * G 0.27 Resource shortage
-* G 0.33 Personnel lossThe cross reference tables can be found in the download area due to their size.
+* G 0.33 Personnel loss
+The cross reference tables can be found in the download area due to their size.

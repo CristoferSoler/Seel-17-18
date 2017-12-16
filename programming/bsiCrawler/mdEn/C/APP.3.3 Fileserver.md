@@ -28,7 +28,8 @@ If a file server fails, the entire information network can be affected and thus 
 
 If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
 
-### 2 3 Inadequate review of dropped filesIf a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
+### 2 3 Inadequate review of dropped files
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
@@ -61,7 +62,8 @@ File servers MUST NOT be operated in offices or as workstations. They MUST be pl
 
 #### APP.3.3.A2 Use of RAID systems
 
-It MUST be planned whether a RAID system is used in the file server. A decision against such a system MUST be documented comprehensible. If a RAID system is to be used, it MUST be decided:* which RAID level should be used to logically group the volumes
+It MUST be planned whether a RAID system is used in the file server. A decision against such a system MUST be documented comprehensible. If a RAID system is to be used, it MUST be decided:
+* which RAID level should be used to logically group the volumes
 * how long the period of time for a RAID Rebuild process may be and
 * whether a software or a hardware RAID should be used.
 The RAID levels MUST conform to the state of the art. For a hardware RAID, the RAID controller SHOULD be redundant. In a RAID, hot spare disks SHOULD be kept.
@@ -94,7 +96,8 @@ Before a file server is procured, a list of requirements SHOULD be created to ev
 
 A REQUEST LIST SHOULD be created to evaluate the file systems. To ensure transaction security, the file system SHOULD provide a journaling feature. Also, it SHOULD have a protection mechanism that prevents two users or applications from writing to a file at the same time. A file system should be selected that does not exceed a defined overhead limit. For high availability solutions, distributed file systems SHOULD be used.
 
-#### APP.3.3.A8 Structured Data Management [User]It SHOULD be determined a structure, according to which data are to be stored. Users SHOULD be informed regularly about the required structured data management. It SHOULD be determined in writing which data may be stored locally and which on the file server. Program and work data SHOULD be stored separately. It SHOULD be checked regularly whether the specifications for structured data management are adhered to.
+#### APP.3.3.A8 Structured Data Management [User]
+It SHOULD be determined a structure, according to which data are to be stored. Users SHOULD be informed regularly about the required structured data management. It SHOULD be determined in writing which data may be stored locally and which on the file server. Program and work data SHOULD be stored separately. It SHOULD be checked regularly whether the specifications for structured data management are adhered to.
 
 #### APP.3.3.A9 Secure storage management
 
@@ -129,7 +132,8 @@ All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD 
 
 For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
-#### APP.3.3.A14 Use of Error Correction Codes (I)In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
+#### APP.3.3.A14 Use of Error Correction Codes (I)
+In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
 
 4 Further Information
 ------------------------------

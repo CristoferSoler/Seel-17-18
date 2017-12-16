@@ -30,7 +30,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 If the requirements are incompletely or incorrectly incorporated or if the parties involved in the software development or procurement (eg client and contractor) communicate inadequately with each other, the requirements of the client could only be fulfilled incompletely. This can lead to weaknesses in the software. If, for example, the requirements of the contractor have to be incorporated retroactively, software development projects may be delayed and thus cause financial damage.
 
-### 2 2 Inadequate training of developers and software testersIt is often assumed that trained developers and software testers have sufficient knowledge to test and share software because of their training. Accordingly, developers and software testers are often trained too little to innovations in their subject area or the application of the software. This ignorance can lead to serious security problems when z. For example, functions or methods may be used in programming that are already considered unsafe, but are not yet known to developers.
+### 2 2 Inadequate training of developers and software testers
+It is often assumed that trained developers and software testers have sufficient knowledge to test and share software because of their training. Accordingly, developers and software testers are often trained too little to innovations in their subject area or the application of the software. This ignorance can lead to serious security problems when z. For example, functions or methods may be used in programming that are already considered unsafe, but are not yet known to developers.
 
 ### 2 3 Software test with productive data
 
@@ -59,7 +60,8 @@ A software release can usually be issued once all tests have been performed and 
 If approval criteria are not clearly communicated, this may result in premature release or no release, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
 
 3 requirements
----------------The following are specific requirements for software testing and clearance. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for software testing and clearance. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -103,7 +105,8 @@ When selecting software testers, separate selection criteria SHOULD be taken int
 
 In public institutions and institutions protected by copyright, SHOULD check if a security clearance is required.
 
-#### OPS.1.1.6.A8 Continuing Education of the Software Tester [Head of Human Resources]The software testers SHOULD be trained according to the module OPS.3 Sensitization and Training. Procedures should be established to inform the software testers about innovations that are relevant to their particular task.
+#### OPS.1.1.6.A8 Continuing Education of the Software Tester [Head of Human Resources]
+The software testers SHOULD be trained according to the module OPS.3 Sensitization and Training. Procedures should be established to inform the software testers about innovations that are relevant to their particular task.
 
 #### OPS.1.1.6.A9 Procurement of test software [tester, IT operation]
 
@@ -147,7 +150,8 @@ Additional information on threats and security measures in the area of ​​"So
   
 
  Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>* #### [29119] ISO / IEC 29119-2: 2013-09
+ <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
+* #### [29119] ISO / IEC 29119-2: 2013-09
 
   
 

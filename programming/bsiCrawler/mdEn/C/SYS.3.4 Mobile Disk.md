@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Mobile media is used for a variety of purposes, such as transporting, storing or using data on the move. There are many different types of portable media, including external hard drives, CD-ROMs, DVDs, memory cards, magnetic tapes and USB sticks.
+Mobile media is used for a variety of purposes, such as transporting, storing, or using data on the move. There are many different types of portable media, including external hard drives, CD-ROMs, DVDs, memory cards, magnetic tapes and USB sticks.
 
 Data carriers can be classified according to whether they are read-only, write-once or rewritable. They can also be subdivided according to further criteria, for example the type of data storage (analogue or digital), how they can be processed (without technical aids, such as paper, or only with technical aids, such as DVDs) ) and their design (removable media or external data storage or data carriers integrated with other devices).
 
@@ -15,11 +15,11 @@ This module shows how the information stored on mobile data carriers can be safe
 
 This module deals only with the basic security features of mobile data carriers.
 
-The different and sometimes complex requirements for devices that can be used in addition to their main function in addition as a mobile disk, such. As smartphones and tablets are also listed in the blocks that deal with the topic. Likewise, in-depth aspects concerning the exchange of digital and analog media are not considered.
+The different and sometimes complex requirements for devices that can be used in addition to their main function in addition as a mobile disk, such. As smartphones and tablets are also listed in the blocks that deal with the topic. Likewise, in-depth aspects concerning the exchange of digital as well as analog media are not considered.
 
 Mobile data carriers can be exchanged during personal meetings or by mail. The exchange of digital and analog data carriers to transfer information between different communication partners and IT systems is not considered in this module. For this purpose, the requirements of block OPS.1.2.3 Data medium exchange must be implemented.
 
-In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data media and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multi-function_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Topics / ITBasics / ITBasics Compendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
+In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data carriers and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / Modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
 
 2 risk situation
 -----------------
@@ -34,7 +34,8 @@ Frequently it can be observed that organizational regulations and technical secu
 
 If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
 
-### 2 3 Data loss in mobile useFor mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
+### 2 3 Data loss in mobile use
+For mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
 
 ### 2 4 Broken disk
 
@@ -73,7 +74,8 @@ All employees MUST be sensitized for the safe handling of mobile data carriers. 
 
 It MUST be reported promptly if a commercial mobile volume is lost or stolen. This SHOULD also apply to private data media that are used for business purposes. For this there must be clear reporting channels and contact persons in each institution.
 
-#### SYS.3.4.A3 Backup copy of submitted data [user]If the data to be transmitted on a mobile data carrier were created or compiled only for the purpose of data transmission and not stored on another medium, a backup copy of this data MUST be maintained.
+#### SYS.3.4.A3 Backup copy of submitted data [user]
+If the data to be transmitted on a mobile data carrier were created or compiled only for the purpose of data transmission and not stored on another medium, a backup copy of this data MUST be maintained.
 
 ### 3.2 Standard requirements
 
@@ -109,7 +111,8 @@ Before rewritable media are to be redistributed, they SHOULD be erased appropria
 
 The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the intended ones and can not be connected to unauthorized external devices and data carriers.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.4.A9 Control and monitoring of interfaces (CI)
 

@@ -30,7 +30,8 @@ Laptops are used in very different environments and are therefore exposed to man
 
 ### 2 2 Theft
 
-Employees also regularly use their laptops outside the institution. The devices are transported in private motor vehicles or public transport, left in other offices in breaks or placed in hotel rooms unguarded. Due to these environmental conditions, laptops are naturally exposed to a higher theft risk. If a laptop is stolen, costs for the recovery and for the restoration of a working condition arise. Likewise, this could also be disclosed to unauthorized data worthy of protection, which can lead to further damage. In many cases, these weigh considerably more heavily than the mere material loss of the device.### 2 3 Unsolicited user switching on laptops
+Employees also regularly use their laptops outside the institution. The devices are transported in private motor vehicles or public transport, left in other offices in breaks or placed in hotel rooms unguarded. Due to these environmental conditions, laptops are naturally exposed to a higher theft risk. If a laptop is stolen, costs for the recovery and for the restoration of a working condition arise. Likewise, this could also be disclosed to unauthorized data worthy of protection, which can lead to further damage. In many cases, these weigh considerably more heavily than the mere material loss of the device.
+### 2 3 Unsolicited user switching on laptops
 
 When employees seldom need mobile IT systems, such as infrequent business travel, it is often more convenient to have a few laptops for many users to pass on. However, if the laptop is simply handed over to the next employee during a user change, there is a risk that the device still stores sensitive data and that it is contaminated with malware. In addition, after some time is no longer understandable who used the laptop when or who is currently using it. The unordered change of users without memory controls and without corresponding documentation can lead to the fact that the laptop is only limited available and residual data on the hard disk can be read without authorization.
 
@@ -57,7 +58,8 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.3.1.A1 Regulations for the mobile use of laptops
 
-It MUST be clear what employees should consider when they take laptops. In particular, it must be determined which laptops may be taken outside the home, who can take them with them, and what basic security measures should be followed. Users MUST be advised of the regulations.#### SYS.3.1.A2 Laptop access protection [user]
+It MUST be clear what employees should consider when they take laptops. In particular, it must be determined which laptops may be taken outside the home, who can take them with them, and what basic security measures should be followed. Users MUST be advised of the regulations.
+#### SYS.3.1.A2 Laptop access protection [user]
 
 All laptops MUST have adequate access protection to prevent unauthorized use of the device. It MUST be checked whether all employees comply with the rules for the correct handling of the established access protection.
 
@@ -91,7 +93,8 @@ For laptops, a security policy SHOULD be created that governs how the devices ma
 
 If laptops are used in turn by different people, SHOULD it be regulated how laptops can be safely handed over to employees or how they can be safely taken back. When changing the user of a laptop, any existing sensitive data SHOULD be safely deleted. If the laptop is not replaced after the user has changed, make sure that there is no malware on the system or any other media attached to it. With a laptop SHOULD give the staff a leaflet for the safe handling of the device.
 
-#### SYS.3.1.A8 Secure connection of laptops to data networks [user]It was intended to regulate how laptops are securely connected to own or foreign networks and to the Internet. Laptops SHOULD be effectively protected against malicious code and attacks from third-party networks and the Internet. For this, the operating system and the installed software of laptops SHOULD always be up to date. Only approved laptops should be able to log into the institution's internal network. Unnecessary interfaces SHOULD be disabled on all laptops.
+#### SYS.3.1.A8 Secure connection of laptops to data networks [user]
+It was intended to regulate how laptops are securely connected to own or foreign networks and to the Internet. Laptops SHOULD be effectively protected against malicious code and attacks from third-party networks and the Internet. For this, the operating system and the installed software of laptops SHOULD always be up to date. Only approved laptops should be able to log into the institution's internal network. Unnecessary interfaces SHOULD be disabled on all laptops.
 
 #### SYS.3.1.A9 Secure remote access from the road [user]
 
@@ -125,7 +128,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 Before laptops are procured, the people in charge SHOULD perform a requirements analysis. It SHOULD also focus on additional hardware needed, such as: As docking stations and monitors to be extended. Based on the results, all candidate devices SHOULD be evaluated. The procurement decision SHOULD be coordinated with the administrators and the technical staff.
 
-#### SYS.3.1.A16 Central administration of laptops (CI)It should be defined a suitable approach, how to centrally manage laptops, as not only easier to distribute software and information, but also the institution's own security policies can be better enforced. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
+#### SYS.3.1.A16 Central administration of laptops (CI)
+It should be defined a suitable approach, how to centrally manage laptops, as not only easier to distribute software and information, but also the institution's own security policies can be better enforced. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
 
 #### SYS.3.1.A17 Collective Storage (A)
 

@@ -36,7 +36,8 @@ For smaller or short meetings, it is usually more efficient to receive a visit t
 
 Attackers can try to manipulate or destroy IT systems, accessories, and other data carriers for a variety of reasons. Attacks can be all the more effective the later they are discovered by the employee or the institution itself, the more extensive the knowledge of the perpetrators and the more profound the consequences for a job. The manipulations range from the unauthorized inspection of the employee's sensitive data to the destruction of data carriers or IT systems. Significant downtime and process limitations can be the result.
 
-### 2 5 TheftAs IT devices become more manageable, it's easier to pocket them unnoticed. The theft of data carriers, IT systems, accessories, software or data incurs reimbursement costs and the restoration of a workable state, as well as losses due to a lack of availability. In addition, the person who stole the IT equipment could view and disclose sensitive information, which could lead to further damage. In many cases, these weigh considerably more heavily than the mere material loss of the device.
+### 2 5 Theft
+As IT devices become more manageable, it's easier to pocket them unnoticed. The theft of data carriers, IT systems, accessories, software or data incurs reimbursement costs and the restoration of a workable state, as well as losses due to a lack of availability. In addition, the person who stole the IT equipment could view and disclose sensitive information, which could lead to further damage. In many cases, these weigh considerably more heavily than the mere material loss of the device.
 
 In addition to expensive IT systems, mobile devices are often stolen, which can be transported inconspicuously and easily. If the office space is not locked, supervised or the IT systems are not sufficiently secured, the technology can be stolen accordingly quickly and inconspicuously.
 
@@ -69,7 +70,8 @@ When employees leave their offices, all windows MUST be closed. If there is conf
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of office workplaces. They SHOULD be implemented in principle.
 
-#### INF.7.A3 Flying cablingThe electrical connections and access to the data network in the office room SHOULD be located near the location where the IT equipment is located. Cabling over the floor SHOULD be covered with a cable duct.
+#### INF.7.A3 Flying cabling
+The electrical connections and access to the data network in the office room SHOULD be located near the location where the IT equipment is located. Cabling over the floor SHOULD be covered with a cable duct.
 
 #### INF.7.A4 access regulations and control
 
@@ -137,7 +139,8 @@ Further information on hazards and security measures in the area of ​​"offic
 
   
 
- especially AREA CF19 Physical and Environmental Security, ISF, 06.2014* #### [NIST80053PEP] NIST Special Publication 800-53 Revision 4 - APPENDIX PAGE F-213
+ especially AREA CF19 Physical and Environmental Security, ISF, 06.2014
+* #### [NIST80053PEP] NIST Special Publication 800-53 Revision 4 - APPENDIX PAGE F-213
 
   
 

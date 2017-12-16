@@ -14,6 +14,7 @@ import os
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -48,7 +49,8 @@ INSTALLED_APPS = [
     'wiki.plugins.images',
     'wiki.plugins.macros',
     'wiki.plugins.links',
-    'bsi.apps.BsiConfig',
+    'bsi',
+    'archive',
 ]
 
 MIDDLEWARE = [
@@ -66,7 +68,7 @@ ROOT_URLCONF = 'bsiwiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['./../bsi/templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +82,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'sekizai.context_processors.sekizai',
 
-
             ],
         },
     },
@@ -91,11 +92,16 @@ SITE_ID = 1
 WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
+# Overwrite according to your crawler content folder
+CRAWLER_DIRECTORY = r'/Users/macbook/Seel-17-18/programming/bsiCrawler/contentEn'
 
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
+
+# from bsiwiki.WikiPattern import WikiPattern
+# URL_CONFIG_CLASS = WikiPattern
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -149,3 +155,4 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 MEDIA_URL = '/media/'
+

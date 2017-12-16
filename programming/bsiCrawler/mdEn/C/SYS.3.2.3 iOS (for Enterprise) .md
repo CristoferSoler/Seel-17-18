@@ -26,7 +26,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 The so-called code lock locks iOS-based devices against unauthorized access. If this feature is not activated, or if it uses an easily guessable code and can be bypassed, there is an increased risk of unauthorized access to iOS-based devices. In addition, the device code used is an essential part of the entropy of certain encryption codes.
 
-### 2 2 JailbreakIn the previous versions of the iOS operating system, vulnerabilities were mostly found that make it possible to undermine Apple's established security framework and thus access system processes and protected storage areas. So-called "jailbreak" exploit these vulnerabilities, for example, to be able to use alternative app stores or Apple's unwanted extensions. Jailbreaking techniques are used by attackers to install malware or perform other malicious manipulation on the iOS-based device.
+### 2 2 Jailbreak
+In the previous versions of the iOS operating system, vulnerabilities were mostly found that make it possible to undermine Apple's established security framework and thus access system processes and protected storage areas. So-called "jailbreak" exploit these vulnerabilities, for example, to be able to use alternative app stores or Apple's unwanted extensions. Jailbreaking techniques are used by attackers to install malware or perform other malicious manipulation on the iOS-based device.
 
 ### 2 3 Risk concentration through an Apple ID account for all Apple services
 
@@ -50,7 +51,8 @@ The iOS operating system includes special functions that can be easily used by t
 
 ### 2 8 Abuse of fitness or location data on iOS
 
-The iOS operating system includes special functions for managing fitness and location data. These data are particularly sensitive and represent an attractive target, especially when collected and stored over a long period of time.### 2 9 Misuse of sensitive data in the locked state
+The iOS operating system includes special functions for managing fitness and location data. These data are particularly sensitive and represent an attractive target, especially when collected and stored over a long period of time.
+### 2 9 Misuse of sensitive data in the locked state
 
 The iOS operating system has a feature to display messages from enabled widgets and push messages on the lock screen. As a result, there is a risk that sensitive information of the user unprotected on the lock screen unauthorized third parties are disclosed and can be exploited. The voice assistant Siri also provides access to phone functions and contact data even when the phone is locked. This can also lead to unauthorized third parties being able to obtain sensitive information.
 
@@ -79,7 +81,8 @@ The following are the specific requirements for iOS-based systems. Basically, th
 
 The following requirements MUST be implemented as a priority:
 
-#### SYS.3.2.3.A1 iOS usage strategyThis building block assumes that iOS devices to be managed are integrated into an MDM infrastructure. A reasonable exception, considering economic considerations, may be the management of a smaller, single-digit number of devices without the use of an MDM. If an MDM is used, the management of the devices MUST be done via the MDM for the purpose of simplified administration and the uniform presentation of security-related and other settings. To do this, there must be an iOS usage strategy that defines aspects such as device selection or backup strategies. It also MUST be regulated whether additional apps should be used by third-party providers.
+#### SYS.3.2.3.A1 iOS usage strategy
+This building block assumes that iOS devices to be managed are integrated into an MDM infrastructure. A reasonable exception, considering economic considerations, may be the management of a smaller, single-digit number of devices without the use of an MDM. If an MDM is used, the management of the devices MUST be done via the MDM for the purpose of simplified administration and the uniform presentation of security-related and other settings. To do this, there must be an iOS usage strategy that defines aspects such as device selection or backup strategies. It also MUST be regulated whether additional apps should be used by third-party providers.
 
 #### SYS.3.2.3.A2 Planning the Use of Cloud Services
 
@@ -105,7 +108,8 @@ In order to prevent the systematic spying of the passcode, a number of maximum p
 
 In order to prevent an unauthorized deletion of configuration profiles, suitable regulations MUST be made and implemented by those responsible. For example, the deletion can be technically realized by a password-protected authentication or organizationally prohibited.
 
-#### SYS.3.2.3.A8 Timely update of the operating systemApple will periodically release new versions of iOS-integrated security updates for currently supported devices. Before all the institution's iOS-based devices are updated to a new version, they MUST have been tested. The aim of this validation process is the verification of existing functions, security mechanisms and the enforceability of compliance requirements. In order to close any security gaps, an update of the installed operating system MUST be rolled out soon after it has been released to the devices. By actively participating in Apple's beta program, in most cases, the new operating system version can be pre-tested to enable timely release for those issues. Older devices that are no longer running iOS versions MUST be discarded and replaced with supported devices.
+#### SYS.3.2.3.A8 Timely update of the operating system
+Apple will periodically release new versions of iOS-integrated security updates for currently supported devices. Before all the institution's iOS-based devices are updated to a new version, they MUST have been tested. The aim of this validation process is the verification of existing functions, security mechanisms and the enforceability of compliance requirements. In order to close any security gaps, an update of the installed operating system MUST be rolled out soon after it has been released to the devices. By actively participating in Apple's beta program, in most cases, the new operating system version can be pre-tested to enable timely release for those issues. Older devices that are no longer running iOS versions MUST be discarded and replaced with supported devices.
 
 ### 3.2 Standard requirements
 
@@ -133,7 +137,8 @@ As an additional precautionary measure to prevent the misuse of official means o
 
 To ensure the confidentiality and integrity of the data processed or stored on the device, any unused or allowed functions or services SHOULD be disabled. Which to disable must be decided based on the purpose and underlying protection needs for the lock screen, unified communication, siri, wallpaper, host system and diagnostics and usage data.
 
-#### SYS.3.2.3.A14 Using the iCloud infrastructureApple provides the iCloud infrastructure to all users with an Apple ID. So there is z. For example, share the ability to share documents and photos through iCloud infrastructure, retrieve friends' location information, or add continuity capabilities to OS X-based and iOS-based devices. Before sharing the extensive or selective use of the iCloud infrastructure, an assessment should be made of the compatibility of Apple's terms and conditions with its internal policies regarding availability, confidentiality, integrity and privacy. If the use of the iCloud infrastructure is allowed, the authentication on the iCloud web service SHOULD be done by a two-factor authentication. By using managed apps, iCloud usage can be reduced to a minimum or completely eliminated for purely business use.
+#### SYS.3.2.3.A14 Using the iCloud infrastructure
+Apple provides the iCloud infrastructure to all users with an Apple ID. So there is z. For example, share the ability to share documents and photos through iCloud infrastructure, retrieve friends' location information, or add continuity capabilities to OS X-based and iOS-based devices. Before sharing the extensive or selective use of the iCloud infrastructure, an assessment should be made of the compatibility of Apple's terms and conditions with its internal policies regarding availability, confidentiality, integrity and privacy. If the use of the iCloud infrastructure is allowed, the authentication on the iCloud web service SHOULD be done by a two-factor authentication. By using managed apps, iCloud usage can be reduced to a minimum or completely eliminated for purely business use.
 
 #### SYS.3.2.3.A15 Using the continuity functions
 
@@ -155,7 +160,8 @@ The Safari browser is deeply integrated in iOS and has in some cases higher righ
 
 If the devices are not integrated into an existing proxy and reputation infrastructure of the institution, the safari browser should use whitelist URLs by using filtering options based on allowed URLs (which are complementary to the URL groups already pre-selected by Apple) , Blacklist URLs or the integration of content filters of third parties, the fulfillment of legal regulations and internal guidelines.
 
-If a reputation service or a proxy infrastructure is already offered by those responsible in the IT, the iOS-based devices can be integrated by depositing a global HTTP proxy for all installed browsers. When using a global, only internally accessible HTTP proxies, the integration using a VPN connection SHOULD be done either permanently or based on the apps used in the infrastructures.#### SYS.3.2.3.A20 Integration of the devices in the internal infrastructure via VPN
+If a reputation service or a proxy infrastructure is already offered by those responsible in the IT, the iOS-based devices can be integrated by depositing a global HTTP proxy for all installed browsers. When using a global, only internally accessible HTTP proxies, the integration using a VPN connection SHOULD be done either permanently or based on the apps used in the infrastructures.
+#### SYS.3.2.3.A20 Integration of the devices in the internal infrastructure via VPN
 
 To maintain the confidentiality and integrity of the institution's information, the iOS-based devices SHOULD be integrated into the infrastructure via VPN. Depending on the protection requirements, purpose and technical possibilities of the VPN server, a VPN connection based on the IKEv2, IPSec, L2TP, PPTP or SSL / TLS technologies SHOULD be implemented. The authentication SHOULD preferably be implemented and operated by one-time passwords and certificates instead of the use of classic passwords.
 
@@ -179,7 +185,8 @@ If a violation or manipulation is suspected, an alert must be sent to the respon
 
 By using the automatic configuration profile deletion SHOULD be ensured that even non-permanently accessible devices without the intervention of IT managers lose the access granted to the internal infrastructure after a defined period of time or on a certain day, unless the period by accessing the internal network is renewed. To ensure that the user still owns the device, this methodology can also be used preventively.
 
-#### SYS.3.2.3.A24 Use of location-based policies (CI)By depositing a geofencing policy SHOULD ensure that devices with information of high protection need do not leave the previously defined geographic area. Should the geographical area be abandoned, a selective erasure of the classified information or a complete erasure of the device should be made. Before a selective or complete deletion of the device, the responsible administrators and security management as well as the user must provide information, eg. B. via push message, e-mail or SMS, about this issue. For the sake of better acceptance and to give the user the opportunity to return to the permitted geographic area, the selective or complete deletion should be delayed for a period of time temporarily. The use of geofencing policies must not violate internal and legal requirements.
+#### SYS.3.2.3.A24 Use of location-based policies (CI)
+By depositing a geofencing policy SHOULD ensure that devices with information of high protection need do not leave the previously defined geographic area. Should the geographical area be abandoned, a selective erasure of the classified information or a complete erasure of the device should be made. Before a selective or complete deletion of the device, the responsible administrators and security management as well as the user must provide information, eg. B. via push message, e-mail or SMS, about this issue. For the sake of better acceptance and to give the user the opportunity to return to the permitted geographic area, the selective or complete deletion should be delayed for a period of time temporarily. The use of geofencing policies must not violate internal and legal requirements.
 
 #### SYS.3.2.3.A25 Using the configuration option for AirPrint (CI)
 
@@ -245,7 +252,8 @@ Further information on threats and security measures in the "iOS (for Enterprise
   
 
  Apple (last accessed on 27.09.2017)
- <Https://www.apple.com/legal/privacy/de-ww/>* #### [AppLPG] Apple's Legal Process Guidelines
+ <Https://www.apple.com/legal/privacy/de-ww/>
+* #### [AppLPG] Apple's Legal Process Guidelines
 
   
 

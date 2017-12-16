@@ -35,7 +35,8 @@ Teleworkers are largely on their own at work. If the teleworker is not adequatel
 
 ### 2 3 Unauthorized private use of the official teleworking computer
 
-In the home, it is easier to use the official teleworking computer privately, because controls by the employer are only partially possible. Therefore, it can happen that unchecked and released software is used and by careless action malicious software reaches the teleworking computer. This could, for example, compromise confidential information.But not only teleworkers can use their computer improperly, but also relatives or visitors. Damage such as deleted hard drives can result in reinstallation costs or re-capture work.
+In the home, it is easier to use the official teleworking computer privately, because controls by the employer are only partially possible. Therefore, it can happen that unchecked and released software is used and by careless action malicious software reaches the teleworking computer. This could, for example, compromise confidential information.
+But not only teleworkers can use their computer improperly, but also relatives or visitors. Damage such as deleted hard drives can result in reinstallation costs or re-capture work.
 
 ### 2 4 Delays due to temporarily limited availability of teleworkers
 
@@ -66,7 +67,8 @@ The following are specific requirements for the protection of teleworking. Basic
 
 The following requirements MUST be implemented as a priority:
 
-#### OPS.1.2.4.A1 Teleworking Regulations [Supervisor, Human Resources]All relevant aspects of teleworking MUST be regulated. For information purposes, teleworkers MUST be given the applicable rules or a leaflet intended to explain the security measures to be followed. All points in dispute MUST be settled either by company agreements or by individual agreements between the teleworker and the employer in addition to the employment contract. For each teleworker, a representative MUST be named. The substitution case SHOULD be rehearsed regularly. The regulations MUST be updated regularly.
+#### OPS.1.2.4.A1 Teleworking Regulations [Supervisor, Human Resources]
+All relevant aspects of teleworking MUST be regulated. For information purposes, teleworkers MUST be given the applicable rules or a leaflet intended to explain the security measures to be followed. All points in dispute MUST be settled either by company agreements or by individual agreements between the teleworker and the employer in addition to the employment contract. For each teleworker, a representative MUST be named. The substitution case SHOULD be rehearsed regularly. The regulations MUST be updated regularly.
 
 #### OPS.1.2.4.A2 Safety requirements for the teleworking computer [Head IT, IT operation]
 
@@ -98,7 +100,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 A teleworking security concept SHOULD be created describing security objectives, protection needs, security requirements and risks. The concept SHOULD be regularly updated and revised. The security concept for telework SHOULD be coordinated with the overarching security concept of the institution.
 
-#### OPS.1.2.4.A7 Regulated use of communication options for teleworking [teleworkers, IT operations]It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
+#### OPS.1.2.4.A7 Regulated use of communication options for teleworking [teleworkers, IT operations]
+It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
 
 #### OPS.1.2.4.A8 Flow of information between teleworker and institution [supervisor, teleworker]
 
@@ -159,7 +162,8 @@ The following elementary hazards are important for the "teleworking" building bl
 * G 0.23 Unauthorized intrusion into IT systems
 * G 0.24 Destruction of equipment or data media
 * G 0.25 Failure of devices or systems
-* G 0.30 Unauthorized use or administration of devices and systems* G 0.31 Incorrect use or administration of devices and systems
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.33 Personnel loss
 * G 0.40 Denial of Service

@@ -28,7 +28,8 @@ Comprehensive rules and guidelines for Microsoft Exchange and Outlook are necess
 
 ### 2 2 Bad migration from Microsoft Exchange
 
-In practice, Microsoft Exchange systems are migrated more frequently than reinstalled. In some cases, migrating to a new version of the Microsoft Exchange server requires updating the operating system to a newer version. For their part, new operating systems often make demands on the existing domain concept and the existing directory services.If the migration is not carefully planned and executed, internal communication through Microsoft Exchange in the institution can be severely disrupted, which could lead to a decline in productivity. During migration, configuration problems may occur, such as: For example, you may have changed the configuration settings for the different versions or connect to directory services. Furthermore, incorrect protocol settings can lead to irregularities in information transmission, authentication and encryption.
+In practice, Microsoft Exchange systems are migrated more frequently than reinstalled. In some cases, migrating to a new version of the Microsoft Exchange server requires updating the operating system to a newer version. For their part, new operating systems often make demands on the existing domain concept and the existing directory services.
+If the migration is not carefully planned and executed, internal communication through Microsoft Exchange in the institution can be severely disrupted, which could lead to a decline in productivity. During migration, configuration problems may occur, such as: For example, you may have changed the configuration settings for the different versions or connect to directory services. Furthermore, incorrect protocol settings can lead to irregularities in information transmission, authentication and encryption.
 
 ### 2 3 Illegal browser access to Microsoft Exchange
 
@@ -52,7 +53,8 @@ If access rights to a Microsoft Outlook client or to data stored within Microsof
 
 A common cause of successful attacks on services such as Microsoft Exchange are misconfigured systems. Since a Microsoft Exchange system is very complex, various configuration settings and the mutually influencing parameters can cause numerous security problems. The possible misconfigurations range from the installation and operation of Microsoft Exchange components to inappropriate systems, to in-capped encryption and inadequate access restrictions on Microsoft Exchange servers, to the incorrect granting of rights when creating or initializing a Microsoft Exchange database.
 
-### 2 7 Incorrect configuration of OutlookThe email client Microsoft Outlook is an important part of the Microsoft Exchange system. For the overall security of the system, it is important that the client is configured correctly. Even the selected communication protocol can cause special security problems. Similarly, private keys could be compromised to encrypt and sign emails. If encrypted at the network level, for example by IPSec or TLS, this encryption mechanism can become ineffective if the client is configured incorrectly. Misconfiguration can create security issues, such as loss of confidentiality due to unauthorized access.
+### 2 7 Incorrect configuration of Outlook
+The email client Microsoft Outlook is an important part of the Microsoft Exchange system. For the overall security of the system, it is important that the client is configured correctly. Even the selected communication protocol can cause special security problems. Similarly, private keys could be compromised to encrypt and sign emails. If encrypted at the network level, for example by IPSec or TLS, this encryption mechanism can become ineffective if the client is configured incorrectly. Misconfiguration can create security issues, such as loss of confidentiality due to unauthorized access.
 
 ### 2 8 Malfunctions and misuse of self-developed macros and programming interfaces under Microsoft Outlook
 
@@ -82,7 +84,8 @@ Before Microsoft Exchange and Outlook can be used, the use of Microsoft Exchange
 
 It MUST be decided with which systems and application components, as well as in which hierarchical gradation the Microsoft Exchange infrastructure should be realized. The selection MUST also decide whether to run the systems as a cloud or local service.
 
-#### APP.5.2.A3 Authorization ManagementFor the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as are necessary for the task fulfillment (minimum principle). It MUST be checked regularly to see if the allocated rights are still appropriate.
+#### APP.5.2.A3 Authorization Management
+For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as are necessary for the task fulfillment (minimum principle). It MUST be checked regularly to see if the allocated rights are still appropriate.
 
 #### APP.5.2.A4 Access rights to Microsoft Exchange objects
 
@@ -112,7 +115,8 @@ The responsible persons SHOULD fix known weaknesses in a timely manner depending
 
 #### APP.5.2.A9 Secure configuration of Microsoft Exchange servers
 
-Microsoft Exchange servers SHOULD be configured based on the requirements of the security concept. A maximum size for both inbound and outbound messages SHOULD be set. Existing connectors SHOULD be configured appropriately. Logging the Microsoft Exchange system SHOULD be enabled. For existing customization, a corresponding concept SHOULD be created.When using functional enhancements (for example, Microsoft Exchange Access Sync, Mirror Port, Spam Filter, Outlook Web App, or Data Loss Prevention), make sure that the defined confidentiality, integrity, and availability protection goals are still met.
+Microsoft Exchange servers SHOULD be configured based on the requirements of the security concept. A maximum size for both inbound and outbound messages SHOULD be set. Existing connectors SHOULD be configured appropriately. Logging the Microsoft Exchange system SHOULD be enabled. For existing customization, a corresponding concept SHOULD be created.
+When using functional enhancements (for example, Microsoft Exchange Access Sync, Mirror Port, Spam Filter, Outlook Web App, or Data Loss Prevention), make sure that the defined confidentiality, integrity, and availability protection goals are still met.
 
 #### APP.5.2.A10 Outlook settings
 
@@ -151,7 +155,8 @@ The contents of the operating manual for Microsoft Exchange SHOULD be comprehens
 
 As part of the emergency preparedness SHOULD be designed a concept that can be minimized the consequences of a failure of the Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.5.2.A17 Encryption of Microsoft Exchange System Databases (CIA)
 

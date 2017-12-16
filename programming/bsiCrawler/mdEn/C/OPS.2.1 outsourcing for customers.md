@@ -32,7 +32,8 @@ An outsourcing project typically transfers large amounts of information between 
 
 Depending on the outsourcing plans, it may be necessary for the outsourcing customer's employees to have access, access and access rights to IT systems, information, buildings or rooms of the outsourcing service provider. If the granting, administration and control of these rights is poorly regulated and, in extreme cases, even unauthorized rights are granted, it is no longer possible to guarantee the necessary protection requirements for the outsourcer's information. For example, the uncontrolled assignment of administrative authorizations to employees of the outsourcing service provider can lead to serious security risks. These could exploit permissions and copy or manipulate sensitive information.
 
-### 2 3 Missing or inadequate testing and approval processIf an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not communicated to the customer, this can result in significant failure. or subsequent investments.
+### 2 3 Missing or inadequate testing and approval process
+If an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not communicated to the customer, this can result in significant failure. or subsequent investments.
 
 ### 2 4 Inadequate contractual arrangements with an outsourcing service provider
 
@@ -48,7 +49,8 @@ By opting for outsourcing, an institution always becomes dependent on the outsou
 
 This situation could be exploited by the outsourcing service provider, for example through drastic price increases and insufficient service quality.
 
-### 2 7 Disruption of the working climate due to an outsourcing projectOutsourcing projects are often seen as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
+### 2 7 Disruption of the working climate due to an outsourcing project
+Outsourcing projects are often seen as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
 
 ### 2 8 Poor information security in the outsourcing implementation phase
 
@@ -73,7 +75,8 @@ The following are specific requirements for Outsourcing for Customers. Basically
 
 ### 3.1 Basic requirements
 
-The following requirements MUST be implemented as a priority:#### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
+The following requirements MUST be implemented as a priority:
+#### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
 
 All security requirements for an outsourcing project MUST be based on the outsourcing strategy. Both outsourcing parties MUST be contractually bound to comply with IT-Grundschutz or a comparable level of protection. All interfaces between the outsourcing service provider and customers MUST be identified and corresponding security requirements defined. It must be specified in the security requirements which permissions (access rights, access rights, access rights) are set up mutually.
 
@@ -101,7 +104,8 @@ An outsourcing strategy SHOULD be defined that takes into account not only the e
 
 The outsourcing customer SHOULD create a security concept for each outsourcing project based on the associated security requirements. Likewise, each outsourcing service provider SHOULD submit an individual security concept for the respective outsourcing project. Both security concepts SHOULD be coordinated with each other. The security concept of the outsourcing service provider and its implementation SHOULD be combined into an overall security concept and regularly checked for effectiveness by the outsourcing customer or independent third parties.
 
-#### OPS.2.1.A7 Definition of possible communication partners [Head of Organization, ISB Outsourcing Customer]It SHOULD be determined which internal and external communication partners may transmit and receive which information about the respective outsourcing project. There SHOULD exist a process that checks the function of the communication partners on both sides. The permitted communication partners with the respective authorizations MUST always be up to date.
+#### OPS.2.1.A7 Definition of possible communication partners [Head of Organization, ISB Outsourcing Customer]
+It SHOULD be determined which internal and external communication partners may transmit and receive which information about the respective outsourcing project. There SHOULD exist a process that checks the function of the communication partners on both sides. The permitted communication partners with the respective authorizations MUST always be up to date.
 
 #### OPS.2.1.A8 Regulations for the use of the staff of the outsourcing service [Head of Human Resources, ISB Outsourcing Customer]
 
@@ -117,7 +121,8 @@ For the regular data exchange with fixed communication partners, the necessary s
 
 #### OPS.2.1.A11 Planning and maintenance of information security in ongoing outsourcing operations [ISB Outsourcing customer]
 
-The intention was to draw up an operational concept for the outsourcing project, which also considers the safety aspects. The security concepts of the outsourcing partners SHOULD regularly be checked for up-to-dateness and consistency. The status of the agreed security measures SHOULD be checked regularly. There should be regular communication between the outsourcing partners, including coordination on changes and improvements.The outsourcing partners SHOULD regularly conduct joint exercises and tests to maintain safety levels. Information about security risks and how to deal with them SHOULD be exchanged on a regular basis between the outsourcing partners. There SHOULD exist a process that ensures the flow of information in dealing with security incidents affecting the respective contractors.
+The intention was to draw up an operational concept for the outsourcing project, which also considers the safety aspects. The security concepts of the outsourcing partners SHOULD regularly be checked for up-to-dateness and consistency. The status of the agreed security measures SHOULD be checked regularly. There should be regular communication between the outsourcing partners, including coordination on changes and improvements.
+The outsourcing partners SHOULD regularly conduct joint exercises and tests to maintain safety levels. Information about security risks and how to deal with them SHOULD be exchanged on a regular basis between the outsourcing partners. There SHOULD exist a process that ensures the flow of information in dealing with security incidents affecting the respective contractors.
 
 #### OPS.2.1.A12 Change Management [IT Operations, Change Manager]
 
@@ -148,7 +153,8 @@ With external outsourcing service providers SHOULD be contractually agreed that 
 4 Further Information
 ------------------------------
 
-### 4.1 LiteratureFurther information on risks and security measures in the area of ​​outsourcing for customers can be found in the following publications, among others:
+### 4.1 Literature
+Further information on risks and security measures in the area of ​​outsourcing for customers can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

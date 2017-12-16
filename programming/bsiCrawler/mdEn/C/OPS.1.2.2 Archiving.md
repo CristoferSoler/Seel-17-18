@@ -30,7 +30,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient migration of archive systems
 
-Archived data should typically remain stored for a very long time. During this period, the underlying technical system components, storage media and data formats may physically or technically age and thereby become unusable. In addition, there may be problems with the compatibility of the data formats used over time.If the aging of the existing system is unresponsive, it can be expected in the long term, for example, that archived raw data will no longer be readable by the archive media or that archived data will be changed by physical errors in the archive system and media.
+Archived data should typically remain stored for a very long time. During this period, the underlying technical system components, storage media and data formats may physically or technically age and thereby become unusable. In addition, there may be problems with the compatibility of the data formats used over time.
+If the aging of the existing system is unresponsive, it can be expected in the long term, for example, that archived raw data will no longer be readable by the archive media or that archived data will be changed by physical errors in the archive system and media.
 
 ### 2 2 Inadequate classification criteria for archives
 
@@ -57,7 +58,8 @@ If the archiving process is under-scrutinized or under-scrutinized, this can ind
 When archiving electronic documents, various legal framework conditions must be observed. Failure to comply with this may result in civil or criminal penalties, eg. For example, minimum retention periods that arise for tax, budgetary or other reasons.
 
 3 requirements
----------------The following are specific requirements for archiving. Basically, the archive manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for archiving. Basically, the archive manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -98,7 +100,8 @@ The integrity of the index database MUST be ensured and verifiable. In addition,
 
 All archive data, the associated index databases and the system data MUST be backed up regularly (see OPS.1.1.6 * Data backup). *).
 
-#### OPS.1.2.2.A8 Logging of archive accesses [Head of IT, IT operation]All access to electronic archives MUST be logged. To do this, the date, time, user, client system, and the actions taken and error messages should be recorded. The retention period of the log data SHOULD be specified in the archiving concept.
+#### OPS.1.2.2.A8 Logging of archive accesses [Head of IT, IT operation]
+All access to electronic archives MUST be logged. To do this, the date, time, user, client system, and the actions taken and error messages should be recorded. The retention period of the log data SHOULD be specified in the archiving concept.
 
 The log data of the archive accesses SHOULD be evaluated regularly. In doing so, the institution's internal guidelines SHOULD be observed.
 
@@ -148,7 +151,8 @@ The implementation and participation in the training SHOULD be documented.
 
 The available free space on the archive media MUST be monitored continuously. As soon as a defined limit value is undershot, a responsible employee MUST be alerted automatically. It SHOULD be ensured that the alerting takes place according to the role. There must always be enough empty archive media available to quickly prevent memory bottlenecks.
 
-#### OPS.1.2.2.A13 Regular revision of the archiving processesIT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+#### OPS.1.2.2.A13 Regular revision of the archiving processes
+IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 #### OPS.1.2.2.A14 Regular monitoring of the archive system [Head IT]
 
@@ -180,7 +184,8 @@ For archiving, there should be regular functional and recovery tests. The archiv
 
 Furthermore, the hardware components of the archive system SHOULD regularly be checked for proper operation. It SHOULD be checked regularly if all archiving processes are working properly.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.2.2.A20 Appropriate use of cryptographic procedures in archiving [Head of IT] (CI)
 

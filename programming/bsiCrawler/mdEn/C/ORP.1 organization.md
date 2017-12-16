@@ -37,7 +37,8 @@ Examples of consequential damage caused by non-compliance with regulations are:
 
 Insufficient supply of equipment can significantly affect operation. Faults may arise if the required resources are not available in sufficient quantity or are not made available in due time. It may also be the case that inappropriate or even incompatible equipment is procured which consequently can not be used.
 
-** Example: ** The hard disk space of PCs and servers as well as the mobile data carriers is constantly increasing. Unfortunately, it is often forgotten to procure IT components and data carriers that provide sufficient capacity for regular data backup.Likewise, the functionality of the equipment used must be guaranteed. If maintenance work is not carried out or only insufficiently carried out, it can cause serious damage. Examples:
+** Example: ** The hard disk space of PCs and servers as well as the mobile data carriers is constantly increasing. Unfortunately, it is often forgotten to procure IT components and data carriers that provide sufficient capacity for regular data backup.
+Likewise, the functionality of the equipment used must be guaranteed. If maintenance work is not carried out or only insufficiently carried out, it can cause serious damage. Examples:
 
 * The batteries of an uninterruptible power supply (UPS) have an insufficient capacity due to lack of maintenance (too low acid content). The UPS can not bridge a power outage for a sufficient amount of time.
 * The fire extinguishers are due to lack of maintenance no longer sufficient pressure, so that their fire-fighting effect is no longer guaranteed.
@@ -67,7 +68,8 @@ Offenders, but also culprits, can use deficiencies in the organization and try t
 
 ** Example: ** In a Swiss financial company, an employee manipulated the application software for certain financial services. This allowed him to illegally obtain larger sums of money.
 
-### 2 8 Destruction, vandalism, sabotageFor various reasons (revenge, malice, frustration), people can try to disrupt business processes, manipulate or destroy devices or information.
+### 2 8 Destruction, vandalism, sabotage
+For various reasons (revenge, malice, frustration), people can try to disrupt business processes, manipulate or destroy devices or information.
 
 Both outside perpetrators (eg, disappointed burglars, out-of-control demonstrators) and culprits (eg, frustrated or mentally unstable staff) can destroy or damage someone else's property through vandalism. While vandalism is usually an expression of spontaneous, blind destructiveness, sabotage is the willful manipulation or damage of things with the aim to harm the victim. Particularly attractive targets of sabotage can be data centers or communication links of authorities or companies, since a relatively small amount of funds can make a big impact.
 
@@ -90,7 +92,7 @@ For all security-related tasks, both responsibilities and authority MUST be defi
 
 #### ORP.1.A2 Assignment of responsibility for information, applications and IT components [Head of IT, Information Security Officer (ISB), Head of Institution]
 
-All information, business processes, applications and IT components MUST be determined who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
+All information, business processes, applications and IT components MUST be defined as who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
 
 #### ORP.1.A3 Supervision or assistance of third parties [employees]
 
@@ -106,7 +108,8 @@ It MUST be determined which access, access and access rights are assigned to whi
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of organization. They SHOULD be implemented in principle.#### ORP.1.A6 The tidy workplace [employee]
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of organization. They SHOULD be implemented in principle.
+#### ORP.1.A6 The tidy workplace [employee]
 
 All employees SHOULD be advised that neither sensitive information nor IT systems should be freely accessible at unattended workplaces. Workplaces SHOULD be randomly checked to see if vulnerable information is open to the public.
 
@@ -138,7 +141,8 @@ Technical devices SHOULD be maintained regularly. It should be regulated which s
 
 Before a planned move, security guidelines for this purpose SHOULD be developed or updated in good time. All employees SHOULD be informed about the safety measures to be followed before, during and after the move. During the move a minimum level of access and access control SHOULD be present. It SHOULD be checked after the move that the moving goods to be transported has arrived completely undamaged or unchanged.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.1.A14 Inspections [Building Services, Information Security Officer (ISB)] (CIA)
 

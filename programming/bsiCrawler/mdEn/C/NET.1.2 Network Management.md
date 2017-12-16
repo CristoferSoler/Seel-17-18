@@ -40,7 +40,8 @@ If attackers succeed in accessing network management solutions, eg. For example,
 
 If attackers succeed in accessing individual network components, they can control and manipulate the respective component. Any traffic routed via the network component can thus be compromised. In addition, further attacks can be prepared to penetrate deeper into the institution's network.
 
-### 2 3 Unauthorized interference with network management communicationIf the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
+### 2 3 Unauthorized interference with network management communication
+If the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
 
 ### 2 4 Inadequate time synchronization of network management components
 
@@ -80,7 +81,8 @@ A role and authorization concept for network management MUST be created, impleme
 
 For management access to network components and management information, appropriate authentication MUST be used. For this, the specifications of the institution for the authentication quality and the handling of the authentication information MUST be implemented. Also, all default passwords on the network components MUST be changed. The new passwords MUST be strong enough and regularly changed.
 
-#### NET.1.2.A5 Importing Updates and PatchesThe responsible employees MUST regularly inform themselves about known vulnerabilities in the network management solutions used and import security-related updates and patches as quickly as possible. Non-security updates MAY NOT compromise the security and stability of the network management solution.
+#### NET.1.2.A5 Importing Updates and Patches
+The responsible employees MUST regularly inform themselves about known vulnerabilities in the network management solutions used and import security-related updates and patches as quickly as possible. Non-security updates MAY NOT compromise the security and stability of the network management solution.
 
 #### NET.1.2.A6 Regular backup
 
@@ -114,7 +116,8 @@ The security policy SHOULD define which areas of network management are implemen
 
 In addition, framework conditions and requirements for network separation, access control, logging and communication protection, the network management tool used and the operational rules for network management SHOULD be specified.
 
-#### NET.1.2.A12 Actual recording and documentation of network managementA documentation describing how the management infrastructure of the network is constructed SHOULD be made. This should include the initial actual recording and all changes made to the network management. In particular, it should be documented which network components are managed with which management tools. In addition, all IT workstations and terminals used for network management, as well as all information inventories, management data and network management operation information, should be recorded. Ultimately, all interfaces to applications and services outside the network management SHOULD be documented.
+#### NET.1.2.A12 Actual recording and documentation of network management
+A documentation describing how the management infrastructure of the network is constructed SHOULD be made. This should include the initial actual recording and all changes made to the network management. In particular, it should be documented which network components are managed with which management tools. In addition, all IT workstations and terminals used for network management, as well as all information inventories, management data and network management operation information, should be recorded. Ultimately, all interfaces to applications and services outside the network management SHOULD be documented.
 
 The documented as-is state of the management infrastructure SHOULD be compared with the documentation of the network infrastructure (see building block NET.1.1 * Network Architecture and Design). *
 
@@ -149,7 +152,8 @@ Network Management Solutions SHOULD be built on the Security Policy (see NET.1.2
 
 It should be checked regularly and comprehensibly to what extent the network management solution meets the target state. It should be checked whether the existing solution still meets the security policy and requirements specification. It should also be examined to what extent the implemented management structure and the processes used are up-to-date. Next SHOULD be compared, whether the management infrastructure is state-of-the-art.
 
-#### NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]Training and training measures SHOULD be designed and implemented for the network management solutions used. The measures SHOULD cover the individual circumstances in the configuration, availability and capacity management as well as typical situations in error management. Training and training SHOULD be repeated on a regular basis, but at least if major technical or organizational changes occur within the network management solution.
+#### NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+Training and training measures SHOULD be designed and implemented for the network management solutions used. The measures SHOULD cover the individual circumstances in the configuration, availability and capacity management as well as typical situations in error management. Training and training SHOULD be repeated on a regular basis, but at least if major technical or organizational changes occur within the network management solution.
 
 #### NET.1.2.A19 Strong authentication of management access
 
@@ -185,7 +189,8 @@ The basic performance and availability parameters of the central network compone
 
 #### NET.1.2.A26 Comprehensive logging, alarming and logging of events
 
-Important events or error conditions SHOULD be automatically transmitted to a central management system and logged there. This applies to events on network components as well as events on the network management tools. The responsible IT staff SHOULD additionally be notified automatically. The alarming and logging SHOULD include at least the following points:* Failure or unavailability of network or management components
+Important events or error conditions SHOULD be automatically transmitted to a central management system and logged there. This applies to events on network components as well as events on the network management tools. The responsible IT staff SHOULD additionally be notified automatically. The alarming and logging SHOULD include at least the following points:
+* Failure or unavailability of network or management components
 * Hardware malfunction
 * incorrect login attempts
 * Critical states or congestion of IT systems
@@ -231,7 +236,8 @@ In addition to the logging of session data (see NET.1.2.A22 * Logging of Adminis
 
 It was intended to establish and document procedures for the preservation of evidence and forensic investigations within the framework of network management. The collected logging data SHOULD be archived for forensic analyzes in compliance with the law and auditable.
 
-#### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)The logging of network management SHOULD be integrated into a security information and event management (SIEM) solution. For this, the requirement catalogs (see NET.1.2.A2) for the selection of network management solutions should be adapted with regard to the required support of interfaces and transfer formats.
+#### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+The logging of network management SHOULD be integrated into a security information and event management (SIEM) solution. For this, the requirement catalogs (see NET.1.2.A2) for the selection of network management solutions should be adapted with regard to the required support of interfaces and transfer formats.
 
 #### NET.1.2.A37 Cross-Site Time Synchronization (CI)
 

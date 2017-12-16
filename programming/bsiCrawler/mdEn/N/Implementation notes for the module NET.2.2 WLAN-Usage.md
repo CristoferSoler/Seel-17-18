@@ -45,7 +45,8 @@ In order not to overload users with too much operational and security-related de
 * What steps should be taken in case of (suspected) compromise of the WLAN clients, especially who to notify.
 It is also important to clearly describe how to deal with client-side security solutions. This includes, for example, that
 
-* no security-relevant configurations may be changed,* an existing personal firewall must not be switched off,
+* no security-relevant configurations may be changed,
+* an existing personal firewall must not be switched off,
 * disabled all shares of directories or services, or at least protected by good passwords,
 * For the use of external WLANs, if possible only special user accounts with restrictive rights assignment should be used.
 In addition, the user policy should include a clear ban on unauthorized access points to the institution's LAN. It must also be pointed out in the guideline that the WLAN interface must be deactivated if it is not used for a longer period of time. Furthermore, the Directive should specify, in particular as regards the use of classified information, such as classified information, which data may be used and transmitted in WLANs and which may not. Users should be made aware of Wi-Fi threats as well as the content and implications of the Wi-Fi policy.
@@ -54,7 +55,7 @@ It is necessary to check regularly whether the contents required by the directiv
 
 #### NET.2.2.M2 Sensitization and training of WLAN users [Supervisors, Head of IT]
 
-Today almost every employee is equipped with a mobile device and can connect to a public or internal WLAN. Mobile devices (eg smartphones) can be used to create WLAN hotspots for others or to set up ad hoc WLANs. These versatile uses can create security issues if the devices are used improperly. Therefore, all employees must be sensitized accordingly. This can be done, for example, by means of a leaflet on possible dangers associated with the use of WLANs. The leaflet should also contain the most important measures and behaviors in order to counteract the corresponding hazards. The leaflet should be handed over together with the devices so that the users can handle the devices responsibly and conscientiously use them. Should users be allowed to provide themselves or others with a WLAN (as a hotspot) via their device, the training content should also contain the associated hazards and measures. For example, it may be pointed out that WLAN communication can be protected by configuring a complex password.
+Today almost every employee is equipped with a mobile device and can connect to a public or internal WLAN. Mobile devices (eg smartphones) can be used to create WLAN hotspots for others or to set up ad hoc WLANs. These versatile uses can cause security issues if the devices are used improperly. Therefore, all employees must be sensitized accordingly. This can be done, for example, by means of a leaflet on possible dangers associated with the use of WLANs. The leaflet should also contain the most important measures and behaviors in order to counteract the corresponding hazards. The leaflet should be handed over together with the devices so that the users can handle the devices responsibly and conscientiously use them. Should users be allowed to provide themselves or others with a WLAN (as a hotspot) via their device, the training content should also contain the associated hazards and measures. For example, it may be pointed out that WLAN communication can be protected by configuring a complex password.
 
 Sensitization, especially of users who are allowed to access confidential information, should be practiced and supported by means of practical examples.
 
@@ -62,7 +63,8 @@ A special hazard for the WLAN clients exists when public radio networks (so-call
 
 It must be clear to users that using WLANs greatly enhances mobility, but it also carries risks as attackers may be out of the field of view or suspected spatial WLAN coverage.
 
-#### NET.2.2.M3 Securing WLAN Usage in Unsafe Environments [IT Operations]Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, railway stations and convention centers.
+#### NET.2.2.M3 Securing WLAN Usage in Unsafe Environments [IT Operations]
+Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, railway stations and convention centers.
 
 Hotspots should always be regarded as an insecure network, firstly because the level of security available there is difficult to assess from the outside, and secondly because most hotspots offer their services in the form of "shared networks". As a result, it is generally possible to access every other terminal in the network from each terminal. If the risk arising from the use of a hotspot can not be estimated, it may be considered that the use of hotspots should be completely prohibited by the WLAN security guideline.
 
@@ -84,7 +86,8 @@ If the WLAN behaves in an unintended manner (eg WLAN is not available for a long
 
 The Wi-Fi users should do the following:
 
-* You should back up your work, stop Wi-Fi access, and disable your client's Wi-Fi interface.* If error messages appear or the client did not behave normally, they should be documented by the user. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to more quickly pinpoint the cause and impact of the incident and more effectively initiate countermeasures.
+* You should back up your work, stop Wi-Fi access, and disable your client's Wi-Fi interface.
+* If error messages appear or the client did not behave normally, they should be documented by the user. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to more quickly pinpoint the cause and impact of the incident and more effectively initiate countermeasures.
 * In addition, they should notify the IT operation via an appropriate escalation level.
 ### 2.3 Measures for increased protection requirements
 

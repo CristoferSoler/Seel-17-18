@@ -1,0 +1,20 @@
+{% load wiki_tags %}
+
+{% if article|can_write:user and not article.current_revision.locked %}
+    <li class="list-inline-item">
+        <a href="{% url 'edit' path=urlpath.path %}">Edit</a>
+    </li>
+{% endif %}
+
+{% if not user.is_anonymous %}
+    <li class="list-inline-item">
+        <a href="">Changes</a>
+    </li>
+{% endif %}
+
+{% if perms.wiki.check_article %}
+    <li class="list-inline-item">
+        <a href="">Check</a>
+    </li>
+{% endif %}
+

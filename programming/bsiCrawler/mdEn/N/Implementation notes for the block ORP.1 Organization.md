@@ -23,7 +23,8 @@ The distribution of tasks and the required functions (see ORP.1.M4 Separation of
 
 **Business**
 
-The defined conceptions are set out in concrete instructions and adopted bindingly for operation. Employee-related regulations must look at the complete career of an employee in the institution from entry to exit. By applying the need-to-know principle and the four-eyes principle, it must be ensured that authorizations at the various levels (eg access to rooms, access to information systems) are purposefully allocated and are also practicable (see ORP.1.M5 granting permissions).These permissions must be documented and supported by various methods, such as: B. Controlled and verifiable issue of keys only to authorized persons, authentication of access, access control systems for specially secured areas and control of operations outside the company (see ORP.1.M3 supervision or assistance of third parties). If regulations are deliberately or unconsciously violated, the information and escalation processes derived from this must be known to the employees, so that a targeted reaction to the violation can take place (see ORP.1.M9 Response to violations of the security specifications).
+The defined conceptions are set out in concrete instructions and adopted bindingly for operation. Employee-related regulations must look at the complete career of an employee in the institution from entry to exit. By applying the need-to-know principle and the four-eyes principle, it must be ensured that authorizations at the various levels (eg access to rooms, access to information systems) are purposefully allocated and are also practicable (see ORP.1.M5 granting permissions).
+These permissions must be documented and supported by various methods, such as: B. Controlled and verifiable issue of keys only to authorized persons, authentication of access, access control systems for specially secured areas and control of operations outside the company (see ORP.1.M3 supervision or assistance of third parties). If regulations are deliberately or unconsciously violated, the information and escalation processes derived from this must be known to the employees, so that a targeted reaction to the violation can take place (see ORP.1.M9 Response to violations of the security specifications).
 
 ** ** segregation
 
@@ -70,7 +71,8 @@ It is best to have arrangements among other things about the topics
 * Revision,
 * Emergency preparedness and
 * How to violate security policies
-hold true. Further information can be found in the relevant IT-Grundschutz modules.If information is to be exchanged between two or more communication partners, a number of different aspects must be observed in order to protect it. For any type of information exchange, it must first be clarified
+hold true. Further information can be found in the relevant IT-Grundschutz modules.
+If information is to be exchanged between two or more communication partners, a number of different aspects must be observed in order to protect it. For any type of information exchange, it must first be clarified
 
 * how vulnerable these are,
 * with whom these may be exchanged and
@@ -96,7 +98,8 @@ The subject managers as the "owners" of information and applications must ensure
 * this is checked regularly (eg daily, weekly, monthly),
 * the tasks for the implementation of the security measures are clearly defined and assigned,
 * the access or access to the information, applications and IT components is regulated,
-* The information security-threatening deviations are documented in writing.The responsible persons together with the information security management must decide, how to deal with possible residual risks.
+* The information security-threatening deviations are documented in writing.
+The responsible persons together with the information security management must decide, how to deal with possible residual risks.
 
 #### ORP.1.M3 Supervision or assistance of third parties [employees]
 
@@ -129,7 +132,8 @@ Once the separation of functions has been determined, the functions can be assig
 
 The stipulations have to be documented and updated with changes in business processes. Should a person have to perform incompatible functions with this assignment, this should be emphasized in a corresponding documentation about the distribution of functions.
 
-#### ORP.1.M5 Authorization [Head IT]At the various levels, appropriate and workable permissions MUST be allocated (eg for access to premises, access to IT systems, access to applications). Only as many rights should be assigned as are necessary for the task perception. There must be a regulated procedure for the assignment, administration and withdrawal of authorizations (see also ORP.4 Identity and Permission Management).
+#### ORP.1.M5 Authorization [Head IT]
+At the various levels, appropriate and workable permissions MUST be allocated (eg for access to premises, access to IT systems, access to applications). Only as many rights should be assigned as are necessary for the task perception. There must be a regulated procedure for the assignment, administration and withdrawal of authorizations (see also ORP.4 Identity and Permission Management).
 
 ** Assignment of access authorizations **
 
@@ -149,7 +153,8 @@ Regulations on the assignment and withdrawal of access authorizations for extern
 
 Access privileges allow the data subject or an authorized representative to use certain IT systems or system components and networks. Access authorizations should be granted as restrictively as possible. These are to be specified for each authorized person on the basis of their function, taking into account the separation of functions (see ORP.1.M4 Separation of functions between operational and controlling tasks). According to the function, the access to the IT systems has to be defined. B. Access to the operating system (system administrator) or access to an IT application (user). In addition, it must be ensured that personnel and task-related changes are taken into consideration without delay.
 
-Access to IT systems or IT applications should only be possible after an identification (eg by name, user ID or chip card) and authentication (eg by password or via an authentication token) of the authorized user and logged become.The issue or withdrawal of means of access such as user IDs or smart cards must be documented. Regulations on the handling of access and authentication means (eg handling of chip cards, password handling, see ORP.4 identity and authorization management) must also be taken. All persons entitled to access must be made aware of the correct handling of the means of access.
+Access to IT systems or IT applications should only be possible after an identification (eg by name, user ID or chip card) and authentication (eg by password or via an authentication token) of the authorized user and logged become.
+The issue or withdrawal of means of access such as user IDs or smart cards must be documented. Regulations on the handling of access and authentication means (eg handling of chip cards, password handling, see ORP.4 identity and authorization management) must also be taken. All persons entitled to access must be made aware of the correct handling of the means of access.
 
 Access authorizations should be temporarily blocked by authorized persons in the event of longer absences in order to prevent misuse; B. in illness or leave. This should be done at least for people with far-reaching permissions like administrators.
 
@@ -186,7 +191,8 @@ The following functions are incompatible due to constraints:
 * the combination of functions 4 or 5 with 6 (the four-eyes principle would be violated for payment instructions)
 These functions are performed by the following persons:
 
-Table 1: Example of task distribution and function separation** Step 2: Assignment of access rights **
+Table 1: Example of task distribution and function separation
+** Step 2: Assignment of access rights **
 
 The protection requirements of the individual rooms are explained below and the assignment of the access rights is documented in the table:
 
@@ -231,7 +237,8 @@ Together with the basic measures, the following measures correspond to the state
 
 All employees should be encouraged to leave their jobs "tidy". Unauthorized persons should not have access to confidential information in other workplaces or manipulate business processes or IT systems. Employees must therefore ensure that unauthorized persons have no access to IT applications or access to data. All employees must check their jobs with the same care and ensure that no sensitive information is freely accessible and the availability, confidentiality or integrity of data can not be adversely affected. It must not be possible for unauthorized persons to access data carriers or documents (eg printouts).
 
-For a short absence during working hours, it is sufficient to lock the room, if possible, and / or to lock IT systems in such a way that accesses are only possible after successful authentication. In the event of a planned absence of an employee (eg longer meetings, business trips, holidays, training events), the workplace should be cleaned up so that no data carriers or documents requiring protection are left unlocked at the workplace. For this, the employees need sufficiently dimensioned and lockable storage options, such. B. stable cabinets.Also, passwords should never be kept visible (as sticky notes on the monitor, in an easily guessed place such as under the desk top or in the unlocked desk drawer) (see ORP.1, A7 Resource Management).
+For a short absence during working hours, it is sufficient to lock the room, if possible, and / or to lock IT systems in such a way that accesses are only possible after successful authentication. In the event of a planned absence of an employee (eg longer meetings, business trips, holidays, training events), the workplace should be cleaned up so that no data carriers or documents requiring protection are left unlocked at the workplace. For this, the employees need sufficiently dimensioned and lockable storage options, such. B. stable cabinets.
+Also, passwords should never be kept visible (as sticky notes on the monitor, in an easily guessed place such as under the desk top or in the unlocked desk drawer) (see ORP.1, A7 Resource Management).
 
 Supervisors and security management staff should sporadically check jobs to see if vulnerable information is openly accessible and employees point to proper cleanup.
 
@@ -269,7 +276,8 @@ Such an overview should be able to provide information about:
 * Identification features,
 * Procurement sources, delivery times,
 * Whereabouts of the devices,
-* Maintenance contracts, maintenance intervals.In order to prevent the misuse of data, the deletion or destruction of devices must be regulated if they are able to store information, see block CON.6 Delete and Destroy.
+* Maintenance contracts, maintenance intervals.
+In order to prevent the misuse of data, the deletion or destruction of devices must be regulated if they are able to store information, see block CON.6 Delete and Destroy.
 
  ** Internet of Things (IoT) **
 
@@ -295,7 +303,8 @@ Equipment (or material) refers to all work equipment that is required to complet
 * Inventory management.
 The ** procurement ** of equipment is of particular importance in the use of information technology. In particular, the objectives pursued by the use of information technology can be supported by a regulated procurement process: increased performance, cost-effectiveness, improvement of communication options.
 
-In addition to pure cost-effectiveness aspects, a new procurement procedure - which can be carried out from a central point - also allows for new and further developments in the field of information technology to be taken more into account.Central procurement also ensures the adoption and adherence to a "house standard" that simplifies employee training and maintenance activities.
+In addition to pure cost-effectiveness aspects, a new procurement procedure - which can be carried out from a central point - also allows for new and further developments in the field of information technology to be taken more into account.
+Central procurement also ensures the adoption and adherence to a "house standard" that simplifies employee training and maintenance activities.
 
 A regulated ** test procedure before use ** of the equipment avoids various hazards. Examples are:
 
@@ -303,7 +312,7 @@ A regulated ** test procedure before use ** of the equipment avoids various haza
 * New software and new preformatted media should be tested with a computer virus protection program.
 * Test runs of new software should be performed on special test systems so that they can be put into operation smoothly.
 * Compatibility of new hardware and software components with existing ones should be verified prior to procurement to prevent mis-purchases.
-It is only with the help of ** Inventory Management ** of the equipment used that it is possible to determine the consumption and to arrange reorders that are required in due time. In addition, Inventory Management allows for completeness checks, review of the use of unauthorized software, or detection of resource theft. This requires a clear ** identification ** of the essential equipment with clear identification features (eg grouped consecutive inventory numbers). In addition, the serial numbers of existing devices such as monitors, printers, hard drives, etc. should be documented so that they can be identified after a theft.
+It is only with the help of an ** Inventory Management ** of the equipment used, it is possible to determine the consumption and promptly required reorders. In addition, Inventory Management allows for completeness checks, review of the use of unauthorized software, or detection of resource theft. This requires a clear ** identification ** of the essential equipment with clear identification features (eg grouped consecutive inventory numbers). In addition, the serial numbers of existing devices such as monitors, printers, hard drives, etc. should be documented so that they can be identified after a theft.
 
 For inventory management, resources must be listed in inventories. Such an inventory must be able to provide information about:
 
@@ -313,7 +322,7 @@ For inventory management, resources must be listed in inventories. Such an inven
 * Warehousing,
 * Handing out regulations and
 * Maintenance contracts, maintenance intervals.
-In order to prevent the misuse of data, the deletion or destruction of resources must be regulated. In particular, the handling of waste paper must be regulated. There must be appropriate disposal options for consumer goods with higher protection requirements, eg. B. so-called shredders or shredders for paper. Everything else is described in the block CON.6 Deleting and Destroying.
+In order to prevent the misuse of data, the deletion or destruction of resources must be regulated. In particular, the handling of waste paper is to be regulated. There must be appropriate disposal options for consumer goods with higher protection requirements, eg. B. so-called shredders or shredders for paper. Everything else is described in the module CON.6 Deleting and Destroying.
 
 #### ORP.1.M9 Proper Disposal of Protected Equipment [Employees, Information Security Officer (ISB)]
 
@@ -321,9 +330,10 @@ Equipment or material (eg printer paper, magnetic tapes, hard disks, CD-ROM, DVD
 
 The nature of the disposal of vulnerable material should be regulated in a specific safety policy. In the institution, the necessary disposal facilities such as shredders must be available.
 
-If material that is in need of protection is collected before disposal, the collection must be kept locked and protected against unauthorized access.
+If material that is in need of protection is collected prior to disposal, the collection should be kept locked and protected against unauthorized access.
 
-Insofar as no environmentally sound and safe disposal can be carried out in the company or in the authority, companies engaged to do so must be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites. It should be checked regularly if the disposal process is reliable.#### ORP.1.M10 Responding to security breaches [Information Security Officer (ISB)]
+Insofar as no environmentally sound and safe disposal can be carried out in the company or in the authority, the companies entrusted with it must be obliged to comply with the required safety measures. A model contract can be found under the IT Baseline Protection tools on the BSI websites. It should be checked regularly if the disposal process is reliable.
+#### ORP.1.M10 Responding to security breaches [Information Security Officer (ISB)]
 
 It is necessary to define the response to breaches of the security policy in order to ensure a clear and immediate response.
 
@@ -341,7 +351,8 @@ Large outsourcing service providers report from the field that the early involve
 
 #### ORP.1.M12 Regulations for maintenance and repair work [IT operation, building services, ICS information security officer]
 
-In order to protect technical equipment from malfunctions and to ensure their operational safety, regular maintenance work must be carried out. This not only applies to IT systems, but also to ICS and IoT components. The timely initiation of maintenance work and the review of its implementation should be carried out from a central point (eg procuring entity). The maintenance should be carried out by trustworthy persons or companies, if they can not be carried out by own personnel. The instructions of the manufacturer must be strictly observed. Regular maintenance work by external persons may require the conclusion of a maintenance contract.For each device should be documented, when it was maintained and what errors were fixed. It is also advisable to set up an information system for maintenance and repair work. With such a system, upcoming work can be planned and documented work can be documented and the successful course can be controlled.
+In order to protect technical equipment from malfunctions and to ensure their operational safety, regular maintenance work must be carried out. This not only applies to IT systems, but also to ICS and IoT components. The timely initiation of maintenance work and the review of its implementation should be carried out from a central point (eg procuring entity). The maintenance should be carried out by trustworthy persons or companies, if they can not be carried out by own personnel. The instructions of the manufacturer must be strictly observed. Regular maintenance work by external persons may require the conclusion of a maintenance contract.
+For each device should be documented, when it was maintained and what errors were fixed. It is also advisable to set up an information system for maintenance and repair work. With such a system, upcoming work can be planned and documented work can be documented and the successful course can be controlled.
 
 It should also document who is responsible for the maintenance or repair of equipment.
 
@@ -361,7 +372,8 @@ As ** measures before and after maintenance and repair work ** are to be planned
 * After maintenance or repair work, check the proper functioning of the maintained system. In particular, the withdrawal of the interventions for testing purposes must be checked.
 ** External maintenance and repair work **
 
-If IT systems are outsourced for maintenance or repair, all sensitive data stored on data media must be physically cleared beforehand. If this is not possible because the data carriers can no longer be accessed due to a defect, the companies responsible for the repair must undertake to comply with the required information security measures. In accordance with the requirements for confidentiality agreements from ORP.2 personnel, these contractual provisions on the confidentiality of data must be taken. In particular, it should be stipulated that data stored externally during maintenance should be completely deleted after completion of the work. Likewise, the duties and responsibilities of the external maintenance personnel must be carefully defined.When carrying out external maintenance work, it must be recorded which IT systems or components have been given to whom for repair, who caused this, what the maintenance or repair order includes, when the repair should be completed and when the device should be back was returned. In order to be able to keep up with this, it is necessary to mark the IT systems or components that identify which institution they belong to and, on the other hand, to clearly identify them within the institution.
+If IT systems are outsourced for maintenance or repair, all sensitive data stored on data media must be physically cleared beforehand. If this is not possible because the data carriers can no longer be accessed due to a defect, the companies responsible for the repair must undertake to comply with the required information security measures. In accordance with the requirements for confidentiality agreements from ORP.2 personnel, these contractual provisions on the confidentiality of data must be taken. In particular, it should be stipulated that data stored externally during maintenance should be completely deleted after completion of the work. Likewise, the duties and responsibilities of the external maintenance personnel must be carefully defined.
+When carrying out external maintenance work, it must be recorded which IT systems or components have been given to whom for repair, who caused this, what the maintenance or repair order includes, when the repair should be completed and when the device should be back was returned. In order to be able to keep up with this, it is necessary to mark the IT systems or components that identify which institution they belong to and, on the other hand, to clearly identify them within the institution.
 
 When shipping or transporting the components to be repaired care should be taken to prevent damage and theft. If there is still sensitive information on or in the devices, they must be transported appropriately protected, eg. B. in sealed containers or by couriers. Furthermore, evidence of the shipping (repair order, accompanying note, dispatch notes) and receipt at the recipient (receipt confirmation) must be kept and archived.
 
@@ -380,7 +392,8 @@ The relocation planning should involve as early as possible the information secu
 * When planning a move, it must be specified in advance who will move where and with what goods to be transported (creation of a move concept). This should be a matter of course anyway, so that the work can be resumed as smoothly as possible after the move.
 * Depending on the protection requirements of the data, it must be determined which boundary conditions for the transport must be observed. For example, for more sensitive data, lockable transport containers (see OPS.1.2.3 Information and Media Exchange) should be used or the data carriers should be encrypted prior to transport.
 * Data backups should be made before each IT system shipment. In addition to the modalities described in OPS.1.1.5 data backup, it should be noted in particular that the data backups must under no circumstances be transported together with the secure IT systems. This ensures that not all storage media will be damaged or lost at the same time.
-* A leaflet should be prepared for all affected employees detailing all safety measures to be performed.In a move, not only the transport is a critical phase, but also the period shortly before or after. In this phase, experience has shown that many things are lost, because at this time the standard safety procedures such. B. the access control is not yet effective. Even during the move, therefore, certain minimum organizational requirements should be met:
+* A leaflet should be prepared for all affected employees detailing all safety measures to be performed.
+In a move, not only the transport is a critical phase, but also the period shortly before or after. In this phase, experience has shown that many things are lost, because at this time the standard safety procedures such. B. the access control is not yet effective. Even during the move, therefore, certain minimum organizational requirements should be met:
 
 * Transport documents should be issued for all materials to be transported, indicating that
  
@@ -404,7 +417,8 @@ After the move, an orderly operation should be started as soon as possible. Firs
 
 * the access control should be resumed in full,
 * the fire loads should be removed from the corridors, d. H. the moving boxes are moved to the new workspaces,
-* the delivered removals are to check that they are complete and fully functional and not tampered with,* The completeness of the moving goods should be checked immediately by each employee and, if necessary, a loss list should be prepared. For this purpose, the affected person could also be given a form already prepared in advance, in which the removed removal goods can already be listed. Thus, even the absence representative may notice and report the absence of parts of the relocation property in the absence of leave, illness or urgent business activities of the affected colleagues. The responsible employee should receive a copy of this in order to be able to report any potential inconsistencies. Special care should be taken in the relocation planning for all servers and network interconnects, as even if only one component fails, the entire network may not be operational ,
+* the delivered removals are to check that they are complete and fully functional and not tampered with,
+* The completeness of the moving goods should be checked immediately by each employee and, if necessary, a loss list should be prepared. For this purpose, the affected person could also be given a form already prepared in advance, in which the removed removal goods can already be listed. Thus, even the absence representative may notice and report the absence of parts of the relocation property in the absence of leave, illness or urgent business activities of the affected colleagues. The responsible employee should receive a copy of this in order to be able to report any potential inconsistencies. Special care should be taken in the relocation planning for all servers and network interconnects, as even if only one component fails, the entire network may not be operational ,
 Before relocating, the central IT administration should take various precautions to ensure a smooth workflow:
 
 * Before the start of the relocation phase, a plan should be drawn up at an early stage for the required changes to the user connection. In particular, it should be analyzed whether new procurements are required for the smooth change of the computer connection of coworkers. Also for security reasons, it is important to know which changes result from the move in the communication behavior of the IT systems. For example, depending on the protection needs of employees, it may be necessary to encrypt a network connection or prevent access to certain data assets.
@@ -412,7 +426,8 @@ Before relocating, the central IT administration should take various precautions
 * When moving, it is often necessary to set up user accounts on a new server for the affected employees. It must be ensured that the required rights and access to applications and protocols are set up. Also, the security settings of the user environment must be maintained according to its security profile. Old user entries and terminal access entries must be adjusted or deleted on the old system. Nevertheless, access to user-defined data areas should remain granted to him for a transitional period, but with a mandatory reference to deletion after a grace period. After this waiting period, the deletion must be completed by the administrator.
 Special precautions should be taken when relocating the components of the data center, such as data or communication servers. The following describes measures to ensure the shortest possible downtime of the components.
 
-* If possible, a new server should be pre-installed and tested in the new facility. If this is not possible, then the old server should be preconfigured as well as possible and only be converted after sufficient advance notice at a time when little access is to be expected. Here, the old configuration should always be secured in advance.* The server should be completely secured before moving. If not already available, a bootable backup medium should also be created. Sensitive server parts such as hard disks should be kept redundant as an image for the failure of the original and be transported separately from the server. It is important to ensure that the data backup and the image as well as the server during transport is secured (eg encryption, locked box, security).
+* If possible, a new server should be pre-installed and tested in the new facility. If this is not possible, then the old server should be preconfigured as well as possible and only be converted after sufficient advance notice at a time when little access is to be expected. Here, the old configuration should always be secured in advance.
+* The server should be completely secured before moving. If not already available, a bootable backup medium should also be created. Sensitive server parts such as hard disks should be kept redundant as an image for the failure of the original and be transported separately from the server. It is important to ensure that the data backup and the image as well as the server during transport is secured (eg encryption, locked box, security).
 * Before moving, ensure that the infrastructure in the new premises is in place and tested for proper server operation. In addition to the presence of the network (electricity, LAN, WAN), it is important to pay attention to the correct order of the move of the components. It makes little sense, for example, to have the Internet web server moved first, if the firewall with its communication router is built much later.
 * Prior to the move, it should be checked whether the IT components to be transported are those that require special environmental conditions during the move. For example, there are controllers for larger (and more expensive!) IT systems, which not only have to be operated in air-conditioned rooms, but also have to be air-conditioned.
 Furthermore, it should be ensured that the new telephone numbers are already reachable as soon as the employees have moved into their new offices. When moving within a location should try to keep the old phone numbers, at least temporarily. During the move, telephone accessibility should be guaranteed both in the old and in the new property, so that questions can be answered at any time if problems arise.
@@ -453,7 +468,8 @@ Further information on hazards and security measures in the area of ​​"Organ
  
 *
 
- #### [27001A6.1] ISO / IEC 27001: 2013 - Annex A.6.1 Internal organizationInformation technology- Security techniques- Information security management systems- Requirements, in particular A.6.1 Internal organization, ISO, 2013
+ #### [27001A6.1] ISO / IEC 27001: 2013 - Annex A.6.1 Internal organization
+Information technology- Security techniques- Information security management systems- Requirements, in particular A.6.1 Internal organization, ISO, 2013
 
   
 

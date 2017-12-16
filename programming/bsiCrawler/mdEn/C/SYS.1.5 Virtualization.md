@@ -32,7 +32,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Faulty virtualization planning
 
-A virtualization server enables the operation of virtual IT systems, integrates the systems in the data center and controls their connection to other infrastructure elements, eg. B. networks and storage networks. Failure to plan how to integrate the virtualization servers technically and organizationally into the existing infrastructure can result in responsibilities for different areas not being clearly defined, such as: For applications, operating systems and network components. Furthermore, the responsibilities of different areas may overlap, or there may be no appropriate rights structure to separate administrative accesses for the different areas.### 2 2 Incorrect virtualization configuration
+A virtualization server enables the operation of virtual IT systems, integrates the systems in the data center and controls their connection to other infrastructure elements, eg. B. networks and storage networks. Failure to plan how to integrate the virtualization servers technically and organizationally into the existing infrastructure can result in responsibilities for different areas not being clearly defined, such as: For applications, operating systems and network components. Furthermore, the responsibilities of different areas may overlap, or there may be no appropriate rights structure to separate administrative accesses for the different areas.
+### 2 2 Incorrect virtualization configuration
 
 Virtualization changes the way servers are provisioned. Resources such as CPU, RAM, network connectivity, and storage are typically configured centrally through a management system and are no longer dictated by hardware and cabling. This can lead to faster configuration errors. If, for example, a highly vulnerable virtual IT system is mistakenly placed in an external DMZ, it can be reached from the Internet and thus be exposed to an increased risk.
 
@@ -58,7 +59,8 @@ Guest tools are often run with very high privileges. As a result, they can be mi
 
 ### 2 7 Compromising the virtualization software
 
-The virtualization software (also: hypervisor) is the central component of a virtualization server, it controls all running virtual machines on this server and allocates them processor and memory resources. Successfully attacking this component also results in compromised server virtual IT systems.3 requirements
+The virtualization software (also: hypervisor) is the central component of a virtualization server, it controls all running virtual machines on this server and allocates them processor and memory resources. Successfully attacking this component also results in compromised server virtual IT systems.
+3 requirements
 ---------------
 
 The following are specific requirements for virtualization. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
@@ -97,7 +99,8 @@ To administer or monitor the virtualization servers or the management systems, s
 
 #### SYS.1.5.A6 Logging in the virtual infrastructure
 
-Operating status, utilization and network connections of the virtual infrastructure MUST be logged continuously. If capacity limits are reached, virtual machines MUST be moved and eventually the hardware extended. The logging data SHOULD be evaluated regularly.#### SYS.1.5.A7 Time synchronization in virtual IT systems
+Operating status, utilization and network connections of the virtual infrastructure MUST be logged continuously. If capacity limits are reached, virtual machines MUST be moved and eventually the hardware extended. The logging data SHOULD be evaluated regularly.
+#### SYS.1.5.A7 Time synchronization in virtual IT systems
 
 The system time of all productive IT systems MUST always be synchronous (see also OPS.1.1.5 * Logging *).
 
@@ -133,7 +136,8 @@ The virtualization infrastructure SHOULD only be administered via a separate man
 
 Based on the tasks and roles defined in the planning (see SYS.1.5.A8 * Planning a Virtual Infrastructure *), a rights and roles concept SHOULD be created and implemented for the administration of virtual IT systems and networks, the virtualization server and the management environment , All components of the virtual infrastructure SHOULD be integrated into a central identity and authorization management.
 
-Administrators of virtual machines and administrators of the virtualization environment SHOULD differentiate and be equipped with different access rights.Furthermore, the management environment SHOULD be able to group virtual machines to introduce appropriate structuring associated with an appropriate administrator role assignment.
+Administrators of virtual machines and administrators of the virtualization environment SHOULD differentiate and be equipped with different access rights.
+Furthermore, the management environment SHOULD be able to group virtual machines to introduce appropriate structuring associated with an appropriate administrator role assignment.
 
 #### SYS.1.5.A13 Selection of suitable hardware for virtualization environments
 
@@ -177,7 +181,8 @@ The virtual infrastructure SHOULD be designed to be highly available. All virtua
 
 #### SYS.1.5.A21 Secure configuration of virtual IT systems with increased protection requirements (IA)
 
-For virtual IT systems, overbooking features for resources SHOULD be disabled.#### SYS.1.5.A22 Hardening of the Virtualization Server (CI)
+For virtual IT systems, overbooking features for resources SHOULD be disabled.
+#### SYS.1.5.A22 Hardening of the Virtualization Server (CI)
 
 The virtualization server SHOULD be hardened. Mandatory access controls SHOULD be used to isolate and encapsulate virtual IT systems in front of each other and over the virtualization server. Likewise, the IT system on which the management software is installed SHOULD be hardened.
 

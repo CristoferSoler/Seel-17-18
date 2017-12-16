@@ -32,7 +32,8 @@ If security measures are implemented without taking into account certain practic
 
 Likewise, individual measures can be taken that do not make economic sense. Thus, for the protection of information with a normal confidentiality, a cleanly implemented rights and role concept is more useful and economical than a certificate authority and the subsequent certificate-based encryption of the file server.
 
-### 2 3 Insufficient implementation of the ISMSIn many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be affected.
+### 2 3 Insufficient implementation of the ISMS
+In many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be affected.
 
 ### 2 4 Inadequate qualification of the examiner
 
@@ -73,7 +74,8 @@ Before an audit or revision, the subject matter and the audit objectives MUST be
 
 #### DER.3.1.A3 Conducting an audit
 
-During an audit it MUST be checked whether the requirements from guidelines, standards, etc. are met. The requirements MUST be known by the audited institution.An audit MUST include a document review and an on-site audit. The on-site audit MUST ensure that the auditors never intervene actively in IT systems and do not give any instructions for changes to the subject matter.
+During an audit it MUST be checked whether the requirements from guidelines, standards, etc. are met. The requirements MUST be known by the audited institution.
+An audit MUST include a document review and an on-site audit. The on-site audit MUST ensure that the auditors never intervene actively in IT systems and do not give any instructions for changes to the subject matter.
 
 All results of an audit MUST be documented in writing and summarized in an audit report. The audit report MUST be sent to the contact person of the institution in a timely manner.
 
@@ -113,7 +115,8 @@ The size of the audit / audit team SHOULD be the same as the audit area. In part
 
 The neutrality of the audit team SHOULD be ensured. In addition, the auditors should also be independent. If external service providers are used as auditors or auditors, they SHOULD check their independence and commit them to secrecy.
 
-#### DER.3.1.A10 Creation of an audit or audit plan [audit team leader]Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted if necessary. Minor revisions SHOULD be planned using the revision list.
+#### DER.3.1.A10 Creation of an audit or audit plan [audit team leader]
+Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted as needed. Minor revisions SHOULD be planned using the revision list.
 
 Sufficient resources should be allocated to the audit / audit team.
 
@@ -129,7 +132,7 @@ There should be an initial interview between the audit team or audit team and th
 
 #### DER.3.1.A13 Inspection and verification of documents [audit team]
 
-The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
+The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
 
 #### DER.3.1.A14 Selection of samples [audit team]
 
@@ -145,13 +148,14 @@ Together with the contact persons, the audit team SHOULD develop the schedule fo
 
 #### DER.3.1.A17 Conducting the on-site inspection [audit team]
 
-At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended according to requirements until the situation has been clarified. After the audit, the audit team SHOULD conduct a final meeting, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
+At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended as needed until the situation is clarified. After the audit, the audit team SHOULD conduct a final meeting, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
 
 #### DER.3.1.A18 conducting interviews [audit team]
 
 Interviews SHOULD be structured. Questions SHOULD be concise, precise and easy to understand. In addition, suitable questioning techniques SHOULD be used.
 
-#### DER.3.1.A19 Review of the risk treatment plan [audit team]The audit team SHOULD verify that the remaining residual risks to the information network are reasonable and sustainable. He SHOULD also check whether they are bindingly borne by the management. Measures that fundamentally contribute to the information security of the entire institution MUST NOT be included in the risk assumption.
+#### DER.3.1.A19 Review of the risk treatment plan [audit team]
+The audit team SHOULD verify that the remaining residual risks to the information network are reasonable and sustainable. He SHOULD also check whether they are bindingly borne by the management. Measures that fundamentally contribute to the information security of the entire institution MUST NOT be included in the risk assumption.
 
 The auditor SHOULD randomly verify whether or to what extent the measures specified in the risk treatment plan have been implemented.
 
@@ -191,7 +195,8 @@ The audit program SHOULD be continuously monitored and adjusted to meet deadline
 
 Using the existing audit program requirements and the results of the audits performed, SHOULD verify that the audit program is appropriate. Maybe it should be adapted.
 
-#### DER.3.1.A27 Storage and archiving of documents for audits and revisionsAudit programs as well as documents for audits and audits SHOULD be filed and kept in a comprehensible and audit-proof manner in accordance with statutory or other regulatory requirements. It should be ensured that only authorized persons can access audit programs and documents (especially audit reports). After expiry of the archiving periods, the audit programs and documents SHOULD be destroyed safely.
+#### DER.3.1.A27 Storage and archiving of documents for audits and revisions
+Audit programs as well as documents for audits and audits SHOULD be filed and kept in a comprehensible and audit-proof manner in accordance with statutory or other regulatory requirements. It should be ensured that only authorized persons can access audit programs and documents (especially audit reports). After expiry of the archiving periods, the audit programs and documents SHOULD be destroyed safely.
 
 ### 3.3 Requirements for increased protection requirements
 

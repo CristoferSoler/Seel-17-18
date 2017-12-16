@@ -28,11 +28,14 @@ def main():
 
     print('Getting Started with Data from the BSI')
     print('Delete all Files of the md directory')
-    deleteAllFilesInDirectory('./md')
-    deleteAllFilesInDirectory('./mdEn')
+    #deleteAllFilesInDirectory('./md')
+    #deleteAllFilesInDirectory('./mdEn')
     print('Deleting is is completed')
 
     print('Missing folder structures are created.')
+    if not os.path.exists('./references'):
+        os.makedirs('./references')
+
     if not os.path.exists('./md'):
         os.makedirs('./md')
 

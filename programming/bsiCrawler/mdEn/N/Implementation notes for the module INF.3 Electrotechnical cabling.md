@@ -40,7 +40,8 @@ The following are specific implementation notes in the area of ​​"Electrical
 
 ### 2.1 Basic measures
 
-The following measures should be implemented as a priority:#### INF.3.M1 Selection of suitable cable types
+The following measures should be implemented as a priority:
+#### INF.3.M1 Selection of suitable cable types
 
 When selecting cables, in addition to the transmission requirements, the ambient conditions during installation as well as during operation must be taken into account. In order to meet these different requirements, cable manufacturers offer different types of cables on the market or develop corresponding solutions.
 
@@ -70,7 +71,8 @@ When planning cable routes, care must be taken to avoid identifiable sources of 
 
 The location of equipment should be selected so that the cables connected to it are not in the running or driving area. If this can not be avoided, the cables must be protected according to the expected loads by means of suitable duct systems. As a general rule, make sure there is sufficient strain relief for the cables in the connectors when connecting the device.
 
-Underground garages are a major problem for damage-reducing cable management. Due to the safety circuits and the long open times of entrance gates, the access of third parties to underground garages can never be ruled out. Due to the usually low ceiling heights, it is possible with simple means to gain access to there running paths. Trains in the driving range can be below the permissible vehicle height. Damage or destruction of the tracks and cables due to vehicles that are too high can not be ruled out.In buildings shared with third parties, care must be taken to ensure that cables do not pass through their areas in floor, ceiling or wall ducts. All duct systems are to be closed mechanically in relation to the foreign occupied areas. It is better to let them end at the area borders.
+Underground garages are a major problem for damage-reducing cable management. Due to the safety circuits and the long open times of entrance gates, the access of third parties to underground garages can never be ruled out. Due to the usually low ceiling heights, it is possible with simple means to gain access to there running paths. Trains in the driving range can be below the permissible vehicle height. Damage or destruction of the tracks and cables due to vehicles that are too high can not be ruled out.
+In buildings shared with third parties, care must be taken to ensure that cables do not pass through their areas in floor, ceiling or wall ducts. All duct systems are to be closed mechanically in relation to the foreign occupied areas. It is better to let them end at the area borders.
 
 Due to areas with a high risk of fire, as far as possible no cables should be laid. If this is not possible and the functional integrity of all cables lying on the route is required, the corresponding route area must be provided with fire barriers. If the functional integrity is only required for individual cables, a suitable cable and the associated fastening should be selected for this purpose. A function maintenance cable can never fulfill the required function alone. The cable system is to be considered as a whole, including the attachment, such as routes, clamps or pipes. It is equally important that the cable system can not be destroyed by parts above it without function preservation, if they fall in case of fire.
 
@@ -86,7 +88,8 @@ If it is not possible to build roads with sufficient reserves, at least care sho
 
 It should be noted that breakthroughs through walls with a fire resistance class may only occupy up to 60% in order to achieve effective partitioning of these openings. If necessary, breakthroughs should be provided for later extensions during the construction and these should initially be closed by means of soft bulkheads or fire protection cushions.
 
-It is important that the route dimensioning must always be planned in connection with the selection of the cable types.The room occupancy and the connection values, for which an electrical installation was designed, are according to experience no longer in accordance with the actual conditions after some time. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the room and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may also be necessary to install additional or completely new infeeds, lines, distributors, etc.
+It is important that the route dimensioning must always be planned in connection with the selection of the cable types.
+The room occupancy and the connection values, for which an electrical installation was designed, are according to experience no longer in accordance with the actual conditions after some time. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the room and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may also be necessary to install additional or completely new infeeds, lines, distributors, etc.
 
 Both in terms of safety and considering the ever-faster data connections on copper lines, it is highly recommended that the power distribution network throughout the building be completely designed as a TN-S system. This is also a requirement of DIN VDE 0100-444. The PE and N conductors are routed separately from the equipotential bonding rail (PAS).
 
@@ -104,7 +107,8 @@ The fire safety officer must be given the opportunity to check the correct execu
 
 The involvement of the fire protection officer must be ensured by appropriate organizational instructions and documented in the planning and acceptance documents of the construction project.
 
-#### INF.3.M3 Professional installationThe installation work of the electrotechnical wiring must be done carefully and expertly. At the same time, all relevant standards must be observed. The decisive criteria for a professional execution of the electrotechnical cabling must therefore be checked by the client in all phases. It is the responsibility of the executing company to check, when the material is delivered, that the correct cables and connection components have been supplied. When laying power cables, special care must be taken to ensure that the installation does not cause damage and that the cable routes are such that damage to the routed cables due to normal use of the building is excluded. In addition, care must generally be taken that IT cables are routed separately from the electrotechnical cabling.
+#### INF.3.M3 Professional installation
+The installation work of the electrotechnical wiring must be done carefully and expertly. At the same time, all relevant standards must be observed. The decisive criteria for a professional execution of the electrotechnical cabling must therefore be checked by the client in all phases. It is the responsibility of the executing company to check, when the material is delivered, that the correct cables and connection components have been supplied. When laying power cables, special care must be taken to ensure that the installation does not cause damage and that the cable routes are such that damage to the routed cables due to normal use of the building is excluded. In addition, care must generally be taken that IT cables are routed separately from the electrotechnical cabling.
 
 ### 2.2 Standard measures
 
@@ -126,7 +130,8 @@ A checklist can be prepared for the acceptance report. The checklist should also
 
 In any electrically conductive network, whether it is the power supply or the data transmission, it can come at any time to overvoltages. Predominantly such overvoltages are caused by other current consumers in the same supply network. Lightning overvoltages, on the other hand, are much rarer, but have much greater potential for damage.
 
-Overvoltages can enter into a building and the IT operated there, not just via the lines laid in the building, but also via all electrically conductive external connections such as telephone, water or gas lines. In addition, overvoltages can also be coupled to internal lines.The necessary measures to protect IT equipment are essentially the same regardless of the cause of the overvoltage. The standard DIN EN 62305 "Lightning Protection" valid since October 2006 (corresponds to the standard VDE 0185-305 and IEC 62305) reorganizes the entire lightning and surge protection.
+Overvoltages can enter into a building and the IT operated there, not just via the lines laid in the building, but also via all electrically conductive external connections such as telephone, water or gas lines. In addition, overvoltages can also be coupled to internal lines.
+The necessary measures to protect IT equipment are essentially the same regardless of the cause of the overvoltage. The standard DIN EN 62305 "Lightning Protection" valid since October 2006 (corresponds to the standard VDE 0185-305 and IEC 62305) reorganizes the entire lightning and surge protection.
 
 Based on the new standard DIN EN 62305 an overvoltage protection concept has to be created.
 
@@ -148,7 +153,8 @@ The LPZ (lightning protection zones) should not be confused with the protection 
 
 Whether an LPS is required and with which protection class must be decided on the basis of the risk assessment (in accordance with Part 2 of DIN EN 62305). The earlier sufficient view into a building list is no longer enough!
 
-In many cases, it is not necessary to build a LPZ 2 or LPZ 3 building-wide. While the transition from LPZ 0 (which is anything outside of a building, where lightning can actually strike directly) to LPZ 1 actually has to be as close to the building envelope as possible, the construction of higher LPZ can be done anywhere and to any extent , However, it is important to ensure that no line that only enjoys the protection of the LPZ 1 (eg heating pipes) passes through higher-quality LPZ.The previously required minimum line lengths between the SPDs, ie the protective elements, and the different LPZs are no longer compulsory today. There are SPDs that realize the transition from the LPZ 0 directly into the LPZ 2 in one component.
+In many cases, it is not necessary to build a LPZ 2 or LPZ 3 building-wide. While the transition from LPZ 0 (which is anything outside of a building, where lightning can actually strike directly) to LPZ 1 actually has to be as close to the building envelope as possible, the construction of higher LPZ can be done anywhere and to any extent , However, it is important to ensure that no line that only enjoys the protection of the LPZ 1 (eg heating pipes) passes through higher-quality LPZ.
+The previously required minimum line lengths between the SPDs, ie the protective elements, and the different LPZs are no longer compulsory today. There are SPDs that realize the transition from the LPZ 0 directly into the LPZ 2 in one component.
 
 The protective effect of an SPD extends on both sides (to the incoming and outgoing line) only over a specific cable route, which must be named in detail by the manufacturer. If the cable length is exceeded, repeatedly install SPDs to maintain protection.
 
@@ -168,7 +174,8 @@ Of course, other media lines (coolant and condensate of a cold supply, normal wa
 
 Only with gas lines, a non-conductive pipe section can cause a true electrical isolation.
 
-#### INF.3.M7 Remove and disable unnecessary linesUnnecessary lines are those lines that are no longer required for the function of the building due to changes in use or modernization measures. These lines should always be completely removed in order to limit the fire loads in the building to the minimum necessary and to fill the existing routes only to the required extent. When removing cables, make sure that the fire barriers are properly closed again after the cables have been removed.
+#### INF.3.M7 Remove and disable unnecessary lines
+Unnecessary lines are those lines that are no longer required for the function of the building due to changes in use or modernization measures. These lines should always be completely removed in order to limit the fire loads in the building to the minimum necessary and to fill the existing routes only to the required extent. When removing cables, make sure that the fire barriers are properly closed again after the cables have been removed.
 
 Which cables are no longer needed may only be decided after careful examination by the responsible organizational unit. The decision has to be documented.
 
@@ -188,7 +195,8 @@ For buildings with several fire compartments, the execution of electrical cables
 
 If electrical cables are routed in a considerable packing density in the fire protection cut cable duct, larger temperature increases can occur. This can cause an increase in electrical line resistance with additional heating. Therefore, the specifications in DIN VDE 0100-520 "Installation of low-voltage systems - Part 5: Selection and erection of electrical equipment - Chapter 52: Cable and line systems" as German version of IEC 60364-5-52 depending on the type of installation must be observed. This is the responsibility of the electrician.
 
-Breakthroughs must be sealed after laying the cables according to the fire resistance class of the wall or ceiling. In order to facilitate the subsequent installation, suitable materials such as soft-bulkheads or fire-protection cushions can be used for measures with a temporary character. Corresponding standards and guidelines, such as DIN 4102 "Fire behavior of building materials and components", must be observed. Cable trays stretch when heated z. B. by fire and can destroy a soft or cushion bulkhead when they are passed through walls.Therefore, routes should not be passed through the bulkhead, but end on both sides at least 10 cm in front of the wall. This practice also facilitates fanning out the cables and lines that do not need to be bundled but individually routed through the bulkhead.
+Breakthroughs must be sealed after laying the cables according to the fire resistance class of the wall or ceiling. In order to facilitate the subsequent installation, suitable materials such as soft-bulkheads or fire-protection cushions can be used for measures with a temporary character. Corresponding standards and guidelines, such as DIN 4102 "Fire behavior of building materials and components", must be observed. Cable trays stretch when heated z. B. by fire and can destroy a soft or cushion bulkhead when they are passed through walls.
+Therefore, routes should not be passed through the bulkhead, but end on both sides at least 10 cm in front of the wall. This practice also facilitates fanning out the cables and lines that do not need to be bundled but individually routed through the bulkhead.
 
 Frequently in a route different cables, z. B. for telephone, LAN and building services. If there are any changes to the cabling, it should be clarified already in the planning phase whether other cable systems should also be replaced in the foreseeable future. A corresponding pooling of projects minimizes downtime and saves additional costs for multiple firewalling.
 
@@ -214,7 +222,8 @@ The type of documentation is similar to that of IT cabling. It therefore makes s
 
 To ensure the up-to-dateness of the documentation, it must be ensured that all work on the cabling is known in good time and completely to the person who maintains the documentation. It is Z. For example, it is conceivable to make the issue of material, the assignment of third-party orders or the release of secured areas dependent on the recording of this function.
 
-Since this documentation contains sensitive information, it must be stored securely and the access to be regulated.It makes sense to start with the documentation already during the planning of cabling measures in a tool and to transfer this from the planning status to the productive status after the implementation. In this way, it is easier to inform the users of the documentation about upcoming changes and keep the documentation up to date.
+Since this documentation contains sensitive information, it must be stored securely and the access to be regulated.
+It makes sense to start with the documentation already during the planning of cabling measures in a tool and to transfer this from the planning status to the productive status after the implementation. In this way, it is easier to inform the users of the documentation about upcoming changes and keep the documentation up to date.
 
 #### INF.3.M10 Neutral documentation in the distributors
 
@@ -249,7 +258,8 @@ In Germany the Berufsgenossenschaftliche regulation for safety and health at wor
 
 * electrical equipment and stationary equipment: at least every 4 years,
 * mobile devices: depending on the device type at least every 6 months up to at least every 2 years.
-Among the portable devices include power strips, but also many IT devices such as workstations.Although the DGUV-V3 is a pure accident prevention regulation, the knowledge gained from the test based on it can and should be taken into account in the VDE-based tests.
+Among the portable devices include power strips, but also many IT devices such as workstations.
+Although the DGUV-V3 is a pure accident prevention regulation, the knowledge gained from the test based on it can and should be taken into account in the VDE-based tests.
 
 ** ** logging
 
@@ -288,7 +298,8 @@ Dust-blocked fans can overheat the IT equipment being cooled, but can also becom
 
 Fans should therefore be checked and cleaned at regular intervals for free concentricity and for dust deposits. This should be done at least once a year and, if there is a need for it, more often.
 
-### 2.3 Measures for increased protection requirementsThe following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
+### 2.3 Measures for increased protection requirements
+The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
 
 #### INF.3.M13 Secondary Power Supply (A)
 
@@ -319,7 +330,8 @@ In the end of the distribution (ie between the last distribution and the consume
 In rooms with public traffic or in confusing areas of a building, it may make sense to secure lines and distribution boards against unauthorized access. This can be achieved in several ways:
 
 * Laying the cables or cable ducts under plaster,
-* Laying the pipes in steel armored pipe,* Laying the cables in mechanically strong and lockable channels,
+* Laying the pipes in steel armored pipe,
+* Laying the cables in mechanically strong and lockable channels,
 * Lock of distributors and
 * electrical monitoring of distributors and channels.
 In any case, the number of points where the routed cable is accessible must be minimized and the length of the connections to be protected against unauthorized access minimized.
@@ -360,7 +372,8 @@ In the case of existing bulkheads, it may be imperative in individual cases in t
 + Complete photo documentation of all essential single steps of installation or conversion,
 + Reason for the conversion,
 + Proof that the materials used in the conversion are approved by the manufacturer of the bulkhead for the conversion.
-+ All entries in the cadastre must be made immediately, at the latest 4 weeks after completion of the work.After a conversion, the old certificate at the place of installation must be clearly marked as invalid but in such a way that all relevant technical information can still be read and supplemented by a new certificate taking into account the conversion.
++ All entries in the cadastre must be made immediately, at the latest 4 weeks after completion of the work.
+After a conversion, the old certificate at the place of installation must be clearly marked as invalid but in such a way that all relevant technical information can still be read and supplemented by a new certificate taking into account the conversion.
 
 3 Further information
 ------------------------------

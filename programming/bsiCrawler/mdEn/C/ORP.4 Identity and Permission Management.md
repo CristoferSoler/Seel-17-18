@@ -34,7 +34,8 @@ Also, it is possible that employees who have been moved to a new department reta
 
 In institutions, employees often have user access to various IT systems such as production, test, quality assurance or project systems. These are usually in different areas of responsibility and are managed by different administrators. As a result, an identical and unique user ID is not used on all IT systems and there is usually no central overview of the user access on the individual IT systems. In such a scenario, it is not possible to immediately disable all user accesses of an employee in the event of an attack or password theft. Also, when an employee leaves the institution, all receipts can not be blocked immediately.
 
-### 2 3 Inappropriate access, access and access rights managementIf the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
+### 2 3 Inappropriate access, access and access rights management
+If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
 3 requirements
 ---------------
@@ -67,7 +68,8 @@ It MUST be specified which access rights are assigned to which persons within th
 
 #### ORP.4.A6 Assignment of access authorizations [Head IT]
 
-It MUST be determined which access rights are assigned or withdrawn to which persons within their function. If means of access such as chip cards are used, the issue or withdrawal MUST be documented. The authorized users SHOULD be trained on the correct handling of the means of access. For longer absences authorized persons SHOULD be temporarily suspended.#### ORP.4.A7 Assignment of access rights [Head IT]
+It MUST be determined which access rights are assigned or withdrawn to which persons within their function. If means of access such as chip cards are used, the issue or withdrawal MUST be documented. The authorized users SHOULD be trained on the correct handling of the means of access. For longer absences authorized persons SHOULD be temporarily suspended.
+#### ORP.4.A7 Assignment of access rights [Head IT]
 
 It MUST be determined which access rights are assigned or withdrawn to which persons within their function. If means of access such as chip cards are used, the issue or withdrawal MUST be documented. The access rights SHOULD be trained on the correct handling of the means of access. For longer absences authorized persons SHOULD be temporarily suspended.
 
@@ -111,7 +113,8 @@ For identity and authorization management, the following processes SHOULD be def
 * Manage identity profiles,
 * Manage user IDs
 * Manage permission profiles,
-* Manage roles.#### ORP.4.A16 Access and Access Control Policy [Administrator]
+* Manage roles.
+#### ORP.4.A16 Access and Access Control Policy [Administrator]
 
 A guideline should be created for the access and access control of IT systems, IT components and networks. You should use standard rights profiles that correspond to the functions and tasks of the employees. For each IT system and every IT application SHOULD have a written access control. In addition, all established users and assigned rights SHOULD be documented. It SHOULD be regulated that users can only access IT systems and services if they have been appropriately identified and authenticated beforehand.
 
@@ -160,7 +163,8 @@ Further information on threats and security measures in the area of ​​"ident
  ISF, especially Area TS1.4 Identity and Access Management, June 2016
 
  
-* #### [NIST80053A] NIST Special Publication 800-53AAssessing Security and Privacy Controls at Federal Information Systems, especially Areas AC and IA, 12.2014
+* #### [NIST80053A] NIST Special Publication 800-53A
+Assessing Security and Privacy Controls at Federal Information Systems, especially Areas AC and IA, 12.2014
 
  
 5 Appendix: Cross reference table for elementary hazards

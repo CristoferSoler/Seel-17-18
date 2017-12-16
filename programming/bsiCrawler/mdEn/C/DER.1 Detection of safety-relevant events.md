@@ -26,7 +26,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Disregard of legal regulations and company participation rights
 
-Programs that detect security-related events and evaluate log data often gather much information about the network structure and internal processes of an institution. This can z. B. Protected data, such as personal data, classified information or work processes of employees be included. However, the fact that such data are stored may violate personal rights or co-determination rights of employees. Under certain circumstances, the institution may also violate the respective state data protection laws or the Federal Data Protection Act.### 2 2 Insufficient qualification of those responsible
+Programs that detect security-related events and evaluate log data often gather much information about the network structure and internal processes of an institution. This can z. B. Protected data, such as personal data, classified information or work processes of employees be included. However, the fact that such data are stored may violate personal rights or co-determination rights of employees. Under certain circumstances, the institution may also violate the respective state data protection laws or the Federal Data Protection Act.
+### 2 2 Insufficient qualification of those responsible
 
 In the daily IT operation of an institution, many errors and errors can occur (for example, a large increase in incoming protocol data). If the responsible employees are not adequately sensitized and trained, there is a risk that they will not identify security-relevant events as such and thus an attack remains undetected.
 
@@ -59,7 +60,8 @@ The following are specific requirements for the detection of safety-related even
 
 The following requirements MUST be implemented as a priority:
 
-#### DER.1.A1 Creation of a security policy for the detection of security-relevant events [Information Security Officer (ISB)]On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the detection of security-relevant events can be planned, constructed and operated safely. The policy MUST be known to all employees responsible for detection and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be coordinated and documented with the responsible ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+#### DER.1.A1 Creation of a security policy for the detection of security-relevant events [Information Security Officer (ISB)]
+On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the detection of security-relevant events can be planned, constructed and operated safely. The policy MUST be known to all employees responsible for detection and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be coordinated and documented with the responsible ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 
 #### DER.1.A2 Compliance with legal conditions when evaluating log data [Information Security Officer (ISB)]
 
@@ -83,7 +85,8 @@ Each employee MUST report a detected incident immediately to Incident Management
 
 If IT systems or applications have functions that can be used to detect safety-related events, they MUST be activated and used.
 
-Logging must be activated on all components used (see OPS.1.1.5 * Logging *). If a security-relevant incident occurs, the messages MUST be evaluated at least locally. In addition, the logged events of other IT systems MUST be checked. Also the collected messages SHOULD be checked punctually in binding fixed periods.It MUST be checked whether additional malicious code scanners should be installed on central IT systems (see also SYS.1.1 * General Server *). If so, they MUST allow them to centrally access their messages and logs. In addition, they MUST be updated regularly. It MUST be ensured that the malicious code scanners automatically report safety-relevant events to the persons responsible and that the messages are also evaluated and examined.
+Logging must be activated on all components used (see OPS.1.1.5 * Logging *). If a security-relevant incident occurs, the messages MUST be evaluated at least locally. In addition, the logged events of other IT systems MUST be checked. Also the collected messages SHOULD be checked punctually in binding fixed periods.
+It MUST be checked whether additional malicious code scanners should be installed on central IT systems (see also SYS.1.1 * General Server *). If so, they MUST allow them to centrally access their messages and logs. In addition, they MUST be updated regularly. It MUST be ensured that the malicious code scanners automatically report safety-relevant events to the persons responsible and that the messages are also evaluated and examined.
 
 ### 3.2 Standard requirements
 
@@ -115,7 +118,8 @@ At transitions to external networks, TLS / SSH proxies SHOULD be used to break t
 
 #### DER.1.A11 Use of a central logging infrastructure for the evaluation of security-relevant events [responsible persons]
 
-The collected event messages of the IT systems and application systems SHOULD be stored on a central protocol infrastructure (see OPS1.1.5 * Logging *). The delivered event messages SHOULD be centrally stored, evaluated and retrieved using a tool. In order for the data to be correlated and reconciled, they SHOULD all be synchronized in time. The collected event messages SHOULD be regularly checked for abnormalities. So that safety-related events can also be detected retrospectively, the signatures of the detection systems SHOULD be up to date and up-to-date.#### DER.1.A12 Evaluation of information from external sources [Information Security Officer (ISB), specialist responsible]
+The collected event messages of the IT systems and application systems SHOULD be stored on a central protocol infrastructure (see OPS1.1.5 * Logging *). The delivered event messages SHOULD be centrally stored, evaluated and retrieved using a tool. In order for the data to be correlated and reconciled, they SHOULD all be synchronized in time. The collected event messages SHOULD be regularly checked for abnormalities. So that safety-related events can also be detected retrospectively, the signatures of the detection systems SHOULD be up to date and up-to-date.
+#### DER.1.A12 Evaluation of information from external sources [Information Security Officer (ISB), specialist responsible]
 
 In order to gain new insights into security-relevant events for their own information network, external sources SHOULD be consulted and evaluated. Since messages are delivered to an institution via different channels, it should be ensured that these messages are also recognized by the employees as being relevant and forwarded to the right place. If information comes from qualified sources, they SHOULD be evaluated in principle. All submitted information SHOULD be evaluated as to whether it is relevant to its own information network. If this is the case, the information SHOULD be escalated according to the incident handling procedure (see DER.2.1. * Incident Management *).
 
@@ -141,7 +145,8 @@ The system managers should regularly audit the analysis parameters and, if neces
 
 Applications with increased protection requirements SHOULD be protected by additional detection measures. For this purpose, for. B. such detection systems are used, with which the increased protection requirements can be technically ensured.
 
-#### DER.1.A17 Automatic response to security events (CI)In a safety-relevant event, the detection systems used should automatically report the event and react with suitable protective measures. In doing so, procedures should be used that automatically detect possible attacks, attempted abuse or security breaches. It SHOULD be possible to automatically intervene in the data stream to prevent a possible security incident.
+#### DER.1.A17 Automatic response to security events (CI)
+In a safety-relevant event, the detection systems used should automatically report the event and react with suitable protective measures. In doing so, procedures should be used that automatically detect possible attacks, attempted abuse or security breaches. It SHOULD be possible to automatically intervene in the data stream to prevent a possible security incident.
 
 #### DER.1.A18 Conduct regular integrity checks (CI)
 

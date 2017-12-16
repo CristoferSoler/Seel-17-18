@@ -30,7 +30,8 @@ New versions of mobile operating systems and updates are regularly released. The
 
 Applications (apps) can contain vulnerabilities that can be exploited for local attacks or attacks over network connections. In addition, many apps are no longer maintained by third-party developers after some time. Detected security deficiencies can then not be remedied by appropriate updates.
 
-### 2 4 ManipulationAn attacker can gain access to the devices to manipulate files. For example, he could change the configuration, start additional services, or install malware. As a result, an attacker on the manipulated system can, for example, record the communication connections (unwanted data outflow) or change the rules according to his needs (eg allow access from the Internet to the intranet).
+### 2 4 Manipulation
+An attacker can gain access to the devices to manipulate files. For example, he could change the configuration, start additional services, or install malware. As a result, an attacker on the manipulated system can, for example, record the communication connections (unwanted data outflow) or change the rules according to his needs (eg allow access from the Internet to the intranet).
 
 ### 2 5 Malware
 
@@ -61,7 +62,8 @@ If private devices are used for business purposes, legal problems may arise, for
 Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
 3 requirements
----------------The following are specific requirements for the smartphone and tablet sector. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for the smartphone and tablet sector. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -97,7 +99,8 @@ A process MUST be established for automatic updates of the operating system and 
 
 The access of apps and operating system to data and interfaces MUST be restricted appropriately. The privacy settings MUST be configured as restrictively as possible. In particular, access to the camera, microphone and geodata MUST be checked for compliance with the organization's privacy and security standards and restrictively configured or disabled.
 
-#### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately initiate suitable countermeasures.
+#### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately initiate suitable countermeasures.
 
 The possible consequences of safety-critical events MUST be investigated. Ultimately, all necessary action MUST be taken to rule out access to confidential and mission-critical information of the institution.
 
@@ -151,7 +154,8 @@ If you want to use a biometric fingerprint sensor, you should check to see if si
 
 #### SYS.3.2.1.A19 Using a language assistant
 
-Language assistants SHOULD only be used if the function is necessary. Otherwise they SHOULD be deactivated. In general, a voice assistant SHOULD NOT be able to be used if the device is locked.#### SYS.3.2.1.A20 Select and share apps
+Language assistants SHOULD only be used if the function is necessary. Otherwise they SHOULD be deactivated. In general, a voice assistant SHOULD NOT be able to be used if the device is locked.
+#### SYS.3.2.1.A20 Select and share apps
 
 Apps from public app stores SHOULD be reviewed and approved by those in charge. For this, a release process should be developed in which suitable evaluation criteria are defined. All shared apps SHOULD be published internally in a standard catalog.
 
@@ -223,7 +227,8 @@ Further information on threats and security measures in the "General Smartphones
 
   
 
- SPECIAL PUBLICATION 1800-1d, NIST, 07.2015[https://nccoe.nist.gov/sites/default/files/nccoe/NIST\_SP1800-1d\_Draft\_HIT\_Mobile-StandardsControls.pdf] (https://nccoe.nist.gov/sites/default/ files / nccoe / NIST_SP1800-1d_Draft_HIT_Mobile-StandardsControls.pdf)
+ SPECIAL PUBLICATION 1800-1d, NIST, 07.2015
+[https://nccoe.nist.gov/sites/default/files/nccoe/NIST\_SP1800-1d\_Draft\_HIT\_Mobile-StandardsControls.pdf] (https://nccoe.nist.gov/sites/default/ files / nccoe / NIST_SP1800-1d_Draft_HIT_Mobile-StandardsControls.pdf)
 
  
 * #### [NIST800124] Guidelines for Managing the Security of Mobile Devices in the Enterprise

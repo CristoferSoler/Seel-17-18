@@ -1,0 +1,20 @@
+[
+  {
+    "model": "auth.group_permissions",
+    "pk": 1,
+    "fields": {
+      "group_id" : ["moderators"],
+      "permission_id": ["check_article", "wiki", "article"]
+    }
+  },
+
+    {
+    "model": "auth.group_permissions",
+    "pk": 2,
+    "fields": {
+      "group_id" : ["moderators"],
+      "permission_id": ["uncheck_article", "wiki", "article"]
+    }
+  }
+
+]
