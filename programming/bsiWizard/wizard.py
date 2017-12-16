@@ -8,6 +8,7 @@ import warnings
 import shutil
 import os
 import pandas
+from nltk.stem import WordNetLemmatizer
 
 pathOfMd = 'mdEn/C/'
 pathOfTxt = 'txt/'
@@ -18,6 +19,8 @@ pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
 
 csvFile = []
+
+lemmanizeCorpus = True
 
 #def lemmatizeTxt():
 #    files = readInFilesToPathList(path_to_corpus)
@@ -70,6 +73,15 @@ def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
     corpus = list(preprocessing.read_from_pathlist([file]))
     tokenizedCorpus = [list(preprocessing.tokenize(document)) for document in corpus]
+
+    #limatize Corpus
+    if(lemmanizeCorpus):
+        lenCorpus = len(tokenizedCorpus[0])
+        for i in range(0,lenCorpus):
+            wnl = WordNetLemmatizer()
+            word = tokenizedCorpus[0][i]
+            lemmanizeWord = wnl.lemmatize(word,pos='v')
+            tokenizedCorpus[0][i] = lemmanizeWord
 
     documentTermMatrix = preprocessing.create_document_term_matrix(tokenizedCorpus,fileName)
     stopwords = getStopWordList()
