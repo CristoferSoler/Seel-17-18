@@ -9,6 +9,7 @@ import shutil
 import os
 import pandas
 from nltk.stem import WordNetLemmatizer
+import spacy
 
 pathOfMd = 'mdEn/C/'
 pathOfTxt = 'txt/'
@@ -17,11 +18,11 @@ pathToStopwordList = 'stopwordlist/en.txt'
 #pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
-
+nlp = spacy.load('en')
 csvFile = []
 
 lemmanizeCorpus = True
-
+lemmanizeCorpus1 = False
 #def lemmatizeTxt():
 #    files = readInFilesToPathList(path_to_corpus)
 #    for file in files:
@@ -73,14 +74,24 @@ def preprocessingOfFile(file):
     corpus = list(preprocessing.read_from_pathlist([file]))
     tokenizedCorpus = [list(preprocessing.tokenize(document)) for document in corpus]
 
+    #print(tokenizedCorpus)
+
     #limatize Corpus
     if(lemmanizeCorpus):
         lenCorpus = len(tokenizedCorpus[0])
+        wnl = WordNetLemmatizer()
         for i in range(0,lenCorpus):
-            wnl = WordNetLemmatizer()
             word = tokenizedCorpus[0][i]
-            lemmanizeWord = wnl.lemmatize(word,pos='v')
+            lemmanizeWord = wnl.lemmatize(word)
             tokenizedCorpus[0][i] = lemmanizeWord
+
+    if (lemmanizeCorpus1):
+        lenCorpus = len(tokenizedCorpus[0])
+        #nlp = spacy.load('en')
+        for i in range(0, lenCorpus):
+            word = nlp(tokenizedCorpus[0][i])
+            tokenizedCorpus[0][i] = word[0].lemma_
+    #print(tokenizedCorpus)
 
     documentTermMatrix = preprocessing.create_document_term_matrix(tokenizedCorpus,fileName)
     stopwords = getStopWordList()
