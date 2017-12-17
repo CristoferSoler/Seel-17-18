@@ -1,12 +1,12 @@
 {% extends 'uga/article.html' %}
-{% load wiki_tags i18n sekizai_tags %}
+{% load wiki_tags bsi_tags i18n sekizai_tags %}
 
 {% block wiki_contents_tab %}
 
     <div class="row">
 
         <div class="col-lg-8">
-            <form method="POST" class="form-horizontal" id="article_edit_form">
+            <form method="POST" class="form-horizontal" id="article_uga_edit_form">
                 {% with edit_form as form %}
                     {% include "wiki/includes/editor.html" %}
                 {% endwith %}
@@ -14,16 +14,12 @@
                 <div class="form-group form-actions">
                     <div class="col-lg-12">
                         <div class="col-lg-offset-2">
-                            <button class="btn btn-default" type="submit" name="preview" value="1" id="id_preview"
-                                    formaction="{% url 'wiki:preview' path=urlpath.path article_id=article.id %}"
-                                    formtarget="previewWindow">
-                                <span class="fa fa-eye"></span>
-                                {% trans "Preview" %}
-                            </button>
                             <button class="btn btn-primary" type="submit" name="save" value="1" id="id_save">
                                 <span class="fa fa-check"></span>
                                 {% trans "Save changes" %}
                             </button>
+
+
 
                             <div class="btn-toolbar pull-right">
                                 {% if article|can_delete:user %}

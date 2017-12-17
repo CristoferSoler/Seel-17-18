@@ -1,6 +1,7 @@
+from django.contrib.auth.models import User
 from wiki.models import URLPath
 
-from bsi.models import BSI, UGA
+from bsi.models.article_extensions import BSI, UGA, ArticleRevisionValidation
 from bsi.tests.super_test_case import InitTestCase
 
 
@@ -31,3 +32,21 @@ class UGATestCase(InitTestCase):
         uga.remove_link_from_bsi(bsi)
 
         self.assertFalse(uga.is_linked_to.filter(url=bsi_path))
+
+
+class ArticleRevisionValidationTestCase(InitTestCase):
+    def setUp(self):
+        super(ArticleRevisionValidationTestCase, self).setUp()
+        # create moderator
+
+
+    def test_check(self):
+        uga = UGA.objects.all()[0]
+        validate_revision = ArticleRevisionValidation.get_or_create(uga.url.article.current_revision)
+        # todo check revision and assert
+
+
+    def test_uncheck(self):
+        uga = UGA.objects.all()[0]
+        validate_revision = ArticleRevisionValidation.get_or_create(uga.url.article.current_revision)
+        # todo check revision and assert

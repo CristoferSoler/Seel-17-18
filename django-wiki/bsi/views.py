@@ -45,6 +45,9 @@ class WikiArticleView(ArticleView):
             *args,
             **kwargs)
 
+    def post(self, request, *args, **kwargs):
+        pass
+
 
 class BSISearchView(SearchView):
     template_name = "bsi/search.html"
