@@ -12,3 +12,15 @@ function initWizard(components,sortedTopics) {
         //window.alert(JSON.stringify(element))
     })
 }
+
+function yesPress() {
+    window.alert('Yes');
+}
+
+function noPress() {
+    window.alert('No');
+}
+
+function dontknowPress() {
+    window.alert('dont know');
+}

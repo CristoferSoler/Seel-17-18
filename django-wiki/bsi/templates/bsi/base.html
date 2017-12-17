@@ -129,15 +129,15 @@
                     <div class="row abstandButtonToBottom" >
                         <div class="col-md-3"></div>
                         <div class="col-md-1">
-                            <button class="btn btn-primary">Yes</button>
+                            <button class="btn btn-primary" id="yesButton">Yes</button>
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-1">
-                            <button class="btn btn-primary">No</button>
+                            <button class="btn btn-primary" id="noButton">No</button>
                         </div>
                         <div class="col-md-1"></div>
                         <div class="col-md-2">
-                            <button class="btn btn-primary">Don't know</button>
+                            <button class="btn btn-primary" id="dontKnowButton">Don't know</button>
                         </div>
                         <div class="col-md-3"></div>
                     </div>
@@ -190,6 +190,20 @@
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+
+        $('#yesButton').on('click', function (e) {
+            yesPress();
+        })
+
+        $('#noButton').on('click', function (e) {
+            noPress();
+        })
+
+        $('#dontKnowButton').on('click', function (e) {
+            dontknowPress();
+        })
+
+
     });
 
     $('#wizard').on('show.bs.modal', function (e) {
