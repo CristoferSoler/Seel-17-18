@@ -33,7 +33,7 @@ class ArticleRevisionValidation(models.Model):
         return rev
 
     @transaction.atomic
-    def check(self, user):
+    def checkArticle(self, user):
         article = Article.objects.get(current_revision=self.revision)
         if can_check(article, user):
             self.status = True
@@ -43,7 +43,7 @@ class ArticleRevisionValidation(models.Model):
             raise PermissionError("The user " + user.__str__() + " has no permissions to check this article.")
 
     @transaction.atomic
-    def uncheck(self, user):
+    def uncheckArticle(self, user):
         article = Article.objects.get(current_revision=self.revision)
         if can_uncheck(article, user):
             self.status = False

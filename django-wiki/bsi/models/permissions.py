@@ -1,6 +1,5 @@
 from wiki.models import URLPath
-
-from bsi.models import article_extensions
+import article_extensions
 
 
 def can_check(article, user):
