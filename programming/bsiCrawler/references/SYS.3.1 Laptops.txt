@@ -9,7 +9,7 @@
 #### SYS.3.1.A7 Controlled Handover and Withdrawal of a Laptop [User]
 #### SYS.3.1.A8 Secure connection of laptops to data networks [user]
 #### SYS.3.1.A9 Secure remote access from the road [user]
-#### SYS.3.1.A10 Synchronization of Laptop Databases [User]
+#### SYS.3.1.A10 Synchronization of Laptop Datasets [User]
 #### SYS.3.1.A11 Ensuring power supply [user]
 #### SYS.3.1.A12 loss report [user]
 #### SYS.3.1.A13 Encryption of laptops
@@ -19,3 +19,12 @@
 #### SYS.3.1.A16 Central administration of laptops (CI)
 #### SYS.3.1.A17 Collective Storage (A)
 #### SYS.3.1.A18 Using theft-proofing (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.4 Pollution, dust, corrosion
+* G 0.14 Spying out information (spying)
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.19 Disclosure of information worthy of protection
+* G 0.22 Manipulation of information
+* G 0.39 Malware
+* G 0.45 data loss

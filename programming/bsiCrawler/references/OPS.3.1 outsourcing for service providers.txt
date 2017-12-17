@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### OPS.3.1.A1 Creation of a rough concept for the outsourcing service
 ### 3.2 Standard requirements
 #### OPS.3.1.A2 Contract Design with Outsourcing Clients [ISB Outsourcing Service Provider]
@@ -17,3 +17,18 @@
 #### OPS.3.1.A15 Orderly termination of an outsourcing relationship [Institutional Management]
 ### 3.3 Requirements for increased protection requirements
 #### OPS.3.1.A16 Security check of employees [Head of Personnel] (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.9 Failure or malfunction of communication networks
+* G 0.14 Spying out information (spying)
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.22 Manipulation of information
+* G 0.25 Failure of devices or systems
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.33 Personnel loss
+* G 0.38 Abuse of personal data
+* G 0.41 Sabotage
+* G 0.42 Social engineering
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

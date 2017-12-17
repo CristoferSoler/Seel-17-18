@@ -32,7 +32,7 @@ Despite regular contradictory recommendations, many users also store important d
 
 * Data loss on hardware defects and
 * no access to relevant data in case of substitution.
-But even if basic requirements for central storage are adhered to, local copies of the centrally stored data are often created in addition. This can lead to the following problems:
+But even if basic requirements for central storage are adhered to, often additional local copies of the centrally stored data are created. This can lead to the following problems:
 
 * Waste of local storage space,
 * premature or non-deletion of data and
@@ -43,7 +43,7 @@ Clients typically store a lot of data across their entire organization, the loss
 
 ### 2 4 Hardware defects due to incorrect operation
 
-Unlike central IT systems such as servers, client users work directly on the device. Physical access can intentionally or unintentionally damage the client. For example, they can step on floor-standing IT systems, upset monitors, tripping over cables, or pouring drinks into keyboards. Often it is not sufficient to replace hardware only in case of a defect. For example, in the event of a hard disk failure, stored data can not be recovered. In addition, the IT system can not be used until the repair is complete. In case of failure of a mobile device on the road, the work can be continued only after the return.
+Unlike central IT systems such as servers, client users work directly at the end device. Physical access can intentionally or unintentionally damage the client. For example, they can step on floor-standing IT systems, upset monitors, tripping over cables, or pouring drinks into keyboards. Often it is not sufficient to replace hardware only in case of a defect. For example, in the event of a hard disk failure, stored data can not be recovered. In addition, the IT system can not be used until the repair is complete. In case of failure of a mobile device on the road, the work can be continued only after the return.
 
 ### 2 5 Software vulnerabilities or errors
 
@@ -69,7 +69,7 @@ Many clients have a microphone and a camera. These can be used by anyone who has
 
 The following are specific requirements for protecting clients. Basically, the * IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -102,7 +102,7 @@ Virus protection programs on the clients MUST be configured so that users can ne
 
 #### SYS.2.1.A7 logging
 
-It MUST be decided which information should be logged on clients at least, how long the log data is kept and who can see the log data under which conditions. In general, all safety-related system events MUST be logged.
+It MUST be decided which information should be logged on clients at least, how long the log data is stored and who can see the log data under which conditions. In general, all safety-related system events MUST be logged.
 
 #### SYS.2.1.A8 Hedging the boot process
 
@@ -121,7 +121,7 @@ For the secure operation of clients SHOULD be planned in advance, where and how 
 
 #### SYS.2.1.A11 Procurement of clients
 
-Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a firmware configuration interface for UEFI SecureBoot and for the TPM (if any) that grants control by the owner (institution), enabling self-managed operation of SecureBoot and the TPM.
+Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a UEFI SecureBoot firmware configuration interface and the TPM (if any) that grants control by the owner (institution) allowing self-managed operation of SecureBoot and the TPM.
 
 #### SYS.2.1.A12 Compatibility check of software
 
@@ -160,7 +160,7 @@ New certificates SHOULD only be activated after checking the "fingerprint". Vali
 
 #### SYS.2.1.A19 Restrictive rights assignment
 
-The available functionality of the IT system SHOULD be restricted for individual users or user groups so that they have the exact rights and access to the functions they need to perform their tasks. Access authorizations SHOULD be awarded as restrictively as possible. It SHOULD be checked periodically if the permissions, especially for system directories and files, comply with the requirements of the security policy. System files SHOULD have access only to system administrators if possible. The circle of authorized administrators SHOULD be kept as small as possible. Also, system directories SHOULD only provide the necessary privileges to the users.
+The available functionality of the IT system SHOULD be restricted for individual users or user groups so that they have the exact rights and access to the functions they need to perform their tasks. Access authorizations SHOULD be awarded as restrictively as possible. It SHOULD be checked periodically if the permissions, especially for system directories and files, comply with the requirements of the security policy. System files SHOULD have access only to system administrators if possible. The circle of authorized administrators SHOULD be kept as small as possible. Even system directories SHOULD only provide the necessary privileges for the users.
 
 #### SYS.2.1.A20 Protection of the administration interfaces
 
@@ -183,14 +183,14 @@ It SHOULD prevent unauthorized software from being installed on clients of drive
 
 #### SYS.2.1.A25 Secure IT Use Policy [User]
 
-A guideline SHOULD be created that transparently describes for all employees which framework conditions must be adhered to when using IT and which security measures have to be taken. The guideline SHOULD cover the following points:
+A guideline SHOULD be created that transparently describes for all employees which framework conditions must be adhered to in the use of IT and which security measures have to be taken. The guideline SHOULD cover the following points:
 
 * Security objectives of the institution
 * Important terms
 * Tasks and roles related to information security
 * Contact for information security issues
 * Safety measures to be implemented and followed by the employees
-The policy SHOULD be made known to all users. Each new user SHOULD confirm the acknowledgment of the policy before using the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
+The policy SHOULD be notified to all users. Each new user SHOULD confirm the acknowledgment of the policy before being allowed to use the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
 
 #### SYS.2.1.A26 Protection of applications
 
@@ -198,7 +198,7 @@ To make it difficult to exploit vulnerabilities in applications, ASLR and DEP / 
 
 #### SYS.2.1.A27 Controlled decommissioning of a client
 
-When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist SHOULD be created that can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist should be created, which can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
@@ -215,7 +215,7 @@ The clients SHOULD be integrated into a suitable system monitoring or monitoring
 
 #### SYS.2.1.A30 Setting Up a Client Reference Installation (CIA)
 
-For clients, a reference installation SHOULD be created in which the basic configuration and all configuration changes, updates and patches can be pre-tested by the users before being loaded on the clients. In addition, such a reference installation SHOULD also be used to simplify the installation and re-installation of the clients by appropriately copying an appropriately pre-configured installation to the clients to be installed ("cloning"). For several typical and more frequently recurring test cases, checklists SHOULD be created that can be run during testing. In addition, all tests SHOULD be documented so that they can be retraced at a later date.
+For clients, a reference installation SHOULD be created in which the basic configuration and all configuration changes, updates and patches can be pre-tested by the users before importing them to the clients. In addition, such a reference installation SHOULD also be used to simplify the installation and re-installation of the clients by appropriately copying an appropriately pre-configured installation to the clients to be installed ("cloning"). For several typical and more frequently recurring test cases, checklists SHOULD be created that can be run during testing. In addition, all tests SHOULD be documented so that they can be retraced at a later date.
 
 #### SYS.2.1.A31 Local packet filter (CIA) setup
 
@@ -223,14 +223,14 @@ On each computer, in addition to the central security gateways used, local packe
 
 #### SYS.2.1.A32 Use of Additional Exploit Prevention Measures (CIA)
 
-The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. If it is not possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
+The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. Should it not be possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
 
 #### SYS.2.1.A33 Application Whitelisting (CIA)
 It should be ensured via application whitelisting that only permitted programs and scripts are executed. The rules SHOULD be made as narrow as possible. If paths and hashes can not be specified explicitly, alternatively certificate based or path rules should be used.
 
 #### SYS.2.1.A34 Application Isolation (CIA)
 
-Applications that manipulate external data SHOULD only be operated in a run-time environment isolated from the operating system.
+Applications that manipulate external data SHOULD only be operated in a runtime environment isolated from the operating system.
 
 #### SYS.2.1.A35 Active Management of Root Certificates (CI)
 
@@ -238,7 +238,7 @@ During the procurement and installation of the client SHOULD you document which 
 
 #### SYS.2.1.A36 Self-managed use of SecureBoot and TPM
 
-On UEFI-compatible systems, the bootloader, kernel, and any required firmware components SHOULD be signed by self-keyed key material and unwanted key material should be removed. Unless the TPM is needed it SHOULD be disabled.
+On UEFI-compatible systems, the boot loader, kernel, and any required firmware components SHOULD be signed by self-controlled key material and any unneeded key material should be removed. Unless the TPM is needed it SHOULD be disabled.
 
 #### SYS.2.1.A37 Protection against unauthorized registrations (CIA)
 

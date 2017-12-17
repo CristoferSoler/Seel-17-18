@@ -47,7 +47,7 @@ Routers and switches ship with a standard configuration in which many services a
 
 ### 2 5 Incorrect planning and conception
 
-Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when used for the first time. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
+Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when it is first used. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
 
 ### 2 6 Incompatible active network components
 
@@ -70,7 +70,7 @@ For Gratuitous ARP (GARP) attacks, the attacker sends unsolicited ARP responses 
 
 The following are specific requirements for protecting * routers and switches *. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -99,7 +99,7 @@ It must be regulated, who may access a router or switch. ONLY ONCE as many acces
 
 All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
 
-To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
+To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and the administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
 All services not required for the management interface MUST be deactivated. If a network component has a dedicated hardware interface, unauthorized access to it MUST be prevented.
 
@@ -131,15 +131,15 @@ The most important operational tasks of a router or switch MUST be suitably docu
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​routers and switches. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state of the art in the area of ​​routers and switches. They SHOULD be implemented in principle.
 
 #### NET.3.1.A10 Creation of a Security Policy [Information Security Officer (ISB)]
 
-On the basis of the institution's general security policy, a specific security policy SHOULD be created in which comprehensible requirements and specifications are described, how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
+On the basis of the institution's general security policy, a specific security policy SHOULD be created, in which comprehensible requirements and specifications are described, how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
 
 #### NET.3.1.A11 Obtain a router or switch
 
-Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the institution's desired level of safety can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
+Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the level of security sought by the institution can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
 
 #### NET.3.1.A12 Creation of a configuration checklist for routers and switches
 

@@ -5,7 +5,7 @@
 
 Mobile devices are a constant companion in today's information society. They are constantly online, that is connected to the Internet or the internal institutional network, and thus provide access to digital information at all times. Communication takes place via various interfaces, examples being GSM / UMTS / LTE, WLAN, Bluetooth.
 
-Smartphones and tablets are widely used today due to modern, simple operating concepts and high performance. These include the Apple-produced mobile devices iPhone and iPad with the iOS operating system. Originally, these devices were designed for home use. However, due to the reorganization of infrastructures and the way in which information is collected and processed, they are increasingly being used in the professional environment and even partially replacing notebooks.
+Smartphones and tablets are widely used today due to modern, simple operating concepts and high performance. These include the Apple-produced mobile devices iPhone and iPad with the iOS operating system. Originally, these devices were designed for home use. However, due to the reorganization of the infrastructures and the way in which information is collected and processed, they are increasingly being used in the professional environment and in some cases even replacing notebooks.
 
 With the integration of business features, since version 4 iOS has been progressively expanded for enterprise and government use and administrative features have been integrated from an institutional perspective. These include Apple's centralized device registration program and options such as single sign-on (SSO).
 
@@ -27,11 +27,11 @@ The following specific threats and vulnerabilities are of particular importance 
 The so-called code lock locks iOS-based devices against unauthorized access. If this feature is not activated, or if it uses an easily guessable code and can be bypassed, there is an increased risk of unauthorized access to iOS-based devices. In addition, the device code used is an essential part of the entropy of certain encryption codes.
 
 ### 2 2 Jailbreak
-In the previous versions of the iOS operating system, vulnerabilities were mostly found that make it possible to undermine Apple's established security framework and thus access system processes and protected storage areas. So-called "jailbreak" exploit these vulnerabilities, for example, to be able to use alternative app stores or Apple's unwanted extensions. Jailbreaking techniques are used by attackers to install malware or perform other malicious manipulation on the iOS-based device.
+In the previous versions of the iOS operating system, vulnerabilities were mostly found that make it possible to undermine Apple's established security framework and thus access system processes and protected storage areas. So-called "jailbreak" exploit these vulnerabilities, for example, to be able to use alternative app stores or Apple's unwanted extensions. Jailbreaking techniques are used by attackers to install malware or perform other harmful manipulations on the iOS-based device.
 
 ### 2 3 Risk concentration through an Apple ID account for all Apple services
 
-The Apple ID provides centralized access to all services provided by Apple (such as iMessage, FaceTime, iCloud, App Store, iTunes, iBook Store, iPhone Search, or Sync Services). If an unauthorized person gains access to an insufficiently secured Apple ID, they may be able to use these Apple services under a false identity, disrupt the availability of Apple ID-based services, remotely locate iOS-based devices or reset all data, and so on access information from the cloud service "iCloud". In particular, an attacker with activated iCloud backups can clone the stored data on their own iOS device.
+The Apple ID provides centralized access to all services provided by Apple (such as iMessage, FaceTime, iCloud, App Store, iTunes, iBook Store, iPhone Search, or Sync Services). If an unauthorized person gains access to an insufficiently secured Apple ID, they may be able to use these Apple services under a false identity, interfere with the availability of Apple ID-based services, remotely locate iOS-based devices, or reset all data, as well access information from the cloud service "iCloud". In particular, an attacker with activated iCloud backups can clone the stored data on their own iOS device.
 
 ### 2 4 Missing OS updates on old devices
 
@@ -43,7 +43,7 @@ IOS apps can contain vulnerabilities that can be exploited for local attacks or 
 
 ### 2 6 Deeper integration for pre-installed apps and their functionalities
 
-With the operating system, Apple already delivers deeply integrated and pre-installed apps (eg the "Mail" and "Clock" apps) as well as interfaces to third-party services (such as Twitter or Facebook). Some of these apps are running with higher permissions than apps downloadable from the App Store, which increases the attack surface of the iOS-based device. The use of the non-erasable or non-configurable interfaces is usually undesirable in professional use and also increases the attack surface of the device.
+With the operating system, Apple already delivers deeply integrated and pre-installed apps (eg the "Mail" and "Clock" apps) as well as interfaces to third-party services (such as Twitter or Facebook). Some of these apps are running with higher privileges than apps downloadable from the App Store, which increases the attack surface of the iOS-based device. The use of the non-erasable or non-configurable interfaces is usually undesirable in professional use and also increases the attack surface of the device.
 
 ### 2 7 Abuse of the fingerprint sensor
 
@@ -90,7 +90,7 @@ iOS-based devices are basically closely interlinked with iCloud services from th
 
 #### SYS.3.2.3.A3 Using the device code
 
-Activating the device code increases the security of the data on the iOS-based device and, in addition, provides improved entropy for certain encryption codes based on the complexity of the device code. Based on the established security policy and protection needs of the data processed or stored on the iOS-based device, a reasonably complex device code MUST be used.
+Activating the device code increases the security of the data on the iOS-based device and, in addition, provides improved entropy for certain encryption codes based on the complexity of the device code. Based on the established security concept and the protection requirements of the data processed or stored on the iOS-based device, a reasonably complex device code MUST be used.
 
 #### SYS.3.2.3.A4 Using the Automatic Lock Configuration Option
 
@@ -102,7 +102,7 @@ To prevent unauthorized access to user files on a locked device, the time period
 
 #### SYS.3.2.3.A6 Using the configuration option "Maximum number of failed attempts"
 
-In order to prevent the systematic spying of the passcode, a number of maximum possible incorrect entries of the passcode must be configured in accordance with the protection requirements. Exceeding this set value MUST automatically initialize a full local wipe on the iOS-based device.
+In order to prevent the systematic spying of the passcode, a number of maximum possible incorrect entries of the passcode must be configured in accordance with the protection requirement. Exceeding this set value MUST automatically initialize a full local wipe on the iOS-based device.
 
 #### SYS.3.2.3.A7 Prevent unauthorized deletion of configuration profiles
 
@@ -117,15 +117,15 @@ Together with the basic requirements, the following requirements are state of th
 
 #### SYS.3.2.3.A9 Using a complex device code
 
-Based on the need for protection, a complex password SHOULD be used to maintain confidentiality. In the regulation of complexity (minimum length of the code, minimum number of special characters) a balance between usability, risk acceptance and protection needs SHOULD be maintained. For example, the regulations established in the institution for mobile work equipment (notebooks) can form the basis for the complexity to be implemented.
+Based on the need for protection, a complex password SHOULD be used to maintain confidentiality. In the regulation of complexity (minimum length of code, minimum number of special characters) a balance between usability, risk acceptance and protection needs SHOULD be maintained. For example, the regulations established in the institution for mobile work equipment (notebooks) can form the basis for the complexity to be implemented.
 
 #### SYS.3.2.3.A10 Using the fingerprint sensor
 
-For iOS-based devices with a biometric fingerprint sensor, the so-called Touch ID, SHOULD be released to users as an alternative to unlocking the device, while at the same time organisationally and technically regulated that the users must use more complex device codes. Along with the activation of the Touch ID, the users should be sensitized regarding the falsability of fingerprints.
+For iOS-based devices with a biometric fingerprint sensor, the so-called Touch ID, SHOULD be released to users as an alternative to unlocking the device, while at the same time organisationally and technically regulated, that users must use more complex device codes. Along with the activation of the Touch ID, the users should be sensitized regarding the falsifiability of fingerprints.
 
 #### SYS.3.2.3.A11 Using non-personalized device name
 
-When an iOS-based device is paired with iTunes or loaded with a notebook or workstation, it will automatically display the device name, allowing you to draw conclusions about the owner or institution. To prevent the user and device password (passcode) from being guessed, the device name SHOULD NOT contain personal name and institution characteristics.
+When an iOS-based device is paired with iTunes or loaded with a notebook or workstation, it automatically displays the device name, allowing you to draw conclusions about the owner or institution. To prevent the user and device password (passcode) from being guessed, the device name SHOULD NOT contain personal name and institution characteristics.
 
 #### SYS.3.2.3.A12 Use of Institutional Apple IDs
 
@@ -135,10 +135,10 @@ As an additional precautionary measure to prevent the misuse of official means o
 
 #### SYS.3.2.3.A13 Using the Restrictions on iOS Configuration Option
 
-To ensure the confidentiality and integrity of the data processed or stored on the device, any functions or services that are not required or allowed should be disabled. Which to disable must be decided based on the purpose and underlying protection needs for the lock screen, unified communication, siri, wallpaper, host system and diagnostics and usage data.
+To ensure the confidentiality and integrity of the data processed or stored on the device, any unused or allowed functions or services SHOULD be disabled. Which to disable must be decided based on the purpose and underlying protection requirements for the lock screen, unified communication, siri, wallpaper, host system and diagnostics and usage data.
 
 #### SYS.3.2.3.A14 Using the iCloud infrastructure
-Apple provides the iCloud infrastructure to all users with an Apple ID. So there is z. For example, share the ability to share documents and photos through iCloud infrastructure, retrieve friends' location information, or add continuity capabilities to OS X-based and iOS-based devices. Before releasing the full or selective use of the iCloud infrastructure, an assessment should be made of the compatibility of Apple's terms and conditions with its internal policies regarding availability, confidentiality, integrity and privacy. If the use of the iCloud infrastructure is allowed, the authentication on the iCloud web service SHOULD be done by a two-factor authentication. By using managed apps, iCloud usage can be reduced to a minimum or completely eliminated for purely business use.
+Apple provides the iCloud infrastructure to all users with an Apple ID. So there is z. For example, share the ability to share documents and photos through iCloud infrastructure, retrieve friends' location information, or add continuity capabilities to OS X-based and iOS-based devices. Before sharing the extensive or selective use of the iCloud infrastructure, an assessment should be made of the compatibility of Apple's terms and conditions with its internal policies regarding availability, confidentiality, integrity and privacy. If the use of the iCloud infrastructure is allowed, the authentication on the iCloud web service SHOULD be done by a two-factor authentication. By using managed apps, iCloud usage can be reduced to a minimum or completely eliminated for purely business use.
 
 #### SYS.3.2.3.A15 Using the continuity functions
 
@@ -150,11 +150,11 @@ AirPlay allows the user to transfer music, videos, presentations or the entire s
 
 #### SYS.3.2.3.A17 Using the device code history
 
-In order to maintain the confidentiality of the passcode used and to prevent too fast repetitions of passwords used by the user, the configuration profile SHOULD set the number of unique codes until the first retry. When establishing the value, for example, the established rules within the Windows domain or similar can be used as a basis.
+In order to preserve the confidentiality of the passcode used and to prevent too fast repetitions of passwords used by the user, the configuration profile SHOULD set the number of unique codes until the first retry. When establishing the value, for example, the established rules within the Windows domain or similar can be used as a basis.
 
 #### SYS.3.2.3.A18 Using the configuration option for the Safari browser
 
-The Safari browser is deeply integrated in iOS and has in some cases higher rights than the browsers of other providers installed from the App Store. The browser guidelines already established in the institution SHOULD be implemented accordingly for Safari through technical and organizational measures. The already established requirements for browsers on stationary and portable PCs SHOULD serve as a basis for securing the iOS-based devices, as well as the application scenarios and the application environment of the devices.
+The Safari browser is deeply integrated in iOS and has in some cases higher rights than the browsers of other providers installed from the App Store. The browser guidelines already established in the institution SHOULD be implemented accordingly for Safari through technical and organizational measures. The already established requirements for browsers on stationary and portable PCs SHOULD serve as the basis for securing the iOS-based devices, as well as the application scenarios and the application environment of the devices.
 
 #### SYS.3.2.3.A19 Using the filtering option for web pages
 
@@ -167,9 +167,9 @@ To maintain the confidentiality and integrity of the institution's information, 
 
 #### SYS.3.2.3.A21 Sharing apps and integrating the Apple App Store
 
-If additional third-party apps are used (see SYS.3.2.3.A1), those responsible must complement the internal software approval process for validating and sharing applications (apps) from the Apple App Store. To support in-house app approval processes, the MDM used SHOULD enable filtering based on whitelists, blacklists, or app reputation services.
+If additional third-party apps are used (see SYS.3.2.3.A1), those responsible must complement the internal software release process for validating and sharing applications (apps) from the Apple App Store. To support in-house app approval processes, the MDM used SHOULD enable filtering based on whitelists, blacklists, or app reputation services.
 
-All shared applications SHOULD be published internally in a standard catalog and made available to users. As a supportive means of ensuring that the required apps are sufficiently available to the authorized users at the appropriate time, the integration of the volume licensing program (VPP) for Apple companies into the MDM infrastructure can be implemented. Another aspect of using the VPP is that the used Apple IDs do not have to be deposited with a form of payment. The payment confirmation of apps in the App Store MUST NOT be done with the Touch ID.
+All shared applications SHOULD be published internally in a standard catalog and made available to users. As a supportive means of ensuring that the required apps are sufficiently available to the authorized users at the appropriate time, the integration of the volume licensing program (VPP) for Apple companies into the MDM infrastructure can take place. Another aspect of using the VPP is that the used Apple IDs do not have to be deposited with a form of payment. The payment confirmation of apps in the App Store MUST NOT be done with the Touch ID.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -183,14 +183,14 @@ If a violation or manipulation is suspected, an alert must be sent to the respon
 
 #### SYS.3.2.3.A23 Using Automatic Configuration Profile Deletion (CI)
 
-By using the automatic configuration profile deletion SHOULD be ensured that even non-permanently accessible devices without the intervention of IT managers lose the access granted to the internal infrastructure after a defined period or on a certain day, unless the period by accessing the internal network is renewed. To ensure that the user still owns the device, this methodology can also be used preventively.
+By using the automatic configuration profile deletion SHOULD be ensured that even non-permanently accessible devices without the intervention of the IT managers lose the previously granted access to the internal infrastructure at the end of a defined period or on a particular day, unless the period by accessing the internal network is renewed. To ensure that the user still owns the device, this methodology can also be used preventively.
 
 #### SYS.3.2.3.A24 Use of location-based policies (CI)
-By depositing a geofencing policy SHOULD ensure that devices with information of high protection need do not leave the previously defined geographic area. Should the geographical area be left, a selective erasure of the classified information or a complete erasure of the device should be made. Before a selective or complete deletion of the device, the responsible administrators and security management as well as the user must provide information, eg. B. via push message, e-mail or SMS, about this issue. For the sake of better acceptance and to give the user the opportunity to return to the permitted geographic area, the selective or complete deletion should be delayed for a period of time temporarily. The use of geofencing policies must not violate internal and legal requirements.
+By depositing a geofencing policy SHOULD ensure that devices with information of high protection need do not leave the previously defined geographic area. Should the geographical area be abandoned, a selective erasure of the classified information or a complete erasure of the device should be made. Before a selective or complete deletion of the device, the responsible administrators and security management as well as the user must provide information, eg. B. via push message, e-mail or SMS, about this issue. For the sake of better acceptance and to give the user the opportunity to return to the permitted geographic area, the selective or complete deletion should be delayed for a period of time temporarily. The use of geofencing policies must not violate internal and legal requirements.
 
 #### SYS.3.2.3.A25 Using the configuration option for AirPrint (CI)
 
-On the part of the Apple company, the AirPrint functionality was firmly integrated into the operating system. This feature can not be turned on or off. Shared AirPrint printers SHOULD be provided to the user through a configuration profile. In order to prevent users from printing information on untrusted printers, it is important to ensure that all communication links are always routed through the institution's infrastructure systems.
+On the part of the Apple company, the AirPrint functionality was firmly integrated into the operating system. This feature can not be turned on or off. Shared AirPrint printers SHOULD be provided to the user through a configuration profile. In order to prevent users from printing information on untrusted printers, it is important to ensure that all communication links are routed through the institution's infrastructure systems.
 
 #### SYS.3.2.3.A26 No connection with host systems (CI)
 
@@ -198,7 +198,7 @@ To prevent iOS-based devices from being unauthorizedly connected to laptops, PCs
 
 #### SYS.3.2.3.A27 Using the configuration option for APN
 
-When using an institution-specific access point to the mobile network (APN, Access Point Name) this forms the basis for the limitation of the allowed device pool. All devices using this APN will receive from the mobile service provider an IP address range agreed with the institution. To avoid security incidents caused by too short passwords for authentication, a complex password with a maximum of 64 characters SHOULD be agreed with the mobile service provider. When using an institution-related APN, authentication should be based on the CHAP protocol.
+When using an institution-specific access point to the mobile network (APN, Access Point Name) this forms the basis for the limitation of the allowed device pool. All devices using this APN will receive from the wireless service provider an IP address range agreed with the institution. To avoid security incidents caused by too short passwords for authentication, a complex password with a maximum of 64 characters SHOULD be agreed with the mobile service provider. When using an institution-related APN, authentication should be based on the CHAP protocol.
 
 4 Further Information
 ------------------------------

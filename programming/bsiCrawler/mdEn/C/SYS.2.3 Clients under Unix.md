@@ -15,7 +15,7 @@ The goal of this module is to protect information that is created, edited, store
 
 ### 1.3 Delimitation
 
-This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the module SYS.2.4 client under Apple OS X.
+This module contains basic requirements for operating unix-like clients on standard IT systems. He concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the module SYS.2.4 client under Apple OS X.
 
 If the client is not to be managed by itself, but is managed by a third party, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account.
 
@@ -33,7 +33,7 @@ Malicious programs are designed to perform unwanted and usually malicious functi
 
 ### 2 2 Software from third party sources
 
-With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than install finished software packages. When ready-made software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
+With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than installing finished software packages. When ready-made software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -57,7 +57,7 @@ Because these applications are configured independently of each other, the confi
 ---------------
 The following are specific requirements for the Client section on Unix. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -129,17 +129,17 @@ A two-factor authentication SHOULD be used.
 
 #### SYS.2.3.A14 Protection against the use of unauthorized peripherals (CIA)
 
-Peripherals SHOULD only be usable if they are run on a centrally managed whitelist. Kernel modules for peripherals SHOULD ONLY be charged and activated when the device is whitelisted.
+Peripherals SHOULD only be usable if they are managed on a centrally managed whitelist. Kernel modules for peripherals SHOULD ONLY be charged and activated when the device is whitelisted.
 
 #### SYS.2.3.A15 Additional protection against the execution of unwanted files (CI)
 
-Partitions and directories where users have write permission SHOULD be mounted so that no files can be executed (/ noexec).
+Partitions and directories where users have write permissions SHOULD be mounted so that no files can be executed (/ noexec).
 
 #### SYS.2.3.A16 Additional safeguarding of boot process (CIA)
 
 Bootloader and Kernel SHOULD be signed by self-controlled key material and unneeded key material should be removed.
 
-#### SYS.2.3.A17 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
+#### SYS.2.3.A17 Additional prevention of spread when exploiting vulnerabilities (CI)
 
 The use of system calls SHOULD be limited to the absolutely necessary system calls, in particular for exposed services and applications (eg by "seccomp"). The existing default profiles or rules of "SELinux", "AppArmor" as well as alternative extensions SHOULD be checked manually and, if necessary, adapted to your own security policy. If necessary, new rules or profiles SHOULD be created.
 

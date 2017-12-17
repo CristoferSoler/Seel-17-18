@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### CON.6.A1 Regulation of the procedure for the deletion and destruction of information [Head of IT, Head of Organization]
 #### CON.6.A2 Proper disposal of equipment and information worthy of protection [Staff, Head of IT, Head of Building Services]
 ### 3.2 Standard requirements
@@ -12,3 +12,8 @@
 #### CON.6.A9 Selection of appropriate methods for deleting or destroying data carriers with increased protection requirements [Head of IT, Head of Organization] (CIA)
 #### CON.6.A10 Procurement of appropriate equipment for deletion or destruction of data [Head of Organization, Head of IT, Procurement Unit] (CIA)
 #### CON.6.A11 Destruction of data media by external service providers [Head of Organization, Data Protection Officer] (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.44 Unauthorized intrusion into premises

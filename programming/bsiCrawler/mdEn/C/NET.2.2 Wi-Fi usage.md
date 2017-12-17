@@ -60,14 +60,14 @@ It MUST be checked on a regular basis to see if the content required by the Dire
 
 #### NET.2.2.A2 Sensitization and training of WLAN users [Supervisors, Head of IT]
 
-The users of WLAN components, especially of WLAN clients, MUST be sensitized and trained on the measures listed in the user policy. Users MUST be clear about what the WLAN-specific security settings mean and why they are important. In addition, you MUST be alerted to the dangers of bypassing or disabling these security settings.
+The users of WLAN components, especially of WLAN clients, MUST be sensitized and trained on the measures listed in the user policy. Users MUST be clear about what the WLAN-specific security settings mean and why they are important. You MUST also be alerted to the dangers of bypassing or disabling these security settings.
 
 The training contents MUST always be adapted according to the respective application scenarios. However, in addition to training on WLAN security mechanisms, users MUST also be presented with the wireless security policy of their institution. Likewise, they MUST be made aware of the dangers of using foreign WLANs.
 
 #### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]
 MUST use external hotspots MUST be implemented:
 
-* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under what conditions he is allowed to use the hotspot.
+* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under which conditions he will be allowed to use the hotspot.
 * WLANs that are only used sporadically SHOULD be deleted by the users from the history.
 * If possible, separate user accounts with a secure base configuration and restrictive permissions SHOULD be used.
 * It should be ensured that no user with administrator rights can log on to external WLANs from his client.
@@ -81,7 +81,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 For WLAN security incidents, users SHOULD implement the following:
 
-* You SHOULD secure your work, stop your wireless access, and disable your client's Wi-Fi interface.
+* You SHOULD secure your work, stop your wireless access, and disable your client's wireless LAN interface.
 * Error messages and abnormalities SHOULD be accurately documented by the user. Likewise, users SHOULD document what they did before or while the security incident occurred.
 * Users SHOULD notify IT operations through a suitable escalation level (eg User Help Desk).
 ### 3.3 Requirements for increased protection requirements

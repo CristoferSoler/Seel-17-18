@@ -11,7 +11,7 @@ The aim of this module is to provide the persons responsible for security manage
 
 ### 1.3 Delimitation
 
-This module is not concerned with how specific operating systems of smartphones and tablets are secured, as this is described in detail in the blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
+This module is not concerned with how specific operating systems are secured by smartphones and tablets, as this is described in detail in the building blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
 
 2 risk situation
 -----------------
@@ -45,7 +45,7 @@ Even browsers on mobile devices can display full web pages and web content. As a
 
 The operating system of many devices usually contains special functions to manage fitness and location data. These often personal data are particularly sensitive and represent an attractive target, especially if they are collected and stored over a long period of time, insofar as these functions have been activated by the user.
 
-As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection effects, this can also lead to other attacks on the employee.
+As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection implications, this can also lead to other attacks on the employee.
 
 ### 2 8 Misuse of sensitive data in the lock screen
 
@@ -59,7 +59,7 @@ If employees are given proprietary smartphones, tablets and phablets, they may b
 
 If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in case of emergency, the user may not agree.
 
-Often IT managers can no longer check every single device brought by the employee to see if it can be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
+Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
 3 requirements
 ---------------
@@ -100,7 +100,7 @@ A process MUST be established for automatic updates of the operating system and 
 The access of apps and operating system to data and interfaces MUST be restricted appropriately. The privacy settings MUST be configured as restrictively as possible. In particular, access to the camera, microphone and geodata MUST be checked for compliance with the organization's privacy and security standards and restrictively configured or disabled.
 
 #### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
-In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately initiate suitable countermeasures.
+In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately take suitable countermeasures.
 
 The possible consequences of safety-critical events MUST be investigated. Ultimately, all necessary action MUST be taken to rule out access to confidential and mission-critical information of the institution.
 
@@ -118,7 +118,7 @@ Functional extensions SHOULD only be used restrictively. If possible, refrain fr
 
 #### SYS.3.2.1.A10 Mobile Employees Policy [User]
 
-A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or rooted the device.
+A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or to rooted the device.
 
 #### SYS.3.2.1.A11 Encryption of the file system
 
@@ -146,7 +146,7 @@ Unused communication interfaces SHOULD be disabled. Necessary interfaces SHOULD 
 
 #### SYS.3.2.1.A17 Using the SIM card PIN
 
-The use of the SIM card of the institution SHOULD be protected by a PIN. The Super PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
+The use of the SIM card of the institution SHOULD be protected by a PIN. The Super-PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
 
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 
@@ -179,11 +179,11 @@ All applications with confidential data SHOULD be protected by an additional pas
 
 #### SYS.3.2.1.A24 Use of a closed user group (CI)
 
-The password for the Access Point Name (APN) of a closed user group SHOULD be complex. Authentication SHOULD use the CHAP protocol.
+The password for the access point name (APN) of a closed user group SHOULD be complex. Authentication SHOULD use the CHAP protocol.
 
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 
-It was intended to use solutions for separate work environments. For this, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
+It was intended to use solutions for separate work environments. For this purpose, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
 
 #### SYS.3.2.1.A26 Use of PIM containers (CIA)
 

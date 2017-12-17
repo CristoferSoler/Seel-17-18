@@ -45,7 +45,7 @@ Hardware or software failure as well as human error may cause data loss in the d
 
 ### 2 6 Loss of integrity of stored data
 
-Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed in productive operation or not at all, not only the inconsistent data must be extensively cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) are concerned.
+Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, the core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) are concerned.
 
 ### 2 7 SQL injections
 
@@ -69,7 +69,7 @@ Also, an attacker could manipulate core functions (such as Data Dictionary Table
 
 The following are specific requirements for the Database Systems area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -92,7 +92,7 @@ New databases MUST be created according to a defined process. When a new databas
 
 The user and authorization concept (see ORP.4 * Identity and Authorization Management *) of the institution MUST be extended by the authorizations for roles, profiles and user groups required for database management systems.
 
-A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
+A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
 
 #### APP.4.3.A6 Change of password [responsible person]
 
@@ -121,7 +121,7 @@ Together with the basic requirements, the following requirements correspond to t
 #### APP.4.3.A10 Selection of suitable database management systems
 Before database management systems are procured, requirements for the DBMS SHOULD be defined and documented in a requirements catalog. Thereafter, all eligible database management systems SHOULD be evaluated against the catalog. The results SHOULD be documented.
 
-#### APP.4.3.A11 Sufficient hardware dimensioning [Head of IT, specialist responsible]
+#### APP.4.3.A11 Sufficient dimensioning of the hardware [Head of IT, specialist responsible]
 
 Database management systems SHOULD be installed on sufficiently sized hardware. The hardware SHOULD have enough reserves to meet any increasing demands. Nevertheless draw down resource bottlenecks during operation, SHOULD these be remedied early. If the hardware is dimensioned, the expected growth for the planned deployment period SHOULD be considered.
 
@@ -147,7 +147,7 @@ The database management system SHOULD be configured to always encrypt database c
 
 #### APP.4.3.A17 Data Transfer or Migration [Specialists]
 
-If data is transferred to a database either initially or regularly, you should define in advance how this data transfer should take place. After data has been acquired, SHOULD check if it is complete and unchanged.
+If data is transferred to a database either initially or on a regular basis, it should be defined in advance how this data transfer should take place. After data has been acquired, SHOULD check if it is complete and unchanged.
 
 #### APP.4.3.A18 Monitoring the database management system
 It SHOULD define parameters, events and operating states of the database management system that are critical to safe operation. These SHOULD be monitored using a monitoring system. Thresholds SHOULD be set for all critical parameters and events. If these values ​​are exceeded, MUST be responded appropriately (eg the responsible staff must be alerted). Application-specific parameters, events and their threshold values ​​SHOULD be coordinated with those responsible for the specialized applications (see also APP.4.3.A11 * Sufficient hardware dimensioning *).

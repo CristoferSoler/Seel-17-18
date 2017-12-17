@@ -7,7 +7,7 @@ In this module, devices with functions from the field of Internet of Things (IoT
 
 IoT devices can be present in institutions because they are brought by employees or external, for. For example, smartwatches or wearables. In many institutions but also IoT devices are procured and operated, z. For example, devices such as fire, gas, and other alarms, coffee machines, or building control elements such as cameras and HVAC (Heating, Ventilation, and Air Conditioning).
 
-In general, a distinction can be made between directly addressable IoT devices and IoT devices, which require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
+In general, a distinction can be made between directly addressable IoT devices and IoT devices that require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
 
 ### 1.2 Life cycle
 
@@ -47,7 +47,7 @@ The devices must have update functions and the manufacturer must offer an update
 
 Another big problem with IoT devices are default and sometimes even hard-coded standard passwords. Devices that can not be authenticated or that can not change default passwords must not be used.
 
-If it turns out during operation that access data are permanently coded in a device, it must be disconnected from the network. This also applies if accessibility with potential for abuse becomes known later, such as additional interfaces for remote access (such as Telnet) or master passwords of the manufacturer, and these can not be reliably switched off or prevented.
+If it turns out during operation that access data are permanently coded in a device, it must be disconnected from the network. This also applies if accessibility possibilities with potential for abuse become known later, such as additional interfaces for remote access (such as Telnet) or master passwords of the manufacturer, and these can not be reliably switched off or prevented.
 
 #### SYS.4.4.M2 Authentication
 
@@ -55,7 +55,7 @@ Companies and authorities should only use IoT devices that enable authentication
 
 #### SYS.4.4.M3 Regular update
 
-During the operation of the IoT devices, it is necessary to regularly check whether new updates / patches are available for the IoT devices used and related components such as sensors or management systems, eg. B. on relevant websites with safety information or the manufacturer. Existing patches and updates must be installed in a timely manner or other security measures must be taken if no patches are available. In the extreme case, the devices may no longer be operated with known, unrecoverable weak points. In addition to the firmware of the IoT devices, third-party components, such as B. administration or management software, be checked for currency. If new updates are available, they must be updated in a timely manner. In general, it must be ensured that patches and updates are only obtained from trustworthy sources, primarily the respective manufacturer itself.
+During operation of the IoT devices, it is necessary to regularly check whether new updates / patches are available for the IoT devices used and related components such as sensors or management systems, eg. B. on relevant websites with safety information or the manufacturer. Existing patches and updates must be installed in a timely manner or other security measures must be taken if no patches are available. In the extreme case, the devices may no longer be operated with known, unrecoverable weak points. In addition to the firmware of the IoT devices, third-party components, such as B. administration or management software, be checked for currency. If new updates are available, they must be updated in a timely manner. In general, it must be ensured that patches and updates are only obtained from trustworthy sources, primarily the respective manufacturer itself.
 
 #### SYS.4.4.M4 Enable auto-update mechanisms
 
@@ -78,7 +78,7 @@ At the perimeter, access via SSH (port 22) may only be released if it is protect
 
 If necessary, access can be further secured through the use of VPN. When using VPN, make sure to use strong enough cryptographic procedures and key lengths.
 
-It is also advisable to operate the IoT devices in a separate physical network area or within a separate Virtual Local Area Network (VLANs) to prevent lateral propagation when the IoT devices are compromised.
+It is also advisable to operate the IoT devices in a separate physical network area or within a separate Virtual Local Area Network (VLANs) to prevent lateral propagation if the IoT devices become compromised.
 
 Based on a well-maintained asset management system, the following measures can prevent unwanted communication:
 
@@ -119,7 +119,7 @@ The following subconcepts should be considered in the planning:
 * Administration: How should the IoT devices be administered? Are all settings made locally or should the IoT devices be integrated into a central administration and configuration management?
 * Network services and network connection: The network connection of the IoT devices should be planned. Above all, the necessary restrictions and monitoring measures should be planned here.
 * Logging: Logging also plays an important role in IoT devices, for example, in diagnosing and repairing malfunctions or in detecting and resolving attacks. It makes sense to specify in the planning phase how and at what times log data should be evaluated.
-All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other persons besides the author must evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
+All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other people next to the author need to evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
 
 #### SYS.4.4.M8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
 
@@ -127,9 +127,9 @@ Even when choosing a product, not only the price-performance ratio should be con
 
 Basically, the use of IoT devices with a cloud concept is not recommended. In this case, sensitive data flows via third parties (eg camera manufacturers) and is stored there for access via the Internet. The use of WLAN - especially in critical applications - should be avoided, as far as the conditions of use allow.
 
-A fundamental goal for the safe use of IoT devices is the minimization of the attack surface. In order to keep these low from the outset, it is recommended to procure IoT devices on which only the services / ports required for the specific application are available. Alternatively, it should be possible to disable unnecessary services. If this is also not possible, appropriate restrictions must be made during commissioning at the network level (eg firewall) in order to prevent the use of unneeded services.
+A fundamental goal for the safe use of IoT devices is the minimization of the attack surface. In order to keep these low from the outset, it is recommended to procure IoT devices on which only the services / ports required for the specific application are available. Alternatively, it should be possible to disable unnecessary services. If this is also not possible, appropriate restrictions must be made during commissioning at network level (eg firewall) in order to prevent the use of unnecessary services.
 
-To ensure confidential transmission of user and configuration data, the IoT device should support an encryption-based protocol, such as SSL / TLS or SSH. If the product itself does not provide any encryption, this must be checked during commissioning, eg during the commissioning phase. B. over a Virtual Private Network (VPN), flanking be implemented.
+To ensure confidential transmission of user and configuration data, the IoT device should support an encryption-based protocol, such as SSL / TLS or SSH. If the product itself does not provide any encryption, this must be ensured during commissioning, eg during the commissioning phase. B. over a Virtual Private Network (VPN), flanking be implemented.
 
 If the application requires it, the IoT devices should provide a differentiated role / rights concept for different users.
 
@@ -137,7 +137,7 @@ Furthermore, the manufacturer must ensure the provision of patches or updates fo
 
 IoT devices are often procured in conjunction with higher-level systems, e.g. Building control systems. Together with the pure hardware and firmware, additional components and services can be procured.
 
-If errors are made in the procurement of IoT devices, this can have negative consequences for the secure operation of the higher-level system or even the entire information network. Before an IoT device is procured, therefore, a list of requirements must be created, by means of which the devices in question are evaluated. Based on the assessment, an informed purchase decision can then be made to ensure that the IoT device meets the safety requirements in practical operation. The list of requirements should essentially comprise the safety-relevant areas and criteria presented below.
+If errors are made in the procurement of IoT devices, this can have negative consequences for the secure operation of the higher-level system or even the entire information network. Before an IoT device is procured, therefore, a list of requirements must be created, by means of which the devices in question are evaluated. Based on the evaluation, an informed purchase decision can then be made to ensure that the IoT device meets the safety requirements in practical operation. The list of requirements should essentially comprise the safety-relevant areas and criteria presented below.
 
 ** Organizational constraints **
 
@@ -161,7 +161,7 @@ Depending on the required availability, requirements for reliability, electromag
 
 ** ** System Architecture
 
-The bandwidth for system architectures is very large. In addition to new developments, unlike in the PC or server area, often older architectures and operating systems are used. The reasons for this are the lower cost of the processor itself and the ability to reuse the application design, code and development tools as well as debugging tools. It must be ensured that the chosen system architecture is suitable for implementing the necessary safety functions.
+The bandwidth for system architectures is very large. In addition to new developments, unlike in the PC or server area, often older architectures and operating systems are used. The reasons for this are the lower cost of the processor itself and the ability to reuse application design, code and development tools, as well as debug tools. It must be ensured that the chosen system architecture is suitable for implementing the necessary safety functions.
 
 ** Operating system and application software **
 
@@ -187,7 +187,7 @@ The IoT devices should be configured so that adequate security and functionality
 #### SYS.4.4.M10 Secure installation and configuration of IoT devices
 
 After you finish planning new IoT devices and creating a security policy, you can start installing the IoT devices.
-The installation and configuration of the IoT devices should only be performed by authorized persons (responsible for IoT devices, administrators or contracted service providers). Administrators for IoT devices and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks. Since administrators have a key role to play in the functionality of the hardware and software used, the continuation of activities must be ensured even if administrators fail. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
+The installation and configuration of the IoT devices should only be performed by authorized persons (responsible for IoT devices, administrators or contracted service providers). Administrators for IoT devices and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks. Since administrators have a key role to play in the functionality of the hardware and software used, the continuation of activities must be guaranteed even if administrators fail. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
 
 **Installation**
 
@@ -206,7 +206,7 @@ The first step in the basic configuration must therefore be to check the basic s
 Goals of a secure basic configuration should be that
 
 * the IoT devices are protected against "simple" attacks over the network,
-* no one can obtain access to sensitive data that is not intended for him by pure curiosity or even accidental
+* no one can obtain access to sensitive data that is not intended for him, purely by curiosity or even accidentally
 * No one can cause serious damage to the IoT devices when working with the IoT devices due to pure operator errors; and that
 * the impact of minor errors is limited as much as possible.
 The settings that should be checked and adjusted as part of the basic configuration concern in particular the following areas:
@@ -265,13 +265,13 @@ In principle, authorizations should always be restrictive so that users can acce
 
 Depending on the type and area of ​​application of IoT devices, these can be infected by malicious programs. How infections can be prevented and how they can be eliminated depends on the operating systems used. This should be updated regularly with the latest safety information.
 
-Current malicious software on surveillance cameras and other IoT devices is often only in volatile memory instead of persistent in the system einunisten. Therefore, a regular restart of such IoT devices is advisable. This can clear an infection, although it does not protect against reinfection.
+Current malicious software on surveillance cameras and other IoT devices is often only in volatile memory, rather than persistent in the system einzunisten. Therefore, a regular restart of such IoT devices is advisable. This can clear an infection, although it does not protect against reinfection.
 
 If the cause of the infection can not be remedied or a new infection can be effectively prevented, the affected IoT devices should no longer be used.
 
 #### SYS.4.4.M17 Monitoring the network traffic of IoT devices
 
-It is advisable to regularly check the communication (incoming and outgoing connections) for abnormalities. Firewalls log files can provide accurate information about who the IoT devices want to communicate with about which service and whether these connections were allowed or blocked. Furthermore, the IoT devices or the associated administration or management software can provide information as to whether the IoT devices are expected to be used.
+It is advisable to regularly check the communication (incoming and outgoing connections) for abnormalities. Firewalls log files can provide accurate information about who the IoT devices want to communicate with about which service, and whether they have been allowed or blocked. Furthermore, the IoT devices or the associated administration or management software can provide information as to whether the IoT devices are expected to be used.
 
 If preventive suppression of unwanted communication is not possible, the following measures can help with detection:
 
@@ -295,7 +295,7 @@ As far as possible, IoT devices should at least record security breaches, such a
 
 If electronic logging is not or only partially feasible due to technical limitations due to the limited resources, organizational regulations should be created. On the one hand, all work on an IoT device with details of place, time, performer and type and cause of activity should be recorded in a logbook. On the other hand, all failures, obvious access and access violations and other abnormalities should be documented in the logbook. The entries should be evaluated regularly and according to the occasion.
 
-Both automatically generated logs and records by personnel must be protected against unauthorized subsequent changes. Only dedicated users can access the logs. As far as technically possible, precautions must be taken that the log data can not be deleted or changed by privileged users, by storage on non-rewritable data carriers or by means of electronic signature. Data carriers with log data must be stored securely and the persons involved must be instructed in the correct handling.
+Both automatically generated logs and records by personnel must be protected against unauthorized subsequent changes. Only dedicated users can access the logs. As far as technically possible, precautions must be taken that the log data can not be deleted or changed by privileged users, by storage on non-rewritable media or by electronic signature. Data carriers with log data must be stored securely and the persons involved must be instructed in the correct handling.
 
 #### SYS.4.4.M19 Protection of the administration interfaces
 
@@ -318,7 +318,7 @@ In particular, it is important to have an overview of what data is stored on IoT
 * Delete the data on the IoT devices
  It must be ensured that no more valuable information is present on the storage areas of IoT devices. All data stored or permanently stored on data carriers should be deleted in such a way that they can not subsequently be readably restored and misused by special software. If it is not possible to delete the data securely, the data carriers concerned should be destroyed if the protection requirements are higher.
 * Remove any other information
- If an IoT device still stores sensitive data in other locations, for example in a non-volatile memory or in the cloud, then these must also be deleted when the device is decommissioned.
+ If an IoT device still stores sensitive data in other locations, for example in a non-volatile memory or in the cloud, these must also be deleted when the device is decommissioned.
 ### 2.3 Measures for increased protection requirements
 
 The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
@@ -340,7 +340,7 @@ In order to be able to react to critical system events, a suitable system monito
 
 #### SYS.4.4.M23 Auditing IoT Devices (CIA)
 
-All IoT devices should be checked periodically to ensure that they are configured correctly and that all specified security measures have been implemented. If deviations from the target state are found and remedial actions are known, these should be documented.
+All IoT devices should be checked periodically to ensure that they are configured correctly and that all specified security measures have been implemented. If deviations from the target state are found and remedial measures are known, these should be documented.
 
 In addition, at least in safety-critical areas, all IoT devices to be used should be checked by experts before use for safety reasons.
 

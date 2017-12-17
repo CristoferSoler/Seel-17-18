@@ -5,7 +5,7 @@
 
 To ensure that information does not fall into the wrong hands, a regulated procedure is required to completely and reliably erase or destroy data and data carriers. Protective information stored on analog and digital media must be considered.
 
-If not or insufficiently deleted data carriers are passed on, sold or discarded, inadvertently valuable information can be passed on and considerable damage can occur. Therefore, each institution must have a procedure for secure deletion and destruction.
+If not or insufficiently deleted data carriers are passed on, sold or discarded, inadvertently valuable information can be passed on and considerable damage can occur. Therefore, every institution must have a procedure for secure deletion and destruction.
 
 ### 1.2 Objective
 
@@ -13,7 +13,7 @@ This module describes how to safely delete and destroy information in institutio
 
 ### 1.3 Delimitation
 
-The module contains only the general procedural, technical and organizational requirements for the deletion and destruction. Individual building blocks of the layers CON (concepts and procedures), security management (ISMS), ORP (organization and personnel), OPS (operation), DER (detection and reaction), IND (industrial IT), APP (applications), SYS (IT) Systems), NETs (Networks and Communications) and INFs (Infrastructure) can define supplementary and more specific requirements for deletion and destruction. In particular, the building blocks OPS.1.1.6 * Data backup *, OPS 1.2.2 * Archiving, * OPS.1.2.3 * Information and data medium exchange and * OPS.1.2.7 * Sales / Disposal of IT * must be taken into account in addition, because these topics are directly related to the deletion and annihilation.
+The module only contains the general procedural, technical and organizational requirements for deletion and destruction. Individual building blocks of the layers CON (concepts and procedures), security management (ISMS), ORP (organization and personnel), OPS (operation), DER (detection and reaction), IND (industrial IT), APP (applications), SYS (IT) Systems), NETs (networks and communication) and INFs (infrastructure) can define supplementary and more specific requirements for deletion and destruction. In particular, the building blocks OPS.1.1.6 * Data backup *, OPS 1.2.2 * Archiving, * OPS.1.2.3 * Information and data medium exchange and * OPS.1.2.7 * Sales / Disposal of IT * must be taken into account in addition, because these topics are directly related to the deletion and annihilation.
 
 2 risk situation
 -----------------
@@ -104,7 +104,7 @@ Before acquiring equipment for deleting or destroying data SHOULD create a requi
 
 #### CON.6.A11 Destruction of data media by external service providers [Head of Organization, Data Protection Officer] (CIA)
 
-On the premises of the institution, all data carriers to be destroyed SHOULD be securely stored against unauthorized access until they have been picked up by the external service provider. The removal SHOULD also be protected according to the protection requirement. The institution SHOULD have the disposal process checked regularly by trained persons.
+On the premises of the institution, all data carriers to be destroyed SHOULD be stored securely against unauthorized access until they have been picked up by the external service provider. The removal SHOULD also be protected according to the protection requirement. The institution SHOULD have the disposal process checked regularly by trained persons.
 
 In addition, the general requirements for service providers and their employees described in OPS.2.1 * Outsourcing Usage * SHOULD be implemented.
 

@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### NET.2.1.A1 Definition of a strategy for the use of WLANs [Head IT]
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
 #### NET.2.1.A3 Selection of suitable crypto procedures for WLAN [Planner]
@@ -19,3 +19,16 @@
 #### NET.2.1.A16 Additional protection for the connection of WLANs to a LAN (CIA)
 #### NET.2.1.A17 Securing Communication Between Access Points (C)
 #### NET.2.1.A18 Using Wireless Intrusion Detection / Wireless Intrusion Prevention Systems (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.9 Failure or malfunction of communication networks
+* G 0.15 Listening
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.24 Destruction of equipment or data media
+* G 0.25 Failure of devices or systems
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.40 Denial of Service
+* G 0.43 Importing messages
+* G 0.44 Unauthorized intrusion into premises

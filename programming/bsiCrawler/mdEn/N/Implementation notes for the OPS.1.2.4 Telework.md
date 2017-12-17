@@ -5,9 +5,9 @@
 
 Teleworking is understood as any activity based on information and communication technology, which is carried out exclusively or occasionally outside the business premises and buildings of the employer.
 
-There are various forms of teleworking: it can be provided, for example, as home-based teleworking in the employee's home or as mobile teleworking on the go. It is also possible that the employees are employed in the context of the on-site teleworking with customers or suppliers and work there with the equipment of the own employer. Another possibility is the teleworking in so-called telecenters or satellite or neighborhood offices.
+There are different forms of telework: it can be provided, for example, as home-based teleworking in the employee's home or as mobile teleworking on the go. It is also possible that the employees are employed in the context of the on-site teleworking with customers or suppliers and work there with the equipment of the own employer. Another possibility is the teleworking in so-called telecenters or satellite or neighborhood offices.
 
-Homebased telework distinguishes between home-based work and alternating teleworking. In the case of alternating teleworking, employees work alternately at their workplace at the employer and at home.
+Homebased telework distinguishes between home-based work and alternating teleworking. In the case of alternating teleworking, employees work alternately at their workplace at the employer's workplace and at home.
 
 ### 1.2 Life cycle
 
@@ -15,14 +15,14 @@ Homebased telework distinguishes between home-based work and alternating telewor
 
 * A teleworking concept should be developed outlining the security objectives, the protection needs of teleworking information, and the risks and safety measures (see OPS.1.2.4.M6 Creating a Teleworking Security Policy). *
 
-* Secure teleworking requires organizational regulations and personnel measures. Particular attention should be given to the special obligations of teleworkers and their instruction in the terms of use of communications. They are described, inter alia, in OPS.1.2.4.M1 Regulations for Teleworking and OPS.1.2.4.M5 Awareness and Training of Teleworkers. *
+* Secure teleworking requires organizational regulations and personnel measures. Particular attention should be paid to the special obligations of teleworkers and their instruction in the terms of use of communications. They are described, inter alia, in OPS.1.2.4.M1 Regulations for Teleworking and OPS.1.2.4.M5 Awareness and Training of Teleworkers. *
 
 **Implementation**
 
 After the organizational and planning preparatory work has been completed, the teleworkers and other IT systems can be installed. The following measures must be observed:
 
 * Safety of the teleworking computer: The teleworking computer must be designed in such a way that safe use is possible in an unsafe operating environment. In particular, only authorized persons should use the teleworking computer offline and online (see OPS.1.2.4.M2 * Safety requirements for the teleworking computer *).
-* Secure communication between the teleworking computer and the institution: As communication takes place via public networks, special security requirements for communication between the teleworking computer and the institution must be fulfilled (see OPS.1.2.4.M3 * Safety requirements for the communication link *).
+* Secure communication between the teleworking computer and the institution: As communication takes place via public networks, special security requirements must be fulfilled for communication between the teleworking computer and the institution (see OPS.1.2.4.M3 * Safety requirements for the communication link *).
 **Business**
 
 Users have a significant impact on telework safety. Teleworkers must therefore be trained to comply with security requirements and to use the IT systems (see * OPS.1.2.4.M5 Awareness and Training of Teleworkers *).
@@ -40,7 +40,7 @@ The following are specific implementation notes in the Teleworking section.
 
 The following measures should be implemented as a priority:
 
-#### OPS.1.2.4.M1 Teleworking Regulations [Supervisor, Human Resources]
+#### OPS.1.2.4.M1 Teleworking Regulations [Supervisors, Human Resources]
 
 Institutions must set rules for telework. In doing so, various labor law and health and safety conditions must be observed. Controversial points should be clarified either by company agreements or by individual agreements between teleworker * and employer in addition to the employment contract. For example, these agreements should address the following issues:
 
@@ -54,7 +54,7 @@ The security measures necessarily to be implemented for teleworking in the handl
 
 The following aspects, for example, should be considered in the teleworking regulations:
 
-* ** Working time regulation: ** It should be regulated how the working hours are distributed among activities between the institution and the teleworker. Fixed times must also be set at which the employee can be reached at the teleworkstation.
+* ** Working time regulation: ** It should be regulated how the working hours are distributed among activities between the institution and the teleworker. Fixed times must also be set at which the employee can be reached at the teleworking station.
 * ** Response times: ** It should be regulated at what intervals the teleworkers are to retrieve current information (for example, how often emails are read) and in which period of time they have to respond.
 * ** Handling of confidential information: ** In teleworking, confidential information is processed both analogously, for example on paper, as well as digitally. Regardless of the form in which information is available, it must be protected from unauthorized access and other security risks. Therefore, the entire life cycle of confidential information is adequately secured.
 * ** Tools: ** It should be specified which tools the teleworker may use and which should not be used (for example, not released software). Thus, an e-mail connection can be provided, but the use of other Internet services are prohibited. Furthermore, it could be prohibited to use data carriers such as DVDs or USB sticks, if the teleworkstation does not require this.
@@ -65,7 +65,7 @@ The following aspects, for example, should be considered in the teleworking regu
 * ** Transport of documents and data carriers: ** The nature and security of the transport of documents and data carriers, between the teleworkplace and the institution, must be regulated. Confidential data on digital media should always be transported encrypted.
 * ** Registration: ** Teleworkers are to be obliged to report security-related incidents immediately to an institution to be designated in advance. For this it is necessary to instruct the teleworkers in accordance with the applicable guidelines. For example, the Incident Management Guideline is suitable for this.
 * ** Access right teleworking place: ** An access right to the teleworking place should be agreed, if necessary after previous registration. This is important in the first place, so that in case of substitution files and data for the assistant employee are available.
-* ** Substitution scheme: ** For each teleworker, a representative should be appointed who must be informed about the current activities, so that he can take over the representation at short notice. For this, the work results by the teleworkers must always be carefully documented. Maybe sporadic or regular meetings between the teleworker and his representative make sense. In addition, it must be regulated how the representative can access the data, the teleworking computer or the teleworkstation in the event of an unexpected substitution. This substitution case should be tested on a trial basis and the test then be evaluated by the teleworker and his representative. This makes it possible to constantly optimize the substitution process.
+* ** Representation scheme: ** For each teleworker, a representative should be appointed who must be informed about the current activities, so that he can take over the representation at short notice. For this, the work results by the teleworkers must always be carefully documented. Maybe sporadic or regular meetings between the teleworker and his representative make sense. In addition, it must be regulated how the representative can access the data, the telework computer or the teleworkstation in case of an unexpected substitution. This substitution case should be tested on a trial basis and the test then be evaluated by the teleworker and his representative. This makes it possible to constantly optimize the substitution process.
 The rules for teleworking are to be handed out to every teleworker. Corresponding leaflets must be updated regularly.
 
 #### OPS.1.2.4.M2 Safety requirements for the teleworking computer [Head IT, IT operation]
@@ -96,7 +96,7 @@ The following functionalities are useful for a teleworking computer:
 
  
 + The teleworking computer must be able to differentiate between different users. It must be possible to set up at least two separate roles on the teleworker, namely Administrator and Teleworker.
-+ By means of a differentiated legal structure (for example, reading, writing, executing), access to files and programs must be controllable. For mobile devices, a differentiated legal structure is not always possible. Especially smartphones and tablets often have no such differentiation. It should therefore be checked whether the devices are suitable for the present protection needs.
++ By means of a differentiated legal structure (for example, read, write, execute), access to files and programs must be controllable. For mobile devices, a differentiated legal structure is not always possible. Especially smartphones and tablets often have no such differentiation. It should therefore be checked whether the devices are suitable for the present protection needs.
 
 
  
@@ -149,7 +149,7 @@ In principle, the automatic encryption of all data carriers should be preferred 
  
 + The implemented encryption algorithm should meet the requirements of the institution.
 + The key management must harmonize with the functionality of the teleworking computer. In particular, fundamental differences of the algorithms are to be considered: Symmetric methods use a secret key for encryption and decryption, asymmetric methods use a public key for encryption and a private (secret) for decryption.
-+ The teleworking computer must securely manage the safety-critical parameters such as keys. Thus, keys (even those that are no longer used) must never be stored unprotected, that is, readable on the teleworking computer.
++ The teleworking computer must securely manage the safety-critical parameters such as keys. Thus, keys (even those that are no longer used) must never be stored unprotected, that is, readable on the telework computer.
 
 
  
@@ -164,8 +164,8 @@ In principle, the automatic encryption of all data carriers should be preferred 
 * The telework calculator should have ** boot protection ** to prevent unauthorized booting from removable media.
 * It should be possible to restrict the ** user environment ** of the teleworking computer ** **. The administrator should be able to specify which programs the teleworker can execute, which peripheral devices can be used and which changes the teleworker may make to the system. In addition, the teleworker settings that are necessary for safe operation should not change unauthorized and not allowed to play third-party software without permission.
 * Depending on the operating system installed and other existing protection mechanisms of the teleworking computer, it must be checked whether virus protection programs should be used. If this is the case, a virus check must be carried out before importing data from removable media, before transferring data media or when sending and receiving data.
-* If the teleworking computer should be administered via ** Remote Administration **, it must be ensured that remote administration can only be carried out in an authorized way. In the remote maintenance, authentication of the remote maintenance personnel, the encryption of the transmitted data and a logging of the administration processes must be ensured.
-From the above functionalities, it is necessary to select those which are required due to the security requirements of the teleworking computers and which are possible according to the protection requirement. Based on these functionalities then a suitable operating system must be selected as a platform. If this does not support all the required functionalities, additional products must be used. In this case, as far as possible all telework computers of an institution should be equipped in the same way in order to facilitate care and maintenance and to be able to bring similar systems together as client groups. The overall system must be configured by the administrators so that maximum security can be achieved.
+* If the teleworking computer should be administrated via ** Remote Administration **, it must be ensured that the remote administration can only be carried out in an authorized way. In the remote maintenance, authentication of the remote maintenance personnel, the encryption of the transmitted data and a logging of the administration processes must be ensured.
+From the above functionalities, it is necessary to select those which are required due to the security requirements of the teleworking computers and which are possible according to the protection requirement. Based on these functionalities then a suitable operating system must be selected as a platform. If this does not support all required functionalities, additional products must be used. In this case, as far as possible all telework computers of an institution should be equipped in the same way in order to facilitate care and maintenance and to be able to bring similar systems together as client groups. The overall system must be configured by the administrators in such a way that maximum security can be achieved.
 
 Additional requirements for the individual client systems are listed in the block layer SYS.2 * Desktop Systems *. These should be implemented according to the client solution used for the teleworking computer.
 
@@ -175,7 +175,7 @@ If teleworking involves data transmission between a teleworking computer and a c
 
 In general, data transfer between the teleworking computer and the institution must meet the following security requirements:
 
-* ** Securing the confidentiality of the transmitted data: ** A sufficiently secure encryption must ensure that even if attackers intercept the communication between the telework computer and the institution's computer, no conclusions can be drawn about the contents of the data. In order to ensure the confidentiality of the transmitted data, in addition to a suitable encryption method, an adapted key management with periodic key change is also required.
+* ** Securing the confidentiality of the transmitted data: ** A sufficiently secure encryption must ensure that even if attackers intercept the communication between the teleworking computer and the computer of the institution, no conclusions can be drawn about the contents of the data. In order to ensure the confidentiality of the transmitted data, in addition to a suitable encryption method, an adapted key management with periodic key change is also required.
 * ** Ensuring the integrity of transmitted data: ** The transmission protocols used must detect and correct a random change in transmitted data. To be able to detect intentional manipulations during data transmission, the data should be signed and / or encrypted.
 * ** Ensuring the availability of data transmission: ** If time delays in teleworking are difficult to tolerate, a redundant public communication network should be selected as the transmission path so that failure of individual links does not mean total communication failure. On a redundant network connection to the teleworking computer and the interface of the institution may be waived if necessary.
 * ** Ensuring the authenticity of the data: ** When transferring data between the teleworking computer and the institution, it must be ensured that communication takes place between the right participants. This means to ensure that data with sender telework computer actually come from there. Similarly, the origin of institutional data must be undoubtedly traceable back to the institution.
@@ -187,7 +187,7 @@ In teleworking, data can be processed on different IT systems and in different p
 A backup of all relevant data at the teleworkstation must generally take place and comply with the general rules for data backup of the institution. The institution's data protection concept must also include teleworking. In general, the following methods for data backup at the teleworkstation are available:
 
 * Data backup on external data carriersHere, the teleworkstation must have the necessary technical equipment. In addition to the necessary external data carriers, this includes the necessary hardware and software of the computer. In addition, the teleworker must be trained to make the backups independently.
-* Data backup via network The backup of the local data can also be done via the connection to the network of the institution. The advantage here is that on the one hand, the backup does not have to be done independently by the teleworkers and on the other hand, the teleworkers have to manage any media. Decisive in the data backup over a network connection is that their transmission capacity for the volume of data to be backed up is sufficient. Depending on the backup program, it is possible to transfer only changes to the database since the last backup (incremental backup). In many cases, this can greatly reduce the volume of data to be transported. An important requirement of the backup program is that unexpected disconnects are detected and handled properly.
+* Data backup via network The backup of the local data can also be done via the connection to the network of the institution. The advantage here is that on the one hand the backup does not have to be done independently by the teleworkers and on the other hand the teleworkers do not have to manage any data carriers either. Decisive in the data backup over a network connection is that their transmission capacity for the volume of data to be backed up is sufficient. Depending on the backup program, it is possible to transfer only changes to the database since the last backup (incremental backup). In many cases, this can greatly reduce the volume of data to be transported. An important requirement of the backup program is that unexpected disconnects are detected and handled properly.
 In both methods of data protection, it is desirable to minimize the volume of data to be backed up. In addition to lossless compression methods, which are integrated into many backup programs, incremental or differential backup methods can also be used. However, this may increase the overhead of restoring a backup.
 
 The backup should be as automated as possible, so that the teleworkers have to perform only a few actions themselves. If user collaboration is required, they should be required to perform the backup regularly. Finally, it should be sporadically checked whether created backups can be restored.
@@ -207,7 +207,7 @@ A teleworking memorandum must be used to instruct the teleworkers in the appropr
 * Structural and security changes to teleworking IT may only be made by the institution's administrators.
 * The teleworking computer may only be connected via the appropriate connection to public communication networks.
 * When exchanging data between data carriers between the IT systems of the institution and the workstation PC at the teleworkstation, only the data carriers procured by the institution may be used. Media should only be transported encrypted. Service and private IT systems or media should be kept separate.
-* Unauthorized access to the teleworker's IT is prevented by access locks, such as boot and screen locks. Passwords are generally kept secret.
+* Unauthorized access to the teleworker's IT is to be prevented by access locks, such as boot and screen locks. Passwords are generally kept secret.
 In addition, the teleworkers are to be trained in dealing with the telework computers so far, that they can make simple error corrections (for example, change printer cartridges) or solve simple problems independently.
 
 The requirements of the module ORP.3 * Sensitization and Information Security Training * should also be taken into account for the orderly and structured approach to teleworker safety instructions.
@@ -284,7 +284,7 @@ The following points must also be clarified in teleworking:
 * Who must be notified of security incidents?
 * How is the task assignment?
 * How is the transfer of the work results carried out?
-If technical-organizational problems arise, these must be reported immediately by the teleworker to the institution.
+If technical-organizational problems arise, they must be reported by the teleworker to the institution immediately.
 
 #### OPS.1.2.4.M9 Care and maintenance concept for teleworking jobs [teleworker, IT manager, IT operations]
 
@@ -294,8 +294,8 @@ For teleworking a special care and maintenance concept should be created, which 
 * ** Maintenance Dates: ** The dates of maintenance on the teleservices should be announced early, so that the teleworkers at these times the maintenance technicians access to the teleworkplace or access to teleworking computer grant or bring to IT equipment waiting to be brought into the institution.
 * ** Introduction of standard teleworkers: ** The IT equipment of all teleworkers in an institution should be standardized so that the user service can quickly help with problems. It also reduces the conceptual and administrative effort required to set up a secure teleworking computer.
 * ** Remote maintenance: ** If the teleworking computer can be administered and maintained via remote maintenance, the necessary security measures must be clarified. In addition, the time for on-line maintenance access must be agreed with the teleworkers concerned. To ensure that remote access can not be abused, appropriate safeguards must be established.
-* ** Transportation of the IT: ** It should be determined for reasons of liability who is authorized to transport IT equipment and other equipment for teleworking between the institution and the teleworking stations. At the same time the protection of the devices must be considered. For example, a laptop can be transported by the teleworker personally, but should be equipped with an anti-theft device. The information should be encrypted.
-#### OPS.1.2.4.M10 Implementation of a requirement analysis for the teleworking station [Head IT, IT Operations]
+* ** Transportation of the IT: ** It should be determined for reasons of liability, who is authorized to transport IT equipment and other equipment for teleworking between the institution and the teleworking stations. At the same time the protection of the devices must be considered. For example, a laptop can be transported by the teleworker personally, but should be equipped with an anti-theft device. The information should be encrypted.
+#### OPS.1.2.4.M10 Implementation of a requirement analysis for the teleworking station [Head IT, IT operation]
 
 Before a teleworkstation is set up, a requirements analysis should be carried out. The purpose of this requirement analysis is to determine all possible application scenarios in order to derive the required hardware and software components. The results of such a requirement analysis must be documented and agreed with the IT managers.
 
@@ -306,7 +306,7 @@ Among other things, the following questions must be clarified in the scope of th
 * How high is the traffic between the teleworkplace and the institution?
 * Does the teleworker need to access the intranet of the institution? If so, does it have to be able to access the entire intranet, ie all available data and services or only parts of the intranet?
 * Is the use of the internet intended for teleworkers? If so, does the teleworker have their own Internet access or is this access realized via the intranet of the institution?
-Depending on the confidentiality of the data, it may be necessary to specify certain transmission paths from the institution to the teleworkstation. It may make sense to exclude individual transmission paths or set minimum requirements for it. For example, it might be compulsory to transport paper documents containing confidential information only directly from the institution to the teleworkstation in sealed transport containers. Likewise, different encryption methods for data transmission could be provided for different degrees of confidentiality.
+Depending on the confidentiality of the data, it may be necessary to specify certain transmission paths from the institution to the teleworkstation. It may make sense to exclude individual transmission paths or set minimum requirements for it. For example, it might be compulsory to transport paper documents containing confidential information only in a direct way from the institution to the teleworkstation in sealed transport containers. Likewise, different encryption methods for data transmission could be provided for different degrees of confidentiality.
 
 Similar considerations should be made when the information to be processed by teleworking needs to be specially protected against manipulation.
 

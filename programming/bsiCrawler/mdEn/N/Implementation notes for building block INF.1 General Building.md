@@ -5,7 +5,7 @@
 
 Buildings form the outer physical framework for the execution of business processes. A building comprises the stationary workstations, the processed information as well as the established information technology and thus ensures an external protection for them. In addition, the infrastructure of a building often enables the execution of business processes and IT operations. Therefore, not only the building itself, so walls, ceilings, floors, roof, windows and doors to look at, but also all building-wide infrastructure and utilities such as electricity, water, gas, heating and cooling. Building on the protection goals, the various tasks and security measures must be coordinated.
 
-Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional users (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
+Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional customers (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
 
 ### 1.2 Life cycle
 
@@ -19,10 +19,10 @@ On the other hand, when it comes to renting or using an existing building, which
 
 ** planning and conception **
 
-The planned use of a building and the protection requirements of the business processes operated there determine how the building is to be designed and equipped with safety aspects. Starting with an assessment of the location and type of the property, it is necessary to consider whether the building is fit for purpose or can be appropriately designed.
+The planned use of a building and the protection requirements of the business processes operated there determine how the building is to be designed and equipped with safety aspects. Starting with an assessment of the location and type of the property, it is necessary to consider whether the building is fit for purpose or can be adequately designed.
 
-The further planning or testing of an existing building is recommended for the creation of a zone model (see INF.1.M 23 Formation of Safety Zones), which can then be used to plan the use of the building based on protection requirements (see INF.1.M1 Planning the building use). From this, the organization of access authorizations, described in Chapter 3.1 Access control system and authorization management, the execution of doors and windows and the further measures for securing and monitoring are derived.
-For room occupancy planning, INF.1.M 3 compliance with fire protection regulations and, in the case of use of an existing building, INF.1.M 34 layout of buildings worth protecting must be applied. It is also always necessary to determine the expected electrical connection values ​​according to the intended use of the room (see INF.1.M 2 Adjusting the Circuits).
+The further planning or testing of an existing building is recommended for the creation of a zone model (see INF.1.M 23 Formation of Safety Zones), which can then be used to plan the use of the building based on protection requirements (see INF.1.M1 Planning the building use). From this, the organization of access authorizations described in chapter 3.1 Access control system and authorization management, the execution of doors and windows and the further measures for securing and monitoring are derived.
+For room occupancy planning, INF.1.M 3 compliance with fire protection regulations and, in the case of use of an existing building, INF.1.M 34 layout of buildings worthy of protection must be applied. It is also always necessary to determine the expected electrical connection values ​​according to the intended use of the room (see INF.1.M 2 Adjusting the Circuits).
 
 **Procurement**
 
@@ -51,14 +51,14 @@ The following measures should be implemented as a priority:
 
 #### INF.1.M1 Building Security Planning [Planner, Information Security Officer (ISB)]
 
-In order to develop practicable and economical security measures for the use of a building, the protection requirements of the business processes operated there and the fundamental protection goals, which often result from the business activity, must be determined. The self-evident protection of persons in the building and the protection of the assets in the context of information security, in particular the protection of IT, ie the hardware and the software, must be observed. In addition to the classic IT hardware, the areas of the entire support technology, ie power supply, cooling / air-conditioning, etc., must be taken into account.
+In order to develop practicable and economical security measures for the use of a building, the protection requirements of the business processes operated there and the fundamental protection goals, which often result from the business activity, must be determined. The self-evident protection of persons in the building and the protection of the assets in the context of information security, in particular the protection of IT, ie the hardware and the software, must be observed. In addition to the classic IT hardware, the areas of the entire support technology, ie power supply, cooling / air conditioning, etc., must be taken into account.
 
 In a building, many different safety aspects have to be taken into account, from fire protection and electrics to access control. Depending on the size of the institution and the buildings, there may be different responsible persons. Therefore, the different roles and tasks have to be coordinated. The responsible persons should coordinate with each other in order to select appropriate security measures for the various areas based on the protection goals.
 It is good practice to first consider zones when planning buildings (see INF.1.M 23 Building Safety Zones). Many protection goals can be achieved by not having to go from a low-security zone directly to a higher-security one. Initially, the spatial layout should be coordinated with the intended use of the building (see INF.1.M 1.13 Arrangement of buildings worth protecting). Clearly identifiable and easy-to-secure transitions should be created between different security zones. Permissible transitions between the zones are then carried out according to the protection requirement. Impermissible transitions are either prevented or particularly secured. For example, escape doors from security zones with a higher level of security into the outside area must be secured in such a way that unauthorized access from outside to inside is prevented. Windows and entrances must be protected according to their protection requirements (see INF.1.M 22 Safe Doors and Windows).
 
 #### INF.1.M2 Adapted distribution of circuits
 
-In many cases, the initial installation already involves inaccurately that one of the three phase conductors in the 3-phase network is significantly more heavily loaded with loads and thus burdened with them than the other two (danger of neutral point shifting). Furthermore, according to experience, the room occupancy and the connection values ​​for which an electrical installation was designed no longer correspond with the actual conditions after some time. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the room and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may be necessary to install additional or completely new infeeds, lines, distributors, etc.
+In many cases, the initial installation already involves inaccurately that one of the three phase conductors in the 3-phase network is significantly more heavily loaded with consumers and thus burdened with them than the other two (danger of neutral point shifting). Furthermore, according to experience, after some time the room occupancy and the connection values ​​for which an electrical installation was designed no longer correspond to the actual conditions. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the room and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may be necessary to install additional or completely new infeeds, lines, distributors, etc.
 
 Further information on IT cabling and electrotechnical cabling can be found in the corresponding building blocks of the INF layer.
 
@@ -66,20 +66,20 @@ Further information on IT cabling and electrotechnical cabling can be found in t
 
 The existing fire protection regulations (eg according to the standard DIN 4102 Fire behavior of building materials and components) and the requirements of building supervision for buildings must be strictly adhered to. The local fire department should be involved in fire safety planning.
 
-For rooms where important IT equipment and data carriers (servers, data backups, etc.) are housed, the regulations of standard EN 1047 Part 2 should also be observed. The aim here is to minimize the effect of a fire on the contents of such rooms by special measures such as the installation of doors with fire and smoke protection quality, the careful execution of closures and possibly even the upgrading of walls.
+For rooms where important IT equipment and data carriers (servers, data backups, etc.) are housed, the regulations of EN 1047 Part 2 should also be observed. The aim here is to minimize the effect of a fire on the contents of such rooms by special measures such as the installation of doors with fire and smoke protection quality, the careful execution of closures and possibly even the upgrading of walls.
 
 For meeting, training and event rooms, the appropriate regulations for fire safety in meeting places may have to be observed. Since there are different additional requirements depending on the type of use, for example with regard to the opening and width of doors in the course of escape and rescue routes and signage, the local fire brigade should also be consulted here during planning.
 
 A person should be designated who is responsible for compliance with fire safety regulations. This may be a fire safety officer or a person entrusted with the task, who is also appropriately trained.
 
 It is advisable to observe further instructions on fire protection, as can be found, for example, in the publications of VdS Schadenverhütung GmbH.
-It is particularly important to describe the escape routes well. For this, the prescribed markings must be used and the regulations for their attachment must be adhered to. The escape routes must always be kept open, which means in particular that they must not be blocked, eg. B. by the inventory parked in the corridor or by the escape doors are completed.
+It is particularly important to describe the escape routes well. For this, the prescribed markings must be used and the regulations for their attachment must be adhered to. The escape routes must always be kept open, that is, in particular, that they must not be blocked, z. B. by the inventory parked in the corridor or by the escape doors are completed.
 
 Fire and smoke protection doors offer protection only when closed and must therefore never be kept permanently open by wedges or other devices. No exceptions may be allowed.
 
-So that the fire brigade can quickly start firefighting in case of fire, it is important that the fire alarm panel, the fire alarm panel and the entry points for extinguishing water can be found quickly by signage.
+So that the fire brigade can quickly start firefighting in case of fire, it is important that the fire alarm panel, the fire alarm panel and the entry points for fire extinguishing water can be found quickly by signage.
 
-Achieving efficient fire protection requires the cooperation of all parties involved. This includes the functions of the fire protection officer (employer is responsible for compliance with fire safety regulations), the specialist for occupational safety (in Germany required by §§ 5, 6 Occupational Safety Act, this is responsible for the design of the company fire protection) and the safety officer (in Germany required according to § 22 SGB VII, this has executive activities, eg for the prevention of accidents at work and occupational diseases, and works for the specialist for occupational safety).
+Achieving efficient fire protection requires the cooperation of all parties involved. This includes the functions of the fire protection officer (employer is responsible for compliance with fire safety regulations), the specialist for occupational safety (required in Germany according to §§ 5, 6 occupational safety law, this is responsible for the design of the company fire protection) and the safety officer (in Germany required according to § 22 SGB VII, this has executive activities, eg for the prevention of accidents at work and occupational diseases, and works for the specialist for occupational safety).
 
 ** avoidance of unnecessary fire loads **
 
@@ -96,9 +96,9 @@ For buildings, the reduction of unnecessary fire loads should already be taken i
 Measures for structural and technical fire protection, fire detection and timely alerting in the event of fire are elementary measures to protect the health and life of all people who are in a building.
 Which measures of the structural and technical fire protection are required for a building, give in Germany the respective valid building regulations. In order to standardize the various state building regulations, the model building code (MBO) was created as a reference framework. In addition, a fire protection concept appropriate to the size and use of the building must be set up.
 
-It is always true that in buildings, depending on the type of use and construction, fires can occur for various reasons. In order to protect people and to be able to stem a fire in time, its formation must be detected as quickly as possible and the fire fought.
+It is always true that in buildings, depending on the type of use and construction, fires can occur for various reasons. In order to protect people and to be able to contain a fire in time, its formation must be detected as quickly as possible and the fire fought.
 
-In order to be able to detect, alert and combat the occurrence of a fire as quickly as possible, sufficient smoke detectors must be installed in compliance with the applicable standards and manufacturer specifications.
+In order to be able to detect, alert and combat the development of a fire as quickly as possible, sufficient smoke detectors must be installed in compliance with the applicable standards and manufacturer specifications.
 
 Local detectors can be controlled and evaluated via a fire alarm panel (BMZ). Detectors of all kinds and a fire alarm system together form the fire alarm system (BMA).
 
@@ -125,15 +125,15 @@ Most fires arise from small, at first still easily controllable fire herds. Espe
 This immediate combat is only possible if hand-held fire extinguishers in the appropriate fire class (DIN EN 3 portable fire extinguishers) in sufficient number and size (advice from the local fire department) are available in the building.
 
 All hand fire extinguishers must be regularly checked and maintained so that they work in case of emergency. A maintenance certificate must be kept about this. It is also important to ensure that fire extinguishers in areas with special access restrictions are not forgotten during such periodic inspections.
-Powder extinguishers covering fire classes A (solid substances), B (flammable liquids) and C (gases) should not be used in areas with electrical and electronic equipment because the damage caused by the damage is usually disproportionately high. It is therefore strongly recommended not to keep powder extinguishers in the immediate vicinity of server rooms, data carriers, rooms for technical infrastructure and data centers, but only suitable gas extinguishers. This is the only way to prevent a powder extinguisher from being mistakenly used in the outbreak of a fire. Incidentally, the appropriate hand-held fire extinguishers are to be specified in the fire protection concept, taking account of the predicted.
+Powder extinguishers covering fire classes A (solid substances), B (flammable liquids) and C (gases) should not be used in areas with electrical and electronic equipment, as the damage caused by damage is usually disproportionately high. It is therefore strongly recommended not to keep powder extinguishers in the immediate vicinity of server rooms, data carriers, rooms for technical infrastructure and data centers, but only suitable gas extinguishers. This is the only way to prevent a powder extinguisher from being mistakenly used in the outbreak of a fire. Incidentally, the appropriate hand-held fire extinguishers are to be specified in the fire protection concept, taking account of the predicted.
 
-The fire extinguishers must be installed so that they are easily accessible in case of fire. Employees should memorize the location of the next fire extinguisher. The locations of extinguishers and hydrants must be marked by prescribed signs. Portable fire extinguishers are allowed up to a total weight of 20 kg. With the predominantly used devices of 6 and 12 kg, it is possible to extinguish larger sources of fire than are generally assumed by non-experts, but this is only possible if the extinguisher is used correctly. Only a few seconds pass until the extinguishing agent is completely discharged. Therefore, in appropriate fire safety exercises, the staff should be instructed in the use of hand fire extinguishers and the operation of the extinguisher also to practice.
+The fire extinguishers must be installed so that they are easily accessible in case of fire. Employees should memorize the location of the next fire extinguisher. The locations of extinguishers and hydrants must be marked by prescribed signs. Portable fire extinguishers are allowed up to a total weight of 20 kg. With the predominantly used devices of 6 and 12 kg, it is possible to extinguish larger sources of fire than are generally assumed by non-experts, but this is only possible if the extinguisher is used correctly. Only a few seconds pass until the extinguishing agent is completely discharged. Therefore, in appropriate fire safety exercises, the staff should be instructed in the use of hand fire extinguishers and to practice the operation of the extinguisher also.
 
 #### INF.1.M6 Closed windows and doors [Staff]
 
-Windows and outward-opening doors (balconies, terraces) must be closed in times when a room is not occupied. Exterior doors are to be completed. In the basement and ground floor and, depending on the design of the façade, also on the higher floors, open windows and doors offer burglars ideal entry points, which are also used during the operating hours of an institution.
+Windows and outward-opening doors (balconies, terraces) must be closed in times when a room is not occupied. Exterior doors are to be completed. In the cellar and ground floor and, depending on the design of the façade, also on the higher floors, open windows and doors offer burglars ideal entry points, which are also used during the operating hours of an institution.
 
-Employees should be advised that windows and doors should be closed when leaving rooms. If it is ensured during normal working hours that the rooms are only temporarily vacant, it is not necessary to have compulsory regulation of office space, meeting, event and training rooms.
+Employees should be advised that windows and doors should be closed when leaving rooms. If it is ensured during normal working hours that the rooms are only temporarily vacant, it is not necessary to have compulsory regulation for offices, meeting rooms, event rooms and training rooms.
 
 No exception may be allowed for fire and smoke protection doors. These provide protection only when closed and must therefore never be kept permanently open by wedges or other devices (see INF.1.M3 Observance of fire protection regulations).
 
@@ -149,7 +149,7 @@ For access control and control it is necessary that
 * the number of persons entitled to access is reduced to a minimum; these persons should know each other's authority in order to recognize unauthorized persons as such,
 * the admission of other persons (visitors) takes place only after prior examination of the necessity,
 * issued access authorizations are documented.
-The granting of rights alone is not sufficient if their compliance or overshoot is not controlled. The design of control mechanisms should be based on the principle that simple and workable solutions are often as efficient as expensive technology. Examples for this are:
+The granting of rights alone is not sufficient if their compliance or overrun is not controlled. The design of control mechanisms should be based on the principle that simple and workable solutions are often as efficient as expensive technology. Examples for this are:
 
 * Information and awareness of the beneficiaries,
 * Announcement of permission changes,
@@ -164,7 +164,7 @@ Access control requires a variety of structural, organizational and personnel me
 * Designation of a person responsible for access controlThis assigns the access rights to the individual persons according to the principles defined in the security policy.
 * Definition of time dependencies It must be clarified whether time restrictions on access rights are required. Such time dependencies may be: access only during working hours, access once a day or temporary access until a fixed date.
 * Specifying evidence retentionHere is to determine which data is logged when entering and leaving a protected area. It requires a careful balance between the security interests of the system operator and the protection interests of the individual's privacy.
-* Handling of exceptional situationsAlso in exceptional situations, no unauthorized persons should be able to enter the building or the properties. However, the highest priority must be to ensure that all persons can leave the endangered zones as quickly as possible in case of fire.
+* Handling of exceptional situationsAlso in exceptional situations, no unauthorized person should be able to enter the building or the properties. However, the highest priority must be to ensure that all persons can leave the endangered zones as quickly as possible in case of fire.
 In addition, the installation of card readers of various qualities, of locks and separating devices may be useful. For key management, see INF.1.M 12 Key Management.
 
 In order to implement a more comprehensive concept, to maintain flexibility in use and to ensure transparency and verifiability, the use of an IT-based system for authorization management is recommended (see chapter 3.1 Access Control System and Authorization Management).
@@ -186,7 +186,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### INF.1.M9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
 
-The prerequisite for the development of an effective security concept is the determination of the protection requirements of the business processes operated in a building and the definition of the fundamental protection goals, which often result from the business activity. Subsequently, a practicable and economical security concept for the use of a building will be developed. Taking into account the various safety aspects of a building, building on the protection objectives, appropriate safety measures should be established for the various areas while maintaining a defined safety level. It should be ensured that all accesses are so controlled and secured that no unauthorized persons can enter the areas to be protected.
+The prerequisite for creating an effective security concept is the determination of the protection requirements of the business processes operated in a building and the definition of the fundamental protection goals, which often result from the business activity. Subsequently, a practicable and economical security concept for the use of a building will be developed. Taking into account the various safety aspects of a building, building on the protection objectives, appropriate safety measures should be established for the various areas while maintaining a defined safety level. It should be ensured that all accesses are so controlled and secured that no unauthorized persons can enter the areas to be protected.
 
 This consideration must almost always be supplemented by further measures against unauthorized intrusion or creeping. An overview of this is the measure INF.1.M 27 Burglary Protection.
 
@@ -235,14 +235,14 @@ Wherever possible, the distribution boards (eg for energy supply, data networks,
 
 Access to the distributors of all utilities (electricity, water, gas, telephone, hazard notification, district heating / cooling, etc.) in a building must be possible and orderly. By possible is meant
 
-* that distributors are not glued with paints or wallpapers so that they can only be opened with tools or can not be found,
+* that distributors are not glued with paints or wallpapers so that they can only be opened with tools or are untraceable,
 * that distributors are not delivered with furniture, equipment, pallets, etc.
 * that for locked distributors the keys are available and the locks work.
 By ordered is meant that it is defined who may open which distributor. Manifolds should be closed and may only be opened by persons responsible for the respective utility. The access options can be regulated by different locks and a corresponding key management (see INF.1.M 12 Key Management and Chapter 3.1 Access Control System and Authorization Management).
 
 If fuses are installed in distributors of the power supply network, appropriate spare fuses (in the distributor) should be available. A documentation of the distributors must be carried out according to INF.3 Electrotechnical cabling.
 
-All devices installed in the distributor must be labeled exactly and permanently. This inscription must be affixed in such a way that each installation element can be identified with immediate certainty even when the covers are removed.
+All devices installed in the distributor must be labeled exactly and permanently. This label must be affixed in such a way that even with removed covers, each installation element can be identified with immediate safety.
 
 #### INF.1.M14 Lightning protection devices
 
@@ -257,7 +257,7 @@ Each institution should create a lightning and surge protection concept based on
 
 The external lightning protection, the catching device (vulgo lightning conductor), is divided into four protection classes (also known as Lightning Protection Level, LPL for short) in terms of their effectiveness. The protection class IV (LPL IV) has the lowest protection value, while the protection class I offers the best protection. Easily distinguishable difference between the 4 protection classes is the mesh size of the capture devices. This ranges from 20 x 20 m for the protection class IV in 5 m steps down to 5 x 5 m for the protection class I. For buildings with extensive IT equipment, the catching device should at least comply with protection class II, better protection class I.
 
-The impressed lightning current that flows out through the catching device for grounding causes a voltage decreasing along the catching device from the point of impact of the lightning to the grounding point. At the highest point of the catching device, this voltage can be a few 100,000 volts. It should therefore be noted that especially in the upper floors of a building galvanic installations (data, electricity, water, etc.) must have a sufficient distance from the capture devices. Also this aspect is considered under the designation separation distance in the new standard. With considerations to protect against compromising coupling that has nothing to do, even if the aspect of the separation distance has often been wrongly equated with the protection against coupling of the lying close to the lightning arrester data lines on the lightning rod.
+The impressed lightning current which flows out through the catching device for grounding causes a voltage which decreases along the catching device from the point of impact of the lightning to the grounding point. At the highest point of the catching device, this voltage can be a few 100,000 volts. It should therefore be noted that especially in the upper floors of a building galvanic installations (data, electricity, water, etc.) must have a sufficient distance from the capture devices. Also this aspect is considered under the designation separation distance in the new standard. With considerations to protect against compromising coupling that has nothing to do, even if the aspect of the separation distance has often been wrongly equated with the protection against coupling of the lying close to the lightning arrester data lines on the lightning rod.
 
 Since the voltage drop along the arrester at the grounding point never drops to 0 V due to the remaining ground contact resistance and the base of the arrester must be connected to the main equipotential bonding of the building, the entire PE system of the building and thus also the N conductor will be at this residual voltage raised. Here are voltages in the range of at least well over 10,000 volts expected. Thus, voltages between N / PE conductors and the conductors L1 / L2 / L3 are achieved, which significantly exceed the usual operating level of 230/400 V. In order for these voltages not to damage the electrical equipment operated within the building, the internal lightning protection, ie the overvoltage protection, must be built as an indispensable consequence of the structure of the external lightning protection (see INF.3 Electrical wiring).
 
@@ -280,7 +280,7 @@ In each building there are areas with different usage scenarios and different pr
 
 Such areas should not bear any indication of their use. Door signs such. B. DATA CENTER or ARCHIVE give a potential attacker, who has access to the building, hints, in order to be able to prepare his activities more purposefully and thus more successfully.
 
-If it is unavoidable to store business-relevant information or IT in rooms or building areas that are easily visible to outsiders (see also INF.1.M 34 Arrangement of buildings worth protecting), appropriate measures must be taken to prevent the glimpse or so to make sure that the use is not revealed. It is important to ensure that z. B. not only a window of a whole floor is provided with a privacy.
+If it is unavoidable to store business-relevant information or IT in rooms or building areas that are easily visible to outsiders (see also INF.1.M 34 Arrangement of buildings worth protecting), appropriate measures must be taken to prevent the glimpse or so to make sure that the use is not revealed. It is important to ensure that z. B. not only a window of an entire floor is provided with a privacy.
 
 #### INF.1.M17 Structural smoke protection [Planner]
 
@@ -288,7 +288,7 @@ In fires, smoke is the greatest risk to people. More than 90% of the deaths are 
 
 The following recommendations should be considered for smoke protection:
 
-* Fire doors should be of smoke-proof quality, recognizable by the abbreviation "RS" in the type designation of the door.
+* Fire doors should be smoke-proof, recognizable by the abbreviation "RS" in the type designation of the door.
 * Smoke doors in corridors should be controlled by smoke switches. Such doors can always be open, as they close automatically when smoke is detected.
 * Rapid smoke extraction from IT rooms must be possible.
 * In air ducts (supply and exhaust air), duct detectors should be installed. In the fresh air intake, detectors should be installed, which automatically lock them when disturbances (smoke) are detected.
@@ -307,7 +307,7 @@ Since the actions of the employees are usually determined not by malicious inten
 
 #### INF.1.M19 Early information from the fire safety officer
 
-For all work on pipe and cable ducts which in any way touch wall penetrations as well as necessary corridors, escape and rescue routes, the fire protection officer must be informed. This information must be given so clearly in advance of the actual work that the fire protection officer has ample opportunity to incorporate all aspects of constructive preventive fire protection in the planning and execution of the intended work.
+For all work on pipe and cable ducts which in any way touch wall penetrations as well as necessary corridors, escape and rescue routes, the fire protection officer must be informed. This information must be given so clearly in advance of the actual work that the fire protection officer has ample opportunity to incorporate all aspects of constructive preventive fire protection in the planning and implementation of the intended work.
 
 The fire safety officer must be given the opportunity, even while the work is in progress, to provide timely information to monitor the proper execution of fire protection measures or to arrange for such control before they become inaccessible as a result of the construction progress, eg. B. because a suspended ceiling has already been closed.
 
@@ -315,10 +315,10 @@ The involvement of the fire protection officer is to be ensured by appropriate o
 
 #### INF.1.M20 Alerting plan and fire drills
 
-It is necessary to draw up plans for the measures to be taken in case of fire. In such a plan z. B. to lay down,
+It is necessary to draw up plans for the measures to be taken in case of fire. In such a plan is z. B. to lay down,
 
 * which measures have to be taken at which events,
-* if and how parts of the building may need to be cleared (persons and equipment),
+* if and how building parts may need to be cleared (persons and equipment),
 * who is to inform and
 * which helping forces are to be informed.
 The alerting plan can be supplemented with behavioral rules for the case of fire, to be announced to all employees. See also module DER.4 Emergency Management.
@@ -341,41 +341,41 @@ The important consumers (central storage components, network nodes or servers) a
 
 Independent electrical supply lines
 
-In this case, it must be ensured, especially with devices that are simply connected, that devices that provide each other with redundancy are not connected to the same supply. In addition, the devices must be distributed evenly according to their power consumption on both strands.
+In this case, it must be ensured, especially with devices that are simply connected, that devices that provide each other with redundancy are not connected to the same supply. In addition, the devices must be distributed equally to both strands according to their power consumption.
 
 #### INF.1.M22 Safe Doors and Windows (CIA)
 
-If doors and windows form a transition between security zones, they must provide adequate protection. An outside door must z. B. protect against burglaries, as well as the achievable windows must be secured. Inside, doors that form the boundary of a fire compartment must themselves be fire-proof, and they or other interior doors can form a second line of burglary protection.
+If doors and windows form a transition between security zones, they must provide adequate protection. An outside door must z. B. protect against burglaries, as well as the achievable windows must be secured. In the interior, doors that form the boundary of a fire compartment must themselves be fire-resistant; in addition, they or other interior doors can form a second line of burglary protection.
 
-Security doors and windows are classified in standards. The protection objective of the area to be protected and the need for protection of the institution make it possible to select the appropriate design of doors and windows:
+Security doors and windows are classified in standards. The protection objective of the area to be protected and the need for protection of the institution make it possible to choose the appropriate design for doors and windows:
 
 * In the standard DIN EN 1627: 2011-09 "Doors, windows, curtain walls, grid elements and terminations - burglary resistance - requirements and classification", the components have been classified in resistance classes (RC, English Resistance Class). Due to their stability, doors according to the classifications RC1 to RC4 offer a higher protection against burglary (eg in server rooms, rooms with technical infrastructure as well as in cellar and supplier entrances). The resistance classes RC5 and RC6 are usually appropriate only for very specific requirements and therefore play no role in IT-Grundschutzbetrachtungen.
-* Self-closing fire-retardant and possibly smoke-tight doors (eg fire doors T30 or T30-RS, according to DIN 18082 "fire protection shutters") delay the spread of a fire and in the RS version also smoke.
+* Self-closing fire-retardant and possibly smoke-tight doors (eg fire doors T30 or T30-RS, according to DIN 18082 "fire protection shutters") delay the spread of fire and in the RS version smoke.
 In the design as a self-closing smoke protection door (DIN 18095-1 "Doors; Smoke protection doors; Terms and requirements") they protect the spread of fire smoke. Fire smoke is so fine-grained that it easily passes through pressure equalization and ventilation holes of hard drives. However, it is still too big for the low altitudes of hard disk read heads and causes enormous damage there.
 
 It can also be combined several protective properties in a door, there are, for example, smoke-tight fire doors, which also provide protection against burglary.
 
 The safety measures of all room enclosing components must be equivalent:
 
-* When using burglary-resistant doors, the use of burglar-resistant windows or façade elements in the façade area (see DIN EN1627-1630: 2011 "Doors, windows, curtain walls, grid elements and barriers - Burglar resistance") must be considered.
+* When using burglary-resistant doors, the use of burglar-resistant windows or facade elements (see DIN EN1627-1630: 2011 "Doors, windows, curtain walls, grille elements and barriers - Burglar resistance") must be considered in the façade area.
 * Furthermore, it is z. B. not appropriate to install a burglar-resistant door of the highest resistance class in a plasterboard wall.
 * When installing a fire-retardant or smoke-tight door, make sure that the surrounding wall is equally fire-retardant and smoke-proof, and that there is no bypass through open skylights or un-sealed cable glands.
 Requirements for the execution of security doors can be found in INF.2 Rechenzentrum and INF.1.M 27 Burglary Protection.
 
-The use of security doors in terms of fire protection above the area prescribed by the building inspectorate and the fire department (see INF.1.M 3 compliance with fire protection regulations) especially in vulnerable areas such as server room, document or data carrier archive makes sense. In the case of rooms requiring a high level of protection, a balanced protection concept must be created, which takes into account the installation of security doors and the notification of danger and alerting for checking and intervention. Because a potential attacker has time for a break-in attempt a whole weekend, even a high-quality burglary-resistant door will not deter him from his goal of stealing or destroying data or equipment.
+The use of security doors in terms of fire protection above the area prescribed by the building inspectorate and the fire department (see INF.1.M 3 compliance with fire protection regulations) especially in vulnerable areas such as server room, document or data carrier archive makes sense. In the case of rooms requiring a high level of protection, a balanced protection concept must be created, which takes into account the installation of security doors and the notification of danger and alerting for checking and intervention. If a potential attacker has time for a break-in attempt for a whole weekend, even a high-quality burglar-resistant door will not prevent him from stealing or destroying data or equipment.
 
-For the equipment of data centers, the resistance class RC3 according to DIN EN 1627-1630: 2011 should be used as the minimum value for the doors including their installation situation. Only if there is a particularly favorable condition for safety, especially if the intervention time of assisting forces is short (maximum 2 minutes), can an RC2 door be sufficient in exceptional cases. On the other hand, if the intervention time of assistants is 5 minutes or more, even an RC3 door can be considered inadequate and the installation of RC4 doors is recommended. Naturally, the same considerations also apply to all other components forming the RZ shell.
+For the equipment of data centers, the resistance class RC3 according to DIN EN 1627-1630: 2011 should be used as the minimum value for the doors including their installation situation. Only if there is a particularly favorable condition for safety, in particular if the intervention time of assisting forces is short (maximum 2 minutes), can an RC2 door be sufficient in exceptional cases. On the other hand, if the intervention time of assistants is 5 minutes or more, even an RC3 door can be considered inadequate and the installation of RC4 doors is recommended. Naturally, the same considerations also apply to all other components forming the RZ shell.
 
 ** Note: ** A burglary could also be to manipulate data or IT systems. For this reason, central IT systems should be checked for their integrity after break-ins (see also S 6.60 Definition of reporting procedures for security incidents).
 
-It must be ensured that fire and smoke protection doors are actually closed and not (inadmissibly) z. B. be kept open by wedges. Alternatively, doors with an automatic locking mechanism activated in case of alarm can be used.
+It must be ensured that fire and smoke protection doors are actually closed and not (inadmissibly) z. B. be kept open by wedges. Alternatively, doors with an automatic locking mechanism activated in the event of an alarm can be used.
 
 In addition, check regularly that the security doors and windows are functional. They must be in a proper mechanical condition, safely open and close, and monitoring installations such as make contacts must operate.
 
 #### INF.1.M23 Formation of Security Zones [Planner] (C)
 
 The need for protection of rooms in a building depends on their use. The required security measures must be adapted to this protection requirement. Accordingly, the structural design of walls, windows and doors must be and the complementary equipment with security and surveillance technology. Therefore, when planning a new building or evaluating an existing building, rooms with similar protection needs should be zoned together. This means that comparable risks can be treated uniformly and the costs of implementing measures are reduced.
-To z. For example, if you do not need to permanently lock or monitor every single room in the building, zones with visitor traffic should be separated from vulnerable areas. Public spaces such as a canteen that attracts external audiences, or semi-public spaces such as meeting, training, or function rooms should be located near the building entrance. Access to parts of buildings with internal areas such as the offices can then z. B. be easily monitored by a gatekeeper. Particularly sensitive areas such as a development department, rooms of building technology or IT rooms should be protected with an additional access control.
+To z. For example, if you do not need to permanently lock or monitor every single room in the building, zones with visitor traffic should be separated from vulnerable areas. Public spaces such as a canteen that attracts external audiences, or semi-public spaces such as meeting, training, or function rooms should be located near the building entrance. Access to parts of buildings with internal areas such as the offices can then z. B. be easily monitored by a gatekeeper. Particularly sensitive areas such as a development department, rooms of building technology or IT rooms should be secured with an additional access control.
 
 For physically securing a building and, if applicable, the surrounding property, it has proven useful to plan and implement a security concept with depth-restricted security measures (onion shell principle). Proven is a division into four security zones, outdoor area, controlled indoor area, internal area and high security area:
 
@@ -385,7 +385,7 @@ The security zone 0, ie the outdoor area, is encompassed by the property boundar
 
 The security zone 1 is the controlled interior area. Through an appropriate access control, z. As a janitor or an access control system, only authorized persons (employees, invited visitors) gain access to this zone. If there is a high need for protection, there should already be an obligation in this zone to always carry visible badges. The outer skin of zone 1 (external building skin) should be protected against sabotage and burglary by structural and technical measures.
 
-Zone 2 as an internal area can only be accessed by a restricted circle of authorized persons. There are defined access authorizations here. Zones or sections of buildings in zone 2 should have only one access at a time. Further access roads serve exclusively as escape and rescue routes and must always be kept closed during operation. They must be permanently monitored and secured against misuse by electromechanical safety devices (escape route safety systems).
+Zone 2 as an internal area can only be accessed by a restricted circle of authorized persons. There are defined access authorizations here. Zones or sections of buildings in Zone 2 should have only one access at a time. Further access roads serve exclusively as escape and rescue routes and must always be kept closed during operation. They must be permanently monitored and secured against misuse by electromechanical safety devices (escape route safety systems).
 
 Zone 3 forms the high-security area (eg board areas, critical IT rooms). The circle of authorized access is very limited. The security measures should be correspondingly high. Example: Access is only possible via a security gate with two-factor authentication and separation, exit with one-factor authentication and separation. There is an accounting of the access, as soon as no persons are reported more than present, the automatic arming of the burglar alarm system takes place.
 
@@ -416,7 +416,7 @@ When selecting and planning the location where a building is to be rented or cre
 
 * In connection with weaknesses in the building fabric, it can come to disruptions of the IT by shaking close traffic routes (road, rail, subway).
 * Buildings located directly on major traffic routes (railways, motorways, main roads, airports) can be damaged by accidents.
-* The proximity to optimal traffic and therefore escape routes can facilitate the execution of a stop.
+* The proximity to optimal traffic and thus escape routes can facilitate the execution of a stop.
 * There may be disruptions to IT near broadcasting equipment.
 * IT can be disrupted near railway lines.
 * Flooding is likely near rivers and in lowlands.
@@ -426,7 +426,7 @@ It may also be possible to avoid hazards from the neighborhood z. B. to compensa
 The location-related hazards and the necessary damage prevention or reduction measures should be documented in the safety concept. In addition, they should be included in the emergency concept.
 
 #### INF.1.M26 porter or security service (CIA)
-The establishment of a porter or security service has far-reaching positive effects against a whole series of threats. However, it is a prerequisite that some basic principles are observed when carrying out the porter or security service. Naturally, the focus of the porter service is to control access during business hours, while security services monitor and secure the property, especially outside business hours.
+The establishment of a porter or security service has far-reaching positive effects against a whole series of threats. However, a prerequisite is that some basic principles are observed when carrying out the porter or security service. Naturally, the focus of the porter service is to control access during business hours, while security services monitor and secure the property, especially outside business hours.
 
 * The gatekeepers should observe and control all movement of persons at the gate and at all other entrances.
 * Supported by video surveillance, remote doors and gates can be monitored and controlled by the gatekeepers (see chapter 3.2 Video surveillance).
@@ -434,10 +434,10 @@ The establishment of a porter or security service has far-reaching positive effe
 * Unknown persons ("even the new boss") have to identify themselves with the gatekeepers.
 * In a visitor's book the access of foreign persons to the building can be documented. Issuance of visitor badges or visitor tickets is to be considered.
 * Visitors should be accompanied to the visitors or picked up at the gate. If visitors are allowed to enter the building unaccompanied, it must first be verified that this is possible without any security concerns. The respective framework conditions must be documented in advance. For example, a list could be kept of trustworthy long-stay visitors who are allowed to enter the building unaccompanied after receiving a visitor's badge.
-* When the gate is open 24 hours a day, alarming and supervising technology may always or only outside normal working hours accumulate. On the basis of alarm lists for the messages, the gatehouse forwards the messages to responsible employees or external authorities in charge.
+* When the gate is open 24 hours a day, alarming and supervising technology can always or only outside normal working hours accumulate. On the basis of alarm lists for the messages, the gatehouse forwards the messages to responsible employees or external authorities in charge.
 The working conditions of the gatekeepers and the security personnel are to be designed for the task perception. The task description must stipulate bindingly what tasks the janitors or employees of the security service play in conjunction with other protective measures (eg building security after business or office hours, arming of the alarm system, control of exterior doors and windows).
 
-When defining the tasks, it must be taken into account that the assigned tasks do not open any security gaps. If a gate is occupied by only one gatekeeper and he has no opportunity to temporarily close the gate, he may not be instructed or allowed to accompany visitors to certain visitors.
+When defining the tasks, it must be noted that the assigned tasks do not open any security gaps. If a gate is occupied by only one gatekeeper and he has no opportunity to temporarily close the gate, he may not be instructed or allowed to accompany visitors to certain visitors.
 
 In many institutions, porter and guard services are provided by external security service providers, see OPS 4.2 Other Services.
 
@@ -445,7 +445,7 @@ In many institutions, porter and guard services are provided by external securit
 
 According to experience, burglars select their goals according to how high the risk and effort in relation to the expected profit. Therefore, all anti-intrusion measures should aim at minimizing perpetrators' chances of success. The usual anti-burglary measures should be adapted to the local conditions. This includes:
 
-* burglary-resistant doors and windows, for example with resistance class RC2 (according to DIN EN 1627: 2011-09 "Doors, windows, curtain walls, grille elements and closures - burglar resistance - requirements and classification") or higher if the hazardous situation makes it necessary
+* burglary-resistant doors and windows, for example with resistance class RC2 (according to DIN EN 1627: 2011-09 "Doors, windows, curtain walls, grille elements and closures - burglar resistance - requirements and classification") or higher, if the risk situation makes it necessary
 * Blinds on entry-level doors or windows,
 * special lock cylinders, additional locks and latches,
 * Securing basement light shafts,
@@ -454,7 +454,7 @@ According to experience, burglars select their goals according to how high the r
 * Closure of passenger and goods lifts outside of service.
 Recommendations are given by the local counseling centers of the Kriminalpolizei.
 
-All anti-burglary measures should meaningfully form an end-to-end cover around the area that is to be protected against unauthorized access. Doors should be installed in sufficiently solid walls. Ventilation openings are to be barred in suitable form (maximum grid width 10x20 cm). Measures for access protection must also be implemented in double floor areas and above suspended ceilings. The equivalence and consistency of protection against burglary should be assessed regularly by a competent person during planning, during implementation and later during operation.
+All anti-burglary measures should meaningfully form an end-to-end cover around the area that is to be protected against unauthorized access. Doors should be installed in sufficiently solid walls. Ventilation openings are to be barred in suitable form (maximum grid width 10x20 cm). Measures for access protection are also to be implemented in raised floor areas and above suspended ceilings. The equivalence and consistency of protection against burglary should be assessed regularly by a competent person during planning, during implementation and later during operation.
 
 When planning material security measures, it must be ensured that provisions of the fire and personal protection, eg. As the usability of escape routes, not be violated. This applies in particular to changes to fire protection elements subject to type approval.
 
@@ -475,7 +475,7 @@ The planning of state-of-the-art ventilation and air conditioning systems for no
 * the relative humidity of the room
 * the weighted sound pressure levels
 * and other factors relevant to humans.
-While there are high demands on air quality for offices and other permanently occupied rooms, the demand in rooms that are not always occupied is lower. All the more important is that, as required in the standard, the specifications for the climate planning by the builder or the future user are given.
+While there are high demands on air quality for offices and other permanently occupied rooms, the demand in rooms that are not always occupied is lower. It is therefore all the more important that, as required by the standard, the specifications for climate planning are specified by the client or the future user.
 
 While cold is almost never a problem in creating a comfortable indoor climate, summer heat can be a bigger problem. The Workplace Ordinance calls for health-friendly room temperatures and protection against excessive sunlight for work areas. To maintain a tolerable indoor climate on warm summer days, the RLT system must be supported by an effective shading of the windows.
 RLT systems must be regularly maintained. Maintenance of HVAC systems not only helps to ensure reliable operation, but also to guarantee hygiene and thus the health of all users of the building. The maintenance of maintenance intervals and the careful execution of cleaning and filter changes must be controlled and documented.
@@ -490,35 +490,35 @@ In addition to general characteristics of a service specification for cleaning w
 
 In order not to disturb the work process, cleaning work is often moved to non-working hours. But this also has to clarify whether the cleaning staff should be supervised. Ideas for the cleaning times as well as the special treatment of individual particularly vulnerable and not uncontrollably accessible areas are to be listed in the service description.
 
-Cleaning staff should be briefed on the tasks before starting their work. This includes, above all, instruction on which areas may be accessed under what conditions, how IT systems are to be cleaned and what needs to be observed in the environment of IT systems and how they deal with confidential information that they receive during their work , This can z. For example, documents found on desks or in baskets, or conversations overheard.
+Cleaning staff should be briefed on the tasks before starting their work. This includes, above all, briefing on which areas may be accessed under what conditions, how IT systems are to be cleaned and what needs to be observed in the environment of IT systems and how they deal with confidential information that they receive during their work , This can z. For example, documents found on desks or in baskets, or conversations overheard.
 
-The entry of cleaning personnel can be particularly problematic in areas with higher security requirements such as data centers, server rooms, technical rooms or communication centers and therefore require additional security measures. In such areas, it may be useful to check the trustworthiness of the cleaning staff or to supervise them during their work.
+The entry of cleaning personnel can be particularly problematic in areas with higher security requirements such as data centers, server rooms, technical rooms or communication centers and therefore require additional security measures. In such areas it may be useful to check the trustworthiness of the cleaning staff or to supervise them during their work.
 
 If there is confidence in the cleaning company, the access of the cleaning staff should be regulated via the existing access control or the locking system. However, this can only be an effective safeguard if z. B. ID card or key against signature and only temporarily issued to named and known employees of the cleaning company. In the agreement on the use of permanent staff, the identification system can provide effective control of compliance.
 For the coordination, but also in the case of occurring problems, the contractor must name an object manager who can be addressed at any time. He must have decision-making authority over the to be used (above all also about not more to be used, because unwanted) personnel.
 
-The special treatment of sensitive areas should already be included in the invitation to tender and the contract formulation. For example, at data centers, random checks of bags or cargo in the access or access area for non-farm personnel should be included in the contracts.
+The special treatment of sensitive areas should already be included in the invitation to tender and the contract formulation. For example, at data centers, random checks on bags or cargo in the access or access area for non-farm personnel should be included in the contracts.
 
-As cleaning staff can not be expected to be IT savvy, they should therefore be instructed in all areas of mission-critical IT systems to determine which activities could damage IT equipment or IT operations. Examples of such problem areas are:
+As cleaning staff can not be expected to be IT savvy, they should therefore be trained in all areas of business-critical IT systems to determine which activities could damage IT equipment or IT operations. Examples of such problem areas are:
 
 * When cleaning keyboards, unintentional input to servers or other key components can interfere with IT operations.
 * IT systems can be turned off accidentally.
 * Power or communication cables may be damaged by vacuum cleaners or torn from the endpoints.
 * Water or cleaning fluid can cause short circuits in hardware components.
-Areas with an increased need for backup such as machine room or data carrier archive are only in the presence of persons responsible of the client or in some cases also in the presence of a trusted person of the contractor, eg. B. in the four-eyes principle to clean.
+Areas with an increased need for backup such as machine room or data carrier archive are only in the presence of the person in charge of the client or in some cases in the presence of a trusted person of the contractor, eg. B. in the four-eyes principle to clean.
 
 #### INF.1.M30 Selection of a suitable building (CIA)
 
 In addition to site planning (see INF.1.M 25 Site Selection), which looks at the environment of a building, a building must be assessed for its internal suitability. In principle, of course, it must be checked already during the building selection whether all measures relevant for the later use can then be implemented.
 
-For some of these measures, however, the requirement can only be met later with great effort or not at all. Therefore, this measure should help in the selection of an existing building, typically to avoid problems occurring later in advance as far as possible. But it can also be helpful when planning a new building.
+For some of these measures, however, the prerequisite can only be created later with great effort or not at all. Therefore, this measure should help in the selection of an existing building, typically to avoid problems occurring later in advance as far as possible. But it can also be helpful when planning a new building.
 
 Individual aspects vary depending on whether the building is purchased or rented. From the point of view of information security, the following must be considered, among other things, with regard to the condition of the building fabric:
 
 * Does statics (maximum ceiling load, load-bearing walls) enable the installation of high-load space (server room, DC, UPS, etc.) where they would be useful in terms of work economy and information security (see also INF.1.34 Arrangement of buildings worth protecting) ?
 * Can the existing or additionally required access routes (corridors, staircases, elevators) be used and set up so that measures such as: B. INF.1.M7 access control and control are also meaningful implementation?
-* Is it possible due to the access routes to separate areas with high security requirements of those with low, so that z. B. Training rooms outside of sensitive areas like product development?
-* Can existing or additionally required access routes (corridors, staircases, elevators) be used at any time to transport even larger IT components? If this is not guaranteed, the restart after a hardware damage can possibly be delayed considerably.
+* Is it possible due to the development paths to separate areas with high security requirements from those with low, so that z. B. Training rooms outside of sensitive areas like product development?
+* Can existing or additionally required access routes (corridors, stairwells, elevators) be used at any time to transport even larger IT components? If this is not guaranteed, the restart after a hardware damage can possibly be delayed considerably.
 * Are there (construction) conditions (rights of way, monument protection, etc.) that can hinder a needs-based use of the building? Particular attention must be paid to third-party rights of way, since these can collide with the necessary access-protected areas.
 * Is a distribution of space possible, so that the INF.1.M 3 compliance with fire protection regulations can be implemented?
 * Can INF.1.M 2 be adapted to circuit layout and INF.4 IT cabling?
@@ -526,8 +526,8 @@ Is there an external lightning protection? If so, it affects the details of the 
 For rental objects, the following additional aspects must be considered:
 
 * Does the tenant receive all the rights necessary for the proper construction of the building? Which rights and opposition options does the landlord reserve?
-* Do safety devices have to be dismantled after the end of the lease? It must be ensured in the planning phase that due to such additional costs, necessary safety measures are not waived.
-* If the building is used by third parties at the same time, it must be clarified to what extent the implementation of measures is made more difficult or even prevented.
+* Do safety devices have to be dismantled after the end of the lease? It must be ensured in the planning phase that due to such additional costs no necessary safety measures are waived.
+* If the building is used by third parties at the same time, it must be clarified to what extent the implementation of measures is hindered or even prevented.
 * As a tenant, do you get a say in a later re-letting of third-used parts of the building? It may well be that a new co-user of the building must be considered more safety-critical than the previous example. The human resources department of a small textbook publisher is moving out and as a tenant a politically or socially highly controversial organization is setting up an office there.
 It should be documented, which safety requirements were considered in the building selection. In particular, any potential security risks and the measures taken to prevent or mitigate them should be noted.
 
@@ -535,9 +535,9 @@ It should be documented, which safety requirements were considered in the buildi
 
 If a building is cleared in whole or in part because of moving out, the following things should be noted:
 
-* In the run-up to the extract, an inventory of all things relevant to information security (hardware, software, data carriers, folders, documents, etc.) is required.
-* Each employee must be informed in writing of the things he is responsible for. This avoids that an employee cares about his own things well, things for the supposedly someone else is responsible, lie down.
-* Old equipment, data carriers etc. that are no longer required must be disposed of in accordance with OPS.1.1.8 Erasure and destruction prior to removal. Under no circumstances should old resources simply be left behind, even if the landlord, tenant or buyer wishes their further use or promises disposal.
+* In the run-up to the extract, an inventory of all things relevant to information security (hardware, software, data media, folders, documents, etc.) must be compiled.
+* Each employee must be informed in writing of the things he is responsible for. This avoids that an employee cares about his own things, things for the supposedly someone else is responsible, however, remain lying.
+* Old equipment, data carriers, etc., which are no longer required, must be disposed of in accordance with OPS.1.1.8 Erasure and destruction prior to removal. Under no circumstances should old resources simply be left behind, even if the landlord, tenant or buyer wishes their further use or promises disposal.
 After completing the excerpt, all rooms must be checked to ensure that no safety-critical items have actually been left behind. Things are often forgotten, especially in remote storage areas such as cellars and attics. All objects of professional use must be collected, removed and, if necessary, subsequently disposed of safely.
 The safety recommendations for removals from ORP.1 organization should be considered.
 
@@ -558,11 +558,11 @@ There should be a firewall cadastre that meets at least the following requiremen
 * Installation company and a current photo of both sides of the built-in bulkhead.
 In the case of existing bulkheads, it may be imperative in individual cases in the case of unclear circumstances to replace it with a new one. The following specifications apply to such a bulkhead:
 
-* For all newly installed or altered bulkheads after the first compilation of the land registry, at least the following additional information must be included in the land register:
+* For all newly installed or altered bulkheads after the first compilation of the cadastre, at least the following additional information must be included in the cadastre:
 * Complete photo documentation of all essential single steps of the installation or conversion, reason of the conversion,
 * Proof that the materials used in the conversion are approved by the manufacturer of the bulkhead for the conversion.
 * All entries in the cadastre must be made immediately, at the latest 4 weeks after completion of the work.
-After a conversion, the old certificate at the place of installation must be clearly marked as invalid but so that you can still read all the relevant technical information and supplement it with a new certificate that takes into account the conversion.
+After a conversion, the old certificate at the place of installation must be clearly marked as invalid but in such a way that all relevant technical information can still be read and supplemented by a new certificate taking into account the conversion.
 
 #### INF.1.M33 Arrangement of protected buildings (CIA)
 
@@ -573,7 +573,7 @@ Protected rooms or parts of buildings should not be located in exposed or endang
 * Rooms on the ground floor with poorly visible courtyards are at risk of burglary and sabotage.
 * Well-visible rooms on the ground floor or in public areas are at risk as it may allow for spontaneous theft or unwanted insights into business-related information.
 * Rooms below flat roofs are endangered by the ingress of rainwater.
-* Underground parking can bring with it a whole range of risks: poorly visible rear entrances, open access supply lines or IT cabling, but they also often offer unauthorized persons access to insufficiently secured WLANs from their cars. From the point of view of fire protection, areas in underground garages are also problematic, which are misused as storage space.
+* Underground parking can bring with it a whole range of risks: poorly visible rear entrances, open access to supply lines or IT cabling, but they also often offer unauthorized persons access to insufficiently secured WLANs from their cars. From the point of view of fire protection, areas in underground garages are also problematic, which are misused as storage space.
 As a rule of thumb, one may say that vulnerable rooms or areas are better located in the center of a building than in its exterior.
 
 It is best to include these aspects in the construction planning for a new building or in the occupancy planning when moving into an existing one. For existing buildings, a corresponding usage arrangement will often be associated with internal moves. As a substitute, the opportunities arising from already required changes of the room occupancy should be used consistently.
@@ -594,7 +594,7 @@ In order to maintain the protective effect of the GMA, regular maintenance and f
 If no GMA is available or if the existing one can not be used, local hazard detectors can be considered as a minimal solution. These work completely independently, without connection to a central office. The alerting takes place on site or by means of a simple two-wire line (possibly telephone line) elsewhere.
 
 There are rooms like server room, data carrier archive, which have an increased need for protection. If there is no central GMA, local hazard alarms should be installed there. When using local hazard detection systems for early detection, it must be ensured that an alarm is also perceived outside the affected areas. The message can be sent through various channels and should be forwarded to a location that is staffed around the clock. For example, there are solutions that can alarm employees via the PBX or radio via a mobile phone.
-Before planning a GMA, a consistent protection concept for the considered building must be developed. When planning security systems for private or commercial properties, it should be clarified with the property insurer whether a reduction of the insurance premium, in particular for burglary theft insurance, is possible.
+Before planning a GMA, a consistent protection concept for the considered building must be developed. When planning security systems for private or commercial properties, it should be clarified with the property insurer whether a reduction in the insurance premium, in particular for burglary theft insurance, is possible.
 
 3 Further information
 ------------------------------
@@ -605,7 +605,7 @@ Supplementary information is listed here that is not included in the measures, b
 
 ### 3.2 Literature
 
-Additional information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
+Further information about hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
 
 * #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
 
@@ -667,11 +667,11 @@ Additional information on hazards and safety measures in the area of ​​"Gene
  Part 2: Data backup rooms and data backup containers
 
  
-* #### [DIN1143-1] DIN EN 1143-1: Secure storage units - Requirements, classification and methods of resistance to burglary - Part 1
+* #### [DIN1143-1] DIN EN 1143-1: Secure storage units - Requirements, classification and methods of testing for burglary resistance - Part 1
 
   
 
- Safes, safes for ATMs, strongroom doors and strongrooms
+ Safes, safes for ATMs, strongroom doors and safes
 
  
 * #### [DIN12056] DIN EN 12056-1 to 4: Gravity drainage systems inside buildings

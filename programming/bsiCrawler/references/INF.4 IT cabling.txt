@@ -6,7 +6,7 @@
 #### INF.4.A4 Requirements Analysis for IT Cabling
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 #### INF.4.A6 Continuous updating and revision of network documentation
-#### INF.4.A7 Removing and Deactivating Unnecessary IT Cabling [Haustechnik Manager]
+#### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
 #### INF.4.A8 Fire isolation of paths [Head of Building Services]
 #### INF.4.A9 Documentation and labeling of IT cabling
 #### INF.4.A10 Neutral documentation in the distributors
@@ -16,3 +16,18 @@
 #### INF.4.A13 Material Assurance of IT Cabling (IA)
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 #### INF.4.A15 Use of Cabinet Systems (IA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.1 fire
+* G 0.2 Unfavorable climatic conditions
+* G 0.9 Failure or malfunction of communication networks
+* G 0.12 Electromagnetic interference
+* G 0.15 Listening
+* G 0.18 Missing planning or missing adjustment
+* G 0.20 Information or products from unreliable sources
+* G 0.21 Manipulation of hardware or software
+* G 0.25 Failure of devices or systems
+* G 0.26 Malfunction of equipment or systems
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.37 denying actions
+* G 0.41 Sabotage

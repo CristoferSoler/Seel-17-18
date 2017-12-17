@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 #### DER.3.1.A2 Preparation for an audit or revision
 #### DER.3.1.A3 Conducting an audit
@@ -29,3 +29,9 @@
 #### DER.3.1.A27 Storage and archiving of documents for audits and revisions
 ### 3.3 Requirements for increased protection requirements
 #### DER.3.1.A28 Security auditing of auditors (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.46 Loss of integrity of sensitive information

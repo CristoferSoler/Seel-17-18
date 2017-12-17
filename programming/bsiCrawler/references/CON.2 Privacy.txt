@@ -2,3 +2,5 @@
 #### CON.2.A1 implementation standard privacy model
 ### 3.2 Standard requirements
 ### 3.3 Requirements for increased protection requirements
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment

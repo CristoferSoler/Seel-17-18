@@ -47,7 +47,7 @@ When documents are scanned, the appearance or semantics of the recorded data may
 
 ### 2 5 Insufficient renewal of cryptographic procedures during archiving
 
-Cryptographic methods that z. As with signatures, seals, time stamps, technical evidence (Evidence Records) or encodings are used must be regularly adapted to the current state of the art, so that the protective effect is maintained. Failure to do so may, for example due to an outdated unsafe signature, jeopardize the integrity of the document so that the file will not be admitted as evidence in court. Also, the confidentiality of an encrypted document is lost.
+Cryptographic methods that z. As with signatures, seals, time stamps, technical evidence (Evidence Records) or encodings are used, must be regularly adapted to the current state of the art, so that the protective effect is maintained. Failure to do so may, for example due to an outdated unsafe signature, jeopardize the integrity of the document so that the file will not be admitted as evidence in court. Also, the confidentiality of an encrypted document is lost.
 
 ### 2 6 Insufficient performance of archival revisions
 
@@ -61,7 +61,7 @@ When archiving electronic documents, various legal framework conditions must be 
 ---------------
 The following are specific requirements for archiving. Basically, the archive manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -81,14 +81,14 @@ Since archive systems centrally store sensitive data of an institution, their IT
 
 #### OPS.1.2.2.A4 Consistent indexing of data during archiving [IT, IT operation, user]
 
-All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to quickly find them again in future searches. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
+All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to find them quickly in future search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
 
 #### OPS.1.2.2.A5 Regular processing of archived data [Head IT]
 
 It MUST be ensured throughout the archiving period that
 
 * the used data format can be processed by the used applications,
-* the stored data will remain readable and reproducible in the future so that semantics and probative value can be maintained,
+* the stored data will remain readable and reproducible in the future so that semantics and probative value can be maintained
 * the used file system can be processed on the storage medium by all involved components,
 * the storage media can be read at any time technically flawlessly and
 * the cryptographic methods used for encryption and evidential value preservation by means of digital signature, seal, time stamp or technical evidence data (Evidence Records) correspond to the state of the art.
@@ -105,7 +105,7 @@ All access to electronic archives MUST be logged. To do this, the date, time, us
 
 The log data of the archive accesses SHOULD be evaluated regularly. In doing so, the institution's internal guidelines SHOULD be observed.
 
-Also, SHOULD be defined which events (eg system errors, timouts or data records copy) should be signaled to which employees are displayed. Critical events SHOULD be checked immediately after signaling and, if necessary, further escalated.
+Also, SHOULD be defined which events (eg system errors, timouts or data records) are to be signaled to which employees are displayed. Critical events SHOULD be checked immediately after signaling and, if necessary, further escalated.
 
 #### OPS.1.2.2.A9 Selection of suitable data formats for the archiving of documents [Head IT, IT operation]
 
@@ -152,7 +152,7 @@ The implementation and participation in the training SHOULD be documented.
 The available free space on the archive media MUST be monitored continuously. As soon as a defined limit value is undershot, a responsible employee MUST be alerted automatically. It SHOULD be ensured that the alerting takes place according to the role. There must always be enough empty archive media available to quickly prevent memory bottlenecks.
 
 #### OPS.1.2.2.A13 Regular revision of the archiving processes
-IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this purpose, a checklist should be created that contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 #### OPS.1.2.2.A14 Regular monitoring of the archive system [Head IT]
 
@@ -166,7 +166,7 @@ Archive data that has been secured by cryptographic techniques whose security su
 
 #### OPS.1.2.2.A16 Regular renewal of technical archive system components [Head of IT, IT operation]
 
-Archive systems SHOULD be kept up-to-date over a long period of time. New hardware and software SHOULD be thoroughly tested before installation in a running archive system. When new components are put into operation or new file formats are introduced, a migration concept SHOULD be created. It SHOULD describe all changes, tests and expected test results. The conversion of the individual data SHOULD be documented (transfer note).
+Archive systems SHOULD be kept up-to-date over a long period of time. New hardware and software SHOULD be thoroughly tested before installation in a running archive system. When new components are put into operation or new file formats are introduced, a migration concept SHOULD be created. It SHOULD describe all changes, tests, and expected test results. The conversion of the individual data SHOULD be documented (transfer note).
 
 If archive data is to be converted into new formats, it should be checked whether, due to legal requirements, the data must also be archived in its original format.
 

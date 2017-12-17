@@ -32,7 +32,7 @@ Even if the regular monitoring of access to the VPN was inadequately planned, at
 
 ### 2 2 Insecure VPN service providers
 
-VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an unsafe VPN service offered by attackers could be used by attackers to steal targeted information.
+VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an insecure VPN service offered by attackers could be used by attackers to steal targeted information.
 
 ### 2 3 Problems with local storage of authentication data for VPNs
 Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
@@ -95,9 +95,9 @@ A requirements analysis SHOULD be carried out in order to be able to determine t
 
 In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
 
-#### NET.3.3.A8 Create a security policy for VPN use
+#### NET.3.3.A8 Create a security policy for VPN usage
 
-A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, SHOULD he be given a leaflet containing the most important VPN security mechanisms. All VPN users SHOULD be required to comply with security policies.
+A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
 
 #### NET.3.3.A9 Appropriate selection of VPN products
 
@@ -112,9 +112,9 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
 #### NET.3.3.A12 User and Access Management for Remote Access VPNs
-For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * Identity and Authorization Management * module.
+For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
 
-When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+When using standalone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 
 #### NET.3.3.A13 Integration of VPN components in a firewall
 

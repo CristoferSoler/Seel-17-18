@@ -39,3 +39,18 @@
 #### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
 #### NET.1.2.A37 Cross-Site Time Synchronization (CI)
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.9 Failure or malfunction of communication networks
+* G 0.11 Failure or disruption of service providers
+* G 0.14 Spying out information (spying)
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.25 Failure of devices or systems
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.39 Malware
+* G 0.40 Denial of Service
+* G 0.43 Importing messages

@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### OPS.1.2.2.A1 Identification of influencing factors for electronic archiving
 #### OPS.1.2.2.A2 Development of an archiving concept
 #### OPS.1.2.2.A3 Appropriate installation of archive systems and storage of archive media [Head of IT, IT operation]
@@ -22,3 +22,19 @@
 ### 3.3 Requirements for increased protection requirements
 #### OPS.1.2.2.A20 Appropriate use of cryptographic procedures in archiving [Head of IT] (CI)
 #### OPS.1.2.2.A21 Transfer of paper data to electronic archives (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.2 Unfavorable climatic conditions
+* G 0.4 Pollution, dust, corrosion
+* G 0.14 Spying out information (spying)
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.22 Manipulation of information
+* G 0.25 Failure of devices or systems
+* G 0.26 Malfunction of equipment or systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.37 denying actions
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Standard software is understood to mean software that is offered on the market and is usually obtained from specialist retailers, for example via catalogs or online portals. It is characterized by the fact that institutions can install them themselves and adapt them with little effort.
+Standard software is understood to mean software that is offered on the market and is usually obtained from specialized dealers, for example via catalogs or online portals. It is characterized by the fact that institutions can install them themselves and adapt them with little effort.
 
 This module shows how institutions should deal with standard software from a security point of view. For example, institutions must be able to create a standard software requirement catalog, select a suitable product, install it safely, manage licenses appropriately, and safely uninstall the product.
 
@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of adaptation of the standard software to the needs of the institution
 
-If purchased standard software is not adapted to the requirements of the institution, the internal operation can be significantly disturbed. Formats could z. B. not be compatible with already used programs or new product could have too little functionality. This can lead to performance losses, disruptions or errors within the business processes.
+If purchased standard software is not adapted to the requirements of the institution, the internal operation can be significantly disturbed. Formats could z. B. not be compatible with already used programs or new product might have too little functionality. This can lead to performance losses, disruptions or errors within the business processes.
 
 ### 2 2 Disclosure of information worthy of protection due to incorrect configuration
 
@@ -34,14 +34,14 @@ Is a standard software configured incorrectly, eg. If, for example, unneeded fun
 
 ### 2 3 Obtaining standard software and updates from unreliable sources
 
-If standard software or related updates are obtained from unreliable sources, the integrity and functionality of the software can not be assured. This also applies to extensions (* plug-ins * or * add-ons *). The installation of compromised software may result in malicious code being distributed throughout the institution and that the software may not function as intended. In addition, the integrity and availability of IT systems may be compromised.
+If standard software or related updates are obtained from unreliable sources, the integrity and functionality of the software can not be assured. This also applies to extensions (* plug-ins * or * add-ons *). The installation of compromised software may result in the distribution of malicious code in the institution and failure of the software to function as intended. In addition, the integrity and availability of IT systems may be compromised.
 
 ### 2 4 Manipulation of data by users
 
 The data used in standard software can be manipulated in a variety of ways by users, e.g. For example, if you incorrectly or incorrectly record data incorrectly, change the content or simply delete. As a result, all specialized processes in which the corresponding application is used are affected. Failure to detect the manipulated data will result in processing of corrupted information. In addition, security holes can be created that attackers can exploit.
 ### 2 5 Software vulnerabilities in standard software
 
-Despite intensive testing, not all vulnerabilities and defects in standard software are usually discovered before they are delivered to customers. If these are not detected in time, resulting crashes or errors can lead to far-reaching consequences. In addition, the confidentiality and integrity of the stored data and the availability of affected IT systems may be affected. Software vulnerabilities or errors can also lead to serious security vulnerabilities in standard software. These can sometimes be exploited by attackers to inject malicious code.
+Despite intensive testing, not all vulnerabilities and defects in standard software are usually detected before they are delivered to customers. If these are not detected in time, resulting crashes or errors can lead to far-reaching consequences. In addition, the confidentiality and integrity of the stored data and the availability of affected IT systems may be affected. Software vulnerabilities or errors can also lead to serious security vulnerabilities in standard software. These can sometimes be exploited by attackers to inject malicious code.
 
 ### 2 6 Use of non-licensed standard software
 
@@ -73,7 +73,7 @@ When installing standard software, you MUST ensure that it is an original unmodi
 An installation instruction MUST be created for the selected standard software. Also suitable parameters for the configuration as well as organizational conditions for the installation of the software MUST be specified.
 #### CON.4.A3 Secure installation and configuration of standard software
 
-Approved standard software MUST be installed and configured to adhere to the appropriate installation instructions (see CON.4.A2 * Development of standard software installation instructions *). If these instructions are deviated, this MUST be approved by the supervisor. All installations MUST be performed by IT operations. It MUST be ensured that only the required program functions are installed.
+Approved standard software MUST be installed and configured to comply with the appropriate installation instructions (see CON.4.A2 * Development of standard software installation instructions *). If these instructions are deviated, this MUST be approved by the supervisor. All installations MUST be performed by IT operations. It MUST be ensured that only the required program functions are installed.
 
 The software MUST be configured to comply with the institution's security policies. Unnecessary services and features MUST be uninstalled. If this is not possible, they MUST be turned off. Before and after standard software has been installed, data backups should be performed by all participating IT systems.
 
@@ -91,18 +91,18 @@ Before purchasing a standard software, a catalog of requirements SHOULD be creat
 
 #### CON.4.A6 Selection of suitable standard software [department, procurement office]
 
-Based on the requirements catalog (see CON4.1.A5 * Creation of a standard software catalog *), the products available on the market SHOULD be viewed and compared using a rating scale. Thereafter SHOULD investigate whether the shortlisted products really meet the institution's requirements. If there are several product alternatives, additional costs should also be taken into account, eg. For training or migration. Ultimately, the procuring entity, together with the head of the requesting department and IT operations, should select a suitable software product based on the ratings and test results.
+Based on the requirements catalog (see CON4.1.A5 * Creation of a standard software catalog *), the products available on the market SHOULD be viewed and compared using a rating scale. Thereafter SHOULD investigate whether the shortlisted products really meet the institution's requirements. If there are several product alternatives, additional costs should also be taken into account, eg. For training or migration. Ultimately, the procuring entity, together with the head of the requesting department and IT operations, should select an appropriate software product based on the ratings and test results.
 
 #### CON.4.A7 Verification of Delivery of Standard Software [Department]
 
-It SHOULD be checked if new software products were delivered completely and correctly. It should at least be checked whether the delivery was ordered, for whom it is intended and whether all the necessary components are present. Also pure download software including associated license files or keys SHOULD be checked accordingly. The results of the review SHOULD be documented. Thereafter, all delivered products and licensing information SHOULD be provided with unique identifiers and included in an inventory.
+It SHOULD be checked if new software products were delivered completely and correctly. It should at least be checked whether the delivery was ordered, for whom it is intended and whether all necessary components are present. Also pure download software including associated license files or keys SHOULD be checked accordingly. The results of the review SHOULD be documented. Thereafter, all delivered products and licensing information SHOULD be provided with unique identification features and incorporated into an inventory.
 
 #### CON.4.A8 License management and version control of standard software
 Licensed standard software products used on the institution's IT systems SHOULD be licensed. To ensure this, the installed program versions and the licenses SHOULD be checked regularly. For this purpose, appropriate lists, databases or special license management programs should be used. The stock lists for the licenses SHOULD always be up to date. In addition, the different configurations of the installed standard software SHOULD be documented.
 
 #### CON.4.A9 Uninstalling standard software
 
-When uninstalling standard software, all files created to run the software on the IT system SHOULD BE removed. Also, all entries in system files made for the product SHOULD be deleted. In order to be able to completely uninstall standard software, the system changes made during installation SHOULD be documented either manually or with appropriate programs.
+When uninstalling standard software, all files created to operate the software on the IT system SHOULD be removed. Also, all entries in system files made for the product SHOULD be deleted. In order to be able to completely uninstall standard software, the system changes made during installation SHOULD be documented either manually or with appropriate programs.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -120,7 +120,7 @@ When procuring standard software, it should be determined whether an assurance o
 
 #### CON.4.A12 Use of encryption, checksums or digital signatures (CI)
 
-If data with increased protection requirements are transmitted or stored, they SHOULD be encrypted beforehand. Is there a built-in encryption function in a standard software, SHOULD it be checked if it is sufficiently secure. This SHOULD be checked especially for older product versions. Users SHOULD be trained and sensitized in handling the encryption functions.
+When transferring or storing data with increased protection requirements, they SHOULD be encrypted beforehand. Is there a built-in encryption function in a standard software, SHOULD it be checked if it is sufficiently secure. This SHOULD be checked especially for older product versions. Users SHOULD be trained and sensitized in handling the encryption functions.
 
 4 Further Information
 ------------------------------

@@ -27,7 +27,7 @@ Lack of attention to Office product requirements when purchasing or customizing 
 If new Office products and their integration into the institution are not or insufficiently tested and released without installation instructions, it may happen that errors are not detected or that the installation parameters that are necessarily observed are not recognized or ignored. Errors in Office products that result from a missing or inadequate testing and approval process pose a significant threat to IT operations. Workflows can be significantly hampered by Office Product Errors. Incorrect updates to the Office products can lead to data loss or reduce the availability of used databases.
 
 ### 2 3 Protective data in residual information in Office documents
-Office documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflow of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information and cause financial, procedural and image damage.
+Office documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflows of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information and cause financial, procedural and image damage.
 
 ### 2 4 Obtain Office products and updates from unreliable sources
 
@@ -58,14 +58,14 @@ Data loss on Office documents can block business processes. Typically, Office pr
 
 ### 2 11 Unauthorized exercise of rights in Office products
 
-Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise due to incorrect rights. Affected business processes can be corrupted, inadvertently process erroneous information or disclose sensitive information.
+Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise due to incorrect rights. Affected business processes can be corrupted, inadvertently process incorrect information or disclose sensitive information.
 
 3 requirements
 ---------------
 
 The following are specific requirements for protecting Office products. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -80,7 +80,7 @@ The automatic execution of embedded Active content, such as macros or ActiveX el
 
 All documents obtained from external sources MUST be checked for malware prior to opening. All classified as problematic and additionally all file formats that are not required within the institution MUST be banned. The users MUST be trained and sensitized to handle documents from external sources. The examination of documents from external sources SHOULD be enforced by technical measures.
 
-#### APP.1.1.A4 Securing ongoing operations of Office products
+#### APP.1.1.A4 Securing ongoing operation of Office products
 
 IT operations and ISB MUST regularly check for known security vulnerabilities in Office products. Existing patches MUST be recorded in a timely manner.
 
@@ -92,7 +92,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### APP.1.1.A5 Selection of suitable office products
 
-As part of the procurement of office applications, the institution's requirements for office products SHOULD be collected by the technical and IT department. These should be documented in a requirements catalog. If all the requirements for the Office product to be procured are documented, the products available on the market SHOULD be examined to what extent they fulfill these requirements of the institution. When choosing between several alternatives, additional costs SHOULD also be considered; These include, for example, overhead for training administrators and users or for migration.
+As part of the procurement of office applications, the institution's requirements for office products SHOULD be charged by the technical and IT department. These should be documented in a requirements catalog. If all the requirements for the Office product to be procured are documented, the products available on the market SHOULD be examined to what extent they fulfill these requirements of the institution. When choosing between several alternatives, additional costs SHOULD also be considered; These include, for example, overhead for training administrators and users or for migration.
 
 #### APP.1.1.A6 Testing new versions of Office products
 
@@ -107,7 +107,7 @@ There SHOULD be a regular check of the installed versions of Office products. Th
 
 #### APP.1.1.A9 Removal of residual information before forwarding documents [User]
 
-Before passing on any documents to third parties, you should remove any unwanted and confidential residual information from Office documents. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained on the risks of residual information as well as the possibilities of elimination in the used office products. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
+Before passing on documents to third parties, all unnecessary and confidential residual information from Office documents SHOULD be removed. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained in the risks of residual information as well as the possibilities of elimination in the office products used. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
 
 #### APP.1.1.A10 End User Software Development [User]
 
@@ -134,7 +134,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.1.1.A15 Use of encryption and digital signatures (CI)
 
-Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD check if it provides adequate protection, especially for older product versions. The IT systems of the sender and the recipient SHOULD ensure access protection for the encryption method used. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
+Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD check if it provides adequate protection, especially for older product versions. The IT systems of sender and recipient SHOULD ensure access protection to the encryption method used. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
 
 #### APP.1.1.A16 Integrity check of documents (I)
 

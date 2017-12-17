@@ -3,9 +3,9 @@
 
 ### 1.1 Introduction
 
-The number and extent of travel necessities has steadily increased in recent years as a result of globalization and the resulting increase in the international networking of public authorities and companies. It is the entrainment of information technology, be it z. As the notebook, smartphone, tablet, removable hard disk or USB stick, as well as information in other papers or spiritual form on trips abroad in today's society has become absolutely essential to ensure the start of business activities outside the regular work environment. When traveling for business, especially when traveling abroad, there are a variety of information security threats and risks that do not exist in normal business operations.
+The number and extent of travel necessities has steadily increased in recent years as a result of globalization and the resulting increase in international networking between public authorities and companies. It is the entrainment of information technology, be it z. As the notebook, smartphone, tablet, removable hard disk or USB stick, as well as information in other papers or spiritual form on trips abroad in today's society has become absolutely essential to ensure the start of business activities outside the regular work environment. When traveling for business, especially when traveling abroad, there are a variety of information security threats and risks that do not exist in normal business operations.
 
-Each trip is fundamentally different, because of the dependency on parameters, such as the purpose of the trip (business meeting, convention, congress, seminar), the duration of the journey and the destination, a new threat situation arises, also with regard to the protection of business-critical information.
+Each trip is fundamentally different, because of the dependency on parameters, such as the purpose of the trip (business meeting, convention, congress, seminar), the duration of the journey and the destination, each time a new threat situation arises, also with regard to the protection of business-critical information.
 
 ### 1.2 Life cycle
 
@@ -21,9 +21,9 @@ In addition, a security approach to dealing with portable IT systems on foreign 
 
 Responsibility for creating, implementing and implementing information security on overseas trips should lie with security management. In order to adequately implement the safety policy by business travelers, awareness training and training should be mandatory in order to improve the perceptions of all issues.
 
-The various security requirements placed on information security during work abroad should therefore be carefully followed by all employees. The consideration of the established safety requirements as well as attentive employees allow the identification of security problems and the timely reaction to them in order to prevent or mitigate possible damages. Security problems and changes are detected in good time so that established security measures can be further developed or the travel scenarios adapted accordingly.
+The various security requirements placed on information security during work abroad should therefore be carefully followed by all employees. The consideration of the established safety requirements as well as mindful employees allow the identification of security problems and the timely reaction to them in order to prevent or mitigate possible damages. Security problems and changes are detected in good time so that established security measures can be further developed or the travel scenarios adapted accordingly.
 
-In addition to the organizational aspects of a trip abroad, technical measures must be taken and physical measures implemented. For this purpose, in particular the use of encryption / cryptography, the possibility of securely deleting data and information, as well as the security of communication via public or unknown Internet access, such. As hotspots to look at.
+In addition to the organizational aspects of a trip abroad, technical measures must be taken and physical measures implemented. For this purpose, in particular the use of encryption / cryptography, the possibility of securely deleting data and information as well as securing communication via public or unknown Internet access, such. As hotspots to look at.
 
 ** Emergency Preparedness **
 
@@ -75,7 +75,7 @@ In addition, the inclusion of the security information security policy when trav
 The security policy for information security on trips abroad must be approved by the management in writing. It is to be announced to all internal employees who carry out a foreign activity. The announcement should be made in such a way that the importance of information security on trips abroad becomes clear to all employees.
 
 #### CON.7.M2 Raising employee awareness of the security policy Information security on trips abroad [IT operations, data protection officer]
-Security in general and information security on trips abroad in particular can not be done without attentive and well-trained staff. Therefore, training and awareness-raising is an integral part of employee preparation. Therefore, overseas employees should be continuously and adequately sensitized to information security when traveling abroad and receive regular training. In particular, they should be taught the dangers of inappropriate handling of information, improper destruction of data and data carriers, malicious software and insecure data exchange, as well as the limitations of the security measures deployed.
+Security in general and information security on trips abroad in particular can not be done without attentive and trained staff. Therefore, training and awareness-raising is an integral part of employee preparation. Therefore, overseas employees should be continuously and adequately sensitized to information security when traveling abroad and receive regular training. In particular, they should be taught the dangers of inappropriate handling of information, improper destruction of data and data carriers, malicious software and insecure data exchange, as well as the limitations of the security measures deployed.
 
 Similarly, users should be made aware of the need to protect mobile IT systems and the data on them. In the process, specific threats or corresponding measures should be demonstrated when using mobile IT systems. Users should also be informed about the type of information they may have during their stays abroad, eg. B. the notebook or smartphone may be processed.
 
@@ -95,12 +95,12 @@ The following aspects should be prepared and observed by employees on trips abro
 
 * Contents of applicable ** internal regulations ** for business trips abroad and overview of information to be protected, threats and measures for the security of information, with and without IT use.
 * ** Workplace Environment **: ** ** Employees must instruct them to decide, prior to each mobile trip abroad, if their environment is suitable as a mobile workstation, especially with regard to information security.
-* ** Prohibition of use of hardware and software ** that has not been released: All employees must be informed again before traveling abroad about the prohibition of the use of unreleased hardware and software.
+* ** Prohibition of use of hardware and software ** that has not been released: All employees must be informed about the ban on the use of unauthorized hardware and software before traveling abroad.
 * ** Malicious programs **: Safety instructions or regulations to be respected should be issued to employees who avoid or reduce infection of portable IT systems with malicious programs. However, if a portable IT system becomes infected with a malicious program, the incident must be immediately communicated to a central reporting office of the institution. Here central contact persons must be named and made known. In addition, compliance with anti-malware regulations should be regularly and randomly checked.
 * ** Password Usage **: Users should be instructed to use password protection passwords that are adequate in their complexity. In addition, these should put a special emphasis on the secrecy of their password. Passwords must be changed immediately as soon as they have become known or suspected of being unauthorized. Access to the institution's IT systems should be secured with multi-factor authentication.
-* ** Prevention of unsecured network access **: Users are not allowed to use a public network or network access of foreign institutions (WLAN and LAN) either directly or unsecured in order to access internal resources. Such accesses are generally considered untrustworthy.
+* ** Prevention of unsecured network access **: Users may not use a public network or network access of foreign institutions (WLAN and LAN) directly or unsecured in order to access internal resources. Such accesses are generally considered untrustworthy.
 * ** IT and data carrier transport **: Established rules for carrying portable IT systems and data media should be noted and implemented. In some cases, the high level of protection required for the confidentiality of information must also be taken into account. Therefore, mobile IT systems and media should be fully encrypted.
-* ** Compulsory information on country-specific regulations, travel and environmental conditions **: Before employees travel, they should inform themselves about the current security situation as well as legal and regulatory requirements. Specific travel and safety information can be obtained from the German Foreign Office, see https://www.auswaertiges-amt.de/DE/Laenderinformationen/SicherheitshinweiseA-Z-Laenderauswahlseite\_node.html. Information on security-related issues should be obtained by the ISB and made available to employees.
+* ** Compulsory information on country-specific regulations, travel and environmental conditions **: Before employees travel, they should inform themselves about the current security situation as well as legal and regulatory requirements. Specific travel and safety information can be obtained from the German Foreign Office, see https://www.auswaertiges-amt.de/DE/Laenderinformationen/SicherheitshinweiseA-Z-Laenderauswahlseite\_node.html. Information on security-related topics should be obtained by ISB and made available to employees.
 * ** Communication with your own institution and business partners **: Institution-internal regulations should be made and lived for communication on the move (eg use of secured connections). Both e-mail and landline and mobile phones can be easily spied out, so any communication needs to be secured to pass on high-sensitive information with end-to-end encryption.
 * ** Attention of employees during work abroad **: Regulations should be made regarding the behavior of employees abroad. In addition, employees should not talk to strangers about the purpose of their trip and their employer to protect business-critical information. Accordingly, an employee should become suspicious of unusually high demand on work or employer issues.
 ** Acceptance of gifts **: Accepting gifts is often difficult, as consideration is usually expected. Therefore, employees have to be informed about how to proceed in such cases.
@@ -108,15 +108,15 @@ The following aspects should be prepared and observed by employees on trips abro
 It is important to carry out these sensitizations continuously and to repeat them regularly.
 #### CON.7.M3 Identification of country-specific regulations, travel and environmental conditions [Human Resources Department]
 
-Provisions for dealing with country-specific regulations, travel and environmental conditions should be defined in the security policy on information security on trips abroad. On the one hand, the ISB or the Human Resources Department must examine the respective applicable regulations of the individual countries and communicate the country's own circumstances within the scope of information security and personal security to the corresponding employees before they start a journey. On the other hand, travelers are also obliged to provide themselves with sufficient background knowledge about the destination and its specifics.
+Provisions for dealing with country-specific regulations, travel and environmental conditions should be defined in the security policy on information security on trips abroad. On the one hand, the ISB or the Human Resources Department must examine the respective applicable regulations of the individual countries and communicate the country-specific circumstances within the scope of information security and personal security to the corresponding employees before they start a journey. On the other hand, travelers are also obliged to provide themselves with sufficient background knowledge about the destination and its specifics.
 
 The prerequisite for this is that appropriate regulations for the exchange of information during stays abroad have been drawn up and communicated to all participants. The security policy on information security on trips abroad needs to be updated on a regular basis, especially if there is a need to adapt due to changing circumstances.
 
-Environmental influences abroad, such as As a high humidity, heat, cold or dust, can also affect the functioning of electronic devices such as notebooks or smartphones. The HR department, ISB and employees should deal with the climatic conditions of the travel destination before departure and take protective measures to protect employees as well as accompanying information technology and information. Portable IT systems should be protected against special climatic conditions or environmental influences, such as: As moisture due to rain or splashing, be secured. Mobile IT systems should not be exposed to extremely low or high temperatures unless specifically designed. Both battery and display can be disturbed by extreme temperatures in their function or even destroyed, z. As if IT devices are left in cars, but this is not recommended due to the potential theft risk.
+Environmental influences abroad, such as As a high humidity, heat, cold or dust, can also affect the functioning of electronic devices such as notebooks or smartphones. The HR department, ISB and employees should deal with the climatic conditions of the travel destination before departure and take protective measures to protect employees as well as accompanying information technology and information. Portable IT systems should be protected against special climatic conditions or environmental influences, such as: As moisture due to rain or splashing, be secured. Mobile IT systems should not be exposed to extremely low or high temperatures unless specifically designed. Both battery and display can be disturbed by extreme temperatures in their function or even destroyed, z. As if IT devices are left in cars, but this is not recommended because of the potential theft risk.
 
 The respective applicable regulations of the individual countries should be examined in situ before each trip. Have existing regulations on the exchange of information been defined and announced? Should an adjustment be made here in situ? Are existing encryption types or communication methods suitable or secure?
 
-In addition, the problem may arise that notebooks are used by business travelers in certain countries, such as: As the US, can be searched at the entry or exit. This aspect conflicts with the protection of confidential information from access by third parties. Because not only is it permissible for the US authorities to search IT systems, they can also take them over and copy data. In addition, IT systems can be confiscated for up to a month, which can be a problem for travelers if they are limited or even prevented from carrying out their work. Therefore, the institution has to create regulations here that allow the protection of company-internal data. An example are corporate rules, in which passwords for accessing the entrained IT systems are sent only after successful entry, certain data is securely deleted before departure, or no sensitive data is stored on smartphones.
+In addition, the problem may arise that notebooks are used by business travelers in certain countries, such as: As the US, can be searched at the entry or exit. This aspect conflicts with the protection of confidential information from access by third parties. Because not only is it permissible for the US authorities to search IT systems, they can also take them over and copy data. In addition, IT systems can be confiscated for up to a month, which can be a problem for travelers if they are limited or even prevented from carrying out their work. Therefore, the institution has to create regulations here that allow the protection of company-internal data. An example are company rules, in which passwords for accessing the entrained IT systems are sent only after successful entry, certain data are securely deleted before departure, or no sensitive data is stored on smartphones.
 
 #### CON.7.M4 Using privacy screens [user]
 
@@ -125,7 +125,7 @@ In order to protect the display of notebooks, tablets or smartphones and thus th
 #### CON.7.M5 Using Screen / Code Lock [User]
 Using a screen / code lock prevents third parties from accessing data on mobile devices, such as mobile devices. B. notebooks or mobile phones can access. For this an appropriate code or a secure device password must be used.
 
-The period after which a screen lock automatically activates due to a lack of user input should not go below or below certain limits. The period should not be too tight, so that the screen lock does not start after a brief pause for thought. Under no circumstances may this period be too long so that the user's absence can not be exploited by third parties. A reasonable default is a 10-minute period for notebooks and 2 minutes for other mobile devices. The ISB should set the latency requirements that reflect the security requirements of each IT system and its environment of use. These requirements should be enforced as centrally as possible on the terminals, for example via group policies or an MDM.
+The period after which a screen lock automatically activates due to a lack of user input should not fall below or exceed certain limits. The period should not be too tight, so that the screen lock does not start after a brief pause for thought. Under no circumstances may this period be too long so that the user's absence can not be exploited by third parties. A reasonable default is a 10-minute period for notebooks and 2 minutes for other mobile devices. The ISB should set the latency requirements that reflect the security requirements of each IT system and its environment of use. These requirements should be enforced as centrally as possible on the terminals, for example via group policies or an MDM.
 
 #### CON.7.M6 Timely loss report [user, emergency officer]
 
@@ -141,7 +141,7 @@ If mobile devices with a wireless connection are lost, measures should be taken 
 If the missing notebook or smartphone reappears, it should be examined for possible tampering, eg. For example, whether screws have been opened or seals removed or the weight has changed from the original state. If the user himself does not have the necessary options for this or if there is a suspicion of manipulation, the respective device should no longer be used and handed over to a specialist for further examination. There should be a clear regulation as to how to locate the device during the journey. For a mobile storage device, the requirement of CON.7.M9 Secure Mobile Media Handling should be applied to ensure there are no malicious programs or malicious software on the recovered media.
 
 #### CON.7.M7 Secure Remote Access [IT Operations, Users]
-Because mobile IT systems are often operated in unmanageable environments, remote access to the institution's network requires the use of special mechanisms, procedures and measures that can protect IT systems. In particular, mobile VPN clients are exposed to a particular danger, since they are physically very easy to attack (eg theft, manipulation). If a VPN client is compromised, there is a risk that this will also affect the security of the LAN.
+Because mobile IT systems are often operated in unmanageable environments, remote access to the institution's network requires the use of special mechanisms, procedures and measures that can protect IT systems. In particular, mobile VPN clients are exposed to a particular danger, since they are physically very easy to attack (eg theft, manipulation). If a VPN client is compromised, there is a risk that it will affect the security of the LAN.
 
 For the secure operation of the mobile IT systems, they must be provided with a secure basic configuration (see blocks SYS.2.1 General Client and SYS.3.2 Mobile Device Management). For foreign travel the following specific points have to be considered:
 
@@ -149,7 +149,7 @@ For the secure operation of the mobile IT systems, they must be provided with a 
 * It is also essential to keep the software of the IT systems up to date and to import the necessary security patches in a timely manner. It makes sense to check whether personal firewalls, other security programs and security patches on the laptop are up-to-date before accessing the production network.
 * It is advisable to use automated tools to perform these checks automatically, so that in case of security deficiencies, access to the internal network can be rejected.
 * The Internet application programs installed on the IT system, especially the browser and e-mail client, should be operated with secure settings.
-For secure remote access of employees to the institutional network, a secure remote access via VPN must first be set up, see also NET.3.3 Virtual Private Networks. The VPN access must be cryptographically secured in order to prevent unauthorized listening between the terminal and the network of the institution.
+For secure remote access of employees to the institution's own network, a secure remote access via VPN must first be set up, see also NET.3.3 Virtual Private Networks. The VPN access must be cryptographically secured in order to prevent unauthorized listening between the terminal and the network of the institution.
 
 A mobile IT system can easily fall into the wrong hands. The connection to the internal network (the tunnel structure) should therefore not be automated, but only after an authentication. Users must have adequate credentials to successfully authenticate themselves to both the terminal and the network.
 
@@ -159,7 +159,7 @@ In addition, the following aspects must be considered for the use of the VPN:
 
 * It must be regulated for which business processes and applications the respective VPN is used and which information may be communicated about it.
 * It must be determined which services may be used only if secure remote access is available. For example, if remote access is available, no services such as e-mail should be allowed to pass by.
-* It is to be determined, e.g. Based on their previous knowledge, which employees should receive which authorizations via the remote access.
+* It is to be determined, e.g. Based on their previous knowledge, which employees should receive which authorizations via remote access.
 * Appropriate identification and authentication procedures for the use of VPN access must be defined.
 * Responsibilities and reporting channels for the operation and use of VPN must be determined.
 * It should be ensured that all cached authentication information that enables the establishment of a VPN will be deleted automatically after the end of VPN use.
@@ -169,7 +169,7 @@ In addition, the following aspects must be considered for the use of the VPN:
 * The policy for VPN usage needs to be explained to staff, for example during training sessions or awareness-raising events.
 #### CON.7.M8 Secure Use of Public WLANs [User]
 
-WLAN hotspots, such as those found in public places such as hotels, airports, exhibition halls, train stations, restaurants and convention centers, should always be regarded as an insecure network, as it is difficult to assess the level of security that exists there from the outside. The user must be made aware that hotspots can not generally be trusted.
+WLAN hotspots, such as those found in public places such as hotels, airports, exhibition halls, train stations, restaurants and convention centers, should always be considered as an insecure network, as it is difficult to assess the level of security that exists there from the outside. The user must be made aware that hotspots can not be classified as trustworthy.
 
 The access of mobile IT systems to resources of the institution via publicly accessible WLANs should therefore only be possible via a Virtual Private Network (VPN) or with comparable security.
 
@@ -211,7 +211,7 @@ In principle, mobile data carriers can be deleted much like built-in hard disks.
 
 ** With encryption **
 
-If the mobile data carrier has been completely encrypted using a secure procedure or all data has been stored in a securely encrypted container, it is sufficient to securely delete the key material.
+If the mobile data carrier has been completely encrypted with a secure procedure or all data is stored in a securely encrypted container, it is sufficient to delete the key material safely.
 
 As an accompanying measure, all copies of possible key material (eg recovery keys) should be deleted. For this documentation of the key management is helpful.
 
@@ -223,7 +223,7 @@ All performed steps should be logged.
 
 USB sticks generally do not provide any special commands for deleting or, in the case of SSDs, the quality of the implementation is often unclear. Therefore, flash memory-based media should be completely overwritten with a random pattern at least twice. Such media have more memory blocks than they provide. The amount of data and the override pattern are used here, in contrast to the hard disk, to cause the load distribution of the medium to overwrite all internal memory blocks.
 
-Since the internal memory blocks can not be addressed directly from the outside, it can not be checked whether all memory blocks have been overwritten. However, access to such data artefacts would only be possible for an attacker with great effort (desoldering of the building blocks, reconstruction of the data structures). For data with normal protection needs and confidential data, this approach is sufficient.
+Since the internal memory blocks can not be addressed directly from the outside, it can not be checked whether all memory blocks have been overwritten. However, an access to such data artefacts would only be possible for an attacker with great effort (desoldering of the building blocks, reconstruction of the data structures). For data with normal protection needs and confidential data, this approach is sufficient.
 
 For unencrypted, strictly confidential data, we recommend that you physically destroy and dispose of the media after it has been deleted as described. Previously encrypted media can be reused for areas of the same classification after being deleted.
 Media declared as defective should first be checked on at least one other system. If they can not be extinguished there, the medium should be physically destroyed and then disposed of, for example by a special disposal company.
@@ -235,7 +235,7 @@ All performed steps should be logged.
 To safely erase all data on the BlackBerry, the Secure Wipe feature must be triggered. This is possible via the following ways:
 
 * By the mobile device management tool BlackBerry Enterprise Service by the responsible administrators or by the self-service portal by the user himself.
-* For an unlocked device in the app "Settings" select the menu item "Security and Privacy", then select the function "Security delete" and confirm the deletion by entering "blackberry".
+* For an unlocked device in the app "Settings", select the menu item "Security and Privacy", then select the function "Security delete" and confirm the deletion by entering "blackberry".
 * For a locked device, enter the wrong password multiple times.
 In order to check the correct deletion, the device should thereafter be reactivated with a test user and checked whether there are still links, eg. B. can be found with the mail account of the original user.
 
@@ -263,8 +263,8 @@ All performed steps should be logged.
 
 #### CON.7.M10 Encryption of portable IT systems and data carriers [user, IT operation]
 
-In order to prevent that information worth protecting can be inspected by unauthorized third parties, it must be ensured prior to departure by the employee that all information worthy of protection is secured in accordance with the internal guidelines.
-Mobile data carriers and clients should be encrypted according to internal procedures and regulations before departure, in order to protect sensitive data against unauthorized access. This applies in particular to rewriteable data carriers. It is possible to encrypt volumes only partially. However, for ease of use, it is recommended that you encrypt the entire disk if it is not needed for a third-party data exchange. An encryption of the disk can be achieved either with software such. B. BitLocker from Microsoft or FileVault from Apple, or even with special hardware. To decrypt clients, a cryptographic key is necessary, which should be used in the form of a separate chip card or a USB token. In this case, the user should keep the cryptographic key and the encrypted volume or client separate from each other.
+In order to prevent that information worth protecting can be inspected by unauthorized third parties, it must be ensured before departure by the employee that all information worthy of protection is protected in accordance with the internal guidelines.
+Mobile data carriers and clients should be encrypted according to internal procedures and regulations before departure, in order to protect sensitive data against unauthorized access. This is especially true for rewritable media. It is possible to encrypt volumes only partially. However, for ease of use, it is recommended that you encrypt the entire disk if it is not needed for a third-party data exchange. An encryption of the disk can be achieved either with software such. B. BitLocker from Microsoft or FileVault from Apple, or even with special hardware. To decrypt clients, a cryptographic key is necessary, which should be used in the form of a separate chip card or a USB token. In this case, the user should keep the cryptographic key and the encrypted volume or client separate from each other.
 
 In addition, it is important to take precautions against data loss in order to intercept malfunctions (power failure, abort of encryption) on the system side. In addition, the following requirements are useful:
 
@@ -301,7 +301,7 @@ When purchasing mechanical fuses, it is important to choose a good lock that has
 * Master Key System: Each device backup has an individual key, but can also be opened by a master key. This has the advantage that the expense of key management is lower. But it has the disadvantage that such systems are more expensive to buy.
 Most notebooks, but also many other devices, have a small opening marked with a chain or lock icon ("Kensington Lock"). This opening (approximately 3 x 7 mm) is located on the side or rear of the device. There is a wide range of cable retainers and other products that use this opening for securing devices.
 
-For cable fuses, a cable loop must then be placed around a solid object in the vicinity of the device, the associated lock must be pulled through the resulting tab and locked.
+In the case of cable fuses, a cable loop must then be placed around a solid object in the vicinity of the device, and the associated lock must be pulled through the resulting tab and closed.
 
 For devices that do not have this opening or where it is not strong enough, there are backup products where a sturdy plate is glued to the device. At this then the security cable is attached.
 
@@ -314,7 +314,7 @@ It should be noted that these fuses usually do not provide comprehensive protect
 When new IT equipment is purchased, care should be taken to ensure that these grommets are attached to the housing for attachment to other objects and that the enclosures are lockable.
 
 #### CON.7.M12 Safe destruction of sensitive materials and documents [user]
-Within your own institution, there are usually trained procedures on how to dispose of old or unusable data carriers and documents, but this is not possible when traveling. Therefore, before disposing of discarded media and documents, consider carefully whether they could contain sensitive information. If this is the case, the data carriers and documents must, in case of doubt, be taken back to their place of origin or back to their own institution. On site, as few as possible materials or documents worthy of protection should be produced.
+Within your own institution, there are usually well-practiced procedures on how to dispose of old or unusable data carriers and documents, but this is not possible when traveling. Therefore, before disposing of discarded media and documents, consider carefully whether they could contain sensitive information. If this is the case, the data carriers and documents must be taken back to their place of origin or back to their own institution in case of doubt. On site, as few as possible materials or documents worthy of protection should be produced.
 
 File and data shredders ("shredders") in foreign institutions should be viewed with caution, since it is not clear who is performing the disposal or how reliable this is.
 
@@ -332,7 +332,7 @@ be enabled.
 
 The security policy must include rules on how employees should handle outdated data media and documents on the move.
 
-As a general rule, data carriers should be protected against unauthorized access until they are disposed of or collected and protected over the entire transport route. Even if it is disposed of according to the appropriate security levels, data carriers should be securely deleted beforehand.
+As a general rule, data carriers should be protected against unauthorized access until they are disposed of or collected and protected over the entire transport route. Even if it is disposed of according to the corresponding security levels, data carriers should be securely deleted beforehand.
 
 A DIN-compliant disposal of physical media, however, is difficult to obtain abroad. It is therefore recommended that documents and data carriers be taken back to their own institution and disposed of there in accordance with a regulated procedure.
 
@@ -342,7 +342,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### CON.7.M13 Carrying of data and data carriers [IT operation, users]
 
-The data on IT systems that are used outside of their own real estate, such as notebooks, mobile phones, tablets, mobile hard disks, exchange sticks and more, must be adequately protected by security measures. Above all, the transport of data carriers and IT components on foreign trips should be clearly regulated. These include the following rules:
+The data on IT systems that are used outside of their own real estate, such as notebooks, mobile phones, tablets, mobile hard drives, exchange sticks and more, must be adequately protected by security measures. Above all, the transport of data carriers and IT components on foreign trips should be clearly regulated. These include the following rules:
 
 * The IT systems must not be checked in as baggage, but must be carried by the traveler (as carry-on baggage).
 * IT systems must always be kept secure. On business trips they should not be left unattended. In particular, they should not be left behind in vehicles.
@@ -358,10 +358,10 @@ It should be specified in writing which mobile data carriers may be taken on tri
 
 It should be set
 
-* which IT systems or data media may be taken outside the home,
+* which IT systems or data carriers may be taken outside the home,
 * who is allowed to take IT systems or data carriers out of the house,
 * which basic security measures must be observed (virus protection, encryption of sensitive data, storage, etc.).
-The type and extent of security measures to be applied to externally deployed IT systems depends, on the one hand, on the protection requirements of the IT applications and data stored on them and, on the other hand, on the security of the storage or storage locations.
+The type and extent of security measures to be applied to externally deployed IT systems depends, on the one hand, on the protection requirements of the IT applications and data stored on them, and, on the other hand, on the security of the storage or storage locations.
 
 ** Storage of portable IT systems and sensitive information **
 
@@ -370,14 +370,14 @@ Users of portable IT systems should be advised to save them before traveling ove
 * Portable IT systems should not be stored unattended or unprotected. Even when leaving a foreign office, care should be taken to ensure that the IT systems and data carriers are not left unsecured. Therefore, either the room should be locked or the IT systems and data carriers should be taken. When leaving the room, the device should be turned off or the access lock should be activated to prevent unauthorized access. Wherever other measures such as suitable access control can not be implemented, anti-theft fuses should be used.
 * Even in hotel rooms, portable IT systems should not be left unsecured. The device can z. B. be included in the hotel room safe, so that a first inhibition threshold for the theft or misuse of mobile IT systems is established. However, high-security information should not be kept in an in-house safe.
 * Protective information that is not essential should not be carried when traveling. If this is necessary, information should be carried in hand luggage. The hand luggage must never be left unattended.
-* Important notes and general instructions for appropriate storage and transport of portable IT systems should be summarized separately on a leaflet, in addition to the inclusion in the security policy for users.
+* Important notes and general instructions for appropriate storage and transport of portable IT systems should be summarized separately on a leaflet, in addition to being included in the security policy for users.
 #### CON.7.M14 Cryptographically secured e-mail communication [user, IT operation]
 
 E-mails should be cryptographically secured by the employees according to the internal guidelines of the institution.
 
 When sending e-mail abroad, users should encrypt their e-mails if they contain sensitive information so that they are only known to the sender and recipient as part of the end-to-end encryption. Emails should be encrypted so that they can not be manipulated on the way between sender and receiver. E-mails without confidential information should at least be signed to ensure the authenticity of the communication partners.
 
-Users should not access their e-mails via public IT systems, as access data or even the content of e-mails can get into unauthorized hands. Such public IT systems include, for. B. Surfstations in hotels or computers in Internet cafes. These are untrusted.
+Users should not access their e-mails via public IT systems, since access data or even the content of the e-mails could get into unauthorized hands. Such public IT systems include, for. B. Surfstations in hotels or computers in Internet cafes. These are untrusted.
 
 Implementation notes and recommendations for cryptographic protection of e-mail communication are contained in the module APP1.4 Groupware.
 
@@ -391,7 +391,7 @@ It should be determined prior to the journey what protection needs the individua
 
 PC screen manufacturers often use the term "low-radiation" according to MPR II, TCO or SSI. However, these guidelines take into account only possible harmful effects of equipment radiation. The measurement methods and limit values ​​for the radiation are therefore unsuitable for the detection of radiating radiation and, like measurements for electromagnetic compatibility (EMC), do not allow an assessment of the security against unauthorized reading of the data.
 
-In addition, however, special radiation-protected IT systems are also offered. A detailed test concept of the BSI is used for graduated testing of IT equipment or systems. The basic idea of ​​this concept is to adapt the scope of the protective measures as well as possible to the threat situation assumed by the user in order to achieve optimum radiation safety at minimum cost. So z. In many cases, for example, a device tested according to the zone model (see BSI concept for the protection of state classified information) and approved for use in zones 1-3 (so-called "Zone 1 device") already offers sufficient protection against unauthorized interception of confidential data offer due to exposing radiation.
+In addition, however, special radiation-protected IT systems are also offered. A detailed test concept of the BSI is used for graduated testing of IT equipment or systems. The basic idea of ​​this concept is to adapt the scope of the protective measures as well as possible to the threat situation assumed by the user in order to achieve optimum radiation safety at minimum cost. So z. In many cases, for example, a device tested according to the zone model (see BSI concept for the protection of state classified information) and approved for use in zones 1-3 (so-called "zone 1 device") already provides sufficient protection against unauthorized interception of confidential data offer due to exposing radiation.
 As an example, it should be mentioned that in keyboards due to the electromagnetic radiation of the keyboard matrix and the connecting cable there is a risk of eavesdropping. This also applies to wireless keyboards. However, in the case of wired keyboards, the risk of eavesdropping is generally much lower than the danger of eavesdropping due to the use of radio communication links with wireless input devices. For systems with proprietary security measures that do not have a security certificate, the security value is unpredictable. The user runs the risk that the manufacturer's non-evaluated solution provides only minimal security, but is far from sufficient to effectively protect his data.
 
 In the case of high or very high confidentiality requirements, it should therefore be checked whether a manufacturer offers radiation-protected equipment in accordance with these so-called "TEMPEST" criteria in its delivery program.

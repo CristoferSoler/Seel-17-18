@@ -49,13 +49,13 @@ For ICS components, logging is often limited to process-related events. Informat
 
 ### 2 6 Manipulation and sabotage of an ICS component
 
-The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have a local impact across locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
+The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally, but also across all locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
 
 Manipulated readings can lead to incorrect decisions of ICS components or operating personnel. Manipulated systems can be used to attack other systems or sites or to cover up ongoing manipulation.
 
 ### 2 7 Use of unsafe protocols
 
-Some of the protocols used in the field of industrial control systems offer no or only limited security mechanisms. Technical information such as measurement and control values ​​are often transmitted in plain text and without integrity assurance or authentication. An attacker with access to the transmission medium can then read out and modify the contents of the communication or introduce control commands, thereby provoking actions or directly influencing the operation. A protocol-level attack is possible even if the ICS component is otherwise securely configured and does not itself have vulnerabilities.
+Some of the protocols used in the field of industrial control systems offer no or only limited security mechanisms. Technical information such as measurement and control values ​​are often transmitted in plain text and without integrity assurance or authentication. An attacker with access to the transmission medium can then read out and modify the contents of the communication or introduce control commands, thereby provoking actions or directly influencing the operation. A log-level attack is possible even if the ICS component is otherwise securely configured and does not itself have vulnerabilities.
 
 ### 2 8 denial-of-service (DoS) attacks
 
@@ -83,7 +83,7 @@ For ICS components, the operating system (firmware) can be changed in addition t
 
 The following are specific requirements for the General ICS Component area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -127,7 +127,7 @@ Programs and data MUST be backed up regularly and after system changes.
 
 #### IND.2.1.A8 Malware Protection [ICS Administrator]
 
-ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used for this, the program and the virus signatures SHOULD always be up to date. If resources on the ICS component could not be sufficient or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
+ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used for this, the program and the virus signatures SHOULD always be up to date. If the resources on the ICS component could not be sufficiently compromised or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
 
 #### IND.2.1.A9 Communication Relationship [ICS Administrator]
 
@@ -139,7 +139,7 @@ It SHOULD be created an extended system documentation. These should include spec
 
 #### IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
 
-When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates, maintenance should be performed at short notice.
+When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates SHOULD be carried out at short notice.
 
 #### IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
 
@@ -179,7 +179,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
 
-It SHOULD provide alternative and independent means of communication that can be used in the event of a malfunction in order to remain able to act.
+It SHOULD provide alternative and independent communication options that can be used in the event of a malfunction in order to remain able to act.
 
 #### IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
 

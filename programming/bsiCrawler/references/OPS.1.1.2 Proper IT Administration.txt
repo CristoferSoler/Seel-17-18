@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### OPS.1.1.2.A1 Personnel Selection for Administrative Activities [Head of Personnel]
 #### OPS.1.1.2.A2 Representation arrangements and emergency preparedness
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]
@@ -20,3 +20,17 @@
 #### OPS.1.1.2.A17 IT Administration in the Four-Eyes Principle (CI)
 #### OPS.1.1.2.A18 Consistent logging of administrative activities (CI)
 #### OPS.1.1.2.A19 Consideration of High Availability Requirements [Information Security Officer (ISB)] (A)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.33 Personnel loss
+* G 0.35 coercion, blackmail or corruption
+* G 0.37 denying actions
+* G 0.42 Social engineering

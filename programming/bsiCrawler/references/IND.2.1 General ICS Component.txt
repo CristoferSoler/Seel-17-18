@@ -21,3 +21,28 @@
 #### IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
 #### IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
 #### IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.2 Unfavorable climatic conditions
+* G 0.4 Pollution, dust, corrosion
+* G 0.8 Failure or malfunction of the power supply
+* G 0.9 Failure or malfunction of communication networks
+* G 0.10 Failure or malfunction of supply networks
+* G 0.12 Electromagnetic interference
+* G 0.14 Spying out information (spying)
+* G 0.15 Listening
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.25 Failure of devices or systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.37 denying actions
+* G 0.39 Malware
+* G 0.40 Denial of Service
+* G 0.41 Sabotage
+* G 0.43 Importing messages
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

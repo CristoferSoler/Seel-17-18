@@ -37,7 +37,7 @@ Lack of access controls or these are insufficient, increases the risk that unaut
 
 ### 2 3 Insufficient monitoring
 
-If the IT and infrastructure operated in the data center are insufficiently supervised and looked after, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring, they might be noticed too late. It is then often not possible to react in time.
+If the IT and infrastructure operated in the data center are insufficiently monitored and managed, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring they could be noticed too late. It is then often not possible to react in time.
 
 ### 2 4 Insufficient air conditioning in the data center
 
@@ -64,7 +64,7 @@ If the power fails and there is no redundant power supply, this can lead to sign
 Dust and other contaminants in a data center can cause the technology to stop working. Due to contamination, it precipitates more often and wears out sooner.
 
 ### 2 10 Insufficient roadway dimensioning
-If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that only 60% of the cross-section of cable penetration holes in firewalls may be covered by cables. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
+If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that holes for fire-rated cable glands may only be laid with cables at 60% of the cross-section. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
 
 3 requirements
 ---------------
@@ -120,7 +120,7 @@ An access regulation tailored to the respective requirements MUST ensure for own
 
 In addition, it MUST be ensured that visitors and external personnel are individually recorded and supervised by the access control during all work in the data center.
 
-In addition, all access to a data center MUST be monitored. The institution's requirements for an access control system MUST be documented in sufficient detail in a concept. In the case of a server room, it should be checked whether it makes sense to monitor all access options.
+In addition, all access to a data center MUST be monitored. The requirements of the institution for an access control system MUST be documented in sufficient detail in a concept. In the case of a server room, it should be checked whether it makes sense to monitor all access options.
 
 Furthermore, it MUST be regulated which internal and external persons are allowed access for which period. It MUST be ensured that no unnecessary or too extensive access rights are granted. It MUST be checked regularly whether the regulations for the use of an access control are adhered to.
 
@@ -137,11 +137,11 @@ In a data center, a state-of-the-art extinguishing or fire prevention system MUS
 
 In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure its proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
 
-#### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+#### INF.2.A10 Inspection and maintenance of infrastructure [IT operation, building services, maintenance personnel]
 
 All components of the technical infrastructure MUST comply with at least the recommended or standard intervals and requirements for inspection and maintenance. In order to understand when which work has been carried out, inspections and maintenance MUST be logged.
 
-Cable and pipe penetrations through fire walls MUST be checked regularly to ensure that the bulkheads are compliant and intact. The results MUST be documented.
+Cable and pipe penetrations through fire walls MUST be checked regularly to ensure that the bulkheads are in conformity with standards and intact. The results MUST be documented.
 
 #### INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
 
@@ -165,7 +165,7 @@ The security measures for perimeter protection SHOULD be equivalent to those of 
 * outside person and vehicle identification.
 #### INF.2.A13 Planning and installation of alarm systems [planner]
 
-A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are needed and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
+A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are required and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
 A suitable alarm system (GMA) should be installed for the respective field of application. The messages of the GMA SHOULD be connected to an alarm receiving station in compliance with the applicable Technical Connection Conditions (TAB). The alarm receiving station SHOULD be reachable at all times and technically as well as personnel able to respond in a suitable manner to the reported hazard. The transmission path between the inserted GMA and the auxiliary service SHOULD be configured redundantly. All transmission paths SHOULD be tested regularly.
 
 #### INF.2.A14 Use of a network replacement system [planner, building services]
@@ -188,14 +188,14 @@ The air conditioning systems SHOULD be as fail-safe as possible in computer room
 
 To detect fires in data centers at a very early stage, a system for early fire detection should be installed.
 
-To prevent incipient fires from spreading further, the early fire detection SHOULD be used to automatically disconnect the power. The monitoring areas of early fire detection as well as the areas of action of the voltage disconnection SHOULD be designed sufficiently small-scale, in order to achieve a balanced relationship between the fire protection on the one hand and the DC availability on the other hand.
+To prevent incipient fires from spreading further, the early fire detection SHOULD be used to automatically disconnect the power. The monitoring areas of the early fire detection as well as the areas of action of the voltage disconnection SHOULD be designed sufficiently small-scale in order to achieve a balanced relationship between the fire protection on the one hand and the DC availability on the other hand.
 
 The system for early fire detection SHOULD comply with the current state of the art. Also it SHOULD be operated according to the specifications of the manufacturer and regularly maintained.
 
 #### INF.2.A18 Protection against water leakage [Building Services]
 
 In areas where IT equipment with central functions is located, water-bearing pipes should be avoided. For example, there should be no radiators in the data center.
-If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and that the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
+If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
 
 #### INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
 
@@ -209,9 +209,9 @@ Construction plans, route plans, circuit diagrams, escape route plans, fire brig
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### INF.2.A21 Dodge Data Center (A)
+#### INF.2.A21 Backup data center (A)
 
-A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be sized to maintain all processes of the institution. Also SHOULD it be always ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
+A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be sized to maintain all processes of the institution. Also SHOULD it be constantly ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
 
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 
@@ -219,7 +219,7 @@ When an existing data center is expanded, appropriate dust control measures shou
 
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 
-Cable trays SHOULD be carefully planned and executed. All cables SHOULD be protected against accidental mechanical stress, manipulation, eavesdropping or fire. For different network types, eg. As data network, network for alarm systems and power grid, separate cables should be used. If cables are routed together for different networks, it should be ensured that mutual interference is minimized. In addition, a redundant route should be sought.
+Cable trays SHOULD be carefully planned and executed. All cables SHOULD be protected against accidental mechanical stress, manipulation, eavesdropping or fire. For different types of networks, eg. As data network, network for alarm systems and power grid, separate cables should be used. If cables are routed together for different networks, it should be ensured that mutual interference is minimized. In addition, a redundant route should be sought.
 
 #### INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
 
@@ -238,7 +238,7 @@ In the case of increased protection requirements, emergency power supply systems
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-The staff of the institution SHOULD have regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+The staff of the institution SHOULD carry out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 

@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 #### NET.1.1.A2 Documentation of the network [IT operation]
 #### NET.1.1.A3 requirements specification for the network
@@ -35,5 +35,18 @@
 #### NET.1.1.A32 Physical separation of management segments (CIA)
 #### NET.1.1.A33 Network microsegmentation (CIA)
 #### NET.1.1.A34 Use of cryptographic procedures at network level (CI)
-#### NET.1.1.A35 Deployment of Net-based DLP [Information Security Officer (ISB)] (CI)
+#### NET.1.1.A35 Use of Net-based DLP [Information Security Officer (ISB)] (CI)
 #### NET.1.1.A36 Separation via VLAN with very high protection requirement
+5 Appendix: Cross reference table for elementary hazards
+* G 0.9 Failure or malfunction of communication networks
+* G 0.11 Failure or disruption of service providers
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.39 Malware
+* G 0.40 Denial of Service
+* G 0.43 Importing messages

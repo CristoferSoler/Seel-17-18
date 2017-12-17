@@ -11,7 +11,7 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-Based on the SYS.2.1 General Client block, this block contains specific requirements that must be observed and fulfilled for the secure operation of clients under the Windows 10 operating system in addition to the requirements of the SYS.2.1 General Client block. The included requirements must always be considered in conjunction with the requirements of the "General Client". Protection against advanced and persistent threats must be realized by meeting additional requirements of the different layers of modernized IT-Grundschutz.
+Based on the SYS.2.1 General Client block, this block contains specific requirements that must be observed and fulfilled for the secure operation of clients under the Windows 10 operating system in addition to the requirements from the SYS.2.1 General Client block. The included requirements must always be considered in conjunction with the requirements of the "General Client". Protection against advanced and persistent threats must be realized by meeting additional requirements of the different layers of modernized IT-Grundschutz.
 
 2 risk situation
 -----------------
@@ -24,10 +24,10 @@ Due to the widespread use of Windows operating systems and the backwards compati
 
 ### 2 2 Software Vulnerabilities in Windows 10
 
-Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read data or tampering.
+Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, wrong management decisions, and delays in business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read data or manipulate.
 
 ### 2 3 Integrated cloud functionalities
-Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the employees' private devices. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
+Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the private devices of the employees. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
@@ -76,7 +76,7 @@ The registration on the system and the domain MAY ONLY be possible with the acco
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clients under Windows 10. They SHOULD be implemented in principle.
 
 #### SYS.2.2.3.A7 Local Security Policy
-All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other IT security or organization requirements. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
+All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other requirements of IT Baseline Protection or the organization. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
 
 #### SYS.2.2.3.A8 Central management of client security policies
 
@@ -84,7 +84,7 @@ All settings of the Windows 10 client SHOULD be managed by centralized managemen
 
 #### SYS.2.2.3.A9 Secure centralized authentication of Windows clients
 
-For the central authentication only Kerberos SHOULD be used. A group policy SHOULD prevent the use of older protocols. If this is not possible, alternatively NTLMv2 MUST be used. The authentication via LAN Manager and NTLMv1 MUST NOT be allowed within the institution and in a productive operating environment. The cryptographic mechanisms used SHOULD be configured, documented and based on the internal guidelines in accordance with the identified protection requirements and justified and with the security management.
+For the central authentication only Kerberos SHOULD be used. A group policy SHOULD prevent the use of older protocols. If this is not possible, alternatively NTLMv2 MUST be used. The authentication via LAN Manager and NTLMv1 MUST NOT be allowed within the institution and in a productive operating environment. The cryptographic mechanisms used SHOULD be configured, documented and based on the internal guidelines in accordance with the identified protection requirements and justified by different attitudes and coordinated with the security management.
 
 #### SYS.2.2.3.A10 Configuration for protecting applications in Windows 10
 
@@ -119,7 +119,7 @@ The storage of passwords, certificates and other credentials for automatic login
 
 #### SYS.2.2.3.A18 Using Windows Remote Assistance
 
-The impact on the configuration of the local firewall SHOULD be taken into account when planning the Windows Remote Assistance (this does not mean RDP). Remote support SHOULD only take place after an explicit invitation. When saving an invitation to a file, it SHOULD have a password. The currently logged-in user SHOULD always vote explicitly for the structure of a session. The maximum duration of the invitation for remote assistance SHOULD be reasonable. Unless this service is used, it SHOULD be completely disabled.
+The impact on local firewall configuration SHOULD be taken into account when planning Windows Remote Assistance (this does not mean RDP). Remote support SHOULD only take place after an explicit invitation. When saving an invitation to a file, it SHOULD have a password. The currently logged-in user SHOULD always vote explicitly for the structure of a session. The maximum duration of the invitation for remote assistance SHOULD be reasonable. Unless this service is used, it SHOULD be completely disabled.
 
 #### SYS.2.2.3.A19 Using Remote Access over RDP [User]
 

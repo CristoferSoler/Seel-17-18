@@ -23,3 +23,17 @@
 #### DER.2.1.A20 Establishment of an internal security incident reporting office (CIA)
 #### DER.2.1.A21 Establishment of a Security Incident Response Team (CIA)
 #### DER.2.1.A22 Security Incident Management System Review (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.11 Failure or disruption of service providers
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.22 Manipulation of information
+* G 0.25 Failure of devices or systems
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.33 Personnel loss
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information
