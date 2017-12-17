@@ -6,8 +6,7 @@ function initWizard(components,sortedTopics) {
     //speichern der Ausgangsdaten
     orginalTopic = components;
 
-    var oldText = 'Are there any problems with ';
-    $("#questionText").text(oldText + JSON.parse(sortedTopics)[1]);
+    $("#topic").text(JSON.parse(sortedTopics)[1]);
     //window.alert(JSON.parse(sortedTopics)[1])
     components.forEach(function (element) {
         //window.alert(JSON.stringify(element))
