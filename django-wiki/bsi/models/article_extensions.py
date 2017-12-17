@@ -1,9 +1,13 @@
+from django.contrib.auth.models import User
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
-from django.http import Http404
+from django.db.models import signals
 from enumfields import Enum
 from enumfields import EnumField
 # from wiki.models.article import Article
-from wiki.models import Article, URLPath, Site, ArticleRevision, transaction
+from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
+
+from bsi.models.permissions import can_check, can_uncheck
 
 
 class BSI_Article_type(Enum):
@@ -12,13 +16,62 @@ class BSI_Article_type(Enum):
     IMPLEMENTATIONNOTES = 'N'
 
 
-# Create your models here.
+class ArticleRevisionValidation(models.Model):
+    revision = models.OneToOneField(ArticleRevision, on_delete=models.CASCADE, blank=False, null=False)
+    validator = models.ForeignKey(User, on_delete=models.SET_NULL, blank=False, null=True)
+    status = models.BooleanField(default=False, blank=False, null=False)
+
+    @classmethod
+    def get_or_create(cls, instance, **kwargs):
+        rev = None
+        try:
+            rev = ArticleRevisionValidation.objects.get(revision=instance)
+        except ObjectDoesNotExist:
+            rev = ArticleRevisionValidation.objects.create(revision=instance)
+            rev.save()
+
+        return rev
+
+    @transaction.atomic
+    def check(self, user):
+        article = Article.objects.get(current_revision=self.revision)
+        if can_check(article, user):
+            self.status = True
+            self.validator = user
+            self.save()
+        else:
+            raise PermissionError("The user " + user.__str__() + " has no permissions to check this article.")
+
+    @transaction.atomic
+    def uncheck(self, user):
+        article = Article.objects.get(current_revision=self.revision)
+        if can_uncheck(article, user):
+            self.status = False
+            self.validator = user
+            self.save()
+        else:
+            raise PermissionError("The user " + user.__str__() + " has no permissions to uncheck this article.")
+
+    def __str__(self):
+        return 'Revision validation for : ' + self.revision.__str__()
+
+
 class UGA(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
 
     @classmethod
     def create(cls, parent, slug, title, **rev_kwargs):
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
+        if not url.path.startswith('uga') or len(url.path) == 3:
+            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
+        uga = cls(url=url)
+        uga.save()
+
+    @classmethod
+    def create_by_request(cls, request, article, parent, slug, title, content, summary):
+        url = URLPath._create_urlpath_from_request(request=request, perm_article=article, parent_urlpath=parent,
+                                                   slug=slug, title=title,
+                                                   content=content, summary=summary)
         if not url.path.startswith('uga') or len(url.path) == 3:
             raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
@@ -91,3 +144,6 @@ class BSI(models.Model):
 
     def __str__(self):
         return 'BSI article with path: ' + self.url.__str__()
+
+
+signals.post_save.connect(ArticleRevisionValidation.get_or_create, sender=ArticleRevision)

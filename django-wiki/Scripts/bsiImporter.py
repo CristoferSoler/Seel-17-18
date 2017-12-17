@@ -12,7 +12,7 @@ from os.path import  isfile, isdir, join
 from os import listdir
 from wiki.models import Article, URLPath, Site, ArticleRevision
 from bsiwiki import settings
-from bsi.models import BSI, UGA,BSI_Article_type
+from bsi.models.article_extensions import BSI, UGA,BSI_Article_type
 
 
 txtFolderDir = './Cross_Reference_Files/'
