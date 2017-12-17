@@ -16,7 +16,7 @@ from bsi import forms
 
 log = logging.getLogger(__name__)
 
-from bsi.models.article_extensions import UGA, ArticleRevisionValidation
+from bsi.models import UGA, ArticleRevisionValidation
 
 
 def overview_uga(request):

@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from wiki.models import URLPath
 
-from bsi.models.article_extensions import BSI, UGA, ArticleRevisionValidation
+from bsi.models import BSI, UGA, ArticleRevisionValidation
 from bsi.tests.super_test_case import InitTestCase
 
 

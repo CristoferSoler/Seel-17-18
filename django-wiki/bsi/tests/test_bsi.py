@@ -1,6 +1,6 @@
 from wiki.models import URLPath
 
-from bsi.models.article_extensions import BSI, BSI_Article_type
+from bsi.models import BSI, BSI_Article_type
 from bsi.tests.super_test_case import InitTestCase
 
 
