@@ -1,0 +1,18 @@
+### 3.1 Basic requirements
+#### OPS.1.1.4.A1 Creation of a concept for protection against malicious programs
+#### OPS.1.1.4.A2 Use of system-specific protection mechanisms
+#### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
+#### OPS.1.1.4.A4 Selection of a virus protection program for gateways and IT systems for data exchange [specialist responsible]
+#### OPS.1.1.4.A5 Operation of virus protection programs
+#### OPS.1.1.4.A6 Updating the used virus protection programs and signatures
+#### OPS.1.1.4.A7 Awareness and Commitment of Users [Users]
+### 3.2 Standard requirements
+#### OPS.1.1.4.A8 Use of cloud services
+#### OPS.1.1.4.A9 Malware infection report [user]
+### 3.3 Requirements for increased protection requirements
+#### OPS.1.1.4.A10 Use of special analysis environments (CIA)
+#### OPS.1.1.4.A11 Using Multiple Scan Engines (CIA)
+#### OPS.1.1.4.A12 Use of Disk Locks (CIA)
+#### OPS.1.1.4.A13 Handling Untrusted Files (CIA)
+#### OPS.1.1.4.A14 Selecting and Using Cyber ​​Security Products Against Targeted Attacks (CIA)
+#### OPS.1.1.4.A15 External Consultation (CIA)

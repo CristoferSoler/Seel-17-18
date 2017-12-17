@@ -1,0 +1,24 @@
+### 3.1 Basic requirements
+#### ORP.4.A1 Regulation for the creation of users and user groups [Administrator, IT Leader]
+#### ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
+#### ORP.4.A3 Authorized User and Rights Profile Documentation [Administrator, IT Leader]
+#### ORP.4.A4 Task distribution and separation of functions [Head IT]
+#### ORP.4.A5 Assignment of access authorizations [Head IT]
+#### ORP.4.A6 Assignment of access authorizations [Head IT]
+#### ORP.4.A7 Assignment of access rights [Head IT]
+#### ORP.4.A8 Password Usage Control [User, IT Leader]
+#### ORP.4.A9 Identification and Authentication [Head IT]
+### 3.2 Standard requirements
+#### ORP.4.A10 Protection of User Accounts with Extended Privileges [IT Leader]
+#### ORP.4.A11 Reset Passwords [IT Manager]
+#### ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
+#### ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
+#### ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
+#### ORP.4.A15 Approach and conception of processes for identity and authorization management [Head of IT]
+#### ORP.4.A16 Access and Access Control Policy [Administrator]
+#### ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
+#### ORP.4.A18 Use of a central authentication service [Head IT]
+#### ORP.4.A19 Training of all employees in the handling of authentication procedures and mechanisms [user, IT manager]
+### 3.3 Requirements for increased protection requirements
+#### ORP.4.A20 Emergency Prevention for the Identity and Entitlement Management System [IT Leader] (CIA)
+#### ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)

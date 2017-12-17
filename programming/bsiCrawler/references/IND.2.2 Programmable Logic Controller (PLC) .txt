@@ -1,0 +1,6 @@
+### 3.1 Basic requirements
+### 3.2 Standard requirements
+#### IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
+#### IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
+#### IND.2.2.A3 Time Synchronization [ICS Administrator]
+### 3.3 Requirements for increased protection requirements

@@ -1,0 +1,9 @@
+### 3.1 Basic requirements
+#### INF.8.A1 Securing official documents at the home office
+#### INF.8.A2 Transportation of work material to the home workplace [Home automation]
+#### INF.8.A3 Protection against unauthorized access to the home workplace [Home automation]
+### 3.2 Standard requirements
+#### INF.8.A4 Adequate home-work equipment [Home automation]
+#### INF.8.A5 Disposal of confidential information at the home workplace [Home automation]
+### 3.3 Requirements for increased protection requirements
+#### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)

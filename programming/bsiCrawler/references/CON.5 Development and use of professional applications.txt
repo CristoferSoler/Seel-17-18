@@ -1,0 +1,16 @@
+### 3.1 Basic requirements
+#### CON.5.A1 Definition of required security functions of the specialist application [IT operation]
+#### CON.5.A2 Testing and approval of specialized applications [Head of IT, Data Protection Officer]
+#### CON.5.A3 Secure installation of a specialist application [IT operation]
+#### CON.5.A4 Introducing users to the application
+#### CON.5.A5 Secure operation of a specialized application [IT operation]
+### 3.2 Standard requirements
+#### CON.5.A6 Comprehensive documentation of application requirements
+#### CON.5.A7 Creation of a client concept [Head IT]
+#### CON.5.A8 Appropriate application development control [IT chief]
+#### CON.5.A9 Decommissioning Applications [IT Manager]
+#### CON.5.A10 Emergency Prevention for Applications [IT Leader]
+### 3.3 Requirements for increased protection requirements
+#### CON.5.A11 Appropriate and legally compliant procurement
+#### CON.5.A12 Fiduciary deposit
+#### CON.5.A13 Development of a redundancy concept for applications [Head IT]

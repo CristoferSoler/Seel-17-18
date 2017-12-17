@@ -1,0 +1,24 @@
+### 3.1 Basic requirements
+#### SYS.2.2.2.A1 Appropriate selection of a Windows 8.1 version
+#### SYS.2.2.2.A2 Definition of a registration procedure
+#### SYS.2.2.2.A3 Use of virus protection programs
+### 3.2 Standard requirements
+#### SYS.2.2.2.A4 Procurement of Windows 8.1
+#### SYS.2.2.2.A5 Local Security Policy
+#### SYS.2.2.2.A6 file and share permissions
+#### SYS.2.2.2.A7 Using the Windows User Account Control UAC
+#### SYS.2.2.2.A8 Using the homegroup feature [User]
+#### SYS.2.2.2.A9 Privacy and Data Saving on Windows 8.1 Clients [User]
+#### SYS.2.2.2.A10 Integration of online accounts in the operating system
+#### SYS.2.2.2.A11 Configuration of Synchronization Mechanisms in Windows 8.1
+#### SYS.2.2.2.A12 Central authentication in Windows networks
+#### SYS.2.2.2.A13 Connection of Windows 8.1 to AppStores
+### 3.3 Requirements for increased protection requirements
+#### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
+#### SYS.2.2.2.A15 Encrypting the file system with EFS (CI)
+#### SYS.2.2.2.A16 Using Windows PowerShell (CIA)
+#### SYS.2.2.2.A17 Safe Use of the Maintenance Center (CIA)
+#### SYS.2.2.2.A18 Activation of the last-access timestamp (A)
+#### SYS.2.2.2.A19 Using Credential Management (C)
+#### SYS.2.2.2.A20 Remote access security via RDP (CIA)
+#### SYS.2.2.2.A21 Using File and Registry Virtualization (CI)

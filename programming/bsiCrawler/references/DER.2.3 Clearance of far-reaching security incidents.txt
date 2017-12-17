@@ -1,0 +1,13 @@
+### 3.1 Basic requirements
+#### DER.2.3.A1 Establishment of a governing body [Information Security Officer (ISB)]
+#### DER.2.3.A2 Decision for a clean-up strategy [Head IT, Information Security Officer (ISB)]
+#### DER.2.3.A3 Isolation of affected network sections
+#### DER.2.3.A4 Blocking and modification of credentials and cryptographic keys
+#### DER.2.3.A5 Closing the initial break-in path
+#### DER.2.3.A6 Return to productive operation
+### 3.2 Standard requirements
+#### DER.2.3.A7 Targeted system hardening
+#### DER.2.3.A8 Establishment of secure, independent communication channels
+### 3.3 Requirements for increased protection requirements
+#### DER.2.3.A9 hardware replacement of affected IT systems (CIA)
+#### DER.2.3.A10 Conversions to hinder a renewed attack by the same attacker (CI)

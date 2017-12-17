@@ -1,0 +1,10 @@
+### 3.1 Basic requirements
+#### SYS.3.2.4.A1 Selection of devices with Android
+### 3.2 Standard requirements
+#### SYS.3.2.4.A2 Disable the developer options
+#### SYS.3.2.4.A3 Using Multi-User and Guest Mode
+#### SYS.3.2.4.A4 Control and configuration of cloud print
+#### SYS.3.2.4.A5 Advanced security settings
+### 3.3 Requirements for increased protection requirements
+#### SYS.3.2.4.A6 Using a Malware Protection (CIA) Product
+#### SYS.3.2.4.A7 Additional Firewall (CI)

@@ -1,0 +1,15 @@
+### 3.1 Basic requirements
+#### APP.1.2.A1 Using sandboxing
+#### APP.1.2.A2 Encryption of communication
+#### APP.1.2.A3 Use of certificates [user]
+#### APP.1.2.A4 Version check and update of the web browser
+### 3.2 Standard requirements
+#### APP.1.2.A5 basic configuration
+#### APP.1.2.A6 Password Management in Web Browser [User]
+#### APP.1.2.A7 Protection of data [user]
+#### APP.1.2.A8 Using plug-ins and extensions [User]
+### 3.3 Requirements for increased protection requirements
+#### APP.1.2.A9 Use of an isolated browser environment
+#### APP.1.2.A10 Using private mode [user]
+#### APP.1.2.A11 Check for harmful content
+#### APP.1.2.A12 two-browser strategy

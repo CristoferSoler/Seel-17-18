@@ -1,0 +1,6 @@
+### 3.1 Basic requirements
+#### IND.2.3.A1 Sensor Installation [ICS Administrator, Maintenance Staff]
+### 3.2 Standard requirements
+#### IND.2.3.A2 Calibration of sensors [maintenance personnel]
+### 3.3 Requirements for increased protection requirements
+#### IND.2.3.A3 Wireless Communication (C)

@@ -1,0 +1,17 @@
+### 3.1 Basic requirements
+#### APP.3.3.A1 Suitable installation [Building services]
+#### APP.3.3.A2 Use of RAID systems
+#### APP.3.3.A3 Use of antivirus programs
+#### APP.3.3.A4 Regular backup
+#### APP.3.3.A5 Restrictive allocation of rights
+### 3.2 Standard requirements
+#### APP.3.3.A6 Obtaining a file server
+#### APP.3.3.A7 Selecting a file system
+#### APP.3.3.A8 Structured Data Management [User]
+#### APP.3.3.A9 Secure storage management
+#### APP.3.3.A10 Periodic tests of the backup or recovery concept
+#### APP.3.3.A11 Use of Quotas
+### 3.3 Requirements for increased protection requirements
+#### APP.3.3.A12 Encryption of the data (CI)
+#### APP.3.3.A13 Replicating Between Sites (A)
+#### APP.3.3.A14 Use of Error Correction Codes (I)

@@ -1,0 +1,21 @@
+### 3.1 Basic requirements
+#### CON.1.A1 Selection of suitable cryptographic procedures [specialist responsible]
+#### CON.1.A2 Data backup using cryptographic procedures [IT operation]
+### 3.2 Standard requirements
+#### CON.1.A3 Encryption of the communication connections
+#### CON.1.A4 Appropriate key management [IT operation, specialist responsible]
+#### CON.1.A5 Secure deletion and destruction of cryptographic keys [IT operation]
+#### CON.1.A6 Needs Assessment for Cryptographic Procedures and Products [IT Operations, Specialists]
+### 3.3 Requirements for increased protection requirements
+#### CON.1.A7 Creating a Security Policy for the Use of Cryptographic Procedures and Products (CIA)
+#### CON.1.A8 Cryptographic and Product Impact Assessment (CIA)
+#### CON.1.A9 Selection of a suitable cryptographic product [IT operation, specialist responsible persons] (CI)
+#### CON.1.A10 Development of a crypto-concept (CI)
+#### CON.1.A11 Secure configuration of crypto modules [IT operation] (CI)
+#### CON.1.A12 Secure role sharing when using crypto modules [IT operation] (CI)
+#### CON.1.A13 OS Security Requirements When Using Crypto Modules (CI)
+#### CON.1.A14 Training of users and administrators [supervisors, IT managers, specialists] (CIA)
+#### CON.1.A15 Reaction to practical weakening of a crypto-method (CI)
+#### CON.1.A16 Physical Protection of Cryptomodules [Head IT] (CI)
+#### CON.1.A17 Radiation Safety [Head IT] (C)
+#### CON.1.A18 Cryptographic Replacement Modules [IT Leader] (CIA)

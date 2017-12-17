@@ -1,0 +1,27 @@
+### 3.1 Basic requirements
+#### SYS.4.4.A1 Usage criteria for IoT devices
+#### SYS.4.4.A2 authentication
+#### SYS.4.4.A3 Regular update
+#### SYS.4.4.A4 Enable auto-update mechanisms
+#### SYS.4.4.A5 Network access restriction
+### 3.2 Standard requirements
+#### SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+#### SYS.4.4.A7 Planning the use of IoT devices
+#### SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+#### SYS.4.4.A9 Control of the use of IoT devices
+#### SYS.4.4.A10 Secure installation and configuration of IoT devices
+#### SYS.4.4.A11 Using secure protocols
+#### SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+#### SYS.4.4.A13 Disabling and uninstalling unneeded components
+#### SYS.4.4.A14 deployment clearance
+#### SYS.4.4.A15 Restrictive rights assignment
+#### SYS.4.4.A16 Eliminate malware on IoT devices
+#### SYS.4.4.A17 Monitoring the network traffic of IoT devices
+#### SYS.4.4.A18 Logging of safety-related events on IoT devices
+#### SYS.4.4.A19 Protection of the administration interfaces
+#### SYS.4.4.A20 Regulated decommissioning of IoT devices
+### 3.3 Requirements for increased protection requirements
+#### SYS.4.4.A21 Environment and Power Supply [Information Security Officer (ISB), Home Automation] (I)
+#### SYS.4.4.A22 System Monitoring (A)
+#### SYS.4.4.A23 Auditing IoT Devices (CIA)
+#### SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)

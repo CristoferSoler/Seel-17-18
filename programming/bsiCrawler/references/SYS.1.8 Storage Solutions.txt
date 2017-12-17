@@ -1,0 +1,29 @@
+### 3.1 Basic requirements
+#### SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
+#### SYS.1.8.A2 Secure basic configuration of storage solutions
+#### SYS.1.8.A3 Restrictive rights assignment
+#### SYS.1.8.A4 Protection of the administration interfaces
+#### SYS.1.8.A5 Logging on storage systems
+### 3.2 Standard requirements
+#### SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
+#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
+#### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
+#### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
+#### SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
+#### SYS.1.8.A11 Safe operation of a storage solution
+#### SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
+#### SYS.1.8.A13 Monitoring and management of storage solutions
+#### SYS.1.8.A14 Securing a SAN by segmentation
+#### SYS.1.8.A15 Secure separation of clients in storage solutions
+#### SYS.1.8.A16 Secure deletion in SAN environments
+#### SYS.1.8.A17 Documentation of the system settings of storage systems
+#### SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
+#### SYS.1.8.A19 Disposal of storage solutions
+#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
+### 3.3 Requirements for increased protection requirements
+#### SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
+#### SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
+#### SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
+#### SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
+#### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
+#### SYS.1.8.A26 Securing a SAN through hard zoning

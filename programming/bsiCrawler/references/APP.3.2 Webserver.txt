@@ -1,0 +1,22 @@
+### 3.1 Basic requirements
+#### APP.3.2.A1 Secure configuration of a web server
+#### APP.3.2.A2 Protection of web server files
+#### APP.3.2.A3 Securing file uploads and downloads
+#### APP.3.2.A4 Logging events
+#### APP.3.2.A5 authentication
+#### APP.3.2.A6 Timely import of security-relevant patches and updates
+#### APP.3.2.A7 Legal framework for web offers [Information Security Officer (ISB)]
+### 3.2 Standard requirements
+#### APP.3.2.A8 Planning the use of a web server
+#### APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
+#### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+#### APP.3.2.A11 Encryption over TLS
+#### APP.3.2.A12 Appropriate handling of errors and error messages
+#### APP.3.2.A13 Web crawler access control
+#### APP.3.2.A14 Integrity Checks and Malware Protection
+### 3.3 Requirements for increased protection requirements
+#### APP.3.2.A15 Redundancy (A)
+#### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+#### APP.3.2.A17 Advanced authentication methods for web servers (CI)
+#### APP.3.2.A18 Protection against denial of service attacks (A)
+#### APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)

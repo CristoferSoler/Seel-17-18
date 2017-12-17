@@ -1,0 +1,34 @@
+### 3.1 Basic requirements
+#### NET.3.2.A1 Creating a Security Policy [Information Security Officer (ISB)]
+#### NET.3.2.A2 Setting firewall rules
+#### NET.3.2.A3 Set up appropriate filter rules on the packet filter
+#### NET.3.2.A4 Secure configuration of the firewall
+#### NET.3.2.A5 Restrictive rights assignment
+#### NET.3.2.A6 Protection of the administration interfaces
+#### NET.3.2.A7 Emergency access to the firewall
+#### NET.3.2.A8 Prevention of dynamic routing
+#### NET.3.2.A9 logging
+#### NET.3.2.A10 Defense against fragmentation attacks on the packet filter
+#### NET.3.2.A11 Importing Updates and Patches
+#### NET.3.2.A12 Procedure for security incidents
+#### NET.3.2.A13 Regular backup
+#### NET.3.2.A14 Operation documentation
+#### NET.3.2.A15 Obtaining a firewall
+### 3.2 Standard requirements
+#### NET.3.2.A16 Structure of a "P-A-P" structure
+#### NET.3.2.A17 Disabling IPv4 or IPv6
+#### NET.3.2.A18 Administration via a separate management network
+#### NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
+#### NET.3.2.A20 Securing basic internet protocols
+#### NET.3.2.A21 Temporary decryption of traffic
+#### NET.3.2.A22 Secure time synchronization
+#### NET.3.2.A23 System Monitoring and Evaluation
+#### NET.3.2.A24 Revision and Penetration Tests
+### 3.3 Requirements for increased protection requirements
+#### NET.3.2.A25 Extended integrity protection for configuration files (CI)
+#### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
+#### NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
+#### NET.3.2.A28 Central filtering of active content (CI)
+#### NET.3.2.A29 Use of High Availability Solutions (A)
+#### NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
+#### NET.3.2.A31 Use of Certified Products (CI)
