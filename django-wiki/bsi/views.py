@@ -1,3 +1,4 @@
+import os
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -10,6 +11,8 @@ from wiki.decorators import get_article
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
+import csv
+import json
 
 from bsi.ugaViews import overview_uga
 
@@ -60,14 +63,23 @@ class BSISearchView(SearchView):
 
 
 def index(request):
-    all_articles = Article.objects.all()
-
+    components = readAndProcessCSV()
     template = loader.get_template('bsi/index.html')
-    context = {
-        'all_articles': all_articles,
-    }
-    return HttpResponse(template.render(context, request))
+    componentsString = json.dumps(components)
+    print(componentsString)
+    return HttpResponse(template.render({'components':componentsString},request))
 
+def generateDic(list):
+    componentDic = {'name':list[0],'topic':list[1:]}
+    return componentDic
+
+def readAndProcessCSV():
+    componentsWithTopics = {'components':[]}
+    with open('./bsi/static/bsi/csv/topics.csv') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            componentsWithTopics['components'].append(generateDic(row))
+    return componentsWithTopics
 
 def bsicatalog(request):
     all_articles = Article.objects.all()

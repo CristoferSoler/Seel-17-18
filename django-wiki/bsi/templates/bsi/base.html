@@ -14,6 +14,7 @@
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/style.css' %}"/>
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
+    <script src="{% static "bsi/js/wizard/wizard.js" %}"></script>
     <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
     <!--Icon -->
     <link href="{% static "bsi/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
@@ -192,6 +193,6 @@
     });
 
     $('#wizard').on('shown.bs.modal', function (e) {
-        alert('shown');
+        initWizard('{{ components|safe }}')
     })
 </script>
