@@ -1,0 +1,11 @@
+
+ <ol class="breadcrumb">
+                {% for ancestor in urlpath.cached_ancestors %}
+                    <li>
+                        <a href="{% url 'get_article' path=ancestor.path %}">{{ ancestor.article.current_revision.title|truncatechars:25 }}</a>
+                    </li>
+                {% endfor %}
+                <li class="active">{{ article.current_revision.title|truncatechars:50 }}</li>
+</ol>
+
+

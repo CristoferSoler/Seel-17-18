@@ -33,7 +33,7 @@ class WikiArticleView(ArticleView):
         elif path.startswith('uga'):
             self.template_name = "uga/view.html"
         elif path.startswith('bsi'):
-            self.template_name = "bsi/article.html"
+            self.template_name = "bsi/article_base.html"
         elif path.startswith('news'):
             """ todo set news template """
 
@@ -50,7 +50,7 @@ class WikiArticleView(ArticleView):
 
 
 class BSISearchView(SearchView):
-    template_name = "bsi/search.html"
+    template_name = "bsi/searchresult.html"
 
     def dispatch(self, request, *args, **kwargs):
         return super(BSISearchView, self).dispatch(request, *args, **kwargs)
@@ -75,7 +75,7 @@ def index(request):
 def bsicatalog(request):
     all_articles = Article.objects.all()
 
-    template = loader.get_template('bsi/article.html')
+    template = loader.get_template('bsi/article_base.html')
     context = {
         'all_articles': all_articles,
     }
