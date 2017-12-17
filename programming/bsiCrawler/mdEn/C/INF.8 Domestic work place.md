@@ -26,15 +26,15 @@ Since a home-based workplace is located outside the institution, the employees t
 
 ### 2 2 Unauthorized access to vulnerable areas of the home workplace
 
-Rooms in a home-based workplace where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
+Domestic workplaces where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
 
 ** Examples **
 
-* An employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
+* One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
 * When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
 ### 2 3 Impairment of IT use due to unfavorable working conditions at the home workplace
 
-A non-ergonomic home-based workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
+A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
@@ -45,7 +45,7 @@ If documents, data carriers or files are transported between the institution and
 * If insufficient access protection is available on the way, files or data carriers can be copied or manipulated unnoticed.
 ### 2 5 Unsuitable disposal of data media and documents
 
-If employees at the domestic workplace are not able to dispose of data media and documents properly, there is a risk that they will be thrown into the household waste. However, attackers can gain valuable information that can be misused specifically for blackmail or industrial espionage. The consequences range from the loss of know-how to the threat to the existence of the institution, for example, if important orders fail to materialize or partnerships fail.
+If employees at the domestic workplace are not able to dispose of data media and documents appropriately, there is a risk that they will be thrown into the household waste. However, attackers can gain valuable information that can be misused specifically for blackmail or industrial espionage. The consequences range from the loss of know-how to the threat to the existence of the institution, for example, if important orders fail to materialize or partnerships fail.
 
 ### 2 6 Manipulation or destruction of IT, accessories, information and software at the home office
 
@@ -56,14 +56,14 @@ IT equipment, accessories, information, and software used at the home workplace 
 Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" with IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
 
 ### 2 8 Increased theft risk at the home workplace
-The home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service) there is the danger that someone will enter the building without authorization, much less than with a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
+The home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service), the danger of someone entering the building without authorization is much lower than in a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
 
 3 requirements
 ---------------
 
 The following are specific requirements for the protection of the home workplace. Basically, the employee is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -102,7 +102,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)
 
-If employees are required to process official documents or information with increased protection needs, they should consider giving up a home-based workplace altogether. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
+If employees are required to process official documents or information with increased protection needs, they should consider giving up work at home. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
 
 4 Further Information
 ------------------------------

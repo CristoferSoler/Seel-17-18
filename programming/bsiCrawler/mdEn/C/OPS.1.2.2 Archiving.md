@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Archiving plays a special role in the document management process, as it is expected that the documents will be available until the expiration of a given retention period and, on the other hand, their confidentiality and integrity will be preserved. In addition, the context must be preserved so that the respective stored process can be reconstructed again.
+Archiving plays a special role in the document management process, as it is expected that the documents will be available until the expiration of a given retention period and, on the other hand, their confidentiality and integrity will be preserved. In addition, the context must be preserved so that the respective stored process can be reconstructed.
 
 Throughout the duration of long-term storage, measures to preserve information and, if necessary, evidential conservation measures must be implemented.
 
@@ -81,14 +81,14 @@ Since archive systems centrally store sensitive data of an institution, their IT
 
 #### OPS.1.2.2.A4 Consistent indexing of data during archiving [IT, IT operation, user]
 
-All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to find them quickly in future search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
+All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to quickly find them again in later search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
 
 #### OPS.1.2.2.A5 Regular processing of archived data [Head IT]
 
 It MUST be ensured throughout the archiving period that
 
 * the used data format can be processed by the used applications,
-* the stored data will remain readable and reproducible in the future so that semantics and probative value can be maintained
+* the stored data will remain readable and reproducible in the future so that semantics and probative value can be maintained,
 * the used file system can be processed on the storage medium by all involved components,
 * the storage media can be read at any time technically flawlessly and
 * the cryptographic methods used for encryption and evidential value preservation by means of digital signature, seal, time stamp or technical evidence data (Evidence Records) correspond to the state of the art.
@@ -152,7 +152,7 @@ The implementation and participation in the training SHOULD be documented.
 The available free space on the archive media MUST be monitored continuously. As soon as a defined limit value is undershot, a responsible employee MUST be alerted automatically. It SHOULD be ensured that the alerting takes place according to the role. There must always be enough empty archive media available to quickly prevent memory bottlenecks.
 
 #### OPS.1.2.2.A13 Regular revision of the archiving processes
-IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this purpose, a checklist should be created that contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 #### OPS.1.2.2.A14 Regular monitoring of the archive system [Head IT]
 
@@ -166,7 +166,7 @@ Archive data that has been secured by cryptographic techniques whose security su
 
 #### OPS.1.2.2.A16 Regular renewal of technical archive system components [Head of IT, IT operation]
 
-Archive systems SHOULD be kept up-to-date over a long period of time. New hardware and software SHOULD be thoroughly tested before installation in a running archive system. When new components are put into operation or new file formats are introduced, a migration concept SHOULD be created. It SHOULD describe all changes, tests, and expected test results. The conversion of the individual data SHOULD be documented (transfer note).
+Archive systems SHOULD be kept up-to-date over a long period of time. New hardware and software SHOULD be thoroughly tested before installation in a running archive system. When new components are put into operation or new file formats are introduced, a migration concept SHOULD be created. It SHOULD describe all changes, tests and expected test results. The conversion of the individual data SHOULD be documented (transfer note).
 
 If archive data is to be converted into new formats, it should be checked whether, due to legal requirements, the data must also be archived in its original format.
 
@@ -189,7 +189,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.2.2.A20 Appropriate use of cryptographic procedures in archiving [Head of IT] (CI)
 
-In order to cover long retention periods, archive data should only be backed up using cryptographic methods based on current standards and standards.
+In order to cover long retention periods, archive data should only be backed up using cryptographic procedures based on current standards and standards.
 
 #### OPS.1.2.2.A21 Transfer of paper data to electronic archives (CI)
 

@@ -33,15 +33,15 @@ Improperly designed or missing logging in * Samba * can lead to security problem
 Also deficits in the emergency preparedness can lead to longer downtime of * Samba *. For example, after a successful attack, a necessary reinstallation may be delayed if installation packages are not available. Existing installation packages, in turn, can produce undesirable results if you have not used versioning of the configuration files or if the * Samba * server compilation and installation options are not kept.
 
 ### 2 4 Missing adaptation of Samba
-To show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of a * Samba * server's services.
+To show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of * Samba * server services.
 
 ### 2 5 Software vulnerabilities or errors in Samba
 
-* Samba * is free software that is created and developed within a community. A consistent quality of the source code can not be guaranteed. This can lead to software vulnerabilities or failures and thus to serious security vulnerabilities in the application or all connected IT systems. Attackers can use such vulnerabilities for various attacks. For example, to infiltrate malicious software and thus possibly gain unauthorized access to sensitive information, such as confidential data or documents and access data. Furthermore, attackers can manipulate IT systems through security vulnerabilities, which can cause them to be inoperable or malfunctioning.
+* Samba * is free software that is created and developed within a community. A consistent quality of the source code can not be guaranteed. This can lead to software vulnerabilities or failures and thus to serious security vulnerabilities in the application or all connected IT systems. Attackers can use such vulnerabilities for various attacks. For example, to infiltrate malicious software and thus possibly gain unauthorized access to sensitive information, such as confidential data or documents and access data. Furthermore, attackers can manipulate IT systems via security vulnerabilities, which can cause them to be inoperable or malfunctioning.
 
 ### 2 6 Unauthorized use or administration of Samba
 
-Unauthorized persons may gain access to confidential information, manipulate it or cause malfunctions through the use of applications or systems, so that they * can administer * Samba * without authorization. It is particularly critical when configuration tools such. For example, the * Samba Web Administration Tool * (SWAT) can be used. SWAT was an integral part of * Samba * until version 4, but was prioritized little by * Samba * developers. Therefore, weaker or no security mechanisms were implemented, for example, HTTPS was not supported.
+Unauthorized persons may gain access to confidential information, manipulate it or cause malfunctions through the use of applications or systems, so that they * can administer * Samba * without authorization. It is particularly critical if configuration tools such. For example, the * Samba Web Administration Tool * (SWAT) can be used. SWAT was an integral part of * Samba * until version 4, but was prioritized little by * Samba * developers. Therefore, weaker or no security mechanisms were implemented, for example, HTTPS was not supported.
 
 ### 2 7 Incorrect administration of Samba
 
@@ -63,7 +63,7 @@ If information is no longer integer, it can lead to many problems. In the simple
 
 The following are specific requirements for the * Samba * area. Basically, IT operations are responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -106,7 +106,7 @@ If a version of * Samba * is used that can not map so-called * Alternate Data St
 
 The default parameters used by * Samba * to map DOS attributes to the Linux file system SHOULD NOT be used. Instead, * Samba * SHOULD be configured to store DOS attributes and the status indicators for inheritance (flag) in * Extended Attributes *. The shares SHOULD only be managed via the registry.
 
-Furthermore, the effective access permissions to the shares of the * Samba * server as well as the log files SHOULD be checked regularly.
+Furthermore, the effective access permissions to the shares of the * Samba * server, as well as the log files, SHOULD be checked regularly.
 
 #### APP.3.4.A6 Secure configuration of Winbind under Samba
 
@@ -164,7 +164,7 @@ To ensure the integrity and confidentiality of the data packets in the transport
 
 ### 4.1 Literature
 
-Further information on threats and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
 
 * #### [SAMBA] Samba
 

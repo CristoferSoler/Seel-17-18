@@ -9,11 +9,11 @@ Homebased telework distinguishes between home-based work and alternating telewor
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose, typical hazards are identified and specific requirements for teleworking are defined.
+The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose typical hazards are identified and specific requirements for teleworking are defined.
 
 ### 1.3 Delimitation
 
-This building block focuses on the forms of telework that are carried out partly or wholly in the home environment. It is assumed that there is a telecommunication link between the teleworking center and the institution, which makes it possible to exchange information and, if necessary, to access data in the institution. The requirements of this module cover three different areas:
+This module focuses on the forms of telework that are carried out in part or entirely in the home environment. It is assumed that there is a telecommunication link between the teleworking center and the institution, which makes it possible to exchange information and, if necessary, to access data in the institution. The requirements of this module cover three different areas:
 
 * the organization of telework,
 * teleworker's teleworker and
@@ -52,11 +52,11 @@ Since teleworkers are not in the institution on a daily basis, they have less op
 
 ### 2 6 Insufficient representation rules for teleworking
 
-The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be a problem in providing the requisite documentation or data from the teleworker to the representative when there are no access options to the teleworker's home office.
+The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be problems in providing the requisite documentation or teleworker data to the representative when there are no access to the teleworker's home office.
 
 ### 2 7 Non-compliance with safety measures
 
-Especially at the teleworkplace, due to a lack of control options, employees may not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
+Especially at the teleworkplace it may be due to lack of control options that employees do not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
 
 3 requirements
 ---------------
@@ -90,7 +90,7 @@ The selected backup method MUST be appropriate and sufficient for the volume of 
 
 #### OPS.1.2.4.A5 Awareness and Training of Teleworkers [Supervisors, Head of IT]
 
-Using a memo, teleworkers MUST be made aware of the dangers associated with teleworking. In addition, they MUST be trained in the appropriate security measures of the institution and trained in their handling. Training and awareness raising for teleworkers SHOULD be repeated regularly.
+Using a memo, teleworkers MUST be made aware of the dangers associated with teleworking. In addition, they MUST be trained in the appropriate security measures of the institution and trained in dealing with them. Training and awareness raising for teleworkers SHOULD be repeated regularly.
 
 ### 3.2 Standard requirements
 
@@ -124,7 +124,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 ### 4.1 Literature
 
-Further information on hazards and security measures in the field of telework can be found in the following publications:
+Further information on hazards and security measures in the field of telework can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

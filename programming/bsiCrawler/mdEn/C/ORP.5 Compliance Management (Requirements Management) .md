@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-In every institution there are legal, contractual, structural and internal guidelines and guidelines that have to be observed from all directions. Many of them have a direct or indirect impact on information security management.
+In every institution there are legal, contractual, structural and internal guidelines and guidelines that have to be observed from many different directions. Many of them have a direct or indirect impact on information security management.
 
 The requirements vary depending on industry, country and other conditions. For example, an authority is subject to other external regulations than a stock corporation. The management level of the institution must ensure compliance with the requirements (New German: Compliance) and operate a compliance management system.
 
@@ -26,30 +26,30 @@ The following specific threats and vulnerabilities are of particular importance 
 
 The inadequate implementation of information security can lead to violations of legal regulations or contractual agreements. In addition, institutions must observe a multitude of sector-specific, national and international legal framework conditions. Since this can be very complex, it can happen that unintentional violates legal requirements or this is even deliberately accepted. Example:
 
-* Many cloud service providers offer their services in an international environment. Thus, the providers are often subject to other national laws. Often, cloud users only see low costs and value the legal framework to be observed, such as data protection, information requirements, insolvency law, liability, information access for third parties.
+* Many cloud service providers offer their services in an international environment. Thus, the providers are often subject to other national laws. Often, cloud users only see at low costs and estimate the legal framework to be complied with, such as data protection, information requirements, insolvency law, liability, information access for third parties.
 ### 2 2 Improper disclosure of information
 
-Due to the misconduct of persons, it may happen that information worth protecting is inadmissible. Examples for this are:
+Due to the misconduct of persons, it can happen that information worth protecting is inadmissibly passed on. Examples for this are:
 
-* Confidential information is discussed within earshot of other people, for example, during breaks in meetings or via mobile phones in public environments.
+* Confidential information is discussed within earshot of other people, such as in a talk break from meetings or via mobile phones in public environments.
 * The manager of a department suspects an employee to work with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
 ### 2 3 Inadequate identification check of communication partners
 In personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
 
-* An employee receives an e-mail from an alleged friend of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
+* An employee receives an e-mail from an alleged acquaintance of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
 * A man in a blue suit with a mounting case gains access to the data center after mumbling something about "water pipes".
 ### 2 4 Accidental disclosure of internal information
 
 When passing on information, it happens again and again that in addition to the desired information inadvertently also other information is transmitted. This may result in confidential, appropriate information falling into the wrong hands. examples for this are
 
 * old files or residual information on shared media, transmission of data other than intended or sent to wrong recipients.
-* In 2015, a French television station was unable to broadcast a program for hours after hackers gained access to internal IT systems. In a press conference, after the station was able to work again, a notice board was transmitted in the background around the world, where passwords for all sorts of internal and external identifiers hung.
+* In 2015, a French TV station was unable to broadcast a program for hours after hackers gained access to internal IT systems. In a press conference, after the station was able to work again, a notice board was transmitted in the background around the world, where passwords for all sorts of internal and external identifiers hung.
 3 requirements
 ---------------
 
 The following are specific requirements for * compliance management *. Basically, the Change Manager (Compliance Manager) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -59,9 +59,9 @@ The institution MUST have a process in place to identify all relevant legal, con
 
 The statutory and contractual requirements relevant to the individual areas of the institution SHOULD be worked out in a structured overview. The documentation MUST be kept up to date. The requirements identified as security-relevant MUST be incorporated in the planning and design of business processes, applications and IT systems, or in the procurement of new components.
 
-#### ORP.5.A2 Compliance with legal frameworks [Supervisors, Head of Organization, Institution Management]
+#### ORP.5.A2 Observance of legal framework conditions [Supervisors, Head of Organization, Institution Management]
 
-Managers who have legal responsibility for the local institution MUST ensure compliance with the legal requirements. The responsibilities and responsibilities for compliance with legal requirements MUST be defined.
+Managers who have the legal responsibility for the local institution MUST ensure compliance with legal requirements. The responsibilities and responsibilities for compliance with legal requirements MUST be defined.
 
 Appropriate measures MUST be identified and implemented to avoid violations of relevant requirements. If violations of relevant requirements are identified, appropriate corrective actions MUST be taken to correct the deviations.
 
@@ -116,7 +116,7 @@ When using cryptographic products, various legal conditions must be observed. Th
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​compliance management can be found in the following publications, among others:
+Additional information on threats and security measures in the area of ​​compliance management can be found in the following publications:
 
 * #### [19600] ISO 19600: 2014
 

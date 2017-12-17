@@ -47,7 +47,7 @@ If an attacker can authenticate himself through the Google ID, he can use all of
 
 With the operating system, manufacturers often ship deeply integrated and pre-installed apps (such as the Play Store and associated Play Services) and interfaces to third-party services (Twitter, Facebook, etc.). Some of these apps can not be removed by the user. This increases the attack surface of the Android operating system. The non-erasable or non-configurable interfaces are often not desired in institutions.
 
-Overall, the deep integration of apps and third-party interfaces increases the risk that the device will become infected with malicious software or that an attacker may gain unauthorized access. The protection of data on the device decreases.
+Overall, the deep integration of apps and third-party interfaces increases the risk that the device will be infected with malware or that an attacker could gain unauthorized access. The protection of data on the device decreases.
 
 3 requirements
 ---------------

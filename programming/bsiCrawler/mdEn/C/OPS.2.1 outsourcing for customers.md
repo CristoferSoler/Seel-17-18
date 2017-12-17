@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-In outsourcing, institutions (outsourcing customers) outsource all or part of their business processes and services (eg, security or cleaning staff) to external service providers (outsourcing service providers). The operation of hardware and software can also be outsourced as a service. Regardless of what is outsourced, every outsourcing requires close ties to the external service provider and their service quality and service quality. This ratio is particularly for the customer not only opportunities, but also associated with significant risks, such. As strong dependencies, loss of their own know-how and loss of control and control. Information security aspects must therefore be adequately taken into account during the entire lifecycle of outsourcing.
+In outsourcing, institutions (outsourcing customers) outsource all or part of their business processes and services (eg, security or cleaning staff) to external service providers (outsourcing service providers). The operation of hardware and software can also be outsourced as a service. Regardless of what is outsourced, every outsourcing requires close ties to the external service provider and their service quality and service quality. This ratio is particularly for the customer not only opportunities, but also associated with significant risks, such. As strong dependencies, loss of their own know-how and loss of control and control. Information security aspects must therefore be adequately considered during the entire life cycle of outsourcing.
 
 This module focuses on requirements that outsourcing customers should adhere to or implement during each phase of an outsourcing project.
 
@@ -26,14 +26,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of or inadequate information security regulations
 
-An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The spectrum of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
+An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The range of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
 
 ### 2 2 Inappropriate access, access and access rights management
 
-Depending on the outsourcing plans, it may be necessary for the outsourcing customer's employees to have access, access and access rights to IT systems, information, buildings or rooms of the outsourcing service provider. If the granting, administration and control of these rights is poorly regulated and, in extreme cases, even unauthorized rights are granted, it is no longer possible to guarantee the necessary protection requirements for the information provided by the outsourcing customer. For example, the uncontrolled assignment of administrative authorizations to employees of the outsourcing service provider can lead to serious security risks. These could exploit permissions and copy or manipulate sensitive information.
+Depending on the outsourcing plans, it may be necessary for the outsourcing customer's employees to have access, access and access rights to IT systems, information, buildings or rooms of the outsourcing service provider. If the granting, administration and control of these rights is poorly regulated and, in extreme cases, even unauthorized rights are granted, it is no longer possible to guarantee the necessary protection requirements for the outsourcer's information. For example, the uncontrolled assignment of administrative authorizations to employees of the outsourcing service provider can lead to serious security risks. These could exploit permissions and copy or manipulate sensitive information.
 
 ### 2 3 Missing or inadequate testing and approval process
-If an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not reported to the customer, this can result in significant failure. or subsequent investments.
+If an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not communicated to the customer, this can result in significant failure. or subsequent investments.
 
 ### 2 4 Inadequate contractual arrangements with an outsourcing service provider
 
@@ -45,12 +45,12 @@ Without sufficient and appropriate regulations for the resolution of an outsourc
 
 ### 2 6 Dependence on an outsourcing service provider
 
-By opting for outsourcing, an institution always becomes dependent on the outsourcing service provider. This dependency involves the risk that know-how will be lost and that there will no longer be complete control over the outsourced processes and components. In addition, the protection needs of the outsourced business processes and information may vary, resulting in inadequate security measures. By having full control over business processes, sensitive information, resources, and IT systems while reducing the knowledge of outsourcing customers, outsourcing service providers may no longer notice information security deficiencies.
+By opting for outsourcing, an institution always becomes dependent on the outsourcing service provider. This dependency involves the risk that know-how will be lost and that there will no longer be complete control over the outsourced processes and components. In addition, the protection needs of the outsourced business processes and information may vary, resulting in inadequate security measures. By having full control of business processes, sensitive information, resources, and IT systems, while reducing the knowledge of outsourcing customers, outsourcing service providers may no longer notice information security deficiencies.
 
 This situation could be exploited by the outsourcing service provider, for example through drastic price increases and insufficient service quality.
 
 ### 2 7 Disruption of the working climate due to an outsourcing project
-Outsourcing projects are often viewed as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
+Outsourcing projects are often seen as negative changes from the point of view of the employees of the outsourcing institution. This often leads to a bad working environment. Employees of the outsourcing client often fear for them adverse task changes or even downsizing through outsourcing projects. In the event of a negative attitude towards the outsourcing project, employees could unintentionally or willfully neglect security measures, take a boycott position or even take acts of revenge. In addition, this could terminate know-how carriers (such as IT managers and the IT operation) during the introductory phase, so that the outsourcing project can not be implemented as planned.
 
 ### 2 8 Poor information security in the outsourcing implementation phase
 
@@ -66,7 +66,7 @@ If the IT connection between the outsourcing service provider and the outsourcin
 
 ### 2 11 Lack of multi-client capability at the outsourcing service provider
 
-Outsourcing service providers usually have many different customers who use the same resource base (eg IT systems, networks, personnel). If the IT systems and data of different customers are not sufficiently separated from one another, there is a risk that one customer will be able to access another customer's area. In addition, there could be conflicts of interest with the outsourcing service provider if he has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
+Outsourcing service providers usually have many different customers who use the same resource base (eg IT systems, networks, personnel). If the IT systems and data of the different customers are not sufficiently separated from each other, there is a risk that one customer will be able to access the area of ​​another customer. In addition, there could be conflicts of interest with the outsourcing service provider if he has to meet parallel comparable resource requirements. If the respective customers are in a competitive situation, this can be particularly problematic.
 
 3 requirements
 ---------------
@@ -134,13 +134,13 @@ For the migration phase, a security management team of qualified employees of th
 
 #### OPS.2.1.A14 Emergency Preparedness for Outsourcing [Emergency Response Officer]
 
-There SHOULD exist an outsourcing contingency plan that includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency provision concept for outsourcing, the responsibilities, contacts and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
+There SHOULD exist an emergency preparedness concept for outsourcing, which includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency preparedness concept for outsourcing, the responsibilities, contact persons and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
 
 #### OPS.2.1.A15 Orderly termination of an outsourcing relationship [Head of Procurement]
 
 The contract with the outsourcing service provider SHOULD regulate all aspects of the termination of the service relationship, both for a planned and an unplanned termination of the contract. It SHOULD be ensured that termination of the service relationship with the outsourcing service provider does not affect the outsourcing client's business.
 
-The outsourcing customer SHOULD receive all information and data after the completion. The outsourcing service provider SHOULD delete all data after the return has been completed.
+The outsourcing customer SHOULD receive all information and data after the completion. The outsourcing service provider SHOULD safely delete all data after the return.
 
 ### 3.3 Requirements for increased protection requirements
 

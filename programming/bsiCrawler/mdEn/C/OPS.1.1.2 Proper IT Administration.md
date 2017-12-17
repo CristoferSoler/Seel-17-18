@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that preserve the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so that it is also very important for the security of the information network to protect the system administration against unauthorized access.
+The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that preserve the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so it is also very important for the security of the information network to protect the system administration against unauthorized access.
 
 ### 1.2 Objective
 
@@ -13,9 +13,9 @@ On the one hand, with the implementation of this module, the institution ensures
 
 ### 1.3 Delimitation
 
-The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturers or suppliers, which is considered in the module * OPS.2.4 Remote maintenance *.
+The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturer or supplier, which is considered in the module * OPS.2.4 Remote maintenance *.
 
-The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are singled out.
+The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are discarded.
 
 The other building blocks of the area * OPS.1.1 core IT operation * describe aspects of IT operation that are relevant in addition to the present building block. They should therefore additionally be considered and modeled in addition to this module.
 
@@ -50,7 +50,7 @@ The privileged system access of the administrators is often the focus of attacke
 Administrative activities directly influence the operation of IT systems and applications. For example, ongoing user sessions can be aborted when IT systems are restarted or legitimate access is prevented when a firewall policy is customized. If such operations are performed without considering how they affect the users and without coordinating them with the affected areas, the operation can be significantly disrupted.
 
 ### 2 6 Lack of information on incidents
-Deficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this assumes, for example, that the target state of systems prior to the incident is documented and verifiable, or that proper unauthorized changes to systems can be distinguished by appropriate records. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
+Deficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this assumes, for example, that the target state of systems prior to the incident is documented and verifiable, or that proper unauthorized changes to systems can be distinguished on the basis of appropriate records. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
 
 3 requirements
 ---------------
@@ -68,7 +68,7 @@ If employees are to perform administrative tasks within the IT environment, they
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
 * Role separation of administrative and controlling roles (e.g., revision) MUST be made.
-The administrators and their representatives MUST have sufficient time to perform their duties carefully. All administrators and their representatives MUST receive sufficient training opportunities
+The administrators and their representatives MUST have sufficient time to perform their duties diligently. All administrators and their representatives MUST receive sufficient training opportunities
 
 These requirements MUST also be met when administrative tasks are delegated to third parties.
 
@@ -76,7 +76,7 @@ These requirements MUST also be met when administrative tasks are delegated to t
 
 For all administrative tasks and responsibilities, substitution arrangements MUST be made.
 
-It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, appropriate emergency users with administration rights SHOULD be set up.
+It MUST be ensured that designated representatives have access to the IT systems to be managed. In order to be able to administratively access systems and applications in emergency situations, corresponding emergency users with administration rights SHOULD be set up.
 
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]
 
@@ -128,7 +128,7 @@ Resource planning SHOULD be done in regular cycles, such as B. annually, tested 
 
 For the IT administrators deployed, suitable further education measures SHOULD be taken to ensure that they are always state-of-the-art. It should also take into account technical developments that have not yet begun, but which may become relevant to the institution in the foreseeable future. The training measures SHOULD be supported by a training plan and take into account the entire team, so that all required qualifications in the team are multiple.
 
-Administrators SHOULD keep up to date with the security of the systems, services and protocols they manage, especially current threats and security measures.
+Administrators SHOULD regularly check the security of the systems, services and protocols they are looking after, especially current threats and security measures.
 
 #### OPS.1.1.2.A11 Documentation of IT Administration Activities [IT Operations]
 
@@ -163,7 +163,7 @@ In the case of increased protection requirements, access to administrative inter
 
 #### OPS.1.1.2.A17 IT Administration in the Four-Eyes Principle (CI)
 
-For particularly safety-critical systems, access to identifiers with administrative authorizations SHOULD be implemented in such a way that two employees are required for this. Each IT administrator SHOULD perform the pending administrative activities while being controlled by another IT administrator.
+For particularly safety-critical systems, access to identifiers with administrative authorizations SHOULD be implemented in such a way that two employees are required for this. One IT administrator SHOULD perform each of the upcoming administrative tasks while being controlled by another IT administrator.
 
 #### OPS.1.1.2.A18 Consistent logging of administrative activities (CI)
 
@@ -171,7 +171,7 @@ Administrative activities SHOULD be logged if possible. For particularly securit
 
 #### OPS.1.1.2.A19 Consideration of High Availability Requirements [Information Security Officer (ISB)] (A)
 
-IT administrators SHOULD analyze which of the systems and networks they serve to meet high availability requirements. For these areas, they SHOULD make sure that the components and architectures used and the associated operating processes are suitable to meet these requirements. As a rule, this requires comprehensive high-availability planning.
+IT administrators SHOULD analyze which of the systems and networks they serve to meet high availability requirements. For these areas, they SHOULD make sure that the components and architectures used, as well as the associated operating processes, are suitable to meet these requirements. As a rule, this requires comprehensive high-availability planning.
 
 4 Further Information
 ------------------------------

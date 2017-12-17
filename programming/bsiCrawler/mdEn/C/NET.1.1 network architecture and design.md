@@ -19,7 +19,7 @@ The focus of this module is on wired networks and data communication. However, g
 
 Specific security requirements for Virtual Private Clouds and Hybrid Clouds are not the focus of this module (see OPS.3.2 * Cloud Providers * and OPS.3.4 * Managed Security Services *).
 
-The network management is considered in the context of the zoning and segmentation, all further topics of the network management are treated in the building block NET.1.2 * network management *.
+The network management is considered in the context of zoning and segmentation, all further topics of network management are dealt with in the module NET.1.2 * Network Management *.
 
 2 risk situation
 -----------------
@@ -48,7 +48,7 @@ The following requirements MUST be implemented as a priority:
 
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 
-Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed. The directive MUST include:
+Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed securely. The directive MUST include:
 
 * in which cases the security zones are to be segmented and in which cases user groups or clients are to be logically or even physically separated,
 * which communication relationships and which network and application protocols are allowed,
@@ -88,7 +88,7 @@ Only terminals in a security segment that meet a similar level of security may b
 
 #### NET.1.1.A7 Protection of sensitive information
 
-Protective information MUST be transmitted over state-of-the-art secure protocols if it is not communicated over trusted dedicated network segments (eg, within the management network). If such protocols can not be used, MUST be adequately encrypted and authenticated according to the state of the art (see NET.3.3 * VPN). *
+Protective information MUST be transmitted over state-of-the-art secure protocols if it is not communicated over trusted dedicated network segments (eg, within the management network). If such protocols can not be used, they MUST be adequately encrypted and authenticated according to the state of the art (see NET.3.3 * VPN). *
 
 #### NET.1.1.A8 Basic protection of Internet access
 
@@ -139,7 +139,7 @@ Together with the basic requirements, the following requirements correspond to t
 On the basis of the security guideline and the requirement specification, an architecture for the security zones including internal network, DMZ area and external connections SHOULD be developed and sustainably maintained. Depending on the specific situation of the institution, all relevant architectural elements SHOULD be considered, but at least:
 * Network architecture of the internal network with definitions of how to use network virtualization techniques, Layer 2 and Layer 3 communication, and redundancy techniques,
 * Network architecture for external connections, including firewall architectures, as well as DMZ and extranet design and site coupling requirements,
-* Determine at which points of the network which security components such as firewalls or IDS / IPS are to be placed and what security functions they must implement
+* Determine at which points of the network which security components such as firewalls or IDS / IPS are to be placed and what security functions they must implement,
 * Specifications for the network connection of the various IT systems,
 * Network architecture in virtualization hosts, taking into account Network Virtualization Overlay (NVO) and Vertical Integrated Systems (ViS) architecture,
 * Definitions of the basic architecture elements for a private cloud as well as securing the connections to Virtual Private Cloud, Hybrid Cloud and Public Cloud (see OPS.3.2 * Cloud Providers * and OPS.3.4 * Managed Security Services *),
@@ -173,13 +173,13 @@ Different IPv4 / IPv6 terminals SHOULD be assigned to dedicated subnets dependin
 #### NET.1.1.A21 Separation of the management area
 It should be used throughout an out-of-band management to manage the infrastructure. All devices that are needed for the management of the IT infrastructure SHOULD be positioned in dedicated segments. Communication with these terminals SHOULD be controlled by a stateful packet filter (firewall). Communication from and to these management segments SHOULD be limited to the necessary management protocols with defined communication endpoints.
 
-The management area SHOULD include at least the following security segments, which SHOULD be further subdivided depending on the security policy and the requirements specification:
+The management area SHOULD include at least the following security segments, which SHOULD be further sub-divided depending on the security policy and the requirements specification:
 
-Segment (s) for IT systems responsible for authenticating and authorizing administrative communications,
+Segment (s) for IT systems responsible for the authentication and authorization of administrative communications,
 * Segment (s) for the administration of IT systems,
 * Segment (s) for monitoring and monitoring,
 * Segment (s) containing central logging including syslog server and SIEM server
-* Segment (s) of IT systems needed for basic management services
+* Segment (s) for IT systems needed for basic management services
 * Segment (s) for the management interface of the IT systems to be administered.
 The various management interfaces of the IT systems MUST be separated according to their purpose and their network placement via a stateful packet filter (firewall). The IT systems (management interface) in addition to the following affiliation SHOULD be separated via dedicated firewalls:
 
@@ -203,7 +203,7 @@ Depending on the security policy and the requirement specification, SHOULD be de
 
 #### NET.1.1.A23 Separation of security segments
 
-IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further subdivided depending on their size and the requirements of the segmentation concept. It MUST be ensured that no bridging of segments or even zones is possible.
+IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further subdivided depending on their size and the requirements of the segmentation concept. It MUST be ensured that bridging of segments or even zones is not possible.
 If the VLANs on a switch belong to different institutions, the separation should be either physical or encryption SHOULD be used to protect the transmitted information from unauthorized access.
 
 #### NET.1.1.A24 Secure logical separation via VLAN
@@ -218,7 +218,7 @@ A detailed and implementation planning for the network architecture and the netw
 
 #### NET.1.1.A26 Specification of operating processes for the network
 
-For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
+For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning as well as the segmentation concept affect IT operations.
 
 #### NET.1.1.A27 Integration of network architecture into contingency planning [Head IT]
 
@@ -240,7 +240,7 @@ The network connections (eg Internet connection and WAN connections) SHOULD be c
 
 To ward off DDoS attacks, Bandwidth Management SHOULD allocate available bandwidth between different communication partners and protocols.
 
-In order to fend off DDoS attacks with very high data rates, mitigation services SHOULD be purchased through major Internet service providers (ISPs) and their use SHOULD be regulated in contracts.
+In order to fend off DDoS attacks with very high data rates, mitigation services SHOULD be purchased through larger Internet Service Providers (ISPs) and their use SHOULD be regulated in contracts.
 
 #### NET.1.1.A31 Physical separation of security segments (CIA)
 
@@ -255,7 +255,7 @@ To limit potential attacks on a small number of terminals, the network SHOULD be
 
 #### NET.1.1.A34 Use of cryptographic procedures at network level (CI)
 
-The security segments SHOULD be implemented on the internal network, in the extranet and in the DMZ area using cryptographic techniques already at the network level. For this, VPN techniques or IEEE 802.1AE should be used.
+The security segments SHOULD be implemented on the internal network, on the extranet and in the DMZ area using cryptographic techniques already at the network level. For this, VPN techniques or IEEE 802.1AE should be used.
 
 When communicating within the internal network, extranet or DMZ over links that are not sufficiently secure for increased protection needs, the communication SHOULD be adequately encrypted at the network level.
 
@@ -265,7 +265,7 @@ At the network level, data loss prevention (DLP) systems should be used to reduc
 
 #### NET.1.1.A36 Separation via VLAN with very high protection requirement
 
-For very high protection requirements, NO VLANs SHOULD BE used.
+With very high protection requirements, NO VLANs SHOULD BE used.
 
 4 Further Information
 ------------------------------

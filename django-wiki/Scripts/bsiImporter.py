@@ -1,12 +1,10 @@
 import argparse
 import django
 import configparser
-import win32com.client
 import os
 import sys
 import string
 import filecmp
-
 
 sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -17,11 +15,7 @@ from wiki.models import Article, URLPath, Site, ArticleRevision
 from bsiwiki import settings
 from bsi.models import BSI, UGA,BSI_Article_type
 
-
-txtFolderDir = './Cross_Reference_Files/'
-excelFolderDir = './Cross_Reference_Tables/'
-macroFileDir = './Cross Reference 2018.xlsm/'
-CRF = './CRF/'
+crfDir = './CRF/'
 system_devices = ["APP", "SYS","IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
@@ -89,7 +83,7 @@ def doImport():
 
                 # append the Cross reference relation files to the content
                 # of each component article before import it in the database
-                if sub_article_type == "C":
+                if sub_article_type == "C" and os.path.isdir(crfDir):
                     appendThreatMeasureRelation(path_and_file, id)
 
                 # import the content to the database
@@ -178,8 +172,8 @@ def checkFileAction(filepath):
 
 def appendThreatMeasureRelation(path_and_file, id):
     try:
-        for cr_file in [f for f in listdir(CRF) if f.endswith(".md")]:
-            path_and_ref = os.path.join(CRF, cr_file)
+        for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:
+            path_and_ref = os.path.join(crfDir, cr_file)
             if id in cr_file:
                 with open(path_and_ref, 'r')as cr:
                     cr_data = cr.read()
@@ -190,61 +184,14 @@ def appendThreatMeasureRelation(path_and_file, id):
     except IOError:
         print('An error occurred trying to open (read/write) the file.')
 
-
-#Calling Macro to get cross reference relation tables
-def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
-    xl = win32com.client.Dispatch("Excel.Application")
-    xl.Visible = True
-    Path = macroFileDir
-    xl.Workbooks.Open(Filename=Path)
-    param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
-    param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
-    xl.Application.Run("Extraction", param1, param2)
-
 def cleanUp():
     # TODO remove all temp dirs and update files in current dirs
     # We need the path to old BSI dir to update its content?
     return
 
-def get_cr_relation():
-    # extract for each component the cross reference relation
-    try:
-        for filename in [f for f in listdir(txtFolderDir) if f.endswith(".txt")]:
-            # extract the component, threats and requirements ids from the macro files
-            path_and_file = os.path.join(txtFolderDir, filename)
-            with open(path_and_file) as data_file:
-                componentId = data_file.readline().rstrip()
-                threats_requirements_id = data_file.read().splitlines()
-
-                # check the references folder (bsiCrawler) to append the ids
-                # to the names of the threats and requirements
-                # build new md files contains the CR relation
-                for referencename in [r for r in listdir(settings.REFERENCE_DIRECTORY) if r.endswith(".txt")]:
-                    if componentId in referencename:
-                        path_and_reference = os.path.join(settings.REFERENCE_DIRECTORY, referencename)
-                        reference_name = os.path.splitext(referencename)[0]
-                        component_file = CRF + reference_name
-                        new_component_file = open(component_file + '.md', "w+")
-
-                        for id in threats_requirements_id:
-                            with open(path_and_reference) as reference_file:
-                                 for line in reference_file:
-                                    if id.strip() in line:
-                                        line = line.replace("####", "  *")
-                                        new_component_file.write(line)
-                        new_component_file.close()
-    except IOError:
-        print('An error occurred trying to open (read/write) the file.')
-
-
 # should not be imported by other module
 if __name__ == '__main__':
-    #generateComponentsThreatsMeasuresRelation()
-    #print( getCrossRefernceRelation())
-    #get_cr_relation()
     #bsiDir, file = parseArgs()
-    #setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
-    #django.setup()
     #main(bsiDir, file)
     doImport()
     print("worked!")

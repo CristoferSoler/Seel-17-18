@@ -34,14 +34,14 @@ ICS components in industrial environments are often exposed to special condition
 
 ICS components are often incompletely documented, so not all product features are known. Information about the services used, protocols and communication ports as well as authorization management are often particularly incomplete. This makes the hazard analysis more difficult because interfaces, functions and security-relevant mechanisms are overlooked. As a result, potential hazards can not be taken into account. In addition, there are no or limited responses to new vulnerabilities in an ICS component if the services and ports used are not fully captured.
 
-### 2 3 Unsafe system configuration
+### 2 3 Insecure system configuration
 
-The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, default permissions often remain unchanged.
+The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.
 It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
 
 ### 2 4 Insufficient user and authorization management
 
-Some ICS components have their own user and authorization management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
+Some ICS components have their own user and permission management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
 
 ### 2 5 Insufficient logging
 
@@ -72,7 +72,7 @@ ICS components often contain detailed information about the controlled or monito
 Attackers could get business secrets here (industrial espionage), eg. Recipes, procedures or other intellectual property. They can also gain information about the functioning of an ICS component and its security mechanisms, which can be used for further attacks.
 
 ### 2 11 Insufficient security requirements for procurement
-Due to a lack of awareness of the risks and cost reasons, procurement often does not take information security into account. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
+Due to a lack of awareness of the risks and cost reasons, procurement often does not take into account information security. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
 
 ### 2 12 Manipulated firmware
 
@@ -127,7 +127,7 @@ Programs and data MUST be backed up regularly and after system changes.
 
 #### IND.2.1.A8 Malware Protection [ICS Administrator]
 
-ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used for this, the program and the virus signatures SHOULD always be up to date. If the resources on the ICS component could not be sufficiently compromised or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
+ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used, the program and the virus signatures SHOULD always be up to date. If resources on the ICS component could not be sufficient or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
 
 #### IND.2.1.A9 Communication Relationship [ICS Administrator]
 
@@ -139,7 +139,7 @@ It SHOULD be created an extended system documentation. These should include spec
 
 #### IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
 
-When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates SHOULD be carried out at short notice.
+When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates, maintenance should be performed at short notice.
 
 #### IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
 
@@ -194,7 +194,7 @@ Firmware updates or new control programs SHOULD only be played if their integrit
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area "General ICS component" can be found in the following publications, among others:
+Further information about hazards and safety measures in the area "General ICS Component" can be found in the following publications, among others:
 
 * #### [AHWAST] How to Use the White Paper - Requirements for Secure Control and Telecommunication Systems (Version 1.1, 2014)
 

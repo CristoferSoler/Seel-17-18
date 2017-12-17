@@ -15,7 +15,7 @@ The goal of the module is the secure operation of web applications and the prote
 
 ### 1.3 Delimitation
 
-This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
+This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not dealt with again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
 
 2 risk situation
 -----------------
@@ -73,20 +73,20 @@ To ensure that a valid session (session ID) was not inherited by an attacker, us
 
 If only a limited number of users are allowed to use the web application, an authorization component MUST be used to ensure that users can only perform actions for which they are authorized. Any access to protected content and features MUST be controlled before it is executed.
 
-All users MUST be assigned restrictive access rights properly. When employees get access rights to or change their web application, those in charge MUST check, confirm, and document it in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
+All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
 All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
 
 #### APP.3.1.A3 Secure Session Management [Developer]
 
-Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
+Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, then the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
 
 A web application MUST allow users to explicitly end an existing session. After the user has logged in, an existing session ID MUST be replaced with a new one. The duration of the session MUST be limited, eg For example, inactive sessions automatically become invalid after a certain time and a maximum validity period is given (timeout). After the session is invalid, all session data (both server-side and client-side) MUST be invalid and deleted.
 
 #### APP.3.1.A4 Controlled integration of data and content in web applications [developer]
 
-It MUST be ensured that a web application incorporates only intended data and content and delivers it to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, MUST ensure that a user can save files only in the specified path.
+It MUST be ensured that a web application integrates and delivers exclusively intended data and content to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, it MUST be ensured that a user can save files only in the specified path.
 
-The goals of the redirect feature of a web application MUST be sufficiently restricted so that users are redirected to trusted web pages only. If a user leaves the trust domain, he MUST be informed.
+The goals of the redirect feature of a web application MUST be sufficiently limited so that users are redirected to trusted web pages only. If a user leaves the trust domain, he MUST be informed.
 
 #### APP.3.1.A5 Logging Security Events of Web Applications [Developer]
 
@@ -167,7 +167,7 @@ All data submitted to a web application SHOULD be treated as potentially dangero
 
 #### APP.3.1.A17 Error Handling [Developer]
 
-If errors occur during the operation of a web application, they SHOULD be treated so that the web application remains in a consistent state. The following points should be considered in the error handling:
+If errors occur during the operation of a web application, they SHOULD be treated so that the web application remains in a consistent state. The following points should be considered when troubleshooting:
 
 * confidential information in error messages should be avoided
 * Error messages must be logged
@@ -211,7 +211,7 @@ To protect against denial-of-service (DoS) attacks, resource intensive operation
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the "Web Applications" area can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
 
 * #### [HILWEB] Help for using the web application module
 

@@ -5,7 +5,7 @@
 
 The "Implementation Plan for the Guarantee of IT Security in the Federal Administration" (UP Bund) stipulates that federal authorities must fully implement IT-Grundschutz. They are also required to carry out a comprehensive information security audit (IS audit) at least every 3 years. However, authorities are exempted if they have an ISO 27001 IT-Grundschutz-based certificate.
 
-IS revisions are essential to any successful information security management. Only when established security measures and processes are regularly reviewed, are they effective, complete, appropriate and up-to-date can the overall state of information security be assessed. IS revisions are thus a tool to identify, achieve, and maintain an appropriate level of security. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
+IS revisions are essential to any successful information security management. Only when established security measures and processes are regularly reviewed, are they effective, complete, adequate and up-to-date can the overall state of information security be assessed. IS revisions are thus a tool to identify, achieve, and maintain an appropriate level of security. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
 
 ### 1.2 Objective
 
@@ -30,7 +30,7 @@ Among other things, the UP Bund envisages that all federal authorities that do n
 
 ### 2 2 Override security measures
 
-The security level of an authority depends on full and correct implementation of security measures. In particular, in the critical phase of projects or under certain circumstances, it may happen that security measures are temporarily suspended. However, it is sometimes forgotten to reactivate them, resulting in too low a level of security.
+The level of security of an authority depends on full and correct implementation of security measures. In particular, in the critical phase of projects or under certain circumstances, it may happen that security measures are temporarily suspended. However, some people forget to reactivate them, resulting in too low a level of security.
 
 ### 2 3 Ineffective or non-economic implementation of security measures
 If security measures are implemented without taking into account certain practical aspects, the measures may be ineffective. For example, it is meaningless to lock the entrance area with turnstiles if the staff can easily enter the building through an open side entrance.
@@ -47,7 +47,7 @@ If an IS auditor is not sufficiently qualified or prepares insufficiently for th
 
 ### 2 6 Lack of long-term planning
 
-If IS revisions are not planned on a long-term and centralized basis, it can happen that individual areas of one authority are checked very frequently and others not at all. As a result, it is very difficult or even impossible to assess the security status of the information network.
+If IS revisions are not planned on a long-term and central basis, it can happen that individual areas of one authority are checked very frequently and others not at all. As a result, it is very difficult or even impossible to assess the security status of the information network.
 
 ### 2 7 Lack of planning and coordination when performing IS revisions
 
@@ -69,7 +69,7 @@ During an IS audit, various confidential information is collected by the auditor
 ---------------
 The following are specific requirements for the area of ​​IS revision for federal authorities. In principle, the person responsible for the IS audit is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -81,9 +81,9 @@ The institution MUST appoint a responsible person to plan, initiate, and track t
 
 An IS Revision Manual MUST be created. The manual MUST be adopted by the management.
 
-#### DER.3.2.A3 Definition of the basis of the audit and a common rating scheme [IS audit team]
+#### DER.3.2.A3 Definition of the basis for the audit and a common rating scheme [IS audit team]
 
-The audit basis for the IS audit MUST be the UP Bund, the Information Security Review Guide, the BSI Information Security Standards, and the IT Baseline Protection Compendium. This MUST also be known to all involved. For the assessment of the implementation of the measures, the evaluation scheme from * Information Security Revision - A Guide for the IS Revision Based on IT-Grundschutz * MUST be used (see 4. * Further Information *).
+The audit basis for the IS audit MUST be the UP Bund, the Information Security Review Guide, the BSI Information Security Standards and the IT Baseline Protection Compendium. This MUST also be known to all involved. For the assessment of the implementation of the measures, the evaluation scheme from * Information Security Revision - A Guide for the IS Revision Based on IT-Grundschutz * MUST be used (see 4. * Further Information *).
 
 #### DER.3.2.A4 Preparation of a plan for the IS audit
 
@@ -97,7 +97,7 @@ For IS revisions, a suitable team MUST be compiled or commissioned. The IS audit
 
 The authority management MUST initiate the IS review process by placing an order with the IS audit team.
 
-For document review, the authority to be audited MUST hand over the necessary reference documents to the IS audit team in accordance with the information security audit guide.
+For document review, the authority to be audited MUST provide the necessary reference documents to the IS audit team in accordance with the information security audit guide.
 
 #### DER.3.2.A7 Carrying out an IS audit [IS audit team]
 
@@ -110,7 +110,7 @@ The IS audit report and its underlying reference documents MUST be audited by th
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of IS revision for federal authorities. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​IS auditing for federal authorities. They SHOULD be implemented in principle.
 
 #### DER.3.2.A9 Integration into the Information Security Process [Information Security Officer (ISB)]
 
@@ -160,7 +160,7 @@ The on-the-spot check SHOULD ensure that the selected measures ensure informatio
 
 Thereafter, all measures of the test plan or all topics of the test topic list SHOULD be tested. If so, the intended test methods SHOULD be used. If the IS audit team identifies deviations from the documented status for a selected sample, the sample SHOULD be extended as needed until the issue is resolved.
 
-During on-the-spot audits, IS auditors should never actively intervene in systems themselves or give instructions on changes to the subject of the review.
+During on-the-spot audits, IS auditors should never actively intervene in systems themselves or give instructions for changes to the subject of the audit.
 
 All essential facts and information about source, information and submission requests as well as conducted meetings SHOULD be recorded in writing.
 
@@ -174,7 +174,7 @@ Interviews SHOULD be structured. Questions SHOULD be concise, precise and easy t
 
 The IS audit team SHOULD verify that the remaining residual risks to the information network are adequate and sustainable and are bindingly borne by the authorities. Measures that fundamentally contribute to the information security of the entire federal authority must NOT be included in the risk assumption.
 
-The IS audit team SHOULD verify on a random basis whether or to what extent the measures specified in the risk treatment plan have been implemented.
+The IS audit team was asked to randomly verify whether or to what extent the measures specified in the risk treatment plan have been implemented.
 
 #### DER.3.2.A20 Follow-up of the on-site inspection [IS-Revision-Team]
 
@@ -187,7 +187,7 @@ The IS audit team SHOULD transfer the results obtained to an IS audit report and
 
 A draft version of the report SHOULD be submitted to the audited federal authority in advance to verify that the issues identified by the audit team were properly recorded. It SHOULD be considered that the IS audit team explains the results of the IS audit in a presentation to those responsible.
 
-The audited federal authority SHOULD make sure that all relevant bodies in the federal authority receive within a reasonable time the passages of the IS auditing report that are important and necessary for them. In particular, the content SHOULD be communicated to the authorities, to those responsible for the IS audit and to the ISB.
+The audited federal authority SHOULD make sure that all relevant bodies in the federal authority receive within a reasonable time the passages of the IS audit report that are important and necessary for them. In particular, the content SHOULD be communicated to the authorities, to those responsible for the IS audit and to the ISB.
 
 IS audit reports SHOULD at least be classified as classified for "for business use only" (VS-NfD).
 

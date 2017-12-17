@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient security requirements for procurement
 
-Due to a lack of awareness of the risks and cost reasons, procurement often does not take information security into account. As a result, sensors can sometimes contain serious weaknesses that can only be remedied with great difficulty later on.
+Due to a lack of awareness of the risks and cost reasons, procurement often does not take into account information security. As a result, sensors can sometimes contain serious weaknesses that can only be remedied with great difficulty later on.
 
 Sensors for ICS components in industrial environments are often exposed to special conditions that may affect safe operation. Examples include extreme heat, cold, moisture, dust, vibration or corrosive or corrosive atmospheres. Frequently, several factors occur simultaneously. Such adverse environmental effects can cause the sensors of ICS components to wear faster and fail earlier or measure erroneous values.
 

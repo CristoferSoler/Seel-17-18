@@ -24,7 +24,7 @@ Cable fires can cause serious damage. Some of these consequences are, for exampl
 
 ### 2 2 Insufficient network dimensioning
 
-If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. However, an extension of networks is only possible to the extent permitted by the existing cables laid or the space available for additional cables.
+If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. An extension of networks is only possible to the extent permitted by the existing, laid cables or the space available for additional cables.
 
 ### 2 3 Insufficient documentation of the wiring
 
@@ -50,7 +50,7 @@ Listening to lines is a danger to information security that should not be neglec
 
 The following are specific requirements for IT cabling. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -79,7 +79,7 @@ The IT cabling SHOULD be subjected to a approval process. This SHOULD only take 
 
 #### INF.4.A6 Continuous updating and revision of network documentation
 
-The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In doing so, all documentation areas affected by the change SHOULD be easily captured and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
+The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In this case, all documentation areas affected by the change SHOULD easily be recorded and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
 
 #### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
 
@@ -94,7 +94,7 @@ An institution SHOULD make sure that it has internal and external documentation 
 
 #### INF.4.A10 Neutral documentation in the distributors
 
-Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indications as to the type of use of the pipes. All further information MUST be listed in a revision documentation.
+Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indication of the type of use of the pipes. All further information MUST be listed in a revision documentation.
 
 #### INF.4.A11 Control of existing connections
 
@@ -106,7 +106,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.4.A12 Redundancies for the wiring (A)
 
-It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire areas of the building. If redundant cabling is used, its functionality should be checked regularly.
+It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire compartments of the building. If redundant cabling is used, its functionality should be checked regularly.
 
 #### INF.4.A13 Material Assurance of IT Cabling (IA)
 
@@ -114,7 +114,7 @@ In rooms with public access or in confusing areas of a building, cables and dist
 
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 
-The power supply of the IT components SHOULD be chosen so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the form of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
+The power supply of the IT components SHOULD be selected so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the shape of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
 
 #### INF.4.A15 Use of Cabinet Systems (IA)
 
@@ -137,14 +137,14 @@ Additional information on hazards and security measures in the area of ​​"IT
 
   
 
- Construction methods for electronic devices, Beuth Verlag
+ Construction methods for electronic equipment, Beuth Verlag
 
  
 * #### [DIN60297] DIN IEC 60297
 
   
 
- Construction methods for electronic devices, Beuth Verlag
+ Construction methods for electronic equipment, Beuth Verlag
 
  
 * #### [EN50173] EN 50173: 2007

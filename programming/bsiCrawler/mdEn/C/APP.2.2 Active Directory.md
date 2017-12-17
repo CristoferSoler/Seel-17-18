@@ -22,10 +22,10 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient planning of safety limits
 
-An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. So the forest represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
+An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. The forest thus represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
 
 ### 2 2 Too many or too lax relationships of trust
-If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, if a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are safe Issues with permissions occur and information flows away. In particular, if the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
+If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, when the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
 
 ### 2 3 Lack of security features due to older operating systems and domain functional level
 
@@ -52,11 +52,11 @@ It has to be assumed that malicious code reaches different systems such as norma
 
 ### 2 9 Lack of supervision of privileged group membership
 
-In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads to more and more opportunities for attackers to gain and abuse additional privileges.
+In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads attackers to have more and more opportunities to gain and abuse additional privileges.
 
 ### 2 10 Too powerful or poorly secured service accounts
 
-Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Because the credentials of a service running in the context of a service account are held in LSASS's protected storage, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
+Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Since the credentials of a service running in the context of a service account are held in the LSASS's protected memory, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
 
 In particular, this applies if the service account is secured with a weak password. For an attacker can easily request a TGS (Ticket Granting Service) ticket when using Kerberos authentication, in which the password of the service account is processed, and the latter offline break brute force.
 
@@ -73,7 +73,7 @@ Attackers may prefer to use accounts that are no longer in use but still exist i
 
 The following are specific requirements for protecting Active Directory. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -149,7 +149,7 @@ In the environment of the Active Directory STRICTLY the authentication protocol 
 
 #### APP.2.2.A10 Secure use of DNS for Active Directory
 
-Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be permitted by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
+Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be allowed by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
 
 Secondary DNS zones SHOULD be avoided. At a minimum, the zone file SHOULD be protected from unauthorized access.
 

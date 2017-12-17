@@ -23,7 +23,7 @@ The goal of the module is to protect information processed by Unix servers. The 
 
 The module contains basic requirements for setting up and operating Unix servers. It concretizes and complements the aspects that are dealt with in the module SYS.1.1 General Server to specifics of Unix systems.
 
-If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing Usage must additionally be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is highlighted in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
+If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own modules, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board resources, regardless of the intended use of the server.
 
 2 risk situation
 -----------------
@@ -83,7 +83,7 @@ To manage users and groups SHOULD use the appropriate administration tools. From
 
 #### SYS.1.3.A7 Additional protection for single-user and recovery mode access
 
-The UNIX server SHOULD be secured by assigning a boot password in the firmware of the server. Alternatively, a predefined boot order with built-in boot disk SHOULD be set first and the boot loader backed up.
+The UNIX server SHOULD be secured by assigning a boot password in the firmware of the server. Alternatively, a predefined boot order with built-in boot disk SHOULD be set first and the bootloader backed up.
 
 #### SYS.1.3.A8 Encrypted access via Secure Shell
 
@@ -95,7 +95,7 @@ When booting, the integrity of the (pre-) bootloader to the kernel SHOULD be che
 
 #### SYS.1.3.A10 Prevention of spread when exploiting vulnerabilities
 
-Services and applications SHOULD be secured with individual security policies (for example, AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
+Services and applications SHOULD be secured with individual security policies (eg with AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
 
 #### SYS.1.3.A11 Use of the security mechanisms of NFS
 
@@ -128,7 +128,7 @@ The use of system calls SHOULD be limited to the absolutely necessary system cal
 
 #### SYS.1.3.A17 Additional Kernel Protection (CI)
 
-With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent exploitation of vulnerabilities and propagation in the operating system.
+With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control designed to prevent exploitation of vulnerabilities and propagation in the operating system.
 
 4 Further Information
 ------------------------------

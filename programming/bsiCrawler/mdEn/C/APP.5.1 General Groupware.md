@@ -30,7 +30,7 @@ If the process, organizational and technical regulations are neglected in the pl
 
 ### 2 2 Incorrect setting of the groupware
 
-Because groupware systems are complex, many security issues can arise due to the many possible settings and the parameters that interact with each other. For example, server components could operate on inappropriate systems. In addition, it might be possible to ignore or disregard the essential settings (for example, encryption of individual groupware services or restrictions on rights according to authorization management). These vulnerabilities can lead to a significant loss of availability, authenticity and confidentiality of information, thereby hindering the functionality of groupware systems and corrupting processed data.
+Because groupware systems are complex, many security issues can arise due to the many possible settings and the parameters that interact with each other. For example, server components could operate on inappropriate systems. In addition, it would be possible to ignore or disregard the essential settings (for example, encryption of individual groupware services or rights management rights restrictions). These vulnerabilities can lead to a significant loss of availability, authenticity and confidentiality of information, thereby hindering the functionality of groupware systems and corrupting processed data.
 If rights are wrongly assigned to a groupware database, this can cause damaging data leak scenarios or unauthorized manipulation in the authorization management of the institution. The manipulations can result, for example, in incorrect settings that disturb the entire groupware system or individual services.
 
 ### 2 3 Misuse of self-developed macros and programming interfaces in groupware services
@@ -41,7 +41,7 @@ Macros can also be used to forward or post messages, appointments or tasks. If m
 
 ### 2 4 Incorrect assignment of access and access rights to groupware services
 
-If access rights to a groupware client or access rights to stored data in groupware services are not sufficiently limited, security gaps may arise. If these rights are created and administered incorrectly, the operation can also be disturbed, for example if an employee can not access information that is important to him. It is also possible for attackers to gain access to confidential information and access sensitive data.
+If access rights to a groupware client or access rights to stored data in groupware services are not sufficiently limited, security gaps may arise. If these rights are created and administered incorrectly, the operation can also be disturbed, for example if an employee can not access important information. It is also possible for attackers to gain access to sensitive information and access sensitive data.
 
 ### 2 5 Inadequate knowledge of the administrators of groupware systems
 
@@ -51,7 +51,7 @@ Even small configuration errors can affect the security of a groupware system. P
 
 The loss of stored data in groupware applications can have a significant impact on business processes and thus on the entire institution. If data in connection with groupware applications are falsified or lost, private-sector institutions can be threatened with their existence. In public authorities, the loss or corruption of those data may delay or even rule out internal administrative and specialized tasks.
 
-Overall, the loss of stored data in groupware applications, in addition to a loss of work and the cost of a replacement, can also lead to long-term consequences, such as loss of confidence among customers and partners, as well as a negative impact on the public.
+Overall, the loss of stored data in groupware applications, in addition to a loss of work and the cost of replacement, can also lead to long-term consequences, such as loss of confidence among customers and partners, as well as a negative public perception.
 
 ### 2 7 Attacks on groupware systems and applications
 Groupware systems and individual groupware applications can be compromised by third parties. For groupware systems z. B. the users, the internal network, used groupware server and the message recipient are intentionally attacked. Potential security vulnerabilities can be exploited by attackers to read, modify or delete information in closed groupware systems. Even if the access to the groupware applications was not sufficiently protected, attackers could, for example, access confidential data.
@@ -67,7 +67,7 @@ Groupware services are usually not cryptographically secured by default. As a re
 
 The following are specific requirements for the Groupware area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -77,10 +77,10 @@ All components required for a groupware system (eg the security gateways) MUST b
 
 #### APP.5.1.A2 Secure configuration of groupware clients [IT, user]
 
-The users' groupware clients MUST be preconfigured by the administrator to be as secure as possible without the user having to do anything. The users MUST be advised that the configuration must not be changed independently. It MUST also be prevented and prohibited that passwords are saved in plain text. If messages are stored on a mail server and z. For example, if accessed through the Internet Message Access Protocol (IMAP), a server-side mailbox size limit MUST be set. Before file attachments are executed, they MUST be checked against malware by a debugging program. You must choose secure settings for email in HTML format, preview features and email filtering rules, and secure email redirection.
+The users' groupware clients MUST be preconfigured by the administrator to be as secure as possible without the user having to do anything. Users MUST be advised that the configuration may not be changed independently. It MUST also be prevented and prohibited that passwords are saved in plain text. If messages are stored on a mail server and z. For example, if accessed through the Internet Message Access Protocol (IMAP), a server-side mailbox size limit MUST be set. Before file attachments are executed, they MUST be checked against malware by a debugging program. You must choose secure settings for email in HTML format, preview features and email filtering rules, and secure email redirection.
 
 #### APP.5.1.A3 Secure Operation of Groupware Systems [Head of IT, Information Security Officer (ISB)]
-All security-relevant service packs, updates and patches for the respective software product MUST be imported. Administrators MUST therefore regularly inform themselves about newly discovered vulnerabilities, the groupware systems used and the operating systems used and close them promptly. In order to secure groupware systems in the institution, protections against denial of service (DoS) attacks MUST be taken. Local communication MUST be properly protected. Communication over public networks MUST be encrypted. In addition, the access rights to the locally connected users MUST be limited. A guideline SHOULD be created that informs about the protocols and services allowed in the respective groupware. In particular, the mail server MUST be set so that it can not be misused as a spam relay.
+All security-relevant service packs, updates and patches for the respective software product MUST be imported. Administrators MUST therefore regularly inform themselves about newly discovered vulnerabilities, the groupware systems used and the operating systems used and close them promptly. In order to secure groupware systems in the institution, protections against denial of service (DoS) attacks MUST be taken. Local communication MUST be properly protected. Communication over public networks MUST be encrypted. In addition, the access rights to the locally connected users MUST be limited. A policy SHOULD be created that informs about the protocols and services allowed in the respective groupware. In particular, the mail server MUST be set so that it can not be misused as a spam relay.
 
 #### APP.5.1.A4 Data Protection Archiving at Groupware [Information Security Officer (ISB), Data Protection Officer, User]
 
@@ -92,9 +92,9 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### APP.5.1.A5 Definition of the communication partners [Head of Organization, Head of IT, Information Security Officer (ISB), Data Protection Officer]
 
-It SHOULD be determined which communication partners are allowed to receive which information. If you want to transfer information to a communication partner outside of your own institution, you SHOULD make sure that the recipient has the right to process that information. All information SHOULD be classified according to its strategic importance to the institution. The communication partners SHOULD be advised that the data transmitted may only be used for the purpose for which they were disclosed. Also for reasons of data protection (Federal Data Protection Act (BDSG), passing control) SHOULD be created an overview of which recipients are entitled to receive information, in particular personal data. In the case of data to be transmitted, it should be clear which communication partners have received or are receiving information.
+It SHOULD be determined which communication partners are allowed to receive which information. If information is to be transmitted to a communication partner outside of their own institution, it should be ensured that the recipient has the right to process this information. All information SHOULD be classified according to its strategic importance to the institution. The communication partners SHOULD be advised that the data transmitted may only be used for the purpose for which they were disclosed. Also for reasons of data protection (Federal Data Protection Act (BDSG), transfer control) an overview SHOULD be created, which recipients are entitled to receive information, in particular personal data. In the case of data to be transmitted, it should be clear which communication partners have received or are receiving information.
 
-#### APP.5.1.A6 Representation rules for e-mail usage [supervisors, information security officer (ISB), users]
+#### APP.5.1.A6 Representation rules for e-mail usage [supervisor, information security officer (ISB), user]
 
 For e-mail processing, a suitable representative SHOULD be named for each employee at all times. Representatives SHOULD have access to the representative's mailbox. Alternatively, the emails SHOULD be forwarded to the representative. If e-mails are forwarded, the representative users SHOULD at least be informed. In order to support the proxy control processes, special rules should be established for autoreply functions in e-mail programs, with which these functions can be safely controlled. When employees use the autoreply functions, NO internal information SHOULD be shared.
 
@@ -124,7 +124,7 @@ To administer a groupware system correctly and securely, the responsible adminis
 * Disaster recovery measures.
 #### APP.5.1.A11 Authorization Management for Groupware Systems [Head of IT, Information Security Officer (ISB)]
 
-The assigned privileges, especially the privileged one, SHOULD regularly be aligned with the authorization concept and adapted in a timely manner as the tasks of users and administrators change. An authorization concept SHOULD be created that includes all groupware components. Permissions SHOULD be awarded as restrictively as possible. Administrative activities at operating system level and groupware application level SHOULD be separated as far as possible. Within the administration, roles and responsibilities SHOULD be separated.
+The assigned privileges, especially the privileged one, SHOULD regularly be aligned with the authorization concept and adapted promptly as the tasks of users and administrators change. An authorization concept SHOULD be created that includes all groupware components. Permissions SHOULD be awarded as restrictively as possible. Administrative activities at operating system level and groupware application level SHOULD be separated as far as possible. Within the administration, roles and responsibilities SHOULD be separated.
 
 #### APP.5.1.A12 Training for Security Mechanisms of Groupware Clients for Users [Head of IT, Information Security Officer (ISB)]
 
@@ -136,7 +136,7 @@ Before a file is sent via email via a groupware service, SHOULD check if it cont
 
 #### APP.5.1.A14 Prevention of problematic file formats [user]
 
-It SHOULD be specified how to deal with emails in HTML format, with other file formats and file attachments. For HTML-formatted emails, a policy SHOULD be created that includes related content from user training, redirect settings, conversion options (eg, in text format), user instructions, and possible secure and separate workstations.
+It SHOULD be specified how to deal with emails in HTML format, with other file formats and file attachments. For HTML-formatted emails, a policy SHOULD be created that includes related content from user training, redirection settings, conversion options (eg, in text formats), user instructions, and possible secure and separate workstations.
 
 #### APP.5.1.A15 Logging of groupware systems [Head IT]
 
@@ -151,11 +151,11 @@ If no own groupware server is to be operated but a service provider is commissio
 
 #### APP.5.1.A18 Spam and virus protection by using an e-mail scanner on the mail server [Information Security Officer (ISB)]
 
-On the central mail server SHOULD an e-mail scanner with built-in memory-resistant anti-virus program should be installed, which checks incoming and outgoing e-mails, in particular their attachments, for spam characteristics and harmful contents. Since encrypted e-mails can not be automatically checked, it should also be determined how to deal with such e-mails. If an e-mail scanner is used, all employees, the data protection officer and the staff representatives SHOULD be informed.
+On the central mail server SHOULD an e-mail scanner with built-in memory-resistant anti-virus program should be installed, which checks incoming and outgoing e-mails, in particular their attachments, for spam features and harmful content. Since encrypted e-mails can not be automatically checked, it should also be determined how to deal with such e-mails. If an e-mail scanner is used, all employees, the data protection officer and the staff representatives SHOULD be informed.
 
 #### APP.5.1.A19 Encryption of Groupware [IT Director, Information Security Officer (ISB), User]
 
-Data transmitted by groupware systems SHOULD be secured using appropriate safeguards. Thus, encryption and digital signatures should ensure the integrity and confidentiality of electronically transmitted information, for example through TLS connection encryption.
+Data transmitted by groupware systems SHOULD be secured using appropriate protection mechanisms. Thus, encryption and digital signatures should ensure the integrity and confidentiality of electronically transmitted information, for example through TLS connection encryption.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -163,7 +163,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.5.1.A20 Creating an Outage Plan for Groupware System Failure [Emergency Response Officer, IT Leader, Information Security Officer (ISB)] (A)
 
-It SHOULD be a concept designed to minimize the consequences of a failure and what to do in the event of a failure. The emergency planning for the groupware system SHOULD consider the existing emergency plan of the institution. Important tasks to be able to maintain or re-start the groupware system SHOULD be described as being able to be performed by appropriately trained personnel. A recovery plan for the groupware system SHOULD be created, which describes how to reboot the systems after a failure. System recovery emergency exercises SHOULD be performed on a regular basis, including all aspects of a system failure or compromise.
+A concept SHOULD be designed to minimize the consequences of a failure and what to do in the event of a failure. The emergency planning for the groupware system SHOULD consider the existing emergency plan of the institution. Important tasks to be able to maintain or re-start the groupware system SHOULD be described as being able to be performed by appropriately trained personnel. A recovery plan for the groupware system SHOULD be created, which describes how to reboot the systems after a failure. System recovery emergency exercises SHOULD be performed on a regular basis, including all aspects of a system failure or compromise.
 
 #### APP.5.1.A21 End-to-end encryption (CI)
 

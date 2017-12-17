@@ -47,11 +47,11 @@ Bottlenecks can not only affect the storage space on hard disks or in storage ne
 
 A snapshot can be used to freeze and secure the state of a virtual machine. If such a snapshot is restored at a later time, any changes made in the meantime will be lost. As a result, already patched security vulnerabilities can be open again. In addition, open files, file transfers, or database transactions can result in inconsistent data at the time of the snapshot.
 
-In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main storage are also backed up to disk and can be recovered and analyzed in a virtual environment outside of the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
+In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main memory are also backed up to disk and can be recovered and analyzed in a virtual environment outside the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
 
 ### 2 5 Failure of the management server for virtualization systems
 
-Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to problems such as resource bottlenecks or the failure of individual virtualization servers or integrate new virtualization servers into the infrastructure or create new virtual IT systems during this time. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
+Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to issues such as resource bottlenecks or the failure of individual virtualization servers, integrate new virtualization servers into the infrastructure, or create new virtual IT systems. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
 
 ### 2 6 Misuse of guest tools
 
@@ -163,7 +163,7 @@ Furthermore, the configuration files of the virtual IT systems SHOULD regularly 
 
 If configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
 
-#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, IT Leaders, Network Leaders]
+#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
 
 All administrators of the virtual environment SHOULD be adequately trained. The training course SOLLTE teaches how virtual infrastructures can be safely set up and operated.
 

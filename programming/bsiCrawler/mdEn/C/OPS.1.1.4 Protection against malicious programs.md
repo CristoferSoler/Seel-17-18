@@ -30,7 +30,7 @@ If IT systems are not adequately protected against malicious programs, which als
 
 ### 2 2 Blackmail by ransomware
 
-A common type of malware is ransomware. This encrypts the data of the infected IT system as well as frequently other data that can be reached via network shares. As a rule, the attackers use encryption methods that can not be reversed without knowing the key, thus forcing their victims to spend large sums of money. If there is no effective protection against malicious programs and no additional precautions like data backups are made, there can be significant restrictions on the availability of information as well as massive financial and image damage.
+A common type of malware is ransomware. This encrypts the data of the infected IT system as well as often other data that can be reached via network shares. As a rule, the attackers use encryption methods that can not be reversed without knowing the key, thus forcing their victims to spend large sums of money. If there is no effective protection against malicious programs and no additional precautions like data backups are made, there can be significant restrictions on the availability of information as well as massive financial and image damage.
 
 ### 2 3 Targeted Attacks and Social Engineering
 Institutions are often attacked with customized malicious programs. This z. B. Leading executives through social engineering methods to open malicious email attachments. Tailor-made malicious programs often can not be detected directly by virus protection programs. The human resources department of an institution, for example, can be a target, for example by malicious application documents are sent by electronic means. If the attacker has been able to infect an IT system in this way, he can spread within the institution and, for example, steal, manipulate or destroy information.
@@ -41,18 +41,18 @@ If the users are not adequately sensitized, mobile data carriers can also serve 
 
 ### 2 5 botnets
 
-Through malicious programs, IT systems of an institution can become part of so-called botnets. For example, an attacker who frequently controls thousands of systems in such a botnet can use them to send spam or launch distributed Denial-of-Service (DDoS) attacks to third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
+Through malicious programs, IT systems of an institution can become part of so-called botnets. An attacker who frequently controls thousands of systems in such a botnet can use them, for example, to send spam or launch distributed denial-of-service attacks (DDoS) on third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
 
 ### 2 6 Infection of production systems and IoT devices
 
-In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
+In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee machine can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
 
 3 requirements
 ---------------
 
 The following are specific requirements for malicious program protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should at least be included in all strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined IT security concept.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -65,11 +65,11 @@ It MUST be assessed what protections the IT systems used as well as the operatin
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
-Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific application. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific purpose. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A4 Selection of a virus protection program for gateways and IT systems for data exchange [specialist responsible]
 
-For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A5 Operation of virus protection programs
 
@@ -102,7 +102,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.4.A10 Use of special analysis environments (CIA)
 
-Automated analytics in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
+Automated analysis in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
 
 #### OPS.1.1.4.A11 Using Multiple Scan Engines (CIA)
 
@@ -122,14 +122,14 @@ With increased protection requirements and appropriate threat status, the use an
 
 #### OPS.1.1.4.A15 External Consultation (CIA)
 
-When developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
+In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
 
 4 Further Information
 ------------------------------
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area of ​​"protection against malware" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"protection against malicious programs" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

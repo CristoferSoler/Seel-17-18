@@ -9,7 +9,7 @@ Data carriers can be classified according to whether they are read-only, write-o
 
 ### 1.2 Objective
 
-This module shows how the information stored on mobile data carriers can be safely used and how unauthorized disclosure of information via mobile data carriers should be prevented.
+This module shows how the information stored on mobile data carriers can be safely used and how an unauthorized transfer of information via mobile data carriers should be prevented.
 
 ### 1.3 Delimitation
 
@@ -19,7 +19,7 @@ The different and sometimes complex requirements for devices that can be used in
 
 Mobile data carriers can be exchanged during personal meetings or by mail. The exchange of digital and analog data carriers to transfer information between different communication partners and IT systems is not considered in this module. For this purpose, the requirements of block OPS.1.2.3 Data medium exchange must be implemented.
 
-In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data media and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
+In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data carriers and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / Modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
 
 2 risk situation
 -----------------
@@ -32,14 +32,14 @@ Frequently it can be observed that organizational regulations and technical secu
 
 ### 2 2 Insufficient knowledge of regulations
 
-If employees and officials are not sufficiently familiar with the rules for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
+If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
 
 ### 2 3 Data loss in mobile use
 For mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
 
 ### 2 4 Broken disk
 
-Because of their size and application fields, mobile data carriers are susceptible to damage, errors or failures. Cause are, for example, constantly changing operating environments or mechanical effects.
+Mobile data carriers are susceptible to damage, errors or failures due to their size and application fields. Cause are, for example, constantly changing operating environments or mechanical effects.
 
 ### 2 5 Theft
 
@@ -51,7 +51,7 @@ Mobile data carriers are used in very different environments and are therefore e
 
 ### 2 7 Spread of malware
 
-Mobile data carriers are often used to exchange data between different devices and workplaces. There is a danger that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
+Mobile data carriers are often used to exchange data between different devices and workplaces. There is a risk that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
 
 ### 2 8 Data theft with mobile data carriers
 
@@ -83,12 +83,12 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.3.4.A4 Creation of a policy for the safe handling of mobile data carriers [user]
 
-A policy SHOULD be created that determines how mobile media is handled. The following basic aspects SHOULD be considered:
+A policy SHOULD be created that defines how mobile media is handled. The following basic aspects SHOULD be considered:
 
 * which mobile data carriers are actually used and who can use them,
 * which data may be stored on mobile data carriers and which not,
 * how data stored on mobile data carriers is protected against unauthorized access, manipulation and loss,
-* how the data on the mobile data carriers should be deleted
+* how the data on the mobile data carriers should be deleted,
 * if and how private media may be used,
 * with which external employees or service providers data carriers may be exchanged and which safety regulations must be observed,
 how to prevent the use of mobile data carriers for the unauthorized disclosure of information and
@@ -109,7 +109,7 @@ Before rewritable media are to be redistributed, they SHOULD be erased appropria
 
 #### SYS.3.4.A8 Hedging drives and interfaces for removable media and external data storage
 
-The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the ones provided and can not be connected to unauthorized external devices and data carriers.
+The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the intended ones and can not be connected to unauthorized external devices and data carriers.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

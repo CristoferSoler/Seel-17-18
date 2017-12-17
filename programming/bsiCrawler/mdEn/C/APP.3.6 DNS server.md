@@ -15,7 +15,7 @@ This module describes the specific threats for a DNS server and the resulting re
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. However, general and operating system-specific aspects of a server are not the subject of the present module, but are described in the SYS1.1 module. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
+This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. However, general and operating system-specific aspects of a server are not the subject of this module, but are described in the SYS1.1. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
 
 2 risk situation
 -----------------
@@ -45,10 +45,10 @@ Similarly, in the case of incorrectly configured DNS servers, there is a risk th
 
 ### 2 6 DNS manipulation
 
-With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, this will deliver the counterfeit data in response. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the Resolving DNS server is asked for a manipulated address, it will not request another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
+With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, it will provide the counterfeit data as an answer. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
 
 ### 2 7 DNS hijacking
-DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. If, after a successful DNS hijacking attack, a request is sent to a DNS server by the resolver of a client IT system, the attacker can, for example, change the assignment of name and IP address. DNS hijacking can also be combined with other attacks, especially phishing in this case.
+DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
 
 ### 2 8 DNS-DoS
 
@@ -63,7 +63,7 @@ A DNS Reflection attack is a DoS attack that does not target the DNS server to w
 
 The following are specific requirements for DNS servers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -98,7 +98,7 @@ In order to operate DNS servers smoothly and to detect possible malfunctions or 
 
 #### APP.3.6.A8 Domain Name Management [IT Leader]
 
-It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control over the domains.
+It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control of the domains.
 
 #### APP.3.6.A9 Create an emergency plan for DNS servers
 
@@ -113,7 +113,7 @@ Together with the basic requirements, the following requirements correspond to t
 If a DNS server product is procured, care should be taken to ensure that all security requirements of the institution are properly implemented. The product SHOULD have proven its worth in practice and support the current RFC standards. It SHOULD help those responsible to create syntactically correct master files. In addition, there should be enough trained personnel for the selected DNS server product.
 
 #### APP.3.6.A11 Sufficient size of DNS servers
-Since the hardware of a DNS server affects the performance of the entire system, it SHOULD have sufficient size. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
+Since the hardware of a DNS server affects the performance of the entire system, it SHOULD be sufficiently sized. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
 
 #### APP.3.6.A12 Training of Responsible Persons [Supervisors, Head of IT]
 
@@ -133,7 +133,7 @@ The log files of the DNS server and the underlying operating system SHOULD be ch
 
 #### APP.3.6.A16 Integration of a DNS server into a "P-A-P" structure
 
-The DNS servers SHOULD be integrated into a "Packet Filter - Application Level Gateway Packet Filter" (PAP) structure (see also NET.3.2 * Firewall *): The Advertising DNS server SHOULD be in a demilitarized zone (DMZ) of the outer packet filter. The resolving DNS server SHOULD be placed in a DMZ of the inner packet filter.
+The DNS servers SHOULD be integrated into a "Packet Filter - Application Level Gateway Packet Filter" (PAP) structure (see also NET.3.2 * Firewall *): The Advertising DNS server SHOULD be located in a demilitarized zone (DMZ) of the outer packet filter. The resolving DNS server SHOULD be placed in a DMZ of the inner packet filter.
 
 #### APP.3.6.A17 Use of DNSSEC
 
@@ -153,7 +153,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.6.A20 Assessment of the contingency plan (A)
 
-It SHOULD regularly be checked if the emergency plan is feasible.
+It SHOULD be checked regularly if the emergency plan is feasible.
 
 #### APP.3.6.A21 Hidden Master (CIA)
 

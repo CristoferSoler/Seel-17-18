@@ -11,7 +11,7 @@ The maintenance of information security must therefore be integrated into a comp
 
 ### 1.2 Objective
 
-The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
+The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary in order to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
 
 ### 1.3 Delimitation
 
@@ -33,7 +33,7 @@ If employees fail, z. Eg by germs in the canteen, pandemic, death or strike, the
 If components of an IT system fail, eg. B. by defective hardware or power failure, the entire IT operation can be disturbed. As a result, the availability of the respective information and thus of the respective business process is at risk. In addition, important information needed for recovery operations may not be available.
 
 ### 2 3 Failure of a Wide Area Network (WAN)
-The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures, which can cause massive problems in communication and accessibility.
+The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
 
 ### 2 4 Failure of a building
 
@@ -48,7 +48,7 @@ When organizational units depend on service providers, the partial or total fail
 
 Specific requirements for emergency management are listed below. In principle, the emergency officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -58,7 +58,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### DER.4.A1 Creation of an emergency manual [Information Security Officer (ISB)]
 
-It SHOULD be created an emergency manual, in which the most important information about
+It SHOULD be created an emergency manual in which the most important information about
 
 * Roll,
 * Emergency measures,
@@ -67,7 +67,7 @@ It SHOULD be created an emergency manual, in which the most important informatio
 * Recovery plans
 are included. Responsibilities and authority SHOULD be assigned, communicated and recorded in the emergency manual. It SHOULD be ensured that appropriately trained personnel are available in an emergency. It SHOULD regularly be checked by tests and exercises as to whether the measures described in the emergency manual also work as intended.
 
-The emergency manual SHOULD be reviewed regularly and updated if necessary. It SHOULD also be accessible in an emergency. The emergency manual SHOULD be supplemented with rules of conduct for cases (eg fire) that should be communicated to all employees.
+The emergency manual SHOULD be checked regularly and updated if necessary. It SHOULD also be accessible in an emergency. The emergency manual SHOULD be supplemented with rules of conduct for cases (eg fire) that should be communicated to all employees.
 
 #### DER.4.A2 Integration of emergency management into organizational processes and processes [institutional management]
 
@@ -86,7 +86,7 @@ A guideline for emergency management SHOULD be adopted by the management level. 
 
 #### DER.4.A5 Development of a suitable organizational structure for emergency management [Institutional Management] (CIA)
 
-The roles for emergency management should be set appropriately to the circumstances of the institution. This SHOULD be documented in writing with the tasks, duties and responsibilities of the roles. It SHOULD be named Qualified Personnel for all roles in Emergency Management. The organizational structure in emergency management SHOULD regularly be checked to determine whether it is practicable, effective and efficient.
+The roles for emergency management should be set appropriately to the circumstances of the institution. This SHOULD be documented in writing with the roles, duties and responsibilities of the roles. It SHOULD be named Qualified Personnel for all roles in Emergency Management. The organizational structure in emergency management SHOULD regularly be checked to determine whether it is practicable, effective and efficient.
 
 #### DER.4.A6 Provision of adequate resources for emergency management [Institutional Management] (CIA)
 
@@ -94,7 +94,7 @@ The financial, technical and human resources for the intended goals of emergency
 
 #### DER.4.A7 Creation of an emergency concept [institutional management] (CIA)
 
-All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept SHOULD information security be considered and appropriate security concepts for emergency solutions developed.
+All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept, information security SHOULD be considered and appropriate security concepts for emergency solutions developed.
 
 #### DER.4.A8 Integration of Employees in the Emergency Management Process [Supervisors, Head of Human Resources] (CIA)
 
@@ -121,7 +121,7 @@ The management level SHOULD carry out its task of regularly reviewing, evaluatin
 
 #### DER.4.A14 Regular review and improvement of emergency response [Institutional Management] (IA)
 
-All emergency measures should be reviewed regularly or in the case of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
+All emergency measures should be reviewed regularly or in the event of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
 
 It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
 
@@ -129,7 +129,7 @@ It should be determined in the institution's management how the review activitie
 
 #### DER.4.A15 Assessment of the Efficiency of the Emergency Management System [Institutional Management] (IA)
 
-It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​deviate negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
+It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​differ negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
 
 The management SOLLTE decide with which measures the emergency management should be further developed. All decisions of the management level SHOULD be documented and the previous records updated.
 

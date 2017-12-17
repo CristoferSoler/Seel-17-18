@@ -30,10 +30,10 @@ In the extreme case, poorly defined responsibilities can affect the entire insti
 
 If the patch and change management within the institution is poorly accepted or the people involved communicate poorly, it may cause change requests to be delayed, or incorrectly decided on by a change request.
 
-This can reduce overall security levels and seriously disrupt IT operations. In any case, inadequate communication makes the change process inefficient, as it often requires too much time and resources to be invested. This has a negative impact on the institution's responsiveness and, in extreme cases, can lead to security vulnerabilities or important business goals being missed.
+This can reduce overall security levels and seriously disrupt IT operations. In any case, the lack of communication makes the change process inefficient, as it often requires too much time and resources to be invested. This has a negative impact on the institution's responsiveness and, in extreme cases, can lead to security vulnerabilities or important business goals being missed.
 
 ### 2 3 Poor consideration of business processes
-Incorrect changes can, among other things, affect the smooth running of business processes or even lead to the IT systems involved completely failing. Even a comprehensive test procedure can not completely rule out that a change in the subsequent productive operation proves to be faulty.
+Incorrect changes can, among other things, affect the smooth running of business processes or even lead to the IT systems involved completely failing. Even a comprehensive test procedure can not completely rule out that a change in subsequent productive operation proves to be faulty.
 
 If the impact, category or priority of a submitted business process change request is misjudged in the change process, the desired level of security may decrease. Such misjudgments occur predominantly when the IT managers and the responsible specialist departments do not adequately coordinate.
 
@@ -45,11 +45,11 @@ Effective patch and change management requires adequate human, time and financia
 
 Frequently, patches and changes are not distributed manually, but centrally software-supported. If such software is used, erroneous patches and changes in the entire information network can be deployed, which can result in mass security problems. It is especially serious when many systems simultaneously install software that contains security holes.
 
-If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a specific time frame and then not all IT systems are reachable, these systems can not be updated.
+If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a certain period of time and then not all IT systems can be reached, these systems can not be updated.
 
 ### 2 6 Poor recovery options for patch and change management
 
-If patches or changes are distributed without a recovery option, or if the recovery routines of the software in use are not or not adequately effective, incorrectly updated software can not be corrected promptly. This can cause important IT systems to fail and high consequential damage. In addition to the integrity of data, especially the availability is at risk here.
+If patches or changes are distributed without a recovery option, or if the recovery routines of the software in use are not or not adequately effective, incorrectly updated software can not be corrected in a timely manner. This can cause important IT systems to fail and high consequential damage. In addition to the integrity of data, especially the availability is at risk here.
 
 ### 2 7 Poor consideration of mobile devices
 
@@ -71,7 +71,7 @@ Patch and change management often operates from a central point. Due to its expo
 
 The following are specific requirements for patch and change management. Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -80,7 +80,7 @@ The following requirements MUST be implemented as a priority:
 If changes to IT components, software or configuration data are to be implemented, there must be guidelines for them that also take security aspects into account. All patches and changes MUST be planned, tested, approved and documented. If patches and changes are made, fallback solutions MUST be present. Major changes MUST also involve information security management. Overall, it MUST be ensured that the desired level of safety is maintained during and after the changes.
 
 #### OPS.1.1.3.A2 Definition of responsibilities [Head IT]
-For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. Everyone involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
+For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. All parties involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
 
 #### OPS.1.1.3.A3 Configuration of Auto Update Mechanisms [Administrator]
 
