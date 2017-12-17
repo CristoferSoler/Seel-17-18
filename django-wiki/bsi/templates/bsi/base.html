@@ -190,4 +190,8 @@
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
     });
+
+    $('#wizard').on('shown.bs.modal', function (e) {
+        alert('shown');
+    })
 </script>
