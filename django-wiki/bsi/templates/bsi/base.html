@@ -12,6 +12,7 @@
     <!-- Optionally enable responsive features in IE8 -->
     <script src="{% static "bsi/js/respond.min.js" %}"></script>
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/style.css' %}"/>
+    <link rel="stylesheet" typle="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
     <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
     <!--Icon -->
@@ -50,10 +51,10 @@
                     <a href="{% url 'get_article' path='uga' %}">UG Articles</a>
                 </li>
                 <li class="">
-                    <a href="#">Tutorials</a>
+                    <a data-toggle="modal" data-target="#wizard">Wizard</a>
                 </li>
                 <li class="">
-                    <a href="#">Wizard</a>
+                     <a href="#">Tutorials</a>
                 </li>
             </ul>
 
@@ -109,6 +110,44 @@
         <!-- /.container-fluid -->
     </div>
 </nav>
+
+<div id="wizard" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Wizard</h4>
+              </div>
+              <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="text-center font-weight-bold">Frage Text</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary">Yes</button>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-1">
+                            <button class="btn btn-primary">No</button>
+                        </div>
+                        <div class="col-md-1"></div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary">Don't know</button>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+    </div>
 
 {% block bsi_contents %} {% endblock %}
 
