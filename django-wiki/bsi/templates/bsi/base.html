@@ -193,6 +193,6 @@
     });
 
     $('#wizard').on('shown.bs.modal', function (e) {
-        initWizard('{{ components|safe }}')
+        initWizard('{{ components|safe }}','{{ sortedTopics|safe }}')
     })
 </script>

@@ -1,4 +1,6 @@
 import os
+from operator import itemgetter
+
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -13,6 +15,8 @@ from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 import csv
 import json
+import itertools
+from collections import Counter
 
 from bsi.ugaViews import overview_uga
 
@@ -61,16 +65,29 @@ class BSISearchView(SearchView):
     def get_context_data(self, **kwargs):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
+def getListOfFrequenceOfTopic(components):
+    topics = []
+    listOfAllTopics = []
+    for component in components:
+        listOfAllTopics = itertools.chain(listOfAllTopics, component['topics'])
+    listOfAllTopics = list(listOfAllTopics)
+    numberOfEachTopic = list(Counter(listOfAllTopics).items())
+    numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
+    for topic in numberOfEachTopic:
+        topics.append(topic[0])
+    return topics
 
 def index(request):
     components = readAndProcessCSV()
+    sortedTopics = getListOfFrequenceOfTopic(components['components'])
     template = loader.get_template('bsi/index.html')
     componentsString = json.dumps(components)
-    print(componentsString)
-    return HttpResponse(template.render({'components':componentsString},request))
+    sortedTopicsString = json.dumps(sortedTopics)
+
+    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 def generateDic(list):
-    componentDic = {'name':list[0],'topic':list[1:]}
+    componentDic = {'name':list[0],'topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():
