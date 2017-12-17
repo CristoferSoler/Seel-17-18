@@ -11,7 +11,7 @@ django.setup()
 
 
 from wiki.models import URLPath
-from bsi.models import BSI_Article_type
+from bsi.models.article_extensions import BSI_Article_type
 
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
