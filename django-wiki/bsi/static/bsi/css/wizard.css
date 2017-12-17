@@ -1,3 +1,11 @@
 .text-center{
     text-align: center;
 }
+
+.abstandToButton{
+    margin-bottom: 15px;
+}
+
+.abstandButtonToBottom{
+    margin-bottom: 10px;
+}
