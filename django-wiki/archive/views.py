@@ -3,8 +3,11 @@ from wiki import forms
 from wiki.views.article import Dir, ArticleView
 from .models import Archive, ArchiveTransaction
 from .decorators import get_archive_article
+from wiki.models import URLPath
+from django.shortcuts import redirect, render
+from django.http import HttpResponseRedirect, Http404
 
-
+'''
 class ArchiveDir(Dir):
     template_name = "archive/archivelist.html"
 
@@ -25,6 +28,26 @@ class ArchiveDir(Dir):
 
     def get_context_data(self, **kwargs):
         return super(ArchiveDir, self).get_context_data(**kwargs)
+'''
+
+
+def overview_archive(request, **kwargs):
+    template_name = "archive/archivelist2.html"
+
+    path = kwargs.pop('path', None)
+    path = path.rstrip("/")
+
+    try:
+        if (path == ''):
+            urlpath = Archive.get_or_create_archive_root()
+        else:
+            urlpath = Archive.get_archive_by_slug(path).archive_url
+    except URLPath.DoesNotExist:
+                raise Http404("No archive found that matches the specified path: ", path)
+
+    children = urlpath.get_children()
+
+    return render(request, template_name, {'archives': children})
 
 
 class ArchiveArticleView(ArticleView):
