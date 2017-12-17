@@ -59,7 +59,7 @@ def preProcessingCSV(document_topic,fileName):
 
 def writeToCSV():
     pd = pandas.DataFrame(csvFile)
-    pd.to_csv("csv/topics.csv")
+    pd.to_csv("csv/topics.csv",header=None,index=None)
 
 def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
