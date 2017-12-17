@@ -45,7 +45,7 @@ In order to avoid misconfigurations or incorrect operation and to point out poss
 
 **Business**
 
-If the WLAN has been put into operation and all WLAN managers have been adequately trained, regular audits (see NET.2.1.M14 * Regular audits of the WLAN components *) must ensure that all security settings made are always up-to-date and that these settings also apply , A key management for the used cryptographic keys is indispensable, in order to secure the communication in WLANs (see CON.1 * Crypto concept *). If a WLAN management solution (see NET.2.1.M12 * Use of a suitable WLAN management solution *) is used, the keys, settings and the WLAN components themselves can be managed centrally from one location.
+If the WLAN has been put into operation and all WLAN managers have been adequately trained, regular audits (see NET.2.1.M14 * Regular audits of the WLAN components *) must ensure that all the security settings made are always up to date and that these settings also apply , A key management for the used cryptographic keys is indispensable, in order to secure the communication in WLANs (see CON.1 * Crypto concept *). If a WLAN management solution (see NET.2.1.M12 * Use of a suitable WLAN management solution *) is used, the keys, settings and the WLAN components themselves can be managed centrally from one location.
 
 ** ** segregation
 
@@ -73,7 +73,7 @@ If the following questions are answered, the WLAN strategy can be derived in its
 
  
 + Which aspects of mobility are made possible by WLANs?
-+ Which functions or applications should be provided or supported by WLAN usage (eg voice over WLAN, media broadcasting, collaboration, videoconferencing, guest access / hotspot, integration of mobile devices, client network segmentation)?
++ Which functions or applications should be provided or supported by the WLAN usage (eg Voice over WLAN, Media Broadcasting, Collaboration, Videoconferencing, Guest Access / Hotspot, Integration of Mobile Devices, Client Network Segmentation)?
 + Which business processes can be optimized by using WLANs?
 
 
@@ -92,11 +92,11 @@ If the following questions are answered, the WLAN strategy can be derived in its
 * What are the requirements for the availability of the WLAN infrastructure?
 #### NET.2.1.M2 Selection of a suitable WLAN standard [planner]
 
-As part of the WLAN design, which follows the documented strategic requirements, potentially disruptive systems near the future location of access points must be identified and evaluated. If microwaves are operated near access points or other IT systems, interference may occur. Possible sources of interference include Bluetooth transmitters, power lines, cordless phones (DECT) or LCD monitors, as well as the building material itself.
+As part of the WLAN design that follows the documented strategic requirements, potentially disruptive systems near the future location of access points must be identified and evaluated. If microwaves are operated near access points or other IT systems, interference may occur. Possible sources of interference include Bluetooth transmitters, power lines, cordless phones (DECT) or LCD monitors, as well as the building material itself.
 
 If the requirements for the procurement of hardware and software are put together, it must be ensured that the authentication is implemented according to the IEEE 802.11i-2004 standard or newer.
 
-To avoid brute force attacks on Wi-Fi passwords, the WLAN infrastructure should support the IEEE 802.11s standard. This standard uses Simultaneous Authentication of Equals (SAE) to define that the actual password is no longer transmitted over the radio channel. As a result, the usual attacks can be effectively countered by recording a connection setup followed by a brute-force attack on the WLAN password. The IEEE 802.11ac standard defines how management frames should be protected by means of protected management frames (PMF) against counterfeit deassociation packets from an attacker. However, in order to use PMF effectively, the terminal must also support the IEEE 802.11ac standard.
+To avoid brute force attacks on Wi-Fi passwords, the WLAN infrastructure should support the IEEE 802.11s standard. This standard uses Simultaneous Authentication of Equals (SAE) to define that the actual password is no longer transmitted over the radio channel. As a result, the usual attacks can be effectively countered by recording a connection setup followed by a brute-force attack on the WLAN password. The IEEE 802.11ac standard defines how management frames should be protected by means of protected management frames (PMF) against counterfeit deassociation packets of an attacker. However, in order to use PMF effectively, the terminal must also support the IEEE 802.11ac standard.
 
 Table 1 shows various authentication options for the three fictional scenarios.
 
@@ -110,7 +110,7 @@ If EAP-TTLS is used, cryptographically secured authentication methods must be us
 
 #### NET.2.1.M3 Selection of suitable crypto procedures for WLAN [Planner]
 
-In order to operate WLANs securely, communication must be cryptographically secured via Wi-Fi Protected Access 2 (WPA2). Easily compromised cryptographic methods may no longer be used. If WEP or WPA is still in use, a migration to WPA2 planned for this should be updated.
+In order to operate WLANs securely, communication must be cryptographically secured via Wi-Fi Protected Access 2 (WPA2). Easily compromised cryptographic methods may no longer be used. If WEP or WPA are still in use, a migration to WPA2 planned for this should be updated.
 
 If WPA2 is used with pre-shared keys (WPA2-PSK), a complex key with a minimum length of 20 characters must be configured. Since the key needs to be replaced regularly, this method is economically viable only for small Wi-Fi installations. In addition, care must be taken with WPA2-PSK that the German umlauts and special control characters can not be used.
 
@@ -119,7 +119,7 @@ To prevent tampering with access points, they must be housed in sturdy enclosure
 
 The optimal locations of the access points should be determined by an illumination measurement.
 
-If external areas are supplied, external installations (antennas and, if applicable, access points) must be adequately protected against the effects of the weather, electrical discharges and unauthorized access. Outside of buildings, access points should be avoided.
+If external areas are supplied, external installations (antennas and, if applicable, access points) must be adequately protected against the effects of the weather, electrical discharges and unauthorized access. Outside of buildings, access points should not be attached if possible.
 
 #### NET.2.1.M5 Secure base configuration of access points
 
@@ -143,12 +143,12 @@ Table 4: Recommended TLS versions per scenario
 
 ** Block unused management access **
 
-In order to reduce potential attack vectors, the administration of the WLAN components z. For example, Secure Shell (SSH), HyperText Transfer Protocol Secure (HTTPS), or SNMP can be accessed from a dedicated management network. The WLAN infrastructure should not be administered via a WLAN-connected client.
+In order to reduce potential attack vectors, the administration of the WLAN components z. For example, Secure Shell (SSH), HyperText Transfer Protocol Secure (HTTPS) or SNMP can be accessed from a dedicated management network. The WLAN infrastructure should not be administered via a WLAN-connected client.
 
 To prevent intruder attacks, a central authentication based on personalized user accounts should be established. The authorizations stored for the user account of the administrator must follow the minimal principle.
 In the context of emergency preparedness it is recommended to deposit a local user account (emergency user account). The password of the emergency user account must comply with the institution's established password policy. After each use of the emergency user account its password must be changed. Use and reason for action must subsequently be documented in a comprehensible manner.
 
-** Detecting and blocking unauthorized user access **
+** Detection and blocking of unauthorized user access **
 
 ARP spoofing attacks should be detected and fended off when IP addresses are assigned via the DHCP server. For this purpose, DHCP snooping and dynamic ARP inspection (DAI) can be used.
 
@@ -164,9 +164,9 @@ A distribution system connects the access points to each other and integrates th
 
 * wired distribution systems (all access points are cabled among each other and with the further infrastructure)
 * Wireless Distribution Systems (direct cabling between the access points is not necessary)
-If high availability requirements are to be met, no wireless distribution system should be set up. In a wireless distribution system, repeaters must communicate with both the wireless clients and the access point. This reduces the transmission rate by half. This drastic reduction in the transmission rate can only be avoided by having clients and repeaters communicate with each other on a different frequency than repeaters and access points / wireless routers. Theoretically, a wireless distribution system with up to 254 repeaters can be operated in a network if the repeaters are not connected in series, but in the star, in order to avoid signal overlaps.
+If high availability requirements are to be met, no wireless distribution system should be set up. In a wireless distribution system, repeaters must communicate with both the wireless clients and the access point. This reduces the transmission rate by half. This drastic reduction in the transmission rate can only be avoided by having clients and repeaters communicate with each other on a different frequency than repeaters and access points / WLAN routers. Theoretically, a wireless distribution system with up to 254 repeaters can be operated in a network if the repeaters are not connected in series, but in the star, in order to avoid signal overlaps.
 
-Before building a wired distribution system, decide whether to build a standalone physical switch infrastructure for the WLANs, a virtualized switch infrastructure or, alternatively, logical segmentation through Virtual Local Area Networks (VLANs). In particular, safety aspects must be considered.
+Before building a wired distribution system, decide whether to build a standalone physical switch infrastructure for the WLANs, a virtualized switch infrastructure or, alternatively, logical segmentation through Virtual Local Area Networks (VLANs). In particular, safety aspects must be taken into account.
 
 #### NET.2.1.M8 Behavioral rules for WLAN security incidents
 
@@ -175,7 +175,7 @@ If the WLAN behaves in an unintended manner (eg WLAN is not available for a long
 The IT operation should implement the following measures:
 
 * Users must be able to reach IT operations through appropriate escalation levels.
-* At the transfer point of the WLAN communication into the internal LAN, the communication should be selectively blocked per SSID, access point or even for the complete WLAN infrastructure in the event of an attack on the WLAN.
+* At the transfer point of the WLAN communication into the internal LAN, the communication should be selectively blocked per SSID, access point or even for the complete WLAN infrastructure in case of an attack on the WLAN.
 * In the event of a security incident or theft, IT operations should be able to take appropriate security measures. Ideally, they rely on coordinated and documented procedures. Possible actions are z. B .:
 
  
@@ -200,7 +200,7 @@ The possible consequences of safety-critical events must be investigated. Ultima
 
 Together with the basic measures, the following measures correspond to the state of the art in the area of ​​"WLAN operation".
 
-#### NET.2.1.M9 Secure connection of WLANs to a LAN [planner]
+#### NET.2.1.M9 Secure connection of WLANs to a LAN [Planner]
 
 The WLAN components must be secured at the transitions between WLANs and LAN, for example by a packet filter. In order to avoid unnecessary broadcast and multicast traffic, a corresponding VLAN should be established for each assigned SSID. Additional requirements that must be considered can be found in the module NET.1.1 * Network architecture and design *.
 
@@ -212,7 +212,7 @@ For a controller-based management of the WLAN infrastructure, the following tabl
 
 Table 5: Recommended access point features per scenario
 
-A pragmatic approach for local extraction of user data can be selected in part for Scenario 3, provided that the authorized access to the WLAN is checked by means of IEEE 802.1X and EAP-TLS and the access points and terminals fully support the IEEE 802.11ac standard. The communication between the access points and the WLAN controllers must also be cryptographically secured. To compensate for potential risks of losing the confidentiality and integrity of the information transmitted by radio, additional overlay encryption is recommended.
+A pragmatic approach for local extraction of user data can be selected in part for scenario 3, provided that the authorized access to the WLAN is checked by means of IEEE 802.1X and EAP-TLS and the access points and terminals fully support the IEEE 802.11ac standard. The communication between the access points and the WLAN controllers must also be cryptographically secured. To compensate for potential risks of losing the confidentiality and integrity of the information transmitted by radio, additional overlay encryption is recommended.
 
 In Scenarios 1 and 2, user communication transitions directly from the access point to the internal networks via the switch. A pragmatic approach is therefore not possible. Only authorized access points of the institution incorporated into the established processes may be connected to the network. This should be ensured by means of IEEE 802.1X.
 All access points receive their operating software directly from the assigned WLAN controller. The operating software of an access point is updated via a cryptographically secured channel. If the operating software is exchanged on the basis of clear-text protocols, then the integrity of the software should be verified by means of signatures.
@@ -248,7 +248,7 @@ A wireless security policy should include the following:
 * If security issues are suspected, a security officer must be informed so that they can take further action (see also DER.2.1 Handling security incidents).
 The IT operation should be informed about the hazards to which WLAN components are exposed and the security measures to be observed.
 
-The correct implementation of the security measures described in the WLAN security policy should be checked regularly.
+The correct implementation of the security measures described in the WLAN security guideline should be checked regularly.
 #### NET.2.1.M11 Suitable selection of WLAN components
 
 Important criteria for selecting WLAN components are security, privacy and compatibility. Compatibility issues can not be ruled out with the large number of different WLAN components. To avoid compatibility issues, all components must be certified by the Wi-Fi Alliance and support the IEEE 802.11 standards. All WLAN components may only use frequency bands approved by the regulatory bodies of the country. Every provider of WLAN components must provide information on this in the data sheets for his product free of charge.
@@ -264,12 +264,12 @@ Is the SSID adjustable?
 * Is Netflow version 9 (RFC 3954) usable for information flow control?
 * Are access control mechanisms available?
 * Are mechanisms integrated for an application-based implementation of Quality of Service?
-Some wireless LAN components can be configured wirelessly directly over the WLAN. If this feature is an integral part of the components, it should be shut down to minimize risk. In order to implement established role and authorization concepts in the institution, administration access to WLAN components may only be possible for authorized persons.
+Some WLAN components can be configured wirelessly directly via the WLAN. If this feature is an integral part of the components, it should be shut down to minimize risk. In order to implement established role and authorization concepts in the institution, administration access to WLAN components may only be possible for authorized persons.
 
 As part of the procurement process, it should also be checked whether all WLAN components work correctly with the established network, security, authentication, monitoring and logging infrastructures. This includes z. For example:
 
 * The authentication methods used in the WLAN must be supported by the operating systems and the hardware of the clients, the access points, the network management systems and the authentication servers.
-* If authentication in the WLAN complies with IEEE 802.1X, the access points must support the authentication methods of the EAP family and correctly process the information communicated within IEEE 802.1X.
+* If the WLAN complies with IEEE 802.1X, the access points must support the authentication methods of the EAP family and correctly process the information communicated within IEEE 802.1X.
 * In addition, it must be checked whether the authentication requests can be passed on to a central user database using secure query methods.
 If it is planned to establish a larger WLAN infrastructure, it should be checked by means of an appropriate test, whether the defined and documented requirements are met before the infrastructure is finally procured.
 
@@ -323,7 +323,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### NET.2.1.M15 Using a VPN to Secure WLANs (CI)
 
-In order to additionally secure the communication over the WLAN infrastructure and thus to ensure that the transmission is fully secured in accordance with protection requirements, a VPN should be used. Further information on VPN can be found in the NET.3.3 * VPN * module or the associated implementation notes.
+In order to additionally secure the communication over the WLAN infrastructure and thus to ensure that the transmission is fully protected in accordance with protection requirements, a VPN should be used. Further information on VPN can be found in the NET.3.3 * VPN * module or the associated implementation notes.
 
 #### NET.2.1.M16 Additional security for the connection of WLANs to a LAN (CIA)
 
@@ -335,7 +335,7 @@ Between the access points, communication should be encrypted via the radio inter
 
 ** Communication via the radio interface **
 
-In order to secure the communication via the radio interface, the measures NET.2.1.M3 * Selection of suitable crypto procedures for WLAN * and NET.2.1.M5 * Secure basic configuration of the access points * must be applied.
+In order to secure the communication via the radio interface, the measures NET.2.1.M3 * Selection of suitable crypto procedures for WLAN * and NET.2.1.M5 * Secure basic configuration of the access points * are to be used.
 
 ** Communication between access point and WLAN management system **
 
@@ -367,7 +367,7 @@ The infrastructure mode allows several deployment variants:
 * If corresponding components (directional antennas) are used at the access points, WLANs can also be used to network real estate. According to the manufacturer, ranges in the kilometer range can be achieved here. The access points can be operated as relay station or bridge.
 The IEEE 802.11 standard uses the term Independent Basic Service Set (IBSS) for radio networks in ad-hoc mode and Basic Service Set (BSS) for constellations in infrastructure mode with an access point. Several coupled BSS are referred to as Extended Service Set (ESS), the coupling network is called Distribution System (DS).
 
-In the 2.4 GHz frequency range, 13 frequency channels with a frequency spacing of 5 MHz are available for radio transmission in Germany. With a channel bandwidth of approx. 22 MHz, however, only a maximum of 3 channels can be used simultaneously without overlapping. In the frequency range from 5.15 to 5.35 GHz and at 5.47 to 5.725 GHz, a total of 19 channels have been released in Germany at a distance of 20 MHz, subject to conditions. With a channel bandwidth of 20 MHz directly adjacent channels are not disturbed here. Military and civilian radar and navigation applications also operate in the 5 GHz frequency range, and only systems that support dynamic frequency selection and transmission power adaptation should be used.
+In the 2.4 GHz frequency range, 13 frequency channels with a frequency spacing of 5 MHz are available for radio transmission in Germany. With a channel bandwidth of approximately 22 MHz, however, only a maximum of 3 channels can be used simultaneously without overlapping. In the frequency range from 5.15 to 5.35 GHz and at 5.47 to 5.725 GHz, a total of 19 channels have been released in Germany at a distance of 20 MHz, subject to conditions. With a channel bandwidth of 20 MHz directly adjacent channels are not disturbed here. Military and civilian radar and navigation applications also operate in the 5 GHz frequency range, and only systems that support dynamic frequency selection and transmission power adaptation should be used.
 
 The mechanisms defined in IEEE 802.11 are used exclusively to secure the radio link between the clients and access points.
 
@@ -428,7 +428,7 @@ Federal Office for Information Security (BSI), 2009 <https://www.bsi.bund.de/DE/
  <Https://www.bmwi.de/Redaktion/DE/Artikel/Digitale-Welt/wlan.html>
 
  
-* #### [TR03103] Technical Guideline Secure Wireless LAN
+* #### [TR03103] Technical Guidelines Secure Wireless LAN
 
   
 

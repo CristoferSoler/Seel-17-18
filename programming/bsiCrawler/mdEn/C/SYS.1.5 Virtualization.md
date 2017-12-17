@@ -65,7 +65,7 @@ The virtualization software (also: hypervisor) is the central component of a vir
 
 The following are specific requirements for virtualization. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -87,7 +87,7 @@ Virtual IT systems SHOULD be configured and protected according to the security 
 
 #### SYS.1.5.A4 Secure configuration of a network for virtual infrastructures
 
-It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It MUST also be excluded that unwanted network connections can be established via virtual IT systems connected to multiple networks.
+It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It also MUST be ruled out that unwanted network connections can be established via virtual IT systems that are connected to multiple networks.
 
 Network connections between virtual IT systems and physical IT systems, as well as virtual security gateways, SHOULD be configured according to the institution's security policies.
 
@@ -163,13 +163,13 @@ Furthermore, the configuration files of the virtual IT systems SHOULD regularly 
 
 If configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
 
-#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
+#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, IT Leaders, Network Leaders]
 
 All administrators of the virtual environment SHOULD be adequately trained. The training course SOLLTE teaches how virtual infrastructures can be safely set up and operated.
 
 #### SYS.1.5.A19 Regular audits of the virtualization infrastructure
 
-It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be traceable documented. Deviations SHOULD be corrected.
+It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be documented comprehensibly. Deviations SHOULD be corrected.
 
 ### 3.3 Requirements for increased protection requirements
 

@@ -37,7 +37,7 @@ After an APT incident, IT systems are often reinstalled or completely decommissi
 
 Usually, prior to clearing an APT incident, the attack is monitored over time and forensically analyzed to identify all access paths and tools and methods used. If the attacker notices that he has been discovered during this phase, he may resort to countermeasures. For example, he can try to cover his tracks or quickly sabotage other IT systems. He could also stop or set up more backdoors just to continue the attack later.
 
-Since an APT attack must generally assume that the entire IT infrastructure of the institution has been compromised, there is a high risk that the attacker will detect the cleanup activity. This is especially true if the compromised IT infrastructure is used to plan and coordinate the cleanup. If the essential cleanup steps are not performed in the correct order, or critical actions are not performed concurrently and concertedly, the risk of alerting the attacker increases. For example, if those responsible isolate the network step-by-step rather than all at once, the attacker may be warned before their access is effectively terminated.
+Since an APT attack must generally assume that the entire IT infrastructure of the institution has been compromised, there is a high risk that the attacker will detect the cleanup activity. This is especially true when the compromised IT infrastructure is used to plan and coordinate the cleanup. If the essential cleanup steps are not performed in the correct order, or critical actions are not performed concurrently and concertedly, the risk of alerting the attacker increases. For example, if those responsible isolate the network step-by-step rather than all at once, the attacker may be warned before their access is effectively terminated.
 
 ### 2 4 Data loss and failure of IT systems
 
@@ -82,7 +82,7 @@ In order to effectively isolate network sections, all local Internet connections
 
 Since it must be assumed that the attacker has acquired all the access data available on the compromised IT systems, all access data MUST be changed after the network has been isolated. Furthermore, centrally managed access data MUST be reset, z. In Active Directory environments or when using the Lightweight Directory Access Protocol (LDAP).
 
-If the central authentication server (domain controller or LDAP server) is compromised, all accesses existing there MUST be blocked and their passwords exchanged. This MUST be performed by experienced administrators, if necessary with the help of internal or external forensics experts.
+If the central authentication server (domain controller or LDAP server) is compromised, all accesses existing there MUST be blocked and their passwords exchanged. This MUST be done by experienced administrators, if necessary using internal or external forensics experts.
 
 If TLS keys or an internal Certification Authority (CA) have been compromised by the APT attack, the corresponding keys and infrastructures MUST be recreated and redistributed. Also, the compromised keys MUST be locked reliably.
 
@@ -100,7 +100,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### DER.2.3.A7 Targeted system hardening
 
-After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
+After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of the forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
 
 If possible, IT systems should already be hardened during cleanup. Measures that can not be implemented in the short term SHOULD be included in an action plan and implemented in the medium term. The ISB SHOULD be responsible for drawing up the plan and checking that it has been implemented correctly.
 

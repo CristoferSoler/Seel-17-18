@@ -26,12 +26,12 @@ User group 3
 
  ** planning and conception **
 
-In the planning and design phase, all possible usage scenarios, eg. For example, integration into a collaboration solution, access to merchandise management systems and the maximum protection requirements to be implemented, can be incorporated into the selection of the central management solution. If a strict separation between private and business areas is desired, it is advisable to check whether a separation of business and private information can be achieved by means of managed apps and managed open-in. Container solutions should also be considered. Similarly, at this stage, the review of the requirements for user-based integration of smartphones and tablets in the infrastructure should take place. According to the result of the check, requirements for the previous security gateways and their functions can, for. These include, for example, the automatic activation of filter rules for the user and their devices or the automatic withdrawal of access rights when active security policies are violated.
+In the planning and design phase, all possible usage scenarios, eg. For example, integration into a collaboration solution, access to enterprise resource planning systems and the maximum protection requirements to be implemented, will be incorporated into the selection of the central management solution. If a strict separation between private and business areas is desired, it is advisable to check whether a separation of business and private information can be achieved using managed apps and managed open-in. Container solutions should also be considered. Similarly, at this stage, the review of the requirements for user-based integration of smartphones and tablets in the infrastructure should take place. According to the result of the check, requirements for the previous security gateways and their functions can, for. These include, for example, the automatic activation of filter rules for the user and their devices or the automatic withdrawal of access rights when active security policies are violated.
 In the planning phase, the compatibility of the general terms and conditions of the Apple company with the business, security and data protection regulations of the institution to review. One thing to consider in any case is the verification of iCloud usage. Currently z. For example, the use of the iCloud account is intended for private use only. An overview of relevant terms and conditions is listed in chapter 3.2 Literature.
 
  **Procurement**
 
-When purchasing smartphones and tablets as well as when selecting the mobile service provider, the safety aspects should be considered in addition to the economic aspects. Examples: Is an institution-specific access point name (APN) required by the wireless service provider for simplified basic filtering of the allowed IP addresses of the devices? Should the authentication at the VPN gateway or the institutional WLAN be based on EAP-SIM? Does using the Device Registration Program (DEP) represent a more flexible alternative?
+When purchasing smartphones and tablets as well as in the selection of the mobile service provider, the safety aspects should be considered in addition to the economic aspects. Examples: Is an institution-specific access point name (APN) required by the mobile service provider for simplified basic filtering of the allowed IP addresses of the devices? Should the authentication at the VPN gateway or the institutional WLAN be based on EAP-SIM? Does using the Device Registration Program (DEP) represent a more flexible alternative?
 
  **Implementation**
 
@@ -39,7 +39,7 @@ There are a variety of security mechanisms and approaches to the implementation 
 
  **Business**
 
-For smartphones and tablets to be organized and used reliably, technical and organizational measures must be implemented. Some of the measures can not be rolled out centrally and consistently across all devices and require the assistance of the user. If the same hardening action is implemented by the people responsible in more than one configuration profile on the device, summing all the configuration profiles applies the stricter setting on the target device.
+For smartphones and tablets to be organized and used reliably, technical and organizational measures must be implemented. Some of the measures can not be rolled out centrally and consistently across all devices and require the assistance of the user. If the same hardening action is implemented by those in more than one configuration profile on the device, summing all the configuration profiles applies the stricter setting on the target device.
 
 Apple may provide regulatory access to Personal User Information from 16 data groups of the respective iCloud user account, subject to court orders. The 16 groups are described in detail in the document "Legal Process Guidelines" (see chapter 3.2). So the law enforcement agencies z. For example, they may receive information about the device's current geo-data, view Apple Store purchases and transactions, iCloud content, such as documents, activation information, registration data, and game center links.
 
@@ -76,13 +76,13 @@ When using online storage services (eg Microsoft Cloud, Google Drive, Dropbox, i
 If access to the data of the institution is not possible because the online storage service is not available due to a failure of the service provider or the connection to the service, this can disrupt or completely disrupt the business processes. In this context, the protection requirements for the information concerned are particularly important. Insofar as high availability is the basis of the processes, financial losses usually result in prolonged downtimes of the online service, usually accompanied by image damage. In addition to the availability of online storage and the information stored in it, especially the confidentiality of information has a high priority. If attackers succeed in gaining access to confidential information of the institution and B. make it accessible to a wider group of people threatened image loss as well as legal consequences and financial losses.
 
 When transferring information, processing it over the network or storing it, integrity problems can occur that can even lead to total loss. This also applies to encrypted data. The implications for the institution are similar to the loss of confidentiality.
-Legal aspects in the use of cloud services always play a role when personal data in the sense of § 3 paragraph 1 Federal Data Protection Act (BDSG) are handed over. Such order data processing, depending on the actual location of the data, according to §11 BDSG only under certain conditions possible and also bound to the issue of a written order. In the event of an infringement, institutions run the risk of violating existing law and thereby not only damage their reputation, but also face damage claims or fines.
+Legal aspects in the use of cloud services always play a role when personal data in the sense of §3 paragraph 1 Federal Data Protection Act (BDSG) are handed over. Such order data processing, depending on the actual location of the data, according to §11 BDSG only under certain conditions possible and also bound to the issue of a written order. In the event of an infringement, institutions run the risk of violating existing law and thereby not only damage their reputation, but also face damage claims or fines.
 
 If at the end of the contract the information of the institution is not deleted by the provider of the online storage, there is a risk that unauthorized persons will continue to gain access to this information.
 
 Further information on these topics can be found in the corresponding modules.
 
-iOS-based devices basically provide a close link with the iCloud services of the manufacturer Apple. Via the App Store, additional apps can be installed on the device to simplify the integration of additional cloud service providers. In the run-up to the use of smartphones and tablets, those responsible for provider management, operation and procurement must be provided with the operational, security and data protection requirements that must be met in accordance with internal guidelines.
+iOS-based devices basically provide a close link with the iCloud services of the manufacturer Apple. Via the App Store, additional apps can be installed on the device to simplify the integration of additional cloud service providers. In the run-up to the use of smartphones and tablets, those responsible for provider management, operation and procurement must be given the required operational, security and data protection requirements in accordance with internal guidelines.
 
 #### SYS.3.2.3.M3 Using the device code
 
@@ -92,7 +92,7 @@ Table: Using the device code (passcode)
 
 #### SYS.3.2.3.M4 Using the Automatic Lock Configuration Option
 
-The configuration option "automatic lock" is the same as the screen lock on a PC. This means that when not in use, an internal counter is started and the screen is locked after reaching the specified time. By a low value can thus be ensured that an unused or short-term unattended device by an unauthorized device can not be used without authentication. When determining the time span, the values ​​for a stationary PC should not be taken as the basis, but rather the intended purpose, the place of use, the identified protection requirements, the usability requirements and the agreed complexity of the passcode. For the three fictitious user groups, the time span listed in the table is recommended.
+The configuration option "automatic lock" is the same as the screen lock on a PC. This means that an internal counter is started when not in use and the screen is locked after reaching the specified time. By a low value can thus be ensured that an unused or short-term unattended device can not be used by an unauthorized without authentication. When determining the time span, the values ​​for a stationary PC should not be taken as the basis, but rather the purpose, the place of use, the determined protection requirements, the requirements for usability and the agreed complexity of the passcode. For the three fictitious user groups, the time span listed in the table is recommended.
 
 Table: Using the Automatic Lock Configuration Option
 
@@ -102,12 +102,12 @@ Since it can not be ruled out that the device only short term, z. If less than t
 
 Table: Using the device locking configuration option
 
-The immediate retrieval of the passcode for user groups 2 and 3 is due to the fact that confidential information could be present on the device. For user group 1, usability was a little more weighted in this example and would thus allow the possibility of short-term unauthorized use of the telephone function.
+The immediate retrieval of the passcode for user groups 2 and 3 is due to the fact that there may be confidential information on the device. For user group 1, usability was a little more weighted in this example and would thus allow for the possibility of short-term unauthorized use of the telephone function.
 
 #### SYS.3.2.3.M6 Using the configuration option "Maximum number of failed attempts"
-This option determines after how many incorrect passcode entries all data is deleted from the device. If no changes have been made to the factory settings, the device enforces a blocking period after six failed attempts. Only after expiry of the blocking period, the passcode can be entered again. This blocking period is automatically extended with every further attempted failure. If the maximum number of failed attempts is equal to or less than 6, no lock-up period is enforced. When the maximum number of failed attempts is reached, data is immediately cleared from the device. Previous semi-automated attacks on the passcode assumed that no value was set to reduce the maximum number of incorrect entries allowed or that a value of ten attempts was used and only a single passcode consisting of four numbers was used. This provides professional attackers with sufficient scope for systematically spying on the passcode. For the three fictitious user groups, the following maximum values ​​are recommended.
+This option determines after how many incorrect passcode entries all data is deleted from the device. If no changes have been made to the factory settings, the device enforces a blocking period after six failed attempts. Only after expiry of the blocking period, the passcode can be entered again. This blocking period is automatically extended with every further attempted failure. If the maximum number of failed attempts is equal to or less than 6, no lock-up period is enforced. When the maximum number of failed attempts is reached, data is immediately cleared from the device. Previous semi-automated attacks on the passcode assumed that no value was set to reduce the maximum number of incorrect entries allowed, or that a value of ten attempts and only one passcode consisting of four numbers was used. This provides professional attackers with sufficient scope for systematically spying on the passcode. For the three fictitious user groups, the following maximum values ​​are recommended.
 
-Table: Using the configuration option Maximum Number of Failed Attempts
+Table: Using the Maximum Number of Failures Configuration Option
 
 #### SYS.3.2.3.M7 Preventing unauthorized deletion of configuration profiles
 
@@ -142,7 +142,7 @@ Table: Using the fingerprint sensor (Touch-ID)
 
 #### SYS.3.2.3.M11 Using non-personalized device name
 
-Using the device name, an attacker can usually draw conclusions about the user or the institution. So the device name z. B. after Bluetooth pairing with integrated multimedia systems or handsfree in modern vehicles deposited in this. Also, after connecting to hotspots, the name of the device can be seen. For this reason, no device names related to the institution and the user should be configured to prevent the personalized profiling and guessability of typical passwords. For easy identification within the institution, it is recommended to use the asset number. To avoid accidentally changing the device name, the configuration setting listed in the table should also be implemented.
+Using the device name, an attacker can usually draw conclusions about the user or the institution. So the device name z. B. after Bluetooth pairing with integrated multimedia systems or hands-free devices in modern vehicles deposited in these. Also, after connecting to hotspots, the name of the device can be seen. For this reason, no device names related to the institution and the user should be configured to prevent the personalized profiling and guessability of typical passwords. For easy identification within the institution, it is recommended to use the asset number. To avoid accidentally changing the device name, the configuration setting listed in the table should also be implemented.
 
 Table: Use of non-personalized device name
 
@@ -163,7 +163,7 @@ The lock screen provides users with a variety of ways to view information from f
 
 Table: Using the "Restrictions on iOS" configuration option - Lock screen
 
-The safeguarding of AirPlay is subjectively deepened in the measure SYS.3.2.3.M16. Along with the release of the message center and the "Today" view, users should be made aware of the use of the information that can be acquired, and a recommendation be made as to which widgets should not be activated with which content.
+The safeguarding of AirPlay is subjectively deepened in the measure SYS.3.2.3.M16. Along with the release of the message center and the "today" view, users should be made aware of the use of the information that can be acquired, and a recommendation be made as to which widgets should not be activated with which content.
 
 Siri
 
@@ -182,9 +182,9 @@ Table: Using the "Restrictions on iOS" configuration option - Unified Communicat
 Should security management already define recommendations for handling chat and video telephony applications, these recommendations should also apply to the use of FaceTime and iMessage. When using FaceTime and iMessage, all information on all devices associated with the Apple ID is displayed simultaneously in the application itself and in the message center.
 
 Diagnostic and usage data
-Based on Apple's guidance, the diagnostic and usage data may include details of hardware and operating system specifications and performance statistics, as well as information about how the device and the apps are used. Users' personal data are either not recorded at all or deleted from the reports before they are sent to Apple. In addition, if the user has agreed to provide this information to Apple and the location services are enabled, the current location of the device will also be sent. The setting values ​​listed in the table for handling diagnostic and usage data as well as location data are recommended.
+Based on Apple's guidance, the diagnostic and usage data may include details of hardware and operating system specifications and performance statistics, as well as information about how the device and the apps are used. Users' personal data are either not recorded at all or deleted from the reports before they are sent to Apple. In addition, if the user has agreed to provide this information to Apple and the location services are enabled at the same time, the current location of the device is also sent. The setting values ​​listed in the table for handling diagnostic and usage data as well as location data are recommended.
 
-Table: Using the "Restrictions on iOS" configuration option - Diagnostic and Usage Data
+Table: Using the "Restrictions on iOS" configuration option - Diagnostic and usage data
 
 Should this recommendation be based on the established guidelines of the institution z. For example, if you deviate from Windows systems, it is advisable to have an overall evaluation of the handling of diagnostic and usage data and a consistent implementation.
 
@@ -244,7 +244,7 @@ Regardless of the institution's permanent involvement in the institution's proxy
 
 Table: Using the filter option for web pages - general
 
-If a reputational service or a proxy infrastructure is already offered by those responsible in the IT, the iOS-based devices can be integrated by depositing a global HTTP proxy for all installed browsers. To use a global proxies, the apps must initiate an NSURL call. An integration of the devices into the internal proxy infrastructure must take place either permanently or based on the used apps in the infrastructures by means of a VPN connection. The following HTTP proxy configuration options can be used to deposit a global proxy.
+If a reputational service or a proxy infrastructure is already being offered by those responsible for IT, the iOS-based devices can be integrated by depositing a global HTTP proxy for all installed browsers. To use a global proxies, the apps must initiate an NSURL call. An integration of the devices into the internal proxy infrastructure must take place either permanently or based on the used apps in the infrastructures by means of a VPN connection. The following HTTP proxy configuration options can be used to deposit a global proxy.
 
 Table: Using the Filtering Option for Web Pages - Proxy Configuration Options
 
@@ -289,7 +289,7 @@ The added value of iOS-based devices usually only arises when a smartphone or ta
 * Does the app offer its own sharing services or network interfaces?
 * Are there updates to the app developer regularly?
 * Does the app developer implement the latest interfaces and policies from Apple?
-Taking into account the results of the approval process and independent of the use of the enterprise volume licensing program (VPP), the following configuration options and their use can help to support the security objectives per user group.
+Taking into account the results of the approval process and independent of the use of the enterprise volume licensing program (VPP), the following configuration options and their use may help to support the security objectives per user group.
 
 Table: App Store Integration and Apps Sharing
 
@@ -298,7 +298,7 @@ Table: App Store Integration and Apps Sharing
 The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.3.M22 Enforcement of compliance requirements (CI)
-The detection of manipulation of the operating system is not fully possible by querying an Apple-enabled interface. The detection of violations of internal rules of the institution should be ensured by the MDM framework of the respective provider. Depending on the quality of the jailbreak obfuscation, this can be recognized, but it can be assumed that the detection rate is low. If there is a suspected breach of regulations or manipulation of the operating system, the actions previously configured by the responsible administrators should be carried out independently. Due to the different implementation variants of the individual MDM providers, there is no possibility to pronounce a generally valid configuration recommendation.
+The detection of manipulation of the operating system is not fully possible by querying an Apple-enabled interface. The detection of violations of internal rules of the institution should be ensured by the MDM framework of the respective provider. Depending on the quality of the jailbreak obfuscation, this can be detected, but it can be assumed that the detection rate is low. If there is a suspected breach of regulations or manipulation of the operating system, the actions previously configured by the responsible administrators should be carried out independently. Due to the different implementation variants of the individual MDM providers, there is no possibility to pronounce a generally valid configuration recommendation.
 
 #### SYS.3.2.3.M23 Using Automatic Configuration Profile Deletion (CI)
 
@@ -310,14 +310,14 @@ An example of a geofencing request could be that the deployed devices are not al
 
 #### SYS.3.2.3.M25 Using the configuration option for AirPrint (CI)
 
-On the part of the Apple company, the AirPrint functionality was firmly integrated into the operating system. This feature can not be turned on or off. The responsible administrators should provide the AirPrint printers released in the institution through a configuration profile to the user. Furthermore, when assessing and approving AirPrint printers in the institution, it is recommended that they be integrated into their own network segment. Only through its own network segment is it possible to apply for a customized firewall rule through the approval process, to manage the multicast communication on port 5353 (Bonjour, mDNS) within the network segment, and to apply the Internet Printing Protocol (IPP) to the network limit required IP addresses or network segments. To do so, it must be ensured that all communication links are always routed through the institution's infrastructure systems.
+On the part of the Apple company, the AirPrint functionality was firmly integrated into the operating system. This feature can not be turned on or off. The responsible administrators should provide the AirPrint printers released in the institution through a configuration profile to the user. Furthermore, when assessing and approving AirPrint printers in the institution, it is recommended that they be integrated into their own network segment. Only through its own network segment, it is easily possible to request for this a custom firewall rule through the release process, to manage the multicast communication on port 5353 (Bonjour, mDNS) within the network segment and the Internet Printing Protocol (IPP) on the limit required IP addresses or network segments. To do so, it must be ensured that all communication links are always routed through the institution's infrastructure systems.
 
 #### SYS.3.2.3.M26 No connection with host systems (CI)
-To create a local backup, the device must be connected to iTunes via USB cable or Wi-Fi. When using Wi-Fi, an attacker may attempt to unnoticeably perform a man-in-the-middle attack and take control of the information on the device. With a local backup, whether encrypted or unencrypted, anyone with host access can make a copy of these files almost unnoticed, then decrypt this copy made and analyze the existing information, especially the user behavior. Another risk in linking the iOS-based device to a host (PC or notebook) is the local filing of a valid pairing key on the host. An attacker could use the pairing key to extract sensitive information from the iOS-based device for a period of time without knowing the passcode. To prevent the named attack scenarios and the loss of sensitive information, the responsible administrators should not be able to connect to host systems.
+To create a local backup, the device must be connected to iTunes via USB cable or Wi-Fi. When using Wi-Fi, an attacker may attempt to unnoticeably perform a man-in-the-middle attack and take control of the information on the device. With a local backup, whether encrypted or unencrypted, anyone with host access can make a copy of these files almost unnoticed, then decrypt that copy and analyze the existing information, especially user behavior. Another risk in linking the iOS-based device to a host (PC or notebook) is the local filing of a valid pairing key on the host. An attacker could use the pairing key to extract sensitive information from the iOS-based device for a period of time without knowing the passcode. To prevent the named attack scenarios and the loss of sensitive information, the responsible administrators should not be able to connect to host systems.
 
 #### SYS.3.2.3.M27 Using the configuration option for APN
 
-This configuration option determines how iOS-based devices connect to the wireless network. This means that with wrong settings there is no possibility to establish a data connection. Currently APN usernames and passwords with up to 64 characters can be defined in the configuration profile. By using an institution-based APN, it is possible to restrict the possible range of IP addresses and include this restricted IP address range in the firewall rule processes and circuits.
+This configuration option determines how iOS-based devices connect to the wireless network. This means that with wrong settings there is no possibility to establish a data connection. Currently APN usernames and passwords with up to 64 characters can be defined in the configuration profile. By using an institution-based APN, it is possible to limit the possible range of IP addresses and include this restricted IP address range in the firewall rule processes and circuits.
 
 3 Further information
 ------------------------------

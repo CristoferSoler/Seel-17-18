@@ -50,14 +50,14 @@ Web pages and data generated and delivered by a web application may include info
 When an attacker automates a web application's capabilities, it can perform numerous operations in a short amount of time, effectively performing repetitive attacks against the web application. With the help of a repeated login process, eg B. valid combinations of user name and password systematically determined (brute force) or lists with valid user name generated (enumeration). In addition, repeated invocation of resource-intensive features (such as complex database queries) for application-level denial-of-service attacks may be abused.
 
 ### 2 8 Insufficient Session Management of Web Applications
-If an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, a session fixation attack allows an attacker to first assign a session ID from the web application and submit it to the victim (for example, via a link in an e-mail). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
+If an unauthorized person detects a user's session ID due to inadequate session management, it can use the web application in the context of that session. As a result, z. For example, an attacker could interact with the web application as a legitimate authenticated user without knowing the actual credentials. For example, in a session fixation attack, an attacker can first assign a session ID from the web application and submit it to the victim (for example, via a link in an email). If the victim follows this link and subsequently authenticates himself to the web application with the session ID transmitted by the attacker, the attacker can then use the application with the session ID known to him. In this way, it is possible for him to access the web application in the security context of the attacked user and thus to use functions.
 
 3 requirements
 ---------------
 
 The following are specific requirements for Web application protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -65,7 +65,7 @@ The following requirements MUST be implemented as a priority:
 
 In order to access protected resources of a web application, users MUST authenticate themselves to the application. For this, a suitable authentication method MUST be selected and the selection process documented. If the so-called digest authentication method is used, the password files on the web server MUST be sufficiently protected.
 
-A central authentication component MUST be used, which was implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
+A central authentication component MUST be used, which has been implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
 
 To ensure that a valid session (session ID) was not inherited by an attacker, users must re-authenticate to critical features. Also, the web application MUST set limits for failed login attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately when the password has been reset.
 
@@ -73,12 +73,12 @@ To ensure that a valid session (session ID) was not inherited by an attacker, us
 
 If only a limited number of users are allowed to use the web application, an authorization component MUST be used to ensure that users can only perform actions for which they are authorized. Any access to protected content and features MUST be controlled before it is executed.
 
-All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
+All users MUST be assigned restrictive access rights properly. When employees get access rights to or change their web application, those in charge MUST check, confirm, and document it in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
 All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
 
 #### APP.3.1.A3 Secure Session Management [Developer]
 
-Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, then the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
+Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
 
 A web application MUST allow users to explicitly end an existing session. After the user has logged in, an existing session ID MUST be replaced with a new one. The duration of the session MUST be limited, eg For example, inactive sessions automatically become invalid after a certain time and a maximum validity period is given (timeout). After the session is invalid, all session data (both server-side and client-side) MUST be invalid and deleted.
 
@@ -97,7 +97,7 @@ A web application MUST record security-relevant events with the required charact
 System administrators MUST regularly inform themselves about current vulnerabilities and import security-related updates in a timely manner. Software updates and patches for web applications MUST be obtained from trusted sources only. You MUST be tested sufficiently before the roll-out. Before any updates or patches are installed, MUST always be sure that the original state of the web application can be restored. The current patch level MUST be documented.
 
 #### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
-Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given period of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
+Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
 
 ### 3.2 Standard requirements
 
@@ -128,7 +128,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -150,7 +150,7 @@ Web pages and Web application responses SHOULD NOT contain information that coul
 * limited access to security-related documentation
 * regular deletion of unneeded files
 * secure registration by external search engines as well as the renunciation of absolute path information
-The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network, be limited. Configuration files of the web application SHOULD be stored outside the web root directory.
+The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network. Configuration files of the web application SHOULD be stored outside the web root directory.
 
 #### APP.3.1.A14 Protection of confidential data [developer]
 

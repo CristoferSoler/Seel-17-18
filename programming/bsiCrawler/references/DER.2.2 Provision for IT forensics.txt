@@ -16,3 +16,14 @@
 #### DER.2.2.A13 Framework contracts with external service providers (CIA)
 #### DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
 #### DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.20 Information or products from unreliable sources
+* G 0.22 Manipulation of information
+* G 0.25 Failure of devices or systems
+* G 0.27 Resource shortage
+* G 0.29 Violation of laws or regulations
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.37 denying actions
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

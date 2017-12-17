@@ -71,15 +71,15 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.4.A4 Requirements Analysis for IT Cabling
 
-Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on this basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
+Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
 
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 
-The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
+The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls for acceptance can be prepared in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
 
 #### INF.4.A6 Continuous updating and revision of network documentation
 
-The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In this case, all documentation areas affected by the change SHOULD easily be recorded and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
+The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In doing so, all documentation areas affected by the change SHOULD be easily captured and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
 
 #### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
 
@@ -106,7 +106,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.4.A12 Redundancies for the wiring (A)
 
-It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire compartments of the building. If redundant cabling is used, its functionality should be checked regularly.
+It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire areas of the building. If redundant cabling is used, its functionality should be checked regularly.
 
 #### INF.4.A13 Material Assurance of IT Cabling (IA)
 
@@ -114,7 +114,7 @@ In rooms with public access or in confusing areas of a building, cables and dist
 
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 
-The power supply of the IT components SHOULD be chosen so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the shape of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
+The power supply of the IT components SHOULD be chosen so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the form of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
 
 #### INF.4.A15 Use of Cabinet Systems (IA)
 
@@ -137,7 +137,7 @@ Additional information on hazards and security measures in the area of ​​"IT
 
   
 
- Construction methods for electronic equipment, Beuth Verlag
+ Construction methods for electronic devices, Beuth Verlag
 
  
 * #### [DIN60297] DIN IEC 60297

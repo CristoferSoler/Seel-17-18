@@ -26,3 +26,23 @@
 #### SYS.2.2.3.A23 Extended Credential Protection in Windows 10 (CI)
 #### SYS.2.2.3.A24 Activation of the last-access timestamp (A)
 #### SYS.2.2.3.A25 Handling Connected User Experience and Telemetry (CI) Remote Access Features
+5 Appendix: Cross reference table for elementary hazards
+* G 0.15 Listening
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.25 Failure of devices or systems
+* G 0.26 Malfunction of equipment or systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.36 Identity theft
+* G 0.39 Malware
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

@@ -36,17 +36,17 @@ The following measures should be implemented as a priority:
 
 Every employee should be encouraged to leave their domestic workplaces tidy. Employees in the home environment must ensure that unauthorized persons can not access IT applications, data, data media or documents. All employees must review their workplaces and ensure that sensitive information is not freely accessible, so that the availability, confidentiality and integrity of data can not be adversely affected.
 
-If an employee only briefly leaves the home office during working hours, it is sufficient to lock the room if possible and / or to lock the screen in such a way that access is only possible after successful authentication. If a room can not be closed, sensitive documents should be locked even in the case of a short absence. If an employee is absent for a longer period of time, for example when traveling on business or on vacation, he has to clean up his workplace in such a way that no data carriers or documents needing protection are left undocked. For this, the employees need sufficiently dimensioned and lockable storage options, such. B. safe roll containers with locks.
+If an employee only briefly leaves the home office during working hours, it is sufficient to lock the room if possible and / or to lock the screen in such a way that access is only possible after successful authentication. If a room can not be closed, sensitive documents should be locked even in the case of a short absence. If an employee is absent for a longer period of time, for example when traveling on business or on vacation, he has to clean up his workplace in such a way that there are no vulnerable data carriers or documents lying around undeclared. For this, the employees need sufficiently dimensioned and lockable storage options, such. B. safe roll containers with locks.
 
 Also, passwords should never be stored easily (eg on an adhesive label on the monitor or under the desk pad). Also, no trivial passwords should be used.
 Safety management supervisors and staff should advise employees that they need to properly clean up their domestic workplaces.
 
 #### INF.8.M2 Transportation of work material to the home workplace [Home automation]
 
-For official tasks to be carried out at a home office, all necessary information must be available there. Files, data media and other documents must be transported safely. This is how to regulate how data media and documents are exchanged between the home office and the institution. The following points should therefore be considered or regulated at least:
+For official tasks to be carried out at a home office, all necessary information must be available there. Files, data media and other documents must be transported safely. This is the way to regulate how data carriers and documents are exchanged between the home office and the institution. The following points should therefore be considered or regulated at least:
 
 * Which files, data carriers and documents may be exchanged via which transport route (eg postal route, courier, parcel service)?
-* What protective measures should be observed during transport?
+* What protective measures must be observed during transport?
 
  
 + It also includes selecting suitable packaging.
@@ -63,14 +63,14 @@ All affected employees must be aware of how to transport and protect files and m
 
 Institutions must regulate what employees need to do to protect their home-based workplace from unauthorized access. The rules are to be made known to the employees in a suitable form.
 
-Depending on the circumstances of the home, appropriate measures must be established to ensure that roommates or visitors can not access official IT and documents at any time. These measures must be checked at reasonable intervals, but at least when domestic circumstances change.
+Depending on the circumstances of the home, suitable measures must be established to ensure that roommates or visitors can not access official IT and documents at any time. These measures must be checked at reasonable intervals, but at least when domestic circumstances change.
 
 To protect against unauthorized access to the home workplace z. For example, the following points should be noted:
 
-* Interior and exterior doors must be locked in times when a home office is not occupied. This prevents unauthorized persons from accessing documents and IT equipment located therein. This is especially important when domestic workplaces are located in areas with public access or access is not controlled by other means.
-* Similarly, windows and outward-facing doors (balconies, terraces) must be closed in times when a home office is not occupied. In the cellar and ground floor and, depending on the design of the façade, also on the higher floors, open windows and doors offer burglars ideal entry points, which can also be used during the working hours of the domestic employee.
+* Interior and exterior doors must be locked in times when a home office is not occupied. This prevents unauthorized persons from accessing documents and IT equipment located therein. This is particularly important when domestic workplaces are located in areas with public access or access is not controlled by other means.
+* Similarly, windows and outward doors (balconies, terraces) must be closed in times when a home office is not occupied. In the cellar and ground floor and, depending on the design of the façade, also on the higher floors, open windows and doors offer burglars ideal entry points, which can also be used during the working hours of the domestic employee.
 * Doors with a blind knob on the side of the corridor do not need to be completed. The prerequisite for this, however, is that the authorized employees always carry their key to the home office with them.
-* When the computer is running, it is not necessary to lock the door if the employee only leaves the workstation for a short time and the PC can only be accessed after successful authentication. When the computer is switched off, the office can remain open if the computer can only be booted with the help of a password. The same function is fulfilled by access mechanisms based on tokens or smart cards. If documents are to be protected at the workplace, however, the door should be locked.
+* When the computer is running, it is not necessary to lock the door if the employee only leaves the workstation for a short time and the PC can only be accessed after successful authentication. When the computer is switched off, the office can remain open if the computer can only be booted with the help of a password. The same function is fulfilled by access mechanisms based on tokens or smart cards. If documents are to be protected at the workplace, the door should be closed.
 Together with the basic measures, the following measures are in line with the state of the art in the field of home work.
 
 ### 2.2 Standard measures
@@ -102,7 +102,7 @@ Employees with a home-based workplace should be regularly asked if the workplace
 
 ** Security **
 
-Experience has shown that burglars select their goals according to how high the risk and effort in relation to the expected profit. Therefore, all anti-burglary measures at home should aim to minimize perpetrators' chances of success. The existing security measures at the home workplace * * may already be sufficient. If this is not the case, the usual anti-intrusion measures must be adapted to local conditions and the existing protection requirements. These include, for example:
+Experience has shown that burglars select their goals according to how high the risk and effort in relation to the expected profit. Therefore, all anti-burglary measures at home should aim to minimize perpetrators' chances of success. The existing security measures at the home workplace * * may already be sufficient. If this is not the case, the usual anti-burglary measures must be adapted to local conditions and the existing protection requirements. These include, for example:
 
 * burglary-resistant doors and windows, for example with resistance class RC2 (according to DIN EN 1627: 2011-09 "Doors, windows, curtain walls, grille elements and closures - burglar resistance - requirements and classification") or higher if the hazardous situation makes it necessary
 * Blinds on entry-level doors or windows,
@@ -122,7 +122,7 @@ The burden of permanent work on poorly equipped domestic workplaces should not b
 
 Therefore, every workplace should be ergonomically designed. For computer workstations, for example, chair, table, screen and keyboard must be individually adjustable in order to enable the most error-free operation of the IT and promote. This includes, among other things, that the backrest, seat height and seat of the chair must be adjustable, but also that the work equipment can be arranged so that for each work task the least possible load.
 
-The IT systems used at home, especially the screen, must also be ergonomically positioned. For example, the screen should always be placed at right angles to the window to avoid direct exposure to light. In addition, an undisturbed work should be possible on IT systems. Domestic workers should not be able to keep a constant eye on other people. This can also prevent information being viewed without authorization.
+The IT systems used at home, especially the screen, also need to be ergonomically set up. For example, the screen should always be placed at right angles to the window to avoid direct exposure to light. In addition, an undisturbed work should be possible on IT systems. Domestic workers should not be able to keep a constant eye on other people. This can also prevent information being viewed without authorization.
 
 An appropriately equipped workplace also makes it easier to comply with safety measures. If trays, documentation, documents and accessories are to be included, there must be lockable desks or cabinets.
 
@@ -147,11 +147,11 @@ If employees are required to work with official documents for which there is an 
 
 The official documents and data carriers with increased protection requirements may only be accessible to authorized persons at the home workplace. Outside the period of use, they must be stored in such a way that no unauthorized person can access them.
 
-In order to meet the requirements, the employees at the home workplace must be informed that documents and data carriers with increased protection requirements must be kept locked.
+In order to meet the requirements, the employees at the home workplace must be advised that documents and data carriers with increased protection requirements must be kept locked.
 
-The locks of the lockable cabinets, roll containers and desks must at least withstand attacks with easy-to-make or easy to acquire Nachschließmitteln (paper clip, lockpick, etc.). Furniture locks with at least four tumblers and at least 1000 locking variants should be used. In addition, make sure that the closure can not be easily avoided, for. B. by a backplane is removed. Overall, the protective effect of the container should comply with the safety requirements of the documents and data carriers to be kept therein.
+The locks of the lockable cabinets, roll containers and desks must at least withstand attacks with easy-to-make or easy-to-acquire locking means (paper clip, lockpick, etc.). Furniture locks with at least four tumblers and at least 1000 locking variants should be used. In addition, make sure that the closure can not be easily avoided, for. B. by a backplane is removed. Overall, the protective effect of the container should comply with the safety requirements of the documents and data carriers to be kept therein.
 
-At home workplaces, therefore, adequate lockable containers (desk, roll container, cabinet, safe) with adequate protective effect must be available for the protection and space requirements.
+At home workplaces, therefore, there must be sufficient closable containers (desk, roll container, cabinet, safe) with adequate protective effect for the protection and space requirements.
 
 In order to increase the protection of data carriers and IT systems with confidential information, they should also be secured in the home environment in such a way that attackers can not simply take them with them, for example with anti-theft devices.
 
@@ -169,7 +169,7 @@ The following aspects should be considered:
 
 *** *** safety culture
 
-The term safety culture encompasses the safety-related attitudes, values ​​and fundamental beliefs of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
+The term safety culture encompasses the safety-related attitudes, values ​​and fundamental convictions of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
 
 * What is the dealings in the agency or the company with business-related information and risks in general? Is the institution more risk-oriented or risk-avoidant? Is information given more freely or restrictively?
 * What are the requirements for accuracy and precision? Are minor errors tolerable in texts, for example, because they still have to go through several tuning processes anyway? Can an input error already lead to serious damage? What are the requirements for availability? Are there a lot of tight deadlines? Can processing times for inquiries and business processes be set flexibly? Are minor missed deadlines or changes generally acceptable or do they lead to harsh consequences?
@@ -196,11 +196,11 @@ The security culture of an institution is strongly influenced by the industry in
 *** Changes ***
 
 * All kinds of far-reaching changes for employees can change their way of handling information, business processes, IT and other devices. These include, for example, restructuring, dismissals, changes of tasks or superiors.
-If the analysis shows that employees behave differently than it makes sense from a security point of view, there are various ways to deal with it. It can, for. For example, try to change the behavior. On the other hand, in many cases it may be easier to redesign the security policies or workflows and make them more secure.
+If the analysis shows that employees behave differently than it makes sense from a security point of view, there are various ways to deal with it. It can, for. For example, try to change the behavior. On the other hand, in many cases it may be simpler to redesign the security policies or workflows and make them more secure.
 
 Those responsible for awareness-raising and training programs should clarify whether and to what extent they want to use their own staff or external providers as trainers. In addition, the form of training must be determined. If a program includes several awareness-raising and training activities, a training coordinator should be appointed. In addition, various offerings from training providers should have been compared, which are the best in terms of content, quality and price. The awareness-raising or training activities carried out should be evaluated by the participants and regularly evaluated internally.
 
-If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers need to get the time they need to not only do awareness-raising and training, but also prepare and evaluate it.
+If one's own employees are to be used as trainers, they must have the necessary specialist knowledge and be able to convey this knowledge in a target group-oriented manner. In addition to the required information security knowledge, trainers must have strong didactic, methodological and communication skills. In particular, awareness-raising activities require sufficient knowledge of the institution, its safety culture and business processes. It is important that coaches master the language of their respective target audience, ie be able to put the information security aspects to be trained in the respective work and project contexts. Internal trainers must be given the time they need to not only carry out awareness-raising and training, but also prepare and evaluate it.
 
 For cost or qualification reasons, it may be more advantageous, at least initially, to have the training carried out by external specialists. Already in the planning phase it has to be clarified which financial resources are available for it. The external trainers should be carefully selected based on content, quality and price criteria and prepared for their task. In particular, they must be provided with the necessary institutional background.
 
@@ -215,7 +215,7 @@ The training coordination can be carried out by the information security officer
 
 Experience has shown that there are a number of external providers who offer appropriate awareness-raising or training in a form that meets the needs of the institution or that can be adapted with reasonable effort.
 
-In awareness-raising or training activities that aim to reach more employees in several cycles, it is worthwhile thinking about a "train the trainer" concept. Here, the initial measures are carried out either by suitable internal staff or external trainers with the aim that the participants of these measures later take on a coaching role themselves. This can have a very positive effect on their own awareness and motivation for information security for these employees. In addition, they can contribute their own experiences to the training measures. Especially with training topics that include aspects of culture and certain behaviors within the institution, an internal trainer can increase the acceptance and learning of the training because of his deeper knowledge of internal processes and awareness of the participants. Insofar as the "train the trainer" concept is to be used, the initial measures must include, in addition to the intended subject matter, instructions on methodical and didactic teaching.
+In awareness-raising or training activities that aim to reach more employees in several cycles, it is worthwhile thinking about a "train the trainer" concept. Here, the initial measures are carried out either by suitable internal staff or external trainers with the aim that the participants of these measures later take on a coaching role themselves. This can have a very positive effect on their own awareness and motivation for information security for these employees. In addition, they can contribute their own experiences to the training measures. Especially with training topics that include aspects of culture and certain behaviors within the institution, an internal trainer can increase the acceptance and learning of the training because of his deeper knowledge of internal processes and awareness of the participants. Insofar as the "train the trainer" concept is to be used, the initial measures must include, in addition to the intended specialist content, instructions on methodical and didactic teaching.
 
 The awareness-raising or training activities should be finalized by the participants. These experiences should be regularly evaluated internally.
 
@@ -234,7 +234,7 @@ Short role-playing games allow employees to practice very well how to behave whe
 
 * Social *
 
-In simulations, employees can practice how to behave in social engineering attacks. For this purpose, the selected target groups such. For example, IT supervisors and various groups of administrators are faced with supposedly harmless requests in a joint simulation. Only through the interdisciplinary consideration of these requests it becomes clear that there is an attack here. The aim of the simulation is to find out these relationships through appropriate exercises in order to then be able to react in a defined way. This type of simulation can be very well done in practice through workshops with moderation materials such as pin board and moderation cards.
+In simulations, employees can practice how to behave in social engineering attacks. For this purpose, the selected target groups such. For example, IT supervisors and various groups of administrators are faced with supposedly harmless queries in a joint simulation. Only through the interdisciplinary consideration of these requests it becomes clear that there is an attack here. The aim of the simulation is to find out these connections through appropriate exercises, in order to then be able to react in a defined way. This type of simulation can be very well done in practice through workshops with moderation materials such as pin board and moderation cards.
 
 * Simulation exercises *
 

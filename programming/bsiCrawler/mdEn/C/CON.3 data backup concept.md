@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Businesses and governments are storing more and more data and at the same time relying more and more on it. Data is then lost, eg. B. by defective hardware or malware, can cause serious damage. However, regular data backups minimize such effects. A data backup should ensure that redundant data can be used to resume IT operations at short notice if parts of the operational data are lost.
+Businesses and governments are storing more and more data and at the same time relying more and more on them. Data is then lost, eg. B. by defective hardware or malware, can cause serious damage. However, regular data backups minimize such effects. A data backup should ensure that redundant data can be used to resume IT operations at short notice if parts of the operational data are lost.
 
 ### 1.2 Objective
 
@@ -76,7 +76,7 @@ A minimum data backup concept MUST be created that determines which data backup 
 
 #### CON.3.A5 Regular data backup [IT operation]
 
-Regular backups MUST be performed. At least the data MUST be backed up on a regular basis, which can not be derived from other information. The created data backups MUST be protected from third party access. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed
+Regular backups MUST be performed. At least the data MUST be backed up on a regular basis, which can not be derived from other information. The backups created MUST be protected against third party access. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed
 
 ### 3.2 Standard requirements
 
@@ -91,7 +91,7 @@ Before a backup system is procured, a list of requirements SHOULD be created to 
 
 #### CON.3.A8 Function Tests and Recoverability Check [IT Operations]
 
-It SHOULD be tested on a regular basis, whether the data backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
+It SHOULD be tested on a regular basis, whether the backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
 
 #### CON.3.A9 Requirements for online data backup [Head of IT, IT operation]
 

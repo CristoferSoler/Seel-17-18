@@ -17,3 +17,7 @@
 #### DER.4.A14 Regular review and improvement of emergency response [Institutional Management] (IA)
 #### DER.4.A15 Assessment of the Efficiency of the Emergency Management System [Institutional Management] (IA)
 #### DER.4.A16 Emergency preparedness and emergency response planning for outsourced components [Institutional Management] (IA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.27 Resource shortage
+* G 0.33 Personnel loss

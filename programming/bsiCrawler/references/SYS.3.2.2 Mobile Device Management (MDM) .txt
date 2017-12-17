@@ -20,3 +20,27 @@
 #### SYS.3.2.2.A17 Control of the use of mobile devices (I)
 #### SYS.3.2.2.A18 Particularly Secure Operating Systems (CIA)
 #### SYS.3.2.2.A19 Geofencing (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.11 Failure or disruption of service providers
+* G 0.13 Interception of compromising radiation
+* G 0.14 Spying out information (spying)
+* G 0.15 Listening
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.24 Destruction of equipment or data media
+* G 0.25 Failure of devices or systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.36 Identity theft
+* G 0.37 denying actions
+* G 0.38 Abuse of personal data
+* G 0.39 Malware
+* G 0.45 data loss

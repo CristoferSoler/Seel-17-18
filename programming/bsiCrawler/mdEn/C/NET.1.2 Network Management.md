@@ -7,7 +7,7 @@ Reliable network management is a prerequisite for the secure and efficient opera
 
 Network management includes many important functions, such as: For example, network monitoring, component configuration, event handling, and logging. Another important function is reporting, which can be created as a common platform for the network and IT systems. Alternatively, it can be implemented as a single platform or as part of the individual management components.
 
-The network management infrastructure consists of central management systems (eg SNMP servers), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
+The network management infrastructure consists of central management systems (eg SNMP server), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
 
 ### 1.2 Objective
 
@@ -90,7 +90,7 @@ All network management solutions MUST be integrated into the institution's data 
 
 #### NET.1.2.A7 Basic logging of events
 
-The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg in configuration distribution) as well as limited accessibility of network components.
+The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg during configuration distribution) as well as limited accessibility of network components.
 
 #### NET.1.2.A8 time synchronization
 
@@ -245,7 +245,7 @@ The time synchronization SHOULD be ensured across all locations of the instituti
 
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
 
-In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to establish adequate backup solutions that can be used to perform the administrative tasks in an emergency.
+In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to set up adequate backup solutions to perform the administrative tasks in an emergency.
 
 4 Further Information
 ------------------------------

@@ -31,11 +31,11 @@ For example, when PVC is burned, it produces chlorine gas, which together with t
 ### 2 2 Flash
 Lightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
 
-If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the building (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
+If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the structure (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
 
 ### 2 3 water
 
-Water can cause damage to a building and its facilities from outside, for example, from rain, flood or floods, or from the inside, for example from defects in water pipes.
+Water can cause damage to a building and its facilities from the outside, for example from rain, flood or floods, or from the inside, for example from defects in water pipes.
 
 ### 2 4 Natural damage and natural disasters
 
@@ -69,11 +69,11 @@ In the event of a power outage, entire buildings or parts of them may become unu
 
 The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the facilities of the infrastructure in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
-#### INF.1.A1 Planning of building security [Planner, Information Security Officer (ISB)]
+#### INF.1.A1 Planning of building security [planner, information security officer (ISB)]
 
 Based on the planned or existing use of a building and the protection requirements of the business processes operated there, it MUST be determined how the building is to be secured. For a building, many different aspects of security MUST be respected for the protection of people in the building, the protection of assets and the IT, from fire protection to electrical systems to access control. The safety requirements from the different areas MUST be coordinated with each other.
 
@@ -83,11 +83,11 @@ It MUST be checked regularly whether the protection and design of the circuits s
 
 #### INF.1.A3 Compliance with fire safety regulations
 
-The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be properly signposted and kept open. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
+The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be signposted and kept open in accordance with regulations. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
 
 Unnecessary fire loads MUST be avoided. This includes the regular disposal of waste paper and packaging waste.
 
-There MUST be a fire safety officer or a person entrusted with the task, who is also trained accordingly.
+There MUST be a fire safety officer or a person entrusted with the task, who is also properly trained.
 
 #### INF.1.A4 fire detection in buildings [planner]
 Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
@@ -104,7 +104,7 @@ Windows and outward doors (balconies, terraces) MUST be closed in times when a r
 
 Access to protected parts of buildings and rooms MUST be regulated and controlled. There SHOULD exist a concept for access control. The number of authorized persons SHOULD be kept to a minimum for each area. Additional persons may only be admitted after prior examination of the necessity. All issued access authorizations SHOULD be documented. The access control measures MUST be regularly checked for their effectiveness.
 
-#### INF.1.A8 smoking ban [staff]
+#### INF.1.A8 smoking ban [employee]
 
 For rooms with IT or data carriers (server room, data carrier archive but also document archive), in which fires or soiling can lead to high damage, a smoking ban MUST be issued. It MUST be regularly checked that the access protection is not undermined when establishing or tolerating smoking areas.
 
@@ -224,7 +224,7 @@ It SHOULD provide a hazard warning system appropriate to the premises and the ri
 ------------------------------
 
 ### 4.1 Literature
-Additional information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
 
 * #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
 

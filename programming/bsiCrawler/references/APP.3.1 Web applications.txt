@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### APP.3.1.A1 Web Application Authentication [Developer]
 #### APP.3.1.A2 Web Application Access Control [Developer]
 #### APP.3.1.A3 Secure Session Management [Developer]
@@ -8,7 +8,7 @@
 #### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
 ### 3.2 Standard requirements
 #### APP.3.1.A8 System architecture of a web application
-#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurer, Developer]
+#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurator, Developer]
 #### APP.3.1.A10 Acceptance and release of web applications [Head IT]
 #### APP.3.1.A11 Secure connection of background systems
 #### APP.3.1.A12 Secure Configuration of Web Applications [Developer]
@@ -25,3 +25,20 @@
 #### APP.3.1.A22 Performing Penetration Tests (CIA)
 #### APP.3.1.A23 Prevention of Cross-Site Request Forgery [Developer] (CI)
 #### APP.3.1.A24 Preventing Blockage of Resources [Developer] (A)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.36 Identity theft
+* G 0.38 Abuse of personal data
+* G 0.39 Malware
+* G 0.40 Denial of Service
+* G 0.43 Importing messages
+* G 0.46 Loss of integrity of sensitive information

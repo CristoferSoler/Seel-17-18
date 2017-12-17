@@ -11,11 +11,11 @@ The customary physical separation of OT from other IT systems and networks in of
 
 As IT components and technologies from office IT are increasingly being used in OT in addition to OT-specific components, they are now exposed to comparable hazards. At the same time, OTs differ significantly from traditional IT, making it difficult to apply established security procedures. For example, there may be restrictions based on manufacturer specifications or legal requirements that prevent or hinder changes to components. An example of this is the application of security updates or subsequent hardening measures. The OT is usually also subject to significantly longer lifecycles, even beyond the manufacturer support, so that the availability of security updates can not be consistently guaranteed.
 
-This convergence of technologies between office IT and OT will demand increased cooperation between the know-how bearers of both functional areas in the future. The technological know-how for IT, communication and cyber defense is currently mostly in the Office IT departments. However, a successful solution must take into account the circumstances of the OT infrastructure as far as possible. However, this can only be done with the support of OT officers.
+This convergence of technologies between office IT and OT will demand increased cooperation between the know-how bearers of both functional areas in the future. The technological know-how for IT, communication and cyber defense is currently mostly in the Office IT departments. However, a successful solution must take into account the circumstances of the OT infrastructure as far as possible. However, this can only be done with the support of OT managers.
 
 ### 1.2 Life cycle
 
-The life cycle of ICS results from the operating life of the respective production plant. This is always much longer than the usual time periods in office IT. The typical duration is ten to fifteen, sometimes even 20 years or more. In the office IT, it is usually only three to five years.
+The life cycle of ICS results from the operating life of the respective production plant. This is always much longer than the usual time periods in office IT. The typical duration is ten to fifteen, sometimes 20 years and longer. In the office IT, it is usually only three to five years.
 
 ** planning and conception **
 
@@ -60,17 +60,17 @@ In particular, consideration should be given to the specific requirements of OTs
 The institution must set up a security organization that governs the roles and responsibilities for the information security of OT infrastructure and components. The safety organization should consider all parties involved in the operation of OT components (eg manufacturer, integrator / machine builder, outsourcing partner, third party vendor, physical security specialist, production and maintenance manager).
 An overall information security officer in OT must be designated and known within the organization. In the following, this is referred to as ICS Information Security Officer. In larger institutions, an information security officer should also be designated for each installation, alternatively per component type / layer / zone.
 
-In this case, both a security organization for the entire institution can be built and operated, which includes the areas of Office IT and OT, or separate security organizations for the two areas. To exploit synergies and avoid planning mistakes and risks, close cooperation between the OT and Office IT experts must take place. Which structure is suitable for an organization depends strongly on the existing structures and well-established processes in an institution. It is crucial that a flow of information and knowledge takes place in both directions and that those responsible in each area are taken seriously. For this, both sides have to be open to the particular peculiarities of the other area and, to avoid misunderstandings, consider the culture and language of the other side. A dual head (Information Security Officer / ICS Information Security Officer) can be a useful solution in some institutions, if the division of tasks and interfaces are clear and clarified in writing.
+In this case, both a security organization for the entire institution can be built and operated, which includes the areas of Office IT and OT, or separate security organizations for the two areas. To exploit synergies and avoid planning mistakes and risks, close cooperation between the OT and Office IT experts must take place. Which structure is suitable for an organization depends strongly on the existing structures and well-established processes in an institution. The decisive factor is that a flow of information and knowledge takes place in both directions and that those responsible in each case are taken seriously. For this, both sides have to be open to the particular peculiarities of the other area and, to avoid misunderstandings, consider the culture and language of the other side. A dual head (Information Security Officer / ICS Information Security Officer) can be a useful solution in some institutions, if the division of tasks and interfaces are clear and clarified in writing.
 
 ** Attention legal framework conditions **
 
-Legal, regulatory and other specific requirements for the OT and the respective sector or sector must be known and interpreted in terms of their impact on the institution. This applies in particular to institutions that operate critical infrastructures, but increasingly also in other areas. In addition to the national requirements, European and international regulations may also have to be observed. Responsibilities and processes should be established to ensure that all relevant requirements are promptly communicated to the key bodies.
+Legal, regulatory and other specific requirements for the OT and the respective sector or sector must be known and interpreted in terms of their impact on the institution. This applies in particular to institutions that operate critical infrastructures, but increasingly also in other areas. In addition to national requirements, European and international regulations may also have to be observed. Responsibilities and processes should be established to ensure that all relevant requirements are promptly communicated to the key bodies.
 
 ** Definition and compliance with specifications **
 
 There should be a process of writing, communicating, updating, evaluating and implementing concrete guidelines for specific subject areas (guidelines / policies) in the ICS area. These can be partially taken from the field of office IT, where appropriate and available. Often, however, adjustments are needed to reflect the specifics of OT.
 
-When selecting components, a check should be made of defined (functional and information security relevant) requirements. In this case, individual components can be the subject of the test up to the entire OT.
+When selecting components, a check should be made of defined (functional and information security relevant) requirements. Individual components can be the subject of the test up to the entire OT.
 
 **Additional information**
 
@@ -87,7 +87,7 @@ For SMEs, it is usually advisable to have the training carried out by external e
 
 Proposals for more detailed training plans may, for. For example, see the document "Recommendations for Further Training and Qualification Measures in the ICS Environment" [BSI-CS 123].
 
-In addition, it is recommended that the awareness of social engineering be promoted regularly and vigorously, for example through information campaigns or through careful tests coordinated with data protection and the works council, which must not personally expose anyone.
+In addition, it is recommended that social engineering be promoted regularly and vigorously, for example through education campaigns or through careful tests coordinated with data protection and the works council, which must not personally expose anyone.
 
 #### IND.1.M3 Protection against malicious programs
 
@@ -142,7 +142,7 @@ A virus wall examines the traffic between two networks for malicious programs. I
 
 ** Alternatives for virus scanners **
 
-However, anti-virus programs typically can not be installed on all components. Possible limitations may arise from a lack of manufacturer release, unsupported operating platforms (eg field systems or PLCs), lack of possibilities to update virus signatures or potential risks in availability, so that mostly complementary or alternative technical or organizational safeguards must be implemented , Alternative technical protective measures can be:
+However, anti-virus programs typically can not be installed on all components. Possible limitations may be a lack of manufacturer release, unsupported operating platforms (eg field systems or PLCs), lack of updating of virus signatures or potential availability risks, so that in most cases complementary or alternative technical or organizational safeguards must be implemented , Alternative technical protective measures can be:
 
 * Securing external interfaces of an OT component (site connections, access by service providers, interfaces to the office network and the Internet)
 * Outlaw endangered systems into secured network segments (with a filtering component if needed to connect to other zones (see Virus Protection Program section above)
@@ -169,7 +169,7 @@ Alternative organizational protection measures can be:
 * Regulations for data exchange and use of removable media
 * Prohibition of connecting third-party devices
 * Manual virus scanning with special offline antivirus solutions in maintenance windows
-In order to effectively protect the OT from malware, coordinated and appropriate security measures must be selected and implemented, taking into account the environmental characteristics. On this basis, an anti-virus concept has to be developed, which shows how the protection against malicious programs is achieved.
+In order to effectively protect the OT from malicious programs, coordinated and appropriate security measures must be selected and implemented, taking into account the environmental characteristics. On this basis, an anti-virus concept has to be developed, which shows how the protection against malicious programs is achieved.
 
 ** Application Whitelisting **
 
@@ -198,7 +198,7 @@ This is all the more true for information security, since it is only on this bas
 The depth of the documentation may differ. For example, a PLS that is a closed system may be limited to the outside interface. As a rule, the PLS itself has an internal administration or a uniform software / hardware version depending on the system version. In other cases, all components can be documented.
 
 ** Creating and Maintaining the Documentation **
-The form of documentation management should be geared to the needs of the target group and should be as practicable as possible. Documentation may take the form of one or more documents embedded in a web site or specific IT tools. However, the existing requirements for the availability of the documentation, which in particular must be accessible also in disturbance and emergency situations, must be considered. This can be done, for example, by replication on emergency systems or as a hard copy on the respective workstation and / or at the emergency location. At the same time, the filing should also take into account the sensitivity of the documentation in order to prevent unauthorized access.
+The form of documentation management should be geared to the needs of the target group and should be as practicable as possible. Documentation may take the form of one or more documents embedded in a web site or specific IT tools. However, the existing requirements for the availability of the documentation, which must be accessible, in particular, in fault and emergency situations, must be observed. This can be done, for example, by replication on emergency systems or as a hard copy on the respective workstation and / or at the emergency location. At the same time, the filing should also take into account the sensitivity of the documentation in order to prevent unauthorized access.
 
 The operator must ensure that changes relevant to the operation are recorded in the system documentation. Through regular checks on up-to-dateness, failures in daily business can be identified and made up for.
 
@@ -226,7 +226,7 @@ The list can, for example, document the following properties:
 * Model / product type
 * Operating system,
 * installed applications and services, including ports and protocols used,
-* Patch level of each software with the patch import date (for IT systems such as PLCs and related devices, it is important to have firmware levels of each CUPU and each module),
+* Patch level of each software with the patch import date (for IT systems such as PLCs and related devices, it is important to keep firmware levels of each CUPU and each module),
 * Date of the last virus scan (or automatic repeat interval) and
 * Backup interval (full and incremental), extent of backup and last performed backup.
 ** Network or network structure plan **
@@ -296,11 +296,11 @@ When operating the system, it is important to incorporate changes and adjustment
 
 ** Change Management **
 
-Administrative changes to the existing infrastructure or OT components can influence the information security of the environment and should be planned, checked, adequately tested, performed and documented through a binding change process. The nature of the process depends strongly on the respective organization or OT and should be comprehensibly documented. In less complex environments with a small administration team, the change process can essentially be based on procedural requirements (planning, information requirements for maintenance, procurement of software and updates, execution of tests (test concept), regulations on the use of service providers) as well as documentation obligations (eg. comprehensive or system-bound administration journal). In larger organizations, there may be a more complex change process consisting of application, review, testing, and approval procedures, and the use of supporting tools (forms, technically supported workflows, CMDB, etc.).
+Administrative changes to the existing infrastructure or OT components can affect the information security of the environment and should be planned, tested, adequately tested, performed and documented through a binding change process. The nature of the process depends heavily on the respective organization or OT and should be comprehensibly documented. In less complex environments with a small administration team, the change process can essentially be based on procedural requirements (planning, information requirements for maintenance, procurement of software and updates, execution of tests (test concept), regulations on the use of service providers) as well as documentation obligations (eg. comprehensive or system-bound administration journal). In larger organizations, there may be a more complex change process consisting of application, review, testing and approval procedures, and the use of supporting tools (forms, engineering workflows, CMDB, etc.).
 
 ** time synchronization **
 
-A large number of processes, but also administrative activities, are based on a precise and coordinated time (eg the traceability of distributed protocol data, addition of additives in production at the right time, etc.). It has to be considered based on the application requirements how the time synchronization takes place.
+A large number of processes, but also administrative activities, are based on a precise and coordinated time (eg the traceability of distributed protocol data, the addition of additives in production at the right time, etc.). It has to be considered based on the application requirements, how the time synchronization takes place.
 
 For synchronization, the Network Time Protocol (NTP) or IEEE 1588 can be used.
 The time signal for the systems should come from a trusted source. For example, zones of high criticality should not move their time from a less protected zone if the signal could possibly be tampered with. The clients on the OT components should interpret the time in a consistent, standardized format (for example, considering time zones, winter and summer time).
@@ -328,9 +328,9 @@ Authorizations must be formally requested and successfully verified before they 
 
 Authorization management must have a complete overview of the authorizations assigned to a person. This overview must also include the authorization history of a person as well as information about the respective authorization request and the test and release process carried out.
 
-The inventory management of user accounts and authorizations must be presented in usable form and used as a basis for a target / actual comparison.
+The inventory management of user accounts and authorizations must be presented in usable form and used as the basis for a target / actual comparison.
 
-** Verification of existing receipts **
+** Verification of existing access **
 
 Authorization management requires an interface to the HR process, so that status changes in employee employment relationships can be taken into account in a timely manner. Additions and authorizations of fixed-term and external employees should always be limited in time for the duration of the employment or commissioning relationship.
 
@@ -340,7 +340,7 @@ In the case of IT authorizations, special requirements for authorization managem
 
 ** Use of personal user access **
 
-If supported by the system, user access for interactive system usage should be created by users and administrators as personal accounts and assigned to the owner. If the use of personal access is not technically possible or not feasible in the existing environment, the allocation of group access must remain comprehensible.
+If supported by the system, user access for interactive system usage should be created by users and administrators as personal accounts and assigned to the owner. If the use of personal access is technically not possible or not feasible in the existing environment, the allocation of group access must remain comprehensible.
 
 ** Role-based authorization for personal access **
 
@@ -353,7 +353,7 @@ The management of authorizations can be done independently for the OT by the ins
 
 **Groups**
 
-Basically, the use of personal user access due to the higher traceability and user responsibility is preferable. In certain cases, however, the use of functional group access can be represented, if this can achieve operational advantages or improved availability, which would otherwise be difficult to achieve by other means. Each group access must be documented separately. Persons who have access to the access to persons must, for organizational reasons, eg. B. be documented comprehensibly on shift schedules. An example could be the use of an "operator" access in a control room, which is staffed around the clock and in which everyone with access to each other knows each other. The functional accesses, as well as other accesses, must be integrated into the proper process of managing entitlements. In particular, it must be ensured that only the minimum rights required are granted. In case of doubt, different tasks can be distributed to different accesses, so that ideally as much of the staff as possible needs read-only access. Each access must be assigned to a responsible person.
+Basically, the use of personal user access due to the higher traceability and user responsibility is preferable. In certain cases, however, the use of functional group access can be represented, if this can achieve operational advantages or improved availability, which would otherwise be costly to produce by other means. Each group access must be documented separately. Persons who have access to the access to persons must, for organizational reasons, eg. B. be documented comprehensibly about shift schedules. An example could be the use of an "operator" access in a control room, which is staffed around the clock and in which all persons with access know each other. The functional accesses, as well as other accesses, must be integrated into the proper process of managing entitlements. In particular, it must be ensured that only the minimum rights required are granted. In case of doubt, different tasks can be distributed to different accesses, so that ideally as much of the staff as possible needs read-only access. Each access must be assigned to a responsible person.
 
 ** Responsibility for functional and technical user access **
 
@@ -434,14 +434,14 @@ Externally accessible remote maintenance access must be planned appropriately an
 * Access Restrictions Access to remote maintenance access should be restricted to known, predefined network areas where possible.
 * Secure authentication External connection setup should be securely authenticated. This can be achieved, for example, by means of an additional token or client certificate. With dial-up connections, a call-back procedure can be set up for a stored telephone number.
 * Use of secure protocols External access to OT environments must be via encrypted and integrity-assured protocols only.
-* Use of jump servers External remote maintenance access to OT components should not be done directly, but via hardened jump servers in a DMZ infrastructure (see IND.1.M16 Greater isolation of the zones). The bounce server can be protected against attacks as well as being up-to-date while the OT component is out of date due to availability requests or missing updates. This protects the component from unauthorized or malicious access, prevents data transfers, enforces checks for malicious programs, and enforces session time limits or disconnections during inactivity.
+* Use of jump servers External remote maintenance access to OT components should not be done directly, but via hardened jump servers in a DMZ infrastructure (see IND.1.M16 Greater isolation of the zones). The bounce server can be protected against attacks as well as being up-to-date while the OT component is still out of date due to availability requests or missing updates. This protects the component from unauthorized or malicious access, prevents data transfers, enforces checks for malicious programs, and enforces session time limits or disconnections during inactivity.
 * Demand-dependent activation If remote access is required only occasionally, the external access should be deactivated by default and activated only when required.
 * Access logging should be traceable by appropriate logging. In the case of very high protection needs, consideration should be given to recording the administration session by appropriate procedures.
-In the design of the remote access care should be taken to prevent the use of unwanted tunnels (TLS, SSH, IPsec) to circumvent security measures. Such tunnels could make components and services of the OT components undesirably accessible.
+When designing the remote access, care should be taken to prevent the use of unwanted tunnels (TLS, SSH, IPsec) to circumvent security measures. Such tunnels could make components and services of the OT components undesirably accessible.
 
 #### IND.1.M9 Restrictive use of removable media and mobile devices
 
-Removable media on the one hand (eg USB stick) and mobile devices on the other hand (eg service laptop) have become main entry points for attacks, as these components often cross the carefully constructed zone boundaries and can be misused to create malware or software Move orders into or send out sensitive information.
+Removable media on the one hand (eg USB stick) and mobile devices on the other hand (eg service laptop) have become main entry points for attacks, as these components often cross the carefully constructed zone boundaries and can be misused to create malicious software or Move orders into or send out sensitive information.
 
 ** Regulations on removable media and mobile devices **
 
@@ -458,7 +458,7 @@ In the new planning of plants and systems should be dispensed with the use or re
 
 ** Removable Disk (Quarantine PC) **
 
-A quarantine PC can test for malware on behalf of OT storage media. For this purpose, employees must be instructed to check storage media from an untrustworthy source (eg USB sticks) for malicious programs by means of the quarantine PC before such data carriers are transferred to the OT network or to OT components with no or limited access Antivirus program can be connected.
+A quarantine PC can test for malware on behalf of OT storage media. For this purpose, employees must be instructed to check storage media from an untrustworthy source (eg USB sticks) for malicious programs using the quarantine PC before such data carriers are transferred to the OT network or to OT components with no or limited access Antivirus program can be connected.
 
 The quarantine PC should have a current patch level of virus protection programs and be recorded with current malware signatures. Therefore, the signatures of quarantine PCs must always be up to date.
 
@@ -472,9 +472,9 @@ Smartphones, tablets and other mobile devices that are not exclusively managed i
 
 ** Use of notebooks for maintenance purposes **
 
-In applications, notebooks are often used as mobile maintenance devices. As a matter of principle, it is important to define the work to be carried out before each mission and the employee must be able to do so because of his or her training and knowledge. When working on systems with high protection requirements (SIL, GMP etc.), additional measures must be taken to ensure that no unintentional changes are made.
+In applications, notebooks are often used as mobile maintenance devices. In principle, it is important to define the work to be carried out before each mission and the employee must be able to do so due to his training and knowledge. When working on systems with high protection requirements (SIL, GMP etc.), additional measures must be taken to ensure that no unintentional changes are made.
 
-Technical safety measures (eg protection of the configuration data of the field device by means of appropriate bridge) or alternatively organizational measures (four-eye principle) are to be applied.
+Technical safety measures (eg protection of the configuration data of the field device by means of appropriate bridge) or alternatively organizational measures (dual control principle) must be applied.
 
 ** Internal devices **
 
@@ -489,12 +489,12 @@ Before using an external maintenance device, an inventory is required. To clarif
 * Which software is installed (including operating system and patches)
 * Which interfaces are available and active (eg UMTS / GPRS / GSM)
 * Which malware protection is installed (are current signatures available?)
-Once this inventory has been completed and has not yielded any negative findings, the next step will be to investigate malicious programs using antivirus protection that complies with institutional requirements. Once this test is successfully completed, OT access can be granted.
+Once this inventory has been completed and has not yielded any negative findings, the next step is to investigate malicious programs using anti-virus protection that complies with institutional requirements. If successfully completed, OT access can be granted.
 In this context, the use of individual firewalls (USB-operated compact devices) has proven itself with different users. These are switched between the respective OT component and the maintenance device and are intended to prevent unwanted activities.
 
 #### IND.1.M10 Monitoring, Logging and Detection [Area Safety Officer]
 
-By early detection of security-relevant events can react to these promptly and thus a possible damage is limited. Therefore, a strategy should be developed in advance in a Security Incident Response Plan as to how security-relevant events are detected and identified, which reactions are required and how a safe state can be restored. The Security Incident Response Plan should take into account the phases of planning, reaction and recovery. For example, to classify the events, notify, document, investigate the event and the actions derived from it.
+By early detection of security-relevant events, they can respond promptly and thus limit possible damage. Therefore, a strategy should be developed in advance in a Security Incident Response Plan as to how security-relevant events are detected and identified, which reactions are required and how a safe state can be restored. The Security Incident Response Plan should take into account the phases of planning, reaction and recovery. For example, to classify the events, notify, document, investigate the event and the actions derived from it.
 
 In particular, the responsibilities and roles as well as the further course of action (eg notification to authorities or publication) should be defined. Here also the data protection officer is to be involved.
 
@@ -548,7 +548,7 @@ In addition, attention must be paid to the applicable data protection regulation
 To ensure safe operation, a suitable infrastructure for operational monitoring of system operation should be designed, implemented and operated. The monitoring should include not only the operational availability and utilization monitoring of services, systems and networks but also the evaluation of security-relevant events.
 
 This will usually not happen if the logs are spread across a variety of systems. Therefore, a central log server should be set up. This must be suitably embedded in the zone concept (see IND.1.M5 Development of a suitable zone concept). If necessary, multiple log servers are required to maintain the separation of the zones.
-The incoming logs must be systematically evaluated so that the appropriate response can be triggered if necessary. In the case of a manageable number of systems, this can be done on a random basis, with at least one (role) responsibility and one frequency (depending on the protection requirement, eg weekly) to be determined. With a larger OT infrastructure, only an at least partially automated evaluation will allow the detection of critical events.
+The incoming logs must be systematically evaluated so that the appropriate response can be triggered if necessary. In the case of a manageable number of systems, this can be done on a random basis, for which at least one (role) responsibility and frequency (depending on the protection requirements, eg weekly) must be defined. With a larger OT infrastructure, only an at least semi-automated evaluation will allow to detect critical events.
 
 Based on events that occur and limits on monitored values, an alarm should be raised to inform the component's IT operations about the event.
 
@@ -560,17 +560,17 @@ The following list illustrates possible examples of such events and patterns:
 * Unusual increase in CPU load and memory usage.
 ** Implementation of intrusion detection or intrusion prevention systems **
 
-Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) can be used to detect attempts to attack at an early stage, so that IT operations can be alerted at an early stage (IDS) or an automated response to the attack is initiated (IPS) ,
+Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) can be used to detect attempts to attack at an early stage so that IT operations are alerted early (IDS) or an automated response to the attack is initiated (IPS) ,
 
-To do this, IDS / IPS works on the basis of heuristics to distinguish attack attempts from common, desired behaviors and data. Accordingly, these heuristics must be updated regularly. When updating the heuristics, the instructions for updating virus signatures should be taken into account. In addition, the heuristics must be adapted to the OT and its individual circumstances. Typical incidents and events that can be detected by such a system are e.g. B. unauthorized access to systems and the unauthorized installation of software or manipulation of data. In addition, unintentional and accidental changes (eg in configuration files) can also be noticed.
+To do this, IDS / IPS works on the basis of heuristics to distinguish attack attempts from common, desired behaviors and data. Accordingly, these heuristics must be updated regularly. When updating the heuristics, the instructions for updating virus signatures should be taken into account. In addition, the heuristics must be adapted to the OT and its individual circumstances. Typical incidents and events that can be detected by such a system are e.g. B. unauthorized access to systems and the unauthorized installation of software or manipulation of data. In addition, unintentional and accidental changes (eg in configuration files) can also be detected.
 
 An IDS / IPS can monitor individual servers (host-based IDS / IPS, HIDS / HIPS) or monitor the traffic through sensors in the network (network-based IDS / IPS, NIDS / NIPS).
 
-If a NIDS / NIPS is used, the sensors should be placed in the network for monitoring the data traffic, in particular for external interfaces (eg DMZ). External interfaces are usually more vulnerable to attacks (eg, the Internet). Likewise, a HIDS should be installed on all OT components. The log data of the HIDS should be integrated into a central logging.
+If a NIDS / NIPS is used, the sensors should be placed in the network for monitoring the data traffic, especially with external interfaces (eg DMZ). External interfaces are usually more vulnerable to attacks (eg, the Internet). Likewise, a HIDS should be installed on all OT components. The log data of the HIDS should be integrated into a central logging.
 
 IDS / IPS should be considered as an additional safeguard and do not replace system and network monitoring (eg through a Security Information Event Management (SIEM) system).
 
-The use and operation of an IDS can only be recommended for larger institutions, since the setup, maintenance and review of the notifications (especially in the initial phase) are not without considerable effort. In smaller plants the effort and the benefit must be checked in advance and alternative curing and protective measures may have to be implemented.
+The use and operation of an IDS can only be recommended for larger institutions, as the set-up, maintenance and review of the notifications (especially in the initial phase) are not inconsiderable. In smaller plants the effort and the benefit must be checked in advance and alternative curing and protective measures may have to be implemented.
 
 When implementing an IPS, it should also be borne in mind that planning also takes into account very specific situations, so that these legitimate transmissions are not prevented. Before activating these functions, therefore, a very thorough trial phase must be completed.
 The effectiveness of an IDS / IPS strongly depends on a customized and individual configuration. For example, the effectiveness can be affected by a high number of recurring false positives. In particular, IPS should be used wisely. Priority here is the ongoing operation, which could be disturbed by a faulty intervention of the IPS.
@@ -581,7 +581,7 @@ Therefore, not only the initial configuration of the IDS / IPS requires a traine
 
 ** Development and Integration **
 
-OT components are delivered as a combination of hardware and software. The adaptation to the individual circumstances and needs is realized by the configuration. In some cases it may be necessary to develop your own software (eg scripts, batch files for batch processing) to integrate certain automatisms or functions later. If own programs or also scripts are developed, then the secure creation (Secure Coding Guidelines) of the programs as well as the safe integration into the existing environment should be regulated by an internal software development guideline.
+OT components are delivered as a combination of hardware and software. The adaptation to the individual circumstances and needs is realized by the configuration. In some cases, it may be necessary to develop your own software (eg scripts, batch files for batch processing) in order to subsequently integrate certain automatisms or functions. If own programs or scripts are developed, both the secure creation (Secure Coding Guidelines) of the programs and the secure integration into the existing environment should be regulated by an internal software development guideline.
 
 ** Confidentiality agreement with manufacturers, suppliers and external operators **
 
@@ -616,7 +616,7 @@ The institution shall take into account the information security specification p
 
 In addition to the hardware (eg industrial computers), the software (eg protocol stack, OT applications) should also react robustly to invalid entries. For example, invalid network packets should not cause the software to crash or fail, but should be ignored by the protocol stack and logged as needed.
 
-The robustness of the components should already be ensured by the manufacturers. This requirement should already be required when acquiring new components by the institution.
+The robustness of the components should already be ensured by the manufacturers. This requirement should already be required when the institution purchases new components.
 
 ** Support for anti-virus solutions **
 
@@ -641,7 +641,7 @@ There are several different cases: For one component (product, system, applicati
 * no vulnerabilities publicly known. This can change at any time.
 
  
-+ In addition, vulnerabilities can only be known to certain parties who do not want to publish them for different reasons.1The exploitation of a vulnerability before the vulnerability was publicly disclosed is a so-called zero-day ("exploit").
++ In addition, vulnerabilities can only be known to certain parties who do not want to publish them for a variety of reasons.1The exploitation of a vulnerability before the vulnerability was publicly disclosed is a so-called zero-day ("exploit").
 
 
  
@@ -674,7 +674,7 @@ The vulnerability management must identify gaps in the software, components, pro
 
 ** ** Inventory Analysis
 
-During the initial implementation of the vulnerability management, a weak-point analysis of the initial situation must be carried out to derive action requirements. On the basis of the existing infrastructure, the institution must identify all existing vulnerabilities of all installed components (products, applications, systems, protocols, external interfaces). This should be based on manufacturers' vulnerability advisories and publicly available CERTs. In addition, organizational and technical weak point analysis audits can be performed. This is especially recommended for higher protection requirements and for special exposure (eg interfaces to the Internet).
+During the initial implementation of the vulnerability management, a weak point analysis of the initial situation must be carried out once to derive the need for action. On the basis of the existing infrastructure, the institution must identify all existing vulnerabilities of all installed components (products, applications, systems, protocols, external interfaces). This should be based on manufacturers' vulnerability advisories and publicly available CERTs. In addition, organizational and technical weak point analysis audits can be performed. This is especially recommended for higher protection requirements and for special exposure (eg interfaces to the Internet).
 
 Importing security-relevant updates as part of a systematic patch management can be a way to close certain vulnerabilities. For this, a suitable procedure for the respective environment must be determined, whether, how and when patches can be applied.
 
@@ -689,7 +689,7 @@ A procedure for software maintenance should be attached to the evaluation proces
 
 ** ** patching
 
-Where patching is possible, the risks of which are estimated and considered acceptable, a patch process with role-specific responsibilities should be defined which, in addition to the patches and updates released by the manufacturer, also considers additional third-party software (eg office applications, PDF readers). The process should contain at least the following elements:
+Where patching is possible, the risks of which are estimated and considered acceptable, a patch process with role-specific responsibilities should be defined which, in addition to the patches and updates released by the manufacturer, also takes into account additional third-party software (eg office applications, PDF readers). The process should contain at least the following elements:
 
 * Regular check for new vulnerability reports from the manufacturers of OT components or third-party software
 * Criticality assessment of patches, for example with Common Vulnerability Scoring System (CVSS),
@@ -737,9 +737,9 @@ Many organizations already have emergency management based on different requirem
 
 * Complete failure of the Internet connection including remote maintenance for a longer period of time (> 1 week)
 * Complete failure of Office IT for a certain period of time (eg 2 days)
-* Temporary failure of critical IT components in the OT area for a period that can not be captured with standard operating processes
+* Temporary failure of critical IT components in the OT area for a period that is not traceable with standard operating processes
 Compromise of critical IT components in the OT area by an unknown attacker or by malicious programs
-If business continuity management (BCM) already exists, the emergency management for the OT infrastructure can be integrated into it. Otherwise, a BCM should be set up, for example according to IT-Grundschutz (module DER.4 emergency management or BSI standard 100-4), which includes the OT infrastructure.
+If business continuity management (BCM) already exists, emergency management for the OT infrastructure can be integrated into it. Otherwise, a BCM should be set up, for example according to IT-Grundschutz (module DER.4 emergency management or BSI standard 100-4), which includes the OT infrastructure.
 
 ** System Backup and Recovery **
 
@@ -748,13 +748,13 @@ For the OT, a backup and recovery concept should be created. The basis for this 
 The security infrastructure of the OT should be operated as independent as possible from the infrastructure of the Office IT solution. When using a common infrastructure, the risks arising from the dependencies should be considered and adequately taken into account. This applies in particular to the storage of system backups or project data on file servers of the office IT.
 
 ** Recovery Plan **
-A recovery plan should specify how basic OT functions can be resumed after a significant failure. Actions should be derived in advance to ensure the restart of production in a reasonable time after a production or safety incident has occurred. These include, for example, backup processes, recovery and periodic backup testing, system recovery procedures, defective component repair and inventory of spare parts, as well as alternative communication and control options for outages.
+A recovery plan should specify how basic OT functions can be resumed after a significant failure. Actions should be derived in advance to ensure the restart of production in a reasonable time after a production or safety incident has occurred. These include, for example, backup processes, recovery and periodic backup testing, system recovery procedures, defective component repair and inventory of spare parts, as well as alternative communication and control capabilities for outages.
 
 The plan should be reviewed at regular intervals and at least annually for topicality and revised if necessary.
 
 Emergency plans and procedures must be compatible with applicable laws and other regulatory requirements. The emergency planning for the OT infrastructure can either be integrated into an existing emergency management or be established as an independent emergency management for the OT. In the latter case, OT emergency management can also be part of existing OT crisis management.
 
-The organization must develop contingency plans for defining categories of failures and other crises. In the event of failure of all or part of the OT or major communications links, pre-defined actions must be taken (eg, safely shut down the controlled process or maintain the last operational state prior to the event).
+The organization must develop contingency plans for defining categories of failures and other crises. In the event of failure of all or part of the OT or critical communication links, pre-defined actions must be taken (eg, safely shut down the controlled process or maintain the last operational state prior to the event).
 
 Restoring the OT infrastructure to a safe state means all system parameters (default parameters such as organization-specific) are set to safe values, safety-critical updates are (re) installed, security-related settings are restored, system documentation and operating instructions are available, and current, verified backups are restored and the whole system is fully tested and functional.
 
@@ -766,7 +766,7 @@ OT emergency management must be evaluated regularly (eg once a year). To do this
 
 With regard to redundancy as an important measure of business continuity, the same applies in the OT area as it does for Office IT. The design and dimensioning of the redundancies always has to comply with the protection requirements and must cover all mission-critical elements of the OT environment, including power supply, supply lines, data cables, active network components, etc.
 
-If there is a high demand for availability, an alternative control center (control room, control room, etc.) should be set up which is ready for action in the event of a failure of the main control center within a certain time frame defined by the organization with the help of the protection requirement (so-called emergency location). This emergency location should
+If there is a high demand for availability, an alternative control center (control room, control room, etc.) should be set up which is ready for action in the event of a failure of the main control center within a certain time frame defined by the organization with the aid of the protection requirement (so-called emergency location). This emergency location should
 
 * be geographically separated so that exposure to a natural disaster on both sites is unlikely
 * reachable in case of emergency (even in case of regional outages of electricity and other services),
@@ -787,11 +787,11 @@ When selecting the authentication methods, a safety consideration must be carrie
 
 The management of these requirements should preferably be implemented via a central management solution (eg in a directory service). There should be no additional dependency on other zones. This can be achieved by operating the directory service within the zone for which it is needed. Information from a directory service in another zone can be replicated as needed.
 
-Not all of the measures mentioned here are fully applicable to all OT components useful. For example, an attacker can block user access through provoked, failed login attempts. Thus, access to the affected system by the legitimate user would no longer be possible. Therefore, the gain in security due to the particular measure and possible restrictions on other requirements for the OT components (eg required, immediate access) must be weighed against each other. There should always be an emergency process that can maintain operation in the event of authentication failure. In this context, the technical user and service access required for automated operation should as far as possible not be dependent on a directory service.
+Not all of the measures mentioned here are fully applicable to all OT components useful. For example, an attacker could block user access through provoked, failed login attempts. Thus, access to the affected system by the legitimate user would no longer be possible. Therefore, the gain in security due to the particular measure and possible restrictions on other requirements for the OT components (eg required, immediate access) must be weighed against each other. There should always be an emergency process that can maintain operation in the event of authentication failure. In this context, the technical user and service access required for automated operation should as far as possible not be dependent on a directory service.
 
 #### IND.1.M15 Permission Checking and Monitoring (CIA)
 
-Necessary The basis for this measure is that IND.1.M7 establishment of an authorization management has been implemented correctly. In the case of increased protection requirements, the requirements for authorization management are increased as follows. The goal is to make it easier and faster to prevent or at least identify abuse.
+Necessary The basis for this measure is that IND.1.M7 establishment of an authorization management has been implemented correctly. In the case of increased protection requirements, the requirements for authorization management are increased as follows. The goal is to prevent or at least detect abuse more easily and quickly.
 
 ** Audit-proof maintenance of an inventory overview and history **
 
@@ -806,7 +806,7 @@ It makes sense to automate the compilation of the effective authorizations while
 
 Critical permissions can be abused in different ways:
 
-In the first case, the likelihood of reducing one's likelihood and at least improving the traceability and elucidation of others when logging critical administrative activities can be reduced. This should be done centrally and needs a systematic evaluation (see IND.1.M10 Monitoring, Logging and Detection). In order to be effective in cases 1 and possibly also 4, the logs should not simply be deleted or manipulated by the same role whose action was logged. At a minimum, deletion or manipulation should be reported to another independent role. Even better is to prevent the deletion or manipulation technically and to automatically report attempts of erasure or manipulation to an independent role.
+In the first case, the likelihood of reducing the likelihood of others improving at least the traceability and elucidation when logging critical administrative activities. This should be done centrally and needs a systematic evaluation (see IND.1.M10 Monitoring, Logging and Detection). In order to be effective in cases 1 and possibly also 4, the logs should not simply be deleted or manipulated by the same role whose action was logged. At a minimum, deletion or manipulation should be reported to another independent role. Even better is to prevent the deletion or manipulation technically and to automatically report attempts of erasure or manipulation to an independent role.
 
 #### IND.1.M16 Greater Foreclosure of Zones (IA)
 
@@ -814,8 +814,8 @@ Interfaces to zones with high or very high protection requirements may require m
 
 The safety assessment should be carried out taking into account the design of the respective interface on the basis of elementary hazards. In this procedure, the relevant elementary hazards must first be determined and the respective interface must be examined for adequate protection. From this point of view, it may be necessary to discard interfaces or additionally protect them against the identified threats if the established security measures do not adequately cover the identified threats.
 
-The protection measures required in each case result from the risk assessment and may also require adjustments to the communicating OT components such as hardening, antivirus protection, patch management or the award of minimum legal requirements. Due to the often limited possibilities of action there, such protective measures can also be implemented on an interface system. For this purpose, the construction of a DMZ can be considered.
-The communication between the security areas considered (such as external access to the OT) is terminated in this DMZ by application layer gateways (ALG) such as proxy or data transfer server. Specific content checks on the gateway, such as checking for malicious programs or data format checks (eg XML checking through a web application firewall or protocol checks by industrial firewalls), can be carried out by the firewall systems, ensuring that only predefined communication paths are possible and desired communication direction of the connection structure is observed. The ALGs can be specially hardened and enforce the safety requirements for the zone without the need for adjustments to the OT components. Such a DMZ infrastructure can be used depending on the environmental requirements per interface or for multiple interfaces.
+The protection measures required in each case result from the risk assessment and may also require adjustments to the communicating OT components such as hardening, antivirus protection, patch management or the awarding of minimum legal requirements. Due to the often limited possibilities of action there, such protective measures can also be implemented on an interface system. For this purpose, the construction of a DMZ can be considered.
+The communication between the security areas considered (such as external access to the OT) is terminated in this DMZ by application layer gateways (ALG) such as proxy or data transfer server. Specific content checks on the gateway, such as checking for malicious programs or data format checks (eg XML checking through a web application firewall or protocol checks by industrial firewalls), can be performed on the gateway. Firewall systems ensure that only predefined communication paths are possible and desired communication direction of the connection structure is observed. The ALGs can be specially hardened and enforce the safety requirements for the zone without the need for adjustments to the OT components. Such a DMZ infrastructure can be used depending on the environmental requirements per interface or for multiple interfaces.
 
 #### IND.1.M17 Regular Security Check (I)
 
@@ -870,7 +870,7 @@ Control circuits ensure defined reaction times with regard to their time behavio
 
 ** Legal requirements / restrictions **
 
-There are many applications in which the operation of the equipment is subject to regulatory requirements (eg CE certification of equipment, safety guidelines, guidelines for the production of pharmaceutical products). In these cases, significant changes, including software changes to the OT components used, may require a dedicated approval process. Due to the prescribed test process, for example, the possibilities for timely import of security updates are limited or not given here.
+There are many applications in which the operation of the equipment is subject to regulatory requirements (eg CE certification of equipment, safety guidelines, guidelines for the production of pharmaceutical products). In these cases, significant changes, including software changes to the OT components used, may require a dedicated approval process. Due to the prescribed test process, for example, the possibilities for the timely import of security updates are limited or not given here.
 
 **Software**
 
@@ -880,7 +880,7 @@ The firmware is updated by the manufacturers only when malfunctions occur; Chang
 
 ** Changes and Updates **
 
-Changing system configurations or applying updates often causes major problems, unlike Office IT. Before the action, possible effects on the timing or other effects on the systems should be considered. During execution, availability may be restricted (eg due to a necessary restart). After the completion of the measure, a decrease (eg with regard to safety aspects) must be renewed. As a result, changes and updates are generally only introduced as part of planned plant shutdowns.
+Changing system configurations or applying updates often causes major problems, unlike Office IT. Before the action, possible effects on timing or other effects on the systems should be considered. During execution, availability may be restricted (eg due to a necessary restart). After the completion of the measure, a decrease (eg with regard to safety aspects) must be renewed. As a result, changes and updates are generally only introduced as part of planned plant shutdowns.
 
 **Hardware**
 

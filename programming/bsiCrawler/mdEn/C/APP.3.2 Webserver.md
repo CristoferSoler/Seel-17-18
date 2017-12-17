@@ -41,7 +41,7 @@ In addition to DDoS, other types of denial-of-service attacks can affect the ava
 
 ### 2 4 Loss of confidential data
 
-Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to attackers being able to read or change the communication between the clients and the servers or between the servers.
+Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to an attacker being able to read or change the communication between the clients and the servers or between the servers.
 
 ### 2 5 Violation of laws or regulations
 
@@ -116,10 +116,10 @@ In order to select suitable security measures for the web server, it should be p
 
 #### APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
 
-A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
+A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how to implement security measures, and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
-If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.

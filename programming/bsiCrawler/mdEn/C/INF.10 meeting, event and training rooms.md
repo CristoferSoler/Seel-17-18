@@ -86,7 +86,7 @@ In addition, the power supply SHOULD be built out of a subdivision separate from
 Dedicated training and presentation calculators SHOULD be provided with a minimal configuration. It should be determined which applications can be used on training and presentation computers in the respective event. The training and presentation computers SHOULD only be connected to a separate network separate from the institution's LAN. Other networks SHOULD only be accessible restrictively.
 
 #### INF.10.A8 Creation of a proof of use for rooms
-Depending on the type of use of the meeting, event and training rooms, it should be clear who used the rooms at what time. For premises where training on IT systems or particularly confidential meetings are carried out, proof of use should also be provided. It SHOULD be considered to introduce evidence of use for premises accessible to each employee.
+Depending on the type of use of the meeting, event and training rooms, it should be clear who used the rooms at what time. For premises where training on IT systems or particularly confidential meetings are carried out, proof of use should also be provided. It SHOULD be considered to introduce proof of use for premises that are accessible to each employee.
 
 ### 3.3 Requirements for increased protection requirements
 

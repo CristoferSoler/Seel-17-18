@@ -9,7 +9,7 @@ Active Directory is mainly used in IT networks with predominantly Microsoft comp
 
 ### 1.2 Objective
 
-This building block aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
+This module aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
 
 ### 1.3 Delimitation
 
@@ -45,18 +45,18 @@ By failing to systematically plan and implement the formation of and the right t
 
 ### 2 7 Unsafe authentication
 
-So-called "legacy" (ie historical) authentication mechanisms in the area of ​​AD such as LM (LAN Manager) and NTLM (NT LAN Manager) v1 are considered to be insecure today and can easily be bypassed by attackers under certain conditions. This allows an attacker to gain and abuse rights without knowing, guessing or otherwise breaking user passwords, thus compromising the domain or parts of it.
+So-called "legacy" (ie historical) authentication mechanisms in the area of ​​AD such as LM (LAN Manager) and NTLM (NT LAN Manager) v1 are considered insecure today and can easily be bypassed by attackers under certain conditions. This allows an attacker to gain and abuse rights without knowing, guessing or otherwise breaking user passwords, thus compromising the domain or parts of it.
 
 ### 2 8 Enroll AD administrators on low trust systems
 It has to be assumed that malicious code reaches different systems such as normal workstations or servers. An attacker who gains access will be looking for other credentials that he can abuse. When privileged accounts log on to all kinds of IT systems, the attacker gains a variety of opportunities to grab the credentials and gain additional privileges, especially if the credentials are cached there.
 
 ### 2 9 Lack of supervision of privileged group membership
 
-In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads attackers to have more and more opportunities to gain and abuse additional privileges.
+In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads to more and more opportunities for attackers to gain and abuse additional privileges.
 
 ### 2 10 Too powerful or poorly secured service accounts
 
-Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Since the credentials of a service running in the context of a service account are held in the LSASS's protected memory, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
+Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Because the credentials of a service running in the context of a service account are held in LSASS's protected storage, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
 
 In particular, this applies if the service account is secured with a weak password. For an attacker can easily request a TGS (Ticket Granting Service) ticket when using Kerberos authentication, in which the password of the service account is processed, and the latter offline break brute force.
 
@@ -79,7 +79,7 @@ The following requirements MUST be implemented as a priority:
 
 #### APP.2.2.A1 Active Directory Planning [Responsible Person]
 
-There must be a suitable domain functional level as high as possible. The justification SHOULD be suitably documented. An on-demand Active Directory authorization concept MUST be designed. Administrative delegations MUST be equipped with restrictive and needs-based permissions. The planned Active Directory structure including any schema changes SHOULD be documented in a comprehensible way.
+It MUST select a suitable, highest possible domain functional level. The justification SHOULD be suitably documented. An on-demand Active Directory authorization concept MUST be designed. Administrative delegations MUST be equipped with restrictive and needs-based permissions. The planned Active Directory structure including any schema changes SHOULD be documented in a comprehensible way.
 
 #### APP.2.2.A2 Active Directory Administration Planning [Specialists]
 

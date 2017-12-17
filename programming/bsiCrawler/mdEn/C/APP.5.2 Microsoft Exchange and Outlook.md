@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mail, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Similarly, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
 Microsoft Outlook is a client made directly available by installing the Microsoft Office suite or integrating with the operating systems of mobile devices. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
@@ -65,7 +65,7 @@ Many software manufacturers provide programming interfaces in their tools and ap
 
 The following are specific requirements for the Microsoft Exchange and Outlook sections. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -105,7 +105,7 @@ The installation SHOULD be done on the basis of the mission planning of Microsof
 
 #### APP.5.2.A7 Migrating from Microsoft Exchange systems
 
-All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook in the various versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
+All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
 
 #### APP.5.2.A8 Secure operation of Microsoft Exchange
 
@@ -120,7 +120,7 @@ When using functional enhancements (for example, Microsoft Exchange Access Sync,
 
 #### APP.5.2.A10 Outlook settings
 
-Only administrators should be able to change the Outlook environment. For this purpose, a separate Outlook profile with the user-specific settings SHOULD be created for each user. Users SHOULD only be able to change user-defined settings (eg set up signature, activate absence agent). , Attachments SHOULD not be opened automatically from emails. Preview window and the car preview SHOULD be deactivated. E-mails SHOULD NOT be forwarded automatically.
+Only administrators SHOULD be able to change the Outlook environment. For this purpose, a separate Outlook profile with the user-specific settings SHOULD be created for each user. Users SHOULD only be able to change user-defined settings (eg set up signature, activate absence agent). , Attachments SHOULD not be opened automatically from emails. Preview window and the car preview SHOULD be deactivated. E-mails SHOULD NOT be forwarded automatically.
 
 #### APP.5.2.A11 Secure communication to and from Microsoft Exchange systems
 
@@ -169,7 +169,7 @@ Mechanisms such. B. Encrypting File System or Windows BitLocker Drive Encryption
 
 #### APP.5.2.A18 Regular Security Checks for Microsoft Exchange Systems (CIA)
 
-The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during an examination:
+The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during a test:
 
 * regular searches of safety-related information,
 * Authorizations for revision users,

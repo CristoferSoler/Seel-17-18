@@ -5,7 +5,7 @@
 
 A file server (or file server) is a server in a network that centrally provides files for all authorized users or clients. The data can be used by authorized users at the same time, without this z. B. to removable media or to distribute by e-mail. By keeping the data central, the data can be structured and provided in different file versions. For file servers, rights can be assigned centrally and data backup can be done centrally.
 
-A file server usually manages mass storage devices that are connected to it via interfaces such as SCSI (Small Computer System Interface) or SAS (Serial Attached SCSI). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (host bus adapter) in the server and SAN switches.
+A file server usually manages mass storage devices that are connected to it via interfaces such as SCSI (Small Computer System Interface) or SAS (Serial Attached SCSI). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (Host Bus Adapter) in the server and SAN switches.
 
 ### 1.2 Objective
 
@@ -37,11 +37,11 @@ If access authorizations and approvals are not properly designed and assigned, t
 
 ### 2 5 Unstructured data management
 
-If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files may be located in directories or file systems that are made accessible to third parties or that are not consistent versions.
+If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files reside in directories or file systems that are made accessible to third parties, or that are not consistent versions.
 
 ### 2 6 Unsuitable installation of the file server
 
-If file servers are deployed in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
+If file servers are set up in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
 
 ### 2 7 Lack of or insufficient data protection concept
 
@@ -52,7 +52,7 @@ If a file server fails completely, individual components are defective or an emp
 
 The following are specific requirements for the Fileserver area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -103,7 +103,7 @@ It SHOULD be determined a structure, according to which data are to be stored. U
 
 All storage resources of the file server SHOULD be cataloged, eg. Hard disks, flash memory, tape drives. In addition, it should be checked regularly whether the memory is still working as intended. In order to be able to react quickly in the event of bottlenecks, replacement storage tanks SHOULD be reserved.
 
-If a memory hierarchy (primary, secondary or tertiary memory) has been set up, a (partially) automated memory management SHOULD be used. If data is distributed automatically, it should be checked manually on a regular basis to see if it works correctly.
+If a memory hierarchy (primary, secondary or tertiary memory) has been set up, (partially) automated memory management SHOULD be used. If data is distributed automatically, it should be checked manually on a regular basis to see if it works correctly.
 
 Furthermore, the memories used SHOULD be included in the logging concept of the information network. The following events SHOULD at least be logged:
 
@@ -118,7 +118,7 @@ The results SHOULD be sufficiently documented. Discovered shortcomings SHOULD ca
 
 #### APP.3.3.A11 Use of Quotas
 
-It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only grant write access to the system administrator.
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -126,11 +126,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.3.A12 Encryption of the data (CI)
 
-All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malicious software. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It SHOULD be made sure that the virus protection can check the encrypted files for malware. Cryptographic bowl SHOULD be safely generated and kept separate from the data (see also CON.1 crypto concept).
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
-For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or independent sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
 #### APP.3.3.A14 Use of Error Correction Codes (I)
 In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
@@ -140,7 +140,7 @@ In principle, error-detecting or error-correcting codes SHOULD be used to store 
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the area of ​​"file servers" can be found in the following publications, among others:
+Additional information on threats and security measures in the area of ​​"file servers" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

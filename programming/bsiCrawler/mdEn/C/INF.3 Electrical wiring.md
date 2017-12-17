@@ -26,7 +26,7 @@ If a cable burns, either by spontaneous combustion or by flame, this can have va
 
 ### 2 2 Inadequate dimensioning of electrotechnical cabling
 
-When planning workplaces, server rooms or data centers, it is often the mistake to orientate these exclusively to current needs. It is overlooked that the capacity of the power grid has to be expanded by new requirements such as the use of additional servers. However, an extension of the electrotechnical cabling is only possible to the extent permitted by the existing, laid cables or the space available for additional cables and distributions.
+When planning workstations, server rooms or data centers, it is often the mistake to align them exclusively with current needs. It is overlooked that the capacity of the power grid has to be expanded by new requirements such as the use of additional servers. However, an extension of the electrotechnical cabling is only possible to the extent permitted by the existing, laid cables or the space available for additional cables and distributions.
 
 ### 2 3 Insufficient documentation of the wiring
 
@@ -45,7 +45,7 @@ Fluctuations in the supply voltage can lead to malfunctions and damage to the IT
 
 ### 2 7 Use of insufficient power strips
 
-Often, the number of fixed sockets for the amount of devices to be operated is not enough. To compensate for this deficiency, then typically socket strips are used. Such power strips provide, if they are of insufficient quality, a dangerous source of ignition and thus a major fire hazard. In addition, several smaller power strips connected in series to provide sufficient slots for all devices, the risk increases due to low line cross-section and overload on.
+Often, the number of fixed sockets for the amount of equipment to be operated is not enough. To compensate for this deficiency, then typically socket strips are used. Such power strips, if they are of inadequate quality, a dangerous source of ignition and thus a major fire hazard. In addition, several smaller power strips connected in series to provide sufficient slots for all devices, the risk increases due to insufficient cable cross-section and overload on.
 
 3 requirements
 ---------------
@@ -66,7 +66,7 @@ Cables, cable trays and cable trays MUST be adequately dimensioned before they a
 
 #### INF.3.A3 Professional installation
 
-The installation work of the electrical wiring MUST be done carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the electrotechnical cabling MUST therefore be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When installing power cables, special care must be taken to ensure that the installation does not cause damage and that the cable routes are such that damage to the routed cables due to normal use of the building is excluded.
+The installation work of the electrical wiring MUST be done carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the electrotechnical wiring MUST therefore be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When installing power cables, special care must be taken to ensure that the installation does not cause damage and that the cable routes are such that damage to the routed cables due to normal use of the building is excluded.
 
 ### 3.2 Standard requirements
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​electrical wiring. They SHOULD be implemented in principle.
@@ -77,7 +77,7 @@ Basically, an analysis of the requirements that have an influence on a future-pr
 
 #### INF.3.A5 Decrease in electrotechnical cabling
 
-The electrotechnical wiring SHOULD be subjected to a acceptance process. A decrease SHOULD only take place when all tasks to be performed have been completed, the contractor has reported the action for acceptance and no unacceptable deficiencies have been identified during the inspections by the contracting authority. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. In addition to the correct billing and the actual scope of the services, compliance with the different standards for electrical wiring MUST be checked during the acceptance. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons. The protocol SHOULD be part of the internal documentation of the cabling.
+The electrotechnical wiring SHOULD be subjected to a acceptance process. A decrease SHOULD take place only after all the tasks to be performed have been completed, the contractor has reported the action for acceptance and no unacceptable deficiencies have been identified during the inspections by the contracting authority. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. In addition to the correct billing and the actual scope of the services, compliance with the different standards for electrical wiring MUST be checked during the acceptance. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons. The protocol SHOULD be part of the internal documentation of the cabling.
 
 #### INF.3.A6 overvoltage protection
 
@@ -85,7 +85,7 @@ Each electrically conductive network SHOULD be protected against overvoltages. F
 
 #### INF.3.A7 Removing and Disabling Unnecessary Lines
 
-When power cables are no longer needed, they should be removed properly and completely. Afterwards, the fireboards MUST be closed professionally. Cabling, which can be usefully used as reserve with the existing technology, SHOULD be maintained in an operable state. Such cables MUST be marked accordingly at least at the end points. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the corresponding documentation MUST be updated.
+When power cables are no longer needed, they should be removed properly and completely. Subsequently, the fireboards MUST be closed professionally. Cabling, which can be usefully used as reserve with the existing technology, SHOULD be maintained in an operable state. Such cables MUST be marked accordingly at least at the end points. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the corresponding documentation MUST be updated.
 
 #### INF.3.A8 Fire protection in paths
 
@@ -112,7 +112,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.3.A13 Secondary Power Supply (A)
 
-The primary energy supply from an energy supply company's network SHOULD be supplemented with emergency care measures in the event of increased availability requirements. For this purpose, a sufficiently dimensioned central UPS and a network backup system (NEA) SHOULD be set up for the areas to be protected. It SHOULD be checked if the connections to the network operator should be redundant. NEA and UPS MUST be serviced regularly.
+The primary energy supply from an energy supply company's network SHOULD be supplemented with emergency care measures in response to increased availability requirements. For this purpose, a sufficiently dimensioned central UPS and a network backup system (NEA) SHOULD be set up for the areas to be protected. It SHOULD be checked if the connections to the network operator should be redundant. NEA and UPS MUST be serviced regularly.
 
 #### INF.3.A14 A-B supply (A)
 
@@ -120,7 +120,7 @@ It SHOULD be examined whether a two-way, so-called A-B supply should be created 
 
 #### INF.3.A15 Material security of electrical wiring (A)
 
-In rooms with public access or in unclear areas of a building SHOULD be considered to secure lines and distributors against unauthorized access. In any case, the number and extent of sites where power supply facilities are accessible to unauthorized persons SHOULD be minimized.
+In rooms with public access or in confusing areas of a building SHOULD be considered to secure lines and distributors against unauthorized access. In any case, the number and extent of sites where power supply facilities are accessible to unauthorized persons SHOULD be minimized.
 
 #### INF.3.A16 Use of Cabinet Systems (A)
 

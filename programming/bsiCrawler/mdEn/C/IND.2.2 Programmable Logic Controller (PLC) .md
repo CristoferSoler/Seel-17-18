@@ -7,7 +7,7 @@ A Programmable Logic Controller (PLC) is an ICS component. It handles control an
 
 A PLC has digital inputs and outputs, a real-time operating system (firmware) and other interfaces for Ethernet or fieldbuses. The connection to sensors and actuators takes place via the analog or digital inputs or outputs or via a fieldbus. Communication with process control systems usually takes place via the Ethernet interface and IP-based networks.
 
-The possible implementations are manifold: PLCs can be used as a module, as a single unit, as a PC plug-in card (slot PLC) or as software emulation (soft PLC). The most common are modular PLCs, which are composed of different functional plug-in modules. Increasingly, other functions such as visualization, alarming and logging are realized by the PLC.
+The possible implementations are manifold: PLCs can be used as a module, as a single unit, as a PC plug-in card (slot PLC) or as software emulation (soft PLC). The most commonly encountered are modular PLCs that are composed of different functional plug-in modules. Increasingly, other functions such as visualization, alarming and logging are realized by the PLC.
 
 Due to the high availability requirements typical in the OT environment and the often extreme environmental conditions (climate, dust, vibration, corrosion), ICS components have always been designed as robust devices with high reliability and a long service life.
 
@@ -15,7 +15,7 @@ PLCs are usually configured or programmed using special software from the respec
 
 ### 1.2 Objective
 
-The aim of the device is to protect all types of programmable logic controllers, regardless of manufacturer, type, purpose and location. It can be applied to a single PLC or a contiguous board used as a PLC.
+The goal of the device is to protect all types of programmable logic controllers, regardless of manufacturer, type, purpose and location. It can be applied to a single PLC or a contiguous board used as a PLC.
 
 ### 1.3 Delimitation
 

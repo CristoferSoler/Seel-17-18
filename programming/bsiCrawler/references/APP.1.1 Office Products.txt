@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### APP.1.1.A1 Ensure the integrity of Office products
 #### APP.1.1.A2 Restricting Active Content [User]
 #### APP.1.1.A3 Opening documents from external sources
@@ -17,3 +17,15 @@
 ### 3.3 Requirements for increased protection requirements
 #### APP.1.1.A15 Use of encryption and digital signatures (CI)
 #### APP.1.1.A16 Integrity check of documents (I)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.37 denying actions
+* G 0.39 Malware
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

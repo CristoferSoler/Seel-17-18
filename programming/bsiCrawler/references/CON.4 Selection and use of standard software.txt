@@ -13,3 +13,14 @@
 #### CON.4.A10 Implementation of Additional Security Features (CIA)
 #### CON.4.A11 Use of certified standard software (CIA)
 #### CON.4.A12 Use of encryption, checksums or digital signatures (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.22 Manipulation of information
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

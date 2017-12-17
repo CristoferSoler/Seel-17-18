@@ -41,11 +41,11 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This should avoid data loss. However, the automated replication of unencrypted data involves risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
-Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data for which he has no authorization. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
+Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data he does not have permission to. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
 
 ### 2 6 Overcoming the logical network separation
 
@@ -53,7 +53,7 @@ If the network structures of different clients are separated by virtual storage 
 
 ### 2 7 Failure of components of a storage solution
 
-Complex, network-based storage often consists of many components (such as FC switches, storage controllers, virtualization appliances). If components of a storage solution fail, this can lead to important applications becoming inoperable and data loss threatening.
+Complex, network-based storage solutions often consist of many components (such as FC switches, storage controllers, virtualization appliances). If components of a storage solution fail, this can lead to important applications becoming inoperable and data loss threatening.
 
 ### 2 8 Obtaining Physical Access to SAN Switches
 
@@ -63,7 +63,7 @@ If an institution has inadequate access and access controls to the components of
 ---------------
 The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -101,7 +101,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 Based on the institution's general security policy, a specific security policy for storage solutions SHOULD be created. It should describe in a comprehensible way requirements and specifications how storage solutions can be safely planned, administered, installed, configured and operated.
 
-The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
+The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
 
 #### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
 A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
@@ -172,7 +172,7 @@ If entire storage solutions or individual components of a storage solution are n
 #### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
 It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
 
-It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
+It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely deleted.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -199,7 +199,7 @@ To ensure the integrity of the SAN fabric, protocols with additional security fe
 * Fiber Channel Password Authentication Protocol (FCPAP).
 #### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
 
-In SAN environments, data SHOULD be deleted by overwriting the associated memory segments of a LUN multiple times.
+In SAN environments, data SHOULD be deleted by repeatedly overwriting the associated memory segments of a LUN.
 
 #### SYS.1.8.A26 Securing a SAN through hard zoning
 

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-In this module, the secure exchange of information is considered, with the focus on digital and analog media as transport media, but also the exchange of information in personal meetings or via IT networks. Even with a broadband network connection, it may be useful or necessary to transmit data carriers for the exchange of information. One reason may be that there is no or no sufficiently trusted connectivity between the affected IT systems. Data carriers can be exchanged during personal meetings or via shipping.
+In this module, the secure exchange of information is considered, with a focus on digital and analog media as transport media, but also the exchange of information in personal meetings or via IT networks. Even with a broadband network connection, it may be useful or necessary to transmit data carriers for the exchange of information. One reason may be that there is no or no sufficiently trusted connectivity between the affected IT systems. Data carriers can be exchanged during personal meetings or via shipping.
 
 ### 1.2 Objective
 
@@ -14,7 +14,7 @@ The aim of this module is to secure the exchange of information between differen
 This module is always to be used if there is an exchange of information with offices outside of one's own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
-* the exchange of information takes place with the help of data carriers. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
+* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
 The protection of network connections is covered in other components of the IT-Grundschutz Compendium. Further processing in the target IT system is not considered. In this module, the basic rules for a secure exchange of information are in the foreground, especially in the use of mobile data carriers. The reasons why there is no or no sufficiently trusted network between the affected IT systems are not considered.
 
 In addition, this module also takes into account the storage of the data on the sender and receiver system, insofar as it is directly related to the data medium exchange, as well as the handling of the data carriers before or after the transfer. This module considers mobile data carriers such. As removable disks, optical media, USB sticks and hard drives and not to forget paper documents.
@@ -87,9 +87,9 @@ The institution MUST specify which communication partners may receive and share 
 
 #### OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
 
-If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may only be used for the purpose for which they were disclosed.
+If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may be used only for the purpose for which they were disclosed.
 
-#### OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+#### OPS.1.2.3.A3 Instructing the staff to exchange information [Specialists]
 
 Staff MUST be informed about the framework conditions for the exchange of information. It MUST know what information they are allowed to give when, where and how.
 
@@ -166,7 +166,7 @@ If the data to be transmitted has been created or compiled solely for the purpos
 
 ### 4.1 Literature
 
-Further information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
+Additional information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

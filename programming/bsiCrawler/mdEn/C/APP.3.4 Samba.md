@@ -26,7 +26,7 @@ When attackers hear unprotected * Samba * communication links, information can b
 
 ### 2 2 Incorrect logging in Samba
 
-Improperly designed or missing logging in * Samba * can lead to security issues. Without proper logging, errors or attacks go undetected and preventive measures and early warning system indicators can not be defined.
+Improperly designed or missing logging in * Samba * can lead to security problems. Without proper logging, errors or attacks go undetected and preventive measures and early warning system indicators can not be defined.
 
 ### 2 3 Incorrect emergency preparedness in Samba
 
@@ -71,7 +71,7 @@ The following requirements MUST be implemented as a priority:
 
 The introduction of a * Samba * server MUST be carefully planned and regulated. Depending on the application scenario, it is necessary to define which tasks the * Samba * server should fulfill in the future, in which operating mode it is operated and which components of * Samba * and which other components are required for this.
 
-If the cluster solution CTDB (Cluster Trivia Data Base) is used, the implementation of Samba MUST be carefully conceptualized. If * Samba * is also to provide the Active Directory (AD) services for Linux and Unix systems, the deployment MUST be carefully planned and the installation tested. Furthermore, the authentication process for the AD MUST be carefully designed and implemented. The introduction and the order in which the Stackable Virtual File System (VFS) modules are executed MUST be carefully designed and the implementation documented.
+If the cluster solution CTDB (Cluster Trivia Data Base) is used, the introduction of Samba MUST be carefully conceptualized. If * Samba * is also to provide the Active Directory (AD) services for Linux and Unix systems, the deployment MUST be carefully planned and the installation tested. Furthermore, the authentication process for the AD MUST be carefully designed and implemented. The introduction and the order in which the Stackable Virtual File System (VFS) modules are executed MUST be carefully designed and the implementation documented.
 
 If IPv6 is used with Samba, this too MUST be carefully planned and also checked for error-free integration in a close-to-operational test environment.
 
@@ -106,7 +106,7 @@ If a version of * Samba * is used that can not map so-called * Alternate Data St
 
 The default parameters used by * Samba * to map DOS attributes to the Linux file system SHOULD NOT be used. Instead, * Samba * SHOULD be configured to store DOS attributes and the status indicators for inheritance (flag) in * Extended Attributes *. The shares SHOULD only be managed via the registry.
 
-Furthermore, the effective access permissions to the shares of the * Samba * server, as well as the log files, SHOULD be checked regularly.
+Furthermore, the effective access permissions to the shares of the * Samba * server as well as the log files SHOULD be checked regularly.
 
 #### APP.3.4.A6 Secure configuration of Winbind under Samba
 
@@ -141,7 +141,7 @@ Administrators SHOULD address the specific areas of * Samba * used, such as: As 
 
 #### APP.3.4.A13 Regular backup of important system components of a Samba server
 
-SHOULD include all system components required to restore a * Samba * server into the institution-wide backup concept. Also the account information from all used backends SHOULD be considered. Likewise, all TDB files SHOULD be backed up. Furthermore, the registry SHOULD be backed up if it was used for shares.
+SHOULD include all system components required to restore a * Samba * server into the institution-wide backup concept. Also the account information from all used backends SHOULD be considered. Likewise, all TDB files SHOULD be backed up. Furthermore, the registry SHOULD be secured if it was used for shares.
 
 The configuration data, status information and system files SHOULD be compatible with each other.
 
@@ -149,7 +149,7 @@ The configuration data, status information and system files SHOULD be compatible
 
 In order to be able to quickly reinstall the * Samba * server in an emergency, the necessary installation packages and information SHOULD be deposited at a specified location. It SHOULD be guaranteed that they are available at all times. The documentation of the * Samba * configuration SHOULD always be up to date and comprehensible.
 
-For the * Samba * server SHOULD be tested depending on the server role and the availability requirements, whether it can be recovered and how long it takes. Based on the results, the emergency plan SHOULD be improved.
+For the * Samba * server SHOULD be tested depending on the server role and the availability requirements, whether it can be recovered and how long that takes. Based on the results, the emergency plan SHOULD be improved.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -157,14 +157,14 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.4.A15 Encryption of data packets under Samba (CI)
 
-In order to ensure the integrity and confidentiality of the data packets in the transport path, the data packets SHOULD be encrypted with the encryption methods integrated in SBM3.
+To ensure the integrity and confidentiality of the data packets in the transport path, the data packets SHOULD be encrypted with the encryption methods integrated in SBM3.
 
 4 Further Information
 ------------------------------
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
+Further information on threats and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
 
 * #### [SAMBA] Samba
 

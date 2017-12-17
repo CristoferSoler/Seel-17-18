@@ -17,7 +17,7 @@ The goal of the building block is for users or even IT components to be able to 
 
 This module describes basic requirements for the development of identity and authorization management.
 
-Requirements concerning components of an identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
+Requirements concerning components of identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
 
 2 risk situation
 -----------------
@@ -35,7 +35,7 @@ Also, it is possible that employees who have been moved to a new department reta
 In institutions, employees often have user access to various IT systems such as production, test, quality assurance or project systems. These are usually in different areas of responsibility and are managed by different administrators. As a result, an identical and unique user ID is not used on all IT systems and there is usually no central overview of the user access on the individual IT systems. In such a scenario, it is not possible to immediately disable all user accesses of an employee in the event of an attack or password theft. Also, when an employee leaves the institution, all receipts can not be blocked immediately.
 
 ### 2 3 Inappropriate access, access and access rights management
-If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hamper the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
+If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to receive permissions on demand, or conversely, only through unnecessarily complicated ways to get them. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
 3 requirements
 ---------------
@@ -50,7 +50,7 @@ The following requirements MUST be implemented as a priority:
 
 It must be governed by how users and user groups are to be set up. All users and user groups MAY ONLY be set up via separate administrative roles.
 
-#### ORP.4.A2 Regulation for setting up, changing, and revoking privileges [Administrator, Head of IT]
+#### ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
 
 User IDs and permissions MAY ONLY be assigned based on actual needs. Personnel changes MUST remove the user IDs and permissions that are no longer required. Applying Employees Authorizations that go beyond the standard may ONLY be assigned after further justification. All permissions MUST be set up via separate administrative roles.
 

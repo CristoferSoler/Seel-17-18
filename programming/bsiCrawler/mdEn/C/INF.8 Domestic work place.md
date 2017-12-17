@@ -26,7 +26,7 @@ Since a home-based workplace is located outside the institution, the employees t
 
 ### 2 2 Unauthorized access to vulnerable areas of the home workplace
 
-Rooms in a home-based workplace where sensitive information is kept and processed, or where vulnerable equipment is placed, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
+Rooms in a home-based workplace where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
 
 ** Examples **
 
@@ -34,11 +34,11 @@ Rooms in a home-based workplace where sensitive information is kept and processe
 * When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
 ### 2 3 Impairment of IT use due to unfavorable working conditions at the home workplace
 
-A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
+A non-ergonomic home-based workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
-When documents, media or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
+If documents, data carriers or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
 
 * If unique items are transported (missing backup), goals and tasks can not be achieved as planned after loss.
 * If unencrypted data carriers fall into the wrong hands, this can lead to serious confidentiality losses.
@@ -63,7 +63,7 @@ The home office is usually not as well secured as the workplace in a company or 
 
 The following are specific requirements for the protection of the home workplace. Basically, the employee is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -102,7 +102,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)
 
-If employees are required to handle official or highly-sensitive information, SHOULD consider considering leaving home a domestic job. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
+If employees are required to process official documents or information with increased protection needs, they should consider giving up a home-based workplace altogether. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
 
 4 Further Information
 ------------------------------

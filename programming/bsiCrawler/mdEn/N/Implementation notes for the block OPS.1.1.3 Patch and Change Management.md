@@ -7,7 +7,7 @@ The task of change management is to make changes in applications, infrastructure
 
 Especially in the field of information technology, many authorities and companies are faced with the challenge of correctly and promptly adopting the necessary changes to the components of their system landscape due to the ever-accelerating development and increasing demands of users. Experience in government agencies and companies shows that security holes or malfunctions are often the result of incorrect or missing changes.
 
-This document demonstrates how to build a well-functioning patch and change management in an institution. It also describes how the process can be controlled and optimized so that disruptions in operation can be avoided and security gaps can be minimized and eliminated in a timely manner. The descriptions focus on the IT operation, but can also be implemented analogously in other business processes. The term change management in this module refers to the task of planning and controlling changes. Patch management is a part of change management that aims at updating software and should always be applied.
+This document demonstrates how to build a well-functioning patch and change management in an institution. It also describes how the process can be controlled and optimized so that disruptions in operation can be avoided and security gaps can be minimized and eliminated in a timely manner. The descriptions focus on the IT operation, but can also be implemented analogously in other business processes. In this module, the term change management refers to the task of planning and controlling changes. Patch management is a part of change management that aims at updating software and should always be applied.
 
 ### 1.2 Life cycle
 
@@ -23,7 +23,7 @@ Patch and change management can be meaningfully supported by technical aids, for
 
 **Procurement**
 
-There are different products that support the patch and change management process. In order to make an appropriate choice from these products, the requirements for these tools, such as which platforms to support, must be determined prior to procurement (see OPS.1.1.3.M8 * Safe Use of Change Management Tools *).
+There are different products that support the patch and change management process. In order to make an appropriate choice from these products, the requirements for these tools, such as which platforms to support, must be specified prior to procurement (see OPS.1.1.3.M8 * Safe Use of Change Management Tools *).
 
 **Implementation**
 During implementation, all IT systems managed by Patch and Change Management should be subordinated individually or in groups. Furthermore, changes to these systems must be documented in a central location (see OPS.1.1.3.M11 * Continuous Documentation of Information Processing *).
@@ -77,7 +77,7 @@ Important for patch and change management is also an authorization concept:
 * the revision of the organization-wide information security guideline
 may require. For major changes, therefore, information security management should be included.
 
-#### OPS.1.1.3.M2 Definition of responsibilities [Head of IT]
+#### OPS.1.1.3.M2 Definition of responsibilities [Head IT]
 
 When setting up patch and change management, a number of responsibilities need to be addressed. It must be ensured that there is a precise definition of each task and organization area, which responsibilities an employee has in the patch and change process, and how the coordination between the individual areas has to proceed.
 
@@ -88,15 +88,15 @@ For the efficient and effective coordination and evaluation of the changes, a de
 
 It is imperative that changes take place in a coordinated manner. No employee may make changes on their own. All employees of the IT organization must also agree to relevant changes with the change management. This ensures that any changes do not interfere with each other or even lead to a system failure.
 
-For an institution of at least medium size or with complex IT infrastructures, the change manager should be supported in its work by a Change Advisory Board (CAB). It has been proven that, in addition to the persons entrusted with the technical implementation of change tasks, one person from each department should also be appointed as a member of the CAB. The CAB is convened regularly at scheduled times to assess changes and help the change manager assess, prioritize and authorize them. As a rule, the CAB will only be subject to serious changes. For this purpose, the CAB may be composed differently in terms of its members. For example, the complete CAB could come together every three months to discuss critical change requests.
+For an institution of at least medium size or with complex IT infrastructures, the change manager should be supported in its work by a Change Advisory Board (CAB). It has been proven that, in addition to the persons entrusted with the technical implementation of change tasks, one person from each department is also to be appointed as a member of the CAB. The CAB is convened regularly at scheduled times to assess changes and help the change manager assess, prioritize and authorize them. As a rule, the CAB will only be subject to serious changes. For this purpose, the CAB may be composed differently in terms of its members. For example, the complete CAB could come together every three months to discuss critical change requests.
 
-For uncritical regular changes, the agreements can be made directly between the change manager and the responsible administrators or the test team.
+For uncritical, regular changes, the agreements can be made directly between the change manager and the responsible administrators or the test team.
 
 In order for the CAB to perform its tasks properly, its members must be able to assess how changes can impact both technically and in terms of business goals and processes.
 
 #### OPS.1.1.3.M3 Configuring Auto Update Mechanisms [Administrator]
 
-Many products have automatic update mechanisms (autoupdate) that inform users when there are patches or updates. Often, these also offer the option of downloading and installing the updates immediately via the Internet. As a rule, today all operating systems and available standard software packages contain such mechanisms. The functionality of the update mechanism varies depending on the version, installation mode and manufacturer.
+Many products have automatic update mechanisms (autoupdate) that inform users when there are patches or updates. Often, these also offer the option of downloading and installing the updates immediately via the Internet. As a rule, all operating systems and available standard software packages today contain such mechanisms. The functionality of the update mechanism varies depending on the version, installation mode and manufacturer.
 
 Usually, auto-update IT products look for new versions or software packages each time the system or software is started or timed on a public update server. The products provide several ways to configure the auto-update mechanism. When new IT components are put into operation, it should always be checked whether and which update mechanisms they have and how they can be configured. It should also be checked which data is transferred from the auto-update mechanism to the manufacturer. It should first be clarified in principle how these mechanisms are handled. Then it should be determined how the update functions are concretely configured in the different products. The following sections give an overview of the different variants of these mechanisms.
 
@@ -105,13 +105,13 @@ Not every software can completely deactivate the update function. If the institu
 If no query of a public update server is desired, many software products can be redirected to Internet addresses other than those of the manufacturer, such as internal ones.
 Some manufacturers offer software for own operation of update servers or update mirror servers, whereby the update server in the institution is installed locally (eg Windows Server Update Services WSUS). The update server then communicates directly with the manufacturer and loads the desired updates. The advantage of this solution is that the IT systems of an institution affected by the update do not have to communicate themselves with the manufacturer's update server, but only with the locally installed system. As a result, data traffic to the outside can be reduced to a minimum. With many products for update servers, the desired settings can be conveniently made via a graphical user interface (GUI). However, there are also products in which the necessary settings to use local update servers or to prevent the query from a public update server are hidden or can only be prevented by packet filters or firewalls.
 
-If public update servers are to be used, the authenticity of the update server must first be checked (see OPS.1.1.3.M10 * Ensuring the Integrity and Authenticity of Software Packages *). In addition, it should be investigated whether update query actions can be set using time intervals or events. The settings must then be made according to the defined change strategy.
+If public update servers are to be used, the authenticity of the update server must first be checked (see OPS.1.1.3.M10 * Ensuring the Integrity and Authenticity of Software Packages *). We also wanted to investigate whether update query actions can be set by using time intervals or events. The settings must then be made according to the defined change strategy.
 
 It should be examined how the communication with update servers can be limited to the lowest possible level. It must also be decided whether direct communication with the manufacturer should be the only alternative or parallel to internal communication (parallel configuration).
 
 A parallel configuration is often useful for mobile users who do not always communicate within the government or enterprise network. For mobile IT systems, for example, it can be more important to load a current patch when it closes a dangerous security gap than to wait for release from change management. Instead, the change manager can also specify that all software changes occur only through the internal shared software distribution.
 
-With auto-update mechanisms, it is also important to note whether the changes are only downloaded to an internal IT system by the manufacturer and then the installation is left to the user, or if they are automatically installed immediately after they have been downloaded.
+With auto-update mechanisms, it is also important to note whether the changes are only downloaded to an internal IT system by the manufacturer and then the installation is left to the user, or whether they are automatically installed immediately after they have been downloaded.
 
 In addition, it must be determined how to deal with any necessary reboots of IT systems after the installation of changes, ie whether they are made directly or z. For example, when the system shuts down the next time.
 
@@ -131,8 +131,8 @@ When a Request for Change (RfC) request (see OPS.1.1.3.M5 * Dealing with Change 
 * Procurement or development of changes
  Many manufacturers offer to receive the necessary information about new hardware or software or about errors that have occurred and their rectification in the subscription by e-mail.
  Updates and patches are typically available for download on Internet servers. In part, these sources are only accessible in conjunction with valid registration or support contracts. Often, the installed software or operating system provides the user with the ability to load software changes directly from the particular application or system.
- Some manufacturers provide their customers with special applications to manage and update the products. In addition, there are also more and more applications that, if the user and the security settings allow it, automatically seek updates from their manufacturers via the Internet and inform the user. From a security point of view, however, there are also disadvantages if changes are automatically recorded. This means that faulty updates that are automatically imported can lead to failures and malfunctions. Therefore, it should be carefully considered whether such mechanisms should be used.
- Internal software development could be another way to make software changes if any security vulnerabilities or other requirements make it necessary. However, not only the necessary expertise must be available. The interfaces or the source code must also be open.
+ Some manufacturers provide their customers with special applications to manage and update the products. In addition, there are also more and more applications that, if the user and the security settings allow it, automatically seek updates from their manufacturers via the Internet and inform the user. From a security point of view, however, there are also disadvantages if changes are automatically imported. This means that faulty updates that are automatically imported can lead to failures and malfunctions. Therefore, it should be carefully considered whether such mechanisms should be used.
+ In-house software development could be another way to make software changes if any security vulnerabilities or other requirements make it necessary. However, not only the necessary expertise must be available. The interfaces or the source code must also be open.
 * Testing
  After a change has been recorded, the functionality of the systems must be determined by a test. Whenever possible, a representative selection of typical application scenarios with the specialist department must be defined and tested. The results should be documented and compared with the expected results in order to identify any problems. In addition, all log files created during the test must be examined for evidence of malfunction.
 * Integration into the software distribution, test of integration
@@ -150,7 +150,7 @@ Changes made should then be evaluated. Then the result is evaluated by Change Ma
 * Were the estimated costs, the planned effort and the timetable met?
 If the change was successful, the change request (Request for Change) or the change record can be closed. If the change fails, it must be decided whether the changes made need to be adjusted. In some cases, it is recommended that you undo the change and create a new or modified change request. In the case of a failed change, it may also be useful to investigate the causes and, based on this, adapt IT systems or processes. So similar problems can be avoided in the future.
 
-Depending on the nature and extent, it may be useful to evaluate the change immediately. On the other hand, it may also be beneficial to wait a few days or weeks to see what effect the change will have and whether the goal has been achieved. Changes made are only successfully completed once they have been positively evaluated and documented. To make sure that this is not forgotten, the change manager should be reminded of this by an automated resubmission.
+Depending on the nature and extent, it may be useful to evaluate the change immediately. On the other hand, it may also be beneficial to wait a few days or weeks to see what effect the change will have and whether the goal has been achieved. Changes made are only successfully completed once they have been positively evaluated and documented. To ensure that this is not forgotten, the change manager should be reminded of this by an automated resubmission.
 
 ** Withdrawal of changes **
 
@@ -211,7 +211,7 @@ Categories are usually assigned by change management, whereby security managemen
 * minor consequences:
  Changing this category requires little effort. The change manager can approve these types of changes without having to submit them to the CAB.
 * serious consequences:
- This category includes changes that require significant effort and have a significant impact on IT services. Such changes are discussed in the CAB in order to define the required effort and to minimize the risk. In the run-up to the meeting, the necessary documentation is first sent to the members of the CAB and, if necessary, to some IT specialists and developers.
+ This category includes changes that require significant effort and have a significant impact on IT services. Such changes are discussed in the CAB to define the effort required and to minimize the risk. In the run-up to the meeting, the necessary documentation is first sent to the members of the CAB and, if necessary, to some IT specialists and developers.
 * far-reaching consequences:
  Changing this category requires a lot of effort. For such a change, the change manager first requires authorization from the security management team. Subsequently, the change must be submitted to the CAB for assessment and further planning.
 **Planning**
@@ -234,7 +234,7 @@ The employees involved in the change management process plan the implementation 
 
 Whether a change management process succeeds depends on effective communication, as the individual process steps, as defined in OPS.1.1.3.M4 * Change Management Process Planning * and OPS.1.1.3.M5 * Dealing with Change Requests *, are common can only be continued after the responsible roles have responded.
 
-In addition to the Change Advisory Board (CAB), additional target groups may be included in the voting process for a hardware or software change. Which these are depends on the size and structure of the institution. Typically, the applicant should be involved in a hardware or software change, the IT help desk, and the end-user affected by the change, or a representative of the department.
+In addition to the Change Advisory Board (CAB), additional target groups may be included in the voting process for a hardware or software change. Which these are depends on the size and structure of the institution. Typically, the requestor of a hardware or software change, the IT help desk and the end user impacted by the change, or a representative of the department, should be involved.
 Business Process Owners must be aware of the application process for hardware or software changes. They also need to know what process the application is undergoing and what information will be provided during the application process. An essential aspect is the quality of the content of the Amendment Request (RfCs). The necessary information is often recorded as a form or via an input mask in a special application. Which information is needed and how the form is developed should therefore be carefully coordinated and determined with the possible target groups.
 
 In addition, the change management process must ensure that, in the event of serious changes, all subject-matter managers can comment on the content of the application in order to prevent a change that is undesirable from the point of view of a target group.
@@ -258,22 +258,22 @@ A patch and change management tool plays a vital role as the central entity to i
 ** Appropriate selection of tools **
 
 The change management process can be supported with different products or product combinations. There can be many reasons for implementing changes using a suitable tool. Frequently, heterogeneous IT infrastructures and the more effective use of resources are decisive.
-Before acquiring a patch and change management tool, the requirements and constraints should be determined to find a product that is appropriate for the particular institution. The procedure for the evaluation of a tool is always similar and is based on the valid change strategy of the institution, regardless of whether change management is needed as a tool for an operating system, for a manufacturer's product range or for a large heterogeneous IT scenario.
+Before a patch and change management tool is procured, the requirements and constraints should be identified to find a product that is appropriate for the particular institution. The procedure for the evaluation of a tool is always similar and is based on the valid change strategy of the institution, regardless of whether change management is needed as a tool for an operating system, for a manufacturer's product range or for a large heterogeneous IT scenario.
 
 The following are the main features that should be considered when choosing a product.
 
 * Platform support:
- On the one hand, this term refers to which platforms are supported with regard to the implementation of the patch and change process and, on the other hand, on which platform the tool itself is executable. Especially the first aspect should be considered in great detail, since in the server-client area, for example, most tool manufacturers support patches and changes to Microsoft products. However, this does not mean that the entire range of IT products available in the institution is covered, from desktop and server operating systems to application servers and individual products.
+ On the one hand, this term refers to which platforms are supported with regard to the implementation of the patching and modification process and, on the other hand, on which platform the tool itself is executable. Especially the first aspect should be considered in great detail, since in the server-client area, for example, most tool manufacturers support patches and changes to Microsoft products. However, this does not mean that the entire range of IT products available in the institution is covered, from desktop and server operating systems to application servers and individual products.
 * Change analysis:
- Some manufacturers are focusing on the amount of updates associated with the distribution process and their rapid distribution, as well as reporting the "delivery status". Some provide more information on the background or cause of a patch, partly with lists of affected files, more detailed description of the vulnerabilities and their own test reports. Especially for security patches, which should normally be distributed quickly, the detailed information provides an indispensable indication for the internal classification of the hardware or software change.
+ Some manufacturers are focusing on the amount of updates associated with the distribution process and their rapid distribution, as well as the reporting of "delivery status". Some provide more information about the background or cause of a patch, partly with lists of affected files, more detailed description of the vulnerabilities and their own test reports. Especially for security patches, which should normally be distributed quickly, the detailed information provides an indispensable indication for the internal classification of the hardware or software change.
 * Change verification:
- Most manufacturers provide hash sums, fingerprints or signatures with the changes to verify their authenticity and integrity. However, only a few tools check this evidence. Therefore, there is a risk that unwanted software is distributed in bulk in the institution and thus a considerable damage occurs. For security reasons, therefore, you should not use any change tools that do not have this function.
+ Most manufacturers provide hash sums, fingerprints or signatures with the changes to verify their authenticity and integrity. However, only a few tools check this evidence. Therefore, there is a risk that unwanted software is distributed in bulk in the institution and so a considerable damage occurs. For security reasons, therefore, you should not use any change tools that do not have this function.
 * Change strategy:
  The tool must allow flexible configuration to automate as many steps as possible in the chosen change strategy. This can vary greatly due to different platforms. The processed steps of the change process should be documented comprehensibly by the tool and, if necessary, audit-proof. Later changes in the process must be able to flow into the tool.
 * Distribution:
  Not every change should be applied to every system. The tool should be the grouping of systems and applications according to freely definable attributes such. Protection, location and organizational unit. These attributes can become IT system profiles according to the standardized system types in the institution.
 * Rollback:
- No software is perfect. Therefore, despite all the tests, it may be necessary to reverse a change process. Being able to automate this process saves time and money in the event of an error. If erroneous changes can not be canceled promptly and with little effort, this can cause considerable damage to the institution.
+ No software is perfect. Therefore, despite all the tests, it may be necessary to reverse a change process. Being able to automate this process saves time and money in the event of a fault. If erroneous changes can not be canceled promptly and with little effort, this can cause considerable damage to the institution.
 * Status evaluation: It must be possible to automatically and correctly distribute the changed hardware or software on all systems. As with software distribution, there might be problems with the connection or availability of a system. For example, a system may reject a patch due to other system states. It is therefore important that the change tool records the patch status of all systems. Depending on the strategy, if problems occur, the tool should continue the technical change process on the remaining IT systems or skip certain system groups or terminate the process.
 ** Security Policy for Using Change Management Tools **
 
@@ -323,8 +323,8 @@ Aspects for which guidelines must be formulated in this security policy are:
 ** Disruption and emergency care **
 
 * For emergency preparedness, the individual contingency plans of the applications and IT systems managed by Patch and Change Management must be considered.
-* Depending on the availability requirements for the Patch and Change Management tool, it should be considered to create a separate contingency plan for the tool in case of unwanted effects during and after installation of patches and changes.
-#### OPS.1.1.3.M9 Testing and Acceptance Procedure for New Hardware and Software [Head IT]
+* Depending on the availability requirements for the patch and change management tool, consider creating a separate contingency plan for the tool in case of unwanted effects during and after installation of patches and changes.
+#### OPS.1.1.3.M9 Testing and Acceptance Procedure for New Hardware and Software [IT Leader]
 
 Before new hardware components or new software are used in the production environment, they must be checked on special test systems. It must be checked whether the product is executable and whether it has a negative effect on the current IT systems. Since malfunctioning can not be excluded before successful tests and because errors are provoked during tests, test systems that are isolated from the production plant must always be used. General procedures for software acceptance and release, including testing, are described in APP.5.1 * Standard Software *. Only after passing the test may new components be installed on production systems.
 
@@ -342,7 +342,7 @@ Usually, test cases and the expected results for the software are developed. The
 To develop the test cases and to carry out the tests, the following should be noted:
 
 * the test cases are developed by the competent authority,
-* for test cases, no data of the active operation is used,
+* for test cases no data of the active operation is used,
 * Test data, in particular if data for this purpose are copied, must not contain any confidential information. Personal data must be anonymised or simulated,
 * The test must not affect the current operation. If possible, a logically or physically isolated test computer should be used.
 A decrease is to be refused if:
@@ -377,9 +377,9 @@ The release statement should include:
 * Restrictions on use (parameter setting, user group, ...),
 * Release date, from when the software may be used and
 * the actual release.
-If IT is technically possible, it must be prevented that software can be changed or manipulated unnoticed after release, for example by means of suitable integrity protection methods. Otherwise, appropriate organizational rules must be established to prevent or promptly detect changes to the software.
+If IT is technically possible, it must be prevented that software can be changed or manipulated unnoticed after release, for example by means of suitable integrity protection procedures. Otherwise, appropriate organizational rules must be established to prevent or promptly detect changes to the software.
 
-Even after intensive acceptance tests, errors in the software may be detected during ongoing use. In this case, it is necessary to determine how to proceed in such an error case (contact person, troubleshooting process, involvement of the responsible authority, repetition of acceptance and release, version control).
+Even after intensive acceptance tests, errors in the software may be detected during ongoing use. In this case, it is necessary to determine how to proceed in such an error case (contact person, troubleshooting procedure, involvement of the responsible authority, repetition of acceptance and release, version control).
 
 #### OPS.1.1.3.M10 Ensuring the integrity and authenticity of software packages [Administrator]
 In principle, software should only be installed from well-known sources, especially if it has not been delivered on data carriers but has been downloaded from the internet, for example. This is especially true for updates or patches. Most manufacturers and distributors offer checksums that can at least verify the integrity of a package. The checksums are usually published on the websites of manufacturers or sent by e-mail. To verify the integrity of a downloaded program or archive file, the published checksum is then compared to a locally generated checksum by a corresponding program.
@@ -446,14 +446,14 @@ The tests performed in the run-up to hardware, software, or configuration change
 
 For this it is inevitable to perform so-called post-tests. As a prerequisite, reference systems must be selected as quality assurance systems. In addition, it must be ensured that the post-tests are carried out by those business users who know the business processes of the institution and are able to assess any errors that may occur.
 
-If the change was necessary from a security point of view, the backtest must be initiated by the change manager and carried out by specialist users.
+If the change was necessary from a security point of view, the backtesting must be initiated by the change manager and carried out by specialist users.
 
 The results of the post-tests and evaluations are documented as part of the patching and change process. The Change Manager, the Change Advisory Board, and Security Management have data available to help improve the process.
 
 #### OPS.1.1.3.M14 Synchronization within Change Management [Change Manager] (CIA)
 
 Most government agencies and companies often make changes to the IT infrastructure. The change management process must react to these changes. It must be ensured that the respective patches and changes are promptly and if possible simultaneously applied to all affected IT systems.
-With mobile devices or even if the network used is overloaded, it can happen that IT systems can not be reached when distributing hardware or software changes. For such cases, appropriate mechanisms must be established to ensure that systems can not re-connect to the network until they have been provided with appropriate updates. There are several tools that verify access to the production network, whether security programs and security patches are up-to-date, and deny access to the internal network if there are security issues. Typically, such tools are used to first determine the software status of the systems and then assemble the software for update. Depending on the type of change process, these can then be distributed and installed automatically or after prior approval for these systems. Changes that require a system restart should be installed last, or only when the IT system shuts down. Depending on the technical support and implementation of the process, the updates can also be installed and the necessary reboot afterwards can be released separately.
+With mobile devices or even if the network used is overloaded, it can happen that IT systems are not reachable when distributing hardware or software changes. For such cases, appropriate mechanisms must be established to ensure that systems can not re-connect to the network until they have been provided with appropriate updates. There are several tools that check for access to the production network, whether security programs and security patches are up-to-date, and deny access to the internal network if there are security issues. Typically, such tools are used to first determine the software status of the systems and then assemble the software for update. Depending on the type of change process, these can then be distributed and installed automatically or after prior approval for these systems. Changes that require a system restart should be installed last, or only when the IT system shuts down. Depending on the technical support and implementation of the process, the updates can also be installed and the necessary reboot afterwards can be released separately.
 
 3 Further information
 ------------------------------

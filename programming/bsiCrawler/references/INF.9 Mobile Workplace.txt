@@ -12,3 +12,20 @@
 ### 3.3 Requirements for increased protection requirements
 #### INF.9.A10 Using anti-theft devices (CIA)
 #### INF.9.A11 Ban on the use of unsafe environments (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.24 Destruction of equipment or data media
+* G 0.25 Failure of devices or systems
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.44 Unauthorized intrusion into premises
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

@@ -15,7 +15,7 @@
 #### SYS.3.2.1.A13 Screensharing and casting regulations
 #### SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
 #### SYS.3.2.1.A15 Deactivation of download boosters
-#### SYS.3.2.1.A16 Deactivation of unused communication interfaces [user]
+#### SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
 #### SYS.3.2.1.A17 Using the SIM card PIN
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 #### SYS.3.2.1.A19 Using a language assistant
@@ -28,3 +28,30 @@
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 #### SYS.3.2.1.A26 Use of PIM containers (CIA)
 #### SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.15 Listening
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.24 Destruction of equipment or data media
+* G 0.25 Failure of devices or systems
+* G 0.26 Malfunction of equipment or systems
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.32 Abuse of permissions
+* G 0.36 Identity theft
+* G 0.37 denying actions
+* G 0.38 Abuse of personal data
+* G 0.39 Malware
+* G 0.42 Social engineering
+* G 0.43 Importing messages
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

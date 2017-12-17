@@ -34,7 +34,7 @@ Planning errors often turn out to be particularly serious, since it is easy to c
 * The transmission capacity may be insufficient. As a result, bandwidth-intensive applications can not be used with the required quality of service.
 ### 2 3 Missing or inadequate regulations for WLAN use
 
-In the case of a WLAN infrastructure that is not centrally administered, the access points in the default setting are usually preconfigured with no or only insufficient security mechanisms. For example, if an employee includes an unapproved or unsecured access point on an internal network of the institution due to a lack of regulations, he or she undermines virtually all security measures taken in the LAN, such as: For example, the security gateway (firewall) protects against unauthorized external access.
+In the case of a WLAN infrastructure that is not centrally administered, the access points in the default setting are usually preconfigured with no or only insufficient security mechanisms. For example, if an employee includes an unapproved or unsecured access point to an internal network of the institution due to a lack of regulations, he or she undermines virtually all security measures taken in the LAN, such as security. For example, the security gateway (firewall) protects against unauthorized external access.
 
 ### 2 4 Unsuitable selection of authentication methods
 
@@ -42,11 +42,11 @@ If authentication methods and mechanisms are missing or insufficient, security g
 
 ### 2 5 Incorrect configuration of the WLAN infrastructure
 
-Access points and other WLAN components (eg WLAN controllers) offer a large number of configuration settings, which in particular also concern security functions. If wrong settings are made here, either no communication via an access point is possible or communication takes place unprotected or with too low a level of protection.
+Access points and other WLAN components (eg WLAN controllers) offer a large number of configuration settings, which in particular also concern security functions. If wrong settings are made here, either no communication via an access point is possible or communication takes place unprotected or with a too low protection level.
 
 ### 2 6 Insufficient or missing Wi-Fi security mechanisms
 
-In the delivery state, WLAN components are often configured so that no or only a few security mechanisms are activated. Moreover, some of the mechanisms are inadequate and do not provide adequate protection. Even today, various WLAN components are used, the only insufficient security mechanisms such. B. WEP support. In part, these devices can not even be upgraded to stronger security mechanisms. If such devices are used, an attacker can easily listen to all communication and thus gain access to confidential information.
+When delivered, WLAN components are often configured so that no or only a few security mechanisms are activated. Moreover, some of the mechanisms are inadequate and do not provide adequate protection. Even today, various WLAN components are used, the only insufficient security mechanisms such. B. WEP support. In part, these devices can not even be upgraded to stronger security mechanisms. If such devices are used, an attacker can easily listen to all communications and gain access to confidential information.
 
 ### 2 7 Listening to the WLAN communication
 
@@ -57,7 +57,7 @@ An attacker can pretend to be part of the WLAN infrastructure by installing thei
 
 ### 2 9 Unprotected LAN access at the access point
 
-If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface but do not consider the Ethernet connection further.
+If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface, but do not consider the Ethernet connection further.
 
 ### 2 10 hardware damage
 
@@ -65,7 +65,7 @@ Hardware damage can cause radio traffic to be disturbed. In the worst case, the 
 
 ### 2 11 Theft of an access point
 
-Are WLAN access points unsecured in transit ways attached, z. B. installed directly under the ceiling or in areas with heavy public traffic, they can be stolen. This makes it possible, for example, to read out a shared-secret key for authentication on the RADIUS server or the key used (for example for WPA2 personnel). With this information can then be accessed unauthorized access to the WLAN.
+Are WLAN access points unsecured in transit ways attached, z. B. installed directly under the ceiling or in areas with heavy public traffic, they can be stolen. This makes it possible, for example, to read out a shared-secret key for authentication on the RADIUS server or the key used (for example, for WPA2 personnel). With this information can then be accessed unauthorized access to the WLAN.
 
 3 requirements
 ---------------
@@ -83,7 +83,7 @@ In addition MUST be determined in the planning phase, who is responsible for the
 
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
 
-In order to avoid a malfunction of the WLAN, it is first necessary to determine within the WLAN planning which of the systems operated by the institution (eg microwave devices, Bluetooth) in the ISM band at 2.4 GHz and in the 5 GHz Radiate ribbon.
+In order to avoid a malfunction of the WLAN, WLAN-MUST first determine which of the systems operated by the institution (eg microwave devices, Bluetooth) in the ISM band at 2.4 GHz and in the 5 GHz Radiate ribbon.
 
 In addition, the existing security mechanisms of the individual WLAN standards MUST be weighed against each other. In general, it MUST be ensured that only be used as a generally secure method for authentication and encryption. Only after the individual standards have been evaluated in detail, a specific WLAN standard can be set. The reasons for the decision MUST be documented.
 
@@ -101,7 +101,7 @@ Access points MUST be mounted securely. In addition MUST be taken to ensure that
 
 #### NET.2.1.A5 Secure base configuration of access points
 
-Access Points MUST NOT be used in the configuration of the delivery state. Preset SSIDs (service set identifiers), access passwords or cryptographic keys MUST be changed immediately after commissioning. In addition, insecure administration accesses (eg Telnet or HTTP) MUST be disabled. Access Points MUST be administered encrypted.
+Access Points MUST NOT be used in the configuration of the delivery state. Preset SSIDs (service set identifiers), access passwords or cryptographic keys MUST be changed immediately after commissioning. In addition, insecure administration accesses (eg Telnet or HTTP) MUST be disabled. Access points MUST be administered encrypted.
 
 #### NET.2.1.A6 Secure configuration of the WLAN clients
 

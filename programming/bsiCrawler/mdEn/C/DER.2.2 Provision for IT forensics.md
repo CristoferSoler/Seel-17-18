@@ -49,7 +49,7 @@ The following requirements MUST be implemented as a priority:
 
 #### DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
 
-If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to weigh the interest of the institution against that of the employees. The company or staff council and the data protection officer MUST be involved.
+If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to balance the interest of the institution with that of the employee. The company or staff council and the data protection officer MUST be involved.
 
 #### DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
 
@@ -84,15 +84,15 @@ A forensic investigation SHOULD always begin by defining the goals or work assig
 
 #### DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
 
-It SHOULD be determined which secondary data (eg log data or traffic recordings) are kept in the way and for how long within the legal framework for possible forensic evidence.
+It SHOULD be determined which secondary data (eg log data or traffic recordings) are made available in which way and for how long within the framework of the legal framework for possible forensic evidence-securing measures.
 
 #### DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
 
 In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, in the case of volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
 
-In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
+In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be legally usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of Forensic Service Providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 
@@ -124,7 +124,7 @@ All employees involved in forensic analysis SHOULD regularly practice how to sec
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found in the following publications, among others:
+Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found, among others, in the following publications:
 
 * #### [BSIFor] BSI IT Forensics Guide
 

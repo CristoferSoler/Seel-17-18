@@ -48,7 +48,7 @@ The command line option "LD \ _PRELOAD" loads the given library before any other
 
 The following are specific requirements for the server area under Unix. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -62,7 +62,7 @@ Each login name, user ID (UID) and group ID (GID) MUST occur only once. Each use
 
 #### SYS.1.3.A3 Automatic integration of removable drives
 
-Removable drives such. B. USB sticks or CDs / DVDs MAY NOT be included automatically.
+Removable drives such. B. USB sticks or CDs / DVDs MUST NOT be included automatically.
 
 #### SYS.1.3.A4 Protection of applications
 
@@ -83,7 +83,7 @@ To manage users and groups SHOULD use the appropriate administration tools. From
 
 #### SYS.1.3.A7 Additional protection for single-user and recovery mode access
 
-The UNIX server SHOULD be secured by assigning a boot password in the firmware of the server. Alternatively, a predefined boot order with built-in boot disk SHOULD be set first and the bootloader backed up.
+The UNIX server SHOULD be secured by assigning a boot password in the firmware of the server. Alternatively, a predefined boot order with built-in boot disk SHOULD be set first and the boot loader backed up.
 
 #### SYS.1.3.A8 Encrypted access via Secure Shell
 

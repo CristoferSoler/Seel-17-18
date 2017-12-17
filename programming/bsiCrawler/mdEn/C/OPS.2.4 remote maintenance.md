@@ -11,7 +11,7 @@ The aim of the module is to protect information stored, processed and transmitte
 
 ### 1.3 Delimitation
 
-This module looks at remote maintenance from the point of view of IT operation and provides advice for users on how remote maintenance can be used. The holistic guarantee of information security in all life cycle phases is important. The security aspects of the communication connections used, authentication mechanisms and the protection of the remote maintenance access are important components of the module. In the context of the component "remote monitoring", not all relevant aspects of the related business processes are covered. Therefore, especially aspects of the blocks * OPS.1.1.3 Patch and Change Management *, * ORP.3 Sensitization and Training, CON.1 Crypto Concept * and CON.3 * Data Backup Concept * must be guaranteed separately. Likewise, the specifications of the component layers NET (networks and communication), DER (detection & reaction), the components of the layer * OPS.2 IT operation of third parties * and the components of the layer * OPS.3 IT operation for third parties * have been implemented which are directly related to remote administration. For cloud-based products, the building block * OPS.2.2 cloud usage * must be taken into account. Likewise, the Remote Procedure Calls of Windows 2010 are not part of this document.
+This module looks at remote maintenance from the point of view of IT operation and provides advice for users on how remote maintenance can be used. The holistic guarantee of information security in all phases of the lifecycle is important. The security aspects of the communication connections used, authentication mechanisms and the protection of the remote maintenance access are important components of the module. In the context of the component "remote monitoring", not all relevant aspects of the related business processes are covered. Therefore, especially aspects of the blocks * OPS.1.1.3 Patch and Change Management *, * ORP.3 Sensitization and Training, CON.1 Crypto Concept * and CON.3 * Data Backup Concept * must be guaranteed separately. Likewise, the specifications of the component layers NET (networks and communication), DER (detection & reaction), the components of the layer * OPS.2 IT operation of third parties * and the components of the layer * OPS.3 IT operation for third parties * have been implemented which are directly related to remote administration. For cloud-based products, the building block * OPS.2.2 cloud usage * must be taken into account. Likewise, the Remote Procedure Calls of Windows 2010 are not part of this document.
 
 2 risk situation
 -----------------
@@ -27,7 +27,7 @@ If remote maintenance is not carefully planned, set up and regulated, not only t
 
 ### 2 3 Unauthorized exercise of rights in remote maintenance
 
-Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance, or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
+Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
 
 ### 2 4 Unsuitable use of authentication for remote maintenance
 
@@ -41,7 +41,7 @@ Likewise, communication interfaces of IT systems are not always obvious to the u
 
 ### 2 6 Faulty remote maintenance
 
-Ensuring the security and viability of remote-access IT systems and applications requires professional and ongoing remote maintenance. If these IT systems and applications are not properly configured, maintained, repaired, and monitored remotely, they can not be used at worst. If errors occur within the remote maintenance processes, malfunctions of individual operating system functions can result directly from this. In addition, late or faulty IT system maintenance can cause security vulnerabilities.
+Ensuring the security and viability of remote-access IT systems and applications requires professional and ongoing remote maintenance. If these IT systems and applications are not properly configured, maintained, repaired, and monitored remotely, they can not be used at worst. If errors occur within the remote maintenance processes, malfunctions of individual operating system functions can directly result from this. In addition, late or faulty IT system maintenance can cause security vulnerabilities.
 
 ### 2 7 Use of unsafe protocols in remote maintenance
 
@@ -60,11 +60,11 @@ Unauthorized persons or third parties are allowed to use the components of the r
 
 ### 2 11 Use of online services for remote maintenance
 
-In addition to remote maintenance, in which an administrator establishes a direct data connection to the institution to be administered, so-called online services can also be used. In this case, the IT systems to be administrated connect to the servers of a third-party provider and the administrators can access the IT systems to be administered via a web browser or similar.
+In addition to remote maintenance, in which an administrator establishes a direct data connection to the institution to be administered, so-called online services can also be used. Here, the IT systems to be administrated connect to the servers of a third-party provider and the administrators can access the IT systems to be administered via a web browser or similar.
 
 Since the communication is not encrypted end-to-end and access takes place via a third party, the data exchange could be read directly. In addition, the IT systems could also be administered by unauthorized persons by changing the data connection. If the IT systems automatically establish a data connection to the online service at system startup and the access data are known, the IT system could be accessed directly.
 
-In order to establish a connection to the online service, often no administrative rights are required on the IT systems to be administrated, the administrator then only needs one browser. Users without administrative rights can thus initiate remote access unauthorized.
+In order to establish a connection to the online service, often no administrative rights to the IT systems to be administered are needed, the administrator then only needs one browser. Users without administrative rights can thus initiate remote access unauthorized.
 
 3 requirements
 ---------------
@@ -104,7 +104,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### OPS.2.4.A6 Creation of a guideline for remote maintenance [IT operation]
 
-The regulations for remote maintenance SHOULD be documented in a guideline. If a stand-alone policy is to be created, the institution's existing policies SHOULD refer to the Remote Maintenance Policy. The guideline SHOULD be known to all responsible persons, who are involved in the conception, the construction and the operation as well as the separation, and can form the basis for their work.
+The regulations for remote maintenance SHOULD be documented in a guideline. If a standalone policy is to be created, the institution's existing policies SHOULD refer to the Remote Maintenance Policy. The guideline SHOULD be known to all responsible persons, who are involved in the conception, the construction and the operation as well as the separation, and can form the basis for their work.
 
 #### OPS.2.4.A7 Documentation for remote maintenance [IT operation]
 
@@ -112,7 +112,7 @@ There must be a current documentation of the remote maintenance. Existing repres
 
 #### OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
 
-It SHOULD use current and considered secure communication protocols. The communication SHOULD be encrypted. Based on the protection needs of the institution, suitable cryptographic procedures for the realization of a tunnel SHOULD be used. In order to properly manage the protocols used and to take into account the security requirements, information on vulnerabilities in the specialized press or relevant sources SHOULD be observed and continuously updated.
+It SHOULD use current and considered secure communication protocols. The communication SHOULD be encrypted. Based on the institution's protection needs, suitable cryptographic procedures for the realization of a tunnel SHOULD be used. In order to properly manage the protocols used and to take into account the security requirements, information on vulnerabilities in the specialized press or relevant sources SHOULD be observed and continuously updated.
 
 #### OPS.2.4.A9 Selection of suitable remote maintenance tools [IT operation]
 The selection of suitable remote maintenance tools SHOULD be based on the operational, safety and data protection requirements of the institution. All procurement decisions SHOULD be agreed with the person in charge of purchasing, the system and application manager and the security management.
@@ -164,7 +164,7 @@ If password-based authentication is used during remote maintenance, password rul
 
 #### OPS.2.4.A19 Remote maintenance by third parties [IT operation]
 
-If it is not possible to dispense with external remote maintenance, all activities within this framework SHOULD be monitored by Internal. All remote maintenance operations by third parties SHOULD be recorded. With external maintenance personnel contractual arrangements MUST be made, above all about the security of the affected IT systems and information. The duties and responsibilities of the external maintenance personnel SHOULD be contractually established.
+If it is not possible to dispense with external remote maintenance, all activities within this framework SHOULD be monitored by Internal. All remote maintenance operations by third parties SHOULD be recorded. With external maintenance personnel, contractual arrangements MUST be made, especially about the security of the affected IT systems and information. The duties and responsibilities of the external maintenance personnel SHOULD be contractually established.
 
 #### OPS.2.4.A20 Remote maintenance operation [IT operation]
 
@@ -184,7 +184,7 @@ In the context of emergency preparedness, a concept SHOULD be developed to minim
 
 #### OPS.2.4.A22 Redundant use of mobile communication networks (A)
 
-For the protection of the communication networks of the remote maintenance with high availability requirements, redundant connection or communication networks SHOULD be established.
+For the protection of the communication networks of the remote maintenance in case of high availability requirements, redundant connection or communication networks SHOULD be established.
 
 #### OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
 

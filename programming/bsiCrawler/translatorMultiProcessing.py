@@ -99,6 +99,13 @@ def check15k(list, component):
             if ('Weiterführende Literatur' in line):
                 ref = False
 
+            if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
+                threats = True
+                referenceList.append(line)
+
+            if(threats and '* ' in line):
+                referenceList.append(line)
+
             if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
                 referenceList.append(line)
 

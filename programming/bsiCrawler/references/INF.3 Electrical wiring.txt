@@ -1,4 +1,4 @@
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 #### INF.3.A1 Selection of suitable cable types
 #### INF.3.A2 Planning the cable management [Head IT]
 #### INF.3.A3 Professional installation
@@ -18,3 +18,12 @@
 #### INF.3.A15 Material security of electrical wiring (A)
 #### INF.3.A16 Use of Cabinet Systems (A)
 #### INF.3.A17 firewall cadastre (A)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.1 fire
+* G 0.8 Failure or malfunction of the power supply
+* G 0.12 Electromagnetic interference
+* G 0.18 Missing planning or missing adjustment
+* G 0.25 Failure of devices or systems
+* G 0.26 Malfunction of equipment or systems
+* G 0.27 Resource shortage
+* G 0.41 Sabotage
