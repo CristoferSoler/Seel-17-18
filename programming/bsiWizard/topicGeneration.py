@@ -18,15 +18,8 @@ pathToStopwordList = 'stopwordlist/en.txt'
 #pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
-nlp = spacy.load('en')
 csvFile = []
-
 lemmanizeCorpus = True
-lemmanizeCorpus1 = False
-#def lemmatizeTxt():
-#    files = readInFilesToPathList(path_to_corpus)
-#    for file in files:
-
 
 def getStopWordList():
     stopwords = [line.strip() for line in open(pathToStopwordList, 'r', encoding='utf-8')]
@@ -63,7 +56,6 @@ def preProcessingCSV(document_topic,fileName):
     #delete to first t
     topicsOfFile = getSortedTopicList(document_topic,fileName)
     csvFile.append(topicsOfFile)
-    #print(csvFile)
 
 def writeToCSV():
     pd = pandas.DataFrame(csvFile)
@@ -73,9 +65,6 @@ def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
     corpus = list(preprocessing.read_from_pathlist([file]))
     tokenizedCorpus = [list(preprocessing.tokenize(document)) for document in corpus]
-
-    #print(tokenizedCorpus)
-
     #limatize Corpus
     if(lemmanizeCorpus):
         lenCorpus = len(tokenizedCorpus[0])
@@ -84,14 +73,6 @@ def preprocessingOfFile(file):
             word = tokenizedCorpus[0][i]
             lemmanizeWord = wnl.lemmatize(word)
             tokenizedCorpus[0][i] = lemmanizeWord
-
-    if (lemmanizeCorpus1):
-        lenCorpus = len(tokenizedCorpus[0])
-        #nlp = spacy.load('en')
-        for i in range(0, lenCorpus):
-            word = nlp(tokenizedCorpus[0][i])
-            tokenizedCorpus[0][i] = word[0].lemma_
-    #print(tokenizedCorpus)
 
     documentTermMatrix = preprocessing.create_document_term_matrix(tokenizedCorpus,fileName)
     stopwords = getStopWordList()
@@ -109,21 +90,15 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
                         output_doc_topics= 'tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
                         num_iterations=3000)
-    #print(malletCorpus)
 
     topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
     document_topics = postprocessing.show_document_topics(topics=topics,
                                                           doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt', num_keys=1)
 
     return document_topics
-    #preProcessingCSV(document_topics,fileNames)
-
-    #print(document_topics['t'])
-    #visualization.plot_doc_topics(document_topics, 0)
 
 def generateTopicTable():
     warnings.filterwarnings('ignore')
-
     files = readInFilesToPathList(path_to_corpus)
 
     for file in files:
