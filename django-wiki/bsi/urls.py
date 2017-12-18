@@ -12,6 +12,7 @@ urlpatterns = [
     # url(r'^bsicatalog/', views.bsicatalog, name='bsicatalog'),
     url(r'^create-root/$', CreateRoot.as_view(), name='root_create'),
     url(r'^search/$', BSISearchView.as_view(), name='bsisearch'),
+    url(r'^search/$', BSISearchView.as_view(), name='bsifilter'),
     # url(r'^article/(?P<path>.+/|)$', WikiArticleView.as_view(), name='bsiarticle'),
     # url(r'^article/(?P<path>.+|)$', BSIArticleView.as_view(), name='bsiarticle'),
     # url(r'^(?P<article_id>[0-9]+|)/$', BSIArticleView.as_view(), name='bsiarticle'),
