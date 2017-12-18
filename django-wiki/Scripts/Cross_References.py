@@ -6,7 +6,7 @@ from os import listdir
 #import win32com.client
 
 
-sys.path.append(r"C:\Users\jsayedis\Desktop\GitHbRepos\Seel-17-18\django-wiki")
+sys.path.append(r"..")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from bsiwiki import settings

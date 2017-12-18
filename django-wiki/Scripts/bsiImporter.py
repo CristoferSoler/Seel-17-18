@@ -6,7 +6,7 @@ import sys
 import string
 import filecmp
 
-sys.path.append(r'C:\Users\jsayedis\Desktop\GitHbRepos\Seel-17-18\django-wiki')
+sys.path.append(r'..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from os.path import  isfile, isdir, join
@@ -59,6 +59,9 @@ def doImport():
         # then create a new article and its urlpath
         site = Site.objects.get_current()
         for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
+            if not filenames:
+                continue
+
             # check the bsi article type is a component or threat or implementation notes
             sub_article_type = os.path.basename(dirpath)
             if sub_article_type == "C":
