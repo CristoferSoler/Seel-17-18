@@ -1,0 +1,20 @@
+IND.2.3
+ G 0.14
+  IND.2.3.A1
+  IND.2.3.A2
+  IND.2.3.A3
+ G 0.18
+  IND.2.3.A1
+  IND.2.3.A3
+ G 0.21
+  IND.2.3.A2
+  IND.2.3.A3
+ G 0.23
+  IND.2.3.A3
+ G 0.28
+  IND.2.3.A2
+  IND.2.3.A3
+ G 0.30
+  IND.2.3.A1
+  IND.2.3.A2
+  IND.2.3.A3

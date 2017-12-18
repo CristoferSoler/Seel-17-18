@@ -6,7 +6,7 @@ import sys
 import string
 import filecmp
 
-sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
+sys.path.append(r'C:\Users\jsayedis\Desktop\GitHbRepos\Seel-17-18\django-wiki')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from os.path import  isfile, isdir, join
@@ -88,7 +88,7 @@ def doImport():
 
                 # import the content to the database
                 with open(path_and_file) as data_file:
-                    content = data_file.readlines()
+                    content = data_file.read()
                     revision_kwargs = {'content': content, 'user_message': 'BSI article creation',
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
