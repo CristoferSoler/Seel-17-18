@@ -4,13 +4,17 @@ from django.db import models
 from django.db.models import signals
 from enumfields import Enum
 from enumfields import EnumField
-# from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
 
 class BSI_Article_type(Enum):
     COMPONENT = 'C'
     THREAT = 'G'
     IMPLEMENTATIONNOTES = 'N'
+
+    class Labels:
+        COMPONENT = 'Components'
+        THREAT = 'Threat'
+        IMPLEMENTATIONNOTES = 'Implementation Notes'
 
 class UGA(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
