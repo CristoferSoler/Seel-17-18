@@ -7,14 +7,42 @@ from enumfields import EnumField
 # from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
 
-from bsi.models.permissions import can_check, can_uncheck
-
-
 class BSI_Article_type(Enum):
     COMPONENT = 'C'
     THREAT = 'G'
     IMPLEMENTATIONNOTES = 'N'
 
+class UGA(models.Model):
+    url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
+
+    @classmethod
+    def create(cls, parent, slug, title, **rev_kwargs):
+        url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
+        if not url.path.startswith('uga') or len(url.path) == 3:
+            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
+        uga = cls(url=url)
+        uga.save()
+
+    @classmethod
+    def create_by_request(cls, request, article, parent, slug, title, content, summary):
+        url = URLPath._create_urlpath_from_request(request=request, perm_article=article, parent_urlpath=parent,
+                                                   slug=slug, title=title,
+                                                   content=content, summary=summary)
+        if not url.path.startswith('uga') or len(url.path) == 3:
+            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
+        uga = cls(url=url)
+        uga.save()
+
+    def add_link_to_bsi(self, bsi):
+        bsi.references.add(self)
+
+    def remove_link_from_bsi(self, bsi):
+        bsi.references.remove(self)
+
+    def __str__(self):
+        return 'UGA with path: ' + self.url.__str__()
+
+from .permissions import can_check, can_uncheck
 
 class ArticleRevisionValidation(models.Model):
     revision = models.OneToOneField(ArticleRevision, on_delete=models.CASCADE, blank=False, null=False)
@@ -54,38 +82,6 @@ class ArticleRevisionValidation(models.Model):
 
     def __str__(self):
         return 'Revision validation for : ' + self.revision.__str__()
-
-
-class UGA(models.Model):
-    url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
-
-    @classmethod
-    def create(cls, parent, slug, title, **rev_kwargs):
-        url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
-        if not url.path.startswith('uga') or len(url.path) == 3:
-            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
-        uga = cls(url=url)
-        uga.save()
-
-    @classmethod
-    def create_by_request(cls, request, article, parent, slug, title, content, summary):
-        url = URLPath._create_urlpath_from_request(request=request, perm_article=article, parent_urlpath=parent,
-                                                   slug=slug, title=title,
-                                                   content=content, summary=summary)
-        if not url.path.startswith('uga') or len(url.path) == 3:
-            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
-        uga = cls(url=url)
-        uga.save()
-
-    def add_link_to_bsi(self, bsi):
-        bsi.references.add(self)
-
-    def remove_link_from_bsi(self, bsi):
-        bsi.references.remove(self)
-
-    def __str__(self):
-        return 'UGA with path: ' + self.url.__str__()
-
 
 class BSI(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
