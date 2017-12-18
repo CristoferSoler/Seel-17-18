@@ -6,10 +6,10 @@ var currentSortedTopic;
 function initWizard(components,sortedTopics) {
     var components = JSON.parse(components)['components'];
     //speichern der Ausgangsdaten
-    orginalTopic = components;
-    remainingComponents = components;
+    orginalTopic = components.slice();
+    remainingComponents = components.slice();
     $("#topic").text(JSON.parse(sortedTopics)[currentTopic]);
-    currentSortedTopic = sortedTopics;
+    currentSortedTopic = sortedTopics.slice();
 }
 
 function yesPress() {
@@ -61,8 +61,8 @@ function dontknowPress() {
 
 function restart(){
     currentTopic = 0;
-    remainingComponents = orginalTopic;
-    remainingComponents = orginalTopic.splice(0);
+    //console.log(orginalTopic.length);
+    [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
     $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
     console.log(remainingComponents.length)
 }
