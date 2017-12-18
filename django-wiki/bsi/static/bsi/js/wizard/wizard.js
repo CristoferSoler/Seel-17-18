@@ -34,7 +34,6 @@ function yesPress() {
 
 function noPress() {
     var currentTopicString = JSON.parse(currentSortedTopic)[currentTopic];
-    console.log(currentTopicString);
     remainingComponents.forEach(function (element) {
         if(element['topics'].includes(currentTopicString)){
             var index = remainingComponents.indexOf(element)
