@@ -32,7 +32,8 @@ class UGAEditForm(EditForm):
         self.no_clean = kwargs.pop('no_clean', False)
         self.preview = kwargs.pop('preview', False)
         self.initial_revision = current_revision
-        self.checked = checked
+        self.checked = forms.BooleanField(label="Reviewed", required=False, initial=checked)
+
         self.presumed_revision = None
         if current_revision:
             initial = {'content': current_revision.content,

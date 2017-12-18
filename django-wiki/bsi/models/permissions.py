@@ -1,4 +1,5 @@
 from wiki.models import URLPath
+
 from .article_extensions import UGA
 
 

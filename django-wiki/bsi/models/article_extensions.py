@@ -6,6 +6,7 @@ from enumfields import Enum
 from enumfields import EnumField
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
 
+
 class BSI_Article_type(Enum):
     COMPONENT = 'C'
     THREAT = 'G'
@@ -46,7 +47,9 @@ class UGA(models.Model):
     def __str__(self):
         return 'UGA with path: ' + self.url.__str__()
 
+
 from .permissions import can_check, can_uncheck
+
 
 class ArticleRevisionValidation(models.Model):
     revision = models.OneToOneField(ArticleRevision, on_delete=models.CASCADE, blank=False, null=False)
@@ -65,7 +68,7 @@ class ArticleRevisionValidation(models.Model):
         return rev
 
     @transaction.atomic
-    def checkArticle(self, user):
+    def check_article(self, user):
         article = Article.objects.get(current_revision=self.revision)
         if can_check(article, user):
             self.status = True
@@ -75,7 +78,7 @@ class ArticleRevisionValidation(models.Model):
             raise PermissionError("The user " + user.__str__() + " has no permissions to check this article.")
 
     @transaction.atomic
-    def uncheckArticle(self, user):
+    def uncheck_article(self, user):
         article = Article.objects.get(current_revision=self.revision)
         if can_uncheck(article, user):
             self.status = False
@@ -86,6 +89,7 @@ class ArticleRevisionValidation(models.Model):
 
     def __str__(self):
         return 'Revision validation for : ' + self.revision.__str__()
+
 
 class BSI(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
