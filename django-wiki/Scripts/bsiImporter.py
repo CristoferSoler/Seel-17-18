@@ -1,9 +1,10 @@
 import argparse
 import django
 import configparser
-import win32com.client
 import os
 import sys
+import string
+import filecmp
 
 sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -14,10 +15,7 @@ from wiki.models import Article, URLPath, Site, ArticleRevision
 from bsiwiki import settings
 from bsi.models import BSI, UGA,BSI_Article_type
 
-
-txtFolderDir = './Cross_Reference_Files/'
-excelFolderDir = './Cross_Reference_Tables/'
-macroFileDir = './Cross Reference 2018.xlsm/'
+crfDir = './CRF/'
 system_devices = ["APP", "SYS","IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
@@ -62,17 +60,18 @@ def doImport():
         site = Site.objects.get_current()
         for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
             # check the bsi article type is a component or threat or implementation notes
-            subArticleType = os.path.basename(dirpath)
-            if subArticleType == "C":
+            sub_article_type = os.path.basename(dirpath)
+            if sub_article_type == "C":
                 article_type = BSI_Article_type.COMPONENT
                 parent = BSI.get_or_create_bsi_subroots("components", "BSI.components", "", "Components")
-            elif subArticleType == "N":
+            elif sub_article_type == "N":
                 article_type = BSI_Article_type.IMPLEMENTATIONNOTES
                 parent = BSI.get_or_create_bsi_subroots("implementationNotes", "BSI.implementationNotes", "",
                                                         "Implementation Notes")
-            elif subArticleType == "T":
-                article_type = BSI_Article_type.THREAT
-                parent = BSI.get_or_create_bsi_subroots("threats", "BSI.threats", "", "Threats")
+            elif sub_article_type == "T":
+                 article_type = BSI_Article_type.THREAT
+                 parent = BSI.get_or_create_bsi_subroots("threats", "BSI.threats", "", "Threats")
+
             for filename in [f for f in filenames if f.endswith(".md")]:
                 # get the drive and the filepath
                 path_and_file = os.path.join(dirpath, filename)
@@ -80,9 +79,14 @@ def doImport():
                 location, file = os.path.split(path_and_file)
                 # get the file id and the titel
                 file_name = os.path.splitext(file)[0]
-                id = get_bsi_article_id(subArticleType, file_name)
+                id = get_bsi_article_id(sub_article_type, file_name)
 
-                # read md file content in variable
+                # append the Cross reference relation files to the content
+                # of each component article before import it in the database
+                if sub_article_type == "C" and os.path.isdir(crfDir):
+                    appendThreatMeasureRelation(path_and_file, id)
+
+                # import the content to the database
                 with open(path_and_file) as data_file:
                     content = data_file.readlines()
                     revision_kwargs = {'content': content, 'user_message': 'BSI article creation',
@@ -126,6 +130,7 @@ def find_between( s, first, last ):
 
 def get_bsi_article_id(type, file_name):
     # search the BSI id in the file name
+    id =''
     if type == 'C':
         id = file_name.split(" ",1)[0]
     elif type == "T":
@@ -165,33 +170,28 @@ def checkFileAction(filepath):
     return modified, added, deleted
 
 
-def appendThreatMeasureRelation(file):
-    # TODO
-    return
-
-
-#Calling Macro to get cross reference relation tables
-def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
-    xl = win32com.client.Dispatch("Excel.Application")
-    xl.Visible = True
-    Path = macroFileDir
-    xl.Workbooks.Open(Filename=Path)
-    param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
-    param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
-    xl.Application.Run("Extraction", param1, param2)
+def appendThreatMeasureRelation(path_and_file, id):
+    try:
+        for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:
+            path_and_ref = os.path.join(crfDir, cr_file)
+            if id in cr_file:
+                with open(path_and_ref, 'r')as cr:
+                    cr_data = cr.read()
+                cr.close()
+                with open(path_and_file, 'a') as data_file:
+                    data_file.write(cr_data)
+                data_file.close()
+    except IOError:
+        print('An error occurred trying to open (read/write) the file.')
 
 def cleanUp():
     # TODO remove all temp dirs and update files in current dirs
     # We need the path to old BSI dir to update its content?
     return
 
-
 # should not be imported by other module
 if __name__ == '__main__':
-    #generateComponentsThreatsMeasuresRelation()
     #bsiDir, file = parseArgs()
-    #setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
-    #django.setup()
     #main(bsiDir, file)
     doImport()
     print("worked!")
