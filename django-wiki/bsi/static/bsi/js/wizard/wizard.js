@@ -1,26 +1,68 @@
 var orginalTopic;
-
+var remainingComponents;
+var currentTopic = 0;
+var currentSortedTopic;
 
 function initWizard(components,sortedTopics) {
     var components = JSON.parse(components)['components'];
     //speichern der Ausgangsdaten
     orginalTopic = components;
-
-    $("#topic").text(JSON.parse(sortedTopics)[1]);
-    //window.alert(JSON.parse(sortedTopics)[1])
-    components.forEach(function (element) {
-        //window.alert(JSON.stringify(element))
-    })
+    remainingComponents = components;
+    $("#topic").text(JSON.parse(sortedTopics)[currentTopic]);
+    currentSortedTopic = sortedTopics;
 }
 
 function yesPress() {
-    window.alert('Yes');
+    var currentTopicString = JSON.parse(currentSortedTopic)[currentTopic];
+    remainingComponents.forEach(function (element) {
+        if(!(element['topics'].includes(currentTopicString))){
+            var index = remainingComponents.indexOf(element)
+            if (index > -1) {
+                remainingComponents.splice(index, 1);
+            }
+        }
+    })
+    currentTopic = currentTopic + 1;
+
+    if(remainingComponents.length <= 10 ){
+        console.log(JSON.stringify(remainingComponents));
+    } else{
+        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+    }
+    console.log(remainingComponents.length);
 }
 
 function noPress() {
-    window.alert('No');
+    var currentTopicString = JSON.parse(currentSortedTopic)[currentTopic];
+    console.log(currentTopicString);
+    remainingComponents.forEach(function (element) {
+        if(element['topics'].includes(currentTopicString)){
+            var index = remainingComponents.indexOf(element)
+            if (index > -1) {
+                remainingComponents.splice(index, 1);
+            }
+        }
+    })
+    currentTopic = currentTopic + 1;
+
+    if(remainingComponents.length <= 10 ){
+        console.log(JSON.stringify(remainingComponents));
+    } else{
+        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+    }
+    console.log(remainingComponents.length);
 }
 
 function dontknowPress() {
-    window.alert('dont know');
+    currentTopic = currentTopic +1;
+    $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+    console.log(remainingComponents.length);
+}
+
+function restart(){
+    currentTopic = 0;
+    remainingComponents = orginalTopic;
+    remainingComponents = orginalTopic.splice(0);
+    $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+    console.log(remainingComponents.length)
 }
