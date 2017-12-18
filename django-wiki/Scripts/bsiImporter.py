@@ -91,10 +91,14 @@ def doImport():
                     BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(file_name + " is saved")
 
-
+import json
 def doUpdate(file):
     # find out which files should be m/a/d
     modified, added, deleted = checkFileAction(file)
+    # just to see how they look
+    print(json.dumps(modified, indent=4))
+    print(json.dumps(added, indent=4))
+    print(json.dumps(deleted, indent=4))
 
     # go through the dir and read the content of each file
     for filename in [f for f in listdir(settings.CRAWLER_DIRECTORY) if f.lower().endswith('md')]:
@@ -105,15 +109,39 @@ def doUpdate(file):
         # for modified
         # find article, clone it, mark the clone as archive, create urlpath for the clone
         # update the content of article, do the same for user articles
+        doModified(modified)
 
         # for added
         # create new article, create its urlpath
+        doAdded(added)
 
         # for deleted
         # find article, mark it as archive, update urlpath, do the same for user articles
+        doDeleted(deleted)
 
         # for unchanged articles, update its modification time
+        updateModificationTime()
 
+    return
+
+
+def doModified(modified):
+    # TODO
+    return
+
+
+def doAdded(added):
+    # TODO
+    return
+
+
+def doDeleted(deleted):
+    # TODO
+    return
+
+
+def updateModificationTime():
+    # TODO
     return
 
 
@@ -143,29 +171,57 @@ def get_bsi_article_id(type, file_name):
 
 
 def checkFileAction(filepath):
-    modified = []
-    added = []
-    deleted = []
+    modified = initDict()
+    added = initDict()
+    deleted = initDict()
 
     # sanity check
     assert(filepath is not None)
 
     # look in the text file and check if the files shoul be m/a/d
-    file = open(filepath, "r")
-    currentSymbol = file.readline()
+    file = open(filepath, mode="r")
+    currentSep1 = file.readline().rstrip()
+    currentSep2 = file.readline().rstrip()
+
     for line in file:
+        line = line.rstrip()
+        if(line.startswith('#')):
+            currentSep1 = line
+            continue
         if(line.startswith('%')):
-            currentSymbol = line
+            currentSep2 = line
             continue
 
-        if(currentSymbol == '%m'):
-            modified.append(line)
-        elif(currentSymbol == '%a'):
-            added.append(line)
-        elif(currentSymbol == '%d'):
-            deleted.append(line)
+        if(currentSep2.startswith('%m')):
+            types = modified.get('type')
+        elif(currentSep2.startswith('%a')):
+            types = added.get('type')
+        elif(currentSep2.startswith('%d')):
+            types = deleted.get('type')
+        else:
+            raise ValueError('Input file might be corrupt.')
+
+        if(currentSep1.startswith('#C')):
+            name = 'component'
+        elif(currentSep1.startswith('#T')):
+            name = 'threat'
+        elif(currentSep1.startswith('#N')):
+            name = 'implementationnotes'
+        else:
+            raise ValueError('Input file might be corrupt.')
+
+        obj = [c for c in types if c.get('name') == name][0]
+        if obj:
+            obj['files'].append({'file': line})
 
     return modified, added, deleted
+
+
+def initDict():
+    return {'type': [
+            {'name': 'component', 'files': []},
+            {'name': 'threat', 'files': []},
+            {'name': 'implementationnotes', 'files': []}]}
 
 
 def appendThreatMeasureRelation(path_and_file, id):
