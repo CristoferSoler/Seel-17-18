@@ -1,11 +1,11 @@
 import argparse
 import django
 import configparser
-import win32com.client
+#import win32com.client
 import os
 import sys
 
-sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
+sys.path.append(r"C:\Users\jsayedis\Desktop\GitHbRepos\Seel-17-18\django-wiki")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from os.path import  isfile, isdir, join
@@ -61,6 +61,8 @@ def doImport():
         # then create a new article and its urlpath
         site = Site.objects.get_current()
         for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
+            if not filenames:
+                continue
             # check the bsi article type is a component or threat or implementation notes
             subArticleType = os.path.basename(dirpath)
             if subArticleType == "C":
@@ -73,6 +75,8 @@ def doImport():
             elif subArticleType == "T":
                 article_type = BSI_Article_type.THREAT
                 parent = BSI.get_or_create_bsi_subroots("threats", "BSI.threats", "", "Threats")
+            else:
+                raise ValueError('Error')
             for filename in [f for f in filenames if f.endswith(".md")]:
                 # get the drive and the filepath
                 path_and_file = os.path.join(dirpath, filename)
@@ -84,7 +88,7 @@ def doImport():
 
                 # read md file content in variable
                 with open(path_and_file) as data_file:
-                    content = data_file.readlines()
+                    content = data_file.read()
                     revision_kwargs = {'content': content, 'user_message': 'BSI article creation',
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
@@ -125,6 +129,7 @@ def find_between( s, first, last ):
 
 
 def get_bsi_article_id(type, file_name):
+    id = ''
     # search the BSI id in the file name
     if type == 'C':
         id = file_name.split(" ",1)[0]
@@ -171,14 +176,14 @@ def appendThreatMeasureRelation(file):
 
 
 #Calling Macro to get cross reference relation tables
-def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
-    xl = win32com.client.Dispatch("Excel.Application")
-    xl.Visible = True
-    Path = macroFileDir
-    xl.Workbooks.Open(Filename=Path)
-    param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
-    param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
-    xl.Application.Run("Extraction", param1, param2)
+# def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
+#     xl = win32com.client.Dispatch("Excel.Application")
+#     xl.Visible = True
+#     Path = macroFileDir
+#     xl.Workbooks.Open(Filename=Path)
+#     param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
+#     param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
+#     xl.Application.Run("Extraction", param1, param2)
 
 def cleanUp():
     # TODO remove all temp dirs and update files in current dirs
