@@ -1,0 +1,30 @@
+
+{% block bsi_contents %}
+
+        <div class=" col-sm-4">
+          {% include "bsi/includes/treeview.html" %}
+        </div>
+        <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
+        <div class="col-xs-12 col-sm-8">
+
+
+            <div>
+                {% if not preview %}
+                    {% if article.current_revision %}
+                        {{ article.get_cached_content }}
+                    {% endif %}
+                {% else %}
+
+                    {{ content|default:"" }}
+                {% endif %}
+            </div>
+
+            <hr>
+        <!--if there is article above, then include this -->
+            {% include "bsi/includes/crossreference.html" %}
+            <hr>
+             {% include "bsi/includes/seealso.html" %}
+        </div>
+
+{% endblock %}
+

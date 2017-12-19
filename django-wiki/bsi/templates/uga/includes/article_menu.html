@@ -1,4 +1,4 @@
-{% load wiki_tags %}
+{% load wiki_tags bsi_tags %}
 
 {% if article|can_write:user and not article.current_revision.locked %}
     <li class="list-inline-item">
@@ -9,12 +9,6 @@
 {% if not user.is_anonymous %}
     <li class="list-inline-item">
         <a href="">Changes</a>
-    </li>
-{% endif %}
-
-{% if perms.wiki.check_article %}
-    <li class="list-inline-item">
-        <a href="">Check</a>
     </li>
 {% endif %}
 

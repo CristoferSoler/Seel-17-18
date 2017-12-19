@@ -1,0 +1,29 @@
+{% extends 'bsi/base.html' %}
+
+{% block bsi_contents %}
+
+     <div class="container" style="margin-top:100px;">
+
+{% block bsi_breadcrumbs %}
+{% include "bsi/includes/breadcrumb.html" %}
+{% endblock %}
+
+    {% block pagetitle %}
+        <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
+        <h2>{{ article.current_revision.title }}</h2>
+    {% endblock %}
+
+     <hr>
+
+
+         {% block contents_article %}
+              <!--if the url path bsi, then this -->
+             {% include "bsi/article_bsi.html" %}
+        {% endblock %}
+
+     
+
+      </div>
+
+
+{% endblock %}

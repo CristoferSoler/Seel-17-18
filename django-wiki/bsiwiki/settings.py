@@ -48,8 +48,8 @@ INSTALLED_APPS = [
     'wiki.plugins.images',
     'wiki.plugins.macros',
     'wiki.plugins.links',
-    'bsiwiki',
     'bsi',
+    'archive',
 ]
 
 MIDDLEWARE = [
@@ -98,6 +98,9 @@ LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
+# from bsiwiki.WikiPattern import WikiPattern
+# URL_CONFIG_CLASS = WikiPattern
+
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -125,6 +128,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

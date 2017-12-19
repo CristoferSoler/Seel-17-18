@@ -1,0 +1,51 @@
+INF.7
+ G 0.02
+  INF.7.A1
+ G 0.13
+  INF.7.A1
+ G 0.14
+  INF.7.A1
+  INF.7.A2
+  INF.7.A4
+  INF.7.A6
+  INF.7.A7
+ G 0.15
+  INF.7.A1
+  INF.7.A7
+ G 0.16
+  INF.7.A1
+  INF.7.A2
+  INF.7.A4
+  INF.7.A7
+  INF.7.A8
+ G 0.18
+  INF.7.A1
+  INF.7.A3
+ G 0.21
+  INF.7.A4
+  INF.7.A7
+ G 0.22
+  INF.7.A2
+  INF.7.A4
+  INF.7.A6
+  INF.7.A7
+ G 0.23
+  INF.7.A2
+  INF.7.A4
+  INF.7.A7
+ G 0.24
+  INF.7.A1
+  INF.7.A2
+  INF.7.A4
+ G 0.30
+  INF.7.A2
+  INF.7.A4
+ G 0.44
+  INF.7.A1
+  INF.7.A2
+  INF.7.A4
+ G 0.46
+  INF.7.A2
+  INF.7.A4
+  INF.7.A6
+  INF.7.A7
