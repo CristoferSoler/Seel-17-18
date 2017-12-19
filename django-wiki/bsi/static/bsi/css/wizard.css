@@ -19,3 +19,8 @@
 .wizardList li{
     margin:2%;
 }
+
+.modal-body {
+    overflow-y: auto;
+}
+

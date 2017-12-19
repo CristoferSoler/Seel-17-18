@@ -2,6 +2,7 @@ var orginalTopic;
 var remainingComponents;
 var currentTopic = 0;
 var currentSortedTopic;
+var thresholdTopicNumber = 10;
 
 function initWizard(components,sortedTopics) {
     var components = JSON.parse(components)['components'];
@@ -24,14 +25,9 @@ function yesPress() {
     })
     currentTopic = currentTopic + 1;
 
-    if(remainingComponents.length <= 10 ){
+    if(remainingComponents.length <= thresholdTopicNumber ){
         console.log(JSON.stringify(remainingComponents));
-        $("#list").empty()
-        $("#list").append('<ul>');
-        for(i=0;i<remainingComponents.length;i++) {
-            $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
-        }
-        $("#list").append('</ul>');
+        presentResults();
     } else{
         $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
     }
@@ -50,8 +46,9 @@ function noPress() {
     })
     currentTopic = currentTopic + 1;
 
-    if(remainingComponents.length <= 10 ){
+    if(remainingComponents.length <= thresholdTopicNumber ){
         console.log(JSON.stringify(remainingComponents));
+        presentResults();
     } else{
         $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
     }
@@ -69,5 +66,15 @@ function restart(){
     //console.log(orginalTopic.length);
     [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
     $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
-    console.log(remainingComponents.length)
+    console.log(remainingComponents.length);
+    $("#list").empty();
+}
+
+function presentResults() {
+    $("#list").empty();
+    $("#list").append('<ul>');
+    for(i=0;i<remainingComponents.length;i++) {
+        $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
+    }
+    $("#list").append('</ul>');
 }

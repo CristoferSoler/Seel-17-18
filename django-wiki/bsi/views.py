@@ -73,6 +73,7 @@ def getListOfFrequenceOfTopic(components):
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
+    print(numberOfEachTopic)
     for topic in numberOfEachTopic:
         topics.append(topic[0])
     return topics
