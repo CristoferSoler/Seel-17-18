@@ -10,10 +10,10 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.utils.decorators import method_decorator
 from wiki.decorators import get_article
-from wiki.models import URLPath, ArticleRevision
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
+from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
 import csv
 import json
 import itertools
@@ -66,19 +66,6 @@ class BSISearchView(SearchView):
     def get_context_data(self, **kwargs):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
-def getListOfFrequenceOfTopic(components):
-    topics = []
-    listOfAllTopics = []
-    for component in components:
-        listOfAllTopics = itertools.chain(listOfAllTopics, component['topics'])
-    listOfAllTopics = list(listOfAllTopics)
-    numberOfEachTopic = list(Counter(listOfAllTopics).items())
-    numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
-    print(numberOfEachTopic)
-    for topic in numberOfEachTopic:
-        topics.append(topic[0])
-    return topics
-
 def index(request):
     components = readAndProcessCSV()
     sortedTopics = getListOfFrequenceOfTopic(components['components'])
@@ -88,25 +75,6 @@ def index(request):
 
     return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
-def getPathOfComponent(title):
-    revision = ArticleRevision.objects.filter(title=title)
-    parent = URLPath.objects.get(slug='components')
-    urlpath = URLPath.objects.get(parent=parent, article=revision.title)
-    return urlpath.path
-
-def generateDic(list):
-    title = list[0]
-    path = getPathOfComponent(title)
-    componentDic = {'name':title,'path':path,'topics':list[1:]}
-    return componentDic
-
-def readAndProcessCSV():
-    componentsWithTopics = {'components':[]}
-    with open('./bsi/static/bsi/csv/topics.csv') as f:
-        reader = csv.reader(f)
-        for row in reader:
-            componentsWithTopics['components'].append(generateDic(row))
-    return componentsWithTopics
 
 def bsicatalog(request):
     all_articles = Article.objects.all()
