@@ -65,7 +65,7 @@ def main():
 
     print('Missing folder structures have been created.')
 
-    os.system("scrapy runspider crawli.py --nolog")
+    #os.system("scrapy runspider crawli.py --nolog")
 
     #start translation with Multiprocessing
     print('Start the translation')

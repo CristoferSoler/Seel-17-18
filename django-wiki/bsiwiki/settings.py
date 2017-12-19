@@ -14,7 +14,6 @@ import os
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -49,8 +48,8 @@ INSTALLED_APPS = [
     'wiki.plugins.images',
     'wiki.plugins.macros',
     'wiki.plugins.links',
+    'bsiwiki',
     'bsi',
-    'archive',
 ]
 
 MIDDLEWARE = [
@@ -93,15 +92,11 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'/Users/macbook/Seel-17-18/programming/bsiCrawler/contentEn'
-
-#LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
-LOGIN_REDIRECT_URL = 'index'
+CRAWLER_DIRECTORY = r'C:\githubRepo\Seel-17-18\programming\bsiCrawler\mdEn'
+REFERENCE_DIRECTORY = r'C:\githubRepo\Seel-17-18\programming\bsiCrawler\references'
+LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
-
-# from bsiwiki.WikiPattern import WikiPattern
-# URL_CONFIG_CLASS = WikiPattern
 
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
@@ -130,9 +125,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-# Redirect to home URL after login (Default redirects to /accounts/profile/)
-LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/

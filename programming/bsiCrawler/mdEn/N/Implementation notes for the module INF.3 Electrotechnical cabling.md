@@ -15,11 +15,11 @@ A number of measures have to be implemented for the electrotechnical cabling, st
 
 In the planning phase, the foundations are laid for efficient, well-secured cabling. For this purpose, a requirements analysis should be carried out within the framework of planning and conception (see INF.3.M4 requirements analysis for the electrotechnical cabling).
 
-The mechanical and electrical characteristics of the cabling are determined by the choice of cable types to be used (see INF.3.M1 Selection of suitable cable types) and by cable routing and routes and the environmental conditions (see INF.3.M2 Cable Management Planning). By selecting suitable cable types and type-specific installation (see INF.3.M3 Professional installation), the electrical installation must be made resistant to environmental hazards (see eg INF.3.M6 overvoltage protection and INF.3.M12 avoidance of electrical damage) ignition sources). Whenever possible, care should be taken to ensure that the lines and main and sub-distributions of the building are adequately physically protected against misuse (see INF.3.M14 Material security of electrical wiring and INF.3.M15 Use of cabinet systems) ,
+The mechanical and electrical characteristics of the cabling are determined by the choice of cable types to be used (see INF.3.M1 Selection of suitable cable types) and by cable routing and routes and the environmental conditions (see INF.3.M2 Cable Management Planning). By selecting suitable cable types and the type-specific installation (see INF.3.M3 Professional Installation), the electrical installation must be made resistant to environmental hazards (see eg INF.3.M6 overvoltage protection and INF.3.M12 avoidance of electrical damage) ignition sources). Whenever possible, care should be taken to ensure that the lines and main and sub-distributions of the building are adequately physically protected against misuse (see INF.3.M14 Material security of electrical wiring and INF.3.M15 Use of cabinet systems) ,
 
 **Implementation**
 
-An essential element of fire safety is the correct installation of cable ducts, which can cause considerable risks due to a lack of fire-barrier insulation (see INF.3.M8 fire-barrier of routes). When installing the cabling, it is also important to pay attention to detailed and correct documentation, since afterwards it is usually very difficult or even impossible to determine where cables are going and what they are connecting (see INF.3.M9 Documentation and marking of electrotechnical cabling and wiring) INF.3.M10 Neutral documentation in the distributors). The electrotechnical cabling should undergo an approval process after completion of the installation, which also includes aspects of information security (see INF.3.M5 Acceptance of electrotechnical cabling).
+An essential element of fire safety is the correct installation of cable ducts, which can cause considerable risks due to a lack of fire-barrier insulation (see INF.3.M8 fire-barrier of routes). When installing the cabling, it is also important to pay attention to detailed and correct documentation, since afterwards it is usually very difficult or even impossible to determine where cables are going and what they are connecting (see INF.3.M9 Documentation and marking of the electrotechnical cabling and wiring) INF.3.M10 Neutral documentation in the distributors). The electrotechnical cabling should undergo an approval process after completion of the installation, which also includes aspects of information security (see INF.3.M5 Acceptance of electrotechnical cabling).
 
 **Business**
 
@@ -63,13 +63,13 @@ The further cable construction must consider the following factors:
 * strong electrical and inductive interference due to cable shielding.
 The correct and compliant selection of electric cables and compliance with the relevant standards (DIN VDE 0100 "Regulations for the installation of power installations with rated voltages up to 1000 V", DIN 4102 "Fire behavior of building materials and components") and regulations and the recognized rules of Technology represents the basic emergency precaution of the electrotechnical installation.
 
-Individual requirements for the selection of cables must not be defined exclusively by the IT itself, especially in operating environments in which environmental influences or special structural conditions must be observed. In particular, building services personnel familiar with operations and other special conditions must be involved in the planned cable management, in determining the relevant influences and, thus, the particular requirements for the design of cables.
+Individual requirements for the selection of cables must not be defined exclusively by the IT itself, especially in operating environments in which environmental influences or special structural conditions must be observed. In particular, building engineers who are familiar with operations and other special conditions must be involved in the planned cable management, in determining the relevant influences and, thus, the particular requirement for the design of cables.
 
 #### INF.3.M2 Planning the cable management [Head IT]
 
 When planning cable routes, care must be taken to avoid identifiable sources of danger. Basically, routes should only be laid in areas that are accessible only within the premises of an institution. A clear structure of the routes facilitates the control. Routes and individual cables should always be laid in such a way that they are protected against direct damage by persons, vehicles and machines.
 
-The location of equipment should be selected so that the cables connected to it are not in the running or driving area. If this can not be avoided, the cables must be protected according to the expected loads by means of suitable duct systems. As a general rule, make sure there is sufficient strain relief for the cables in the connectors when connecting the device.
+The location of equipment should be selected so that the cables connected to it are not in the running or driving area. If this can not be avoided, the cables must be protected by suitable ducting systems in accordance with the expected loads. As a general rule, make sure there is sufficient strain relief for the cables in the connectors when connecting the device.
 
 Underground garages are a major problem for damage-reducing cable management. Due to the safety circuits and the long open times of entrance gates, the access of third parties to underground garages can never be ruled out. Due to the usually low ceiling heights, it is possible with simple means to gain access to there running paths. Trains in the driving range can be below the permissible vehicle height. Damage or destruction of the tracks and cables due to vehicles that are too high can not be ruled out.
 In buildings shared with third parties, care must be taken to ensure that cables do not pass through their areas in floor, ceiling or wall ducts. All duct systems are to be closed mechanically in relation to the foreign occupied areas. It is better to let them end at the area borders.
@@ -89,7 +89,7 @@ If it is not possible to build roads with sufficient reserves, at least care sho
 It should be noted that breakthroughs through walls with a fire resistance class may only occupy up to 60% in order to achieve effective partitioning of these openings. If necessary, breakthroughs should be provided for later extensions during the construction and these should initially be closed by means of soft bulkheads or fire protection cushions.
 
 It is important that the route dimensioning must always be planned in connection with the selection of the cable types.
-The room occupancy and the connection values, for which an electrical installation was designed, are according to experience no longer in accordance with the actual conditions after some time. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the room and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may also be necessary to install additional or completely new infeeds, lines, distributors, etc.
+The room occupancy and the connection values, for which an electrical installation was designed, are according to experience no longer in accordance with the actual conditions after some time. It is therefore essential to check the electrical installation and, if necessary, adapt it to changes in the use of the space and changes and additions to the technical equipment (IT, air conditioning units, lighting, etc.). This can be done in simple cases by relocation of lines. In some cases, however, it may also be necessary to install additional or completely new infeeds, lines, distributors, etc.
 
 Both in terms of safety and considering the ever-faster data connections on copper lines, it is highly recommended that the power distribution network throughout the building be completely designed as a TN-S system. This is also a requirement of DIN VDE 0100-444. The PE and N conductors are routed separately from the equipotential bonding rail (PAS).
 
@@ -120,9 +120,9 @@ Requirements that could influence the future-proof, needs-based and cost-effecti
 
 #### INF.3.M5 Decrease in electrotechnical cabling
 
-The electrotechnical cabling must be subjected to a acceptance process in accordance with the relevant DIN VDE regulations after completion of the installation. In principle, the aspects of information security (see also INF.3.M11 Control of electrical equipment and connections) must be taken into account.
+The electrotechnical cabling must be subjected to a approval process in accordance with the relevant DIN VDE regulations after completion of the installation. In principle, the aspects of information security (see also INF.3.M11 Control of electrical equipment and connections) must be taken into account.
 
-An acceptance should only be made when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and no unacceptable deficiencies have been identified during the inspections by the contracting authority. The acceptance date should be selected in time so that the controls can be prepared for acceptance in sufficient time. In addition to the correct billing and the actual scope of the services, compliance with the different standards for electrical wiring must be checked during the acceptance. Upon acceptance, it should also be considered whether the firewall was properly restored after installation.
+An acceptance should only be made when all the tasks to be performed have been completed, the contractor has notified the measure of acceptance and no unacceptable deficiencies have been identified during the inspections by the contracting authority. The acceptance date should be selected in time so that the controls can be prepared for acceptance in sufficient time. In addition to the correct billing and the actual scope of the services, compliance with the different standards for electrical wiring must be checked during the acceptance. Upon acceptance, it should also be considered whether the firewall was properly restored after installation.
 
 A checklist can be prepared for the acceptance report. The checklist should also contain points regarding general requirements for the premises. The acceptance protocol must be signed by the participants and responsible persons in a legally binding manner. The protocol should be part of the internal documentation of the cabling.
 
@@ -130,18 +130,18 @@ A checklist can be prepared for the acceptance report. The checklist should also
 
 In any electrically conductive network, whether it is the power supply or the data transmission, it can come at any time to overvoltages. Predominantly such overvoltages are caused by other current consumers in the same supply network. Lightning overvoltages, on the other hand, are much rarer, but have much greater potential for damage.
 
-Overvoltages can enter into a building and the IT operated there, not just via the lines laid in the building, but also via all electrically conductive external connections such as telephone, water or gas lines. In addition, overvoltages can also be coupled to internal lines.
+Overvoltages can enter into a building and the IT operated there, not only via the cables laid in the building, but also via all electrically conductive external connections such as telephone, water or gas pipes. In addition, overvoltages can also be coupled to internal lines.
 The necessary measures to protect IT equipment are essentially the same regardless of the cause of the overvoltage. The standard DIN EN 62305 "Lightning Protection" valid since October 2006 (corresponds to the standard VDE 0185-305 and IEC 62305) reorganizes the entire lightning and surge protection.
 
 Based on the new standard DIN EN 62305 an overvoltage protection concept has to be created.
 
-For the first time in its Part 2 "Risk Management", DIN EN 62305 describes the way to a risk-oriented lightning and surge protection for the first time in a generally binding manner. Part 3 deals with the "Protection of Structures and Persons", in Part 4 "Electrical and Electronic Systems in Buildings".
+For the first time in its Part 2 "Risk Management", DIN EN 62305 describes the way to a risk-oriented lightning and surge protection for the first time in a generally binding way. Part 3 deals with the "Protection of Structures and Persons", in Part 4 "Electrical and Electronic Systems in Buildings".
 
-In the overvoltage protection concept, of course, stand-alone power supply systems (NEA) and uninterruptible power supplies (UPSs) must be taken into account. Although UPSs provide some protection to the connected equipment, they are in no way to be considered a surge protector, but solely as an electronic device to be protected.
+In the overvoltage protection concept, of course, stand-alone power supply systems (NEA) and uninterruptible power supplies (UPSs) must also be taken into account. Although UPSs provide some protection to the connected equipment, they are in no way to be considered a surge protector, but solely as an electronic device to be protected.
 
 The former three levels of coarse, medium and fine protection have been replaced by the concept of energetic coordination. According to the standard, overvoltage protection in the building and thus respect for the energetic coordination is only imperative if there is external lightning protection. In the interests of information security, overvoltage protection should also be built up in cases without external lightning protection in the building and consequently the energetic coordination should be considered. Simplified, this means the following:
 
-* Behind each protection element (SPD - Surge Protecting Device), the maximum amount of energy caused by overvoltage must be the same as that of all the electrical devices behind it (including the following SPDs). A pure network is of course much more robust and tolerates significantly more energy than z. B. the interface of a network card in a PC.
+* Behind each protection element (SPD - Surge Protecting Device), the maximum amount of energy caused by overvoltage must be the same as that of all the electrical devices behind it (including the following SPDs). A pure network is of course much more robust and tolerates much more energy than z. B. the interface of a network card in a PC.
 * All used SPDs must be compatible. The output of an upstream SPD and the input of the following must be matched. Evidence of energetic coordination can be provided in three ways:
 The construction of the lightning and overvoltage protection means that lightning protection zones (LPZ, LPZ, Lightning Protection Zone) are formed like onion shells. With increasing protection they are called from outside to inside with LPZ 0, LPZ 1, LPZ 2 etc. In this case, a zone can only be formed if there is the next outer one: Thus, it is not possible to realize an LPZ 2 without having the LPZ 1 as well.
 
@@ -179,7 +179,7 @@ Unnecessary lines are those lines that are no longer required for the function o
 
 Which cables are no longer needed may only be decided after careful examination by the responsible organizational unit. The decision has to be documented.
 
-If the changes to the cabling infrastructure are carried out parallel to the operation of the service, the measures must be organized in such a way that the disruption to service operations is reduced to a minimum. For this purpose, weekend and night work may also have to be scheduled. If there is not enough space in the existing lines for the old and new cables, then new lines for the new cables have to be installed in order to minimize the switching time from the still running old infrastructure to the new infrastructure.
+If the changes to the cabling infrastructure are carried out parallel to the operation of the service, the measures must be organized in such a way that the disruption to service operations is reduced to a minimum. For this purpose, weekend and night work may also have to be scheduled. If there is not enough space in the existing lines for the old and new cables, then new lines for the new cables have to be installed to minimize the switching time from the still running old infrastructure to the new infrastructure.
 
 Routes and cables that can be reasonably used as reserve with the existing technology must be marked explicitly on the cable itself and in the documentation as a non-operational reserve and must be kept in an operable condition.
 
@@ -206,7 +206,7 @@ If the planned route is not possible according to the fire protection regulation
 
 Maintenance, troubleshooting, repair, and successful cabling verification requires good documentation and clear identification of all associated components. The quality of this revision documentation depends on the completeness, the topicality and the readability of the documents. In any case, a person responsible for the documentation of the wiring must be named.
 
-Since it is not possible to accommodate all the information in a plan as the size of a network increases, it makes sense to divide up the information. Actual position information should always be drawn in scale plans. Other information can be kept in tabular or schematics. It is important that there is a clear assignment of all information among each other. The documentation should therefore consist of descriptive documents, lists and plans.
+Since it is not possible to accommodate all information in a plan as the size of a network increases, it is useful to divide up the information. Actual position information should always be drawn in scale plans. Other information can be kept in tabular or schematics. It is important that there is a clear assignment of all information among each other. The documentation should therefore consist of descriptive documents, lists and plans.
 
 The descriptive documents, such as For example, a documentation policy contains the information about the procedures for documentation, designation and labeling regulations. This should, for example, describe in a general way which lists and plans are to be created and how these are to be audit-proof.
 
@@ -250,7 +250,7 @@ Electrical systems must also be regularly checked for operational safety by an e
 
 ** electric distribution **
 
-The entire electrical distribution, mainly circuit breakers as well as screw connections and terminal points, is subject to aging like all technical devices. It must therefore be checked at regular intervals in accordance with DIN VDE 0105-100: 2005-06 "Operation of electrical systems".
+The entire electrical distribution, mainly circuit breakers as well as screw connections and terminal points, is subject to aging like all other technical devices. It must therefore be checked at regular intervals in accordance with DIN VDE 0105-100: 2005-06 "Operation of electrical systems".
 
 In the event of damage, a trader must furnish proof of the perfect condition of the electrical system to the trade supervisory authorities, the professional associations and the insurance companies.
 
@@ -267,7 +267,7 @@ All tests and their results must be documented in a suitable form.
 
 #### INF.3.M12 Avoidance of electrical ignition sources
 
-The major part of structural fire protection measures aims to limit developing fires, as well as to allow the escape of persons and the deployment of rescue workers. On the development of fires, these measures usually have little influence.
+The major part of structural fire protection measures aims to limit developing fires, as well as to allow the escape of persons and the deployment of rescue workers. On the origin of fires these measures usually have only a small influence.
 
 Here, the individual has to pay special attention and precaution in his daily work environment. In addition to the well-known and obvious sources of fire such as ashtrays, the "tip in the trash" or Christmas candle decorations attention must be paid to the less obvious electrical ignition sources.
 
@@ -296,7 +296,7 @@ If this is not possible and therefore the use of power strips is unavoidable, pl
 
 Dust-blocked fans can overheat the IT equipment being cooled, but can also become a source of fire.
 
-Fans should therefore be checked and cleaned at regular intervals for free concentricity and for dust deposits. This should be done at least once a year and, if there is a need for it, more often.
+Fans should therefore be inspected and cleaned at regular intervals for free concentricity and for dust deposits. This should be done at least once a year and if there is a noticeable need more often.
 
 ### 2.3 Measures for increased protection requirements
 The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
@@ -305,7 +305,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 The primary energy supply from an energy supply company's network should be supplemented with emergency care measures, such as server rooms, with increased availability requirements.
 
-The secondary power supply usually consists of a central UPS for the areas to be protected and a network backup system (NEA). If the local conditions and the requirement profile for availability permit it, a second supply from the network of a second energy supply company can fulfill this drop-in function instead of a NEA.
+The secondary power supply usually consists of a central UPS for the areas to be protected and a network backup system (NEA). If the local conditions and the requirement profile for availability permit it, a second supply from the network of a second energy supply company can fulfill this fallback function instead of a NEA.
 
 While a UPS bypasses fluctuations or short-term interruptions in the power supply, an emergency power system catches longer-term power outages.
 
@@ -319,7 +319,7 @@ To maintain the protection of a NEA and a UPS, they must be serviced regularly. 
 
 In a redundant power supply by means of a so-called A-B supply their functionality is usually permanently monitored anyway that devices with two power supplies that are A-B-powered, can report the failure of one of the two supplies via network protocols. If this possibility does not exist or can not be used for certain reasons, the availability of the A-B supply can also be B. be monitored by means of building control (GLT).
 
-In the area of ​​the upstream distribution (from the main distribution up to and including the last distribution before the consumers), the lines should be kept separate from each other in terms of space and fire protection. This is the only way to ensure that the redundancy brought about by the A-B supply is optimal.
+In the area of ​​the upstream distribution (from the main distribution up to and including the last distribution before the consumers), the cables should be kept separate from each other in terms of space and fire protection. This is the only way to ensure that the redundancy brought about by the A-B supply is optimal.
 
 The last distributions (A and B) before the consumers are at least so far apart in the impossibility of a spatially separated arrangement that it is not possible for one person to be active in both distributions at the same time.
 
@@ -327,7 +327,7 @@ In the end of the distribution (ie between the last distribution and the consume
 
 #### INF.3.M15 Material security of electrical wiring (A)
 
-In rooms with public traffic or in confusing areas of a building, it may make sense to secure lines and distribution boards against unauthorized access. This can be achieved in several ways:
+In rooms with public traffic or in confusing areas of a building, it may make sense to secure lines and distributors against unauthorized access. This can be achieved in several ways:
 
 * Laying the cables or cable ducts under plaster,
 * Laying the pipes in steel armored pipe,
@@ -348,8 +348,8 @@ To improve the operational safety of electrical connections and distributors, th
 
 There should be a firewall cadastre that meets at least the following requirements:
 
-* In the cadastre all bulkheads are to be included, so pure cable bulkheads, pipe bulkheads, combination fumigants etc.
-* Each firewall in the building or in the property must be managed individually in the cadastre. (The inclusion of bulkheads in the cadastre may be omitted for bulkheads whose failure demonstrably has no adverse effect on the IT operation of the building or property.)
+* In the cadastre, all bulkheads are to be included, that is, pure cable ducts, pipe bulkheads, combination bulkheads, etc.
+* Each firewall in the building or in the property must be managed individually in the cadastre. (The inclusion of bulkheads in the cadastre may be omitted for such bulkheads, the failure of which has been shown to have no adverse effect on the IT operation of the building or property.)
 * Each firewall is listed in the cadastre under an individual unique identification. This identification must be affixed in the immediate vicinity of the relevant bulkhead (as far as possible on both sides) in a legible manner.
 * In the cadastre for each bulkhead individually the proof of at least annual visual inspection with the resulting findings is to lead.
 * In the cadastre are for Schotts, which are already installed at the time of the creation of the cadastre, all available information structured, so at least:
