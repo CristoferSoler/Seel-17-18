@@ -9,3 +9,13 @@
 .abstandButtonToBottom{
     margin-bottom: 10px;
 }
+
+.wizardList{
+    text-align:left;
+    font-size: large;
+    list-style-type:none;
+}
+
+.wizardList li{
+    margin:2%;
+}

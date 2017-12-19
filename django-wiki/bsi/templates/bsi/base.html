@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% load staticfiles %}
-    <link href="{% static "bsi/bootstrap/css/wiki-bootstrap.min.css" %}" rel="stylesheet">
-    <script src="{% static "bsi/js/jquery.min.js" %}"></script>
-    <script src="{% static "bsi/js/core.js" %}"></script>
-    <script src="{% static "bsi/bootstrap/js/bootstrap.min.js" %}"></script>
+    <link href="{% static 'bsi/bootstrap/css/wiki-bootstrap.min.css' %}" rel="stylesheet">
+    <script src="{% static 'bsi/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bsi/js/core.js' %}"></script>
+    <script src="{% static 'bsi/bootstrap/js/bootstrap.min.js' %}"></script>
     <!-- Optionally enable responsive features in IE8 -->
-    <script src="{% static "bsi/js/respond.min.js" %}"></script>
+    <script src="{% static 'bsi/js/respond.min.js' %}"></script>
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/style.css' %}"/>
     <link rel="stylesheet" typle="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
-    <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
-    <script src="{% static "bsi/js/wizard/wizard.js" %}"></script>
-    <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
+    <script src="{% static 'bsi/js/bootstrap-treeview.js' %}"></script>
+    <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
+    <script src="{% static 'bsi/css/bootstrap-treeview.css' %}"></script>
     <!--Icon -->
-    <link href="{% static "bsi/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
 </head>
 
@@ -151,7 +151,7 @@
                 </div>
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <div id="list" class="wizardList"></div>
               </div>
             </div>
           </div>

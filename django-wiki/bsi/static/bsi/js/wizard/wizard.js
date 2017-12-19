@@ -26,6 +26,12 @@ function yesPress() {
 
     if(remainingComponents.length <= 10 ){
         console.log(JSON.stringify(remainingComponents));
+        $("#list").empty()
+        $("#list").append('<ul>');
+        for(i=0;i<remainingComponents.length;i++) {
+            $("#list").append('<li>' + remainingComponents[i].name);
+        }
+        $("#list").append('</ul>');
     } else{
         $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
     }
