@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect
 from django.template import loader
 from django.utils.decorators import method_decorator
 from wiki.decorators import get_article
+from wiki.models import URLPath, ArticleRevision
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
@@ -87,8 +88,16 @@ def index(request):
 
     return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
+def getPathOfComponent(title):
+    revision = ArticleRevision.objects.filter(title=title)
+    parent = URLPath.objects.get(slug='components')
+    urlpath = URLPath.objects.get(parent=parent, article=revision.title)
+    return urlpath.path
+
 def generateDic(list):
-    componentDic = {'name':list[0],'topics':list[1:]}
+    title = list[0]
+    path = getPathOfComponent(title)
+    componentDic = {'name':title,'path':path,'topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():

@@ -72,7 +72,7 @@ function restart(){
 
 function presentResults() {
     $("#list").empty();
-    $("#list").append('<ul class="urd-square-success">');
+    //$("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
         $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
     }
