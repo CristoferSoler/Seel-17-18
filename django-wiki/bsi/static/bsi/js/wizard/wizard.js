@@ -29,7 +29,7 @@ function yesPress() {
         $("#list").empty()
         $("#list").append('<ul>');
         for(i=0;i<remainingComponents.length;i++) {
-            $("#list").append('<li>' + remainingComponents[i].name);
+            $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
         }
         $("#list").append('</ul>');
     } else{
