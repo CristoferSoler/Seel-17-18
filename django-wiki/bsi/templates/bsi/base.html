@@ -16,6 +16,8 @@
     <script src="{% static 'bsi/js/bootstrap-treeview.js' %}"></script>
     <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
     <script src="{% static 'bsi/css/bootstrap-treeview.css' %}"></script>
+    <script type="text/javascript" src="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/js/bootstrap-extend.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/css/bootstrap-extend.min.css"/>
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
@@ -152,7 +154,8 @@
                   <div class="row">
                       <div class="col-md-2"></div>
                        <div class="col-md-9">
-                           <div id="list" class="wizardList"></div>
+                           <ul id="list" class="wizardListTopMargin urd urd-disc-primary">
+                           </ul>
                        </div>
                        <div class="col-md-1"></div>
                   </div>

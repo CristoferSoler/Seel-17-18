@@ -2,7 +2,7 @@ var orginalTopic;
 var remainingComponents;
 var currentTopic = 0;
 var currentSortedTopic;
-var thresholdTopicNumber = 10;
+const thresholdTopicNumber = 10;
 
 function initWizard(components,sortedTopics) {
     var components = JSON.parse(components)['components'];
@@ -72,7 +72,7 @@ function restart(){
 
 function presentResults() {
     $("#list").empty();
-    $("#list").append('<ul>');
+    $("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
         $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
     }

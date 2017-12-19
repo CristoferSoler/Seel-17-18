@@ -17,7 +17,11 @@
 }
 
 .wizardList li{
-    margin:2%;
+    margin-top: 10px;
+}
+
+.wizardListTopMargin{
+    margin-top: 20px;
 }
 
 .modal-body {
