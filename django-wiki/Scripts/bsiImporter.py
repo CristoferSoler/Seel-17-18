@@ -12,6 +12,7 @@ django.setup()
 from bsiwiki import settings
 from bsi.models import BSI, BSI_Article_type
 
+new_temp_bsi_folder = './mdNew'
 crfDir = './CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 
@@ -68,6 +69,8 @@ def doImport():
             elif sub_article_type == "T":
                 article_type = BSI_Article_type.THREAT
                 parent = BSI.get_or_create_bsi_subroots("threats", "BSI.importer", "", "Threats")
+            else:
+                continue
 
             for filename in [f for f in filenames if f.endswith(".md")]:
                 # get the drive and the filepath
@@ -101,42 +104,71 @@ def doUpdate(file):
     print(json.dumps(deleted, indent=4))
 
     # go through the dir and read the content of each file
-    for filename in [f for f in listdir(settings.CRAWLER_DIRECTORY) if f.lower().endswith('md')]:
-        fileContent = open(join(settings.CRAWLER_DIRECTORY, filename), "r").read()
+    for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
+        if not filenames:
+            continue
 
-        # if it's a component, append the threat-measures relationships
+        sub_article_type = basename(dirpath)
+        if sub_article_type == "C":
+            article_type = BSI_Article_type.COMPONENT
+            bsi_type = 'component'
+        elif sub_article_type == "N":
+            article_type = BSI_Article_type.IMPLEMENTATIONNOTES
+            bsi_type = 'implementationnotes'
+        elif sub_article_type == "T":
+            article_type = BSI_Article_type.THREAT
+            bsi_type = 'threat'
+        else:
+            continue
 
-        # for modified
-        # find article, clone it, mark the clone as archive, create urlpath for the clone
-        # update the content of article, do the same for user articles
-        doModified(modified)
+        # TODO create new page
 
-        # for added
-        # create new article, create its urlpath
-        doAdded(added)
+        for filename in [f for f in filenames if f.endswith(".md")]:
+            # get the drive and the filepath
+            path_and_file = join(dirpath, filename)
+            # get the path and file name
+            location, file = split(path_and_file)
+            # get the file id and the titel
+            file_name = splitext(file)[0]
+            id = get_bsi_article_id(sub_article_type, file_name)
+            if(is_contained_in(modified, bsi_type, id)):
+                doModified(article_type, id)
+            elif(is_contained_in(added, bsi_type, id)):
+                doAdded(article_type, id)
 
-        # for deleted
-        # find article, mark it as archive, update urlpath, do the same for user articles
-        doDeleted(deleted)
+    doDeleted(deleted)
 
-        # for unchanged articles, update its modification time
-        updateModificationTime()
-
+    # for unchanged articles, update its modification time
+    updateModificationTime()
     return
 
 
-def doModified(modified):
+def is_contained_in(dic, bsi_type, bsi_id):
+    for elem in dic.get('type'):
+        if(elem.get('name') == bsi_type):
+            for file in elem.get('files'):
+                if(file.get('file') == bsi_id):
+                    return True
+    return False
+
+
+def doModified(bsi_type, bsi_id):
     # TODO
+    # if it's a component, append the threat-measures relationships
+    print('modified', bsi_type, bsi_id)
     return
 
 
-def doAdded(added):
+def doAdded(bsi_type, bsi_id):
     # TODO
+    # if it's a component, append the threat-measures relationships
+    print('added', bsi_type, bsi_id)
     return
 
 
 def doDeleted(deleted):
     # TODO
+    print('deleted')
     return
 
 
@@ -179,7 +211,7 @@ def checkFileAction(filepath):
     assert(filepath is not None)
 
     # look in the text file and check if the files shoul be m/a/d
-    file = open(filepath, mode="r")
+    file = open(filepath, "r")
     currentSep1 = file.readline().rstrip()
     currentSep2 = file.readline().rstrip()
 
@@ -199,20 +231,23 @@ def checkFileAction(filepath):
         elif(currentSep2.startswith('%d')):
             types = deleted.get('type')
         else:
-            raise ValueError('Input file might be corrupt.')
+            raise ValueError('Input file might be corrupted.')
 
         if(currentSep1.startswith('#C')):
             name = 'component'
+            sub = 'C'
         elif(currentSep1.startswith('#T')):
             name = 'threat'
+            sub = 'T'
         elif(currentSep1.startswith('#N')):
             name = 'implementationnotes'
+            sub = 'N'
         else:
-            raise ValueError('Input file might be corrupt.')
+            raise ValueError('Input file might be corrupted.')
 
         obj = [c for c in types if c.get('name') == name][0]
         if obj:
-            obj['files'].append({'file': line})
+            obj['files'].append({'file': get_bsi_article_id(sub, line)})
 
     return modified, added, deleted
 
