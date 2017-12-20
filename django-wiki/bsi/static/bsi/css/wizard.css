@@ -28,3 +28,6 @@
     overflow-y: auto;
 }
 
+.modal-backdrop {
+    background:none;
+}
