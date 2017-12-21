@@ -17,11 +17,12 @@ class BSITestCase(InitTestCase):
         self.assertTrue(roots == 1, "There should be only one BSI root")
 
     def test_get_or_create_bsi_subroots(self):
-        BSI.get_or_create_bsi_subroots('components', 'usermsg', 'content', 'BSI Components')
+        bsi_root = BSI.get_or_create_bsi_root(content='')
+        BSI.get_or_create_bsi_subroots(bsi_root, 'components', 'usermsg', 'content', 'BSI Components')
         comproots = URLPath.objects.filter(slug='components').count()
         self.assertTrue(comproots == 1, "There should be only one BSI Components root")
 
-        BSI.get_or_create_bsi_subroots('components', 'usermsg', 'content', 'BSI Components')
+        BSI.get_or_create_bsi_subroots(bsi_root, 'components', 'usermsg', 'content', 'BSI Components')
         comproots = URLPath.objects.filter(slug='components').count()
         self.assertTrue(comproots == 1, "There should be only one BSI Components root")
 
@@ -34,3 +35,4 @@ class BSITestCase(InitTestCase):
 
         count = len(BSI.get_articles_by_type(BSI_Article_type.THREAT))
         self.assertTrue(count == 0, "There should be no BSI Threat article")
+
