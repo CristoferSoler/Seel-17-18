@@ -6,7 +6,7 @@ import sys
 import string
 import filecmp
 
-sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
+sys.path.append("/Users/Jonathan/PycharmProjects/Seel-17-18/django-wiki")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from os.path import  isfile, isdir, join

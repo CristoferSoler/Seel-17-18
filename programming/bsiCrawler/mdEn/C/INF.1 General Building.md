@@ -269,3 +269,333 @@ The following elementary hazards are important for the module "General Building"
 * G 0.34 stop
 * G 0.44 Unauthorized intrusion into premises
 The cross reference tables can be found in the download area due to their size.
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A4 fire detection in buildings [planner]
+  * INF.1.A5 Hand Fire Extinguisher
+  * INF.1.A8 smoking ban [staff]
+  * INF.1.A12 key management
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A20 Alerting plan and fire drills
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A28 Air conditioning for people (IA)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A6 Closed Windows and Doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A24 Automatic drainage (A)
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A8 smoking ban [staff]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A20 Alerting plan and fire drills
+  * INF.1.A24 Automatic drainage (A)
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A20 Alerting plan and fire drills
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A6 Closed Windows and Doors [Staff]
+  * INF.1.A7 Access Control and Control [Head of Organization]
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A23 Formation of Security Zones [Planner] (C)
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A2 Adjusted distribution of circuits
+  * INF.1.A20 Alerting plan and fire drills
+  * INF.1.A21 Independent electrical supply strands (A)
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A23 Formation of Security Zones [Planner] (C)
+  * INF.1.A24 Automatic drainage (A)
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A26 porter or security service (CIA)
+  * INF.1.A27 Burglary Protection (CIA)
+  * INF.1.A28 Air conditioning for people (IA)
+  * INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A21 Independent electrical supply strands (A)
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
+  * INF.1.A30 Selection of a suitable building (CIA)
+* G 0.10 Failure or malfunction of supply networks
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A21 Independent electrical supply strands (A)
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A30 Selection of a suitable building (CIA)
+* G 0.16 Theft of devices, data carriers or documents
+  * INF.1.A6 Closed Windows and Doors [Staff]
+  * INF.1.A7 Access Control and Control [Head of Organization]
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A23 Formation of Security Zones [Planner] (C)
+  * INF.1.A26 porter or security service (CIA)
+  * INF.1.A27 Burglary Protection (CIA)
+  * INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+* G 0.18 Missing planning or missing adjustment
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A4 fire detection in buildings [planner]
+  * INF.1.A5 Hand Fire Extinguisher
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A12 key management
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A25 Suitable Location Selection [Institutional Management] (A)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+* G 0.29 Violation of laws or regulations
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A3 Compliance with fire safety regulations
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+  * INF.1.A32 firewall cadastre (A)
+  * INF.1.A33 Arrangement of protected buildings (CIA)
+  * INF.1.A34 Alarm system (A)
+  * INF.1.A4 fire detection in buildings [planner]
+  * INF.1.A5 Hand Fire Extinguisher
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+* G 0.34 stop
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A20 Alerting plan and fire drills
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A23 Formation of Security Zones [Planner] (C)
+* G 0.44 Unauthorized intrusion into premises
+  * INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+  * INF.1.A10 Compliance with relevant standards and regulations [installer company, site manager]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A14 Lightning protection devices
+  * INF.1.A15 Location plans of utilities
+  * INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
+  * INF.1.A17 Structural smoke protection [Planner]
+  * INF.1.A18 fire safety inspections
+  * INF.1.A19 Early information of the fire protection officer
+  * INF.1.A6 Closed Windows and Doors [Staff]
+  * INF.1.A7 Access Control and Control [Head of Organization]
+  * INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
+  * INF.1.A11 Completed doors [Staff]
+  * INF.1.A12 key management
+  * INF.1.A13 Regulations for access to distribution boards
+  * INF.1.A22 Safe Doors and Windows (CIA)
+  * INF.1.A23 Formation of Security Zones [Planner] (C)
+  * INF.1.A26 porter or security service (CIA)
+  * INF.1.A27 Burglary Protection (CIA)
+  * INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
+  * INF.1.A30 Selection of a suitable building (CIA)
+  * INF.1.A31 Extract from Buildings [Inner Service] (C)
+* G 0.14 Spying out information (spying)
+  * INF.10.A4 Planning of meeting, event and training rooms
+  * INF.10.A6 Setting up secure network access [Head IT]
+  * INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]
+  * INF.10.A9 Resetting Training and Presentation Computers [IT Leader] (CA)
+* G 0.15 Listening
+  * INF.10.A4 Planning of meeting, event and training rooms
+  * INF.10.A6 Setting up secure network access [Head IT]
+  * INF.10.A9 Resetting Training and Presentation Computers [IT Leader] (CA)
+* G 0.16 Theft of devices, data carriers or documents
+  * INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+  * INF.10.A2 Supervision of visitors [Staff]
+* G 0.18 Missing planning or missing adjustment
+  * INF.10.A5 Flying Wiring
+  * INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]
+* G 0.21 Manipulation of hardware or software
+  * INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+  * INF.10.A2 Supervision of visitors [Staff]
+  * INF.10.A3 Closed windows and doors [Staff]
+  * INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]
+* G 0.24 Destruction of equipment or data media
+  * INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+  * INF.10.A2 Supervision of visitors [Staff]
+  * INF.10.A3 Closed windows and doors [Staff]
+* G 0.41 Sabotage
+  * INF.10.A2 Supervision of visitors [Staff]
+  * INF.10.A3 Closed windows and doors [Staff]
+  * INF.10.A4 Planning of meeting, event and training rooms
+  * INF.10.A6 Setting up secure network access [Head IT]
+  * INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]
+  * INF.10.A8 Creation of a proof of use for rooms
+  * INF.10.A9 Resetting Training and Presentation Computers [IT Leader] (CA)
+* G 0.44 Unauthorized intrusion into premises
+  * INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+  * INF.10.A2 Supervision of visitors [Staff]
+  * INF.10.A3 Closed windows and doors [Staff]
+  * INF.10.A8 Creation of a proof of use for rooms
+* G 0.45 data loss
+  * INF.10.A7 Secure Configuration of Training and Presentation Computers [IT Leader]

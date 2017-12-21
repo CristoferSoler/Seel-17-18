@@ -93,8 +93,8 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'C:\githubRepo\Seel-17-18\programming\bsiCrawler\mdEn'
-REFERENCE_DIRECTORY = r'C:\githubRepo\Seel-17-18\programming\bsiCrawler\references'
+CRAWLER_DIRECTORY = r'/Users/Jonathan/PycharmProjects/Seel-17-18/programming/bsiCrawler/mdEn'
+REFERENCE_DIRECTORY = r'/Users/Jonathan/PycharmProjects/Seel-17-18/programming/bsiCrawler/references'
 LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
