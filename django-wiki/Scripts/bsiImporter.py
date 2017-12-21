@@ -11,7 +11,7 @@ django.setup()
 
 from bsiwiki import settings
 from bsi.models import BSI, BSI_Article_type
-from wiki.models import URLPath
+from wiki.models import URLPath, ArticleRevision
 
 
 new_temp_bsi_folder = './mdNew'
@@ -161,9 +161,9 @@ def createNewPage():
     # this is just sanity check, the new page should not exist
     try:
         new = URLPath.objects.get(slug='new')
-    except URLPath.DoesNotExist:
+    except Exception:
         # it does not exist, so create it
-        root = URLPath.objects.get(slug='')
+        root = URLPath.root()
         rev_kwargs = {'content': '', 'user_message': 'Importer.create', 'ip_address': '0.0.0.0'}
         new = URLPath.create_urlpath(parent=root, slug='new', title='What\'s new', **rev_kwargs)
     return new
@@ -179,8 +179,51 @@ def is_contained_in(dic, bsi_type, bsi_id):
 
 
 def fillNewPage(modified, added, deleted, new_page):
-    # TODO
-    return
+    bsi = BSI.get_or_create_bsi_root('')
+    content = 'The following articles have been changed in the new BSI Catalogue:<br />'
+    for bsi_type in new_page.get_children():
+        if(bsi_type.slug == 'components'):
+            bsi_parent = URLPath.objects.filter(slug='components', parent=bsi)[0]
+            content += '<br />Components:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'component', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'component', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'component'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+        if(bsi_type.slug == 'threats'):
+            bsi_parent = URLPath.objects.filter(slug='threats', parent=bsi)[0]
+            content += '<br />Threats:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'threat', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'threat', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'threat'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+        elif(bsi_type.slug == 'implementationnotes'):
+            bsi_parent = URLPath.objects.filter(slug='implementationnotes', parent=bsi)[0]
+            content += '<br />Implementation Notes:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'implementationnotes', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'implementationnotes', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'implementationnotes'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+    revision = ArticleRevision()
+    revision.inherit_predecessor(new_page.article)
+    from markdownify import markdownify as md
+    revision.content = md(content)
+    new_page.article.add_revision(revision)
+    print('Content of ' + new_page.path + ' is updated!')
 
 
 def updateModificationTime():
@@ -302,4 +345,5 @@ if __name__ == '__main__':
     file = parseArgs()
     main(file)
     print("finished!")
+
 

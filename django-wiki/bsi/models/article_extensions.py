@@ -119,7 +119,7 @@ class BSI(models.Model):
 
     @classmethod
     def get_or_create_bsi_subroots(cls, parent, slug, user_msg, content, title):
-        subroot = URLPath.objects.filter(slug=slug)
+        subroot = URLPath.objects.filter(slug=slug, parent=parent)
         if (not subroot):
             rev_kwargs = {'content': content, 'user_message': user_msg, 'ip_address': '0.0.0.0'}
             subroot = URLPath.create_urlpath(parent=parent, slug=slug, title=title,
@@ -132,8 +132,8 @@ class BSI(models.Model):
     @transaction.atomic
     def create(cls, parent, slug, title, article_type, **rev_kwargs):
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
-        if not url.path.startswith('bsi') or len(url.path) == 3:
-            raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
+        #if not url.path.startswith('bsi') or len(url.path) == 3:
+        #    raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
         bsi = cls(url=url, articleType=article_type)
         bsi.save()
 
