@@ -4,6 +4,7 @@ from django.db import models
 from django.db.models import signals
 from enumfields import Enum
 from enumfields import EnumField
+# from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
 
 
@@ -12,10 +13,6 @@ class BSI_Article_type(Enum):
     THREAT = 'G'
     IMPLEMENTATIONNOTES = 'N'
 
-    class Labels:
-        COMPONENT = 'Components'
-        THREAT = 'Threat'
-        IMPLEMENTATIONNOTES = 'Implementation Notes'
 
 class UGA(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
@@ -106,7 +103,7 @@ class BSI(models.Model):
             if (not root):
                 site = Site.objects.get_current()
                 kwargs = {'content': "", 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
-                root = URLPath.create_root(site=site, title="Root", request=None, **kwargs)
+                root = URLPath.create_root(site=site, title="BSI Overview", request=None, **kwargs)
             else:
                 root = root[0]
             rev_kwargs = {'content': content, 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
@@ -116,12 +113,11 @@ class BSI(models.Model):
         return bsiRoot
 
     @classmethod
-    def get_or_create_bsi_subroots(cls, slug, user_msg, content, title):
-        bsi_root = BSI.get_or_create_bsi_root('')
+    def get_or_create_bsi_subroots(cls, parent, slug, user_msg, content, title):
         subroot = URLPath.objects.filter(slug=slug)
         if (not subroot):
             rev_kwargs = {'content': content, 'user_message': user_msg, 'ip_address': '0.0.0.0'}
-            subroot = URLPath.create_urlpath(parent=bsi_root, slug=slug, title=title,
+            subroot = URLPath.create_urlpath(parent=parent, slug=slug, title=title,
                                              **rev_kwargs)
         else:
             subroot = subroot[0]
@@ -151,3 +147,4 @@ class BSI(models.Model):
 
 
 signals.post_save.connect(ArticleRevisionValidation.get_or_create, sender=ArticleRevision)
+
