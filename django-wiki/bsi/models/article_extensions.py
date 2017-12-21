@@ -13,6 +13,11 @@ class BSI_Article_type(Enum):
     THREAT = 'G'
     IMPLEMENTATIONNOTES = 'N'
 
+    class Labels:
+        COMPONENT = 'Components'
+        THREAT = 'Threat'
+        IMPLEMENTATIONNOTES = 'Implementation Notes'
+
 
 class UGA(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
