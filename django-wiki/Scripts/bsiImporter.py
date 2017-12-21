@@ -105,6 +105,8 @@ def doUpdate(file):
     print(json.dumps(added, indent=4))
     print(json.dumps(deleted, indent=4))
 
+    new_page = createNewPage()
+
     # go through the dir and read the content of each file
     for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
         if not filenames:
@@ -122,8 +124,6 @@ def doUpdate(file):
             bsi_type = 'threat'
         else:
             continue
-
-        new_page = createNewPage()
 
         for filename in [f for f in filenames if f.endswith(".md")]:
             # get the drive and the filepath
@@ -146,10 +146,8 @@ def doUpdate(file):
                     BSI.create(parent=new_page, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(file_name + " is saved")
 
-    doDeleted(deleted)
+    fillNewPage(modified, added, deleted, new_page)
 
-    # for unchanged articles, update its modification time
-    updateModificationTime()
     return
 
 
@@ -175,9 +173,8 @@ def is_contained_in(dic, bsi_type, bsi_id):
     return False
 
 
-def doDeleted(deleted):
+def fillNewPage(modified, added, deleted, new_page):
     # TODO
-    print('deleted')
     return
 
 
@@ -194,6 +191,12 @@ def find_between(s, first, last):
         return s[start:end]
     except ValueError:
         return ""
+
+
+def post_phase():
+    # TODO
+    # for unchanged articles, update its modification time
+    updateModificationTime()
 
 
 def get_bsi_article_id(type, file_name):
