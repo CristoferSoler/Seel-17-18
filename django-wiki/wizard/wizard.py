@@ -12,7 +12,7 @@ from wiki.models import ArticleRevision, URLPath
 def getPathOfComponent(title):
     revision = ArticleRevision.objects.filter(title=title)
     parent = URLPath.objects.get(slug='components')
-    urlpath = URLPath.objects.get(parent=parent, article=revision.title)
+    urlpath = URLPath.objects.get(parent=parent, article=revision.article)
     return urlpath.path
 
 def generateDic(list):
@@ -41,7 +41,7 @@ def getListOfFrequenceOfTopic(components):
         topics.append(topic[0])
     return topics
 
-def getSortedTopicList():
+def getSortedTopicList(request  ):
     components = readAndProcessCSV()
     var = getListOfFrequenceOfTopic(components['components'])
     jsonFile = '{components:' + json.dumps(components) +', sortedTopicList:' + json.dumps(var) + "}"

@@ -21,6 +21,7 @@ from wiki.urls import get_pattern
 from bsi import views
 
 urlpatterns = [
+    url(r'^_wizard/', include('wizard.urls')),
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^register/', views.register, name='register'),
@@ -34,5 +35,4 @@ urlpatterns = [
     url(r'^', include('bsi.urls')),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
     url(r'^', get_pattern()),
-    url(r'^getWizardData/', include('wizard.urls')),
 ]

@@ -211,7 +211,7 @@
         if(localStorage.getItem('sortedTopicList') !== null){
             console.log('Nicks los');
         }else{
-            console.log(jQuery.getJSON('/getWizardData').done(function(data){
+            console.log(jQuery.getJSON('/wizard/').done(function(data){
                 localStorage.setItem('sortedTopicList', data);
             })
             );
