@@ -55,6 +55,7 @@ def doImport():
         # just in case, look in DB, find if an article with the same headerID exists
         # if it doesn't (it should always be this case)
         # then create a new article and its urlpath
+        bsi_root = BSI.get_or_create_bsi_root('')
         for dirpath, dirnames, filenames in walk(settings.CRAWLER_DIRECTORY):
             if not filenames:
                 continue
@@ -63,14 +64,14 @@ def doImport():
             sub_article_type = basename(dirpath)
             if sub_article_type == "C":
                 article_type = BSI_Article_type.COMPONENT
-                parent = BSI.get_or_create_bsi_subroots("components", "BSI.importer", "", "Components")
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "components", "BSI.importer", "", "Components")
             elif sub_article_type == "N":
                 article_type = BSI_Article_type.IMPLEMENTATIONNOTES
-                parent = BSI.get_or_create_bsi_subroots("implementationnotes", "BSI.importer", "",
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "implementationnotes", "BSI.importer", "",
                                                         "Implementation Notes")
             elif sub_article_type == "T":
                 article_type = BSI_Article_type.THREAT
-                parent = BSI.get_or_create_bsi_subroots("threats", "BSI.importer", "", "Threats")
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "threats", "BSI.importer", "", "Threats")
             else:
                 continue
 
@@ -116,12 +117,16 @@ def doUpdate(file):
         if sub_article_type == "C":
             article_type = BSI_Article_type.COMPONENT
             bsi_type = 'component'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "components", "BSI.importer", "", "Components")
         elif sub_article_type == "N":
             article_type = BSI_Article_type.IMPLEMENTATIONNOTES
             bsi_type = 'implementationnotes'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "implementationnotes", "BSI.importer", "",
+                                                                "Implementation Notes")
         elif sub_article_type == "T":
             article_type = BSI_Article_type.THREAT
             bsi_type = 'threat'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "threats", "BSI.importer", "", "Threats")
         else:
             continue
 
@@ -143,7 +148,7 @@ def doUpdate(file):
                     content = data_file.read()
                     revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
                                        'ip_address': '0.0.0.0'}
-                    BSI.create(parent=new_page, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
+                    BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(file_name + " is saved")
 
     fillNewPage(modified, added, deleted, new_page)
