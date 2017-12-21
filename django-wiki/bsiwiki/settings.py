@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'wiki.plugins.links',
     'bsi',
     'archive',
+    'wizard'
 ]
 
 MIDDLEWARE = [

@@ -18,7 +18,6 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
-
 from bsi import views
 
 urlpatterns = [
@@ -35,5 +34,5 @@ urlpatterns = [
     url(r'^', include('bsi.urls')),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
     url(r'^', get_pattern()),
-
+    url(r'^getWizardData/', include('wizard.urls')),
 ]

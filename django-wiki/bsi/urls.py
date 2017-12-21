@@ -26,6 +26,5 @@ urlpatterns = [
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
     url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),
-    url(r'^getWizardData/', getSortedTopicList, name='wizard'),
 
 ]

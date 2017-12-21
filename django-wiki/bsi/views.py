@@ -19,8 +19,6 @@ import json
 import itertools
 from collections import Counter
 
-from bsi.ugaViews import overview_uga
-
 
 class WikiArticleView(ArticleView):
 
