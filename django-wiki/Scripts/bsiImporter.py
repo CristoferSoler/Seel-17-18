@@ -4,6 +4,7 @@ import configparser
 import sys
 from os.path import isdir, join, isfile, basename, split, splitext
 from os import listdir, environ, walk
+import pdb
 
 sys.path.append(r'..')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -12,7 +13,7 @@ django.setup()
 from bsiwiki import settings
 from bsi.models import BSI, BSI_Article_type
 from wiki.models import URLPath, ArticleRevision
-
+from archive.models import Archive, ArchiveTransaction
 
 new_temp_bsi_folder = './mdNew'
 crfDir = './CRF/'
@@ -112,7 +113,7 @@ def doUpdate(file):
     for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
         if not filenames:
             continue
-
+        pdb.set_trace()
         sub_article_type = basename(dirpath)
         if sub_article_type == "C":
             article_type = BSI_Article_type.COMPONENT
@@ -149,7 +150,7 @@ def doUpdate(file):
                     revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
-                    print(file_name + " is saved")
+                    print(file_name + " " + id +" "+ bsi_type + " is saved")
 
     fillNewPage(modified, added, deleted, new_page)
 
@@ -242,8 +243,74 @@ def find_between(s, first, last):
 
 
 def post_phase():
-    # TODO
     # for unchanged articles, update its modification time
+    type = []
+    new_c_articles = []
+    c_article = []
+    t_article = []
+    n_article = []
+    new_t_article = []
+    new_n_article = []
+    uga_ref = []
+    archive = Archive.get_or_create('2017-12')
+    new = URLPath.objects.get(slug='new')
+    bsi = URLPath.objects.get(slug='bsi')
+    type = URLPath.objects.filter(parent=new)
+    for new_type in type:
+        uga_ref = ""
+        if new_type.slug == "components":
+            bsi_type = URLPath.objects.get(parent=bsi, slug='components')
+            new_c_article = new_type.get_ordered_children()
+            for article in new_c_article:
+                c_article = BSI.get_articles_by_type('C')
+                for c in c_article:
+                    if c.slug == article.slug:
+                        c.slug = "c_" + c.slug
+                        print(ref)
+                        uga_ref = c.bsi.references.all()
+                        archive_tranc = ArchiveTransaction.create(archive, c)
+                        archive_tranc.archive()
+                        for ref in uga_ref:
+                            print(ref)
+                            ArchiveTransaction.create(archive, ref.url).archive()
+                article.parent = bsi_type
+                article.save()
+
+
+
+        elif new_type.slug == "threats":
+            bsi_type = URLPath.objects.get(parent=bsi, slug='threats')
+            new_t_article = new_type.get_ordered_children()
+            for article in new_t_article:
+                t_article = BSI.get_articles_by_type('G')
+                for t in t_article:
+                    if t.slug == article.slug:
+                        t.slug = "t_" + t.slug
+                        uga_ref = t.bsi.references.all()
+                        archive_tranc = ArchiveTransaction.create(archive, t)
+                        archive_tranc.archive()
+                        for ref in uga_ref:
+                            ArchiveTransaction.create(archive, ref.url).archive()
+                article.parent = bsi_type
+                article.save()
+
+
+
+        elif new_type.slug == "implementationnotes":
+            bsi_type = URLPath.objects.get(parent=bsi, slug='implementationnotes')
+            new_n_article  = new_type.get_ordered_children()
+            for article in new_n_article:
+                n_article = BSI.get_articles_by_type('N')
+                for n in n_article:
+                    if n.slug == article.slug:
+                        n.slug = "n_" + n.slug
+                        uga_ref = n.bsi.references.all()
+                        archive_tranc = ArchiveTransaction.create(archive, n)
+                        archive_tranc.archive()
+                        for ref in uga_ref:
+                            ArchiveTransaction.create(archive, ref.url).archive()
+                article.parent = bsi_type
+                article.save()
     updateModificationTime()
 
 
@@ -344,6 +411,7 @@ def cleanUp():
 if __name__ == '__main__':
     file = parseArgs()
     main(file)
+    #post_phase()
     print("finished!")
 
 
