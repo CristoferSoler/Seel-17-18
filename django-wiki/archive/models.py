@@ -9,9 +9,9 @@ class Archive(models.Model):
     An archive always has the same parent article. If an archive is created, it is to validate that the root archive exists.
     If it does not exist, it is created (see except statement in method create).
     """
-    archive_url = models.OneToOneField('wiki.URLPath', verbose_name='archive',
+    archive_url = models.ForeignKey('wiki.URLPath', verbose_name='archive',
                                        blank=False, null=False, related_name='url_of',
-                                       on_delete=models.CASCADE, )
+                                       on_delete=models.CASCADE,  unique = False,)
 
     @classmethod
     @transaction.atomic
@@ -62,13 +62,13 @@ class ArchiveTransaction(models.Model):
     This class does not validate the archive that is taken for the transaction.
     Validation according to tree correctness (root -> 'archive' -> ...) has to take place in the class Archive itself.
     """
-    archive_root = models.OneToOneField('Archive', verbose_name='archive parent article',
+    archive_root = models.ForeignKey(Archive, verbose_name='archive parent article',
                                         blank=False, null=False, related_name='root_archive_of',
-                                        on_delete=models.CASCADE, )
+                                        on_delete=models.CASCADE, unique = False,)
 
-    urlpath = models.OneToOneField('wiki.URLPath', verbose_name='urlpath to transfer',
+    urlpath = models.ForeignKey('wiki.URLPath', verbose_name='urlpath to transfer',
                                    blank=False, null=True, related_name='urlpath_of',
-                                   on_delete=models.CASCADE, )
+                                   on_delete=models.CASCADE, unique = False, )
 
     @classmethod
     def create(cls, archive, urlpath):
