@@ -11,6 +11,8 @@ django.setup()
 
 from bsiwiki import settings
 from bsi.models import BSI, BSI_Article_type
+from wiki.models import URLPath
+
 
 new_temp_bsi_folder = './mdNew'
 crfDir = './CRF/'
@@ -121,7 +123,7 @@ def doUpdate(file):
         else:
             continue
 
-        # TODO create new page
+        new_page = createNewPage()
 
         for filename in [f for f in filenames if f.endswith(".md")]:
             # get the drive and the filepath
@@ -131,16 +133,37 @@ def doUpdate(file):
             # get the file id and the titel
             file_name = splitext(file)[0]
             id = get_bsi_article_id(sub_article_type, file_name)
-            if(is_contained_in(modified, bsi_type, id)):
-                doModified(article_type, id)
-            elif(is_contained_in(added, bsi_type, id)):
-                doAdded(article_type, id)
+            # if the file is new or modified, add to database under /new
+            if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
+                if sub_article_type == "C" and isdir(crfDir):
+                    appendThreatMeasureRelation(path_and_file, id)
+
+                # import the content to the database
+                with open(path_and_file) as data_file:
+                    content = data_file.read()
+                    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
+                                       'ip_address': '0.0.0.0'}
+                    BSI.create(parent=new_page, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
+                    print(file_name + " is saved")
 
     doDeleted(deleted)
 
     # for unchanged articles, update its modification time
     updateModificationTime()
     return
+
+
+def createNewPage():
+    # first check if it is already there
+    # this is just sanity check, the new page should not exist
+    try:
+        new = URLPath.objects.get(slug='new')
+    except URLPath.DoesNotExist:
+        # it does not exist, so create it
+        root = URLPath.objects.get(slug='')
+        rev_kwargs = {'content': '', 'user_message': 'Importer.create', 'ip_address': '0.0.0.0'}
+        new = URLPath.create_urlpath(parent=root, slug='new', title='What\'s new', **rev_kwargs)
+    return new
 
 
 def is_contained_in(dic, bsi_type, bsi_id):
@@ -150,20 +173,6 @@ def is_contained_in(dic, bsi_type, bsi_id):
                 if(file.get('file') == bsi_id):
                     return True
     return False
-
-
-def doModified(bsi_type, bsi_id):
-    # TODO
-    # if it's a component, append the threat-measures relationships
-    print('modified', bsi_type, bsi_id)
-    return
-
-
-def doAdded(bsi_type, bsi_id):
-    # TODO
-    # if it's a component, append the threat-measures relationships
-    print('added', bsi_type, bsi_id)
-    return
 
 
 def doDeleted(deleted):
