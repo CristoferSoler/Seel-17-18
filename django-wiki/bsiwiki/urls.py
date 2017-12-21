@@ -35,4 +35,5 @@ urlpatterns = [
     url(r'^', include('bsi.urls')),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
     url(r'^', get_pattern()),
+
 ]

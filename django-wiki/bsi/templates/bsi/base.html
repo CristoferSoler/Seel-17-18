@@ -208,6 +208,15 @@
             restart();
         })
 
+        if(localStorage.getItem('sortedTopicList') !== null){
+            console.log('Nicks los');
+        }else{
+            console.log(jQuery.getJSON('/getWizardData').done(function(data){
+                localStorage.setItem('sortedTopicList', data);
+            })
+            );
+        }
+
         components = JSON.parse(localStorage.getItem('wizard'));
         for(i=0;i<components.length;i++) {
             $("#listPanel").append("<li><a href='" + components[i].path+"'>" + components[i].name +"</a></li>");

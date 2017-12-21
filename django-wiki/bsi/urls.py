@@ -4,6 +4,7 @@ from wiki.views import article
 from . import views
 from .ugaViews import CreateRoot, UGEditView, UGACreate
 from .views import BSISearchView, WikiArticleView
+from .wizard import getSortedTopicList
 
 article_create_view_class = article.Create
 
@@ -25,6 +26,6 @@ urlpatterns = [
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
     url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),
-    # url(r'^(?P<path>.+/|)_edit/$', UGEditView.as_view(), name='edit'),
+    url(r'^getWizardData/', getSortedTopicList, name='wizard'),
 
 ]

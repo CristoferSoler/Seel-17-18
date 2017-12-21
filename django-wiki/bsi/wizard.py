@@ -3,6 +3,8 @@ import csv
 import itertools
 from collections import Counter
 from operator import itemgetter
+from django.http import HttpResponse
+import json
 
 from wiki.models import ArticleRevision, URLPath
 
@@ -38,3 +40,9 @@ def getListOfFrequenceOfTopic(components):
     for topic in numberOfEachTopic:
         topics.append(topic[0])
     return topics
+
+def getSortedTopicList():
+    components = readAndProcessCSV()
+    var = getListOfFrequenceOfTopic(components['components'])
+    jsonFile = '{components:' + json.dumps(components) +', sortedTopicList:' + json.dumps(var) + "}"
+    return HttpResponse(jsonFile, content_type='application/json')
