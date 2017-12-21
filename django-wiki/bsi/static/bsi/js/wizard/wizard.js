@@ -71,10 +71,11 @@ function restart(){
 }
 
 function presentResults() {
-    $("#list").empty();
+    $("#listPanel").empty();
     //$("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
-        $("#list").append("<li><a href='#'>" + remainingComponents[i].name +"</a></li>");
+        $("#listPanel").append("<li><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
     }
     $("#list").append('</ul>');
+    localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }

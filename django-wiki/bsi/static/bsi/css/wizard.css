@@ -31,3 +31,30 @@
 .modal-backdrop {
     background:none;
 }
+
+#slide-panel {
+    position: fixed;
+    float:right;
+    text-align: left;
+    margin-top:5%;
+    left:97%;
+}
+#opener {
+    margin:-10px -50px 0px 0px;
+    padding-top:15px;
+    border-radius:0;
+}
+#content {
+    float: right;
+    margin-left: 50px;
+    height: 300px;
+    width: 250px;
+    overflow-y: scroll;
+    background:white;
+    border:black;
+}
+
+.center{
+    height:310px;
+    background:orange;
+}

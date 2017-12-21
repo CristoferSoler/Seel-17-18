@@ -60,16 +60,12 @@
                      <a href="#">Tutorials</a>
                 </li>
             </ul>
-
-
             <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                 <div class="form-group inner-addon right-addon">
                     <i class="glyphicon glyphicon-search"></i>
                     <input type="search" class="form-control search-query" name="q" placeholder="search"/>
-
                 </div>
             </form>
-
             <div class="navbar-right">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav">
@@ -113,6 +109,18 @@
         <!-- /.container-fluid -->
     </div>
 </nav>
+
+<div id="slide-panel" class="panel panel-primary">
+    <a href="#" class="btn center" id="opener"><i class="glyphicon glyphicon-align-justify"></i></a>
+     <div id="content">
+         <div class="panel-heading">Assistant Results:</div>
+         <div class="panel-body">
+            <ul id="listPanel">
+
+            </ul>
+        </div>
+     </div>
+</div>
 
 <div id="wizard" class="modal fade" role="dialog">
           <div class="modal-dialog">
@@ -168,35 +176,11 @@
           </div>
     </div>
 
-{% block bsi_contents %} {% endblock %}
-
-
+{% block bsi_contents %}
+{% endblock %}
 
 <footer class="bg-info">
-    <div class="container">
-        <div class="row">
-            <ul class="menu list-inline">
 
-                <li>
-                    <a> Copyright © 2017 All rights reserved</a>
-                </li>
-
-                <li>
-                    <a href="#">About</a>
-                </li>
-
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-
-            </ul>toggle
-        </div>
-
-    </div>
 </footer>
 
 
@@ -225,10 +209,22 @@
             restart();
         })
 
-
+        components = JSON.parse(localStorage.getItem('wizard'));
+        for(i=0;i<components.length;i++) {
+            $("#listPanel").append("<li><a href='" + components[i].path+"'>" + components[i].name +"</a></li>");
+        }
     });
 
     $('#wizard').on('show.bs.modal', function (e) {
         initWizard('{{ components|safe }}','{{ sortedTopics|safe }}')
-    })
+    });
+    $('#opener').on('click', function() {
+        var panel = $('#slide-panel');
+        if (panel.hasClass("visible")) {
+            panel.removeClass('visible').animate({'left':'97%'});
+        } else {
+            panel.addClass('visible').animate({'left':'80%'});
+        }
+        return false;
+});
 </script>
