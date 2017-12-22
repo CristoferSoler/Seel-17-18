@@ -3,8 +3,9 @@ var remainingComponents;
 var currentTopic = 0;
 var currentSortedTopic;
 const thresholdTopicNumber = 10;
+var valid = false;
 
-function initWizard(components,sortedTopics) {
+function initWizard() {
     if(localStorage.getItem('currentTopic')=== null){
         currentTopic = 0;
         localStorage.setItem('currentTopic',String(currentTopic));
@@ -94,27 +95,6 @@ function dontknowPress() {
     console.log(remainingComponents.length);
 }
 
-function safeData() {
-    localStorage.setItem('currentTopic',String(currentTopic));
-    localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents))
-}
-
-
-function getDataFromServer(){
-    if(localStorage.getItem('componentsTopic') === null){
-        $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
-            localStorage.setItem('componentsTopic',JSON.stringify(result));
-        });
-    }
-
-    if(localStorage.getItem('sortedTopics') === null){
-        console.log('test');
-        $.getJSON('/_wizard/sortedTopics/',function (result) {
-            localStorage.setItem('sortedTopics',JSON.stringify(result));
-        });
-    }
-}
-
 function restart(){
     currentTopic = 0;
     console.log('Hello');
@@ -136,9 +116,87 @@ function presentResults() {
     //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
 
+function getDataFromServer(){
+    if(localStorage.getItem('componentsTopic') === null){
+        $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
+            localStorage.setItem('componentsTopic',JSON.stringify(result));
+        });
+    }
+
+    if(localStorage.getItem('sortedTopics') === null){
+        console.log('test');
+        $.getJSON('/_wizard/sortedTopics/',function (result) {
+            localStorage.setItem('sortedTopics',JSON.stringify(result));
+        });
+    }
+}
+
+function safeData() {
+    localStorage.setItem('currentTopic',String(currentTopic));
+    localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents))
+}
+
 function clearLocalStorage(){
     localStorage.removeItem('componentsTopic');
     localStorage.removeItem('currentTopic');
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
+}
+
+function buttonsWizard() {
+    $('#yesButton').on('click', function (e) {
+        yesPress();
+    })
+
+    $('#noButton').on('click', function (e) {
+        noPress();
+    })
+
+    $('#dontKnowButton').on('click', function (e) {
+        dontknowPress();
+    })
+
+    $('#restart').on('click', function (e) {
+        restart();
+    })
+}
+
+
+function initWizardsComponents(){
+    //handle löschend er Wizarddaten
+    wireupEvents();
+    buttonsWizard();
+    getDataFromServer();
+
+    $('#wizard').on('show.bs.modal', function (e) {
+        valid = false;
+        initWizard('{{ components|safe }}','{{ sortedTopics|safe }}')
+    });
+
+    $('#opener').on('click', function() {
+        var panel = $('#slide-panel');
+        if (panel.hasClass("visible")) {
+            panel.removeClass('visible').animate({'left':'97%'});
+        } else {
+            panel.addClass('visible').animate({'left':'80%'});
+        }
+        return false;
+    });
+
+    $('a').bind('click',function () {
+        valid = true;
+    });
+
+}
+
+function wireupEvents(){
+    if(!valid){
+        window.onbeforeunload = askWheatherToClose;
+    }
+}
+
+function askWheatherToClose(event){
+    if(!valid){
+        clearLocalStorage();
+    }
 }

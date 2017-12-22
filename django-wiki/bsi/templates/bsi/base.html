@@ -187,44 +187,9 @@
 </html>
 
 <script>
-    //wenn Tab oder Broswser geschlossen wird
-    window.onbeforeunload = function () {
-        clearLocalStorage();
-    };
-
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
-
-        $('#yesButton').on('click', function (e) {
-            yesPress();
-        })
-
-        $('#noButton').on('click', function (e) {
-            noPress();
-        })
-
-        $('#dontKnowButton').on('click', function (e) {
-            dontknowPress();
-        })
-
-        $('#restart').on('click', function (e) {
-            restart();
-        })
-        getDataFromServer();
-
+        initWizardsComponents();
     });
-
-    $('#wizard').on('show.bs.modal', function (e) {
-        initWizard('{{ components|safe }}','{{ sortedTopics|safe }}')
-    });
-    $('#opener').on('click', function() {
-        var panel = $('#slide-panel');
-        if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'left':'97%'});
-        } else {
-            panel.addClass('visible').animate({'left':'80%'});
-        }
-        return false;
-});
 </script>
