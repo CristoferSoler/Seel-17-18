@@ -1,6 +1,6 @@
 from django import template
 
-from bsi.models import ArticleRevisionValidation
+from bsi.models.article_extensions import ArticleRevisionValidation
 from bsi.models import permissions
 
 register = template.Library()

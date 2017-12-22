@@ -10,18 +10,19 @@ from wiki.decorators import get_article
 from wiki.models import URLPath, ArticleRevision
 from wiki.views.article import Create
 from wiki.views.article import CreateRootView
-from wiki.views.article import Edit
+from wiki.views.article import Edit, Delete
+from wiki import forms as wiki_forms
 
 from bsi import forms
 
 log = logging.getLogger(__name__)
 
-from bsi.models import UGA, ArticleRevisionValidation
+from bsi.models.article_extensions import UGA, ArticleRevisionValidation
 
 
 def overview_uga(request):
     uga = URLPath.get_by_path('uga/')
-    children = uga.get_children()
+    children = UGA.get_active_children()
 
     return render(request, 'uga/overview_uga.html', {'articles': children})
 
@@ -134,3 +135,18 @@ class UGEditView(Edit):
             form = form_class(self.request, self.article.current_revision, **kwargs)
 
         return form
+
+
+class UGDeleteView(Delete):
+    form_class = wiki_forms.DeleteForm
+    template_name = "uga/delete.html"
+
+    def get_form(self, form_class=None):
+        form = super(Delete, self).get_form(form_class=form_class)
+        # if self.article.can_moderate(self.request.user):
+        #     form.fields['purge'].widget = forms.forms.CheckboxInput()
+        return form
+
+    def form_valid(self, form):
+        form.cleaned_data['purge'] = True
+        return super(UGDeleteView, self).form_valid(form)

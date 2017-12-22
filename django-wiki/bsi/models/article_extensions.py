@@ -6,6 +6,8 @@ from enumfields import Enum
 from enumfields import EnumField
 # from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
+from . import permissions
+from django.db.models import When, F, Q
 
 
 class BSI_Article_type(Enum):
@@ -46,11 +48,13 @@ class UGA(models.Model):
     def remove_link_from_bsi(self, bsi):
         bsi.references.remove(self)
 
+    @classmethod
+    def get_active_children(cls):
+        parent = URLPath.get_by_path("uga/")
+        return URLPath.objects.filter(parent=parent).exclude(Q(article__current_revision__deleted=True))
+
     def __str__(self):
         return 'UGA with path: ' + self.url.__str__()
-
-
-from .permissions import can_check, can_uncheck
 
 
 class ArticleRevisionValidation(models.Model):
@@ -72,7 +76,7 @@ class ArticleRevisionValidation(models.Model):
     @transaction.atomic
     def check_article(self, user):
         article = Article.objects.get(current_revision=self.revision)
-        if can_check(article, user):
+        if permissions.can_check(article, user):
             self.status = True
             self.validator = user
             self.save()
@@ -82,7 +86,7 @@ class ArticleRevisionValidation(models.Model):
     @transaction.atomic
     def uncheck_article(self, user):
         article = Article.objects.get(current_revision=self.revision)
-        if can_uncheck(article, user):
+        if permissions.can_uncheck(article, user):
             self.status = False
             self.validator = user
             self.save()
@@ -132,7 +136,7 @@ class BSI(models.Model):
     @transaction.atomic
     def create(cls, parent, slug, title, article_type, **rev_kwargs):
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
-       # if not url.path.startswith('bsi') or len(url.path) == 3:
+        # if not url.path.startswith('bsi') or len(url.path) == 3:
         #    raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
         bsi = cls(url=url, articleType=article_type)
         bsi.save()
@@ -143,7 +147,8 @@ class BSI(models.Model):
         articles = BSI.objects.filter(articleType=article_type)
         if articles:
             for article in articles:
-                if article.url.parent.parent == BSI.get_or_create_bsi_root(''):
+                # if article.url.parent.parent == BSI.get_or_create_bsi_root(''):
+                if article.url.parent == BSI.get_or_create_bsi_root(''):
                     article_urlpaths.append(article.url)
         # return empty if nothing is found
         return article_urlpaths
@@ -153,4 +158,3 @@ class BSI(models.Model):
 
 
 signals.post_save.connect(ArticleRevisionValidation.get_or_create, sender=ArticleRevision)
-
