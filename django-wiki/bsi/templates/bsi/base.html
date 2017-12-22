@@ -207,19 +207,15 @@
             restart();
         })
 
-        if(localStorage.getItem('sortedTopicList') !== null){
-            console.log('Nicks los');
-        }else{
-            console.log(jQuery.getJSON('/_wizard/').done(function(data){
-                localStorage.setItem('sortedTopicList', data);
+        //noch keine Daten im local storgage get zum server
+        if(localStorage.getItem('componentsTopic') === null){
+            jQuery.getJSON('/_wizard/').done(function(data){
+                console.log('test');
+                console.log(json.parse(data));
+                //localStorage.setItem('sortedTopicList', data);
             })
-            );
         }
 
-        components = JSON.parse(localStorage.getItem('wizard'));
-        for(i=0;i<components.length;i++) {
-            $("#listPanel").append("<li><a href='" + components[i].path+"'>" + components[i].name +"</a></li>");
-        }
     });
 
     $('#wizard').on('show.bs.modal', function (e) {
