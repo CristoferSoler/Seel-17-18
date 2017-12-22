@@ -65,6 +65,7 @@ function dontknowPress() {
 }
 
 function restart(){
+
     currentTopic = 0;
     console.log('Hello');
     [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
