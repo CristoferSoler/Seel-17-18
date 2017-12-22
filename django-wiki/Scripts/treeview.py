@@ -95,7 +95,7 @@ def find_BSI_articles(nodes, type, children):
 
 def clean(path):
     if(path.startswith('bsi/')):
-        return path.replace('bsi/', '')
+        return path.replace('bsi', '')
     return path
 
 
