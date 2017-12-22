@@ -6,6 +6,7 @@ from os.path import isdir, join, isfile, basename, split, splitext
 from os import listdir, environ, walk
 import pdb
 from django.http import Http404
+from datetime import datetime
 
 sys.path.append(r'..')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -227,12 +228,6 @@ def fillNewPage(modified, added, deleted, new_page):
     new_page.article.add_revision(revision)
     print('Content of ' + new_page.path + ' is updated!')
 
-
-def updateModificationTime():
-    # TODO
-    return
-
-
 def find_between(s, first, last):
     # find the Implementation Notes id in the file name
     try:
@@ -330,6 +325,18 @@ def post_phase_delete_url(path):
     path.delete_subtree()
     return path.is_deleted()
 
+def updateModificationTime():
+    # update the date for all unchange and change articles
+    new_date = datetime.now()
+    # new = datetime(2009, 10, 5)
+    for article in Article.objects.all():
+        article.modified = new_date
+        article.save()
+    for revision in ArticleRevision.objects.all():
+         revision.modified = new_date
+         revision.save()
+    return
+
 def checkFileAction(filepath):
     modified = initDict()
     added = initDict()
@@ -410,8 +417,9 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-      file = parseArgs()
-      main(file)
+      #file = parseArgs()
+      #main(file)
+      updateModificationTime()
       #post_phase("2017-12")
       # new = URLPath.objects.get(slug='new')
       # print(post_phase_delete_url(new))
