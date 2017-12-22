@@ -1,5 +1,6 @@
 from wiki.models import URLPath
 from bsiwiki import settings
+from bsi.models import UGA
 
 def init():
     revision_kwargs = {'content': '', 'user_message': 'Initializer Service', 'ip_address': '0.0.0.0'}

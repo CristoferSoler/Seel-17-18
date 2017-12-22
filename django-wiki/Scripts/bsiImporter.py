@@ -243,14 +243,6 @@ def find_between(s, first, last):
 
 def post_phase(archiving_data):
     # for unchanged articles, update its modification time
-    type = []
-    # new_c_articles = []
-    # c_article = []
-    # t_article = []
-    # n_article = []
-    # new_t_article = []
-    # new_n_article = []
-    # uga_ref = []
     archive = Archive.get_or_create(archiving_data)
     new = URLPath.objects.get(slug='new')
     bsi = URLPath.objects.get(slug='bsi')
@@ -262,60 +254,7 @@ def post_phase(archiving_data):
             post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
         elif new_type.slug == "implementationnotes":
             post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
-
-        # uga_ref = ""
-        # if new_type.slug == "components":
-        #     bsi_type = URLPath.objects.get(parent=bsi, slug='components')
-        #     new_c_article = new_type.get_ordered_children()
-        #     for article in new_c_article:
-        #         c_article = BSI.get_articles_by_type('C')
-        #         for c in c_article:
-        #             if c.slug == article.slug:
-        #                 c.slug = "c_" + c.slug
-        #                 uga_ref = c.bsi.references.all()
-        #                 archive_tranc = ArchiveTransaction.create(archive, c)
-        #                 archive_tranc.archive()
-        #                 for ref in uga_ref:
-        #                     print(ref)
-        #                     ArchiveTransaction.create(archive, ref.url).archive()
-        #         article.parent = bsi_type
-        #         article.save()
-        #
-        #
-        #
-        # elif new_type.slug == "threats":
-        #     bsi_type = URLPath.objects.get(parent=bsi, slug='threats')
-        #     new_t_article = new_type.get_ordered_children()
-        #     for article in new_t_article:
-        #         t_article = BSI.get_articles_by_type('G')
-        #         for t in t_article:
-        #             if t.slug == article.slug:
-        #                 t.slug = "t_" + t.slug
-        #                 uga_ref = t.bsi.references.all()
-        #                 archive_tranc = ArchiveTransaction.create(archive, t)
-        #                 archive_tranc.archive()
-        #                 for ref in uga_ref:
-        #                     ArchiveTransaction.create(archive, ref.url).archive()
-        #         article.parent = bsi_type
-        #         article.save()
-        #
-        #
-        #
-        # elif new_type.slug == "implementationnotes":
-        #     bsi_type = URLPath.objects.get(parent=bsi, slug='implementationnotes')
-        #     new_n_article  = new_type.get_ordered_children()
-        #     for article in new_n_article:
-        #         n_article = BSI.get_articles_by_type('N')
-        #         for n in n_article:
-        #             if n.slug == article.slug:
-        #                 n.slug = "n_" + n.slug
-        #                 uga_ref = n.bsi.references.all()
-        #                 archive_tranc = ArchiveTransaction.create(archive, n)
-        #                 archive_tranc.archive()
-        #                 for ref in uga_ref:
-        #                     ArchiveTransaction.create(archive, ref.url).archive()
-        #         article.parent = bsi_type
-        #         article.save()
+    print(type)
     updateModificationTime()
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
@@ -339,14 +278,28 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             new_article.parent = bsi_type
             new_article.save()
 
+
+
 def post_phase_move_references(bsi_article, archive):
-    uga_ref = []
     uga_ref = bsi_article.bsi.references.all()
     archive_tranc = ArchiveTransaction.create(archive, bsi_article)
     archive_tranc.archive()
     for ref in uga_ref:
         ArchiveTransaction.create(archive, ref.url).archive()
 
+def post_phase_delete_url(path):
+    children = path.get_ordered_children()
+    #print(children[0])
+    if not children:
+        path.delete()
+        path.save()
+    else:
+        for child in children:
+            child.delete()
+            child.save()
+        path.delete()
+        path.save()
+    return path.is_deleted()
 
 def get_bsi_article_id(type, file_name):
     # search the BSI id in the file name
