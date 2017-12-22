@@ -1,5 +1,5 @@
 from wiki.models import URLPath
-import article_extensions
+from . import article_extensions
 
 
 def can_check(article, user):

@@ -1,24 +1,27 @@
 import argparse
 import django
 import configparser
-import win32com.client
-import os
 import sys
+from os.path import isdir, join, isfile, basename, split, splitext
+from os import listdir, environ, walk
+import pdb
+from django.http import Http404
+from datetime import datetime
 
-sys.path.append("C:/githubRepo/Seel-17-18/django-wiki")
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+sys.path.append(r'..')
+environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
-from os.path import  isfile, isdir, join
-from os import listdir
-from wiki.models import Article, URLPath, Site, ArticleRevision
+
 from bsiwiki import settings
-from bsi.models import BSI, UGA,BSI_Article_type
+from bsi.models import BSI, BSI_Article_type
+from wiki.models import URLPath, ArticleRevision, Article
+from archive.models import Archive, ArchiveTransaction
+
+new_temp_bsi_folder = './mdNew'
+crfDir = './CRF/'
+system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 
 
-txtFolderDir = './Cross_Reference_Files/'
-excelFolderDir = './Cross_Reference_Tables/'
-macroFileDir = './Cross Reference 2018.xlsm/'
-system_devices = ["APP", "SYS","IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
     configParser.read("config.cfg")
@@ -27,26 +30,22 @@ def readConfig(varname):
 
 def parseArgs():
     parser = argparse.ArgumentParser('Imports new or updated BSI contents to the database')
-    parser.add_argument('bsiDir', metavar='dir', help='The directory containing the BSI files to be imported')
     parser.add_argument('-u', '--update', help='Use this option only when it is an update, it should be followed by '
                         'the path to the text file containing the modified files')
 
     args = parser.parse_args()
-    if(not isdir(args.bsiDir)):
-        raise ValueError("Please give a valid directory path!")
-
     if(args.update is not None):
         if(not isfile(args.update)):
             raise ValueError("Please give a valid file path!")
         if(not args.update.endswith('txt')):
             raise ValueError("The file may only be a text file!")
 
-    return args.bsiDir, args.update
+    return args.update
 
 
-def main(bsiDir, update):
+def main(update):
     if(update):
-        doUpdate(bsiDir, update)
+        doUpdate(update)
     else:
         doImport()
 
@@ -54,131 +53,361 @@ def main(bsiDir, update):
 
 
 def doImport():
-    # go through the dir and read the content of each file
+        # go through the dir and read the content of each file
         # if it's a component, append the threat-measures relationships
         # just in case, look in DB, find if an article with the same headerID exists
         # if it doesn't (it should always be this case)
         # then create a new article and its urlpath
-        site = Site.objects.get_current()
-        for dirpath, dirnames, filenames in os.walk(settings.CRAWLER_DIRECTORY):
+        bsi_root = BSI.get_or_create_bsi_root('')
+        for dirpath, dirnames, filenames in walk(settings.CRAWLER_DIRECTORY):
+            if not filenames:
+                continue
+
             # check the bsi article type is a component or threat or implementation notes
-            subArticleType = os.path.basename(dirpath)
-            if subArticleType == "C":
+            sub_article_type = basename(dirpath)
+            if sub_article_type == "C":
                 article_type = BSI_Article_type.COMPONENT
-                parent = BSI.get_or_create_bsi_subroots("components", "BSI.components", "", "Components")
-            elif subArticleType == "N":
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "components", "BSI.importer", "", "Components")
+            elif sub_article_type == "N":
                 article_type = BSI_Article_type.IMPLEMENTATIONNOTES
-                parent = BSI.get_or_create_bsi_subroots("implementationNotes", "BSI.implementationNotes", "",
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "implementationnotes", "BSI.importer", "",
                                                         "Implementation Notes")
-            elif subArticleType == "T":
+            elif sub_article_type == "T":
                 article_type = BSI_Article_type.THREAT
-                parent = BSI.get_or_create_bsi_subroots("threats", "BSI.threats", "", "Threats")
+                parent = BSI.get_or_create_bsi_subroots(bsi_root, "threats", "BSI.importer", "", "Threats")
+            else:
+                continue
+
             for filename in [f for f in filenames if f.endswith(".md")]:
                 # get the drive and the filepath
-                path_and_file = os.path.join(dirpath, filename)
+                path_and_file = join(dirpath, filename)
                 # get the path and file name
-                location, file = os.path.split(path_and_file)
+                location, file = split(path_and_file)
                 # get the file id and the titel
-                file_name = os.path.splitext(file)[0]
-                id = get_bsi_article_id(subArticleType, file_name)
+                file_name = splitext(file)[0]
+                id = get_bsi_article_id(sub_article_type, file_name)
 
-                # read md file content in variable
+                # append the Cross reference relation files to the content
+                # of each component article before import it in the database
+                if sub_article_type == "C" and isdir(crfDir):
+                    appendThreatMeasureRelation(path_and_file, id)
+
+                # import the content to the database
                 with open(path_and_file) as data_file:
-                    content = data_file.readlines()
-                    revision_kwargs = {'content': content, 'user_message': 'BSI article creation',
+                    content = data_file.read()
+                    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(file_name + " is saved")
 
-def doUpdate(bsiDir, file):
+import json
+def doUpdate(file):
     # find out which files should be m/a/d
     modified, added, deleted = checkFileAction(file)
+    # just to see how they look
+    print(json.dumps(modified, indent=4))
+    print(json.dumps(added, indent=4))
+    print(json.dumps(deleted, indent=4))
+
+    new_page = createNewPage()
 
     # go through the dir and read the content of each file
-    for filename in [f for f in listdir(bsiDir) if f.lower().endswith('md')]:
-        fileContent = open(join(bsiDir, filename), "r").read()
+    for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
+        if not filenames:
+            continue
+        sub_article_type = basename(dirpath)
+        if sub_article_type == "C":
+            article_type = BSI_Article_type.COMPONENT
+            bsi_type = 'component'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "components", "BSI.importer", "", "Components")
+        elif sub_article_type == "N":
+            article_type = BSI_Article_type.IMPLEMENTATIONNOTES
+            bsi_type = 'implementationnotes'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "implementationnotes", "BSI.importer", "",
+                                                                "Implementation Notes")
+        elif sub_article_type == "T":
+            article_type = BSI_Article_type.THREAT
+            bsi_type = 'threat'
+            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "threats", "BSI.importer", "", "Threats")
+        else:
+            continue
 
-        # if it's a component, append the threat-measures relationships
+        for filename in [f for f in filenames if f.endswith(".md")]:
+            # get the drive and the filepath
+            path_and_file = join(dirpath, filename)
+            # get the path and file name
+            location, file = split(path_and_file)
+            # get the file id and the titel
+            file_name = splitext(file)[0]
+            id = get_bsi_article_id(sub_article_type, file_name)
+            # if the file is new or modified, add to database under /new
+            if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
+                if sub_article_type == "C" and isdir(crfDir):
+                    appendThreatMeasureRelation(path_and_file, id)
 
-        # for modified
-        # find article, clone it, mark the clone as archive, create urlpath for the clone
-        # update the content of article, do the same for user articles
+                # import the content to the database
+                with open(path_and_file) as data_file:
+                    content = data_file.read()
+                    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
+                                       'ip_address': '0.0.0.0'}
+                    BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
+                    print(new_bsi_subroot)
+                    print(file_name + " " + id +" "+ bsi_type + " is saved")
 
-        # for added
-        # create new article, create its urlpath
-
-        # for deleted
-        # find article, mark it as archive, update urlpath, do the same for user articles
-
-        # for unchanged articles, update its modification time
+    fillNewPage(modified, added, deleted, new_page)
 
     return
 
-def find_between( s, first, last ):
+
+def createNewPage():
+    # first check if it is already there
+    # this is just sanity check, the new page should not exist
+    try:
+        new = URLPath.objects.get(slug='new')
+    except Exception:
+        # it does not exist, so create it
+        root = URLPath.root()
+        rev_kwargs = {'content': '', 'user_message': 'Importer.create', 'ip_address': '0.0.0.0'}
+        new = URLPath.create_urlpath(parent=root, slug='new', title='What\'s new', **rev_kwargs)
+    return new
+
+
+def is_contained_in(dic, bsi_type, bsi_id):
+    for elem in dic.get('type'):
+        if(elem.get('name') == bsi_type):
+            for file in elem.get('files'):
+                if(file.get('file') == bsi_id):
+                    return True
+    return False
+
+
+def fillNewPage(modified, added, deleted, new_page):
+    bsi = BSI.get_or_create_bsi_root('')
+    content = 'The following articles have been changed in the new BSI Catalogue:<br />'
+    for bsi_type in new_page.get_children():
+        if(bsi_type.slug == 'components'):
+            bsi_parent = URLPath.objects.filter(slug='components', parent=bsi)[0]
+            content += '<br />Components:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'component', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'component', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'component'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+        if(bsi_type.slug == 'threats'):
+            bsi_parent = URLPath.objects.filter(slug='threats', parent=bsi)[0]
+            content += '<br />Threats:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'threat', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'threat', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'threat'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+        elif(bsi_type.slug == 'implementationnotes'):
+            bsi_parent = URLPath.objects.filter(slug='implementationnotes', parent=bsi)[0]
+            content += '<br />Implementation Notes:<br />'
+            for article in bsi_type.get_children():
+                if(is_contained_in(modified, 'implementationnotes', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                elif(is_contained_in(added, 'implementationnotes', article.slug)):
+                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+            for del_article in deleted.get('type'):
+                if(del_article.get('name') == 'implementationnotes'):
+                    for file in del_article.get('files'):
+                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+    revision = ArticleRevision()
+    revision.inherit_predecessor(new_page.article)
+    from markdownify import markdownify as md
+    revision.content = md(content)
+    new_page.article.add_revision(revision)
+    print('Content of ' + new_page.path + ' is updated!')
+
+def find_between(s, first, last):
     # find the Implementation Notes id in the file name
     try:
         start = s.index(first)
-        end = s.index( last, start )
+        end = s.index(last, start)
         return s[start:end]
     except ValueError:
         return ""
 
-
 def get_bsi_article_id(type, file_name):
     # search the BSI id in the file name
+    id = ''
     if type == 'C':
-        id = file_name.split(" ",1)[0]
+        id = file_name.split(" ", 1)[0]
     elif type == "T":
         id = "".join(file_name.split(" ", 2)[:2])
     elif type == "N":
-       for n_id in system_devices:
+        for n_id in system_devices:
             if n_id in file_name:
-                id = find_between(file_name, n_id," ")
+                id = find_between(file_name, n_id, " ")
 
     return id
 
+def post_phase(archiving_data):
+    # after 30 days
+    # create archive
+    # move the old bsi articles with their related uga articles to archive
+    # change the url of he new one to the old one
+    # delete the new (change log) page
+        archive = Archive.get_or_create(archiving_data)
+        new = URLPath.objects.get(slug='new')
+        bsi = URLPath.objects.get(slug='bsi')
+        type = URLPath.objects.filter(parent=new)
+        # print(type)
+        for new_type in type:
+              if new_type.slug == "components":
+                  post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
+              elif new_type.slug == "threats":
+                   post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
+              elif new_type.slug == "implementationnotes":
+                   post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
 
+        post_phase_delete_url(new)
+        updateModificationTime()
+
+
+def post_phase_move_bsi(new_type, default_type, old_parent, archive):
+    # for each type append the new updates
+    new_articles = []
+    articles = []
+    if default_type == "components":
+        type_symbol = 'C'
+        # print(type_symbol)
+    elif default_type == "threats":
+        type_symbol = 'G'
+    elif default_type == "implementationnotes":
+        type_symbol = 'N'
+    if new_type.slug == default_type:
+        bsi_type = URLPath.objects.get(parent=old_parent, slug= default_type)
+        # print(bsi_type)
+        new_articles = new_type.get_ordered_children()
+        for new_article in new_articles:
+            articles = BSI.get_articles_by_type(type_symbol)
+            # print(articles)
+            for article in articles:
+                if article.slug == new_article.slug:
+                    article.slug = type_symbol.lower() +"_" + article.slug
+                    ArchiveTransaction.create(archive, article).archive()
+                    post_phase_move_references(archive, article)
+
+            new_article.parent = bsi_type
+            new_article.save()
+            # Reload url path form database
+            urlpath_article = URLPath.objects.get(pk=new_article.pk)
+            # print(urlpath_article.path)
+            # Use a copy of ourself (to avoid cache) and update article links again
+            for ancestor in Article.objects.get(pk=urlpath_article.article.pk).ancestor_objects():
+                    ancestor.article.clear_cache()
+
+def post_phase_move_references(archive, bsi_article):
+    # move the uga articles that related to the old bsi to archive
+    uga_ref = bsi_article.bsi.references.all()
+    for ref in uga_ref:
+        ArchiveTransaction.create(archive, ref.url).archive()
+
+def post_phase_delete_url(path):
+    # delete the new page and its subroots
+    children = path.get_ordered_children()
+    # print(children)
+    if children:
+        for child in children:
+            # print(child)
+            child.delete()
+            child.save()
+    path.delete_subtree()
+    return path.is_deleted()
+
+def updateModificationTime():
+    # update the date for all unchange and change articles
+    new_date = datetime.now()
+    # new = datetime(2009, 10, 5)
+    for article in Article.objects.all():
+        article.modified = new_date
+        article.save()
+    for revision in ArticleRevision.objects.all():
+         revision.modified = new_date
+         revision.save()
+    return
 
 def checkFileAction(filepath):
-    modified = []
-    added = []
-    deleted = []
+    modified = initDict()
+    added = initDict()
+    deleted = initDict()
 
     # sanity check
     assert(filepath is not None)
 
     # look in the text file and check if the files shoul be m/a/d
     file = open(filepath, "r")
-    currentSymbol = file.readline()
+    currentSep1 = file.readline().rstrip()
+    currentSep2 = file.readline().rstrip()
+
     for line in file:
+        line = line.rstrip()
+        if(line.startswith('#')):
+            currentSep1 = line
+            continue
         if(line.startswith('%')):
-            currentSymbol = line
+            currentSep2 = line
             continue
 
-        if(currentSymbol == '%m'):
-            modified.append(line)
-        elif(currentSymbol == '%a'):
-            added.append(line)
-        elif(currentSymbol == '%d'):
-            deleted.append(line)
+        if(currentSep2.startswith('%m')):
+            types = modified.get('type')
+        elif(currentSep2.startswith('%a')):
+            types = added.get('type')
+        elif(currentSep2.startswith('%d')):
+            types = deleted.get('type')
+        else:
+            raise ValueError('Input file might be corrupted.')
+
+        if(currentSep1.startswith('#C')):
+            name = 'component'
+            sub = 'C'
+        elif(currentSep1.startswith('#T')):
+            name = 'threat'
+            sub = 'T'
+        elif(currentSep1.startswith('#N')):
+            name = 'implementationnotes'
+            sub = 'N'
+        else:
+            raise ValueError('Input file might be corrupted.')
+
+        obj = [c for c in types if c.get('name') == name][0]
+        if obj:
+            obj['files'].append({'file': get_bsi_article_id(sub, line)})
 
     return modified, added, deleted
 
 
-def appendThreatMeasureRelation(file):
-    # TODO
-    return
+def initDict():
+    return {'type': [
+            {'name': 'component', 'files': []},
+            {'name': 'threat', 'files': []},
+            {'name': 'implementationnotes', 'files': []}]}
 
 
-#Calling Macro to get cross reference relation tables
-def generateComponentsThreatsMeasuresRelation(excelFolderDir = excelFolderDir, macroFileDir = macroFileDir, txtFolderDir = txtFolderDir):
-    xl = win32com.client.Dispatch("Excel.Application")
-    xl.Visible = True
-    Path = macroFileDir
-    xl.Workbooks.Open(Filename=Path)
-    param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
-    param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
-    xl.Application.Run("Extraction", param1, param2)
+def appendThreatMeasureRelation(path_and_file, id):
+    try:
+        for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:
+            path_and_ref = join(crfDir, cr_file)
+            if id in cr_file:
+                with open(path_and_ref, 'r')as cr:
+                    cr_data = cr.read()
+                cr.close()
+                with open(path_and_file, 'a') as data_file:
+                    data_file.write(cr_data)
+                data_file.close()
+    except IOError:
+        print('An error occurred trying to open (read/write) the file.')
+
 
 def cleanUp():
     # TODO remove all temp dirs and update files in current dirs
@@ -188,10 +417,13 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-    #generateComponentsThreatsMeasuresRelation()
-    #bsiDir, file = parseArgs()
-    #setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
-    #django.setup()
-    #main(bsiDir, file)
-    doImport()
-    print("worked!")
+      #file = parseArgs()
+      #main(file)
+      updateModificationTime()
+      #post_phase("2017-12")
+      # new = URLPath.objects.get(slug='new')
+      # print(post_phase_delete_url(new))
+      # components = URLPath.objects.get(slug='threats', parent=new)
+      # print(components.path)
+      # # print(components)
+      print("finished!")

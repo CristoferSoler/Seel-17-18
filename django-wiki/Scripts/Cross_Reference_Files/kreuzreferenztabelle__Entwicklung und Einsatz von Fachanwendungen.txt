@@ -1,0 +1,62 @@
+CON.5
+ G 0.18
+  CON.5.A1
+  CON.5.A2
+  CON.5.A7
+  CON.5.A8
+ G 0.19
+  CON.5.A1
+  CON.5.A4
+  CON.5.A5
+  CON.5.A7
+  CON.5.A9
+ G 0.22
+  CON.5.A2
+  CON.5.A12
+ G 0.23
+  CON.5.A1
+  CON.5.A2
+  CON.5.A3
+  CON.5.A5
+  CON.5.A8
+  CON.5.A11
+ G 0.26
+  CON.5.A2
+  CON.5.A8
+  CON.5.A11
+ G 0.28
+  CON.5.A2
+  CON.5.A8
+ G 0.29
+  CON.5.A7
+  CON.5.A11
+ G 0.30
+  CON.5.A4
+  CON.5.A5
+  CON.5.A11
+ G 0.31
+  CON.5.A4
+  CON.5.A5
+  CON.5.A11
+ G 0.38
+  CON.5.A1
+  CON.5.A5
+  CON.5.A9
+ G 0.39
+  CON.5.A1
+  CON.5.A5
+  CON.5.A11
+ G 0.45
+  CON.5.A1
+  CON.5.A2
+  CON.5.A4
+  CON.5.A5
+  CON.5.A9
+  CON.5.A10
+  CON.5.A12
+  CON.5.A13
+ G 0.46
+  CON.5.A1
+  CON.5.A4
+  CON.5.A5
+  CON.5.A8

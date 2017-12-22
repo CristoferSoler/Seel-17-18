@@ -1,7 +1,7 @@
 from django.test import TestCase
 from wiki.models import URLPath
 
-from bsi.models import BSI, UGA, BSI_Article_type
+from bsi.models.article_extensions import BSI, UGA, BSI_Article_type
 
 
 class InitTestCase(TestCase):

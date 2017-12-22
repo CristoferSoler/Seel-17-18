@@ -5,7 +5,7 @@ import sys
 import django
 
 # THIS FILE IS TO BE MERGED WITH BSIIMPORTER.PY
-sys.path.append("/home/adewi/Dropbox/SEEL/Seel-17-18/django-wiki")
+sys.path.append("..")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
@@ -20,12 +20,11 @@ path_to_treeview_with_links = '../../programming/bsiCrawler/treeview/bsiTreeLink
 
 
 def addLinksToTreeView():
-    print 'Loading the tree view file ' + path_to_treeview
+    print('Loading the tree view file ' + path_to_treeview)
     parsed = []
     try:
         with open(path_to_treeview, 'r') as handle:
             parsed = json.load(handle)
-            # print json.dumps(parsed, indent=4)
     except Exception as e:
         print(e)
         raise ValueError('Cannot load and parse the json format. Please check the tree view file.')
@@ -34,7 +33,6 @@ def addLinksToTreeView():
         raise ValueError('Loaded json file turned up empty. Please check the tree view file.')
 
     # site = 'http://' + str(Site.objects.get_current()) + '/'
-    site = 'http://localhost:8000/'
     for elem in parsed:
         # print json.dumps(elem, indent=4)
         text = elem.get('text')
@@ -64,19 +62,19 @@ def addLinksToTreeView():
             if(parents):
                 parent = parents[0]
                 children = parent.get_children()
-                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children, site)
+                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children)
 
     try:
         file = open(path_to_treeview_with_links, "w")
         file.write(json.dumps(parsed, indent=4))
         file.close()
-        print 'Successfully wrote the new tree view file to ' + path_to_treeview_with_links
+        print('Successfully wrote the new tree view file to ' + path_to_treeview_with_links)
     except Exception as e:
         print(e)
         raise IOError('Error while writing to file ' + path_to_treeview_with_links)
 
 
-def find_BSI_articles(nodes, type, children, site):
+def find_BSI_articles(nodes, type, children):
     if(nodes):
         for node in nodes:
             text = node.get('text').lstrip()
@@ -86,13 +84,19 @@ def find_BSI_articles(nodes, type, children, site):
                     path = ''
                     for child in children:
                         if(child.slug == id):
-                            path = site + child.path
-                            node['url'] = path
+                            path = child.path
+                            node['href'] = '<a href>' + clean(path) + '</a>'
                     if(not path):
-                        print 'WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.'
+                        print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
 
-            node = find_BSI_articles(node.get('nodes'), type, children, site)
+            node = find_BSI_articles(node.get('nodes'), type, children)
     return nodes
+
+
+def clean(path):
+    if(path.startswith('bsi/')):
+        return path.replace('bsi', '')
+    return path
 
 
 def get_bsi_article_id(file_name):
@@ -118,7 +122,7 @@ def get_bsi_article_id(file_name):
                 match = matchObj.group()
                 match = fix_threat_id(match)
             else:
-                print 'No BSI ID found in ' + file_name + '. Skipped...'
+                print('No BSI ID found in ' + file_name + '. Skipped...')
     return match
 
 
@@ -137,3 +141,4 @@ def fix_typo(id):
 
 if __name__ == '__main__':
     addLinksToTreeView()
+

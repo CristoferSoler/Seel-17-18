@@ -6,8 +6,8 @@ from enumfields import Enum
 from enumfields import EnumField
 # from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
-
-from bsi.models.permissions import can_check, can_uncheck
+from . import permissions
+from django.db.models import When, F, Q
 
 
 class BSI_Article_type(Enum):
@@ -15,45 +15,10 @@ class BSI_Article_type(Enum):
     THREAT = 'G'
     IMPLEMENTATIONNOTES = 'N'
 
-
-class ArticleRevisionValidation(models.Model):
-    revision = models.OneToOneField(ArticleRevision, on_delete=models.CASCADE, blank=False, null=False)
-    validator = models.ForeignKey(User, on_delete=models.SET_NULL, blank=False, null=True)
-    status = models.BooleanField(default=False, blank=False, null=False)
-
-    @classmethod
-    def get_or_create(cls, instance, **kwargs):
-        rev = None
-        try:
-            rev = ArticleRevisionValidation.objects.get(revision=instance)
-        except ObjectDoesNotExist:
-            rev = ArticleRevisionValidation.objects.create(revision=instance)
-            rev.save()
-
-        return rev
-
-    @transaction.atomic
-    def checkArticle(self, user):
-        article = Article.objects.get(current_revision=self.revision)
-        if can_check(article, user):
-            self.status = True
-            self.validator = user
-            self.save()
-        else:
-            raise PermissionError("The user " + user.__str__() + " has no permissions to check this article.")
-
-    @transaction.atomic
-    def uncheckArticle(self, user):
-        article = Article.objects.get(current_revision=self.revision)
-        if can_uncheck(article, user):
-            self.status = False
-            self.validator = user
-            self.save()
-        else:
-            raise PermissionError("The user " + user.__str__() + " has no permissions to uncheck this article.")
-
-    def __str__(self):
-        return 'Revision validation for : ' + self.revision.__str__()
+    class Labels:
+        COMPONENT = 'Components'
+        THREAT = 'Threat'
+        IMPLEMENTATIONNOTES = 'Implementation Notes'
 
 
 class UGA(models.Model):
@@ -83,8 +48,53 @@ class UGA(models.Model):
     def remove_link_from_bsi(self, bsi):
         bsi.references.remove(self)
 
+    @classmethod
+    def get_active_children(cls):
+        parent = URLPath.get_by_path("uga/")
+        return URLPath.objects.filter(parent=parent).exclude(Q(article__current_revision__deleted=True))
+
     def __str__(self):
         return 'UGA with path: ' + self.url.__str__()
+
+
+class ArticleRevisionValidation(models.Model):
+    revision = models.OneToOneField(ArticleRevision, on_delete=models.CASCADE, blank=False, null=False)
+    validator = models.ForeignKey(User, on_delete=models.SET_NULL, blank=False, null=True)
+    status = models.BooleanField(default=False, blank=False, null=False)
+
+    @classmethod
+    def get_or_create(cls, instance, **kwargs):
+        rev = None
+        try:
+            rev = ArticleRevisionValidation.objects.get(revision=instance)
+        except ObjectDoesNotExist:
+            rev = ArticleRevisionValidation.objects.create(revision=instance)
+            rev.save()
+
+        return rev
+
+    @transaction.atomic
+    def check_article(self, user):
+        article = Article.objects.get(current_revision=self.revision)
+        if permissions.can_check(article, user):
+            self.status = True
+            self.validator = user
+            self.save()
+        else:
+            raise PermissionError("The user " + user.__str__() + " has no permissions to check this article.")
+
+    @transaction.atomic
+    def uncheck_article(self, user):
+        article = Article.objects.get(current_revision=self.revision)
+        if permissions.can_uncheck(article, user):
+            self.status = False
+            self.validator = user
+            self.save()
+        else:
+            raise PermissionError("The user " + user.__str__() + " has no permissions to uncheck this article.")
+
+    def __str__(self):
+        return 'Revision validation for : ' + self.revision.__str__()
 
 
 class BSI(models.Model):
@@ -102,7 +112,7 @@ class BSI(models.Model):
             if (not root):
                 site = Site.objects.get_current()
                 kwargs = {'content': "", 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
-                root = URLPath.create_root(site=site, title="Root", request=None, **kwargs)
+                root = URLPath.create_root(site=site, title="BSI Overview", request=None, **kwargs)
             else:
                 root = root[0]
             rev_kwargs = {'content': content, 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
@@ -112,12 +122,11 @@ class BSI(models.Model):
         return bsiRoot
 
     @classmethod
-    def get_or_create_bsi_subroots(cls, slug, user_msg, content, title):
-        bsi_root = BSI.get_or_create_bsi_root('')
-        subroot = URLPath.objects.filter(slug=slug)
+    def get_or_create_bsi_subroots(cls, parent, slug, user_msg, content, title):
+        subroot = URLPath.objects.filter(slug=slug, parent=parent)
         if (not subroot):
             rev_kwargs = {'content': content, 'user_message': user_msg, 'ip_address': '0.0.0.0'}
-            subroot = URLPath.create_urlpath(parent=bsi_root, slug=slug, title=title,
+            subroot = URLPath.create_urlpath(parent=parent, slug=slug, title=title,
                                              **rev_kwargs)
         else:
             subroot = subroot[0]
@@ -127,8 +136,8 @@ class BSI(models.Model):
     @transaction.atomic
     def create(cls, parent, slug, title, article_type, **rev_kwargs):
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
-        if not url.path.startswith('bsi') or len(url.path) == 3:
-            raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
+        # if not url.path.startswith('bsi') or len(url.path) == 3:
+        #    raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
         bsi = cls(url=url, articleType=article_type)
         bsi.save()
 
@@ -138,7 +147,9 @@ class BSI(models.Model):
         articles = BSI.objects.filter(articleType=article_type)
         if articles:
             for article in articles:
-                article_urlpaths.append(article)
+                # if article.url.parent.parent == BSI.get_or_create_bsi_root(''):
+                if article.url.parent == BSI.get_or_create_bsi_root(''):
+                    article_urlpaths.append(article.url)
         # return empty if nothing is found
         return article_urlpaths
 
