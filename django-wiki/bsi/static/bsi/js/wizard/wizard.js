@@ -5,10 +5,26 @@ var currentSortedTopic;
 const thresholdTopicNumber = 10;
 
 function initWizard(components,sortedTopics) {
-    var components = JSON.parse(components)['components'];
-    //speichern der Ausgangsdaten
+    if(localStorage.getItem('currentTopic')=== null){
+        currentTopic = 0;
+        localStorage.setItem('currentTopic',str(currentTopic));
+    } else{
+        currentTopic = Int(localStorage.getItem('currentTopic'));
+    }
+
+    var components = JSON.parse(localStorage.getItem('componentsTopic'));
+
+    //braiche ich glaube nicht mehr
     orginalTopic = components.slice();
-    remainingComponents = components.slice();
+
+    if(localStorage.getItem('remainingComponents')=== null){
+        remainingComponents = components.slice();
+        localStorage.setItem('remainingComponents',remainingComponents);
+    } else{
+        remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
+    }
+
+    remainingComponents =
     $("#topic").text(JSON.parse(sortedTopics)[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 }
