@@ -17,7 +17,6 @@ class UrlsTestCase(InitTestCase):
         uga = reverse('get_article', kwargs={"path": "uga"})
         self.assertEqual(uga, '/uga')
 
-
     def test_resolve_get_article(self):
         bsi_resolver = resolve('/bsi')
         self.assertEqual(bsi_resolver.view_name, 'get_article')

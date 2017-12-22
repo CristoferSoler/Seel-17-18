@@ -2,7 +2,7 @@ from django.conf.urls import url
 from wiki.views import article
 
 from . import views
-from .ugaViews import CreateRoot, UGEditView, UGACreate
+from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView
 from .views import BSISearchView, WikiArticleView
 
 article_create_view_class = article.Create
@@ -22,6 +22,7 @@ urlpatterns = [
     # url(r'^(?P<path>.+/|)$', WikiArticleView.as_view(), name='display_uga'),
 
     url(r'^(?P<path>.+/|)edit/$', UGEditView.as_view(), name='edit'),
+    url(r'^(?P<path>.+/|)delete/$', UGDeleteView.as_view(), name='delete'),
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
     url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),
