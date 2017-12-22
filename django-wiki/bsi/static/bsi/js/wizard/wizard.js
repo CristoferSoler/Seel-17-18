@@ -135,3 +135,10 @@ function presentResults() {
     $("#list").append('</ul>');
     //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
+
+function clearLocalStorage(){
+    localStorage.removeItem('componentsTopic');
+    localStorage.removeItem('currentTopic');
+    localStorage.removeItem('remainingComponents');
+    localStorage.removeItem('sortedTopics');
+}
