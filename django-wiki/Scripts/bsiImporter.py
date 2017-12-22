@@ -150,6 +150,7 @@ def doUpdate(file):
                     revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
+                    print(new_bsi_subroot)
                     print(file_name + " " + id +" "+ bsi_type + " is saved")
 
     fillNewPage(modified, added, deleted, new_page)
@@ -243,25 +244,30 @@ def find_between(s, first, last):
 
 
 def post_phase(archiving_data):
-    # for unchanged articles, update its modification time
+    # after 30 days
+    # create archive
+    # move the old bsi articles with their related uga articles to archive
+    # change the url of he new one to the old one
+    # delete the new (change log) page
         archive = Archive.get_or_create(archiving_data)
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         type = URLPath.objects.filter(parent=new)
-        print(type)
+        # print(type)
         for new_type in type:
-             # if new_type.slug == "components":
-             #     post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
-             if new_type.slug == "threats":
+              if new_type.slug == "components":
+                  post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
+              elif new_type.slug == "threats":
                    post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
-             # elif new_type.slug == "implementationnotes":
-             #      post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
+              elif new_type.slug == "implementationnotes":
+                   post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
 
-        #print(post_phase_delete_url(new))
+        post_phase_delete_url(new)
         updateModificationTime()
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
+    # for each type append the new updates
     new_articles = []
     articles = []
     if default_type == "components":
@@ -281,7 +287,7 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             for article in articles:
                 if article.slug == new_article.slug:
                     article.slug = type_symbol.lower() +"_" + article.slug
-                    archive_tranc = ArchiveTransaction.create(archive, article).archive()
+                    ArchiveTransaction.create(archive, article).archive()
                     post_phase_move_references(archive, article)
 
             new_article.parent = bsi_type
@@ -297,16 +303,18 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
 
 
 def post_phase_move_references(archive, bsi_article):
+    # move the uga articles that related to the old bsi to archive
     uga_ref = bsi_article.bsi.references.all()
     for ref in uga_ref:
         ArchiveTransaction.create(archive, ref.url).archive()
 
 def post_phase_delete_url(path):
+    # delete the new page and its subroots
     children = path.get_ordered_children()
-    print(children)
+    # print(children)
     if children:
         for child in children:
-            print(child)
+            # print(child)
             child.delete()
             child.save()
     path.delete_subtree()
@@ -406,14 +414,14 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-     #file = parseArgs()
-     #main(file)
-     post_phase("2017-12")
-     #new = URLPath.objects.get(slug='new')
-     #print(post_phase_delete_url(new))
-     #components = URLPath.objects.get(slug='threats', parent=new)
-     #print(components.path)
-      # print(components)
-     print("finished!")
+      file = parseArgs()
+      main(file)
+      #post_phase("2017-12")
+      # new = URLPath.objects.get(slug='new')
+      # print(post_phase_delete_url(new))
+      # components = URLPath.objects.get(slug='threats', parent=new)
+      # print(components.path)
+      # # print(components)
+      print("finished!")
 
 
