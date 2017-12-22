@@ -27,6 +27,8 @@ function yesPress() {
 
     if(remainingComponents.length <= thresholdTopicNumber ){
         console.log(JSON.stringify(remainingComponents));
+        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+        console.log('buh')
         presentResults();
     } else{
         $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
@@ -47,6 +49,7 @@ function noPress() {
     currentTopic = currentTopic + 1;
 
     if(remainingComponents.length <= thresholdTopicNumber ){
+        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
         console.log(JSON.stringify(remainingComponents));
         presentResults();
     } else{
@@ -63,7 +66,7 @@ function dontknowPress() {
 
 function restart(){
     currentTopic = 0;
-    //console.log(orginalTopic.length);
+    console.log('Hello');
     [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
     $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
     console.log(remainingComponents.length);
@@ -71,11 +74,13 @@ function restart(){
 }
 
 function presentResults() {
-    $("#listPanel").empty();
+    //console.log(remainingComponents);
+    $("#list").empty();
+    console.log(remainingComponents.length);
     //$("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
-        $("#listPanel").append("<li><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
+        $("#list").append("<li><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
     }
     $("#list").append('</ul>');
-    localStorage.setItem("wizard", JSON.stringify(remainingComponents))
+    //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
