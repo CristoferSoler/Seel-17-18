@@ -242,6 +242,19 @@ def find_between(s, first, last):
     except ValueError:
         return ""
 
+def get_bsi_article_id(type, file_name):
+    # search the BSI id in the file name
+    id = ''
+    if type == 'C':
+        id = file_name.split(" ", 1)[0]
+    elif type == "T":
+        id = "".join(file_name.split(" ", 2)[:2])
+    elif type == "N":
+        for n_id in system_devices:
+            if n_id in file_name:
+                id = find_between(file_name, n_id, " ")
+
+    return id
 
 def post_phase(archiving_data):
     # after 30 days
@@ -299,9 +312,6 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             for ancestor in Article.objects.get(pk=urlpath_article.article.pk).ancestor_objects():
                     ancestor.article.clear_cache()
 
-
-
-
 def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
     uga_ref = bsi_article.bsi.references.all()
@@ -319,20 +329,6 @@ def post_phase_delete_url(path):
             child.save()
     path.delete_subtree()
     return path.is_deleted()
-
-def get_bsi_article_id(type, file_name):
-    # search the BSI id in the file name
-    id = ''
-    if type == 'C':
-        id = file_name.split(" ", 1)[0]
-    elif type == "T":
-        id = "".join(file_name.split(" ", 2)[:2])
-    elif type == "N":
-        for n_id in system_devices:
-            if n_id in file_name:
-                id = find_between(file_name, n_id, " ")
-
-    return id
 
 def checkFileAction(filepath):
     modified = initDict()
@@ -423,5 +419,3 @@ if __name__ == '__main__':
       # print(components.path)
       # # print(components)
       print("finished!")
-
-
