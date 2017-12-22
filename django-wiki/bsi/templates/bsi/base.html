@@ -187,6 +187,11 @@
 </html>
 
 <script>
+    //wenn Tab oder Broswser geschlossen wird
+    window.onbeforeunload = function () {
+
+    };
+
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
@@ -207,13 +212,17 @@
             restart();
         })
 
-        //noch keine Daten im local storgage get zum server
         if(localStorage.getItem('componentsTopic') === null){
-            jQuery.getJSON('/_wizard/').done(function(data){
-                console.log('test');
-                console.log(json.parse(data));
-                //localStorage.setItem('sortedTopicList', data);
-            })
+            $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
+                localStorage.setItem('componentsTopic',JSON.stringify(result));
+            });
+        }
+
+        if(localStorage.getItem('sortedTopics') === null){
+            console.log('test');
+            $.getJSON('/_wizard/sortedTopics/',function (result) {
+                localStorage.setItem('sortedTopics',JSON.stringify(result));
+            });
         }
 
     });

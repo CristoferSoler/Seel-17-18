@@ -44,8 +44,8 @@ def getListOfFrequenceOfTopic(components):
 def getSortedTopicList(request  ):
     components = readAndProcessCSV()
     frequenceOfTopics = getListOfFrequenceOfTopic(components['components'])
-    jsonFile = '{ sortedTopicList:' + json.dumps(frequenceOfTopics) + "}"
-    return HttpResponse(jsonFile, content_type='application/json')
+    jsonFile = { 'sortedTopicList' : frequenceOfTopics }
+    return HttpResponse(json.dumps(jsonFile), content_type='application/json')
 
 def getComponentsTopics(request):
     components = readAndProcessCSV()
