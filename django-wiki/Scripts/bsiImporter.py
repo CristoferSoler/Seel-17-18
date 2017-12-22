@@ -113,7 +113,6 @@ def doUpdate(file):
     for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
         if not filenames:
             continue
-        pdb.set_trace()
         sub_article_type = basename(dirpath)
         if sub_article_type == "C":
             article_type = BSI_Article_type.COMPONENT
@@ -242,77 +241,65 @@ def find_between(s, first, last):
         return ""
 
 
-def post_phase():
+def post_phase(archiving_data):
     # for unchanged articles, update its modification time
-    type = []
-    new_c_articles = []
-    c_article = []
-    t_article = []
-    n_article = []
-    new_t_article = []
-    new_n_article = []
-    uga_ref = []
-    archive = Archive.get_or_create('2017-12')
+    archive = Archive.get_or_create(archiving_data)
     new = URLPath.objects.get(slug='new')
     bsi = URLPath.objects.get(slug='bsi')
     type = URLPath.objects.filter(parent=new)
     for new_type in type:
-        uga_ref = ""
         if new_type.slug == "components":
-            bsi_type = URLPath.objects.get(parent=bsi, slug='components')
-            new_c_article = new_type.get_ordered_children()
-            for article in new_c_article:
-                c_article = BSI.get_articles_by_type('C')
-                for c in c_article:
-                    if c.slug == article.slug:
-                        c.slug = "c_" + c.slug
-                        print(ref)
-                        uga_ref = c.bsi.references.all()
-                        archive_tranc = ArchiveTransaction.create(archive, c)
-                        archive_tranc.archive()
-                        for ref in uga_ref:
-                            print(ref)
-                            ArchiveTransaction.create(archive, ref.url).archive()
-                article.parent = bsi_type
-                article.save()
-
-
-
+            post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
         elif new_type.slug == "threats":
-            bsi_type = URLPath.objects.get(parent=bsi, slug='threats')
-            new_t_article = new_type.get_ordered_children()
-            for article in new_t_article:
-                t_article = BSI.get_articles_by_type('G')
-                for t in t_article:
-                    if t.slug == article.slug:
-                        t.slug = "t_" + t.slug
-                        uga_ref = t.bsi.references.all()
-                        archive_tranc = ArchiveTransaction.create(archive, t)
-                        archive_tranc.archive()
-                        for ref in uga_ref:
-                            ArchiveTransaction.create(archive, ref.url).archive()
-                article.parent = bsi_type
-                article.save()
-
-
-
+            post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
         elif new_type.slug == "implementationnotes":
-            bsi_type = URLPath.objects.get(parent=bsi, slug='implementationnotes')
-            new_n_article  = new_type.get_ordered_children()
-            for article in new_n_article:
-                n_article = BSI.get_articles_by_type('N')
-                for n in n_article:
-                    if n.slug == article.slug:
-                        n.slug = "n_" + n.slug
-                        uga_ref = n.bsi.references.all()
-                        archive_tranc = ArchiveTransaction.create(archive, n)
-                        archive_tranc.archive()
-                        for ref in uga_ref:
-                            ArchiveTransaction.create(archive, ref.url).archive()
-                article.parent = bsi_type
-                article.save()
+            post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
+    print(type)
     updateModificationTime()
 
+def post_phase_move_bsi(new_type, default_type, old_parent, archive):
+    new_articles = []
+    articles = []
+    if default_type == "components":
+        type_symbol = 'C'
+    elif default_type == "threats":
+        type_symbol = 'G'
+    elif default_type == "implementationnotes":
+        type_symbol = 'N'
+    if new_type.slug == default_type:
+        bsi_type = URLPath.objects.get(parent=old_parent, slug= default_type)
+        new_articles = new_type.get_ordered_children()
+        for new_article in new_articles:
+            articles = BSI.get_articles_by_type(type_symbol)
+            for article in articles:
+                if article.slug == new_article.slug:
+                    article.slug = type_symbol.lower() +"_" + article.slug
+                    post_phase_move_references(article,archive)
+            new_article.parent = bsi_type
+            new_article.save()
+
+
+
+def post_phase_move_references(bsi_article, archive):
+    uga_ref = bsi_article.bsi.references.all()
+    archive_tranc = ArchiveTransaction.create(archive, bsi_article)
+    archive_tranc.archive()
+    for ref in uga_ref:
+        ArchiveTransaction.create(archive, ref.url).archive()
+
+def post_phase_delete_url(path):
+    children = path.get_ordered_children()
+    #print(children[0])
+    if not children:
+        path.delete()
+        path.save()
+    else:
+        for child in children:
+            child.delete()
+            child.save()
+        path.delete()
+        path.save()
+    return path.is_deleted()
 
 def get_bsi_article_id(type, file_name):
     # search the BSI id in the file name
@@ -327,7 +314,6 @@ def get_bsi_article_id(type, file_name):
                 id = find_between(file_name, n_id, " ")
 
     return id
-
 
 def checkFileAction(filepath):
     modified = initDict()
@@ -409,9 +395,9 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-    file = parseArgs()
-    main(file)
-    #post_phase()
+    #file = parseArgs()
+    #main(file)
+    post_phase("2017-12")
     print("finished!")
 
 
