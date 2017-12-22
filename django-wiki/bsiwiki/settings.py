@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_nyt',
     'mptt',
     'sekizai',
+    'markdown',
     'sorl.thumbnail',
     'wiki',
     'wiki.plugins.attachments',
@@ -93,7 +94,7 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'/Users/macbook/Seel-17-18/programming/bsiCrawler/contentEn'
+CRAWLER_DIRECTORY = r'/Users/macbook/Seel-17-18/programming/bsiCrawler/mdEn'
 
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'

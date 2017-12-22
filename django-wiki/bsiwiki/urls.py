@@ -33,6 +33,7 @@ urlpatterns = [
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
     url(r'^', include('bsi.urls')),
-    # so far anything that cannot be handled by our urls, is forwarded to django-wiki
     url(r'^', get_pattern()),
+    # so far anything that cannot be handled by our urls, is forwarded to django-wiki
+
 ]

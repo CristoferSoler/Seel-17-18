@@ -11,6 +11,13 @@ from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 
+from django.http import JsonResponse
+
+import json
+import os
+import sys
+sys.path.append("../../programming/bsiCrawler/treeview")
+
 from bsi.ugaViews import overview_uga
 
 
@@ -33,7 +40,7 @@ class WikiArticleView(ArticleView):
         elif path.startswith('uga'):
             self.template_name = "uga/view.html"
         elif path.startswith('bsi'):
-            self.template_name = "bsi/article_base.html"
+            self.template_name = "bsi/article_bsi.html"
         elif path.startswith('news'):
             """ todo set news template """
 
@@ -104,3 +111,6 @@ def register(request):
 
 def create(request):
     return render(request, 'bsi/create_article.html')
+
+
+
