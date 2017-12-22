@@ -7,30 +7,35 @@ const thresholdTopicNumber = 10;
 function initWizard(components,sortedTopics) {
     if(localStorage.getItem('currentTopic')=== null){
         currentTopic = 0;
-        localStorage.setItem('currentTopic',str(currentTopic));
+        localStorage.setItem('currentTopic',String(currentTopic));
     } else{
-        currentTopic = Int(localStorage.getItem('currentTopic'));
+        currentTopic = parseInt(localStorage.getItem('currentTopic'));
     }
 
-    var components = JSON.parse(localStorage.getItem('componentsTopic'));
+    var components = JSON.parse(localStorage.getItem('componentsTopic'))['components'];
+    var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
+
+    console.log(components);
 
     //braiche ich glaube nicht mehr
     orginalTopic = components.slice();
 
     if(localStorage.getItem('remainingComponents')=== null){
         remainingComponents = components.slice();
-        localStorage.setItem('remainingComponents',remainingComponents);
+        localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents));
     } else{
         remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
     }
 
-    remainingComponents =
-    $("#topic").text(JSON.parse(sortedTopics)[currentTopic]);
+    console.log(sortedTopics);
+
+    $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 }
 
 function yesPress() {
-    var currentTopicString = JSON.parse(currentSortedTopic)[currentTopic];
+    var currentTopicString = currentSortedTopic[currentTopic];
+    console.log(currentTopicString);
     remainingComponents.forEach(function (element) {
         if(!(element['topics'].includes(currentTopicString))){
             var index = remainingComponents.indexOf(element)
@@ -43,12 +48,15 @@ function yesPress() {
 
     if(remainingComponents.length <= thresholdTopicNumber ){
         console.log(JSON.stringify(remainingComponents));
-        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+        $("#topic").text(currentSortedTopic[currentTopic]);
         console.log('buh')
         presentResults();
     } else{
-        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+        $("#topic").text(currentSortedTopic[currentTopic]);
     }
+
+    safeData();
+
     console.log(remainingComponents.length);
 }
 
@@ -65,19 +73,46 @@ function noPress() {
     currentTopic = currentTopic + 1;
 
     if(remainingComponents.length <= thresholdTopicNumber ){
-        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+        $("#topic").text(currentSortedTopic[currentTopic]);
         console.log(JSON.stringify(remainingComponents));
         presentResults();
     } else{
-        $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+        $("#topic").text(currentSortedTopic[currentTopic]);
     }
+
+    safeData();
+
     console.log(remainingComponents.length);
 }
 
 function dontknowPress() {
     currentTopic = currentTopic +1;
-    $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
+    $("#topic").text(currentSortedTopic[currentTopic]);
+
+    safeData();
+
     console.log(remainingComponents.length);
+}
+
+function safeData() {
+    localStorage.setItem('currentTopic',String(currentTopic));
+    localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents))
+}
+
+
+function getDataFromServer(){
+    if(localStorage.getItem('componentsTopic') === null){
+        $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
+            localStorage.setItem('componentsTopic',JSON.stringify(result));
+        });
+    }
+
+    if(localStorage.getItem('sortedTopics') === null){
+        console.log('test');
+        $.getJSON('/_wizard/sortedTopics/',function (result) {
+            localStorage.setItem('sortedTopics',JSON.stringify(result));
+        });
+    }
 }
 
 function restart(){

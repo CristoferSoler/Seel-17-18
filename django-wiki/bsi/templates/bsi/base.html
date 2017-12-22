@@ -211,19 +211,7 @@
         $('#restart').on('click', function (e) {
             restart();
         })
-
-        if(localStorage.getItem('componentsTopic') === null){
-            $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
-                localStorage.setItem('componentsTopic',JSON.stringify(result));
-            });
-        }
-
-        if(localStorage.getItem('sortedTopics') === null){
-            console.log('test');
-            $.getJSON('/_wizard/sortedTopics/',function (result) {
-                localStorage.setItem('sortedTopics',JSON.stringify(result));
-            });
-        }
+        getDataFromServer();
 
     });
 
