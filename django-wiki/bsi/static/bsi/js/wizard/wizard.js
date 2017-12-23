@@ -31,36 +31,22 @@ function initWizard() {
 }
 
 function yesPress() {
-    var currentTopicString = currentSortedTopic[currentTopic];
-    console.log(currentTopicString);
-    remainingComponents.forEach(function (element) {
-        if(!(element['topics'].includes(currentTopicString))){
-            var index = remainingComponents.indexOf(element)
-            if (index > -1) {
-                remainingComponents.splice(index, 1);
-            }
-        }
-    })
-    currentTopic = currentTopic + 1;
-
-    if(remainingComponents.length <= thresholdTopicNumber ){
-        console.log(JSON.stringify(remainingComponents));
-        $("#topic").text(currentSortedTopic[currentTopic]);
-        console.log('buh')
-        presentResults();
-    } else{
-        $("#topic").text(currentSortedTopic[currentTopic]);
-    }
-
-    safeData();
-
-    console.log(remainingComponents.length);
+    checkTopics(true);
 }
 
 function noPress() {
-    var currentTopicString = JSON.parse(currentSortedTopic)[currentTopic];
+    checkTopics(false);
+}
+
+function checkTopics(yes) {
+    var currentTopicString = currentSortedTopic[currentTopic];
     remainingComponents.forEach(function (element) {
-        if(element['topics'].includes(currentTopicString)){
+        var check = element['topics'].includes(currentTopicString)
+        if(yes){
+          check= !check;
+        }
+
+        if(check){
             var index = remainingComponents.indexOf(element)
             if (index > -1) {
                 remainingComponents.splice(index, 1);
@@ -71,7 +57,6 @@ function noPress() {
 
     if(remainingComponents.length <= thresholdTopicNumber ){
         $("#topic").text(currentSortedTopic[currentTopic]);
-        console.log(JSON.stringify(remainingComponents));
         presentResults();
     } else{
         $("#topic").text(currentSortedTopic[currentTopic]);
@@ -79,6 +64,7 @@ function noPress() {
 
     safeData();
 }
+
 
 function dontknowPress() {
     currentTopic = currentTopic + 1;
@@ -128,7 +114,6 @@ function safeData() {
 }
 
 function clearLocalStorage(){
-    console.log('clearStorage');
     localStorage.removeItem('componentsTopic');
     localStorage.removeItem('currentTopic');
     localStorage.removeItem('remainingComponents');
