@@ -11,7 +11,7 @@ django.setup()
 
 
 from wiki.models import URLPath
-from bsi.models import BSI_Article_type
+from bsi.models.article_extensions import BSI_Article_type
 
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
@@ -85,7 +85,7 @@ def find_BSI_articles(nodes, type, children):
                     for child in children:
                         if(child.slug == id):
                             path = child.path
-                            node['href'] = '<a href>' + clean(path) + '</a>'
+                            node['href'] = clean(path)
                     if(not path):
                         print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
 
