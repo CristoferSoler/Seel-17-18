@@ -178,7 +178,7 @@ function initWizardsComponents(){
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'left':'97%'});
         } else {
-            panel.addClass('visible').animate({'left':'80%'});
+            panel.addClass('visible').animate({'left':'60%'});
         }
         return false;
     });
