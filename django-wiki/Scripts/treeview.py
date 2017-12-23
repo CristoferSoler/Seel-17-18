@@ -11,7 +11,7 @@ django.setup()
 
 
 from wiki.models import URLPath
-from bsi.models import BSI_Article_type
+from bsi.models.article_extensions import BSI_Article_type
 
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
@@ -33,6 +33,7 @@ def addLinksToTreeView():
         raise ValueError('Loaded json file turned up empty. Please check the tree view file.')
 
     # site = 'http://' + str(Site.objects.get_current()) + '/'
+    site = 'http://localhost:8000/'
     for elem in parsed:
         # print json.dumps(elem, indent=4)
         text = elem.get('text')
@@ -57,12 +58,12 @@ def addLinksToTreeView():
             elif(bsi_type == BSI_Article_type.THREAT):
                 parents = URLPath.objects.filter(slug='threats')
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
-                parents = URLPath.objects.filter(slug='implementationNotes')
+                parents = URLPath.objects.filter(slug='implementationnotes')
 
             if(parents):
                 parent = parents[0]
                 children = parent.get_children()
-                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children)
+                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children, site)
 
     try:
         file = open(path_to_treeview_with_links, "w")
@@ -74,7 +75,7 @@ def addLinksToTreeView():
         raise IOError('Error while writing to file ' + path_to_treeview_with_links)
 
 
-def find_BSI_articles(nodes, type, children):
+def find_BSI_articles(nodes, type, children, site):
     if(nodes):
         for node in nodes:
             text = node.get('text').lstrip()
@@ -84,12 +85,13 @@ def find_BSI_articles(nodes, type, children):
                     path = ''
                     for child in children:
                         if(child.slug == id):
+                            node['path'] = site + child.path
                             path = child.path
-                            node['href'] = '<a href>' + clean(path) + '</a>'
+                            node['href'] = clean(path)
                     if(not path):
                         print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
 
-            node = find_BSI_articles(node.get('nodes'), type, children)
+            node = find_BSI_articles(node.get('nodes'), type, children, site)
     return nodes
 
 
