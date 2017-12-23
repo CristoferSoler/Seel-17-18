@@ -164,9 +164,13 @@ function initWizardsComponents(){
     buttonsWizard();
     getDataFromServer();
 
+    $('a').bind('click',function () {
+        valid = true;
+        console.log('in Bind of a');
+    });
+
     $('#opener').on('click', function() {
         initWizard();
-
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'left':'97%'});
@@ -176,11 +180,6 @@ function initWizardsComponents(){
 
         valid = false;
         return false;
-    });
-
-    $('a').bind('click',function () {
-        valid = true;
-        console.log('in Bind of a');
     });
 
 }
