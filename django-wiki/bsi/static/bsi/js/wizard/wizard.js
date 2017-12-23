@@ -6,7 +6,6 @@ const thresholdTopicNumber = 10;
 var valid = false;
 
 function initWizard() {
-    console.log('test');
     if(localStorage.getItem('currentTopic')=== null){
         currentTopic = 0;
         localStorage.setItem('currentTopic',String(currentTopic));
@@ -16,8 +15,6 @@ function initWizard() {
 
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['components'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
-
-    console.log(components);
 
     //braiche ich glaube nicht mehr
     orginalTopic = components.slice();
@@ -83,17 +80,12 @@ function noPress() {
     }
 
     safeData();
-
-    console.log(remainingComponents.length);
 }
 
 function dontknowPress() {
-    currentTopic = currentTopic +1;
+    currentTopic = currentTopic + 1;
     $("#topic").text(currentSortedTopic[currentTopic]);
-
     safeData();
-
-    console.log(remainingComponents.length);
 }
 
 function restart(){
@@ -125,7 +117,6 @@ function getDataFromServer(){
     }
 
     if(localStorage.getItem('sortedTopics') === null){
-        console.log('test');
         $.getJSON('/_wizard/sortedTopics/',function (result) {
             localStorage.setItem('sortedTopics',JSON.stringify(result));
         });
@@ -138,6 +129,7 @@ function safeData() {
 }
 
 function clearLocalStorage(){
+    console.log('clearStorage');
     localStorage.removeItem('componentsTopic');
     localStorage.removeItem('currentTopic');
     localStorage.removeItem('remainingComponents');
@@ -147,18 +139,22 @@ function clearLocalStorage(){
 function buttonsWizard() {
     $('#yesButton').on('click', function (e) {
         yesPress();
+        valid = false;
     })
 
     $('#noButton').on('click', function (e) {
         noPress();
+         valid = false;
     })
 
     $('#dontKnowButton').on('click', function (e) {
         dontknowPress();
+         valid = false;
     })
 
     $('#restart').on('click', function (e) {
         restart();
+         valid = false;
     })
 }
 
@@ -171,29 +167,35 @@ function initWizardsComponents(){
 
     $('#opener').on('click', function() {
         initWizard();
+
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'left':'97%'});
         } else {
             panel.addClass('visible').animate({'left':'60%'});
         }
+
+        valid = false;
         return false;
     });
 
     $('a').bind('click',function () {
         valid = true;
+        console.log('in Bind of a');
     });
 
 }
 
 function wireupEvents(){
     if(!valid){
+        console.log('Balc');
         window.onbeforeunload = askWheatherToClose;
     }
 }
 
 function askWheatherToClose(event){
     if(!valid){
+        console.log('wireupEvents');
         clearLocalStorage();
     }
 }
