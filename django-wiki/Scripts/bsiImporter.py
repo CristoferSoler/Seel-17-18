@@ -13,7 +13,7 @@ environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
 from bsiwiki import settings
-from bsi.models import BSI, BSI_Article_type
+from bsi.models.article_extensions import BSI, BSI_Article_type
 from wiki.models import URLPath, ArticleRevision, Article
 from archive.models import Archive, ArchiveTransaction
 
@@ -251,12 +251,13 @@ def get_bsi_article_id(type, file_name):
 
     return id
 
+import pdb
 def post_phase(archiving_data):
-    # after 30 days
-    # create archive
-    # move the old bsi articles with their related uga articles to archive
-    # change the url of he new one to the old one
-    # delete the new (change log) page
+        # after 30 days
+        # create archive
+        # move the old bsi articles with their related uga articles to archive
+        # change the url of he new one to the old one
+        # delete the new (change log) page
         archive = Archive.get_or_create(archiving_data)
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
@@ -270,21 +271,22 @@ def post_phase(archiving_data):
               elif new_type.slug == "implementationnotes":
                    post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
 
-        post_phase_delete_url(new)
-        updateModificationTime()
+        #post_phase_delete_url(new)
+        #updateModificationTime()
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
     # for each type append the new updates
+    pdb.set_trace()
     new_articles = []
     articles = []
     if default_type == "components":
-        type_symbol = 'C'
+        type_symbol = BSI_Article_type.COMPONENT
         # print(type_symbol)
     elif default_type == "threats":
-        type_symbol = 'G'
+        type_symbol = BSI_Article_type.THREAT
     elif default_type == "implementationnotes":
-        type_symbol = 'N'
+        type_symbol = BSI_Article_type.IMPLEMENTATIONNOTES
     if new_type.slug == default_type:
         bsi_type = URLPath.objects.get(parent=old_parent, slug= default_type)
         # print(bsi_type)
@@ -294,7 +296,7 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             # print(articles)
             for article in articles:
                 if article.slug == new_article.slug:
-                    article.slug = type_symbol.lower() +"_" + article.slug
+                    article.slug = type_symbol.label.lower()[:1] +"_" + article.slug
                     ArchiveTransaction.create(archive, article).archive()
                     post_phase_move_references(archive, article)
 
@@ -315,26 +317,31 @@ def post_phase_move_references(archive, bsi_article):
 
 def post_phase_delete_url(path):
     # delete the new page and its subroots
-    children = path.get_ordered_children()
-    # print(children)
+    children = path.get_children()
+    #print(children)
     if children:
         for child in children:
             # print(child)
-            child.delete()
-            child.save()
-    path.delete_subtree()
-    return path.is_deleted()
+            child.article.delete()
+            print('deleted ' + child.path)
+    #        child.save()
+    #path.delete_subtree()
+    path.article.delete()
+    #return path.is_deleted()
+    print("new path is deleted")
 
 def updateModificationTime():
     # update the date for all unchange and change articles
     new_date = datetime.now()
     # new = datetime(2009, 10, 5)
-    for article in Article.objects.all():
-        article.modified = new_date
-        article.save()
-    for revision in ArticleRevision.objects.all():
-         revision.modified = new_date
-         revision.save()
+    for bsi in BSI.objects.all():
+        bsi.url.article.modified = new_date
+        bsi.url.article.current_revision.modified = new_date
+        bsi.url.article.current_revision.save()
+        bsi.url.article.save()
+    #for revision in ArticleRevision.objects.all():
+    #     revision.modified = new_date
+    #     revision.save()
     return
 
 def checkFileAction(filepath):
@@ -417,11 +424,12 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-      #file = parseArgs()
+      file = parseArgs()
       #main(file)
       updateModificationTime()
       #post_phase("2017-12")
-      # new = URLPath.objects.get(slug='new')
+      #new = URLPath.objects.get(slug='new')
+      #post_phase_delete_url(new)
       # print(post_phase_delete_url(new))
       # components = URLPath.objects.get(slug='threats', parent=new)
       # print(components.path)

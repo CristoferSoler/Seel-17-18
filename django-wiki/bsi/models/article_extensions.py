@@ -149,7 +149,7 @@ class BSI(models.Model):
         if articles:
             bsi_root = BSI.get_or_create_bsi_root('')
             for article in articles:
-                if article.url.parent.parent is bsi_root:
+                if article.url.parent.parent == bsi_root:
                     article_urlpaths.append(article.url)
         # return empty if nothing is found
         return article_urlpaths
