@@ -184,5 +184,6 @@ function setPanel() {
     var panel = $('#slide-panel');
     if(localStorage.getItem('visible')!== null){
         panel.addClass('visible').animate({'left':'60%'});
+        initWizard();
     }
 }
