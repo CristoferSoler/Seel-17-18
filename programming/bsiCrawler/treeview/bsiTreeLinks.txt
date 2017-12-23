@@ -6,192 +6,192 @@
                 "text": "Overview of elementary hazards",
                 "nodes": [
                     {
-                        "text": "G01 fire",
-                        "href": "/threats/G0.1/"
+                        "href": "/threats/G0.1/",
+                        "text": "G01 fire"
                     },
                     {
-                        "text": "G02 Unfavorable climatic conditions",
-                        "href": "/threats/G0.2/"
+                        "href": "/threats/G0.2/",
+                        "text": "G02 Unfavorable climatic conditions"
                     },
                     {
-                        "text": "G03 water",
-                        "href": "/threats/G0.3/"
+                        "href": "/threats/G0.3/",
+                        "text": "G03 water"
                     },
                     {
-                        "text": "G04 pollution, dust, corrosion",
-                        "href": "/threats/G0.4/"
+                        "href": "/threats/G0.4/",
+                        "text": "G04 pollution, dust, corrosion"
                     },
                     {
-                        "text": "G05 natural disasters",
-                        "href": "/threats/G0.5/"
+                        "href": "/threats/G0.5/",
+                        "text": "G05 natural disasters"
                     },
                     {
-                        "text": "G06 Disasters in the environment",
-                        "href": "/threats/G0.6/"
+                        "href": "/threats/G0.6/",
+                        "text": "G06 Disasters in the environment"
                     },
                     {
-                        "text": "G07 Major events in the environment",
-                        "href": "/threats/G0.7/"
+                        "href": "/threats/G0.7/",
+                        "text": "G07 Major events in the environment"
                     },
                     {
-                        "text": "G08 Failure or fault of the power supply",
-                        "href": "/threats/G0.8/"
+                        "href": "/threats/G0.8/",
+                        "text": "G08 Failure or fault of the power supply"
                     },
                     {
-                        "text": "G09 Failure or malfunction of communication networks",
-                        "href": "/threats/G0.9/"
+                        "href": "/threats/G0.9/",
+                        "text": "G09 Failure or malfunction of communication networks"
                     },
                     {
-                        "text": "G010 Failure or malfunction of supply networks",
-                        "href": "/threats/G0.10/"
+                        "href": "/threats/G0.10/",
+                        "text": "G010 Failure or malfunction of supply networks"
                     },
                     {
-                        "text": "G011 Failure or malfunction of service providers",
-                        "href": "/threats/G0.11/"
+                        "href": "/threats/G0.11/",
+                        "text": "G011 Failure or malfunction of service providers"
                     },
                     {
-                        "text": "G012 Electromagnetic interference",
-                        "href": "/threats/G0.12/"
+                        "href": "/threats/G0.12/",
+                        "text": "G012 Electromagnetic interference"
                     },
                     {
-                        "text": "G013 interception of compromising radiation",
-                        "href": "/threats/G0.13/"
+                        "href": "/threats/G0.13/",
+                        "text": "G013 interception of compromising radiation"
                     },
                     {
-                        "text": "G014 Spying out information (espionage)",
-                        "href": "/threats/G0.14/"
+                        "href": "/threats/G0.14/",
+                        "text": "G014 Spying out information (espionage)"
                     },
                     {
-                        "text": "G015 Listening",
-                        "href": "/threats/G0.15/"
+                        "href": "/threats/G0.15/",
+                        "text": "G015 Listening"
                     },
                     {
-                        "text": "G016 Theft of devices, data carriers or documents",
-                        "href": "/threats/G0.16/"
+                        "href": "/threats/G0.16/",
+                        "text": "G016 Theft of devices, data carriers or documents"
                     },
                     {
-                        "text": "G017 Loss of equipment, data carriers or documents",
-                        "href": "/threats/G0.17/"
+                        "href": "/threats/G0.17/",
+                        "text": "G017 Loss of equipment, data carriers or documents"
                     },
                     {
-                        "text": "G018 Incorrect planning or missing adjustment",
-                        "href": "/threats/G0.18/"
+                        "href": "/threats/G0.18/",
+                        "text": "G018 Incorrect planning or missing adjustment"
                     },
                     {
-                        "text": "G019 Disclosure of information worthy of protection",
-                        "href": "/threats/G0.19/"
+                        "href": "/threats/G0.19/",
+                        "text": "G019 Disclosure of information worthy of protection"
                     },
                     {
-                        "text": "G020 Information or products from unreliable sources",
-                        "href": "/threats/G0.20/"
+                        "href": "/threats/G0.20/",
+                        "text": "G020 Information or products from unreliable sources"
                     },
                     {
-                        "text": "G021 Manipulation of hardware or software",
-                        "href": "/threats/G0.21/"
+                        "href": "/threats/G0.21/",
+                        "text": "G021 Manipulation of hardware or software"
                     },
                     {
-                        "text": "G022 Manipulation of information",
-                        "href": "/threats/G0.22/"
+                        "href": "/threats/G0.22/",
+                        "text": "G022 Manipulation of information"
                     },
                     {
-                        "text": "G023 Unauthorized intrusion into IT systems",
-                        "href": "/threats/G0.23/"
+                        "href": "/threats/G0.23/",
+                        "text": "G023 Unauthorized intrusion into IT systems"
                     },
                     {
-                        "text": "G024 Destruction of devices or data carriers",
-                        "href": "/threats/G0.24/"
+                        "href": "/threats/G0.24/",
+                        "text": "G024 Destruction of devices or data carriers"
                     },
                     {
-                        "text": "G025 Failure of devices or systems",
-                        "href": "/threats/G0.25/"
+                        "href": "/threats/G0.25/",
+                        "text": "G025 Failure of devices or systems"
                     },
                     {
-                        "text": "G026 Malfunction of devices or systems",
-                        "href": "/threats/G0.26/"
+                        "href": "/threats/G0.26/",
+                        "text": "G026 Malfunction of devices or systems"
                     },
                     {
-                        "text": "G027 Lack of resources",
-                        "href": "/threats/G0.27/"
+                        "href": "/threats/G0.27/",
+                        "text": "G027 Lack of resources"
                     },
                     {
-                        "text": "G028 Software vulnerabilities or errors",
-                        "href": "/threats/G0.28/"
+                        "href": "/threats/G0.28/",
+                        "text": "G028 Software vulnerabilities or errors"
                     },
                     {
-                        "text": "G029 Violation of laws or regulations",
-                        "href": "/threats/G0.29/"
+                        "href": "/threats/G0.29/",
+                        "text": "G029 Violation of laws or regulations"
                     },
                     {
-                        "text": "G030 Unauthorized use or administration of devices and systems",
-                        "href": "/threats/G0.30/"
+                        "href": "/threats/G0.30/",
+                        "text": "G030 Unauthorized use or administration of devices and systems"
                     },
                     {
-                        "text": "G031 Incorrect use or administration of devices and systems",
-                        "href": "/threats/G0.31/"
+                        "href": "/threats/G0.31/",
+                        "text": "G031 Incorrect use or administration of devices and systems"
                     },
                     {
-                        "text": "G032 Abuse of permissions",
-                        "href": "/threats/G0.32/"
+                        "href": "/threats/G0.32/",
+                        "text": "G032 Abuse of permissions"
                     },
                     {
-                        "text": "G033 personal injury",
-                        "href": "/threats/G0.33/"
+                        "href": "/threats/G0.33/",
+                        "text": "G033 personal injury"
                     },
                     {
-                        "text": "G034 stop",
-                        "href": "/threats/G0.34/"
+                        "href": "/threats/G0.34/",
+                        "text": "G034 stop"
                     },
                     {
-                        "text": "G035 coercion, blackmail or corruption",
-                        "href": "/threats/G0.35/"
+                        "href": "/threats/G0.35/",
+                        "text": "G035 coercion, blackmail or corruption"
                     },
                     {
-                        "text": "G036 Identity theft",
-                        "href": "/threats/G0.36/"
+                        "href": "/threats/G0.36/",
+                        "text": "G036 Identity theft"
                     },
                     {
-                        "text": "G037 denying actions",
-                        "href": "/threats/G0.37/"
+                        "href": "/threats/G0.37/",
+                        "text": "G037 denying actions"
                     },
                     {
-                        "text": "G038 Misuse of personal data",
-                        "href": "/threats/G0.38/"
+                        "href": "/threats/G0.38/",
+                        "text": "G038 Misuse of personal data"
                     },
                     {
-                        "text": "G039 malicious program",
-                        "href": "/threats/G0.39/"
+                        "href": "/threats/G0.39/",
+                        "text": "G039 malicious program"
                     },
                     {
-                        "text": "G040 Denial of Service",
-                        "href": "/threats/G0.40/"
+                        "href": "/threats/G0.40/",
+                        "text": "G040 Denial of Service"
                     },
                     {
-                        "text": "G041 Sabotage",
-                        "href": "/threats/G0.41/"
+                        "href": "/threats/G0.41/",
+                        "text": "G041 Sabotage"
                     },
                     {
-                        "text": "G042 Social engineering",
-                        "href": "/threats/G0.42/"
+                        "href": "/threats/G0.42/",
+                        "text": "G042 Social engineering"
                     },
                     {
-                        "text": "G043 Importing messages",
-                        "href": "/threats/G0.43/"
+                        "href": "/threats/G0.43/",
+                        "text": "G043 Importing messages"
                     },
                     {
-                        "text": "G044 Unauthorized intrusion into premises",
-                        "href": "/threats/G0.44/"
+                        "href": "/threats/G0.44/",
+                        "text": "G044 Unauthorized intrusion into premises"
                     },
                     {
-                        "text": "G045 data loss",
-                        "href": "/threats/G0.45/"
+                        "href": "/threats/G0.45/",
+                        "text": "G045 data loss"
                     },
                     {
-                        "text": "G046 Loss of integrity of sensitive information",
-                        "href": "/threats/G0.46/"
+                        "href": "/threats/G0.46/",
+                        "text": "G046 Loss of integrity of sensitive information"
                     },
                     {
-                        "text": "G047 Harmful side effects of IT-based attacks",
-                        "href": "/threats/G0.47/"
+                        "href": "/threats/G0.47/",
+                        "text": "G047 Harmful side effects of IT-based attacks"
                     }
                 ]
             }
@@ -204,6 +204,7 @@
                 "text": "ISMS: Security Management",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/ISMS.1/",
                         "text": "ISMS.1 security management"
                     }
                 ]
@@ -212,9 +213,11 @@
                 "text": "NET: networks and communication",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/NET.2.1/",
                         "text": "NET.2.1 WLAN operation"
                     },
                     {
+                        "href": "/implementationnotes/NET.2.2/",
                         "text": "NET.2.2 Wi-Fi usage"
                     }
                 ]
@@ -223,15 +226,19 @@
                 "text": "APP: Applications",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/APP.1.1/",
                         "text": "APP.1.1 Office products"
                     },
                     {
+                        "href": "/implementationnotes/APP.2.2/",
                         "text": "APP.2.2 Active Directory"
                     },
                     {
+                        "href": "/implementationnotes/APP.3.1/",
                         "text": "APP.3.1 Web applications"
                     },
                     {
+                        "href": "/implementationnotes/APP.3.6/",
                         "text": "APP.3.6 DNS server"
                     }
                 ]
@@ -240,30 +247,39 @@
                 "text": "SYS: IT systems",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/SYS.1.1/",
                         "text": "SYS.1.1 General Server"
                     },
                     {
+                        "href": "/implementationnotes/SYS.1.2.2/",
                         "text": "SYS.1.2.2 Windows Server 2012"
                     },
                     {
+                        "href": "/implementationnotes/SYS.2.1/",
                         "text": "SYS.2.1 General Client"
                     },
                     {
+                        "href": "/implementationnotes/SYS.3.1/",
                         "text": "SYS.3.1 laptops"
                     },
                     {
+                        "href": "/implementationnotes/SYS.3.2.2/",
                         "text": "SYS.3.2.2 Mobile Device Management (MDM)"
                     },
                     {
+                        "href": "/implementationnotes/SYS.3.2.3/",
                         "text": "SYS.3.2.3 iOS (for Enterprise)"
                     },
                     {
+                        "href": "/implementationnotes/SYS.3.4/",
                         "text": "SYS.3.4 Mobile Disk"
                     },
                     {
+                        "href": "/implementationnotes/SYS.4.1/",
                         "text": "SYS.4.1 printers, copiers and multifunction devices"
                     },
                     {
+                        "href": "/implementationnotes/SYS.4.4/",
                         "text": "SYS.4.4 General IoT device"
                     }
                 ]
@@ -272,6 +288,7 @@
                 "text": "IND: Industrial IT",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/IND.1/",
                         "text": "IND.1 Operating and Control Technology"
                     }
                 ]
@@ -280,15 +297,19 @@
                 "text": "ORP: organization and staff",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/ORP.1/",
                         "text": "ORP.1 organization"
                     },
                     {
+                        "href": "/implementationnotes/ORP.2/",
                         "text": "ORP.2 staff"
                     },
                     {
+                        "href": "/implementationnotes/ORP.3/",
                         "text": "ORP.3 Raising awareness and training"
                     },
                     {
+                        "href": "/implementationnotes/ORP.5/",
                         "text": "ORP.5 Compliance Management (Requirements Management)"
                     }
                 ]
@@ -297,6 +318,7 @@
                 "text": "DER: detection and reaction",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/DER.2.3/",
                         "text": "DER.2.3 Clearance of far-reaching security incidents"
                     }
                 ]
@@ -305,12 +327,15 @@
                 "text": "CON: conception and procedure",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/CON.3/",
                         "text": "CON.3 data backup concept"
                     },
                     {
+                        "href": "/implementationnotes/CON.4/",
                         "text": "CON.4 Selection and use of standard software"
                     },
                     {
+                        "href": "/implementationnotes/CON.7/",
                         "text": "CON.7 Information security on trips abroad"
                     }
                 ]
@@ -319,24 +344,31 @@
                 "text": "OPS: operation",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/OPS.1.1.2/",
                         "text": "OPS.1.1.2 Proper IT Administration"
                     },
                     {
+                        "href": "/implementationnotes/OPS.1.1.3/",
                         "text": "OPS.1.1.3 Patch and Change Management"
                     },
                     {
+                        "href": "/implementationnotes/OPS.1.2.3/",
                         "text": "OPS.1.2.3 Information and data medium exchange"
                     },
                     {
+                        "href": "/implementationnotes/OPS.1.2.4/",
                         "text": "OPS.1.2.4 Teleworking"
                     },
                     {
+                        "href": "/implementationnotes/OPS.2.1/",
                         "text": "OPS.2.1 Outsourcing for customers"
                     },
                     {
+                        "href": "/implementationnotes/OPS.2.4/",
                         "text": "OPS.2.4 remote maintenance"
                     },
                     {
+                        "href": "/implementationnotes/OPS.3.1/",
                         "text": "OPS.3.1 Outsourcing for service providers"
                     }
                 ]
@@ -345,18 +377,23 @@
                 "text": "INF: Infrastructure",
                 "nodes": [
                     {
+                        "href": "/implementationnotes/INF.1/",
                         "text": "INF.1 General Building"
                     },
                     {
+                        "href": "/implementationnotes/INF.3/",
                         "text": "INF.3 Electronic wiring"
                     },
                     {
+                        "href": "/implementationnotes/INF.4/",
                         "text": "INF.4 IT cabling"
                     },
                     {
+                        "href": "/implementationnotes/INF.8/",
                         "text": "INF.8 Domestic Workplace"
                     },
                     {
+                        "href": "/implementationnotes/INF.9/",
                         "text": "INF.9 Mobile Workplace"
                     }
                 ]
@@ -370,8 +407,8 @@
                 "text": "ISMS: Security Management",
                 "nodes": [
                     {
-                        "text": "ISMS.1 security management",
-                        "href": "/components/ISMS.1/"
+                        "href": "/components/ISMS.1/",
+                        "text": "ISMS.1 security management"
                     }
                 ]
             },
@@ -379,32 +416,32 @@
                 "text": "NET: networks and communication",
                 "nodes": [
                     {
-                        "text": "NET.1.1 Network architecture and design",
-                        "href": "/components/NET.1.1/"
+                        "href": "/components/NET.1.1/",
+                        "text": "NET.1.1 Network architecture and design"
                     },
                     {
-                        "text": "NET.1.2 Network Management",
-                        "href": "/components/NET.1.2/"
+                        "href": "/components/NET.1.2/",
+                        "text": "NET.1.2 Network Management"
                     },
                     {
-                        "text": "NET.2.1 WLAN operation",
-                        "href": "/components/NET.2.1/"
+                        "href": "/components/NET.2.1/",
+                        "text": "NET.2.1 WLAN operation"
                     },
                     {
-                        "text": "NET.2.2 Wi-Fi usage",
-                        "href": "/components/NET.2.2/"
+                        "href": "/components/NET.2.2/",
+                        "text": "NET.2.2 Wi-Fi usage"
                     },
                     {
-                        "text": "NET.3.1 routers and switches",
-                        "href": "/components/NET.3.1/"
+                        "href": "/components/NET.3.1/",
+                        "text": "NET.3.1 routers and switches"
                     },
                     {
-                        "text": "NET.3.2 firewall",
-                        "href": "/components/NET.3.2/"
+                        "href": "/components/NET.3.2/",
+                        "text": "NET.3.2 firewall"
                     },
                     {
-                        "text": "NET.3.3 VPN",
-                        "href": "/components/NET.3.3/"
+                        "href": "/components/NET.3.3/",
+                        "text": "NET.3.3 VPN"
                     }
                 ]
             },
@@ -412,52 +449,52 @@
                 "text": "APP: Applications",
                 "nodes": [
                     {
-                        "text": "APP.1.1 Office products",
-                        "href": "/components/APP.1.1/"
+                        "href": "/components/APP.1.1/",
+                        "text": "APP.1.1 Office products"
                     },
                     {
-                        "text": "APP.1.2 Web browser",
-                        "href": "/components/APP.1.2/"
+                        "href": "/components/APP.1.2/",
+                        "text": "APP.1.2 Web browser"
                     },
                     {
-                        "text": "APP.2.1 General directory service",
-                        "href": "/components/APP.2.1/"
+                        "href": "/components/APP.2.1/",
+                        "text": "APP.2.1 General directory service"
                     },
                     {
-                        "text": "APP.2.2 Active Directory",
-                        "href": "/components/APP.2.2/"
+                        "href": "/components/APP.2.2/",
+                        "text": "APP.2.2 Active Directory"
                     },
                     {
-                        "text": "APP.3.1 Web applications",
-                        "href": "/components/APP.3.1/"
+                        "href": "/components/APP.3.1/",
+                        "text": "APP.3.1 Web applications"
                     },
                     {
-                        "text": "APP.3.2 Web server",
-                        "href": "/components/APP.3.2/"
+                        "href": "/components/APP.3.2/",
+                        "text": "APP.3.2 Web server"
                     },
                     {
-                        "text": "APP.3.3 file server",
-                        "href": "/components/APP.3.3/"
+                        "href": "/components/APP.3.3/",
+                        "text": "APP.3.3 file server"
                     },
                     {
-                        "text": "APP.3.4 Samba",
-                        "href": "/components/APP.3.4/"
+                        "href": "/components/APP.3.4/",
+                        "text": "APP.3.4 Samba"
                     },
                     {
-                        "text": "APP.3.6 DNS server",
-                        "href": "/components/APP.3.6/"
+                        "href": "/components/APP.3.6/",
+                        "text": "APP.3.6 DNS server"
                     },
                     {
-                        "text": "APP.4.3 Relational Database Systems",
-                        "href": "/components/APP.4.3/"
+                        "href": "/components/APP.4.3/",
+                        "text": "APP.4.3 Relational Database Systems"
                     },
                     {
-                        "text": "APP.5.1 General Groupware",
-                        "href": "/components/APP.5.1/"
+                        "href": "/components/APP.5.1/",
+                        "text": "APP.5.1 General Groupware"
                     },
                     {
-                        "text": "APP.5.2 Microsoft Exchange and Outlook",
-                        "href": "/components/APP.5.2/"
+                        "href": "/components/APP.5.2/",
+                        "text": "APP.5.2 Microsoft Exchange and Outlook"
                     }
                 ]
             },
@@ -465,72 +502,72 @@
                 "text": "SYS: IT systems",
                 "nodes": [
                     {
-                        "text": "SYS.1.1 General Server",
-                        "href": "/components/SYS.1.1/"
+                        "href": "/components/SYS.1.1/",
+                        "text": "SYS.1.1 General Server"
                     },
                     {
-                        "text": "SYS1.2.2 Windows Server 2012",
-                        "href": "/components/SYS.1.2.2/"
+                        "href": "/components/SYS.1.2.2/",
+                        "text": "SYS1.2.2 Windows Server 2012"
                     },
                     {
-                        "text": "SYS.1.3 server under Unix",
-                        "href": "/components/SYS.1.3/"
+                        "href": "/components/SYS.1.3/",
+                        "text": "SYS.1.3 server under Unix"
                     },
                     {
-                        "text": "SYS.1.5 Virtualization",
-                        "href": "/components/SYS.1.5/"
+                        "href": "/components/SYS.1.5/",
+                        "text": "SYS.1.5 Virtualization"
                     },
                     {
-                        "text": "SYS.1.8 Storage Solutions",
-                        "href": "/components/SYS.1.8/"
+                        "href": "/components/SYS.1.8/",
+                        "text": "SYS.1.8 Storage Solutions"
                     },
                     {
-                        "text": "SYS.2.1 General Client",
-                        "href": "/components/SYS.2.1/"
+                        "href": "/components/SYS.2.1/",
+                        "text": "SYS.2.1 General Client"
                     },
                     {
-                        "text": "SYS.2.2.2 Clients in Windows 8.1",
-                        "href": "/components/SYS.2.2.2/"
+                        "href": "/components/SYS.2.2.2/",
+                        "text": "SYS.2.2.2 Clients in Windows 8.1"
                     },
                     {
-                        "text": "SYS.2.2.3 Clients on Windows 10",
-                        "href": "/components/SYS.2.2.3/"
+                        "href": "/components/SYS.2.2.3/",
+                        "text": "SYS.2.2.3 Clients on Windows 10"
                     },
                     {
-                        "text": "SYS.2.3 clients under Unix",
-                        "href": "/components/SYS.2.3/"
+                        "href": "/components/SYS.2.3/",
+                        "text": "SYS.2.3 clients under Unix"
                     },
                     {
-                        "text": "SYS.3.1 laptops",
-                        "href": "/components/SYS.3.1/"
+                        "href": "/components/SYS.3.1/",
+                        "text": "SYS.3.1 laptops"
                     },
                     {
-                        "text": "SYS.3.2.1 General Smartphones and Tablets",
-                        "href": "/components/SYS.3.2.1/"
+                        "href": "/components/SYS.3.2.1/",
+                        "text": "SYS.3.2.1 General Smartphones and Tablets"
                     },
                     {
-                        "text": "SYS.3.2.2 Mobile Device Management (MDM)",
-                        "href": "/components/SYS.3.2.2/"
+                        "href": "/components/SYS.3.2.2/",
+                        "text": "SYS.3.2.2 Mobile Device Management (MDM)"
                     },
                     {
-                        "text": "SYS.3.2.3 iOS (for Enterprise)",
-                        "href": "/components/SYS.3.2.3/"
+                        "href": "/components/SYS.3.2.3/",
+                        "text": "SYS.3.2.3 iOS (for Enterprise)"
                     },
                     {
-                        "text": "SYS.3.2.4 Android",
-                        "href": "/components/SYS.3.2.4/"
+                        "href": "/components/SYS.3.2.4/",
+                        "text": "SYS.3.2.4 Android"
                     },
                     {
-                        "text": "SYS.3.4 Mobile Disk",
-                        "href": "/components/SYS.3.4/"
+                        "href": "/components/SYS.3.4/",
+                        "text": "SYS.3.4 Mobile Disk"
                     },
                     {
-                        "text": "SYS.4.1 printers, copiers, and multi-function devices",
-                        "href": "/components/SYS.4.1/"
+                        "href": "/components/SYS.4.1/",
+                        "text": "SYS.4.1 printers, copiers, and multi-function devices"
                     },
                     {
-                        "text": "SYS.4.4 General IoT device",
-                        "href": "/components/SYS.4.4/"
+                        "href": "/components/SYS.4.4/",
+                        "text": "SYS.4.4 General IoT device"
                     }
                 ]
             },
@@ -538,24 +575,24 @@
                 "text": "IND: Industrial IT",
                 "nodes": [
                     {
-                        "text": "IND.1 Operating and Control Technology",
-                        "href": "/components/IND.1/"
+                        "href": "/components/IND.1/",
+                        "text": "IND.1 Operating and Control Technology"
                     },
                     {
-                        "text": "IND.2.1 General ICS Component",
-                        "href": "/components/IND.2.1/"
+                        "href": "/components/IND.2.1/",
+                        "text": "IND.2.1 General ICS Component"
                     },
                     {
-                        "text": "IND.2.2 Programmable Logic Controller (PLC)",
-                        "href": "/components/IND.2.2/"
+                        "href": "/components/IND.2.2/",
+                        "text": "IND.2.2 Programmable Logic Controller (PLC)"
                     },
                     {
-                        "text": "IND.2.3 Sensors and Actuators",
-                        "href": "/components/IND.2.3/"
+                        "href": "/components/IND.2.3/",
+                        "text": "IND.2.3 Sensors and Actuators"
                     },
                     {
-                        "text": "IND.2.4 machine",
-                        "href": "/components/IND.2.4/"
+                        "href": "/components/IND.2.4/",
+                        "text": "IND.2.4 machine"
                     }
                 ]
             },
@@ -563,24 +600,24 @@
                 "text": "ORP: organization and staff",
                 "nodes": [
                     {
-                        "text": "ORP.1 organization",
-                        "href": "/components/ORP.1/"
+                        "href": "/components/ORP.1/",
+                        "text": "ORP.1 organization"
                     },
                     {
-                        "text": "ORP.2 staff",
-                        "href": "/components/ORP.2/"
+                        "href": "/components/ORP.2/",
+                        "text": "ORP.2 staff"
                     },
                     {
-                        "text": "ORP.3 Raising awareness and training",
-                        "href": "/components/ORP.3/"
+                        "href": "/components/ORP.3/",
+                        "text": "ORP.3 Raising awareness and training"
                     },
                     {
-                        "text": "ORP.4 Identity and Permission Management",
-                        "href": "/components/ORP.4/"
+                        "href": "/components/ORP.4/",
+                        "text": "ORP.4 Identity and Permission Management"
                     },
                     {
-                        "text": "ORP.5 Compliance Management (Requirements Management)",
-                        "href": "/components/ORP.5/"
+                        "href": "/components/ORP.5/",
+                        "text": "ORP.5 Compliance Management (Requirements Management)"
                     }
                 ]
             },
@@ -588,32 +625,32 @@
                 "text": "DER: detection and reaction",
                 "nodes": [
                     {
-                        "text": "DER.1 Detection of safety-relevant events",
-                        "href": "/components/DER.1/"
+                        "href": "/components/DER.1/",
+                        "text": "DER.1 Detection of safety-relevant events"
                     },
                     {
-                        "text": "DER.2.1 Treatment of security incidents",
-                        "href": "/components/DER.2.1/"
+                        "href": "/components/DER.2.1/",
+                        "text": "DER.2.1 Treatment of security incidents"
                     },
                     {
-                        "text": "DER.2.2 Provision for IT forensics",
-                        "href": "/components/DER.2.2/"
+                        "href": "/components/DER.2.2/",
+                        "text": "DER.2.2 Provision for IT forensics"
                     },
                     {
-                        "text": "DER.2.3 Clearance of far-reaching security incidents",
-                        "href": "/components/DER.2.3/"
+                        "href": "/components/DER.2.3/",
+                        "text": "DER.2.3 Clearance of far-reaching security incidents"
                     },
                     {
-                        "text": "DER.3.1 Audits and revisions",
-                        "href": "/components/DER.3.1/"
+                        "href": "/components/DER.3.1/",
+                        "text": "DER.3.1 Audits and revisions"
                     },
                     {
-                        "text": "DER.3.2 IS revision for public authorities",
-                        "href": "/components/DER.3.2/"
+                        "href": "/components/DER.3.2/",
+                        "text": "DER.3.2 IS revision for public authorities"
                     },
                     {
-                        "text": "DER.4 emergency management",
-                        "href": "/components/DER.4/"
+                        "href": "/components/DER.4/",
+                        "text": "DER.4 emergency management"
                     }
                 ]
             },
@@ -647,48 +684,48 @@
                 "text": "OPS: operation",
                 "nodes": [
                     {
-                        "text": "OPS.1.1.2 Proper IT Administration",
-                        "href": "/components/OPS.1.1.2/"
+                        "href": "/components/OPS.1.1.2/",
+                        "text": "OPS.1.1.2 Proper IT Administration"
                     },
                     {
-                        "text": "OPS.1.1.3 Patch and Change Management",
-                        "href": "/components/OPS.1.1.3/"
+                        "href": "/components/OPS.1.1.3/",
+                        "text": "OPS.1.1.3 Patch and Change Management"
                     },
                     {
-                        "text": "OPS.1.1.4 Protection against malicious programs",
-                        "href": "/components/OPS.1.1.4/"
+                        "href": "/components/OPS.1.1.4/",
+                        "text": "OPS.1.1.4 Protection against malicious programs"
                     },
                     {
-                        "text": "OPS.1.1.5 logging",
-                        "href": "/components/OPS.1.1.5/"
+                        "href": "/components/OPS.1.1.5/",
+                        "text": "OPS.1.1.5 logging"
                     },
                     {
-                        "text": "OPS.1.1.6 software tests and releases",
-                        "href": "/components/OPS.1.1.6/"
+                        "href": "/components/OPS.1.1.6/",
+                        "text": "OPS.1.1.6 software tests and releases"
                     },
                     {
-                        "text": "OPS.1.2.2 Archiving",
-                        "href": "/components/OPS.1.2.2/"
+                        "href": "/components/OPS.1.2.2/",
+                        "text": "OPS.1.2.2 Archiving"
                     },
                     {
-                        "text": "OPS.1.2.3 Information and data medium exchange",
-                        "href": "/components/OPS.1.2.3/"
+                        "href": "/components/OPS.1.2.3/",
+                        "text": "OPS.1.2.3 Information and data medium exchange"
                     },
                     {
-                        "text": "OPS.1.2.4 Teleworking",
-                        "href": "/components/OPS.1.2.4/"
+                        "href": "/components/OPS.1.2.4/",
+                        "text": "OPS.1.2.4 Teleworking"
                     },
                     {
-                        "text": "OPS.2.1 Outsourcing for customers",
-                        "href": "/components/OPS.2.1/"
+                        "href": "/components/OPS.2.1/",
+                        "text": "OPS.2.1 Outsourcing for customers"
                     },
                     {
-                        "text": "OPS.2.4 remote maintenance",
-                        "href": "/components/OPS.2.4/"
+                        "href": "/components/OPS.2.4/",
+                        "text": "OPS.2.4 remote maintenance"
                     },
                     {
-                        "text": "OPS.3.1 Outsourcing for service providers",
-                        "href": "/components/OPS.3.1/"
+                        "href": "/components/OPS.3.1/",
+                        "text": "OPS.3.1 Outsourcing for service providers"
                     }
                 ]
             },
@@ -696,36 +733,36 @@
                 "text": "INF: Infrastructure",
                 "nodes": [
                     {
-                        "text": "INF.1 General Building",
-                        "href": "/components/INF.1/"
+                        "href": "/components/INF.1/",
+                        "text": "INF.1 General Building"
                     },
                     {
-                        "text": "INF.2 data center and server room",
-                        "href": "/components/INF.2/"
+                        "href": "/components/INF.2/",
+                        "text": "INF.2 data center and server room"
                     },
                     {
-                        "text": "INF.3 Electronic wiring",
-                        "href": "/components/INF.3/"
+                        "href": "/components/INF.3/",
+                        "text": "INF.3 Electronic wiring"
                     },
                     {
-                        "text": "INF.4 IT cabling",
-                        "href": "/components/INF.4/"
+                        "href": "/components/INF.4/",
+                        "text": "INF.4 IT cabling"
                     },
                     {
-                        "text": "INF.7 office workplace",
-                        "href": "/components/INF.7/"
+                        "href": "/components/INF.7/",
+                        "text": "INF.7 office workplace"
                     },
                     {
-                        "text": "INF.8 Domestic Workplace",
-                        "href": "/components/INF.8/"
+                        "href": "/components/INF.8/",
+                        "text": "INF.8 Domestic Workplace"
                     },
                     {
-                        "text": "INF.9 Mobile Workplace",
-                        "href": "/components/INF.9/"
+                        "href": "/components/INF.9/",
+                        "text": "INF.9 Mobile Workplace"
                     },
                     {
-                        "text": "INF.10 Meeting, Event and Training Room",
-                        "href": "/components/INF.10/"
+                        "href": "/components/INF.10/",
+                        "text": "INF.10 Meeting, Event and Training Room"
                     }
                 ]
             }

@@ -57,7 +57,7 @@ def addLinksToTreeView():
             elif(bsi_type == BSI_Article_type.THREAT):
                 parents = URLPath.objects.filter(slug='threats')
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
-                parents = URLPath.objects.filter(slug='implementationNotes')
+                parents = URLPath.objects.filter(slug='implementationnotes')
 
             if(parents):
                 parent = parents[0]
