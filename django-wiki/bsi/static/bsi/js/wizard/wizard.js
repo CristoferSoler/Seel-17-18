@@ -26,8 +26,6 @@ function initWizard() {
         remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
     }
 
-    console.log(sortedTopics);
-
     $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 }
@@ -90,11 +88,12 @@ function dontknowPress() {
 
 function restart(){
     currentTopic = 0;
-    console.log('Hello');
     [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
-    $("#topic").text(JSON.parse(currentSortedTopic)[currentTopic]);
-    console.log(remainingComponents.length);
+    //$("#topic").text(currentSortedTopic[currentTopic]);
+    localStorage.setItem('currentTopic',String(currentTopic));
+    localStorage.removeItem('remainingComponents');
     $("#list").empty();
+    initWizard();
 }
 
 function presentResults() {
