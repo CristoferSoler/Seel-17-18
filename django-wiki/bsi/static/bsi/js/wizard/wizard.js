@@ -6,6 +6,7 @@ const thresholdTopicNumber = 10;
 var valid = false;
 
 function initWizard() {
+    console.log('test');
     if(localStorage.getItem('currentTopic')=== null){
         currentTopic = 0;
         localStorage.setItem('currentTopic',String(currentTopic));
@@ -168,12 +169,8 @@ function initWizardsComponents(){
     buttonsWizard();
     getDataFromServer();
 
-    $('#wizard').on('show.bs.modal', function (e) {
-        valid = false;
-        initWizard('{{ components|safe }}','{{ sortedTopics|safe }}')
-    });
-
     $('#opener').on('click', function() {
+        initWizard();
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'left':'97%'});
