@@ -45,16 +45,22 @@
     border-radius:0;
 }
 #content {
+    position: absolute;
     float: right;
     margin-left: 50px;
     height: 300px;
     width: 600px;
-    overflow-y: scroll;
-    background:darkgray;
     border:black;
+    z-index: 99;
 }
 
 .center{
     height:310px;
     background:orange;
+}
+
+.contentPanel{
+    height: 300px;
+    width: 600px;
+    overflow-y: scroll;
 }
