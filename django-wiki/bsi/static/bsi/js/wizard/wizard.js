@@ -16,9 +16,6 @@ function initWizard() {
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['components'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
-    //braiche ich glaube nicht mehr
-    orginalTopic = components.slice();
-
     if(localStorage.getItem('remainingComponents')=== null){
         remainingComponents = components.slice();
         localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents));
@@ -118,6 +115,7 @@ function clearLocalStorage(){
     localStorage.removeItem('currentTopic');
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
+    localStorage.removeItem('visible');
 }
 
 function buttonsWizard() {
@@ -148,7 +146,7 @@ function initWizardsComponents(){
     wireupEvents();
     buttonsWizard();
     getDataFromServer();
-
+    setPanel();
     $('a').bind('click',function () {
         valid = true;
         console.log('in Bind of a');
@@ -159,14 +157,14 @@ function initWizardsComponents(){
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
             panel.removeClass('visible').animate({'left':'97%'});
+            localStorage.removeItem('visible');
         } else {
+            localStorage.setItem('visible',String(true));
             panel.addClass('visible').animate({'left':'60%'});
         }
-
         valid = false;
         return false;
     });
-
 }
 
 function wireupEvents(){
@@ -178,7 +176,13 @@ function wireupEvents(){
 
 function askWheatherToClose(event){
     if(!valid){
-        console.log('wireupEvents');
         clearLocalStorage();
+    }
+}
+
+function setPanel() {
+    var panel = $('#slide-panel');
+    if(localStorage.getItem('visible')!== null){
+        panel.addClass('visible').animate({'left':'60%'});
     }
 }
