@@ -1,13 +1,14 @@
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
+from django.db.models import Q
 from django.db.models import signals
 from enumfields import Enum
 from enumfields import EnumField
 # from wiki.models.article import Article
 from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
+
 from . import permissions
-from django.db.models import When, F, Q
 
 
 class BSI_Article_type(Enum):
@@ -146,9 +147,9 @@ class BSI(models.Model):
         article_urlpaths = []
         articles = BSI.objects.filter(articleType=article_type)
         if articles:
+            bsi_root = BSI.get_or_create_bsi_root('')
             for article in articles:
-                # if article.url.parent.parent == BSI.get_or_create_bsi_root(''):
-                if article.url.parent == BSI.get_or_create_bsi_root(''):
+                if article.url.parent.parent is bsi_root:
                     article_urlpaths.append(article.url)
         # return empty if nothing is found
         return article_urlpaths
