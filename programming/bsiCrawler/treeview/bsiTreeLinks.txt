@@ -7,191 +7,238 @@
                 "nodes": [
                     {
                         "href": "/threats/G0.1/",
-                        "text": "G01 fire"
+                        "text": "G01 fire",
+                        "path": "http://localhost:8000/bsi/threats/G0.1/"
                     },
                     {
                         "href": "/threats/G0.2/",
-                        "text": "G02 Unfavorable climatic conditions"
+                        "text": "G02 Unfavorable climatic conditions",
+                        "path": "http://localhost:8000/bsi/threats/G0.2/"
                     },
                     {
                         "href": "/threats/G0.3/",
-                        "text": "G03 water"
+                        "text": "G03 water",
+                        "path": "http://localhost:8000/bsi/threats/G0.3/"
                     },
                     {
                         "href": "/threats/G0.4/",
-                        "text": "G04 pollution, dust, corrosion"
+                        "text": "G04 pollution, dust, corrosion",
+                        "path": "http://localhost:8000/bsi/threats/G0.4/"
                     },
                     {
                         "href": "/threats/G0.5/",
-                        "text": "G05 natural disasters"
+                        "text": "G05 natural disasters",
+                        "path": "http://localhost:8000/bsi/threats/G0.5/"
                     },
                     {
                         "href": "/threats/G0.6/",
-                        "text": "G06 Disasters in the environment"
+                        "text": "G06 Disasters in the environment",
+                        "path": "http://localhost:8000/bsi/threats/G0.6/"
                     },
                     {
                         "href": "/threats/G0.7/",
-                        "text": "G07 Major events in the environment"
+                        "text": "G07 Major events in the environment",
+                        "path": "http://localhost:8000/bsi/threats/G0.7/"
                     },
                     {
                         "href": "/threats/G0.8/",
-                        "text": "G08 Failure or fault of the power supply"
+                        "text": "G08 Failure or fault of the power supply",
+                        "path": "http://localhost:8000/bsi/threats/G0.8/"
                     },
                     {
                         "href": "/threats/G0.9/",
-                        "text": "G09 Failure or malfunction of communication networks"
+                        "text": "G09 Failure or malfunction of communication networks",
+                        "path": "http://localhost:8000/bsi/threats/G0.9/"
                     },
                     {
                         "href": "/threats/G0.10/",
-                        "text": "G010 Failure or malfunction of supply networks"
+                        "text": "G010 Failure or malfunction of supply networks",
+                        "path": "http://localhost:8000/bsi/threats/G0.10/"
                     },
                     {
                         "href": "/threats/G0.11/",
-                        "text": "G011 Failure or malfunction of service providers"
+                        "text": "G011 Failure or malfunction of service providers",
+                        "path": "http://localhost:8000/bsi/threats/G0.11/"
                     },
                     {
                         "href": "/threats/G0.12/",
-                        "text": "G012 Electromagnetic interference"
+                        "text": "G012 Electromagnetic interference",
+                        "path": "http://localhost:8000/bsi/threats/G0.12/"
                     },
                     {
                         "href": "/threats/G0.13/",
-                        "text": "G013 interception of compromising radiation"
+                        "text": "G013 interception of compromising radiation",
+                        "path": "http://localhost:8000/bsi/threats/G0.13/"
                     },
                     {
                         "href": "/threats/G0.14/",
-                        "text": "G014 Spying out information (espionage)"
+                        "text": "G014 Spying out information (espionage)",
+                        "path": "http://localhost:8000/bsi/threats/G0.14/"
                     },
                     {
                         "href": "/threats/G0.15/",
-                        "text": "G015 Listening"
+                        "text": "G015 Listening",
+                        "path": "http://localhost:8000/bsi/threats/G0.15/"
                     },
                     {
                         "href": "/threats/G0.16/",
-                        "text": "G016 Theft of devices, data carriers or documents"
+                        "text": "G016 Theft of devices, data carriers or documents",
+                        "path": "http://localhost:8000/bsi/threats/G0.16/"
                     },
                     {
                         "href": "/threats/G0.17/",
-                        "text": "G017 Loss of equipment, data carriers or documents"
+                        "text": "G017 Loss of equipment, data carriers or documents",
+                        "path": "http://localhost:8000/bsi/threats/G0.17/"
                     },
                     {
                         "href": "/threats/G0.18/",
-                        "text": "G018 Incorrect planning or missing adjustment"
+                        "text": "G018 Incorrect planning or missing adjustment",
+                        "path": "http://localhost:8000/bsi/threats/G0.18/"
                     },
                     {
                         "href": "/threats/G0.19/",
-                        "text": "G019 Disclosure of information worthy of protection"
+                        "text": "G019 Disclosure of information worthy of protection",
+                        "path": "http://localhost:8000/bsi/threats/G0.19/"
                     },
                     {
                         "href": "/threats/G0.20/",
-                        "text": "G020 Information or products from unreliable sources"
+                        "text": "G020 Information or products from unreliable sources",
+                        "path": "http://localhost:8000/bsi/threats/G0.20/"
                     },
                     {
                         "href": "/threats/G0.21/",
-                        "text": "G021 Manipulation of hardware or software"
+                        "text": "G021 Manipulation of hardware or software",
+                        "path": "http://localhost:8000/bsi/threats/G0.21/"
                     },
                     {
                         "href": "/threats/G0.22/",
-                        "text": "G022 Manipulation of information"
+                        "text": "G022 Manipulation of information",
+                        "path": "http://localhost:8000/bsi/threats/G0.22/"
                     },
                     {
                         "href": "/threats/G0.23/",
-                        "text": "G023 Unauthorized intrusion into IT systems"
+                        "text": "G023 Unauthorized intrusion into IT systems",
+                        "path": "http://localhost:8000/bsi/threats/G0.23/"
                     },
                     {
                         "href": "/threats/G0.24/",
-                        "text": "G024 Destruction of devices or data carriers"
+                        "text": "G024 Destruction of devices or data carriers",
+                        "path": "http://localhost:8000/bsi/threats/G0.24/"
                     },
                     {
                         "href": "/threats/G0.25/",
-                        "text": "G025 Failure of devices or systems"
+                        "text": "G025 Failure of devices or systems",
+                        "path": "http://localhost:8000/bsi/threats/G0.25/"
                     },
                     {
                         "href": "/threats/G0.26/",
-                        "text": "G026 Malfunction of devices or systems"
+                        "text": "G026 Malfunction of devices or systems",
+                        "path": "http://localhost:8000/bsi/threats/G0.26/"
                     },
                     {
                         "href": "/threats/G0.27/",
-                        "text": "G027 Lack of resources"
+                        "text": "G027 Lack of resources",
+                        "path": "http://localhost:8000/bsi/threats/G0.27/"
                     },
                     {
                         "href": "/threats/G0.28/",
-                        "text": "G028 Software vulnerabilities or errors"
+                        "text": "G028 Software vulnerabilities or errors",
+                        "path": "http://localhost:8000/bsi/threats/G0.28/"
                     },
                     {
                         "href": "/threats/G0.29/",
-                        "text": "G029 Violation of laws or regulations"
+                        "text": "G029 Violation of laws or regulations",
+                        "path": "http://localhost:8000/bsi/threats/G0.29/"
                     },
                     {
                         "href": "/threats/G0.30/",
-                        "text": "G030 Unauthorized use or administration of devices and systems"
+                        "text": "G030 Unauthorized use or administration of devices and systems",
+                        "path": "http://localhost:8000/bsi/threats/G0.30/"
                     },
                     {
                         "href": "/threats/G0.31/",
-                        "text": "G031 Incorrect use or administration of devices and systems"
+                        "text": "G031 Incorrect use or administration of devices and systems",
+                        "path": "http://localhost:8000/bsi/threats/G0.31/"
                     },
                     {
                         "href": "/threats/G0.32/",
-                        "text": "G032 Abuse of permissions"
+                        "text": "G032 Abuse of permissions",
+                        "path": "http://localhost:8000/bsi/threats/G0.32/"
                     },
                     {
                         "href": "/threats/G0.33/",
-                        "text": "G033 personal injury"
+                        "text": "G033 personal injury",
+                        "path": "http://localhost:8000/bsi/threats/G0.33/"
                     },
                     {
                         "href": "/threats/G0.34/",
-                        "text": "G034 stop"
+                        "text": "G034 stop",
+                        "path": "http://localhost:8000/bsi/threats/G0.34/"
                     },
                     {
                         "href": "/threats/G0.35/",
-                        "text": "G035 coercion, blackmail or corruption"
+                        "text": "G035 coercion, blackmail or corruption",
+                        "path": "http://localhost:8000/bsi/threats/G0.35/"
                     },
                     {
                         "href": "/threats/G0.36/",
-                        "text": "G036 Identity theft"
+                        "text": "G036 Identity theft",
+                        "path": "http://localhost:8000/bsi/threats/G0.36/"
                     },
                     {
                         "href": "/threats/G0.37/",
-                        "text": "G037 denying actions"
+                        "text": "G037 denying actions",
+                        "path": "http://localhost:8000/bsi/threats/G0.37/"
                     },
                     {
                         "href": "/threats/G0.38/",
-                        "text": "G038 Misuse of personal data"
+                        "text": "G038 Misuse of personal data",
+                        "path": "http://localhost:8000/bsi/threats/G0.38/"
                     },
                     {
                         "href": "/threats/G0.39/",
-                        "text": "G039 malicious program"
+                        "text": "G039 malicious program",
+                        "path": "http://localhost:8000/bsi/threats/G0.39/"
                     },
                     {
                         "href": "/threats/G0.40/",
-                        "text": "G040 Denial of Service"
+                        "text": "G040 Denial of Service",
+                        "path": "http://localhost:8000/bsi/threats/G0.40/"
                     },
                     {
                         "href": "/threats/G0.41/",
-                        "text": "G041 Sabotage"
+                        "text": "G041 Sabotage",
+                        "path": "http://localhost:8000/bsi/threats/G0.41/"
                     },
                     {
                         "href": "/threats/G0.42/",
-                        "text": "G042 Social engineering"
+                        "text": "G042 Social engineering",
+                        "path": "http://localhost:8000/bsi/threats/G0.42/"
                     },
                     {
                         "href": "/threats/G0.43/",
-                        "text": "G043 Importing messages"
+                        "text": "G043 Importing messages",
+                        "path": "http://localhost:8000/bsi/threats/G0.43/"
                     },
                     {
                         "href": "/threats/G0.44/",
-                        "text": "G044 Unauthorized intrusion into premises"
+                        "text": "G044 Unauthorized intrusion into premises",
+                        "path": "http://localhost:8000/bsi/threats/G0.44/"
                     },
                     {
                         "href": "/threats/G0.45/",
-                        "text": "G045 data loss"
+                        "text": "G045 data loss",
+                        "path": "http://localhost:8000/bsi/threats/G0.45/"
                     },
                     {
                         "href": "/threats/G0.46/",
-                        "text": "G046 Loss of integrity of sensitive information"
+                        "text": "G046 Loss of integrity of sensitive information",
+                        "path": "http://localhost:8000/bsi/threats/G0.46/"
                     },
                     {
                         "href": "/threats/G0.47/",
-                        "text": "G047 Harmful side effects of IT-based attacks"
+                        "text": "G047 Harmful side effects of IT-based attacks",
+                        "path": "http://localhost:8000/bsi/threats/G0.47/"
                     }
                 ]
             }
@@ -205,7 +252,8 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/ISMS.1/",
-                        "text": "ISMS.1 security management"
+                        "text": "ISMS.1 security management",
+                        "path": "http://localhost:8000/bsi/implementationnotes/ISMS.1/"
                     }
                 ]
             },
@@ -214,11 +262,13 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/NET.2.1/",
-                        "text": "NET.2.1 WLAN operation"
+                        "text": "NET.2.1 WLAN operation",
+                        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.1/"
                     },
                     {
                         "href": "/implementationnotes/NET.2.2/",
-                        "text": "NET.2.2 Wi-Fi usage"
+                        "text": "NET.2.2 Wi-Fi usage",
+                        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.2/"
                     }
                 ]
             },
@@ -227,19 +277,23 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/APP.1.1/",
-                        "text": "APP.1.1 Office products"
+                        "text": "APP.1.1 Office products",
+                        "path": "http://localhost:8000/bsi/implementationnotes/APP.1.1/"
                     },
                     {
                         "href": "/implementationnotes/APP.2.2/",
-                        "text": "APP.2.2 Active Directory"
+                        "text": "APP.2.2 Active Directory",
+                        "path": "http://localhost:8000/bsi/implementationnotes/APP.2.2/"
                     },
                     {
                         "href": "/implementationnotes/APP.3.1/",
-                        "text": "APP.3.1 Web applications"
+                        "text": "APP.3.1 Web applications",
+                        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.1/"
                     },
                     {
                         "href": "/implementationnotes/APP.3.6/",
-                        "text": "APP.3.6 DNS server"
+                        "text": "APP.3.6 DNS server",
+                        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.6/"
                     }
                 ]
             },
@@ -248,39 +302,48 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/SYS.1.1/",
-                        "text": "SYS.1.1 General Server"
+                        "text": "SYS.1.1 General Server",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.1/"
                     },
                     {
                         "href": "/implementationnotes/SYS.1.2.2/",
-                        "text": "SYS.1.2.2 Windows Server 2012"
+                        "text": "SYS.1.2.2 Windows Server 2012",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.2.2/"
                     },
                     {
                         "href": "/implementationnotes/SYS.2.1/",
-                        "text": "SYS.2.1 General Client"
+                        "text": "SYS.2.1 General Client",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.2.1/"
                     },
                     {
                         "href": "/implementationnotes/SYS.3.1/",
-                        "text": "SYS.3.1 laptops"
+                        "text": "SYS.3.1 laptops",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.1/"
                     },
                     {
                         "href": "/implementationnotes/SYS.3.2.2/",
-                        "text": "SYS.3.2.2 Mobile Device Management (MDM)"
+                        "text": "SYS.3.2.2 Mobile Device Management (MDM)",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.2/"
                     },
                     {
                         "href": "/implementationnotes/SYS.3.2.3/",
-                        "text": "SYS.3.2.3 iOS (for Enterprise)"
+                        "text": "SYS.3.2.3 iOS (for Enterprise)",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.3/"
                     },
                     {
                         "href": "/implementationnotes/SYS.3.4/",
-                        "text": "SYS.3.4 Mobile Disk"
+                        "text": "SYS.3.4 Mobile Disk",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.4/"
                     },
                     {
                         "href": "/implementationnotes/SYS.4.1/",
-                        "text": "SYS.4.1 printers, copiers and multifunction devices"
+                        "text": "SYS.4.1 printers, copiers and multifunction devices",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.1/"
                     },
                     {
                         "href": "/implementationnotes/SYS.4.4/",
-                        "text": "SYS.4.4 General IoT device"
+                        "text": "SYS.4.4 General IoT device",
+                        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.4/"
                     }
                 ]
             },
@@ -289,7 +352,8 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/IND.1/",
-                        "text": "IND.1 Operating and Control Technology"
+                        "text": "IND.1 Operating and Control Technology",
+                        "path": "http://localhost:8000/bsi/implementationnotes/IND.1/"
                     }
                 ]
             },
@@ -298,19 +362,23 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/ORP.1/",
-                        "text": "ORP.1 organization"
+                        "text": "ORP.1 organization",
+                        "path": "http://localhost:8000/bsi/implementationnotes/ORP.1/"
                     },
                     {
                         "href": "/implementationnotes/ORP.2/",
-                        "text": "ORP.2 staff"
+                        "text": "ORP.2 staff",
+                        "path": "http://localhost:8000/bsi/implementationnotes/ORP.2/"
                     },
                     {
                         "href": "/implementationnotes/ORP.3/",
-                        "text": "ORP.3 Raising awareness and training"
+                        "text": "ORP.3 Raising awareness and training",
+                        "path": "http://localhost:8000/bsi/implementationnotes/ORP.3/"
                     },
                     {
                         "href": "/implementationnotes/ORP.5/",
-                        "text": "ORP.5 Compliance Management (Requirements Management)"
+                        "text": "ORP.5 Compliance Management (Requirements Management)",
+                        "path": "http://localhost:8000/bsi/implementationnotes/ORP.5/"
                     }
                 ]
             },
@@ -319,7 +387,8 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/DER.2.3/",
-                        "text": "DER.2.3 Clearance of far-reaching security incidents"
+                        "text": "DER.2.3 Clearance of far-reaching security incidents",
+                        "path": "http://localhost:8000/bsi/implementationnotes/DER.2.3/"
                     }
                 ]
             },
@@ -328,15 +397,18 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/CON.3/",
-                        "text": "CON.3 data backup concept"
+                        "text": "CON.3 data backup concept",
+                        "path": "http://localhost:8000/bsi/implementationnotes/CON.3/"
                     },
                     {
                         "href": "/implementationnotes/CON.4/",
-                        "text": "CON.4 Selection and use of standard software"
+                        "text": "CON.4 Selection and use of standard software",
+                        "path": "http://localhost:8000/bsi/implementationnotes/CON.4/"
                     },
                     {
                         "href": "/implementationnotes/CON.7/",
-                        "text": "CON.7 Information security on trips abroad"
+                        "text": "CON.7 Information security on trips abroad",
+                        "path": "http://localhost:8000/bsi/implementationnotes/CON.7/"
                     }
                 ]
             },
@@ -345,31 +417,38 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/OPS.1.1.2/",
-                        "text": "OPS.1.1.2 Proper IT Administration"
+                        "text": "OPS.1.1.2 Proper IT Administration",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.2/"
                     },
                     {
                         "href": "/implementationnotes/OPS.1.1.3/",
-                        "text": "OPS.1.1.3 Patch and Change Management"
+                        "text": "OPS.1.1.3 Patch and Change Management",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.3/"
                     },
                     {
                         "href": "/implementationnotes/OPS.1.2.3/",
-                        "text": "OPS.1.2.3 Information and data medium exchange"
+                        "text": "OPS.1.2.3 Information and data medium exchange",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.3/"
                     },
                     {
                         "href": "/implementationnotes/OPS.1.2.4/",
-                        "text": "OPS.1.2.4 Teleworking"
+                        "text": "OPS.1.2.4 Teleworking",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.4/"
                     },
                     {
                         "href": "/implementationnotes/OPS.2.1/",
-                        "text": "OPS.2.1 Outsourcing for customers"
+                        "text": "OPS.2.1 Outsourcing for customers",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.1/"
                     },
                     {
                         "href": "/implementationnotes/OPS.2.4/",
-                        "text": "OPS.2.4 remote maintenance"
+                        "text": "OPS.2.4 remote maintenance",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.4/"
                     },
                     {
                         "href": "/implementationnotes/OPS.3.1/",
-                        "text": "OPS.3.1 Outsourcing for service providers"
+                        "text": "OPS.3.1 Outsourcing for service providers",
+                        "path": "http://localhost:8000/bsi/implementationnotes/OPS.3.1/"
                     }
                 ]
             },
@@ -378,23 +457,28 @@
                 "nodes": [
                     {
                         "href": "/implementationnotes/INF.1/",
-                        "text": "INF.1 General Building"
+                        "text": "INF.1 General Building",
+                        "path": "http://localhost:8000/bsi/implementationnotes/INF.1/"
                     },
                     {
                         "href": "/implementationnotes/INF.3/",
-                        "text": "INF.3 Electronic wiring"
+                        "text": "INF.3 Electronic wiring",
+                        "path": "http://localhost:8000/bsi/implementationnotes/INF.3/"
                     },
                     {
                         "href": "/implementationnotes/INF.4/",
-                        "text": "INF.4 IT cabling"
+                        "text": "INF.4 IT cabling",
+                        "path": "http://localhost:8000/bsi/implementationnotes/INF.4/"
                     },
                     {
                         "href": "/implementationnotes/INF.8/",
-                        "text": "INF.8 Domestic Workplace"
+                        "text": "INF.8 Domestic Workplace",
+                        "path": "http://localhost:8000/bsi/implementationnotes/INF.8/"
                     },
                     {
                         "href": "/implementationnotes/INF.9/",
-                        "text": "INF.9 Mobile Workplace"
+                        "text": "INF.9 Mobile Workplace",
+                        "path": "http://localhost:8000/bsi/implementationnotes/INF.9/"
                     }
                 ]
             }
@@ -408,7 +492,8 @@
                 "nodes": [
                     {
                         "href": "/components/ISMS.1/",
-                        "text": "ISMS.1 security management"
+                        "text": "ISMS.1 security management",
+                        "path": "http://localhost:8000/bsi/components/ISMS.1/"
                     }
                 ]
             },
@@ -417,31 +502,38 @@
                 "nodes": [
                     {
                         "href": "/components/NET.1.1/",
-                        "text": "NET.1.1 Network architecture and design"
+                        "text": "NET.1.1 Network architecture and design",
+                        "path": "http://localhost:8000/bsi/components/NET.1.1/"
                     },
                     {
                         "href": "/components/NET.1.2/",
-                        "text": "NET.1.2 Network Management"
+                        "text": "NET.1.2 Network Management",
+                        "path": "http://localhost:8000/bsi/components/NET.1.2/"
                     },
                     {
                         "href": "/components/NET.2.1/",
-                        "text": "NET.2.1 WLAN operation"
+                        "text": "NET.2.1 WLAN operation",
+                        "path": "http://localhost:8000/bsi/components/NET.2.1/"
                     },
                     {
                         "href": "/components/NET.2.2/",
-                        "text": "NET.2.2 Wi-Fi usage"
+                        "text": "NET.2.2 Wi-Fi usage",
+                        "path": "http://localhost:8000/bsi/components/NET.2.2/"
                     },
                     {
                         "href": "/components/NET.3.1/",
-                        "text": "NET.3.1 routers and switches"
+                        "text": "NET.3.1 routers and switches",
+                        "path": "http://localhost:8000/bsi/components/NET.3.1/"
                     },
                     {
                         "href": "/components/NET.3.2/",
-                        "text": "NET.3.2 firewall"
+                        "text": "NET.3.2 firewall",
+                        "path": "http://localhost:8000/bsi/components/NET.3.2/"
                     },
                     {
                         "href": "/components/NET.3.3/",
-                        "text": "NET.3.3 VPN"
+                        "text": "NET.3.3 VPN",
+                        "path": "http://localhost:8000/bsi/components/NET.3.3/"
                     }
                 ]
             },
@@ -450,51 +542,63 @@
                 "nodes": [
                     {
                         "href": "/components/APP.1.1/",
-                        "text": "APP.1.1 Office products"
+                        "text": "APP.1.1 Office products",
+                        "path": "http://localhost:8000/bsi/components/APP.1.1/"
                     },
                     {
                         "href": "/components/APP.1.2/",
-                        "text": "APP.1.2 Web browser"
+                        "text": "APP.1.2 Web browser",
+                        "path": "http://localhost:8000/bsi/components/APP.1.2/"
                     },
                     {
                         "href": "/components/APP.2.1/",
-                        "text": "APP.2.1 General directory service"
+                        "text": "APP.2.1 General directory service",
+                        "path": "http://localhost:8000/bsi/components/APP.2.1/"
                     },
                     {
                         "href": "/components/APP.2.2/",
-                        "text": "APP.2.2 Active Directory"
+                        "text": "APP.2.2 Active Directory",
+                        "path": "http://localhost:8000/bsi/components/APP.2.2/"
                     },
                     {
                         "href": "/components/APP.3.1/",
-                        "text": "APP.3.1 Web applications"
+                        "text": "APP.3.1 Web applications",
+                        "path": "http://localhost:8000/bsi/components/APP.3.1/"
                     },
                     {
                         "href": "/components/APP.3.2/",
-                        "text": "APP.3.2 Web server"
+                        "text": "APP.3.2 Web server",
+                        "path": "http://localhost:8000/bsi/components/APP.3.2/"
                     },
                     {
                         "href": "/components/APP.3.3/",
-                        "text": "APP.3.3 file server"
+                        "text": "APP.3.3 file server",
+                        "path": "http://localhost:8000/bsi/components/APP.3.3/"
                     },
                     {
                         "href": "/components/APP.3.4/",
-                        "text": "APP.3.4 Samba"
+                        "text": "APP.3.4 Samba",
+                        "path": "http://localhost:8000/bsi/components/APP.3.4/"
                     },
                     {
                         "href": "/components/APP.3.6/",
-                        "text": "APP.3.6 DNS server"
+                        "text": "APP.3.6 DNS server",
+                        "path": "http://localhost:8000/bsi/components/APP.3.6/"
                     },
                     {
                         "href": "/components/APP.4.3/",
-                        "text": "APP.4.3 Relational Database Systems"
+                        "text": "APP.4.3 Relational Database Systems",
+                        "path": "http://localhost:8000/bsi/components/APP.4.3/"
                     },
                     {
                         "href": "/components/APP.5.1/",
-                        "text": "APP.5.1 General Groupware"
+                        "text": "APP.5.1 General Groupware",
+                        "path": "http://localhost:8000/bsi/components/APP.5.1/"
                     },
                     {
                         "href": "/components/APP.5.2/",
-                        "text": "APP.5.2 Microsoft Exchange and Outlook"
+                        "text": "APP.5.2 Microsoft Exchange and Outlook",
+                        "path": "http://localhost:8000/bsi/components/APP.5.2/"
                     }
                 ]
             },
@@ -503,71 +607,88 @@
                 "nodes": [
                     {
                         "href": "/components/SYS.1.1/",
-                        "text": "SYS.1.1 General Server"
+                        "text": "SYS.1.1 General Server",
+                        "path": "http://localhost:8000/bsi/components/SYS.1.1/"
                     },
                     {
                         "href": "/components/SYS.1.2.2/",
-                        "text": "SYS1.2.2 Windows Server 2012"
+                        "text": "SYS1.2.2 Windows Server 2012",
+                        "path": "http://localhost:8000/bsi/components/SYS.1.2.2/"
                     },
                     {
                         "href": "/components/SYS.1.3/",
-                        "text": "SYS.1.3 server under Unix"
+                        "text": "SYS.1.3 server under Unix",
+                        "path": "http://localhost:8000/bsi/components/SYS.1.3/"
                     },
                     {
                         "href": "/components/SYS.1.5/",
-                        "text": "SYS.1.5 Virtualization"
+                        "text": "SYS.1.5 Virtualization",
+                        "path": "http://localhost:8000/bsi/components/SYS.1.5/"
                     },
                     {
                         "href": "/components/SYS.1.8/",
-                        "text": "SYS.1.8 Storage Solutions"
+                        "text": "SYS.1.8 Storage Solutions",
+                        "path": "http://localhost:8000/bsi/components/SYS.1.8/"
                     },
                     {
                         "href": "/components/SYS.2.1/",
-                        "text": "SYS.2.1 General Client"
+                        "text": "SYS.2.1 General Client",
+                        "path": "http://localhost:8000/bsi/components/SYS.2.1/"
                     },
                     {
                         "href": "/components/SYS.2.2.2/",
-                        "text": "SYS.2.2.2 Clients in Windows 8.1"
+                        "text": "SYS.2.2.2 Clients in Windows 8.1",
+                        "path": "http://localhost:8000/bsi/components/SYS.2.2.2/"
                     },
                     {
                         "href": "/components/SYS.2.2.3/",
-                        "text": "SYS.2.2.3 Clients on Windows 10"
+                        "text": "SYS.2.2.3 Clients on Windows 10",
+                        "path": "http://localhost:8000/bsi/components/SYS.2.2.3/"
                     },
                     {
                         "href": "/components/SYS.2.3/",
-                        "text": "SYS.2.3 clients under Unix"
+                        "text": "SYS.2.3 clients under Unix",
+                        "path": "http://localhost:8000/bsi/components/SYS.2.3/"
                     },
                     {
                         "href": "/components/SYS.3.1/",
-                        "text": "SYS.3.1 laptops"
+                        "text": "SYS.3.1 laptops",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.1/"
                     },
                     {
                         "href": "/components/SYS.3.2.1/",
-                        "text": "SYS.3.2.1 General Smartphones and Tablets"
+                        "text": "SYS.3.2.1 General Smartphones and Tablets",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.2.1/"
                     },
                     {
                         "href": "/components/SYS.3.2.2/",
-                        "text": "SYS.3.2.2 Mobile Device Management (MDM)"
+                        "text": "SYS.3.2.2 Mobile Device Management (MDM)",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.2.2/"
                     },
                     {
                         "href": "/components/SYS.3.2.3/",
-                        "text": "SYS.3.2.3 iOS (for Enterprise)"
+                        "text": "SYS.3.2.3 iOS (for Enterprise)",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.2.3/"
                     },
                     {
                         "href": "/components/SYS.3.2.4/",
-                        "text": "SYS.3.2.4 Android"
+                        "text": "SYS.3.2.4 Android",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.2.4/"
                     },
                     {
                         "href": "/components/SYS.3.4/",
-                        "text": "SYS.3.4 Mobile Disk"
+                        "text": "SYS.3.4 Mobile Disk",
+                        "path": "http://localhost:8000/bsi/components/SYS.3.4/"
                     },
                     {
                         "href": "/components/SYS.4.1/",
-                        "text": "SYS.4.1 printers, copiers, and multi-function devices"
+                        "text": "SYS.4.1 printers, copiers, and multi-function devices",
+                        "path": "http://localhost:8000/bsi/components/SYS.4.1/"
                     },
                     {
                         "href": "/components/SYS.4.4/",
-                        "text": "SYS.4.4 General IoT device"
+                        "text": "SYS.4.4 General IoT device",
+                        "path": "http://localhost:8000/bsi/components/SYS.4.4/"
                     }
                 ]
             },
@@ -576,23 +697,28 @@
                 "nodes": [
                     {
                         "href": "/components/IND.1/",
-                        "text": "IND.1 Operating and Control Technology"
+                        "text": "IND.1 Operating and Control Technology",
+                        "path": "http://localhost:8000/bsi/components/IND.1/"
                     },
                     {
                         "href": "/components/IND.2.1/",
-                        "text": "IND.2.1 General ICS Component"
+                        "text": "IND.2.1 General ICS Component",
+                        "path": "http://localhost:8000/bsi/components/IND.2.1/"
                     },
                     {
                         "href": "/components/IND.2.2/",
-                        "text": "IND.2.2 Programmable Logic Controller (PLC)"
+                        "text": "IND.2.2 Programmable Logic Controller (PLC)",
+                        "path": "http://localhost:8000/bsi/components/IND.2.2/"
                     },
                     {
                         "href": "/components/IND.2.3/",
-                        "text": "IND.2.3 Sensors and Actuators"
+                        "text": "IND.2.3 Sensors and Actuators",
+                        "path": "http://localhost:8000/bsi/components/IND.2.3/"
                     },
                     {
                         "href": "/components/IND.2.4/",
-                        "text": "IND.2.4 machine"
+                        "text": "IND.2.4 machine",
+                        "path": "http://localhost:8000/bsi/components/IND.2.4/"
                     }
                 ]
             },
@@ -601,23 +727,28 @@
                 "nodes": [
                     {
                         "href": "/components/ORP.1/",
-                        "text": "ORP.1 organization"
+                        "text": "ORP.1 organization",
+                        "path": "http://localhost:8000/bsi/components/ORP.1/"
                     },
                     {
                         "href": "/components/ORP.2/",
-                        "text": "ORP.2 staff"
+                        "text": "ORP.2 staff",
+                        "path": "http://localhost:8000/bsi/components/ORP.2/"
                     },
                     {
                         "href": "/components/ORP.3/",
-                        "text": "ORP.3 Raising awareness and training"
+                        "text": "ORP.3 Raising awareness and training",
+                        "path": "http://localhost:8000/bsi/components/ORP.3/"
                     },
                     {
                         "href": "/components/ORP.4/",
-                        "text": "ORP.4 Identity and Permission Management"
+                        "text": "ORP.4 Identity and Permission Management",
+                        "path": "http://localhost:8000/bsi/components/ORP.4/"
                     },
                     {
                         "href": "/components/ORP.5/",
-                        "text": "ORP.5 Compliance Management (Requirements Management)"
+                        "text": "ORP.5 Compliance Management (Requirements Management)",
+                        "path": "http://localhost:8000/bsi/components/ORP.5/"
                     }
                 ]
             },
@@ -626,31 +757,38 @@
                 "nodes": [
                     {
                         "href": "/components/DER.1/",
-                        "text": "DER.1 Detection of safety-relevant events"
+                        "text": "DER.1 Detection of safety-relevant events",
+                        "path": "http://localhost:8000/bsi/components/DER.1/"
                     },
                     {
                         "href": "/components/DER.2.1/",
-                        "text": "DER.2.1 Treatment of security incidents"
+                        "text": "DER.2.1 Treatment of security incidents",
+                        "path": "http://localhost:8000/bsi/components/DER.2.1/"
                     },
                     {
                         "href": "/components/DER.2.2/",
-                        "text": "DER.2.2 Provision for IT forensics"
+                        "text": "DER.2.2 Provision for IT forensics",
+                        "path": "http://localhost:8000/bsi/components/DER.2.2/"
                     },
                     {
                         "href": "/components/DER.2.3/",
-                        "text": "DER.2.3 Clearance of far-reaching security incidents"
+                        "text": "DER.2.3 Clearance of far-reaching security incidents",
+                        "path": "http://localhost:8000/bsi/components/DER.2.3/"
                     },
                     {
                         "href": "/components/DER.3.1/",
-                        "text": "DER.3.1 Audits and revisions"
+                        "text": "DER.3.1 Audits and revisions",
+                        "path": "http://localhost:8000/bsi/components/DER.3.1/"
                     },
                     {
                         "href": "/components/DER.3.2/",
-                        "text": "DER.3.2 IS revision for public authorities"
+                        "text": "DER.3.2 IS revision for public authorities",
+                        "path": "http://localhost:8000/bsi/components/DER.3.2/"
                     },
                     {
                         "href": "/components/DER.4/",
-                        "text": "DER.4 emergency management"
+                        "text": "DER.4 emergency management",
+                        "path": "http://localhost:8000/bsi/components/DER.4/"
                     }
                 ]
             },
@@ -685,47 +823,58 @@
                 "nodes": [
                     {
                         "href": "/components/OPS.1.1.2/",
-                        "text": "OPS.1.1.2 Proper IT Administration"
+                        "text": "OPS.1.1.2 Proper IT Administration",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.1.2/"
                     },
                     {
                         "href": "/components/OPS.1.1.3/",
-                        "text": "OPS.1.1.3 Patch and Change Management"
+                        "text": "OPS.1.1.3 Patch and Change Management",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.1.3/"
                     },
                     {
                         "href": "/components/OPS.1.1.4/",
-                        "text": "OPS.1.1.4 Protection against malicious programs"
+                        "text": "OPS.1.1.4 Protection against malicious programs",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.1.4/"
                     },
                     {
                         "href": "/components/OPS.1.1.5/",
-                        "text": "OPS.1.1.5 logging"
+                        "text": "OPS.1.1.5 logging",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.1.5/"
                     },
                     {
                         "href": "/components/OPS.1.1.6/",
-                        "text": "OPS.1.1.6 software tests and releases"
+                        "text": "OPS.1.1.6 software tests and releases",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.1.6/"
                     },
                     {
                         "href": "/components/OPS.1.2.2/",
-                        "text": "OPS.1.2.2 Archiving"
+                        "text": "OPS.1.2.2 Archiving",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.2.2/"
                     },
                     {
                         "href": "/components/OPS.1.2.3/",
-                        "text": "OPS.1.2.3 Information and data medium exchange"
+                        "text": "OPS.1.2.3 Information and data medium exchange",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.2.3/"
                     },
                     {
                         "href": "/components/OPS.1.2.4/",
-                        "text": "OPS.1.2.4 Teleworking"
+                        "text": "OPS.1.2.4 Teleworking",
+                        "path": "http://localhost:8000/bsi/components/OPS.1.2.4/"
                     },
                     {
                         "href": "/components/OPS.2.1/",
-                        "text": "OPS.2.1 Outsourcing for customers"
+                        "text": "OPS.2.1 Outsourcing for customers",
+                        "path": "http://localhost:8000/bsi/components/OPS.2.1/"
                     },
                     {
                         "href": "/components/OPS.2.4/",
-                        "text": "OPS.2.4 remote maintenance"
+                        "text": "OPS.2.4 remote maintenance",
+                        "path": "http://localhost:8000/bsi/components/OPS.2.4/"
                     },
                     {
                         "href": "/components/OPS.3.1/",
-                        "text": "OPS.3.1 Outsourcing for service providers"
+                        "text": "OPS.3.1 Outsourcing for service providers",
+                        "path": "http://localhost:8000/bsi/components/OPS.3.1/"
                     }
                 ]
             },
@@ -734,35 +883,43 @@
                 "nodes": [
                     {
                         "href": "/components/INF.1/",
-                        "text": "INF.1 General Building"
+                        "text": "INF.1 General Building",
+                        "path": "http://localhost:8000/bsi/components/INF.1/"
                     },
                     {
                         "href": "/components/INF.2/",
-                        "text": "INF.2 data center and server room"
+                        "text": "INF.2 data center and server room",
+                        "path": "http://localhost:8000/bsi/components/INF.2/"
                     },
                     {
                         "href": "/components/INF.3/",
-                        "text": "INF.3 Electronic wiring"
+                        "text": "INF.3 Electronic wiring",
+                        "path": "http://localhost:8000/bsi/components/INF.3/"
                     },
                     {
                         "href": "/components/INF.4/",
-                        "text": "INF.4 IT cabling"
+                        "text": "INF.4 IT cabling",
+                        "path": "http://localhost:8000/bsi/components/INF.4/"
                     },
                     {
                         "href": "/components/INF.7/",
-                        "text": "INF.7 office workplace"
+                        "text": "INF.7 office workplace",
+                        "path": "http://localhost:8000/bsi/components/INF.7/"
                     },
                     {
                         "href": "/components/INF.8/",
-                        "text": "INF.8 Domestic Workplace"
+                        "text": "INF.8 Domestic Workplace",
+                        "path": "http://localhost:8000/bsi/components/INF.8/"
                     },
                     {
                         "href": "/components/INF.9/",
-                        "text": "INF.9 Mobile Workplace"
+                        "text": "INF.9 Mobile Workplace",
+                        "path": "http://localhost:8000/bsi/components/INF.9/"
                     },
                     {
                         "href": "/components/INF.10/",
-                        "text": "INF.10 Meeting, Event and Training Room"
+                        "text": "INF.10 Meeting, Event and Training Room",
+                        "path": "http://localhost:8000/bsi/components/INF.10/"
                     }
                 ]
             }
