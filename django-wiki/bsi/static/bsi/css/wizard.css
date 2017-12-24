@@ -49,7 +49,7 @@
     float: right;
     margin-left: 50px;
     height: 300px;
-    width: 600px;
+    width: 500px;
     border:black;
     z-index: 99;
 }
@@ -61,6 +61,10 @@
 
 .contentPanel{
     height: 300px;
-    width: 600px;
+    width: 500px;
     overflow-y: scroll;
+}
+
+.marginTop{
+    margin-top: 30px;
 }

@@ -23,6 +23,13 @@ function initWizard() {
         remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
     }
 
+   /* if(localStorage.getItem('listOfBack') === null){
+        currentTopicString = String(currentTopic);
+        listOfBack = {};
+        listOfBack[currentTopicString] = remainingComponents;
+        localStorage.setItem('listOfBack',JSON.stringify(listOfBack));
+    }*/
+
     $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 
@@ -165,7 +172,7 @@ function initWizardsComponents(){
             localStorage.removeItem('visible');
         } else {
             localStorage.setItem('visible',String(true));
-            panel.addClass('visible').animate({'left':'60%'});
+            panel.addClass('visible').animate({'left':'62%'});
         }
         valid = false;
         return false;
@@ -188,7 +195,7 @@ function askWheatherToClose(event){
 function setPanel() {
     var panel = $('#slide-panel');
     if(localStorage.getItem('visible')!== null){
-        panel.addClass('visible').animate({'left':'60%'});
+        panel.addClass('visible').animate({'left':'62%'});
         initWizard();
     }
 }
