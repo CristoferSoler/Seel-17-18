@@ -34,6 +34,36 @@
 
   <form method="POST" class="form-horizontal">
     {% wiki_form create_form %}
+    <table class="table table-striped"
+                       data-toggle="table"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-toolbar="#toolbar"
+                       data-query-params="queryParams"
+                       data-pagination="true"
+                       data-height="550"
+                       data-locale="en-US"
+                       data-page-list="[15, 30, 90, 200]">
+
+                    <thead>
+                    <tr>
+                        <th data-sortable="true">BSI Article Name</th>
+                        <th data-sortable="true">Author</th>
+                        <th data-sortable="true">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for article in articles %}
+                        <tr>
+                            <td class="col-xs-7">{{ article.article.current_revision.title }}</td>
+                            <td class="col-xs-3">{{ article.article.owner }}</td>
+                            <td class="col-xs-2">{{ article.article.created }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
     <div class="form-group form-actions">
       <div class="col-lg-2"></div>
       <div class="col-lg-10">

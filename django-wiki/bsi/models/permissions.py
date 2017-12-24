@@ -1,4 +1,5 @@
 from wiki.models import URLPath
+from .import article_extensions
 from . import article_extensions
 
 
