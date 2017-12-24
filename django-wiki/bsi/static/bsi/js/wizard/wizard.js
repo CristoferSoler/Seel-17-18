@@ -26,7 +26,7 @@ function initWizard() {
     $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 
-    if(remainingComponents.length <= thresholdTopicNumber){
+    if(remainingComponents.length  <= thresholdTopicNumber){
         presentResults();
     }
 
