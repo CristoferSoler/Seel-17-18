@@ -12,6 +12,7 @@ from wiki.views.article import Create
 from wiki.views.article import CreateRootView
 from wiki.views.article import Edit, Delete
 from wiki import forms as wiki_forms
+from .forms import CreateForm
 
 from bsi import forms
 
@@ -36,6 +37,7 @@ class CreateRoot(CreateRootView):
 
 class UGACreate(Create):
     template_name = 'uga/create_article.html'
+    form_class = CreateForm
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):

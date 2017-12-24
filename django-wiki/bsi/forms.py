@@ -1,8 +1,17 @@
 from django import forms
+from django.utils.translation import pgettext_lazy
+from django.utils.translation import ugettext_lazy as _
+from wiki.editors import getEditor
+from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField
+from wiki import models
+from wiki.models import URLPath
 from django.utils.translation import ugettext
 from wiki.core.diff import simple_merge
 from wiki.forms import EditForm
 
+from django.utils.translation import ugettext
+from wiki.core.diff import simple_merge
+from wiki.forms import EditForm
 
 class UserRegistrationForm(forms.Form):
     username = forms.CharField(
@@ -22,11 +31,48 @@ class UserRegistrationForm(forms.Form):
         widget=forms.PasswordInput()
     )
 
+class CreateForm(forms.Form, SpamProtectionMixin):
+
+    def __init__(self, request, urlpath_parent, *args, **kwargs):
+        super(CreateForm, self).__init__(*args, **kwargs)
+        self.request = request
+        self.urlpath_parent = urlpath_parent
+
+    title = forms.CharField(label=_('Title'),)
+    slug = WikiSlugField(
+        label=_('Slug'),
+        help_text=_(
+            "This will be the address where your article can be found. Use only alphanumeric characters and - or _.<br>Note: If you change the slug later on, links pointing to this article are <b>not</b> updated."),
+        max_length=models.URLPath.SLUG_MAX_LENGTH)
+    content = forms.CharField(
+        label=_('Contents'),
+        required=False,
+        widget=getEditor().get_widget())  # @UndefinedVariable
+
+    summary = forms.CharField(
+        label=pgettext_lazy('Revision comment', 'Summary'),
+        help_text=_("Write a brief message for the article's history log."),
+        required=False)
+    list = [('1', 'B.1'), ('2', 'B.2'), ('3', 'B.3')]
+
+    summary = forms.MultipleChoiceField(
+        label=pgettext_lazy('Revision comment', 'BSI'),
+        choices=list,
+        widget=forms.CheckboxSelectMultiple,
+        required=False)
+
+    def clean_slug(self):
+        return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
+
+    def clean(self):
+        super(CreateForm, self).clean()
+        self.check_spam()
+        return self.cleaned_data
 
 class UGAEditForm(EditForm):
     checked = forms.BooleanField(label="Reviewed", required=False)
 
-    def __init__(self, request, current_revision, checked, *args, **kwargs):
+    def _init_(self, request, current_revision, checked, *args, **kwargs):
 
         self.request = request
         self.no_clean = kwargs.pop('no_clean', False)
@@ -70,7 +116,7 @@ class UGAEditForm(EditForm):
 
             kwargs['initial'] = initial
 
-        super(EditForm, self).__init__(*args, **kwargs)
+        super(EditForm, self)._init_(*args, **kwargs)
 
     def clean(self):
         """Validates form data by checking for the following
@@ -91,3 +137,4 @@ class UGAEditForm(EditForm):
                 ugettext('No changes made. Nothing to save.'))
         self.check_spam()
         return cd
+

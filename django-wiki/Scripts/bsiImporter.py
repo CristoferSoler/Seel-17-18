@@ -261,9 +261,9 @@ def post_phase(archiving_data):
         archive = Archive.get_or_create(archiving_data)
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
-        type = URLPath.objects.filter(parent=new)
+        types = URLPath.objects.filter(parent=new)
         # print(type)
-        for new_type in type:
+        for new_type in types:
               if new_type.slug == "components":
                   post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
               elif new_type.slug == "threats":
@@ -290,24 +290,45 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
     if new_type.slug == default_type:
         bsi_type = URLPath.objects.get(parent=old_parent, slug= default_type)
         # print(bsi_type)
-        new_articles = new_type.get_ordered_children()
+        new_articles = new_type.get_children()
         for new_article in new_articles:
-            articles = BSI.get_articles_by_type(type_symbol)
+            try:
+                old_article = URLPath.objects.get(parent=bsi_type, slug=new_article.slug)
+                for ancestor in old_article.article.ancestor_objects():
+                    ancestor.article.clear_cache()
+                old_article.slug = type_symbol.label.lower()[:1] +"_" + old_article.slug
+                old_article.save()
+                ArchiveTransaction.create(archive, old_article).archive()
+                post_phase_move_references(archive, old_article)
+            except Exception:
+                # do nothing
+                print('old article not found')
+            #articles = BSI.get_articles_by_type(type_symbol)
             # print(articles)
-            for article in articles:
-                if article.slug == new_article.slug:
-                    article.slug = type_symbol.label.lower()[:1] +"_" + article.slug
-                    ArchiveTransaction.create(archive, article).archive()
-                    post_phase_move_references(archive, article)
+            #for article in articles:
+            #    if article.slug == new_article.slug:
+            #        article.slug = type_symbol.label.lower()[:1] +"_" + article.slug
+            #        ArchiveTransaction.create(archive, article).archive()
+            #        post_phase_move_references(archive, article)
 
+            new_article.save()
+            bla1 = URLPath.objects.get(pk=new_article.pk)
+            for ancestor in new_article.article.ancestor_objects():
+                ancestor.article.clear_cache()
+            new_article.save()
+            bla = URLPath.objects.get(pk=new_article.pk)
             new_article.parent = bsi_type
             new_article.save()
+            #new_article.cached_ancestors = new_article.parent.cached_ancestors + [new_article.parent]
+            new_article.set_cached_ancestors_from_parent(new_article.parent)
+            bla2 = URLPath.objects.get(pk=new_article.pk)
+            new_article.save()
             # Reload url path form database
-            urlpath_article = URLPath.objects.get(pk=new_article.pk)
+            new = URLPath.objects.get(pk=new_article.pk)
             # print(urlpath_article.path)
             # Use a copy of ourself (to avoid cache) and update article links again
-            for ancestor in Article.objects.get(pk=urlpath_article.article.pk).ancestor_objects():
-                    ancestor.article.clear_cache()
+            #for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
+            #        ancestor.article.clear_cache()
 
 def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
@@ -425,8 +446,8 @@ def cleanUp():
 # should not be imported by other module
 if __name__ == '__main__':
       file = parseArgs()
-      #main(file)
-      updateModificationTime()
+      main(file)
+      #updateModificationTime()
       #post_phase("2017-12")
       #new = URLPath.objects.get(slug='new')
       #post_phase_delete_url(new)
