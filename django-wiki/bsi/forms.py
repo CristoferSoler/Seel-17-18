@@ -33,19 +33,10 @@ class UserRegistrationForm(forms.Form):
 
 class CreateForm(forms.Form, SpamProtectionMixin):
 
-    children = []
-    def _init_(self, request, urlpath_parent, *args, **kwargs):
+    def __init__(self, request, urlpath_parent, *args, **kwargs):
+        super(CreateForm, self).__init__(*args, **kwargs)
         self.request = request
         self.urlpath_parent = urlpath_parent
-        global children
-        initial = kwargs.get('initial')
-        children = initial.get('children')
-        super(CreateForm, self).__init__(*args, **kwargs)
-
-    articles = []
-    for child in children:
-        articles.append((child.get_absolute_url(), child.get_pk_val()))
-
 
     title = forms.CharField(label=_('Title'),)
     slug = WikiSlugField(
@@ -62,9 +53,13 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         label=pgettext_lazy('Revision comment', 'Summary'),
         help_text=_("Write a brief message for the article's history log."),
         required=False)
+    list = [('1', 'B.1'), ('2', 'B.2'), ('3', 'B.3')]
 
-    articles = forms.MultipleChoiceField(choices= articles, widget=forms.CheckboxSelectMultiple())
-
+    summary = forms.MultipleChoiceField(
+        label=pgettext_lazy('Revision comment', 'BSI'),
+        choices=list,
+        widget=forms.CheckboxSelectMultiple,
+        required=False)
 
     def clean_slug(self):
         return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)

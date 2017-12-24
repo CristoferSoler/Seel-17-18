@@ -37,13 +37,8 @@ class CreateRoot(CreateRootView):
 
 class UGACreate(Create):
     template_name = 'uga/create_article.html'
-    form = CreateForm()
+    form_class = CreateForm
 
-    '''def get_form_kwargs(self):
-        kwargs = super(UGACreate, self).get_form_kwargs()
-        kwargs.update({'children': URLPath.get_by_path('bsi/').get_children()})
-        return kwargs
-    '''
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
         return super(Create, self).dispatch(request, article, *args, **kwargs)
