@@ -18,7 +18,7 @@ def getPathOfComponent(title):
 def generateDic(list):
     title = list[0]
     #path = getPathOfComponent(title)
-    componentDic = {'name':title,'path':'placeholder','topics':list[1:]}
+    componentDic = {'name':title,'path':'http://localhost:8000/bsi/threats/G0.1/','topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():
