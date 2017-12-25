@@ -32,6 +32,7 @@
   <!--{% include "wiki/includes/editormedia.html" %} -->
   <h1 class="page-header">{% trans "Add new article" %}</h1>
 
+
   <form method="POST" class="form-horizontal">
     {% wiki_form create_form %}
     <table class="table table-striped"
@@ -48,20 +49,30 @@
                        data-page-list="[15, 30, 90, 200]">
 
                     <thead>
+                     {% block contents_article %}
+              <!--if the url path bsi, then this -->
+
+
+        {% endblock %}
+
+
                     <tr>
                         <th data-sortable="true">BSI Article Name</th>
                         <th data-sortable="true">Author</th>
                         <th data-sortable="true">Date</th>
+
                     </tr>
                     </thead>
-                    <tbody>
+
                     {% for article in articles %}
                         <tr>
                             <td class="col-xs-7">{{ article.article.current_revision.title }}</td>
                             <td class="col-xs-3">{{ article.article.owner }}</td>
                             <td class="col-xs-2">{{ article.article.created }}</td>
+
                         </tr>
                     {% endfor %}
+
                     </tbody>
                 </table>
     <div class="form-group form-actions">

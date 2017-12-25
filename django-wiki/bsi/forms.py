@@ -38,6 +38,13 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         self.request = request
         self.urlpath_parent = urlpath_parent
 
+    bsi = URLPath.get_by_path('bsi/')
+    children = bsi.get_children()
+    liste = []
+
+    for child in children:
+        liste.append([child.get_absolute_url(), child.get_absolute_url()])
+
     title = forms.CharField(label=_('Title'),)
     slug = WikiSlugField(
         label=_('Slug'),
@@ -53,13 +60,16 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         label=pgettext_lazy('Revision comment', 'Summary'),
         help_text=_("Write a brief message for the article's history log."),
         required=False)
+
     list = [('1', 'B.1'), ('2', 'B.2'), ('3', 'B.3')]
 
-    summary = forms.MultipleChoiceField(
+
+    article = forms.MultipleChoiceField(
         label=pgettext_lazy('Revision comment', 'BSI'),
         choices=list,
         widget=forms.CheckboxSelectMultiple,
         required=False)
+
 
     def clean_slug(self):
         return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
