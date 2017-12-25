@@ -2,7 +2,6 @@
 {% extends "bsi/base.html" %}
 {% load wiki_tags i18n sekizai_tags static %}
 
-
 {% block bsi_pagetitle %}{% trans "Add new article" %}{% endblock %}
 
 {% block bsi_contents %}
@@ -56,13 +55,13 @@
         {% endblock %}
 
 
-                    <tr>
+                  <!--  <tr>
                         <th data-sortable="true">BSI Article Name</th>
                         <th data-sortable="true">Author</th>
                         <th data-sortable="true">Date</th>
 
-                    </tr>
-                    </thead>
+                    </tr> -->
+                    <thead>
 
                     {% for article in articles %}
                         <tr>
@@ -76,6 +75,7 @@
                     </tbody>
                 </table>
     <div class="form-group form-actions">
+
       <div class="col-lg-2"></div>
       <div class="col-lg-10">
         <a href="{% url 'index' %}" class="btn btn-default">

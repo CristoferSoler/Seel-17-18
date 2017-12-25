@@ -38,9 +38,13 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         self.request = request
         self.urlpath_parent = urlpath_parent
 
+    def add_link_to_BSI(self, bsi):
+        bsi.references.add(self)
+
     bsi = URLPath.get_by_path('bsi/')
     children = bsi.get_children()
     liste = []
+
 
     for child in children:
         liste.append([child.get_absolute_url(), child.get_absolute_url()])
@@ -63,11 +67,11 @@ class CreateForm(forms.Form, SpamProtectionMixin):
 
     list = [('1', 'B.1'), ('2', 'B.2'), ('3', 'B.3')]
 
-
     article = forms.MultipleChoiceField(
         label=pgettext_lazy('Revision comment', 'BSI'),
         choices=list,
         widget=forms.CheckboxSelectMultiple,
+        help_text=_("Associate with a BSI article when creating an article."),
         required=False)
 
 
