@@ -168,11 +168,11 @@ function initWizardsComponents(){
         initWizard();
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'left':'98%'});
+            panel.removeClass('visible').animate({'left':'97%'});
             localStorage.removeItem('visible');
         } else {
             localStorage.setItem('visible',String(true));
-            panel.addClass('visible').animate({'left':'70%'});
+            panel.addClass('visible').animate({'left':'62%'});
         }
         valid = false;
         return false;
