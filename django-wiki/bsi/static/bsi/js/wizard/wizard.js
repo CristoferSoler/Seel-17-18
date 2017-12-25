@@ -37,6 +37,8 @@ function initWizard() {
         presentResults();
     }
 
+     $("#topicBack").addClass('disabled');
+
 }
 
 function yesPress() {
@@ -48,6 +50,11 @@ function noPress() {
 }
 
 function checkTopics(yes) {
+
+    if($("#topicBack").hasClass('disabled')){
+        $("#topicBack").removeClass('disabled');
+    }
+
     var currentTopicString = currentSortedTopic[currentTopic];
     remainingComponents.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
@@ -109,6 +116,10 @@ function restart(){
 function topicBack() {
     if((currentTopic -1)!== -1) {
         currentTopic = currentTopic - 1;
+
+        if(currentTopic === 0){
+            $("#topicBack").addClass('disabled');
+        }
         console.log(currentTopic);
         var currentTopicString = String(currentTopic);
         console.log(currentTopicString);
