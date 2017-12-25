@@ -23,12 +23,12 @@ function initWizard() {
         remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
     }
 
-   /* if(localStorage.getItem('listOfBack') === null){
-        currentTopicString = String(currentTopic);
-        listOfBack = {};
+    if(localStorage.getItem('listOfBack') === null){
+        var currentTopicString = String(currentTopic);
+        var listOfBack = {};
         listOfBack[currentTopicString] = remainingComponents;
         localStorage.setItem('listOfBack',JSON.stringify(listOfBack));
-    }*/
+    }
 
     $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
@@ -64,32 +64,61 @@ function checkTopics(yes) {
     })
     currentTopic = currentTopic + 1;
 
-    if(remainingComponents.length <= thresholdTopicNumber ){
-        $("#topic").text(currentSortedTopic[currentTopic]);
-        presentResults();
-    } else{
-        $("#topic").text(currentSortedTopic[currentTopic]);
-    }
-
-    safeData();
+    addGoBackListTopicList();
+    checkPresentResults();
 }
+
+function checkPresentResults() {
+        if (remainingComponents.length <= thresholdTopicNumber) {
+            $("#topic").text(currentSortedTopic[currentTopic]);
+            presentResults();
+        } else {
+            $("#list").empty();
+            $("#topic").text(currentSortedTopic[currentTopic]);
+        }
+        safeData();
+    }
 
 
 function dontknowPress() {
     currentTopic = currentTopic + 1;
+    addGoBackListTopicList();
     $("#topic").text(currentSortedTopic[currentTopic]);
     safeData();
 }
 
+function addGoBackListTopicList() {
+    var topicString = String(currentTopic);
+    var goBackList = JSON.parse(localStorage.getItem('listOfBack'));
+    console.log(goBackList);
+    goBackList[topicString] = remainingComponents;
+    localStorage.setItem('listOfBack',JSON.stringify(goBackList));
+}
+
+
 function restart(){
     currentTopic = 0;
     [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
-    //$("#topic").text(currentSortedTopic[currentTopic]);
     localStorage.setItem('currentTopic',String(currentTopic));
     localStorage.removeItem('remainingComponents');
+    localStorage.removeItem('listOfBack');
     $("#list").empty();
     initWizard();
 }
+
+function topicBack() {
+    if((currentTopic -1)!== -1) {
+        currentTopic = currentTopic - 1;
+        console.log(currentTopic);
+        var currentTopicString = String(currentTopic);
+        console.log(currentTopicString);
+        var listOfBack = JSON.parse(localStorage.getItem('listOfBack'));
+        remainingComponents = listOfBack[currentTopicString];
+        console.log(remainingComponents);
+        checkPresentResults();
+    }
+}
+
 
 function presentResults() {
     //console.log(remainingComponents);
@@ -128,6 +157,7 @@ function clearLocalStorage(){
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
     localStorage.removeItem('visible');
+    localStorage.removeItem('listOfBack')
 }
 
 function buttonsWizard() {
@@ -148,6 +178,11 @@ function buttonsWizard() {
 
     $('#restart').on('click', function (e) {
         restart();
+         valid = false;
+    })
+
+    $('#topicBack').on('click', function (e) {
+        topicBack();
          valid = false;
     })
 }
