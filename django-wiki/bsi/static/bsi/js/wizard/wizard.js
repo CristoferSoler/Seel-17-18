@@ -37,8 +37,9 @@ function initWizard() {
         presentResults();
     }
 
-     $("#topicBack").addClass('disabled');
-
+    if(currentTopic === 0){
+         $("#topicBack").addClass('disabled');
+    }
 }
 
 function yesPress() {
@@ -116,7 +117,6 @@ function restart(){
 function topicBack() {
     if((currentTopic -1)!== -1) {
         currentTopic = currentTopic - 1;
-
         if(currentTopic === 0){
             $("#topicBack").addClass('disabled');
         }

@@ -62,12 +62,9 @@
 .contentPanel{
     height: 300px;
     width: 500px;
+    overflow-y: scroll;
 }
 
 .marginTop{
     margin-top: 30px;
-}
-
-.contentPanelBody{
-    overflow-y: scroll;
 }
