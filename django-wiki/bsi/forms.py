@@ -38,9 +38,6 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         self.request = request
         self.urlpath_parent = urlpath_parent
 
-    def add_link_to_BSI(self, bsi):
-        bsi.references.add(self)
-
     bsi = URLPath.get_by_path('bsi/')
     children = bsi.get_children()
     liste = []
