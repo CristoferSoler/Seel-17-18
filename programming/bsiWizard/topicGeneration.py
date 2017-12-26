@@ -131,6 +131,14 @@ def main():
     generateTopicTable()
     writeToCSV("csv/componentsTopics.csv")
 
+    #threads
+    pathOfMd = 'mdEn/T/'
+    pathOfTxt = 'txt/t/'
+    path_to_corpus = 'txt/t'
+    convertMDtoTxt(pathOfMd)
+    generateTopicTable()
+    writeToCSV("csv/threadsTopics.csv")
+
 
 if __name__ == "__main__":
     main()

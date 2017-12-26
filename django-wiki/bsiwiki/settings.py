@@ -25,7 +25,7 @@ SECRET_KEY = 'lbwd(*iuixgii-z9-_54#fk4v1*#p^9-gnj3i+#*$e%dzx80nf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.2.115']
 
 # Application definition
 

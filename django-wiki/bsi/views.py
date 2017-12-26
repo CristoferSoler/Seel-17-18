@@ -104,7 +104,7 @@ def register(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'bsi/account/register.html', {'form': form})
+        return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
