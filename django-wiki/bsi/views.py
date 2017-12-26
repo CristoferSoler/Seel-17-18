@@ -10,7 +10,8 @@ from wiki.decorators import get_article
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
-from .models import article_extensions
+from .models.article_extensions import BSI
+
 
 from bsi.ugaViews import overview_uga
 
@@ -62,18 +63,26 @@ class BSISearchView(SearchView):
     def get_context_data(self, **kwargs):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
-    def filter(request):
-        request = request.GET.get('f')
-        filterResult = article_extensions.BSI.get_articles_by_type(request)
-        template = loader.get_template('bsi/search.html')
-        context = {
-            'filterResult': filterResult,
-        }
-        return HttpResponse(template.render(context, request))
+class BSIFilterView(SearchView):
+    template_name = "bsi/search.html"
+
+    def get_queryset(self):
+        def get_queryset(self, *args, **kwargs):
+            filter_category = self.request.GET.get("filter_category")
+            article_urlpaths = []
+            articles = BSI.objects.filter(articleType=filter_category)
+            if not articles: return
+            if articles:
+                for article in articles:
+                    article_urlpaths.append(article)
+            # return empty if nothing is found
+            return article_urlpaths
+
 
 
 def index(request):
     all_articles = Article.objects.all()
+
 
     template = loader.get_template('bsi/index.html')
     context = {

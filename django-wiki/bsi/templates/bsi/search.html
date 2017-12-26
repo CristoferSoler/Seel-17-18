@@ -21,7 +21,7 @@
                             </button>
                             <ul class="dropdown-menu" role="menu" style="">
                                 <li data-value="1"><a href="#">All</a></li>
-                                <li data-value="C"><a href="{% url 'bsifilter filter ' name = 'C' %}">componenets</a></li>
+                                <li data-value="C"><a href="#}">componenets</a></li>
                                 <li data-value="G"><a href="#">Threats</a></li>
                                 <li data-value="N"><a href="#">implementation Notes</a></li>
                                 <li data-value="5"><a href="#">Archive</a></li>
@@ -31,6 +31,21 @@
 
                 </div>
             </form>
+
+
+
+            <form method="GET">
+                <select id="airline-selected">
+                    <option value="C">Components</option>
+                    <option value="G">Threatss</option>
+                    <option value="N">Implementation Notes</option>
+                </select>
+                <input type="button" value="Update" id="selection-button" method="GET">
+            </form>
+
+
+
+
 
             {% blocktrans with paginator.object_list.count as cnt %}Your search returned
                 <strong>{{ cnt }}</strong> results.{% endblocktrans %}</p>
@@ -92,6 +107,29 @@
     </div>
 
     <script>
+
+        $( "#selection-button" ).click(function(event) {
+            event.preventDefault();
+            debugger
+            var airlineSelected = $('#airline-selected').find(":selected").val();
+
+            $.ajax({
+     url: "{% url 'bsifilter' %}",
+     method: 'GET',
+     data : {
+             filter_category: airlineSelected
+     },
+     success: function(data){
+         console.log(data)
+     },
+     error: function(xhr, errmsg, err){
+         console.log("error")
+         console.log(err)
+     }
+});
+        })
+
+
         $(document).ready(function (e) {
             $(document).on('click', '.bs-dropdown-to-select-group .dropdown-menu li', function (event) {
                 var $target = $(event.currentTarget);
