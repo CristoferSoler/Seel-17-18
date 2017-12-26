@@ -11,9 +11,6 @@ import pandas
 from nltk.stem import WordNetLemmatizer
 import spacy
 
-pathOfMd = 'mdEn/C/'
-pathOfTxt = 'txt/'
-path_to_corpus = 'txt'
 pathToStopwordList = 'stopwordlist/en.txt'
 #pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
@@ -32,7 +29,7 @@ def readInFilesToPathList(path):
 def convertMDtoTxt(path):
     files = readInFilesToPathList(path)
     for file in files:
-        shutil.copyfile(pathOfMd + file,pathOfTxt + file.replace('md','txt').replace(' Md','txt'))
+        shutil.copyfile(path + file,pathOfTxt + file.replace('md','txt').replace(' Md','txt'))
 
 def getNameOfFile(file):
     name = file.replace('.txt','')
@@ -57,9 +54,9 @@ def preProcessingCSV(document_topic,fileName):
     topicsOfFile = getSortedTopicList(document_topic,fileName)
     csvFile.append(topicsOfFile)
 
-def writeToCSV():
+def writeToCSV(name):
     pd = pandas.DataFrame(csvFile)
-    pd.to_csv("csv/topics.csv",header=None,index=None)
+    pd.to_csv(name,header=None,index=None)
 
 def preprocessingOfFile(file):
     fileName = getNameOfFile(file)
@@ -89,9 +86,10 @@ def modelCreation(cleanTokenizedCorpus,fileNames):
                         output_topic_keys= 'tutorial_supplementals/mallet_output/topic_keys.txt',
                         output_doc_topics= 'tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
-                        num_iterations=3000)
+                        num_iterations=5000,
+                        num_top_words=1)
 
-    topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt')
+    topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt',num_keys=1)
     document_topics = postprocessing.show_document_topics(topics=topics,
                                                           doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt', num_keys=1)
 
@@ -102,15 +100,37 @@ def generateTopicTable():
     files = readInFilesToPathList(path_to_corpus)
 
     for file in files:
+        deleteAllFilesInDirectory('tutorial_supplementals/mallet_output')
+        print(file)
         cleanTokenizedCorpus, fileName  = preprocessingOfFile(pathOfTxt + file)
-        print(fileName)
         document_topics = modelCreation(cleanTokenizedCorpus,fileName)
         preProcessingCSV(document_topics, fileName)
 
+def deleteAllFilesInDirectory(directory):
+    for the_file in os.listdir(directory):
+        file_path = os.path.join(directory, the_file)
+        try:
+            if os.path.isfile(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+        except Exception as e:
+            print(e)
+
+
 def main():
+    global  pathOfMd
+    global pathOfTxt
+    global path_to_corpus
+
+    # components
+    pathOfMd = 'mdEn/C/'
+    pathOfTxt = 'txt/c/'
+    path_to_corpus = 'txt/c'
     convertMDtoTxt(pathOfMd)
     generateTopicTable()
-    writeToCSV()
+    writeToCSV("csv/componentsTopics.csv")
+
 
 if __name__ == "__main__":
     main()
