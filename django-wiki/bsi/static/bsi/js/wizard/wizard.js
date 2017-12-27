@@ -139,7 +139,14 @@ function presentResults() {
     for(i=0;i<remainingComponents.length;i++) {
         $("#list").append("<li><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
     }
+
     $("#list").append('</ul>');
+
+    $('li a').bind('click',function () {
+        valid = true;
+        console.log('in Bind of a');
+    });
+
     //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
 
@@ -206,6 +213,11 @@ function initWizardsComponents(){
     getDataFromServer();
     setPanel();
     $('a').bind('click',function () {
+        valid = true;
+        console.log('in Bind of a');
+    });
+
+    $('li a').bind('click',function () {
         valid = true;
         console.log('in Bind of a');
     });
