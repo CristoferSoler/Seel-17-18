@@ -1,35 +1,33 @@
 import csv
-
 import itertools
 from collections import Counter
 from operator import itemgetter
 from django.http import HttpResponse
 import json
 from random import shuffle
-from wiki.models import ArticleRevision, URLPath
 
 
-def getPathOfComponent(title):
-    with open('./../programming/bsiCrawler/treeview/pathlist.txt') as f:
-        jsonFile = json.loads(f.read())
-        for el in jsonFile:
-            if(el['name'] in title):
-                return el['path']
 
-        return ''
+def getPathOfComponent(title,pathlist):
+    for el in pathlist:
+        if(el['name'].lower() == title.lower()):
+            return el['path']
+    return ''
 
-def generateDic(list):
+def generateDic(list,pathlist):
     title = list[0]
-    #path = getPathOfComponent(title)
-    componentDic = {'name':title,'path':'path','topics':list[1:]}
+    path = getPathOfComponent(title,pathlist)
+    componentDic = {'name':title,'path':path ,'topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():
     componentsWithTopics = {'components':[]}
     with open('./bsi/static/bsi/csv/topics.csv') as f:
+        pathlist =  open('./../programming/bsiCrawler/treeview/pathlist.txt')
+        jsonFile = json.loads(pathlist.read())
         reader = csv.reader(f)
         for row in reader:
-            dic = generateDic(row)
+            dic = generateDic(row,jsonFile)
             componentsWithTopics['components'].append(dic)
     return componentsWithTopics
 
@@ -79,13 +77,14 @@ def randomizeTopicSerialization(topics):
 
 
 def getSortedTopicList(request  ):
-    components = readAndProcessCSV()
-    frequenceOfTopics = getListOfFrequenceOfTopic(components['components'])
-    jsonFile = { 'sortedTopicList' : frequenceOfTopics }
-    return HttpResponse(json.dumps(jsonFile), content_type='application/json')
+       components = readAndProcessCSV()
+       frequenceOfTopics = getListOfFrequenceOfTopic(components['components'])
+       jsonFile = { 'sortedTopicList' : frequenceOfTopics }
+       return HttpResponse(json.dumps(jsonFile), content_type='application/json')
+
 
 def getComponentsTopics(request):
     components = readAndProcessCSV()
-    #print(components)
+    print(components)
     jsonFile = json.dumps(components)
     return HttpResponse(jsonFile, content_type='application/json')

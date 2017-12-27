@@ -227,7 +227,6 @@ function initWizardsComponents(){
 
 function wireupEvents(){
     if(!valid){
-        console.log('Balc');
         window.onbeforeunload = askWheatherToClose;
     }
 }
