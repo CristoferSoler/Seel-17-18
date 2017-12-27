@@ -1,120 +1,47 @@
-c/APP.1.1 Office Products,office,product,requirement,protection,source,user,app,software,module,test
-c/APP.1.2 Web browser,web,browser,http,malicious,security,password,data,certificate,service,policy
-c/APP.2.1 General Directory Service,directory,service,user,requirement,data,security,configuration,administration,general,lead
-c/APP.2.2 Active Directory,directory,domain,security,account,administrator,service,group,dns,app,trust
-c/APP.3.1 Web applications,application,web,access,user,mechanism,data,protection,requirement,protected,file
-c/APP.3.2 Webserver,server,web,app,content,technical,http,protection,error,service,isb
-c/APP.3.3 Fileserver,server,file,system,data,security,network,memory,app,regularly,user
-c/APP.3.4 Samba,samba,samba,system,vulnerability,requirement,access,server,app,file,user
-c/APP.3.6 DNS server,dns,server,domain,system,request,requirement,app,http,will,standard
-c/APP.4.3 Relational Database Systems,database,data,app,security,management,system,requirement,sql,required,checked
-c/APP.5.1 General Groupware,groupware,user,data,security,service,protection,isb,app,server,policy
-c/APP.5.2 Microsoft Exchange and Outlook,exchange,microsoft,outlook,server,system,app,infrastructure,access,client,migration
-c/DER.1 Detection of safety-relevant events,event,requirement,data,detection,protection,message,incident,requirement,der,management
-c/DER.2.1 Treatment of security incidents,security,incident,der,operation,team,requirement,data,contact,institution,process
-c/DER.2.2 Provision for IT forensics,data,evidence,security,forensic,forensics,incident,provider,carrier,der,original
-c/DER.2.3 Clearance of far-reaching security incidents,system,apt,attack,attacker,der,responsible,cleanup,body,pdf,data
-c/DER.3.1 Audits and revisions,audit,security,der,revision,revision,requirement,team,document,guideline,result
-c/DER.3.2 IS revision for federal authorities,audit,measure,authority,der,result,protection,requirement,risk,federal,reference
-c/DER.4 emergency management,management,process,emergency,bund.de,security,http,emergency,risk,standard,requirement
-c/IND.1 Operating and Control Technology,security,control,network,requirement,access,service,management,interface,protection,office
-c/IND.2.1 General ICS Component,component,control,ind,system,software,industrial,data,component,event,operation
-c/IND.2.2 Programmable Logic Controller (PLC) ,plc,requirement,logic,function,protection,controller,system,administrator,security,device
-c/IND.2.3 Sensors and actuators,sensor,requirement,security,actuator,interface,increased,ind,implemented,protection,device
-c/IND.2.4 Machine,machine,requirement,implemented,area,service,remote,module,manipulation,isb,protection
-c/INF.1 General Building,building,area,protection,inf,requirement,smoke,system,documented,power,regularly
-"c/INF.10 meeting, event and training rooms",training,room,event,example,determined,data,security,meeting,meeting,visitor
-c/INF.2 data center and server room,data,fire,center,protection,building,component,power,room,system,alarm
-c/INF.3 Electrical wiring,cable,installation,electrical,power,cabling,inf,distributor,requirement,din,supply
-c/INF.4 IT cabling,cabling,cable,requirement,network,documentation,development,din,technology,installation,building
-c/INF.7 office workplace,office,data,workplace,inf,requirement,carrier,unauthorized,door,appendix,closed
-c/INF.8 Domestic work place,workplace,office,document,requirement,institution,protection,increased,unauthorized,official,domestic
-c/INF.9 Mobile Workplace,data,mobile,requirement,institution,device,carrier,system,document,workplace,room
-c/ISMS.1 Security Management,security,resource,process,management,employee,ism,officer,bsi,level,responsibility
-c/NET.1.1 network architecture and design,network,requirement,net,security,communication,management,segment,packet,cloud,data
-c/NET.1.2 Network Management,management,network,net,requirement,infrastructure,security,access,logging,solution,administrative
-c/NET.2.1 WLAN operation,wlan,security,access,addition,radio,infrastructure,communication,lan,institution,point
-c/NET.2.2 Wi-Fi usage,wlan,point,security,requirement,access,system,standard,network,bsi,listed
-c/NET.3.1 routers and switches,switch,net,router,network,system,emergency,management,configuration,access,source
-c/NET.3.2 Firewall,firewall,security,network,access,service,attack,net,http,administration,protocol
-c/NET.3.3 VPN,vpn,access,requirement,net,system,user,permission,service,network,data
-c/OPS.1.1.2 Proper IT Administration,system,requirement,administration,access,protection,administrative,resource,institution,measure,network
-c/OPS.1.1.3 Patch and Change Management,change,patch,management,requirement,system,manager,distribution,protection,request,case
-c/OPS.1.1.4 Protection against malicious programs,program,protection,virus,system,data,program,gateway,area,operation,update
-c/OPS.1.1.5 Logging,logging,application,security,requirement,logging,ops,policy,protection,attack,time
-c/OPS.1.1.6 Software tests and releases,software,test,security,requirement,lead,tester,system,documented,http,penetration
-c/OPS.1.2.2 Archiving,archive,archiving,system,access,document,medium,archived,storage,suitable,cryptographic
-c/OPS.1.2.3 Information and media exchange,data,medium,ops,exchange,system,risk,requirement,disk,user,unauthorized
-c/OPS.1.2.4 Telework,teleworking,teleworkers,security,teleworker,ops,requirement,institution,operation,concept,supervisor
-c/OPS.2.1 outsourcing for customers,outsourcing,provider,customer,security,service,data,project,requirement,institution,concept
-c/OPS.2.4 remote maintenance,remote,access,unauthorized,operation,network,requirement,user,data,service,person
-c/OPS.3.1 Outsourcing for service providers,outsourcing,customer,service,security,relationship,concept,requirement,access,personnel,service
-c/ORP.1 organization,system,security,equipment,access,damage,orp,regulation,employee,requirement,task
-c/ORP.2 Personal,employee,requirement,security,area,data,institution,regulation,system,social,abuse
-c/ORP.3 Sensitization and training,security,measure,training,institution,employee,orp,activity,lack,protection,awareness-raising
-c/ORP.4 Identity and Permission Management,authorization,identity,access,orp,management,user,protection,employee,assigned,profile
-c/ORP.5 Compliance Management (Requirements Management) ,compliance,security,requirement,institution,protection,management,employee,area,process,orp
-c/SYS.1.1 General Server,server,data,system,sys,protection,operating,general,installation,administrator,service
-c/SYS.1.2.2 Windows Server 2012,server,sys,window,requirement,service,protection,attacker,loss,secure,microsoft
-c/SYS.1.3 server under Unix,server,system,sys,unix,security,user,file,protection,boot,checked
-c/SYS.1.5 Virtualization,virtual,system,sys,resource,security,requirement,access,snapshot,head,protection
-c/SYS.1.8 Storage Solutions,storage,solution,requirement,client,network,data,device,server,area,configuration
-c/SYS.2.1 General Client,client,data,user,system,access,application,loss,policy,protection,configuration
-c/SYS.2.2.2 Clients under Windows 8.1,security,system,window,microsoft,policy,requirement,version,data,disabled,cloud
-c/SYS.2.2.3 Clients on Windows 10,sys,window,system,data,client,account,application,microsoft,policy,service
-c/SYS.2.3 Clients under Unix,client,software,system,unix,boot,file,linux,sys,application,checked
-c/SYS.3.1 Laptops,laptop,user,sys,access,data,device,institution,regularly,operating,secure
-c/SYS.3.2.1 General Smartphones and Tablets,device,mobile,requirement,system,data,operating,software,institution,general,confidential
-c/SYS.3.2.2 Mobile Device Management (MDM) ,device,mobile,mdm,protection,data,basic,sys,http,regulation,byod
-c/SYS.3.2.3 iOS (for Enterprise) ,device,device,access,user,apple,operating,mdm,http,ios-based,unauthorized
-c/SYS.3.2.4 Android,android,device,access,requirement,google,apps,device,protection,android-based,institution
-c/SYS.3.4 Mobile Disk,data,carrier,mobile,device,system,basic,module,risk,stored,security
-"c/SYS.4.1 printers, copiers and multifunction devices",printer,copier,multifunction,user,sys,job,print,security,protection,time
-c/SYS.4.4 General IoT device,device,network,security,requirement,sys,institution,sensor,policy,protection,documented
-t/G 0.1 fire,damage,fire,improper,improperly,extinguishing,installed,machine,catastrophic,building,center
-t/G 0.10 Failure or malfunction of supply networks,failure,network,supply,building,affect,malfunction,water,operation,power,control
-t/G 0.11 Failure or disruption of service providers,provider,service,problem,failure,external,client,bankruptcy,company,center,bank
-t/G 0.12 Electromagnetic interference,electromagnetic,memory,component,electronic,interference,medium,communication,impair,network,air
-t/G 0.13 Interception of compromising radiation,device,radiation,electromagnetic,radiation,wave,limited,carry,reflected,aggravated,printer
-t/G 0.14 Spying on information (spying) ,attacker,gain,horse,password,trojan,aim,pin,office,shielded,wealth
-t/G 0.15 Listening,risk,intercept,attacker,transmitted,radio,effort,attack,plain,conversation,letter
-"t/G 0.16 Theft of devices, data carriers or documents",call,confidential,stolen,device,data,company,theft,access,system,manipulated
-"t/G 0.17 Loss of equipment, data carriers or documents",example,document,data,result,customer,card,confidential,tram,notified,software
-t/G 0.18 Misplanned planning or missing adjustment,process,processing,required,building,account,example,provide,issue,time,escape
-t/G 0.19 Disclosure of information worthy of protection,confidential,example,data,disclosed,reading,carrier,protection,listening,unauthorized,number
-t/G 0.2 Unfavorable climatic conditions,temperature,condition,high,failure,equipment,unfavorable,device,summer,excessively,example
-t/G 0.20 Information or products from unreliable source,internet,source,incorrect,origin,system,unreliable,software,decision,verified,broadcast
-t/G 0.21 Manipulation of hardware or software,data,software,money,manipulation,carrier,kind,implication,cardholder,damage,larger
-t/G 0.22 Manipulation of information,access,company,manipulation,example,serious,monthly,gained,balance,annual,noticed
-t/G 0.23 Unauthorized intrusion into IT systems,access,unauthorized,system,interface,storage,conceivable,secured,memory,gain,case
-t/G 0.24 Destruction of devices or data carriers,server,computer,power,destruction,reconstructed,hard,data,previous,system,blocked
-t/G 0.25 Failure of devices or systems,system,failure,web,consequence,server,inconsistency,isp-operated,manufacturer,service,longer
-t/G 0.26 Malfunction of devices or systems,result,stored,malfunction,security,device,time,example,sampling,application,released
-t/G 0.27 Resource shortage,resource,service,overloaded,network,time,money,provider,needed,sporadic,spare
-t/G 0.28 Software vulnerabilities or errors,software,vulnerability,browser,example,error,lead,component,attacker,government,client
-t/G 0.29 Violation of laws or regulations,institution,data,law,regulation,security,industry,business,business,proper,german
-t/G 0.3 water,water,frost,system,repair,supply,damage,room,leaking,connection,power
-t/G 0.30 Unauthorized use or administration of devices and systems,system,unauthorized,example,access,administration,mechanism,front,administrator,authentication,building
-t/G 0.31 Incorrect use or administration of devices and systems,system,incorrect,example,visitor,connection,application,equipment,fail,power,inadvertently
-t/G 0.32 Abuse of permissions,access,access,privilege,authorization,application,password,foreign,view,urgently,infrequently
-t/G 0.33 Staff loss,network,system,administrator,staff,loss,institution,data,example,personnel,central
-t/G 0.34 stop,institution,area,attack,center,explosive,data,criminal,politically,considerable,power
-"t/G 0.35 coercion, extortion or corruption",confidential,security,corruption,coercion,blackmail,high-level,example,attack,target,executive
-t/G 0.36 Identity theft,address,theft,identity,register,attempt,service,manipulating,example,existing,fake
-t/G 0.37 Denying actions,denied,message,deny,example,communication,action,repudiation,incurred,order,high
-t/G 0.38 Abuse of personal data,data,example,log,personal,pas,company,collected,control,purpose,access
-t/G 0.39 Malware,program,computer,e-mail,infested,control,html,loss,manipulation,action,continuous
-"t/G 0.4 Contamination, dust, corrosion",corrosion,supply,power,work,eventually,example,failure,processor,device,damage
-t/G 0.40 Denial of Service ,attack,service,order,resource,internet,term,denial,result,numerous,capacity
-t/G 0.41 sabotage,technical,data,manipulation,water,perpetrator,center,component,manipulated,drain,example
-t/G 0.42 Social Engineering,attacker,service,social,fishing,victim,user,allows,building,attack,prosecution
-t/G 0.43 Importing messages,authentication,message,attacker,attack,pretend,authorization,actual,communication,system,the-middle
-t/G 0.44 Unauthorized intrusion into premises,unauthorized,premise,cleverly,perpetrator,damaged,replaced,manipulated,damage,routine,break-in
-t/G 0.45 data loss,data,system,suitable,password,stored,example,online,provider,infected,limited
-t/G 0.46 Integrity loss of sensitive information,integrity,archive,data,manipulate,document,key,proven,bit,decrypted,applies
-t/G 0.47 Adverse effects of IT-based attacks,attack,target,system,infrastructure,object,device,perpetrator,lead,party,it-based
-t/G 0.5 natural catastrophes,data,natural,activity,area,flood,volcanic,supply,high,time,covered
-t/G 0.6 disasters in the area,air,fire,rescue,spread,data,conditioning,supply,happened,hour,center
-t/G 0.7 Major events in the area,data,demonstration,major,center,street,violence,power,led,building,obstacle
-t/G 0.8 Failure or malfunction of the power supply,power,supply,system,disturbance,day,failure,pylon,california,facility,monitoring
-t/G 0.9 Failure or malfunction of communication networks,service,network,communication,example,required,internet,data,risk,transported,lead
+G 0.1 fire,fire,insulation,failure,system,coffee,electrical,improper,building,caused,hydrochloric
+G 0.10 Failure or malfunction of supply networks,network,failure,supply,affect,technology,water,pump,building,fire,drain
+G 0.11 Failure or disruption of service providers,service,company,time,failure,supplier,process,bankruptcy,business,quality,outsourced
+G 0.12 Electromagnetic interference,electromagnetic,interference,component,air,example,radiation,large,device,conditioning,strong
+G 0.13 Interception of compromising radiation,radiation,exposing,device,carry,printer,example,external,accepted,electromagnetic,equipment
+G 0.14 Spying on information (spying) ,attacker,pin,trojan,gain,conversation,well,addition,company,card,visitor
+G 0.15 Listening,unprotected,attacker,conversation,question,text,wep,classic,easily,listening,wlan
+"G 0.16 Theft of devices, data carriers or documents",data,center,theft,confidential,system,press,document,large,addition,access
+"G 0.17 Loss of equipment, data carriers or documents",data,document,equipment,customer,result,confidential,accidentally,paper,tram,update
+G 0.18 Misplanned planning or missing adjustment,process,planning,processing,account,time,required,receiving,process,building,example
+G 0.19 Disclosure of information worthy of protection,data,disclosed,confidential,example,confidentiality,institution,transmission,protection,turn,file
+G 0.2 Unfavorable climatic conditions,temperature,unfavorable,high,lead,failure,fluctuation,equipment,device,magnetic,dust
+G 0.20 Information or products from unreliable source,e-mail,origin,source,system,result,internet,will,check,risk,partner
+G 0.21 Manipulation of hardware or software,data,manipulation,result,manipulating,implication,carrier,abused,application,payment,loss
+G 0.22 Manipulation of information,manipulation,example,access,sheet,incorrect,document,serious,roommate's,result,balance
+G 0.23 Unauthorized intrusion into IT systems,system,interface,data,gain,administrative,component,network,access,corresponding,introduction
+G 0.24 Destruction of devices or data carriers,hard,server,day,short,destruction,carrier,circuit,data,reconstructed,supply
+G 0.25 Failure of devices or systems,system,unavailable,failure,consequence,server,web,file,internet,actual,equipment
+G 0.26 Malfunction of devices or systems,result,system,example,malfunction,analysis,stored,application,statistical,incomplete,dataset
+G 0.27 Resource shortage,network,resource,example,happen,lead,time,controlled,service,overloaded,bankruptcy
+G 0.28 Software vulnerabilities or errors,software,vulnerability,internet,lead,system,application,company,security,creating,today
+G 0.29 Violation of laws or regulations,institution,business,law,security,regulation,serious,data,safety,relationship,german
+G 0.3 water,water,pipe,frost,building,supply,damage,system,risk,result,switched
+G 0.30 Unauthorized use or administration of devices and systems,unauthorized,identification,person,system,device,access,authorization,example,company,access
+G 0.31 Incorrect use or administration of devices and systems,system,connection,incorrect,equipment,power,stumble,security,employee,backup,improper
+G 0.32 Abuse of permissions,access,people,task,foreign,authorization,password,needed,file,user,stored
+G 0.33 Staff loss,data,vacation,network,system,staff,administrator,company,backup,longer,work
+G 0.34 stop,area,institution,attack,explosive,continuing,considerable,center,activity,office,company
+"G 0.35 coercion, extortion or corruption",security,person,coercion,corruption,example,threatening,business,process,thing,fundamentally
+G 0.36 Identity theft,identity,provider,theft,fake,e-mail,attacker,connection,address,example,communication
+G 0.37 Denying actions,received,message,example,production,denied,communication,action,denies,ordered,order
+G 0.38 Abuse of personal data,data,personal,example,access,purpose,log,reception,collected,abuse,sell
+G 0.39 Malware,e-mail,malicious,program,infested,html,virus,software,computer,book,control
+"G 0.4 Contamination, dust, corrosion",device,fan,dust,eventually,led,power,failure,supply,department,drill
+G 0.40 Denial of Service ,service,attack,internet,term,order,site,estonia,result,transmission,distributed
+G 0.41 sabotage,damage,center,business,central,interruption,data,sensitive,perpetrator,manipulation,total
+G 0.42 Social Engineering,social,attacker,password,engineering,user,desired,victim,phishing,authentication,allows
+G 0.43 Importing messages,message,recipient,attacker,authorization,communication,attack,sender,system,actual,purely
+G 0.44 Unauthorized intrusion into premises,break-in,unauthorized,damage,stolen,window,repaired,premise,cleverly,open,pot
+G 0.45 data loss,loss,data,mobile,system,service,device,stored,limited,medium,infected
+G 0.46 Integrity loss of sensitive information,archive,electronic,document,data,integrity,stored,lose,key,manipulate,error
+G 0.47 Adverse effects of IT-based attacks,attack,perpetrator,protection,system,third,intended,trigger,infrastructure,object,iot
+G 0.5 natural catastrophes,natural,example,location,data,disaster,center,will,infrastructure,risk,flood
+G 0.6 disasters in the area,accident,measure,property,data,employee,air,center,rescue,system,monitoring
+G 0.7 Major events in the area,violence,data,event,led,center,major,network,failure,existing,party
+G 0.8 Failure or malfunction of the power supply,power,supply,longer,system,disturbance,operation,failure,day,security,affect
+G 0.9 Failure or malfunction of communication networks,service,communication,example,network,institution,link,data,business,process,retrieval

@@ -15,7 +15,6 @@ pathToStopwordList = 'stopwordlist/en.txt'
 #pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
-csvFile = []
 lemmanizeCorpus = True
 
 def getStopWordList():
@@ -33,6 +32,8 @@ def convertMDtoTxt(path):
 
 def getNameOfFile(file):
     name = file.replace('.txt','')
+    name = name.replace('txt/c/','')
+    name = name.replace('txt/t/', '')
     return name
 
 def getSortedTopicList(topics,fileName):
@@ -43,7 +44,8 @@ def getSortedTopicList(topics,fileName):
         unsortedTopic.append((split[0], float(split[1])))
 
     sortedTopic = sorted(unsortedTopic, key=itemgetter(1), reverse=True)
-    topicNames = [fileName.replace('txt/','')]
+    topicNames = [fileName.replace('(\w+/)', '')]
+
     for topic in sortedTopic:
         topicNames.append(topic[0])
 
@@ -101,8 +103,8 @@ def generateTopicTable():
 
     for file in files:
         deleteAllFilesInDirectory('tutorial_supplementals/mallet_output')
-        print(file)
         cleanTokenizedCorpus, fileName  = preprocessingOfFile(pathOfTxt + file)
+        print(fileName)
         document_topics = modelCreation(cleanTokenizedCorpus,fileName)
         preProcessingCSV(document_topics, fileName)
 
@@ -122,8 +124,10 @@ def main():
     global  pathOfMd
     global pathOfTxt
     global path_to_corpus
+    global csvFile
 
     # components
+    csvFile = []
     pathOfMd = 'mdEn/C/'
     pathOfTxt = 'txt/c/'
     path_to_corpus = 'txt/c'
@@ -132,6 +136,7 @@ def main():
     writeToCSV("csv/componentsTopics.csv")
 
     #threads
+    csvFile = []
     pathOfMd = 'mdEn/T/'
     pathOfTxt = 'txt/t/'
     path_to_corpus = 'txt/t'
