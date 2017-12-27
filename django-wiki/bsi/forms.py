@@ -1,7 +1,7 @@
 from django import forms
 from django.utils.translation import ugettext
 from wiki.core.diff import simple_merge
-from wiki.forms import EditForm
+from wiki.forms import EditForm, SearchForm
 
 
 class UserRegistrationForm(forms.Form):
@@ -90,3 +90,10 @@ class UGAEditForm(EditForm):
                 ugettext('No changes made. Nothing to save.'))
         self.check_spam()
         return cd
+
+class FilterForm(SearchForm):
+    f = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                'class': 'search-query'}),
+        required=True)

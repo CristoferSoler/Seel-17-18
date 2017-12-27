@@ -15,15 +15,15 @@
                             <button type="button" class="btn btn-default dropdown-toggle as-is bs-dropdown-to-select"
                                     data-toggle="dropdown">
                                 <span data-bind="bs-drp-sel-label">All</span>
-                                <input type="hidden" name="selected_value" data-bind="bs-drp-sel-value" value="">
+                                <input type="hidden" name="f" data-bind="bs-drp-sel-value" value="">
                                 <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <ul class="dropdown-menu" role="menu" style="">
                                 <li data-value="1"><a href="#">All</a></li>
-                                <li data-value="C"><a href="#}">componenets</a></li>
-                                <li data-value="G"><a href="#">Threats</a></li>
-                                <li data-value="N"><a href="#">implementation Notes</a></li>
+                                <li data-value="2"><a href="#}">componenets</a></li>
+                                <li data-value="3"><a href="#">Threats</a></li>
+                                <li data-value="4"><a href="#">implementation Notes</a></li>
                                 <li data-value="5"><a href="#">Archive</a></li>
                             </ul>
                         </div>
@@ -31,20 +31,6 @@
 
                 </div>
             </form>
-
-
-
-            <form method="GET">
-                <select id="airline-selected">
-                    <option value="C">Components</option>
-                    <option value="G">Threatss</option>
-                    <option value="N">Implementation Notes</option>
-                </select>
-                <input type="button" value="Update" id="selection-button" method="GET">
-            </form>
-
-
-
 
 
             {% blocktrans with paginator.object_list.count as cnt %}Your search returned
@@ -107,28 +93,6 @@
     </div>
 
     <script>
-
-        $( "#selection-button" ).click(function(event) {
-            event.preventDefault();
-            debugger
-            var airlineSelected = $('#airline-selected').find(":selected").val();
-
-            $.ajax({
-     url: "{% url 'bsifilter' %}",
-     method: 'GET',
-     data : {
-             filter_category: airlineSelected
-     },
-     success: function(data){
-         console.log(data)
-     },
-     error: function(xhr, errmsg, err){
-         console.log("error")
-         console.log(err)
-     }
-});
-        })
-
 
         $(document).ready(function (e) {
             $(document).on('click', '.bs-dropdown-to-select-group .dropdown-menu li', function (event) {
