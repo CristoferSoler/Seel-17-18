@@ -87,7 +87,7 @@ def find_BSI_articles(nodes, type, children, site):
                         if(child.slug == id):
                             node['path'] = site + child.path
                             path = child.path
-                            node['href'] = clean(path)
+                            node['href'] = site + child.path
                     if(not path):
                         print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
 
