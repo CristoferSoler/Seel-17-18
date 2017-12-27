@@ -10,7 +10,7 @@ from random import shuffle
 
 def getPathOfComponent(title,pathlist):
     for el in pathlist:
-        if(el['name'].lower() == title.lower()):
+        if(el['name'].lower() == title.lower() and 'components' in el['path']):
             return el['path']
     return ''
 
