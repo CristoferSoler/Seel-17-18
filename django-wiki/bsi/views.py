@@ -88,36 +88,6 @@ class BSISearchView(SearchView):
                         filtered_result.append(article)
         return filtered_result
 
-    # def get_queryset(self):
-    #     # import pdb
-    #     # pdb.set_trace()
-    #     if not self.filter:
-    #         return models.Article.objects.none().order_by('-current_revision__created')
-    #
-    #     search_result = super(BSISearchView, self).get_queryset()
-    #     filtered_result = []
-    #     if self.filter == '1':
-    #         return search_result
-    #
-    #     for article in search_result:
-    #         url = URLPath.objects.get(article=article)
-    #         if url.parent.parent == Archive.get_or_create_archive_root():
-    #             if self.filter == '5':
-    #                 filtered_result.append(article)
-    #             continue
-    #
-    #         if hasattr(url, 'bsi'):
-    #             if self.filter == '2':
-    #                 if url.bsi.articleType == BSI_Article_type.COMPONENT:
-    #                     filtered_result.append(article)
-    #             elif self.filter == '3':
-    #                 if url.bsi.articleType == BSI_Article_type.THREAT:
-    #                     filtered_result.append(article)
-    #             elif self.filter == '4':
-    #                 if url.articleType == BSI_Article_type.IMPLEMENTATIONNOTES:
-    #                     filtered_result.append(article)
-    #     return filtered_result
-
     def get_context_data(self, **kwargs):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
