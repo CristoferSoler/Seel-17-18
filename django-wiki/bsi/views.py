@@ -110,3 +110,4 @@ def register(request):
 def create(request):
     return render(request, 'bsi/create_article.html')
 
+

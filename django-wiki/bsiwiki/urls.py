@@ -21,6 +21,7 @@ from wiki.urls import get_pattern
 from bsi import views
 
 urlpatterns = [
+    url(r'^_treeview/', include('treeview.urls')),
     url(r'^_wizard/', include('wizard.urls')),
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
