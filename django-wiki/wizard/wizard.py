@@ -10,15 +10,18 @@ from wiki.models import ArticleRevision, URLPath
 
 
 def getPathOfComponent(title):
-    revision = ArticleRevision.objects.filter(title=title)
-    parent = URLPath.objects.get(slug='components')
-    urlpath = URLPath.objects.get(parent=parent, article=revision.article)
-    return urlpath.path
+    with open('./../programming/bsiCrawler/treeview/pathlist.txt') as f:
+        jsonFile = json.loads(f.read())
+        for el in jsonFile:
+            if(el['name'] in title):
+                return el['path']
+
+        return ''
 
 def generateDic(list):
     title = list[0]
     #path = getPathOfComponent(title)
-    componentDic = {'name':title,'path':'http://localhost:8000/bsi/threats/G0.1/','topics':list[1:]}
+    componentDic = {'name':title,'path':'path','topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():
@@ -26,7 +29,8 @@ def readAndProcessCSV():
     with open('./bsi/static/bsi/csv/topics.csv') as f:
         reader = csv.reader(f)
         for row in reader:
-            componentsWithTopics['components'].append(generateDic(row))
+            dic = generateDic(row)
+            componentsWithTopics['components'].append(dic)
     return componentsWithTopics
 
 def getListOfFrequenceOfTopic(components):
@@ -82,5 +86,6 @@ def getSortedTopicList(request  ):
 
 def getComponentsTopics(request):
     components = readAndProcessCSV()
+    #print(components)
     jsonFile = json.dumps(components)
     return HttpResponse(jsonFile, content_type='application/json')
