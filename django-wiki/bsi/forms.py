@@ -31,22 +31,28 @@ class UserRegistrationForm(forms.Form):
         widget=forms.PasswordInput()
     )
 
-class CreateForm(forms.Form, SpamProtectionMixin):
 
+class CreateForm(forms.Form, SpamProtectionMixin):
     def __init__(self, request, urlpath_parent, *args, **kwargs):
         super(CreateForm, self).__init__(*args, **kwargs)
         self.request = request
         self.urlpath_parent = urlpath_parent
+        bsi = URLPath.get_by_path('bsi/')
+        children = bsi.get_children()
+        liste = []
+        for child in children:
+            art = child.get_children()
+            for a in art:
+                liste.append([a.get_absolute_url(), a.get_absolute_url()])
+        self.fields['article'] = forms.MultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            choices=liste,
+            # initial={'choices':list1},
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Associate with a BSI article when creating an article."),
+            required=False)
 
-    bsi = URLPath.get_by_path('bsi/')
-    children = bsi.get_children()
-    liste = []
-
-
-    for child in children:
-        liste.append([child.get_absolute_url(), child.get_absolute_url()])
-
-    title = forms.CharField(label=_('Title'),)
+    title = forms.CharField(label=_('Title'), )
     slug = WikiSlugField(
         label=_('Slug'),
         help_text=_(
@@ -61,16 +67,6 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         label=pgettext_lazy('Revision comment', 'Summary'),
         help_text=_("Write a brief message for the article's history log."),
         required=False)
-
-    list = [('1', 'B.1'), ('2', 'B.2'), ('3', 'B.3')]
-
-    article = forms.MultipleChoiceField(
-        label=pgettext_lazy('Revision comment', 'BSI'),
-        choices=list,
-        widget=forms.CheckboxSelectMultiple,
-        help_text=_("Associate with a BSI article when creating an article."),
-        required=False)
-
 
     def clean_slug(self):
         return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)

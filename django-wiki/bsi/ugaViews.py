@@ -36,6 +36,8 @@ class CreateRoot(CreateRootView):
 
 
 class UGACreate(Create):
+
+
     template_name = 'uga/create_article.html'
     form_class = CreateForm
 
