@@ -6,7 +6,8 @@ from django.http import HttpResponse
 import json
 from random import shuffle
 
-
+pathOfComponentsCSV = './bsi/static/bsi/csv/componentsTopics.csv'
+pathOfThreadsCSV = './bsi/static/bsi/csv/threadsTopics.csv'
 
 def getPathOfElement(title,pathlist,requestParameter):
     checkPath = ''
@@ -101,7 +102,7 @@ def getFileName(request):
     fileName = ''
     requestParameter = dict(request.GET)['element'][0]
     if (requestParameter == 'c'):
-        fileName = './bsi/static/bsi/csv/componentsTopics.csv'
+        fileName = pathOfComponentsCSV
     elif (requestParameter == 't'):
-        fileName = './bsi/static/bsi/csv/threadsTopics.csv'
+        fileName = pathOfThreadsCSV
     return fileName,requestParameter
