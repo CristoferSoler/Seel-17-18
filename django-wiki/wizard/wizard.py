@@ -8,7 +8,7 @@ from random import shuffle
 
 
 
-def getPathOfComponent(title,pathlist):
+def getPathOfElement(title,pathlist):
     for el in pathlist:
         if(el['name'].lower() == title.lower() and 'components' in el['path']):
             return el['path']
@@ -16,26 +16,26 @@ def getPathOfComponent(title,pathlist):
 
 def generateDic(list,pathlist):
     title = list[0]
-    path = getPathOfComponent(title,pathlist)
+    path = getPathOfElement(title,pathlist)
     componentDic = {'name':title,'path':path ,'topics':list[1:]}
     return componentDic
 
 def readAndProcessCSV():
-    componentsWithTopics = {'components':[]}
+    elementWithTopics = {'element':[]}
     with open('./bsi/static/bsi/csv/componentsTopics.csv') as f:
         pathlist =  open('./../programming/bsiCrawler/treeview/pathlist.txt')
         jsonFile = json.loads(pathlist.read())
         reader = csv.reader(f)
         for row in reader:
             dic = generateDic(row,jsonFile)
-            componentsWithTopics['components'].append(dic)
-    return componentsWithTopics
+            elementWithTopics['element'].append(dic)
+    return elementWithTopics
 
-def getListOfFrequenceOfTopic(components):
+def getListOfFrequenceOfTopic(elements):
     topics = []
     listOfAllTopics = []
-    for component in components:
-        listOfAllTopics = itertools.chain(listOfAllTopics, component['topics'])
+    for element in elements:
+        listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
@@ -78,7 +78,7 @@ def randomizeTopicSerialization(topics):
 
 def getSortedTopicList(request  ):
        components = readAndProcessCSV()
-       frequenceOfTopics = getListOfFrequenceOfTopic(components['components'])
+       frequenceOfTopics = getListOfFrequenceOfTopic(components['element'])
        jsonFile = { 'sortedTopicList' : frequenceOfTopics }
        return HttpResponse(json.dumps(jsonFile), content_type='application/json')
 

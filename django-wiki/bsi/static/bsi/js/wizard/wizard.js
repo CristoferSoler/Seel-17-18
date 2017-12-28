@@ -13,7 +13,7 @@ function initWizard() {
         currentTopic = parseInt(localStorage.getItem('currentTopic'));
     }
 
-    var components = JSON.parse(localStorage.getItem('componentsTopic'))['components'];
+    var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
     if(localStorage.getItem('remainingComponents')=== null){
