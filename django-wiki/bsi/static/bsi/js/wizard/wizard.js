@@ -5,49 +5,106 @@ var currentSortedTopic;
 const thresholdTopicNumber = 10;
 var valid = false;
 
-function initWizard() {
-    if(localStorage.getItem('currentTopic')=== null){
-        currentTopic = 0;
-        localStorage.setItem('currentTopic',String(currentTopic));
-    } else{
-        currentTopic = parseInt(localStorage.getItem('currentTopic'));
-    }
+var entryQuestionThread = 'Problem Thread?';
+var entryQuestionComponent = 'Problem Component?';
+var questionThread = 'Problem with ';
+var questionComponent = 'Problem with '
+
+function inilizeData() {
+    getDataFromServer();
 
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
-    if(localStorage.getItem('remainingComponents')=== null){
+    if (localStorage.getItem('remainingComponents') === null) {
         remainingComponents = components.slice();
-        localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents));
-    } else{
+        localStorage.setItem('remainingComponents', JSON.stringify(remainingComponents));
+    } else {
         remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
     }
 
-    if(localStorage.getItem('listOfBack') === null){
+    if (localStorage.getItem('listOfBack') === null) {
         var currentTopicString = String(currentTopic);
         var listOfBack = {};
         listOfBack[currentTopicString] = remainingComponents;
-        localStorage.setItem('listOfBack',JSON.stringify(listOfBack));
+        localStorage.setItem('listOfBack', JSON.stringify(listOfBack));
     }
 
     $("#topic").text(sortedTopics[currentTopic]);
     currentSortedTopic = sortedTopics.slice();
 
-    if(remainingComponents.length  <= thresholdTopicNumber){
+    if (remainingComponents.length <= thresholdTopicNumber) {
         presentResults();
     }
 
-    if(currentTopic === 0){
-         $("#topicBack").addClass('disabled');
+    if (currentTopic === 0) {
+        $("#topicBack").addClass('disabled');
+    }
+}
+
+function initWizard() {
+
+    if(localStorage.getItem('currentTopic')=== null){
+        currentTopic = -2;
+        localStorage.setItem('currentTopic',String(currentTopic));
+    } else{
+        currentTopic = parseInt(localStorage.getItem('currentTopic'));
+    }
+    if(currentTopic < 0){
+        if(currentTopic == -1){
+            $('#question').text(entryQuestionThread);
+            $('#topic').text('');
+        } else{
+            if(currentTopic == - 2){
+                $('#question').text(entryQuestionComponent);
+                $('#topic').text('');
+            }
+        }
+
+    } else {
+        inilizeData();
     }
 }
 
 function yesPress() {
-    checkTopics(true);
+    if(currentTopic < 0){
+        if(currentTopic == -2){
+            currentTopic = 0;
+            localStorage.setItem('currentTopic',String(currentTopic));
+            localStorage.setItem('mode','c');
+            $('#question').text(questionComponent);
+            initWizard()
+        } else {
+            if(currentTopic == -1){
+                currentTopic = 0;
+                localStorage.setItem('currentTopic',String(currentTopic));
+                localStorage.setItem('mode','t');
+                $('#question').text(questionThread);
+                initWizard();
+            }
+        }
+    } else{
+        checkTopics(true);
+    }
 }
 
 function noPress() {
-    checkTopics(false);
+    if(currentTopic < 0){
+        if(currentTopic == -2){
+            currentTopic = currentTopic + 1;
+            localStorage.setItem('currentTopic',String(currentTopic));
+            $('#question').text(entryQuestionThread);
+            $('#topic').text('');
+        } else {
+            if(currentTopic == -1){
+                $('#question').text('Fehler');
+                $('#topic').text('');
+            }
+        }
+    } else {
+        checkTopics(false);
+    }
+
 }
 
 function checkTopicStayInside(yes) {
@@ -229,17 +286,39 @@ function presentResults() {
 }
 
 function getDataFromServer(){
+
+    if(localStorage.getItem('mode') == 'c'){
+        data = {'element':'c'}
+    } else {
+        if(localStorage.getItem('mode')== 't'){
+            data = {'element':'t'}
+        }
+    }
+
     if(localStorage.getItem('componentsTopic') === null){
-        $.getJSON('/_wizard/elementsPlusTopics/',{'element':'c'},function (result) {
-            localStorage.setItem('componentsTopic',JSON.stringify(result));
+        $.ajax({
+            dataType:'json',
+            url:'/_wizard/elementsPlusTopics/',
+            data: data,
+            async: false,
+            success:function (result) {
+                localStorage.setItem('componentsTopic',JSON.stringify(result));
+            }
         });
     }
 
     if(localStorage.getItem('sortedTopics') === null){
-        $.getJSON('/_wizard/sortedTopics/',{'element':'c'},function (result) {
-            localStorage.setItem('sortedTopics',JSON.stringify(result));
+        $.ajax({
+            dataType:'json',
+            url:'/_wizard/sortedTopics/',
+            data: data,
+            async: false,
+            success:function (result) {
+                localStorage.setItem('sortedTopics',JSON.stringify(result));
+            }
         });
     }
+
 }
 
 function safeData() {
@@ -253,7 +332,8 @@ function clearLocalStorage(){
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
     localStorage.removeItem('visible');
-    localStorage.removeItem('listOfBack')
+    localStorage.removeItem('listOfBack');
+    localStorage.removeItem('mode');
 }
 
 function buttonsWizard() {
@@ -296,7 +376,6 @@ function initWizardsComponents(){
     //handle löschend er Wizarddaten
     wireupEvents();
     buttonsWizard();
-    getDataFromServer();
     setPanel();
     $('a').bind('click',function () {
         valid = true;

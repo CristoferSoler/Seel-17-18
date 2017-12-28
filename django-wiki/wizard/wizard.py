@@ -100,6 +100,7 @@ def getElementsTopics(request):
 
 def getFileName(request):
     fileName = ''
+    print(request.GET)
     requestParameter = dict(request.GET)['element'][0]
     if (requestParameter == 'c'):
         fileName = pathOfComponentsCSV
