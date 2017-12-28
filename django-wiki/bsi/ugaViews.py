@@ -25,7 +25,7 @@ def overview_uga(request):
     uga = URLPath.get_by_path('uga/')
     children = UGA.get_active_children()
 
-    return render(request, 'uga/overview_uga.html', {'articles': children})
+    return render(request, 'uga/overview_base.html', {'articles': children})
 
 
 class CreateRoot(CreateRootView):

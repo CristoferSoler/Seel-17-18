@@ -34,7 +34,7 @@ class WikiArticleView(ArticleView):
         slug = urlpath.slug
 
         if path.startswith('uga') and len(path) == 4:
-            self.template_name = "uga/overview_uga.html"
+            self.template_name = "uga/overview_base.html"
             return overview_uga(request)
         elif path.startswith('uga'):
             self.template_name = "uga/view.html"
