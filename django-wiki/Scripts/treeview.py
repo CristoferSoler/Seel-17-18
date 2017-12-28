@@ -11,13 +11,13 @@ django.setup()
 
 
 from wiki.models import URLPath
-from bsi.models.article_extensions import BSI_Article_type
+from bsi.models.article_extensions import BSI_Article_type, BSI
 
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 path_to_treeview = '../../programming/bsiCrawler/treeview/bsiTree.txt'
 path_to_treeview_with_links = '../../programming/bsiCrawler/treeview/bsiTreeLinks.txt'
-
+path_to_pathlist = '../../programming/bsiCrawler/treeview/pathlist.txt'
 
 def addLinksToTreeView():
     print('Loading the tree view file ' + path_to_treeview)
@@ -32,8 +32,10 @@ def addLinksToTreeView():
     if(not parsed):
         raise ValueError('Loaded json file turned up empty. Please check the tree view file.')
 
+    path_list = []
     # site = 'http://' + str(Site.objects.get_current()) + '/'
     site = 'http://localhost:8000/'
+    parent = BSI.get_or_create_bsi_root('')
     for elem in parsed:
         # print json.dumps(elem, indent=4)
         text = elem.get('text')
@@ -56,26 +58,32 @@ def addLinksToTreeView():
             if(bsi_type == BSI_Article_type.COMPONENT):
                 parents = URLPath.objects.filter(slug='components')
             elif(bsi_type == BSI_Article_type.THREAT):
-                parents = URLPath.objects.filter(slug='threats')
+                parents = URLPath.objects.filter(slug='threats', parent=parent)
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
                 parents = URLPath.objects.filter(slug='implementationnotes')
 
             if(parents):
                 parent = parents[0]
                 children = parent.get_children()
-                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children, site)
+                elem['nodes'] = find_BSI_articles(nodes, bsi_type, children, site, path_list)
 
     try:
         file = open(path_to_treeview_with_links, "w")
         file.write(json.dumps(parsed, indent=4))
         file.close()
         print('Successfully wrote the new tree view file to ' + path_to_treeview_with_links)
+
+        file = open(path_to_pathlist, "w")
+        file.write(json.dumps(path_list, indent=4))
+        file.close()
+        print('Successfully wrote the list of paths to ' + path_to_pathlist)
+
     except Exception as e:
         print(e)
         raise IOError('Error while writing to file ' + path_to_treeview_with_links)
 
 
-def find_BSI_articles(nodes, type, children, site):
+def find_BSI_articles(nodes, type, children, site, path_list):
     if(nodes):
         for node in nodes:
             text = node.get('text').lstrip()
@@ -85,13 +93,15 @@ def find_BSI_articles(nodes, type, children, site):
                     path = ''
                     for child in children:
                         if(child.slug == id):
-                            node['path'] = site + child.path
-                            path = child.path
+                            node['text'] = child.article.current_revision.title
                             node['href'] = site + child.path
+                            path = child.path
+                            new_dict = {'name': node.get('text'), 'path': node.get('href')}
+                            path_list.append(new_dict)
                     if(not path):
                         print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
 
-            node = find_BSI_articles(node.get('nodes'), type, children, site)
+            node = find_BSI_articles(node.get('nodes'), type, children, site, path_list)
     return nodes
 
 
