@@ -1,68 +1,20 @@
-{% extends 'bsi/base.html' %}
-{% load bsi_tags i18n %}
-{% block bsi_contents %}
+{% extends 'bsi/article_base.html' %}
 
-    <div class="container" style="margin-top:100px;">
-        <!-- THIS IS NOT NEEDED, THIS IS JUST THE CONTENT OF THE DEMO -->
+{% block contents_article %}
+
         <div class="col-xs-12 col-sm-12 col-lg-12">
-            <ol class="breadcrumb">
-                {% for ancestor in urlpath.cached_ancestors %}
-                    <li>
-                        <a href="{% url 'get_article' path=ancestor.path %}">{{ ancestor.article.current_revision.title|truncatechars:25 }}</a>
-                    </li>
-                {% endfor %}
-                <li class="active">{{ article.current_revision.title|truncatechars:25 }}</li>
-            </ol>
 
-            <ul class="list-inline">
-                <li class="list-inline-item">
-                    <p class="small text-muted">This article was last
-                        modified:{{ article.current_revision.modified }}</p>
-                </li>
                 {% block article_menu %}
                 {% endblock %}
-                <li class="list-inline-item">
-                    {% if article|is_checked %}
-                        <span class="btn btn-success" name="checked">
-                            <span class="fa fa-check-square"></span>
-                            {# todo really ugly, I know. Rima, make it better please #}
-                            {% trans "Checked" %}
-                        </span>
-                    {% endif %}
 
-                </li>
-            </ul>
             <div>
                 {% block wiki_contents_tab %}
                 {% endblock %}
             </div>
 
             <hr>
-            <ul class="list-unstyled">
-                <li>
-                    <a href="#intro">
-                        <span class="fa fa-angle-double-right text-primary"></span>Introduction
-                    </a>
-                </li>
-                <li>
-                    <a href="#getting-started">
-                        <span class="fa fa-angle-double-right text-primary"></span>Getting started
-                    </a>
-                </li>
-                <li>
-                    <a href="#setting-up-our-page">
-                        <span class="fa fa-angle-double-right text-primary"></span>Setting up our page
-                    </a>
-                </li>
-                <li>
-                    <a href="#conclusion">
-                        <span class="fa fa-angle-double-right text-primary"></span>Conclusion
-                    </a>
-                </li>
-            </ul>
 
         </div>
-    </div>
 
     <script type="text/javascript">
         $(function () {

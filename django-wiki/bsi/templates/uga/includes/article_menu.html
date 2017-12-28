@@ -1,14 +1,38 @@
 {% load wiki_tags bsi_tags %}
+{% load bsi_tags i18n %}
 
-{% if article|can_write:user and not article.current_revision.locked %}
-    <li class="list-inline-item">
-        <a href="{% url 'edit' path=urlpath.path %}">Edit</a>
-    </li>
-{% endif %}
+<div class="row">
+		<div class="col-md-12">
+            <h2>{{ article.current_revision.title}}
 
-{% if not user.is_anonymous %}
-    <li class="list-inline-item">
-        <a href="">Changes</a>
-    </li>
-{% endif %}
+        	   <span class="pull-right">
+                   {% if article|is_checked %}
+                        <a href="#" class="btn btn-success">
+                        <span class="glyphicon glyphicon-checked"></span> Checked </a>
+                         {% trans "Checked" %}
+                        {% else %}
+                       <a href="#" class="btn btn-warning">
+                        <span class="glyphicon glyphicon-unchecked"></span>
+                        Unchecked
+                   {% endif %}
+                        </a>
+                   {% if not user.is_anonymous %}
+                     <a href="#" class="btn btn btn-primary">
+                        <span class="glyphicon glyphicon-time"></span> Changes
+                   {% endif %}
+                     </a>
+
+                 {% if article|can_write:user and not article.current_revision.locked %}
+                    <a href="{% url 'edit' path=urlpath.path %}" class="btn btn btn-primary">
+                    <span class="glyphicon glyphicon-edit"></span> Edit
+                      {% endif %}
+                   </a>
+                </span>
+    		  </h2>
+            <p class="small text-muted">This article was last
+          modified:{{ article.current_revision.modified }}</p>
+
+		</div>
+	</div>
+<hr>
 
