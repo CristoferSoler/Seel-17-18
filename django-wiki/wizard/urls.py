@@ -1,7 +1,7 @@
 from django.conf.urls import url
-from .wizard import getSortedTopicList , getComponentsTopics
+from .wizard import getSortedTopicList , getElementsTopics
 
 urlpatterns = [
         url(r'^sortedTopics/$', getSortedTopicList),
-        url(r'^componentsPlusTopics/$', getComponentsTopics),
+        url(r'^elementsPlusTopics/$', getElementsTopics),
         ]

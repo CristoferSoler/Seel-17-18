@@ -230,13 +230,13 @@ function presentResults() {
 
 function getDataFromServer(){
     if(localStorage.getItem('componentsTopic') === null){
-        $.getJSON('/_wizard/componentsPlusTopics/',function (result) {
+        $.getJSON('/_wizard/elementsPlusTopics/',{'element':'c'},function (result) {
             localStorage.setItem('componentsTopic',JSON.stringify(result));
         });
     }
 
     if(localStorage.getItem('sortedTopics') === null){
-        $.getJSON('/_wizard/sortedTopics/',function (result) {
+        $.getJSON('/_wizard/sortedTopics/',{'element':'c'},function (result) {
             localStorage.setItem('sortedTopics',JSON.stringify(result));
         });
     }

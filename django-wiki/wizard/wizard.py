@@ -8,26 +8,32 @@ from random import shuffle
 
 
 
-def getPathOfElement(title,pathlist):
+def getPathOfElement(title,pathlist,requestParameter):
+    checkPath = ''
+    if(requestParameter == 'c'):
+        checkPath = 'components'
+    elif(requestParameter == 't'):
+        checkPath = 'threats'
+
     for el in pathlist:
-        if(el['name'].lower() == title.lower() and 'components' in el['path']):
+        if(el['name'].lower() == title.lower() and checkPath in el['path']):
             return el['path']
     return ''
 
-def generateDic(list,pathlist):
+def generateDic(list,pathlist,requestParameter):
     title = list[0]
-    path = getPathOfElement(title,pathlist)
+    path = getPathOfElement(title,pathlist,requestParameter)
     componentDic = {'name':title,'path':path ,'topics':list[1:]}
     return componentDic
 
-def readAndProcessCSV():
+def readAndProcessCSV(fileName, requestParameter):
     elementWithTopics = {'element':[]}
-    with open('./bsi/static/bsi/csv/componentsTopics.csv') as f:
+    with open(fileName) as f:
         pathlist =  open('./../programming/bsiCrawler/treeview/pathlist.txt')
         jsonFile = json.loads(pathlist.read())
         reader = csv.reader(f)
         for row in reader:
-            dic = generateDic(row,jsonFile)
+            dic = generateDic(row,jsonFile,requestParameter)
             elementWithTopics['element'].append(dic)
     return elementWithTopics
 
@@ -76,15 +82,26 @@ def randomizeTopicSerialization(topics):
     return randomSerializationTopics
 
 
-def getSortedTopicList(request  ):
-       components = readAndProcessCSV()
+def getSortedTopicList(request):
+       fileName, requestParameter = getFileName(request)
+       components = readAndProcessCSV(fileName, requestParameter)
        frequenceOfTopics = getListOfFrequenceOfTopic(components['element'])
        jsonFile = { 'sortedTopicList' : frequenceOfTopics }
        return HttpResponse(json.dumps(jsonFile), content_type='application/json')
 
 
-def getComponentsTopics(request):
-    components = readAndProcessCSV()
-    print(components)
+def getElementsTopics(request):
+    fileName, requestParameter = getFileName(request)
+    components = readAndProcessCSV(fileName,requestParameter)
     jsonFile = json.dumps(components)
     return HttpResponse(jsonFile, content_type='application/json')
+
+
+def getFileName(request):
+    fileName = ''
+    requestParameter = dict(request.GET)['element'][0]
+    if (requestParameter == 'c'):
+        fileName = './bsi/static/bsi/csv/componentsTopics.csv'
+    elif (requestParameter == 't'):
+        fileName = './bsi/static/bsi/csv/threadsTopics.csv'
+    return fileName,requestParameter
