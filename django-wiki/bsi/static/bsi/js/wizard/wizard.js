@@ -67,7 +67,7 @@ function checkTopicStayInside(yes) {
     })
 }
 
-function checkExistsThereATopicAfterGoBackButton(yes,topicElements,nextTopic) {
+function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goForward) {
     var currentTopicString = currentSortedTopic[nextTopic];
     topicElements.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
@@ -83,46 +83,28 @@ function checkExistsThereATopicAfterGoBackButton(yes,topicElements,nextTopic) {
         }
     })
 
-    if(topicElements.length >= 1 && yes){
-        $('#yesButton').removeClass('disabled');
-    }
-
-    if(topicElements.length >= 1 && !yes){
-        $('#noButton').removeClass('disabled');
-    }
-
-    if(!$('#yesButton').hasClass('disabled') || !$('#noButton').hasClass('disabled')){
-         $('#dontKnowButton').removeClass('disabled');
-    }
-}
-
-function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic) {
-    var currentTopicString = currentSortedTopic[nextTopic];
-    topicElements.forEach(function (element) {
-        var check = element['topics'].includes(currentTopicString)
-        if (yes) {
-            check = !check;
+    if(goForward){
+        if(topicElements.length < 1 && yes){
+            $('#yesButton').addClass('disabled');
         }
-
-        if (check) {
-            var index = topicElements.indexOf(element)
-            if (index > -1) {
-                topicElements.splice(index, 1);
-            }
+        if(topicElements.length < 1 && !yes){
+            $('#noButton').addClass('disabled');
         }
-    })
-
-    if(topicElements.length < 1 && yes){
-        $('#yesButton').addClass('disabled');
+        if($('#yesButton').hasClass('disabled')&& $('#noButton').hasClass('disabled')){
+             $('#dontKnowButton').addClass('disabled');
+        }
+    } else{
+        if(topicElements.length >= 1 && yes){
+            $('#yesButton').removeClass('disabled');
+        }
+        if(topicElements.length >= 1 && !yes){
+            $('#noButton').removeClass('disabled');
+        }
+        if(!$('#yesButton').hasClass('disabled') || !$('#noButton').hasClass('disabled')){
+             $('#dontKnowButton').removeClass('disabled');
+        }
     }
 
-    if(topicElements.length < 1 && !yes){
-        $('#noButton').addClass('disabled');
-    }
-
-    if($('#yesButton').hasClass('disabled')&&$('#noButton').hasClass('disabled')){
-         $('#dontKnowButton').addClass('disabled');
-    }
 
 }
 
@@ -136,8 +118,8 @@ function checkTopics(yes) {
 
     currentTopic = currentTopic + 1;
 
-    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic);
-    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic);
+    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
+    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic,true);
 
     addGoBackListTopicList();
     checkPresentResults();
@@ -156,9 +138,19 @@ function checkPresentResults() {
 
 
 function dontknowPress() {
+    if($("#topicBack").hasClass('disabled')){
+        $("#topicBack").removeClass('disabled');
+    }
+
     currentTopic = currentTopic + 1;
     addGoBackListTopicList();
     $("#topic").text(currentSortedTopic[currentTopic]);
+
+    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
+    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),true;
+
+    addGoBackListTopicList()
+
     safeData();
 }
 
@@ -188,14 +180,17 @@ function restart(){
     if($('#dontKnowButton').hasClass('disabled')) {
         $('#dontKnowButton').removeClass('disabled');
     }
+    if($('#topicBack').hasClass('disabled')) {
+        $('#topicBack').removeClass('disabled');
+    }
 
     initWizard();
 }
 
 function checkEnableButtons () {
     if(remainingComponents.length >= 1){
-        checkExistsThereATopicAfterGoBackButton(true,remainingComponents.slice(),currentTopic);
-        checkExistsThereATopicAfterGoBackButton(false,remainingComponents.slice(),currentTopic);
+        checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,false);
+        checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),false;
     }
 }
 
@@ -289,8 +284,10 @@ function buttonsWizard() {
     })
 
     $('#topicBack').on('click', function (e) {
-        topicBack();
-         valid = false;
+        if(!($('#topicBack').hasClass('disabled'))){
+            topicBack();
+            valid = false;
+        }
     })
 }
 
