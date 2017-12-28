@@ -50,27 +50,94 @@ function noPress() {
     checkTopics(false);
 }
 
-function checkTopics(yes) {
-
-    if($("#topicBack").hasClass('disabled')){
-        $("#topicBack").removeClass('disabled');
-    }
-
+function checkTopicStayInside(yes) {
     var currentTopicString = currentSortedTopic[currentTopic];
     remainingComponents.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
-        if(yes){
-          check= !check;
+        if (yes) {
+            check = !check;
         }
 
-        if(check){
+        if (check) {
             var index = remainingComponents.indexOf(element)
             if (index > -1) {
                 remainingComponents.splice(index, 1);
             }
         }
     })
+}
+
+function checkExistsThereATopicAfterGoBackButton(yes,topicElements,nextTopic) {
+    var currentTopicString = currentSortedTopic[nextTopic];
+    topicElements.forEach(function (element) {
+        var check = element['topics'].includes(currentTopicString)
+        if (yes) {
+            check = !check;
+        }
+
+        if (check) {
+            var index = topicElements.indexOf(element)
+            if (index > -1) {
+                topicElements.splice(index, 1);
+            }
+        }
+    })
+
+    if(topicElements.length >= 1 && yes){
+        $('#yesButton').removeClass('disabled');
+    }
+
+    if(topicElements.length >= 1 && !yes){
+        $('#noButton').removeClass('disabled');
+    }
+
+    if(!$('#yesButton').hasClass('disabled') || !$('#noButton').hasClass('disabled')){
+         $('#dontKnowButton').removeClass('disabled');
+    }
+}
+
+function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic) {
+    var currentTopicString = currentSortedTopic[nextTopic];
+    topicElements.forEach(function (element) {
+        var check = element['topics'].includes(currentTopicString)
+        if (yes) {
+            check = !check;
+        }
+
+        if (check) {
+            var index = topicElements.indexOf(element)
+            if (index > -1) {
+                topicElements.splice(index, 1);
+            }
+        }
+    })
+
+    if(topicElements.length < 1 && yes){
+        $('#yesButton').addClass('disabled');
+    }
+
+    if(topicElements.length < 1 && !yes){
+        $('#noButton').addClass('disabled');
+    }
+
+    if($('#yesButton').hasClass('disabled')&&$('#noButton').hasClass('disabled')){
+         $('#dontKnowButton').addClass('disabled');
+    }
+
+}
+
+function checkTopics(yes) {
+
+    if($("#topicBack").hasClass('disabled')){
+        $("#topicBack").removeClass('disabled');
+    }
+
+    checkTopicStayInside(yes);
+
     currentTopic = currentTopic + 1;
+
+    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic);
+    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic);
 
     addGoBackListTopicList();
     checkPresentResults();
@@ -111,7 +178,25 @@ function restart(){
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('listOfBack');
     $("#list").empty();
+
+    if($('#yesButton').hasClass('disabled')) {
+        $('#yesButton').removeClass('disabled');
+    }
+    if($('#noButton').hasClass('disabled')) {
+        $('#noButton').removeClass('disabled');
+    }
+    if($('#dontKnowButton').hasClass('disabled')) {
+        $('#dontKnowButton').removeClass('disabled');
+    }
+
     initWizard();
+}
+
+function checkEnableButtons () {
+    if(remainingComponents.length >= 1){
+        checkExistsThereATopicAfterGoBackButton(true,remainingComponents.slice(),currentTopic);
+        checkExistsThereATopicAfterGoBackButton(false,remainingComponents.slice(),currentTopic);
+    }
 }
 
 function topicBack() {
@@ -120,13 +205,11 @@ function topicBack() {
         if(currentTopic === 0){
             $("#topicBack").addClass('disabled');
         }
-        console.log(currentTopic);
         var currentTopicString = String(currentTopic);
-        console.log(currentTopicString);
         var listOfBack = JSON.parse(localStorage.getItem('listOfBack'));
         remainingComponents = listOfBack[currentTopicString];
-        console.log(remainingComponents);
         checkPresentResults();
+        checkEnableButtons();
     }
 }
 
@@ -144,7 +227,7 @@ function presentResults() {
 
     $('li a').bind('click',function () {
         valid = true;
-        console.log('in Bind of a');
+        console.log('in Bind of test');
     });
 
     //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
@@ -180,18 +263,24 @@ function clearLocalStorage(){
 
 function buttonsWizard() {
     $('#yesButton').on('click', function (e) {
-        yesPress();
-        valid = false;
+        if(!($('#yesButton').hasClass('disabled'))){
+            yesPress();
+            valid = false;
+        }
     })
 
     $('#noButton').on('click', function (e) {
-        noPress();
-         valid = false;
+        if(!($('#noButton').hasClass('disabled'))) {
+            noPress();
+            valid = false;
+        }
     })
 
     $('#dontKnowButton').on('click', function (e) {
-        dontknowPress();
-         valid = false;
+        if(!($('#dontKnowButton').hasClass('disabled'))){
+            dontknowPress();
+            valid = false;
+        }
     })
 
     $('#restart').on('click', function (e) {
@@ -214,12 +303,12 @@ function initWizardsComponents(){
     setPanel();
     $('a').bind('click',function () {
         valid = true;
-        console.log('in Bind of a');
+        console.log('in Bind of test');
     });
 
     $('li a').bind('click',function () {
         valid = true;
-        console.log('in Bind of a');
+        console.log('in Bind of test');
     });
 
     $('#opener').on('click', function() {
