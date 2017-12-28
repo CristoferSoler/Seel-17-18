@@ -32,6 +32,7 @@ class UGA(models.Model):
             raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
         uga.save()
+        return url
 
     @classmethod
     def create_by_request(cls, request, article, parent, slug, title, content, summary):
@@ -42,6 +43,7 @@ class UGA(models.Model):
             raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
         uga.save()
+        return url
 
     def add_link_to_bsi(self, bsi):
         bsi.references.add(self)

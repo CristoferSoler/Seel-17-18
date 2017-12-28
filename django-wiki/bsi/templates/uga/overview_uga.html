@@ -1,7 +1,7 @@
 {% extends 'uga/overview_base.html' %}
 {% block tbody_overview %}
     <tbody>
-
+	{% for article in articles %}
                 <tr>
                     <td class="col-xs-6"><a
                             href="{% url 'get_article' path=article.path %}">{{ article.article.current_revision.title }}</a>
@@ -9,7 +9,7 @@
                     <td class="col-xs-3">{{ article.article.owner }}</td>
                     <td class="col-xs-3">{{ article.article.created }}</td>
                 </tr>
-
+	{% endfor %}
      </tbody>
 
 {% endblock %}

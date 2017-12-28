@@ -16,13 +16,13 @@
 
         <div class="container margin-after-nav">
          <div class="jumbotron-margin">
-             {% if urlpath.slug !=  'arhive' %}
-             <h1 >User Generated Articles</h1>
+             {% if articles.0.parent.slug ==  'uga' %}
+             <h1 >User Generated Articles Overview</h1>
                {% else %}
                  <h1 >Archive</h1>
              {% endif %}
          <div class="jumbotron">
-          {% if urlpath.slug !=  'archive' %}
+          {% if articles.0.parent.slug ==  'uga' %}
                   <p class="text-center" style="font-size: 15px">This section was created for publications of articles
                     about the topics of the BSI. There is the opportunity
                     to link the articles to the Elementary Hazards, Implementation Notes, and Components. This is only possible if the
@@ -39,7 +39,7 @@
                     {% endif %}
                 </div>
                {% else %}
-                    <p>Archive list</p>
+                    <p>Archive List</p>
          {% endif %}
 
           <table class="table table-striped"
