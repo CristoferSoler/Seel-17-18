@@ -22,7 +22,7 @@ def generateDic(list,pathlist):
 
 def readAndProcessCSV():
     componentsWithTopics = {'components':[]}
-    with open('./bsi/static/bsi/csv/topics.csv') as f:
+    with open('./bsi/static/bsi/csv/componentsTopics.csv') as f:
         pathlist =  open('./../programming/bsiCrawler/treeview/pathlist.txt')
         jsonFile = json.loads(pathlist.read())
         reader = csv.reader(f)
