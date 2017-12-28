@@ -13,6 +13,7 @@ from django.utils.translation import ugettext
 from wiki.core.diff import simple_merge
 from wiki.forms import EditForm
 
+
 class UserRegistrationForm(forms.Form):
     username = forms.CharField(
         required=True,
@@ -76,10 +77,11 @@ class CreateForm(forms.Form, SpamProtectionMixin):
         self.check_spam()
         return self.cleaned_data
 
+
 class UGAEditForm(EditForm):
     checked = forms.BooleanField(label="Reviewed", required=False)
 
-    def _init_(self, request, current_revision, checked, *args, **kwargs):
+    def __init__(self, request, current_revision, checked, *args, **kwargs):
 
         self.request = request
         self.no_clean = kwargs.pop('no_clean', False)
@@ -123,7 +125,7 @@ class UGAEditForm(EditForm):
 
             kwargs['initial'] = initial
 
-        super(EditForm, self)._init_(*args, **kwargs)
+        super(EditForm, self).__init__(*args, **kwargs)
 
     def clean(self):
         """Validates form data by checking for the following
@@ -144,4 +146,3 @@ class UGAEditForm(EditForm):
                 ugettext('No changes made. Nothing to save.'))
         self.check_spam()
         return cd
-

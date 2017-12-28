@@ -10,7 +10,7 @@ from wiki.decorators import get_article
 from wiki.models import URLPath, ArticleRevision
 from wiki.views.article import Create
 from wiki.views.article import CreateRootView
-from wiki.views.article import Edit, Delete
+from wiki.views.article import Edit, Delete, History
 from wiki import forms as wiki_forms
 from .forms import CreateForm
 
@@ -36,8 +36,6 @@ class CreateRoot(CreateRootView):
 
 
 class UGACreate(Create):
-
-
     template_name = 'uga/create_article.html'
     form_class = CreateForm
 
@@ -154,3 +152,11 @@ class UGDeleteView(Delete):
     def form_valid(self, form):
         form.cleaned_data['purge'] = True
         return super(UGDeleteView, self).form_valid(form)
+
+
+class UGHistoryView(History):
+   template_name = "uga/history.html"
+
+   @method_decorator(get_article(can_read=True))
+   def dispatch(self, request, article, *args, **kwargs):
+       return super(History, self).dispatch(request, article, *args, **kwargs)
