@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django_nyt',
     'mptt',
     'sekizai',
-    'markdown',
     'sorl.thumbnail',
     'wiki',
     'wiki.plugins.attachments',
@@ -52,6 +51,7 @@ INSTALLED_APPS = [
     'wiki.plugins.links',
     'bsi',
     'archive',
+    'treeview'
 ]
 
 MIDDLEWARE = [

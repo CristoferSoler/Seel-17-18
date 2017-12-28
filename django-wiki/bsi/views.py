@@ -10,16 +10,15 @@ from wiki.decorators import get_article
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
+from .models.article_extensions import BSI
 
-from django.http import JsonResponse
-
+import pdb
 import json
 import os
-import sys
-sys.path.append("../../programming/bsiCrawler/treeview")
+
 
 from bsi.ugaViews import overview_uga
-
+from bsi.models import BSI_Article_type
 
 class WikiArticleView(ArticleView):
 
@@ -69,6 +68,23 @@ class BSISearchView(SearchView):
         return super(BSISearchView, self).get_context_data(**kwargs)
 
 
+class BSIFilterView(SearchView):
+    template_name = "bsi/searchresult.html"
+
+    def get_queryset(self):
+            pdb.set_trace()
+            filter_category = self.request.GET.get("filter_category")
+            article_urlpaths = []
+            if(filter_category == 'G'):
+                cat = BSI_Article_type.THREAT
+            articles = BSI.objects.filter(articleType=cat)
+            if not articles: return
+            if articles:
+                for article in articles:
+                    article_urlpaths.append(article.url.article)
+            # return empty if nothing is found
+            return article_urlpaths
+
 def index(request):
     all_articles = Article.objects.all()
 
@@ -111,6 +127,5 @@ def register(request):
 
 def create(request):
     return render(request, 'bsi/create_article.html')
-
 
 

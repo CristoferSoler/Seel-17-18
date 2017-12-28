@@ -53,12 +53,8 @@
                 <li class="">
                     <a href="{% url 'archive_dir' path='' %}">Archive</a>
                 </li>
-                <li class="">
-                    <a href="#">Tutorials</a>
-                </li>
 
             </ul>
-
 
             <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                 <div class="form-group inner-addon right-addon">
@@ -116,8 +112,9 @@
 
 {% endblock %}
 
+<a href="#" id="scroll" style="display: none;">
 
-<footer class="bg-info">
+<footer class="Footer">
     <div class="container">
         <div class="row">
             <ul class="menu list-inline">
@@ -150,6 +147,20 @@
 </html>
 
 <script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('#scroll').fadeIn();
+        } else {
+            $('#scroll').fadeOut();
+        }
+    });
+    $('#scroll').click(function(){
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+    });
+});
+
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
