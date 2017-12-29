@@ -6,17 +6,17 @@ from django.contrib import messages
 from django.shortcuts import redirect, render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
+from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
 from wiki.decorators import get_article
-from wiki.models import URLPath, ArticleRevision
-from wiki.views.article import Create
+from wiki.models import URLPath, ArticleRevision, reverse
+from wiki.views.article import Create, ChangeRevisionView
 from wiki.views.article import CreateRootView
-from wiki.views.article import Edit, Delete, History
-from wiki import forms as wiki_forms
-from .forms import CreateForm
+from wiki.views.article import Edit, Delete, History, Preview
 
 from bsi import forms
+from .forms import CreateForm
 
 log = logging.getLogger(__name__)
 
@@ -165,7 +165,6 @@ class UGHistoryView(History):
 
 
 def diff(request, revision_id, other_revision_id=None):
-
     revision = get_object_or_404(ArticleRevision, id=revision_id)
 
     if not other_revision_id:
@@ -185,3 +184,32 @@ def diff(request, revision_id, other_revision_id=None):
     return object_to_json_response(
         dict(diff=list(diff), other_changes=other_changes)
     )
+
+
+class UGPreviewView(Preview):
+    template_name = "uga/preview_inline.html"
+
+
+class UGChangeRevisionView(ChangeRevisionView):
+    permanent = False
+
+    # @method_decorator(get_article(can_write=True, not_locked=True))
+    # def dispatch(self, request, article, *args, **kwargs):
+    #     self.article = article
+    #     self.urlpath = kwargs.pop('kwargs', False)
+    #     self.change_revision()
+    #
+    #     return super(
+    #         ChangeRevisionView,
+    #         self).dispatch(
+    #         request,
+    #         *args,
+    #         **kwargs)
+
+    def get_redirect_url(self, **kwargs):
+        # if self.urlpath:
+        #     return reverse("history", kwargs={'path': self.urlpath.path})
+        # else:
+        #     return reverse('history', kwargs={'article_id': self.article.id})
+
+        return reverse("get_article", kwargs={'path': kwargs.get('urlpath')})
