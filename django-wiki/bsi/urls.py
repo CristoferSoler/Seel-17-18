@@ -2,10 +2,12 @@ from django.conf.urls import url
 from wiki.views import article
 
 from . import views
-from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView
+from . import ugaViews
+from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistoryView
 from .views import BSISearchView, WikiArticleView
 
 article_create_view_class = article.Create
+# article_diff_view = staticmethod(ugaViews.diff)
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
@@ -22,6 +24,8 @@ urlpatterns = [
     # url(r'^(?P<path>.+/|)$', WikiArticleView.as_view(), name='display_uga'),
 
     url(r'^(?P<path>.+/|)edit/$', UGEditView.as_view(), name='edit'),
+    url(r'^(?P<path>.+/|)history/$', UGHistoryView.as_view(), name='history'),
+    url(r'^_revision/diff/(?P<revision_id>[0-9]+)/$', ugaViews.diff, name='diff'),
     url(r'^(?P<path>.+/|)delete/$', UGDeleteView.as_view(), name='delete'),
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
     url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),

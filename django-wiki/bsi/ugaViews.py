@@ -1,11 +1,13 @@
 # from bsi.decorators import get_article
+import difflib
 import logging
 
 from django.contrib import messages
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
 from wiki.core.plugins import registry as plugin_registry
+from wiki.core.utils import object_to_json_response
 from wiki.decorators import get_article
 from wiki.models import URLPath, ArticleRevision
 from wiki.views.article import Create
@@ -155,8 +157,31 @@ class UGDeleteView(Delete):
 
 
 class UGHistoryView(History):
-   template_name = "uga/history.html"
+    template_name = "uga/history.html"
 
-   @method_decorator(get_article(can_read=True))
-   def dispatch(self, request, article, *args, **kwargs):
-       return super(History, self).dispatch(request, article, *args, **kwargs)
+    @method_decorator(get_article(can_read=True))
+    def dispatch(self, request, article, *args, **kwargs):
+        return super(History, self).dispatch(request, article, *args, **kwargs)
+
+
+def diff(request, revision_id, other_revision_id=None):
+
+    revision = get_object_or_404(ArticleRevision, id=revision_id)
+
+    if not other_revision_id:
+        other_revision = revision.previous_revision
+
+    baseText = other_revision.content if other_revision else ""
+    newText = revision.content
+
+    differ = difflib.Differ(charjunk=difflib.IS_CHARACTER_JUNK)
+    diff = differ.compare(baseText.splitlines(1), newText.splitlines(1))
+
+    other_changes = []
+
+    if not other_revision or other_revision.title != revision.title:
+        other_changes.append((_('New title'), revision.title))
+
+    return object_to_json_response(
+        dict(diff=list(diff), other_changes=other_changes)
+    )

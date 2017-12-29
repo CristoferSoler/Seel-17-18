@@ -17,7 +17,7 @@
                    {% endif %}
                         </a>
                    {% if not user.is_anonymous %}
-                     <a href="#" class="btn btn btn-primary">
+                     <a href="{% url 'history' path=urlpath.path %}" class="btn btn btn-primary">
                         <span class="glyphicon glyphicon-time"></span> Changes
                    {% endif %}
                      </a>

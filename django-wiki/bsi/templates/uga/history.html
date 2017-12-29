@@ -1,4 +1,4 @@
-{% extends "wiki/article.html" %}
+{% extends "uga/article.html" %}
 {% load wiki_tags i18n sekizai_tags static %}
 
 
@@ -9,8 +9,8 @@
 {% include "wiki/includes/modals.html" %}
 
 {% addtoblock "js" %}
-<script type="text/javascript" src="{% static "wiki/js/diffview.js" %}"></script>
-<script type="text/javascript" src="{% static "wiki/js/diff.js" %}"></script>
+<script type="text/javascript" src="{% static "bsi/js/diffview.js" %}"></script>
+<script type="text/javascript" src="{% static "bsi/js/diff.js" %}"></script>
 {% endaddtoblock %}
 {% addtoblock "css" %}
 <style type="text/css">
