@@ -2,7 +2,7 @@ from django import forms
 from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext_lazy as _
 from wiki.editors import getEditor
-from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField
+from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField, SearchForm
 from wiki import models
 from wiki.models import URLPath
 from django.utils.translation import ugettext
@@ -146,3 +146,10 @@ class UGAEditForm(EditForm):
                 ugettext('No changes made. Nothing to save.'))
         self.check_spam()
         return cd
+
+class FilterForm(SearchForm):
+    f = forms.CharField(
+    widget=forms.TextInput(
+        attrs={
+            'class': 'search-query'}),
+        required=True)
