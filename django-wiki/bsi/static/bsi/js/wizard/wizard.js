@@ -36,6 +36,16 @@ function inilizeData() {
     if (remainingComponents.length <= thresholdTopicNumber) {
         presentResults();
     }
+    var mode = localStorage.getItem('mode');
+    if(mode !== null){
+        if(mode == 't'){
+            $('#question').text(questionThread);
+        } else {
+            if(mode == 'c'){
+                $('#question').text(questionComponent);
+            }
+        }
+    }
 
     if (currentTopic === 0) {
         $("#topicBack").addClass('disabled');
@@ -73,6 +83,7 @@ function yesPress() {
             localStorage.setItem('currentTopic',String(currentTopic));
             localStorage.setItem('mode','c');
             $('#question').text(questionComponent);
+            $('#dontKnowButton').removeClass('disabled');
             initWizard()
         } else {
             if(currentTopic == -1){
@@ -95,6 +106,7 @@ function noPress() {
             localStorage.setItem('currentTopic',String(currentTopic));
             $('#question').text(entryQuestionThread);
             $('#topic').text('');
+            $('#dontKnowButton').removeClass('disabled');
         } else {
             if(currentTopic == -1){
                 $('#question').text('Fehler');
