@@ -1,9 +1,10 @@
 from django.conf.urls import url
 from wiki.views import article
 
-from . import views
 from . import ugaViews
-from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistoryView
+from . import views
+from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistoryView, UGPreviewView, \
+    UGChangeRevisionView
 from .views import BSISearchView, WikiArticleView
 
 article_create_view_class = article.Create
@@ -25,7 +26,12 @@ urlpatterns = [
 
     url(r'^(?P<path>.+/|)edit/$', UGEditView.as_view(), name='edit'),
     url(r'^(?P<path>.+/|)history/$', UGHistoryView.as_view(), name='history'),
+    # url(r'^(?P<article_id>\d+)/history/$', UGHistoryView.as_view(), name='history'),
+    # url(r'^(?P<path>.+/|)_history/$', UGHistoryView.as_view(), name='history'),
     url(r'^_revision/diff/(?P<revision_id>[0-9]+)/$', ugaViews.diff, name='diff'),
+    url(r'^_revision/preview/(?P<article_id>\d+)/$', UGPreviewView.as_view(), name='preview_revision'),
+    url(r'^(?P<path>.+/|)_revision/change/(?P<revision_id>\d+)/$', UGChangeRevisionView.as_view(),
+        name='change_revision'),
     url(r'^(?P<path>.+/|)delete/$', UGDeleteView.as_view(), name='delete'),
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
     url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),

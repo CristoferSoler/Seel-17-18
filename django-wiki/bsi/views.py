@@ -1,3 +1,5 @@
+import pdb
+
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -16,13 +18,10 @@ from .models.article_extensions import BSI_Article_type
 from .forms import FilterForm
 from wiki import models
 
-import pdb
-import json
-import os
-
-
-from bsi.ugaViews import overview_uga
 from bsi.models import BSI_Article_type
+from bsi.ugaViews import overview_uga
+from .models.article_extensions import BSI
+
 
 class WikiArticleView(ArticleView):
 
@@ -139,5 +138,3 @@ def register(request):
 
 def create(request):
     return render(request, 'bsi/create_article.html')
-
-
