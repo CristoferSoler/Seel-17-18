@@ -1,100 +1,23 @@
-<script src="../../static/bsi/js/jquery.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
-<!-- Latest compiled and minified Locales -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
 
-{% extends "bsi/base.html" %}
-{% load wiki_tags i18n humanize %}
-
-
-
-{% block bsi_contents %}
-
-{% url 'archive_dir' urlpath.path as self_url %}
-<div class="container" style="margin-top: 80px">
-     <ol class="breadcrumb">
-                {% for ancestor in urlpath.cached_ancestors %}
-                    <li>
-                        <a href="{% url 'get_article' path=ancestor.path %}">{{ ancestor.article.current_revision.title|truncatechars:25 }}</a>
-                    </li>
-                {% endfor %}
-                <li class="active">{{ article.current_revision.title|truncatechars:25 }}</li>
-            </ol>
-
- <h1 >
-          {{ article.current_revision.title }}
-          <small style="font-size: 14px;">
-            {% if urlpath.parent %}
-            <a href="{% url 'wiki:get' path=urlpath.path %}"><span class="fa fa-bookmark"></span> {{ urlpath.slug }}</a>
-            {% endif %}
-            {% if article.current_revision.locked %}
-              <span class="fa fa-lock"></span>
-            {% endif %}
-          </small>
- </h1>
-
-<hr>
-
-<table class="table table-striped"
-                       data-toggle="table"
-                       data-search="true"
-                       data-show-refresh="true"
-                       data-show-toggle="true"
-                       data-show-columns="true"
-                       data-toolbar="#toolbar"
-                       data-query-params="queryParams"
-                       data-pagination="true"
-                       data-height="550"
-                       data-locale="en-US"
-                       data-page-list="[15, 30, 90, 200]">
-<thead>
-  <tr>
-    <th data-sortable="true">{% trans "Title" %}</th>
-    <th data-sortable="true">{% trans "Slug" %}</th>
-    <th data-sortable="true">{% trans "Last modified" %}</th>
-  </tr>
-</thead>
-<tbody>
-  {% for urlpath in directory %}
-    <tr>
-      <td class="col-xs-6">
-	{% if urlpath.parent.slug == 'archive' %}
-		<a href="{% url 'archive_dir' path=urlpath.slug %}"> {{ urlpath.article.current_revision.title }} </a>
-	{% else %}
-		<a href="{% url 'archive_get' path=urlpath.parent.slug article=urlpath.slug %}"> {{ urlpath.article.current_revision.title }} </a>
-	{% endif %}
-        {% if urlpath.article.current_revision.deleted %}
-          <span class="fa fa-trash"></span>
-        {% endif %}
-        {% if urlpath.article.current_revision.locked %}
-          <span class="fa fa-lock"></span>
-        {% endif %}
-      </td>
-      <td class="col-xs-3">
-        {{ urlpath.slug }}
-      </td>
-      <td class="col-xs-3">
-        {{ urlpath.article.current_revision.created|naturaltime }}
-      </td>
-    </tr>
-    {% empty%}
-    <tr>
-      <td colspan="100">
-        <em>{% trans "There are no articles in this level" %}</em>
-      </td>
-    </tr>
-  {% endfor %}
-</tbody>
-</table>
-</div>
-{% include "wiki/includes/pagination.html" %}
+{% extends 'uga/overview_base.html' %}
+{% block tbody_overview %}
+    <tbody>
+                    {% for archive in archives %}
+                        <tr>
+                            <td class="col-xs-7">
+                                    {% if archive.parent.slug == 'archive' %}
+                                      <a href="{% url 'archive_dir' path=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
+                                    {% else %}
+                                      <a href="{% url 'archive_get' path=archive.parent.slug article=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
+                                    {% endif %}
+                            </td>
+                            <td class="col-xs-3">{{ archive.article.owner }}</td>
+                            <td class="col-xs-2">{{ archive.article.created }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
 
 {% endblock %}
+
+
+

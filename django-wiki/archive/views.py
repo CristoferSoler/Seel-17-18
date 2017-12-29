@@ -32,7 +32,7 @@ class ArchiveDir(Dir):
 
 
 def overview_archive(request, **kwargs):
-    template_name = "archive/archivelist2.html"
+    template_name = "archive/archivelist.html"
 
     path = kwargs.pop('path', None)
     path = path.rstrip("/")
