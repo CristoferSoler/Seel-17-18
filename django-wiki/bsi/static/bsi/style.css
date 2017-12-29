@@ -1,11 +1,8 @@
-
 footer {
-
     min-height: 50px;
     padding: 20px 0 10px 0;
     background-color: #E1E2E1;
 }
-
 
 
 footer .menu li a {
@@ -249,7 +246,7 @@ section {
 /* credit : Rohan Hapani https://codepen.io/desirecode/pen/MJPJqV  */
 #scroll {
     position:fixed;
-    right:10px;
+    right:30px !important;
     bottom:10px;
     cursor:pointer;
     width:50px;
@@ -271,6 +268,7 @@ section {
     width:0;
     border:8px solid transparent;
     border-bottom-color:#ffffff;
+    font-family: 'glyphicon glyphicon-pencil';
 }
 #scroll:hover {
     background-color:#e74c3c;
@@ -284,3 +282,5 @@ section {
     float: right;
     margin-bottom: 10px;
 }
+
+
