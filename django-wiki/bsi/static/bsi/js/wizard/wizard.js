@@ -239,12 +239,10 @@ function addGoBackListTopicList() {
 
 
 function restart(){
-    currentTopic = 0;
-    [].splice.apply(remainingComponents, [0, remainingComponents.length].concat(orginalTopic));
-    localStorage.setItem('currentTopic',String(currentTopic));
-    localStorage.removeItem('remainingComponents');
-    localStorage.removeItem('listOfBack');
+    currentTopic = -2;
     $("#list").empty();
+    $('#dontKnowButton').addClass('disabled');
+    $('#topicBack').addClass('disabled');
 
     if($('#yesButton').hasClass('disabled')) {
         $('#yesButton').removeClass('disabled');
@@ -252,14 +250,13 @@ function restart(){
     if($('#noButton').hasClass('disabled')) {
         $('#noButton').removeClass('disabled');
     }
-    if($('#dontKnowButton').hasClass('disabled')) {
-        $('#dontKnowButton').removeClass('disabled');
-    }
-    if($('#topicBack').hasClass('disabled')) {
-        $('#topicBack').removeClass('disabled');
-    }
 
-    initWizard();
+    $('#question').text(entryQuestionComponent);
+    $('#topic').text('');
+
+    clearTopicStorage();
+
+    //initWizard();
 }
 
 function checkEnableButtons () {
