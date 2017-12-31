@@ -47,7 +47,9 @@ function inilizeData() {
         }
     }
 
-    if (currentTopic === 0) {
+    $("#dontKnowButton").removeClass('disabled');
+
+    if (currentTopic === -2) {
         $("#topicBack").addClass('disabled');
     }
 }
@@ -77,6 +79,7 @@ function initWizard() {
 }
 
 function yesPress() {
+    console.log(currentTopic);
     if(currentTopic < 0){
         if(currentTopic == -2){
             currentTopic = 0;
@@ -84,6 +87,8 @@ function yesPress() {
             localStorage.setItem('mode','c');
             $('#question').text(questionComponent);
             $('#dontKnowButton').removeClass('disabled');
+            $('#topicBack').removeClass('disabled');
+
             initWizard()
         } else {
             if(currentTopic == -1){
@@ -106,7 +111,8 @@ function noPress() {
             localStorage.setItem('currentTopic',String(currentTopic));
             $('#question').text(entryQuestionThread);
             $('#topic').text('');
-            $('#dontKnowButton').removeClass('disabled');
+            $('#topicBack').removeClass('disabled');
+
         } else {
             if(currentTopic == -1){
                 $('#question').text('Fehler');
@@ -264,17 +270,58 @@ function checkEnableButtons () {
 }
 
 function topicBack() {
-    if((currentTopic -1)!== -1) {
+    if((currentTopic -1) >= 0) {
         currentTopic = currentTopic - 1;
-        if(currentTopic === 0){
-            $("#topicBack").addClass('disabled');
-        }
         var currentTopicString = String(currentTopic);
         var listOfBack = JSON.parse(localStorage.getItem('listOfBack'));
         remainingComponents = listOfBack[currentTopicString];
         checkPresentResults();
         checkEnableButtons();
+    } else{
+        if(currentTopic - 1 == -2){
+            currentTopic = - 2;
+            $("#topicBack").addClass('disabled');
+            $("#dontKnowButton").addClass('disabled');
+
+            $('#question').text(entryQuestionComponent);
+            $('#topic').text('');
+            localStorage.setItem('mode','c');
+            clearTopicStorage();
+
+        } else {
+            if(currentTopic -1 == -1){
+                if(localStorage.getItem('mode') == 'c'){
+                    currentTopic = - 2;
+                    $("#topicBack").addClass('disabled');
+                    $("#dontKnowButton").addClass('disabled');
+                    $('#question').text(entryQuestionComponent);
+                    $('#topic').text('');
+                    localStorage.setItem('mode','c');
+                    clearTopicStorage();
+
+                }
+                if(localStorage.getItem('mode') == 't'){
+                    currentTopic = currentTopic -1;
+                    $('#question').text(entryQuestionThread);
+                     $("#dontKnowButton").addClass('disabled');
+                    $('#topic').text('');
+                    localStorage.setItem('mode','t');
+                    clearTopicStorage();
+                }
+            }
+
+        }
     }
+
+
+
+}
+
+function clearTopicStorage() {
+   localStorage.removeItem('componentsTopic');
+    localStorage.removeItem('remainingComponents');
+    localStorage.removeItem('sortedTopics');
+    localStorage.removeItem('listOfBack');
 }
 
 
