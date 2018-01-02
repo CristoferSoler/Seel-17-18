@@ -21,6 +21,10 @@ new_temp_bsi_folder = './mdNew'
 crfDir = './CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 
+# temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
+# for testing, we should not append the CR everytime we run the importer, because then the files would contain 
+# multiple CR
+doCR = False
 
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
@@ -89,7 +93,7 @@ def doImport():
 
                 # append the Cross reference relation files to the content
                 # of each component article before import it in the database
-                if sub_article_type == "C" and isdir(crfDir):
+                if sub_article_type == "C" and isdir(crfDir) and doCR:
                     appendThreatMeasureRelation(path_and_file, id)
 
                 # import the content to the database
