@@ -202,11 +202,11 @@ function checkTopics(yes) {
 
 function checkPresentResults() {
         if (remainingComponents.length <= thresholdTopicNumber) {
-            $("#topic").text(currentSortedTopic[currentTopic]);
+            $("#topic").text(currentSortedTopic[currentTopic] + '?');
             presentResults();
         } else {
             $("#list").empty();
-            $("#topic").text(currentSortedTopic[currentTopic]);
+            $("#topic").text(currentSortedTopic[currentTopic]+ '?');
         }
         safeData();
     }
@@ -219,7 +219,7 @@ function dontknowPress() {
 
     currentTopic = currentTopic + 1;
     addGoBackListTopicList();
-    $("#topic").text(currentSortedTopic[currentTopic]);
+    $("#topic").text(currentSortedTopic[currentTopic] + '?');
 
     checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
     checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),true;
