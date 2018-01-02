@@ -16,3 +16,7 @@ db.sqlite3
 *.log
 
 programming/bsiCrawler/content/*
+
+programming/bsiCrawler/md/*
+
+programming/bsiCrawler/mdEn/*

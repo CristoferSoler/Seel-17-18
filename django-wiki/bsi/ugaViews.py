@@ -51,7 +51,7 @@ class UGACreate(Create):
                                                  parent=self.urlpath,
                                                  slug=form.cleaned_data['slug'], title=form.cleaned_data['title'],
                                                  content=form.cleaned_data['content'],
-                                                 summary=form.cleaned_data['summary'])
+                                                 summary=form.cleaned_data['summary']).url
             messages.success(
                 self.request,
                 _("New article '%s' created.") %
