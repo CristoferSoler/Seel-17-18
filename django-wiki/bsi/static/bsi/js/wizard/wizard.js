@@ -5,10 +5,10 @@ var currentSortedTopic;
 const thresholdTopicNumber = 10;
 var valid = false;
 
-var entryQuestionThread = 'Problem Thread?';
-var entryQuestionComponent = 'Problem Component?';
-var questionThread = 'Problem with ';
-var questionComponent = 'Problem with '
+const entryQuestionThread = 'Would you like to know more about a specific IT Thread?';
+const entryQuestionComponent = 'Do you have a specific IT problem and would you like to know more about it and see its solutions?';
+const questionThread = 'Do you have a problem with ';
+const questionComponent = 'Do you have a problem with '
 
 function inilizeData() {
     getDataFromServer();
@@ -30,7 +30,7 @@ function inilizeData() {
         localStorage.setItem('listOfBack', JSON.stringify(listOfBack));
     }
 
-    $("#topic").text(sortedTopics[currentTopic]);
+    $("#topic").text(sortedTopics[currentTopic] + '?');
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
