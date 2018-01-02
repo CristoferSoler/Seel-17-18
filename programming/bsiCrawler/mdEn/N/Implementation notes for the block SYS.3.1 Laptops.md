@@ -13,7 +13,7 @@ The laptop is presumed to be used by only one user within a given period of time
 
 ** planning and conception **
 
-In order to use laptops safely and effectively in institutions, a concept should be created based on the security requirements for the existing IT systems and the requirements of the planned deployment scenarios (see SYS.3.1.M1 * Regulations for the use of laptops * ). Based on this, the laptop usage has to be regulated and security guidelines have to be developed (see SYS.3.1.M6 * Laptops security guidelines *).
+In order to use laptops safely and effectively in institutions, a concept should be created based on the security requirements for the existing IT systems and the requirements of the planned deployment scenarios (see SYS.3.1.M1 * Regulations for the use of laptops * ). Based on this, the use of the laptop has to be regulated and security guidelines have to be developed (see SYS.3.1.M6 * Security guidelines for laptops *).
 
 ** procurement **
 
@@ -21,11 +21,11 @@ For the procurement of laptops, the requirements of the respective products resu
 
 **Implementation**
 
-It is necessary to carefully select and install the operating system and software components. The protective measures to be implemented here depend on the operating system used and are therefore described in the specific blocks, for example * SYS.2.2.3 Client under Windows 10 * or SYS 2.3 * Clients under Unix *. Depending on the security requirements, the software components involved must be configured differently. The measures to be taken here are also dependent on the operating system used.
+It is necessary to carefully select and install the operating system and software components. The protective measures to be performed here depend on the operating system used and are therefore described in the specific blocks, for example * SYS.2.2.3 Client under Windows 10 * or SYS 2.3 * Clients under Unix *. Depending on the security requirements, the software components involved must be configured differently. The measures to be taken here are also dependent on the operating system used.
 
 **Business**
 
-One of the most important security measures when running today's laptops is to install an antivirus program and permanently update it (see SYS.3.1.M4 * Using Anti-Virus Programs *). As laptops have a relatively high risk of theft, the data on the laptop should be encrypted (see SYS.3.1.M13 * Encryption of laptops *) and anti-theft devices used (see SYS.3.1.M18 * Using theft-proofing *).
+One of the most important security measures when running today's laptops is to install an antivirus program and permanently update it (see SYS.3.1.M4 * Using Anti-Virus Programs *). As laptops have a relatively high risk of theft, the data on the laptop should be encrypted (see SYS.3.1.M13 * Encryption of laptops *) and anti-theft devices used (see SYS.3.1.M18 * Using theft protection *).
 
 If laptops are connected directly to the Internet during mobile use, it is essential to protect them against attacks from the network by means of a restrictively configured personal firewall (see SYS.3.1.M3 * Using personal firewalls for clients *). It is also necessary to secure the communication to other networks or to other devices (see SYS.3.1.M9 * Secure remote access on the road) * as well as to the internal network (see SYS.3.1.M8 * Secure connection of laptops via data networks *).
 
@@ -62,15 +62,15 @@ The type and extent of security measures to be applied to laptops depends, on th
 
 As a general rule, all laptops that are to be used externally should be appropriately licensed.
 
-Outside the institutional real estate, users are responsible for protecting the laptops entrusted to them. These and the precautions to be taken are to be noted.
+Outside of the institution's properties, users are responsible for protecting the laptops entrusted to them. These and the precautions to be taken are to be noted.
 
 #### SYS.3.1.M2 Access protection on the laptop [user]
 
-Every laptop should be provided with access protection that prevents it from being used without authorization. Thus it is possible in almost all operating systems to set up login passwords and to provide them with suitable restrictions (eg minimum length, service life). Since these on-board means are only limitedly secure, it is recommended to use additional security hard- or software on laptops with data worthy of protection. These include, for example, chip cards or tokens, which secure the authentication.
+Every laptop should be provided with access protection that prevents it from being used without authorization. Thus it is possible in almost all operating systems to set up login passwords and to provide them with suitable restrictions (eg minimum length, service life). Since these on-board means are only limitedly secure, it is recommended to use additional security hard- or software for laptops with data worthy of protection. These include, for example, chip cards or tokens, which secure the authentication.
 
-If the data on the laptop is not encrypted, employees should be prohibited from storing sensitive information on their hard drive (see SYS3.1.M13 * Encryption of Laptops *). Instead, they should be stored on encrypted mobile disks, eg. B. USB sticks. These are then kept separately from the laptop.
+If the data on the laptop is not encrypted, it should be prohibited for employees to store sensitive information on the hard drive (see SYS3.1.M13 * Encryption of Laptops *). Instead, they should be stored on encrypted mobile disks, eg. B. USB sticks. These are then kept separately from the laptop.
 
-For short work interruptions it is essential to activate an access protection, eg. For example, a password-protected screen saver. If it is foreseeable that the interruption lasts longer, the laptop should be switched off.
+For short work interruptions it is essential to activate an access protection, eg. For example, a password-protected screen saver. If it is foreseeable that the interruption will take longer, the laptop should be switched off.
 
 #### SYS.3.1.M3 Use of personal firewalls
 Personal firewalls control and prevent access to clients via connected IT networks or from clients to these networks. Depending on the type of network service and the direction of the connection setup, the personal firewall of the client can allow or reject a communication setup. For example, a personal firewall could be configured to allow all connections made by the client and to block all incoming requests.
@@ -103,7 +103,7 @@ In principle, it is z. For example, in the case of large third-party security so
 
 When configuring and operating a personal firewall on laptops, the following aspects should be considered:
 
-* The filter rules should be set as restrictive as possible. The principle applies: Everything that is not expressly permitted is prohibited. It is recommended that outgoing connections may only be established by approved applications or services. Based on the IP address of the target system, the port number of the required service and the accessing application or the accessing service, the following accesses established by the client could be restricted or allowed: Incoming connections should be restricted to those for remote maintenance, software distribution, system update and monitoring the required services and the server systems used for this purpose.
+* The filter rules should be set as restrictive as possible. The principle applies: Everything that is not expressly permitted is prohibited. It is recommended that outgoing connections may only be established by approved applications or services. Based on the IP address of the target system, the port number of the required service and the accessing application or the accessing service, the following accesses established by the client could be restricted or allowed: Incoming connections should be limited to those for remote maintenance, software distribution, system update and monitoring the required services and the server systems used for this purpose.
 
  
 + to file servers, to the Internet for the browser via the security gateway,
@@ -116,14 +116,14 @@ When configuring and operating a personal firewall on laptops, the following asp
  
 * Incoming connections should be restricted to those required for remote maintenance, software distribution, system upgrading and monitoring of required services and server systems.
 * Personal Firewall filtering rules should be tested after initial configuration to allow allowed events and prevent unauthorized events.
-* The correct configuration of the filter rules should be checked at sporadic intervals, if the installation of the client is not regularly deleted anyway and re-recorded from a hard disk image (images).
+* The correct configuration of the filter rules should be checked at sporadic intervals, if the installation of the client is not regularly deleted anyway and re-loaded from a hard disk image (images).
 * If the product used offers this option, the rules of the Personal Firewall should also be assigned to special programs. This can be detected and prevented that other than the intended client programs connects to computers on the Internet.
-* Since many of the checking mechanisms of a personal firewall are based on current findings, patches or updates released by the manufacturer must be regularly imported. It must be ensured that the required files are obtained from a trustworthy source, for example directly from the manufacturer.
+* Since many of the checking mechanisms of a personal firewall are based on current findings, patches or updates published by the manufacturer must be regularly imported. It must be ensured that the required files are obtained from a trustworthy source, for example directly from the manufacturer.
 * The Personal Firewall must be configured so that users are not bothered by many alerts that they can not interpret.
 * If the product used offers this option, security-related events should be logged. The log data should be evaluated regularly by expert personnel.
 Some products have the ability to start with a very restrictive basic configuration and then refine the settings during operation. Each time a security-related event occurs that does not yet have a unique rule, the user is asked if that event is allowed. An example of such a security-related event is the access of a particular installed program to the Internet. Based on the user's responses, the personal firewall will determine the desired configuration step by step, e.g. For example, the filter rules.
 
-The advantage of this incremental configuration is that it makes administration less complex. The disadvantage, however, is that users often can not judge whether a particular event is allowed or not. The incremental configuration of the personal firewall can therefore only be recommended if the users are either given precise instructions on how to respond to queries from the program or if this is done under the supervision of an administrator, eg. B. by telephone inquiries.
+The advantage of this incremental configuration is that it makes administration less complex. The disadvantage, however, is that users often can not judge whether a particular event is allowed or not. The incremental configuration of the personal firewall can therefore only be recommended if the users are either given precise instructions on how to respond to queries from the program, or if this is done under the supervision of an administrator, eg. B. by telephone inquiries.
 
 #### SYS.3.1.M4 Using Anti-Virus Programs [User]
 
@@ -131,7 +131,7 @@ In order to protect against malicious programs, different principles of action c
 
 ** Regular examination of the entire database **
 
-Even if the antivirus program checks for malicious programs every time you access files, it must periodically scan all files on the laptop. This way malware can be found for which there was no signature when it was saved. In such cases, for example, it must be investigated whether the malicious program has already collected confidential data, disabled protection functions or downloaded code from the Internet.
+Even if the antivirus program checks for malicious programs every time you access files, you must periodically search all files on the laptop. This way malware can be found for which there was no signature when it was saved. In such cases, for example, it must be investigated whether the malicious program has already collected confidential data, disabled protection functions or downloaded code from the Internet.
 
 For performance reasons, the dataset should only be fully validated when IT resources are not under heavy use. It is ideal if the software monitors whether the laptop is busy and automatically uses its "breaks" to check it. The antivirus program could z. B. also be coupled with the start of the screen saver.
 
@@ -140,7 +140,7 @@ For performance reasons, the dataset should only be fully validated when IT reso
 Data to be sent must be checked for malware immediately prior to shipment. Similarly, received data must be checked for malicious programs immediately upon receipt. These checks are required both when accessing data carriers and when transferring data over communication links. They should be automated as much as possible.
 
 ** Interactions with encryption techniques **
-When encryption techniques are used, it is important to consider how this affects the protection against malware. If data is encrypted, system components or applications can not access this data unless they have the appropriate key. This implies that an anti-virus program must either run in the context of the user or be equipped with the appropriate cryptographic keys to check an encrypted file for malware. However, if the user ID under which the antivirus program is run is provided with the appropriate cryptographic keys, new security risks are created which should be avoided. Therefore, it is recommended to use a resident antivirus program that checks for malicious programs in the user context each time a file is accessed.
+When encryption techniques are used, it is important to consider how this affects the protection against malicious programs. If data is encrypted, system components or applications can not access this data unless they have the appropriate key. This implies that an anti-virus program must either run in the context of the user or be equipped with the appropriate cryptographic keys to check an encrypted file for malware. However, if the user ID under which the antivirus program is run is provided with the appropriate cryptographic keys, new security risks are created which should be avoided. Therefore, it is recommended to use a resident antivirus program that checks for malicious programs in the user context each time a file is accessed.
 
 ** Protection against unauthorized deactivation or change **
 
@@ -148,12 +148,12 @@ The antivirus programs on the laptops must be configured so that users can not c
 
 #### SYS.3.1.M5 Backup [User]
 
-As a rule, laptops are not permanently integrated in a network. Data exchange with other IT systems usually takes place via temporary network connections. The latter can be realized, for example, by a Virtual Private Network (VPN) or direct connection to a LAN after returning to work. Unlike stationary clients, it is therefore usually unavoidable for laptops that data is at least temporarily stored locally instead of on a central server. It is therefore important to prevent data loss by using appropriate data protection measures.
+As a rule, laptops are not permanently integrated in a network. Data exchange with other IT systems usually takes place via temporary network connections. The latter can, for example, be realized by a Virtual Private Network (VPN) or direct connection to a LAN after returning to work. Unlike stationary clients, it is therefore usually unavoidable for laptops that data is at least temporarily stored locally instead of on a central server. It is therefore important to prevent data loss by using appropriate data protection measures.
 
 In general, the following methods for data backup are available:
 
 * ** Data backup on external media **
- The advantage of this method is that it can be backed up almost anywhere, anytime. The disadvantage is that additional disk, z. As external hard drives, must be carried and that arises for the user more effort for the proper handling of the disk. The volumes should have sufficient storage capacity so that the user does not need to use multiple volumes per backup operation. In the case of unencrypted data storage, there is also the danger that data carriers will be lost and thus valuable data can be compromised. The data carriers and the laptop should be kept as separate as possible, so that they do not get lost if the laptop is lost or stolen.
+ The advantage of this method is that it can be backed up almost anywhere, anytime. The disadvantage is that additional disk, z. As external hard drives, must be carried and that arises for the user more effort for the proper handling of the disk. The volumes should have sufficient storage capacity so that the user does not need to use multiple volumes per backup operation. In the case of unencrypted data management, there is also the risk that data carriers will be lost and thus data that could be protected can be compromised. The data carriers and the laptop should be kept as separate as possible, so that they do not get lost if the laptop is lost or stolen.
  The storage on external data carriers for data backup is particularly suitable, even if the data exchange with other IT systems via external data carriers takes place. These two processes can also be combined. After returning to the workstation, the data backups on the data carriers must be entered in the backup system or in the production system or central data storage of the institution.
 * ** Data backup over temporary network connections **
  If it is possible to connect the laptop regularly to a network, for example via VPNs, the local data can also be secured via the network connection. It is advantageous here that the user does not have to manage and carry data carriers. Furthermore, the method can be largely automated, for example, the backup can be started automatically when using VPNs after each dial-up.
@@ -203,7 +203,7 @@ Consideration should be given to restricting or prohibiting the use or bringing 
 
 #### SYS.3.1.M7 Regulated handover and return of a laptop [user]
 
-Depending on the purpose, laptops are only used by a single employee. B. as a workstation, which is also used for mobile. But they can also be used alternately by different employees, for. For presentations. Depending on the type of application, different security requirements arise. Therefore, the purpose and type of use should be carefully planned.
+Depending on the purpose, laptops are only used by a single employee. B. as a workstation, which is also used for mobile. But they can also be used alternately by different employees, eg. For presentations. Depending on the type of application, various safety requirements arise. Therefore, the purpose and type of use should be carefully planned.
 
 If the laptop is a workstation, it is typically used alternately mobile and stationary. It is possible to access different networks. For this purpose, the laptops must be secured in such a way that on the one hand the mobile application can not compromise, manipulate or lose important data of the laptop. On the other hand, laptops should not introduce any threats to the internal networks.
 
@@ -220,16 +220,16 @@ If a laptop is handed over or taken back, the following points should be noted:
 
 * The user announces his last used password or sets a default password.
 * The laptop must be scanned for malware using a current antivirus program.
-* The user must ensure that all data still required by the user is transferred to data media accessible to him prior to handing over the device. In addition, the user must ensure that all files and data generated by him are deleted. For this purpose, suitable tools must be available.
+* The user must ensure that all data that the user still needs is transferred to data media accessible to him before transferring the device. In addition, the user must ensure that all files and data generated by him are deleted. For this purpose, suitable tools must be available.
 * The return of the laptop and the result of the virus scan are documented. The completeness of the device, the accessories and the documentation must be ensured.
 * To ensure that the defined secure basic configuration is present and there are no more vulnerable files on the laptop, it should be reinstalled using a reference installation.
 The intended use of the laptops must be documented.
 
 #### SYS.3.1.M8 Secure Connection of Laptops to Data Networks [User]
 
-It is important to determine which regulations are to be observed when connecting laptops to own and third-party LANs and to the Internet. It should be avoided that this affects the secure operation of your own LAN and other IT systems coupled with it, eg. B. by imported malware.
+It is important to determine which regulations are to be observed when connecting laptops to own and third-party LANs and to the Internet. It should be avoided that this will affect the secure operation of your own LAN and other IT systems coupled with it, eg. B. by imported malware.
 
-If a laptop is to be reconnected to the corporate or government network after an external deployment, it must first be ensured by a thorough check with current virus signatures that this laptop is not infected.
+If a laptop is to be reconnected to the company or government network after an external use, it must first be ensured by a thorough check with current virus signatures that this laptop is not infected.
 
 ** Coupling with other IT systems **
 
@@ -256,7 +256,7 @@ When DHCP is enabled, an IT system is automatically assigned a valid IP address 
 
 ** Internet access **
 
-It must be regulated whether laptops are allowed to access the internet directly. The critical point here is that it bypasses the intrinsic security gateways and security mechanisms, potentially causing security issues.
+It has to be settled if laptops are allowed to access the internet directly. The critical issue here is that it bypasses the intrinsic security gateways and security mechanisms, potentially causing security issues.
 
 If laptops are predictably connected directly to the Internet during mobile use, it is essential to protect them against attacks from the network by means of a restrictively configured personal firewall. The virus protection alone is not enough to ward off all expected attacks. Likewise, it is absolutely necessary to keep the software of the laptop up to date and to install necessary security patches in a timely manner. It makes sense to check whether personal firewalls, other security programs and security patches on the laptop are up-to-date before accessing the production network. It is recommended to use automated tools to carry out these checks automatically, so that in the case of security deficiencies, access to the internal network can be rejected.
 
@@ -278,25 +278,25 @@ The Infrared Data Association (IrDA) has published specifications that initially
 
 The IrDA standard does not specify security mechanisms that help attackers capture traffic. The data is saved only at the protocol level by means of checksum methods against transmission errors. Security mechanisms such as authentication, cryptographic integrity protection and encryption are not available. Therefore, the IrDA interface should only be activated if there is a specific need.
 
-Since the coupling is only possible in a very limited area, the communication can usually not be overheard. The existing low residual risk due to the scattered radiation of the IrDA components can be further minimized by additional security mechanisms (eg authentication and encryption at the application level) or the replacement of IrDA by line-based transmission.
+Since the coupling is only possible in a very limited area, the communication can usually not be overheard. The existing low residual risk due to the stray radiation of the IrDA components can be further minimized by additional security mechanisms (eg authentication and encryption at the application level) or the replacement of IrDA by line-based transmission.
 
 #### SYS.3.1.M9 Secure remote access from the road [user]
 
 Laptops are also often used to access data from the internal network of an institution while on the move. Usually public communication networks are used. Since neither the institution nor the mobile workers can greatly influence the confidentiality, integrity and availability of the public communications network, additional measures to protect the information are required.
 
 In general, data transfer between a laptop and the LAN of an institution must meet the following security requirements:
-* Ensuring the confidentiality of the transmitted data: The data transmission must be encrypted sufficiently securely. In addition to a suitable encryption method, this also includes adapted key management with periodic key changes. Ensuring the integrity of the transferred data: With the transmission protocols used, it must be possible to detect changes in the transmitted data and possibly even correct them. Such changes can be caused, for example, by transmission errors (technical problems) or deliberate manipulation by an attacker. In addition, the use of digital signatures can be useful to ensure data integrity. Ensuring the authenticity of the data: When transferring the data must be trustworthy to determine whether the communication between the right participants takes place, so z. B. a man-in-the-middle attack can be excluded. For this purpose, the communication partners have to authenticate each other, for example via digital certificates. Ensuring the traceability of the data transmission: In order to make a communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
-* Ensuring the integrity of the transmitted data: With the transmission protocols used, it must be possible to detect changes in the transmitted data and possibly even fix them. Such changes can be caused, for example, by transmission errors (technical problems) or deliberate manipulation by an attacker. In addition, the use of digital signatures can be useful to ensure data integrity. Ensuring the authenticity of the data: When transferring the data must be trustworthy to determine whether the communication between the right participants takes place, so z. B. a man-in-the-middle attack can be excluded. For this purpose, the communication partners have to authenticate each other, for example via digital certificates. Ensuring the traceability of the data transmission: In order to make a communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
+* Ensuring the confidentiality of the transmitted data: The data transmission must be encrypted sufficiently securely. In addition to a suitable encryption method, this also includes adapted key management with periodic key changes. Ensuring the integrity of the transferred data: With the transmission protocols used, it must be possible to detect changes in the transmitted data and possibly even correct them. Such changes can be caused, for example, by transmission errors (technical problems) or deliberate manipulation by an attacker. In addition, the use of digital signatures can be useful to ensure data integrity. Ensuring the authenticity of the data: When transferring the data, it must be possible to reliably determine whether the communication is taking place between the right participants. B. a man-in-the-middle attack can be excluded. For this purpose, the communication partners have to authenticate each other, for example via digital certificates. Ensuring the traceability of the data transmission: In order to make a communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
+* Ensuring the integrity of the transmitted data: With the transmission protocols used, it must be possible to detect changes in the transmitted data and possibly even fix them. Such changes can be caused, for example, by transmission errors (technical problems) or deliberate manipulation by an attacker. In addition, the use of digital signatures can be useful to ensure data integrity. Ensuring the authenticity of the data: When transferring the data, it must be possible to reliably determine whether the communication is taking place between the right participants. B. a man-in-the-middle attack can be excluded. For this purpose, the communication partners have to authenticate each other, for example via digital certificates. Ensuring the traceability of the data transmission: In order to make a communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
 * Ensuring the authenticity of the data: When transferring the data, it must be possible to reliably determine whether the communication is taking place between the right participants. B. a man-in-the-middle attack can be excluded. For this purpose, the communication partners have to authenticate each other, for example via digital certificates. Ensuring the traceability of the data transmission: In order to make a communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
-* Ensuring the traceability of the data transfer: To make a communication comprehensible, logging functions can be used, which can determine afterwards, which data was transferred when and to whom.
-The strength of the mechanisms required depends on the protection requirements of the transmitted data. How adequate cryptographic procedures and systems can be selected and used is described in module CON.1 * Crypto Concept *.
+* Ensuring the traceability of data transmission: To make communication comprehensible, logging functions can be used, which can subsequently determine which data was transmitted when and to whom.
+The strength of the necessary mechanisms depends on the protection requirements of the transmitted data. How adequate cryptographic procedures and systems can be selected and used is described in module CON.1 * Crypto Concept *.
 
 ** ** VPN
 External access to the internal network from a laptop should only be done via a Virtual Private Network (VPN) (see NET.3.3 Virtual Private Networks (VPN)). Corresponding products are available from various manufacturers and for virtually all common platforms. Data or systems with high protection requirements may not be accessed without appropriate safeguards. If the institution operates a filter for malicious software in its network, then the network connection of the laptop should be routed through this filter in order to better protect the end device against malicious software.
 
-If the institution allows to retrieve business e-mails via the Internet using a web-mail solution, it must be ensured that the e-mails are only transmitted in encrypted form from the server to the laptop. B. by TLS. However, not only the transport channel, but also the end system itself must be specially secured. A laptop can be compromised if, in addition to the use of VPN at the same time also standard protocols such. B. HTTP or SMTP can be used on the Internet. Therefore, laptops should be secured in such a way that no other connections are possible with existing VPN connection into the internal network (split tunneling). It must be ensured that all outgoing data packets of the client go into the tunnel and only data packets from the tunnel are accepted.
+If the institution allows to retrieve business e-mails via the Internet using a web-mail solution, it must be ensured that the e-mails are only transmitted in encrypted form from the server to the laptop. B. by TLS. However, not only the transport channel, but also the end system itself must be specially secured. A laptop can be compromised if, in addition to the VPN usage at the same time also standard protocols such. B. HTTP or SMTP can be used on the Internet. Therefore, laptops should be secured in such a way that no other connections are possible with existing VPN connection into the internal network (split tunneling). It must be ensured that all outgoing data packets of the client go into the tunnel and only data packets from the tunnel are accepted.
 
-In this context, it should also be ensured that, in addition to the VPN-secured laptop access, other network accesses to the internal network are not possible at the same time. In particular, no WLAN or Bluetooth may be active on the laptop during the VPN accesses.
+In this context, it should also be ensured that, in addition to VPN-secured laptop access, other network accesses to the internal network are not possible at the same time. In particular, no WLAN or Bluetooth may be active on the laptop during the VPN accesses.
 
 ** Authentication of VPN usage **
 
@@ -308,13 +308,13 @@ The accesses to server services should be logged. It should also be apparent whe
 
 ** Temporary data **
 
-It should be ensured that all cached authentication information that enables the establishment of a VPN will be automatically deleted after the end of the VPN usage. This applies to both intentionally and unintentionally terminated VPN connections. In addition, for example, with browser-based SSL VPNs, care should be taken to deactivate all intermediate stores, so that authentication information is not temporarily stored at all. Otherwise, this could allow an attacker to recover the VPN connection.
+It should be ensured that all cached authentication information that enables the establishment of a VPN will be deleted automatically after the end of VPN usage. This applies to both intentionally and unintentionally terminated VPN connections. In addition, for example, with browser-based SSL VPNs, care should be taken to deactivate all buffer stores, so that authentication information is not temporarily stored at all. Otherwise, this could allow an attacker to recover the VPN connection.
 
 Further BSI recommendations for secure remote access can be found in the document * * "Secure Remote Access to the Internal Network (ISi-S)" [SFIN].
 
 #### SYS.3.1.M10 Synchronization of Laptop Databases [User]
 
-If a laptop is being used on the road and is not being used directly on the institution's file servers over a VPN, it is important that all the necessary data and applications are up-to-date. Likewise, data processed on the move should be quickly stored on IT systems within the information network of the institution so that inconsistent data sets do not occur. The easiest way to do this is to periodically synchronize laptops, such as with tools to synchronize files and directories between laptops and workstations or servers.
+When a laptop is being used on the road rather than working directly on the institution's file servers over a VPN, it is important that all the necessary data and applications are up-to-date. Likewise, data processed on the move should be quickly stored on IT systems within the information network of the institution so that inconsistent data sets do not occur. The easiest way to do this is to periodically synchronize laptops, such as using tools to synchronize files and directories between laptops and workstations or servers.
 This should be considered, which information is stored in which places, ie on which servers and in which directories. The first sighting usually shows how many different places in an information network the information relevant for a job is.
 
 So that synchronization processes do not take too long, tools should be selected for this purpose.
@@ -344,7 +344,7 @@ Before the battery is replaced, the laptop should be turned off to prevent damag
 
 If an office laptop fails, it is defective, destroyed, lost or stolen should this be reported immediately. This also applies to private devices that are used for business purposes. For this purpose, there should be clear reporting channels and contact persons in each institution.
 
-In particular, if a laptop is lost or stolen, must be acted quickly, since it is not just about the replacement of the devices, but also that the information concerned will not be misused. Laptops may contain sensitive data that requires immediate action, such as:
+In particular, if a laptop is lost or stolen, must be acted quickly, because this is not only about the replacement of the equipment, but also that the information concerned will not be misused. Laptops may contain sensitive data that requires immediate action, such as:
 
 * Access data such as passwords: All access data in any affected IT system must be changed immediately. Information classified as confidential: All affected areas (eg department, customers) must be notified in order to take appropriate action.
 * Information classified as confidential: all affected areas (eg, department, customers) must be notified to take appropriate action.
@@ -354,7 +354,7 @@ If lost devices reappear, they should be examined for possible tampering. For ex
 
 #### SYS.3.1.M13 Encryption of laptops
 
-An encryption program should be used to prevent sensitive data from a stolen laptop being read out. With the help of the marketable products, it is possible to encrypt individual files, certain areas or the entire hard disk in such a way that only the person with the secret key can read and process the data.
+An encryption program should be used to prevent sensitive data from being stolen from a laptop. With the help of the marketable products, it is possible to encrypt individual files, certain areas or the entire hard disk in such a way that only the person with the secret key can read and process the data.
 The security of the encryption depends on three different points centrally:
 
 * The encryption algorithm used must be such that, without knowing the key used, it is not possible to reconstruct the plaintext from the encrypted text. Not possible here means that the required effort, with which the algorithm can be broken or decrypted, is disproportionate to the information gain that can be achieved thereby.
@@ -364,10 +364,10 @@ Encryption can be done online or offline. Online means that all hard drive (or p
 
 #### SYS.3.1.M14 Suitable storage of laptops [user]
 
-Users must be careful to keep their laptops safe outside of the institution. For this only a few hints can be given, which are to be considered:
+Users must be careful to keep their laptops safe outside of the institution. For this only a few hints can be given, which should be considered:
 
 * Laptops should not be left unattended if possible.
-* If a laptop is stored in a motor vehicle, the device should not be visible from the outside. For example, it should be covered or locked in the trunk. A laptop can be a high value that attracts potential thieves, especially as such IT systems can be easily sold.
+* If a laptop is stored in a motor vehicle, the device should not be visible from the outside. For example, it should be covered or locked in the trunk. A laptop can be a high value that attracts potential thieves, especially since such IT systems can be easily sold.
 * If the laptop is used in a foreign office, the employee should take it with him if he only leaves the room for a short time or he locks the device. At least one access protection should be activated to prevent unauthorized use. If the room is left for a long time, the laptop should also be switched off.
 * In hotel rooms, the laptop should not be left unattended. If the device is locked in a cupboard, it stops at least occasional thieves.
 * A laptop can also be secured by a lock. A thief then needs tools to steal it.
@@ -378,7 +378,7 @@ It is advisable to create a leaflet for the users of laptops containing the most
 
 ** Suitable storage of laptops in stationary use **
 
-Due to their design, laptops are always popular targets for theft. Therefore, they must be kept safe even if they are in the supposed safe office. Therefore, the requirements described in module INF.8 * Workstation * must be observed. However, since a laptop is particularly easy to transport and hide, the device can be locked away during off-peak hours, such as being locked or chained in a closet or desk.
+Due to their design, laptops are always popular targets for theft. Therefore, they must be kept safe even if they are in the supposed safe office. For this reason, the requirements described in module INF.8 * Workstation * must be observed. However, since a laptop is particularly easy to transport and hide, the device can be locked away during off-peak hours, such as being locked or chained in a closet or desk.
 
 ### 2.3 Measures for increased protection requirements
 
@@ -479,7 +479,7 @@ The following list gives a rough overview of possible general evaluation criteri
 
 
  
-Once all the requirements for the product to be procured have been documented, the laptops available on the market must be examined to what extent they meet these requirements. It is to be expected that not every product will meet all requirements at the same time or equally well. Therefore, the individual requirements should be weighted. Based on the product evaluation, a sound purchasing decision can be made.
+Once all requirements for the product to be procured have been documented, the laptops available on the market must be examined to what extent they meet these requirements. It is to be expected that not every product will meet all requirements at the same time or equally well. Therefore, the individual requirements should be weighted. Based on the product evaluation, a sound purchasing decision can be made.
 
 Practice shows that due to various application requirements, it may be sensible to select several different device types for procurement. The variety of devices should be limited, so that the support is easier.
 
@@ -507,7 +507,7 @@ Anti-theft devices can be used wherever there is a need to protect large assets 
 
 ** Preventing a Cold Boot Attack **
 
-In areas that are not sufficiently protected against unauthorized access, for example, could be read by a cold boot attack the memory. The same applies to systems that have been put into a power-saving mode by Suspend to RAM.
+In areas that are not sufficiently protected against unauthorized access, for example, could be read by a cold boot attack of memory. The same applies to systems that have been put into a power-saving mode by Suspend to RAM.
 
 In a cold boot attack, the memory chips are heavily cooled before the system is turned off. The memory content is retained for several minutes and can be read while using a suitable device.
 
@@ -525,7 +525,7 @@ When purchasing mechanical fuses, it is important to choose a good lock that has
 * Master Key System: Each device backup has an individual key, but can also be opened by a master key. This has the advantage that the effort for key management is lower. But it has the disadvantage that such systems are more expensive to buy.
 Most laptops have a small slot marked with a chain or lock symbol. This small opening is located on the side or rear of the unit. There are a wide range of cable retainers and other products that use this opening for securing devices.
 
-In the case of cable fuses, only one cable loop must be placed around a solid object close to the device, and the associated lock must be pulled and closed by the resulting tab.
+In the case of cable fuses, only one cable loop has to be placed around a solid object close to the device, the corresponding lock must be pulled through the resulting tab and locked.
 
 For devices that do not have this opening, or where this is not strong enough, there are backup products where a stable plate is glued to the device. At this then the security cable is attached.
 

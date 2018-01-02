@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Mobile data carriers are used for many different purposes, such as data transport, storage of data or data use on the move. There are many different variants of mobile data carriers, including removable disks, CD-ROMs, DVDs, magnetic tapes, USB hard disks and USB sticks. These various forms and applications do not always make all the necessary safety considerations.
+Mobile data carriers are used for many different purposes, such as transporting data, storing data or using data on the move. There are many different variants of mobile data carriers, including removable disks, CD-ROMs, DVDs, magnetic tapes, USB hard disks and USB sticks. These various forms and applications do not always make all the necessary safety considerations.
 
 Data carriers can be classified according to whether they are read-only, write-once or rewritable. They can also be subdivided according to further criteria, for example
 
@@ -18,7 +18,7 @@ These implementation notes show on the one hand how the information stored on mo
 
 ### 1.2 Life cycle
 
-For the safe handling of mobile data carriers, a number of measures have to be implemented, beginning with the planning and conception to the procurement up to the emergency preparedness. The steps that should be taken and the actions that should be followed in each step are listed below.
+For the safe handling of mobile data carriers, a number of measures have to be implemented, beginning with the planning and conception through the procurement up to the emergency preparedness. The steps that should be taken and the actions that should be followed in each step are listed below.
 
 ** planning and conception **
 
@@ -93,9 +93,9 @@ Therefore, some basic aspects should be considered when dealing with portable me
 * with which external employees or service providers mobile data carriers may be exchanged and which safety regulations must be observed (see OPS.1.2.3 Data medium exchange),
 * how to prevent mobile media from being used to pass on unauthorized information,
 * how to prevent the spread of malware via the mobile data carrier.
-It should also be clarified whether employees are allowed to use their private mobile data carriers within the institution, and vice versa, whether employees may store or use private data on official mobile data carriers. It should also be clarified whether the mobile data carriers brought in by external parties may be used within the institution, for example to exchange files.
+It should also be clarified whether employees are allowed to use their private mobile storage devices within the institution, and vice versa, whether employees may store or use private data on official mobile data carriers. It should also be clarified whether the mobile data carriers brought in by external parties may be used within the institution, for example to exchange files.
 
-The more restrictive the security requirements are for the handling of mobile data carriers, the higher are also the limitations in the daily work routine. Therefore, all security requirements should be weighed to determine whether they are appropriate.
+The more restrictive the security requirements are for the handling of mobile data carriers, the higher are also the restrictions in the daily working routine. Therefore, all security requirements should be weighed to determine whether they are appropriate.
 The variety and variants of data carriers will continue to increase. Mobile disks are becoming increasingly "invisible" as they integrate with other devices. It should be checked regularly whether the security requirements for the handling of mobile data media are still current, starting with whether all variants of currently used data media are still covered.
 
 Mobile data carriers can easily be lost or stolen while traveling. Therefore, depending on protection needs to consider whether the information stored on it should be encrypted. For this purpose, products should be used that automatically encrypt all data that users store on mobile data carriers. For more information, see SYS.3.4.M10 Disk Encryption.
@@ -104,7 +104,7 @@ The procedure defined by the institution should be documented and prepared in a 
 
 #### SYS.3.4.M5 Control of the transport of mobile data carriers
 
-The IT components used within an in-house property are generally adequately protected against misuse and theft by infrastructural security measures. However, mobile data carriers are often used outside the home, e.g. B. on business trips. In order to be able to protect these sufficiently, the transport of such data carriers must be clearly regulated.
+The IT components used within an in-house property are generally adequately protected against misuse and theft by infrastructural security measures. However, mobile data carriers are often used outside the home, e.g. B. on business trips. In order to be able to adequately protect these, the transport of such data carriers must be clearly regulated.
 
 It should be specified
 
@@ -113,7 +113,7 @@ It should be specified
 * which basic security measures must be observed (virus protection, encryption of sensitive data, storage, etc.).
 The type and extent of security measures to be applied to externally deployed media depends, on the one hand, on the protection requirements of the IT applications and data stored on them and, on the other hand, on the security of the storage or storage locations.
 
-In principle, employees should obtain the appropriate authorization for all mobile data carriers they want to use externally. In particular outside of the institution's own real estate, users should ensure the protection of the data carriers entrusted to them. These and the precautions to be taken are to be noted. These include the following rules:
+In principle, employees should obtain the appropriate authorization for all mobile data carriers they wish to use externally. In particular outside of the institution's own real estate, users should ensure the protection of the data carriers entrusted to them. These and the precautions to be taken are to be noted. These include the following rules:
 
 * Mobile data carriers must always be stored safely. On business trips they should not be left unattended.
 * Mobile data carriers that contain sensitive data should be encrypted as completely as possible (SYS.3.4.M10 volume encryption). If such media enables encryption without any additional resources, it is recommended to use these features even if less sensitive data is contained on the media.
@@ -124,11 +124,11 @@ In principle, employees should obtain the appropriate authorization for all mobi
 The task of the disk management as part of the resource management is to be able to guarantee the access to mobile data carriers to the required extent and within a reasonable time. This requires a regular management of the data carriers, which requires uniform labeling and inventory management. Furthermore, in the context of data carrier management, the proper handling and storage of the data carriers, their proper use and transport and, last but not least, the deletion or destruction of the data carriers must be ensured.
 
 ** Inventories ** provide fast and targeted access to mobile media. For example, they provide information about the storage location, retention period and authorized recipients.
-The external ** identification ** of mobile data carriers enables their rapid identification. However, the label should not allow unauthorized persons to infer the content (eg the inscription of a USB key with the keyword "confidential") in order to make it more difficult to misuse. It should be noted, however, that flanking regulations and requirements that apply to the institution require a corresponding labeling. In this case, additional requirements from these regulations and requirements usually have to be implemented. A defined structure of identification features (eg date, filing structure, serial number) facilitates the assignment to stock records.
+The external ** identification ** of mobile data carriers enables their rapid identification. However, the labeling should not allow unauthorized persons to infer the content (eg the inscription of a USB stick with the keyword "confidential") in order to make it more difficult to misuse. It should be noted, however, that flanking regulations and requirements that apply to the institution require a corresponding labeling. In this case, additional requirements from these regulations and requirements usually have to be implemented. A defined structure of identification features (eg date, filing structure, serial number) facilitates the assignment to stock records.
 
-For ** proper handling ** of mobile data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage on the one hand measures for storage (magnetic and dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to meet.
+For ** proper handling ** of mobile data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field and dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to meet.
 
-The ** shipping or transport ** of mobile data media must be carried out in such a way that they can not be damaged if possible (eg magnetic tape mailing bag, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport methods (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion.
+The ** shipping or transport ** of mobile data media must be carried out in such a way that they can not be damaged if possible (eg magnetic tape mailing bag, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport types (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion.
 
 It should also be noted that a backup copy is made before important data carriers are delivered. Further information on the shipping and transport of data media is contained in the module OPS.1.2.3 Data medium exchange.
 
@@ -183,7 +183,7 @@ Storage media can be used to uncheck information and programs. Therefore, they a
 #### SYS.3.4.M10 Disk Encryption (C)
 
 Confidential information can be encrypted in various ways and thus protected against unauthorized access. For example, the entire volume, a single partition or just a single file can be encrypted. From a security point of view, it is better to encrypt the entire data carrier, since then less user intervention is required and all data is protected against unauthorized access. If only individual files or file containers are encrypted, there is a risk of inadvertently removing sensitive data in unencrypted areas of the hard disk. In addition, the user must explicitly start an encryption program for this purpose.
-Disk encryption can be implemented with software, but also with hardware support. Software solutions are z. For example, BitLocker from Microsoft or the open source program VeraCrypt. Mobile data carriers, such as USB sticks, should always be fully encrypted whenever possible, even if they are occasionally used for confidential information.
+Disk encryption can be implemented with software, but also with hardware support. Software solutions are z. For example, BitLocker from Microsoft or the open source program VeraCrypt. Mobile data carriers, such as USB sticks, should always be completely encrypted whenever possible, even if they are occasionally used for confidential information.
 
 The key feature of an encryption method is the quality of the algorithm and the key selection. One recognized algorithm that is sufficient for normal protection needs is the Triple DES, which is based on the Data Encryption Standard (DES). This is easy to program, especially since the source code is printed in many textbooks in the C programming language. Another recognized algorithm is the Advanced Encryption Standard (AES).
 
@@ -195,7 +195,7 @@ Used passwords must meet the requirements for length and characters to be used.
 
 #### SYS.3.4.M11 Integrity Protection by Checksums or Digital Signatures (I)
 
-If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be made. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by means of a symmetric encryption algorithm (eg triple DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a "digital signature". The respective generated "fingerprints" (checksum, error-correcting codes, MAC, digital signature) are transmitted via an independent transport path with the information to the receiver and can be checked by the latter.
+If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation to be made. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by means of a symmetric encryption algorithm (eg triple DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a "digital signature". The respective generated "fingerprints" (checksum, error-correcting codes, MAC, digital signature) are transmitted via an independent transport path with the information to the receiver and can be checked by the latter.
 
 3 Further information
 ------------------------------

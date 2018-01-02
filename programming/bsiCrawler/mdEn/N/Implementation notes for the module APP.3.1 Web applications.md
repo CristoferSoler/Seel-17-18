@@ -18,7 +18,7 @@ Typical security components or mechanisms of a web application are:
 * Authorization
  Before accessing protected resources and features, you must verify that users have sufficient rights.
 * Input and output validation
- Input and output data must be checked and filtered to avoid processing of harmful data (such as executable malicious code).
+ Input and output data must be checked and filtered to avoid processing harmful data (such as executable malicious code).
 * Session Management
  Since the Internet Protocol HTTP does not support assigning related requests to a user, this mapping is done through the session management of the Web application.
 * Error handling
@@ -29,7 +29,7 @@ Typical security components or mechanisms of a web application are:
 
 ** planning and conception **
 
-When planning a web application, it usually has to be decided whether the requirements for the web application can be covered by standard products or an in-house development is necessary. When a web application is implemented based on standard software, customizations are usually required that go beyond mere configuration changes and often include development work. As a result, standard software-based web applications often have to meet web application development and extension requirements (see APP.3.1.M9 * Web Application Procurement, Development, and Extension *).
+When planning a web application, it usually has to be decided whether the requirements for the web application can be covered by standard products or an in-house development is necessary. When a web application is implemented based on standard software, customizations are usually required that go beyond mere configuration changes and often include development work. As a result, standard software-based web applications often have to comply with Web application development and extension requirements (see APP.3.1.M9 * Web Application Procurement, Development, and Extension *).
 
 Already in the design phase of a web application, security aspects must be taken into account to protect the data to be processed (see APP.3.1.M8 * System architecture of a web application *). Here, the integration of the background systems (eg database) and their secure connection must be included (see APP.3.1.M11 * Secure connection of background systems *).
 
@@ -42,15 +42,15 @@ If a web application with available standard software is to be realized, a suita
 
 Before a web application is taken over into active operation, the safety functions must be configured. The components to be deployed must protect the web application from known threats and attack techniques (see, for example, APP.3.1.M18 * SQL Injection Protection *).
 
-In addition, context-sensitive validation and filtering of the data (see APP.3.1.M1 * Authentication for web applications *) and the protection of user sessions through session management (see APP.3.1.M3 * Secure Session Management *) are essential Security components of a web application.
+In addition, the contextual validation and filtering of the data (see APP.3.1.M1 * Authentication for web applications *) and the protection of user sessions through session management (see APP.3.1.M3 * Secure Session Management *) are essential Security components of a web application.
 
 **Business**
 
-After a web application has passed through the acceptance and release procedure successfully and has been configured ready for operation, normal operation can be started.
+After a web application has passed through the acceptance and release procedure successfully and has been configured ready for operation, the regular operation can be started.
 
 In particular, when using a web application over public networks (eg Internet) there is a risk that exploited vulnerabilities will be exploited. Therefore, processes must be defined in order to be able to permanently maintain the desired security level of the web application (see APP.3.1.M6 * Timely Import of Security-Relevant Patches and Updates *).
 
-It must be ensured that data transmitted by web applications does not contain any security-relevant information that gives an attacker information about bypassing security mechanisms (see APP.3.1.M14 * Confidential Data Protection *).
+It must be ensured that data transmitted by web applications does not contain any security-related information that gives an attacker information about bypassing security mechanisms (see APP.3.1.M14 * Confidential Data Protection *).
 
 For the high protection requirement, penetration tests have to be carried out on the web application in order to check the security level of the web application and to quickly eliminate possible weaknesses (APP.3.1.M21 * Carrying out of penetration tests *).
 
@@ -107,7 +107,7 @@ Table: User Authentication on Web Servers
 The Microsoft Internet Information Server also provides another method that uses Windows user logon. However, this method works only with the Microsoft Internet Explorer as a client.
 ** Remember Me function **
 
-To improve user-friendliness, web application authentication data is sometimes stored permanently on the users' clients (eg within a cookie in the web browser). This option is often referred to as the Remember Me feature. If authentication data has been stored on the client as part of the Remember Me function, it will be automatically transferred during later use of the web application. The user no longer needs to enter access data.
+To improve user-friendliness, web application authentication data is sometimes stored permanently on the users' clients (eg within a cookie in the web browser). This option is often referred to as the Remember Me feature. If authentication data has been saved on the client as part of the Remember Me function, it will be automatically transferred during later use of the web application. The user no longer needs to enter access data.
 
 If an attacker gains access to the web browser or malicious code is executed on the client, this stored authentication data can be read out. For this reason, this feature should be avoided. However, if the Remember Me function can not be dispensed with, then the user should explicitly agree to an activation (opt-in). In addition, the user should be made aware of the risks of the function.
 
@@ -121,18 +121,18 @@ Since the session ID is often attacked, it can not be completely ruled out that 
 
 ** Limits for failed logon attempts **
 
-If a user tries to log on to the web application several times at short intervals, these authentication attempts should be considered as an attack. If the number of failed attempts exceeds a specified value (for example, five failed attempts), the user account should be locked for a defined time interval (for example, 10 seconds). In addition, the time intervals for blocking the user account may progressively increase with the number of failed attempts. This is to prevent users from guessing passwords of other users without authorization.
+If a user tries to log in to the web application several times at short intervals, these authentication attempts should be considered as an attack. If the number of failed attempts exceeds a specified value (for example, five failed attempts), the user account should be locked for a defined time interval (for example, 10 seconds). In addition, the time intervals for blocking the user account may progressively increase with the number of failed attempts. This is to prevent users from guessing passwords of other users without authorization.
 
 When choosing the limit and time intervals, it should be noted that this mechanism can be misused for denial-of-service attacks. An attacker could deliberately provoke the blocking of many user accounts and thus exclude these users from using the web application.
 
 ** Automated resetting of authentication data **
 Since web applications are often used by a large group of users, they often offer functions for automatically resetting the authentication information (password reset). So the administrative effort should be kept as low as possible, if z. B. a user has forgotten his password. If the authentication data can be reset without authorization, the authentication mechanism can be bypassed in this way. Therefore, it must be ensured that all functions of a web application for changing the authentication data are at least as secure as the primary authentication.
 
-For example, in the process of resetting the password, if authentication of the user is ensured by a secret question with an appropriate answer, the features should be formulated by the user. It should be noted that they should not include data that is publicly available or easy to guess. To increase the level of protection, several questions and answers can be included during registration (eg five, of which at least three questions need to be answered correctly for successful authentication).
+For example, in the process of resetting the password, if the user is authenticated by a secret question with an appropriate answer, the features should be formulated by the user. It should be noted that they should not include data that is publicly available or easy to guess. To increase the level of protection, several questions and answers can be included in the registration process (eg five, of which at least three questions need to be answered correctly for successful authentication).
 
-In addition, another security feature can be used by sending a link to a previously specified by the user e-mail address after correct answering the questions or sent another security token (eg a PIN) via SMS to a stored phone number becomes. Only after the user clicks on the link or enters the PIN, he can then log in.
+In addition, another security feature can be used by sending a link to a previously specified by the user e-mail address after correct answering the questions or sent another security token (eg a PIN) via SMS to a stored phone number becomes. Only after the user clicks on the link or enters the PIN can he log in.
 
-Since the authentication procedure is usually difficult to bring to the same level of security when resetting credentials as in primary authentication, an automated reset by the web application should be avoided. In the case of limited user groups of the web application (eg in the case of a web application on the intranet), the password can instead be manually reset, for example, via a hotline with secure authentication features and a corresponding release procedure. Especially with a high protection requirement, this method is preferable.
+Since the authentication process is usually difficult to bring to the same level of security when resetting credentials as it does with primary authentication, an automated reset by the web application should be avoided. In the case of limited user groups of the web application (eg in the case of a web application on the intranet), the password can instead be manually reset, for example, via a hotline with secure authentication features and a corresponding release procedure. Especially with a high protection requirement, this method is preferable.
 
 ** Password usage control **
 
@@ -152,11 +152,11 @@ A password should consist of uppercase letters, lowercase letters, special chara
 * When entering the password, the password should not be displayed on the screen.
 ** Reset passwords **
 
-It happens regularly that users forget or lose their authentication information or tokens. Therefore, every web application must have an adequate mechanism to give users access again quickly, but without opening any security holes. Depending on the type of authentication procedure selected and the protection requirements, there are various options for resetting passwords or enabling tokens, see ORP.4 Identity and Permission Management.
+It happens regularly that users forget or lose their authentication information or tokens. Therefore, every web application must have an adequate mechanism to give users access again quickly, but without opening any security holes. Depending on the type of authentication procedure selected and the need for protection, there are various options for resetting passwords or enabling tokens, see ORP.4 Identity and Permission Management.
 
 #### APP.3.1.M2 Web Application Access Control [Developer]
 
-An access control has to be implemented at all levels of a web application (eg through the web application, the application server, the web server and the operating system). As a result, in addition to web-application-level access protection, the requirement of APP.3.1.M11 Secure Back-End Systems * for access protection of data in background systems should be considered.
+An access control has to be implemented at all levels of a web application (eg through the web application, the application server, the web server and the operating system). As a result, in addition to Web application-level access protection, the requirement of APP.3.1.M11 Secure Back-End System Interface * should be considered for back-up protection of data in background systems.
 
 The following points should be considered for secure access control at the web application level:
 
@@ -238,7 +238,7 @@ The session ID should meet at least the following requirements:
 * If session IDs are managed and created with a framework, it is important to ensure a secure configuration of the framework, so that the above-mentioned requirements for the session ID are met.
 ** Protection against unauthorized access to the session ID **
 
-The session ID can be transferred both in the URL of a request (GET method), in the body of the request (POST method) or as a cookie in the header of the request. When data is submitted using the GET method, it can be stored by participating IT systems and viewed by third parties (for example, browsing history, screenshots, page copies, or printouts). Therefore, the session ID should not be transferred via the GET method (ie in the URL). For web applications with high protection requirements, this is not allowed. Instead, the session ID should preferably be transferred in cookies.
+The session ID can be transferred both in the URL of a request (GET method), in the body of the request (POST method) or as a cookie in the header of the request. When data is submitted using the GET method, it can be stored by participating IT systems and viewed by third parties (for example, in the browser history, on screenshots, page copies, or printouts). Therefore, the session ID should not be transferred via the GET method (ie in the URL). For web applications with high protection requirements, this is not allowed. Instead, the session ID should preferably be transferred in cookies.
 
 If the application requires the GET method (for example, because some clients can not process cookies), the following points should be noted:
 
@@ -249,7 +249,7 @@ If the application requires the GET method (for example, because some clients ca
 * When linking to external sites, the session ID must not be transferred. This applies both to the transmission in the URL and to the referrer field. Therefore, for links to external pages, a forced redirect should be used to clean up the referrer field.
 To protect against unauthorized reading of the session ID, the communication should take place via a secure connection after a successful login. This can be encrypted via a transport security, for example by means of SSL / TLS. The session ID can be transferred over an unsecured connection if the existing session can not use access-protected areas of the web application. Usually the user is not yet authenticated in this case.
 
-Access to the session ID as an authentication feature should be strictly regulated. If the session ID is transferred in a cookie, the client-side access to this cookie should be limited as far as possible with the following flags (for a detailed description of the cookie flags, see APP.3.1.M14 * Confidential Data Protection *): Path (for example * / webapp / *), Secure and HttpOnly.
+Access to the session ID as an authentication feature should be strictly regulated. If the session ID is transferred in a cookie, the client-side access to this cookie should be limited as far as possible with the following flags (for a detailed description of the cookie flags see APP.3.1.M14 * Protection of confidential data *): Path (for example * / webapp / *), Secure and HttpOnly.
 
 ** Limited time of meeting **
 
@@ -257,11 +257,11 @@ A web application must allow users to explicitly end an existing session after t
 
 * If the user is logged in, he should log out of the web application after completing the activities.
 * If there was no logout on the last visit, the user should be advised to log out in the future on the next logon to the web application.
-Unused existing sessions provide an attack surface for brute force attacks on the session ID. Therefore, sessions should no longer be valid after an idle time interval (idletime). In addition, a maximum validity period should be assigned (timeout), so that the session IDs of active sessions have a limited validity. This should be chosen as low as possible for the sessions, so that brute-force attacks are difficult, whereby the usability of the web application should not be unnecessarily limited. The formula in the "Session ID requirements" section can be used to determine an appropriate validity period.
+Unused existing sessions provide an attack surface for session ID brute force attacks. Therefore, sessions should no longer be valid after an idle time interval (idletime). In addition, a maximum validity period should be assigned (timeout), so that the session IDs of active sessions have a limited validity. This should be chosen as low as possible for the sessions, so that brute-force attacks are difficult, whereby the usability of the web application should not be unnecessarily limited. The formula in the "Session ID requirements" section can be used to determine an appropriate validity period.
 
 If serious errors occur while using the web application, requested actions should be aborted and, in addition, the session terminated. Fatal errors are, for example, exceptions and detected attempts to attack. In the case of high protection requirements, even narrower criteria should be considered, which invalidate the session (for example, invalid entries, invocation of missing pages).
 
-During invalidation, the session data should be completely deleted on the server and client side, so that the session will no longer be accepted on the server side and client-side information about previously established sessions will remain. This can be achieved, for example, by deleting the cookie with the session ID.
+During invalidation, the session data should be completely deleted on the server and client side so that the session is no longer accepted on the server side and no information about previously established sessions remains on the client side. This can be achieved, for example, by deleting the cookie with the session ID.
 
 In addition, multiple parallel sessions under the same user account can be prevented. An existing session can be invalidated when you log in again so that only the new session remains valid. Alternatively, for example, it is possible to maintain the first session for a limited period of time (for example, 15 minutes) before it is invalidated. When logging in, the user should see a message about the expiring first session via a parallel, second session. In this way, existing but no longer used sessions after re-logon can not be used by third parties or only partially unauthorized.
 To protect against session fixation attacks, an existing session ID should be replaced by a new one after logging in.
@@ -270,7 +270,7 @@ Likewise, after a change from an unsecured communication channel (HTTP) to a sec
 
 ** Protection of session data **
 
-Resulting session data (for example shopping cart) may only be stored on the server side on a trustworthy IT system. In addition, data must be protected against unauthorized access by other users through access control. If the web application requires client-side storage of session data, then APP.3.1.M14 * Confidential Data Protection * should also be considered for storing data on the client.
+Resulting session data (for example shopping cart) may only be stored on the server side on a trustworthy IT system. In addition, data must be protected against unauthorized access by other users through access control. If the web application requires client-side storage of session data, APP.3.1.M14 * Confidential Data Protection * should also be considered for the storage of data on the client.
 
 ** Assignment of a session using additional attributes **
 
@@ -298,7 +298,7 @@ The contents can be integrated by means of different techniques. Therefore, the 
 
 ** Including Files (File Inclusion) **
 
-When web pages are generated by a web application, it often dynamically incorporates portions of the delivered Internet page from disparate files (such as a navigation bar). This reduces the maintenance required for changes to the website (eg a new navigation entry). The content and path of the files to be included should be changed only by the administrator or privileged users of the web application. On the other hand, ordinary users should not be able to freely choose or modify the files for inclusion (eg via changed parameters). For this reason, the web application should not process user input to embed files.
+When web pages are generated by a web application, it often dynamically incorporates portions of the delivered Internet page from disparate files (such as a navigation bar). This reduces the maintenance required for changes to the website (eg a new navigation entry). The content and path of the files to be included should be changed only by the administrator or privileged users of the web application. On the other hand, ordinary users should not be able to freely select or modify the files for inclusion (eg via changed parameters). For this reason, the web application should not process user input to embed files.
 
 However, if the web application requires user input as a source for embedding files, the intended paths to the source files should not be arbitrary. Users should not be able to specify the entire path, but instead user input should be encapsulated in predefined path statements.
 
@@ -398,7 +398,7 @@ The logged data should be stored in a uniform format for efficient evaluation. T
 
 The logging of the web application is to be carried out on the server side only, since only in this way the log data can be evaluated centrally. The log data should be collected from a single, central logging component of the web application, not from different logging components.
 
-An error-prone redevelopment of the logging component should be avoided. Instead, use the functionality of established frameworks that typically support a centralized logging approach and logging in common protocol data formats (see section * Appropriate Data Formats and Mechanisms *).
+An error-prone redevelopment of the logging component should be avoided. Instead, use the functionality of established frameworks that typically support a centralized logging approach and logging in common log data formats (see Section * Appropriate Data Formats and Mechanisms *).
 
 ** Protection against unauthorized access and manipulation of log data **
 
@@ -453,14 +453,14 @@ These are emergency computer teams that serve as a single point of contact for p
 * Some IT journals also regularly post articles that outline new vulnerabilities in different products.
 Ideally, administrators and security officers should be aware of security vulnerabilities in at least two different locations. It is advisable, in addition to the manufacturer's information, to use an "independent" source of information.
 
-In any case, administrators should also use product-specific sources of information from the manufacturer, for example, to know whether patches or updates are ever made available for a specific product when security vulnerabilities are discovered. For products for which the manufacturer no longer provides security patches, it must be checked in good time whether an application under these circumstances is still responsible and by what additional measures a protection of the affected systems can still be guaranteed.
+In any case, administrators should also use product-specific sources of information from the manufacturer, for example, to know whether patches or updates are ever made available to a specific product when security vulnerabilities are discovered. For products for which the manufacturer no longer provides security patches, it must be checked in good time whether an application under these circumstances is still responsible and by what additional measures a protection of the affected systems can still be guaranteed.
 
 #### APP.3.1.M7 Protection against unauthorized automated use of web applications [Developer]
 
 A web application is commonly used by humans and thus does not require automated usage (eg through scripts). Brute-force attacks (eg guessing credentials) and enumeration attacks (eg automated detection of valid login names) rely on the automated control of a web application (automation). These attacks typically attempt to collect sensitive data through repetitive, slightly varying queries (such as changed usernames).
 To prevent such attacks, the web application must be able to distinguish automated from manual access. Automated attacks are characterized by a high number of access attempts within a short period of time, which clearly exceeds the usual level.
 
-Therefore, a tolerance threshold for repeatedly retrieved resources can make such attacks more difficult (tar pit). If limits are set against automated queries, it must be ensured that legitimate users are as little restricted as possible in the functionality and operation of the web application. If Web application primitive limits are too tight, attackers can use it at the Web application level for denial-of-service attacks. For example, if user accounts are blocked for a certain amount of time after a specified number of unsuccessful login attempts, targeted incorrect entries can result in a long-term lockdown of many user accounts. As a result, legitimate users will no longer be able to log in to the web application during this time.
+Therefore, a tolerance threshold for repeatedly retrieved resources can make such attacks more difficult (tar pit). If limits are set against automated queries, it must be ensured that legitimate users are as little restricted as possible in the functionality and operation of the web application. If Web application primitive limits are too tight, attackers can abuse it at the Web application level for denial-of-service attacks. For example, if user accounts are blocked for a certain amount of time after a specified number of unsuccessful login attempts, targeted incorrect entries can result in a long-term lockdown of many user accounts. As a result, legitimate users will no longer be able to log in to the web application during this time.
 
 In addition, the efficiency of automated attacks is usually highly dependent on the level of detail of the information in the web application responses (see * APP.3.1.M13 Restrictive Release of Security-Related Information *).
 
@@ -469,7 +469,7 @@ The following examples show possible protection mechanisms:
 * An artificial delay between entering user authentication credentials and reporting a failed login attempt can make brute-force attacks more difficult due to the increased time required. The effectiveness of this method can be increased by a progressive increase in the delay after each failed attempt.
 * If submissions are rejected, information about the cause should be generic. For example, an attacker may not be able to log in to a valid user account based on messages such as "Invalid Password" instead of "Invalid Access Data" (see also APP.3.1.M16 * Error Handling *).
 Attack attempts are often characterized by multiple failed attempts to perform an action. Therefore, the session should be ended in this case. Subsequently, a new registration should be required.
-* Automated attacks can be fended off by temporarily blocking the IP address if an attack is suspected. It should be kept in mind that this recommendation may also affect bystanders who are not involved (eg if multiple users use the same proxy).
+* Automated attacks can be fended off by temporarily blocking the IP address if an attack is suspected. It should be kept in mind that this recommendation may also affect outsiders (for example if multiple users use the same proxy).
 * Frequently called CAPTCHAs (Completely Automated Public Turing Test To Tell Computer and Humans Apart) are used to distinguish automated and manual access. In this case, tasks have to be solved by the user of the web application (for example, the characters in a picture must be recognized and tapped or puzzles answered), which is not easily possible for a computer program. Depending on the technology used and the task, the web application may only be used to a limited extent for people with disabilities. So should As an alternative to fading in the task they are also provided acoustically to allow people with visual impairment, the use of the web application. It should be noted that the use of CAPTCHAs for reasons of discrimination is regulated or prohibited by law in many countries. In Germany, the Federal Administration is obliged to design its publicly available Internet and Intranet offers in accordance with the Barrier-Free Information Technology Ordinance (BITV).
 ### 2.2 Standard measures
 
@@ -516,19 +516,19 @@ You should use separate accounts for the different server processes of the syste
 
 ** Multilayer network architecture **
 
-The Web application's IT system components should be decoupled in the security gateway in demilitarized zones (DMZs) according to protection needs.
+The Web application IT system components should be decoupled in the security gateway in demilitarized zones (DMZs) according to protection needs.
 
 The network architecture should follow a multi-tiered approach (multi-tier architecture). At least the following security zones should be considered:
 
 * Web layer
  This layer is adjacent to the untrusted network (eg, Internet) and represents the exposed layer with direct access by users. Packet filters between adjacent networks (e.g., application layer and Internet) should filter the traffic so that there is no direct access the untrusted network beyond the mesh limits of the Web layer. In this layer systems such as the web server should be placed, which occupy an exposed position and z. B. require direct access by users.
 * Application layer
- The application layer should be adjacent to the Web layer and to the data layer. The network traffic to the adjacent networks should be filtered by packet filters, so that no direct access between the adjacent networks is possible. In this network segment, systems and servers should be placed with the application logic (eg the application server with the web application). The systems access data from the adjacent data layer (eg, databases), process it, and make it available to systems in the Web layer (eg, the Web server).
+ The application layer should be adjacent to the Web layer and to the data layer. The network traffic to the adjacent networks should be filtered by packet filters, so that no direct access between the adjacent networks is possible. In this network segment, systems and servers should be placed with the application logic (for example, the application server with the web application). The systems access data from the adjacent data layer (eg, databases), process it, and make it available to systems in the Web layer (eg, the Web server).
 * Data Layer
 The data layer is the most trusted zone of the multi-layered architecture. Packet filters between the adjacent networks should regulate the traffic. In this layer, the background applications of the web application, such as Databases, directory service and legacy systems. Access to these systems should only be possible from adjacent networks (eg application layer). The data layer is to be implemented as a separate zone and should not be integrated into other zones (eg Intranet).
 It should not be possible to access systems on the intranet from the above zones. If z. For example, if a directory service is used for the authentication on the web application, a dedicated domain on dedicated hardware should be used for this purpose.
 
-Filtering of the traffic should be done by separate filter components (eg packet filter). If the protection requirement is high, the filter components should be replaced or supplemented by systems with filter functions at higher protocol levels (eg Application Level Gateway). The application level gateway should be integrated into a separate security zone, which receives the requests of the users before the systems of the web layer.
+Filtering of the traffic should be done by separate filter components (eg packet filter). If the protection requirement is high, the filter components should be replaced or supplemented by systems with filter functions at higher protocol levels (eg Application Level Gateway). The application level gateway should be integrated into its own security zone, which accepts the requests of the users before the systems of the web layer.
 
 ** documentation of the architecture **
 
@@ -589,7 +589,7 @@ It should be developed according to a suitable process model (eg V-Modell XT, wa
 
 ** ** Requirements Analysis
 
-Corporate security policies and company-specific requirements should be considered in the requirements analysis and made available to development teams (eg meeting industry standards such as PCI DSS or accessibility requirements). These include z. For example, guidelines and requirements for the use of cryptographic algorithms and secure programming guidelines (see also section Implementation of Programming Guidelines).
+Enterprise security policies and company-specific requirements should be considered in the requirements analysis and made available to the development teams (eg meeting industry standards such as PCI DSS or accessibility requirements). These include z. For example, guidelines and requirements for the use of cryptographic algorithms and secure programming guidelines (see also section Implementation of Programming Guidelines).
 
 At this stage, all data to be processed by the web application should be identified and classified according to protection needs. Appropriate protection mechanisms of the application must be established to protect the data according to their protection needs.
 
@@ -608,13 +608,13 @@ Decisions taken should be documented, so that efficient further development of t
 **Development**
 
 When implementing the application, programming guidelines (see also section Implementation of Programming Guidelines) for the safe development of the components should be observed.
-Care should be taken to ensure that the documentation is continued during the development work (eg by comments in the source code and tools for generating the documentation). Thus, the source code at a later date for third parties is traceable.
+Care should be taken to ensure that the documentation is continued during the development work (eg through comments in the source code and tools for generating the documentation). Thus, the source code at a later date for third parties is traceable.
 
 To protect against the loss of already developed and rejected solutions as well as for documentation purposes, the history of the changes should be recorded (eg by a revision system).
 
 **Testing**
 
-Test cases should not only consider the business functions but also the security functionality. These include z. B. Security components such as authorization, authentication and filtering components. If possible, penetration tests and, for high protection requirements, source code analysis should also be performed to control the implemented security mechanisms (APP.3.1.M21 * Performing Penetration Tests *).
+Test cases should not only consider the business functions but also the security functionality. These include z. B. Security components such as authorization, authentication and filtering components. Whenever possible, penetration tests and, for high protection needs, source code analysis should be performed to control the implemented security mechanisms (APP.3.1.M21 * Performing Penetration Tests *).
 
 Before an application is operated, not only the functionality, but also a possible abuse of the offered functionality should be checked. This can be achieved by penetration tests. In order to be tested on a four-eye basis, the tests should not be performed by persons who were previously involved in the design or development of the application.
 
@@ -636,7 +636,7 @@ In addition, it should be ensured that the data can not be manipulated by third 
 
 A process for maintaining the application needs to be defined, which also includes periodically checking the security of the application for vulnerabilities or available patches.
 
-When adapting or extending the application, care must be taken not to compromise the security mechanisms. In addition, tests in a separate test environment should recheck whether the security mechanisms are still working properly.
+When adapting or extending the application, care must be taken not to compromise the security mechanisms. In addition, tests in a separate test environment should re-verify that the security mechanisms are still working properly.
 
 ** Implementation of programming guidelines **
 
@@ -653,7 +653,7 @@ If a web application is used exclusively with a specific browser, the use of pro
 
 ** Application Development Outsourcing **
 
-In the case of outsourcing, it must be ensured that the contractor meets the necessary security requirements when developing the application. This can be achieved, for example, by specifying a procedure model or by programming guidelines.
+In the case of outsourcing, it must be ensured that the contractor fulfills the necessary security requirements when developing the application. This can be achieved, for example, by specifying a procedure model or by programming guidelines.
 
 If a service provider is commissioned to develop an application with a high protection requirement, the source code (eg the project archive) should be under the administrative control of the client. At the same time, the client should be able to access the source code of the application at any time and be able to follow changes to the source code.
 
@@ -711,7 +711,7 @@ The release statement should include:
 * Restrictions on use (parameter setting, user group ...),
 * Release date, from when the software may be used and
 * the actual release.
-If IT technically possible, it must be prevented that software can be changed or manipulated unnoticed after release, for example by means of suitable integrity protection methods. Otherwise, appropriate organizational rules must be established to prevent or promptly detect changes to the software.
+If IT is technically possible, it must be prevented that software can be changed or manipulated unnoticed after release, for example by means of suitable integrity protection procedures. Otherwise, appropriate organizational rules must be established to prevent or promptly detect changes to the software.
 
 Even after intensive acceptance tests, errors in the software may be detected during ongoing use. In this case, it is necessary to determine how to proceed in such an error case (contact person, troubleshooting process, involvement of the responsible authority, repetition of acceptance and release, version control).
 
@@ -731,26 +731,26 @@ Users of the web application should not be able to directly access the backgroun
 
 In addition, the connection to the background systems should be additionally protected. For this purpose, the systems should authenticate themselves before the data transmission and encrypt the transmitted data so that they can not be read or changed unnoticed (for example by means of SSL / TLS).
 
-If the IT systems involved are connected via insecure channels, a cryptographically secured tunnel with appropriate encryption and authentication should always be used.
+If the IT systems involved are connected via insecure channels, then a cryptographically secured tunnel with appropriate encryption and authentication should always be used.
 Access to background systems should be done with minimal rights. For this purpose, service accounts should be set up on the respective background system.
 
 If a single service account is used to access a background system, all requests in the security context of that service account are processed. This then applies both to access by users with restricted access authorizations and to access by administrative users. To prevent this, several service accounts with different access rights should be used for a background system.
 
 In a suitable system environment, the user accounts may be forwarded to the background system, for example when using a directory service that both the web application and the background system manage the users. In this way, the privileges can be limited to the necessary rights of the user logged on to the web application.
 
-It is important to ensure that unauthenticated access to the web application uses its own service account in the directory service with limited privileges.
+It is important to ensure that unauthorized access to the web application uses its own service account in the directory service with restricted permissions.
 
 ** Enterprise Service Bus **
 
 In the context of so-called service-oriented architectures (SOA), web applications are often connected to background systems via an enterprise service bus (ESB) as a central communication infrastructure. This ensures that only the interface to the ESB needs to be defined and implemented for each application, and not many separate interfaces to other applications and services. In a separate directory (* Repository *) the ESB stores metadata about the connected services.
 
-In addition, the ESB can also implement central safety functions to further protect the connected applications. Such security features can, for example, detect and prevent replay attacks or check XML data for potentially harmful content, but also log message exchange centrally and audit-proof.
+In addition, the ESB can also implement central safety functions to further protect the connected applications. Such security features can, for example, detect and stave off replay attacks or check XML data for potentially harmful content, but also log the message exchange centrally and audit-proof.
 
 When using an ESB, ensure that all services authenticate to the ESB before they are allowed access. This also applies to access to the ESB repository. The ESB must be integrated into the network architecture so that access is only possible from the servers of the connected applications and services and external access to the ESB is excluded. For this purpose, the ESB should have its own logical network segment. The ESB must perform its own authorization check to verify that access to the requested service is permitted by the requesting service or requesting application. In particular, it must be ensured that applications or services with external contact do not access internal services that are not intended for this purpose. Such applications must not gain knowledge of internal services and their interfaces through the ESB repository. If the service-oriented architecture encompasses several security domains, for example a DMZ with externally invocable services and an internal network with back-end systems, the ESB must also be divided into appropriate security domains with controlled transitions, or several ESBs must be implemented for the individual security zones ,
 
 If the ESB does not communicate exclusively locally in a protected data center network, the communication between the ESB and the connected applications must be adequately secured (authentication and encryption).
 
-By bundling the communication of many applications and services, the availability of the ESB is of particular importance. This must be taken into account in the realization and operation of the ESB by redundancies and appropriate monitoring of the service.
+By bundling the communication of many applications and services, the availability of the ESB is of particular importance. This must be taken into account in the implementation and operation of the ESB by redundancies and appropriate monitoring of the service.
 
 #### APP.3.1.M12 Secure Configuration of Web Applications [Developer]
 If a web application is poorly configured, an attacker may be able to overcome existing security mechanisms. Therefore, the following points should be considered when configuring the web application:
@@ -763,7 +763,7 @@ In addition, a web application can respond differently to a request, depending o
 
 Some HTTP methods (such as * PUT *) provide access to security-critical functionality (such as uploading arbitrary files), allowing you to bypass Web application restrictions (for example, file type checking for an upload function). ,
 
-Therefore, unneeded HTTP methods should be disabled and not edited by the web application. This also applies to fictitious HTTP methods that are not defined in the corresponding standard RFC 2616. Even if the HTTP methods have already been deactivated in the configuration of the web server, the web application should not process unneeded HTTP requests.
+Therefore, unneeded HTTP methods should be disabled and not edited by the Web application. This also applies to fictitious HTTP methods that are not defined in the corresponding standard RFC 2616. Even if the HTTP methods have already been deactivated in the configuration of the web server, the web application should not process unneeded HTTP requests either.
 
 ** character encoding configuration **
 
@@ -773,9 +773,9 @@ If the web application is used internationally, care should be taken to ensure t
 
 ** setting of limits **
 
-Some protections include the use of limit values ​​(see eg APP.3.1.M7 * Protection against unauthorized automated use of web applications *). If a limit value is exceeded, the temporary blocking of an affected function or resource is often carried out. For example, failed login attempts can result in the user account being blocked (for example, to prevent brute force attacks).
+Some protections include the use of limits (see eg APP.3.1.M7 * Protection against unauthorized automated use of web applications *). If a limit value is exceeded, the temporary blocking of an affected function or resource is often carried out. For example, failed login attempts can result in the user account being blocked (for example, to prevent brute force attacks).
 
-However, such measures may affect the operation of the web application and thus also affect uninvolved users. For example, these users will not be able to log in to the web application if their user account has been suspended.
+However, such measures can affect the operation of the web application and thus also affect uninvolved users. For example, these users will not be able to log in to the web application if their user account has been suspended.
 
 These effects should therefore also be taken into account when setting limit values.
 
@@ -784,7 +784,7 @@ These effects should therefore also be taken into account when setting limit val
 Web applications often provide users with direct or indirect access to the underlying file system (for example, via retrievable files or an upload feature). In order for an attacker to be able to read or manipulate unauthorized files that are worthy of protection, they should be protected by restrictive file system permissions in addition to the web application-level access restrictions. The server running the web application must be started with restricted privileges and not as administrator (root).
 
 ** Administration of a web application **
-The web application should primarily be administered via a system decoupled from the application. For example, in the case of an ecommerce application, article maintenance may be through a separate system with access to the database of the web application. Ideally, the system should be designed solely for this purpose and not directly connected to the web application. Accordingly, the web application should retrieve the item data exclusively from the database.
+The web application should primarily be administered via a system decoupled from the application. For example, in the case of an ecommerce application, article maintenance may be via a separate system with access to the database of the web application. Ideally, the system should be designed solely for this purpose and not directly connected to the web application. Accordingly, the web application should retrieve the item data exclusively from the database.
 
 Often web administration applications offer a web interface on the same server. This feature should be avoided and instead the web application should be administered via a separate system. If administration is required on the same server, the administration interface should only be accessible from the administration network and access by ordinary users of the web application should not be possible. Ways to administer the web application that are not used (eg console) should be disabled.
 
@@ -799,7 +799,7 @@ The following examples illustrate what information can contain security-related 
 If an error occurs during the operation of the web application (for example, access errors), neutral error messages should be sent to the user. The error messages must not allow any direct conclusions about techniques, security mechanisms and conditions of the web application. Examples of information that should not be included in error messages:
 
 * Stack traces and debugging information,
-* Messages such as * username invalid * or * invalid password * (invalid instead of general error messages such as * username or password *),
+* Messages such as * username invalid * or * password invalid * (invalid instead of general error messages such as * username or password *),
 * error messages passed on by background systems, for example SQL error messages of a database instead of a message * error in checking the access data *,
 * Error codes instead of, for example, the message * An error has occurred *.
 In the case of a failed authentication, for example, regardless of the validity of the user name, a general message such as * Incorrect or invalid access data * should always be output so that an attacker can not infer the existence of user accounts (user enumeration).
@@ -809,9 +809,9 @@ Basically, different HTML code can lead to the same output in the web browser. F
 Further information on error handling can be found in APP.3.1.M16 * Error Handling *.
 
 ** Prevention of "WS-Interface Probing" **
-When generating Web Services Description Language (WSDL) files, make sure that the tools or frameworks used do not write additional and possibly safety-critical information into the files. Therefore, the files are to be examined first before they are published. If necessary, the tools or frameworks must then be reconfigured so that they no longer write any security-critical information to the WSDL files, or the files must be subsequently cleaned up.
+When generating Web Services Description Language (WSDL) files, make sure that the tools or frameworks used do not write additional and possibly safety-critical information into the files. Because of this, the files have to be checked first before they are published. If necessary, the tools or frameworks must then be reconfigured so that they no longer write security-critical information in the WSDL files, or the files must be subsequently cleaned up.
 
-XML transport containers should generally not pass error messages with detailed information to users (potential attackers). The messages should be general or generic in such a way that they do not contain any information about the applications, frameworks and version numbers used and also do not allow them to be inferred.
+XML transport containers should generally not pass error messages with detailed information to users (potential attackers). The messages should be general or generic in such a way that they do not contain any information about applications, frameworks and version numbers used, nor do they allow any conclusion.
 
 If services can only be searched and called by certain users known to the service provider, it is a good idea to protect the WSDL files or their repositories from direct and unauthorized access by means of a previous user authentication.
 
@@ -821,7 +821,7 @@ When developing web applications, comments may be written to the HTML code. Thes
 
 ** Limited access to documentation **
 
-Information in the documentation of a web application can alert an attacker to potential vulnerabilities (for example, default users after installation). They can be abused to prepare for attacks. Therefore, unnecessary documentation about the web application and its components (for example, database) should be deleted. If the documentation is available online, only the appropriate addressee group should be able to access it. For example, the documentation for administering a web application should not be accessible from the Internet.
+Information in the documentation of a web application may alert an attacker to potential vulnerabilities (for example, default users after installation). They can be abused to prepare for attacks. Therefore, unnecessary documentation about the web application and its components (for example, database) should be deleted. If the documentation is available online, only the appropriate addressee group should be able to access it. For example, the documentation for administering a web application should not be accessible from the Internet.
 
 ** Delete unneeded files **
 
@@ -830,13 +830,13 @@ Running a web application often results in files that are not needed for product
 In addition, it should be noted that especially with temporary files or backup files often other file extensions (for example, * .bak files as backup copies of an editor) are used. If these files are retrieved from the web server, it would be possible that the files are no longer interpreted due to the unknown file extension and instead the source code of the web application is delivered.
 Versioning systems usually create files or folder structures for the objects they manage (for example, folders such as * .svn * or * .git *). These files or folders often contain detailed information about the managed projects and may allow complete access to the source code. For this reason, applications or application components should not be applied to production systems via versioning. At a minimum, access to files and folders created by the versioning software should be blocked.
 
-For the above reasons, all files that are not needed for productive operation must be deleted. In addition, you should check regularly whether new files have been created and whether they can be deleted. If this is not possible, access to these files can be blocked.
+For the reasons mentioned above, all files that are not required for productive operation must be deleted. In addition, you should check regularly whether new files have been created and whether they can be deleted. If this is not possible, access to these files can be blocked.
 
 ** Secure registration by external search engines **
 
 Search engines use so-called agents (also called robots or crawlers) to index new or changed content in the network. These agents can be instructed by the * robots.txt * file in the Web application root directory to ignore designated resources (for example, paths) of the Web application. In this way, sensitive information can be excluded from indexing in the search engine. The confidential resources (for example, directory paths) should be listed in the * robots.txt * file under the * Disallow * directive. This causes the agents not to index the listed resources.
 
-So that the entries in the file * robots.txt * do not give an attacker an indication of security-critical resources of the web application, all directories to be protected should, if possible, be grouped together in a separate directory of the web application. Only this directory should be entered in the file * robots.txt * so that it does not contain any internal directory structures with security-relevant information.
+So that the entries in the file * robots.txt * do not give an attacker an indication of security-critical resources of the web application, all directories to be protected should, if possible, be grouped together in a separate directory of the web application. Only this directory should be entered in the * robots.txt * file so that it does not contain any internal directory structures containing security-relevant information.
 
 ** Protection against directory traversal attacks **
 
@@ -862,7 +862,7 @@ Confidential data of a web application are e.g. B .:
 
 * Access data (eg user, password),
 * Authentication data (eg session ID),
-* Critical data processed by the web application (eg payment information or health data).
+* critical data processed by the web application (eg payment information or health data).
 Cryptographic methods can be used in the processing, transmission and storage of this data by the web application and by the clients. You can z. B. be used as follows:
 
 * Encryption of data,
@@ -872,13 +872,13 @@ Care must be taken to select cryptographic algorithms for the respective applica
 
 A special meaning with the cryptography comes to the used keys. Depending on the field of application, these must have a certain minimum length and satisfy various mathematical requirements (eg complexity). In addition, a correspondingly secure transport or exchange of keys must be ensured. The same applies to their storage. When designing a web application, these points should be regulated and summarized in a crypto concept (see CON.1 * crypto concept *).
 
-For web applications with a high protection requirement, it may additionally be necessary to secure the user data. For example, if social data with high confidentiality requirements is being processed by the web application, this data may be encrypted by the web application prior to storage. This ensures that even with direct access to the database (eg by database administrators) no usable data can be read out.
+For web applications with a high protection requirement, additional protection of the user data may be required. For example, if social data with high confidentiality requirements is being processed by the web application, this data may be encrypted by the web application prior to storage. This ensures that even with direct access to the database (eg by database administrators) no usable data can be read out.
 
 ** Secure handling of SSL / TLS **
 
 If confidential data is transmitted, it can be protected against unauthorized knowledge or manipulation by means of a secure transport channel. Therefore, before transferring confidential data, you should switch to a secure connection. Even after a user has logged in, the transmitted data should continue to be protected by a secure connection. The transport channel is usually secured by the use of SSL / TLS. Further information can be found in the module APP.3.2 * Webserver *.
 
-In addition, care must be taken to ensure that no errors occur during the SSL / TLS connection setup or during the transmission of data over an encrypted channel to an unencrypted connection. Instead, the connection should be renewed or rejected. It must be prevented that confidential data is transmitted over an unsecured connection (eg by setting the secure flag for cookies).
+In addition, care must be taken to ensure that no errors occur during the SSL / TLS connection setup or when transferring data over an encrypted channel to an unencrypted connection. Instead, the connection should be renewed or rejected. It must be prevented that confidential data is transmitted over an unsecured connection (eg by setting the secure flag for cookies).
 
 When establishing an SSL / TLS connection, the encryption mode to be used is negotiated between client and server. Among the available algorithms are those that can no longer be considered safe. In particular, there is also the so-called zero-encryption mode, in which no encryption takes place. When configuring the web server to use SSL / TLS, care must be taken that the server does not accept any of the weak algorithms, and in particular, not the null-encryption mode. Otherwise, it might happen that a secure connection appears to be established (using https), which is in fact too weak or not encrypted at all. Such a situation could be deliberately brought about by an attacker to intercept authentication information and other data. Therefore, in the SSL / TLS configuration of the web server, the use of the Null Encryption mode and the weak algorithms should be disabled.
 
@@ -887,7 +887,7 @@ When operating a web application, typically, data (eg, form data or the session 
 
 When using the GET method, sensitive data such as form data is visible in the URL (for example, in the browser history) and can be logged and stored by intermediate systems.
 
-Therefore, sensitive data should only be transferred via the POST method. It should be noted that frameworks often abstract the HTTP request method. Incorrect configuration of the framework may still allow both methods to be allowed, even though the web application is forcibly constrained to the POST method (for example, by forwarding an HTTP GET request to an HTTP POST request through the framework ).
+Therefore, sensitive data should only be transferred via the POST method. It should be noted that frameworks often abstract the HTTP request method. Incorrect configuration of the framework may still allow both methods to be allowed, even though the web application is forcibly restricted to the POST method (for example, by forwarding an HTTP GET request to an HTTP POST request by the framework ).
 
 ** Protection of client-side stored data **
 
@@ -898,7 +898,7 @@ The client-side caching of Web application sensitive data can be prevented by th
 * Cache-Control: * no-cache, no-store *
 * Pragma: * no-cache *
 * Expires: * -1 *
-Since the web browser is usually not under the control of the operator of the web application, thus can not be completely ruled out that data is still cached. Therefore, for high-security Web applications, it may additionally be necessary for the user to deactivate or delete the browser cache during operation of the web application once it has finished its operations on the web application. In this case, for example, after the user has logged out, the user can be informed that the browser cache should be deleted. This particularly applies to web applications used by public IT systems. Alternatively, the user may be advised to use the browser's private mode, which does not cache data about the session.
+Since the web browser is usually not under the control of the operator of the web application, thus can not be completely ruled out that data is still cached. Therefore, for high-security Web applications, it may additionally be necessary for the user to deactivate or delete the browser cache during operation of the web application once it has finished its operations on the web application. In this case, for example, after the user has logged out, the user can be informed that the browser cache should be deleted. This particularly applies to web applications that are used by public IT systems. Alternatively, the user may be advised to use the browser's private mode, which does not cache data about the session.
 
 Often, when operating a web application, data is stored in cookies on the client. Each time you access the web application, these cookies are transmitted transparently to the user to the web application. This can also be sensitive data such as the session ID. The access to cookies with confidential data should therefore be limited as much as possible. When cookies are created by the web application, the following cookie flags should be set:
 
@@ -910,15 +910,15 @@ Often, when operating a web application, data is stored in cookies on the client
  If the directive Secure is set, the cookie will only be transmitted via encrypted communication channels, such as: Over SSL / TLS.
 * HttpOnly
  This directive prevents client-side scripts from accessing the cookie (for example, JavaScript). It should be noted that this attribute is not supported by all browsers.
-The following example shows the statement that creates a cookie using these directives:
+The following example shows the statement used to create a cookie using these directives:
 
 * Set-Cookie: SESSIONID = sl342kdfjslaal39skdj; path = / webapp; secure; HTTPOnly *
 
 When authenticating the user to a web application, an HTML form is usually used in which the user name and password are entered. If the user types his password into the password field, it should not be rendered in clear text, but replaced by so-called wildcards (eg stars or dots). To do this, the password field type must be selected in the form definition (* type = "password" *).
 
-In addition, the web browser can be instructed not to cache sensitive form data (eg, the username and password) and propose as a selection the next time the form is invoked. The option * autocomplete = "Off" * should be set when defining the form in the form header.
+In addition, the web browser can be instructed not to cache sensitive form data (eg, username and password) and suggest as a selection the next time the form is invoked. The option * autocomplete = "Off" * should be set when defining the form in the form header.
 
-During a user's session with a web application, user-specific data typically needs to be stored (for example, the items in the shopping cart). This data can be stored not only on the server side, but also on the client side in a cookie or in the web storage of the browser. In principle, it should be avoided to transfer confidential data to the client or to save it on the client because the web application has no influence on the protection of client-side data. For example, security mechanisms used by the browser on the client to protect data can often be bypassed (for example, by direct access to the file system by local users or through cross-site scripting). Instead, confidential data should always be stored on the server side and only the identification feature of the user (eg the session ID) should be stored on the client side.
+During a user's session with a web application, user-specific data typically needs to be stored (for example, the items in the shopping cart). This data can be stored not only on the server side, but also on the client side in a cookie or in the web storage of the browser. In principle, it should be avoided to transfer confidential data to the client or to save it on the client, since the web application has no influence on the protection of client-side stored data. For example, security mechanisms used by the browser on the client to protect data can often be bypassed (for example, by direct access to the file system by local users or through cross-site scripting). Instead, confidential data should in principle be stored on the server side and only the identification feature of the user (eg the session ID) should be stored on the client side.
 
 If it is unavoidable to store the session data on the client side, that data should be encrypted and checked for integrity before being processed by the web application. This ensures that the data can not be viewed unauthorized during transmission or manipulated unnoticed.
 
@@ -931,7 +931,7 @@ If users can log on to the web application, access data must be stored on the we
 In addition, the access data should be stored on the server side on a trustworthy IT system (eg on the web application) and in a protected area (eg outside the web root directory or in separate database tables). The access data should not be stored in the source code of the web application (hardcoded passwords).
 
 In addition, only the web application should be able to access the access data with write access. The access data should only be able to be changed by the user and via the intended interfaces and functions of the web application, so that it is not possible for users to access access data without authorization. For example, to read, modify or delete through direct access to the file system.
-When a user calls a Web page from the Web application, the page is typically created by the application at runtime. The called file contains code that is interpreted by the web application before delivery and returns a web page. This website is sent to the user.
+When a user calls a web page from the web application, the page is typically created by the application at runtime. The called file contains code that is interpreted by the web application before delivery and returns a web page. This website is sent to the user.
 
 Usually, file extensions are used to associate these file types with an interpreter or parser. If the file extension changes, it may be transmitted to the user without first being interpreted. When such files are retrieved, the user is given access to the program logic and sensitive information that may be stored in the code. This can affect any file whose file extension is not associated with an interpreter or parser. Examples of vulnerable files are:
 
@@ -964,7 +964,7 @@ If it is necessary for individual functions to set the data filter to be less re
 For a secure processing of the data, the following points should be taken into account during the implementation and configuration of the validation component:
 
 ** Identification of the data **
-In order for the input and output data to be comprehensively validated, all data structures to be processed (for example, the e-mail address) and the values ​​permitted therein must first be identified. For each data structure a corresponding validation routine should be implemented. In addition to the data structure, the type of data processing should also be recorded, for example forwarding to an interpreter, return to the client, storage in a database.
+In order for the input and output data to be comprehensively validated, all data structures to be processed (for example, e-mail address) and the permissible values ​​must first be identified. For each data structure a corresponding validation routine should be implemented. In addition to the data structure, the type of data processing should also be recorded, for example forwarding to an interpreter, return to the client, storage in a database.
 
 ** Consideration of all data and data formats **
 
@@ -996,7 +996,7 @@ If additional data is processed by the web application on the client side (for e
 
 ** ** validation approach
 
-Data validation distinguishes between the white list approach and the black list approach.
+Data validation distinguishes between the white list and the black list approach.
 
 A white-list approach only allows for data that is included in the list. Starting with as small a set of characters as possible, rules are created that allow data in a defined character space and reject data that contains different characters. Complex rules should be mapped by using simple rules sequentially.
 
@@ -1036,7 +1036,7 @@ With this approach, there is a high risk of overlooking problematic tags (for ex
 
 One possible technique for allowing simple markup is to use * {* and *} * instead of * <* and *> *. Fat would then be written as * {F} ** This is bold ** {/ F} * and an image could be placed this way: * {img src = / images / img.gif width = 1 height = 1 img} *.
 
-Here, the conversion into HTML must not simply replace curly braces with angle brackets, but must look at each day as a whole:
+Here, the conversion to HTML must not simply replace curly braces with angle brackets, but must look at each day as a whole:
 
 * * {img * after * <img *,
 * * img} * after *> *,
@@ -1063,7 +1063,7 @@ Instead of rejecting data due to an unexpected data format or character, incorre
 A cleanup may consist of deleting, replacing, or masking characters (see also section Context-Sensitive Data Masking).
 
 When sanitizing, there is a risk that changes to the data lead to new complexity, new vectors of attack or misinterpretation. Sanitizing should therefore be avoided as far as possible and should only be used in cases where abuse of sanitizing can be ruled out.
-If the web application detects bad data, errors that indicate intentional manipulation (for example, a changed session ID) should not be automatically corrected, but rejected. In addition, input data that can not occur with the intended browser or client operation should always be rejected. These include, for example:
+If the web application detects bad data, errors that indicate deliberate manipulation (for example, a changed session ID) should not be automatically corrected, but rejected. In addition, input data that can not occur with the intended browser or client operation should always be rejected. These include, for example:
 
 * additional or missing form parameters,
 * Session cookies with unexpected characters or invalid length,
@@ -1077,7 +1077,7 @@ Basically, if the data is rejected, the requested action should also be aborted 
 
 If an error occurs during the operation of a web application, it should be treated so as to ensure a consistent state of the web application and to maintain the protection of the data. A web application is in an inconsistent state when it transitions to an unexpected state due to an error, causing data to be processed uncontrollably (for example, no error message if data is stored unsuccessfully).
 
-The consistent state of a Web application can be jeopardized by, among other things, the following events:
+The consistent state of a web application can be jeopardized by, among other things, the following events:
 
 * the application crashes,
 * a transaction is performed incompletely at the application level,
@@ -1087,9 +1087,9 @@ The consistent state of a Web application can be jeopardized by, among other thi
 * Malicious code is executed (code execution).
 The following points should be considered when troubleshooting:
 
-* ** Avoiding Confidential Information in Error Messages: ** The web application must provide the user with neutral, customized error pages that do not contain sensitive information in the event of an error. See also * APP.3.1. * M13 * Restrictive release of safety-relevant information *.
-* ** Error logging: ** In order to fully understand errors that have occurred, they must be logged as events in accordance with APP.3.1.M5 * Logging of security-relevant events of web applications *.
-* ** Aborting the operation after an error occurs: ** If errors occur with web application security components (for example, during authorization or authentication), the action initiated must be aborted and access to the requested resource or function must be rejected. It must be ensured that provoked errors can not circumvent security mechanisms. For Web applications with a high protection requirement, consideration should also be given to forcibly terminating an existing session (see also APP.3.1.M3 * Secure Session Management *).
+* ** Avoiding Confidential Information in Error Messages: ** The web application must provide the user with neutral, customized error pages in the event of an error that do not contain sensitive information. See also * APP.3.1. * M13 * Restrictive release of safety-relevant information *.
+* ** Error logging: ** In order to fully understand errors that have occurred, they must be logged as an event in accordance with APP.3.1.M5 * Logging of security-relevant events of web applications *.
+* ** Canceling the operation after an error occurs: ** If errors occur with web application security components (for example, during authorization or authentication), the action initiated must be aborted and access to the requested resource or function must be rejected. It must be ensured that provoked errors can not circumvent security mechanisms. For Web applications with a high protection requirement, consideration should also be given to forcibly terminating an existing session (see also APP.3.1.M3 * Secure Session Management *).
 * ** Released Reserved Resources: ** On-the-fly, web applications use resources, such as network or file streams, to access background systems, cached states, or other data. As long as the web application accesses these resources, they are usually reserved for their exclusive access and can not be used by other processes. If an error occurs, previously reserved resources (for example, a file handle to a temporary file) should be released as part of the error handling. In addition, cached data must be deleted during error handling.
 * ** Immediate handling of errors: ** Internal errors should be handled by the web application itself. Forwarding an unhandled error to other components (for example, application servers or downstream web services) may result in a loss of information necessary to handle the error (for example, release bound resources). Therefore, unhandled errors should not be forwarded.
 * ** Avoidance of excessive fault tolerance: ** If causes of fault conditions are not fully understood, the fault should not be tolerated with regard to ease of use. In case of doubt, cancel the action. In case of serious errors should always be canceled.
@@ -1101,15 +1101,15 @@ The logging of security-relevant events is only effective as a security measure 
 
 The regular check also serves the purpose of preventing the excessive deletion of the log files by the subsequent deletion of the log data. Depending on the type of log data, it may be useful to archive them on external data carriers.
 
-Since log files contain personal data in most cases, it must be ensured that these data are used only for the purpose of data protection control, data backup or to ensure proper operation (see § 14 Abs. 4 BDSG and section * Data protection aspects during logging *). The scope of the logging and the criteria for its evaluation should be documented and agreed within the organization.
+Since log files contain personal data in most cases, it must be ensured that these data are only used for the purpose of data protection control, data backup or to ensure proper operation (see § 14 Abs. 4 BDSG and section * Data protection aspects during logging *). The scope of the logging and the criteria for its evaluation should be documented and agreed within the organization.
 
-On the one hand, the minimum legal retention periods on the one hand and the maximum retention periods for log data on the other hand can result from various legal regulations. For example, data protection regulations may require a deletion (see also section * Data protection aspects during logging *).
+On the one hand, the minimum legal retention periods on the one hand and the maximum retention periods for log data on the other can result from various legal regulations. For example, data protection regulations may require a deletion (see also section * Data protection aspects during logging *).
 
-For certain protocol data, however, legal minimum retention periods may apply. For example, if they provide information about business transactions. These deadlines must be met in any case. Therefore, before log data is deleted, care must be taken to check whether appropriate legislation is in place and what retention periods result. Here, the legal department should be involved.
-The following evaluation criteria serve as examples that indicate indications of possible security gaps, manipulation attempts and irregularities:
+For certain protocol data, however, legal minimum retention periods may apply. For example, if they provide information about business transactions. These deadlines must be met in any case. Before log data is deleted, it is therefore necessary to carefully check whether the relevant legal provisions have to be observed and what retention periods result from this. Here, the legal department should be involved.
+The following evaluation criteria serve as examples which indicate indications of possible security gaps, manipulation attempts and irregularities:
 
 * Are the times of logging in and out of working hours (reference to manipulation attempts)?
-* Are there incorrect attempts to log in (an indication of an attempt to guess passwords)?
+* Are there incorrect login attempts (hint to try to guess passwords)?
 * Are there any unauthorized access attempts (indication of attempts to manipulate)?
 * Are there noticeably large time intervals in which no log data was recorded (reference to possibly deleted log records)?
 * Is the amount of logged data too large (a large log file makes it difficult to find any irregularities)?
@@ -1135,7 +1135,7 @@ When administering web applications, the following activities must be fully logg
 * ** system generation and modification of system parameters **
  Since no system-controlled protocols are usually generated at this level, corresponding, more detailed, manual records are required which should correspond to the system documentation.
 * ** Setting up users **
- Who from when to when who has been granted the right to use the web application in question, must be fully logged. Longer-term retention periods should be provided for these protocols as they are the basis of virtually every revision.
+ Who from when to when who has been granted the right to use the web application concerned, must be fully logged. Longer-term retention periods should be provided for these protocols since they are the basis of virtually every revision.
 * ** creation of rights profiles **
  In the context of user management logging, it is particularly important to record who issued the instruction to set up specific user rights.
 * ** Application and modification of application software **
@@ -1171,7 +1171,7 @@ Unless domain-specific regulations provide otherwise, the retention period of th
 As clues can serve:
 
 * the likelihood that irregularities may (still) become apparent and
-* the ability to detect the causes of irregularities based on the logs and other records.
+* the ability to detect the causes of irregularities based on the logs and other documents.
 Experience has shown that a period of one year should not be exceeded.
 As far as protocols are prepared for the purpose of targeted controls, shorter retention periods may be considered. In general, a storage is sufficient to the actual control. Here, too, the area-specific regulations must be observed.
 
@@ -1180,7 +1180,7 @@ As far as protocols are prepared for the purpose of targeted controls, shorter r
 The effectiveness of logging and its evaluation in the context of controls depends crucially on the technical and organizational framework conditions. Therefore the following aspects have to be considered:
 
 * A concept should be drawn up that clearly defines the purpose of the protocols and their controls as well as safeguards for the rights of employees and other data subjects (see also OPS.1.1.6 * Logging *).
-* The inevitability and therefore the completeness of the protocols must be guaranteed as well as the tamper-proofness of the entries in log files.
+* The inevitability and thus the completeness of the protocols must be ensured as well as the tamper-proofness of the entries in log files.
 * Effective access restrictions must be realized in line with the earmarking of data.
 * The protocols must be designed so that they can be effectively checked. This also includes IT support for the evaluation.
 * The evaluation options should be agreed in advance and determined.
@@ -1199,7 +1199,7 @@ One of the most important measures to avoid SQL injection is the careful review 
 
 It is safer to use stored procedures or prepared SQL statements. These are offered by many database management systems (DBMS) and are originally intended to optimize more frequently occurring queries. The advantage of these parameterized statements is that parameters are no longer directly integrated into an SQL statement. Rather, they are transferred separately from the SQL statement to the database. The DBMS then combines its own statement and parameters, whereby the special characters mentioned above ** are automatically masked.
 
-In order to provide potential attackers with no evidence of attacks, special attention should be paid to ensure that applications do not issue any external error messages that allow conclusions to be drawn about the system used or the structure of the underlying database.
+In order to provide potential attackers with no evidence of attacks, special attention should be paid to ensuring that applications do not emit any external error messages that allow conclusions about the system used or the structure of the underlying database.
 
 ** Server-side measures **
 
@@ -1223,7 +1223,7 @@ As well as the operating system, the database should also be hardened. In the ca
 * disable unneeded services,
 * delete unneeded user accounts and default accounts and
 * import relevant patches.
-In this context, an account specifically designed for database access should also be created, which should have as few access rights as possible.
+In this context, an account specially designed for database access should also be created, which should have as few access rights as possible.
 
 In addition, confidential data, such as As passwords are stored in the database as far as possible only encrypted.
 
@@ -1275,7 +1275,7 @@ For filtering data at higher protocol levels, Web Application Firewalls (WAF) ca
 The filtering on the WAF can usually be done in two ways.
 
 * Data sent to a web application is examined for known attack patterns. The attack patterns are provided by the manufacturer of the WAF and include both typical strings used in general attacks against web applications (eg SQL injection) and specific attack patterns that affect standard software products. In order for known attacks to be reliably detected, the attack signatures must be updated regularly, similar to a virus scanner.
-* If no standard software is used or if additional protection is to be achieved, customary filter rules can also be created for WAF. For example, it defines which input data will be allowed for the web application. This method requires a lot of configuration and knowledge of the data processed by the web application.
+* If no standard software is used or additional protection is to be achieved, customary filter rules can also be created for WAF. For example, it defines which input data will be allowed for the web application. This method requires a lot of configuration and knowledge of the data processed by the web application.
 #### APP.3.1.M21 Prevention of Clickjacking [Developer] (CI)
 
 To avoid clickjacking attacks, the following countermeasures should be implemented:
@@ -1288,7 +1288,7 @@ Penetration testing is proven and appropriate to determine the current security 
 
 The BSI uses two test methods, IS penetration tests and IS Webchecks. The IS Penetration Test is the procedure for investigating the current security level of IT systems and networks. An IS web check is used to determine the current security level of the website or web services of an institution.
 
-Penetration tests serve to assess the chances of success of a deliberate attack on an information network, a single IT system or a website and to derive the necessary additional security measures or to check whether the already implemented security measures are effective. For safety-critical networks and systems, penetration tests should be carried out regularly.
+Penetration tests are used to assess the chances of success of a deliberate attack on an information network, a single IT system or an Internet presence and to derive the necessary additional security measures or to check whether the security measures already implemented are effective. For safety-critical networks and systems, penetration tests should be carried out regularly.
 
 In detail, the installed applications (web application, mail server, web service) or the underlying carrier systems (operating system, database, etc.) are checked.
 Typical starting points for a penetration test are:
@@ -1310,7 +1310,7 @@ In addition, there is a risk that the attack of an informed interior detective w
 
 Penetration testers should now be provided with all the information necessary for the test to be performed on the systems under test in order to be able to minimize any risks associated with the test and to enable as complete a vulnerability search as possible.
 
-The classification of penetration tests into a largely automated vulnerability scan ("Vulnerability Scan") as well as a largely manual security revision therefore seems more practical and more success-oriented according to current knowledge.
+The classification of penetration tests in a largely automated vulnerability scan ("Vulnerability Scan") and a largely manual security audit therefore seems more practical and success-oriented according to current knowledge.
 
 ** Personnel and technical requirements for a penetration tester **
 
@@ -1363,7 +1363,7 @@ Network and port scanning: Network and port scanning are used to locate the IT s
 
 On the part of the IT administration, such queries are used to query the current status of the IT systems used. However, an attacker might use this information to identify vulnerabilities on each IT system and attack them based on that information.
 
-* Improper input validation: Input validation is the process by which the user input (data) passed to an application for further processing is filtered, cleaned, or rejected in advance. This filtering is designed to prevent the application from passing malicious code whose processing leads to misconduct, such as the disclosure of confidential information.
+* Improper input validation: Input validation is the process by which the user input (data) passed to an application for further manipulation is filtered, cleaned, or rejected beforehand. This filtering is designed to prevent the application from passing malicious code whose processing leads to misconduct, such as the disclosure of confidential information.
 * Attack methods that can cause such misconduct include: Cross-Site Scripting (XSS), Cross-Site Request Forgery (XSRF), Injection, OS Injection, Fuzzing *.
 * Partly exploit vulnerabilities of the protocols and other techniques used to cause damage, for example by attacks on outdated SSL / TLS versions.
 * Denial of Service (DoS) Attacks: These attacks are designed to disable one or more of the services provided. Among other things, this can be done by means of a load increased by increased inquiries, by a massively increased data volume (for example e-mails), but also by targeted exploitation of possible software errors. A well-known example of a DoS attack is the * Ping of Death *.
@@ -1372,8 +1372,8 @@ On the part of the IT administration, such queries are used to query the current
 * Password attacks: Here, the security or strength of passwords is tested by means of so-called dictionary attacks, brute force attacks or by decryption attempts.
 * Exploiting Software Vulnerabilities: These attacks test, for example, whether the installed software is vulnerable to certain exploits, is configured incorrectly, has vulnerabilities, or is outdated. Frequently it is also examined whether known weaknesses of the standard installation of the respective product can be exploited in the present case.
 * Cryptographic attacks: For example, the strength and implementation of the encryption mechanisms and protocols used, as well as key management, are examined.
-* Infrastructure investigations: Within the framework of infrastructure investigations, structural safety measures, access and closure facilities, as well as the disposal of materials are examined. A variant of this is the so-called * Dumpster Diving *, here attackers are looking for useful documents or data carriers in the waste (for example, waste baskets, waste containers).
-In the evaluation and reporting phase, the results are collected, evaluated and compiled in the form of a report. All information gained during the penetration test must be stored accordingly. The client should oblige the contractor in advance to transfer all records of the penetration test to the client in full or to destroy them.
+* Infrastructure investigations: As part of infrastructure investigations, structural safety measures, access and closure facilities, as well as the disposal of materials, are examined. A variant of this is the so-called * Dumpster Diving *, here attackers are looking for useful documents or data carriers in the waste (for example, waste baskets, waste containers).
+In the evaluation and reporting phase, the results are collected, evaluated and compiled in the form of a report. All information gained during the penetration test must be stored accordingly. The client should oblige the contractor in advance to hand over or destroy all records of the penetration test in full to the client.
 
 The report must list the vulnerabilities found and also contain action recommendations on how to deal with the vulnerabilities discovered. It is also advisable to draw up an implementation plan for the recommended measures included in the report, including a prioritization. For management, the final report should also include a summary detailing the key audit findings and a review of the recommended course of action. The final report must be presented to the ISB and the responsible executives.
 
@@ -1383,7 +1383,7 @@ Accompanying all phases of a penetration test, a joint documentation of the indi
 
 In a cross-site request forgery (CSRF) attack, a user is given a command for a web application (eg, in the form of a link in a guest book) by an attacker. If he follows this link, the command will be sent to the web application and executed in the context of that user. If the user is logged on to the web application, their trust against the web application is exploited and the command is executed with the user's rights.
 
-To complicate such attacks, the web application should support security mechanisms that allow users to distinguish intentional page views from unintentionally redirected third-party commands. The following security measures are designed to prevent critical actions from CSRF attacks from being inadvertently executed.
+To make such attacks more difficult, the web application should support security mechanisms that make it possible to distinguish intended user page views from unintentionally redirected third-party commands. The following security measures are designed to prevent critical actions from CSRF attacks from being inadvertently executed.
 
 ** Use of an additional token **
 
@@ -1396,7 +1396,7 @@ Although the session ID is confidential and therefore could be used as a token t
 If a CSRF protection is implemented, it is recommended to use the function from already used frameworks, if they offer a corresponding implementation.
 
 For high-security web applications, consider creating the token for each request so that each time the web application is called, a new token is sent to the client, which must then be used in the subsequent request.
-Before critical actions are performed (for example, state-changing requests such as a password change), the user should be re-authenticated by the web application. As a result, these functions can not be performed unnoticed, but an interaction with the user is required. Web applications with high protection requirements should use an authentication method with multiple authentication factors (eg TAN, chip card).
+Before critical actions are performed (for example, state-changing requests such as a password change), the user should be re-authenticated by the web application. As a result, these functions can not be performed unnoticed, but an interaction with the user is required. Web applications with a high protection requirement should use an authentication method with multiple authentication factors (eg TAN, chip card).
 
 Alternatively, when critical actions are invoked, the user may be redirected to a page that requires user interaction before the action is executed (eg, entering a random string). Only after the user has performed the interaction (eg, entered correct string) will it be redirected and the original request will be processed. Instead of the string, other mechanisms may be used that require user interaction (eg CAPTCHAs or puzzles, see also APP.3.1.M23 * Preventing Blocking of Resources (DoS) in Web Applications *).
 
@@ -1410,7 +1410,7 @@ Security mechanisms to protect against CSRF attacks based on the referrer field 
 
 #### APP.3.1.M24 Preventing Blockage of Resources [Developer] (A)
 
-Web applications often offer resource-intensive features that trigger complex database queries or data submissions, for example. If these compute-intensive operations are deliberately called up frequently or the web applications are flooded with inquiries, resources can be over-utilized and the operation can be restricted to unreachability. This procedure is known as Denial of Service (DoS) attack.
+Web applications often offer resource-intensive features that trigger complex database queries or data submissions, for example. If these compute-intensive operations are deliberately called up frequently or the web applications are flooded with inquiries, resources can be over-allocated and the operation can be restricted to unreachability. This procedure is known as Denial of Service (DoS) attack.
 
 In most cases, DoS attacks are based on both brute-force and enumeration attacks on automation (see APP.3.1.M7 * Protection against unauthorized automated use of web applications *). Therefore, similar protections should be implemented to prevent DoS attacks. These include, for example, the following measures:
 
@@ -1420,21 +1420,21 @@ In most cases, DoS attacks are based on both brute-force and enumeration attacks
 * Use CAPTCHAs,
 * Verify inputs to input fields before initiating compute-intensive operations,
 * Use XML filtering mechanisms and XML validation checks.
-In addition, the following examples provide pointers to specific safeguards to complicate web application denial-of-service attacks:
+In addition, the following examples suggest specific security measures to make denial-of-service attacks on web applications difficult:
 * Resource intensive operations are especially vulnerable to DoS attacks. Therefore, the resource usage per user can be limited to a maximum. In addition, certain operations can only be made available to logged-in users (for example, complex database calls).
 * Only one request should be processed per user at the same time. Multiple requests from the same user should be processed sequentially.
 * The load of DoS requests can be reduced in part by buffering ("caching") the web page views. Thus, the requested, computationally intensive operation is not executed on each call, but only the cached result is returned. Highly resource-intensive inquiries can be precalculated even in low-load periods (pre-aggregation).
-* Web application architecture and flow control should be designed to avoid compute-intensive operations (for example, resource-intensive operations should be avoided when creating session IDs or other cryptographic mechanisms). Load tests can be performed to detect compute-intensive operations.
+* The web application's architecture and flow control should be designed to avoid compute-intensive operations (for example, resource-intensive operations should be avoided when creating session IDs or other cryptographic mechanisms). Load tests can be performed to detect compute-intensive operations.
 * An overflow of memory space, for example during logging, can lead to write accesses to the data carrier being no longer possible. Storage operations performed by the web application can jeopardize operations. Therefore, access to data storage should be limited and the capacity of data storage should be checked regularly. Similarly, the consumption of random access memory (RAM) per thread should also be limited.
-* SOAP messages must be validated according to the appropriate XML schema. If the validation is unsuccessful, for example because it contains an undefined number of elements, the SOAP message must not be further processed, as otherwise this can lead to problems with the processing by the XML parser.
-* Similarly, Web applications should be protected from SOAP flooding attacks. These are comparable to conventional flooding attacks (eg SYN flooding) and can therefore be fought with similar protective measures. For example, an intrusion detection system can detect and block messages that are sent repeatedly, for example by blocking messages. By using heuristics.
+* SOAP messages must be validated according to the appropriate XML schema. If the validation is unsuccessful, for example because it contains an undefined number of elements, then the SOAP message should not be processed further, as this can otherwise lead to problems with the processing by the XML parser.
+* Similarly, web applications should be protected from SOAP flooding attacks. These are comparable to conventional flooding attacks (eg SYN flooding) and can therefore be fought with similar protective measures. For example, an intrusion detection system can detect and block messages that are sent repeatedly, for example by blocking messages. By using heuristics.
 In the case of web applications where targeted, for example politically motivated DoS attacks from the Internet can be expected due to their nature, cooperation with a service provider specializing in the prevention of DoS attacks may be useful. Such service providers direct the IP traffic in the event of an attack via their own systems, which filter access and / or relieve the target systems by other measures, such as caching. It is important to consider in advance whether the diversion of the data streams via the systems of third parties will result in additional hazards or requirements. For example, a popular attack method for cached Web pages is that the attacker calls non-existent subpages. If the service provider does not intercept this and forwards the request for the allegedly new subpage to the original page, an inadvertent DoS attack of the service provider occurs. Such new attack vectors must be addressed in the selection of the anti-DoS service provider.
 
 3 Further information
 ------------------------------
 
 ### 3.1 Worth knowing
-Web tracking refers to the evaluation of user data, eg. To track the activities of users of a website. On the basis of these evaluations, user-tailored advertising can be displayed, for example, or the popularity of articles can be measured by means of statistics and the web presence can then be optimized. For this purpose, personal information, such as the user's location, the status of a transaction (eg transaction completion on a purchasing platform) and retrieval statistics via web pages, can be logged and used.
+Web tracking refers to the evaluation of user data, eg. To track the activities of users of a website. On the basis of these evaluations, user-tailored advertising can be displayed, for example, or the popularity of articles can be measured by statistics and then the website can be optimized. For this purpose, personal information, such as the user's location, the status of a transaction (eg transaction completion on a purchasing platform) and retrieval statistics via web pages, can be logged and used.
 
 If external service providers are commissioned to evaluate this user data, it should be noted that these service providers may be able to correlate the user data with the data of other customers and web applications. On this basis, detailed user profiles can be created across applications.
 
@@ -1451,7 +1451,7 @@ If user data, in particular personal data, are to be evaluated, the legal basis 
 
 ### 3.2 Literature
 
-Further information about threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
+Further information on threats and security measures in the "Web Applications" area can be found in the following publications, among others:
 
 * #### [BSICC] Common Criteria for Testing and Assessing the Security of Information Technology (Common Criteria)
 
