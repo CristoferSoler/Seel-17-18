@@ -240,6 +240,8 @@ function addGoBackListTopicList() {
 
 function restart(){
     currentTopic = -2;
+    localStorage.setItem('currentTopic',currentTopic);
+
     $("#list").empty();
     $('#dontKnowButton').addClass('disabled');
     $('#topicBack').addClass('disabled');
