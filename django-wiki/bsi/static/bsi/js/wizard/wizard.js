@@ -115,8 +115,12 @@ function noPress() {
 
         } else {
             if(currentTopic == -1){
-                $('#question').text('Fehler');
+                $('#question').text('Would you like to find out if you have a problem you are not aware of? Unfortunately this feature is not available yet. Please press restart');
                 $('#topic').text('');
+                $('#yesButton').addClass('disabled');
+                $('#noButton').addClass('disabled');
+                $('#dontKnowButton').addClass('disabled');
+                $('#topicBack').addClass('disabled');
             }
         }
     } else {
