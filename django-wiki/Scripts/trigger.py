@@ -5,6 +5,7 @@ from bsiImporter import doUpdate, post_phase
 
 
 if __name__ == "__main__":
+    # call crawler + translator here TODO
     doUpdate('../../programming/bsiComparator/example_modified_files.txt')
     scheduler = scheduler(time.time, time.sleep)
     now = datetime.now()
