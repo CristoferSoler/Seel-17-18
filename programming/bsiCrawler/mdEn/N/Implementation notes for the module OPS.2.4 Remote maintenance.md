@@ -19,7 +19,7 @@ Irrespective of the following measures, the requirements of the * module ORP.4 I
 
 **Procurement**
 
-In the next step, the procurement of suitable tools for remote maintenance and possibly additionally required hardware must take place. Based on application scenarios, the requirements for products to be procured must be formulated and, based on this, the selection of suitable products must be made. Therefore, at this point * OPS.2.4.M8 Selection of suitable remote maintenance tools * must be considered.
+In the next step, the procurement of suitable tools for remote maintenance and possibly additionally required hardware must be carried out. Based on application scenarios, the requirements for products to be procured must be formulated and, based on this, the selection of suitable products must be made. Therefore, at this point * OPS.2.4.M8 Selection of suitable remote maintenance tools * must be considered.
 
 **Implementation**
 
@@ -38,7 +38,7 @@ In order to ensure high availability of remote maintenance, the measures from * 
 
 After the implementation of the requirements for remote maintenance, the normal operation is started. In order to detect security breaches, a corresponding attack defense and monitoring of all IT systems and applications, which are managed by the remote maintenance, must take place.
 
-Since the remote maintenance is always subject to changes, which are usually derived from changed requirements or application scenarios, it must be ensured that the desired level of security is maintained (see * OPS.2.4.M19 Operation of the remote maintenance and OPS.2.4.M11 patch and change management for remote maintenance *).
+Since the remote maintenance is always subject to changes that are usually derived from changed requirements or application scenarios, it must be ensured that the desired level of security is maintained (see * OPS.2.4.M19 Operation of the remote maintenance and OPS.2.4.M11 patch and change management for remote maintenance *).
 
 ** Emergency Preparedness **
 
@@ -57,7 +57,7 @@ The following measures should be implemented as a priority:
 
 The use of remote maintenance must be adapted to the institution and planned as required in terms of technical and organizational aspects. At least the following aspects should be considered in resource planning:
 
-* Should remote maintenance take place in-band (ie within the normal IT network) or out-band (ie via a dedicated administration network)? In the case of increased protection requirements, it is advisable to carry out the remote maintenance from a dedicated administration network.
+* Should the remote maintenance take place in-band (ie within the normal IT network) or out-band (ie via a dedicated administration network)? In the case of increased protection requirements, it is advisable to carry out the remote maintenance from a dedicated administration network.
 * Which interfaces and protocols should be used?
 * What protection is required? Which protection goals have to be met?
 * Which auditing requirements have to be considered?
@@ -100,10 +100,10 @@ Together with the basic measures, the following measures correspond to the state
 
 #### OPS.2.4.M5 Use of Online Services [IT Operations, Users]
 
-Often an established software for the remote maintenance is charged and must be installed on each client. In exceptional situations, however, it may be helpful to administer IT systems remotely over the short term. The solution seems pragmatic that the clients connect to an online service and the administrator accesses the clients via a web server via the online service.
+Often an established software for the remote maintenance is charged and must be installed on each client. In exceptional situations, however, it may be helpful to administrate IT systems remotely over the short term. The solution seems pragmatic that the clients connect to an online service and the administrator accesses the clients via a web server via the online service.
 
 If online services are used, but safety risks arise. This should therefore be prohibited in principle. Remote maintenance via online services should be prevented by technical measures. If a general prohibition is not possible in individual cases, the use should be limited to a minimum and only for clearly defined areas of application with strict regulations.
-For online services for remote maintenance, the IT systems of the remote maintenance administrator and the administrator each connect to a service provider on the Internet. It is not recognizable by the remote maintainer, what happens to this information with the service provider or what intervention options exist there. Content could be recorded or manipulated. This applies z. As well as for keystrokes (eg passwords).
+For online services for remote maintenance, the IT systems of the remote maintenance administrator and the administrator each connect to a service provider on the Internet. It is not recognizable by the remote maintainer what happens with this information to the service provider or what intervention options exist there. Content could be recorded or manipulated. This applies z. As well as for keystrokes (eg passwords).
 
 Often, the remote attendant's clients automatically start the service and connect to the online service. If this is the case, anyone who knows the access data (often only an ID and PIN) unobserved and unnoticed access to the Clients.It should be forbidden that clients can automatically connect to online services, this should also be technically prevented become.
 
@@ -126,11 +126,11 @@ Together with the basic measures, the following measures correspond to the state
 It must be decided whether the aspects of remote maintenance are to be supplemented in existing directives or whether a separate guideline is to be drawn up. If a separate guideline is to be created, the existing guidelines of the institution should refer to the guideline for remote maintenance. Based on the general security policy of the institution, the essential core aspects for remote maintenance should be specified. The Directive must be known to all those involved in the design, construction, operation and disposal, and be the basis for their work. The implementation of the content required in the guideline should be checked regularly and the results should then be meaningfully documented. The guidelines within the guideline should be stringent in order to carry out later risk assessments or risk assumptions. If cryptographic communication is required for remote maintenance, the requirements of the block * CON.1 crypto concept * must be taken into account.
 
 #### OPS.2.4.M7 Documentation for remote maintenance [IT operation]
-There must be current documentation of remote maintenance. Existing deputies must be able to take over the tasks and processes at any time with the help of the remote maintenance documentation. For this reason, it is recommended to use a standardized naming concept for the IT systems of the institution for larger infrastructures in order to increase transparency and to optimize work processes through targeted access.
+There must be current documentation of remote maintenance. Existing deputies must be able to take over the tasks and processes at any time with the help of the remote maintenance documentation. For this reason, it is advisable to use a standardized naming concept for the IT systems of the institution for larger infrastructures in order to increase transparency and optimize work processes through targeted access.
 
-Since the documents, z. If, for example, work instructions for the initiation of a remote access, usually contain confidential information and data, they must be stored securely in suitable locations and also be available in the context of emergency management. Likewise, they must be protected against unauthorized access. All remote access options must be recorded and documented, unless they are standard procedures according to the operating system standard. In the asset management of the institution, the systems and their interfaces should be stored for remote administration. For the emergency management and the recovery plan the internal and external contact persons of the systems should be deposited.
+Since the documents, z. If, for example, work instructions for the initiation of remote access, usually contain confidential information and data, must be stored securely in suitable locations and also be available as part of emergency management. Likewise, they must be protected against unauthorized access. All remote access options must be recorded and documented, unless they are standard procedures according to the operating system standard. In the asset management of the institution, the systems and their interfaces should be stored for remote administration. For the emergency management and the recovery plan the internal and external contact persons of the systems should be deposited.
 
-The general documentation of the administrative processes for the various IT components should take the form of operating manuals. The operating manual for the respective system, which is to be administered remotely, must contain an indication of which system is allowed to access it, which rights and which organizational unit it can access.
+The general documentation of the administrative processes for the various IT components should take the form of operating manuals. The operating manual for the respective system, which is to be administered remotely, must contain an indication of which system is allowed to access it, which rights and which organizational unit it is to access.
 
 Within the remote maintenance processes, the following documented information is accessed:
 
@@ -141,7 +141,7 @@ Within the remote maintenance processes, the following documented information is
 * Descriptions of all found and fixed bugs.
 #### OPS.2.4.M8 Secure protocols for remote maintenance [IT operation]
 
-Only current and safe communication protocols should be used for remote maintenance. The communication should be encrypted. The recommendations of the BSI from the technical guideline (TR-02102) "Cryptographic methods: Recommendations and key lengths" should be taken into account when selecting protocols and algorithms. To ensure that the protocols used are managed appropriately and the security requirements are taken into account, information on vulnerabilities from the trade press or relevant sources must be observed and continuously updated.
+Only current and safe communication protocols should be used for remote maintenance. The communication should be encrypted. The recommendations of the BSI from the technical guideline (TR-02102) "Cryptographic methods: Recommendations and key lengths" should be taken into account when selecting the protocols and algorithms. To ensure that the protocols used are managed appropriately and the security requirements are taken into account, information on vulnerabilities from the trade press or relevant sources must be observed and continuously updated.
 
 Tunnel administration can be secured by an SSH tunnel, SSL tunnel or IPSec tunnel. An adequate tunneling method should be selected based on the institution's protection needs. Of course, this must also be supported by the IT systems used.
 
@@ -178,7 +178,7 @@ The required authorizations and identities for the remote maintenance of systems
 * For the operation of remote maintenance tools, specifications and procedures must be specified. For example, it should be determined who may access the tools and where changes may be made. This should be documented in the form of a process diagram.
 * The remote maintenance tools must be included in the process of remote maintenance itself and in patch and change management, if they are not already part of the operating system.
 #### OPS.2.4.M11 Use of cryptographic processes for remote maintenance [IT operation]
-For remote maintenance, cryptographic methods (signatures and encryption methods) must be used in order to secure communication on the one hand and secure authentication on the other hand. Sufficiently strong cryptographic methods for encryption or signature within the remote maintenance must be used. The strength of the cryptographic methods and keys used must be regularly checked in the context of remote maintenance and adjusted if necessary. The used cryptographic procedures are to be kept up to date on the basis of the internal specifications and the recommendations of the BSI. The general requirements and measures are covered by the recommendations of the module * CON.1 crypto concept * and also apply to the use of remote maintenance procedures.
+For remote maintenance, cryptographic methods (signatures and encryption methods) must be used in order to secure communication on the one hand and secure authentication on the other hand. Sufficiently strong cryptographic methods for encryption or signature within the remote maintenance must be used. The strength of the cryptographic methods and keys used must be checked regularly in the context of remote maintenance and adjusted if necessary. The used cryptographic procedures are to be kept up to date on the basis of the internal specifications and the recommendations of the BSI. The general requirements and measures are covered by the recommendations of the module * CON.1 crypto concept * and also apply to the use of remote maintenance procedures.
 
 #### OPS.2.4.M12 Patch and Change Management for Remote Maintenance [IT Operations]
 
@@ -214,7 +214,7 @@ When accessing via the public network, the remote maintainer only has the option
 
 Further requirements for the use of VPN are described in the block * NET.3.3 VPN *.
 
-#### OPS.2.4.M16 Remote Maintenance Training [IT Operations]
+#### OPS.2.4.M16 Training for remote maintenance [IT-Betrieb]
 
 The administrators should be given sufficient knowledge in dealing with the remote maintenance components. These training measures should be integrated into the already established procedures of the institution.
 
@@ -223,7 +223,7 @@ Within the awareness-raising and training activities, the basics, concepts and p
 Important aspects in the planning of the sensitization and training of administrators of the remote maintenance are:
 
 * Analysis of target groups for awareness-raising and training programs
-* the planning of training content (eg requirements for remote maintenance based on this implementation note, laws, internal regulations)
+* the planning of training content (eg requirements for remote maintenance on the basis of this implementation note, laws, internal regulations)
 * Measurement and evaluation of learning success
 * Announcement of contacts on security issues
 The topics of the training must be adapted according to the purpose of the tool. The following or a combination of several subject fields can be content of the training:
@@ -294,11 +294,11 @@ As the institution, as a service user, has no direct influence on the functionin
 * Definitions around the possibility of auditing
 * Determinations for the purpose of integration into the monitoring and logging infrastructure of the institutional sites
 * Transfer or confirmed destruction (annihilation declaration) of the backup and archiving data in the context of remote maintenance after termination of the contract
-Further information on the operation of remote maintenance by third parties is described in the blocks OPS.2.1 Outsourcing Usage and OPS.3.1 Outsourcing Providers.
+Further information on the operation of remote maintenance by third parties is described in the modules OPS.2.1 Outsourcing Usage and OPS.3.1 Outsourcing Providers.
 
 #### OPS.2.4.M20 Operation of remote maintenance [IT operation]
 
-To ensure the operation of the IT systems and applications through remote maintenance, the initiative to set up a support or remote maintenance session should always be based on the users of the supported IT components. Since these work directly with the IT systems and applications, a notification process for support and remote maintenance requests should be established (eg ticket system). All access by remote maintenance should only be permitted after successful authentication.
+To ensure the operation of the IT systems and applications through remote maintenance, the initiative to set up a support or remote maintenance session should always be based on the users of the IT components being managed. As these work directly with the IT systems and applications, a notification process for support and remote maintenance tasks should be established (eg ticket system). All access by remote maintenance should only be permitted after successful authentication.
 
 The security infrastructure releases required to establish the remote maintenance access should be integrated into the established firewall rule processes. The integration of remote maintenance into the security infrastructure should take into account all the information in the * NET.3.2 Firewall * block.
 A remote maintenance service provider should not have access to IT systems and applications outside of those required for the respective remote maintenance. To ensure that only authorized accesses by administrators are possible, the communication between remote maintenance server and client should be verified by means of a stateful firewall, better a firewall NG.

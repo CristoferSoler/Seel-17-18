@@ -16,7 +16,6 @@
                                     data-toggle="dropdown">
                                 <span data-bind="bs-drp-sel-label">All</span>
                                 <input type="hidden" name="f" data-bind="bs-drp-sel-value" value="">
-                                <span class="caret"></span>
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
                             <ul class="dropdown-menu" role="menu">
@@ -89,6 +88,8 @@
             {% endfor %}
         </table>
 
+    {% include "wiki/includes/pagination.html" %}
+
     </div>
 
     <script>
@@ -104,4 +105,14 @@
                 return false;
             });
         });
-    </script> {% endblock %}
+
+         $(".pagination").on('click','li',function(){
+    // remove classname 'active' from all li who already has classname 'active'
+    $("ul.pagination li").removeClass("active");
+    // adding classname 'active' to current click li
+    $(this).addClass("active");
+});
+    </script>
+
+
+{% endblock %}
