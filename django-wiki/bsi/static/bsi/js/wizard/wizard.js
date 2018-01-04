@@ -5,7 +5,7 @@ var currentSortedTopic;
 const thresholdTopicNumber = 10;
 var valid = false;
 
-const entryQuestionThread = 'Would you like to know more about a specific IT Thread?';
+const entryQuestionThread = 'Would you like to know more about a specific IT Threat?';
 const entryQuestionComponent = 'Do you have a specific IT problem and would you like to know more about it and see its solutions?';
 const questionThread = 'Do you have a problem with ';
 const questionComponent = 'Do you have a problem with '
