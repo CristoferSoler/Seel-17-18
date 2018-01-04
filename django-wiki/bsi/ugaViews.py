@@ -6,17 +6,20 @@ from django.contrib import messages
 from django.shortcuts import redirect, render, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
+from django.views.generic import FormView
+from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
 from wiki.decorators import get_article
 from wiki.models import URLPath, ArticleRevision, reverse
-from wiki.views.article import Create, ChangeRevisionView
+from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
 from wiki.views.article import Edit, Delete, History, Preview
+from wiki.views.mixins import ArticleMixin
 
 from bsi import forms
-from .forms import CreateForm
+from .forms import AddLinksForm, CreateForm
 
 log = logging.getLogger(__name__)
 
@@ -37,42 +40,94 @@ class CreateRoot(CreateRootView):
         return super(CreateRoot, self).dispatch(request, *args, **kwargs)
 
 
-class UGACreate(Create):
+FORMS = [("creation", CreateForm), ("add_links", AddLinksForm)]
+
+TEMPLATES = {"creation": "uga/create_article.html",
+             "add_links": "uga/create_article_add_links.html"}
+
+
+class UGACreate(SessionWizardView):
     template_name = 'uga/create_article.html'
-    form_class = CreateForm
+
+    # form_list = [CreateForm, AddLinksForm]
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
-        return super(Create, self).dispatch(request, article, *args, **kwargs)
+        self.sidebar_plugins = plugin_registry.get_sidebar()
+        self.sidebar = []
+        self.urlpath = kwargs.pop('urlpath', None)
+        self.article = article
+        return super(UGACreate, self).dispatch(request, *args, **kwargs)
 
-    def form_valid(self, form):
-        try:
-            self.newpath = UGA.create_by_request(request=self.request, article=self.article,
-                                                 parent=self.urlpath,
-                                                 slug=form.cleaned_data['slug'], title=form.cleaned_data['title'],
-                                                 content=form.cleaned_data['content'],
-                                                 summary=form.cleaned_data['summary']).url
-            messages.success(
-                self.request,
-                _("New article '%s' created.") %
-                self.newpath.article.current_revision.title)
+    # def get_template_names(self):
+    #     return [TEMPLATES[self.steps.current]]
 
-        # TODO: Handle individual exceptions better and give good feedback.
-        except Exception as e:
-            log.exception("Exception creating article.")
-            if self.request.user.is_superuser:
-                messages.error(
-                    self.request,
-                    _("There was an error creating this article: %s") %
-                    str(e))
-            else:
-                messages.error(
-                    self.request,
-                    _("There was an error creating this article."))
-            return redirect('wiki:get', '')
+    # def get_form(self, step=None, data=None, files=None):
+    #     # kwargs = {'request': self.request, 'urlpath_parent': self.urlpath}
+    #
+    #     # if form_class is None:
+    #     #     form_class = self.get_form_class()
+    #     # kwargs = self.get_form_kwargs()
+    #     # initial = kwargs.get('initial', {})
+    #     # initial['slug'] = self.request.GET.get('slug', None)
+    #     # kwargs['initial'] = initial
+    #     # form = form_class(self.request, self.urlpath, **kwargs)
+    #     # form.fields['slug'].widget = forms.TextInputPrepend(
+    #     #     prepend='/' + self.urlpath.path,
+    #     #     attrs={
+    #     #         # Make patterns force lowercase if we are case insensitive to bless the user with a
+    #     #         # bit of strictness, anyways
+    #     #         'pattern': '[a-z0-9_-]+' if not settings.URL_CASE_SENSITIVE else '[a-zA-Z0-9_-]+',
+    #     #         'title': 'Lowercase letters, numbers, hyphens and underscores' if not settings.URL_CASE_SENSITIVE else 'Letters, numbers, hyphens and underscores',
+    #     #     }
+    #     # )
+    #     return super().get_form(step=None, data=None, files=None)
 
-        url = self.get_success_url()
-        return url
+    # def form_valid(self, form):
+    #     try:
+    #         self.newpath = UGA.create_by_request(request=self.request, article=self.article,
+    #                                              parent=self.urlpath,
+    #                                              slug=form.cleaned_data['slug'], title=form.cleaned_data['title'],
+    #                                              content=form.cleaned_data['content'],
+    #                                              summary=form.cleaned_data['summary']).url
+    #         messages.success(
+    #             self.request,
+    #             _("New article '%s' created.") %
+    #             self.newpath.article.current_revision.title)
+    #
+    #     # TODO: Handle individual exceptions better and give good feedback.
+    #     except Exception as e:
+    #         log.exception("Exception creating article.")
+    #         if self.request.user.is_superuser:
+    #             messages.error(
+    #                 self.request,
+    #                 _("There was an error creating this article: %s") %
+    #                 str(e))
+    #         else:
+    #             messages.error(
+    #                 self.request,
+    #                 _("There was an error creating this article."))
+    #         return redirect('wiki:get', '')
+
+        # url = self.get_success_url()
+        # return url
+
+    def done(self, form_list, **kwargs):
+
+        return redirect('/uga')
+
+
+# class UGCreateAddLinksView(FormView, ArticleMixin):
+#     template_name = "uga/create_article_add_links.html"
+#     form_class = AddLinksForm
+#
+#     @method_decorator(get_article(can_write=True, can_create=True))
+#     def dispatch(self, request, article, *args, **kwargs):
+#         return super(UGCreateAddLinksView, self).dispatch(request, article, *args, **kwargs)
+#
+#     def get_form(self, form_class=None):
+#         form = super(UGCreateAddLinksView, self).get_form(form_class=form_class)
+#         return form
 
 
 class UGEditView(Edit):
@@ -92,7 +147,7 @@ class UGEditView(Edit):
         self.checked = ArticleRevisionValidation.objects.get(revision=article.current_revision).status
 
         if request.user.has_perm('wiki:uncheck_article') and request.user.has_perm('wiki:check_article'):
-            self.form_class = forms.UGAEditForm
+            self.form_class = forms.UGEditForm
         else:
             self.form_class = forms.EditForm
         return super(Edit, self).dispatch(request, article, *args, **kwargs)

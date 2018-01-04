@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'wiki.plugins.links',
     'bsi',
     'archive',
-    'treeview'
+    'treeview',
+    'formtools'
 ]
 
 MIDDLEWARE = [

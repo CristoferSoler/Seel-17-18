@@ -1,93 +1,90 @@
-
 {% extends "bsi/base.html" %}
 {% load wiki_tags i18n sekizai_tags static %}
+
+{% block head %}
+    {{ wizard.form.media }}
+{% endblock %}
 
 {% block bsi_pagetitle %}{% trans "Add new article" %}{% endblock %}
 
 {% block bsi_contents %}
 
-  {% addtoblock "js" %}
+    {% addtoblock "js" %}
 
-  <script type="text/javascript" src="{% static "django-wiki/bsi/static/bsi/js/urlify.js" %}"></script>
-  <script type="text/javascript">
-  {% if not create_form.slug.value %}
-  //<![CDATA[
-  (function($) {
-	  $(document).ready(function (){
-		  $("#id_title").keyup(function () {
-			  var e = $("#id_slug")[0];
-			  if(!e._changed) {
-			    slug = URLify(this.value, 50);
-				  e.value = slug;
-			  }
-	      });
-	  });
-  })(jQuery);
-  //]]>
-  {% endif %}
-  </script>
-  {% endaddtoblock %}
-<div class="container margin-after-nav">
-  <!--{% include "wiki/includes/editormedia.html" %} -->
-  <h1 class="page-header">{% trans "Add new article" %}</h1>
-
-
-  <form method="POST" class="form-horizontal">
-    {% wiki_form create_form %}
-    <table class="table table-striped"
-                       data-toggle="table"
-                       data-search="true"
-                       data-show-refresh="true"
-                       data-show-toggle="true"
-                       data-show-columns="true"
-                       data-toolbar="#toolbar"
-                       data-query-params="queryParams"
-                       data-pagination="true"
-                       data-height="550"
-                       data-locale="en-US"
-                       data-page-list="[15, 30, 90, 200]">
-
-                    <thead>
-                     {% block contents_article %}
-              <!--if the url path bsi, then this -->
+        <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
+        <script type="text/javascript">
+            {% if not create_form.slug.value %}
+                //<![CDATA[
+                (function ($) {
+                    $(document).ready(function () {
+                        $("#id_title").keyup(function () {
+                            var e = $("#id_slug")[0];
+                            if (!e._changed) {
+                                slug = URLify(this.value, 50);
+                                e.value = slug;
+                            }
+                        });
+                    });
+                })(jQuery);
+                //]]>
+            {% endif %}
+        </script>
+    {% endaddtoblock %}
+    <div class="container margin-after-nav">
+        <!--{% include "wiki/includes/editormedia.html" %} -->
+        <h1 class="page-header">{% trans "Add new article" %}</h1>
 
 
-        {% endblock %}
-
-
-                  <!--  <tr>
-                        <th data-sortable="true">BSI Article Name</th>
-                        <th data-sortable="true">Author</th>
-                        <th data-sortable="true">Date</th>
-
-                    </tr> -->
-                    <thead>
-
-                    {% for article in articles %}
-                        <tr>
-                            <td class="col-xs-7">{{ article.article.current_revision.title }}</td>
-                            <td class="col-xs-3">{{ article.article.owner }}</td>
-                            <td class="col-xs-2">{{ article.article.created }}</td>
-
-                        </tr>
+        <p>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>
+        <form method="POST" class="form-horizontal"> {% csrf_token %}
+            <table>
+                {{ wizard.management_form }}
+                {% if wizard.form.forms %}
+                    {{ wizard.form.management_form }}
+                    {% for form in wizard.form.forms %}
+                        {{ form }}
                     {% endfor %}
+                    {#                {% block wizard_form %}#}
+                    {#                {% endblock %}#}
+                {% else %}
+                    {{ wizard.form }}
+                {% endif %}
+            </table>
+            {#            {% if wizard.steps.prev %}#}
+            {#                <button name="wizard_goto_step" type="submit"#}
+            {#                        value="{{ wizard.steps.prev }}">{% trans "prev step" %}</button>#}
+            {#            {% endif %}#}
 
-                    </tbody>
-                </table>
-    <div class="form-group form-actions">
+            {#            <button href="" class="btn btn-default">#}
+            {#                <span class="fa fa-link"></span>#}
+            {#                {% trans "Add links" %}#}
+            {#            </button>#}
+            <div class="form-group form-actions">
 
-      <div class="col-lg-2"></div>
-      <div class="col-lg-10">
-        <a href="{% url 'index' %}" class="btn btn-default">
-          <span class="fa fa-arrow-left"></span>
-          {% trans "Go back" %}
-        </a>
-        <button type="submit" name="save_changes" class="btn btn-primary">
-          <span class="fa fa-plus"></span>
-          {% trans "Create article" %}
-        </button>
-      </div>
+                <div class="col-lg-2"></div>
+                <div class="col-lg-10">
+                    <a href="{% url 'index' %}" class="btn btn-default">
+                        {% trans "Cancel" %}
+                    </a>
+                    {% if wizard.steps.prev %}
+                        <button name="wizard_goto_step" type="submit" class="btn btn-default"
+                                value="{{ wizard.steps.prev }}">
+                            <span class="fa fa-arrow-left"></span>
+                            {% trans "Back" %}</button>
+                    {% endif %}
+                    {% if wizard.steps.current != wizard.steps.last %}
+                        <button name="wizard_goto_step" type="submit" class="btn btn-default"
+                        >{% trans "Next" %}</button>
+                    {% endif %}
+                    {% if wizard.steps.current == wizard.steps.last %}
+                        <button type="submit" name="save_changes" class="btn btn-primary">
+                            <span class="fa fa-plus"></span>
+                            {% trans "Create article" %}
+                        </button>
+                    {% endif %}
+
+                </div>
+            </div>
+        </form>
     </div>
-  </form>
- </div>
 {% endblock %}
