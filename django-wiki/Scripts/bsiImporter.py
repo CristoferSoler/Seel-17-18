@@ -5,7 +5,6 @@ import sys
 from os.path import isdir, join, isfile, basename, split, splitext
 from os import listdir, environ, walk
 import pdb
-from django.http import Http404
 from datetime import datetime
 
 sys.path.append(r'..')
@@ -266,7 +265,7 @@ def post_phase(archiving_data):
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
-        # print(type)
+        #print(type)
         for new_type in types:
               if new_type.slug == "components":
                   post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
@@ -281,58 +280,44 @@ def post_phase(archiving_data):
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
     # for each type append the new updates
-    pdb.set_trace()
-    new_articles = []
-    articles = []
+    #pdb.set_trace()
     if default_type == "components":
         type_symbol = BSI_Article_type.COMPONENT
-        # print(type_symbol)
+        #print(type_symbol)
     elif default_type == "threats":
         type_symbol = BSI_Article_type.THREAT
     elif default_type == "implementationnotes":
         type_symbol = BSI_Article_type.IMPLEMENTATIONNOTES
+
     if new_type.slug == default_type:
         bsi_type = URLPath.objects.get(parent=old_parent, slug= default_type)
-        # print(bsi_type)
+        #print(bsi_type.path)
         new_articles = new_type.get_children()
         for new_article in new_articles:
             try:
+                #print(new_article.path)
                 old_article = URLPath.objects.get(parent=bsi_type, slug=new_article.slug)
                 for ancestor in old_article.article.ancestor_objects():
                     ancestor.article.clear_cache()
                 old_article.slug = type_symbol.label.lower()[:1] +"_" + old_article.slug
+                #print(old_article.slug)
                 old_article.save()
+
+                bla1 = URLPath.objects.get(pk=new_article.pk)
+                #print(bla1)
+                new_article.parent = bsi_type
+                new_article.parent.parent = bsi_type.parent
+
+                new_article.save()
+                # print(new_article.parent.parent.path)
+                # print(new_article.parent.path)
+                # print(new_article.path)
+
                 ArchiveTransaction.create(archive, old_article).archive()
                 post_phase_move_references(archive, old_article)
+                new_article.save()
             except Exception:
-                # do nothing
                 print('old article not found')
-            #articles = BSI.get_articles_by_type(type_symbol)
-            # print(articles)
-            #for article in articles:
-            #    if article.slug == new_article.slug:
-            #        article.slug = type_symbol.label.lower()[:1] +"_" + article.slug
-            #        ArchiveTransaction.create(archive, article).archive()
-            #        post_phase_move_references(archive, article)
-
-            new_article.save()
-            bla1 = URLPath.objects.get(pk=new_article.pk)
-            for ancestor in new_article.article.ancestor_objects():
-                ancestor.article.clear_cache()
-            new_article.save()
-            bla = URLPath.objects.get(pk=new_article.pk)
-            new_article.parent = bsi_type
-            new_article.save()
-            #new_article.cached_ancestors = new_article.parent.cached_ancestors + [new_article.parent]
-            new_article.set_cached_ancestors_from_parent(new_article.parent)
-            bla2 = URLPath.objects.get(pk=new_article.pk)
-            new_article.save()
-            # Reload url path form database
-            new = URLPath.objects.get(pk=new_article.pk)
-            # print(urlpath_article.path)
-            # Use a copy of ourself (to avoid cache) and update article links again
-            #for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
-            #        ancestor.article.clear_cache()
 
 def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
@@ -342,15 +327,14 @@ def post_phase_move_references(archive, bsi_article):
 
 def post_phase_delete_url(path):
     # delete the new page and its subroots
+    #pdb.set_trace()
     children = path.get_children()
     #print(children)
     if children:
         for child in children:
-            # print(child)
+            #print(child)
             child.article.delete()
-            print('deleted ' + child.path)
-    #        child.save()
-    #path.delete_subtree()
+            #print('deleted ' + child.path)
     path.article.delete()
     #return path.is_deleted()
     print("new path is deleted")
@@ -364,9 +348,6 @@ def updateModificationTime():
         bsi.url.article.current_revision.modified = new_date
         bsi.url.article.current_revision.save()
         bsi.url.article.save()
-    #for revision in ArticleRevision.objects.all():
-    #     revision.modified = new_date
-    #     revision.save()
     return
 
 def checkFileAction(filepath):
@@ -449,14 +430,15 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-      file = parseArgs()
-      main(file)
-      #updateModificationTime()
+      #file = parseArgs()
+      #main(file)
       #post_phase("2017-12")
+      #updateModificationTime()
       #new = URLPath.objects.get(slug='new')
       #post_phase_delete_url(new)
-      # print(post_phase_delete_url(new))
-      # components = URLPath.objects.get(slug='threats', parent=new)
-      # print(components.path)
-      # # print(components)
+      #print(post_phase_delete_url(new))
+      #print(new)
+      #components = URLPath.objects.get(slug='components', parent=new)
+      #print(components.path)
+      #print(components)
       print("finished!")
