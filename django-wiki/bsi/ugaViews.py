@@ -3,10 +3,10 @@ import difflib
 import logging
 
 from django.contrib import messages
-from django.shortcuts import redirect, render, get_object_or_404
+from django.db.models.query_utils import Q
+from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
-from django.views.generic import FormView
 from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
@@ -16,9 +16,9 @@ from wiki.models import URLPath, ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
 from wiki.views.article import Edit, Delete, History, Preview
-from wiki.views.mixins import ArticleMixin
 
 from bsi import forms
+from bsi.models.article_extensions import BSI
 from .forms import AddLinksForm, CreateForm
 
 log = logging.getLogger(__name__)
@@ -57,6 +57,7 @@ class UGACreate(SessionWizardView):
         self.sidebar = []
         self.urlpath = kwargs.pop('urlpath', None)
         self.article = article
+        self.request = request
         return super(UGACreate, self).dispatch(request, *args, **kwargs)
 
     # def get_template_names(self):
@@ -109,12 +110,25 @@ class UGACreate(SessionWizardView):
     #                 _("There was an error creating this article."))
     #         return redirect('wiki:get', '')
 
-        # url = self.get_success_url()
-        # return url
+    # url = self.get_success_url()
+    # return url
 
     def done(self, form_list, **kwargs):
+        slug = kwargs.get('form_dict')['0'].cleaned_data['slug']
+        title = kwargs.get('form_dict')['0'].cleaned_data['title']
+        content = kwargs.get('form_dict')['0'].cleaned_data['content']
+        summary = kwargs.get('form_dict')['0'].cleaned_data['summary']
+        self.uga = UGA.create_by_request(request=self.request, article=self.article,
+                                         parent=self.urlpath,
+                                         slug=slug, title=title,
+                                         content=content,
+                                         summary=summary)
+        links = kwargs.get('form_dict')['1'].cleaned_data['links']
+        for l in links:
+            bsi = BSI.objects.filter(Q(url__article__current_revision__title=l))[0]
+            self.uga.add_link_to_bsi(bsi)
 
-        return redirect('/uga')
+        return redirect(reverse('get_article', kwargs={'path': self.uga.url.path}))
 
 
 # class UGCreateAddLinksView(FormView, ArticleMixin):
