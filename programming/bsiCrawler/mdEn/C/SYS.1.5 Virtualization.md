@@ -39,7 +39,7 @@ Virtualization changes the way servers are provisioned. Resources such as CPU, R
 
 ### 2 3 Insufficient resources for virtual IT systems
 
-Virtualization servers require storage for the operation of the virtual IT systems, either locally in the virtualization server itself or in a storage network. If the required storage capacities are not planned sufficiently large, there are far-reaching risks for the availability of the virtual IT systems and the integrity of the information processed in them. This is especially true when using special virtualization features such as snapshots or overbooking storage space.
+Virtualization servers require storage for the operation of the virtual IT systems, either locally in the virtualization server itself or in a storage network. If the required storage capacities are not sufficiently planned, there are far-reaching risks for the availability of the virtual IT systems and the integrity of the information processed in them. This is especially true when using special virtualization features such as snapshots or overbooking storage space.
 
 Bottlenecks can not only affect the storage space on hard disks or in storage networks, but also the main memory (RAM) or the network connection. Also, with insufficient resources on the virtualization server, the virtual machines could interfere with each other's operations and eventually stop working or failing.
 
@@ -47,11 +47,11 @@ Bottlenecks can not only affect the storage space on hard disks or in storage ne
 
 A snapshot can be used to freeze and secure the state of a virtual machine. If such a snapshot is restored at a later time, any changes made in the meantime will be lost. As a result, already patched security vulnerabilities can be open again. In addition, open files, file transfers, or database transactions can result in inconsistent data at the time of the snapshot.
 
-In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main memory are also backed up to disk and can be recovered and analyzed in a virtual environment outside the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
+In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main storage are also backed up to disk and can be recovered and analyzed in a virtual environment outside of the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
 
 ### 2 5 Failure of the management server for virtualization systems
 
-Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to issues such as resource bottlenecks or the failure of individual virtualization servers, integrate new virtualization servers into the infrastructure, or create new virtual IT systems. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
+Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to problems such as resource bottlenecks or the failure of individual virtualization servers or integrate new virtualization servers into the infrastructure or create new virtual IT systems during this time. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
 
 ### 2 6 Misuse of guest tools
 
@@ -163,7 +163,7 @@ Furthermore, the configuration files of the virtual IT systems SHOULD regularly 
 
 If configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
 
-#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
+#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, IT Leaders, Network Leaders]
 
 All administrators of the virtual environment SHOULD be adequately trained. The training course SOLLTE teaches how virtual infrastructures can be safely set up and operated.
 
@@ -263,160 +263,3 @@ The following elementary threats are important for the "virtualization" building
 * G 0.43 Importing messages
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
-* G 0.15 Listening
-  * SYS.1.5.A5 Protection of administration interfaces
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-  * SYS.1.5.A28 Encryption of virtual IT systems (CI)
-* G 0.18 Missing planning or missing adjustment
-  * SYS.1.5.A8 Planning a Virtual Infrastructure [Head of IT, Head of Networks]
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-  * SYS.1.5.A13 Selection of suitable hardware for virtualization environments
-* G 0.19 Disclosure of information worthy of protection
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-* G 0.20 Information or products from unreliable sources
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-* G 0.21 Manipulation of hardware or software
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-* G 0.22 Manipulation of information
-  * SYS.1.5.A3 Secure configuration of virtual IT systems
-  * SYS.1.5.A4 Secure configuration of a network for virtual infrastructures
-  * SYS.1.5.A5 Protection of administration interfaces
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-  * SYS.1.5.A23 Rights limitation of virtual machines (CI)
-  * SYS.1.5.A24 Disabling Snapshots of Virtual IT Systems (CIA)
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-* G 0.23 Unauthorized intrusion into IT systems
-  * SYS.1.5.A3 Secure configuration of virtual IT systems
-  * SYS.1.5.A4 Secure configuration of a network for virtual infrastructures
-  * SYS.1.5.A5 Protection of administration interfaces
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-  * SYS.1.5.A23 Rights limitation of virtual machines (CI)
-  * SYS.1.5.A24 Disabling Snapshots of Virtual IT Systems (CIA)
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-* G 0.25 Failure of devices or systems
-  * SYS.1.5.A1 Importing Updates and Security Updates
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-  * SYS.1.5.A13 Selection of suitable hardware for virtualization environments
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A6 Logging in the virtual infrastructure
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A20 Use of Highly Available Architectures [Head of IT, Head of Networks] (A)
-* G 0.26 Malfunction of equipment or systems
-  * SYS.1.5.A3 Secure configuration of virtual IT systems
-  * SYS.1.5.A6 Logging in the virtual infrastructure
-  * SYS.1.5.A7 Time synchronization in virtual IT systems
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A13 Selection of suitable hardware for virtualization environments
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A20 Use of Highly Available Architectures [Head of IT, Head of Networks] (A)
-  * SYS.1.5.A21 Secure configuration of virtual IT systems with increased protection requirements (IA)
-  * SYS.1.5.A25 Minimal use of console access to virtual IT systems (A)
-* G 0.27 Resource shortage
-  * SYS.1.5.A1 Importing Updates and Security Updates
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-  * SYS.1.5.A13 Selection of suitable hardware for virtualization environments
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-  * SYS.1.5.A3 Secure configuration of virtual IT systems
-  * SYS.1.5.A6 Logging in the virtual infrastructure
-  * SYS.1.5.A8 Planning a Virtual Infrastructure [Head of IT, Head of Networks]
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A21 Secure configuration of virtual IT systems with increased protection requirements (IA)
-  * SYS.1.5.A25 Minimal use of console access to virtual IT systems (A)
-* G 0.28 Software vulnerabilities or errors
-  * SYS.1.5.A1 Importing Updates and Security Updates
-  * SYS.1.5.A10 Implementing Administrative Processes for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A11 Administration of the virtualization infrastructure via a separate management network
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-  * SYS.1.5.A13 Selection of suitable hardware for virtualization environments
-  * SYS.1.5.A14 Uniform Configuration Standards for Virtual IT Systems [IT Leader]
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A17 Monitoring the health and configuration of the virtual infrastructure
-  * SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
-  * SYS.1.5.A19 Regular audits of the virtualization infrastructure
-* G 0.29 Violation of laws or regulations
-  * SYS.1.5.A8 Planning a Virtual Infrastructure [Head of IT, Head of Networks]
-* G 0.30 Unauthorized use or administration of devices and systems
-  * SYS.1.5.A2 Secure use of virtual IT systems
-  * SYS.1.5.A20 Use of Highly Available Architectures [Head of IT, Head of Networks] (A)
-  * SYS.1.5.A21 Secure configuration of virtual IT systems with increased protection requirements (IA)
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-  * SYS.1.5.A23 Rights limitation of virtual machines (CI)
-  * SYS.1.5.A24 Disabling Snapshots of Virtual IT Systems (CIA)
-  * SYS.1.5.A25 Minimal use of console access to virtual IT systems (A)
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-  * SYS.1.5.A28 Encryption of virtual IT systems (CI)
-  * SYS.1.5.A5 Protection of administration interfaces
-  * SYS.1.5.A8 Planning a Virtual Infrastructure [Head of IT, Head of Networks]
-  * SYS.1.5.A9 Network Planning for Virtual Infrastructures [Head of IT, Head of Networks]
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A16 Encapsulation of virtual machines
-  * SYS.1.5.A24 Disabling Snapshots of Virtual IT Systems (CIA)
-* G 0.31 Incorrect use or administration of devices and systems
-  * SYS.1.5.A8 Planning a Virtual Infrastructure [Head of IT, Head of Networks]
-  * SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
-* G 0.32 Abuse of permissions
-  * SYS.1.5.A2 Secure use of virtual IT systems
-  * SYS.1.5.A20 Use of Highly Available Architectures [Head of IT, Head of Networks] (A)
-  * SYS.1.5.A21 Secure configuration of virtual IT systems with increased protection requirements (IA)
-  * SYS.1.5.A22 Hardening of the Virtualization Server (CI)
-  * SYS.1.5.A23 Rights limitation of virtual machines (CI)
-  * SYS.1.5.A24 Disabling Snapshots of Virtual IT Systems (CIA)
-  * SYS.1.5.A25 Minimal use of console access to virtual IT systems (A)
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-  * SYS.1.5.A27 Use of Certified Virtualization Software [IT Leader] (CIA)
-  * SYS.1.5.A28 Encryption of virtual IT systems (CI)
-  * SYS.1.5.A12 Rights and Roles Concept for the Administration of a Virtual Infrastructure
-* G 0.40 Denial of Service
-  * SYS.1.5.A26 Use of a PKI [Head of IT, Head of Networks] (CIA)
-* G 0.43 Importing messages
-  * SYS.1.5.A15 Operation of guest operating systems with different protection requirements
-  * SYS.1.5.A20 Use of Highly Available Architectures [Head of IT, Head of Networks] (A)
-* G 0.46 Loss of integrity of sensitive information
-  * SYS.1.5.A28 Encryption of virtual IT systems (CI)

@@ -24,13 +24,13 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Inadequate key management with encryption
 
-Inadequate key management could allow attackers to access encrypted data. So it may be, for example, that due to lack of regulations encrypted information together with the associated keys are on the same disk. As a result, in symmetric methods, anyone who can access the data carrier or the communication channel can decrypt the information if the encryption method used is known.
+Inadequate key management could allow attackers to access encrypted data. It may be, for example, that due to lack of regulations encrypted information, including the associated keys are on the same disk. As a result, in symmetric methods, anyone who can access the data medium or the communication channel can decrypt the information if the encryption method used is known.
 
 ### 2 2 Infringement of the legal framework for the use of cryptographic procedures
 
 When institutions use cryptographic procedures and products, they must observe various legal framework conditions. For example, in some countries, cryptographic procedures may not be used without government approval. As a result, recipients abroad can not read encrypted records because they are not allowed to use the required cryptographic products or may even be liable to prosecution.
 
-In addition, in many countries, the export of products with strong cryptography is significantly limited. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.
+In addition, exports of products with strong cryptography are also severely limited in many countries. This can lead one to leave sensitive data unencrypted or to protect it with insecure procedures. As a result, on the one hand attackers are opened the door and on the other hand, this can also violate national law. For example, privacy laws may require that adequate cryptographic procedures be used to protect personal information.
 ### 2 3 Confidentiality or integrity of data due to misconduct
 
 For example, if an institution uses a crypto-module that is either too complicated to use or not intuitive to use, users may, for convenience or pragmatic reasons, refrain from using it and instead transmit the information in plain text. This allows the transmitted information to be intercepted by attackers.
@@ -89,7 +89,7 @@ Suitable cryptographic methods MUST be selected. It MUST be ensured that establi
 
 #### CON.1.A2 Data backup using cryptographic procedures [IT operation]
 
-In backups, cryptographic keys MUST be stored in such a way that they can not be accessed by unauthorized persons. Long-lived cryptographic keys MUST be kept outside the IT systems used. In the case of long-term storage of encrypted data, it should be regularly checked whether the cryptographic algorithms used and the key lengths still correspond to the state of the art. It MUST be ensured that encrypted stored data can still be accessed even after longer periods of time. Used crypto products SHOULD be archived. The configuration data of crypto products SHOULD be saved.
+In backups, cryptographic keys MUST be stored or stored in such a way that unauthorized persons can not access them. Long-lived cryptographic keys MUST be kept outside the IT systems used. In the case of long-term storage of encrypted data, it should be regularly checked whether the cryptographic algorithms used and the key lengths still correspond to the state of the art. It MUST be ensured that encrypted stored data can still be accessed even after longer periods of time. Used crypto products SHOULD be archived. The configuration data of crypto products SHOULD be saved.
 
 ### 3.2 Standard requirements
 
@@ -120,7 +120,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### CON.1.A7 Creating a Security Policy for the Use of Cryptographic Procedures and Products (CIA)
 
-Based on the institution's general security policy, a specific policy for the use of crypto products SHOULD be created. The security policy SHOULD regulate who is responsible for the secure operation of the cryptographic products. For the crypto products used, there should be representation rules.
+Based on the institution's general security policy, a specific policy for the use of crypto products SHOULD be prepared. The security policy SHOULD regulate who is responsible for the secure operation of the cryptographic products. For the crypto products used, there should be representation rules.
 
 Also SHOULD the necessary training and awareness raising measures for users as well as rules of conduct and reporting channels for problems or security incidents be determined. Further, the policy SHOULD define how to ensure that crypto modules are securely configured, properly deployed, and regularly maintained.
 
@@ -161,7 +161,7 @@ The interaction of operating system and crypto modules SHOULD ensure that
 * the installed crypto modules can not be switched off or bypassed unnoticed,
 * the applied or stored keys can not be compromised
 * the data to be protected can only be stored unencrypted on data media with the knowledge and control of the user or can leave the information-processing system; and
-* Manipulation attempts are detected on the crypto module.
+* Manipulation attempts on the crypto module are detected.
 #### CON.1.A14 Training of users and administrators [supervisors, IT managers, specialists] (CIA)
 
 There should be training sessions that teach users and administrators how to handle the crypto modules they serve. Users SHOULD explain exactly what the specific security settings of crypto modules mean and why they are important. You should also be alerted to the dangers of bypassing or disabling these security settings for convenience. The training contents SHOULD always be adapted according to the respective application scenarios.
@@ -188,7 +188,7 @@ SHOULD spare crypto modules be kept in stock.
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​"crypto concept" can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"crypto concept" can be found in the following publications, among others:
 
 * #### [27001A10] ISO / IEC 27001: 2013 - Annex A.10 Cryptography
 

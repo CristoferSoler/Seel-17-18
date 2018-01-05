@@ -13,7 +13,7 @@ This module describes how to safely delete and destroy information in institutio
 
 ### 1.3 Delimitation
 
-The module contains only the general procedural, technical and organizational requirements for the deletion and destruction. Individual building blocks of the layers CON (concepts and procedures), security management (ISMS), ORP (organization and personnel), OPS (operation), DER (detection and reaction), IND (industrial IT), APP (applications), SYS (IT) Systems), NETs (Networks and Communications) and INFs (Infrastructure) can define supplementary and more specific requirements for deletion and destruction. In particular, the building blocks OPS.1.1.6 * data backup *, OPS 1.2.2 * archiving, * OPS.1.2.3 * information and data medium exchange and * OPS.1.2.7 * sale / disposition of IT * must be taken into account in addition, because these topics are directly related to the deletion and annihilation.
+The module only contains the general procedural, technical and organizational requirements for deletion and destruction. Individual building blocks of the layers CON (concepts and procedures), security management (ISMS), ORP (organization and personnel), OPS (operation), DER (detection and reaction), IND (industrial IT), APP (applications), SYS (IT) Systems), NETs (networks and communication) and INFs (infrastructure) can define supplementary and more specific requirements for deletion and destruction. In particular, the building blocks OPS.1.1.6 * Data backup *, OPS 1.2.2 * Archiving, * OPS.1.2.3 * Information and data medium exchange and * OPS.1.2.7 * Sales / Disposal of IT * must be taken into account in addition, because these topics are directly related to the deletion and annihilation.
 
 2 risk situation
 -----------------
@@ -37,18 +37,18 @@ Due to inadequate specifications, as well as lack of training of the employees, 
 
 Swap files or paging partitions may contain sensitive data, such as: Passwords or cryptographic keys. However, the paging files and thus also the information contained therein are not protected because they z. B. can be read when the hard drive is removed and installed in another IT system.
 
-In addition, during operation of many applications, files are generated that are not required for productive operation (eg browser history). These files may also contain security-related information. If paging or temporary files are not securely deleted, unauthorized access to sensitive information, passwords, and keys can be exploited to gain access to other IT systems and data, to gain competitive advantage in the marketplace, or to deliberately spy on user behavior.
+In addition, during operation of many applications, files are generated that are not required for productive operation (eg browser history). These files may also contain security-related information. If paging or temporary files are not securely deleted, unauthorized access to sensitive information, passwords, and keys can be used to gain access to other IT systems and data, to gain competitive advantage in the marketplace, or to deliberately spy on user behavior.
 
 ### 2 5 Unsuitable disposal of data media and documents
 
-If media or documents are not properly disposed of, it may be possible to extract information that should not be in the hands of third parties. For example, attackers can B. stealing media from inadequately secured disposal facilities. Even if commissioned disposal service providers are insufficiently controlled, confidentiality can not be sufficiently ensured.
+If media or documents are not properly disposed of, it may be possible to extract information that should not be in the hands of third parties. Thus, attackers z. B. stealing media from inadequately secured disposal facilities. Even if commissioned disposal service providers are insufficiently controlled, confidentiality can not be sufficiently ensured.
 
 3 requirements
 ---------------
 
 The following are specific requirements for the Delete and Destroy area. Basically, the ISB is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -94,7 +94,7 @@ The regulations of the institution for * * deletion and destruction SHOULD be do
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### CON.6.A9 Selection of appropriate procedures for deletion or destruction of data carriers in case of increased protection requirements [Head of IT, Head of Organization] (CIA)
+#### CON.6.A9 Selection of appropriate methods for deleting or destroying data carriers with increased protection requirements [Head of IT, Head of Organization] (CIA)
 
 For extinguishing and destroying, methods should be selected that meet the increased protection requirements of information and equipment.
 
