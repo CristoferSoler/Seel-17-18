@@ -51,9 +51,8 @@ INSTALLED_APPS = [
     'bsi',
     'archive',
     'treeview',
-    'formtools'
+    'formtools',
     'wizard',
-    'treeview'
 ]
 
 MIDDLEWARE = [
