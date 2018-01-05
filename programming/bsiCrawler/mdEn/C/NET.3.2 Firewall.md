@@ -5,7 +5,7 @@
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
 A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
@@ -19,7 +19,7 @@ The building block builds on the building block NET.1.1 * Network Architecture a
 
 In order to secure networks, more network components are usually required, eg. For example, routers and switches. Requirements for this are not listed in this module, but can be found in NET.3.1 * Routers and Switches *. If a firewall takes on the role of a router or switch, it also has to meet the requirements of the NET.3.1 * Router and Switches * block.
 
-In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management firewalls, which also contain functional enhancements, such as: VPN, Intrusion Detection and Intrusion Prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
+In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management Firewalls, which also contain functional enhancements, such as: Eg VPN, intrusion detection and intrusion prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
 
 Likewise, no application recognition or filtering is discussed. It is a common feature of Next Generation Firewalls and IDS / IPS. Since the implementations differ between the products, it is recommended that they be viewed individually depending on the application scenario. In this module is also not discussed on the individual protection options for externally offered server services, z. For example, through a reverse proxy or for web services using a Web Application Firewall (WAF). In addition, aspects of infrastructural safety (eg suitable installation or power supply) are not listed in this module, but can be found in the respective building blocks of the INF layer.
 
@@ -52,7 +52,7 @@ An improperly configured or incorrectly operated firewall can seriously affect t
 
 The following are specific firewall requirements. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -89,7 +89,7 @@ Information about the internal configuration and operating state MUST be hidden 
 
 #### NET.3.2.A5 Restrictive rights assignment
 
-It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
+It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
 #### NET.3.2.A6 Protection of the administration interfaces
 
@@ -102,14 +102,14 @@ It must always be possible to access the firewall directly so that you can conti
 
 #### NET.3.2.A8 Prevention of dynamic routing
 
-In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the building block NET.3.1 * Router and Switches *.
+In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the module NET.3.1 * Router and Switches *.
 
 #### NET.3.2.A9 logging
 
 The firewall MUST be configured to log at least the following events:
 
 * denied network connections (source and destination IP addresses, source and destination ports or ICMP / ICMPv6 type, date, time),
-* Failed access to system resources due to incorrect authentication, lack of authority or lack of resources,
+* Failed access to system resources due to bad authentication, lack of authority or lack of resources,
 * Error messages of the firewall services and
 * general system error messages.
 If security proxies are used, security violations and access control list violations (ACLs or short access lists) MUST be appropriately logged: at least the type of protocol violation or violation, source and destination IP address, source and destination IP addresses Destination port, service, date and time, and connection duration (if required).
@@ -167,7 +167,7 @@ The packet filter, which protects server services reachable from untrusted netwo
 
 At the packet filter, which protects server services reachable from less or untrusted networks, the so-called rate limits for UDP data streams SHOULD be set.
 
-At the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
+On the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
 
 #### NET.3.2.A20 Securing basic internet protocols
 
@@ -186,7 +186,7 @@ There SHOULD be a secure time synchronization with a Network Time Protocol (NTP)
 
 #### NET.3.2.A23 System Monitoring and Evaluation
 
-Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined that regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
+Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined, which regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
 
 #### NET.3.2.A24 Revision and Penetration Tests
 
@@ -198,11 +198,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.3.2.A25 Extended integrity protection for configuration files (CI)
 
-If a system crashes, SHOULD ensure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
+If a system crashes, SHOULD make sure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
 
 #### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
 
-To further minimize the potential for attack, an organization SHOULD outsource its firewall functionality to dedicated hardware and software.
+To further minimize the potential for attack, an institution SHOULD outsource its firewall enhancements to dedicated hardware and software.
 
 #### NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
 
@@ -221,7 +221,7 @@ Function monitoring SHOULD be done on the basis of numerous parameters and not r
 
 #### NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
 
-To ensure bandwidth management for critical applications and services, packet filters with appropriate bandwidth management capability should be deployed at gateways and at the transition between different security zones.
+To ensure bandwidth management for critical applications and services, packet filters with appropriate bandwidth management capability SHOULD be used at gateways and at the transition between different security zones.
 
 #### NET.3.2.A31 Use of Certified Products (CI)
 
@@ -296,286 +296,3 @@ The following elementary threats are important for the "Firewall" block.
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A7 Emergency access to the firewall
-  * NET.3.2.A18 Administration via a separate management network
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-* G 0.14 Spying out information (spying)
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.18 Missing planning or missing adjustment
-  * NET.3.2.A1 Creating a Security Policy [Information Security Officer (ISB)]
-  * NET.3.2.A10 Defense against fragmentation attacks on the packet filter
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A12 Procedure for security incidents
-  * NET.3.2.A13 Regular backup
-  * NET.3.2.A14 Operation documentation
-  * NET.3.2.A15 Obtaining a firewall
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A17 Disabling IPv4 or IPv6
-  * NET.3.2.A18 Administration via a separate management network
-  * NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
-  * NET.3.2.A12 Procedure for security incidents
-  * NET.3.2.A14 Operation documentation
-  * NET.3.2.A15 Obtaining a firewall
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-* G 0.19 Disclosure of information worthy of protection
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A10 Defense against fragmentation attacks on the packet filter
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.20 Information or products from unreliable sources
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A14 Operation documentation
-  * NET.3.2.A15 Obtaining a firewall
-  * NET.3.2.A31 Use of Certified Products (CI)
-* G 0.21 Manipulation of hardware or software
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A9 logging
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.22 Manipulation of information
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A5 Restrictive rights assignment
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A8 Prevention of dynamic routing
-  * NET.3.2.A9 logging
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-* G 0.23 Unauthorized intrusion into IT systems
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A17 Disabling IPv4 or IPv6
-  * NET.3.2.A18 Administration via a separate management network
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.24 Destruction of equipment or data media
-  * NET.3.2.A11 Importing Updates and Patches
-* G 0.25 Failure of devices or systems
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A7 Emergency access to the firewall
-  * NET.3.2.A8 Prevention of dynamic routing
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-* G 0.26 Malfunction of equipment or systems
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A5 Restrictive rights assignment
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.27 Resource shortage
-  * NET.3.2.A1 Creating a Security Policy [Information Security Officer (ISB)]
-  * NET.3.2.A10 Defense against fragmentation attacks on the packet filter
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A12 Procedure for security incidents
-  * NET.3.2.A13 Regular backup
-  * NET.3.2.A14 Operation documentation
-  * NET.3.2.A15 Obtaining a firewall
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A17 Disabling IPv4 or IPv6
-  * NET.3.2.A18 Administration via a separate management network
-  * NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-* G 0.28 Software vulnerabilities or errors
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-* G 0.29 Violation of laws or regulations
-  * NET.3.2.A9 logging
-  * NET.3.2.A22 Secure time synchronization
-* G 0.30 Unauthorized use or administration of devices and systems
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A9 logging
-  * NET.3.2.A18 Administration via a separate management network
-  * NET.3.2.A22 Secure time synchronization
-* G 0.31 Incorrect use or administration of devices and systems
-  * NET.3.2.A9 logging
-  * NET.3.2.A22 Secure time synchronization
-* G 0.32 Abuse of permissions
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A9 logging
-  * NET.3.2.A22 Secure time synchronization
-* G 0.39 Malware
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-* G 0.40 Denial of Service
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A16 Structure of a "P-A-P" structure
-  * NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-* G 0.41 Sabotage
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A5 Restrictive rights assignment
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A8 Prevention of dynamic routing
-  * NET.3.2.A9 logging
-  * NET.3.2.A10 Defense against fragmentation attacks on the packet filter
-  * NET.3.2.A11 Importing Updates and Patches
-  * NET.3.2.A12 Procedure for security incidents
-  * NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A28 Central filtering of active content (CI)
-* G 0.43 Importing messages
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A8 Prevention of dynamic routing
-  * NET.3.2.A9 logging
-  * NET.3.2.A10 Defense against fragmentation attacks on the packet filter
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-* G 0.45 data loss
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A9 logging
-  * NET.3.2.A13 Regular backup
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-* G 0.46 Loss of integrity of sensitive information
-  * NET.3.2.A2 Setting firewall rules
-  * NET.3.2.A20 Securing basic internet protocols
-  * NET.3.2.A21 Temporary decryption of traffic
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A23 System Monitoring and Evaluation
-  * NET.3.2.A24 Revision and Penetration Tests
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
-  * NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)
-  * NET.3.2.A29 Use of High Availability Solutions (A)
-  * NET.3.2.A3 Set up appropriate filter rules on the packet filter
-  * NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
-  * NET.3.2.A31 Use of Certified Products (CI)
-  * NET.3.2.A4 Secure configuration of the firewall
-  * NET.3.2.A5 Restrictive rights assignment
-  * NET.3.2.A6 Protection of the administration interfaces
-  * NET.3.2.A9 logging
-  * NET.3.2.A22 Secure time synchronization
-  * NET.3.2.A25 Extended integrity protection for configuration files (CI)
-  * NET.3.2.A28 Central filtering of active content (CI)

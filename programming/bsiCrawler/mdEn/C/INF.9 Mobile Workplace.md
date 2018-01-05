@@ -5,7 +5,7 @@ description
 
 Good network coverage and powerful IT equipment, such as: For example, laptops, smartphones, or tablets allow employees to work almost anywhere, from anywhere. This means that official tasks are often performed not only in the rooms and buildings of the institution, but in changing workplaces in different environments, eg. In hotel rooms, trains or at customers. The information processed must be adequately protected.
 
-On the one hand, mobile work changes the duration, location, and distribution of working hours, and on the other hand, it increases information security requirements because mobile workplace environments do not require a secure IT infrastructure such as that found in an office environment.
+On the one hand, mobile work changes the duration, location, and distribution of working hours, and on the other hand, it increases information security requirements because mobile workplace environments can not assume the security of an IT infrastructure found in an office environment.
 
 ### 1.2 Objective
 
@@ -15,9 +15,9 @@ The module describes security requirements for mobile workstations. The aim is t
 
 The module contains fundamental requirements that must be observed and fulfilled when employees often work not only within the premises of the institution, but at changing workplaces outside.
 
-Above all, it depicts the organizational, technical and personnel requirements for wholly or partially mobile work. In order to secure IT systems, data media or documents used in mobile work, all relevant components such as SYS.3.1 * laptop *, SYS.3.2 * tablet and smartphone, * SYS.3.4 * mobile data carrier, * NET .3.3 * VPN, * SYS.2.1 * General Client, INF.1 Building or INF.8 Home Workplace * must be considered separately.
+Above all, it depicts the organizational, technical and personnel requirements for wholly or partially mobile work. In order to secure IT systems, data carriers or documents used during mobile work, all relevant components must be used, such as SYS.3.1 * laptop *, SYS.3.2 * tablet and smartphone, * SYS.3.4 * mobile data carrier, * NET .3.3 * VPN, * SYS.2.1 * Common Client, INF.1 Building or INF.8 Home Workplace * are considered separately.
 
-Likewise, the security requirements for VDU workplaces that are fixed by the employer (teleworking) are not the subject of this module, but are described in OPS.1.2.4 * Teleworking *.
+Likewise, the security requirements for VDU workplaces, which are fixed by the employer (teleworking) are not the subject of this module, but are described in OPS.1.2.4 * Teleworking *.
 
 2 risk situation
 -----------------
@@ -58,7 +58,7 @@ At the mobile workstation, attackers can more easily access sensitive informatio
 
 ### 2 8 Theft or loss of data carriers or documents
 
-The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or sometimes also from conference rooms to customers, it is easier to steal official IT and documents.
+The mobile workstation is not as well secured as the workplace in a company or agency. During a train journey, from a hotel room or occasionally also from conference rooms with customers, official IT and documents can therefore be stolen more easily.
 In addition, IT systems or components can be lost. In addition to the purely material damage caused by the immediate loss of the mobile device, the disclosure of sensitive data (eg e-mails, notes from meetings, addresses or other documents) may result in further (financial and / or reputational) damage.
 
 ### 2 9 Lack of security awareness and carelessness in handling information
@@ -74,7 +74,7 @@ In public transport or during business lunches, it can be observed again and aga
 
 The following are specific requirements for the protection of mobile workstations. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -101,7 +101,7 @@ If rooms are left only briefly, the clients used MUST be locked or shut down so 
 
 #### INF.9.A4 Working with external IT systems [supervisors, users]
 
-The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. When employees work with third-party IT systems, it is essential to ensure that all temporary data created during this process is deleted.
+The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. If employees are working with external IT systems, it MUST always be ensured that all temporary data created during this process is deleted.
 
 ### 3.2 Standard requirements
 
@@ -120,11 +120,11 @@ Confidential information SHOULD be safely disposed of, so do not just throw it i
 For mobile work, labor law and labor protection framework conditions SHOULD be observed and regulated. All relevant points SHOULD be governed either by company agreements or by individual agreements made between the mobile employee and the employer in addition to the employment contract.
 
 #### INF.9.A8 Mobile Workplace Security Policy [IT Leader]
-All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated on a regular basis. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current security policy.
+All relevant security requirements for mobile workstations SHOULD be documented in a mandatory security policy for mobile workers. In addition, it SHOULD be coordinated with the existing security guidelines of the institution as well as with all relevant specialist departments. Also, the security policy for mobile workstations SHOULD be updated on a regular basis. Likewise, it SHOULD specify that a representative be named for each mobile employee and that the substitution process be rehearsed on a regular basis. The staff of the institution SHOULD be sensitized and trained with regard to the current safety guideline.
 
 #### INF.9.A9 Encryption of Portable IT Systems and Media [User]
 
-To ensure that information worthy of protection can not be viewed by unauthorized third parties, SHOULD it be ensured that they are protected in accordance with the internal guidelines. Mobile data carriers and clients SHOULD be encrypted. The cryptographic keys SHOULD be kept separate from the encrypted device.
+To ensure that information worthy of protection can not be accessed by unauthorized third parties, SHOULD it be ensured that they are protected in accordance with the internal guidelines. Mobile data carriers and clients SHOULD be encrypted. The cryptographic keys SHOULD be kept separate from the encrypted device.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -136,7 +136,7 @@ If the IT system used offers an anti-theft device, SHOULD it be used. The theft 
 
 #### INF.9.A11 Ban on the use of unsafe environments (CIA)
 
-It SHOULD set criteria for the work environment that must be met at least so that information with increased protection requirements can be handled on the go. The criteria should cover at least the following topics:
+It SHOULD set criteria for the work environment that must be met to at least be met so that information with increased protection requirements can be handled mobile. The criteria should cover at least the following topics:
 
 * Access and access by third parties,
 * closed and, if necessary, lockable or guarded rooms,

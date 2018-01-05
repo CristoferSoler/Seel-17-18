@@ -13,7 +13,7 @@ The module shows how an MDM can be used to securely use mobile devices by instit
 
 ### 1.3 Delimitation
 
-Mobile devices in the sense of this module are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module does not focus on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
+Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module is not on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
 
 2 risk situation
 -----------------
@@ -45,7 +45,7 @@ The rights management of the MDM decides who should make which settings and who 
 
 ### 2 7 No or weak encryption of communication between MDM and terminal
 
-If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms, or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
+If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
 
 ### 2 8 Unauthorized creation of motion profiles by the MDM
 
@@ -59,7 +59,7 @@ If private devices are used for business purposes, there are various potential t
 ---------------
 The following are specific requirements for the protection of Mobile Device Management (MDM). Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -94,7 +94,7 @@ All mobile devices MUST be integrated into the MDM as soon as possible so that t
 
 All mobile devices MUST be configured to adequately meet their protection needs. For this, a suitable basic configuration MUST be compiled and documented. Details are defined in the specific device modules.
 
-When mobile devices are handed over to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
+When handing over mobile devices to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
 
 #### SYS.3.2.2.A6 logging
 The MDM MUST log all security-related events and configuration changes. The collected data MUST NOT be viewed by unauthorized persons and MUST be stored unchangeably. In addition, legal and internal regulations MUST be adhered to during logging.
@@ -200,7 +200,7 @@ Additional information on threats and security measures in the area of ​​"Mo
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the "Mobile Device Management (MDM)" building block.
+The following elementary threats are important for the Mobile Device Management (MDM) building block.
 
 * G 0.11 Failure or disruption of service providers
 * G 0.13 Interception of compromising radiation

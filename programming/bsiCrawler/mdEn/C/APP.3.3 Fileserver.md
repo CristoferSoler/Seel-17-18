@@ -26,10 +26,10 @@ If a file server fails, the entire information network can be affected and thus 
 
 ### 2 2 Inadequate dimensioning of the file server
 
-If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
+If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
 
 ### 2 3 Inadequate review of dropped files
-If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can quickly spread throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
@@ -37,7 +37,7 @@ If access authorizations and approvals are not properly designed and assigned, t
 
 ### 2 5 Unstructured data management
 
-If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files may be located in directories or file systems that are made accessible to third parties or that are not consistent versions.
+If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files reside in directories or file systems that are made accessible to third parties, or that are not consistent versions.
 
 ### 2 6 Unsuitable installation of the file server
 
@@ -52,7 +52,7 @@ If a file server fails completely, individual components are defective or an emp
 
 The following are specific requirements for the Fileserver area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -118,7 +118,7 @@ The results SHOULD be sufficiently documented. Discovered shortcomings SHOULD ca
 
 #### APP.3.3.A11 Use of Quotas
 
-It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only grant write access to the system administrator.
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -126,7 +126,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.3.A12 Encryption of the data (CI)
 
-All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malware. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It SHOULD be made sure that the virus protection can check the encrypted files for malware. Cryptographic bowl SHOULD be safely generated and kept separate from the data (see also CON.1 crypto concept).
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
@@ -191,113 +191,3 @@ The following elementary threats are important for the "file server" building bl
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
-* G 0.14 Spying out information (spying)
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.16 Theft of devices, data carriers or documents
-  * APP.3.3.A1 Suitable installation [Building services]
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-  * APP.3.3.A11 Use of Quotas
-  * APP.3.3.A12 Encryption of the data (CI)
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-  * APP.3.3.A3 Use of antivirus programs
-* G 0.18 Missing planning or missing adjustment
-  * APP.3.3.A6 Obtaining a file server
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-* G 0.19 Disclosure of information worthy of protection
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A8 Structured Data Management [User]
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.21 Manipulation of hardware or software
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A9 Secure storage management
-* G 0.22 Manipulation of information
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.23 Unauthorized intrusion into IT systems
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A9 Secure storage management
-* G 0.25 Failure of devices or systems
-  * APP.3.3.A1 Suitable installation [Building services]
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-  * APP.3.3.A11 Use of Quotas
-  * APP.3.3.A12 Encryption of the data (CI)
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-  * APP.3.3.A2 Use of RAID systems
-  * APP.3.3.A4 Regular backup
-  * APP.3.3.A6 Obtaining a file server
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A11 Use of Quotas
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-* G 0.26 Malfunction of equipment or systems
-  * APP.3.3.A1 Suitable installation [Building services]
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-  * APP.3.3.A11 Use of Quotas
-  * APP.3.3.A12 Encryption of the data (CI)
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-  * APP.3.3.A2 Use of RAID systems
-  * APP.3.3.A4 Regular backup
-  * APP.3.3.A6 Obtaining a file server
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-* G 0.27 Resource shortage
-  * APP.3.3.A6 Obtaining a file server
-  * APP.3.3.A8 Structured Data Management [User]
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A11 Use of Quotas
-* G 0.30 Unauthorized use or administration of devices and systems
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.31 Incorrect use or administration of devices and systems
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.32 Abuse of permissions
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A9 Secure storage management
-* G 0.39 Malware
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-* G 0.40 Denial of Service
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A9 Secure storage management
-* G 0.43 Importing messages
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A12 Encryption of the data (CI)
-* G 0.44 Unauthorized intrusion into premises
-  * APP.3.3.A1 Suitable installation [Building services]
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-  * APP.3.3.A11 Use of Quotas
-  * APP.3.3.A12 Encryption of the data (CI)
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-* G 0.45 data loss
-  * APP.3.3.A2 Use of RAID systems
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A4 Regular backup
-  * APP.3.3.A7 Selecting a file system
-  * APP.3.3.A8 Structured Data Management [User]
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A10 Periodic tests of the backup or recovery concept
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)
-* G 0.46 Loss of integrity of sensitive information
-  * APP.3.3.A3 Use of antivirus programs
-  * APP.3.3.A4 Regular backup
-  * APP.3.3.A5 Restrictive allocation of rights
-  * APP.3.3.A7 Selecting a file system
-  * APP.3.3.A9 Secure storage management
-  * APP.3.3.A13 Replicating Between Sites (A)
-  * APP.3.3.A14 Use of Error Correction Codes (I)

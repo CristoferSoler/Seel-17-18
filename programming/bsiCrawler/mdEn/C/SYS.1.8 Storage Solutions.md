@@ -8,7 +8,7 @@ The steady growth of digital information and the increasing amount of unstructur
 * The data of an institution should be available anytime, anywhere and for different application scenarios. As a result, modern storage solutions often have increased availability requirements.
 * The increasing digitization of all information in an institution makes it necessary to comply with and comply with far-reaching legal requirements (compliance requirements).
 * Storage solutions should be dynamically adaptable to ever-changing requirements and provide storage space centrally.
-In the past, storage solutions were often implemented by connecting storage media directly to a server. However, these so-called direct-attached storage (DAS) systems often can not meet current and future requirements. Therefore, today's widespread central storage solutions and their components are necessary, which can be distinguished as follows:
+In the past, storage solutions were often implemented by connecting storage media directly to a server. However, these so-called direct-attached storage (DAS) systems often can not meet current and future requirements. Therefore, today's widely used central storage solutions and their components are necessary, which can be differentiated as follows:
 
 * Storage solutions: A storage solution consists of one or more storage networks and at least one storage system.
 * Storage networks: Storage networks allow access to the storage systems on the one hand and replication of data between storage systems on the other.
@@ -41,11 +41,11 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data involves risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
-Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data for which he has no authorization. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
+Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data he does not have permission to. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
 
 ### 2 6 Overcoming the logical network separation
 
@@ -57,7 +57,7 @@ Complex, network-based storage solutions often consist of many components (such 
 
 ### 2 8 Obtaining Physical Access to SAN Switches
 
-If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
+If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be accessing the distributed zoning database to change it so that it can access the storage systems.
 
 3 requirements
 ---------------
@@ -114,7 +114,7 @@ A REQUIREMENT analysis should be carried out, which among other things considers
 * Integration into existing processes.
 #### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
 
-The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Likewise, the decision to select a storage solution SHOULD be documented comprehensible.
+The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Similarly, the decision for the selection of a storage solution should be documented comprehensible.
 
 #### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
 
@@ -147,7 +147,7 @@ A SAN SHOULD be segmented. A concept SHOULD be developed that maps the SAN resou
 
 It SHOULD be documented and comprehensibly documented, which requirements the institution places on the multi-client capability of a storage solution. The storage solutions used SHOULD meet these documented requirements.
 
-In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to work with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
+In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to act with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
 
 When using IP or iSCSI, the clients SHOULD be separated by segmentation in the network. If Fiber Channel is used, SHOULD be separated using VSANs and soft zoning.
 
@@ -172,7 +172,7 @@ If entire storage solutions or individual components of a storage solution are n
 #### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
 It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
 
-It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
+It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely deleted.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -194,12 +194,12 @@ All data stored in storage solutions SHOULD be encrypted. It SHOULD be determine
 
 To ensure the integrity of the SAN fabric, protocols with additional security features SHOULD be used. The following protocols SHOULD consider their security properties and use appropriate configurations:
 
-* Diffie Hellman Challenge Handshake Authentication Protocol (DH-CHAP),
+* Diffie Hellman Challenge Handshake Authentication Protocol (DH-CHAP)
 * Fiber Channel Authentication Protocol (FCAP) and
 * Fiber Channel Password Authentication Protocol (FCPAP).
 #### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
 
-In SAN environments, data SHOULD be deleted by overwriting the associated memory segments of a LUN multiple times.
+In SAN environments, data SHOULD be deleted by repeatedly overwriting the associated memory segments of a LUN.
 
 #### SYS.1.8.A26 Securing a SAN through hard zoning
 
@@ -256,181 +256,3 @@ The following elementary hazards are important for the "memory solutions" block.
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
-  * SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
-  * SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A16 Secure deletion in SAN environments
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A19 Disposal of storage solutions
-* G 0.11 Failure or disruption of service providers
-  * SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
-* G 0.15 Listening
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A4 Protection of the administration interfaces
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-* G 0.16 Theft of devices, data carriers or documents
-  * SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
-  * SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A16 Secure deletion in SAN environments
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A19 Disposal of storage solutions
-* G 0.18 Missing planning or missing adjustment
-  * SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
-  * SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
-* G 0.19 Disclosure of information worthy of protection
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-  * SYS.1.8.A16 Secure deletion in SAN environments
-  * SYS.1.8.A19 Disposal of storage solutions
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-* G 0.20 Information or products from unreliable sources
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-  * SYS.1.8.A4 Protection of the administration interfaces
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-* G 0.23 Unauthorized intrusion into IT systems
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A4 Protection of the administration interfaces
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-* G 0.24 Destruction of equipment or data media
-  * SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
-  * SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A16 Secure deletion in SAN environments
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A19 Disposal of storage solutions
-* G 0.25 Failure of devices or systems
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-* G 0.26 Malfunction of equipment or systems
-  * SYS.1.8.A5 Logging on storage systems
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-* G 0.27 Resource shortage
-  * SYS.1.8.A5 Logging on storage systems
-  * SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
-  * SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-* G 0.28 Software vulnerabilities or errors
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
-  * SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-* G 0.29 Violation of laws or regulations
-  * SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
-  * SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
-* G 0.30 Unauthorized use or administration of devices and systems
-  * SYS.1.8.A3 Restrictive rights assignment
-  * SYS.1.8.A4 Protection of the administration interfaces
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-* G 0.31 Incorrect use or administration of devices and systems
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-* G 0.32 Abuse of permissions
-  * SYS.1.8.A3 Restrictive rights assignment
-* G 0.40 Denial of Service
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-* G 0.44 Unauthorized intrusion into premises
-  * SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
-  * SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
-  * SYS.1.8.A11 Safe operation of a storage solution
-  * SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
-  * SYS.1.8.A13 Monitoring and management of storage solutions
-  * SYS.1.8.A14 Securing a SAN by segmentation
-  * SYS.1.8.A15 Secure separation of clients in storage solutions
-  * SYS.1.8.A16 Secure deletion in SAN environments
-  * SYS.1.8.A17 Documentation of the system settings of storage systems
-  * SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
-  * SYS.1.8.A19 Disposal of storage solutions
-* G 0.45 data loss
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-* G 0.46 Loss of integrity of sensitive information
-  * SYS.1.8.A2 Secure basic configuration of storage solutions
-  * SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
-  * SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
-  * SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
-  * SYS.1.8.A26 Securing a SAN through hard zoning
-  * SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
-  * SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)

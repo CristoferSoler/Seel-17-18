@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Businesses and governments are storing more and more data and at the same time relying more and more on it. Data is then lost, eg. B. by defective hardware or malware, can cause serious damage. However, regular data backups minimize such effects. A data backup should ensure that redundant data can be used to resume IT operations at short notice if parts of the operational data are lost.
+Businesses and governments are storing more and more data and at the same time relying more and more on them. Data is then lost, eg. B. by defective hardware or malware, can cause serious damage. However, regular data backups minimize such effects. A data backup should ensure that redundant data can be used to resume IT operations at short notice if parts of the operational data are lost.
 
 ### 1.2 Objective
 
@@ -16,7 +16,7 @@ The module describes the basic requirements that contribute to an adequate data 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the field of data protection:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​data protection:
 
 ### 2 1 Missing backup
 
@@ -28,7 +28,7 @@ An institution regularly backs up its important data, especially its customer da
 
 ### 2 3 Unsuitable storage of backup volumes
 
-Backup media contain a host of valuable institutional information. If the data carriers are stored in an insecure place, an attacker (eg an innocent person) may be able to access them and steal or manipulate information worthy of protection. Similarly, backup media may become unusable due to improper storage or climatic conditions, and then become unavailable when needed.
+Backup media contain a great deal of proprietary information from the institution. If the data carriers are stored in an insecure place, an attacker (eg an innocent person) may be able to access them and steal or manipulate information worthy of protection. Similarly, backup media may become unusable due to improper storage or climatic conditions, and then become unavailable when needed.
 
 ### 2 4 Missing or insufficient documentation
 
@@ -40,7 +40,7 @@ If at the data security legal requirements, eg. For example, data protection law
 
 ### 2 6 Unsafe cloud providers
 
-If institutions outsource their data protection to a cloud provider, an attacker could also access the backup data or the backup can not be restored quickly enough. As a result, data worth protecting has leaked out or emergency backups have not been available in the required time.
+If institutions outsource their data protection to a cloud provider, an attacker could also access the backup data or the backup can not be restored quickly enough. As a result, data worth protecting has leaked or emergency backups have not been available in the required time.
 
 ### 2 7 Insufficient storage capacity
 The amount of processed and therefore also stored data is steadily increasing. If the backup media does not have enough memory, more up-to-date data may no longer be backed up or the backup software used will automatically overwrite old and possibly still necessary backups. Are those responsible not informed about this because z. For example, if monitoring is inadequate, data may be lost or only the wrong versions are available in an emergency.
@@ -54,7 +54,7 @@ If no adequate data protection concept is created and followed for data protecti
 
 The following are specific requirements for data protection. Basically, the information security officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -91,7 +91,7 @@ Before a backup system is procured, a list of requirements SHOULD be created to 
 
 #### CON.3.A8 Function Tests and Recoverability Check [IT Operations]
 
-It SHOULD be tested on a regular basis, whether the data backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
+It SHOULD be tested on a regular basis, whether the backup works as desired and, above all, whether backed up data can be reproduced easily and in a reasonable amount of time.
 
 #### CON.3.A9 Requirements for online data backup [Head of IT, IT operation]
 
@@ -113,7 +113,7 @@ Backup copies should be made of software programs used, provided that this is le
 
 #### CON.3.A12 Suitable storage of backup data carriers [IT operation]
 
-The backup volumes SHOULD be protected against unauthorized access. They SHOULD be spatially separated from the source systems. The storage location SHOULD be conditioned so that the storage media can be stored for a longer period of time.
+The backup volumes SHOULD be protected from unauthorized access. They SHOULD be spatially separated from the source systems. The storage location SHOULD be conditioned so that the storage media can be stored for a longer period of time.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -128,7 +128,7 @@ To ensure the confidentiality and integrity of the data backed up, all data SHOU
 
 ### 4.1 Literature
 
-Additional information on hazards and security measures in the area of ​​"data protection concept" can be found in the following publications, among others:
+Additional information on threats and security measures in the "data protection concept" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 
