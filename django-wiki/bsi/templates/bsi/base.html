@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"></link>
     {% load staticfiles %}
     <link href="{% static "bsi/bootstrap/css/wiki-bootstrap.min.css" %}" rel="stylesheet">
     <script src="{% static "bsi/js/jquery.min.js" %}"></script>
+    <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script src="{% static "bsi/js/core.js" %}"></script>
     <script src="{% static "bsi/bootstrap/js/bootstrap.min.js" %}"></script>
     <!-- Optionally enable responsive features in IE8 -->
     <script src="{% static "bsi/js/respond.min.js" %}"></script>
-    <link rel="stylesheet" typle="text/css" href="{% static 'bsi/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/style.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
     <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
+
+
     <!--Icon -->
     <link href="{% static "bsi/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
@@ -115,34 +119,34 @@
 {% endblock %}
 
 <a href="#" id="scroll" style="display: none;"><<span class="glyphicon glyphicon-triangle-top"></span>></a>
-    <footer class="Footer">
-        <div class="container">
-            <div class="row">
-                <ul class="menu list-inline">
+<footer class="Footer">
+    <div class="container">
+        <div class="row">
+            <ul class="menu list-inline">
 
-                    <li>
-                        <a> Copyright © 2017 All rights reserved</a>
-                    </li>
+                <li>
+                    <a> Copyright © 2017 All rights reserved</a>
+                </li>
 
-                    <li>
-                        <a href="#">About</a>
-                    </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
 
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
+                <li>
+                    <a href="#">FAQ</a>
+                </li>
 
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
 
-                </ul>
-            </div>
-
+            </ul>
         </div>
-    </footer>
 
-    {% render_block "js" %}
+    </div>
+</footer>
+
+{% render_block "js" %}
 
 </body>
 

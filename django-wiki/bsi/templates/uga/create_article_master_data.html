@@ -1,0 +1,62 @@
+{% extends "uga/create_article.html" %}
+{% load wiki_tags i18n sekizai_tags static %}
+
+{% addtoblock "js" %}
+
+    <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
+    <script type="text/javascript">
+        {% if not create_form.slug.value %}
+            //<![CDATA[
+            (function ($) {
+                $(document).ready(function () {
+                    $("#id_title").keyup(function () {
+                        var e = $("#id_slug")[0];
+                        if (!e._changed) {
+                            slug = URLify(this.value, 50);
+                            e.value = slug;
+                        }
+                    });
+                });
+            })(jQuery);
+            //]]>
+        {% endif %}
+    </script>
+{% endaddtoblock %}
+
+{% block form_data %}
+    <table>
+        <tbody>
+        {% if wizard.form.forms %}
+            {% for form in wizard.form.forms %}
+                {% for field in form %}
+                    <tr>
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
+
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+
+                    </tr>
+                    <tr>{{ field.help_text|safe }}</tr>
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            {% for field in form %}
+                <tr>
+                    <p>
+                        {{ field.label_tag }}
+                        {{ field }}
+
+                        {% for error in field.errors %}
+                            <p style="color: red">{{ error }}</p>
+                        {% endfor %}
+
+                </tr>
+                <tr>{{ field.help_text|safe }}</tr>
+            {% endfor %}
+        {% endif %}
+        </tbody>
+    </table>
+{% endblock %}

@@ -1,11 +1,171 @@
-{% extends "bsi/base.html" %}
-{% load wiki_tags %}
+{% extends "uga/create_article.html" %}
+{% load wiki_tags i18n sekizai_tags static %}
 
-{% block bsi_pagetitle %}{% trans "Add links" %}{% endblock %}
+{% block form_data %}
+    <div class="col-lg-12">
+        <div class="col-lg-12">
+            <h4>Search articles</h4>
+            {#            <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">#}
+            <form class="navbar-form navbar-right" id="wiki-search-form" method="GET">
+                <div class="form-group inner-addon right-addon ui-widget">
+                    <i class="glyphicon glyphicon-search"></i>
+                    {#                                        <input type="search" class="form-control search-query" name="q" placeholder="search"/>#}
+                    {#                    <label for="search">Search: </label>#}
+                    <input type="search" class="form-control search-query" id="search_autocomplete"/>
+                </div>
+            </form>
 
-{% block bsi_contents %}
-    <form method="POST" class="form-horizontal"> {% csrf_token %}
-            {% wiki_form add_links_form %}
-    </form>
+
+            <div class="col-lg-12">
+                <table class="table table-striped"
+                       data-toggle="table"
+                       data-search="true"
+                       data-show-refresh="true"
+                       data-show-toggle="true"
+                       data-show-columns="true"
+                       data-toolbar="#toolbar"
+                       data-query-params="queryParams"
+                       data-pagination="true"
+                       data-height="550"
+                       data-locale="en-US"
+                       data-page-list="[15, 30, 90, 200]">
+
+                    <thead>
+                    <tr>
+                        <th data-sortable="true">Article Name</th>
+                        {#                        <th data-sortable="true">Author</th>#}
+                        {#                        <th data-sortable="true">Date</th>#}
+                    </tr>
+                    </thead>
+
+                    <!-- tbody should be displayed from overview_uga.html -->
+                    <tbody>
+                    {#                    {% for article in articles %}#}
+                    <tr>
+
+
+                        {#                            <td class="col-xs-3">{{ article.article.owner }}</td>#}
+                        {#                            <td class="col-xs-3">{{ article.article.created }}</td>#}
+                    </tr>
+                    {#                    {% endfor %}#}
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class=" col-lg-4">
+            <div class="fading-side-menu" data-spy="" data-offset-top="350">
+                <h4>Table of Contents</h4>
+                <hr class="no-margin">
+                <div id="treeview1"></div>
+
+                <script type="text/javascript">
+
+
+                    $(function () {
+                        $('#treeview1').treeview({
+                            levels: 1,
+                            data: getData(),
+                            enableLinks: false,
+                            selectedBackColor: '#337ab7'
+                        })
+                    });
+
+
+                    function getData() {
+                        return $.ajax({
+                            url: '/_treeview/gettreeview/',
+                            async: false
+                        }).responseText
+
+                    }
+
+
+                    {#$(function () {#}
+                    {#    var elements = document.getElementsByClassName('list-group-item');#}
+                    {#    for (var i = 0; i < elements.length; i++) {#}
+                    {#        elements[i].addEventListener('click', function () {#}
+                    {#            console.log('click :)')#}
+                    {#        }, false);#}
+                    {#    }#}
+
+
+                </script>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h4>See also</h4>
+            <hr class="no-margin">
+            <div id="see_also_links"></div>
+
+
+            <table>
+                <tbody>
+                {{ wizard.management_form }}
+                {% if wizard.form.forms %}
+                    {{ wizard.form.management_form }}
+                    {% for form in wizard.form.forms %}
+                        {% for field in form %}
+                            <tr>
+                                <p>
+                                    {{ field.label_tag }}
+                                    {{ field }}
+
+                                    {% for error in field.errors %}
+                                        <p style="color: red">{{ error }}</p>
+                                    {% endfor %}
+
+                            </tr>
+                            <tr>{{ field.help_text|safe }}</tr>
+                        {% endfor %}
+                    {% endfor %}
+                {% else %}
+                    {% for field in form %}
+                        <tr>
+                            <p>
+                                {{ field.label_tag }}
+                                {{ field }}
+
+                                {% for error in field.errors %}
+                                    <p style="color: red">{{ error }}</p>
+                                {% endfor %}
+
+                        </tr>
+                        <tr>{{ field.help_text|safe }}</tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    if (!$('input[type=checkbox]').is(':checked')) {
+                        console.log("unchecked");
+                        $('input[type=checkbox]').parent().parent().hide()
+                    }
+                });
+                $('input[type=checkbox]').change(function () {
+                    if ($(this).is(':checked')) {
+                        console.log("checked");
+                        $(this).parent().parent().show()
+                    } else {
+                        console.log("unchecked");
+                        $(this).parent().parent().hide()
+                    }
+                });
+            </script>
+
+        </div>
+    </div>
+
+    <script type="application/javascript">
+        $(function () {
+            $("#search_autocomplete").autocomplete({
+                source: "/uga/_create/get_bsi_articles/",
+                minLength: 2
+            });
+        });
+    </script>
 
 {% endblock %}
