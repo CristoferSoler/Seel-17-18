@@ -10,6 +10,9 @@ const entryQuestionComponent = 'Do you have a specific IT problem and would you 
 const questionThread = 'Do you have a problem with ';
 const questionComponent = 'Do you have a problem with '
 
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+
 function inilizeData() {
     getDataFromServer();
 
@@ -453,11 +456,15 @@ function initWizardsComponents(){
         initWizard();
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'left':'97%'});
+            panel.removeClass('visible').animate({'right':'50px'});
             localStorage.removeItem('visible');
         } else {
             localStorage.setItem('visible',String(true));
-            panel.addClass('visible').animate({'left':'62%'});
+            if(width > 1200){
+                panel.addClass('visible').animate({'right':'600px'});
+            }else{
+                panel.addClass('visible').animate({'right':'300px'});
+            }
         }
         valid = false;
         return false;
@@ -479,7 +486,11 @@ function askWheatherToClose(event){
 function setPanel() {
     var panel = $('#slide-panel');
     if(localStorage.getItem('visible')!== null){
-        panel.addClass('visible').animate({'left':'62%'});
+        if(width > 1200){
+            panel.addClass('visible').animate({'right':'600px'});
+        }else{
+            panel.addClass('visible').animate({'right':'300px'});
+        }
         initWizard();
     }
 }

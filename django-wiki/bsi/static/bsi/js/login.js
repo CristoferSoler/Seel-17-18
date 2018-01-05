@@ -16,7 +16,7 @@
 	});
 
 	var error = "{{error}}";
-	console.log('Halo')
+	console.log('Halo');
 	if(error) {
 		$('#login-form-link').removeClass('active');
 		$('#register-form-link').addClass('active');

@@ -103,6 +103,7 @@ LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
+LOGIN_URL = 'login'
 # from bsiwiki.WikiPattern import WikiPattern
 # URL_CONFIG_CLASS = WikiPattern
 
