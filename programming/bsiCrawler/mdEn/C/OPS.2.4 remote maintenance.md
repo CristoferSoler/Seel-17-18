@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Remote maintenance refers to spatially separate access to IT systems and the applications running on them for configuration, maintenance, repair or control purposes. Remote maintenance can be done passively through an exclusive access to the IT system or applications, or actively through direct administrative intervention in the operating system or running applications. In the case of passive remote maintenance, a user on site must perform the actual actions under the guidance of an administrator. In the case of active remote maintenance, on the other hand, an operating system is intervened and operated directly by an administrator. Among other things, the signals of a mouse and keyboard commands, as well as screen contents and console outputs are transmitted. Even if effective mechanisms for securing remote access access are implemented, there is direct access from outside to the internal network and data processed therein. Through these interfaces, external parties can endanger the institution and thus cause economic and operational damage.
+Remote maintenance refers to spatially separate access to IT systems and the applications running on them for configuration, maintenance, repair or control purposes. Remote maintenance can be done passively by an exclusively viewing access to the IT system or applications, or actively through direct administrative intervention in the operating system or running applications. In the case of passive remote maintenance, a user on site must perform the actual actions under the guidance of an administrator. In the case of active remote maintenance, on the other hand, an operating system is intervened and operated directly by an administrator. Among other things, the signals of a mouse and keyboard commands, as well as screen contents and console outputs are transmitted. Even if effective mechanisms for securing remote access access are implemented, there is direct access from outside to the internal network and data processed therein. Through these interfaces, external parties can endanger the institution and thus cause economic and operational damage.
 
 ### 1.2 Objective
 
@@ -18,7 +18,7 @@ This module looks at remote maintenance from the point of view of IT operation a
 
 The following specific threats and vulnerabilities are of particular importance in the field of remote maintenance:
 
-### 2 1 Inadequate knowledge of remote maintenance regulations
+### 2 1 Insufficient knowledge of remote maintenance regulations
 
 If the parties know insufficiently about important regulations and therefore do not apply them, the protection of the information in the context of a remote maintenance is endangered. Therefore, there are dangers for the IT operation, if current regulations are not made public. In particular, administrators who set up and use remote maintenance, are on regulations, eg. As to configurations, instructed, otherwise with the remote maintenance additional operational risks, but also security gaps to the internal network arise and attacks on the remote maintenance can not be detected or fended off.
 
@@ -27,7 +27,7 @@ If remote maintenance is not carefully planned, set up and regulated, not only t
 
 ### 2 3 Unauthorized exercise of rights in remote maintenance
 
-Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
+Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance, or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
 
 ### 2 4 Unsuitable use of authentication for remote maintenance
 
@@ -48,7 +48,7 @@ Ensuring the security and viability of remote-access IT systems and applications
 Communication via public and internal networks via insecure protocols poses a potential danger. For example, if legacy versions of IPSec, SSH, or SSL / TLS are used to establish a tunnel between two endpoints or networks, the security of these tunnels can not be adequately ensured. Attackers can exploit vulnerabilities in these protocols to inject their own content into protected connections. Generally considered to be unsecure protocols, where information is transmitted in plain text.
 
 ### 2 8 Inappropriate handling of authentication procedures for remote maintenance
-The security of an authentication process is directly dependent on the careful handling of it. The disclosure of user-supplied authentication data and the insecure storage of this information pose a potential danger. There may be security vulnerabilities for unauthorized access to the rights and role profiles of administrators as well as IT systems and applications.
+The security of an authentication process is directly dependent on the careful handling of it. The disclosure of user-supplied authentication data and the insecure storage of this information pose a potential danger. There may be security gaps for unauthorized access to the rights and role profiles of administrators as well as IT systems and applications.
 
 ### 2 9 Unsafe cryptographic algorithms for remote maintenance
 
@@ -145,7 +145,7 @@ Within the remote maintenance components should be used, which serve exclusively
 
 Remote maintenance SHOULD only be done from the internal network.
 
-However, if it is necessary to access internal IT systems from a public data network, a secure Virtual Private Network (VPN) SHOULD be used. For remote maintenance via VPN, a protected data connection to the VPN endpoint SHOULD be generated. In addition to these external remote access accesses, the internal remote maintenance access points SHOULD also be protected. The use of internal remote maintenance access SHOULD be restricted as much as possible. Furthermore, all activities SHOULD be logged during an administration session.
+However, if it is necessary to access internal IT systems from a public data network, a secured Virtual Private Network (VPN) SHOULD be used. For remote maintenance via VPN, a protected data connection to the VPN endpoint SHOULD be generated. In addition to these external remote access accesses, the internal remote maintenance access points SHOULD also be protected. The use of internal remote maintenance access SHOULD be restricted as much as possible. Furthermore, all activities SHOULD be logged during an administration session.
 
 #### OPS.2.4.A16 Training for remote maintenance [IT operation]
 

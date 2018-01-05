@@ -96,7 +96,7 @@ The logging data SHOULD be evaluated regularly.
 
 #### APP.3.2.A5 authentication
 
-If clients authenticate to the web server, an encrypted connection MUST be used for this (see APP.3.2.A11 * Encryption via TLS *). The password files on the web server MUST be stored cryptographically secured and protected against unauthorized access.
+If clients authenticate to the web server, an encrypted connection MUST be used for this (see APP.3.2.A11 * Encryption via TLS *). The password files on the web server MUST be cryptographically secured and protected against unauthorized access.
 
 #### APP.3.2.A6 Timely import of security-relevant patches and updates
 
@@ -119,7 +119,7 @@ In order to select suitable security measures for the web server, it should be p
 A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how to implement security measures, and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
-If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.
@@ -127,7 +127,7 @@ If the web server is not operated by the institutions themselves, but offers fro
 * The service provider SHOULD implement basic technical and organizational measures to protect its information network.
 #### APP.3.2.A11 Encryption over TLS
 
-The web server SHOULD provide encryption for all connections via TLS (HTTPS). If an HTTPS connection is offered then all content SHOULD be available over HTTPS. So-called mixed content SHOULD NOT be used. Critical actions, such as logging in to a web application (login), SHOULD be done via HTTPS.
+The web server SHOULD provide encryption for all connections via TLS (HTTPS). If an HTTPS connection is offered then all content SHOULD be available over HTTPS. So-called mixed content SHOULD NOT be used. Critical actions, such as logging in to a web application (login), SHOULD be done over HTTPS.
 
 #### APP.3.2.A12 Appropriate handling of errors and error messages
 
@@ -150,7 +150,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 Web servers SHOULD be configured redundantly. The Internet connection of the web server and other IT systems, such as the web application server, SHOULD be designed to be redundant.
 
 #### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
-There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
+There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the agreement of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
 
 #### APP.3.2.A17 Advanced authentication methods for web servers (CI)
 

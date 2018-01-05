@@ -99,7 +99,7 @@ An authentication concept SHOULD be created. In it, it should be defined for eac
 
 #### ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
 
-SHOULD use identification and authentication mechanisms appropriate to the protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
+SHOULD use identification and authentication mechanisms appropriate to protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
 
 #### ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
 

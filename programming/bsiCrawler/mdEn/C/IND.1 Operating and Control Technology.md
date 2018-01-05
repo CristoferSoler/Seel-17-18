@@ -17,7 +17,7 @@ Another major difference for OT is the high availability and integrity requireme
 
 The goal of the module is to demonstrate suitable requirements for the information security of the OT. He addresses cross-component, conceptual and architectural security requirements.
 
-The module is to be modeled and implemented across the board. Multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out, as these have different information security requirements.
+The module is to be modeled and implemented across the board. In this case, multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out since there are different requirements with regard to information security.
 
 ### 1.3 Delimitation
 
@@ -43,7 +43,7 @@ The OT is used to monitor, control and automate technical processes. Disruptions
 
 Industrial control systems are increasingly rarely operated completely independently from the outside world. Modern manufacturing and manufacturing processes require an information exchange with upstream and downstream production steps and are often linked to central production planning and control systems (Manifacturing Execution System / Enterprise Resource Planning) of an institution. The electronic exchange of information requires networking of production facilities with third party networks such as office IT or the networks of partners and service providers. Requirements for interactive access from office or mobile workstations as well as operational requirements for the electronic data exchange, such as the provision of software and updates, or for the realization of remote access for a call or service providers promote networking with the outside world.
 
-If the required communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
+If the necessary communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
 
 ### 2 4 Insufficient protection against malicious programs for OT
 
@@ -66,7 +66,7 @@ Local administrators also have privileged rights that make abusive intrusion or 
 
 ### 2 7 Insufficient monitoring and detection procedures
 
-The monitoring of operating states of the process to be automated is an essential function of industrial control systems. For example, warnings that are relevant to the process (eg if levels are exceeded) and technical parameters (eg temperatures, valve positions) are displayed. On the other hand, there is often a lack of adequate monitoring of the supporting IT infrastructure.
+The monitoring of operating states of the process to be automated is an essential function of industrial control systems. For example, warnings that are relevant to the process (eg if levels are exceeded) and technical parameters (eg temperatures, valve positions) are displayed. In contrast, there is often a lack of adequate monitoring of the supporting IT infrastructure.
 
 If unusual or security-relevant events of such operating environments are not or only insufficiently monitored, attempts to attack, network bottlenecks or foreseeable failures can not be detected early.
 
@@ -93,7 +93,7 @@ An attacker with access to the network could read or modify the contents of the 
 
 ### 2 11 Unsafe configurations
 
-In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or trusted by other systems.
+In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or in trust with other systems.
 
 Examples of insecure configurations include the use of standard passwords, the use of system administration plaintext protocols, the operation of unneeded services, unsecured interfaces, such as: USB or Firewire ports, or disabled security features.
 
@@ -241,7 +241,7 @@ For ICS environments that are highly vulnerable or difficult to protect at the s
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
-By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without adjustments the ICS system are necessary.
+By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without any adjustments the ICS system are necessary.
 
 The implementation of this requirement increases perimeter security. Supplementary organizational and technical measures SHOULD be identified and implemented to further reduce the risks of intentional and accidental circumvention of the perimeter, such as the use of removable media or mobile devices.
 

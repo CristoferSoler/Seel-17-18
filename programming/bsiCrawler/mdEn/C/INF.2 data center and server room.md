@@ -17,7 +17,7 @@ On the one hand, the module addresses institutions that run a data center and wa
 
 ### 1.3 Delimitation
 
-The subject of this module are only data centers of medium type and quality. The security requirements described here are not sufficient to protect high-security data centers, such as those used in the banking sector. A high-security data center differs above all in terms of high availability, disaster tolerance, component redundancy, elemental damage resistance, energy efficiency and data security from the average data centers considered here.
+The subject of this module are only data centers of medium type and quality. The security requirements described here are not sufficient to protect high-security data centers, such as those used in the banking sector. A high-security data center is different, especially in the points high availability, disaster tolerance, redundancy of components, resistance to natural hazards, energy efficiency and data security of the consideration here mean data centers.
 
 Furthermore, the present module is not suitable for small information networks with z. B. only one or very few servers or IT systems. An example of this is a small, medium-sized enterprise (SME) with few IT workstations and a server that is located in a separate room. In such cases, it is often sufficient to implement the INF.6 * protective cabinet / technical room * module.
 
@@ -53,7 +53,7 @@ Leakages in the data center infrastructure, floods, burst pipes, faulty sprinkle
 
 ### 2 7 Missing or inadequate burglary protection
 
-A missing or poor burglary protection makes it easy for unauthorized persons to penetrate a data center. Offenders can so z. B. stealing or manipulating IT components and accessing confidential information. They could also destroy the devices or damage the data center as a whole.
+Missing or inadequate intruder protection makes it easy for unauthorized individuals to invade a data center. Offenders can so z. B. stealing or manipulating IT components and accessing confidential information. They could also destroy the devices or damage the data center as a whole.
 
 ### 2 8 Power failure
 
@@ -93,7 +93,7 @@ Appropriate fire compartments MUST be set for the premises of a data center. The
 
 For all operational components of the data center, an uninterruptible power supply (UPS) MUST be installed. Since the power requirement of air conditioning systems is often too high for a UPS, however, at least the control of the equipment MUST be connected to the uninterruptible power supply. In the case of a server room, IT systems SHOULD check to see if the operation of a UPS is necessary, depending on the availability requirements of the IT systems.
 
-The UPS MUST be adequately dimensioned so that all components are powered on in the event of a power failure, so that no data loss occurs.
+The UPS MUST be adequately dimensioned so that all components will be powered on in the event of a power failure, so that no data loss occurs.
 In the case of relevant changes, it MUST be checked whether the existing UPS systems are still sufficiently dimensioned. The battery of the UPS MUST be maintained in the required temperature range and preferably placed in a separate area.
 
 The UPS MUST be regularly maintained and tested for functionality. For this, the maintenance intervals provided by the manufacturer MUST be adhered to * (* see * INF.2.A10 Infrastructure Inspection and Maintenance) *. In order to ensure that the UPS provides the necessary support time, the actual support time MUST be determined on a regular basis and, in addition, if there is a change in the consumer.
@@ -129,7 +129,7 @@ Furthermore, it MUST be regulated which internal and external persons are allowe
 All data center doors MUST always be kept locked. Windows should be avoided as early as possible during planning. If they do exist, they MUST be kept locked as well as the doors. Doors and windows MUST provide adequate protection against attack and environmental influences (eg fire and smoke). It should be noted that the structural design of all space-forming elements in terms of safety, especially in terms of security zones, must be equivalent.
 
 #### INF.2.A8 Use of a fire alarm system [planner]
-A fire alarm system MUST be installed in a data center. This MUST monitor all surfaces. All messages from the fire alarm system MUST be forwarded appropriately (see also INF.2.A13 * Planning and installation of hazard alarm systems *). The fire alarm system MUST be maintained regularly. It MUST be ensured that no special fire loads are present in rooms located in the fire compartment of the data center.
+A fire alarm system MUST be installed in a data center. This MUST monitor all surfaces. All messages from the fire alarm system MUST be forwarded appropriately (see also INF.2.A13 * Planning and Installation of Hazard Alarm Systems *). The fire alarm system MUST be maintained regularly. It MUST be ensured that no special fire loads are present in rooms located in the fire compartment of the data center.
 
 #### INF.2.A9 Use of extinguishing or fire prevention system [Planner]
 
@@ -170,7 +170,7 @@ A suitable alarm system (GMA) should be installed for the respective field of ap
 
 #### INF.2.A14 Use of a network replacement system [planner, building services]
 
-The energy supply from the network of a power supply company () SHOULD be supplemented by a network backup system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
+The energy supply from the network of a power supply company () SHOULD be supplemented by a power supply system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be maintained regularly (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
 
 #### INF.2.A15 Surge protection device [Planner, building services]
 
@@ -195,7 +195,7 @@ The system for early fire detection SHOULD comply with the current state of the 
 #### INF.2.A18 Protection against water leakage [Building Services]
 
 In areas where IT equipment with central functions is located, water-bearing pipes should be avoided. For example, there should be no radiators in the data center.
-If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
+If water-carrying lines (eg for cooling directly on the RZ surface) are unavoidable, SHOULD it be ensured that water leaks are detected as early as possible and that the effects are minimized. By visual inspection, the existing water pipes should be checked regularly to see if they are still tight. Messages from a detection system SHOULD be reported to responsible employees so that they can intervene quickly based on reaction plans and current documentation (see * INF.2.A13 Planning and Installation of Alarm Systems *).
 
 #### INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
 
@@ -209,7 +209,7 @@ Construction plans, route plans, circuit diagrams, escape route plans, fire brig
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### INF.2.A21 Backup data center (A)
+#### INF.2.A21 Dodge Data Center (A)
 
 A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be sized to maintain all processes of the institution. Also SHOULD it be constantly ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
 
@@ -234,7 +234,7 @@ To ensure the availability of a data center, the UPS systems SHOULD be redundant
 
 #### INF.2.A26 Redundant design of emergency power systems (A)
 
-In the case of increased protection requirements, emergency power supply systems SHOULD be designed redundantly. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
+In case of increased protection requirements, emergency power supply systems SHOULD be designed redundantly. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 

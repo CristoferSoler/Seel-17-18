@@ -24,7 +24,7 @@ Because mobile devices are often small and are constantly being transported, the
 
 ### 2 2 Missing OS updates
 
-New versions of mobile operating systems and updates are regularly released. The updates and versions of devices that have vendor-specific extensions of the operating system must first be integrated by the manufacturers in their version and then distributed. These updates are typically provided for the latest generation of devices and for a number of older device generations. However, not all previous operating system versions are supplied with updates and security updates to the same extent; in some cases, operating systems are not further developed for economic reasons. Subsequently known vulnerabilities in the operating system of an already discontinued device generation are then no longer supplied with updates and no longer closed.
+New versions of mobile operating systems and updates are regularly released. The updates and versions of devices that have vendor-specific extensions of the operating system must first be integrated by the manufacturers in their version and then distributed. These updates are typically provided for the latest generation of devices and for a number of legacy device generations. However, not all previous operating system versions are supplied with updates and security updates to the same extent, in some cases operating systems are not further developed for economic reasons. Subsequently known vulnerabilities in the operating system of an already discontinued device generation are then no longer supplied with updates and no longer closed.
 
 ### 2 3 Software vulnerabilities in applications (apps)
 
@@ -93,7 +93,7 @@ It SHOULD use a complex device password.
 
 #### SYS.3.2.1.A5 Automatic updates of operating system and apps
 
-A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices that are no longer supplied with current versions MUST be discarded and replaced with devices supported by the manufacturer.
+A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices for which no more current versions are provided MUST be discarded and replaced with devices supported by the manufacturer.
 
 #### SYS.3.2.1.A6 privacy settings
 
@@ -110,7 +110,7 @@ It MUST be prevented that apps can be installed from alternative markets or from
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of general smartphones and tablets. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general smartphones and tablets. They SHOULD be implemented in principle.
 
 #### SYS.3.2.1.A9 Use of functional extensions
 

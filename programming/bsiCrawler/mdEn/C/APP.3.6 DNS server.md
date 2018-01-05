@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server literally stands for the software used, but is usually also used as a synonym for the computer on which this software is operated.
+This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server stands for the software used in the actual sense, but is usually also used as a synonym for the computer on which this software is operated.
 
 DNS servers can be distinguished according to their tasks, there are basically two different types: Advertising DNS server and Resolving DNS server. Advertising DNS servers are usually responsible for processing requests from the Internet. Resolving DNS servers, on the other hand, process requests from the internal network.
 
@@ -82,7 +82,7 @@ Advertising DNS servers (external requests) and resolving DNS servers (internal 
 #### APP.3.6.A4 Secure basic configuration of a DNS server
 A Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
 
-It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured to only be possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
+It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured so that they are only possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
 
 #### APP.3.6.A5 Timely import of security-relevant patches and updates
 
@@ -141,7 +141,7 @@ The DNS protocol extension DNSSEC SHOULD be activated on Resolving DNS servers a
 
 #### APP.3.6.A18 Extended protection of zone transfers
 
-In order to secure zone transfers more strongly, additional Transaction Signatures (TSIG) SHOULD be used.
+In order to secure more zone transfers, Transaction Signatures (TSIG) SHOULD also be used.
 
 #### APP.3.6.A19 Disposal of DNS servers
 

@@ -11,7 +11,7 @@ The aim of this module is to secure the exchange of information between differen
 
 ### 1.3 Delimitation
 
-This module is always to be used if there is an exchange of information with offices outside of one's own institution or property and the internal network is not used. He is especially to be applied when
+This module is always to be used if there is an exchange of information with offices outside of your own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
 * the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
@@ -63,14 +63,14 @@ When passing on information, it often happens that other information is transmit
 
 ### 2 7 Theft, tampering or destruction of data media
 
-Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content modification of data to the destruction of data carriers.
+Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content changes of data to the destruction of data carriers.
 
 ### 2 8 Malicious programs in transferred files or on data carriers
 If the work environment is insufficiently secured against malicious programs, malicious programs could be located on data media that are forwarded to external users. This could destroy or corrupt the stored data, but above all IT systems at the receiving end could be compromised. But the loss of image and the financial damage caused by malicious programs are also of great importance.
 
 ### 2 9 Unauthorized copying of information or data media
 
-If information or data carriers are exchanged or transported via an insecure transport route, there is a risk that the information transmitted may be copied by unauthorized persons during transport. Likewise, attackers could try to intercept communications over IT networks.
+If information or data carriers are exchanged or transported via an insecure transport route, there is a risk that the information transmitted will be copied by unauthorized persons during transport. Likewise, attackers could try to intercept communications over IT networks.
 
 3 requirements
 ---------------

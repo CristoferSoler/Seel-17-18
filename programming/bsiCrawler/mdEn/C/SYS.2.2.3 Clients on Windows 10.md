@@ -20,14 +20,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware on Windows 10
 
-Due to the widespread use of Windows operating systems and the backwards compatibility with older versions, which is often present between the system generations, the threat from malware and unauthorized intrusion into the IT system is comparatively high. Malicious programs can have a variety of functions and provide an attacker with extensive control options. Among other things, malicious programs can specifically search passwords, remotely control systems, deactivate protection software and spy on data. In particular, loss or falsification of information or applications is of paramount importance. But also a loss of image and financial damage, which can thus result from malicious programs, is of great importance. Windows is a primary target for malicious software because of its widespread adoption, posing a major threat from many attackers and attack types.
+Due to the high prevalence of Windows operating systems and the backwards compatibility with older versions, which is often present between the system generations, the threat from malicious programs and unauthorized intrusion into the IT system is comparatively high. Malicious programs can have a variety of functions and provide an attacker with extensive control options. Among other things, malicious programs can specifically search passwords, remotely control systems, deactivate protection software and spy on data. In particular, loss or falsification of information or applications is of paramount importance. But also a loss of image and financial damage, which can thus result from malicious programs, is of great importance. Windows is a primary target for malware attacks due to its widespread use, posing a major threat from numerous attackers and attack types.
 
 ### 2 2 Software Vulnerabilities in Windows 10
 
-Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, wrong management decisions, and delays in business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read data or manipulate.
+Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, illegally read data or manipulate.
 
 ### 2 3 Integrated cloud functionalities
-Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the private devices of the employees. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
+Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the employees' private devices. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
@@ -43,7 +43,7 @@ Improper or improper use of devices, systems, and applications can also affect s
 ---------------
 The following are specific requirements for Windows 10 protection. Basically * the IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -57,7 +57,7 @@ The functional scope and the supply of functional changes of a Windows 10 versio
 
 #### SYS.2.2.3.A3 Appropriate patch and change management
 
-To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system, it MUST be checked whether all the requirements from the IT-Grundschutz and the internal specifications are still met.
+To capture and evaluate all changes, all Windows 10 systems MUST be subject to patch and change management. For complex patches or changes, an implementation plan MUST define tests, control and breakpoints, and distribution priorities. After a functional update of the operating system it MUST be checked whether all requirements from the IT-Grundschutz and the internal specifications are still fulfilled.
 
 #### SYS.2.2.3.A4 telemetry and privacy settings
 
@@ -76,7 +76,7 @@ The registration on the system and the domain MAY ONLY be possible with the acco
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clients under Windows 10. They SHOULD be implemented in principle.
 
 #### SYS.2.2.3.A7 Local Security Policy
-All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other requirements of IT Baseline Protection or the organization. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
+All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other IT security or organization requirements. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
 
 #### SYS.2.2.3.A8 Central management of client security policies
 
@@ -96,7 +96,7 @@ If Windows 10 is (native) installed on a hardware system in the Enterprise versi
 
 #### SYS.2.2.3.A12 File and Share Permissions
 
-Access to files and folders on the local system and to network shares SHOULD be configured according to an authorization and access concept. This includes in particular the standard administrative shares on the system. The write permissions for users SHOULD be limited to a defined area in the file system. In particular, users SHOULD NOT receive write permissions to folders of the operating system or installed applications.
+Access to files and folders on the local system and network shares SHOULD be configured according to an authorization and access concept. This includes in particular the standard administrative shares on the system. The write permissions for users SHOULD be limited to a defined area in the file system. In particular, users SHOULD NOT receive write permissions to folders of the operating system or installed applications.
 
 #### SYS.2.2.3.A13 Using SmartScreen features
 
@@ -148,7 +148,7 @@ The execution of PowerShell and WPS files SHOULD only be granted to administrato
 
 #### SYS.2.2.3.A23 Extended Credential Protection in Windows 10 (CI)
 
-On UEFI-based systems, SecureBoot SHOULD use and monitor the status of LSASS protected mode at system startup (see SYS.2.2.3.A11 Credential Protection in Windows 10). If remote maintenance of the client systems is provided by means of RDP, the option "restrictedAdmin" SHOULD be used when using Windows 10 in a domain from the functional level 2012 R2.
+On UEFI-based systems, SecureBoot SHOULD use and monitor the status of LSASS protected mode at system startup (see SYS.2.2.3.A11 Credential protection in Windows 10). If remote maintenance of the client systems is provided by means of RDP, the option "restrictedAdmin" SHOULD be used when using Windows 10 in a domain from the functional level 2012 R2.
 
 #### SYS.2.2.3.A24 Activation of the last-access timestamp (A)
 

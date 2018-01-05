@@ -18,11 +18,11 @@ Also on the wiring of offices is not discussed. To do this, the components INF.3
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the * * office space area:
+The following specific threats and vulnerabilities are of particular importance in the field of * * office space:
 
 ### 2 1 Unauthorized access
 
-If access controls are lacking or insufficient, unauthorized persons can enter an office room and steal sensitive data, steal devices or manipulate them. This may affect the availability, confidentiality, or integrity of devices and information. Even if no immediate damage can be detected, the operation can be disrupted by the fact that it must be investigated how such an incident was possible, whether damage has occurred or tampering.
+If access controls are lacking or insufficient, unauthorized persons can enter an office room and steal sensitive data, steal devices or manipulate them. This may affect the availability, confidentiality, or integrity of devices and information. Even if no immediate damage can be detected, the operation can be disrupted by the fact that it must be investigated how such an incident was possible, whether damage has occurred or manipulations have been made.
 
 ### 2 2 Impairment due to unfavorable working conditions
 
@@ -30,11 +30,11 @@ An office space that is not ergonomically designed or an unfavorable working env
 
 ### 2 3 Cleaning and external staff or visitors
 
-For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, from improper handling of technical equipment to attempts to "play" IT systems to theft of documents or IT components. For example, by cleaning personnel accidentally a connector can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
+For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, ranging from the improper handling of technical equipment to the attempt to "play" IT systems and theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
 
 ### 2 4 Manipulation or destruction of IT, accessories, information and software in the office
 
-Attackers can try to manipulate or destroy IT systems, accessories, and other data carriers for a variety of reasons. Attacks can be all the more effective the later they are discovered by the employee or the institution itself, the more extensive the knowledge of the perpetrators and the more profound the consequences for a job. The manipulations range from the unauthorized inspection of the employee's sensitive data to the destruction of data carriers or IT systems. Significant downtime and process limitations can be the result.
+Attackers may try to manipulate or destroy IT systems, accessories, and other data carriers for a variety of reasons. Attacks can be all the more effective the later they are discovered by the employee or the institution itself, the more extensive the knowledge of the perpetrators and the more profound the consequences for a job. The manipulations range from the unauthorized inspection of the employee's sensitive data to the destruction of data carriers or IT systems. Significant downtime and process limitations can be the result.
 
 ### 2 5 Theft
 As IT devices become more manageable, it's easier to pocket them unnoticed. The theft of data carriers, IT systems, accessories, software or data incurs reimbursement costs and the restoration of a workable state, as well as losses due to a lack of availability. In addition, the person who stole the IT equipment could view and disclose sensitive information, which could lead to further damage. In many cases, these weigh considerably heavier than the mere material loss of the device.
@@ -79,7 +79,7 @@ It SHOULD be ensured that unauthorized persons can not enter the office. For thi
 
 #### INF.7.A5 Ergonomic workplace [Head of Domestic Engineering]
 
-The workplaces of all employees SHOULD be ergonomically designed. Above all, the screens SHOULD be set up so that an ergonomic and undisturbed work is possible. It should be noted that screens can not be viewed by unauthorized persons. The Bildschirmarbeitsschutzverordnung (BildscharbV) SHOULD be implemented. All workstations SHOULD be individually adjustable for the most error-free operation of IT.
+The workplaces of all employees SHOULD be ergonomically designed. Above all, the screens SHOULD be set up so that an ergonomic and undisturbed work is possible. It should be noted that screens can not be viewed by unauthorized persons. The Bildschirmarbeitsschutzverordnung (BildscharbV) SHOULD be implemented. All workstations SHOULD be individually adjustable for a flawless operation of the IT.
 
 #### INF.7.A6 Tidy Workplace [Staff]
 

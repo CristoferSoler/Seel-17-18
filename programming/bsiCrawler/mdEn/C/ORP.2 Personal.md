@@ -51,7 +51,7 @@ The unauthorized use of own IT systems by employees can generally be difficult t
 
 ### 2 9 Abuse of social networks
 
-Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as here, on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed under "acquaintance" can be exploited.
+Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed in "acquaintance" can be exploited.
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 

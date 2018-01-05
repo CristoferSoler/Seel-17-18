@@ -45,7 +45,7 @@ Such unused applications and services can contain vulnerabilities. If the applic
 
 ### 2 5 Overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative consequences, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable or data loss occurring. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
@@ -91,9 +91,9 @@ The administration MUST be done via secure protocols. It SHOULD be considered, a
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
-All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably restricted for individual users, but also for applications.
+All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably limited for individual users, but also for applications.
 
-The decisions made SHOULD be documented in such a way that it is possible to trace the configuration and software equipment selected for the servers.
+The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the servers.
 
 #### SYS.1.1.A7 Updates and patches for firmware, operating system and applications
 
@@ -122,7 +122,7 @@ It MUST be decided which information should be logged by the server at least, ho
 * Warning messages from security systems (eg virus protection).
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general servers. They SHOULD be implemented in principle.
 
 #### SYS.1.1.A11 Setting a security policy for servers
 Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
@@ -191,7 +191,7 @@ The server SHOULD be considered in the emergency management process. To this end
 
 #### SYS.1.1.A23 system monitoring
 
-The server system SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
+The server system SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.1.1.A24 security checks
 
@@ -222,7 +222,7 @@ Server systems with high availability requirements SHOULD be suitably protected 
 
 #### SYS.1.1.A29 Setting up a test environment (CIA)
 
-In order to be able to test changes to the system or the configuration without jeopardizing the productive operation, appropriate test systems SHOULD be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
+In order to be able to test changes to the system or the configuration without jeopardizing productive operation, appropriate test systems should be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
 
 #### SYS.1.1.A30 One service per server (CIA)
 

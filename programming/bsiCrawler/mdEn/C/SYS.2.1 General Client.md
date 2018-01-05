@@ -32,7 +32,7 @@ Despite regular contradictory recommendations, many users also store important d
 
 * Data loss on hardware defects and
 * no access to relevant data in case of substitution.
-But even if basic requirements for central storage are adhered to, often additional local copies of the centrally stored data are created. This can lead to the following problems:
+But even if basic requirements for central storage are adhered to, local copies of the centrally stored data are often created in addition. This can lead to the following problems:
 
 * Waste of local storage space,
 * premature or non-deletion of data and
@@ -117,7 +117,7 @@ Together with the basic requirements, the following requirements are state of th
 Based on the general security policy of the institution, the requirements for general clients SHOULD be specified. The policy SHOULD be known to all users and all persons involved in the procurement and operation of the clients and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.
 #### SYS.2.1.A10 Planning the use of clients
 
-For the secure operation of clients SHOULD be planned in advance, where and how the clients should be used. The design should not only concern aspects that are classically linked to the term security, but also normal operational aspects that entail safety requirements. In addition to client-type-specific requirement profiles, specifications for authentication and user administration SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
+For the secure operation of clients SHOULD be planned in advance, where and how the clients should be used. The design should not only concern aspects that are classically linked to the term security, but also normal operational aspects that entail safety requirements. In addition to client type-specific requirement profiles, specifications for authentication and user administration SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
 
 #### SYS.2.1.A11 Procurement of clients
 
@@ -144,7 +144,7 @@ It SHOULD be determined which components of the operating system, specialized ap
 The basic settings of clients SHOULD be checked and, if necessary, adjusted according to the guidelines of the security policy. Only after the installation and configuration is complete, the client SHOULD connect to the Internet.
 #### SYS.2.1.A16 Disabling and uninstalling unneeded components and identifiers
 
-After installation, SHOULD check which components of the firmware, operating system, applications, and other tools are installed and enabled on the clients. Unnecessary modules, programs, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled. Corresponding, unneeded components that are firmly connected to the IT system SHOULD be disabled. Also in the firmware existing, unnecessary components (such as theft protection, remote maintenance) SHOULD be turned off. It SHOULD be prevented that these components can be reactivated. The decisions made SHOULD be documented in such a way that it is possible to understand which configuration and software equipment have been selected for the IT systems.
+After installation, SHOULD check which components of the firmware, operating system, applications, and other tools are installed and enabled on the clients. Unnecessary modules, programs, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled. Corresponding, unneeded components that are firmly connected to the IT system SHOULD be disabled. Also in the firmware existing, unnecessary components (such as theft protection, remote maintenance) SHOULD be turned off. It SHOULD be prevented that these components can be reactivated. The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the IT systems.
 
 #### SYS.2.1.A17 deployment clearance
 
@@ -156,7 +156,7 @@ Communication links SHOULD be protected by encryption as far as possible. Users 
 
 The IT operation SHOULD make sure that the client products used support a secure version of TLS. Clients SHOULD use cryptographic algorithms and key lengths that reflect the state of the art and the security requirements of the institution.
 
-New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session Renegotiation and TLS Compression SHOULD be disabled.
+New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session renegotiation and TLS compression SHOULD be disabled.
 
 #### SYS.2.1.A19 Restrictive rights assignment
 
@@ -205,7 +205,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### SYS.2.1.A28 Encryption of clients (C)
 
-When confidential information is stored on the clients, the vulnerable files, selected file system areas, or better, the entire hard disk should be encrypted. For this purpose, a separate concept SHOULD be created and the details of the configuration should be documented with particular care, as in the case of problems, the data on the encrypted file systems may otherwise be completely lost. In this context, the following should be regulated: authentication (eg password, PIN, token), storage of recovery information, drives to encrypt, write access to unencrypted media, and how to ensure that recovery information is accessible only to authorized persons. Even encrypted files, partitions or data carriers SHOULD be backed up regularly. The used key material MUST NOT be stored in clear text on the clients.
+When confidential information is stored on the clients, the vulnerable files, selected file system areas, or better, the entire hard disk should be encrypted. For this purpose, a separate concept SHOULD be created and the details of the configuration should be documented with particular care, as in the case of problems the data on the encrypted file systems can otherwise be completely lost. In this context, the following should be regulated: authentication (eg password, PIN, token), storage of recovery information, drives to encrypt, write access to unencrypted media, and how to ensure that recovery information is accessible only to authorized persons. Even encrypted files, partitions or data carriers SHOULD be backed up regularly. The used key material MUST NOT be stored in clear text on the clients.
 
 Users SHOULD be informed about how to behave if they lose an authentication medium.
 

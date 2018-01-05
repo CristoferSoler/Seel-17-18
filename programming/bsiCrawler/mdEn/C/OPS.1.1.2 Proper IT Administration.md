@@ -63,7 +63,7 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.2.A1 Personnel Selection for Administrative Activities [Head of Personnel]
 
-If employees are to perform administrative tasks within the IT environment, they MUST meet the following criteria, taking into account the security requirements of the systems and applications they support:
+If employees are to perform administrative tasks within the IT environment, they MUST meet the following criteria, taking into account the security requirements of the systems and applications they are managing:
 
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
@@ -103,7 +103,7 @@ Administration IDs MUST be appropriately protected by appropriate authentication
 
 For administrative access, secure protocols MUST be used if this is not done through a local console. These MUST ensure that state-of-the-art communication is encrypted.
 
-Each logon process via an administration ID (login) MUST be logged so that it is comprehensible when, in what way and under which user ID the system was accessed.
+Each login process via an administration ID (LOG) MUST be logged so that it is understandable when, in what way and under which user ID the system was accessed.
 
 ### 3.2 Standard requirements
 

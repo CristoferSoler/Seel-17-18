@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Teleworking is understood as any activity based on information and communication technology, which is carried out exclusively outside the business premises and buildings of the employer. There are different forms of teleworking. It can, for example, be provided as home-based teleworking in the employee's home. It is also possible that the employees are employed in the context of the on-site teleworking with customers or suppliers and work there with the equipment of the own employer. Another possibility is teleworking in so-called telecentres, satellite or neighborhood offices.
+Teleworking is understood to mean any activity based on information and communication technology, which is carried out exclusively outside the business premises and buildings of the employer. There are different forms of teleworking. It can, for example, be provided as home-based teleworking in the employee's home. It is also possible that the employees are employed in the context of the on-site teleworking with customers or suppliers and work there with the equipment of the own employer. Another possibility is teleworking in so-called telecentres, satellite or neighborhood offices.
 
 Homebased telework distinguishes between home-based work and alternating teleworking. In the case of alternating teleworking, employees work alternately at their workplace at the employer's workplace and at home.
 
@@ -13,7 +13,7 @@ The aim of the module is to protect the information stored, processed and transm
 
 ### 1.3 Delimitation
 
-This building block focuses on the forms of telework that are carried out partly or wholly in the home environment. It is assumed that there is a telecommunication link between the teleworking center and the institution, which makes it possible to exchange information and, if necessary, to access data in the institution. The requirements of this module cover three different areas:
+This building block focuses on the forms of telework that are carried out partly or wholly in the home environment. It is assumed that there is a telecommunications link between the teleworkstation and the institution that makes it possible to exchange information and if necessary access data in the institution. The requirements of this module cover three different areas:
 
 * the organization of telework,
 * teleworker's teleworker and
@@ -31,7 +31,7 @@ Since a teleworking station is located outside the institution, it requires indi
 
 ### 2 2 Lack of or insufficient training of teleworkers
 
-Teleworkers are largely on their own at work. If the teleworker is not adequately trained in the handling of IT, this can lead to increased downtime in the event of problems, since, for example, an IT supervisor from the institution must first drive to the teleworkstation in order to eliminate the problems there.
+Teleworkers are largely on their own at work. If the teleworker not sufficiently trained in the use of IT, which may cause problems to increased downtime, as for example, an IT supervisor from the institution must first drive to the telework place, there to eliminate the problems.
 
 ### 2 3 Unauthorized private use of the official teleworking computer
 
@@ -40,7 +40,7 @@ But not only teleworkers can use their computer improperly, but also relatives o
 
 ### 2 4 Delays due to temporarily limited availability of teleworkers
 
-Usually, a teleworker has no fixed working hours at the teleworkstation. Only fixed times are agreed when it must be reachable. In the case of alternating teleworking, his working hours are also distributed between the teleworkstation and the in-house workplace.
+Usually, a teleworker has no fixed working hours at the teleworkstation. Only fixed times are agreed on when he must be reachable. In the case of alternating teleworking, his working hours are also distributed between the teleworkstation and the in-house workplace.
 
 If it is necessary for information to be obtained from the teleworker at short notice or for information to be passed on to the teleworker, delays may occur due to the difficult accessibility. Even if the information is sent via e-mail, it does not necessarily shorten the response time since it can not be guaranteed that the teleworker will read the e-mail in a timely manner.
 
@@ -52,7 +52,7 @@ Since teleworkers are not in the institution on a daily basis, they have less op
 
 ### 2 6 Insufficient representation rules for teleworking
 
-The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be a problem in providing the requisite documentation or data from the teleworker to the representative when there are no access options to the teleworker's home office.
+The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be problems in providing the requisite documentation or teleworker data to the representative when there are no access to the teleworker's home office.
 
 ### 2 7 Non-compliance with safety measures
 
@@ -78,7 +78,7 @@ It MUST be ensured that only authorized persons are allowed to access the telewo
 
 #### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
 
-Safety requirements for the communication link between teleworker and institution MUST be defined. It MUST be ensured that the confidentiality, integrity and authenticity of the transmitted data is guaranteed.
+It is necessary to define safety requirements for the communication link between the teleworking computer and the institution. It MUST be ensured that the confidentiality, integrity and authenticity of the transmitted data is guaranteed.
 
 All communication protocols and security mechanisms MUST meet the defined requirements of the institution. The strength of the required security mechanisms SHOULD be based on the protection needs of the transmitted data. In addition, the authenticity of the communication partners MUST be guaranteed.
 
@@ -105,7 +105,7 @@ It SHOULD be clearly defined which communication options may be used for telewor
 
 #### OPS.1.2.4.A8 Flow of information between teleworker and institution [supervisor, teleworker]
 
-A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changes in security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
+A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changed security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
 
 #### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
 

@@ -19,7 +19,7 @@ An information network can only be purged if the APT incident was previously suc
 
 In this module, only the cleanup of APT incidents is considered. Common incidents are dealt with in module DER.2.1 * Incident Management *. Also, the building block does not describe how so-called "Indicators of Compromise" (IOCs), ie burglary traces, are derived and how they can be used to detect recurring attackers. It also does not discuss how any backdoors overlooked during analysis and cleanup can be found. Furthermore, the building block has to be demarcated from the higher-level incident management process (see DER.2.1 * Incident Management *), in which the cleanup is embedded.
 
-It also eliminates attacks that give attackers physical access to an IT environment. This is how attack forms break down in computer centers, bribe administrators, intercept and manipulate newly procured hardware or do not listen to electromagnetic radiation. Only cyber attacks are considered.
+It also eliminates attacks that give attackers physical access to an IT environment. As such, forms of attack such as breaking into data centers, bribing admins, intercepting and manipulating newly procured hardware, or intercepting electromagnetic radiation are not included in this building block. Only cyber attacks are considered.
 
 2 risk situation
 -----------------
@@ -37,7 +37,7 @@ After an APT incident, IT systems are often reinstalled or completely decommissi
 
 Usually, prior to clearing an APT incident, the attack is monitored over time and forensically analyzed to identify all access paths and tools and methods used. If the attacker notices that he has been discovered during this phase, he may resort to countermeasures. For example, he can try to cover his tracks or quickly sabotage other IT systems. He could also stop or set up more backdoors just to continue the attack later.
 
-Since an APT attack must generally assume that the entire IT infrastructure of the institution has been compromised, there is a high risk that the attacker will detect the cleanup activity. This is especially true when the compromised IT infrastructure is used to plan and coordinate the cleanup. If the essential cleanup steps are not performed in the correct order, or critical actions are not performed concurrently and concertedly, the risk of alerting the attacker increases. For example, if those responsible isolate the network step-by-step rather than all at once, the attacker may be warned before their access is effectively terminated.
+Since an APT attack must generally assume that the entire IT infrastructure of the institution has been compromised, there is a high risk that the attacker will detect the cleanup activity. This is especially true if the compromised IT infrastructure is used to plan and coordinate the cleanup. If the essential cleanup steps are not performed in the correct order, or critical actions are not performed concurrently and concertedly, the risk of alerting the attacker increases. For example, if those responsible isolate the network step-by-step rather than all at once, the attacker may be warned before their access is effectively terminated.
 
 ### 2 4 Data loss and failure of IT systems
 
@@ -65,7 +65,7 @@ If the IT is over-compromised or if the necessary clean-up measures are very ext
 
 #### DER.2.3.A2 Decision for a clean-up strategy [Head IT, Information Security Officer (ISB)]
 
-Before an APT incident is actually remediated, the governing body MUST define a cleanup strategy. In particular, it must be decided whether the malware can be removed from compromised IT systems, whether IT systems need to be reinstalled, or whether IT systems, including the hardware, should be completely replaced. Furthermore, it MUST be determined which IT systems are cleaned up. The basis for these decisions MUST be the results of a previous forensic investigation.
+Before an APT incident is actually remediated, the governing body MUST define a cleanup strategy. In particular, it must be decided whether the malware can be removed from compromised IT systems, whether IT systems need to be reinstalled, or whether IT systems, including the hardware, should be completely replaced. Furthermore, it MUST be determined which IT systems are being cleaned up. The basis for these decisions MUST be the results of a previous forensic investigation.
 
 All affected IT systems SHOULD be reinstalled. Thereafter, the institution's recovery plans MUST be used. However, before backups are restored, forensic investigations MUST ensure that no manipulated data or programs are transferred to the newly installed IT system.
 
@@ -84,7 +84,7 @@ Since it must be assumed that the attacker has acquired all the access data avai
 
 If the central authentication server (domain controller or LDAP server) is compromised, all accesses existing there MUST be blocked and their passwords exchanged. This MUST be done by experienced administrators, if necessary using internal or external forensics experts.
 
-If TLS keys or an internal Certification Authority (CA) have been compromised by the APT attack, the corresponding keys and infrastructures MUST be recreated and redistributed. Also, the compromised keys MUST be locked reliably.
+If TLS keys or an internal Certification Authority (CA) have been compromised by the APT attack, the corresponding keys and infrastructure MUST be recreated and redistributed. Also, the compromised keys MUST be locked reliably.
 
 #### DER.2.3.A5 Closing the initial break-in path
 
@@ -96,7 +96,7 @@ After the network has been successfully cleaned up, the IT systems MUST be retur
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
 
 #### DER.2.3.A7 Targeted system hardening
 

@@ -1,0 +1,38 @@
+### 3.1 Basic requirements
+#### CON.7.A1 Security Policy on Information Security on Foreign Travel
+#### CON.7.A2 Awareness of employees on the security policy Information security on trips abroad [IT operations, data protection officer]
+#### CON.7.A3 Identification of country-specific regulations, travel and environmental conditions [Human Resources Department]
+#### CON.7.A4 Using privacy screens [user]
+#### CON.7.A5 Using the screen / code lock [user]
+#### CON.7.A6 Timely loss report [User, Emergency Representative]
+#### CON.7.A7 Secure Remote Access [IT Operations, Users]
+#### CON.7.A8 Secure Use of Public WLANs [User]
+#### CON.7.A9 Secure handling of mobile data carriers [user]
+#### CON.7.A10 Encryption of portable IT systems and data carriers [user, IT operation]
+#### CON.7.A11 Use of theft-fuses [user]
+#### CON.7.A12 Secure destruction of sensitive materials and documents [user]
+### 3.2 Standard requirements
+#### CON.7.A13 Carrying of data and data media [IT operation, users]
+#### CON.7.A14 Cryptographically secured e-mail communication [user, IT operation]
+### 3.3 Requirements for increased protection requirements
+#### CON.7.A15 Radiation security of portable IT systems [IT operation] (C)
+#### CON.7.A16 Integrity protection through checksums or digital signatures (I)
+#### CON.7.A17 Use of Dedicated Travel Hardware [IT Operations] (CIA)
+#### CON.7.A18 Restricted authorizations on trips abroad [IT-Betrieb, Fachverantwortliche] (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.15 Listening
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.35 coercion, blackmail or corruption
+* G 0.36 Identity theft
+* G 0.39 Malware
+* G 0.42 Social engineering
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

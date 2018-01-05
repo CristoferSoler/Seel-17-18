@@ -39,7 +39,7 @@ Virtualization changes the way servers are provisioned. Resources such as CPU, R
 
 ### 2 3 Insufficient resources for virtual IT systems
 
-Virtualization servers require storage for the operation of the virtual IT systems, either locally in the virtualization server itself or in a storage network. If the required storage capacities are not sufficiently planned, there are far-reaching risks for the availability of the virtual IT systems and the integrity of the information processed in them. This is especially true when using special virtualization features such as snapshots or overbooking storage space.
+Virtualization servers require storage for the operation of the virtual IT systems, either locally in the virtualization server itself or in a storage network. If the required storage capacities are not planned sufficiently large, there are far-reaching risks for the availability of the virtual IT systems and the integrity of the information processed in them. This is especially true when using special virtualization features such as snapshots or overbooking storage space.
 
 Bottlenecks can not only affect the storage space on hard disks or in storage networks, but also the main memory (RAM) or the network connection. Also, with insufficient resources on the virtualization server, the virtual machines could interfere with each other's operations and eventually stop working or failing.
 

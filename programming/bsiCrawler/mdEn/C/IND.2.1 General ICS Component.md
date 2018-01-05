@@ -49,7 +49,7 @@ For ICS components, logging is often limited to process-related events. Informat
 
 ### 2 6 Manipulation and sabotage of an ICS component
 
-The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally, but also across all locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
+The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have a local impact across locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
 
 Manipulated readings can lead to incorrect decisions of ICS components or operating personnel. Manipulated systems can be used to attack other systems or sites or to cover up ongoing manipulation.
 

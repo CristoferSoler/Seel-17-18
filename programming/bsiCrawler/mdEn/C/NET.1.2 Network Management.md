@@ -102,7 +102,7 @@ If network management communication is via the productive infrastructure, then s
 
 #### NET.1.2.A10 Limitation of SNMP communication
 
-Network management MUST NOT use unsafe versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
+Network management MUST NOT use insecure versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
 
 ### 3.2 Standard requirements
 
@@ -125,7 +125,7 @@ The documentation SHOULD be complete and always up-to-date.
 
 #### NET.1.2.A13 Creation of a network management concept [Head IT]
 
-Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be taken into account as needed:
+Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be considered as needed:
 
 * Methods, techniques and tools for network management,
 * Security of access and communication,
@@ -224,7 +224,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 

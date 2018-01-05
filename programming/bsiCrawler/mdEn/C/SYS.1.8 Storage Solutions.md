@@ -8,7 +8,7 @@ The steady growth of digital information and the increasing amount of unstructur
 * The data of an institution should be available anytime, anywhere and for different application scenarios. As a result, modern storage solutions often have increased availability requirements.
 * The increasing digitization of all information in an institution makes it necessary to comply with and comply with far-reaching legal requirements (compliance requirements).
 * Storage solutions should be dynamically adaptable to ever-changing requirements and provide storage space centrally.
-In the past, storage solutions were often implemented by connecting storage media directly to a server. However, these so-called direct-attached storage (DAS) systems often can not meet current and future requirements. Therefore, today's widely used central storage solutions and their components are necessary, which can be differentiated as follows:
+In the past, storage solutions were often implemented by connecting storage media directly to a server. However, these so-called direct-attached storage (DAS) systems often can not meet current and future requirements. Therefore, today's widespread central storage solutions and their components are necessary, which can be distinguished as follows:
 
 * Storage solutions: A storage solution consists of one or more storage networks and at least one storage system.
 * Storage networks: Storage networks allow access to the storage systems on the one hand and replication of data between storage systems on the other.
@@ -41,7 +41,7 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data involves risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
@@ -114,7 +114,7 @@ A REQUIREMENT analysis should be carried out, which among other things considers
 * Integration into existing processes.
 #### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
 
-The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Similarly, the decision for the selection of a storage solution should be documented comprehensible.
+The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Likewise, the decision to select a storage solution SHOULD be documented comprehensible.
 
 #### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
 
@@ -147,7 +147,7 @@ A SAN SHOULD be segmented. A concept SHOULD be developed that maps the SAN resou
 
 It SHOULD be documented and comprehensibly documented, which requirements the institution places on the multi-client capability of a storage solution. The storage solutions used SHOULD meet these documented requirements.
 
-In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to act with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
+In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to work with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
 
 When using IP or iSCSI, the clients SHOULD be separated by segmentation in the network. If Fiber Channel is used, SHOULD be separated using VSANs and soft zoning.
 
@@ -194,7 +194,7 @@ All data stored in storage solutions SHOULD be encrypted. It SHOULD be determine
 
 To ensure the integrity of the SAN fabric, protocols with additional security features SHOULD be used. The following protocols SHOULD consider their security properties and use appropriate configurations:
 
-* Diffie Hellman Challenge Handshake Authentication Protocol (DH-CHAP)
+* Diffie Hellman Challenge Handshake Authentication Protocol (DH-CHAP),
 * Fiber Channel Authentication Protocol (FCAP) and
 * Fiber Channel Password Authentication Protocol (FCPAP).
 #### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)

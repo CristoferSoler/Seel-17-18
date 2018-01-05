@@ -75,13 +75,13 @@ Basically, an analysis of the requirements that have an influence on a future-pr
 
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 
-The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls for acceptance can be prepared in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
+The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
 
 #### INF.4.A6 Continuous updating and revision of network documentation
 
 The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In doing so, all documentation areas affected by the change SHOULD be easily captured and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
 
-#### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
+#### INF.4.A7 Removing and Deactivating Unnecessary IT Cabling [Haustechnik Manager]
 
 If IT cabling is no longer needed, it should be removed professionally and completely. IT cabling, which can be usefully used as a reserve with existing technology, SHOULD be maintained in an operational state. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the documentation listing the inventory of IT cabling MUST be updated.
 
@@ -110,7 +110,7 @@ It was to be examined whether, at least for important buildings, a redundant, in
 
 #### INF.4.A13 Material Assurance of IT Cabling (IA)
 
-In rooms with public access or in confusing areas of a building, cables and distribution boards SHOULD be additionally secured against unauthorized access. In any case, the number of locations where the routed cable is accessible should be minimized and the length of the connections to be protected against unauthorized access minimized.
+In rooms with public access or in confusing areas of a building, cables and distribution boards SHOULD additionally be protected against unauthorized access. In any case, the number of locations where the routed cable is accessible should be minimized and the length of the connections to be protected against unauthorized access minimized.
 
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 
