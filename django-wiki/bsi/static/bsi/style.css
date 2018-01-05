@@ -260,3 +260,14 @@ section {
 }
 
 
+
+.wizardButton {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+  border-color: #ccc;
+}

@@ -15,20 +15,20 @@ The block contains requirements with which the logging of as many security-relev
 
 The present module only considers general aspects that are necessary for adequate logging. The logging of specific IT systems or applications is not treated here, but described in the respective modules.
 
-Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. B. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
+Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
 
-The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): both aspects are not dealt with in the logging module, or only in passing.
+The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): Both aspects are not dealt with in the logging module, or only in passing.
 
 Guidelines on how to deal with personal data are regulated in the module CON.2 * Privacy *. How long and extensive logging data must be archived is also explained in the module OPS.1.1.2 * Archiving *.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the area of ​​logging:
+The following specific threats and vulnerabilities are of particular importance in logging:
 
 ### 2 1 Missing or insufficient logging
 
-In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used for individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.
+In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used with individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.
 Furthermore, logging data must contain meaningful information. Among other things, the events that are logged depend on the protection requirements of the respective IT systems or applications. If this is disregarded, for example, when logging only to default settings of the IT systems or applications, this can lead to particularly relevant security events not being logged. Thus, attacks may not be detected.
 
 ### 2 2 Incorrect selection of relevant logging data
@@ -39,7 +39,7 @@ Furthermore, logging data can be discarded or overwritten if the memory or hard 
 
 ### 2 3 Missing time synchronization during logging
 
-If the time is not synchronized on all IT systems in an information network, the logging data may not be correlated, or the correlation may lead to incorrect statements because the different time stamps of events have no common basis. Lack of time synchronization thus makes it difficult to evaluate collected logging data, especially when stored on a central log server. Furthermore, a faulty or missing time synchronization can lead to the fact that the logging can not be used to secure evidence.
+If the time is not synchronized on all IT systems in an information network, the logging data may not be correlated with each other, or the correlation may lead to erroneous statements because the different timestamps of events have no common basis. Lack of time synchronization thus makes it difficult to evaluate collected logging data, especially when stored on a central log server. Furthermore, a faulty or missing time synchronization can lead to the fact that the logging can not be used to secure evidence.
 
 ### 2 4 Incorrect planning during logging
 
@@ -47,7 +47,7 @@ If logging is not planned sufficiently, IT systems or applications can not be mo
 
 ### 2 5 Confidentiality and integrity loss of logging data
 
-Some IT systems in an information network generate logging data such as user names, IP addresses, e-mail addresses, and host names that can be assigned to specific individuals. Such information can be copied, audited and manipulated if it is not encrypted and stored securely. This can result in attackers accessing sensitive information or deliberately obfuscating security incidents through compromised logging data. Similarly, if an attacker encounters a greater amount of logging data, they can use that information to uncover the internal structure of the information network, thereby targeting their attacks.
+Some IT systems in an information network generate logging data such as user names, IP addresses, e-mail addresses, and host names that can be assigned to specific individuals. Such information can be copied, audited and manipulated if it is not encrypted and securely stored. This can result in attackers accessing sensitive information or deliberately obfuscating security incidents through compromised logging data. Similarly, if an attacker encounters a greater amount of logging data, they can use that information to uncover the internal structure of the information network, thereby targeting their attacks.
 
 ### 2 6 Incorrectly configured logging
 
@@ -60,7 +60,7 @@ If IT systems in an information network no longer provide the necessary logging 
 
 ### 2 8 Insufficiently sized logging infrastructure
 
-Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a great deal of logging data has to be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only insufficiently evaluated and security incidents remain undetected.
+Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a great deal of logging data has to be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only inadequately evaluated and security incidents remain undetected.
 
 3 requirements
 ---------------
@@ -73,7 +73,7 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
 
-Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what should be logged. The nature and extent of the logging should be based on the protection requirements of the information.
+Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what to log. The nature and extent of the logging should be based on the protection requirements of the information.
 
 The guideline MUST be prepared by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
 
@@ -82,7 +82,7 @@ The guideline MUST be prepared by the ISB together with the responsible persons.
 For the IT systems and applications defined in the logging policy (see OPS.1.1.5.A1 * Creation of a security policy for logging *) MUST be designated. These MUST ensure that the logging policy is followed.
 
 #### OPS.1.1.5.A3 Configuration of logging at system and network level
-All security-relevant events of IT systems and applications MUST be logged. If the IT systems and applications defined as relevant in the logging policy have a logging function, they MUST be used. When logging is set up, the manufacturer's specifications for each IT system or application MUST be followed. It must be checked in reasonable intervals, if the logging is still working correctly. The intervals MUST be defined in the logging policy. If operational and security-relevant events can not be logged on an IT system, further IT systems MUST be integrated for logging (eg events at the network level).
+All security-relevant events of IT systems and applications MUST be logged. If the IT systems and applications defined as relevant in the logging policy have a logging function, they MUST be used. When logging is established, the manufacturer's specifications for the particular IT systems or applications MUST be followed. It must be checked in reasonable intervals, if the logging is still working correctly. The intervals MUST be defined in the logging policy. If operational and security-relevant events can not be logged on an IT system, further IT systems MUST be integrated for logging (eg events at the network level).
 
 #### OPS.1.1.5.A4 Time synchronization of the IT systems
 
@@ -104,7 +104,7 @@ In addition to security-related events (see OPS.1.1.5.A3 * Configuring System-le
 
 Lack of logging data or unavailability of a logging IT system,
 * Operational events that indicate exceptional utilization or use of individual services.
-The logging infrastructure SHOULD be dimensioned sufficiently so that scaling can be considered in the sense of extended logging. Sufficient technical, financial and human resources should be available. If the logging infrastructure is to be set up and operated externally, a specialized service provider SHOULD be commissioned.
+The logging infrastructure SHOULD be sufficiently sized so that scaling can be considered in the sense of extended logging. Sufficient technical, financial and human resources should be available. If the logging infrastructure is to be set up and operated externally, a specialized service provider SHOULD be commissioned.
 
 #### OPS.1.1.5.A7 Secure administration of logging servers
 The log server network SHOULD only be administered via a separate management network (out-of-band management). An authorization concept SHOULD be created for the administration accesses. Only administrators should be able to access the log servers specifically responsible for this (see * * OPS.1.1.5.A2 * Defining roles and responsibilities *).
@@ -129,7 +129,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.5.A11 Increase Logging Scope (CIA)
 
-With increased protection requirements of applications or IT systems, the amount and type of logged events SHOULD be extended so that security-related incidents can be traced as completely as possible.
+With increased protection requirements of applications or IT systems, the amount and type of logged events SHOULD be extended so that security-relevant incidents can be traced as completely as possible.
 
 In order to enable a real-time evaluation of the logging data, the logging data from the logging IT systems and applications SHOULD be stored centrally at shorter intervals (see also OPS.1.1.5.A6 * Structure of a central logging infrastructure *). The logging SHOULD enable an evaluation over the entire information network.
 
@@ -197,3 +197,93 @@ The following elementary hazards are important for the "logging" block.
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * OPS.1.1.5.A3 Configuration of logging at system and network level
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+* G 0.14 Spying out information (spying)
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A12 Encryption (CI)
+* G 0.15 Listening
+  * OPS.1.1.5.A7 Secure administration of logging servers
+  * OPS.1.1.5.A12 Encryption (CI)
+* G 0.18 Missing planning or missing adjustment
+  * OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A12 Encryption (CI)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+  * OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A8 Archiving of logging data
+* G 0.19 Disclosure of information worthy of protection
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A12 Encryption (CI)
+* G 0.21 Manipulation of hardware or software
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+* G 0.22 Manipulation of information
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A7 Secure administration of logging servers
+  * OPS.1.1.5.A8 Archiving of logging data
+  * OPS.1.1.5.A12 Encryption (CI)
+* G 0.23 Unauthorized intrusion into IT systems
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A7 Secure administration of logging servers
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+* G 0.25 Failure of devices or systems
+  * OPS.1.1.5.A3 Configuration of logging at system and network level
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+* G 0.26 Malfunction of equipment or systems
+  * OPS.1.1.5.A3 Configuration of logging at system and network level
+  * OPS.1.1.5.A9 Provision of logging data for evaluation
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+* G 0.29 Violation of laws or regulations
+  * OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A12 Encryption (CI)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+  * OPS.1.1.5.A5 Compliance with legal framework [Information Security Officer (ISB)]
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A8 Archiving of logging data
+  * OPS.1.1.5.A9 Provision of logging data for evaluation
+* G 0.30 Unauthorized use or administration of devices and systems
+  * OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A7 Secure administration of logging servers
+  * OPS.1.1.5.A10 Access protection for logging data
+* G 0.31 Incorrect use or administration of devices and systems
+  * OPS.1.1.5.A3 Configuration of logging at system and network level
+  * OPS.1.1.5.A4 Time synchronization of the IT systems
+  * OPS.1.1.5.A9 Provision of logging data for evaluation
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+* G 0.32 Abuse of permissions
+  * OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
+  * OPS.1.1.5.A10 Access protection for logging data
+* G 0.37 denying actions
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+* G 0.38 Abuse of personal data
+  * OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A12 Encryption (CI)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+  * OPS.1.1.5.A5 Compliance with legal framework [Information Security Officer (ISB)]
+  * OPS.1.1.5.A10 Access protection for logging data
+* G 0.40 Denial of Service
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+* G 0.45 data loss
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A8 Archiving of logging data
+  * OPS.1.1.5.A11 Increase Logging Scope (CIA)
+  * OPS.1.1.5.A12 Encryption (CI)
+  * OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
+* G 0.46 Loss of integrity of sensitive information
+  * OPS.1.1.5.A4 Time synchronization of the IT systems
+  * OPS.1.1.5.A6 Structure of a central logging infrastructure
+  * OPS.1.1.5.A7 Secure administration of logging servers
+  * OPS.1.1.5.A8 Archiving of logging data
+  * OPS.1.1.5.A10 Access protection for logging data
+  * OPS.1.1.5.A12 Encryption (CI)

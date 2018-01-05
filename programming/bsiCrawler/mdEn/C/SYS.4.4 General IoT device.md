@@ -7,7 +7,7 @@ In this module, devices with functions from the field of Internet of Things (IoT
 
 IoT devices can be present in institutions because they are brought by employees or external, for. For example, smartwatches or wearables. In many institutions but also IoT devices are procured and operated, z. For example, devices such as fire, gas, and other alarms, coffee machines, or building control elements such as cameras and HVAC (Heating, Ventilation, and Air Conditioning).
 
-In general, a distinction can be made between directly addressable IoT devices and IoT devices that require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
+In general, a distinction can be made between directly addressable IoT devices and IoT devices, which require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
 
 ### 1.2 Objective
 
@@ -19,7 +19,7 @@ This module is generally concerned with IoT devices and is intended to be applic
 
 Depending on the nature of the IoT devices, the transitions to industrial control systems (ICS systems) or embedded systems are fluid. Requirements for equipment used in production and manufacturing can be found in the building blocks of the layer IND (Industrial IT).
 
-Embedded systems are information processing systems that are integrated into a larger system or product, where they take over control, regulation and data processing tasks and are often not directly perceived by the user. For this block SYS.4.3 Embedded Systems has to be implemented.
+Embedded systems are information processing systems that are integrated into a larger system or product, where they take over control, regulation and data processing tasks and are often not directly perceived by the user. For this module SYS.4.3 Embedded Systems has to be implemented.
 
 Requirements for the radio links frequently used in the context are in the building blocks of the layer NET.2 radio networks.
 
@@ -32,7 +32,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 In the development of IoT devices, the aspect of information security is typically a design goal that is not respected or only subordinate. Therefore, IoT devices could be abused again and again to gather information about the users or the field of application. So it has always come back to incidents with networked or IP-based surveillance cameras, z. B .:
 
-* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in financial institutions through the cameras.
+* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in the financial institutions through the cameras.
 * In 2014, video images and streams from 73,000 inadequately-protected webcams were made publicly available through the Insecam website.
 * In 2015, 8-year-old Malware Conficker infected a variety of bodycams from various police forces.
 ### 2 2 Using UPnP
@@ -43,7 +43,7 @@ LAN's built-in IoT devices often connect to the Internet on their own by configu
 
 If IoT devices are not regularly patched, known vulnerabilities remain open and can be exploited for large-scale attacks. One target of an attack could be to integrate the IoT devices into a botnet. In this case, they could be used, for example, to perform distributed denial of service (DDoS) attacks and to limit the availability of services.
 
-Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet automatically scanned the Internet for additional devices to infect them with malware and add them to the botnet.
+Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet independently scanned the Internet for other devices to infect them with malware and add them to the botnet.
 
 ### 2 4 espionage attacks using backdoors in IoT devices
 
@@ -54,7 +54,7 @@ At the end of September 2016, it became known that some models of surveillance c
 
 The following are specific requirements for the IoT area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -71,7 +71,7 @@ It MUST be checked periodically to see if the IoT devices and associated compone
 
 #### SYS.4.4.A4 Enable auto-update mechanisms
 
-Automatic update mechanisms (autoupdate) MUST be enabled unless other mechanisms such as regular manual maintenance or a centralized software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
+Automatic update mechanisms (auto-update) MUST be enabled unless other mechanisms such as regular manual maintenance or a central software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
 
 #### SYS.4.4.A5 Network access restriction
 
@@ -147,13 +147,13 @@ Depending on whether IoT devices are administered locally, directly via the netw
 
 #### SYS.4.4.A20 Regulated decommissioning of IoT devices
 
-When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be processed when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be used when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### SYS.4.4.A21 Environment and Power Supply [Information Security Officer (ISB), Home Automation] (I)
+#### SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
 
 It should be clarified whether IoT devices may be operated in the envisaged operating environment (protection requirements of other systems, data protection). IoT devices SHOULD be protected from theft, destruction and manipulation in the environment of use.
 
@@ -247,3 +247,333 @@ The following elementary hazards are important for the "General IoT device" bloc
 * G 0.39 Malware
 * G 0.40 Denial of Service
 The cross reference tables can be found in the download area due to their size.
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+* G 0.14 Spying out information (spying)
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+* G 0.16 Theft of devices, data carriers or documents
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+* G 0.18 Missing planning or missing adjustment
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+* G 0.19 Disclosure of information worthy of protection
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+* G 0.20 Information or products from unreliable sources
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+* G 0.21 Manipulation of hardware or software
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+* G 0.23 Unauthorized intrusion into IT systems
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+* G 0.24 Destruction of equipment or data media
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+* G 0.25 Failure of devices or systems
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+* G 0.26 Malfunction of equipment or systems
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+* G 0.28 Software vulnerabilities or errors
+  * SYS.4.4.A1 Usage criteria for IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A8 IoT Device Procurement Criteria [Information Security Officer (ISB), Procurement Agent]
+  * SYS.4.4.A9 Control of the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+* G 0.29 Violation of laws or regulations
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A12 Secure integration with higher-level systems [Information Security Officer (ISB)]
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A14 deployment clearance
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A18 Logging of safety-related events on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+* G 0.38 Abuse of personal data
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A19 Protection of the administration interfaces
+* G 0.39 Malware
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A16 Eliminate malware on IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+* G 0.40 Denial of Service
+  * SYS.4.4.A2 authentication
+  * SYS.4.4.A20 Regulated decommissioning of IoT devices
+  * SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+  * SYS.4.4.A22 System Monitoring (A)
+  * SYS.4.4.A23 Auditing IoT Devices (CIA)
+  * SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
+  * SYS.4.4.A3 Regular update
+  * SYS.4.4.A4 Enable auto-update mechanisms
+  * SYS.4.4.A5 Network access restriction
+  * SYS.4.4.A6 Inclusion of IoT devices in the security policy of the institution
+  * SYS.4.4.A7 Planning the use of IoT devices
+  * SYS.4.4.A10 Secure installation and configuration of IoT devices
+  * SYS.4.4.A11 Using secure protocols
+  * SYS.4.4.A13 Disabling and uninstalling unneeded components
+  * SYS.4.4.A15 Restrictive rights assignment
+  * SYS.4.4.A17 Monitoring the network traffic of IoT devices
+  * SYS.4.4.A19 Protection of the administration interfaces
+  * SYS.4.4.A22 System Monitoring (A)

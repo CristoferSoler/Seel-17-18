@@ -35,7 +35,7 @@ Different framework conditions, knowledge and procedures in the areas of office 
 
 ### 2 2 Inappropriate integration of OT into operational processes
 
-Despite the increasing convergence of OT and IT, there are peculiarities that make it difficult to transfer established business operations. Operational interventions in the context of change and (security) incident management for secure configuration, troubleshooting or the implementation of security updates, for example, can lead to a renewed official release or the loss of manufacturer's support. Unauthorized changes can affect the function of a component and potentially have an impact on its safety functions.
+Despite the increasing convergence of OT and IT, there are peculiarities that make it difficult to transfer established business operations. Operational interventions in the context of change and (security) incident management for secure configuration, troubleshooting or the import of security updates, for example, can lead to a renewed official release or the loss of manufacturer's support. Unauthorized changes can affect the function of a component and potentially have an impact on its safety functions.
 
 The OT is used to monitor, control and automate technical processes. Disruptions to these systems can lead to production losses, technical or personal damage and environmental damage. These potential effects must be taken into account during operational interventions.
 
@@ -54,13 +54,13 @@ In addition, the use of anti-virus software requires regular updates. If this is
 
 ### 2 5 Unsafe projecting process / application development process
 
-Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Malfunctions can arise from functional errors in the case of inadequate test and validation steps, faulty or manipulated configuration data or weak points in the software, if important safety functions such as input and output Issuance or authorization checks are implemented inadequately.
+Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Malfunctions can arise from functional errors in the case of inadequate test and validation steps, faulty or manipulated configuration data or weak points in the software, if important safety functions such as on- and off-hook Issuance or authorization checks are implemented inadequately.
 
 Further dangers may arise from unsafe development environments, improper storage of program code, documentation or project data, as well as from the data transfer interfaces.
 
 ### 2 6 Insecure administration concept and remote administration
 
-The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
+The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, then attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
 
 Local administrators also have privileged rights that make abusive intrusion or compromised accounts attractive to attackers.
 
@@ -89,7 +89,7 @@ The long operating times can also lead to problems in the procurement of spare p
 
 The OT components communicate with each other via various network protocols and technologies. In addition to protocols and technologies from office IT (eg Ethernet, TCP / IP, WLAN, GSM), ICS-specific protocols are used. These have not always been developed from the point of view of information security and accordingly provide, in part, no or only limited security mechanisms. Information is often transmitted in plain text and without integrity assurance or authentication.
 
-An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by feigning sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
+An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by faking sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
 
 ### 2 11 Unsafe configurations
 
@@ -115,7 +115,7 @@ The following requirements MUST be implemented as a priority:
 
 #### IND.1.A1 Integration into the security organization
 
-An Information Security Management System (ISMS) for operating the OT infrastructure MUST exist either as an independent ISMS or as part of an overall ISMS, and MUST explicitly specify within its scope the definition of goals and values, processes, roles, responsibilities, and specifications for the OT include.
+An Information Security Management System (ISMS) for Operating the OT Infrastructure MUST exist either as an independent ISMS or as part of an overall ISMS, and MUST explicitly specify within its scope the definition of goals and values, processes, roles, responsibilities, and specifications for the OT include.
 
 The management level of the institution MUST initiate, control and control the security process. The institution MUST establish a security organization that governs the roles and responsibilities for the information security of the OT infrastructure and components.
 
@@ -135,7 +135,7 @@ Additional information is described in the ORP.3 Sensitization and Training modu
 
 In order to prevent risks from malicious programs, a concept for the protection against malicious programs MUST be created and implemented. It must consider the threatened IT systems as well as the possible infection pathways (external interfaces, removable media, service and parameterization / programming devices) and determine appropriate technical and organizational protective measures.
 
-When using anti-virus software on OT components MUST consider whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection mechanisms MUST be considered in a risk analysis.
+When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection procedures MUST be considered in a risk analysis.
 
 Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of updating. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
 
@@ -146,7 +146,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 The safety-relevant parameters of the OT infrastructure SHOULD be documented. All software and system components SHOULD be kept in an inventory. From this, the product and protocol versions used as well as the responsibilities should emerge. The components used SHOULD include any manufacturer restrictions or regulatory requirements such as certifications. This documentation and a system inventory SHOULD be kept in a control system, for example.
 
-In addition, a current network SHOULD document zones, zone transitions, established communication protocols and procedures, and external interfaces. The interfaces SHOULD consider active network components as well as manual data transfer methods (eg using removable data carriers). The documentation SHOULD capture redundancies, IP addresses or ranges, and the assignment to physical security zones.
+In addition, a current network SHOULD document zones, conduit transitions, communication protocols and procedures used, and outside interfaces. The interfaces SHOULD consider active network components as well as manual data transfer methods (eg using removable data carriers). The documentation SHOULD capture redundancies, IP addresses or ranges, and the assignment to physical security zones.
 
 Since the documentation contains confidential information, all documents must be stored securely and given a classification regarding protection requirements.
 
@@ -169,13 +169,13 @@ Further information is described in the module OPS.1.2.1 Change Management.
 #### IND.1.A7 Establish Permission Management
 
 The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.
-The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be observed. Compliance SHOULD be reviewed and sanctioned misconduct.
+The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
 
 Further information is described in the module ORP.4 Identity and Authorization Management.
 
 #### IND.1.A8 Secure Administration [IT Operations]
 
-For initial configuration, administration and remote maintenance in OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions needed for the respective administration task.
+For initial configuration, administration and remote maintenance in OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions required for the respective administration task.
 
 The systems and communication channels used for administration or remote maintenance should have the same level of protection as the managed OT components. All remote maintenance and monitoring SHOULD be authorized, monitored and controlled by the institution. For this, the remote maintenance access SHOULD only be activated for use and then deactivated again. This SHOULD be documented
 
@@ -183,7 +183,7 @@ It should be ensured that it is not possible to build up unwanted tunnels to byp
 
 #### IND.1.A9 Restrictive use of removable media and mobile devices
 
-For the use of removable media and mobile devices SHOULD regulations for handling be set up and publicized. Basically, the use of removable media and mobile devices in ICS environments SHOULD be limited. For media and devices of service providers, an approval process and a request list SHOULD exist. The specifications SHOULD be known to each service provider and confirmed by them in writing.
+For the use of removable media and mobile devices SHOULD regulations for handling be set up and publicized. Basically, the use of removable media and mobile devices in ICS environments SHOULD be limited. For media and devices of service providers SHOULD an approval process and a request list exist. The specifications SHOULD be known to each service provider and confirmed by them in writing.
 
 On the OT components, all unnecessary interfaces SHOULD be disabled. At the active interfaces, the use of certain devices or media can be restricted.
 
@@ -197,7 +197,7 @@ The response plan SHOULD set procedures for incident handling. It should cover t
 
 #### IND.1.A11 Secure Procurement and System Development
 
-For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the invitation to tender.
+For procurements, planning or developments of ICS, information security regulations SHOULD be made and documented. The documents SHOULD be part of the invitation to tender.
 In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
 
 The institution SHOULD document how the system fits in with the concepts of zoning, entitlement, vulnerability management, and antivirus protection, and adjust it if necessary. It should be regulated how the operation can be maintained if one of the partners stops providing services.
@@ -206,7 +206,7 @@ Further information is described in the module OPS.2.1 Outsourcing Usage.
 
 #### IND.1.A12 Establish Vulnerability Management
 
-For the secure operation of an ICS environment, the institution SHOULD establish a vulnerability management. Vulnerability Management SHOULD identify gaps in the software, components, protocols, and external interfaces of the environment, and identify, evaluate, and implement potential action requirements and capabilities (eg, patch management).
+For the secure operation of an ICS environment, the institution SHOULD establish a vulnerability management. Vulnerability Management SHOULD identify gaps in the software, components, protocols, and external interfaces of the environment, and identify, evaluate, and implement potential action requirements and capabilities (such as patch management).
 
 The basis for this should be manufacturer vulnerability advisories or publicly available CERT reports. In addition, organizational and technical weak point analysis audits can be performed.
 
@@ -237,7 +237,7 @@ To enable effective verification of privileges, the institution SHOULD maintain 
 All critical administrative activities SHOULD be logged. The IT operation SHOULD NOT be able to erase or manipulate the logs.
 
 #### IND.1.A16 Greater foreclosure of zones (IA)
-For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with safety testing functions is required to prevent risks from external connections.
+For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with security check functions is required to prevent risks from external connections.
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
@@ -341,3 +341,130 @@ The following elementary hazards are important for the block "Operating and Cont
 * G 0.42 Social engineering
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A2 Awareness and training of staff
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A4 Documentation of the OT infrastructure
+  * IND.1.A5 Development of a suitable zone concept [IT operation]
+  * IND.1.A6 Change management in OT operation
+  * IND.1.A13 Emergency Planning for OT (A)
+* G 0.11 Failure or disruption of service providers
+  * IND.1.A5 Development of a suitable zone concept [IT operation]
+  * IND.1.A6 Change management in OT operation
+  * IND.1.A8 Secure Administration [IT Operations]
+  * IND.1.A13 Emergency Planning for OT (A)
+* G 0.14 Spying out information (spying)
+  * IND.1.A2 Awareness and training of staff
+  * IND.1.A3 Protection against malicious programs
+  * IND.1.A4 Documentation of the OT infrastructure
+  * IND.1.A6 Change management in OT operation
+  * IND.1.A8 Secure Administration [IT Operations]
+* G 0.15 Listening
+  * IND.1.A5 Development of a suitable zone concept [IT operation]
+* G 0.18 Missing planning or missing adjustment
+  * IND.1.A1 Integration into the security organization
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+  * IND.1.A5 Development of a suitable zone concept [IT operation]
+  * IND.1.A11 Secure Procurement and System Development
+* G 0.19 Disclosure of information worthy of protection
+  * IND.1.A1 Integration into the security organization
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+  * IND.1.A2 Awareness and training of staff
+  * IND.1.A8 Secure Administration [IT Operations]
+  * IND.1.A9 Restrictive use of removable media and mobile devices
+* G 0.20 Information or products from unreliable sources
+  * IND.1.A1 Integration into the security organization
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+  * IND.1.A11 Secure Procurement and System Development
+* G 0.21 Manipulation of hardware or software
+  * IND.1.A4 Documentation of the OT infrastructure
+  * IND.1.A8 Secure Administration [IT Operations]
+* G 0.23 Unauthorized intrusion into IT systems
+  * IND.1.A4 Documentation of the OT infrastructure
+  * IND.1.A8 Secure Administration [IT Operations]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A16 Greater foreclosure of zones (IA)
+* G 0.28 Software vulnerabilities or errors
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+* G 0.29 Violation of laws or regulations
+  * IND.1.A1 Integration into the security organization
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+  * IND.1.A17 Regular Security Check (I)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * IND.1.A1 Integration into the security organization
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A11 Secure Procurement and System Development
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+  * IND.1.A8 Secure Administration [IT Operations]
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A17 Regular Security Check (I)
+* G 0.32 Abuse of permissions
+  * IND.1.A4 Documentation of the OT infrastructure
+  * IND.1.A7 Establish Permission Management
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+  * IND.1.A17 Regular Security Check (I)
+* G 0.36 Identity theft
+  * IND.1.A2 Awareness and training of staff
+  * IND.1.A7 Establish Permission Management
+  * IND.1.A14 Strong Authentication to OT Components (CIA)
+  * IND.1.A15 Permission Checking and Monitoring (CIA)
+* G 0.37 denying actions
+  * IND.1.A6 Change management in OT operation
+  * IND.1.A7 Establish Permission Management
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+* G 0.39 Malware
+  * IND.1.A2 Awareness and training of staff
+  * IND.1.A3 Protection against malicious programs
+  * IND.1.A9 Restrictive use of removable media and mobile devices
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A12 Establish Vulnerability Management
+* G 0.41 Sabotage
+  * IND.1.A3 Protection against malicious programs
+  * IND.1.A9 Restrictive use of removable media and mobile devices
+  * IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+  * IND.1.A12 Establish Vulnerability Management
+  * IND.1.A13 Emergency Planning for OT (A)
+  * IND.1.A16 Greater foreclosure of zones (IA)
+* G 0.42 Social engineering
+  * IND.1.A2 Awareness and training of staff
+* G 0.46 Loss of integrity of sensitive information
+  * IND.1.A9 Restrictive use of removable media and mobile devices

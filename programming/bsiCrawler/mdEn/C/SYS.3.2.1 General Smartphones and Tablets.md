@@ -11,7 +11,7 @@ The aim of this module is to provide the persons responsible for security manage
 
 ### 1.3 Delimitation
 
-This module is not concerned with how specific operating systems are secured by smartphones and tablets, as this is described in detail in the building blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
+This module is not concerned with how specific operating systems of smartphones and tablets are secured, as this is described in detail in the blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
 
 2 risk situation
 -----------------
@@ -45,7 +45,7 @@ Even browsers on mobile devices can display full web pages and web content. As a
 
 The operating system of many devices usually contains special functions to manage fitness and location data. These often personal data are particularly sensitive and represent an attractive target, especially if they are collected and stored over a long period of time, insofar as these functions have been activated by the user.
 
-As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection implications, this can also lead to other attacks on the employee.
+As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection effects, this can also lead to other attacks on the employee.
 
 ### 2 8 Misuse of sensitive data in the lock screen
 
@@ -57,7 +57,7 @@ If employees are given proprietary smartphones, tablets and phablets, they may b
 
 ### 2 10 Dangers of Bring Your Own Device (BYOD)
 
-If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in case of emergency, the user may not agree.
+If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in an emergency, the user may not agree.
 
 Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
@@ -65,7 +65,7 @@ Often IT managers can no longer check every single device brought by the employe
 ---------------
 The following are specific requirements for the smartphone and tablet sector. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -100,7 +100,7 @@ A process MUST be established for automatic updates of the operating system and 
 The access of apps and operating system to data and interfaces MUST be restricted appropriately. The privacy settings MUST be configured as restrictively as possible. In particular, access to the camera, microphone and geodata MUST be checked for compliance with the organization's privacy and security standards and restrictively configured or disabled.
 
 #### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
-In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately take suitable countermeasures.
+In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately initiate suitable countermeasures.
 
 The possible consequences of safety-critical events MUST be investigated. Ultimately, all necessary action MUST be taken to rule out access to confidential and mission-critical information of the institution.
 
@@ -118,7 +118,7 @@ Functional extensions SHOULD only be used restrictively. If possible, refrain fr
 
 #### SYS.3.2.1.A10 Mobile Employees Policy [User]
 
-A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or to rooted the device.
+A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or rooted the device.
 
 #### SYS.3.2.1.A11 Encryption of the file system
 
@@ -134,7 +134,7 @@ It SHOULD be decided whether to use screen sharing or casting. Screen sharing an
 
 #### SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
 
-All mobile devices SHOULD be protected against malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
+All mobile devices SHOULD be protected from malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
 
 #### SYS.3.2.1.A15 Deactivation of download boosters
 
@@ -146,11 +146,11 @@ Unused communication interfaces SHOULD be disabled. Necessary interfaces SHOULD 
 
 #### SYS.3.2.1.A17 Using the SIM card PIN
 
-The use of the SIM card of the institution SHOULD be protected by a PIN. The Super-PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
+The use of the SIM card of the institution SHOULD be protected by a PIN. The Super PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
 
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 
-When using a biometric fingerprint sensor, SHOULD it be checked if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
+If you want to use a biometric fingerprint sensor, you should check to see if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
 
 #### SYS.3.2.1.A19 Using a language assistant
 
@@ -183,7 +183,7 @@ The password for the access point name (APN) of a closed user group SHOULD be co
 
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 
-It was intended to use solutions for separate work environments. For this purpose, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
+It was intended to use solutions for separate work environments. For this, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
 
 #### SYS.3.2.1.A26 Use of PIM containers (CIA)
 
@@ -286,3 +286,453 @@ The following elementary threats are important for the building block "General S
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+* G 0.14 Spying out information (spying)
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.15 Listening
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.16 Theft of devices, data carriers or documents
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.17 Loss of equipment, data carriers or documents
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.18 Missing planning or missing adjustment
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+* G 0.19 Disclosure of information worthy of protection
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.20 Information or products from unreliable sources
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+* G 0.21 Manipulation of hardware or software
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.22 Manipulation of information
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.23 Unauthorized intrusion into IT systems
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.24 Destruction of equipment or data media
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.25 Failure of devices or systems
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+* G 0.26 Malfunction of equipment or systems
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+* G 0.28 Software vulnerabilities or errors
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+* G 0.29 Violation of laws or regulations
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.31 Incorrect use or administration of devices and systems
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.32 Abuse of permissions
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.36 Identity theft
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.37 denying actions
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.38 Abuse of personal data
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.39 Malware
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A8 No installation of apps from insecure sources
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.42 Social engineering
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A20 Select and share apps
+* G 0.43 Importing messages
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.45 data loss
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+* G 0.46 Loss of integrity of sensitive information
+  * SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
+  * SYS.3.2.1.A10 Mobile Employees Policy [User]
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A16 Deactivation of unused communication interfaces [User]
+  * SYS.3.2.1.A17 Using the SIM card PIN
+  * SYS.3.2.1.A18 Using a fingerprint sensor
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A2 Defining a strategy for cloud deployment
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
+  * SYS.3.2.1.A3 Secure basic configuration for mobile devices
+  * SYS.3.2.1.A4 Using an Access Protection [User]
+  * SYS.3.2.1.A5 Automatic updates of operating system and apps
+  * SYS.3.2.1.A6 privacy settings
+  * SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
+  * SYS.3.2.1.A9 Use of functional extensions
+  * SYS.3.2.1.A11 Encryption of the file system
+  * SYS.3.2.1.A12 Use of non-personalized device name
+  * SYS.3.2.1.A13 Screensharing and casting regulations
+  * SYS.3.2.1.A15 Deactivation of download boosters
+  * SYS.3.2.1.A19 Using a language assistant
+  * SYS.3.2.1.A20 Select and share apps
+  * SYS.3.2.1.A21 Definition of allowed information and applications on mobile devices [Specialists, Users]
+  * SYS.3.2.1.A22 Integration of the devices in the internal infrastructure via VPN
+  * SYS.3.2.1.A23 Additional password for confidential applications (CI)
+  * SYS.3.2.1.A24 Use of a closed user group (CI)
+  * SYS.3.2.1.A25 Use of Separate Work Environments (CI)
+  * SYS.3.2.1.A26 Use of PIM containers (CIA)
+  * SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)

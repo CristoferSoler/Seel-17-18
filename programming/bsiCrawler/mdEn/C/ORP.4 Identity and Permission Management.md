@@ -17,7 +17,7 @@ The goal of the building block is for users or even IT components to be able to 
 
 This module describes basic requirements for the development of identity and authorization management.
 
-Requirements concerning components of identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
+Requirements concerning components of an identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
 
 2 risk situation
 -----------------
@@ -35,14 +35,14 @@ Also, it is possible that employees who have been moved to a new department reta
 In institutions, employees often have user access to various IT systems such as production, test, quality assurance or project systems. These are usually in different areas of responsibility and are managed by different administrators. As a result, an identical and unique user ID is not used on all IT systems and there is usually no central overview of the user access on the individual IT systems. In such a scenario, it is not possible to immediately disable all user accesses of an employee in the event of an attack or password theft. Also, when an employee leaves the institution, all receipts can not be blocked immediately.
 
 ### 2 3 Inappropriate access, access and access rights management
-If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to receive permissions on demand, or conversely, only through unnecessarily complicated ways to get them. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
+If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to get permissions on demand or, conversely, get them over unnecessarily complicated ways. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
 3 requirements
 ---------------
 
 The following are specific requirements for identity and entitlement management. Basically, the ISB is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -50,7 +50,7 @@ The following requirements MUST be implemented as a priority:
 
 It must be governed by how users and user groups are to be set up. All users and user groups MAY ONLY be set up via separate administrative roles.
 
-#### ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
+#### ORP.4.A2 Regulation for setting up, changing and revoking privileges [Administrator, Head of IT]
 
 User IDs and permissions MAY ONLY be assigned based on actual needs. Personnel changes MUST remove the user IDs and permissions that are no longer required. Applying Employees Authorizations that go beyond the standard may ONLY be assigned after further justification. All permissions MUST be set up via separate administrative roles.
 
@@ -116,7 +116,7 @@ For identity and authorization management, the following processes SHOULD be def
 * Manage roles.
 #### ORP.4.A16 Access and Access Control Policy [Administrator]
 
-A guideline should be created for the access and access control of IT systems, IT components and networks. You should use standard rights profiles that correspond to the functions and tasks of the employees. For each IT system and IT application, a written access policy SHOULD exist. In addition, all established users and assigned rights SHOULD be documented. It SHOULD be regulated that users can only access IT systems and services if they have been appropriately identified and authenticated beforehand.
+A guideline should be created for the access and access control of IT systems, IT components and networks. You should use standard rights profiles that correspond to the functions and tasks of the employees. For each IT system and every IT application SHOULD have a written access control. In addition, all established users and assigned rights SHOULD be documented. It SHOULD be regulated that users can only access IT systems and services if they have been appropriately identified and authenticated beforehand.
 
 #### ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
 
@@ -188,3 +188,90 @@ The following elementary threats are important for the module "identity and auth
 * G 0.44 Unauthorized intrusion into premises
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+* G 0.14 Spying out information (spying)
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A10 Protection of User Accounts with Extended Privileges [IT Leader]
+  * ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
+  * ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
+  * ORP.4.A18 Use of a central authentication service [Head IT]
+* G 0.15 Listening
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A18 Use of a central authentication service [Head IT]
+* G 0.16 Theft of devices, data carriers or documents
+  * ORP.4.A5 Assignment of access authorizations [Head IT]
+* G 0.18 Missing planning or missing adjustment
+  * ORP.4.A1 Regulation for the creation of users and user groups [Administrator, IT Leader]
+  * ORP.4.A10 Protection of User Accounts with Extended Privileges [IT Leader]
+  * ORP.4.A11 Reset Passwords [IT Manager]
+  * ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
+  * ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
+  * ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
+  * ORP.4.A15 Approach and conception of processes for identity and authorization management [Head of IT]
+  * ORP.4.A16 Access and Access Control Policy [Administrator]
+  * ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
+  * ORP.4.A18 Use of a central authentication service [Head IT]
+  * ORP.4.A19 Training of all employees in the handling of authentication procedures and mechanisms [user, IT manager]
+  * ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
+  * ORP.4.A20 Emergency Prevention for the Identity and Entitlement Management System [IT Leader] (CIA)
+  * ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
+  * ORP.4.A3 Authorized User and Rights Profile Documentation [Administrator, IT Leader]
+  * ORP.4.A5 Assignment of access authorizations [Head IT]
+  * ORP.4.A6 Assignment of access authorizations [Head IT]
+  * ORP.4.A7 Assignment of access rights [Head IT]
+  * ORP.4.A8 Password Usage Control [User, IT Leader]
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A11 Reset Passwords [IT Manager]
+  * ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
+  * ORP.4.A15 Approach and conception of processes for identity and authorization management [Head of IT]
+  * ORP.4.A16 Access and Access Control Policy [Administrator]
+  * ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
+  * ORP.4.A18 Use of a central authentication service [Head IT]
+* G 0.22 Manipulation of information
+  * ORP.4.A4 Task distribution and separation of functions [Head IT]
+  * ORP.4.A9 Identification and Authentication [Head IT]
+* G 0.23 Unauthorized intrusion into IT systems
+  * ORP.4.A6 Assignment of access authorizations [Head IT]
+  * ORP.4.A7 Assignment of access rights [Head IT]
+  * ORP.4.A8 Password Usage Control [User, IT Leader]
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A11 Reset Passwords [IT Manager]
+  * ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
+* G 0.25 Failure of devices or systems
+  * ORP.4.A20 Emergency Prevention for the Identity and Entitlement Management System [IT Leader] (CIA)
+* G 0.29 Violation of laws or regulations
+  * ORP.4.A4 Task distribution and separation of functions [Head IT]
+  * ORP.4.A5 Assignment of access authorizations [Head IT]
+  * ORP.4.A6 Assignment of access authorizations [Head IT]
+  * ORP.4.A7 Assignment of access rights [Head IT]
+  * ORP.4.A8 Password Usage Control [User, IT Leader]
+  * ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
+* G 0.30 Unauthorized use or administration of devices and systems
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
+  * ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
+* G 0.31 Incorrect use or administration of devices and systems
+  * ORP.4.A17 Appropriate Selection of Identity and Entitlement Management Systems [IT Leader]
+  * ORP.4.A19 Training of all employees in the handling of authentication procedures and mechanisms [user, IT manager]
+* G 0.32 Abuse of permissions
+  * ORP.4.A4 Task distribution and separation of functions [Head IT]
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A10 Protection of User Accounts with Extended Privileges [IT Leader]
+  * ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
+  * ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
+  * ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
+* G 0.36 Identity theft
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A10 Protection of User Accounts with Extended Privileges [IT Leader]
+  * ORP.4.A11 Reset Passwords [IT Manager]
+  * ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
+  * ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
+  * ORP.4.A18 Use of a central authentication service [Head IT]
+  * ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
+* G 0.37 denying actions
+  * ORP.4.A4 Task distribution and separation of functions [Head IT]
+  * ORP.4.A9 Identification and Authentication [Head IT]
+  * ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
+* G 0.44 Unauthorized intrusion into premises
+  * ORP.4.A5 Assignment of access authorizations [Head IT]
+* G 0.46 Loss of integrity of sensitive information
+  * ORP.4.A9 Identification and Authentication [Head IT]

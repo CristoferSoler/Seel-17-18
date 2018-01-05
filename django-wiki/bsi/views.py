@@ -1,6 +1,7 @@
-import pdb
-
+import os
+from operator import itemgetter
 from django.contrib.auth import login, authenticate
+import pdb
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.http import Http404
@@ -21,6 +22,11 @@ from wiki import models
 from bsi.models import BSI_Article_type
 from bsi.ugaViews import overview_uga
 from .models.article_extensions import BSI
+from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
+import csv
+import json
+import itertools
+from collections import Counter
 
 
 class WikiArticleView(ArticleView):
@@ -95,15 +101,14 @@ class BSISearchView(SearchView):
 
 
 
-
 def index(request):
-    all_articles = Article.objects.all()
-
+    components = readAndProcessCSV()
+    sortedTopics = getListOfFrequenceOfTopic(components['components'])
     template = loader.get_template('bsi/index.html')
-    context = {
-        'all_articles': all_articles,
-    }
-    return HttpResponse(template.render(context, request))
+    componentsString = json.dumps(components)
+    sortedTopicsString = json.dumps(sortedTopics)
+
+    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
 def bsicatalog(request):
@@ -133,8 +138,10 @@ def register(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'bsi/account/register.html', {'form': form})
+        return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
     return render(request, 'bsi/create_article.html')
+
+

@@ -30,18 +30,18 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Incorrect planning
 
-If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to incorrect design or if the energy supply at the selected location is insufficient.
+If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to a faulty design or if the energy supply at the selected location is insufficient.
 
 ### 2 2 Unauthorized access
 Lack of access controls or these are insufficient, increases the risk that unauthorized persons enter the data center and there negligent, z. B. due to lack of expertise, or intentionally cause damage. Attackers can so z. For example, stealing sensitive data, stealing devices or manipulating servers. Inadequate access controls thus have a particular impact on the availability, confidentiality and integrity of data or IT components.
 
 ### 2 3 Insufficient monitoring
 
-If the IT and infrastructure operated in the data center are insufficiently monitored and managed, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring they could be noticed too late. It is then often not possible to react in time.
+If the IT and infrastructure operated in the data center are insufficiently monitored and maintained, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring, they might be noticed too late. It is then often not possible to react in time.
 
 ### 2 4 Insufficient air conditioning in the data center
 
-IT components need a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
+IT components require a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
 
 ### 2 5 fire
 
@@ -71,7 +71,7 @@ If cable runs are not routed separately and minimum clearances are not met, data
 
 The following are specific requirements for data center protection. Basically, the IT manager is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -108,9 +108,9 @@ In the event of an emergency, there must be suitable possibilities for disconnec
 
 In order to be able to operate IT systems reliably in accordance with the manufacturer's recommendations, it MUST be ensured that the air temperature and humidity in the IT operating range are within the prescribed limits.
 
-The actual heat load in the cooled areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
+The actual heat load in the refrigerated areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
 
-Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period in a time interval adapted to the situation.
+Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period of time in a time interval adapted to the situation.
 
 #### INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
 
@@ -120,7 +120,7 @@ An access regulation tailored to the respective requirements MUST ensure for own
 
 In addition, it MUST be ensured that visitors and external personnel are individually recorded and supervised by the access control during all work in the data center.
 
-In addition, all access to a data center MUST be monitored. The requirements of the institution for an access control system MUST be documented in sufficient detail in a concept. In the case of a server room, it should be checked whether it makes sense to monitor all access options.
+In addition, all access to a data center MUST be monitored. The institution's requirements for an access control system MUST be documented in sufficient detail in a concept. In the case of a server room, it should be checked whether it makes sense to monitor all access options.
 
 Furthermore, it MUST be regulated which internal and external persons are allowed access for which period. It MUST be ensured that no unnecessary or too extensive access rights are granted. It MUST be checked regularly whether the regulations for the use of an access control are adhered to.
 
@@ -135,9 +135,9 @@ A fire alarm system MUST be installed in a data center. This MUST monitor all su
 
 In a data center, a state-of-the-art extinguishing or fire prevention system MUST be installed.
 
-In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure its proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
+In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
 
-#### INF.2.A10 Inspection and maintenance of infrastructure [IT operation, building services, maintenance personnel]
+#### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
 
 All components of the technical infrastructure MUST comply with at least the recommended or standard intervals and requirements for inspection and maintenance. In order to understand when which work has been carried out, inspections and maintenance MUST be logged.
 
@@ -165,7 +165,7 @@ The security measures for perimeter protection SHOULD be equivalent to those of 
 * outside person and vehicle identification.
 #### INF.2.A13 Planning and installation of alarm systems [planner]
 
-A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are required and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
+A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are needed and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
 A suitable alarm system (GMA) should be installed for the respective field of application. The messages of the GMA SHOULD be connected to an alarm receiving station in compliance with the applicable Technical Connection Conditions (TAB). The alarm receiving station SHOULD be reachable at all times and technically as well as personnel able to respond in a suitable manner to the reported hazard. The transmission path between the inserted GMA and the auxiliary service SHOULD be configured redundantly. All transmission paths SHOULD be tested regularly.
 
 #### INF.2.A14 Use of a network replacement system [planner, building services]
@@ -211,7 +211,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.2.A21 Dodge Data Center (A)
 
-A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be sized to maintain all processes of the institution. Also SHOULD it be constantly ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
+A geographically separated alternative data center SHOULD be set up and used. The backup data center SHOULD be dimensioned so that all processes of the institution can be maintained. Also SHOULD it be always ready to use. All data of the institution SHOULD be regularly mirrored in the alternative data center.
 
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 
@@ -238,7 +238,7 @@ In case of increased protection requirements, emergency power supply systems SHO
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-The staff of the institution SHOULD carry out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+With the employees of the institution SHOULD be carried out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 
@@ -310,3 +310,226 @@ The following elementary threats are important for the building block "data cent
 * G 0.41 Sabotage
 * G 0.44 Unauthorized intrusion into premises
 The cross reference tables can be found in the download area due to their size.
+  * INF.2.A2 Fire department formation [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A4 emergency shutdown of power supply [building services]
+  * INF.2.A8 Use of a fire alarm system [planner]
+  * INF.2.A9 Use of extinguishing or fire prevention system [Planner]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A5 compliance with air temperature and humidity [building services]
+  * INF.2.A16 Air conditioning in the data center [Building Services]
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A14 Use of a network replacement system [planner, building services]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A16 Air conditioning in the data center [Building Services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A4 emergency shutdown of power supply [building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A14 Use of a network replacement system [planner, building services]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A16 Air conditioning in the data center [Building Services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A14 Use of a network replacement system [planner, building services]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A16 Air conditioning in the data center [Building Services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A2 Fire department formation [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A3 Use of an Uninterruptible Power Supply [Building Services]
+  * INF.2.A4 emergency shutdown of power supply [building services]
+  * INF.2.A8 Use of a fire alarm system [planner]
+  * INF.2.A9 Use of extinguishing or fire prevention system [Planner]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A14 Use of a network replacement system [planner, building services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.10 Failure or malfunction of supply networks
+  * INF.2.A2 Fire department formation [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A8 Use of a fire alarm system [planner]
+  * INF.2.A9 Use of extinguishing or fire prevention system [Planner]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.11 Failure or disruption of service providers
+  * INF.2.A21 Dodge Data Center (A)
+* G 0.15 Listening
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+* G 0.16 Theft of devices, data carriers or documents
+  * INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
+  * INF.2.A7 Closing and securing [staff, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.24 Destruction of equipment or data media
+  * INF.2.A2 Fire department formation [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A4 emergency shutdown of power supply [building services]
+  * INF.2.A8 Use of a fire alarm system [planner]
+  * INF.2.A9 Use of extinguishing or fire prevention system [Planner]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.25 Failure of devices or systems
+  * INF.2.A2 Fire department formation [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A22 Implementation of dust control measures [Building Services] (IA)
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
+  * INF.2.A26 Redundant design of emergency power systems (A)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+  * INF.2.A8 Use of a fire alarm system [planner]
+  * INF.2.A9 Use of extinguishing or fire prevention system [Planner]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.26 Malfunction of equipment or systems
+  * INF.2.A4 emergency shutdown of power supply [building services]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.29 Violation of laws or regulations
+  * INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
+  * INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A14 Use of a network replacement system [planner, building services]
+  * INF.2.A15 Surge protection device [Planner, building services]
+  * INF.2.A16 Air conditioning in the data center [Building Services]
+  * INF.2.A17 Early fire detection [planner, building services]
+  * INF.2.A18 Protection against water leakage [Building Services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
+  * INF.2.A7 Closing and securing [staff, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.31 Incorrect use or administration of devices and systems
+  * INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A20 Regular updates of infrastructure and construction plans [planner]
+  * INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.32 Abuse of permissions
+  * INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
+  * INF.2.A7 Closing and securing [staff, building services]
+* G 0.33 Personnel loss
+* G 0.34 stop
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A21 Dodge Data Center (A)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.41 Sabotage
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
+  * INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
+  * INF.2.A28 Use of higher-level alarm systems (IA)
+* G 0.44 Unauthorized intrusion into premises
+  * INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
+  * INF.2.A7 Closing and securing [staff, building services]
+  * INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
+  * INF.2.A13 Planning and installation of alarm systems [planner]
+  * INF.2.A28 Use of higher-level alarm systems (IA)

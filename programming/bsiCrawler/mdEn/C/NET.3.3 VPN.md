@@ -22,9 +22,9 @@ Recommendations on how to configure the operating systems of the VPN endpoints a
 
 The following specific threats and vulnerabilities are of particular importance in the area of ​​VPN:
 
-### 2 1 Lacking or inadequate planning and regulation of VPN deployment
+### 2 1 Lack of or inadequate planning and regulation of VPN deployment
 
-If the VPN is not carefully planned, set up, or configured, security vulnerabilities can occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
+If the VPN is not carefully planned, set up, or configured, security vulnerabilities may occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
 
 For example, with inadequate VPN scheduling and regimentation, it is possible that users were not properly trained, thereby using the VPN in an insecure environment or dialing in from an insecure client. This may allow attackers to access the entire corporate network.
 
@@ -109,12 +109,12 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 
 #### NET.3.3.A11 Secure connection of an external network
 
-If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
+If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with a sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
 #### NET.3.3.A12 User and Access Management for Remote Access VPNs
 For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
 
-When using standalone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 
 #### NET.3.3.A13 Integration of VPN components in a firewall
 
@@ -129,7 +129,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the "VPN" area can be found in the following publications, among others:
+Further information on threats and security measures in the "VPN" area can be found in the following publications, among others:
 
 * #### [27033-5] ISO / IEC 27033-5: 2013
 
@@ -173,3 +173,60 @@ The following elementary threats are important for the "VPN" block.
 * G 0.43 Importing messages
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * NET.3.3.A3 Secure installation of VPN terminals
+  * NET.3.3.A9 Appropriate selection of VPN products
+  * NET.3.3.A11 Secure connection of an external network
+* G 0.11 Failure or disruption of service providers
+  * NET.3.3.A2 Selection of a VPN Service Provider [Information Security Officer (ISB)]
+  * NET.3.3.A9 Appropriate selection of VPN products
+  * NET.3.3.A11 Secure connection of an external network
+* G 0.14 Spying out information (spying)
+  * NET.3.3.A4 Secure configuration of a VPN
+  * NET.3.3.A7 Planning of technical VPN realization
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A13 Integration of VPN components in a firewall
+* G 0.18 Missing planning or missing adjustment
+  * NET.3.3.A1 Planning the VPN deployment
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A11 Secure connection of an external network
+  * NET.3.3.A12 User and Access Management for Remote Access VPNs
+  * NET.3.3.A13 Integration of VPN components in a firewall
+  * NET.3.3.A3 Secure installation of VPN terminals
+  * NET.3.3.A6 Perform a VPN requirement analysis
+  * NET.3.3.A8 Create a security policy for VPN use
+* G 0.19 Disclosure of information worthy of protection
+  * NET.3.3.A4 Secure configuration of a VPN
+  * NET.3.3.A7 Planning of technical VPN realization
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A13 Integration of VPN components in a firewall
+* G 0.22 Manipulation of information
+  * NET.3.3.A4 Secure configuration of a VPN
+  * NET.3.3.A7 Planning of technical VPN realization
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A13 Integration of VPN components in a firewall
+* G 0.23 Unauthorized intrusion into IT systems
+  * NET.3.3.A4 Secure configuration of a VPN
+  * NET.3.3.A6 Perform a VPN requirement analysis
+  * NET.3.3.A7 Planning of technical VPN realization
+* G 0.28 Software vulnerabilities or errors
+  * NET.3.3.A5 Blocking of unneeded VPN accesses
+* G 0.32 Abuse of permissions
+  * NET.3.3.A1 Planning the VPN deployment
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A11 Secure connection of an external network
+  * NET.3.3.A12 User and Access Management for Remote Access VPNs
+  * NET.3.3.A13 Integration of VPN components in a firewall
+  * NET.3.3.A4 Secure configuration of a VPN
+  * NET.3.3.A6 Perform a VPN requirement analysis
+  * NET.3.3.A12 User and Access Management for Remote Access VPNs
+* G 0.40 Denial of Service
+  * NET.3.3.A9 Appropriate selection of VPN products
+  * NET.3.3.A11 Secure connection of an external network
+* G 0.43 Importing messages
+  * NET.3.3.A7 Planning of technical VPN realization
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A13 Integration of VPN components in a firewall
+* G 0.46 Loss of integrity of sensitive information
+  * NET.3.3.A7 Planning of technical VPN realization
+  * NET.3.3.A10 Secure operation of a VPN
+  * NET.3.3.A13 Integration of VPN components in a firewall

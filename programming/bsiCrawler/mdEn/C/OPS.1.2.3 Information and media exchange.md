@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-In this module, the secure exchange of information is considered, with a focus on digital and analog media as transport media, but also the exchange of information in personal meetings or via IT networks. Even with a broadband network connection, it may be useful or necessary to transmit data carriers for the exchange of information. One reason may be that there is no or no sufficiently trusted connectivity between the affected IT systems. Data carriers can be exchanged during personal meetings or via shipping.
+In this module, the secure exchange of information is considered, with the focus on digital and analog media as transport media, but also the exchange of information in personal meetings or via IT networks. Even with a broadband network connection, it may be useful or necessary to transmit data carriers for the exchange of information. One reason may be that there is no or no sufficiently trusted connectivity between the affected IT systems. Data carriers can be exchanged during personal meetings or via shipping.
 
 ### 1.2 Objective
 
@@ -14,7 +14,7 @@ The aim of this module is to secure the exchange of information between differen
 This module is always to be used if there is an exchange of information with offices outside of your own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
-* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
+* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into consideration.
 The protection of network connections is covered in other components of the IT-Grundschutz Compendium. Further processing in the target IT system is not considered. In this module, the basic rules for a secure exchange of information are in the foreground, especially in the use of mobile data carriers. The reasons why there is no or no sufficiently trusted network between the affected IT systems are not considered.
 
 In addition, this module also takes into account the storage of the data on the sender and receiver system, insofar as it is directly related to the data medium exchange, as well as the handling of the data carriers before or after the transfer. This module considers mobile data carriers such. As removable disks, optical media, USB sticks and hard drives and not to forget paper documents.
@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Defective media
 
-All types of media can cause damage, errors, or failures. The problem arises when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
+All types of media can cause damage, errors, or failures. They become a problem when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
 
 ** Impermissible temperature and humidity **
 
@@ -34,7 +34,7 @@ Extreme temperatures and humidity can affect the proper operation of media. For 
 
 ** improperly packaged media **
 
-During transport or shipping, data media are subject to special loads. For data carriers, even minor contamination can lead to data errors. Hard disks can be destroyed by the "head crash" of the read / write head, tapes or cassettes by direct mechanical action. CD-ROMs or DVDs may become unusable due to scratching of the surface.
+During transport or shipping, data carriers are subject to special loads. For data carriers, even minor contamination can lead to data errors. Hard disks can be destroyed by the "head crash" of the read / write head, tapes or cassettes by direct mechanical action. CD-ROMs or DVDs may become unusable due to scratching of the surface.
 
 ** Data loss due to strong magnetic fields **
 Typical disks with magnetizable storage media are removable disks, cassettes and tapes. These data carriers are sensitive to magnetic interference, so the proximity to such radiation sources should be avoided.
@@ -77,7 +77,7 @@ If information or data carriers are exchanged or transported via an insecure tra
 
 The following are specific requirements for information and media protection protection. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -87,19 +87,19 @@ The institution MUST specify which communication partners may receive and share 
 
 #### OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
 
-If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may be used only for the purpose for which they were disclosed.
+If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may only be used for the purpose for which they were disclosed.
 
-#### OPS.1.2.3.A3 Instructing the staff to exchange information [Specialists]
+#### OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
 
 Staff MUST be informed about the framework conditions for the exchange of information. It MUST know what information they are allowed to give when, where and how.
 
 #### OPS.1.2.3.A4 Malware Protection [User]
 
-Digital data MUST be checked for malware both by the sender before sending and by the receiver. The anti-virus programs used must comply with the current state of the art.
+Digital data MUST be checked by both the sender and the recipient for malware. The anti-virus programs used must comply with the current state of the art.
 
 #### OPS.1.2.3.A5 loss report [user]
 
-It MUST be reported immediately if a data carrier is lost, stolen or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
+It MUST be reported immediately if a data carrier is lost, stolen, or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
 
 ### 3.2 Standard requirements
 
@@ -126,9 +126,9 @@ External parties SHOULD make confidentiality agreements before gaining access to
 
 #### OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
 
-Before exchanging information, the systems and products used on the sender and receiver side SHOULD be checked for compatibility.
+Before exchanging information, the systems and products used on the transmitter and receiver side SHOULD be checked for compatibility.
 
-#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [user]
+#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [User]
 
 When tagging media, SHOULD ensure that sender and recipient are immediately identifiable. The marking of the data carriers or their packaging SHOULD make the contents of the data carriers clearly identifiable to the recipient. The labeling of data carriers with information worth protecting SHOULD NOT allow any conclusions as to the nature and content of the information.
 
@@ -142,7 +142,7 @@ Confidential information SHOULD be encrypted before exchanging information. Info
 
 #### OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
 
-For more protection, a disk management SHOULD be set up to control disk access, tagging and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
+For higher protection, a disk management SHOULD be set up to regulate access to disks, their marking and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
 
 #### OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
 
@@ -166,7 +166,7 @@ If the data to be transmitted has been created or compiled solely for the purpos
 
 ### 4.1 Literature
 
-Additional information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
+Further information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 
@@ -208,3 +208,165 @@ The following elementary hazards are important for the module "Information and d
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.14 Spying out information (spying)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A8 Physical deletion of media before and after use [user]
+  * OPS.1.2.3.A9 Eliminate Remaining Information in Files Before Redistributing [User]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+* G 0.16 Theft of devices, data carriers or documents
+  * OPS.1.2.3.A5 loss report [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+* G 0.17 Loss of equipment, data carriers or documents
+  * OPS.1.2.3.A5 loss report [user]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.18 Missing planning or missing adjustment
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+* G 0.19 Disclosure of information worthy of protection
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A8 Physical deletion of media before and after use [user]
+  * OPS.1.2.3.A9 Eliminate Remaining Information in Files Before Redistributing [User]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+* G 0.20 Information or products from unreliable sources
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+* G 0.22 Manipulation of information
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+* G 0.24 Destruction of equipment or data media
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.25 Failure of devices or systems
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.26 Malfunction of equipment or systems
+  * OPS.1.2.3.A4 Malware Protection [User]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.29 Violation of laws or regulations
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+* G 0.38 Abuse of personal data
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A5 loss report [user]
+  * OPS.1.2.3.A6 Agreements to exchange information with external [Head of Organization]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A8 Physical deletion of media before and after use [user]
+  * OPS.1.2.3.A9 Eliminate Remaining Information in Files Before Redistributing [User]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+* G 0.39 Malware
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A4 Malware Protection [User]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+* G 0.42 Social engineering
+  * OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
+  * OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
+  * OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
+  * OPS.1.2.3.A16 Secure Storage of Media Before and After Shipping [User, Post Office] (CIA)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+  * OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+* G 0.45 data loss
+  * OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+  * OPS.1.2.3.A4 Malware Protection [User]
+  * OPS.1.2.3.A5 loss report [user]
+  * OPS.1.2.3.A7 Control of data medium exchange [Head of Organization]
+  * OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
+  * OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
+  * OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
+* G 0.46 Loss of integrity of sensitive information
+  * OPS.1.2.3.A4 Malware Protection [User]
+  * OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
+  * OPS.1.2.3.A17 Verifying Media Before Shipping [User] (CI)
