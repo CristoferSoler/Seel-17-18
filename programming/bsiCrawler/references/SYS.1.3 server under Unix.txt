@@ -15,7 +15,7 @@
 ### 3.3 Requirements for increased protection requirements
 #### SYS.1.3.A13 Additional protection of privileged credentials (CI)
 #### SYS.1.3.A14 Preventing spying on system and user information (C)
-#### SYS.1.3.A15 Additional safeguarding of boot process (CIA)
+#### SYS.1.3.A15 Additional protection of the boot process (CIA)
 #### SYS.1.3.A16 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
 #### SYS.1.3.A17 Additional Kernel Protection (CI)
 5 Appendix: Cross reference table for elementary hazards

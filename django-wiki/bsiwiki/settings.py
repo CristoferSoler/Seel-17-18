@@ -14,7 +14,6 @@ import os
 from django.core.urlresolvers import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
@@ -52,7 +51,8 @@ INSTALLED_APPS = [
     'bsi',
     'archive',
     'treeview',
-    'formtools'
+    'formtools',
+    'wizard',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +70,7 @@ ROOT_URLCONF = 'bsiwiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,6 +103,7 @@ LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
+LOGIN_URL = 'login'
 # from bsiwiki.WikiPattern import WikiPattern
 # URL_CONFIG_CLASS = WikiPattern
 

@@ -1,6 +1,7 @@
-import pdb
-
+import os
+from operator import itemgetter
 from django.contrib.auth import login, authenticate
+import pdb
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.http import Http404
@@ -21,6 +22,11 @@ from wiki import models
 from bsi.models import BSI_Article_type
 from bsi.ugaViews import overview_uga
 from .models.article_extensions import BSI
+from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
+import csv
+import json
+import itertools
+from collections import Counter
 
 
 class WikiArticleView(ArticleView):
@@ -71,7 +77,10 @@ class BSISearchView(SearchView):
         return super(BSISearchView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
+        #import pdb
+        #pdb.set_trace()
         search_result = super(BSISearchView, self).get_queryset()
+        # store the ids only
         filtered_result = []
         if (not self.filter) or (self.filter == '1'):
             return search_result
@@ -79,31 +88,33 @@ class BSISearchView(SearchView):
             url = URLPath.objects.get(article=article)
             if url.parent.parent == Archive.get_or_create_archive_root():
                 if self.filter == '5':
-                    filtered_result.append(article)
+                    filtered_result.append(article.pk)
                 continue
             if hasattr(url, 'bsi'):
                 if self.filter == '2':
                     if url.bsi.articleType == BSI_Article_type.COMPONENT:
-                        filtered_result.append(article)
+                        filtered_result.append(article.pk)
                 elif self.filter == '3':
                     if url.bsi.articleType == BSI_Article_type.THREAT:
-                        filtered_result.append(article)
+                        filtered_result.append(article.pk)
                 elif self.filter == '4':
                     if url.bsi.articleType == BSI_Article_type.IMPLEMENTATIONNOTES:
-                        filtered_result.append(article)
-        return filtered_result
+                        filtered_result.append(article.pk)
+        return search_result.filter(id__in=filtered_result)
 
-
-
+    def get_context_data(self, **kwargs):
+        k = super(BSISearchView, self).get_context_data(**kwargs)
+        k['filter'] = self.filter
+        return k
 
 def index(request):
-    all_articles = Article.objects.all()
-
+    components = readAndProcessCSV()
+    sortedTopics = getListOfFrequenceOfTopic(components['components'])
     template = loader.get_template('bsi/index.html')
-    context = {
-        'all_articles': all_articles,
-    }
-    return HttpResponse(template.render(context, request))
+    componentsString = json.dumps(components)
+    sortedTopicsString = json.dumps(sortedTopics)
+
+    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
 def bsicatalog(request):
@@ -133,8 +144,10 @@ def register(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'bsi/account/register.html', {'form': form})
+        return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
     return render(request, 'bsi/create_article.html')
+
+

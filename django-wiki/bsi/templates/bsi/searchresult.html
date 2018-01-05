@@ -18,7 +18,7 @@
                                 <input type="hidden" name="f" data-bind="bs-drp-sel-value" value="">
                                 <span class="sr-only">Toggle Dropdown</span>
                             </button>
-                            <ul class="dropdown-menu" role="menu">
+                            <ul class="dropdown-menu pull-right" role="menu">
                                 <li data-value="1" class=""><a href="#">All</a></li>
                                 <li data-value="2" class=""><a href="#">componenets</a></li>
                                 <li data-value="3" class=""><a href="#">Threats</a></li>
@@ -39,22 +39,19 @@
 
         <table class="table table-striped">
             <tr>
-                <th style="width: 55%">Title</th>
+                <th style="width:55%">Title</th>
                 <!-- trans -->
                 <th>Category</th>
                 <th>Last modified</th>
-
             </tr>
             {% for article in articles %} {% block wiki_search_loop %}
-
                 {% for urlpath in article.urlpath_set.all %}
                     <tr>
                         <td>
-                            <a href="{% url 'get_article' path=urlpath.path %}">{{ article.current_revision.title }}
-
-                                <br/>
-                                <small class="muted">/{{ urlpath.path }}</small>
-                            </a>
+                            <small class="muted"><a href="{% url 'get_article' path=urlpath.path %}"><strong>{{ article.current_revision.title }}</strong>
+                                   <br/>
+                             /{{ urlpath.path }}
+                               </a></small>
 
                             {% if article.current_revision.deleted %}
                                 <span class="fa fa-trash"></span>
@@ -69,15 +66,19 @@
                         </td>
 
                         <td>
-                            {{urlpath.bsi.articleType}}
+                           {% if urlpath.parent.slug == 'uga' %}
+                            <small>UGA article</small>
+                           {% elif urlpath.parent.parent.slug == 'archive' %}
+                            <small>Archive article</small>
+                            {% else %}
+                            <small class="muted"> {{urlpath.bsi.articleType}}</small>
+                            {% endif %}
                         </td>
-                        <td style="white-space: nowrap">
-                            {{ article.current_revision.created|naturaltime }}
+                        <td style="">
+                            <small class="muted">{{ article.current_revision.created|naturaltime }}</small>
                         </td>
                     </tr>
                 {% endfor %}
-
-
 
             {% endblock %} {% empty %}
                 <tr>
@@ -88,7 +89,9 @@
             {% endfor %}
         </table>
 
-    {% include "wiki/includes/pagination.html" %}
+
+{% include "bsi/includes/pagination.html" %}
+
 
     </div>
 
@@ -106,12 +109,7 @@
             });
         });
 
-         $(".pagination").on('click','li',function(){
-    // remove classname 'active' from all li who already has classname 'active'
-    $("ul.pagination li").removeClass("active");
-    // adding classname 'active' to current click li
-    $(this).addClass("active");
-});
+
     </script>
 
 

@@ -18,10 +18,14 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
-
 from bsi import views
 
+admin.site.index_template = 'admin/index.html'
+admin.autodiscover()
+
 urlpatterns = [
+    url(r'^_treeview/', include('treeview.urls')),
+    url(r'^_wizard/', include('wizard.urls')),
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^register/', views.register, name='register'),

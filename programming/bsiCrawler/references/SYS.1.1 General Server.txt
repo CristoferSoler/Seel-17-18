@@ -14,7 +14,7 @@
 #### SYS.1.1.A12 Planning the server deployment
 #### SYS.1.1.A13 Obtaining servers
 #### SYS.1.1.A14 Creation of a user and administration concept
-#### SYS.1.1.A15 Uninterruptible and stable power supply [Building Services]
+#### SYS.1.1.A15 Uninterruptible and stable power supply [building services]
 #### SYS.1.1.A16 Secure installation and basic configuration of servers
 #### SYS.1.1.A17 deployment clearance
 #### SYS.1.1.A18 Encryption of communication links

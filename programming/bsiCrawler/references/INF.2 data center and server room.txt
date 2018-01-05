@@ -27,7 +27,7 @@
 #### INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
 #### INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
 #### INF.2.A26 Redundant design of emergency power systems (A)
-#### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
+#### INF.2.A27 Conducting Alerting and Fire Prevention Practices (CA)
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 5 Appendix: Cross reference table for elementary hazards
 * G 0.5 natural disasters
