@@ -52,7 +52,7 @@ If a file server fails completely, individual components are defective or an emp
 
 The following are specific requirements for the Fileserver area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -126,7 +126,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.3.A12 Encryption of the data (CI)
 
-All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It SHOULD be made sure that the virus protection can check the encrypted files for malware. Cryptographic bowl SHOULD be safely generated and kept separate from the data (see also CON.1 crypto concept).
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malware. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 

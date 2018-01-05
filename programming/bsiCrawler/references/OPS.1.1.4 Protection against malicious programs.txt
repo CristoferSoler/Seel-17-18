@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.1.1.4.A1 Creation of a concept for protection against malicious programs
 #### OPS.1.1.4.A2 Use of system-specific protection mechanisms
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices

@@ -1,10 +1,10 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### NET.3.1.A1 Secure basic configuration of a router or switch
 #### NET.3.1.A2 Importing Updates and Patches
 #### NET.3.1.A3 Restrictive assignment of rights
-#### NET.3.1.A4 Protection of administration interfaces
+#### NET.3.1.A4 Protection of the administration interfaces
 #### NET.3.1.A5 Protection against fragmentation attacks
-#### NET.3.1.A6 Emergency Access to Routers and Switches
+#### NET.3.1.A6 Emergency access to routers and switches
 #### NET.3.1.A7 Logging on Routers and Switches
 #### NET.3.1.A8 Regular backup
 #### NET.3.1.A9 operating documentation

@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that preserve the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so that it is also very important for the security of the information network to protect the system administration against unauthorized access.
+The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that preserve the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so it is also very important for the security of the information network to protect the system administration against unauthorized access.
 
 ### 1.2 Objective
 
@@ -13,9 +13,9 @@ On the one hand, with the implementation of this module, the institution ensures
 
 ### 1.3 Delimitation
 
-The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturers or suppliers, which is considered in the module * OPS.2.4 Remote maintenance *.
+The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturer or supplier, which is considered in the module * OPS.2.4 Remote maintenance *.
 
-The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are singled out.
+The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are discarded.
 
 The other building blocks of the area * OPS.1.1 core IT operation * describe aspects of IT operation that are relevant in addition to the present building block. They should therefore additionally be considered and modeled in addition to this module.
 
@@ -63,7 +63,7 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.2.A1 Personnel Selection for Administrative Activities [Head of Personnel]
 
-If employees are to perform administrative tasks within the IT environment, they MUST meet the following criteria, taking into account the security requirements of the systems and applications they support:
+If employees are to perform administrative tasks within the IT environment, they MUST meet the following criteria, taking into account the security requirements of the systems and applications they are managing:
 
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
@@ -103,7 +103,7 @@ Administration IDs MUST be appropriately protected by appropriate authentication
 
 For administrative access, secure protocols MUST be used if this is not done through a local console. These MUST ensure that state-of-the-art communication is encrypted.
 
-Each logon process via an administration ID (login) MUST be logged so that it is comprehensible when, in what way and under which user ID the system was accessed.
+Each login process via an administration ID (LOG) MUST be logged so that it is understandable when, in what way and under which user ID the system was accessed.
 
 ### 3.2 Standard requirements
 
@@ -163,7 +163,7 @@ In the case of increased protection requirements, access to administrative inter
 
 #### OPS.1.1.2.A17 IT Administration in the Four-Eyes Principle (CI)
 
-For particularly safety-critical systems, access to identifiers with administrative authorizations SHOULD be implemented in such a way that two employees are required for this. Each IT administrator SHOULD perform the pending administrative activities while being controlled by another IT administrator.
+For particularly safety-critical systems, access to identifiers with administrative authorizations SHOULD be implemented in such a way that two employees are required for this. One IT administrator SHOULD perform each of the upcoming administrative tasks while being controlled by another IT administrator.
 
 #### OPS.1.1.2.A18 Consistent logging of administrative activities (CI)
 

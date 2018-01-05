@@ -41,7 +41,7 @@ Vulnerability lists and so-called exploit kits greatly facilitate the developmen
 
 The basic security of communication on the Internet depends very much on the authentication method used and the encryption of the data in transit. The necessary procedures are often poorly implemented.
 
-Weak implementations of the necessary procedures are widespread and prevent effective authentication and encryption. Many web services still use outdated encryption techniques. Thus, an attacker can undermine the authentication of servers or the communication or the data is not encrypted effectively. This information can be read or changed on the transmission path. In the past, CAs were also compromised, allowing attackers to obtain certificates for third-party sites.
+Weak implementations of the necessary procedures are widespread and prevent effective authentication and encryption. Many web services still use outdated encryption techniques. Thus, an attacker can undermine the authentication of servers or the communication or data is not encrypted effectively. This information can be read or changed on the transmission path. In the past, CAs were also compromised, allowing attackers to obtain certificates for third-party sites.
 
 ### 2 4 Loss of integrity in web browsers
 
@@ -104,7 +104,7 @@ The autocomplete feature SHOULD be disabled. If the function is used, the user s
 
 If available, a synchronization of the browser with cloud services should be disabled. Telemetry functions as well as the automatic transmission of crash reports to the manufacturer SHOULD be deactivated as far as possible.
 
-If peripherals such as microphone or webcam are connected, they SHOULD be disabled in the browser. The browser SHOULD provide a way to configure or disable WebRTC, HSTS, and JavaScript.
+If peripherals such as microphone or webcam are connected, they SHOULD be disabled in the browser. The browser SHOULD provide a way to configure / disable WebRTC, HSTS, and JavaScript.
 
 #### APP.1.2.A8 Using plug-ins and extensions [User]
 

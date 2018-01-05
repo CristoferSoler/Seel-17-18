@@ -17,7 +17,7 @@ The goal of the building block is for users or even IT components to be able to 
 
 This module describes basic requirements for the development of identity and authorization management.
 
-Requirements concerning components of identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
+Requirements concerning components of an identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
 
 2 risk situation
 -----------------
@@ -42,7 +42,7 @@ If the allocation of access, access and access rights is poorly regulated, this 
 
 The following are specific requirements for identity and entitlement management. Basically, the ISB is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -99,7 +99,7 @@ An authentication concept SHOULD be created. In it, it should be defined for eac
 
 #### ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
 
-SHOULD use identification and authentication mechanisms appropriate to the protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
+SHOULD use identification and authentication mechanisms appropriate to protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
 
 #### ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
 

@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### DER.1.A1 Creation of a security policy for the detection of security-relevant events [Information Security Officer (ISB)]
 #### DER.1.A2 Compliance with legal conditions when evaluating log data [Information Security Officer (ISB)]
 #### DER.1.A3 Definition of reporting routes for safety-related events

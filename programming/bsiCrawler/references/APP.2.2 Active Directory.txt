@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.2.2.A1 Active Directory Planning [Responsible Person]
 #### APP.2.2.A2 Active Directory Administration Planning [Specialists]
 #### APP.2.2.A3 Planning Group Policy on Windows

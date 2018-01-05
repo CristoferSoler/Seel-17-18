@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### DER.2.3.A1 Establishment of a governing body [Information Security Officer (ISB)]
 #### DER.2.3.A2 Decision for a clean-up strategy [Head IT, Information Security Officer (ISB)]
 #### DER.2.3.A3 Isolation of affected network sections

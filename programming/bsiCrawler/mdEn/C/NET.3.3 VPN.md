@@ -22,7 +22,7 @@ Recommendations on how to configure the operating systems of the VPN endpoints a
 
 The following specific threats and vulnerabilities are of particular importance in the area of ​​VPN:
 
-### 2 1 Lacking or inadequate planning and regulation of VPN deployment
+### 2 1 Lack of or inadequate planning and regulation of VPN deployment
 
 If the VPN is not carefully planned, set up, or configured, security vulnerabilities can occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
 
@@ -95,9 +95,9 @@ A requirements analysis SHOULD be carried out in order to be able to determine t
 
 In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
 
-#### NET.3.3.A8 Create a security policy for VPN usage
+#### NET.3.3.A8 Create a security policy for VPN use
 
-A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
+A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, SHOULD he be given a leaflet containing the most important VPN security mechanisms. All VPN users SHOULD be required to comply with security policies.
 
 #### NET.3.3.A9 Appropriate selection of VPN products
 
@@ -129,7 +129,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the "VPN" area can be found in the following publications, among others:
+Further information on threats and security measures in the "VPN" area can be found in the following publications, among others:
 
 * #### [27033-5] ISO / IEC 27033-5: 2013
 

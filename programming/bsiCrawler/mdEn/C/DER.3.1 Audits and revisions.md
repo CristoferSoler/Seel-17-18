@@ -33,7 +33,7 @@ If security measures are implemented without taking into account certain practic
 Likewise, individual measures can be taken that do not make economic sense. Thus, for the protection of information with a normal confidentiality, a cleanly implemented rights and role concept is more useful and economical than a certificate authority and the subsequent certificate-based encryption of the file server.
 
 ### 2 3 Insufficient implementation of the ISMS
-In many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be impaired.
+In many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be affected.
 
 ### 2 4 Inadequate qualification of the examiner
 
@@ -41,15 +41,15 @@ If an auditor or an auditor is not sufficiently qualified or prepares insufficie
 
 ### 2 5 Lack of long-term planning
 
-If audits and revisions are not planned on a long-term and centralized basis, it can happen that individual areas are frequently audited and others are not audited at all. As a result, it is very difficult or even impossible to assess the security status of the information network.
+If audits and revisions are not planned on a long-term and centralized basis, it can happen that some areas are frequently audited and others are not audited at all. As a result, it is very difficult or even impossible to assess the security status of the information network.
 
 ### 2 6 Lack of planning and coordination when conducting an audit
 
 If an audit is poorly scheduled and has not been agreed with all of the institution's employees concerned, it may not have the required or the wrong contacts available during the on-site audit. As a result, individual areas may not be audited at all. Even though the auditor has set appointments too narrowly for the individual areas, the planned investigation could only be superficial if there is not enough time available.
 
-### 2 7 Lack of coordination with the staff representatives
+### 2 7 Lack of coordination with the Staff Committee
 
-Audits and revisions can also be used to examine aspects that can be used to draw conclusions about the performance of employees. Thus, these exams could be considered performance appraisals. Failure to involve staff representatives may result in violations of the applicable codetermination law.
+Audits and revisions can also be used to examine aspects from which conclusions can be drawn on the performance of employees. Thus, these exams could be considered performance appraisals. Failure to involve staff representatives may result in violations of the applicable codetermination law.
 
 ### 2 8 Intentional concealment of deviations
 
@@ -60,7 +60,7 @@ Employees may fear that the audit uncovers errors and seeks to conceal security 
 
 The following are specific requirements for audit and audit. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -111,12 +111,12 @@ One or more revision lists SHOULD be maintained to document the current status o
 
 It should be a suitable team for each audit or for each revision. It SHOULD appoint a senior auditor (audit team leader) or lead auditor who has overall responsibility for carrying out the audits or revisions.
 
-The size of the audit / audit team SHOULD be the same as the audit area. In particular, the competence requirements of the test topics as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
+The size of the audit / audit team SHOULD be the same as the audit area. In particular, the competence requirements of the test subjects as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
 
 The neutrality of the audit team SHOULD be ensured. In addition, the auditors should also be independent. If external service providers are used as auditors or auditors, they SHOULD check their independence and commit them to secrecy.
 
 #### DER.3.1.A10 Creation of an audit or audit plan [audit team leader]
-Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted as needed. Minor revisions SHOULD be planned using the revision list.
+Before an audit or major audit, the audit team leader or lead auditor SHOULD create an audit or revision plan. For audits, the audit plan SHOULD be part of the final audit report. The audit plan SHOULD be updated throughout the audit and adjusted if necessary. Minor revisions SHOULD be planned using the revision list.
 
 Sufficient resources should be allocated to the audit / audit team.
 
@@ -132,7 +132,7 @@ There should be an initial interview between the audit team or audit team and th
 
 #### DER.3.1.A13 Inspection and verification of documents [audit team]
 
-The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
+The document review in the course of audits SHOULD be based on the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
 
 #### DER.3.1.A14 Selection of samples [audit team]
 
@@ -148,7 +148,7 @@ Together with the contact persons, the audit team SHOULD develop the schedule fo
 
 #### DER.3.1.A17 Conducting the on-site inspection [audit team]
 
-At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended as needed until the situation is clarified. After the audit, the audit team SHOULD conduct a final discussion, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
+At the beginning of the on-site inspection, the audit team SHOULD have an in-depth interview with the people in charge of the institution concerned. Thereafter, all requirements specified in the test plan SHOULD be checked using the intended test methods. If a selected sample deviates from the documented status, the sample SHOULD be extended according to requirements until the situation has been clarified. After the audit, the audit team SHOULD conduct a final meeting, briefly presenting the results without assessment and how to proceed. The conversation SHOULD be logged.
 
 #### DER.3.1.A18 conducting interviews [audit team]
 
@@ -185,7 +185,7 @@ It should be agreed with the auditors or auditors how to handle the results. It 
 
 #### DER.3.1.A25 follow-up and initiation of follow-up
 
-The deviations or defects identified in the audit report or in a revision SHOULD be remedied in a reasonable time. In order for the implementation status to be easily understood, the corrective measures to be implemented, including the time and responsibilities, SHOULD be documented. Also completed corrective measures SHOULD be documented. For this, an established method should already exist in the ISMS, which should be used.
+The deviations or defects identified in the audit report or in a revision SHOULD be remedied in a reasonable time. In order for the implementation status to be easily understood, the corrective measures to be implemented, including the time and responsibilities, SHOULD be documented. Also completed corrective measures SHOULD be documented. For this, an established method should already exist in the ISMS, which is to be used.
 
 If there were serious deviations or defects, the audit / review team SHOULD verify that corrective action has been taken.
 
@@ -238,7 +238,7 @@ Further information on hazards and safety measures in the area of ​​"audits 
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the module "Audits and Revisions".
+The following elementary hazards are important for the module "Audits and Revisions".
 
 * G 0.18 Missing planning or missing adjustment
 * G 0.19 Disclosure of information worthy of protection

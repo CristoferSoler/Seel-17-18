@@ -36,14 +36,14 @@ The establishment of regulations alone does not ensure their compliance and trou
 
 ### 2 5 Misconduct
 
-Misbehavior of any type of person may interfere with the confidentiality, integrity or availability of information, business processes or IT systems. Depending on the need for protection of the information or the systems and depending on the authorizations of the polluters, the damage may be minor or critical.
+Misbehavior of any type of person may interfere with the confidentiality, integrity or availability of information, business processes or IT systems. Depending on the need for protection of the information or the systems and depending on the authorizations of the polluters, the damages may be minor or critical.
 
 ### 2 6 Social Engineering
 
 In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.
 ### 2 7 Carelessness in handling information
 
-Often, it can be observed that while a large number of organizational and technical security procedures exist in institutions, these are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
+Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
 
 ### 2 8 Unauthorized use of own IT systems
 
@@ -51,7 +51,7 @@ The unauthorized use of own IT systems by employees can generally be difficult t
 
 ### 2 9 Abuse of social networks
 
-Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as here, on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed under "acquaintance" can be exploited.
+Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed in "acquaintance" can be exploited.
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
@@ -108,7 +108,7 @@ New employees SHOULD be checked for trustworthiness before they are hired. There
 
 #### ORP.2.A8 Tasks and Responsibilities of Employees [Information Security Officer (ISB)]
 
-The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that each employee has a responsibility for information security outside of working hours and outside the premises.
+The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that every employee has a responsibility for information security outside of working hours and outside the premises.
 
 #### ORP.2.A9 Training of employees
 
@@ -129,7 +129,7 @@ The security measures selected for the institution SHOULD always be based on the
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 
-To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact should be checked.
+To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact person SHOULD be checked.
 
 #### ORP.2.A13 Security Check (CIA)
 

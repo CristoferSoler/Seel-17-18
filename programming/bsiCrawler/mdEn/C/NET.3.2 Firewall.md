@@ -5,7 +5,7 @@
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
 A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
@@ -19,7 +19,7 @@ The building block builds on the building block NET.1.1 * Network Architecture a
 
 In order to secure networks, more network components are usually required, eg. For example, routers and switches. Requirements for this are not listed in this module, but can be found in NET.3.1 * Routers and Switches *. If a firewall takes on the role of a router or switch, it also has to meet the requirements of the NET.3.1 * Router and Switches * block.
 
-In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management Firewalls, which also contain functional enhancements, such as: Eg VPN, intrusion detection and intrusion prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
+In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management firewalls, which also contain functional enhancements, such as: VPN, Intrusion Detection and Intrusion Prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
 
 Likewise, no application recognition or filtering is discussed. It is a common feature of Next Generation Firewalls and IDS / IPS. Since the implementations differ between the products, it is recommended that they be viewed individually depending on the application scenario. In this module is also not discussed on the individual protection options for externally offered server services, z. For example, through a reverse proxy or for web services using a Web Application Firewall (WAF). In addition, aspects of infrastructural safety (eg suitable installation or power supply) are not listed in this module, but can be found in the respective building blocks of the INF layer.
 
@@ -52,7 +52,7 @@ An improperly configured or incorrectly operated firewall can seriously affect t
 
 The following are specific firewall requirements. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -89,7 +89,7 @@ Information about the internal configuration and operating state MUST be hidden 
 
 #### NET.3.2.A5 Restrictive rights assignment
 
-It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
+It must be regulated, who may access the firewall, z. To configure or monitor them. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). Unauthorized user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
 #### NET.3.2.A6 Protection of the administration interfaces
 
@@ -102,14 +102,14 @@ It must always be possible to access the firewall directly so that you can conti
 
 #### NET.3.2.A8 Prevention of dynamic routing
 
-In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the module NET.3.1 * Router and Switches *.
+In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the building block NET.3.1 * Router and Switches *.
 
 #### NET.3.2.A9 logging
 
 The firewall MUST be configured to log at least the following events:
 
 * denied network connections (source and destination IP addresses, source and destination ports or ICMP / ICMPv6 type, date, time),
-* Failed access to system resources due to bad authentication, lack of authority or lack of resources,
+* Failed access to system resources due to incorrect authentication, lack of authority or lack of resources,
 * Error messages of the firewall services and
 * general system error messages.
 If security proxies are used, security violations and access control list violations (ACLs or short access lists) MUST be appropriately logged: at least the type of protocol violation or violation, source and destination IP address, source and destination IP addresses Destination port, service, date and time, and connection duration (if required).
@@ -186,7 +186,7 @@ There SHOULD be a secure time synchronization with a Network Time Protocol (NTP)
 
 #### NET.3.2.A23 System Monitoring and Evaluation
 
-Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined, which regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
+Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined that regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
 
 #### NET.3.2.A24 Revision and Penetration Tests
 
@@ -198,7 +198,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.3.2.A25 Extended integrity protection for configuration files (CI)
 
-If a system crashes, SHOULD make sure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
+If a system crashes, SHOULD ensure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
 
 #### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
 

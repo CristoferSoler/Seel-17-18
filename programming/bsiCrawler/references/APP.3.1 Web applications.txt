@@ -8,7 +8,7 @@
 #### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
 ### 3.2 Standard requirements
 #### APP.3.1.A8 System architecture of a web application
-#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurator, Developer]
+#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurer, Developer]
 #### APP.3.1.A10 Acceptance and release of web applications [Head IT]
 #### APP.3.1.A11 Secure connection of background systems
 #### APP.3.1.A12 Secure Configuration of Web Applications [Developer]

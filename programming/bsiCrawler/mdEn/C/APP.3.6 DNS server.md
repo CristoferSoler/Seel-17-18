@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server literally stands for the software used, but is usually also used as a synonym for the computer on which this software is operated.
+This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server stands for the software used in the actual sense, but is usually also used as a synonym for the computer on which this software is operated.
 
 DNS servers can be distinguished according to their tasks, there are basically two different types: Advertising DNS server and Resolving DNS server. Advertising DNS servers are usually responsible for processing requests from the Internet. Resolving DNS servers, on the other hand, process requests from the internal network.
 
@@ -45,10 +45,10 @@ Similarly, in the case of incorrectly configured DNS servers, there is a risk th
 
 ### 2 6 DNS manipulation
 
-With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, this will deliver the counterfeit data in response. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the Resolving DNS server is asked for a manipulated address, it will not request another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
+With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, it will provide the counterfeit data as an answer. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
 
 ### 2 7 DNS hijacking
-DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. If, after a successful DNS hijacking attack, a request is sent to a DNS server by the resolver of a client IT system, the attacker can, for example, change the assignment of name and IP address. DNS hijacking can also be combined with other attacks, especially phishing in this case.
+DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
 
 ### 2 8 DNS-DoS
 
@@ -63,7 +63,7 @@ A DNS Reflection attack is a DoS attack that does not target the DNS server to w
 
 The following are specific requirements for DNS servers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -82,7 +82,7 @@ Advertising DNS servers (external requests) and resolving DNS servers (internal 
 #### APP.3.6.A4 Secure basic configuration of a DNS server
 A Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
 
-It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured to only be possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
+It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured so that they are only possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
 
 #### APP.3.6.A5 Timely import of security-relevant patches and updates
 
@@ -133,7 +133,7 @@ The log files of the DNS server and the underlying operating system SHOULD be ch
 
 #### APP.3.6.A16 Integration of a DNS server into a "P-A-P" structure
 
-The DNS servers SHOULD be integrated into a "Packet Filter - Application Level Gateway Packet Filter" (PAP) structure (see also NET.3.2 * Firewall *): The Advertising DNS server SHOULD be in a demilitarized zone (DMZ) of the outer packet filter. The resolving DNS server SHOULD be placed in a DMZ of the inner packet filter.
+The DNS servers SHOULD be integrated into a "Packet Filter - Application Level Gateway Packet Filter" (PAP) structure (see also NET.3.2 * Firewall *): The Advertising DNS server SHOULD be located in a demilitarized zone (DMZ) of the outer packet filter. The resolving DNS server SHOULD be placed in a DMZ of the inner packet filter.
 
 #### APP.3.6.A17 Use of DNSSEC
 
@@ -141,7 +141,7 @@ The DNS protocol extension DNSSEC SHOULD be activated on Resolving DNS servers a
 
 #### APP.3.6.A18 Extended protection of zone transfers
 
-In order to secure zone transfers more strongly, additional Transaction Signatures (TSIG) SHOULD be used.
+In order to secure more zone transfers, Transaction Signatures (TSIG) SHOULD also be used.
 
 #### APP.3.6.A19 Disposal of DNS servers
 

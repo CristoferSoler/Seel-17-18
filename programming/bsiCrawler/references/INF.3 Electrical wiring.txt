@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.3.A1 Selection of suitable cable types
 #### INF.3.A2 Planning the cable management [Head IT]
 #### INF.3.A3 Professional installation

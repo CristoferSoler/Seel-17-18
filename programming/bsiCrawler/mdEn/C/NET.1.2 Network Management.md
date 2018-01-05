@@ -7,7 +7,7 @@ Reliable network management is a prerequisite for the secure and efficient opera
 
 Network management includes many important functions, such as: For example, network monitoring, component configuration, event handling, and logging. Another important function is reporting, which can be created as a common platform for the network and IT systems. Alternatively, it can be implemented as a single platform or as part of the individual management components.
 
-The network management infrastructure consists of central management systems (eg SNMP server), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
+The network management infrastructure consists of central management systems (eg SNMP servers), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
 
 ### 1.2 Objective
 
@@ -17,7 +17,7 @@ The aim of this module is to establish information security as an integral part 
 
 This module considers the necessary components and conceptual tasks for network management. The counterpart in the system management for networked clients and servers is described in the block SYS.5 * System Management *.
 
-The present module specifies the basic requirements of the module NET.1.1 * Network Architecture and Design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
+The present module specifies the basic requirements of the module NET.1.1 * Network architecture and design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
 
 The management of the passive network infrastructure is dealt with in the building blocks of the infrastructure (building block layer INF) or industrial IT (building block layer IND). Therefore, these topics are not included in this module.
 
@@ -52,7 +52,7 @@ If the system time of the network management components is insufficiently synchr
 
 The following are specific requirements for network management. Basically, the IT operation is responsible for meeting the requirements. In addition, the Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and regularly reviewed in accordance with established security policies. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These roles are listed in square brackets in the heading of each requirement.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -102,7 +102,7 @@ If network management communication is via the productive infrastructure, then s
 
 #### NET.1.2.A10 Limitation of SNMP communication
 
-Network management MUST NOT use unsafe versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
+Network management MUST NOT use insecure versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
 
 ### 3.2 Standard requirements
 
@@ -110,7 +110,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
 
-For network management, a security policy SHOULD be created and maintained sustainably. The guideline SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
+For network management, a security policy SHOULD be created and maintained sustainably. The policy SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
 
 The security policy SHOULD define which areas of network management are implemented through centralized management tools and services. It SHOULD also define to what extent tasks should be automated in the network management of the institution.
 
@@ -125,7 +125,7 @@ The documentation SHOULD be complete and always up-to-date.
 
 #### NET.1.2.A13 Creation of a network management concept [Head IT]
 
-Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be taken into account as needed:
+Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be considered as needed:
 
 * Methods, techniques and tools for network management,
 * Security of access and communication,
@@ -214,7 +214,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 
-Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be designed redundantly. Also, the individual components SHOULD be provided highly available.
+Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be configured redundantly. Also, the individual components SHOULD be provided highly available.
 
 #### NET.1.2.A31 Basic Use of Secure Protocols (CIA)
 
@@ -224,7 +224,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 
@@ -245,7 +245,7 @@ The time synchronization SHOULD be ensured across all locations of the instituti
 
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
 
-In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to set up adequate backup solutions to perform the administrative tasks in an emergency.
+In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to establish adequate backup solutions that can be used to perform the administrative tasks in an emergency.
 
 4 Further Information
 ------------------------------

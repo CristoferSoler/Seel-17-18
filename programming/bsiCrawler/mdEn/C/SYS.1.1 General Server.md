@@ -35,7 +35,7 @@ If business-relevant information of any kind is destroyed or falsified, business
 
 ### 2 3 Prevention of services
 
-One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. This attack is often associated with distributed resources by an attacker consuming these resources to the detriment of other users at work and unable to access the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
+One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. Often, this attack is associated with distributed resources, as an attacker uses these resources to the detriment of other users and prevents them from accessing the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
 
 ### 2 4 Provision of unused operating system components and applications
 
@@ -45,7 +45,7 @@ Such unused applications and services can contain vulnerabilities. If the applic
 
 ### 2 5 Overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative consequences, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable or data loss occurring. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
@@ -58,7 +58,7 @@ Numerous requests at the same time overstrain a system and overload the processo
 ---------------
 The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -91,9 +91,9 @@ The administration MUST be done via secure protocols. It SHOULD be considered, a
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
-All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably restricted for individual users, but also for applications.
+All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably limited for individual users, but also for applications.
 
-The decisions made SHOULD be documented in such a way that it is possible to trace the configuration and software equipment selected for the servers.
+The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the servers.
 
 #### SYS.1.1.A7 Updates and patches for firmware, operating system and applications
 
@@ -103,11 +103,11 @@ Unless patches are available, other appropriate measures to protect the system M
 
 #### SYS.1.1.A8 Regular backup
 
-Data backups MUST be made prior to installations and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
+Data backups MUST be made prior to installation and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
 
 #### SYS.1.1.A9 Use of virus protection programs
 
-Depending on the operating system installed, the service provided and other existing server protection mechanisms, it MUST be checked whether virus protection programs should and can be used. Concrete statements as to whether virus protection is necessary can generally be found in the operating system-specific blocks of IT-Grundschutz. The corresponding signatures of a virus protection program MUST be updated regularly. In addition to real-time and on-demand scans, a solution MUST provide the ability to scan even compressed and encrypted data for malicious programs.
+Depending on the operating system installed, the service provided and other existing server protection mechanisms MUST be checked as to whether virus protection programs should and can be used. Concrete statements as to whether virus protection is necessary can generally be found in the operating system-specific blocks of IT-Grundschutz. The corresponding signatures of a virus protection program MUST be updated regularly. In addition to real-time and on-demand scans, a solution MUST provide the ability to scan even compressed and encrypted data for malicious programs.
 
 #### SYS.1.1.A10 logging
 
@@ -122,7 +122,7 @@ It MUST be decided which information should be logged by the server at least, ho
 * Warning messages from security systems (eg virus protection).
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general servers. They SHOULD be implemented in principle.
 
 #### SYS.1.1.A11 Setting a security policy for servers
 Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
@@ -150,7 +150,7 @@ Before one or more servers are procured, a list of requirements SHOULD be create
 
 Process, conditions and requirements for administrative tasks, as well as the task separation between the different roles of the users of the IT system SHOULD be codified in a user and administration concept.
 
-#### SYS.1.1.A15 Uninterruptible and stable power supply [building services]
+#### SYS.1.1.A15 Uninterruptible and stable power supply [Building Services]
 
 Each server SHOULD be connected to an uninterruptible power supply (UPS). The UPS SHOULD be sufficiently dimensioned in terms of power and support time. If changes have been made to the consumers, SHOULD check again if the support time is sufficient. Both the UPS devices and the servers SHOULD have an overvoltage protection.
 
@@ -158,7 +158,7 @@ The actual capacity of the battery and thus the support time of the UPS SHOULD b
 
 #### SYS.1.1.A16 Secure installation and basic configuration of servers
 
-Servers SHOULD be set up so that only the required services are selected during the installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
+Servers SHOULD be set up so that only the required services are selected during installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
 
 All installation steps SHOULD be documented in such a way that the installation can be reconstructed and repeated by a knowledgeable third party based on the documentation.
 
@@ -191,11 +191,11 @@ The server SHOULD be considered in the emergency management process. To this end
 
 #### SYS.1.1.A23 system monitoring
 
-The server system SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
+The server system SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.1.1.A24 security checks
 
-Server systems SHOULD undergo regular security testing to verify compliance with security requirements and to identify any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
+Server systems SHOULD undergo regular security testing that verifies compliance with security requirements and identifies any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
@@ -222,7 +222,7 @@ Server systems with high availability requirements SHOULD be suitably protected 
 
 #### SYS.1.1.A29 Setting up a test environment (CIA)
 
-In order to be able to test changes to the system or the configuration without jeopardizing the productive operation, appropriate test systems SHOULD be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
+In order to be able to test changes to the system or the configuration without jeopardizing productive operation, appropriate test systems should be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
 
 #### SYS.1.1.A30 One service per server (CIA)
 
@@ -237,7 +237,7 @@ It should be ensured with increased protection requirements via application whit
 
 ### 4.1 Literature
 
-Further information about threats and security measures in the area "general server" can be found in the following publications:
+Additional information on threats and security measures in the "General Server" area can be found in the following publications, among others:
 
 * #### [ISi server] Securing a server (ISi server), BSI, 09.2013
 

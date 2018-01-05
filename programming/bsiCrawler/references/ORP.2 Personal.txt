@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ORP.2.A1 Regulated training of new employees [supervisors]
 #### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]
 #### ORP.2.A3 Representation Rules [Supervisors]

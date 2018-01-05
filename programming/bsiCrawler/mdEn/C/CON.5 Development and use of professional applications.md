@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Specialized applications are complex applications that are designed for individual and specific technical tasks and are generally not purchased and used as standard solutions. Instead, base solutions are customized for individual use by institutions, or applications are developed entirely by third parties or the institution itself. These specialized applications include, for example, human resources management software, social data management techniques, or reporting data. Careful planning of safety measures prior to selection and commissioning of an application is essential for the achieved safety level, since errors in planning such as eg B. missing security features during operation can not be compensated or only with high additional expenses.
+Specialized applications are complex applications that are designed for individual and specific technical tasks and are generally not purchased and used as standard solutions. Instead, base solutions are customized for individual use by institutions, or applications are developed entirely by third parties or the institution itself. These specialized applications include, for example, human resources management software, social data management techniques, or reporting data. Careful planning of safety measures before selection and commissioning of an application is essential for the achieved safety level, since errors in the planning such as eg. B. missing security features during operation can not be compensated or only with high additional expenses.
 
 ### 1.2 Objective
 
@@ -20,7 +20,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Loss of confidentiality or integrity in specialized applications
 
-Specialist applications typically process sensitive information, such as all types of personal information or trade secrets. If these data are disclosed or changed unintentionally, this can result in contractual or legal violations (including data protection law violations). In particular, in the event of loss of integrity, legal violations may arise due to process or procedural errors. If the information is no longer available, business or specialist tasks can no longer be fulfilled. The loss of confidentiality, integrity and availability can have significant consequences, such as: As criminal and financial consequences, or in individual cases even personal injury.
+Specialist applications typically process sensitive information, such as all types of personal information or trade secrets. If these data are disclosed or changed unintentionally, this can result in contractual or legal violations (including data protection law violations). In particular, in the event of loss of integrity, legal violations may arise due to process or procedural errors. If the information is no longer available, business or specialist tasks can no longer be fulfilled. The loss of confidentiality, integrity and availability can have significant consequences such as: As criminal and financial consequences, or in individual cases even personal injury.
 
 ### 2 2 Inappropriate access and access rights management
 
@@ -31,7 +31,7 @@ Due to inadequate contractual arrangements with an external service provider, es
 
 ### 2 4 Software designation error
 
-When planning applications, programs and protocols, security-relevant design errors can arise. These often result from the reuse of dedicated application modules and protocols in other deployment scenarios. If other security requirements are relevant here, for example, if application modules and protocols intended for isolated operating environments are connected to the Internet, this can lead to massive security gaps.
+When planning applications, programs and protocols, security-relevant design errors can arise. These often result from the reuse of dedicated application modules and protocols in other deployment scenarios. If other security requirements are relevant here, for example, if application modules and protocols intended for isolated business environments are connected to the Internet, this can lead to massive security vulnerabilities.
 
 ### 2 5 Software vulnerabilities
 
@@ -43,19 +43,19 @@ Many applications often include built-in undocumented features for development o
 
 ### 2 7 Missing or inadequate security measures in applications
 
-Security mechanisms or security functions are designed to ensure that the processing of information ensures confidentiality, integrity and availability to the required extent. Frequently, however, the development of an application focuses on functional functionality or the time and cost framework, so that important security mechanisms are too weak, so that they can easily be bypassed, or even completely lacking.
+Security mechanisms or security features are designed to ensure that the processing of information ensures confidentiality, integrity and availability to the extent necessary. Frequently, however, the development of an application focuses on functional functionality or the time and cost framework, so that important security mechanisms are too weak, so that they can easily be bypassed, or even completely lacking.
 
 3 requirements
 ---------------
 
 The following are specific requirements for planning, selection, procurement, commissioning, operation and separation of specialized applications. Basically, the department that uses the application is responsible for fulfilling these requirements. In practice, these requirements can only be fulfilled if the IT operations managers (eg IT managers) and the information security officer (ISB) are involved or involved.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
-#### CON.5.A1 Specification of required security functions of the specialist application [IT operation]
-For the specialist application, the necessary security functions MUST be taken into account in the professional selection and integration into the IT infrastructures and operating processes. The selection and implementation of appropriate security features in the specialized application MUST be based on the data processed in the application and, where appropriate, a complementary risk analysis. The safety functions MUST be suitably documented.
+#### CON.5.A1 Definition of required security functions of the specialist application [IT operation]
+For the specialist application, the necessary security functions MUST be taken into account in the professional selection and integration into the IT infrastructures and operating processes. The selection and implementation of appropriate security features in the specialist application MUST be based on the data processed in the application and, where appropriate, a complementary risk analysis. The safety functions MUST be suitably documented.
 
 #### CON.5.A2 Testing and approval of specialized applications [Head of IT, Data Protection Officer]
 
@@ -74,7 +74,7 @@ For changes in the application and functional updates, the installation instruct
 
 #### CON.5.A4 Introducing users to the application
 
-Users and administrators MUST be guided to the proper use and administration of the application, including its security features. This should include policies and procedures for using and administering the application, training and briefing, manuals and online help, and key user support.
+Users and administrators MUST be guided to the proper use and administration of the application, including its security features. This should include policies and procedures for using and administering the application, training and briefing, manuals and online help, and user support from key users.
 
 #### CON.5.A5 Secure operation of a specialized application [IT operation]
 
@@ -99,11 +99,11 @@ The e relevant requirements for the application SHOULD be documented. This docum
 It was intended to ensure, with a client concept, that applications and data of different customers are operated in a cleanly separated manner. This SHOULD be created by the operator of the multi-tenant application and made available to the using institutions. The required mechanisms for client separation at the service provider SHOULD be implemented sufficiently.
 
 #### CON.5.A8 Appropriate application development control [IT chief]
-In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, an appropriate development model, risk management and quality objectives SHOULD be considered.
+In developing an individual application, a suitable control and project management model SHOULD be used. In particular, the required qualifications of the personnel, the coverage of all relevant phases during the life cycle of the software, a suitable development model, risk management and quality objectives SHOULD be considered.
 
 #### CON.5.A9 Decommissioning Applications [IT Manager]
 
-The decommissioning of applications SHOULD be planned. It SHOULD be clear for all data which data is being migrated, archived or deleted. Data that is no longer needed SHOULD be deleted safely. The decommissioning of applications and the associated IT systems and data carriers SHOULD be comprehensibly documented.
+The decommissioning of applications SHOULD be planned. It SHOULD be clear for all data which data is being migrated, archived or deleted. Data that is no longer needed SHOULD be deleted securely. The decommissioning of applications and the associated IT systems and data carriers SHOULD be comprehensibly documented.
 
 #### CON.5.A10 Emergency Prevention for Applications [IT Leader]
 

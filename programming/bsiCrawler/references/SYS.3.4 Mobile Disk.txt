@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.4.A1 Raising employee awareness about the safe handling of mobile data media
 #### SYS.3.4.A2 Mobile Media Loss Report [User]
 #### SYS.3.4.A3 Backup copy of submitted data [user]

@@ -30,7 +30,7 @@ Due to negligence and lack of controls, it happens again and again that people d
 
 ### 2 3 Listening to the WLAN communication
 
-Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
+Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data is also broadcast in areas that can not be controlled and secured by the users or an institution.
 
 ### 2 4 Evaluation of connection data in wireless communication
 
@@ -44,7 +44,7 @@ An attacker can pretend to be part of the WLAN infrastructure by installing thei
 
 The following are specific requirements for Wi-Fi usage. Basically, the user is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -67,7 +67,7 @@ The training contents MUST always be adapted according to the respective applica
 #### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]
 MUST use external hotspots MUST be implemented:
 
-* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under which conditions he will be allowed to use the hotspot.
+* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under what conditions he is allowed to use the hotspot.
 * WLANs that are only used sporadically SHOULD be deleted by the users from the history.
 * If possible, separate user accounts with a secure base configuration and restrictive permissions SHOULD be used.
 * It should be ensured that no user with administrator rights can log on to external WLANs from his client.
@@ -81,7 +81,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 For WLAN security incidents, users SHOULD implement the following:
 
-* You SHOULD secure your work, stop your wireless access, and disable your client's wireless LAN interface.
+* You SHOULD secure your work, stop your wireless access, and disable your client's Wi-Fi interface.
 * Error messages and abnormalities SHOULD be accurately documented by the user. Likewise, users SHOULD document what they did before or while the security incident occurred.
 * Users SHOULD notify IT operations through a suitable escalation level (eg User Help Desk).
 ### 3.3 Requirements for increased protection requirements

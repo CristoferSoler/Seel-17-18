@@ -11,10 +11,10 @@ The aim of this module is to secure the exchange of information between differen
 
 ### 1.3 Delimitation
 
-This module is always to be used if there is an exchange of information with offices outside of one's own institution or property and the internal network is not used. He is especially to be applied when
+This module is always to be used if there is an exchange of information with offices outside of your own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
-* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
+* the exchange of information with the help of data carriers takes place. In addition to the transmission, the storage and handling of the data carriers must be taken into consideration.
 The protection of network connections is covered in other components of the IT-Grundschutz Compendium. Further processing in the target IT system is not considered. In this module, the basic rules for a secure exchange of information are in the foreground, especially in the use of mobile data carriers. The reasons why there is no or no sufficiently trusted network between the affected IT systems are not considered.
 
 In addition, this module also takes into account the storage of the data on the sender and receiver system, insofar as it is directly related to the data medium exchange, as well as the handling of the data carriers before or after the transfer. This module considers mobile data carriers such. As removable disks, optical media, USB sticks and hard drives and not to forget paper documents.
@@ -26,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Defective media
 
-All types of media can cause damage, errors, or failures. The problem arises when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
+All types of media can cause damage, errors, or failures. They become a problem when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
 
 ** Impermissible temperature and humidity **
 
@@ -63,21 +63,21 @@ When passing on information, it often happens that other information is transmit
 
 ### 2 7 Theft, tampering or destruction of data media
 
-Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content modification of data to the destruction of data carriers.
+Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content changes of data to the destruction of data carriers.
 
 ### 2 8 Malicious programs in transferred files or on data carriers
 If the work environment is insufficiently secured against malicious programs, malicious programs could be located on data media that are forwarded to external users. This could destroy or corrupt the stored data, but above all IT systems at the receiving end could be compromised. But the loss of image and the financial damage caused by malicious programs are also of great importance.
 
 ### 2 9 Unauthorized copying of information or data media
 
-If information or data carriers are exchanged or transported via an insecure transport route, there is a risk that the information transmitted may be copied by unauthorized persons during transport. Likewise, attackers could try to intercept communications over IT networks.
+If information or data carriers are exchanged or transported via an insecure transport route, there is a risk that the information transmitted will be copied by unauthorized persons during transport. Likewise, attackers could try to intercept communications over IT networks.
 
 3 requirements
 ---------------
 
 The following are specific requirements for information and media protection protection. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -87,7 +87,7 @@ The institution MUST specify which communication partners may receive and share 
 
 #### OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
 
-If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may be used only for the purpose for which they were disclosed.
+If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may only be used for the purpose for which they were disclosed.
 
 #### OPS.1.2.3.A3 Instructing the staff to exchange information [Specialists]
 
@@ -126,7 +126,7 @@ External parties SHOULD make confidentiality agreements before gaining access to
 
 #### OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
 
-Before exchanging information, the systems and products used on the sender and receiver side SHOULD be checked for compatibility.
+Before exchanging information, the systems and products used on the transmitter and receiver side SHOULD be checked for compatibility.
 
 #### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [user]
 
@@ -142,7 +142,7 @@ Confidential information SHOULD be encrypted before exchanging information. Info
 
 #### OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)
 
-For more protection, a disk management SHOULD be set up to control disk access, tagging and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
+For higher protection, a disk management SHOULD be set up to regulate access to disks, their marking and proper storage. All types of media should be handled properly, including storage, distribution, transportation and deletion. It SHOULD create an inventory. The data carriers SHOULD be handled properly according to the manufacturer's instructions.
 
 #### OPS.1.2.3.A15 Safe shipping method and packaging [Post Office, User] (C)
 
@@ -166,7 +166,7 @@ If the data to be transmitted has been created or compiled solely for the purpos
 
 ### 4.1 Literature
 
-Additional information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
+Further information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

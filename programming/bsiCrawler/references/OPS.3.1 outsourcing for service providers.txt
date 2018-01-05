@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.3.1.A1 Creation of a rough concept for the outsourcing service
 ### 3.2 Standard requirements
 #### OPS.3.1.A2 Contract Design with Outsourcing Clients [ISB Outsourcing Service Provider]

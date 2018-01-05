@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### CON.7.A1 Security Policy on Information Security on Foreign Travel
 #### CON.7.A2 Awareness of employees on the security policy Information security on trips abroad [IT operations, data protection officer]
 #### CON.7.A3 Identification of country-specific regulations, travel and environmental conditions [Human Resources Department]

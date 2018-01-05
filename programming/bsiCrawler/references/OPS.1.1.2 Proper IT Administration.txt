@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.1.1.2.A1 Personnel Selection for Administrative Activities [Head of Personnel]
 #### OPS.1.1.2.A2 Representation arrangements and emergency preparedness
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]

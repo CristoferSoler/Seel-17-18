@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### IND.1.A1 Integration into the security organization
 #### IND.1.A2 Awareness and training of staff
 #### IND.1.A3 Protection against malicious programs

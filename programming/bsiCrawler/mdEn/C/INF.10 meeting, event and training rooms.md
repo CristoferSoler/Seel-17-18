@@ -7,11 +7,11 @@ As a rule, each institution has one or more rooms in which meetings, trainings o
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate rooms, treated.
+The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate spaces, treated.
 
 ### 1.3 Delimitation
 
-This module considers all technical and non-technical safety aspects for the use of meeting, event and training rooms. Detailed recommendations on how to configure and secure the IT systems in these rooms are not covered in this module, which can be found in SYS.2.1 General Client and the OS-specific system building blocks. Other typical for meeting rooms aspects such. B. WLAN or video conferencing systems are considered in the building blocks of the layers NET.2 radio networks or NET.4 telecommunications. The wiring in these rooms is in the module INF. 3 Electrotechnical cabling and INF.4 IT cabling considered separately. Requirements for fire protection can be found in building block INF.1 General building.
+This module considers all technical and non-technical safety aspects for the use of meeting, event and training rooms. Detailed recommendations on how to configure and secure the IT systems in these rooms are not covered in this module, which can be found in SYS.2.1 General Client and OS-specific system building blocks. Other typical for meeting rooms aspects such. B. WLAN or video conferencing systems are considered in the building blocks of the layers NET.2 radio networks or NET.4 telecommunications. The wiring in these rooms is in the module INF. 3 Electrotechnical cabling and INF.4 IT cabling considered separately. Requirements for fire protection can be found in building block INF.1 General building.
 
 2 risk situation
 -----------------
@@ -27,11 +27,11 @@ If z. For example, if employees do not close the windows and doors when they lea
 IT systems are becoming increasingly mobile and increasingly used in different environments. Mobile IT users often find scenarios in which the IT systems can not be used as planned due to incompatibility. For example, older devices do not have the same connectors and connectors as newer devices. In addition, devices are manufactured that are not compatible with other devices without a suitable adapter. So is z. For example, if a matching adapter is not available, a laptop that has been prepared with all the important data for a meeting can not be used on a projector. In addition, attempts to connect the IT systems may cause damage to the equipment or stored data.
 
 ### 2 3 Danger to visitors
-It is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
+It is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors are on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
 
 ### 2 4 Flying wiring
 
-In meeting, event, and training rooms, users often change as well as how the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even across traffic routes, laid. Not only people are endangered by these trip hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
+In meeting, event, and training rooms, users often change as well as how the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even over traffic routes away, be laid. Not only people are endangered by these tripping hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
 
 ### 2 5 Theft
 

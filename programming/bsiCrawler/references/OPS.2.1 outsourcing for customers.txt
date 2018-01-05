@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
 ### 3.2 Standard requirements
 #### OPS.2.1.A2 Timely participation of the Staff Committee [Head of Organization]
@@ -13,7 +13,7 @@
 #### OPS.2.1.A11 Planning and maintenance of information security in ongoing outsourcing operations [ISB Outsourcing customer]
 #### OPS.2.1.A12 Change Management [IT Operations, Change Manager]
 #### OPS.2.1.A13 Secure migration for outsourcing projects
-#### OPS.2.1.A14 Emergency Preparedness for Outsourcing [Emergency Representative]
+#### OPS.2.1.A14 Emergency Preparedness for Outsourcing [Emergency Response Officer]
 #### OPS.2.1.A15 Orderly termination of an outsourcing relationship [Head of Procurement]
 ### 3.3 Requirements for increased protection requirements
 #### OPS.2.1.A16 Security check of employees (CI)

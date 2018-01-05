@@ -17,7 +17,7 @@
 #### SYS.2.3.A14 Protection against the use of unauthorized peripherals (CIA)
 #### SYS.2.3.A15 Additional protection against the execution of unwanted files (CI)
 #### SYS.2.3.A16 Additional safeguarding of boot process (CIA)
-#### SYS.2.3.A17 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
+#### SYS.2.3.A17 Additional prevention of spread when exploiting vulnerabilities (CI)
 #### SYS.2.3.A18 Additional Kernel Protection (CI)
 #### SYS.2.3.A19 Hard Disk or File Encryption (CI)
 #### SYS.2.3.A20 Shutdown Critical SysRq Functions (CIA)

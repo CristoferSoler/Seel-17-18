@@ -36,7 +36,7 @@ ICS components are often incompletely documented, so not all product features ar
 
 ### 2 3 Unsafe system configuration
 
-The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, default permissions often remain unchanged.
+The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.
 It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
 
 ### 2 4 Insufficient user and authorization management
@@ -49,7 +49,7 @@ For ICS components, logging is often limited to process-related events. Informat
 
 ### 2 6 Manipulation and sabotage of an ICS component
 
-The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally, but also across all locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
+The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have a local impact across locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
 
 Manipulated readings can lead to incorrect decisions of ICS components or operating personnel. Manipulated systems can be used to attack other systems or sites or to cover up ongoing manipulation.
 
@@ -139,7 +139,7 @@ It SHOULD be created an extended system documentation. These should include spec
 
 #### IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
 
-When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates SHOULD be carried out at short notice.
+When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates, maintenance should be performed at short notice.
 
 #### IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
 

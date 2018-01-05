@@ -11,7 +11,7 @@ The goal of this module is to protect information that is created, read, edited,
 
 ### 1.3 Delimitation
 
-Typically, client systems operate under an operating system that requires its own security measures. Common client operating systems have their own blocks that supplement this block. The module "general client" forms the basis for the concrete building blocks on which they are based. If a concrete block exists for a considered IT system, it must be used in addition to the module General Client. If no specific module exists for deployed client systems, the requirements of this module must be suitably adapted. Safety recommendations for mobile devices that can not be freely configured, such as smartphones or tablets, can generally be found in the SYS.3 Mobile Devices layer.
+Typically, client systems operate under an operating system that requires its own security measures. Common client operating systems have their own blocks that supplement this block. The module "general client" forms the basis for the concrete building blocks on which they are based. If a concrete module exists for a considered IT system, it must be used in addition to the module General Client. If no specific module exists for deployed client systems, the requirements of this module must be suitably adapted. Safety recommendations for mobile devices that can not be freely configured, such as smartphones or tablets, can generally be found in the SYS.3 Mobile Devices layer.
 
 If the client has other interfaces for data exchange, such. As USB, Bluetooth, LAN or WLAN, they must be secured according to the security requirements of the institution, as described in the corresponding modules. For this, information can be found in SYS.3.4 Mobile Disk, NET.2.3 Near Field Radio and NET.2.2 WLAN Usage.
 
@@ -22,9 +22,9 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware
 
-Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker comprehensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
+Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker extensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
 
-Clients are particularly susceptible to malware: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
+Clients are particularly vulnerable to malicious software: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
 
 ### 2 2 Unstructured local data management
 
@@ -32,7 +32,7 @@ Despite regular contradictory recommendations, many users also store important d
 
 * Data loss on hardware defects and
 * no access to relevant data in case of substitution.
-But even if basic requirements for central storage are adhered to, often additional local copies of the centrally stored data are created. This can lead to the following problems:
+But even if basic requirements for central storage are adhered to, local copies of the centrally stored data are often created in addition. This can lead to the following problems:
 
 * Waste of local storage space,
 * premature or non-deletion of data and
@@ -117,11 +117,11 @@ Together with the basic requirements, the following requirements are state of th
 Based on the general security policy of the institution, the requirements for general clients SHOULD be specified. The policy SHOULD be known to all users and all persons involved in the procurement and operation of the clients and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.
 #### SYS.2.1.A10 Planning the use of clients
 
-For the secure operation of clients SHOULD be planned in advance, where and how the clients should be used. The design should not only concern aspects that are classically linked to the term security, but also normal operational aspects that entail safety requirements. In addition to client-type-specific requirement profiles, specifications for authentication and user administration SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
+For the secure operation of clients SHOULD be planned in advance, where and how the clients should be used. The design should not only concern aspects that are classically linked to the term security, but also normal operational aspects that entail safety requirements. In addition to client type-specific requirement profiles, specifications for authentication and user administration SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
 
 #### SYS.2.1.A11 Procurement of clients
 
-Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a UEFI SecureBoot firmware configuration interface and the TPM (if any) that grants control by the owner (institution) allowing self-managed operation of SecureBoot and the TPM.
+Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a UEFI SecureBoot firmware configuration interface and TPM (if any) that grants control by the owner (institution), enabling self-managed operation of SecureBoot and the TPM.
 
 #### SYS.2.1.A12 Compatibility check of software
 
@@ -144,7 +144,7 @@ It SHOULD be determined which components of the operating system, specialized ap
 The basic settings of clients SHOULD be checked and, if necessary, adjusted according to the guidelines of the security policy. Only after the installation and configuration is complete, the client SHOULD connect to the Internet.
 #### SYS.2.1.A16 Disabling and uninstalling unneeded components and identifiers
 
-After installation, SHOULD check which components of the firmware, operating system, applications, and other tools are installed and enabled on the clients. Unnecessary modules, programs, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled. Corresponding, unneeded components that are firmly connected to the IT system SHOULD be disabled. Also in the firmware existing, unnecessary components (such as theft protection, remote maintenance) SHOULD be turned off. It SHOULD be prevented that these components can be reactivated. The decisions made SHOULD be documented in such a way that it is possible to understand which configuration and software equipment have been selected for the IT systems.
+After installation, SHOULD check which components of the firmware, operating system, applications, and other tools are installed and enabled on the clients. Unnecessary modules, programs, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled. Corresponding, unneeded components that are firmly connected to the IT system SHOULD be disabled. Also in the firmware existing, unnecessary components (such as theft protection, remote maintenance) SHOULD be turned off. It SHOULD be prevented that these components can be reactivated. The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the IT systems.
 
 #### SYS.2.1.A17 deployment clearance
 
@@ -156,7 +156,7 @@ Communication links SHOULD be protected by encryption as far as possible. Users 
 
 The IT operation SHOULD make sure that the client products used support a secure version of TLS. Clients SHOULD use cryptographic algorithms and key lengths that reflect the state of the art and the security requirements of the institution.
 
-New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session Renegotiation and TLS Compression SHOULD be disabled.
+New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session renegotiation and TLS compression SHOULD be disabled.
 
 #### SYS.2.1.A19 Restrictive rights assignment
 
@@ -190,7 +190,7 @@ A guideline SHOULD be created that transparently describes for all employees whi
 * Tasks and roles related to information security
 * Contact for information security issues
 * Safety measures to be implemented and followed by the employees
-The policy SHOULD be notified to all users. Each new user SHOULD confirm the acknowledgment of the policy before being allowed to use the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
+The policy SHOULD be made known to all users. Each new user SHOULD confirm the acknowledgment of the policy before being allowed to use the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
 
 #### SYS.2.1.A26 Protection of applications
 
@@ -198,20 +198,20 @@ To make it difficult to exploit vulnerabilities in applications, ASLR and DEP / 
 
 #### SYS.2.1.A27 Controlled decommissioning of a client
 
-When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist should be created, which can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist SHOULD be created that can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.1.A28 Encryption of clients (C)
 
-When confidential information is stored on the clients, the vulnerable files, selected file system areas, or better, the entire hard disk should be encrypted. For this purpose, a separate concept SHOULD be created and the details of the configuration should be documented with particular care, as in the case of problems, the data on the encrypted file systems may otherwise be completely lost. In this context, the following should be regulated: authentication (eg password, PIN, token), storage of recovery information, drives to encrypt, write access to unencrypted media, and how to ensure that recovery information is accessible only to authorized persons. Even encrypted files, partitions or data carriers SHOULD be backed up regularly. The used key material MUST NOT be stored in clear text on the clients.
+When confidential information is stored on the clients, the vulnerable files, selected file system areas, or better, the entire hard disk should be encrypted. For this purpose, a separate concept SHOULD be created and the details of the configuration should be documented with particular care, as in the case of problems the data on the encrypted file systems can otherwise be completely lost. In this context, the following should be regulated: authentication (eg password, PIN, token), storage of recovery information, drives to encrypt, write access to unencrypted media, and how to ensure that recovery information is accessible only to authorized persons. Even encrypted files, partitions or data carriers SHOULD be backed up regularly. The used key material MUST NOT be stored in clear text on the clients.
 
 Users SHOULD be informed about how to behave if they lose an authentication medium.
 
 #### SYS.2.1.A29 System Monitoring (A)
 
-The clients SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the clients and reports fault conditions as well as the exceeding of defined limit values ​​to the operating personnel.
+The clients SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the clients and reports fault conditions as well as the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.2.1.A30 Setting Up a Client Reference Installation (CIA)
 
@@ -223,7 +223,7 @@ On each computer, in addition to the central security gateways used, local packe
 
 #### SYS.2.1.A32 Use of Additional Exploit Prevention Measures (CIA)
 
-The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. Should it not be possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
+The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. If it is not possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
 
 #### SYS.2.1.A33 Application Whitelisting (CIA)
 It should be ensured via application whitelisting that only permitted programs and scripts are executed. The rules SHOULD be made as narrow as possible. If paths and hashes can not be specified explicitly, alternatively certificate based or path rules should be used.

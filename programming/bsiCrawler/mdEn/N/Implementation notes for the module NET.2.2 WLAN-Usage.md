@@ -15,7 +15,7 @@ Before WLANs are operated and used, a careful planning is necessary. In order no
 
 **Implementation**
 
-In order to meet the security requirements of the institution in the daily use of WLANs, the users must be involved. So they have to be informed about security measures that can not only be implemented by technical means and that require their participation. In order to minimize security incidents and to point out potential dangers that may arise when using WLANs improperly, users should be adequately trained and sensitized (see NET.2.2.M2 * Sensitization and training of WLAN users *).
+In order to meet the security requirements of the institution in the daily use of WLANs, the users must be involved. So they have to be informed about security measures that can not only be implemented by technical means and that require their participation. In order to minimize security incidents and to point out potential dangers that may arise when WLANs are used improperly, users should be sufficiently trained and sensitized (see NET.2.2.M2 * Sensitization and training of WLAN users *).
 
 **Business **
 
@@ -36,12 +36,12 @@ The following measures should be implemented as a priority:
 
 #### NET.2.2.M1 Creation of a user policy for WLAN [Head IT]
 
-In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key issues to make sure that the WLAN is safe. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
+In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key aspects of how to use WLANs safely. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
 
 * with which internal and external networks the WLAN clients may be connected,
 * Under what conditions you are allowed to log in to internal or external WLANs,
 * if and how hotspots may be used,
-* that the ad-hoc mode should be switched off so that no other client can access the WLAN clients directly,
+* that the ad-hoc mode must be switched off so that no other client can access the WLAN clients directly,
 * What steps should be taken in case of (suspected) compromise of the WLAN clients, especially who to notify.
 It is also important to clearly describe how to deal with client-side security solutions. This includes, for example, that
 
@@ -72,10 +72,10 @@ The operators of hotspots can do a lot for the security of the radio link and ot
 
 * Every user of a hotspot should know his or her security requirements and decide whether or under which conditions he is allowed to use the hotspot.
 * Registration at the hotspot is usually via a web portal or via a web application. This must ensure the protection of the registration information. Authentication should always be encrypted.
-* WLANs that have been used sporadically should be removed by the users from the history. For this purpose, the identifier of the WLAN (SSID) is removed from the list. This prevents the device from unintentionally logging into the WLAN.
+* WLANs that were only sporadically used should be removed by the users from the history. For this purpose, the identifier of the WLAN (SSID) is removed from the list. This prevents the device from unintentionally logging into the WLAN.
 * If possible, special user accounts with secure basic configuration and restrictive rights should be created for the use of hotspots. Under no circumstances should a user with administrator rights log on to external WLANs from his client.
 * At the latest when financial, personal or other sensitive data such as credit card numbers, PINs, passwords or emails are to be transmitted, it must be ensured that all necessary security measures on the clients, especially encryption, are activated. An example of this would be the secure processing of e-mails via an HTTPS web interface. Confidential information may never be transmitted unencrypted over foreign networks.
-* Users can only access the institution's internal resources via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots) via VPNs. As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
+* Users can only access the institution's internal resources via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots). As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
 ### 2.2 Standard measures
 
 Together with the basic measures, the following measures correspond to the state of the art in the area of ​​"WLAN use".
@@ -166,7 +166,7 @@ Additional information on hazards and security measures in the area of ​​"WL
  [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
 
  
-* #### [TR03103] Technical Guidelines Secure Wireless LAN
+* #### [TR03103] Technical Guideline Secure Wireless LAN
 
   
 

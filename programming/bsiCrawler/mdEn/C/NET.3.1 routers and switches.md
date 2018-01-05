@@ -47,11 +47,11 @@ Routers and switches ship with a standard configuration in which many services a
 
 ### 2 5 Incorrect planning and conception
 
-Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when it is first used. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
+Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when used for the first time. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
 
 ### 2 6 Incompatible active network components
 
-Compatibility problems can arise in particular when existing networks are supplemented by active network components from other manufacturers or when networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in a network, individual subareas of the network, certain services or even the entire network can fail.
+Compatibility problems can arise in particular when existing networks are supplemented by active network components from other manufacturers or when networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in one network, individual subareas of the network, certain services or even the entire network can fail.
 
 ### 2 7 MAC flooding
 
@@ -95,11 +95,11 @@ It MUST be taken care that patches and updates are obtained only from trustworth
 
 It must be regulated, who may access a router or switch. ONLY ONCE as many access rights must be granted as are required for the respective tasks (minimum principle). Unused user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
-#### NET.3.1.A4 Protection of the administration interfaces
+#### NET.3.1.A4 Protection of administration interfaces
 
 All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
 
-To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and the administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
+To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
 All services not required for the management interface MUST be deactivated. If a network component has a dedicated hardware interface, unauthorized access to it MUST be prevented.
 
@@ -131,7 +131,7 @@ The most important operational tasks of a router or switch MUST be suitably docu
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state of the art in the area of ​​routers and switches. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​routers and switches. They SHOULD be implemented in principle.
 
 #### NET.3.1.A10 Creation of a Security Policy [Information Security Officer (ISB)]
 
@@ -186,7 +186,7 @@ Routers and switches SHOULD be connected to a central identity and authorization
 
 To be able to react effectively and quickly in disruptive situations, diagnosis and troubleshooting should be planned and prepared in advance. For typical failure scenarios, appropriate action instructions SHOULD be defined.
 
-The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
+The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and are based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
 
 #### NET.3.1.A23 Revision and Penetration Tests
 

@@ -41,35 +41,35 @@ If the users are not adequately sensitized, mobile data carriers can also serve 
 
 ### 2 5 botnets
 
-Through malicious programs, IT systems of an institution can become part of so-called botnets. For example, an attacker who frequently controls thousands of systems in such a botnet can use them to send spam or launch distributed Denial-of-Service (DDoS) attacks to third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
+Through malicious programs, IT systems of an institution can become part of so-called botnets. An attacker who frequently controls thousands of systems in such a botnet can use them, for example, to send spam or launch distributed denial-of-service attacks (DDoS) on third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
 
 ### 2 6 Infection of production systems and IoT devices
 
-In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
+In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee machine can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
 
 3 requirements
 ---------------
 
 The following are specific requirements for malicious program protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should at least be included in all strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined IT security concept.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.4.A1 Creation of a concept for protection against malicious programs
 
-It MUST be created a concept, which IT systems must be protected against malicious programs. It also MUST be noted how the protection has to be done. If no reliable protection is possible, then the identified IT systems SHOULD NOT be operated. The concept SHOULD be comprehensibly documented.
+It MUST be created a concept, which IT systems must be protected against malicious programs. It also MUST be noted how the protection has to be done. If no reliable protection is possible, then the identified IT systems SHOULD NOT BE operated. The concept SHOULD be comprehensibly documented.
 
 #### OPS.1.1.4.A2 Use of system-specific protection mechanisms
 It MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
-Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific application. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific purpose. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY be used cloud features of such products, where no serious, demonstrable data or privacy issues speak against it.
 
 #### OPS.1.1.4.A4 Selection of a virus protection program for gateways and IT systems for data exchange [specialist responsible]
 
-For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY be used cloud features of such products, where no serious, demonstrable data or privacy issues speak against it.
 
 #### OPS.1.1.4.A5 Operation of virus protection programs
 
@@ -102,7 +102,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.4.A10 Use of special analysis environments (CIA)
 
-Automated analytics in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
+Automated analysis in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
 
 #### OPS.1.1.4.A11 Using Multiple Scan Engines (CIA)
 
@@ -122,7 +122,7 @@ With increased protection requirements and appropriate threat status, the use an
 
 #### OPS.1.1.4.A15 External Consultation (CIA)
 
-When developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
+In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After the installation of protection programs, the configuration SHOULD be subjected to an external expert review.
 
 4 Further Information
 ------------------------------

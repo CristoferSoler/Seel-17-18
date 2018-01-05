@@ -27,7 +27,7 @@ The network management is considered in the context of the zoning and segmentati
 The following specific threats and vulnerabilities are of particular importance in the area of ​​*** *** network architecture and design:
 
 ### 2 1 Failure or inadequate performance of communication links
-If the communication links are insufficiently sized or if their performance is no longer sufficient due to technical failures or due to a denial-of-service (DoS) attack, eg B. Clients communicate only limited with servers. As a result, the access times to internal and external services (eg cloud services) increase, which are sometimes only limited or even unusable. Also, any business-related information is no longer available. As a result, production downtime can occur, for example, or essential business processes fail.
+If the communication links are insufficiently sized or if their performance is no longer sufficient due to technical failures or due to a denial-of-service (DoS) attack, they can, for example, B. Clients communicate only limited with servers. As a result, the access times to internal and external services (eg cloud services) increase, which are sometimes only limited or even unusable. Also, any business-related information is no longer available. As a result, production downtime can occur, for example, or essential business processes fail.
 
 ### 2 2 Insufficiently secured network access
 
@@ -48,7 +48,7 @@ The following requirements MUST be implemented as a priority:
 
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 
-Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed. The directive MUST include:
+Based on the institution's general security policy, a specific security policy for the network MUST be established, which comprehensibly describes requirements and requirements for how networks are designed and constructed. The Directive MUST specify, inter alia:
 
 * in which cases the security zones are to be segmented and in which cases user groups or clients are to be logically or even physically separated,
 * which communication relationships and which network and application protocols are allowed,
@@ -78,7 +78,7 @@ A P-A-P structure consisting of packet filters, application layer gateways or se
 
 Clients and servers MUST be placed in different security segments. The communication between these segments MUST be controlled at least by a stateful packet filter (firewall).
 
-It should be noted that any exceptions that allow clients and servers to be placed in a common security segment are governed by the appropriate application and system-specific building blocks.
+It should be noted that any exceptions that allow clients and servers to be positioned in a common security segment are governed by the appropriate application and system-specific building blocks.
 
 For guest access and for network areas where there is insufficient internal control over the terminals, dedicated security segments MUST be set up.
 
@@ -88,7 +88,7 @@ Only terminals in a security segment that meet a similar level of security may b
 
 #### NET.1.1.A7 Protection of sensitive information
 
-Protective information MUST be transmitted over state-of-the-art secure protocols if it is not communicated over trusted dedicated network segments (eg, within the management network). If such protocols can not be used, MUST be adequately encrypted and authenticated according to the state of the art (see NET.3.3 * VPN). *
+Protective information MUST be transmitted over state-of-the-art secure protocols if it is not communicated over trusted dedicated network segments (eg, within the management network). If such protocols can not be used, they MUST be adequately encrypted and authenticated according to the state of the art (see NET.3.3 * VPN). *
 
 #### NET.1.1.A8 Basic protection of Internet access
 
@@ -139,7 +139,7 @@ Together with the basic requirements, the following requirements correspond to t
 On the basis of the security guideline and the requirement specification, an architecture for the security zones including internal network, DMZ area and external connections SHOULD be developed and sustainably maintained. Depending on the specific situation of the institution, all relevant architectural elements SHOULD be considered, but at least:
 * Network architecture of the internal network with definitions of how to use network virtualization techniques, Layer 2 and Layer 3 communication, and redundancy techniques,
 * Network architecture for external connections, including firewall architectures, as well as DMZ and extranet design and site coupling requirements,
-* Determine at which points of the network which security components such as firewalls or IDS / IPS are to be placed and what security functions they must implement
+* Determine at which points of the network which security components such as firewalls or IDS / IPS are to be placed and what security functions they must implement,
 * Specifications for the network connection of the various IT systems,
 * Network architecture in virtualization hosts, taking into account Network Virtualization Overlay (NVO) and Vertical Integrated Systems (ViS) architecture,
 * Definitions of the basic architecture elements for a private cloud as well as securing the connections to Virtual Private Cloud, Hybrid Cloud and Public Cloud (see OPS.3.2 * Cloud Providers * and OPS.3.4 * Managed Security Services *),
@@ -175,7 +175,7 @@ It should be used throughout an out-of-band management to manage the infrastruct
 
 The management area SHOULD include at least the following security segments, which SHOULD be further subdivided depending on the security policy and the requirements specification:
 
-Segment (s) for IT systems responsible for authenticating and authorizing administrative communications,
+Segment (s) for IT systems responsible for the authentication and authorization of administrative communications,
 * Segment (s) for the administration of IT systems,
 * Segment (s) for monitoring and monitoring,
 * Segment (s) containing central logging including syslog server and SIEM server
@@ -185,8 +185,8 @@ The various management interfaces of the IT systems MUST be separated according 
 
 * IT systems that are accessible from the Internet,
 * IT systems in the internal network,
-* Security components that are located between the IT systems accessible from the Internet and the internal network.
-It MUST be ensured that the segmentation can not be undermined by the management communication, i. H. a bridging of segments MUST be excluded.
+* Security components located between the IT systems accessible from the Internet and the internal network.
+It MUST be ensured that segmentation can not be undermined by management communication, i. H. a bridging of segments MUST be excluded.
 
 #### NET.1.1.A22 Specification of the segmentation concept
 
@@ -199,7 +199,7 @@ Based on the specifications of network architecture and network design, a compre
 * Connecting the virtualization hosts and virtual machines on the hosts to the security segments
 * Data center automation
 * Determination of how to integrate terminals that serve multiple security segments, eg. Load balancers, and storage and backup solutions
-Depending on the security policy and the requirement specification, SHOULD be designed for each security segment, as it should be implemented in terms of network technology. In addition, it should be determined which security functions the coupling elements must provide between the security segments (eg firewall as a stateful packet filter or IDS / IPS).
+Depending on the security policy and the requirement specification, SHOULD be designed for each security segment, as it should be implemented in terms of network technology. In addition, SHOULD specify which security features the coupling elements must provide between the security segments (for example, a firewall as a stateful packet filter or IDS / IPS).
 
 #### NET.1.1.A23 Separation of security segments
 
@@ -218,7 +218,7 @@ A detailed and implementation planning for the network architecture and the netw
 
 #### NET.1.1.A26 Specification of operating processes for the network
 
-For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
+For a secure and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
 
 #### NET.1.1.A27 Integration of network architecture into contingency planning [Head IT]
 
@@ -240,7 +240,7 @@ The network connections (eg Internet connection and WAN connections) SHOULD be c
 
 To ward off DDoS attacks, Bandwidth Management SHOULD allocate available bandwidth between different communication partners and protocols.
 
-In order to fend off DDoS attacks with very high data rates, mitigation services SHOULD be purchased through major Internet service providers (ISPs) and their use SHOULD be regulated in contracts.
+In order to fend off DDoS attacks with very high data rates, mitigation services SHOULD be purchased through larger Internet Service Providers (ISPs) and their use SHOULD be regulated in contracts.
 
 #### NET.1.1.A31 Physical separation of security segments (CIA)
 
@@ -251,7 +251,7 @@ Depending on security policy and requirement specification, security segments SH
 Depending on security policy and requirement specification, security segments of the management area SHOULD be physically separated.
 
 #### NET.1.1.A33 Network microsegmentation (CIA)
-To limit potential attacks on a small number of terminals, the network SHOULD be divided into small segments with a very similar requirement profile and protection needs. In particular, this should be taken into account for the DMZ segments.
+To limit potential attacks on a small number of terminals, the network SHOULD be divided into small segments with a very similar requirement profile and need for protection. In particular, this should be taken into account for the DMZ segments.
 
 #### NET.1.1.A34 Use of cryptographic procedures at network level (CI)
 

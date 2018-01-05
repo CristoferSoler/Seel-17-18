@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### CON.1.A1 Selection of suitable cryptographic procedures [specialist responsible]
 #### CON.1.A2 Data backup using cryptographic procedures [IT operation]
 ### 3.2 Standard requirements
