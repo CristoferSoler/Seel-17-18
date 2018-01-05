@@ -1,17 +1,15 @@
 from django import forms
 from django.utils.translation import pgettext_lazy
+from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
-from wiki.editors import getEditor
-from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField, SearchForm
 from wiki import models
+from wiki.core.diff import simple_merge
+from wiki.editors import getEditor
+from wiki.forms import EditForm
+from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField, SearchForm
 from wiki.models import URLPath
-from django.utils.translation import ugettext
-from wiki.core.diff import simple_merge
-from wiki.forms import EditForm
 
-from django.utils.translation import ugettext
-from wiki.core.diff import simple_merge
-from wiki.forms import EditForm
+from bsi.models import BSI
 
 
 class UserRegistrationForm(forms.Form):
@@ -33,25 +31,25 @@ class UserRegistrationForm(forms.Form):
     )
 
 
-class CreateForm(forms.Form, SpamProtectionMixin):
-    def __init__(self, request, urlpath_parent, *args, **kwargs):
+class CreateForm(forms.Form):
+    def __init__(self, *args, **kwargs):
         super(CreateForm, self).__init__(*args, **kwargs)
-        self.request = request
-        self.urlpath_parent = urlpath_parent
-        bsi = URLPath.get_by_path('bsi/')
-        children = bsi.get_children()
-        liste = []
-        for child in children:
-            art = child.get_children()
-            for a in art:
-                liste.append([a.get_absolute_url(), a.get_absolute_url()])
-        self.fields['article'] = forms.MultipleChoiceField(
-            label=pgettext_lazy('Revision comment', 'BSI'),
-            choices=liste,
-            # initial={'choices':list1},
-            widget=forms.CheckboxSelectMultiple,
-            help_text=_("Associate with a BSI article when creating an article."),
-            required=False)
+        # self.request = kwargs.get('request')
+        self.urlpath_parent = URLPath.get_by_path('uga/')
+        # bsi = URLPath.get_by_path('bsi/')
+        # bsi = BSI.objects.all()
+        # liste = []
+        # for bsi_article in bsi:
+        #     urlpath = bsi_article.url
+        #     liste.append([urlpath, urlpath.article.current_revision.title])
+        #
+        # # liste.append([a.get_absolute_url(), a.get_absolute_url()])
+        # self.fields['article'] = forms.MultipleChoiceField(
+        #     label=pgettext_lazy('Revision comment', 'BSI'),
+        #     choices=liste,
+        #     widget=forms.CheckboxSelectMultiple,
+        #     help_text=_("Associate with a BSI article when creating an article."),
+        #     required=False)
 
     title = forms.CharField(label=_('Title'), )
     slug = WikiSlugField(
@@ -74,11 +72,30 @@ class CreateForm(forms.Form, SpamProtectionMixin):
 
     def clean(self):
         super(CreateForm, self).clean()
-        self.check_spam()
+        # self.check_spam()
         return self.cleaned_data
 
 
-class UGAEditForm(EditForm):
+class AddLinksForm(forms.Form):
+    links = forms.MultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Associate with a BSI article when creating an article."),
+            required=False)
+
+    def __init__(self, *args, **kwargs):
+        super(AddLinksForm, self).__init__(*args, **kwargs)
+        bsi = URLPath.get_by_path('bsi/')
+        children = bsi.get_children()
+        liste = []
+        for child in children:
+            art = child.get_children()
+            for a in art:
+                liste.append([a.article.current_revision.title, a.article.current_revision.title])
+        self.fields['links'].choices = liste
+
+
+class UGEditForm(EditForm):
     checked = forms.BooleanField(label="Reviewed", required=False)
 
     def __init__(self, request, current_revision, checked, *args, **kwargs):
@@ -147,9 +164,10 @@ class UGAEditForm(EditForm):
         self.check_spam()
         return cd
 
+
 class FilterForm(SearchForm):
     f = forms.CharField(
-    widget=forms.TextInput(
-        attrs={
-            'class': 'search-query'}),
+        widget=forms.TextInput(
+            attrs={
+                'class': 'search-query'}),
         required=True)

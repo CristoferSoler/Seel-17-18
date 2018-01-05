@@ -45,6 +45,10 @@ class UGA(models.Model):
         uga.save()
         return uga
 
+    def add_links_to_bsi(self, list):
+        for item in list:
+            self.add_link_to_bsi(item)
+
     def add_link_to_bsi(self, bsi):
         bsi.references.add(self)
 

@@ -54,7 +54,7 @@ Reasons for a mobile workstation include:
 * Since many mobile IT systems are destroyed by falls, there should be a stable place to turn them off.
 * The environment should not be too loud and allow a proper working environment.
 * The environment should be well lit. The monitor light alone is not enough in the long run. Disturbing glare, reflections or reflections should be avoided.
-* The monitor should be able to be positioned so that entries made are not visible to third parties. For laptops, there are monitor films that prevent viewing from the side.
+* The monitor should be able to be placed in such a way that entries made are not visible to third parties. For laptops, there are monitor films that prevent viewing from the side.
 * The environment should also ensure that mobile IT systems are not compromised, so they should not be too humid, too cold or too warm. The employee will avoid such conditions for his own well-being while using the equipment. However, to ensure that the devices are stored appropriately, regulations should be laid down.
 * Mobile devices should be protected against theft with increased protection requirements (see also INF.9.M10 * Using anti-theft devices *). The environment should provide the necessary conditions for this. For example, it may be necessary to connect the cable lock to a fixed object to secure the fastened laptop against easy removal. If possible, the windows and doors of the mobile workstation should be locked and closed when the employee leaves the room. This is often possible, for example, in hotel rooms or meeting rooms.
 In strange environments such as hotels, it is also advisable to find out about the correct behavior during fires or other emergencies, for example about warning sounds and escape routes.
@@ -75,7 +75,7 @@ IT systems and data media used outside their own institution are more exposed to
 * IT systems and data media must always be stored securely. On business trips they should not be left unattended. In particular, they should not be left behind in vehicles.
 * IT systems such as laptops, tablets or smartphones and their applications can generally be secured by PINs or passwords. These mechanisms should be used in principle.
 * It should be logged, when and by whom, what IT components were used outside the home.
-* It should be regulated how to dispose of mobile IT systems or data media (see INF.9.M6 * Disposal of confidential information *).
+* It should be regulated how mobile IT systems or data media should be disposed of (see INF.9.M6 * Disposal of confidential information *).
 In addition, users should be provided with a short and clear leaflet on the secure use of mobile IT systems.
 
 If possible, mobile IT systems should not be left unattended. If a mobile IT system needs to be left behind in a motor vehicle, it should not be visible to third parties from the outside. Since a visible mobile IT system is a value that could attract potential thieves, they should generally be covered or trapped in the trunk.
@@ -100,7 +100,7 @@ It should be checked as randomly as possible whether the regulations for the tra
 ** Sensitization of users **
 The smaller and lighter IT systems become, the more frivolous experience has shown. Therefore, employees should be made aware of the value of mobile IT systems and the value of information stored on them. As mobile IT systems offer a wide range of variants and combinations, they should be informed first and foremost about the specific hazards and measures of the devices they use. This can affect both smartphones and tablets or laptops with their respective different interfaces.
 
-Employees should also be advised that they should not exchange confidential information with anyone on the move and should not talk about it on the go while hearing or being seen by outsiders. In particular, the identity of each communication partner should be questioned against detailed information. Users should be made aware of the building block requirements of * ORP.3 Information Security and Information Security *.
+Employees should also be advised that they should not exchange confidential information with anyone on the move and should not talk about it on the road while hearing or being seen by outsiders. In particular, the identity of each communication partner should be questioned against detailed information. Users should be made aware of the building block requirements of * ORP.3 Information Security and Information Security *.
 
 #### INF.9.M3 Access and Access Protection [Staff]
 
@@ -119,7 +119,7 @@ Doors do not have to be locked if there are no vulnerable items such as document
 When the computer is running, doors do not have to be locked if access is only possible after successful authentication, ie, for example, a password-based lock screen is activated. When the computer is switched off, it can be done without closing the room if a password has to be entered when booting the computer. The same function is fulfilled by access mechanisms based on tokens or smart cards.
 
 ** The tidy workplace **
-Every employee should be encouraged to leave their workspace tidy. Users must ensure that unauthorized persons are denied access to applications or access to data. All mobile workers must ensure that confidential information is not freely available and that the availability, confidentiality or integrity of data can not be adversely affected. It must not be possible for unauthorized persons to access data carriers or documents.
+Every employee should be encouraged to leave their jobs tidy. Users must ensure that unauthorized persons are denied access to applications or access to data. All mobile workers must ensure that confidential information is not freely available and that the availability, confidentiality or integrity of data can not be adversely affected. It must not be possible for unauthorized persons to access data carriers or documents.
 
 For a short absence during working hours, it is sufficient:
 
@@ -138,14 +138,14 @@ It is often necessary to access digital information using third-party IT systems
 * from an internet cafe,
 * in an office of the visited institution or
 * via a Wi-Fi hotspot in the hotel, on the train or at the airport.
-However, every user should be aware that it is externally administered IT and therefore additional security measures have to be taken. Therefore, it should always be assumed that the security level of the foreign IT environment is unknown and must therefore be considered low. Every employee should know that third-party computers and foreign IT environments pose a fundamentally higher security risk. Even if the security level makes an excellent impression, this can be a fallacy.
+However, every user should be aware that it is externally administered IT and therefore additional security measures have to be taken. Therefore, it should always be assumed that the security level of the foreign IT environment is unknown and must therefore be considered low. Every employee should know that third-party computers and foreign IT environments pose a fundamentally greater security risk. Even if the security level makes an excellent impression, this can be a fallacy.
 
 Therefore, users should consider the following recommendations before working with third-party IT systems or using service offerings:
 
 * You should inform yourself about existing security measures.
 * You should think carefully about how you work with third-party IT systems. They should be guided by the specifications and regulations for mobile workplaces and should not use external IT systems or service offerings for all conceivable actions and data.
 * As soon as the work has been finished, all temporary data created during this process should be deleted on a foreign computer. However, this is usually not easy, since many operating systems produce temporary data in many places. In addition, it can also happen with foreign IT systems that the access rights do not allow the resulting data to be deleted. At a minimum, the cache should be cleared.
-* Under no circumstances should browser features be used to autocomplete usernames and passwords so that subsequent users can not easily log in under this username anywhere.
+* Under no circumstances should browser features be used to autocomplete usernames and passwords so that subsequent users can not easily log in under that username anywhere.
 ### 2.2 Standard measures
 
 Together with the basic measures, the following measures are in line with the state of the art in the field of mobile workplaces.
@@ -166,16 +166,16 @@ If lost devices re-emerge, they should be inspected for possible tampering. For 
 
 Equipment or material at the home office (eg printer paper, USB hard disks, DVDs, USB sticks, SD cards, but also special toner cartridges) will eventually no longer be needed or need to be sorted out. If they contain sensitive data, they must be disposed of in such a way that no conclusions can be drawn about previously stored data. For functional data carriers, the data should be deleted securely. Non-functioning data carriers or write-once data carriers must be mechanically destroyed (see also CON.6 * Deleting and destruction *).
 
-The nature of the disposal of vulnerable material should be regulated in a specific safety policy. In the institution, the necessary disposal facilities must be available.
+The nature of the disposal of vulnerable material should be regulated in a specific safety policy. The required disposal facilities must be available in the institution.
 
 If confidential material is collected prior to disposal, the collection must be protected against unauthorized access.
 
-Proper disposal of equipment and material that is worthy of protection must comply with the requirements of module OPS.1.2.7 Sales / Disposal of IT.
+Proper disposal of equipment and material subject to protection must comply with the requirements of module OPS.1.2.7 IT sale / disposition.
 
 ** Disposal of data carriers and documents while traveling **
 Also on the way there is often material that should be disposed of for various reasons. Just the necessary disposals, so that the luggage remains portable, must be considered in this context. While disposal procedures for old or unusable data carriers and documents exist in your own institution, they are not always possible on the move. Therefore, it is important to consider carefully before each disposal of used data media and documents whether they could contain information worthy of protection. If this is the case, the data carriers and documents must be transported back in case of doubt. This also applies if the data carriers are defective, since IT experts can also recover valuable information from this. Likewise, care should be taken in facilities for data destruction in foreign institutions, as it is not clear who is responsible for the disposal or how reliable it is.
 
-The requirements for the disposal of data carriers and documents are shown in the module OPS.1.2.7 * Sales / Disposal of IT *. In general, they should be included in the design of security policies and regulations for information protection in the area of ​​waste disposal of data carriers and documents.
+The requirements for the disposal of data media and documents are shown in the module OPS.1.2.7 * Sales / Disposal of IT *. In general, they should be included in the design of security policies and regulations for information protection in the area of ​​waste disposal of data carriers and documents.
 
 #### INF.9.M7 Legal framework for mobile work [Head of Human Resources, Human Resources]
 
@@ -197,14 +197,14 @@ The following aspects should be considered:
 
 ** Response times: ** It should be regulated at what intervals the mobile workers retrieve up-to-date information (for example, how often emails are read) and in what time frame they have to respond.
 
-** Representation scheme: ** For each mobile employee, a representative should be appointed who must be informed about the current activities, so that he can take over the representation at short notice. For this, the work results by the mobile employees must always be carefully documented. Perhaps sporadic or regular meetings between the mobile employee and his representative make sense. In addition, it must be regulated how the representative can access the data on the IT systems and applications in the event of an unexpected substitution or can view the existing documents at the mobile workstation. This substitution case should be tested and evaluated on a trial basis. The evaluation should be done by the mobile employee and his representative.
+** Representation scheme: ** For each mobile employee, a representative should be appointed who must be informed about the current activities, so that he can take over the representation at short notice. For this, the work results by the mobile employees must always be carefully documented. Perhaps sporadic or regular meetings between the mobile employee and his representative make sense. In addition, it must be regulated how the representative can access the data on the IT systems and applications in the event of an unexpected substitution or can view the existing documents on the mobile workstation. This substitution case should be tested and evaluated on a trial basis. The evaluation should be done by the mobile employee and his representative.
 ** Handling confidential information: ** In mobile work, information is processed both analogously (for example, on paper) and digitally (for example, on data carriers). Regardless of the form in which information is available, it must be protected from unauthorized access and other security risks. Therefore, the complete life cycle of information worthy of protection must be adequately secured.
 
-** Reporting procedure: ** The mobile employees are to be obligated to report security-relevant incidents immediately to a point to be determined in advance in the institution.
+** Reporting procedure: ** The mobile employees are to be obligated to report security-related incidents immediately to a point to be determined in advance in the institution.
 
-** Tools: ** It should be specified which work equipment the mobile workers can use and which can not be used (for example, not released software). Thus, an e-mail connection can be made available, but the use of other Internet services are prohibited. Furthermore, the use of data media, such as DVDs or USB sticks could be prohibited if the mobile workstation does not require it.
+** Tools: ** It should be specified which work equipment the mobile workers can use and which can not be used (for example, not released software). Thus, an e-mail connection can be provided, but the use of other Internet services are prohibited. Furthermore, the use of data media, such as DVDs or USB sticks could be prohibited if the mobile workstation does not require it.
 
-** Transport of documents and data media: ** The type and security of the transport of documents and data media between mobile workplaces, customer premises and the institution must be regulated. Confidential data on digital media should only be transported in encrypted form (see INF.9.M2 * Mobile workstation regulations * and * * INF.9.M9 * Encryption of portable IT systems and data media *).
+** Transport of documents and data media: ** The type and security of the transport of documents and data media between mobile workplaces, customer premises and the institution must be regulated. Confidential data on digital media should only be transported in encrypted form (see INF.9.M2 * Mobile workstation regulations * and * * INF.9.M9 * Encrypting portable IT systems and data media *).
 
 ** Data backup: ** The mobile employees must be obliged to carry out regular data backups of the locally stored data. In addition, it should be agreed that one generation of data backups will be deposited in each institution to ensure higher availability.
 
@@ -214,9 +214,9 @@ The following aspects should be considered:
 
 ** Data communication: ** It should be specified which data should be transmitted in which way and which data should not be transmitted electronically or only encrypted. It is also necessary to regulate which documents may be transported between the institution, the mobile workstation and the customer and how these are protected.
 
-** Disposal: ** The security policy must contain rules on how employees should handle disused data carriers and documents. (See INF.9.M6 * Disposal of confidential information * and * ORP.3 Information security awareness and training *).
+** Disposal: ** The security policy must contain rules on how employees should deal with disused data carriers and documents. (See INF.9.M6 * Disposal of confidential information * and * ORP.3 Information security awareness and training *).
 
-** Sensitization: ** All employees should be regularly sensitized to the proper handling of mobile IT (see INF.9.M2 * Mobile Workplace Regulations *).
+** Sensitization: ** All employees should be regularly sensitized to the proper handling of mobile IT (see INF.9.M2 * mobile workstation regulations *).
 
 The regulations are to be handed over to every mobile employee. Corresponding leaflets must be updated regularly.
 
@@ -227,20 +227,20 @@ Employees must handle confidential information carefully, even on business or pr
 #### INF.9.M9 Encryption of Portable IT Systems and Media [User]
 To prevent sensitive information from being seen by unauthorized third parties, it should be ensured that all sensitive information is protected in accordance with internal guidelines.
 
-Mobile data carriers and IT systems should be encrypted according to company-internal procedures and regulations in order to protect sensitive data against unauthorized access. This is especially true for rewritable media. It is possible to encrypt volumes only partially. For ease of use, however, it is recommended to encrypt the entire volume. An encryption of the disk can be achieved either with software such. B. BitLocker from Microsoft or FileVault from Apple, or even with special hardware. In order to decrypt the data, a cryptographic key is needed, which should be used in the form of a separate smart card or a USB token. In this case, the user should keep the cryptographic key and the encrypted volume or client separate from each other.
+Mobile data carriers and IT systems should be encrypted according to company-internal procedures and regulations in order to protect sensitive data against unauthorized access. This is especially true for rewritable media. It is possible to encrypt volumes only partially. For ease of use, however, it is recommended to encrypt the entire volume. An encryption of the disk can be achieved either with software such. B. BitLocker from Microsoft or FileVault from Apple, or even with special hardware. In order to decrypt the data, a cryptographic key is needed, which should be used in the form of a separate chip card or a USB token. In this case, the user should keep the cryptographic key and the encrypted volume or client separate from each other.
 
 In addition, it is important to take precautions against data loss in order to intercept malfunctions (eg power failure, abort of encryption) on the system side. In addition, the following requirements are useful:
 
 * The encryption algorithm used should meet the requirements of the institution.
 Key management must harmonize with the functions of the mobile IT system.
-* The mobile IT system must securely manage the security-critical parameters such as keys. Thus, keys (even those that are no longer used) must never be left unprotected, ie readable or unencrypted. They must be kept separate from the encrypted device if possible.
+* The mobile IT system must securely manage the security-critical parameters such as keys. Thus, keys (even those that are no longer used) must never be left unprotected, that is, readable or unencrypted. They must be kept separate from the encrypted device if possible.
 ### 2.3 Measures for increased protection requirements
 
 The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
 
 #### INF.9.M10 Using theft deterrents (CIA)
 
-Anti-theft devices must be used wherever large values ​​need to be protected or where other measures can not be implemented. This is true, for example, of laptops in mobile use. Anti-theft devices are also useful where there is public traffic or where the turnover of users is very high. It should always be kept in mind that the values ​​to be protected are only a small part of the replacement cost of the device, but in laptops and similar IT systems the value of the stored data must be taken into account.
+Anti-theft devices must be used wherever large values ​​need to be protected or where other measures can not be implemented. This is true, for example, of laptops in mobile use. Anti-theft systems are also useful where there is public traffic or where the turnover of users is very high. It should always be kept in mind that the values ​​to be protected are only a small part of the replacement cost of the device, but in laptops and similar IT systems the value of the stored data must be taken into account.
 
 ** Types of anti-theft devices **
 

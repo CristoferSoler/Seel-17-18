@@ -1,6 +1,7 @@
 from django.conf.urls import url
 from wiki.views import article
 
+from bsi.forms import CreateForm, AddLinksForm
 from . import ugaViews
 from . import views
 from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistoryView, UGPreviewView, \
@@ -34,7 +35,8 @@ urlpatterns = [
         name='change_revision'),
     url(r'^(?P<path>.+/|)delete/$', UGDeleteView.as_view(), name='delete'),
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
-    url(r'^(?P<path>.+/|)_create/', UGACreate.as_view(), name='create'),
+    url(r'^(?P<path>.+/|)_create/$', UGACreate.as_view([CreateForm, AddLinksForm]), name='create'),
+    # url(r'^(?P<path>.+/|)_create/_add_links/$', UGCreateAddLinksView.as_view(), name='add_links'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),
     # url(r'^(?P<path>.+/|)_edit/$', UGEditView.as_view(), name='edit'),
 

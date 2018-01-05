@@ -1,0 +1,11 @@
+{% extends "bsi/base.html" %}
+{% load wiki_tags %}
+
+{% block bsi_pagetitle %}{% trans "Add links" %}{% endblock %}
+
+{% block bsi_contents %}
+    <form method="POST" class="form-horizontal"> {% csrf_token %}
+            {% wiki_form add_links_form %}
+    </form>
+
+{% endblock %}
