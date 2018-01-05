@@ -20,6 +20,9 @@ from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
 from bsi import views
 
+admin.site.index_template = 'admin/index.html'
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^_treeview/', include('treeview.urls')),
     url(r'^_wizard/', include('wizard.urls')),
