@@ -75,6 +75,15 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
+                                {% if user.is_superuser %}
+                                <li>
+                                    <a href="/admin/">
+                                        <i class="fa fa-wrench"></i>
+                                        Admin Settings
+                                    </a>
+                                </li>
+                                {% endif %}
+
                                 <li>
                                     <a href="{% url 'password_change' %}">
                                         <i class="fa fa-gear"></i>
@@ -130,18 +139,17 @@
                                     </div>
                                 </div>
                                 <div class="row abstandButtonToBottom" >
-                                    <div class="col-md-3"></div>
-                                    <div class="col-sm-2" >
-                                        <a id="yesButton" class="btn btn-primary" >Yes</a>
-                                    </div>
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-2" >
-                                        <a id="noButton" class="btn btn-primary" >No</a>
-                                    </div>
-                                    <div class="col-sm-2"></div>
-                                    <div class="col-sm-2" >
-                                        <a id="dontKnowButton" class="btn btn-primary disabled" >I don't know</a>
-                                    </div>
+                                    <ul class="wizardList">
+                                        <li class="wizard-buttons">
+                                            <a id="yesButton" class="btn btn-primary btn-block" >Yes</a>
+                                        </li>
+                                        <li>
+                                            <a id="noButton" class="btn btn-primary btn-block" >No</a>
+                                        </li>
+                                        <li>
+                                            <a id="dontKnowButton" class="btn btn-primary disabled btn-block" >I don't know</a>
+                                        </li>
+                                    </ul>
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
