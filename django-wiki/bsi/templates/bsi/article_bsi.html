@@ -27,6 +27,8 @@
              {% else %}
                  <h2>{{ article.current_revision.title}}</h2>
                  <div style="word-wrap: break-word;"> {{ article.render }} </div>
+                    {% include "bsi/includes/seealso.html" %}
+
               {% endif %}
 
             </div>
@@ -36,7 +38,7 @@
         <!--if there is article above, then include this
             {% include "bsi/includes/crossreference.html" %}
             <hr>-->
-             {% include "bsi/includes/seealso.html" %}
+
         </div>
 
 {% endblock %}

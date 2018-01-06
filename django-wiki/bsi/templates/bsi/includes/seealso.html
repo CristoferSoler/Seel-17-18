@@ -8,6 +8,8 @@
                           </a>
                         </li>
                     </ul>
+                      {% empty %}
+                    <em>There are no BSI article linked in this level</em>
                 {% endfor %}
                 {% else %}
                 {% for artpath in urlpath.bsi.references.all %}
@@ -17,5 +19,7 @@
                           </a>
                         </li>
                     </ul>
+                    {% empty %}
+                    <em>There are no user article linked in this level</em>
                 {% endfor %}
                 {% endif %}
