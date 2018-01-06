@@ -1,29 +1,6 @@
 {% extends "uga/create_article.html" %}
 {% load wiki_tags i18n sekizai_tags static %}
 
-{% addtoblock "js" %}
-
-    <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
-    <script type="text/javascript">
-        {{ wizard.management_form }}
-        {% if not form.slug.value %}
-            //<![CDATA[
-            (function ($) {
-                $(document).ready(function () {
-                    $("#id_creation-title").keyup(function () {
-                        var e = $("#id_creation-slug")[0];
-                        if (!e._changed) {
-                            slug = URLify(this.value, 50);
-                            e.value = slug;
-                        }
-                    });
-                });
-            })(jQuery);
-            //]]>
-        {% endif %}
-    </script>
-{% endaddtoblock %}
-
 {% block form_data %}
     <table>
         <tbody>
@@ -43,4 +20,22 @@
         {% endfor %}
         </tbody>
     </table>
+
+    <script type="text/javascript">
+        {% if not form.slug.value %}
+            //<![CDATA[
+            (function ($) {
+                $(document).ready(function () {
+                    $("#id_creation-title").keyup(function () {
+                        var e = $("#id_creation-slug")[0];
+                        if (!e._changed) {
+                            slug = URLify(this.value, 50);
+                            e.value = slug;
+                        }
+                    });
+                });
+            })(jQuery);
+            //]]>
+        {% endif %}
+    </script>
 {% endblock %}

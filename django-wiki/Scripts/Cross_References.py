@@ -32,6 +32,8 @@ def csv_parser(path_and_file, newFolderPath):
     # parsing the csv files to extract the important info from it
     # threats and requirements relation for each component
     try:
+        if not os.path.exists(txtDir):
+            os.makedirs(txtDir)
         with open(path_and_file) as csvfile:
              rows = []
              readCSV = csv.reader(csvfile, delimiter=';')
@@ -65,7 +67,10 @@ def get_cr_relation(newFolderPath):
     # extract for each component the cross reference relation
 	# site = str(Site.objects.get_current()) + '/'
     site = 'http://localhost:8000/'
+
     try:
+        if not os.path.exists(crfDir):
+            os.makedirs(crfDir)
         for filename in [f for f in listdir(newFolderPath) if f.endswith(".txt")]:
             # extract the component, threats and requirements ids from the macro files
             path_and_file = os.path.join(newFolderPath, filename)
