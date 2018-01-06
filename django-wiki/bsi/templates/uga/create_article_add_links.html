@@ -108,13 +108,16 @@
             $("#search_autocomplete").autocomplete({
                 source: "/uga/_create/get_bsi_articles/",
                 minLength: 2
-            }).change(function () {
+            }).keyup(function (e) {
+                $(this).autocomplete('close');
                 var autocompletelistitem = $("#ui-id-1").find("> .ui-menu-item");
                 var resultlist = $("#newList");
                 resultlist.empty();
                 autocompletelistitem.each(function () {
                     resultlist.append("<li class='list-group-item search-result'>" + $(this).text() + "</li>");
+
                 });
+
 
 
                 $(function () {
