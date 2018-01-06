@@ -16,12 +16,16 @@
     <!-- Optionally enable responsive features in IE8 -->
     <script src="{% static "bsi/js/respond.min.js" %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
+    <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
     <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
-
-
+    <script type="text/javascript"
+            src="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/js/bootstrap-extend.min.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/css/bootstrap-extend.min.css"/>
     <!--Icon -->
-    <link href="{% static "bsi/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
     {% render_block "css" %}
 </head>
@@ -61,15 +65,12 @@
                 </li>
 
             </ul>
-
             <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                 <div class="form-group inner-addon right-addon">
                     <i class="glyphicon glyphicon-search"></i>
                     <input type="search" class="form-control search-query" name="q" placeholder="search"/>
-
                 </div>
             </form>
-
             <div class="navbar-right">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav">
@@ -113,6 +114,64 @@
         <!-- /.container-fluid -->
     </div>
 </nav>
+<main>
+    <div class="row">
+        <div class="col-md-12">
+            <div id="slide-panel">
+                <a href="#" class="btn btn-warning" id="opener"><i
+                        class="icon-magic-wand m-auto text-primary   "></i></a>
+                <div id="content" class="panel panel-primary">
+                    <div class="panel panel-default contentPanel">
+                        <div class="panel-heading">
+                            Wizard
+                            <div class="pull-right">
+                                <button id="topicBack" class="btn btn-sm disabled"><i
+                                        class="glyphicon glyphicon-arrow-left"></i></button>
+                                <button id="restart" class="btn btn-sm" type="reset" data-toggle="tooltip"
+                                        data-placement="top" title="Restart"><i class="glyphicon glyphicon-repeat"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="container-fluid marginTop">
+                                <div class="row">
+                                    <div class="col-md-12 abstandToButton">
+                                        <h4 class="text-center font-weight-bold" id="questionText"><span
+                                                id="question"></span> <span id="topic"></span></h4>
+                                    </div>
+                                </div>
+                                <div class="row abstandButtonToBottom">
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-primary" id="yesButton">Yes</button>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-1">
+                                        <button class="btn btn-primary" id="noButton">No</button>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                    <div class="col-md-2">
+                                        <button class="btn btn-primary disabled" id="dontKnowButton">Don't know</button>
+                                    </div>
+                                    <div class="col-md-2"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2"></div>
+                                <div class="col-md-9">
+                                    <ul id="list">
+                                    </ul>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 
 {% block bsi_contents %}
 
@@ -170,5 +229,6 @@
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
+        initWizardsComponents();
     });
 </script>

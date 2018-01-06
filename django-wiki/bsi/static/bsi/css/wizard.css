@@ -1,0 +1,70 @@
+.text-center{
+    text-align: center;
+}
+
+.abstandToButton{
+    margin-bottom: 15px;
+}
+
+.abstandButtonToBottom{
+    margin-bottom: 10px;
+}
+
+.wizardList{
+    text-align:left;
+    font-size: large;
+    list-style-type:none;
+}
+
+.wizardList li{
+    margin-top: 10px;
+}
+
+.wizardListTopMargin{
+    margin-top: 20px;
+}
+
+.modal-body {
+    overflow-y: auto;
+}
+
+.modal-backdrop {
+    background:none;
+}
+
+#slide-panel {
+    position: fixed;
+    float:right;
+    text-align: left;
+    margin-top:5%;
+    left:98%;
+    z-index:10;
+}
+#opener {
+    margin:-10px -50px 0px 0px;
+    padding-top:15px;
+    border-radius:0;
+}
+#content {
+    position: absolute;
+    float: right;
+    margin-left: 50px;
+    height: 300px;
+    width: 500px;
+    border:black;
+}
+
+.center{
+    height:310px;
+    background:orange;
+}
+
+.contentPanel{
+    height: 300px;
+    width: 500px;
+    overflow-y: scroll;
+}
+
+.marginTop{
+    margin-top: 30px;
+}

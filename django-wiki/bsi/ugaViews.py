@@ -66,56 +66,6 @@ class UGACreate(SessionWizardView):
     def get_template_names(self):
         return [TEMPLATES[self.steps.current]]
 
-    # def get_form(self, step=None, data=None, files=None):
-    #     # kwargs = {'request': self.request, 'urlpath_parent': self.urlpath}
-    #
-    #     # if form_class is None:
-    #     #     form_class = self.get_form_class()
-    #     # kwargs = self.get_form_kwargs()
-    #     # initial = kwargs.get('initial', {})
-    #     # initial['slug'] = self.request.GET.get('slug', None)
-    #     # kwargs['initial'] = initial
-    #     # form = form_class(self.request, self.urlpath, **kwargs)
-    #     # form.fields['slug'].widget = forms.TextInputPrepend(
-    #     #     prepend='/' + self.urlpath.path,
-    #     #     attrs={
-    #     #         # Make patterns force lowercase if we are case insensitive to bless the user with a
-    #     #         # bit of strictness, anyways
-    #     #         'pattern': '[a-z0-9_-]+' if not settings.URL_CASE_SENSITIVE else '[a-zA-Z0-9_-]+',
-    #     #         'title': 'Lowercase letters, numbers, hyphens and underscores' if not settings.URL_CASE_SENSITIVE else 'Letters, numbers, hyphens and underscores',
-    #     #     }
-    #     # )
-    #     return super().get_form(step=None, data=None, files=None)
-
-    # def form_valid(self, form):
-    #     try:
-    #         self.newpath = UGA.create_by_request(request=self.request, article=self.article,
-    #                                              parent=self.urlpath,
-    #                                              slug=form.cleaned_data['slug'], title=form.cleaned_data['title'],
-    #                                              content=form.cleaned_data['content'],
-    #                                              summary=form.cleaned_data['summary']).url
-    #         messages.success(
-    #             self.request,
-    #             _("New article '%s' created.") %
-    #             self.newpath.article.current_revision.title)
-    #
-    #     # TODO: Handle individual exceptions better and give good feedback.
-    #     except Exception as e:
-    #         log.exception("Exception creating article.")
-    #         if self.request.user.is_superuser:
-    #             messages.error(
-    #                 self.request,
-    #                 _("There was an error creating this article: %s") %
-    #                 str(e))
-    #         else:
-    #             messages.error(
-    #                 self.request,
-    #                 _("There was an error creating this article."))
-    #         return redirect('wiki:get', '')
-
-    # url = self.get_success_url()
-    # return url
-
     def done(self, form_list, **kwargs):
         slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']

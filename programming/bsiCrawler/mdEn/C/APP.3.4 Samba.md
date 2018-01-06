@@ -26,18 +26,18 @@ When attackers hear unprotected * Samba * communication links, information can b
 
 ### 2 2 Incorrect logging in Samba
 
-Improperly designed or missing logging in * Samba * can lead to security problems. Without proper logging, errors or attacks go undetected and preventive measures and early warning system indicators can not be defined.
+Improperly designed or missing logging in * Samba * can lead to security issues. Without proper logging, errors or attacks go undetected and preventive measures and early warning system indicators can not be defined.
 
 ### 2 3 Incorrect emergency preparedness in Samba
 
 Also deficits in the emergency preparedness can lead to longer downtime of * Samba *. For example, after a successful attack, a necessary reinstallation may be delayed if installation packages are not available. Existing installation packages, in turn, can produce undesirable results if you have not used versioning of the configuration files or if the * Samba * server compilation and installation options are not kept.
 
 ### 2 4 Missing adaptation of Samba
-To show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of a * Samba * server's services.
+To show some capabilities of the * Samba * server and to give administrators a quick start, the configuration file * smb.conf * is created with default settings during the installation of the * Samba * server. With the options preset in this file, the * Samba * server can be started afterwards. If this file is thoughtlessly used without further settings, this can lead to considerable security gaps. However, even if the file is modified, errors may occur that may result in the disclosure of sensitive information or compromise the security, availability, and performance of * Samba * server services.
 
 ### 2 5 Software vulnerabilities or errors in Samba
 
-* Samba * is free software that is created and developed within a community. A consistent quality of the source code can not be guaranteed. This can lead to software vulnerabilities or failures and thus to serious security vulnerabilities in the application or all connected IT systems. Attackers can use such vulnerabilities for various attacks. For example, to infiltrate malicious software and thus possibly gain unauthorized access to sensitive information, such as confidential data or documents and access data. Furthermore, attackers can manipulate IT systems through security vulnerabilities, which can cause them to be inoperable or malfunctioning.
+* Samba * is free software that is created and developed within a community. A consistent quality of the source code can not be guaranteed. This can lead to software vulnerabilities or errors and thus to serious security vulnerabilities in the application or all connected IT systems. Attackers can use such vulnerabilities for various attacks. For example, to infiltrate malicious software and thus possibly gain unauthorized access to sensitive information, such as confidential data or documents and access data. Furthermore, attackers can manipulate IT systems via security vulnerabilities, which can cause them to be inoperable or malfunctioning.
 
 ### 2 6 Unauthorized use or administration of Samba
 
@@ -49,11 +49,11 @@ If administrators are not familiar enough with * Samba *'s extensive features, c
 
 ### 2 8 Malicious programs around Samba services
 
-If * Samba * is used as a file server on Linux systems, then the server itself is not directly susceptible to Windows malware. These can however be contained in infected files that are stored on them. Through the * Samba * system these infected files are then provided to all connected Windows clients and thus actively disseminated.
+If * Samba * is used as a file server on Linux systems, then the server itself is not directly susceptible to Windows malware. However, these can be contained in infected files that are stored on them. Through the * Samba * system these infected files are then provided to all connected Windows clients and thus actively disseminated.
 
 ### 2 9 Data loss at Samba
 
-Data loss has a significant impact on IT use. If business-relevant information is destroyed or falsified, business processes and specialist tasks can be delayed or even stopped. For example, * Samba * notes that the file system properties of Windows and Unix are significantly different. Therefore, it is not always guaranteed that access rights will be maintained under Windows. It can also cause information on * Alternate Data Streams * (ADS) and DOS attributes to be lost.
+Data loss has a significant impact on IT use. If business-relevant information is destroyed or falsified, business processes and specialist tasks can be delayed or even stopped. For example, * Samba * notes that the file system properties of Windows and Unix are very different. Therefore, it is not always guaranteed that access rights will be maintained under Windows. It can also cause information on * Alternate Data Streams * (ADS) and DOS attributes to be lost.
 
 ### 2 10 Integrity loss of sensitive information at Samba
 If information is no longer integer, it can lead to many problems. In the simplest case, information can then no longer be read, so it can no longer be further processed. * Samba * itself stores important operating data in * Trivial Database * (TDB) format databases. If these databases are not adequately and consistently handled by the operating system, they can cause problems when * Samba * services are used.
@@ -63,7 +63,7 @@ If information is no longer integer, it can lead to many problems. In the simple
 
 The following are specific requirements for the * Samba * area. Basically, IT operations are responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -71,7 +71,7 @@ The following requirements MUST be implemented as a priority:
 
 The introduction of a * Samba * server MUST be carefully planned and regulated. Depending on the application scenario, it is necessary to define which tasks the * Samba * server should fulfill in the future, in which operating mode it is operated and which components of * Samba * and which other components are required for this.
 
-If the cluster solution CTDB (Cluster Trivia Data Base) is used, the introduction of Samba MUST be carefully conceptualized. If * Samba * is also to provide the Active Directory (AD) services for Linux and Unix systems, the deployment MUST be carefully planned and the installation tested. Furthermore, the authentication process for the AD MUST be carefully designed and implemented. The introduction and the order in which the Stackable Virtual File System (VFS) modules are executed MUST be carefully designed and the implementation documented.
+If the cluster solution CTDB (Cluster Trivia Data Base) is used, the implementation of Samba MUST be carefully conceptualized. If * Samba * is also to provide the Active Directory (AD) services for Linux and Unix systems, the deployment MUST be carefully planned and the installation tested. Furthermore, the authentication process for the AD MUST be carefully designed and implemented. The introduction and the order in which the * Stackable Virtual File System * (VFS) modules are run MUST be carefully designed and the implementation documented.
 
 If IPv6 is used with Samba, this too MUST be carefully planned and also checked for error-free integration in a close-to-operational test environment.
 
@@ -164,7 +164,7 @@ To ensure the integrity and confidentiality of the data packets in the transport
 
 ### 4.1 Literature
 
-Further information on threats and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"Samba" can be found in the following publications, among others:
 
 * #### [SAMBA] Samba
 

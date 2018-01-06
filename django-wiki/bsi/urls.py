@@ -7,6 +7,7 @@ from . import views
 from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistoryView, UGPreviewView, \
     UGChangeRevisionView
 from .views import BSISearchView, WikiArticleView
+from .wizard import getSortedTopicList
 
 article_create_view_class = article.Create
 # article_diff_view = staticmethod(ugaViews.diff)
@@ -39,6 +40,5 @@ urlpatterns = [
     url(r'^uga/_create/get_bsi_articles/$', ugaViews.get_bsi_articles, name='get_bsi_articles'),
     # url(r'^(?P<path>.+/|)_create/_add_links/$', UGCreateAddLinksView.as_view(), name='add_links'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),
-    # url(r'^(?P<path>.+/|)_edit/$', UGEditView.as_view(), name='edit'),
 
 ]

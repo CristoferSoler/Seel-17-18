@@ -21,7 +21,7 @@ The aim of the module is to operate general directory services securely and to a
 
 This module considers general security aspects of directory services regardless of the product used. For product-specific security aspects, the IT-Grundschutz Compendium contains further components that must also be applied to the respective directory service.
 
-An example of this is Microsoft Active Directory (see APP.2.2 * Active Directory *). Other directory services are based on the freely available OpenLDAP (see APP.2.3 * OpenLDAP *), which is used in many Unix-based systems and, for example, also used by Apple's macOS. Modules for server systems on which directory services are usually operated are listed in the SYS.1 * Server * layer of the IT Baseline Protection Compendium.
+An example of this is Microsoft Active Directory (see APP.2.2 * Active Directory *). Other directory services are based on the freely available OpenLDAP (see APP.2.3 * OpenLDAP *), which is used in many Unix-based systems and, for example, also used by Apple's macOS. Components for server systems on which directory services are usually operated are listed in the SYS.1 * Server * layer of the IT Baseline Protection Compendium.
 
 2 risk situation
 -----------------
@@ -33,7 +33,7 @@ The following specific threats and vulnerabilities are of particular importance 
 The security of directory services relies heavily on the security of the base operating system, and especially on file system security. Directory services can be installed and operated on a variety of operating systems, which can result in a wide variety of security settings to be made. This diversity increases the planning requirements and requires appropriate knowledge of the underlying operating system. If the resulting overall solution is very heterogeneous or complex, an insufficiently planned use of the directory service in active operation can lead to security gaps. Since directory services also make use of role-based administration of the directory database and individual administration tasks can be delegated, incorrect administration of the administration tasks runs the risk of insecure or inadequate administration of the system.
 
 ### 2 2 Incorrect or inadequate planning of partitioning and replication in the directory service
-Partitioning is a division of the directory data of a directory service into individual subareas (partitions). The replication of partitions of the directory service is usually used for load balancing. Furthermore, the redundancy in the data storage improves the reliability and thus increases the availability. Therefore, a suitable planning is of crucial importance here, since subsequent changes to the partition and replication settings are possible, but can sometimes cause problems. Planning the partitioning and replication of the directory service incorrectly or inadequately may result in data loss, inconsistencies in data management, poor directory service availability, overall poor system performance, and even outages.
+Partitioning is a division of the directory data of a directory service into individual subareas (partitions). The replication of partitions of the directory service is usually used for load balancing. Furthermore, the redundancy in the data storage improves the reliability and thus increases the availability. Therefore, a suitable planning is of crucial importance here, since subsequent changes to the partition and replication settings are possible, but can sometimes cause problems. Planning the partitioning and replication of the directory service incorrectly or inadequately may result in data loss, inconsistencies in data storage, poor directory service availability, overall poor system performance, and even outages.
 
 ### 2 3 Incorrect or inadequate planning of access to the directory service
 
@@ -41,18 +41,18 @@ Managing access and access rights in the context of a directory service is an ex
 
 ### 2 4 Incorrect administration of access and access rights
 
-Access rights to an IT system and access rights to stored data and IT applications may only be granted to the extent necessary for the tasks to be performed. This also applies to the permissions granted to users and groups managed through a directory service. If these rights are administered incorrectly, this will lead to malfunctions if necessary rights have not been assigned. On the other hand, security vulnerabilities can occur if more than necessary rights are granted. If the access rights in the directory service are assigned incorrectly or inconsistently, the security of the entire system is considerably jeopardized. A particularly critical point is also the administration rights. If these rights are assigned incorrectly, the entire administration concept can be called into question or even the administration of the directory system itself may be blocked.
+Access rights to an IT system and access rights to stored data and IT applications may only be granted to the extent necessary for the tasks to be performed. This also applies to the permissions granted to users and groups managed through a directory service. If these rights are administered incorrectly, this will lead to malfunctions if necessary rights have not been assigned. On the other hand, there may be security vulnerabilities if more than necessary rights are granted. If the access rights in the directory service are assigned incorrectly or inconsistently, the security of the entire system is considerably jeopardized. A particularly critical point is also the administration rights. If these rights are assigned incorrectly, the entire administration concept can be called into question or even the administration of the directory system itself may be blocked.
 
 ### 2 5 Incorrect configuration of access to directory services
 
-In many usage scenarios, other applications, such as Internet or intranet applications, must access the directory service. A misconfiguration can result in incorrect access to access rights or unauthorized access to the directory service, or the transmission of data for authentication in plain text, thus allowing unencrypted information to be spied out.
+In many usage scenarios, other applications, such as Internet or intranet applications, must access the directory service. A misconfiguration can lead to incorrect access to access rights or unauthorized access to the directory service, or to the fact that data for authentication can be transmitted in plain text and thus unencrypted information can be spied out.
 
 ### 2 6 Directory Services Failure and Encryption Failure
 
 Technical failures due to hardware or software problems may cause directory services or parts thereof to fail. As a result, the data held in the directory are temporarily inaccessible. In extreme cases, data can be lost. This can hinder business processes and internal work processes. If functional copies of the failed system parts are available, access is still possible, but depending on the selected network topology, this may only be limited.
 
 ### 2 7 Compromise of directory services due to unauthorized access
-If an attacker has succeeded in successfully bypassing a necessary authentication against the directory service, then he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
+If an attacker has succeeded in successfully bypassing a necessary authentication against the directory service, he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
 
 3 requirements
 ---------------
@@ -67,7 +67,7 @@ The following requirements MUST be implemented as a priority:
 
 A security policy for the directory service MUST be created. This SHOULD be coordinated with the overarching security concept of the entire institution.
 
-#### APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+#### APP.2.1.A2 Planning of the use of directory services [Data protection officer, specialist responsible persons]
 
 The use of directory services MUST be carefully planned. In addition to determining the use of the directory service, a model of object classes and attribute types MUST be developed that meets the requirements of the intended use. During the planning of the directory service, staff representatives and data protection officers MUST be involved. A needs-based authorization concept for directory service MUST be designed. In general, the planned directory service structure SHOULD be fully documented. Actions SHOULD be planned to prevent the unauthorized collection of data from the directory service.
 
@@ -112,7 +112,7 @@ Administrators SHOULD be familiar with all security mechanisms and aspects of di
 
 #### APP.2.1.A11 Setting up access to directory services
 
-Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended purpose.
+Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended use.
 
 #### APP.2.1.A12 Directory Services Monitoring
 
@@ -123,11 +123,11 @@ The data exchange between client and directory service server SHOULD be secured,
 
 #### APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
 
-When decommissioning the directory service SHOULD be made sure that further required rights or information will be available to a sufficient extent, but all others are deleted. In addition, users SHOULD be notified when a directory service is taken out of service. When decommissioning individual partitions of a directory service, care should be taken not to affect other partitions.
+When decommissioning the directory service SHOULD be made sure that further required rights or information are sufficiently available, but all others are deleted. In addition, users SHOULD be notified when a directory service is taken out of service. When decommissioning individual partitions of a directory service, care should be taken not to affect other partitions.
 
 #### APP.2.1.A15 Migration of directory services
 
-For a planned migration of directory services, a migration concept SHOULD be created in advance. The schema changes made to the directory service SHOULD be documented. Extensive permissions used to perform the directory service migration SHOULD be reset. The access rights for directory service objects on systems that were upgraded from previous versions or adopted by other directory systems SHOULD be updated.
+For a planned migration of directory services, a migration concept SHOULD be created in advance. The schema changes made to the directory service SHOULD be documented. Extensive permissions used to perform the directory service migration SHOULD be reset. The access rights for directory service objects on systems upgraded from previous versions or adopted by other directory systems SHOULD be updated.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -135,7 +135,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.2.1.A16 Creation of a directory service failure plan (CIA)
 
-As part of emergency preparedness, needs-based contingency planning for directory services SHOULD be implemented. SHOULD have contingency plans in place for the failure of major directory service systems. All emergency procedures for the entire system configuration of directory service components SHOULD be documented.
+As part of emergency preparedness, needs-based contingency planning for directory services SHOULD be carried out. SHOULD have contingency plans in place for the failure of major directory service systems. All emergency procedures for the entire system configuration of directory service components SHOULD be documented.
 
 4 Further Information
 ------------------------------
@@ -170,7 +170,7 @@ Further information on threats and security measures in the area of ​​the "g
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the "general directory service" building block.
+The following elementary threats are important for the module "General directory service".
 
 * G 0.11 Failure or disruption of service providers
 * G 0.14 Spying out information (spying)
@@ -199,3 +199,183 @@ The following elementary threats are important for the "general directory servic
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+* G 0.11 Failure or disruption of service providers
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A8 Planning partitioning and replication in the directory service
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+* G 0.14 Spying out information (spying)
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A13 Securing Communication with Directory Services
+* G 0.15 Listening
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A13 Securing Communication with Directory Services
+* G 0.18 Missing planning or missing adjustment
+  * APP.2.1.A1 Creating a directory services security policy
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A7 Creation of a security concept for the use of directory services
+  * APP.2.1.A8 Planning partitioning and replication in the directory service
+  * APP.2.1.A9 Appropriate Selection of Directory Services Components [Specialists]
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+* G 0.19 Disclosure of information worthy of protection
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+* G 0.21 Manipulation of hardware or software
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+* G 0.22 Manipulation of information
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+* G 0.23 Unauthorized intrusion into IT systems
+  * APP.2.1.A1 Creating a directory services security policy
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A4 Secure installation of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+* G 0.25 Failure of devices or systems
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A8 Planning partitioning and replication in the directory service
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+* G 0.26 Malfunction of equipment or systems
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+* G 0.27 Resource shortage
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A7 Creation of a security concept for the use of directory services
+  * APP.2.1.A8 Planning partitioning and replication in the directory service
+  * APP.2.1.A9 Appropriate Selection of Directory Services Components [Specialists]
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+* G 0.28 Software vulnerabilities or errors
+  * APP.2.1.A4 Secure installation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+* G 0.29 Violation of laws or regulations
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+* G 0.30 Unauthorized use or administration of devices and systems
+  * APP.2.1.A1 Creating a directory services security policy
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A15 Migration of directory services
+* G 0.31 Incorrect use or administration of devices and systems
+  * APP.2.1.A1 Creating a directory services security policy
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+  * APP.2.1.A16 Creation of a directory service failure plan (CIA)
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+* G 0.32 Abuse of permissions
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+* G 0.33 Personnel loss
+  * APP.2.1.A10 Training on administration and operation of directory services
+* G 0.36 Identity theft
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A13 Securing Communication with Directory Services
+* G 0.37 denying actions
+  * APP.2.1.A12 Directory Services Monitoring
+* G 0.38 Abuse of personal data
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A5 Secure configuration and configuration changes of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A13 Securing Communication with Directory Services
+* G 0.39 Malware
+  * APP.2.1.A12 Directory Services Monitoring
+* G 0.40 Denial of Service
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A12 Directory Services Monitoring
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+* G 0.42 Social engineering
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A12 Directory Services Monitoring
+* G 0.43 Importing messages
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+* G 0.45 data loss
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A13 Securing Communication with Directory Services
+  * APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
+  * APP.2.1.A15 Migration of directory services
+* G 0.46 Loss of integrity of sensitive information
+  * APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
+  * APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
+  * APP.2.1.A6 Secure operation of directory services
+  * APP.2.1.A8 Planning partitioning and replication in the directory service
+  * APP.2.1.A10 Training on administration and operation of directory services
+  * APP.2.1.A11 Setting up access to directory services
+  * APP.2.1.A13 Securing Communication with Directory Services

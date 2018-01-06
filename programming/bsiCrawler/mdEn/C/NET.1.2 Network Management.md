@@ -7,7 +7,7 @@ Reliable network management is a prerequisite for the secure and efficient opera
 
 Network management includes many important functions, such as: For example, network monitoring, component configuration, event handling, and logging. Another important function is reporting, which can be created as a common platform for the network and IT systems. Alternatively, it can be implemented as a single platform or as part of the individual management components.
 
-The network management infrastructure consists of central management systems (eg SNMP server), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
+The network management infrastructure consists of central management systems (eg SNMP servers), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
 
 ### 1.2 Objective
 
@@ -17,7 +17,7 @@ The aim of this module is to establish information security as an integral part 
 
 This module considers the necessary components and conceptual tasks for network management. The counterpart in the system management for networked clients and servers is described in the block SYS.5 * System Management *.
 
-The present module specifies the basic requirements of the module NET.1.1 * Network Architecture and Design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
+The present module specifies the basic requirements of the module NET.1.1 * Network architecture and design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
 
 The management of the passive network infrastructure is dealt with in the building blocks of the infrastructure (building block layer INF) or industrial IT (building block layer IND). Therefore, these topics are not included in this module.
 
@@ -52,7 +52,7 @@ If the system time of the network management components is insufficiently synchr
 
 The following are specific requirements for network management. Basically, the IT operation is responsible for meeting the requirements. In addition, the Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and regularly reviewed in accordance with established security policies. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These roles are listed in square brackets in the heading of each requirement.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -86,7 +86,7 @@ The responsible employees MUST regularly inform themselves about known vulnerabi
 
 #### NET.1.2.A6 Regular backup
 
-All network management solutions MUST be integrated into the institution's data protection concept (see CON.3 * data backup concept *). All specific data for network management MUST be considered. At least the system data for the integration of the components or objects to be managed, event messages, statistical data as well as reserved data for the configuration management MUST be saved.
+All network management solutions MUST be integrated into the institution's data protection concept (see CON.3 * data backup concept *). All specific data for network management MUST be considered. At least the system data for the integration of the components or objects to be managed, event messages, statistical data as well as data retained for the configuration management MUST be saved.
 
 #### NET.1.2.A7 Basic logging of events
 
@@ -94,7 +94,7 @@ The network management solution MUST be integrated into the institution's loggin
 
 #### NET.1.2.A8 time synchronization
 
-All network management components, including the integrated network components, MUST use a synchronous time. The time MUST be synchronized at each location within the local network via NTP service. If a separate management network is set up, an NTP instance MUST be positioned in this management network.
+All network management components, including the integrated network components, MUST use a synchronous time. The time MUST be synchronized at each location within the local network using NTP service. If a separate management network is set up, an NTP instance MUST be positioned in this management network.
 
 #### NET.1.2.A9 Securing network management communication
 
@@ -102,7 +102,7 @@ If network management communication is via the productive infrastructure, then s
 
 #### NET.1.2.A10 Limitation of SNMP communication
 
-Network management MUST NOT use unsafe versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
+Network management MUST NOT use insecure versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
 
 ### 3.2 Standard requirements
 
@@ -110,7 +110,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
 
-For network management, a security policy SHOULD be created and maintained sustainably. The guideline SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
+For network management, a security policy SHOULD be created and maintained sustainably. The policy SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
 
 The security policy SHOULD define which areas of network management are implemented through centralized management tools and services. It SHOULD also define to what extent tasks should be automated in the network management of the institution.
 
@@ -125,7 +125,7 @@ The documentation SHOULD be complete and always up-to-date.
 
 #### NET.1.2.A13 Creation of a network management concept [Head IT]
 
-Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be taken into account as needed:
+Based on the security policy (see NET.1.2.A11 * Defining a security policy for network management *), a network management concept SHOULD be created and sustainably maintained. At least the following aspects should be considered as needed:
 
 * Methods, techniques and tools for network management,
 * Security of access and communication,
@@ -214,7 +214,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 
-Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be designed redundantly. Also, the individual components SHOULD be provided highly available.
+Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be configured redundantly. Also, the individual components SHOULD be provided highly available.
 
 #### NET.1.2.A31 Basic Use of Secure Protocols (CIA)
 
@@ -224,7 +224,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 
@@ -245,7 +245,7 @@ The time synchronization SHOULD be ensured across all locations of the instituti
 
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
 
-In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to set up adequate backup solutions to perform the administrative tasks in an emergency.
+In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to establish adequate backup solutions that can be used to perform the administrative tasks in an emergency.
 
 4 Further Information
 ------------------------------
@@ -290,3 +290,595 @@ The following elementary hazards are important for the module "Network Managemen
 * G 0.40 Denial of Service
 * G 0.43 Importing messages
 The cross reference tables can be found in the download area due to their size.
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A8 time synchronization
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+* G 0.11 Failure or disruption of service providers
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+* G 0.14 Spying out information (spying)
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A8 time synchronization
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+* G 0.18 Missing planning or missing adjustment
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+* G 0.19 Disclosure of information worthy of protection
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+* G 0.22 Manipulation of information
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A8 time synchronization
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+* G 0.23 Unauthorized intrusion into IT systems
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A8 time synchronization
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+* G 0.25 Failure of devices or systems
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A8 time synchronization
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+* G 0.27 Resource shortage
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+* G 0.29 Violation of laws or regulations
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+* G 0.39 Malware
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+* G 0.40 Denial of Service
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A7 Basic logging of events
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+* G 0.43 Importing messages
+  * NET.1.2.A1 Planning the network management
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A12 Actual recording and documentation of network management
+  * NET.1.2.A13 Creation of a network management concept [Head IT]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A15 Concept for the secure operation of the network management infrastructure
+  * NET.1.2.A16 Setup and configuration of network management solutions
+  * NET.1.2.A17 Regular target / actual comparison
+  * NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A22 Limitation of management functions
+  * NET.1.2.A23 Logging of administrative access
+  * NET.1.2.A24 Central configuration management for network components
+  * NET.1.2.A25 Status monitoring of the network components
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A27 Integration of network management in emergency planning
+  * NET.1.2.A28 Placement of management clients for in-band management
+  * NET.1.2.A29 Use of VLANs in the Management Zone
+  * NET.1.2.A3 Role and authorization concept for network management
+  * NET.1.2.A30 Highly available realization of the management solution (A)
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+  * NET.1.2.A37 Cross-Site Time Synchronization (CI)
+  * NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
+  * NET.1.2.A4 Basic Authentication for Network Management Access [IT Leader, Information Security Officer (ISB)]
+  * NET.1.2.A5 Importing Updates and Patches
+  * NET.1.2.A6 Regular backup
+  * NET.1.2.A9 Securing network management communication
+  * NET.1.2.A10 Limitation of SNMP communication
+  * NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
+  * NET.1.2.A14 fine- and implementation planning
+  * NET.1.2.A19 Strong authentication of management access
+  * NET.1.2.A20 Securing Access to Network Management Solutions
+  * NET.1.2.A21 Decoupling of network management communication
+  * NET.1.2.A26 Comprehensive logging, alarming and logging of events
+  * NET.1.2.A31 Basic Use of Secure Protocols (CIA)
+  * NET.1.2.A32 Physical separation of the management network (CIA)
+  * NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+  * NET.1.2.A34 Logging Content of Administrative Sessions (CI)
+  * NET.1.2.A35 Preservation Requirements (CIA)
+  * NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)

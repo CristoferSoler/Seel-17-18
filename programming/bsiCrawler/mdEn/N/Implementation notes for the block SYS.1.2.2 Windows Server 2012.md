@@ -101,7 +101,7 @@ The editions Standard and Datacenter are equivalent from a security point of vie
 
 ** Features of the Essentials Edition **
 
-Foundation and Essentials in Windows 2012 are not intended to run within a full domain. Although this is now technically possible for Essentials with Windows Server 2012 R2, its features are primarily aimed at smaller institutions that use only a single server to run all functions. This is in contrast to the established practice in larger IT environments of running as few services per server as possible to resolve dependencies and spread risk, a trend that is becoming more prevalent as virtualization increases.
+Foundation and Essentials in Windows 2012 are not intended to run within a full domain. Although this is now technically possible for Essentials with Windows Server 2012 R2, its features are primarily aimed at smaller institutions that use only a single server to run all functions. This is in contrast to the established practice in larger IT environments of running as few services as possible per server to resolve dependencies and spread risk, a trend that is becoming more prevalent as virtualization increases.
 
 The Essentials Edition offers a number of features that can simplify setup without further configuration:
 
@@ -111,7 +111,7 @@ The Essentials Edition offers a number of features that can simplify setup witho
  There is a preconfigured VPN client available. The user can also activate auto dial-in so that he is always connected to the corporate or government network.
 * Server StorageFor locations such as user home directories, you can simply create shared folders on another server on the same network. This can be an automatic alert when the directories exceed a certain size.
 * Health Report
- A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as on the smartphone.
+ A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as the smartphone.
 * BranchCache
  The BranchCache mechanism can already be activated in Essentials, which increases the availability of data in remote locations through caching. It also reduces bandwidth usage across the WAN.
 * Remote Web Access
@@ -123,7 +123,7 @@ While this is a very easy way to generate regular backups of the data stored on 
 
 ** Block Microsoft accounts **
 
-The following section is not applicable if a well-founded and documented decision has been made regarding the use of Microsoft Azure in connection with the Windows Server 2012 (R2) server system as part of the OPS.2.2 Cloud Usage building block.
+The following section is not applicable if a well-founded and documented decision to use Microsoft Azure in connection with the Windows Server 2012 (R2) server system has been made in the context of the OPS.2.2 Cloud Usage building block.
 
 Otherwise, no Microsoft account may be created during system setup. Creation of Microsoft accounts on the server must also be blocked. This is done most reliably via the Active Directory and the following security policy:
 
@@ -145,7 +145,7 @@ For each role, you can specify which role services are provided to other users a
 
 ** Features **
 
-Features are programs that support or enhance the functionality of the server or one or more roles. For example, the Failover Clustering feature enhances the functionality of other roles, including file services and DHCP servers, because server clusters can be merged for greater redundancy and better performance. The Telnet client feature, on the other hand, enables remote communication via the Telnet protocol.
+Features are programs that support or enhance the functionality of the server or one or more roles. For example, the Failover Clustering feature improves the functionality of other roles, including file services and DHCP servers, by allowing server clusters to converge for better redundancy and better performance. The Telnet client feature, on the other hand, enables remote communication via the Telnet protocol.
 
 Roles, role services, and features must always be installed as sparingly as possible to minimize the complexity and attack surface. The rule "one service per server" also applies analogously. As a rule, only one server role per server should be installed. The selection of roles, role services and features to be installed should be justified and documented.
 
@@ -178,7 +178,7 @@ To securely set up and operate Windows Server 2012 (R2), the administrators resp
 
 * not to surf the web from servers,
 * in particular, not to control potentially unsafe sites,
-* To use client systems for downloading files such as drivers and
+* Client systems for downloading files such as drivers to use and
 * to use a standard account for all non-administrative activities.
 The following is a description of Windows Server 2012 (R2) specifics that administrators should be familiar with. Necessary training should be done before installing the server systems.
 
@@ -208,7 +208,7 @@ An even stronger coverage would be achieved by working with completely separate 
 
 However, with complete separation of the accounts the problem arises that if administrators should first be able to log on to servers as standard users, it is also possible to log in all domain users on the server. This is not desirable as it significantly increases the attack surface. Either this must be prevented with complex configuration or the alternative of separate admin systems, so-called Privileged Access Workstations (PAWs), can be used. However, these specially protected dedicated systems are usually only in question with higher protection requirements.
 
-Attention: UAC never limits the predefined account "Administrator". Under client operating systems as of Vista this usually has no effect as this account can not be used for login; instead, additional accounts from the "Administrators" group will be created. On the other hand, Windows Server (as of 2008) does not create any additional accounts during installation and allows you to log in as "Administrator" without UAC. The account "Administrator" should therefore not be used for regular system administration. Other local or domain accounts that are "administrators" members are restricted via UAC.
+Attention: UAC never limits the predefined account "Administrator". Under client operating systems from Vista, this usually has no effect because this account can not be used for login; instead, additional accounts from the "Administrators" group will be created. On the other hand, Windows Server (as of 2008) does not create any additional accounts during installation and allows you to log in as "Administrator" without UAC. The account "Administrator" should therefore not be used for regular system administration. Other local or domain accounts that are "administrators" members are restricted via UAC.
 
 ### 2.2 Standard measures
 
@@ -221,11 +221,11 @@ In the following, those important security mechanisms, i. H. Security techniques
 Windows Server 2012 (R2) already comes with a set of resources and tools that can and should be used for backup. These should complement each other in a meaningful way with the security features of other IT systems and third-party products, ideally covering them in the sense of a defense-in-depth and never canceling or weakening each other.
 
 Not several essential functions per ** server **
-The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). This is more about making functionally independent units technically independent of each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
+The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). It's more about making functionally independent units technically independent from each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
 
 S ** ecurity Baseline ** and SCM
 
-Many security-related settings in Windows Server 2012 (R2) are most easily managed through GPOs. It is advisable to create a so-called baseline for all server systems or for server systems of a specific deployment class, ie a template that contains optimal security settings, is regularly checked and updated and is rolled out to all operating server systems.
+Many security-related settings in Windows Server 2012 (R2) are most easily managed through GPOs. It is recommended to create a so-called baseline for all server systems or for server systems of a certain application class, ie a template that contains optimal security settings, is regularly checked and updated and is rolled out to all server systems operated.
 
 The Security Compliance Manager (SCM) is a free tool from Microsoft that can be used to quickly create and manage GPOs and also brings security templates for various purposes. These can then with different methods, such. For example, Group Policy Editor or System Center Configuration Manager (SCCM) or DCM (Desired Configuration Management, now renamed Configuration Manager Compliance Settings) can be rolled out centrally. Configuration of stand-alone machines is also possible through the GPO Pack feature, but recommended only for non-domain member exceptions.
 
@@ -233,7 +233,7 @@ The consistent use of SCM or other security templates and the central deployment
 
 In particular, the security templates available in the SCM contain settings that are even more secure for many parameters than the default settings in Windows Server 2012 (R2). Often, however, these still have to be adapted to the respective purpose of use and the circumstances of the institution.
 
-If the institution does not already have a security-compliant security template, the security baseline for Windows Server 2012 or R2 should be selected in the SCM. The packed .cab file contains the following components:
+If the institution does not already have a security-compliant security template, the Security Baseline for Windows Server 2012 or R2 should be selected in the SCM. The packed .cab file contains the following components:
 
 * Windows Server 2012
 
@@ -272,7 +272,7 @@ If the institution does not already have a security-compliant security template,
 
  
 The customization should be based on GPOs for the envisaged role of Server 2012 (R2). All settings should be thoroughly tested before rolling out to productive systems, otherwise malfunctions can easily occur.
-It should be checked after every major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, as there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
+It should be checked after each major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, as there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
 
 For further information, see also module APP.2.2 Active Directory.
 
@@ -298,7 +298,7 @@ Before an IT system is connected to potentially insecure networks, and before re
 
 When using an anti-virus program on the server, the signatures should be updated at least daily, and all hard disks, including the operating system partition, should be scanned regularly. Appropriate alerts for the responsible administrators should be configured for all types of malware related events.
 
-Regardless of which antivirus product you choose, you can use the Microsoft Windows Defender product built into Windows Server 2012 (R2) before the final malware-protection solution can be activated.
+Regardless of which antivirus product you choose, you can use Windows Defender, a Microsoft Windows Defender product integrated with Windows Server 2012 (R2), until the final malware-protection solution is activated.
 
 ** Windows Defender **
 
@@ -346,7 +346,7 @@ Attention: Accounts for services and computers should not be members of Protecte
 
 Managed Service Accounts (MSA) are one of the special features that have been added with Windows Server 2008 R2 and Windows 7. These are accounts for services (such as SQL Server or Exchange) in the Active Directory that are bound to a specific machine. The account has its own complex password and is managed automatically. Thus, an MSA can easily and securely perform services on a particular system while maintaining the ability to access resources on the network as a particular user principal. The Managed Service Account group created with Windows Server 2012 provides the same functionality in the domain, but with the added ability to span multiple servers.
 
-Wherever possible, MSA should be used for service accounts, as well as the Managed Service Account group if possible in the sense of uniform configuration and complexity limitation.
+Wherever possible, MSA should be used for service accounts, as well as the Managed Service Account group, if possible, in the sense of uniform configuration and limitation of complexity.
 
 ** LSA - ** Protection in Windows Server 2012 R2
 
@@ -429,16 +429,16 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### SYS.1.2.2.M9 Local Communication Filtering (CI)
 
-Basically, central measures such as segmentation of networks, zoning and packet filtering in the corporate and government sector are generally implemented by dedicated active network components that are set up at suitable locations. However, in the sense of a staggered defense (defense-in-depth), the local firewall should be activated if more protection is required.
+Basically, central measures such as segmentation of networks, zoning and packet filtering in the corporate and government sector are usually realized by dedicated active network components that are set up at appropriate locations. However, in the sense of a staggered defense (defense-in-depth), the local firewall should be activated if more protection is required.
 
 Windows Server 2012 (R2) includes a local firewall for this purpose, the so-called "Windows Firewall with Advanced Security (WFAS)". This should be activated and set as strictly as possible for incoming and outgoing traffic.
 
 The WFAS can be managed by GPOs. This is recommended to keep the configuration consistent and central. The administration of concrete firewall rules is outside the scope of this building block. For this, the building block firewall is to be used.
 
-Also implemented by WFAS are the native IPsec features of Windows Server 2012 (R2). These should be used to ensure the identity and integrity of the connection to remote systems, as this is not possible with packet filtering alone. The secure configuration of IPsec connections is also not part of this module. It is handled in the module VPN.
+Also implemented by WFAS are the native IPsec features of Windows Server 2012 (R2). These should be used to ensure the identity and integrity of the connection to remote systems, as this is not possible with packet filtering alone. The secure configuration of IPsec connections is also not content of this block. It is handled in the module VPN.
 
 #### SYS.1.2.2.M10 Disk Encryption on Windows Server 2012 (C)
-A suitable means of protecting the confidentiality of data at rest, not during transport, is the encryption of hard disks and other data carriers. It should be noted that the data must be decrypted for processing (for example, in the case of encryption of the boot medium already during the boot process) and always remain readable until the system is shut down or put into sleep mode. With server systems often running around the clock, protection is ultimately limited, but can be helpful against physical attacks such as theft of media when combined with appropriate other measures. Windows brings with it the tool BitLocker, which is also available in Windows Server 2012 (R2) in all editions.
+A suitable means of protecting the confidentiality of data at rest, not during transport, is the encryption of hard disks and other data carriers. It should be noted that the data must be decrypted for processing (for example, in the case of encryption of the boot medium already during the boot process) and remain legible until the system is shut down or put into sleep mode. With server systems often running around the clock, protection is ultimately limited, but can be helpful against physical attacks such as theft of media when combined with appropriate other measures. Windows brings with it the tool BitLocker, which is also available in Windows Server 2012 (R2) in all editions.
 
 BitLocker supports device encryption on x86 and x64-based systems that meet the requirements of the Windows Hardware Certification Kit (HCK) for a Trusted Platform Module (TPM) and Connected Stand-by Secure Boot. The device encryption protects both the operating system and other connected hard drives. Basically, device encryption can be used with a Microsoft account or a domain account.
 
@@ -454,7 +454,7 @@ BitLocker can now encrypt disks during installation. This is recommended because
 
 Administrators can enable BitLocker before installing the Windows Preinstallation Environment (WinPE). This is done with a random plaintext key applied to the freshly formatted disk before the setup process starts. Also newly added is the option "Used Disk Space Only", in which only the previously used memory is encrypted. This usually only takes a few seconds at this point and thus does not noticeably hinder the installation process.
 
-The administrator can check the BitLocker status of a partition in the BitLocker Control Panel or in Windows Explorer. If a hard disk was initially encrypted with plain text keys during installation, the status "Waiting For Activation" is displayed with a yellow exclamation mark. This means that for complete protection of the partition, the key still needs to be protected. To do this, the administrator adds suitable key protection via the control panel, the manage-bde tool, or the WMI APIs.
+The administrator can check the BitLocker status of a partition in the BitLocker Control Panel or in Windows Explorer. If a hard disk was initially encrypted with plain text keys during installation, the status "Waiting For Activation" is displayed with a yellow exclamation mark. This means that for complete protection of the partition, the key still needs to be protected. To do this, the administrator adds suitable key protection via the control panel, the manage-tool, or the WMI APIs.
 
 ** Key Protector **
 
@@ -498,7 +498,7 @@ With Windows 8.1 and Server 2012 R2, the following enhancements to the BitLocker
 
 Unlike the previous BitLocker implementation, so-called Device Encryption, which is also based on BitLocker in the background, is automatically enabled so that the device is encrypted from the beginning. This happens as follows:
 
-During a clean installation of Windows Server 2012 R2, the server is prepared for first use. It also initializes device encryption and initially encrypts the disk of the operating system and the other disks with a key stored in plain text. The security of the data at this time corresponds to a BitLocker encryption in standby mode (Suspended), in which the key is in plain text on the hard disk.
+During a clean installation of Windows Server 2012 R2, the server is prepared for first use. The device encryption is also initialized and the data carrier of the operating system and the other hard disks are first encrypted with a key stored in plain text. The security of the data at this time corresponds to a BitLocker encryption in standby mode (Suspended), in which the key is in plain text on the hard disk.
 If the server is not added to a domain, it requires a Microsoft account that has been granted administrative rights on the server. Once the administrator logs in with the Microsoft account, the plain text key is deleted, a recovery key is uploaded to the Microsoft account (online), and TPM protection is created. If the recovery key is needed later (for example, if the TPM is damaged), the administrator can get it back using a second device and the Microsoft account.
 
 If the user logs on via a domain account, the plaintext key is not deleted until the server has entered the domain and the recovery key then successfully created has been successfully saved in the Active Directory Domain Services. The Computer Configuration \ Administrative Templates \ Windows Components \ BitLocker Drive Encryption \ Operating System Drives GPO must be enabled and the "Do not enable BitLocker until recovery information is stored in AD DS for operating system drives" option should be selected. Only then does TPM protection become active, thus completing device encryption.
@@ -511,7 +511,7 @@ Since Windows Server 2012 R2, there is a FIPS mode that allows BitLocker to be c
 
 ** BitLocker on virtual machines **
 
-The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as soon as possible after use.
+The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or if it should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as soon as possible after use.
 
 Because virtual machines do not have a TPM, the following two steps must be taken before BitLocker (which must be installed on the server) can be activated:
 
@@ -553,14 +553,14 @@ The setup only requires a Windows server and a GPO. In addition, the network ser
 
 Autoconfiguration is invoked on the Collector by the command "winrm qc" in an administrative prompt. Automatic start of the WinRM service should be activated on demand, the also queried automatic opening of the firewall can be done even more secure by GPO. Now incoming events can be viewed in the Eventviewer under "Subscriptions".
 
-Subsequently, the events to be forwarded can be defined via GPO. Systems using the GPO will ask the Windows Event Collector if they have any subscriptions and only then send the desired events.
+Subsequently, the events to be forwarded can be defined by GPO. Systems using the GPO will ask the Windows Event Collector if they have any subscriptions and only then send the desired events.
 
-It is quite possible to collect the entirety of all domain security events in the WEF. This can be useful if no other central logging system is available and still forensic investigations should be possible. Otherwise, the strength of the WEF mainly lies in the targeted collection and filtering of critical events. Likewise, a SIEM that records all events can be best complemented: the SIEM for completeness, WEF for visibility, even in areas of the environment that are not covered by the SIEM. The SIEM can then retrieve events from these at the collector and thus even better provide a uniform view of everything.
+It is quite possible to collect the entirety of all domain security events in the WEF. This can be useful if no other central logging system is available and still forensic investigations should be possible. Otherwise, the strength of the WEF mainly lies in the targeted collection and filtering of critical events. Likewise, a SIEM that records all events can be best complemented: the SIEM for completeness, WEF for visibility, even in areas of the environment that are not covered by the SIEM. The SIEM can then retrieve events from these at the collector and thus even better provide the uniform view of everything.
 
 ** Block after failed decryption attempts **
 
 User accounts can be thresholded for how many login attempts are possible before the account is locked. This is a standard procedure to hinder brute force attacks. At the same time, there is a danger that locks will be deliberately provoked to achieve denial of service.
-Since disk encryption is an extension of access protection to the data on hard disks, which can also be attacked by brute force, a comparable measure is possible here:
+Since disk encryption is an extension of access protection to the data on hard drives, which can also be attacked by brute force, a comparable measure is possible here:
 
 Since Windows 8 and Server 2012, the "\ Computer Configuration \ Windows Settings \ Security Settings \ Local Policies \ Security Options \ Interactive logon: Machine account lockout threshold" policy allows you to automatically lock partitions after a defined number of unsuccessful attempts to log in primary key protectors. After that, the volume can only be decrypted using the recovery key. This must be entered by an authorized user in the so-called "Device Lockout Mode", in which the system automatically reboots, to gain access again. It counts faulty login attempts on both Ctrl-Alt-Entf locked systems and password-protected screensavers.
 
@@ -578,7 +578,7 @@ Several Windows servers can be operated in a network. Similar to the server role
 
 ** Network Load Balancing **
 
-The Network Load Balancing feature allows two or more Windows Server to provide network services over TCP / IP at a common address. The servers and services are independent and do not share resources. Network requests to the shared address are distributed to the servers in the federation.
+The Network Load Balancing feature allows two or more Windows servers to provide network services over TCP / IP at a common address. The servers and services are independent and do not share resources. Network requests to the shared address are distributed to the servers in the federation.
 
 ** NIC teaming **
 
@@ -619,11 +619,11 @@ The main differences in terms of NIC teaming concern
 * Improved interoperability and performance in connection with Hyper-V Network Virtualization (NVGRE).
 ** ** BranchCache
 
-BranchCache is a technique for optimizing the use of transmission capacity in the WAN, e.g. B. in the connection of field offices. To save bandwidth, BranchCache copies content from central servers and caches it in the branch office (so-called caching) so that they no longer need to be transferred when accessing it again.
+BranchCache is a technique for optimizing the use of transmission capacity in the WAN, e.g. B. in the connection of field offices. In order to save bandwidth, BranchCache copies content from central servers and caches it in the branch office (so-called caching) so that they no longer need to be transferred when accessed again.
 
 BranchCache is based on deep functions of the Windows file server. So files are divided into small sections to find and eliminate duplicates. In particular, smaller changes in large files do not lead to a complete retransmission.
 
-Configuration can also be done for larger institutions through a single small set of GPOs.
+The configuration can also be done for larger institutions through a single small set of GPOs.
 
 With Windows Server 2012 (R2), the cache is now encrypted, so that at least for normal confidentiality requirements on a further encryption about the volume can be waived.
 
@@ -648,13 +648,13 @@ Virtual smart cards enable multi-factor authentication in many types of infrastr
 
 ** Windows Biometric Framework **
 
-The Windows Biometric Framework (WBF), a set of services and interfaces for biometric devices, has also been expanded. Fast user switching and password synchronization with fingerprints are now possible.
+The Windows Biometric Framework (WBF), a set of services and interfaces for biometric devices, has also been extended. Fast user switching and password synchronization with fingerprints are now possible.
 
 However, it should be noted that biometric data have some disadvantages that make them largely unusable as identification and authentication features from a security perspective. In addition to the fact that many biometric features are not unique worldwide, they are often relatively easy to counterfeit and, above all, can not be changed.
 
 #### SYS.1.2.2.M14 Shutting Down Encrypted Servers and Virtual Machines (CI)
 
-If hard disks are encrypted to protect the confidentiality or integrity of data, ideally the key to decryption is not permanently available, but requires an administrator interaction or at least a logged technical request on the network or the AD. Otherwise, an attacker or innate perpetrator can read out or manipulate the data during operation. For this, BitLocker or the device encryption must be activated in a mode that is not exclusively based on the TPM, and the additional key protection, such as a USB key, should not be permanently plugged. Although this increases the effort in operation, but represents a much higher hurdle for attackers.
+If hard drives are encrypted to protect the confidentiality or integrity of data, ideally the key to decryption is not permanently available but requires an administrator interaction or at least a logged technical request on the network or AD. Otherwise, an attacker or innate perpetrator can read out or manipulate the data during operation. For this, BitLocker or the device encryption must be activated in a mode that is not exclusively based on the TPM, and the additional key protection, such as a USB key, should not be permanently plugged. Although this increases the effort in operation, but represents a much higher hurdle for attackers.
 
 3 Further information
 ------------------------------
@@ -665,7 +665,7 @@ Currently there is no corresponding information for this module. The IT-Grundsch
 
 ### 3.2 Literature
 
-Additional information on threats and security measures in the "Windows Server 2012" area can be found in the following publications, among others:
+Additional information about threats and security measures in the "Windows Server 2012" area can be found in the following publications, among others:
 
 * #### [LAPS1] Local Administrator Password Solution
 

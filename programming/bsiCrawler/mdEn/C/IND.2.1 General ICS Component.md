@@ -34,14 +34,14 @@ ICS components in industrial environments are often exposed to special condition
 
 ICS components are often incompletely documented, so not all product features are known. Information about the services used, protocols and communication ports as well as authorization management are often particularly incomplete. This makes the hazard analysis more difficult because interfaces, functions and security-relevant mechanisms are overlooked. As a result, potential hazards can not be taken into account. In addition, there are no or limited responses to new vulnerabilities in an ICS component if the services and ports used are not fully captured.
 
-### 2 3 Unsafe system configuration
+### 2 3 Insecure system configuration
 
-The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, default permissions often remain unchanged.
+The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.
 It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
 
 ### 2 4 Insufficient user and authorization management
 
-Some ICS components have their own user and authorization management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
+Some ICS components have their own user and permission management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
 
 ### 2 5 Insufficient logging
 
@@ -49,7 +49,7 @@ For ICS components, logging is often limited to process-related events. Informat
 
 ### 2 6 Manipulation and sabotage of an ICS component
 
-The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally, but also across all locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
+The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have a local impact across locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
 
 Manipulated readings can lead to incorrect decisions of ICS components or operating personnel. Manipulated systems can be used to attack other systems or sites or to cover up ongoing manipulation.
 
@@ -72,7 +72,7 @@ ICS components often contain detailed information about the controlled or monito
 Attackers could get business secrets here (industrial espionage), eg. Recipes, procedures or other intellectual property. They can also gain information about the functioning of an ICS component and its security mechanisms, which can be used for further attacks.
 
 ### 2 11 Insufficient security requirements for procurement
-Due to a lack of awareness of the risks and cost reasons, procurement often does not take information security into account. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
+Due to a lack of awareness of the risks and cost reasons, procurement often does not take into account information security. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
 
 ### 2 12 Manipulated firmware
 
@@ -127,7 +127,7 @@ Programs and data MUST be backed up regularly and after system changes.
 
 #### IND.2.1.A8 Malware Protection [ICS Administrator]
 
-ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used for this, the program and the virus signatures SHOULD always be up to date. If the resources on the ICS component could not be sufficiently compromised or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
+ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used, the program and the virus signatures SHOULD always be up to date. If resources on the ICS component could not be sufficient or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
 
 #### IND.2.1.A9 Communication Relationship [ICS Administrator]
 
@@ -139,7 +139,7 @@ It SHOULD be created an extended system documentation. These should include spec
 
 #### IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
 
-When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates SHOULD be carried out at short notice.
+When servicing an ICS component, the latest and released security updates SHOULD always be loaded. Updates to the operating system SHOULD NOT be installed until approved by the manufacturer of a component, or the update SHOULD be tested in a test environment before it is used in a production component. For critical security updates, maintenance should be performed at short notice.
 
 #### IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
 
@@ -194,7 +194,7 @@ Firmware updates or new control programs SHOULD only be played if their integrit
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area "General ICS component" can be found in the following publications, among others:
+Further information about hazards and safety measures in the area "General ICS Component" can be found in the following publications, among others:
 
 * #### [AHWAST] How to Use the White Paper - Requirements for Secure Control and Telecommunication Systems (Version 1.1, 2014)
 
@@ -266,3 +266,299 @@ The following elementary hazards are important for the "General ICS component" b
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+* G 0.10 Failure or malfunction of supply networks
+  * IND.2.1.A7 Backups [Control Center Operator]
+* G 0.12 Electromagnetic interference
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+* G 0.14 Spying out information (spying)
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+* G 0.15 Listening
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+* G 0.19 Disclosure of information worthy of protection
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+* G 0.21 Manipulation of hardware or software
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+* G 0.22 Manipulation of information
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+* G 0.23 Unauthorized intrusion into IT systems
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+* G 0.25 Failure of devices or systems
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+* G 0.28 Software vulnerabilities or errors
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+* G 0.31 Incorrect use or administration of devices and systems
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+* G 0.32 Abuse of permissions
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+* G 0.37 denying actions
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+* G 0.39 Malware
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A8 Malware Protection [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+* G 0.40 Denial of Service
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+* G 0.41 Sabotage
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A4 Deactivation of unused services, functions and interfaces [ICS administrator, maintenance personnel]
+  * IND.2.1.A5 Deactivation of unused user accounts [ICS Administrator]
+  * IND.2.1.A6 Network Segmentation [ICS Administrator]
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+* G 0.43 Importing messages
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A3 Logging [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+* G 0.45 data loss
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A7 Backups [Control Center Operator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+* G 0.46 Loss of integrity of sensitive information
+  * IND.2.1.A1 Restricting Access to Configuration and Maintenance Interfaces [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A11 ICS Component Maintenance [Maintenance Personnel, Control Center Operator, ICS Administrator]
+  * IND.2.1.A12 Acquisition of ICS Components [Control Center Operator, ICS Administrator]
+  * IND.2.1.A13 Suitable commissioning of the ICS components [ICS Administrator]
+  * IND.2.1.A14 Disposal of ICS Components [ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A16 External Interface Protection [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
+  * IND.2.1.A2 Use of Secure Configuration and Maintenance Protocols [ICS Administrator, Maintenance Staff]
+  * IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
+  * IND.2.1.A9 Communication Relationship [ICS Administrator]
+  * IND.2.1.A10 System Documentation [Control Center Operator, ICS Administrator]
+  * IND.2.1.A15 Central System Logging and Monitoring [ICS Administrator]
+  * IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
+  * IND.2.1.A19 Security Tests [ICS Administrator] (CIA)

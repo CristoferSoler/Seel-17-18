@@ -14,11 +14,11 @@ Forensically investigating IT security incidents is always necessary if damage i
 * Presentation of results: The relevant test results are prepared and taught according to the target group.
 ### 1.2 Objective
 
-The module shows what precautionary measures are necessary to enable IT forensic investigations. The focus will be on how forensics can be prepared and carried out. If forensic service providers carry out forensics in whole or in part, the requirements also apply to the service providers. Through contractual agreements and examinations, it can be ensured that the service provider adheres to the same.
+The module shows what precautionary measures are necessary to enable IT forensic investigations. The focus will be on how forensics can be prepared and carried out. If forensic service providers carry out forensics in whole or in part, the requirements also apply to the service providers. Through contractual agreements and examinations, it can be ensured that the service provider adheres to this as well.
 
 ### 1.3 Delimitation
 
-The module does not describe any requirements to ensure that attacks are detected. These are contained in the module DER.1 * Detection of safety-relevant events * and are assumed in the present block. Also, no criteria and processes are explained, by means of which the responsible persons can decide, whether an IT security incident must be examined forensisch or not. The decision is made while the incident is being handled (see DER.2.1 * Incident Management *).
+The module does not describe any requirements to ensure that attacks are detected. These are contained in block DER.1 * Detection of safety-relevant events * and are assumed in the present block. Also, no criteria and processes are explained, by means of which the responsible persons can decide, whether an IT security incident must be examined forensisch or not. The decision is made while the incident is being handled (see DER.2.1 * Incident Management *).
 
 Furthermore, the module deals only with precautionary measures, which are fundamental for later IT forensic investigations. How the actual forensic analysis is performed is therefore not the subject of this module.
 
@@ -30,11 +30,11 @@ Ultimately, the building block also does not address how IT infrastructures can 
 The following specific threats and vulnerabilities are of particular importance for provisioning for IT forensics:
 
 ### 2 1 Infringement of legal framework
-For IT forensic investigations, all data deemed necessary are often copied, secured and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
+For IT forensic investigations, all data deemed necessary are often copied, saved and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
 
 ### 2 2 Loss of evidence through incorrect or incomplete preservation of evidence
 
-If evidence is backed up incorrectly or not fast enough, it can cause important data to be lost that can not later be recovered. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
+If evidence is backed up incorrectly or not fast enough, it may lose important data that can not be recovered later. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
 
 The risk of losing important evidence increases when employees misuse forensic tools, back up data too slowly or practice too little. Often, evidence is lost if those responsible do not recognize and secure transient data as relevant.
 
@@ -43,7 +43,7 @@ The risk of losing important evidence increases when employees misuse forensic t
 
 The following are specific requirements for the provision of IT forensics. Basically, the information security officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -76,7 +76,7 @@ All responsible employees SHOULD know how to properly track and use forensic too
 
 #### DER.2.2.A7 Selection of forensic tools
 
-It SHOULD be made sure that tools used to forensically secure and analyze traces are also suitable for this purpose. Before a forensics tool is used, it should also be checked if it works properly. Also SHOULD be checked and documented that it was not manipulated.
+It SHOULD be ensured that tools used to forensically secure and analyze tracks are also suitable for this. Before a forensics tool is used, it should also be checked if it works properly. Also SHOULD be checked and documented that it was not manipulated.
 
 #### DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
 
@@ -84,15 +84,15 @@ A forensic investigation SHOULD always begin by defining the goals or work assig
 
 #### DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
 
-It SHOULD be determined which secondary data (eg log data or traffic recordings) are made available in which way and for how long within the framework of the legal framework for possible forensic evidence-securing measures.
+It SHOULD be determined which secondary data (eg log data or traffic recordings) are kept in the way and for how long within the legal framework for possible forensic evidence.
 
 #### DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
 
 In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, in the case of volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
 
-In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be legally usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
+In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of Forensic Service Providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of staff for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 
@@ -111,7 +111,7 @@ To enable IT security incidents to be investigated forensically more quickly, th
 
 #### DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
 
-For applications, IT systems or IT system groups with high protection requirements as well as for widespread system configurations, standard procedures SHOULD be created, which make it possible to secure volatile and non-volatile data as completely as possible forensically.
+For applications, IT systems or IT system groups with high protection requirements as well as for common system configurations, standard procedures SHOULD be created that allow to secure volatile and non-volatile data as completely as possible forensically.
 
 The respective system-specific standard procedures SHOULD be implemented by proven and possibly automated processes. They SHOULD also be supported by checklists and technical aids, such as: Through software, software tools on mobile devices, and IT forensic hardware such as write-blockers.
 
@@ -124,7 +124,7 @@ All employees involved in forensic analysis SHOULD regularly practice how to sec
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found, among others, in the following publications:
+Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found in the following publications, among others:
 
 * #### [BSIFor] BSI IT Forensics Guide
 
@@ -188,3 +188,101 @@ The following elementary threats are important for the module "Provision for IT 
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+* G 0.17 Loss of equipment, data carriers or documents
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.20 Information or products from unreliable sources
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A6 Training of forensic security implementation personnel
+* G 0.22 Manipulation of information
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.25 Failure of devices or systems
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A4 Definition of interfaces for crisis and emergency management
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.27 Resource shortage
+  * DER.2.2.A3 Preselection of forensic service providers
+  * DER.2.2.A13 Framework contracts with external service providers (CIA)
+* G 0.29 Violation of laws or regulations
+  * DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A13 Framework contracts with external service providers (CIA)
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.31 Incorrect use or administration of devices and systems
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A3 Preselection of forensic service providers
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A6 Training of forensic security implementation personnel
+  * DER.2.2.A7 Selection of forensic tools
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A13 Framework contracts with external service providers (CIA)
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.37 denying actions
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.45 data loss
+  * DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A13 Framework contracts with external service providers (CIA)
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A3 Preselection of forensic service providers
+  * DER.2.2.A4 Definition of interfaces for crisis and emergency management
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A6 Training of forensic security implementation personnel
+  * DER.2.2.A7 Selection of forensic tools
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A13 Framework contracts with external service providers (CIA)
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)
+* G 0.46 Loss of integrity of sensitive information
+  * DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
+  * DER.2.2.A4 Definition of interfaces for crisis and emergency management
+  * DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
+  * DER.2.2.A6 Training of forensic security implementation personnel
+  * DER.2.2.A7 Selection of forensic tools
+  * DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
+  * DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
+  * DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+  * DER.2.2.A11 Documentation of the evidence [investigator, investigator]
+  * DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+  * DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
+  * DER.2.2.A15 Performing evidence-gathering exercises (CIA)

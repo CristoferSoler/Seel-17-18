@@ -3,7 +3,7 @@
 
 ### 1.1 Introduction
 
-Remote maintenance refers to spatially separate access to IT systems and the applications running on them for configuration, maintenance, repair or control purposes. Remote maintenance can be done passively through an exclusive access to the IT system or applications, or actively through direct administrative intervention in the operating system or running applications. In the case of passive remote maintenance, a user on site must perform the actual actions under the guidance of an administrator. In the case of active remote maintenance, on the other hand, an operating system is intervened and operated directly by an administrator. Among other things, the signals of a mouse and keyboard commands, as well as screen contents and console outputs are transmitted. Even if effective mechanisms for securing remote access access are implemented, there is direct access from outside to the internal network and data processed therein. Through these interfaces, external parties can endanger the institution and thus cause economic and operational damage.
+Remote maintenance refers to spatially separate access to IT systems and the applications running on them for configuration, maintenance, repair or control purposes. Remote maintenance can be done passively by an exclusively viewing access to the IT system or applications, or actively through direct administrative intervention in the operating system or running applications. In the case of passive remote maintenance, a user on site must perform the actual actions under the guidance of an administrator. In the case of active remote maintenance, on the other hand, an operating system is intervened and operated directly by an administrator. Among other things, the signals of a mouse and keyboard commands, as well as screen contents and console outputs are transmitted. Even if effective mechanisms for securing remote access access are implemented, there is direct access from outside to the internal network and data processed therein. Through these interfaces, external parties can endanger the institution and thus cause economic and operational damage.
 
 ### 1.2 Objective
 
@@ -11,14 +11,14 @@ The aim of the module is to protect information stored, processed and transmitte
 
 ### 1.3 Delimitation
 
-This module looks at remote maintenance from the point of view of IT operation and provides advice for users on how remote maintenance can be used. The holistic guarantee of information security in all phases of the lifecycle is important. The security aspects of the communication connections used, authentication mechanisms and the protection of the remote maintenance access are important components of the module. In the context of the component "remote monitoring", not all relevant aspects of the related business processes are covered. Therefore, especially aspects of the blocks * OPS.1.1.3 Patch and Change Management *, * ORP.3 Sensitization and Training, CON.1 Crypto Concept * and CON.3 * Data Backup Concept * must be guaranteed separately. Likewise, the specifications of the component layers NET (networks and communication), DER (detection & reaction), the components of the layer * OPS.2 IT operation of third parties * and the components of the layer * OPS.3 IT operation for third parties * have been implemented which are directly related to remote administration. For cloud-based products, the building block * OPS.2.2 cloud usage * must be taken into account. Likewise, the Remote Procedure Calls of Windows 2010 are not part of this document.
+This module looks at remote maintenance from the point of view of IT operation and provides advice for users on how remote maintenance can be used. The holistic guarantee of information security in all life cycle phases is important. The security aspects of the communication connections used, authentication mechanisms and the protection of the remote maintenance access are important components of the module. In the context of the component "remote monitoring", not all relevant aspects of the related business processes are covered. Therefore, especially aspects of the blocks * OPS.1.1.3 Patch and Change Management *, * ORP.3 Sensitization and Training, CON.1 Crypto Concept * and CON.3 * Data Backup Concept * must be guaranteed separately. Likewise, the specifications of the component layers NET (networks and communication), DER (detection & reaction), the components of the layer * OPS.2 IT operation of third parties * and the components of the layer * OPS.3 IT operation for third parties * have been implemented which are directly related to remote administration. For cloud-based products, the building block * OPS.2.2 cloud usage * must be taken into account. Likewise, the Remote Procedure Calls of Windows 2010 are not part of this document.
 
 2 risk situation
 -----------------
 
 The following specific threats and vulnerabilities are of particular importance in the field of remote maintenance:
 
-### 2 1 Inadequate knowledge of remote maintenance regulations
+### 2 1 Insufficient knowledge of remote maintenance regulations
 
 If the parties know insufficiently about important regulations and therefore do not apply them, the protection of the information in the context of a remote maintenance is endangered. Therefore, there are dangers for the IT operation, if current regulations are not made public. In particular, administrators who set up and use remote maintenance, are on regulations, eg. As to configurations, instructed, otherwise with the remote maintenance additional operational risks, but also security gaps to the internal network arise and attacks on the remote maintenance can not be detected or fended off.
 
@@ -27,7 +27,7 @@ If remote maintenance is not carefully planned, set up and regulated, not only t
 
 ### 2 3 Unauthorized exercise of rights in remote maintenance
 
-Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
+Access, access and access permissions tailored to each task are used to protect information, business processes and IT systems from unauthorized access. If such authorizations are granted to unauthorized persons during remote maintenance, or if rights are exercised unauthorized remotely, a large number of threats to the confidentiality and integrity of data and the availability of such data may arise. B. of computing power. Possible damage scenarios include, for example, the introduction of malicious software, the manipulation of data and information, and the unauthorized gathering of information. Impact can z. For example, financial and knowledge losses, physical destruction of physical assets and compromises of IT systems and networks.
 
 ### 2 4 Unsuitable use of authentication for remote maintenance
 
@@ -45,10 +45,10 @@ Ensuring the security and viability of remote-access IT systems and applications
 
 ### 2 7 Use of unsafe protocols in remote maintenance
 
-Communication via public and internal networks via insecure protocols poses a potential danger. For example, if legacy versions of IPSec, SSH, or SSL / TLS are used to establish a tunnel between two endpoints or networks, the security of these tunnels can not be adequately ensured. Attackers can exploit vulnerabilities in these protocols to inject their own content into protected connections. Generally considered to be unsecure protocols, where information is transmitted in plain text.
+Communication via public and internal networks via insecure protocols poses a potential danger. For example, if legacy versions of IPSec, SSH, or SSL / TLS are used to establish a tunnel between two endpoints or networks, the security of these tunnels can not be adequately ensured. Attackers can exploit vulnerabilities in these protocols to inject their own content into protected connections. In general, considered as unsafe protocols in which information is transmitted in plain text.
 
 ### 2 8 Inappropriate handling of authentication procedures for remote maintenance
-The security of an authentication process is directly dependent on the careful handling of it. The disclosure of user-supplied authentication data and the insecure storage of this information pose a potential danger. There may be security vulnerabilities for unauthorized access to the rights and role profiles of administrators as well as IT systems and applications.
+The security of an authentication process is directly dependent on the careful handling of it. The disclosure of user-supplied authentication data and the insecure storage of this information pose a potential danger. There may be security gaps for unauthorized access to the rights and role profiles of administrators as well as IT systems and applications.
 
 ### 2 9 Unsafe cryptographic algorithms for remote maintenance
 
@@ -71,7 +71,7 @@ In order to establish a connection to the online service, often no administrativ
 
 The following are specific requirements for remote maintenance. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -145,9 +145,9 @@ Within the remote maintenance components should be used, which serve exclusively
 
 Remote maintenance SHOULD only be done from the internal network.
 
-However, if it is necessary to access internal IT systems from a public data network, a secure Virtual Private Network (VPN) SHOULD be used. For remote maintenance via VPN, a protected data connection to the VPN endpoint SHOULD be generated. In addition to these external remote access accesses, the internal remote maintenance access points SHOULD also be protected. The use of internal remote maintenance access SHOULD be restricted as much as possible. Furthermore, all activities SHOULD be logged during an administration session.
+However, if it is necessary to access internal IT systems from a public data network, a secured Virtual Private Network (VPN) SHOULD be used. For remote maintenance via VPN, a protected data connection to the VPN endpoint SHOULD be generated. In addition to these external remote access accesses, the internal remote maintenance access points SHOULD also be protected. The use of internal remote maintenance access SHOULD be restricted as much as possible. Furthermore, all activities SHOULD be logged during an administration session.
 
-#### OPS.2.4.A16 Training for remote maintenance [IT operation]
+#### OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
 
 The administrators SHOULD be provided with sufficient knowledge in dealing with the remote maintenance components. These training courses SHOULD be integrated into the already established procedures of the institution.
 Likewise, the employees SHOULD be informed about what they have to consider in the remote maintenance.
@@ -164,13 +164,13 @@ If password-based authentication is used during remote maintenance, password rul
 
 #### OPS.2.4.A19 Remote maintenance by third parties [IT operation]
 
-If it is not possible to dispense with external remote maintenance, all activities within this framework SHOULD be monitored by Internal. All remote maintenance operations by third parties SHOULD be recorded. With external maintenance personnel, contractual arrangements MUST be made, especially about the security of the affected IT systems and information. The duties and responsibilities of the external maintenance personnel SHOULD be contractually established.
+If it is not possible to dispense with external remote maintenance, all activities within this framework SHOULD be monitored by Internal. All remote maintenance operations by third parties SHOULD be recorded. With external maintenance personnel contractual arrangements MUST be made, above all about the security of the affected IT systems and information. The duties and responsibilities of the external maintenance personnel SHOULD be contractually established.
 
 #### OPS.2.4.A20 Remote maintenance operation [IT operation]
 
 A reporting process for support and remote maintenance issues should be established (eg ticket system). All access by the remote maintenance SHOULD only be permitted after successful authentication.
 
-The security infrastructure releases required to establish remote maintenance accesses SHOULD be integrated into the established firewall rule processes. It should be implemented mechanisms for detection and defense against high-volume attacks, TCP state exhaustion attacks and attacks at the application level.
+The security infrastructure releases required to establish remote maintenance accesses SHOULD be integrated into the established firewall rules processes. It should be implemented mechanisms for detection and defense against high-volume attacks, TCP state exhaustion attacks and attacks at the application level.
 
 All remote maintenance operations SHOULD be recorded. The resulting log data SHOULD be evaluated regularly.
 
@@ -184,7 +184,7 @@ In the context of emergency preparedness, a concept SHOULD be developed to minim
 
 #### OPS.2.4.A22 Redundant use of mobile communication networks (A)
 
-For the protection of the communication networks of the remote maintenance in case of high availability requirements, redundant connection or communication networks SHOULD be established.
+For the protection of the communication networks of the remote maintenance with high availability requirements, redundant connection or communication networks SHOULD be established.
 
 #### OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
 
@@ -242,3 +242,196 @@ The following elementary hazards are important for the module "Remote maintenanc
 * G 0.43 Importing messages
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+* G 0.14 Spying out information (spying)
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A7 Documentation for remote maintenance [IT operation]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
+* G 0.18 Missing planning or missing adjustment
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
+  * OPS.2.4.A4 Regulations for communication connections [IT operation]
+  * OPS.2.4.A6 Creation of a guideline for remote maintenance [IT operation]
+  * OPS.2.4.A7 Documentation for remote maintenance [IT operation]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A9 Selection of suitable remote maintenance tools [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+  * OPS.2.4.A22 Redundant use of mobile communication networks (A)
+  * OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
+* G 0.19 Disclosure of information worthy of protection
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A5 Use of online services [IT operation, users]
+  * OPS.2.4.A7 Documentation for remote maintenance [IT operation]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A22 Redundant use of mobile communication networks (A)
+* G 0.20 Information or products from unreliable sources
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A9 Selection of suitable remote maintenance tools [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+* G 0.21 Manipulation of hardware or software
+  * OPS.2.4.A4 Regulations for communication connections [IT operation]
+  * OPS.2.4.A5 Use of online services [IT operation, users]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
+* G 0.22 Manipulation of information
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+  * OPS.2.4.A22 Redundant use of mobile communication networks (A)
+* G 0.23 Unauthorized intrusion into IT systems
+  * OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
+  * OPS.2.4.A5 Use of online services [IT operation, users]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+* G 0.25 Failure of devices or systems
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+* G 0.30 Unauthorized use or administration of devices and systems
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A23 Planning the Safe Use in a Secure Network Segment [IT Operations]
+* G 0.31 Incorrect use or administration of devices and systems
+  * OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A22 Redundant use of mobile communication networks (A)
+* G 0.32 Abuse of permissions
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+* G 0.39 Malware
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
+  * OPS.2.4.A4 Regulations for communication connections [IT operation]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A20 Remote maintenance operation [IT operation]
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+* G 0.40 Denial of Service
+  * OPS.2.4.A5 Use of online services [IT operation, users]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A21 Create a contingency plan for remote maintenance (A)
+* G 0.43 Importing messages
+  * OPS.2.4.A5 Use of online services [IT operation, users]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+* G 0.46 Loss of integrity of sensitive information
+  * OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
+  * OPS.2.4.A10 Management of remote maintenance tools [IT operation, users]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A12 Patch and Change Management for Remote Maintenance [IT Operations]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]
+  * OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+  * OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
+  * OPS.2.4.A18 Password security for remote maintenance [IT operation]
+  * OPS.2.4.A19 Remote maintenance by third parties [IT operation]
+  * OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
+  * OPS.2.4.A4 Regulations for communication connections [IT operation]
+  * OPS.2.4.A8 Secure protocols for remote maintenance [IT operation]
+  * OPS.2.4.A11 Use of cryptographic procedures for remote maintenance [IT operation]
+  * OPS.2.4.A13 Data backup for remote maintenance [IT operation]
+  * OPS.2.4.A15 Securing remote maintenance [IT operation]

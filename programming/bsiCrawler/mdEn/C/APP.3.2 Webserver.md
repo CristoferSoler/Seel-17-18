@@ -41,7 +41,7 @@ In addition to DDoS, other types of denial-of-service attacks can affect the ava
 
 ### 2 4 Loss of confidential data
 
-Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to an attacker being able to read or change the communication between the clients and the servers or between the servers.
+Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to attackers being able to read or change the communication between the clients and the servers or between the servers.
 
 ### 2 5 Violation of laws or regulations
 
@@ -64,7 +64,7 @@ If security-relevant events are insufficiently logged by the web server, they ca
 
 The following are specific requirements for the Web server area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -96,11 +96,11 @@ The logging data SHOULD be evaluated regularly.
 
 #### APP.3.2.A5 authentication
 
-If clients authenticate to the web server, an encrypted connection MUST be used for this (see APP.3.2.A11 * Encryption via TLS *). The password files on the web server MUST be stored cryptographically secured and protected against unauthorized access.
+If clients authenticate to the web server, an encrypted connection MUST be used for this (see APP.3.2.A11 * Encryption via TLS *). The password files on the web server MUST be cryptographically secured and protected against unauthorized access.
 
 #### APP.3.2.A6 Timely import of security-relevant patches and updates
 
-The responsible employees MUST inform themselves regularly at various sources about current weaknesses in the web server software used and import security-related updates in a timely manner. Software updates and patches for web servers, as well as additional applications and enhancements MUST be sourced from trusted sources only and must be sufficiently tested before they are installed or deployed. Before any updates or patches are installed, MUST always be sure that the original state of the web server can be restored.
+The responsible employees MUST inform themselves regularly at various sources about current weaknesses in the web server software used and import security-relevant updates in a timely manner. Software updates and patches for web servers, as well as additional applications and enhancements MUST be sourced from trusted sources only and must be sufficiently tested before they are installed or deployed. Before any updates or patches are installed, MUST always be sure that the original state of the web server can be restored.
 
 #### APP.3.2.A7 Legal framework for web offers [Information Security Officer (ISB)]
 
@@ -116,10 +116,10 @@ In order to select suitable security measures for the web server, it should be p
 
 #### APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
 
-A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how to implement security measures, and how to proceed when security incidents occur.
+A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
-If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.
@@ -127,7 +127,7 @@ If the web server is not operated by the institutions themselves, but offers fro
 * The service provider SHOULD implement basic technical and organizational measures to protect its information network.
 #### APP.3.2.A11 Encryption over TLS
 
-The web server SHOULD provide encryption for all connections via TLS (HTTPS). If an HTTPS connection is offered then all content SHOULD be available over HTTPS. So-called mixed content SHOULD NOT be used. Critical actions, such as logging in to a web application (login), SHOULD be done via HTTPS.
+The web server SHOULD provide encryption for all connections via TLS (HTTPS). If an HTTPS connection is offered then all content SHOULD be available over HTTPS. So-called mixed content SHOULD NOT be used. Critical actions, such as logging in to a web application (login), SHOULD be done over HTTPS.
 
 #### APP.3.2.A12 Appropriate handling of errors and error messages
 
@@ -139,7 +139,7 @@ Web crawler access SHOULD be governed by the robots exclusion standard. Content 
 
 #### APP.3.2.A14 Integrity Checks and Malware Protection
 
-It SHOULD be checked regularly if the files and web content are still integer and not changed by attackers. Also, the files SHOULD regularly be checked for malware.
+It SHOULD be checked regularly if the files and web content are still integer and not changed by attackers. Also, the files SHOULD be regularly checked for malware.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -150,7 +150,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 Web servers SHOULD be configured redundantly. The Internet connection of the web server and other IT systems, such as the web application server, SHOULD be designed to be redundant.
 
 #### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
-There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
+There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the agreement of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
 
 #### APP.3.2.A17 Advanced authentication methods for web servers (CI)
 
@@ -241,3 +241,124 @@ The following elementary threats are important for the "Web server" building blo
 * G 0.40 Denial of Service
 * G 0.46 Loss of integrity of sensitive information
 The cross reference tables can be found in the download area due to their size.
+* G 0.11 Failure or disruption of service providers
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+* G 0.15 Listening
+  * APP.3.2.A5 authentication
+  * APP.3.2.A11 Encryption over TLS
+* G 0.18 Missing planning or missing adjustment
+  * APP.3.2.A8 Planning the use of a web server
+  * APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+* G 0.19 Disclosure of information worthy of protection
+  * APP.3.2.A1 Secure configuration of a web server
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A11 Encryption over TLS
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+  * APP.3.2.A2 Protection of web server files
+  * APP.3.2.A3 Securing file uploads and downloads
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+* G 0.20 Information or products from unreliable sources
+  * APP.3.2.A6 Timely import of security-relevant patches and updates
+* G 0.21 Manipulation of hardware or software
+  * APP.3.2.A1 Secure configuration of a web server
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A11 Encryption over TLS
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+  * APP.3.2.A2 Protection of web server files
+  * APP.3.2.A6 Timely import of security-relevant patches and updates
+* G 0.22 Manipulation of information
+  * APP.3.2.A1 Secure configuration of a web server
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A11 Encryption over TLS
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+  * APP.3.2.A2 Protection of web server files
+  * APP.3.2.A5 authentication
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+* G 0.23 Unauthorized intrusion into IT systems
+  * APP.3.2.A1 Secure configuration of a web server
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A11 Encryption over TLS
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+  * APP.3.2.A2 Protection of web server files
+  * APP.3.2.A5 authentication
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+* G 0.25 Failure of devices or systems
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+* G 0.26 Malfunction of equipment or systems
+  * APP.3.2.A4 Logging events
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+* G 0.27 Resource shortage
+  * APP.3.2.A8 Planning the use of a web server
+  * APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
+* G 0.28 Software vulnerabilities or errors
+  * APP.3.2.A6 Timely import of security-relevant patches and updates
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+* G 0.29 Violation of laws or regulations
+  * APP.3.2.A7 Legal framework for web offers [Information Security Officer (ISB)]
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+* G 0.30 Unauthorized use or administration of devices and systems
+  * APP.3.2.A4 Logging events
+  * APP.3.2.A5 authentication
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+* G 0.31 Incorrect use or administration of devices and systems
+  * APP.3.2.A8 Planning the use of a web server
+  * APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
+* G 0.39 Malware
+  * APP.3.2.A3 Securing file uploads and downloads
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+* G 0.40 Denial of Service
+  * APP.3.2.A3 Securing file uploads and downloads
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+* G 0.46 Loss of integrity of sensitive information
+  * APP.3.2.A1 Secure configuration of a web server
+  * APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
+  * APP.3.2.A11 Encryption over TLS
+  * APP.3.2.A12 Appropriate handling of errors and error messages
+  * APP.3.2.A13 Web crawler access control
+  * APP.3.2.A14 Integrity Checks and Malware Protection
+  * APP.3.2.A15 Redundancy (A)
+  * APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
+  * APP.3.2.A17 Advanced authentication methods for web servers (CI)
+  * APP.3.2.A18 Protection against denial of service attacks (A)
+  * APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
+  * APP.3.2.A2 Protection of web server files
+  * APP.3.2.A6 Timely import of security-relevant patches and updates
+  * APP.3.2.A14 Integrity Checks and Malware Protection

@@ -3,9 +3,9 @@
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Similarly, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mail, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
-Microsoft Outlook is a client made directly available by installing the Microsoft Office suite or integrating with the operating systems of mobile devices. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
+Microsoft Outlook is a client made available directly from mobile devices by installing the Microsoft Office suite or integrating with the operating systems. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
 ### 1.2 Objective
 
@@ -85,7 +85,7 @@ Before Microsoft Exchange and Outlook can be used, the use of Microsoft Exchange
 It MUST be decided with which systems and application components, as well as in which hierarchical gradation the Microsoft Exchange infrastructure should be realized. The selection MUST also decide whether to run the systems as a cloud or local service.
 
 #### APP.5.2.A3 Authorization Management
-For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as is necessary for the task fulfillment (minimum principle). It MUST be checked on a regular basis to see if the allocated rights are still appropriate.
+For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as are necessary for the task fulfillment (minimum principle). It MUST be checked regularly to see if the allocated rights are still appropriate.
 
 #### APP.5.2.A4 Access rights to Microsoft Exchange objects
 
@@ -105,7 +105,7 @@ The installation SHOULD be done on the basis of the mission planning of Microsof
 
 #### APP.5.2.A7 Migrating from Microsoft Exchange systems
 
-All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
+All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook in the various versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
 
 #### APP.5.2.A8 Secure operation of Microsoft Exchange
 
@@ -153,7 +153,7 @@ The contents of the operating manual for Microsoft Exchange SHOULD be comprehens
 
 #### APP.5.2.A16 Creation of a contingency plan for the failure of Microsoft Exchange and Outlook [Emergency Response Officer]
 
-As part of the emergency preparedness SHOULD be designed a concept that can minimize the consequences of a failure of Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
+As part of the emergency preparedness SHOULD be designed a concept that can be minimized the consequences of a failure of the Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

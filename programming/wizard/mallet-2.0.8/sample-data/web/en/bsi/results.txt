@@ -1,0 +1,15 @@
+datacenter.txt
+data (17) center (14) security (10) room (7) systems (7)
+
+laptop.txt
+data (3) time (3) connected (3) modem (3) operated (3)
+
+
+sap.txt
+sap (23) netweaver (6) module (6) systems (6) components (6) 
+
+server.txt
+server (4) room (3) data (2) space (1) office (1)
+
+sicherheitsmanagement.txt
+security (15) management (8) information (8) standard (2) bsi (2) 

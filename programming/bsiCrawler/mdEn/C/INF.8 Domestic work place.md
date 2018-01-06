@@ -22,7 +22,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of or inadequate regulations for the home office
 
-Since a home-based workplace is located outside the institution, the employees there are largely on their own. As a result, lack of or inadequate regulations for the home-based workplace environment can create IT issues with increased downtime. For example, if IT issues can not be resolved remotely, an IT supervisor from the institution will first have to go to work at home to solve the problem. If the handling of internal and confidential information at the home office is not comprehensibly regulated, it could happen that employees keep this information wrong. This may compromise the confidentiality and integrity of the information, as it can not sufficiently prevent information from being spied out or modified.
+Since a home-based workplace is located outside the institution, the employees there are largely on their own. As a result, lack of or inadequate regulations for the home-based work environment can create IT issues with increased downtime. For example, if IT issues can not be resolved remotely, an IT supervisor from the institution will first have to go to work at home to solve the problem. If the handling of internal and confidential information at the home office is not comprehensibly regulated, it could happen that employees keep this information wrong. This may compromise the confidentiality and integrity of the information, as it can not sufficiently prevent information from being spied out or modified.
 
 ### 2 2 Unauthorized access to vulnerable areas of the home workplace
 
@@ -30,11 +30,11 @@ Rooms in a home-based workplace where sensitive information is kept and processe
 
 ** Examples **
 
-* An employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
+* One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
 * When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
 ### 2 3 Impairment of IT use due to unfavorable working conditions at the home workplace
 
-A non-ergonomic home-based workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
+A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
@@ -53,7 +53,7 @@ IT equipment, accessories, information, and software used at the home workplace 
 
 ### 2 7 Danger by cleaning or external personnel
 
-Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" with IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
+Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
 
 ### 2 8 Increased theft risk at the home workplace
 The home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service) there is the danger that someone will enter the building without authorization, much less than with a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
@@ -63,7 +63,7 @@ The home office is usually not as well secured as the workplace in a company or 
 
 The following are specific requirements for the protection of the home workplace. Basically, the employee is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -102,7 +102,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)
 
-If employees are required to process official documents or information with increased protection needs, they should consider giving up a home-based workplace altogether. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
+If employees are required to handle official documents or information with increased protection needs, they should consider giving up work at home. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
 
 4 Further Information
 ------------------------------
