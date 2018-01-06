@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 from threading import Thread
-from translatorMultiProcessing import checkStatus, translate
+from .translatorMultiProcessing import  translate
 import os, shutil
 import time
 
@@ -20,7 +20,7 @@ def deleteAllFilesInDirectory(directory):
         except Exception as e:
             print(e)
 
-def main():
+def crawlTranslateTreeview():
     #directorys to store the content of the bsi
     directoryC = './md/C'
     directoryT = './md/T'
@@ -81,5 +81,3 @@ def main():
     os.system("scrapy runspider crawliTree.py --nolog")
     print('Generation of the treeview is finshed')
 
-if __name__ == "__main__":
-    main()

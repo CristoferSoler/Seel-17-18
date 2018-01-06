@@ -120,7 +120,7 @@ def deleteAllFilesInDirectory(directory):
             print(e)
 
 
-def main():
+def topicGeneration():
     global  pathOfMd
     global pathOfTxt
     global path_to_corpus
@@ -143,7 +143,3 @@ def main():
     convertMDtoTxt(pathOfMd)
     generateTopicTable()
     writeToCSV("csv/threadsTopics.csv")
-
-
-if __name__ == "__main__":
-    main()
