@@ -1,8 +1,28 @@
 {% extends "admin/index.html" %}
 {% block sidebar %}
         {{ block.super }}
-	<button onclick="startUpdate()">start update phase</button>
-	<button onclick="postUpdate()">start post update phase</button>
+
+	<div class="module">
+        <table>
+        <caption>
+            <a href="#" class="section" title="Models in the Wiki images application">BSI Update</a>
+        </caption>
+
+            <tr class="model-image">
+				<th>Mid Phase</th>
+				<td scope="row"><button onclick="startUpdate()">Start</button></td>
+            </tr>
+			<tr class="model-image">
+				<th>Post Phase</th>
+				<td scope="row"><button onclick="postUpdate()">Start</button></td>
+			</tr>
+
+        </table>
+        </div>
+
+
+
+
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
