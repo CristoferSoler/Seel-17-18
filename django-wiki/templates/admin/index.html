@@ -2,30 +2,29 @@
 
 {% block sidebar %}
         {{ block.super }}
-	 <div class="module">
-        <table>
-        <caption>
-            <a>Wiki attachments</a>
-        </caption>
-
-            <tr class="model-attachment">
-
-                <th scope="row"><a href="/admin/wiki_attachments/attachment/">Attachments</a></th>
-
-
-
-                <td><a href="/admin/wiki_attachments/attachment/add/" class="addlink">Add</a></td>
-
-
-
-                <td><a href="/admin/wiki_attachments/attachment/" class="changelink">Change</a></td>
-
-            </tr>
-
-        </table>
-        </div>
-
-
-	<button>start update phase</button>
-	<button>start post update phase</button>
+	<button onclick="startUpdate()">start update phase</button>
+	<button onclick="postUpdate()">start post update phase</button>
 {% endblock %}
+
+<script>
+	function startUpdate() {
+
+	    var data = {'user':'Test'};
+
+		$.ajax({
+			url:'/_update/performMidPhase/',
+			data:data
+		});
+    }
+
+    function postUpdate() {
+
+	    var data = {'user':'Test'};
+
+		$.ajax({
+			url:'/_update/performMidPhase/',
+			data:data
+		});
+    }
+
+</script>

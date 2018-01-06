@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'treeview',
     'formtools',
     'wizard',
+    'BSIUpdate',
 ]
 
 MIDDLEWARE = [
