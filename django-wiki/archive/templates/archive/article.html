@@ -2,14 +2,6 @@
 {% block contents_article %}
 
         <div class="col-xs-12 col-sm-12 col-lg-12">
-     <ol class="breadcrumb">
-                {% for ancestor in urlpath.cached_ancestors %}
-                    <li>
-                        <a href="{% url 'get_article' path=ancestor.path %}">{{ ancestor.article.current_revision.title|truncatechars:25 }}</a>
-                    </li>
-                {% endfor %}
-                <li class="active">{{ article.current_revision.title|truncatechars:25 }}</li>
-            </ol>
 
     <h1 >
           {{ article.current_revision.title }}
@@ -24,14 +16,17 @@
  </h1>
         <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
 <hr>
-            <div style="word-wrap: break-word;">>
+            <div style="word-wrap: break-word;">
                 {% if not preview %}
                     {% if article.current_revision %}
                         {{ article.get_cached_content }}
                     {% endif %}
                 {% else %}
                     {{ content|default:"" }}
+
                 {% endif %}
+
+            {% include "bsi/includes/seealso.html" %}
             </div>
 
             <hr>
