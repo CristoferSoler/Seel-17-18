@@ -3,5 +3,5 @@ from .update import performMidPhase,performPostPhase
 
 urlpatterns = [
         url(r'^performMidPhase/', performMidPhase),
-        url(r'^performMidPhase/', performPostPhase),
+        url(r'^performPostPhase/', performPostPhase),
         ]

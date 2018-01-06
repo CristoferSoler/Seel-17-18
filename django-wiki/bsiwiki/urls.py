@@ -24,6 +24,7 @@ admin.site.index_template = 'admin/index.html'
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^_update/', include('BSIUpdate.urls')),
     url(r'^_treeview/', include('treeview.urls')),
     url(r'^_wizard/', include('wizard.urls')),
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
@@ -33,7 +34,7 @@ urlpatterns = [
         name='password_change'),
     url(r'^accounts/password/change/done/$', auth_views.password_change_done,
         {'template_name': 'bsi/account/passwordChangeDone.html'}, name='password_change_done'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls, name='adminpage'),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
     url(r'^_treeview/', include('treeview.urls')),

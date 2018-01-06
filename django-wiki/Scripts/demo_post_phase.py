@@ -1,4 +1,8 @@
-from bsiImporter import after_midphase
+import sys
+
+sys.path.append(r'..')
+
+from Scripts.bsiImporter import after_midphase
 from sched import scheduler
 import time
 

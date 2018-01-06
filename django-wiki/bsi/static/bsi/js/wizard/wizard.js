@@ -461,9 +461,9 @@ function initWizardsComponents(){
         } else {
             localStorage.setItem('visible',String(true));
             if(width > 1200){
-                panel.addClass('visible').animate({'right':'600px'});
+                panel.addClass('visible').animate({'right':'550px'});
             }else{
-                panel.addClass('visible').animate({'right':'300px'});
+                panel.addClass('visible').animate({'right':'320px'});
             }
         }
         valid = false;
@@ -487,9 +487,9 @@ function setPanel() {
     var panel = $('#slide-panel');
     if(localStorage.getItem('visible')!== null){
         if(width > 1200){
-            panel.addClass('visible').animate({'right':'600px'});
+            panel.addClass('visible').animate({'right':'550px'});
         }else{
-            panel.addClass('visible').animate({'right':'300px'});
+            panel.addClass('visible').animate({'right':'320px'});
         }
         initWizard();
     }

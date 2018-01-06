@@ -1,31 +1,53 @@
 {% extends "admin/index.html" %}
-
 {% block sidebar %}
         {{ block.super }}
-	 <div class="module">
+
+	<div class="module">
         <table>
         <caption>
-            <a>Wiki attachments</a>
+            <a href="#" class="section" title="Models in the Wiki images application">BSI Update</a>
         </caption>
 
-            <tr class="model-attachment">
-
-                <th scope="row"><a href="/admin/wiki_attachments/attachment/">Attachments</a></th>
-
-
-
-                <td><a href="/admin/wiki_attachments/attachment/add/" class="addlink">Add</a></td>
-
-
-
-                <td><a href="/admin/wiki_attachments/attachment/" class="changelink">Change</a></td>
-
+            <tr class="model-image">
+				<th>Mid Phase</th>
+				<td scope="row"><button onclick="startUpdate()">Start</button></td>
             </tr>
+			<tr class="model-image">
+				<th>Post Phase</th>
+				<td scope="row"><button onclick="postUpdate()">Start</button></td>
+			</tr>
 
         </table>
         </div>
 
 
-	<button>start update phase</button>
-	<button>start post update phase</button>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function () {
+
+    });
+
+	function startUpdate() {
+		var data = {'user':'test'};
+		$.ajax({
+            dataType:'json',
+            url:'/_update/performMidPhase/',
+            data: data,
+        });
+    }
+
+    function postUpdate() {
+		var data = {'user':'test'};
+		$.ajax({
+            dataType:'json',
+            url:'/_update/performPostPhase/',
+            data: data,
+        });
+    }
+
+</script>
+
 {% endblock %}
