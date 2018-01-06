@@ -15,15 +15,17 @@ from bsiwiki import settings
 from bsi.models.article_extensions import BSI, BSI_Article_type
 from wiki.models import URLPath, ArticleRevision, Article
 from archive.models import Archive, ArchiveTransaction
+from Scripts import Cross_References
 
 new_temp_bsi_folder = './Scripts/mdNew'
 crfDir = '.CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-
+txtDir = './Cross_Reference_Files/'
+csvDir = './Cross_Reference_Tables/'
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
-doCR = False
+doCR = True
 
 
 def readConfig(varname):
@@ -91,11 +93,6 @@ def doImport():
                 file_name = splitext(file)[0]
                 id = get_bsi_article_id(sub_article_type, file_name)
 
-                # append the Cross reference relation files to the content
-                # of each component article before import it in the database
-                if sub_article_type == "C" and isdir(crfDir) and doCR:
-                    appendThreatMeasureRelation(path_and_file, id)
-
                 # import the content to the database
                 with open(path_and_file) as data_file:
                     content = data_file.read()
@@ -103,6 +100,11 @@ def doImport():
                                        'ip_address': '0.0.0.0'}
                     BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(file_name + " is saved")
+
+        # append the Cross reference relation files to the content
+        # of each component article before import it in the database
+        if isdir(crfDir) and doCR:
+            appendThreatMeasureRelation()
 
 import json
 def doUpdate(file):
@@ -157,6 +159,11 @@ def doUpdate(file):
                     BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type, **revision_kwargs)
                     print(new_bsi_subroot)
                     print(file_name + " " + id +" "+ bsi_type + " is saved")
+
+    # append the Cross reference relation files to the content
+    # of each component article before import it in the database
+    if isdir(crfDir) and doCR:
+        appendThreatMeasureRelation()
 
     fillNewPage(modified, added, deleted, new_page)
 
@@ -409,17 +416,28 @@ def initDict():
             {'name': 'implementationnotes', 'files': []}]}
 
 
-def appendThreatMeasureRelation(path_and_file, id):
+def appendThreatMeasureRelation():
+    Cross_References.extraction(csvDir,txtDir)
+    # site = str(Site.objects.get_current()) + '/'
+    site = 'http://localhost:8000/'
     try:
+        components_articles = BSI.get_articles_by_type('C')
         for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:
             path_and_ref = join(crfDir, cr_file)
-            if id in cr_file:
-                with open(path_and_ref, 'r')as cr:
-                    cr_data = cr.read()
-                cr.close()
-                with open(path_and_file, 'a') as data_file:
-                    data_file.write(cr_data)
-                data_file.close()
+            for article in components_articles:
+                cr_data = ""
+                if article.slug in cr_file:
+                    with open(path_and_ref, 'r')as cr:
+                        cr_data_line = cr.readline().rstrip()
+                        while cr_data_line:
+                            if (cr_data_line.strip('* ').startswith('G')):
+                                cr_data_line = Cross_References.find_BSI_threats(cr_data_line.strip("* "), site)
+                            cr_data = cr_data + cr_data_line
+                            article.article.current_revision.content += cr_data_line + "<br />"
+                            cr_data_line = cr.readline()
+                        article.article.current_revision.save()
+                    cr.close()
+
     except IOError:
         print('An error occurred trying to open (read/write) the file.')
 
@@ -434,6 +452,7 @@ def cleanUp():
 if __name__ == '__main__':
       #file = parseArgs()
       #main(file)
+      appendThreatMeasureRelation()
       #post_phase("2017-12")
       #updateModificationTime()
       #new = URLPath.objects.get(slug='new')

@@ -1,11 +1,149 @@
-{% extends "bsi/base.html" %}
-{% load wiki_tags %}
+{% extends "uga/create_article.html" %}
+{% load wiki_tags i18n sekizai_tags static %}
 
-{% block bsi_pagetitle %}{% trans "Add links" %}{% endblock %}
+{% block form_data %}
+    <div class="col-lg-12">
+        <div class="col-lg-12">
+            <h4>Search articles</h4>
+            <div class="form-group inner-addon right-addon ui-widget">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search" class="form-control search-query" id="search_autocomplete" placeholder="search"/>
+            </div>
+            <hr class="no-margin">
+            <div id="see_also_links">
+                <ul class="list-group" id="newList"></ul>
+            </div>
 
-{% block bsi_contents %}
-    <form method="POST" class="form-horizontal"> {% csrf_token %}
-            {% wiki_form add_links_form %}
-    </form>
+
+        </div>
+        <div class="col-lg-1"></div>
+        <div class=" col-lg-4">
+            <div class="fading-side-menu" data-spy="" data-offset-top="350">
+                <h4>Table of Contents</h4>
+                <hr class="no-margin">
+                <div id="treeview1"></div>
+
+                <script type="text/javascript">
+
+
+                    $(function () {
+                        $('#treeview1').treeview({
+                            levels: 1,
+                            data: getData(),
+                            enableLinks: false,
+                            selectedBackColor: '#337ab7'
+                        })
+                    });
+
+
+                    function getData() {
+                        return $.ajax({
+                            url: '/_treeview/gettreeview/',
+                            async: false
+                        }).responseText
+
+                    }
+
+
+                    $(function () {
+                        var elements = document.getElementsByClassName('list-group-item');
+                        for (var i = 0; i < elements.length; i++) {
+                            elements[i].addEventListener('click', function () {
+                                console.log('click :)')
+                            }, false);
+                        }
+                    })
+
+
+                </script>
+            </div>
+        </div>
+        <div class="col-lg-6">
+
+
+            <table>
+                <tbody>
+                {% for field in form %}
+                    <tr>
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
+
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
+
+                    </tr>
+                    <tr>{{ field.help_text|safe }}</tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                        $('input[type=checkbox]').each(function () {
+                            if (!$(this).is(':checked')) {
+                                $(this).parent().parent().hide()
+                            }
+                        })
+                    }
+                );
+                $(function () {
+                    $('input[type=checkbox]').change(function () {
+                        if ($(this).is(':checked')) {
+                            $(this).parent().parent().show()
+                        } else {
+                            $(this).parent().parent().hide()
+                        }
+                    });
+                });
+            </script>
+
+        </div>
+    </div>
+
+
+    <script type="application/javascript">
+        $(function () {
+            $("#search_autocomplete").autocomplete({
+                source: "/uga/_create/get_bsi_articles/",
+                minLength: 2
+            }).change(function () {
+                var autocompletelistitem = $("#ui-id-1").find("> .ui-menu-item");
+                var resultlist = $("#newList");
+                resultlist.empty();
+                autocompletelistitem.each(function () {
+                    resultlist.append("<li class='list-group-item search-result'>" + $(this).text() + "</li>");
+                });
+
+
+                $(function () {
+                    $('.search-result').each(function () {
+                        var text = $(this).text();
+                        var corresponding_field = $(':input[type=checkbox]').filter(function () {
+                            return this.value === text
+                        });
+                        if (corresponding_field.is(':checked')) {
+                            $(this).addClass("active");
+                        }
+                        $(this).click(function () {
+                            if ($(this).hasClass("active")) {
+                                $(this).removeClass("active");
+                                corresponding_field.prop('checked', false);
+                                corresponding_field.parent().parent().hide();
+                            } else {
+                                $(this).addClass("active");
+                                corresponding_field.prop('checked', true);
+                                corresponding_field.parent().parent().show();
+                            }
+
+                        });
+                    })
+
+                });
+            });
+        });
+
+    </script>
 
 {% endblock %}

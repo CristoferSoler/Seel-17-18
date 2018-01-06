@@ -75,7 +75,6 @@ class CreateForm(forms.Form):
         # self.check_spam()
         return self.cleaned_data
 
-
 class AddLinksForm(forms.Form):
     links = forms.MultipleChoiceField(
             label=pgettext_lazy('Revision comment', 'BSI'),
