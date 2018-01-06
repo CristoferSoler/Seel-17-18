@@ -16,8 +16,8 @@ from bsi.models.article_extensions import BSI, BSI_Article_type
 from wiki.models import URLPath, ArticleRevision, Article
 from archive.models import Archive, ArchiveTransaction
 
-new_temp_bsi_folder = './mdNew'
-crfDir = './CRF/'
+new_temp_bsi_folder = './Scripts/mdNew'
+crfDir = '.CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
@@ -25,13 +25,6 @@ system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET"
 # multiple CR
 doCR = False
 
-def mid_phase():
-    from datetime import datetime
-    print("mid phase executed on:", datetime.now())
-
-def after_midphase():
-    from datetime import datetime
-    print("post phase executed on:", datetime.now())
 
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
@@ -269,10 +262,12 @@ def post_phase(archiving_data):
         # move the old bsi articles with their related uga articles to archive
         # change the url of he new one to the old one
         # delete the new (change log) page
+
         archive = Archive.get_or_create(archiving_data)
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
+        '''
         #print(type)
         for new_type in types:
               if new_type.slug == "components":
@@ -281,9 +276,9 @@ def post_phase(archiving_data):
                    post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
               elif new_type.slug == "implementationnotes":
                    post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
-
-        #post_phase_delete_url(new)
-        #updateModificationTime()
+        '''
+        post_phase_delete_url(new)
+        updateModificationTime()
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
@@ -365,7 +360,6 @@ def checkFileAction(filepath):
 
     # sanity check
     assert(filepath is not None)
-
     # look in the text file and check if the files shoul be m/a/d
     file = open(filepath, "r")
     currentSep1 = file.readline().rstrip()
