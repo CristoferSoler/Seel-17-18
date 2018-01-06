@@ -1,9 +1,12 @@
 # from bsi.decorators import get_article
 import difflib
+import json
 import logging
 
 from django.contrib import messages
+from django.core import serializers
 from django.db.models.query_utils import Q
+from django.http.response import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
@@ -42,12 +45,12 @@ class CreateRoot(CreateRootView):
 
 FORMS = [("creation", CreateForm), ("add_links", AddLinksForm)]
 
-TEMPLATES = {"creation": "uga/create_article.html",
+TEMPLATES = {"creation": "uga/create_article_master_data.html",
              "add_links": "uga/create_article_add_links.html"}
 
 
 class UGACreate(SessionWizardView):
-    template_name = 'uga/create_article.html'
+    # template_name = 'uga/create_article.html'
 
     # form_list = [CreateForm, AddLinksForm]
 
@@ -60,75 +63,44 @@ class UGACreate(SessionWizardView):
         self.request = request
         return super(UGACreate, self).dispatch(request, *args, **kwargs)
 
-    # def get_template_names(self):
-    #     return [TEMPLATES[self.steps.current]]
-
-    # def get_form(self, step=None, data=None, files=None):
-    #     # kwargs = {'request': self.request, 'urlpath_parent': self.urlpath}
-    #
-    #     # if form_class is None:
-    #     #     form_class = self.get_form_class()
-    #     # kwargs = self.get_form_kwargs()
-    #     # initial = kwargs.get('initial', {})
-    #     # initial['slug'] = self.request.GET.get('slug', None)
-    #     # kwargs['initial'] = initial
-    #     # form = form_class(self.request, self.urlpath, **kwargs)
-    #     # form.fields['slug'].widget = forms.TextInputPrepend(
-    #     #     prepend='/' + self.urlpath.path,
-    #     #     attrs={
-    #     #         # Make patterns force lowercase if we are case insensitive to bless the user with a
-    #     #         # bit of strictness, anyways
-    #     #         'pattern': '[a-z0-9_-]+' if not settings.URL_CASE_SENSITIVE else '[a-zA-Z0-9_-]+',
-    #     #         'title': 'Lowercase letters, numbers, hyphens and underscores' if not settings.URL_CASE_SENSITIVE else 'Letters, numbers, hyphens and underscores',
-    #     #     }
-    #     # )
-    #     return super().get_form(step=None, data=None, files=None)
-
-    # def form_valid(self, form):
-    #     try:
-    #         self.newpath = UGA.create_by_request(request=self.request, article=self.article,
-    #                                              parent=self.urlpath,
-    #                                              slug=form.cleaned_data['slug'], title=form.cleaned_data['title'],
-    #                                              content=form.cleaned_data['content'],
-    #                                              summary=form.cleaned_data['summary']).url
-    #         messages.success(
-    #             self.request,
-    #             _("New article '%s' created.") %
-    #             self.newpath.article.current_revision.title)
-    #
-    #     # TODO: Handle individual exceptions better and give good feedback.
-    #     except Exception as e:
-    #         log.exception("Exception creating article.")
-    #         if self.request.user.is_superuser:
-    #             messages.error(
-    #                 self.request,
-    #                 _("There was an error creating this article: %s") %
-    #                 str(e))
-    #         else:
-    #             messages.error(
-    #                 self.request,
-    #                 _("There was an error creating this article."))
-    #         return redirect('wiki:get', '')
-
-    # url = self.get_success_url()
-    # return url
+    def get_template_names(self):
+        return [TEMPLATES[self.steps.current]]
 
     def done(self, form_list, **kwargs):
-        slug = kwargs.get('form_dict')['0'].cleaned_data['slug']
-        title = kwargs.get('form_dict')['0'].cleaned_data['title']
-        content = kwargs.get('form_dict')['0'].cleaned_data['content']
-        summary = kwargs.get('form_dict')['0'].cleaned_data['summary']
+        slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        title = kwargs.get('form_dict')['creation'].cleaned_data['title']
+        content = kwargs.get('form_dict')['creation'].cleaned_data['content']
+        summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
         self.uga = UGA.create_by_request(request=self.request, article=self.article,
                                          parent=self.urlpath,
                                          slug=slug, title=title,
                                          content=content,
                                          summary=summary)
-        links = kwargs.get('form_dict')['1'].cleaned_data['links']
+        links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
         for l in links:
             bsi = BSI.objects.filter(Q(url__article__current_revision__title=l))[0]
             self.uga.add_link_to_bsi(bsi)
 
         return redirect(reverse('get_article', kwargs={'path': self.uga.url.path}))
+
+
+def get_bsi_articles(request):
+    if request.is_ajax():
+        q = request.GET.get('term', '')
+        bsis = BSI.objects.filter(url__article__current_revision__title__icontains=q)[:20]
+        results = []
+        for bsi in bsis:
+            title_json = {}
+            title_json['id'] = bsi.url.path
+            title_json['label'] = bsi.url.article.current_revision.title
+            title_json['value'] = bsi.url.article.current_revision.title
+            results.append(title_json)
+        data = json.dumps(results)
+        # data = serializers.serialize('json', results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
 
 
 # class UGCreateAddLinksView(FormView, ArticleMixin):

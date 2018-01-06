@@ -10,6 +10,7 @@ sys.path.append(r"..")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 from bsiwiki import settings
+from wiki.models import URLPath
 
 
 csvDir = './Cross_Reference_Tables/'
@@ -62,6 +63,8 @@ def csv_parser(path_and_file, newFolderPath):
 
 def get_cr_relation(newFolderPath):
     # extract for each component the cross reference relation
+	# site = str(Site.objects.get_current()) + '/'
+    site = 'http://localhost:8000/'
     try:
         for filename in [f for f in listdir(newFolderPath) if f.endswith(".txt")]:
             # extract the component, threats and requirements ids from the macro files
@@ -84,22 +87,21 @@ def get_cr_relation(newFolderPath):
                             with open(path_and_reference) as reference_file:
                                  for line in reference_file:
                                     if id.strip() in line:
-                                        line = line.replace("####", "  *")
+                                        line = line.replace("####", "         *")
                                         new_component_file.write(line)
                         new_component_file.close()
     except IOError:
         print('An error occurred trying to open (read/write) the file.')
 
-
-#Calling Macro to get cross reference relation tables
-# def generateComponentsThreatsMeasuresRelation(excelFolderDir, macroFileDir, txtFolderDir ):
-#     xl = win32com.client.Dispatch("Excel.Application")
-#     xl.Visible = True
-#     Path = macroFileDir
-#     xl.Workbooks.Open(Filename=Path)
-#     param1 = excelFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_Tables"
-#     param2 = txtFolderDir #"C:\\Users\\Master\\Desktop\\Cross_Reference_files"
-#     xl.Application.Run("Extraction", param1, param2)
+def find_BSI_threats(threatName, site):
+    if(threatName):
+        id = "".join(threatName.split(" ", 2)[:2])
+        if(id):
+            threat = URLPath.objects.get(slug=id)
+            name = threat.article.current_revision.title
+            path = site + threat.path
+            mdThreat = "<br />" +'[' + name + '](' + path + ')\n'
+    return mdThreat
 
 if __name__ == '__main__':
     extraction(csvDir,txtDir)
