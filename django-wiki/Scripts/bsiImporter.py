@@ -25,7 +25,7 @@ csvDir = './Cross_Reference_Tables/'
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
-doCR = True
+doCR = False
 
 
 def readConfig(varname):
@@ -274,7 +274,7 @@ def post_phase(archiving_data):
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
-        '''
+        
         #print(type)
         for new_type in types:
               if new_type.slug == "components":
@@ -283,7 +283,7 @@ def post_phase(archiving_data):
                    post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
               elif new_type.slug == "implementationnotes":
                    post_phase_move_bsi(new_type=new_type, default_type="implementationnotes", old_parent=bsi, archive=archive)
-        '''
+        
         post_phase_delete_url(new)
         updateModificationTime()
 
@@ -452,7 +452,7 @@ def cleanUp():
 if __name__ == '__main__':
       #file = parseArgs()
       #main(file)
-      appendThreatMeasureRelation()
+      #appendThreatMeasureRelation()
       #post_phase("2017-12")
       #updateModificationTime()
       #new = URLPath.objects.get(slug='new')

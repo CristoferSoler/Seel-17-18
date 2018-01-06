@@ -1,21 +1,19 @@
 #C
 %m
-CON.7 Informationssicherheit auf Auslandsreisen.md
+APP.1.1 Office Products.md
 %a
-APP.3.4 Samba.md
 %d
-APP.1.1 Office-Produkte.md
+APP.1.2 Web browser.md
 #T
 %m
+G 0.7 Major events in the area
 %a
-G 0.14 Ausspähen von Informationen (Spionage).md
 %d
-G 0.47 Schädliche Seiteneffekte IT-gestützter Angriffe.md
-G 0.46 Integritätsverlust schützenswerter Informationen.md
+G 0.3 water.md
+G 0.6 disasters in the area.md
 #N
 %m
+Implementation notes for the block SYS.1.2.2 Windows Server 2012
 %a
-Umsetzungshinweise zum Baustein INF.3 Elektrotechnische Verkabelung.md
 %d
-Umsetzungshinweise zum Baustein SYS.3.2.2 Mobile Device Management (MDM).md
-Umsetzungshinweise zum Baustein SYS.3.2.3 iOS (for Enterprise).md
+Implementation notes for the block OPS.1.1.3 Patch and Change Management.md

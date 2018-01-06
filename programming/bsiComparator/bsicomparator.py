@@ -1,28 +1,19 @@
-import argparse
 from os.path import isdir
 import filecmp
-import ConfigParser
+import configparser
+
+
+oldDir = './md'
+newDir = './mdNew'
 
 
 def readConfig(varname):
-    configParser = ConfigParser.RawConfigParser()
+    configParser = configparser.RawConfigParser()
     configParser.read("config.cfg")
     return configParser.get('bsi', varname)
 
 
-def parseArgs():
-    parser = argparse.ArgumentParser('Compares BSI contents in two directories')
-    parser.add_argument('oldBsiDir', metavar='D1', help='The directory containing the old BSI')
-    parser.add_argument('newBsiDir', metavar='D2', help='The directory containing the new BSI')
-
-    args = parser.parse_args()
-    if((not isdir(args.oldBsiDir)) or (not isdir(args.newBsiDir))):
-        raise ValueError("Both arguments have to be a valid directory path!")
-
-    return args.oldBsiDir, args.newBsiDir
-
-
-def compare(oldDir, newDir):
+def compare():
     modified = []
 
     # compare old dir with new dir
@@ -82,5 +73,4 @@ def generateTextFile(dir, added, modified, deleted):
 
 # should not be imported by other module
 if __name__ == '__main__':
-    oldDir, newDir = parseArgs()
-    compare(oldDir, newDir)
+    compare()
