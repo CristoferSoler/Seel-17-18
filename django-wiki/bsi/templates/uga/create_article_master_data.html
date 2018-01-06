@@ -5,12 +5,13 @@
 
     <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
     <script type="text/javascript">
-        {% if not create_form.slug.value %}
+        {{ wizard.management_form }}
+        {% if not form.slug.value %}
             //<![CDATA[
             (function ($) {
                 $(document).ready(function () {
-                    $("#id_title").keyup(function () {
-                        var e = $("#id_slug")[0];
+                    $("#id_creation-title").keyup(function () {
+                        var e = $("#id_creation-slug")[0];
                         if (!e._changed) {
                             slug = URLify(this.value, 50);
                             e.value = slug;
@@ -26,37 +27,20 @@
 {% block form_data %}
     <table>
         <tbody>
-        {% if wizard.form.forms %}
-            {% for form in wizard.form.forms %}
-                {% for field in form %}
-                    <tr>
-                        <p>
-                            {{ field.label_tag }}
-                            {{ field }}
 
-                            {% for error in field.errors %}
-                                <p style="color: red">{{ error }}</p>
-                            {% endfor %}
+        {% for field in form %}
+            <tr>
+                <p>
+                    {{ field.label_tag }}
+                    {{ field }}
 
-                    </tr>
-                    <tr>{{ field.help_text|safe }}</tr>
-                {% endfor %}
-            {% endfor %}
-        {% else %}
-            {% for field in form %}
-                <tr>
-                    <p>
-                        {{ field.label_tag }}
-                        {{ field }}
+                    {% for error in field.errors %}
+                        <p style="color: red">{{ error }}</p>
+                    {% endfor %}
 
-                        {% for error in field.errors %}
-                            <p style="color: red">{{ error }}</p>
-                        {% endfor %}
-
-                </tr>
-                <tr>{{ field.help_text|safe }}</tr>
-            {% endfor %}
-        {% endif %}
+            </tr>
+            <tr>{{ field.help_text|safe }}</tr>
+        {% endfor %}
         </tbody>
     </table>
 {% endblock %}

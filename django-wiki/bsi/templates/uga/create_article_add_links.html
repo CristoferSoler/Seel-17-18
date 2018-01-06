@@ -5,53 +5,16 @@
     <div class="col-lg-12">
         <div class="col-lg-12">
             <h4>Search articles</h4>
-            {#            <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">#}
-            <form class="navbar-form navbar-right" id="wiki-search-form" method="GET">
-                <div class="form-group inner-addon right-addon ui-widget">
-                    <i class="glyphicon glyphicon-search"></i>
-                    {#                                        <input type="search" class="form-control search-query" name="q" placeholder="search"/>#}
-                    {#                    <label for="search">Search: </label>#}
-                    <input type="search" class="form-control search-query" id="search_autocomplete"/>
-                </div>
-            </form>
-
-
-            <div class="col-lg-12">
-                <table class="table table-striped"
-                       data-toggle="table"
-                       data-search="true"
-                       data-show-refresh="true"
-                       data-show-toggle="true"
-                       data-show-columns="true"
-                       data-toolbar="#toolbar"
-                       data-query-params="queryParams"
-                       data-pagination="true"
-                       data-height="550"
-                       data-locale="en-US"
-                       data-page-list="[15, 30, 90, 200]">
-
-                    <thead>
-                    <tr>
-                        <th data-sortable="true">Article Name</th>
-                        {#                        <th data-sortable="true">Author</th>#}
-                        {#                        <th data-sortable="true">Date</th>#}
-                    </tr>
-                    </thead>
-
-                    <!-- tbody should be displayed from overview_uga.html -->
-                    <tbody>
-                    {#                    {% for article in articles %}#}
-                    <tr>
-
-
-                        {#                            <td class="col-xs-3">{{ article.article.owner }}</td>#}
-                        {#                            <td class="col-xs-3">{{ article.article.created }}</td>#}
-                    </tr>
-                    {#                    {% endfor %}#}
-                    </tbody>
-
-                </table>
+            <div class="form-group inner-addon right-addon ui-widget">
+                <i class="glyphicon glyphicon-search"></i>
+                <input type="search" class="form-control search-query" id="search_autocomplete" placeholder="search"/>
             </div>
+            <hr class="no-margin">
+            <div id="see_also_links">
+                <ul class="list-group" id="newList"></ul>
+            </div>
+
+
         </div>
         <div class="col-lg-1"></div>
         <div class=" col-lg-4">
@@ -82,90 +45,105 @@
                     }
 
 
-                    {#$(function () {#}
-                    {#    var elements = document.getElementsByClassName('list-group-item');#}
-                    {#    for (var i = 0; i < elements.length; i++) {#}
-                    {#        elements[i].addEventListener('click', function () {#}
-                    {#            console.log('click :)')#}
-                    {#        }, false);#}
-                    {#    }#}
+                    $(function () {
+                        var elements = document.getElementsByClassName('list-group-item');
+                        for (var i = 0; i < elements.length; i++) {
+                            elements[i].addEventListener('click', function () {
+                                console.log('click :)')
+                            }, false);
+                        }
+                    })
 
 
                 </script>
             </div>
         </div>
         <div class="col-lg-6">
-            <h4>See also</h4>
-            <hr class="no-margin">
-            <div id="see_also_links"></div>
 
 
             <table>
                 <tbody>
-                {{ wizard.management_form }}
-                {% if wizard.form.forms %}
-                    {{ wizard.form.management_form }}
-                    {% for form in wizard.form.forms %}
-                        {% for field in form %}
-                            <tr>
-                                <p>
-                                    {{ field.label_tag }}
-                                    {{ field }}
+                {% for field in form %}
+                    <tr>
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
 
-                                    {% for error in field.errors %}
-                                        <p style="color: red">{{ error }}</p>
-                                    {% endfor %}
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
 
-                            </tr>
-                            <tr>{{ field.help_text|safe }}</tr>
-                        {% endfor %}
-                    {% endfor %}
-                {% else %}
-                    {% for field in form %}
-                        <tr>
-                            <p>
-                                {{ field.label_tag }}
-                                {{ field }}
-
-                                {% for error in field.errors %}
-                                    <p style="color: red">{{ error }}</p>
-                                {% endfor %}
-
-                        </tr>
-                        <tr>{{ field.help_text|safe }}</tr>
-                    {% endfor %}
-                {% endif %}
+                    </tr>
+                    <tr>{{ field.help_text|safe }}</tr>
+                {% endfor %}
                 </tbody>
             </table>
 
             <script type="text/javascript">
                 $(document).ready(function () {
-                    if (!$('input[type=checkbox]').is(':checked')) {
-                        console.log("unchecked");
-                        $('input[type=checkbox]').parent().parent().hide()
+                        $('input[type=checkbox]').each(function () {
+                            if (!$(this).is(':checked')) {
+                                $(this).parent().parent().hide()
+                            }
+                        })
                     }
-                });
-                $('input[type=checkbox]').change(function () {
-                    if ($(this).is(':checked')) {
-                        console.log("checked");
-                        $(this).parent().parent().show()
-                    } else {
-                        console.log("unchecked");
-                        $(this).parent().parent().hide()
-                    }
+                );
+                $(function () {
+                    $('input[type=checkbox]').change(function () {
+                        if ($(this).is(':checked')) {
+                            $(this).parent().parent().show()
+                        } else {
+                            $(this).parent().parent().hide()
+                        }
+                    });
                 });
             </script>
 
         </div>
     </div>
 
+
     <script type="application/javascript">
         $(function () {
             $("#search_autocomplete").autocomplete({
                 source: "/uga/_create/get_bsi_articles/",
                 minLength: 2
+            }).change(function () {
+                var autocompletelistitem = $("#ui-id-1").find("> .ui-menu-item");
+                var resultlist = $("#newList");
+                resultlist.empty();
+                autocompletelistitem.each(function () {
+                    resultlist.append("<li class='list-group-item search-result'>" + $(this).text() + "</li>");
+                });
+
+
+                $(function () {
+                    $('.search-result').each(function () {
+                        var text = $(this).text();
+                        var corresponding_field = $(':input[type=checkbox]').filter(function () {
+                            return this.value === text
+                        });
+                        if (corresponding_field.is(':checked')) {
+                            $(this).addClass("active");
+                        }
+                        $(this).click(function () {
+                            if ($(this).hasClass("active")) {
+                                $(this).removeClass("active");
+                                corresponding_field.prop('checked', false);
+                                corresponding_field.parent().parent().hide();
+                            } else {
+                                $(this).addClass("active");
+                                corresponding_field.prop('checked', true);
+                                corresponding_field.parent().parent().show();
+                            }
+
+                        });
+                    })
+
+                });
             });
         });
+
     </script>
 
 {% endblock %}
