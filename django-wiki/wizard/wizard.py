@@ -6,8 +6,8 @@ from django.http import HttpResponse
 import json
 from random import shuffle
 
-pathOfComponentsCSV = './bsi/static/bsi/csv/componentsTopics.csv'
-pathOfThreadsCSV = './bsi/static/bsi/csv/threadsTopics.csv'
+pathOfComponentsCSV = './../programming/bsiWizard/csv/componentsTopics.csv'
+pathOfThreadsCSV = './../programming/bsiWizard/csv/threadsTopics.csv'
 
 def getPathOfElement(title,pathlist,requestParameter):
     checkPath = ''

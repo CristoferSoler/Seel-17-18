@@ -15,7 +15,7 @@ if __name__ == "__main__":
     crawlTranslateTreeview()
 
     #call topic generation for the wizard
-    topicGeneration()
+    topicGeneration()  
 
     doUpdate('../../programming/bsiComparator/example_modified_files.txt')
     scheduler = scheduler(time.time, time.sleep)
