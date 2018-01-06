@@ -15,6 +15,7 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
+
 .margin-after-nav{
     margin-top: 70px;
 }
@@ -131,12 +132,25 @@ section {
 
 /* breadcrumb-arrow  */
 /* credit: TonetIds https://bootsnipp.com/snippets/4O9nR  */
+
+@media (max-width: 767px) {
+ .breadcrumb-arrow{
+     display: none;
+ }
+}
+
+@media (min-width: 767px) {
+ .breadcrumb-arrow-dis{
+     display: none;
+ }
+}
+
 .breadcrumb-arrow {
     height: 36px;
     padding: 0;
     line-height: 36px;
     list-style: none;
-    background-color: #E1E2E1
+    background-color: #E1E2E1;
 }
 .breadcrumb-arrow li:first-child a {
     border-radius: 4px 0 0 4px;
