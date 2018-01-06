@@ -9,12 +9,14 @@ from Scripts.demo_post_phase import postPhase
 
 
 def performMidPhase(request):
-    midPhase()
+    #midPhase()
     print('MidPhase')
+    return HttpResponse('', content_type='application/json')
 
 def performPostPhase(request):
-    postPhase()
+    #postPhase()
     print('PostPhase')
+    return HttpResponse('', content_type='application/json')
 
 
 '''
