@@ -4,17 +4,16 @@ import sys
 
 sys.path.append(r'..')
 
-from Scripts.demo_mid_phase import midPhase
-from Scripts.demo_post_phase import postPhase
+from Scripts.main import demo_mid_phase, demo_post_phase
 
 
 def performMidPhase(request):
-    #midPhase()
+    demo_mid_phase()
     print('MidPhase')
     return HttpResponse('', content_type='application/json')
 
 def performPostPhase(request):
-    #postPhase()
+    demo_post_phase()
     print('PostPhase')
     return HttpResponse('', content_type='application/json')
 
