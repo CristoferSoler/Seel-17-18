@@ -7,7 +7,7 @@ In emergency situations, access to information to restore a business process, an
 
 Only when planned and organized is an optimal emergency preparedness and emergency management possible. A professional emergency management process reduces their impact and thus ensures the operation and continued existence of the institution. Appropriate measures must be identified and implemented that make business processes and specialist tasks more robust and fail-safe, and that make it possible to handle the emergency quickly and purposefully.
 
-The maintenance of information security is therefore to be integrated into a comprehensive emergency management. However, emergency management has its own process manager (the emergency officer) with whom the information security officer coordinates.
+The maintenance of information security must therefore be integrated into a comprehensive emergency management. However, emergency management has its own process manager (the emergency officer) with whom the information security officer coordinates.
 
 ### 1.2 Objective
 
@@ -48,7 +48,7 @@ When organizational units depend on service providers, the partial or total fail
 
 Specific requirements for emergency management are listed below. In principle, the emergency officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -58,7 +58,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### DER.4.A1 Creation of an emergency manual [Information Security Officer (ISB)]
 
-It SHOULD be created an emergency manual, in which the most important information to
+It SHOULD be created an emergency manual, in which the most important information about
 
 * Roll,
 * Emergency measures,
@@ -67,7 +67,7 @@ It SHOULD be created an emergency manual, in which the most important informatio
 * Recovery plans
 are included. Responsibilities and authority SHOULD be assigned, communicated and recorded in the emergency manual. It SHOULD be ensured that appropriately trained personnel are available in an emergency. It SHOULD regularly be checked by tests and exercises as to whether the measures described in the emergency manual also work as intended.
 
-The emergency manual SHOULD be checked regularly and updated if necessary. It SHOULD also be accessible in an emergency. The emergency manual SHOULD be supplemented with rules of conduct for cases (eg fire) that should be communicated to all employees.
+The emergency manual SHOULD be reviewed regularly and updated if necessary. It SHOULD also be accessible in an emergency. The emergency manual SHOULD be supplemented with rules of conduct for cases (eg fire) that should be communicated to all employees.
 
 #### DER.4.A2 Integration of emergency management into organizational processes and processes [institutional management]
 
@@ -86,7 +86,7 @@ A guideline for emergency management SHOULD be adopted by the management level. 
 
 #### DER.4.A5 Development of a suitable organizational structure for emergency management [Institutional Management] (CIA)
 
-The roles for emergency management should be set appropriately to the circumstances of the institution. This SHOULD be documented in writing with the roles, duties and responsibilities of the roles. It SHOULD be named Qualified Personnel for all roles in Emergency Management. The organizational structure in emergency management SHOULD regularly be checked to determine whether it is practicable, effective and efficient.
+The roles for emergency management should be set appropriately to the circumstances of the institution. This SHOULD be documented in writing with the tasks, duties and responsibilities of the roles. It SHOULD be named Qualified Personnel for all roles in Emergency Management. The organizational structure in emergency management SHOULD regularly be checked to determine whether it is practicable, effective and efficient.
 
 #### DER.4.A6 Provision of adequate resources for emergency management [Institutional Management] (CIA)
 
@@ -121,7 +121,7 @@ The management level SHOULD carry out its task of regularly reviewing, evaluatin
 
 #### DER.4.A14 Regular review and improvement of emergency response [Institutional Management] (IA)
 
-All emergency measures should be reviewed regularly or in the event of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
+All emergency measures should be reviewed regularly or in the case of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
 
 It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
 

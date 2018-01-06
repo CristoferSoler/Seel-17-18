@@ -19,11 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
     <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
-    <script src="{% static "bsi/css/bootstrap-treeview.css" %}"></script>
-    <script type="text/javascript"
-            src="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/js/bootstrap-extend.min.js"></script>
-    <link rel="stylesheet"
-          href="https://cdn.rawgit.com/Chalarangelo/bootstrap-extend/880420ae663f7c539971ded33411cdecffcc2134/css/bootstrap-extend.min.css"/>
+    <script src="{% static 'bsi/css/bootstrap-treeview.css' %}"></script>
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
@@ -118,6 +114,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="slide-panel">
+<<<<<<< HEAD
                 <a href="#" class="btn btn-warning" id="opener"><i
                         class="icon-magic-wand m-auto text-primary   "></i></a>
                 <div id="content" class="panel panel-primary">
@@ -134,6 +131,20 @@
                         </div>
                         <div class="panel-body">
                             <div class="container-fluid marginTop">
+=======
+                <a href="#" class="btn btn-warning" id="opener"><i class="icon-magic-wand text-primary"></i></a>
+                 <div id="content" class="panel panel-primary">
+                     <div class="panel panel-default contentPanel">
+                         <div class="panel-heading">
+                             Wizard
+                              <div class="pull-right">
+                                   <button id="topicBack" class="btn btn-sm disabled"><i class="glyphicon glyphicon-arrow-left" ></i></button>
+                                  <button id="restart"class="btn btn-sm" type="reset" data-toggle="tooltip" data-placement="top" title="Restart"><i class="glyphicon glyphicon-repeat" ></i></button>
+                              </div>
+                         </div>
+                         <div class="panel-body">
+                             <div class="container-fluid marginTop">
+>>>>>>> 7baa0465543d2edd2be075a3c4ae291f608d16f3
                                 <div class="row">
                                     <div class="col-md-12 abstandToButton">
                                         <h4 class="text-center font-weight-bold" id="questionText"><span
@@ -142,16 +153,16 @@
                                 </div>
                                 <div class="row abstandButtonToBottom">
                                     <div class="col-md-3"></div>
-                                    <div class="col-md-1">
-                                        <button class="btn btn-primary" id="yesButton">Yes</button>
+                                    <div class="col-sm-2" >
+                                        <a id="yesButton" class="btn btn-primary" >Yes</a>
                                     </div>
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-1">
-                                        <button class="btn btn-primary" id="noButton">No</button>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-2" >
+                                        <a id="noButton" class="btn btn-primary" >No</a>
                                     </div>
-                                    <div class="col-md-1"></div>
-                                    <div class="col-md-2">
-                                        <button class="btn btn-primary disabled" id="dontKnowButton">Don't know</button>
+                                    <div class="col-sm-2"></div>
+                                    <div class="col-sm-2" >
+                                        <a id="dontKnowButton" class="btn btn-primary disabled" >I don't know</a>
                                     </div>
                                     <div class="col-md-2"></div>
                                 </div>

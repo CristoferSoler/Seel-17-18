@@ -15,7 +15,7 @@ The goal of the module is the secure operation of web applications and the prote
 
 ### 1.3 Delimitation
 
-This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-oriented architectures *) are not considered in this module.
+This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
 
 2 risk situation
 -----------------
@@ -67,18 +67,18 @@ In order to access protected resources of a web application, users MUST authenti
 
 A central authentication component MUST be used, which has been implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
 
-To ensure that a valid session (session ID) was not inherited by an attacker, users must re-authenticate to critical features. Also, the web application MUST set limits for failed logon attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately if the password has been reset.
+To ensure that a valid session (session ID) was not inherited by an attacker, users must re-authenticate to critical features. Also, the web application MUST set limits for failed login attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately when the password has been reset.
 
 #### APP.3.1.A2 Web Application Access Control [Developer]
 
 If only a limited number of users are allowed to use the web application, an authorization component MUST be used to ensure that users can only perform actions for which they are authorized. Any access to protected content and features MUST be controlled before it is executed.
 
-All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable manner. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
+All users MUST be assigned restrictive access rights properly. When employees get access rights to or change their web application, those in charge MUST check, confirm, and document it in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
 All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
 
 #### APP.3.1.A3 Secure Session Management [Developer]
 
-Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, then the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
+Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
 
 A web application MUST allow users to explicitly end an existing session. After the user has logged in, an existing session ID MUST be replaced with a new one. The duration of the session MUST be limited, eg For example, inactive sessions automatically become invalid after a certain time and a maximum validity period is given (timeout). After the session is invalid, all session data (both server-side and client-side) MUST be invalid and deleted.
 
@@ -97,7 +97,7 @@ A web application MUST record security-relevant events with the required charact
 System administrators MUST regularly inform themselves about current vulnerabilities and import security-related updates in a timely manner. Software updates and patches for web applications MUST be obtained from trusted sources only. You MUST be tested sufficiently before the roll-out. Before any updates or patches are installed, MUST always be sure that the original state of the web application can be restored. The current patch level MUST be documented.
 
 #### APP.3.1.A7 Protection against unauthorized automated use of web applications [Developer]
-Web applications MUST be protected from automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
+Web applications MUST be protected against automated access by appropriate protection mechanisms, such as: For example, by setting limits on the number of access attempts in a given amount of time. However, it MUST be taken into account how the limits affect the web application, e.g. For example, functional restrictions might occur for authorized users.
 
 ### 3.2 Standard requirements
 
@@ -107,7 +107,7 @@ Together with the basic requirements, the following requirements are state of th
 
 Already in the design phase of a web application security aspects should be considered. Also, care should be taken that the architecture of the web application accurately captures and correctly implements the business logic of the institution.
 
-In the system architecture SHOULD be provided to separate the server services by separate IT systems from each other. Also, each user account SHOULD be used for the different server processes of the system components. The rights of these service accounts SHOULD be restricted to the operating system level so that only the required resources and files of the operating system can be accessed.
+In the system architecture SHOULD be provided to separate the server services by separate IT systems from each other. Also, each user account SHOULD be used for the different server processes of the system components. The rights of these service accounts SHOULD be limited to the operating system level, so that only the required resources and files of the operating system can be accessed.
 
 The network architecture SHOULD pursue a multi-tiered approach (multi-tier architecture). At least the security zones Web Layer, Application Layer and Data Layer SHOULD be considered. From these zones SHOULD NOT be able to access systems on the intranet.
 
@@ -128,7 +128,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -177,7 +177,7 @@ Previously reserved resources SHOULD be released again during error handling. Al
 
 #### APP.3.1.A18 Control of log files
 
-For each web application, a concept SHOULD be created to determine how extensive the logging should be and how the data should be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or another designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
+For each web application, a concept SHOULD be created that determines how extensive the logging should be and how the data is to be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or another designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
 
 #### APP.3.1.A19 Protection against SQL injection
 
@@ -196,7 +196,7 @@ To avoid clickjacking attacks, make sure that the content on all Web application
 
 #### APP.3.1.A22 Performing Penetration Tests (CIA)
 
-Web applications SHOULD undergo regular penetration testing. Penetration tests SHOULD only be carried out by reliable, trustworthy and qualified personnel or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the agreement of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB and the responsible executives.
+Web applications SHOULD undergo regular penetration testing. Penetration tests SHOULD only be carried out by reliable, trustworthy and qualified personnel or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB and the responsible executives.
 
 #### APP.3.1.A23 Prevention of Cross-Site Request Forgery [Developer] (CI)
 
@@ -211,7 +211,7 @@ To protect against denial-of-service (DoS) attacks, resource intensive operation
 
 ### 4.1 Literature
 
-Further information about threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
+Further information on threats and security measures in the "Web Applications" area can be found in the following publications, among others:
 
 * #### [HILWEB] Help for using the web application module
 

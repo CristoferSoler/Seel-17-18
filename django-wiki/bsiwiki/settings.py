@@ -70,7 +70,7 @@ ROOT_URLCONF = 'bsiwiki.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,6 +103,7 @@ LOGIN_REDIRECT_URL = 'index'
 
 WSGI_APPLICATION = 'bsiwiki.wsgi.application'
 
+LOGIN_URL = 'login'
 # from bsiwiki.WikiPattern import WikiPattern
 # URL_CONFIG_CLASS = WikiPattern
 

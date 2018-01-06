@@ -3,11 +3,11 @@
 
 ### 1.1 Introduction
 
-A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
+A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, even a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
 
 A PLC has digital inputs and outputs, a real-time operating system (firmware) and other interfaces for Ethernet or fieldbuses. The connection to sensors and actuators takes place via the analog or digital inputs or outputs or via a fieldbus. Communication with process control systems usually takes place via the Ethernet interface and IP-based networks.
 
-The possible implementations are manifold: PLCs can be used as a module, as a single unit, as a PC plug-in card (slot PLC) or as software emulation (soft PLC). The most common are modular PLCs, which are composed of different functional plug-in modules. Increasingly, other functions such as visualization, alarming and logging are realized by the PLC.
+The possible implementations are manifold: PLCs can be used as a module, as a single unit, as a PC plug-in card (slot PLC) or as software emulation (soft PLC). The most commonly encountered are modular PLCs that are composed of different functional plug-in modules. Increasingly, other functions such as visualization, alarming and logging are realized by the PLC.
 
 Due to the high availability requirements typical in the OT environment and the often extreme environmental conditions (climate, dust, vibration, corrosion), ICS components have always been designed as robust devices with high reliability and a long service life.
 
@@ -15,7 +15,7 @@ PLCs are usually configured or programmed using special software from the respec
 
 ### 1.2 Objective
 
-The aim of the device is to protect all types of programmable logic controllers, regardless of manufacturer, type, purpose and location. It can be applied to a single PLC or a contiguous board used as a PLC.
+The goal of the device is to protect all types of programmable logic controllers, regardless of manufacturer, type, purpose and location. It can be applied to a single PLC or a contiguous board used as a PLC.
 
 ### 1.3 Delimitation
 
@@ -81,25 +81,3 @@ The following elementary hazards are important for the block "Programmable Logic
 * G 0.30 Unauthorized use or administration of devices and systems
 * G 0.41 Sabotage
 The cross reference tables can be found in the download area due to their size.
-* G 0.14 Spying out information (spying)
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-* G 0.15 Listening
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-* G 0.19 Disclosure of information worthy of protection
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-* G 0.21 Manipulation of hardware or software
-  * IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-  * IND.2.2.A3 Time Synchronization [ICS Administrator]
-* G 0.22 Manipulation of information
-  * IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-  * IND.2.2.A3 Time Synchronization [ICS Administrator]
-* G 0.23 Unauthorized intrusion into IT systems
-  * IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-* G 0.30 Unauthorized use or administration of devices and systems
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]
-* G 0.41 Sabotage
-  * IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
-  * IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]

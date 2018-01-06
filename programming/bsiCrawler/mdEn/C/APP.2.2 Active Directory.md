@@ -9,7 +9,7 @@ Active Directory is mainly used in IT networks with predominantly Microsoft comp
 
 ### 1.2 Objective
 
-This building block aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
+This module aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
 
 ### 1.3 Delimitation
 
@@ -22,10 +22,10 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient planning of safety limits
 
-An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. The forest thus represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
+An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. So the forest represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
 
 ### 2 2 Too many or too lax relationships of trust
-If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, if the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
+If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, if a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are safe Issues with permissions occur and information flows away. In particular, if the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
 
 ### 2 3 Lack of security features due to older operating systems and domain functional level
 
@@ -37,11 +37,11 @@ Any additional domain controller-side service, other than the AD itself, as well
 
 ### 2 5 Abuse of Domain Admins
 
-The AD itself should only be managed by a very small number of administrators. Often, however, there are many more accounts than DA (domain administrator). These have full administrative rights on all domain controllers, workstations, group policies, etc. This will give attackers unnecessary leeway if one of these accounts can be taken over. Often, the DA's group includes service accounts and other groups that are not directly involved in the management of the AD itself.
+The AD itself should only be managed by a very small number of administrators. Often, however, many more accounts than DA (domain administrator) are kept. These have full administrative rights on all domain controllers, workstations, group policies, etc. This will give attackers unnecessary leeway if one of these accounts can be taken over. Often, the DA's group includes service accounts and other groups that are not directly involved in the management of the AD itself.
 
 ### 2 6 Inadequate monitoring and documentation of delegated rights
 
-By failing to systematically plan and implement the formation of and the right to delegate the rights of individual groups, the delegation can get out of control and give much more access than foreseen, which can be misused by third parties. Without regular auditing of the groups and their access rights, these rights threaten to over time. The use of standard groups and the delegation of their rights to their own groups (eg by delegation of "Account Operators" to help desk staff) usually grant more rights than actually needed.
+By failing to systematically plan and implement the formation of and the right to delegate the rights of individual groups, the delegation can get out of control and give much more access than foreseen, which can be misused by third parties. Without regular auditing of the groups and their access rights, these rights threaten to over time. The use of standard groups and the delegation of their rights to their own groups (eg by delegating "Account Operators" to help desk staff) usually grant more rights than actually needed.
 
 ### 2 7 Unsafe authentication
 
@@ -52,7 +52,7 @@ It has to be assumed that malicious code reaches different systems such as norma
 
 ### 2 9 Lack of supervision of privileged group membership
 
-In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads attackers to have more and more opportunities to gain and abuse additional privileges.
+In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads to more and more opportunities for attackers to gain and abuse additional privileges.
 
 ### 2 10 Too powerful or poorly secured service accounts
 
@@ -73,7 +73,7 @@ Attackers may prefer to use accounts that are no longer in use but still exist i
 
 The following are specific requirements for protecting Active Directory. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -149,7 +149,7 @@ In the environment of the Active Directory STRICTLY the authentication protocol 
 
 #### APP.2.2.A10 Secure use of DNS for Active Directory
 
-Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be allowed by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
+Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be permitted by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
 
 Secondary DNS zones SHOULD be avoided. At a minimum, the zone file SHOULD be protected from unauthorized access.
 
@@ -180,7 +180,7 @@ The administration of Active Directory SHOULD be restricted to dedicated adminis
 
 #### APP.2.2.A15 Separation of administration and production environment (CIA)
 
-Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust towards the production forest.
+Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust in the direction of the production forest.
 
 4 Further Information
 ------------------------------

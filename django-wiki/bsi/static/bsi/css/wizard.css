@@ -1,70 +1,159 @@
-.text-center{
-    text-align: center;
+@media (min-width: 1280px) {
+    .text-center {
+        text-align: center;
+    }
+
+    .abstandToButton {
+        margin-bottom: 15px;
+    }
+
+    .abstandButtonToBottom {
+        margin-bottom: 10px;
+    }
+
+    .wizardList {
+        text-align: left;
+        font-size: large;
+        list-style-type: none;
+    }
+
+    .wizardList li {
+        margin-top: 10px;
+    }
+
+    .wizardListTopMargin {
+        margin-top: 20px;
+    }
+
+    .modal-body {
+        overflow-y: auto;
+    }
+
+    .modal-backdrop {
+        background: none;
+    }
+
+    #slide-panel {
+        position: fixed;
+        float: right;
+        text-align: left;
+        margin-top: 5%;
+        right: 50px;
+        z-index: 10;
+    }
+
+    #opener {
+        margin: -10px -50px 0px 0px;
+        padding-top: 15px;
+        border-radius: 0;
+    }
+
+    #content {
+        position: absolute;
+        float: right;
+        margin-left: 50px;
+        height: 300px;
+        width: 500px;
+        border: black;
+    }
+
+    .center {
+        height: 310px;
+        background: orange;
+    }
+
+    .contentPanel {
+        height: 300px;
+        width: 500px;
+        overflow-y: scroll;
+    }
+
+    .marginTop {
+        margin-top: 30px;
+    }
 }
 
-.abstandToButton{
-    margin-bottom: 15px;
-}
+@media (min-width: 320px) and (max-width: 1279px) {
+    .text-center {
+        text-align: center;
+    }
 
-.abstandButtonToBottom{
-    margin-bottom: 10px;
-}
+    .abstandToButton {
+        margin-bottom: 10px;
+    }
 
-.wizardList{
-    text-align:left;
-    font-size: large;
-    list-style-type:none;
-}
+    .abstandButtonToBottom {
+        margin-bottom: 10px;
+    }
 
-.wizardList li{
-    margin-top: 10px;
-}
+    .wizardList {
+        text-align: left;
+        font-size: x-large;
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow:hidden;
+    }
 
-.wizardListTopMargin{
-    margin-top: 20px;
-}
+    .wizardList li {
+        float:left;
+        margin-top:2%;
+        width:100%;
+    }
 
-.modal-body {
-    overflow-y: auto;
-}
+    .wizardList li a {
+        white-space: normal;
+        width:100%;
+    }
 
-.modal-backdrop {
-    background:none;
-}
+    .wizardListTopMargin {
+        margin-top: 10px;
+    }
 
-#slide-panel {
-    position: fixed;
-    float:right;
-    text-align: left;
-    margin-top:5%;
-    left:98%;
-    z-index:10;
-}
-#opener {
-    margin:-10px -50px 0px 0px;
-    padding-top:15px;
-    border-radius:0;
-}
-#content {
-    position: absolute;
-    float: right;
-    margin-left: 50px;
-    height: 300px;
-    width: 500px;
-    border:black;
-}
+    .modal-body {
+        overflow-y: auto;
+    }
 
-.center{
-    height:310px;
-    background:orange;
-}
+    .modal-backdrop {
+        background: none;
+    }
 
-.contentPanel{
-    height: 300px;
-    width: 500px;
-    overflow-y: scroll;
-}
+    #slide-panel {
+        position: fixed;
+        float: right;
+        text-align: left;
+        margin-top:20%;
+        right: 50px;
+        z-index: 10;
+    }
 
-.marginTop{
-    margin-top: 30px;
+    #opener {
+        margin: -10px -50px 0px 0px;
+        padding-top: 15px;
+        border-radius: 0;
+    }
+
+    #content {
+        position: absolute;
+        float: right;
+        margin-left: 50px;
+        height: 320px;
+        width: 225px;
+        border: black;
+    }
+
+    .center {
+        height: 300px;
+        background: orange;
+    }
+
+    .contentPanel {
+        height: 320px;
+        width: 225px;
+        overflow-y: scroll;
+    }
+
+    .marginTop {
+        margin-top: 20px;
+    }
 }

@@ -25,6 +25,14 @@ system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET"
 # multiple CR
 doCR = False
 
+def mid_phase():
+    from datetime import datetime
+    print("mid phase executed on:", datetime.now())
+
+def after_midphase():
+    from datetime import datetime
+    print("post phase executed on:", datetime.now())
+
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
     configParser.read("config.cfg")

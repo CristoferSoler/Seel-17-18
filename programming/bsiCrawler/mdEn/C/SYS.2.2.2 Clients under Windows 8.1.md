@@ -11,12 +11,12 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described safety requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
+This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described safety requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the module [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the area of ​​*** *** Windows 8.1:
+The following specific threats and vulnerabilities are of particular importance in the area *** *** Windows 8.1:
 
 ### 2 1 Malware targeted to Windows
 
@@ -24,7 +24,7 @@ Malicious programs provide an attacker with extensive communication and control 
 
 ### 2 2 Software vulnerabilities or errors
 
-Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read out or manipulate data.
+Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, wrong management decisions, and delays in business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read out or manipulate data.
 
 ### 2 3 Integrated cloud functionalities
 Windows 8.1 includes many features that store and synchronize data in Microsoft's cloud services. There is a risk of unconsciously (or at least carelessly) using cloud services for possibly sensitive or personal data. At the same time, data protection laws may also be violated if data is stored by third parties, especially abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up there. Thus, data of the company can be unintentionally synchronized to the employees' private devices. As another example, Windows 8 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud. This puts critical cryptographic secrets in the hands of third parties.
@@ -43,7 +43,7 @@ Improper or improper use of devices, systems, and applications can also affect s
 ---------------
 The following are specific requirements for the Windows 8.1 area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic requirements
+### 3.1 Basic Requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -79,7 +79,7 @@ In addition to authorizations on the local file system, the authorization and ac
 
 #### SYS.2.2.2.A7 Using the Windows User Account Control UAC
 
-To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
+To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the setting of UAC SHOULD be balanced between usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
 #### SYS.2.2.2.A8 Using the homegroup feature [User]
 
 Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in handling homegroup permissions.
@@ -98,7 +98,7 @@ Syncing user data with Microsoft Cloud Services SHOULD be completely disabled.
 
 #### SYS.2.2.2.A12 Central authentication in Windows networks
 
-In pure Windows networks, only Kerberos SHOULD be used for centralized SSO authentication (Single Sign On). A group policy SHOULD prevent the use of older protocols. Storage of LAN Manager hash values ​​for password changes SHOULD be disabled by group policy. The monitoring settings together with the server components of DirectAccess SHOULD be carefully adjusted to the requirements of the information network. Client side logging SHOULD be ensured.
+In pure Windows networks, only Kerberos SHOULD be used for centralized SSO authentication (Single Sign On). A group policy SHOULD prevent the use of older protocols. Saving the LAN Manager hash values ​​for password changes SHOULD be disabled by group policy. The monitoring settings together with the server components of DirectAccess SHOULD be carefully adjusted to the requirements of the information network. Client side logging SHOULD be ensured.
 
 #### SYS.2.2.2.A13 Connection of Windows 8.1 to AppStores
 
@@ -110,12 +110,12 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
 
-Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The management of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
+Applications in user writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
 AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
 For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
 
-Implementation of the SRP and AppLocker rules SHOULD be tested on a test system or operating in monitor mode before being used on a productive system.
+The implementation of the SRP and AppLocker rules SHOULD be tested on a test system or operating in the monitoring mode before being used on a productive system.
 
 #### SYS.2.2.2.A15 Encrypting the file system with EFS (CI)
 
@@ -127,7 +127,7 @@ If the Windows PowerShell (WPS) is not needed, it SHOULD be uninstalled. With Wi
 
 #### SYS.2.2.2.A17 Safe Use of the Maintenance Center (CIA)
 
-The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows Backup," "User Experience Utility," and "Troubleshooting Other Settings" below Windows 8.1 will be disabled.
+The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows backup," "User Experience Utility," and "Troubleshooting - other settings" below Windows 8.1 will be disabled.
 
 #### SYS.2.2.2.A18 Activation of the last-access timestamp (A)
 
@@ -138,7 +138,7 @@ As part of the process of creating a security plan for an IT system running Wind
 The permission or the prohibition of the storage of access data in the so-called "safe" SHOULD be defined in a guideline. A ban SHOULD be technically enforced.
 
 #### SYS.2.2.2.A20 Remote access security via RDP (CIA)
-The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have an appropriate size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
+The impact on the configuration of the local firewall SHOULD be taken into account when planning the remote support. The group of authorized users for remote desktop access SHOULD be set by assigning appropriate user rights and policy. Remote support SHOULD only be done after an explicit invitation via EasyConnect or on the basis of an invitation file. When saving an invitation to a file, the file SHOULD be password protected. The currently logged in user SHOULD always have to explicitly agree to the setup of a session. The maximum validity of the invitation SHOULD have a reasonable size. In addition, a strong encryption (128 bit, setting "Highest Level") SHOULD be used. In addition, the automatic password login SHOULD be disabled. It SHOULD be checked if clipboard redirects, printers, filing and smartcard connections are necessary, otherwise they SHOULD be disabled. Unless the use of remote control mechanisms is foreseen, they SHOULD be completely disabled.
 
 #### SYS.2.2.2.A21 Using File and Registry Virtualization (CI)
 
@@ -149,7 +149,7 @@ It SHOULD be checked if the operation of legacy applications is still necessary,
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the section "Clients under Windows 8.1" can be found in the following publications, among others:
+Further information about threats and security measures in the section "Clients under Windows 8.1" can be found in the following publications:
 
 * #### [MicSAO] Security Auditing Overview, Microsoft, 07.2013
 
