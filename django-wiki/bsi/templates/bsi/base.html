@@ -75,6 +75,15 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
+                                {% if user.is_superuser %}
+                                <li>
+                                    <a href="/admin/">
+                                        <i class="fa fa-wrench"></i>
+                                        Admin Settings
+                                    </a>
+                                </li>
+                                {% endif %}
+
                                 <li>
                                     <a href="{% url 'password_change' %}">
                                         <i class="fa fa-gear"></i>

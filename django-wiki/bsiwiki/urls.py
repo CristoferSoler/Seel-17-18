@@ -34,7 +34,7 @@ urlpatterns = [
         name='password_change'),
     url(r'^accounts/password/change/done/$', auth_views.password_change_done,
         {'template_name': 'bsi/account/passwordChangeDone.html'}, name='password_change_done'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls, name='adminpage'),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
     url(r'^_treeview/', include('treeview.urls')),
