@@ -21,6 +21,7 @@
     <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
     <script src="{% static 'bsi/css/bootstrap-treeview.css' %}"></script>
     <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
+
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
@@ -28,6 +29,7 @@
 </head>
 
 <body>
+<div class="wrapper">
 <nav class="navbar navbar-fixed-top navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -183,7 +185,10 @@
 {% endblock %}
 
 <a href="#" id="scroll" style="display: none;"><<span class="glyphicon glyphicon-triangle-top"></span>></a>
-<footer class="Footer">
+</div>
+<div class="push"></div>
+  </div>
+<footer class="footer">
     <div class="container">
         <div class="row">
             <ul class="menu list-inline">
@@ -193,15 +198,15 @@
                 </li>
 
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">/About</a>
                 </li>
 
                 <li>
-                    <a href="#">FAQ</a>
+                    <a href="#">/FAQ</a>
                 </li>
 
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">/Contact</a>
                 </li>
 
             </ul>
