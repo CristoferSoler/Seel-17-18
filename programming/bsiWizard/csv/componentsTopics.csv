@@ -1,73 +1,80 @@
-APP.1.1 Office Products,product,office,application,app,software,user,feature,content,cloud,version
-APP.1.2 Web browser,browser,web,system,requirement,basic,user,gn/t/cq,dxw,xsr,xpw
-APP.2.1 General Directory Service,service,directory,security,access,user,app,operation,incorrect,failure,entire
-APP.2.2 Active Directory,domain,administrator,system,active,security,service,account,access,group,trust
-APP.3.1 Web applications,web,application,access,service,app,requirement,operation,data,session,message
-APP.3.2 Webserver,web,security,server,bund.de,http,requirement,application,bsi,software,internet
-APP.3.3 Fileserver,server,data,raid,file,requirement,file,app,storage,unauthorized,system
-APP.3.4 Samba,samba,server,app,requirement,configuration,user,file,service,system,linux
-APP.3.6 DNS server,dns,address,requirement,domain,app,configuration,system,network,incorrect,http
-APP.4.3 Relational Database Systems,database,data,documented,application,regularly,example,link,user,script,hardware
-APP.5.1 General Groupware,security,groupware,system,app,service,requirement,access,protection,file,specific
-APP.5.2 Microsoft Exchange and Outlook,microsoft,exchange,access,system,app,data,client,user,example,macro
-DER.1 Detection of safety-relevant events,event,der,network,attack,log,regularly,protection,security-related,security-relevant,message
-DER.2.1 Treatment of security incidents,security,incident,reporting,system,procedure,der,damage,expert,process,management
-DER.2.2 Provision for IT forensics,incident,forensic,forensics,evidence,data,der,responsible,security,order,process
-DER.2.3 Clearance of far-reaching security incidents,attacker,system,network,security,cleanup,incident,forensic,backdoor,governing,high
-DER.3.1 Audits and revisions,audit,der,team,security,institution,on-site,program,ism,protection,result
-DER.3.2 IS revision for federal authorities,audit,revision,security,authority,result,measure,audited,der,federal,on-site
-DER.4 emergency management,management,emergency,requirement,process,security,continuity,http,protection,risk,institutional
-IND.1 Operating and Control Technology,system,requirement,security,network,concept,access,protection,operation,service,data
-IND.2.1 General ICS Component,component,system,security,industrial,service,ind,interface,ind,control,mechanism
-IND.2.2 Programmable Logic Controller (PLC) ,requirement,ind,controller,plc,administrator,device,programmable,system,function,logic
-IND.2.3 Sensors and actuators,sensor,ind,protection,interface,officer,calibration,block,security,area,measure
-IND.2.4 Machine,machine,requirement,service,basic,safety,hazard,spying,missing,specific,security
-INF.1 General Building,inf,fire,protection,damage,requirement,area,building,building,unauthorized,person
-"INF.10 meeting, event and training rooms",room,training,requirement,event,computer,network,addition,system,confidential,access
-INF.2 data center and server room,center,data,protection,fire,area,inf,control,early,network,operation
-INF.3 Electrical wiring,electrical,inf,cable,requirement,power,protection,supply,installation,damage,risk
-INF.4 IT cabling,cabling,documentation,cable,network,inf,damage,checked,beuth,connection,verlag
-INF.7 office workplace,requirement,office,security,http,room,equipment,employee,data,system,inf
-INF.8 Domestic work place,requirement,workplace,office,example,equipment,data,work,system,transported,regulation
-INF.9 Mobile Workplace,mobile,data,institution,carrier,document,device,employee,third,example,sys
-ISMS.1 Security Management,security,measure,management,ism,institution,security,safety,aspect,protection,standard
-NET.1.1 network architecture and design,network,requirement,net,security,architecture,specification,area,including,access,dedicated
-NET.1.2 Network Management,network,management,access,net,communication,component,security,solution,area,unauthorized
-NET.2.1 WLAN operation,wlan,access,network,requirement,security,net,point,system,lan,encrypted
-NET.2.2 Wi-Fi usage,wlan,user,requirement,network,http,secure,addition,nist,policy,data
-NET.3.1 routers and switches,switch,router,net,access,security,system,layer,protocol,data,operating
-NET.3.2 Firewall,net,management,access,requirement,firewall,network,protection,proxy,ipv,data
-NET.3.3 VPN,vpn,access,network,security,client,attacker,net,component,network,institution
-OPS.1.1.2 Proper IT Administration,system,requirement,ops,security,administration,operation,administrative,activity,administrator,institution
-OPS.1.1.3 Patch and Change Management,change,manager,process,management,ops,requirement,management,level,protection,addition
-OPS.1.1.4 Protection against malicious programs,program,protection,requirement,system,malicious,virus,support,security,user,responsible
-OPS.1.1.5 Logging,logging,system,data,security,application,log,ops,infrastructure,server,central
-OPS.1.1.6 Software tests and releases,software,requirement,missing,system,operation,ops,test,management,productive,tested
-OPS.1.2.2 Archiving,archive,operation,requirement,data,document,suitable,integrity,result,head,protection
-OPS.1.2.3 Information and media exchange,data,carrier,user,data,medium,exchange,protection,partner,ops,head
-OPS.1.2.4 Telework,teleworking,teleworkers,institution,requirement,teleworker,security,system,guaranteed,access,device
-OPS.2.1 outsourcing for customers,outsourcing,service,project,customer,provider,system,control,concept,partner,network
-OPS.2.4 remote maintenance,remote,maintenance,security,operation,ops,system,requirement,access,operation,cryptographic
-OPS.3.1 Outsourcing for service providers,provider,outsourcing,customer,service,outsourcing,ops,requirement,process,management,concept
-ORP.1 organization,data,employee,security,orp,requirement,organization,system,person,area,organizational
-ORP.2 Personal,employee,security,orp,system,requirement,protection,personnel,social,change,external
-ORP.3 Sensitization and training,security,training,requirement,awareness-raising,program,activity,area,safety,technical,lack
-ORP.4 Identity and Permission Management,user,access,identity,requirement,authentication,management,password,employee,authorized,leader
-ORP.5 Compliance Management (Requirements Management) ,compliance,institution,requirement,security,measure,management,framework,protection,contractual,isb
-SYS.1.1 General Server,server,service,system,access,general,administration,user,protection,network,communication
-SYS.1.2.2 Windows Server 2012,server,window,configuration,security,system,feature,protection,encrypted,account,vulnerability
-SYS.1.3 server under Unix,unix,requirement,server,sys,protection,service,file,user,kernel,user
-SYS.1.5 Virtualization,system,server,virtual,virtualization,network,configuration,storage,resource,security,component
-SYS.1.8 Storage Solutions,storage,data,solution,solution,san,requirement,client,addition,documented,network
-SYS.2.1 General Client,client,sys,system,software,operating,requirement,security,policy,device,general
-SYS.2.2.2 Clients under Windows 8.1,window,application,security,system,account,client,requirement,data,vulnerability,policy
-SYS.2.2.3 Clients on Windows 10,window,system,user,data,security,account,client,requirement,file,efs
-SYS.2.3 Clients under Unix,system,client,linux,operating,user,requirement,program,file,vulnerability,distribution
-SYS.3.1 Laptops,laptop,user,sys,data,protection,device,requirement,employee,system,software
-SYS.3.2.1 General Smartphones and Tablets,device,system,sys,mobile,update,user,example,apps,protection,confidential
-SYS.3.2.2 Mobile Device Management (MDM) ,device,mobile,institution,requirement,mdm,security,protection,data,internal,install
-SYS.3.2.3 iOS (for Enterprise) ,device,security,sys,data,operating,requirement,apple,service,system,infrastructure
-SYS.3.2.4 Android,device,http,google,protection,system,software,requirement,access,operating,malware
-SYS.3.4 Mobile Disk,data,security,mobile,device,regulation,requirement,mobile,theft,addition,considered
-"SYS.4.1 printers, copiers and multifunction devices",printer,multifunction,protection,device,requirement,access,copier,data,security,device
-SYS.4.4 General IoT device,iot,device,security,device,requirement,sys,protection,update,sensor,service
+APP.1.1 Office Products,office,product,document,content,requirement,application,data,app,test,institution
+APP.1.2 Web browser,browser,web,password,system,extension,data,user,internet,pdf,requirement
+APP.2.1 General Directory Service,service,directory,access,planning,security,administration,concept,documented,task,anonymous
+APP.2.2 Active Directory,account,directory,domain,group,protected,requirement,security,active,administrator,access
+APP.3.1 Web applications,application,access,security,system,requirement,app,file,data,development,session
+APP.3.2 Webserver,web,server,security,protection,app,access,http,error,requirement,basic
+APP.3.3 Fileserver,file,system,backup,storage,requirement,institution,protection,access,app,raid
+APP.3.4 Samba,samba,window,data,service,access,file,system,linux,app,carefully
+APP.3.6 DNS server,dns,server,network,system,domain,example,app,plan,bund.de,operation
+APP.4.3 Relational Database Systems,database,system,management,data,script,standard,backup,regularly,created,account
+APP.5.1 General Groupware,groupware,system,security,requirement,data,protection,user,loss,app,partner
+APP.5.2 Microsoft Exchange and Outlook,microsoft,exchange,e-mail,exchange,server,access,service,client,configuration,protection
+CON.1 crypto concept,key,cryptographic,module,security,product,crypto,data,concept,encrypted,algorithm
+CON.2 Privacy,data,personal,data,protection,measure,objective,basis,person,security,model
+CON.3 data backup concept,data,backup,protection,requirement,system,recovery,concept,software,institution,integrity
+CON.4 Selection and use of standard software,standard,requirement,software,product,program,security,data,license,additional,checked
+CON.5 Development and use of professional applications,application,specialized,security,requirement,data,con,planning,loss,management,required
+CON.6 Delete and destroy,data,destruction,file,medium,deletion,employee,service,system,procedure,access
+CON.7 Information security on trips abroad,abroad,security,data,institution,requirement,device,con,travel,addition,management
+DER.1 Detection of safety-relevant events,event,protection,system,system,requirement,employee,responsible,external,safety-relevant,measure
+DER.2.1 Treatment of security incidents,security,updated,requirement,handling,management,process,policy,team,regularly,structure
+DER.2.2 Provision for IT forensics,data,der,evidence,forensically,security,employee,order,forensics,tool,area
+DER.2.3 Clearance of far-reaching security incidents,incident,system,apt,forensic,attacker,requirement,network,cleanup,access,governing
+DER.3.1 Audits and revisions,audit,on-site,result,revision,document,team,security,auditor,der,test
+DER.3.2 IS revision for federal authorities,audit,revision,security,authority,requirement,federal,document,inspection,bund.de,security
+DER.4 emergency management,emergency,management,security,process,failure,requirement,institutional,employee,cia,resource
+IND.1 Operating and Control Technology,requirement,security,protection,system,control,network,access,software,risk,institution
+IND.2.1 General ICS Component,component,security,system,protection,requirement,ind,event,control,device,industrial
+IND.2.2 Programmable Logic Controller (PLC) ,plc,function,controller,requirement,requirement,programmable,component,area,software,spying
+IND.2.3 Sensors and actuators,sensor,requirement,measure,system,security,calibration,control,wireless,implemented,table
+IND.2.4 Machine,machine,requirement,maintenance,implemented,addition,area,ind,service,safety,module
+INF.1 General Building,fire,building,door,area,protection,requirement,security,checked,damage,regulation
+"INF.10 meeting, event and training rooms",requirement,room,training,system,event,door,inf,premise,visitor,access
+INF.2 data center and server room,data,power,fire,inf,system,service,security,supply,maintained,requirement
+INF.3 Electrical wiring,cable,electrotechnical,cabling,power,inf,electrical,risk,operation,insufficient,socket
+INF.4 IT cabling,cabling,network,cable,requirement,fire,communication,building,verlag,protection,head
+INF.7 office workplace,access,office,unauthorized,system,security,device,requirement,staff,inf,space
+INF.8 Domestic work place,system,institution,data,security,document,requirement,protection,workplace,office,employee
+INF.9 Mobile Workplace,system,mobile,requirement,document,loss,workplace,device,data,employee,regulated
+ISMS.1 Security Management,security,level,objective,resource,process,institution,management,ism,regularly,system
+NET.1.1 network architecture and design,network,firewall,security,internet,requirement,net,design,system,policy,basic
+NET.1.2 Network Management,management,net,data,security,concept,addition,requirement,implemented,service,law
+NET.2.1 WLAN operation,wlan,access,security,requirement,wireless,point,protection,addition,radio,configuration
+NET.2.2 Wi-Fi usage,wlan,requirement,user,security,network,bund.de,net,addition,transmitted,system
+NET.3.1 routers and switches,router,switch,configuration,requirement,security,protection,attack,access,emergency,layer
+NET.3.2 Firewall,firewall,network,requirement,security,net,rule,system,packet,management,proxy
+NET.3.3 VPN,vpn,access,net,network,service,security,attacker,institution,data,doe
+OPS.1.1.2 Proper IT Administration,maintenance,system,administration,security,administrator,protection,access,incident,person,perform
+OPS.1.1.3 Patch and Change Management,change,management,manager,tool,security,software,level,update,operation,business
+OPS.1.1.4 Protection against malicious programs,program,system,malicious,service,requirement,security,malware,institution,documented,support
+OPS.1.1.5 Logging,logging,system,data,security,log,policy,application,event,logged,responsible
+OPS.1.1.6 Software tests and releases,test,software,release,testing,requirement,ops,system,application,productive,environment
+OPS.1.2.2 Archiving,archive,archiving,data,head,operation,process,system,storage,period,integrity
+OPS.1.2.3 Information and media exchange,data,exchange,organization,carrier,protection,module,head,post,storage,office
+OPS.1.2.4 Telework,teleworking,requirement,teleworker,data,telework,security,ops,institution,case,protection
+OPS.2.1 outsourcing for customers,outsourcing,provider,service,security,project,control,inadequate,partner,business,measure
+OPS.2.4 remote maintenance,remote,maintenance,access,data,communication,security,cryptographic,user,downloads/bsi,third
+OPS.3.1 Outsourcing for service providers,service,outsourcing,customer,data,security,concept,requirement,regulation,access,inadequate
+ORP.1 organization,task,data,access,security,head,requirement,employee,orp,protection,example
+ORP.2 Personal,requirement,employee,case,personnel,process,orp,security,access,data,responsibility
+ORP.3 Sensitization and training,security,training,measure,employee,system,requirement,institution,incident,sensitization,lack
+ORP.4 Identity and Permission Management,access,user,password,orp,security,authentication,system,head,handling,area
+ORP.5 Compliance Management (Requirements Management) ,requirement,legal,compliance,management,process,framework,orp,institution,law,head
+SYS.1.1 General Server,system,server,requirement,sys,security,administration,checked,power,unauthorized,specific
+SYS.1.2.2 Windows Server 2012,server,sys,security,attacker,administrator,configuration,protection,service,administration,integrity
+SYS.1.3 server under Unix,sys,unix,server,system,module,protection,user,file,mechanism,account
+SYS.1.5 Virtualization,virtualization,system,virtual,infrastructure,network,requirement,security,access,network,software
+SYS.1.8 Storage Solutions,storage,requirement,network,san,security,service,leader,data,basic,default
+SYS.2.1 General Client,system,client,sys,protection,institution,application,program,requirement,check,software
+SYS.2.2.2 Clients under Windows 8.1,window,application,sys,access,client,setting,requirement,remote,service,operating
+SYS.2.2.3 Clients on Windows 10,system,security,sys,window,application,account,client,software,threat,policy
+SYS.2.3 Clients under Unix,client,system,sys,security,user,distribution,software,boot,application,linux
+SYS.3.1 Laptops,laptop,user,requirement,data,access,sys,user,mobile,operating,employee
+SYS.3.2.1 General Smartphones and Tablets,device,system,mobile,requirement,sys,operating,user,tablet,smartphones,extension
+SYS.3.2.2 Mobile Device Management (MDM) ,device,mobile,data,operating,mdm,apps,sys,employee,http,management
+SYS.3.2.3 iOS (for Enterprise) ,device,system,apple,data,ios-based,sys,accessed,user,lock,sensitive
+SYS.3.2.4 Android,device,android,requirement,google,system,accessed,user,http,cloud,play
+SYS.3.4 Mobile Disk,carrier,data,mobile,medium,system,requirement,risk,protection,device,basic
+"SYS.4.1 printers, copiers and multifunction devices",device,printer,multifunction,copier,sys,requirement,security,user,scanner,function
+SYS.4.4 General IoT device,device,iot,network,security,configuration,installation,service,requirement,data,sensor

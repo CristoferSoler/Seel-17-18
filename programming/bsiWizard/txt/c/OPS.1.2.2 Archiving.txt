@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -30,11 +34,12 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient migration of archive systems
 
-Archived data should typically remain stored for a very long time. During this period, the underlying technical system components, storage media and data formats may physically or technically age and thereby become unusable. In addition, there may be problems with the compatibility of the data formats used over time.If the aging of the existing system is unresponsive, it can be expected in the long term, for example, that archived raw data will no longer be readable by the archive media or that archived data will be changed by physical errors in the archive system and media.
+Archived data should typically remain stored for a very long time. During this period, the underlying technical system components, storage media and data formats may physically or technically age and thereby become unusable. In addition, there may be problems with the compatibility of the data formats used over time.
+If the aging of the existing system is unresponsive, it can be expected in the long term, for example, that archived raw data will no longer be readable by the archive media or that archived data will be changed by physical errors in the archive system and media.
 
 ### 2 2 Inadequate classification criteria for archives
 
-Electronic archives can contain very large amounts of data. The individual data records are stored according to certain classification criteria, which are to be distinguished into index data of the business applications and index data of the archive system. If unsuitable order criteria are used, archived documents may not be retrieved or can only be re-searched with great difficulty, or the semantics of the documents can not be clearly determined. Likewise, there is a risk that retention targets will be missed by an unsuitable or limited selection of ordering criteria, e.g. B. the ability to prove to third parties.
+Electronic archives can contain very large amounts of data. The individual data records are stored according to certain classification criteria, which are to be distinguished into index data of the business applications and index data of the archive system. If unsuitable ordering criteria are used, archived documents may not be retrievable, or only very laboriously re-searched, or the semantics of the documents can not be determined unambiguously. Likewise, there is a risk that retention targets will be missed by an unsuitable or limited selection of ordering criteria, e.g. B. the ability to prove to third parties.
 
 ### 2 3 Inadequate documentation of archive accesses
 
@@ -57,7 +62,8 @@ If the archiving process is under-scrutinized or under-scrutinized, this can ind
 When archiving electronic documents, various legal framework conditions must be observed. Failure to comply with this may result in civil or criminal penalties, eg. For example, minimum retention periods that arise for tax, budgetary or other reasons.
 
 3 requirements
----------------The following are specific requirements for archiving. Basically, the archive manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for archiving. Basically, the archive manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -79,7 +85,7 @@ Since archive systems centrally store sensitive data of an institution, their IT
 
 #### OPS.1.2.2.A4 Consistent indexing of data during archiving [IT, IT operation, user]
 
-All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to quickly find them again in later search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
+All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to quickly find them again in future search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
 
 #### OPS.1.2.2.A5 Regular processing of archived data [Head IT]
 
@@ -94,11 +100,12 @@ It MUST be ensured throughout the archiving period that
 
 The integrity of the index database MUST be ensured and verifiable. In addition, the index database MUST be backed up regularly. The backups MUST be recoverable. Medium and large archives MUST have redundant index databases.
 
-#### OPS.1.2.2.A7 Regular backup of system and archive data [Head IT, IT Operations]
+#### OPS.1.2.2.A7 Regular data backup of system and archive data [Head IT, IT Operations]
 
 All archive data, the associated index databases and the system data MUST be backed up regularly (see OPS.1.1.6 * Data backup). *).
 
-#### OPS.1.2.2.A8 Logging of archive accesses [Head of IT, IT operation]All access to electronic archives MUST be logged. To do this, the date, time, user, client system, and the actions taken and error messages should be recorded. The retention period of the log data SHOULD be specified in the archiving concept.
+#### OPS.1.2.2.A8 Logging of archive accesses [Head of IT, IT operation]
+All access to electronic archives MUST be logged. To do this, the date, time, user, client system, and the actions taken and error messages should be recorded. The retention period of the log data SHOULD be specified in the archiving concept.
 
 The log data of the archive accesses SHOULD be evaluated regularly. In doing so, the institution's internal guidelines SHOULD be observed.
 
@@ -106,7 +113,7 @@ Also, SHOULD be defined which events (eg system errors, timouts or data records)
 
 #### OPS.1.2.2.A9 Selection of suitable data formats for the archiving of documents [Head IT, IT operation]
 
-For archiving a suitable data format MUST be selected. It MUST ensure that archive data as well as selected characteristics of the original document medium can be reproduced long-term and true to the original.
+For archiving a suitable data format MUST be selected. It MUST ensure that archive data as well as selected features of the original document medium can be reproduced in the long term and true to the original.
 
 The document structure of the selected data format MUST be clearly interpretable and electronically processable. The syntax and semantics of the data formats used SHOULD be documented and published by a standardization organization. It was intended to use a lossless image compression method for proof-proof and audit-proof archiving.
 
@@ -148,7 +155,8 @@ The implementation and participation in the training SHOULD be documented.
 
 The available free space on the archive media MUST be monitored continuously. As soon as a defined limit value is undershot, a responsible employee MUST be alerted automatically. It SHOULD be ensured that the alerting takes place according to the role. There must always be enough empty archive media available to quickly prevent memory bottlenecks.
 
-#### OPS.1.2.2.A13 Regular revision of the archiving processesIT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+#### OPS.1.2.2.A13 Regular revision of the archiving processes
+IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 #### OPS.1.2.2.A14 Regular monitoring of the archive system [Head IT]
 
@@ -174,13 +182,14 @@ A new archive system SHOULD always be selected based on the specifications descr
 
 For archiving, suitable media SHOULD be selected and used. The aspects to be archived data volume, average access times and average concurrent accesses to the archive system SHOULD be taken into account. Likewise, the archive media SHOULD meet the requirements for long-term archiving with regard to audit security and service life.
 
-#### OPS.1.2.2.A19 Regular function and recovery tests during archiving [Head IT, IT Operations]
+#### OPS.1.2.2.A19 Regular function and recovery tests during archiving [Head of IT, IT operation]
 
 For archiving, there should be regular functional and recovery tests. The archiving media SHOULD be checked at least once a year to see if they are still readable and with integrity. For troubleshooting, suitable processes SHOULD be defined.
 
 Furthermore, the hardware components of the archive system SHOULD regularly be checked for proper operation. It SHOULD be checked regularly if all archiving processes are working properly.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.2.2.A20 Appropriate use of cryptographic procedures in archiving [Head of IT] (CI)
 

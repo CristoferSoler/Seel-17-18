@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -36,7 +40,8 @@ Because of the proliferation and open architecture, Android OS devices are a pop
 
 ### 2 3 Missing updates for the Android operating system
 
-Many manufacturers ship smartphones and tablets with outdated versions of Android or do not provide regular or even no updates. As vulnerabilities in Android are regularly discovered, such devices are particularly vulnerable. This problem mainly affects cheap devices and smaller manufacturers, but also large manufacturers and premium models often do not provide sufficient security updates over a longer period of time.### 2 4 Risk concentration through a user account (Google ID) for all Google services
+Many manufacturers ship smartphones and tablets with outdated versions of Android or do not provide regular or even no updates. As vulnerabilities in Android are regularly discovered, such devices are particularly vulnerable. This problem mainly affects cheap devices and smaller manufacturers, but also large manufacturers and premium models often do not provide sufficient security updates over a longer period of time.
+### 2 4 Risk concentration through a user account (Google ID) for all Google services
 
 With Google ID, users can centrally access all Google services, including: Device management, recorded geographic locations, chat software, cloud storage, play store, music, book and movie offerings, backup, bookmarks, web page password storage, and synchronization services. Many other Internet service providers also use the Google ID to authenticate users.
 
@@ -46,7 +51,7 @@ If an attacker can authenticate himself through the Google ID, he can use all of
 
 With the operating system, manufacturers often ship deeply integrated and pre-installed apps (such as the Play Store and associated Play Services) and interfaces to third-party services (Twitter, Facebook, etc.). Some of these apps can not be removed by the user. This increases the attack surface of the Android operating system. The non-erasable or non-configurable interfaces are often not desired in institutions.
 
-Overall, the deep integration of apps and third-party interfaces increases the risk that the device will be infected with malware or that an attacker could gain unauthorized access. The protection of data on the device decreases.
+Overall, the deep integration of apps and third-party interfaces increases the risk that the device will become infected with malicious software or that an attacker may gain unauthorized access. The protection of data on the device decreases.
 
 3 requirements
 ---------------
@@ -83,7 +88,8 @@ Only the shared security apps SHOULD register as device administrators or trust 
 
 Furthermore, the "Access to usage data and access to notifications" settings should only allow allowed apps to access this sensitive data.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.4.A6 Using a Malware Protection (CIA) Product
 

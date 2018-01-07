@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,7 +17,7 @@ This module describes the specific threats for a file server and the resulting r
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server module and in the corresponding operating system-specific components of the IT systems layer. For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
+This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server block and in the corresponding operating system-specific components of the IT systems layer, for example: For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
 
 2 risk situation
 -----------------
@@ -26,21 +30,22 @@ If a file server fails, the entire information network can be affected and thus 
 
 ### 2 2 Inadequate dimensioning of the file server
 
-If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
+If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
 
-### 2 3 Inadequate review of dropped filesIf a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
+### 2 3 Inadequate review of dropped files
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
-If access authorizations and approvals are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
+If access authorizations and releases are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
 
 ### 2 5 Unstructured data management
 
-If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files may be located in directories or file systems that are made accessible to third parties or that are not consistent versions.
+If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files reside in directories or file systems that are made accessible to third parties, or that are not consistent versions.
 
 ### 2 6 Unsuitable installation of the file server
 
-If file servers are set up in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
+If file servers are deployed in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
 
 ### 2 7 Lack of or insufficient data protection concept
 
@@ -55,13 +60,14 @@ The following are specific requirements for the Fileserver area. Basically, the 
 
 The following requirements MUST be implemented as a priority:
 
-#### APP.3.3.A1 Suitable installation [Building services]
+#### APP.3.3.A1 Suitable installation [building services]
 
 File servers MUST NOT be operated in offices or as workstations. They MUST be placed in locations to which only authorized persons have access. In addition, attention must be paid to a vibration-free or vibration-free environment of the file server. Even file servers with additional functions, such as NAS systems combined with a WLAN access point or with direct connections for memory cards, MUST be set up suitably. Furthermore, a safe power supply and according to the manufacturer's recommended ambient temperature and humidity MUST be ensured.
 
 #### APP.3.3.A2 Use of RAID systems
 
-It MUST be planned whether a RAID system is used in the file server. A decision against such a system MUST be documented comprehensible. If a RAID system is to be used, it MUST be decided:* which RAID level should be used to logically group the volumes
+It MUST be planned whether a RAID system is used in the file server. A decision against such a system MUST be documented comprehensible. If a RAID system is to be used, it MUST be decided:
+* which RAID level should be used to logically group the volumes
 * how long the period of time for a RAID Rebuild process may be and
 * whether a software or a hardware RAID should be used.
 The RAID levels MUST conform to the state of the art. For a hardware RAID, the RAID controller SHOULD be redundant. In a RAID, hot spare disks SHOULD be kept.
@@ -78,7 +84,7 @@ All data stored on the file server MUST be backed up regularly. For this, a data
 
 #### APP.3.3.A5 Restrictive allocation of rights
 
-Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can only access the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
+Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can access only the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
 
 It MUST be checked on a regular basis to see if the access permissions are still up to date and comply with the security policy. In addition, there must be a defined process to re-establish, change, or revoke permissions. All access rights MUST be traceable documented.
 
@@ -94,7 +100,8 @@ Before a file server is procured, a list of requirements SHOULD be created to ev
 
 A REQUEST LIST SHOULD be created to evaluate the file systems. To ensure transaction security, the file system SHOULD provide a journaling feature. Also, it SHOULD have a protection mechanism that prevents two users or applications from writing to a file at the same time. A file system should be selected that does not exceed a defined overhead limit. For high availability solutions, distributed file systems SHOULD be used.
 
-#### APP.3.3.A8 Structured Data Management [User]It SHOULD be determined a structure, according to which data are to be stored. Users SHOULD be informed regularly about the required structured data management. It SHOULD be determined in writing which data may be stored locally and which on the file server. Program and work data SHOULD be stored separately. It SHOULD be checked regularly whether the specifications for structured data management are adhered to.
+#### APP.3.3.A8 Structured Data Management [User]
+It SHOULD be determined a structure, according to which data are to be stored. Users SHOULD be informed regularly about the required structured data management. It SHOULD be determined in writing which data may be stored locally and which on the file server. Program and work data SHOULD be stored separately. It SHOULD be checked regularly whether the specifications for structured data management are adhered to.
 
 #### APP.3.3.A9 Secure storage management
 
@@ -127,9 +134,10 @@ All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD 
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
-For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or independent sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
-#### APP.3.3.A14 Use of Error Correction Codes (I)In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
+#### APP.3.3.A14 Use of Error Correction Codes (I)
+In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
 
 4 Further Information
 ------------------------------

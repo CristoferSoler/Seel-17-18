@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -29,11 +33,12 @@ Ultimately, the building block also does not address how IT infrastructures can 
 
 The following specific threats and vulnerabilities are of particular importance for provisioning for IT forensics:
 
-### 2 1 Infringement of legal frameworkFor IT forensic investigations, all data deemed necessary are often copied, secured and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
+### 2 1 Infringement of legal framework
+For IT forensic investigations, all data deemed necessary are often copied, secured and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
 
 ### 2 2 Loss of evidence through incorrect or incomplete preservation of evidence
 
-If evidence is backed up incorrectly or not fast enough, it can cause important data to be lost that can not later be recovered. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
+If evidence is backed up incorrectly or not fast enough, it may lose important data that can not be recovered later. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
 
 The risk of losing important evidence increases when employees misuse forensic tools, back up data too slowly or practice too little. Often, evidence is lost if those responsible do not recognize and secure transient data as relevant.
 
@@ -62,7 +67,8 @@ If an institution does not have its own forensic team, it is necessary to identi
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the provision of IT forensics. They SHOULD be implemented in principle.
 
-#### DER.2.2.A4 Definition of interfaces for crisis and emergency managementThe interfaces between IT forensic investigations and crisis and emergency management SHOULD be defined and documented. For this purpose, it should be determined which employees are responsible for what and how to communicate with them. In addition, it should be ensured that contact persons are available.
+#### DER.2.2.A4 Definition of interfaces for crisis and emergency management
+The interfaces between IT forensic investigations and crisis and emergency management SHOULD be defined and documented. For this purpose, it should be determined which employees are responsible for what and how to communicate with them. In addition, it should be ensured that contact persons are available.
 
 #### DER.2.2.A5 Creation of a guideline for the safeguarding of evidence of IT security incidents
 
@@ -74,7 +80,7 @@ All responsible employees SHOULD know how to properly track and use forensic too
 
 #### DER.2.2.A7 Selection of forensic tools
 
-It SHOULD be made sure that tools used to forensically secure and analyze traces are also suitable for this purpose. Before a forensics tool is used, it should also be checked if it works properly. Also SHOULD be checked and documented that it was not manipulated.
+It SHOULD be made sure that tools used to forensically secure and analyze traces are also suitable for this purpose. Before a forensics tool is used, it should also be checked to see if it works properly. Also SHOULD be checked and documented that it was not manipulated.
 
 #### DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
 
@@ -82,19 +88,20 @@ A forensic investigation SHOULD always begin by defining the goals or work assig
 
 #### DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
 
-It SHOULD be determined which secondary data (eg log data or traffic recordings) are kept in the way and for how long within the legal framework for possible forensic evidence.
+It SHOULD be determined which secondary data (eg log data or traffic recordings) will be made available in which way and for how long within the legal framework for possible forensic evidences.
 
-#### DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+#### DER.2.2.A10 IT Forensic Security of Evidence [Investigator, Investigator]
 
 In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, in the case of volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
 
 In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of staff for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 
-If evidence is forensically secured, all steps taken should be documented. The documentation SHOULD provide complete proof of how the secured original evidence was handled. Also SHOULD be documented, which methods were used and why the responsible people have decided.#### DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
+If evidence is forensically secured, all steps taken should be documented. The documentation SHOULD provide complete proof of how the secured original evidence was handled. Also SHOULD be documented, which methods were used and why the responsible people have decided.
+#### DER.2.2.A12 Secure storage of original data and evidence [investigator, investigator]
 
 All seized original data carriers SHOULD be physically stored in such a way that only investigative and named employees can access them. If original media and evidence are to be stored, SHOULD set how long they should be stored. After the deadline has expired, it should be checked whether the media and evidence must be kept even further. After the retention period, evidence should be securely erased or destroyed and original data carriers returned.
 
@@ -108,7 +115,7 @@ To enable IT security incidents to be investigated forensically more quickly, th
 
 #### DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
 
-For applications, IT systems or IT system groups with high protection requirements as well as for widespread system configurations, standard procedures SHOULD be created, which make it possible to secure volatile and non-volatile data as completely as possible forensically.
+For applications, IT systems or IT system groups with high protection requirements as well as for common system configurations, standard procedures SHOULD be created that allow to secure volatile and non-volatile data as completely as possible forensically.
 
 The respective system-specific standard procedures SHOULD be implemented by proven and possibly automated processes. They SHOULD also be supported by checklists and technical aids, such as: Through software, software tools on mobile devices, and IT forensic hardware such as write-blockers.
 
@@ -174,7 +181,8 @@ Additional information on threats and security measures in the area of ​​"Pr
 
 The following elementary threats are important for the module "Provision for IT Forensics".
 
-* G 0.17 Loss of equipment, data carriers or documents* G 0.20 Information or products from unreliable sources
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.20 Information or products from unreliable sources
 * G 0.22 Manipulation of information
 * G 0.25 Failure of devices or systems
 * G 0.27 Resource shortage

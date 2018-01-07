@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 G 0.45 Data loss
 ===================
 
@@ -10,6 +14,6 @@ It should also be noted that many mobile IT systems are not always online. The d
 Examples:
 
 * The PDA falls out of the shirt pocket and smashes on the tiles, a mobile phone is retrieved instead of the newspaper from the dog, unfortunately with consequences. Such and similar events are the cause of many total losses of mobile device data.
-* There are malicious programs that selectively delete data on infected IT systems. For some pests, deletion is not performed immediately upon infection, but only when a defined event occurs, such as when the system clock reaches a certain date.
+* There are malicious programs that selectively delete data on infected IT systems. For some pests, deletion is not performed immediately upon infection, but only when a defined event occurs, for example when the system clock reaches a certain date.
 * Many internet services can be used to store information online. If the password is forgotten and is not stored, it may happen that the stored information can no longer be accessed unless the service provider offers a suitable method for resetting the password.
 * Hard drives and other mass storage media have a limited lifespan. If no suitable redundancy measures are taken, technical defects can lead to data losses.

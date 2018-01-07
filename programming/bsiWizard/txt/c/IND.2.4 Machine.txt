@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -26,7 +30,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Failure or malfunction due to insufficient maintenance
 
-When machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
+If machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
 
 ### 2 2 Targeted manipulations
 
@@ -43,7 +47,8 @@ The following requirements MUST be implemented as a priority:
 
 #### IND.2.4.A1 Remote Maintenance by Machine and Plant Builder [ICS Administrator]
 
-For the remote maintenance of a machine SHOULD there be a central guideline. In it SHOULD be regulated how the respective remote maintenance solutions are to be used and how communication links are protected. It SHOULD also describe what activities should be monitored during remote maintenance.In addition, it should NOT be possible to remotely access a machine to other systems or machines of the institution.
+For the remote maintenance of a machine SHOULD there be a central guideline. In it SHOULD be regulated how the respective remote maintenance solutions are to be used and how communication links are protected. It SHOULD also describe what activities should be monitored during remote maintenance.
+In addition, it should NOT be possible to remotely access a machine to other systems or machines of the institution.
 
 It should be agreed with a service provider how to use the information stored in the machine.
 

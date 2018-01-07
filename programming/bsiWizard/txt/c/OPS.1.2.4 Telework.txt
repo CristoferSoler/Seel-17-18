@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -9,7 +13,7 @@ Homebased telework distinguishes between home-based work and alternating telewor
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose typical hazards are identified and specific requirements for teleworking are defined.
+The aim of the module is to protect the information stored, processed and transmitted during teleworking. For this purpose, typical hazards are identified and specific requirements for teleworking are defined.
 
 ### 1.3 Delimitation
 
@@ -27,7 +31,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Missing or inadequate regulations for the teleworking station
 
-Since a teleworking station is located outside the institution, it requires individually adapted organizational arrangements. If such regulations do not exist, employees may not know that they B. independently have to perform backups. Also, they may not know how to handle security-related incidents at the teleworkstation. For example, if confidential information gets into someone else's hands, it may be used by unauthorized persons as a serious disadvantage of the institution.
+Since a teleworking station is located outside the institution, it requires individually adapted organizational arrangements. If such regulations do not exist, employees may not know that they B. independently have to perform backups. Also, they may not know how to deal with security-related incidents at the teleworkstation. For example, if confidential information gets into someone else's hands, it may be used by unauthorized persons as a serious disadvantage of the institution.
 
 ### 2 2 Lack of or insufficient training of teleworkers
 
@@ -35,7 +39,8 @@ Teleworkers are largely on their own at work. If the teleworker is not adequatel
 
 ### 2 3 Unauthorized private use of the official teleworking computer
 
-In the home, it is easier to use the official teleworking computer privately, because controls by the employer are only partially possible. Therefore, it can happen that unchecked and released software is used and by careless action malicious software reaches the teleworking computer. This could, for example, compromise confidential information.But not only teleworkers can use their computer improperly, but also relatives or visitors. Damage such as deleted hard drives can result in reinstallation costs or re-capture work.
+In the home, it is easier to use the official teleworking computer privately, because controls by the employer are only partially possible. Therefore, it can happen that unchecked and released software is used and by careless action malicious software reaches the teleworking computer. This could, for example, compromise confidential information.
+But not only teleworkers can use their computer improperly, but also relatives or visitors. Damage such as deleted hard drives can result in reinstallation costs or re-capture work.
 
 ### 2 4 Delays due to temporarily limited availability of teleworkers
 
@@ -66,13 +71,14 @@ The following are specific requirements for the protection of teleworking. Basic
 
 The following requirements MUST be implemented as a priority:
 
-#### OPS.1.2.4.A1 Teleworking Regulations [Supervisor, Human Resources]All relevant aspects of teleworking MUST be regulated. For information purposes, teleworkers MUST be given the applicable rules or a leaflet intended to explain the security measures to be followed. All points in dispute MUST be settled either by company agreements or by individual agreements between the teleworker and the employer in addition to the employment contract. For each teleworker, a representative MUST be named. The substitution case SHOULD be rehearsed regularly. The regulations MUST be updated regularly.
+#### OPS.1.2.4.A1 Teleworking Regulations [Supervisor, Human Resources]
+All relevant aspects of teleworking MUST be regulated. For information purposes, teleworkers MUST be given the applicable rules or a leaflet intended to explain the security measures to be followed. All points in dispute MUST be settled either by company agreements or by individual agreements between the teleworker and the employer in addition to the employment contract. For each teleworker, a representative MUST be named. The substitution case SHOULD be rehearsed regularly. The regulations MUST be updated regularly.
 
 #### OPS.1.2.4.A2 Safety requirements for the teleworking computer [Head IT, IT operation]
 
 All safety requirements that a telework computer must meet must be specified. All access and access to the institution's communication computers MUST be kept to the minimum necessary.
 
-It MUST be ensured that only authorized persons are allowed to access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
+It MUST be ensured that only authorized persons are allowed access to the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
 
 #### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
 
@@ -98,11 +104,12 @@ Together with the basic requirements, the following requirements correspond to t
 
 A teleworking security concept SHOULD be created describing security objectives, protection needs, security requirements and risks. The concept SHOULD be regularly updated and revised. The security concept for telework SHOULD be coordinated with the overarching security concept of the institution.
 
-#### OPS.1.2.4.A7 Regulated use of communication options for teleworking [teleworkers, IT operations]It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
+#### OPS.1.2.4.A7 Regulated use of communication options in teleworking [teleworker, IT operation]
+It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
 
 #### OPS.1.2.4.A8 Flow of information between teleworker and institution [supervisor, teleworker]
 
-A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changes in security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
+A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changed security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
 
 #### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
 
@@ -159,7 +166,8 @@ The following elementary hazards are important for the "teleworking" building bl
 * G 0.23 Unauthorized intrusion into IT systems
 * G 0.24 Destruction of equipment or data media
 * G 0.25 Failure of devices or systems
-* G 0.30 Unauthorized use or administration of devices and systems* G 0.31 Incorrect use or administration of devices and systems
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.33 Personnel loss
 * G 0.40 Denial of Service

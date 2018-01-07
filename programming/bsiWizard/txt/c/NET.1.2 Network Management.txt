@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -7,7 +11,7 @@ Reliable network management is a prerequisite for the secure and efficient opera
 
 Network management includes many important functions, such as: For example, network monitoring, component configuration, event handling, and logging. Another important function is reporting, which can be created as a common platform for the network and IT systems. Alternatively, it can be implemented as a single platform or as part of the individual management components.
 
-The network management infrastructure consists of central management systems (eg SNMP servers), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
+The network management infrastructure consists of central management systems (eg SNMP server), administration terminals with software for management access, decentralized management agents, dedicated management tools (eg probes or specific measuring instruments) , Management protocols (such as SNMP or SSH), and management interfaces (such as dedicated Ethernet ports or console ports).
 
 ### 1.2 Objective
 
@@ -40,9 +44,10 @@ If attackers succeed in accessing network management solutions, eg. For example,
 
 If attackers succeed in accessing individual network components, they can control and manipulate the respective component. Any traffic routed via the network component can thus be compromised. In addition, further attacks can be prepared to penetrate deeper into the institution's network.
 
-### 2 3 Unauthorized interference with network management communicationIf the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
+### 2 3 Unauthorized interference with network management communication
+If the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
 
-### 2 4 Inadequate time synchronization of network management components
+### 2 4 Insufficient time synchronization of network management components
 
 If the system time of the network management components is insufficiently synchronized, the logging data may not be correlated with each other, or the correlation may lead to incorrect statements, since the different timestamps of events have no common basis. This can not properly govern events that have occurred and problems can not be resolved. As a result, for example, security incidents and data outflows can go undetected.
 
@@ -80,11 +85,12 @@ A role and authorization concept for network management MUST be created, impleme
 
 For management access to network components and management information, appropriate authentication MUST be used. For this, the specifications of the institution for the authentication quality and the handling of the authentication information MUST be implemented. Also, all default passwords on the network components MUST be changed. The new passwords MUST be strong enough and regularly changed.
 
-#### NET.1.2.A5 Importing Updates and PatchesThe responsible employees MUST regularly inform themselves about known vulnerabilities in the network management solutions used and import security-related updates and patches as quickly as possible. Non-security updates MAY NOT compromise the security and stability of the network management solution.
+#### NET.1.2.A5 Importing Updates and Patches
+The responsible employees MUST regularly inform themselves about known vulnerabilities in the network management solutions used and import security-related updates and patches as quickly as possible. Non-security updates MAY NOT compromise the security and stability of the network management solution.
 
 #### NET.1.2.A6 Regular backup
 
-All network management solutions MUST be integrated into the institution's data protection concept (see CON.3 * data backup concept *). All specific data for network management MUST be considered. At least the system data for the integration of the components or objects to be managed, event messages, statistical data as well as data retained for the configuration management MUST be saved.
+All network management solutions MUST be integrated into the institution's data protection concept (see CON.3 * data backup concept *). All specific data for network management MUST be considered. At least the system data for the integration of the components or objects to be managed, event messages, statistical data as well as reserved data for the configuration management MUST be saved.
 
 #### NET.1.2.A7 Basic logging of events
 
@@ -92,7 +98,7 @@ The network management solution MUST be integrated into the institution's loggin
 
 #### NET.1.2.A8 time synchronization
 
-All network management components, including the integrated network components, MUST use a synchronous time. The time MUST be synchronized at each location within the local network using NTP service. If a separate management network is set up, an NTP instance MUST be positioned in this management network.
+All network management components, including the integrated network components, MUST use a synchronous time. The time MUST be synchronized at each location within the local network via NTP service. If a separate management network is set up, an NTP instance MUST be positioned in this management network.
 
 #### NET.1.2.A9 Securing network management communication
 
@@ -108,13 +114,14 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
 
-For network management, a security policy SHOULD be created and maintained sustainably. The policy SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
+For network management, a security policy SHOULD be created and sustainably maintained. The guideline SHOULD be familiar to all persons involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
 
 The security policy SHOULD define which areas of network management are implemented through centralized management tools and services. It SHOULD also define to what extent tasks should be automated in the network management of the institution.
 
 In addition, framework conditions and requirements for network separation, access control, logging and communication protection, the network management tool used and the operational rules for network management SHOULD be specified.
 
-#### NET.1.2.A12 Actual recording and documentation of network managementA documentation describing how the management infrastructure of the network is constructed SHOULD be made. This should include the initial actual recording and all changes made to the network management. In particular, it should be documented which network components are managed with which management tools. In addition, all IT workstations and terminals used for network management, as well as all information inventories, management data and network management operation information, should be recorded. Ultimately, all interfaces to applications and services outside the network management SHOULD be documented.
+#### NET.1.2.A12 Actual recording and documentation of network management
+A documentation describing how the management infrastructure of the network is constructed SHOULD be made. This should include the initial actual recording and all changes made to the network management. In particular, it should be documented which network components are managed with which management tools. In addition, all IT workstations and terminals used for network management, as well as all information inventories, management data and network management operation information, should be recorded. Ultimately, all interfaces to applications and services outside the network management SHOULD be documented.
 
 The documented as-is state of the management infrastructure SHOULD be compared with the documentation of the network infrastructure (see building block NET.1.1 * Network Architecture and Design). *
 
@@ -149,7 +156,8 @@ Network Management Solutions SHOULD be built on the Security Policy (see NET.1.2
 
 It should be checked regularly and comprehensibly to what extent the network management solution meets the target state. It should be checked whether the existing solution still meets the security policy and requirements specification. It should also be examined to what extent the implemented management structure and the processes used are up-to-date. Next SHOULD be compared, whether the management infrastructure is state-of-the-art.
 
-#### NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]Training and training measures SHOULD be designed and implemented for the network management solutions used. The measures SHOULD cover the individual circumstances in the configuration, availability and capacity management as well as typical situations in error management. Training and training SHOULD be repeated on a regular basis, but at least if major technical or organizational changes occur within the network management solution.
+#### NET.1.2.A18 Training for Management Solutions [Head of IT, Supervisors]
+Training and training measures SHOULD be designed and implemented for the network management solutions used. The measures SHOULD cover the individual circumstances in the configuration, availability and capacity management as well as typical situations in error management. Training and training SHOULD be repeated on a regular basis, but at least if major technical or organizational changes occur within the network management solution.
 
 #### NET.1.2.A19 Strong authentication of management access
 
@@ -185,7 +193,8 @@ The basic performance and availability parameters of the central network compone
 
 #### NET.1.2.A26 Comprehensive logging, alarming and logging of events
 
-Important events or error conditions SHOULD be automatically transmitted to a central management system and logged there. This applies to events on network components as well as events on the network management tools. The responsible IT staff SHOULD additionally be notified automatically. The alarming and logging SHOULD include at least the following points:* Failure or unavailability of network or management components
+Important events or error conditions SHOULD be automatically transmitted to a central management system and logged there. This applies to events on network components as well as events on the network management tools. The responsible IT staff SHOULD additionally be notified automatically. The alarming and logging SHOULD include at least the following points:
+* Failure or unavailability of network or management components
 * Hardware malfunction
 * incorrect login attempts
 * Critical states or congestion of IT systems
@@ -201,7 +210,7 @@ Dedicated management clients SHOULD be used to administer both internal and exte
 
 #### NET.1.2.A29 Use of VLANs in the Management Zone
 
-If management networks are separated by VLANs, care should be taken that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
+If management networks are separated by VLANs, care should be taken to ensure that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -219,7 +228,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 
@@ -231,7 +240,8 @@ In addition to the logging of session data (see NET.1.2.A22 * Logging of Adminis
 
 It was intended to establish and document procedures for the preservation of evidence and forensic investigations within the framework of network management. The collected logging data SHOULD be archived for forensic analyzes in compliance with the law and auditable.
 
-#### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)The logging of network management SHOULD be integrated into a security information and event management (SIEM) solution. For this, the requirement catalogs (see NET.1.2.A2) for the selection of network management solutions should be adapted with regard to the required support of interfaces and transfer formats.
+#### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)
+The logging of network management SHOULD be integrated into a security information and event management (SIEM) solution. For this, the requirement catalogs (see NET.1.2.A2) for the selection of network management solutions should be adapted with regard to the required support of interfaces and transfer formats.
 
 #### NET.1.2.A37 Cross-Site Time Synchronization (CI)
 
@@ -239,7 +249,7 @@ The time synchronization SHOULD be ensured across all locations of the instituti
 
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
 
-In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to establish adequate backup solutions that can be used to perform the administrative tasks in an emergency.
+In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to set up adequate backup solutions to perform the administrative tasks in an emergency.
 
 4 Further Information
 ------------------------------

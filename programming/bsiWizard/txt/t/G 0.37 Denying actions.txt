@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 G 0.37 Denying actions
 ================================
 

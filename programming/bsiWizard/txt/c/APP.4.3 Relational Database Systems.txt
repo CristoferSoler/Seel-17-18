@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Database systems (DBS) are a widely used tool for organizing, creating, modifying and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
+Database systems (DBS) are a widely-used tool for organizing, creating, modifying, and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
 
 ### 1.2 Objective
 
@@ -15,7 +19,7 @@ This module describes requirements for relational database systems. Security req
 
 In order to consistently protect the information in the databases, security requirements should already be taken into account in the development of the database tables and access to the database. However, requirements for this are not listed in this module, but can be found z. In CON.3 * software development *, APP.3.1 * web applications * and APP.3.5 * web services *.
 
-Likewise, the module does not address hazards and requirements that affect the operating system and hardware underlying the database system. Aspects can be found in the corresponding operating system-specific building blocks of the layer IT systems, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
+Similarly, the module does not address hazards and requirements that affect the operating system and hardware underlying the database system. Aspects can be found in the corresponding operating system-specific building blocks of the layer IT systems, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
 
 2 risk situation
 -----------------
@@ -30,7 +34,8 @@ If the hardware of a database system does not have enough system resources, ther
 
 During the initial installation or in the delivery state of a database management system, user and administration accounts are often not secured or only with passwords that are publicly known. There is a risk that these accounts will be misused. For example, an attacker with the publicly known credentials can log in to the database management system as a user or even as an administrator. Then he can read, manipulate or delete the configuration or the stored data.
 
-### 2 3 Insufficient allocation of authorizationsIf authorizations are assigned or managed incorrectly, persons in charge or users of the database management system can receive authorizations that go beyond what is absolutely necessary. Thus, it is possible that the overly entitled persons or users carry out unauthorized actions on the database management system that have far-reaching consequences, as the following example shows:
+### 2 3 Insufficient allocation of authorizations
+If authorizations are assigned or managed incorrectly, persons in charge or users of the database management system can receive authorizations that go beyond what is absolutely necessary. Thus, it is possible that the overly entitled persons or users carry out unauthorized actions on the database management system that have far-reaching consequences, as the following example shows:
 
 An incorrect SQL statement (for example, in an installation script) unintentionally deletes a large number of records in the database. Afterwards it is determined that the user actually only needed read-only rights for these data records, but also unnecessarily had delete rights.
 
@@ -44,7 +49,7 @@ Hardware or software failure as well as human error may cause data loss in the d
 
 ### 2 6 Loss of integrity of stored data
 
-Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) are concerned.
+Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) is concerned.
 
 ### 2 7 SQL injections
 
@@ -52,9 +57,10 @@ One common attack on database systems is SQL injection. If an application access
 
 ### 2 8 Insufficient patch management
 
-Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, disrupt services or shut down entire production processes.
+Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, shut down services or shut down entire production processes.
 
-### 2 9 Insecure configuration of the database management systemOften, in the default configuration of the database management system, unneeded features are enabled that make it easier for a potential attacker to read or manipulate information from the database. For example, an attacker can connect to an unused programming interface by an unmodified default installation to administer the DBMS without having to authenticate. This allows him to access the databases of the institution without authorization.
+### 2 9 Insecure configuration of the database management system
+Often, in the default configuration of the database management system, unneeded features are enabled that make it easier for a potential attacker to read or manipulate information from the database. For example, an attacker can connect to an unused programming interface by an unmodified default installation to administer the DBMS without having to authenticate. This allows him to access the databases of the institution without authorization.
 
 ### 2 10 malware and insecure database scripts
 
@@ -85,11 +91,12 @@ The database management system MUST be hardened. For this, a checklist with the 
 
 #### APP.4.3.A4 Regulated creation of new databases
 
-New databases MUST be created according to a defined process. When a new database is created, basic information about the database MUST be documented in a traceable way.#### APP.4.3.A5 user and authorization concept
+New databases MUST be created according to a defined process. When a new database is created, basic information about the database MUST be documented in a traceable way.
+#### APP.4.3.A5 user and authorization concept
 
 The user and authorization concept (see ORP.4 * Identity and Authorization Management *) of the institution MUST be extended by the authorizations for roles, profiles and user groups required for database management systems.
 
-A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
+A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
 
 #### APP.4.3.A6 Change of password [responsible person]
 
@@ -115,9 +122,10 @@ All transactions SHOULD be saved so that they can be recovered at any time. If t
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of relational database systems. They SHOULD be implemented in principle.
 
-#### APP.4.3.A10 Selection of suitable database management systemsBefore database management systems are procured, requirements for the DBMS SHOULD be defined and documented in a requirements catalog. Thereafter, all eligible database management systems SHOULD be evaluated against the catalog. The results SHOULD be documented.
+#### APP.4.3.A10 Selection of suitable database management systems
+Before database management systems are procured, requirements for the DBMS SHOULD be defined and documented in a requirements catalog. Thereafter, all eligible database management systems SHOULD be evaluated against the catalog. The results SHOULD be documented.
 
-#### APP.4.3.A11 Sufficient hardware dimensioning [Head of IT, specialist responsible]
+#### APP.4.3.A11 Sufficient dimensioning of the hardware [Head of IT, specialist responsible]
 
 Database management systems SHOULD be installed on sufficiently sized hardware. The hardware SHOULD have enough reserves to meet any increasing demands. Nevertheless draw down resource bottlenecks during operation, SHOULD these be remedied early. If the hardware is dimensioned, the expected growth for the planned deployment period SHOULD be considered.
 
@@ -145,7 +153,8 @@ The database management system SHOULD be configured to always encrypt database c
 
 If data is transferred to a database either initially or on a regular basis, it should be defined in advance how this data transfer should take place. After data has been acquired, SHOULD check if it is complete and unchanged.
 
-#### APP.4.3.A18 Monitoring the database management systemIt SHOULD define parameters, events and operating states of the database management system that are critical to safe operation. These SHOULD be monitored using a monitoring system. Thresholds SHOULD be set for all critical parameters and events. If these values ​​are exceeded, MUST be responded appropriately (eg the responsible staff must be alerted). Application-specific parameters, events and their threshold values ​​SHOULD be coordinated with those responsible for the specialized applications (see also APP.4.3.A11 * Sufficient hardware dimensioning *).
+#### APP.4.3.A18 Monitoring the database management system
+It SHOULD define parameters, events and operating states of the database management system that are critical to safe operation. These SHOULD be monitored using a monitoring system. Thresholds SHOULD be set for all critical parameters and events. If these values ​​are exceeded, MUST be responded appropriately (eg the responsible staff must be alerted). Application-specific parameters, events and their threshold values ​​SHOULD be coordinated with those responsible for the specialized applications (see also APP.4.3.A11 * Sufficient hardware dimensioning *).
 
 #### APP.4.3.A19 protection against malicious database scripts [developer]
 
@@ -169,7 +178,8 @@ For the database management system, a contingency plan SHOULD be created that de
 
 #### APP.4.3.A23 Archiving (CIA)
 
-If it is necessary to archive data of a database system, a corresponding archiving concept SHOULD be created. It SHOULD be ensured that the datasets are fully and consistently available again at a later date.In the archiving concept, both the intervals of the archiving and the retention periods of the archived data SHOULD be specified. In addition, it should be documented with which technique the databases were archived. The archived data SHOULD regularly perform recovery tests. The results SHOULD be documented.
+If it is necessary to archive data of a database system, a corresponding archiving concept SHOULD be created. It SHOULD be ensured that the datasets are fully and consistently available again at a later date.
+In the archiving concept, both the intervals of the archiving and the retention periods of the archived data SHOULD be specified. In addition, it should be documented with which technique the databases were archived. The archived data SHOULD regularly perform recovery tests. The results SHOULD be documented.
 
 #### APP.4.3.A24 Data encryption in the database (C)
 

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -26,13 +30,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Software vulnerabilities and drive-by downloads
 
-If IT systems are not adequately protected against malicious programs, which also requires, among other things, that patches are brought in quickly and the protection mechanisms of application programs such as browsers are correctly configured, software vulnerabilities can be exploited to execute malicious code. In the so-called drive-by downloads, for example, it is sufficient to visit a malicious website. A vulnerability in the browser or in an installed plug-in such as Java or Adobe Flash can then be exploited to infect the IT system and provide the attacker with extensive control and access to the network of an institution. Particularly at risk here are IT systems that are not regularly updated, such as many smartphones.
+If IT systems are not adequately protected against malicious programs, which also requires, among other things, that patches have been brought in quickly and the protection mechanisms of application programs such as browsers are correctly configured, software vulnerabilities can be exploited to execute malicious code. In the so-called drive-by downloads, for example, it is sufficient to visit a malicious website. A vulnerability in the browser or in an installed plug-in such as Java or Adobe Flash can then be exploited to infect the IT system and provide the attacker with extensive control and access to the network of an institution. Particularly at risk here are IT systems that are not regularly updated, such as many smartphones.
 
 ### 2 2 Blackmail by ransomware
 
-A common type of malware is ransomware. This encrypts the data of the infected IT system as well as often other data that can be reached via network shares. As a rule, the attackers use encryption methods that can not be reversed without knowing the key, thus forcing their victims to spend large sums of money. If there is no effective protection against malicious programs and no additional precautions like data backups are made, there can be significant restrictions on the availability of information as well as massive financial and image damage.
+A common type of malware is ransomware. This encrypts the data of the infected IT system as well as frequently other data that can be reached via network shares. As a rule, the attackers use encryption methods that can not be reversed without knowing the key, thus forcing their victims to spend large sums of money. If there is no effective protection against malicious programs and no additional precautions like data backups are made, there can be significant restrictions on the availability of information as well as massive financial and image damage.
 
-### 2 3 Targeted Attacks and Social EngineeringInstitutions are often attacked with customized malicious programs. This z. B. Leading executives through social engineering methods to open malicious email attachments. Tailor-made malicious programs often can not be detected directly by virus protection programs. The human resources department of an institution, for example, can be a target, for example by malicious application documents are sent by electronic means. If the attacker has been able to infect an IT system in this way, he can spread within the institution and, for example, steal, manipulate or destroy information.
+### 2 3 Targeted Attacks and Social Engineering
+Institutions are often attacked with customized malicious programs. This z. B. Leading executives through social engineering methods to open malicious email attachments. Tailor-made malicious programs often can not be detected directly by virus protection programs. The human resources department of an institution, for example, can be a target, for example by malicious application documents are sent by electronic means. If the attacker has been able to infect an IT system in this way, he can spread within the institution and, for example, steal, manipulate or destroy information.
 
 ### 2 4 Mobile media infections
 
@@ -44,7 +49,7 @@ Through malicious programs, IT systems of an institution can become part of so-c
 
 ### 2 6 Infection of production systems and IoT devices
 
-In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee machine can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
+In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can result in downtime and many other threats to the institution and its employees, including fires.
 
 3 requirements
 ---------------
@@ -59,7 +64,8 @@ The following requirements MUST be implemented as a priority:
 
 It MUST be created a concept, which IT systems must be protected against malicious programs. It also MUST be noted how the protection has to be done. If no reliable protection is possible, then the identified IT systems SHOULD NOT be operated. The concept SHOULD be comprehensibly documented.
 
-#### OPS.1.1.4.A2 Use of system-specific protection mechanismsIt MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
+#### OPS.1.1.4.A2 Use of system-specific protection mechanisms
+It MUST be assessed what protections the IT systems used as well as the operating systems and applications used to provide protection against malicious programs. These mechanisms MUST be used unless there is at least equivalent substitution or good reason against it. If they are not used, this should be justified and documented.
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
@@ -85,9 +91,10 @@ Users MUST be regularly briefed on the threat of malware. You MUST follow the ba
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the field of malware protection. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of protection against malicious programs. They SHOULD be implemented in principle.
 
-#### OPS.1.1.4.A8 Use of cloud servicesCloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
+#### OPS.1.1.4.A8 Use of cloud services
+Cloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
 
 #### OPS.1.1.4.A9 Malware infection report [user]
 
@@ -121,11 +128,12 @@ With increased protection requirements and appropriate threat status, the use an
 
 In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
 
-4 Further Information------------------------------
+4 Further Information
+------------------------------
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area of ​​"protection against malicious programs" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"protection against malware" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 
