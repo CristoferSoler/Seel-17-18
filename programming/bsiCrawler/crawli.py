@@ -99,11 +99,8 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h1Element[0].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
-        mdFile = md(allRelatedContentOneStringHTML)
-        mdFile = 'Table of content\n\n[toc]\n\n' + mdFile
-
         f = open(directoryContent + '/' + directoryContentThreats + re.sub('/', '-', h1) + '.md', 'w')
-        f.write(mdFile)
+        f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
 
@@ -118,11 +115,8 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
 
-        mdFile = md(allRelatedContentOneStringHTML)
-        mdFile = 'Table of content\n\n[toc]\n\n' + mdFile
-
         f = open(directoryContent + '/' + directoryContentNotes + re.sub('/', '-', h1) + '.md', 'w')
-        f.write(mdFile)
+        f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
     def parse_following_urls(self, response):
@@ -136,11 +130,8 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
 
-        mdFile = md(allRelatedContentOneStringHTML)
-        mdFile = 'Table of content\n\n[toc]\n\n' + mdFile
-
         f = open(directoryContent + '/' + directoryContentComponent + re.sub('/', '-', h1) + '.md', 'w')
-        f.write(mdFile)
+        f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
     def closed(self, reason):

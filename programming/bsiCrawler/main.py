@@ -1,6 +1,6 @@
 from multiprocessing import Pool
 from threading import Thread
-from .translatorMultiProcessing import  translate
+from translatorMultiProcessing import  translate
 import os, shutil
 import time
 
@@ -81,3 +81,5 @@ def crawlTranslateTreeview():
     os.system("scrapy runspider crawliTree.py --nolog")
     print('Generation of the treeview is finshed')
 
+if __name__ == "__main__":
+    crawlTranslateTreeview()
