@@ -25,7 +25,7 @@ csvDir = './Cross_Reference_Tables/'
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
-doCR = False
+doCR = True
 
 
 def readConfig(varname):
@@ -185,8 +185,8 @@ def createNewPage():
 
 def is_contained_in(dic, bsi_type, bsi_id):
     for elem in dic.get('type'):
-        if(elem.get('name') == bsi_type):
-            for file in elem.get('files'):
+       if(elem.get('name') == bsi_type):
+           for file in elem.get('files'):
                 if(file.get('file') == bsi_id):
                     return True
     return False
@@ -263,7 +263,7 @@ def get_bsi_article_id(type, file_name):
     return id
 
 import pdb
-def post_phase(archiving_data):
+def post_phase(archiving_data, new_file):
         # after 30 days
         # create archive
         # move the old bsi articles with their related uga articles to archive
@@ -274,8 +274,10 @@ def post_phase(archiving_data):
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
-        
+
+        post_phase_move_deleted_articles(archive, new_file, bsi)
         #print(type)
+
         for new_type in types:
               if new_type.slug == "components":
                   post_phase_move_bsi(new_type=new_type, default_type= "components",old_parent = bsi, archive = archive)
@@ -286,6 +288,7 @@ def post_phase(archiving_data):
         
         post_phase_delete_url(new)
         updateModificationTime()
+
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
@@ -336,6 +339,29 @@ def post_phase_move_references(archive, bsi_article):
     uga_ref = bsi_article.bsi.references.all()
     for ref in uga_ref:
         ArchiveTransaction.create(archive, ref.url).archive()
+
+def post_phase_move_deleted_articles(archive, new_file, bsi):
+    # move the bsi deleted articles directly to archive
+    modified, added, deleted = checkFileAction(new_file)
+    #archives = Archive.get_or_create(archive)
+    #bsi = URLPath.objects.get(slug='bsi')
+
+    for elem in deleted.get('type'):
+        if(elem.get('name') == "component"):
+            bsi_type = URLPath.objects.get(parent=bsi, slug="components")
+        if(elem.get('name') == "threat"):
+            bsi_type = URLPath.objects.get(parent=bsi, slug="threats")
+        if (elem.get('name') == "implementationnotes"):
+            bsi_type = URLPath.objects.get(parent=bsi, slug="implementationnotes")
+
+        for file in elem.get('files'):
+            bsi_id = file.get('file')
+            deleted_article = URLPath.objects.get(parent=bsi_type, slug=bsi_id)
+            for ancestor in Article.objects.get(pk=deleted_article.article.pk).ancestor_objects():
+                    ancestor.article.clear_cache()
+            ArchiveTransaction.create(archive, deleted_article).archive()
+            post_phase_move_references(archive, deleted_article)
+            deleted_article.save()
 
 def post_phase_delete_url(path):
     # delete the new page and its subroots
@@ -455,7 +481,9 @@ if __name__ == '__main__':
       #file = parseArgs()
       #main(file)
       #appendThreatMeasureRelation()
-      #post_phase("2017-12")
+      #archive = Archive.get_or_create('2018-01')
+      #post_phase_move_deleted_articles('2018-01','../../programming/bsiComparator/example_modified_files.txt')
+      #post_phase('2018-01', '../../programming/bsiComparator/example_modified_files.txt')
       #updateModificationTime()
       #new = URLPath.objects.get(slug='new')
       #post_phase_delete_url(new)

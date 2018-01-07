@@ -48,7 +48,7 @@ def demo_mid_phase():
 
 
 def demo_post_phase():
-    post_phase('2018-03')
+    post_phase('2018-03' , '../programming/bsiComparator/example_modified_files.txt')
 
 
 if __name__ == "__main__":
