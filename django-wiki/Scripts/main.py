@@ -48,7 +48,7 @@ def demo_mid_phase():
 
 
 def demo_post_phase():
-    post_phase('2018-01')
+    post_phase('2018-03')
 
 
 if __name__ == "__main__":

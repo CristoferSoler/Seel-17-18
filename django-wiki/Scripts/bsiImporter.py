@@ -18,7 +18,7 @@ from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
 
 new_temp_bsi_folder = './Scripts/mdNew'
-crfDir = '.CRF/'
+crfDir = './CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 txtDir = './Cross_Reference_Files/'
 csvDir = './Cross_Reference_Tables/'
@@ -307,27 +307,29 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             try:
                 #print(new_article.path)
                 old_article = URLPath.objects.get(parent=bsi_type, slug=new_article.slug)
-                for ancestor in old_article.article.ancestor_objects():
-                    ancestor.article.clear_cache()
                 old_article.slug = type_symbol.label.lower()[:1] +"_" + old_article.slug
                 #print(old_article.slug)
                 old_article.save()
-
-                bla1 = URLPath.objects.get(pk=new_article.pk)
-                #print(bla1)
-                new_article.parent = bsi_type
-                new_article.parent.parent = bsi_type.parent
-
-                new_article.save()
-                # print(new_article.parent.parent.path)
-                # print(new_article.parent.path)
-                # print(new_article.path)
-
+                for ancestor in Article.objects.get(pk=old_article.article.pk).ancestor_objects():
+                    ancestor.article.clear_cache()
                 ArchiveTransaction.create(archive, old_article).archive()
                 post_phase_move_references(archive, old_article)
-                new_article.save()
             except Exception:
+                # if old article not found, this means this is a newly added article
                 print('old article not found')
+            #print(bla1)
+            for ancestor in new_article.article.ancestor_objects():
+                ancestor.article.clear_cache()
+            new_article.parent = bsi_type
+            new_article.parent.parent = bsi_type.parent
+
+            new_article.save()
+            for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
+                ancestor.article.clear_cache()
+            # print(new_article.parent.parent.path)
+            # print(new_article.parent.path)
+            # print(new_article.path)
+
 
 def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
