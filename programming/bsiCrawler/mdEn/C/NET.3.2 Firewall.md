@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,9 +9,9 @@
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
-A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
+A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, for example: For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
 ### 1.2 Objective
 
@@ -52,7 +56,7 @@ An improperly configured or incorrectly operated firewall can seriously affect t
 
 The following are specific firewall requirements. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -61,7 +65,7 @@ The following requirements MUST be implemented as a priority:
 On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described on how firewalls can be operated safely. The policy MUST be known and fundamental to all employees responsible for firewalls. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 #### NET.3.2.A2 Setting firewall rules
 
-All communications between the participating networks MUST be routed through the firewall. It MUST be ensured that no unauthorized connections to the protected network can be established from outside. Likewise, NO unauthorized connections MUST be built out of the protected network.
+All communications between the participating networks MUST be routed through the firewall. It MUST be ensured that no unauthorized connections can be established in the protected network from the outside. Likewise, NO unauthorized connections MUST be built out of the protected network.
 
 The firewall MUST have unique rules defining which communication links and data streams are allowed. All other connections MUST be blocked by the firewall (whitelist approach). The communication relationships with connected service servers (eg e-mail servers, web servers) that are routed through the firewall MUST be considered in the rules.
 
@@ -109,7 +113,7 @@ In the settings of the firewall, the dynamic routing MUST be deactivated, unless
 The firewall MUST be configured to log at least the following events:
 
 * denied network connections (source and destination IP addresses, source and destination ports or ICMP / ICMPv6 type, date, time),
-* Failed access to system resources due to bad authentication, lack of authority or lack of resources,
+* Failed access to system resources due to incorrect authentication, lack of authority or lack of resources,
 * Error messages of the firewall services and
 * general system error messages.
 If security proxies are used, security violations and access control list violations (ACLs or short access lists) MUST be appropriately logged: at least the type of protocol violation or violation, source and destination IP address, source and destination IP addresses Destination port, service, date and time, and connection duration (if required).
@@ -169,7 +173,7 @@ At the packet filter, which protects server services reachable from less or untr
 
 On the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
 
-#### NET.3.2.A20 Securing basic internet protocols
+#### NET.3.2.A20 Securing Basic Internet Protocols
 
 To communicate to the Internet, the HTTP, SMTP, and DNS protocols, including their encrypted versions, SHOULD be routed through protocol-specific security proxies.
 
@@ -198,7 +202,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.3.2.A25 Extended integrity protection for configuration files (CI)
 
-If a system crashes, SHOULD make sure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
+If a system crashes, SHOULD ensure that no old or faulty configurations (including access lists) are used. This should also apply if an attacker succeeds in restarting the firewall.
 
 #### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
 

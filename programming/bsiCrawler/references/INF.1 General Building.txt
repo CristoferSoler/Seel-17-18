@@ -1,5 +1,5 @@
 ### 3.1 Basic requirements
-#### INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+#### INF.1.A1 Planning of building security [Planner, Information Security Officer (ISB)]
 #### INF.1.A2 Adjusted distribution of circuits
 #### INF.1.A3 Compliance with fire safety regulations
 #### INF.1.A4 fire detection in buildings [planner]

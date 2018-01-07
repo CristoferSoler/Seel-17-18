@@ -8,7 +8,7 @@
 #### INF.2.A7 Closing and securing [staff, building services]
 #### INF.2.A8 Use of a fire alarm system [planner]
 #### INF.2.A9 Use of extinguishing or fire prevention system [Planner]
-#### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+#### INF.2.A10 Inspection and maintenance of infrastructure [IT operation, building services, maintenance personnel]
 #### INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
 ### 3.2 Standard requirements
 #### INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]

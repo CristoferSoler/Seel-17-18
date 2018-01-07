@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -18,7 +22,7 @@ Also on the wiring of offices is not discussed. To do this, the components INF.3
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the * * office space area:
+The following specific threats and vulnerabilities are of particular importance in the field of * * office space:
 
 ### 2 1 Unauthorized access
 
@@ -30,7 +34,7 @@ An office space that is not ergonomically designed or an unfavorable working env
 
 ### 2 3 Cleaning and external staff or visitors
 
-For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, from improper handling of technical equipment to attempts to "play" IT systems to theft of documents or IT components. For example, by cleaning personnel accidentally a connector can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
+For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, from improper handling of technical equipment to attempts to "play" IT systems to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
 
 ### 2 4 Manipulation or destruction of IT, accessories, information and software in the office
 

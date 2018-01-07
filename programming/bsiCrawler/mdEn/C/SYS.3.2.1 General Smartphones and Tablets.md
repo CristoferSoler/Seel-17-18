@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,7 +15,7 @@ The aim of this module is to provide the persons responsible for security manage
 
 ### 1.3 Delimitation
 
-This module is not concerned with how specific operating systems are secured by smartphones and tablets, as this is described in detail in the building blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
+This module is not concerned with how specific operating systems of smartphones and tablets are secured, as this is described in detail in the blocks for the respective systems, eg. For example, SYS.3.2.3 iOS (for Enterprise) or SYS.3.2.4 Android. Safety requirements for operating an MDM are described in SYS.3.2.2 Mobile Device Management.
 
 2 risk situation
 -----------------
@@ -45,7 +49,7 @@ Even browsers on mobile devices can display full web pages and web content. As a
 
 The operating system of many devices usually contains special functions to manage fitness and location data. These often personal data are particularly sensitive and represent an attractive target, especially if they are collected and stored over a long period of time, insofar as these functions have been activated by the user.
 
-As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection implications, this can also lead to other attacks on the employee.
+As a result, the employee's location is identifiable by an attack on the device or the employee's cloud ID. In addition to the data protection effects, this can also lead to other attacks on the employee.
 
 ### 2 8 Misuse of sensitive data in the lock screen
 
@@ -65,7 +69,7 @@ Often IT managers can no longer check every single device brought by the employe
 ---------------
 The following are specific requirements for the smartphone and tablet sector. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -93,14 +97,14 @@ It SHOULD use a complex device password.
 
 #### SYS.3.2.1.A5 Automatic updates of operating system and apps
 
-A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices that are no longer supplied with current versions MUST be discarded and replaced with devices supported by the manufacturer.
+A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices for which no more current versions are provided MUST be discarded and replaced with devices supported by the manufacturer.
 
 #### SYS.3.2.1.A6 privacy settings
 
 The access of apps and operating system to data and interfaces MUST be restricted appropriately. The privacy settings MUST be configured as restrictively as possible. In particular, access to the camera, microphone and geodata MUST be checked for compliance with the organization's privacy and security standards and restrictively configured or disabled.
 
 #### SYS.3.2.1.A7 Code of Conduct for Security Incidents [Specialists, Users]
-In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately take suitable countermeasures.
+In general, all security incidents MUST be reported and handled. If devices are lost or if unauthorized changes to the device and software are detected, those responsible must immediately initiate suitable countermeasures.
 
 The possible consequences of safety-critical events MUST be investigated. Ultimately, all necessary action MUST be taken to rule out access to confidential and mission-critical information of the institution.
 
@@ -110,15 +114,15 @@ It MUST be prevented that apps can be installed from alternative markets or from
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of general smartphones and tablets. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general smartphones and tablets. They SHOULD be implemented in principle.
 
 #### SYS.3.2.1.A9 Use of functional extensions
 
-Functional extensions SHOULD only be used restrictively. If possible, refrain from functional enhancements. The functional extensions SHOULD NOT have automatic access to sensitive information. You SHOULD NOT be able to bypass or change the default configuration.
+Functional extensions SHOULD only be used restrictively. If possible, you should refrain from functional enhancements. The functional extensions SHOULD NOT have automatic access to sensitive information. You SHOULD NOT be able to bypass or change the default configuration.
 
 #### SYS.3.2.1.A10 Mobile Employees Policy [User]
 
-A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or to rooted the device.
+A mandatory policy for employees to use mobile devices SHOULD be created. This SHOULD determine how mobile devices should be used and maintained. In it, the topics storage and loss reporting SHOULD be dealt with. It should also be clearly forbidden to uninstall management software or rooted the device.
 
 #### SYS.3.2.1.A11 Encryption of the file system
 
@@ -134,7 +138,7 @@ It SHOULD be decided whether to use screen sharing or casting. Screen sharing an
 
 #### SYS.3.2.1.A14 Protection against phishing and malicious programs in the browser
 
-All mobile devices SHOULD be protected against malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
+All mobile devices SHOULD be protected from malicious programs. In the browser used "Safe Browsing" or the function to warn against harmful content SHOULD be activated.
 
 #### SYS.3.2.1.A15 Deactivation of download boosters
 
@@ -146,11 +150,11 @@ Unused communication interfaces SHOULD be disabled. Necessary interfaces SHOULD 
 
 #### SYS.3.2.1.A17 Using the SIM card PIN
 
-The use of the SIM card of the institution SHOULD be protected by a PIN. The Super-PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
+The use of the SIM card of the institution SHOULD be protected by a PIN. The Super PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
 
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 
-When using a biometric fingerprint sensor, SHOULD it be checked if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
+If you want to use a biometric fingerprint sensor, you should check to see if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
 
 #### SYS.3.2.1.A19 Using a language assistant
 

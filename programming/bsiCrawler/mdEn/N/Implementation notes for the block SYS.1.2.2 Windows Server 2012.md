@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -45,7 +49,7 @@ In case of increased protection requirements, additional attention can be paid d
 * SYS.1.2.2.M14 Shutting Down Encrypted Servers and Virtual Machines (CI)
 ** Disposal & Emergency Prevention **
 
-With regard to the phases of disposition and emergency preparedness, there are no specifics of Windows Server 2012 (R2) compared to a general server.
+With regard to the phases of the rejection and emergency preparedness, there are no special features of Windows Server 2012 (R2) compared to a general server.
 
 2 measures
 -----------
@@ -103,7 +107,7 @@ The editions Standard and Datacenter are equivalent from a security point of vie
 
 Foundation and Essentials in Windows 2012 are not intended to run within a full domain. Although this is now technically possible for Essentials with Windows Server 2012 R2, its features are primarily aimed at smaller institutions that use only a single server to run all functions. This is in contrast to the established practice in larger IT environments of running as few services per server as possible to resolve dependencies and spread risk, a trend that is becoming more prevalent as virtualization increases.
 
-The Essentials Edition offers a number of features that can simplify setup without further configuration:
+The Essentials Edition offers a number of features that can simplify the setup without further configuration:
 
 * Add to the domain
  Essentials makes it easy to add machines to the domain that are located remotely. All it takes is a new employee to access the / connect path on the Essentials remote access website.
@@ -111,11 +115,11 @@ The Essentials Edition offers a number of features that can simplify setup witho
  There is a preconfigured VPN client available. The user can also activate auto dial-in so that he is always connected to the corporate or government network.
 * Server StorageFor locations such as user home directories, you can simply create shared folders on another server on the same network. This can be an automatic alert when the directories exceed a certain size.
 * Health Report
- A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as on the smartphone.
+ A basic "health check" of the Windows Server 2012 R2 Essentials environment is already integrated and does not need to be installed as an add-in. Various values ​​can be configured that are displayed via different media, such as the smartphone.
 * BranchCache
  The BranchCache mechanism can already be activated in Essentials, which increases the availability of data in remote locations through caching. It also reduces bandwidth usage across the WAN.
 * Remote Web Access
- Many features of Windows Server 2012 Essentials can be remotely accessed and controlled through a web interface (Remote Web Access), which has also been streamlined in R2 and optimized for use with tablets and similar devices.
+ Many features of Windows Server 2012 Essentials can be remotely accessed and controlled through a web interface (Remote Web Access), which has been streamlined in R2 and optimized for use with tablets and similar devices.
 ** Microsoft Azure Online Backup **
 In Windows Server 2012, Microsoft's cloud storage solution Azure Online Backup is already integrated into Essentials and can be easily activated. All you have to do is install the corresponding Add-in in the Essentials Dashboard and create an account (depending on the storage volume). In R2 is not even an add-in necessary, here can be done directly by clicking the registration with Azure.
 
@@ -145,9 +149,9 @@ For each role, you can specify which role services are provided to other users a
 
 ** Features **
 
-Features are programs that support or enhance the functionality of the server or one or more roles. For example, the Failover Clustering feature enhances the functionality of other roles, including file services and DHCP servers, because server clusters can be merged for greater redundancy and better performance. The Telnet client feature, on the other hand, enables remote communication via the Telnet protocol.
+Features are programs that support or enhance the functionality of the server or one or more roles. For example, the Failover Clustering feature improves the functionality of other roles, including file services and DHCP servers, by allowing server clusters to converge for better redundancy and better performance. The Telnet client feature, on the other hand, enables remote communication via the Telnet protocol.
 
-Roles, role services, and features must always be installed as sparingly as possible to minimize the complexity and attack surface. The rule "one service per server" also applies analogously. As a rule, only one server role per server should be installed. The selection of roles, role services and features to be installed should be justified and documented.
+Roles, role services, and features must always be installed as sparingly as possible to minimize the complexity and attack surface. The rule "one service per server" also applies mutatis mutandis, as a rule only one institution-specific server role per server should be installed. The selection of roles, role services and features to be installed should be justified and documented.
 
 ** Server Core **
 
@@ -170,7 +174,7 @@ Since Server Core represents the minimum and thus optimum with respect to the at
 
 It's important to make sure that the password for each local administrator account is not only secure, but unique. This makes it more difficult for an attacker to move from one compromised IT system to the next.
 
-With the LAPS (Local Administrator Password Solution) tool available for free at Microsoft, it is possible to automatically manage secure local administrator accounts via AD. Its use is highly recommended if a third-party solution is not already available.
+With the LAPS (Local Administrator Password Solution) tool available for free at Microsoft, it is possible to automatically manage secure local administrator accounts by AD. Its use is highly recommended if a third-party solution is not already available.
 
 ** Training ** by administrators
 
@@ -198,7 +202,7 @@ In addition, as part of Windows PowerShell Core Modules, Microsoft offers collec
 ** User Account Control (UAC) **
 
 User Account Control (UAC) was introduced in Windows Vista. It ensures that an increase in rights is required for administrative tasks. Until then, most users had worked as administrators, with the potential for malicious software.
-If an administrator logs in with UAC enabled, he works with restricted rights. Only after confirmation in a special dialog box does an application receive administrative permissions. In the background, rights are increased by changing the identity. The UAC is thus the basis for the sandboxing of programs and directories under Windows. It regulates the granting of privileges to processes and isolates processes and windows that run on the same desktop with different rights.
+If an administrator logs in with UAC enabled, he works with restricted rights. Only after confirmation in a special dialog box does an application get administrative permissions. In the background, rights are increased by changing the identity. The UAC is thus the basis for the sandboxing of programs and directories under Windows. It regulates the granting of privileges to processes and isolates processes and windows that run on the same desktop with different rights.
 
 With Windows Server 2012 and Windows 7, the UAC has been refined to make it easier to manage the configuration and messages.
 
@@ -221,11 +225,11 @@ In the following, those important security mechanisms, i. H. Security techniques
 Windows Server 2012 (R2) already comes with a set of resources and tools that can and should be used for backup. These should complement each other in a meaningful way with the security features of other IT systems and third-party products, ideally covering them in the sense of a defense-in-depth and never canceling or weakening each other.
 
 Not several essential functions per ** server **
-The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). This is more about making functionally independent units technically independent of each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
+The requirement that several essential functions should not be fulfilled by a server, a fundamental distribution of critical server functionality is aimed at different systems. The "one service per server" used in the Unix area does not fit here, since service in the narrower sense rather describes a single network service (eg Telnet). It's more about making functionally independent units technically independent from each other. For example, a web server should not be a terminal server at the same time as a file server should not be a WSUS server at the same time. In multi-layer applications, the goal is usually to map the individual layers (such as database / business logic / presentation) into separate servers (clusters). This has the advantage that the network can be segmented more easily and thus better adapted to the protection requirements and the nature of the threats. There are also advantages in maintenance and administration.
 
 S ** ecurity Baseline ** and SCM
 
-Many security-related settings in Windows Server 2012 (R2) are most easily managed through GPOs. It is advisable to create a so-called baseline for all server systems or for server systems of a specific deployment class, ie a template that contains optimal security settings, is regularly checked and updated and is rolled out to all operating server systems.
+Many security-related settings in Windows Server 2012 (R2) are most easily managed through GPOs. It is recommended to create a so-called baseline for all server systems or for server systems of a specific deployment class, ie a template that contains optimal security settings, is regularly checked and updated and is rolled out to all server systems operated.
 
 The Security Compliance Manager (SCM) is a free tool from Microsoft that can be used to quickly create and manage GPOs and also brings security templates for various purposes. These can then with different methods, such. For example, Group Policy Editor or System Center Configuration Manager (SCCM) or DCM (Desired Configuration Management, now renamed Configuration Manager Compliance Settings) can be rolled out centrally. Configuration of stand-alone machines is also possible through the GPO Pack feature, but recommended only for non-domain member exceptions.
 
@@ -272,7 +276,7 @@ If the institution does not already have a security-compliant security template,
 
  
 The customization should be based on GPOs for the envisaged role of Server 2012 (R2). All settings should be thoroughly tested before rolling out to productive systems, otherwise malfunctions can easily occur.
-It should be checked after every major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, as there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
+It should be checked after each major change, whether the setting was successfully changed and whether the template is ever applied to the desired server, since there are many sources of error lurking here. An easy way to do this is to run the Group Policy Results command-line tool GPResult.exe on the server.
 
 For further information, see also module APP.2.2 Active Directory.
 
@@ -298,7 +302,7 @@ Before an IT system is connected to potentially insecure networks, and before re
 
 When using an anti-virus program on the server, the signatures should be updated at least daily, and all hard disks, including the operating system partition, should be scanned regularly. Appropriate alerts for the responsible administrators should be configured for all types of malware related events.
 
-Regardless of which antivirus product you choose, you can use the Microsoft Windows Defender product built into Windows Server 2012 (R2) before the final malware-protection solution can be activated.
+Regardless of which antivirus product you choose, you can use Windows Defender, a Microsoft Windows Defender product integrated with Windows Server 2012 (R2), until the final malware-protection solution is activated.
 
 ** Windows Defender **
 
@@ -328,7 +332,7 @@ Authentication and authorization play important roles as two basic security tech
 
 ** protected users **
 
-R2 added the domain-based global security group Protected Users. The credentials of the members of this group are additionally protected by default more restrictive security settings.
+R2 added the domain-based global security group Protected Users. The credentials of the members of this group are additionally protected by more restrictive security settings by default.
 
 Non-reconfigurable protection applies to all devices running Windows Server 2012 R2 and Windows 8.1 and to domain controllers in domains with a primary Windows Server 2012 R2 domain controller.
 
@@ -344,9 +348,9 @@ Attention: Accounts for services and computers should not be members of Protecte
 
 ** Group "Managed Service Accounts" **
 
-Managed Service Accounts (MSA) are one of the special features that have been added with Windows Server 2008 R2 and Windows 7. These are accounts for services (such as SQL Server or Exchange) in the Active Directory that are bound to a specific machine. The account has its own complex password and is managed automatically. Thus, an MSA can easily and securely perform services on a particular system while maintaining the ability to access resources on the network as a particular user principal. The Managed Service Account group created with Windows Server 2012 provides the same functionality in the domain, but with the added ability to span multiple servers.
+Managed Service Accounts (MSA) are one of the special features that have been added with Windows Server 2008 R2 and Windows 7. These are accounts for services (such as SQL Server or Exchange) in the Active Directory that are bound to a specific machine. The account has its own complex password and is managed automatically. Thus, an MSA can easily and securely perform services on a particular system while maintaining the ability to access resources on the network as a particular user principal. The Managed Service Account group created with Windows Server 2012 provides the same functionality in the domain, but with the added ability to span across multiple servers.
 
-Wherever possible, MSA should be used for service accounts, as well as the Managed Service Account group if possible in the sense of uniform configuration and complexity limitation.
+Wherever possible, MSA should be used for service accounts, as well as the Managed Service Account group, if possible, in the sense of uniform configuration and limitation of complexity.
 
 ** LSA - ** Protection in Windows Server 2012 R2
 
@@ -404,16 +408,16 @@ Secure Boot should be active. AppLocker should be enabled and configured as stri
 
 Secure Boot is a security standard from the ranks of computer manufacturers. The procedure tries to ensure that only software that is trusted by the PC manufacturer is booted. This is realized by digital signatures on software components as well as a database maintained by the manufacturer of the computer.
 
-When starting the PC, the firmware checks the signature of each component of the boot software, including the drivers and the operating system. Only if all signatures are valid, the boot process is completed, otherwise vendor-specific emergency measures come into play.
+When starting the PC, the firmware checks the signature of each component of the boot software, including the drivers and the operating system. Only if all signatures are valid, the boot process is completed, otherwise manufacturer-specific emergency measures come into play.
 
 It is not possible to use Secure Boot with old, incompatible hardware or in a generally ineffective dual mode for server operation, as well as with virtual machines that do not support Secure Boot.
 
-Today's hardware and compatibility are generally reasonable enough that there is no reason not to use the valuable integrity protection that Secure Boot offers.
+Today's hardware and compatibility are generally reasonable enough that there is no reason not to use the valuable integrity protection offered by Secure Boot.
 
 ** ** AppLocker
 
 AppLocker provides policy-driven access control for applications and other executables. This allows certain applications to be allowed while blocking others. Windows Server 2012 added the ability to define rules for application packages, allowing the configuration of AppLocker for apps from the Windows Store. Since R2, it is possible to monitor and record runtime information of processes that can be used to fine tune AppLocker (audit mode). This should be used to prevent failures, including locking out administrators from the system.
-AppLocker is a powerful tool to significantly hinder the execution of malicious software. Despite various simplifications, however, there is still a considerable amount of configuration work, so that the use of AppLocker is especially recommended if there is a high degree of integrity or if the configuration of a server is relatively static. This is often the case for server systems running Windows 2012 (R2) that only have a role.
+AppLocker is a powerful tool to significantly hinder the execution of malicious software. Despite various simplifications, however, there is still a considerable amount of configuration work, so the use of AppLocker is especially recommended if there is a high degree of integrity or if the configuration of a server is relatively static. This is often the case for server systems running Windows 2012 (R2) that only have a role.
 
 ** Software Restriction Policies **
 
@@ -429,13 +433,13 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### SYS.1.2.2.M9 Local Communication Filtering (CI)
 
-Basically, central measures such as segmentation of networks, zoning and packet filtering in the corporate and government sector are generally implemented by dedicated active network components that are set up at suitable locations. However, in the sense of a staggered defense (defense-in-depth), the local firewall should be activated if more protection is required.
+Basically, central measures such as segmentation of networks, zoning and packet filtering in the corporate and government sector are usually realized by dedicated active network components that are set up at appropriate locations. However, in the sense of a staggered defense (defense-in-depth), the local firewall should be activated if more protection is required.
 
 Windows Server 2012 (R2) includes a local firewall for this purpose, the so-called "Windows Firewall with Advanced Security (WFAS)". This should be activated and set as strictly as possible for incoming and outgoing traffic.
 
 The WFAS can be managed by GPOs. This is recommended to keep the configuration consistent and central. The administration of concrete firewall rules is outside the scope of this building block. For this, the building block firewall is to be used.
 
-Also implemented by WFAS are the native IPsec features of Windows Server 2012 (R2). These should be used to ensure the identity and integrity of the connection to remote systems, as this is not possible with packet filtering alone. The secure configuration of IPsec connections is also not part of this module. It is handled in the module VPN.
+Also implemented by WFAS are the native IPsec features of Windows Server 2012 (R2). These should be used to ensure the identity and integrity of the connection to remote systems, as this is not possible with packet filtering alone. The secure configuration of IPsec connections is also not content of this block. It is handled in the module VPN.
 
 #### SYS.1.2.2.M10 Disk Encryption on Windows Server 2012 (C)
 A suitable means of protecting the confidentiality of data at rest, not during transport, is the encryption of hard disks and other data carriers. It should be noted that the data must be decrypted for processing (for example, in the case of encryption of the boot medium already during the boot process) and always remain readable until the system is shut down or put into sleep mode. With server systems often running around the clock, protection is ultimately limited, but can be helpful against physical attacks such as theft of media when combined with appropriate other measures. Windows brings with it the tool BitLocker, which is also available in Windows Server 2012 (R2) in all editions.
@@ -458,7 +462,7 @@ The administrator can check the BitLocker status of a partition in the BitLocker
 
 ** Key Protector **
 
-For a complete BitLocker protection, the random encryption key itself must be protected. There are different variants for this:
+For complete BitLocker protection, the random encryption key must be protected. There are different variants for this:
 
 ** Used Disk Space Only **
 
@@ -499,7 +503,7 @@ With Windows 8.1 and Server 2012 R2, the following enhancements to the BitLocker
 Unlike the previous BitLocker implementation, so-called Device Encryption, which is also based on BitLocker in the background, is automatically enabled so that the device is encrypted from the beginning. This happens as follows:
 
 During a clean installation of Windows Server 2012 R2, the server is prepared for first use. It also initializes device encryption and initially encrypts the disk of the operating system and the other disks with a key stored in plain text. The security of the data at this time corresponds to a BitLocker encryption in standby mode (Suspended), in which the key is in plain text on the hard disk.
-If the server is not added to a domain, it requires a Microsoft account that has been granted administrative rights on the server. Once the administrator logs in with the Microsoft account, the plain text key is deleted, a recovery key is uploaded to the Microsoft account (online), and TPM protection is created. If the recovery key is needed later (for example, if the TPM is damaged), the administrator can get it back using a second device and the Microsoft account.
+If the server is not added to a domain, it requires a Microsoft account that has been granted administrative rights on the server. Once the administrator logs in with the Microsoft account, the plain text key is deleted, a recovery key is uploaded to the Microsoft account (online), and TPM protection is created. If the recovery key is required later (for example, if the TPM is damaged), the administrator can obtain it again using a second device and the Microsoft account.
 
 If the user logs on via a domain account, the plaintext key is not deleted until the server has entered the domain and the recovery key then successfully created has been successfully saved in the Active Directory Domain Services. The Computer Configuration \ Administrative Templates \ Windows Components \ BitLocker Drive Encryption \ Operating System Drives GPO must be enabled and the "Do not enable BitLocker until recovery information is stored in AD DS for operating system drives" option should be selected. Only then does TPM protection become active, thus completing device encryption.
 
@@ -511,7 +515,7 @@ Since Windows Server 2012 R2, there is a FIPS mode that allows BitLocker to be c
 
 ** BitLocker on virtual machines **
 
-The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as soon as possible after use.
+The encryption of virtual machines is useful if either the host system can not or should not be encrypted, or if the confidentiality requirement of the data in the VM is higher or should be shielded from the host system for other reasons. Again, hard disk encryption (FDE: Full Disk Encryption) does not provide effective protection against read-out of data during operation, i. H. with decrypted data carriers, represents. As an additional measure, it can therefore be specified in organizational terms that encrypted VMs may only be decrypted when they are needed and have to be shut down as quickly as possible after use.
 
 Because virtual machines do not have a TPM, the following two steps must be taken before BitLocker (which must be installed on the server) can be activated:
 
@@ -549,18 +553,18 @@ WEF can be configured with GPOs. Events can be exported in native .evtx format. 
 
 In push mode, systems automatically forward certain events to the Collector (server). Thus it is possible for administrators who are not security officers to configure additional events for the systems they are responsible for.
 
-The setup only requires a Windows server and a GPO. In addition, the network service (only the local on the respective system) must be granted read access to the protocol and the WinRM service must be started on all systems to be monitored. He does not need to be (auto) -configured, which would leave him in the listening, rather vulnerable state. If only critical events are logged, then not very large log files can be expected.
+The setup only requires a Windows server and a GPO. In addition, the network service (only the local on the respective system) must be granted read access to the protocol and the WinRM service must be started on all systems to be monitored. He does not need to be (auto) configured, which would leave him in the listening, that is more vulnerable state. If only critical events are logged, then not very large log files can be expected.
 
 Autoconfiguration is invoked on the Collector by the command "winrm qc" in an administrative prompt. Automatic start of the WinRM service should be activated on demand, the also queried automatic opening of the firewall can be done even more secure by GPO. Now incoming events can be viewed in the Eventviewer under "Subscriptions".
 
 Subsequently, the events to be forwarded can be defined via GPO. Systems using the GPO will ask the Windows Event Collector if they have any subscriptions and only then send the desired events.
 
-It is quite possible to collect the entirety of all domain security events in the WEF. This can be useful if no other central logging system is available and still forensic investigations should be possible. Otherwise, the strength of the WEF mainly lies in the targeted collection and filtering of critical events. Likewise, a SIEM that records all events can be best complemented: the SIEM for completeness, WEF for visibility, even in areas of the environment that are not covered by the SIEM. The SIEM can then retrieve events from these at the collector and thus even better provide a uniform view of everything.
+It is quite possible to collect the entirety of all domain security events in the WEF. This can be useful if no other central logging system is available and still forensic investigations should be possible. Otherwise, the strength of the WEF mainly lies in the targeted collection and filtering of critical events. Likewise, a SIEM that records all events can be best complemented: the SIEM for completeness, WEF for visibility, even in areas of the environment that are not covered by the SIEM. The SIEM can then retrieve events from these at the collector and thus even better provide the uniform view of everything.
 
 ** Block after failed decryption attempts **
 
 User accounts can be thresholded for how many login attempts are possible before the account is locked. This is a standard procedure to hinder brute force attacks. At the same time, there is a danger that locks will be deliberately provoked to achieve denial of service.
-Since disk encryption is an extension of access protection to the data on hard disks, which can also be attacked by brute force, a comparable measure is possible here:
+Since disk encryption is an extension of access protection to the data on hard drives, which can also be attacked by brute force, a comparable measure is possible here:
 
 Since Windows 8 and Server 2012, the "\ Computer Configuration \ Windows Settings \ Security Settings \ Local Policies \ Security Options \ Interactive logon: Machine account lockout threshold" policy allows you to automatically lock partitions after a defined number of unsuccessful attempts to log in primary key protectors. After that, the volume can only be decrypted using the recovery key. This must be entered by an authorized user in the so-called "Device Lockout Mode", in which the system automatically reboots, to gain access again. It counts faulty login attempts on both Ctrl-Alt-Entf locked systems and password-protected screensavers.
 
@@ -578,7 +582,7 @@ Several Windows servers can be operated in a network. Similar to the server role
 
 ** Network Load Balancing **
 
-The Network Load Balancing feature allows two or more Windows Server to provide network services over TCP / IP at a common address. The servers and services are independent and do not share resources. Network requests to the shared address are distributed to the servers in the federation.
+The Network Load Balancing feature allows two or more Windows servers to provide network services over TCP / IP at a common address. The servers and services are independent and do not share resources. Network requests to the shared address are distributed to the servers in the federation.
 
 ** NIC teaming **
 
@@ -586,7 +590,7 @@ NIC teaming (by Network Interface Card), also known as Load Balancing / Failover
 
 a.) bundling bandwidth capacities and / or
 
-b.) in the event of an interface or link failure to have a failover for the network traffic.
+b.) in the event of an interface or connection failure to have a failover for the network traffic.
 
 Since Windows Server 2012, this technique is natively available in the operating system.
 
@@ -603,11 +607,11 @@ If virtualization with Hyper-V is used, the team process must be performed befor
 
 ** NIC Teaming Architecture **
 
-There are several architectures in which NIC teaming can be used. With switch-independent teaming, the switch does not know about team affiliation, but the NICs may or may not be connected to different switches. In switch-dependent teaming, where the entire team has to hang on the same physical switch, network cards and switches are configured for teaming. This can be done statically (a feature typically supported by server-enabled switches) or dynamically negotiated through the IEEE 802.1ax (Link Aggregation Control Protocol) protocol.
+There are several architectures in which NIC teaming can be used. With switch-independent teaming, the switch does not know about team affiliation; the NICs can also be connected to different switches, but they do not have to. In switch-dependent teaming, where the entire team has to hang on the same physical switch, the network cards and switch are configured for teaming. This can be done statically (a feature that is typically supported by server-enabled switches) or dynamically negotiated through the IEEE 802.1ax (Link Aggregation Control Protocol) protocol.
 
 ** Traffic distribution algorithms **
 
-In order to be able to use the possible combined bandwidth, it is necessary to distribute the traffic sensibly to the network cards. Typically, this is done after address hashing, a method that pseudo-randomly distributes packets to their adapters based on their address information. When using virtualization, a much finer granular distribution can be achieved if in addition the Hyper-V virtual switch port is included in the distribution algorithm.
+In order to be able to use the possible combined bandwidth, it is necessary to distribute the traffic sensibly to the network cards. Typically, this is done after address hashing, a method that pseudo-randomly distributes packets to their adapters based on their address information. When using virtualization, a much finer granular distribution can be achieved if the Hyper-V virtual switch port is also included in the distribution algorithm.
 
 Depending on the setup and requirements, different combinations of architecture and distribution algorithm offer different advantages and disadvantages.
 
@@ -619,11 +623,11 @@ The main differences in terms of NIC teaming concern
 * Improved interoperability and performance in connection with Hyper-V Network Virtualization (NVGRE).
 ** ** BranchCache
 
-BranchCache is a technique for optimizing the use of transmission capacity in the WAN, e.g. B. in the connection of field offices. To save bandwidth, BranchCache copies content from central servers and caches it in the branch office (so-called caching) so that they no longer need to be transferred when accessing it again.
+BranchCache is a technique for optimizing the use of transmission capacity in the WAN, e.g. B. in the connection of field offices. In order to save bandwidth, BranchCache copies content from central servers and caches it in the branch office (so-called caching) so that they no longer need to be transferred when accessed again.
 
 BranchCache is based on deep functions of the Windows file server. So files are divided into small sections to find and eliminate duplicates. In particular, smaller changes in large files do not lead to a complete retransmission.
 
-Configuration can also be done for larger institutions through a single small set of GPOs.
+The configuration can also be done for larger institutions through a single small set of GPOs.
 
 With Windows Server 2012 (R2), the cache is now encrypted, so that at least for normal confidentiality requirements on a further encryption about the volume can be waived.
 
@@ -644,17 +648,17 @@ Smart cards are hard-to-copy mobile security features, such as two-factor authen
 
 ** Virtual Smart Cards **
 
-Virtual smart cards enable multi-factor authentication in many types of infrastructures even in the event that users do not carry a physical card with them. For this, the process of registering any device with TPM as a virtual smart card device has been simplified, whether they are domain members or their hardware otherwise. This significantly reduces the hurdle for using smart cards as another authentication feature.
+Virtual smart cards enable multi-factor authentication in many types of infrastructures even in the event that users do not carry a physical card with them. For this, the process of registering any device with TPM as a virtual smart card device has been simplified, whether or not they are domain members and what their hardware is otherwise. This significantly reduces the hurdle for using smart cards as another authentication feature.
 
 ** Windows Biometric Framework **
 
-The Windows Biometric Framework (WBF), a set of services and interfaces for biometric devices, has also been expanded. Fast user switching and password synchronization with fingerprints are now possible.
+The Windows Biometric Framework (WBF), a set of services and interfaces for biometric devices, has also been extended. Fast user switching and password synchronization with fingerprints are now possible.
 
 However, it should be noted that biometric data have some disadvantages that make them largely unusable as identification and authentication features from a security perspective. In addition to the fact that many biometric features are not unique worldwide, they are often relatively easy to counterfeit and, above all, can not be changed.
 
 #### SYS.1.2.2.M14 Shutting Down Encrypted Servers and Virtual Machines (CI)
 
-If hard disks are encrypted to protect the confidentiality or integrity of data, ideally the key to decryption is not permanently available, but requires an administrator interaction or at least a logged technical request on the network or the AD. Otherwise, an attacker or innate perpetrator can read out or manipulate the data during operation. For this, BitLocker or the device encryption must be activated in a mode that is not exclusively based on the TPM, and the additional key protection, such as a USB key, should not be permanently plugged. Although this increases the effort in operation, but represents a much higher hurdle for attackers.
+If hard drives are encrypted to protect the confidentiality or integrity of data, ideally the key to decryption is not permanently available but requires an administrator interaction or at least a logged technical request on the network or AD. Otherwise, an attacker or innate perpetrator can read out or manipulate the data during operation. For this, BitLocker or the device encryption must be activated in a mode that is not exclusively based on the TPM, and the additional key protection, such as a USB key, should not be permanently plugged. Although this increases the effort in operation, but represents a much higher hurdle for attackers.
 
 3 Further information
 ------------------------------

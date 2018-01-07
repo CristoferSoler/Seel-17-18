@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 #### DER.3.1.A2 Preparation for an audit or revision
 #### DER.3.1.A3 Conducting an audit

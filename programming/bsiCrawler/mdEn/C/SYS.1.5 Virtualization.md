@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -35,7 +39,7 @@ The following specific threats and vulnerabilities are of particular importance 
 A virtualization server enables the operation of virtual IT systems, integrates the systems in the data center and controls their connection to other infrastructure elements, eg. B. networks and storage networks. Failure to plan how to integrate the virtualization servers technically and organizationally into the existing infrastructure can result in responsibilities for different areas not being clearly defined, such as: For applications, operating systems and network components. Furthermore, the responsibilities of different areas may overlap, or there may be no appropriate rights structure to separate administrative accesses for the different areas.
 ### 2 2 Incorrect virtualization configuration
 
-Virtualization changes the way servers are provisioned. Resources such as CPU, RAM, network connectivity, and storage are typically configured centrally through a management system and are no longer dictated by hardware and cabling. This can lead to faster configuration errors. If, for example, a highly vulnerable virtual IT system is mistakenly placed in an external DMZ, it can be reached from the Internet and thus be exposed to an increased risk.
+Virtualization changes the way servers are provisioned. Resources such as CPU, RAM, network connectivity, and storage are typically configured centrally through a management system and are no longer dictated by hardware and cabling. This can lead to faster configuration errors. If, for example, a highly vulnerable virtual IT system is incorrectly placed in an external DMZ, this can be accessed from the Internet and thus exposed to an increased risk.
 
 ### 2 3 Insufficient resources for virtual IT systems
 
@@ -51,7 +55,7 @@ In addition, attackers can use snapshots to gain unauthorized access to the data
 
 ### 2 5 Failure of the management server for virtualization systems
 
-Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to problems such as resource bottlenecks or the failure of individual virtualization servers or integrate new virtualization servers into the infrastructure or create new virtual IT systems during this time. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
+Since the management server controls and manages all the functions of a virtual infrastructure, a failure of this management system means that configuration changes to the virtual infrastructure can not be made. Administrators can not respond to issues such as resource bottlenecks or the failure of individual virtualization servers, integrate new virtualization servers into the infrastructure, or create new virtual IT systems. The * Live Migration * and thus the dynamic allocation of resources for individual guest systems is not possible without a management server.
 
 ### 2 6 Misuse of guest tools
 
@@ -161,7 +165,7 @@ The operating state of the virtual infrastructure SHOULD be monitored. It SHOULD
 
 Furthermore, the configuration files of the virtual IT systems SHOULD regularly be checked for unauthorized changes. It should also be monitored whether the virtual networks are correctly assigned to the respective virtual IT systems.
 
-If configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
+When configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
 
 #### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, IT Leaders, Network Leaders]
 

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -7,7 +11,7 @@ As a rule, each institution has one or more rooms in which meetings, trainings o
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate rooms, treated.
+The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate spaces, treated.
 
 ### 1.3 Delimitation
 
@@ -31,7 +35,7 @@ It is not always easy to sensitize and train your own employees to handle sensit
 
 ### 2 4 Flying wiring
 
-In meeting, event, and training rooms, users often change as well as how the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even across traffic routes, laid. Not only people are endangered by these trip hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
+In meeting, event, and training rooms, users often change as well as how the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even over traffic routes away, be laid. Not only people are endangered by these trip hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
 
 ### 2 5 Theft
 

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -9,7 +13,7 @@ There are many different sensors on the market. To measure physical quantities. 
 
 ### 1.2 Objective
 
-The goal of the device is to protect all types of intelligent sensors, regardless of manufacturer, type, purpose and location. It can be used for a single sensor or a contiguous assembly used as a sensor.
+The goal of the device is to protect all types of intelligent sensors, regardless of manufacturer, type, purpose and location. It can be applied to a single sensor or a contiguous assembly used as a sensor.
 
 ### 1.3 Delimitation
 
@@ -26,7 +30,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient security requirements for procurement
 
-Due to a lack of awareness of the risks and cost reasons, procurement often does not take information security into account. As a result, sensors can sometimes contain serious weaknesses that can only be remedied with great difficulty later on.
+Due to a lack of awareness of the risks and cost reasons, information security is often not taken into account in procurement. As a result, sensors can sometimes contain serious weaknesses that can only be remedied with great difficulty later on.
 
 Sensors for ICS components in industrial environments are often exposed to special conditions that may affect safe operation. Examples include extreme heat, cold, moisture, dust, vibration or corrosive or corrosive atmospheres. Frequently, several factors occur simultaneously. Such adverse environmental effects can cause the sensors of ICS components to wear faster and fail earlier or measure erroneous values.
 

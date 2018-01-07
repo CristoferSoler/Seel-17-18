@@ -1,21 +1,25 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that preserve the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so that it is also very important for the security of the information network to protect the system administration against unauthorized access.
+The ongoing administration of IT systems and components is fundamental to IT operations. The system administrators set up IT systems and applications, observe the operation and react with measures that maintain the function and performance of the systems, or adapt the systems to the changing needs. They also perform a number of security tasks: not only do they keep the systems available, they also implement security measures and verify their effectiveness. For this they have very extensive authorizations, so that it is also very important for the security of the information network to protect the system administration against unauthorized access.
 
 ### 1.2 Objective
 
 The goal of this module is to demonstrate how proper IT administration meets the security requirements of IT applications, systems, and networks.
 
-On the one hand, with the implementation of this module, the institution ensures that the activities required in the system administration for the security of the information network are carried out properly and systematically. On the other hand, the institution also reacts to the special threats that inevitably arise from dealing with administration privileges and from access to areas worthy of protection of the institution.
+On the one hand, with the implementation of this module, the institution ensures that the activities required in the system administration for the security of the information network are carried out properly and systematically. On the other hand, the institution also reacts to the special threats that inevitably arise from dealing with administration privileges and from gaining access to areas worthy of protection in the institution.
 
 ### 1.3 Delimitation
 
-The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturers or suppliers, which is considered in the module * OPS.2.4 Remote maintenance *.
+The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from the remote administration of IT systems via external interfaces, as well as the remote maintenance of devices and components by the respective manufacturer or supplier, which is considered in the module * OPS.2.4 Remote maintenance *.
 
-The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are singled out.
+The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are discarded.
 
 The other building blocks of the area * OPS.1.1 core IT operation * describe aspects of IT operation that are relevant in addition to the present building block. They should therefore additionally be considered and modeled in addition to this module.
 
@@ -50,7 +54,7 @@ The privileged system access of the administrators is often the focus of attacke
 Administrative activities directly influence the operation of IT systems and applications. For example, ongoing user sessions can be aborted when IT systems are restarted or legitimate access is prevented when a firewall policy is customized. If such operations are performed without considering how they affect the users and without coordinating them with the affected areas, the operation can be significantly disrupted.
 
 ### 2 6 Lack of information on incidents
-Deficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this assumes, for example, that the target state of systems prior to the incident is documented and verifiable, or that proper unauthorized changes to systems can be distinguished by appropriate records. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
+Deficiencies in the documentation of the IT operation or missing records can lead to the fact that IT security incidents can not be clarified or tracked. Since security incidents are often not easily recognizable, such. If the attack has expired, what extent it has had or how it has been manipulated, this must first be determined by means of suitable investigations. However, this requires that, for example, the desired status of systems documented before the security incident and is verifiable, or that proper unauthorized changes to systems using appropriate records can be distinguished. If such information is lacking, incidents are difficult or impossible to resolve. Even a judicial proof against the perpetrators is no longer possible in such cases.
 
 3 requirements
 ---------------
@@ -63,12 +67,12 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.2.A1 Personnel Selection for Administrative Activities [Head of Personnel]
 
-If employees are to perform administrative tasks within the IT environment, they MUST meet the following criteria, taking into account the security requirements of the systems and applications they support:
+If employees are to perform administrative tasks within the IT environment, they MUST comply with the following criteria, taking into account the security requirements of the systems and applications they support:
 
 * Employees MUST have the necessary professional qualifications to properly handle the tasks assigned to them. You must continue to have sufficient knowledge of the IT systems, applications, and platforms that you are managing. Employees MUST master the language used in the institution for documentation and have sufficient command of English to understand typical IT documentation.
 * Employees MUST be able to perform the tasks assigned to them reliably and carefully.
 * Role separation of administrative and controlling roles (e.g., revision) MUST be made.
-The administrators and their representatives MUST have sufficient time to perform their duties carefully. All administrators and their representatives MUST receive sufficient training opportunities
+The administrators and their representatives MUST have sufficient time to perform their duties diligently. All administrators and their representatives MUST receive sufficient training opportunities
 
 These requirements MUST also be met when administrative tasks are delegated to third parties.
 
@@ -80,7 +84,7 @@ It MUST be ensured that designated representatives have access to the IT systems
 
 #### OPS.1.1.2.A3 Regulated recruitment of IT administrators [Head of Human Resources]
 
-As employees assume administrative responsibilities within the IT environment, they MUST be trained in their work, particularly in the existing IT architecture and the IT systems and applications they are responsible for. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.
+When employees take over administrative tasks within the IT environment, they MUST BE in their activities, particularly in the existing IT architecture and be briefed by them take care of IT systems and applications. The security regulations valid in the institution and relevant for their activities MUST be made known to the IT administrators. Also, they MUST be required to comply with relevant data protection laws and other legal and operational regulations.
 These requirements MUST also be met when administrative tasks are delegated to third parties.
 
 #### OPS.1.1.2.A4 Termination as IT Administrator [Head of Human Resources]
@@ -103,7 +107,7 @@ Administration IDs MUST be appropriately protected by appropriate authentication
 
 For administrative access, secure protocols MUST be used if this is not done through a local console. These MUST ensure that state-of-the-art communication is encrypted.
 
-Each logon process via an administration ID (login) MUST be logged so that it is comprehensible when, in what way and under which user ID the system was accessed.
+Each login process via an administration ID (LOG) MUST be logged so that it is understandable when, in what way and under which user ID the system was accessed.
 
 ### 3.2 Standard requirements
 

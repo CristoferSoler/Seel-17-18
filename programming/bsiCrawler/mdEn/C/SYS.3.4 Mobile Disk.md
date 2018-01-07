@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -9,7 +13,7 @@ Data carriers can be classified according to whether they are read-only, write-o
 
 ### 1.2 Objective
 
-This module shows how the information stored on mobile data carriers can be safely used and how unauthorized disclosure of information via mobile data carriers should be prevented.
+This module shows how the information stored on mobile data carriers can be safely used and how an unauthorized transfer of information via mobile data carriers should be prevented.
 
 ### 1.3 Delimitation
 
@@ -32,7 +36,7 @@ Frequently it can be observed that organizational regulations and technical secu
 
 ### 2 2 Insufficient knowledge of regulations
 
-If employees and officials are not sufficiently familiar with the rules for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
+If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not comply with them. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
 
 ### 2 3 Data loss in mobile use
 For mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
@@ -81,23 +85,23 @@ If the data to be transmitted on a mobile data carrier were created or compiled 
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of mobile data carriers. They SHOULD be implemented in principle.
 
-#### SYS.3.4.A4 Creation of a policy for the safe handling of mobile data carriers [user]
+#### SYS.3.4.A4 Creation of a guideline for the safe handling of mobile data carriers [user]
 
 A policy SHOULD be created that determines how mobile media is handled. The following basic aspects SHOULD be considered:
 
 * which mobile data carriers are actually used and who can use them,
 * which data may be stored on mobile data carriers and which not,
 * how data stored on mobile data carriers is protected against unauthorized access, manipulation and loss,
-* how the data on the mobile data carriers should be deleted
+* how the data on the mobile data carriers should be deleted,
 * if and how private media may be used,
 * with which external employees or service providers data carriers may be exchanged and which safety regulations must be observed,
 how to prevent the use of mobile data carriers for the unauthorized disclosure of information and
 * how to prevent the spread of malware via mobile data carriers.
-In addition, it was intended to regulate how private mobile data carriers may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
+In addition, it should be regulated how private mobile data media may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
 
 #### SYS.3.4.A5 Control of the transport of mobile data carriers
 
-There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data media may be transported outside the home, who may take them away from home and which basic security measures must be followed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
+There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data carriers may be transported outside the home, who may take them away from home, and which basic security measures must be observed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
 
 #### SYS.3.4.A6 Disk Management [Specialists]
 
@@ -109,7 +113,7 @@ Before rewritable media are to be redistributed, they SHOULD be erased appropria
 
 #### SYS.3.4.A8 Hedging drives and interfaces for removable media and external data storage
 
-The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the ones provided and can not be connected to unauthorized external devices and data carriers.
+The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the intended ones and can not be connected to unauthorized external devices and data carriers.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

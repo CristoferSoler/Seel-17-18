@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,7 +17,7 @@ The aim of the module is to protect the information stored, processed and transm
 
 ### 1.3 Delimitation
 
-This building block focuses on the forms of telework that are carried out partly or wholly in the home environment. It is assumed that there is a telecommunication link between the teleworking center and the institution, which makes it possible to exchange information and, if necessary, to access data in the institution. The requirements of this module cover three different areas:
+This module focuses on the forms of telework that are carried out in part or entirely in the home environment. It is assumed that there is a telecommunication link between the teleworking center and the institution, which makes it possible to exchange information and, if necessary, to access data in the institution. The requirements of this module cover three different areas:
 
 * the organization of telework,
 * teleworker's teleworker and
@@ -27,7 +31,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Missing or inadequate regulations for the teleworking station
 
-Since a teleworking station is located outside the institution, it requires individually adapted organizational arrangements. If such regulations do not exist, employees may not know that they B. independently have to perform backups. Also, they may not know how to handle security-related incidents at the teleworkstation. For example, if confidential information gets into someone else's hands, it may be used by unauthorized persons as a serious disadvantage of the institution.
+Since a teleworking station is located outside the institution, it requires individually adapted organizational arrangements. If such regulations do not exist, employees may not know that they B. independently have to perform backups. Also, they may not know how to deal with security-related incidents at the teleworkstation. For example, if confidential information gets into someone else's hands, it may be used by unauthorized persons as a serious disadvantage of the institution.
 
 ### 2 2 Lack of or insufficient training of teleworkers
 
@@ -52,11 +56,11 @@ Since teleworkers are not in the institution on a daily basis, they have less op
 
 ### 2 6 Insufficient representation rules for teleworking
 
-The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be a problem in providing the requisite documentation or data from the teleworker to the representative when there are no access options to the teleworker's home office.
+The tasks of the teleworker are usually designed so that he can work independently for the most part. This can make it difficult in the case of illness to provide a representation for the teleworker. In particular, there may be problems in providing the requisite documentation or teleworker data to the representative when there are no access to the teleworker's home office.
 
 ### 2 7 Non-compliance with safety measures
 
-Especially at the teleworkplace, due to a lack of control options, employees may not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
+Especially at the teleworkplace it may be due to lack of control options that employees do not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
 
 3 requirements
 ---------------
@@ -74,7 +78,7 @@ All relevant aspects of teleworking MUST be regulated. For information purposes,
 
 All safety requirements that a telework computer must meet must be specified. All access and access to the institution's communication computers MUST be kept to the minimum necessary.
 
-It MUST be ensured that only authorized persons are allowed to access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
+It MUST be ensured that only authorized persons are allowed access to the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
 
 #### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
 
@@ -90,7 +94,7 @@ The selected backup method MUST be appropriate and sufficient for the volume of 
 
 #### OPS.1.2.4.A5 Awareness and Training of Teleworkers [Supervisors, Head of IT]
 
-Using a memo, teleworkers MUST be made aware of the dangers associated with teleworking. In addition, they MUST be trained in the appropriate security measures of the institution and trained in their handling. Training and awareness raising for teleworkers SHOULD be repeated regularly.
+Using a memo, teleworkers MUST be made aware of the dangers associated with teleworking. In addition, they MUST be trained in the appropriate security measures of the institution and trained in dealing with them. Training and awareness raising for teleworkers SHOULD be repeated regularly.
 
 ### 3.2 Standard requirements
 
@@ -100,12 +104,12 @@ Together with the basic requirements, the following requirements correspond to t
 
 A teleworking security concept SHOULD be created describing security objectives, protection needs, security requirements and risks. The concept SHOULD be regularly updated and revised. The security concept for telework SHOULD be coordinated with the overarching security concept of the institution.
 
-#### OPS.1.2.4.A7 Regulated use of communication options for teleworking [teleworkers, IT operations]
+#### OPS.1.2.4.A7 Regulated use of communication options in teleworking [teleworker, IT operation]
 It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
 
 #### OPS.1.2.4.A8 Flow of information between teleworker and institution [supervisor, teleworker]
 
-A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changes in security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
+A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changed security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
 
 #### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
 
@@ -124,7 +128,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 ### 4.1 Literature
 
-Further information on hazards and security measures in the field of telework can be found in the following publications:
+Further information on hazards and security measures in the field of telework can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

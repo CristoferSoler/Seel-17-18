@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.5.A1 Importing Updates and Security Updates
 #### SYS.1.5.A2 Secure use of virtual IT systems
 #### SYS.1.5.A3 Secure configuration of virtual IT systems

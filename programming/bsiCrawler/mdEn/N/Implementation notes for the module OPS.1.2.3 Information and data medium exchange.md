@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -19,11 +23,11 @@ In the run-up to the exchange of information and data media, it must be clarifie
 
 **Procurement**
 
-The selection of suitable data media must be coordinated with the communication partners.
+The selection of suitable data media must be agreed with the communication partners.
 
 **Implementation**
 
-In order to prevent security problems in the exchange of information, appropriate security measures should be established, which are appropriate for the respective protection needs, types of data and transport routes. In order to minimize any possible damage caused by improper handling of the data carriers during transport, a suitable method of dispatch should be specified which, depending on the medium used (eg documents, CD-ROM, magnetic tape), may well be different.
+In order to prevent security problems in the exchange of information, appropriate security measures should be established which are appropriate for the respective protection needs, types of data and transport routes. In order to minimize any possible damage caused by improper handling of the data carriers during transport, a suitable method of dispatch should be specified which, depending on the medium used (eg documents, CD-ROM, magnetic tape), may well be different.
 
 **Business**
 
@@ -67,7 +71,7 @@ Recipients must be advised that the data transmitted may only be used for the pu
 **Example:**
 
 An institution concludes a contract with a cloud service provider to use a defined cloud service. The selected cloud service provider, for its part, uses services of a subcontractor and forwards the data of the institution to the latter for processing. All communication channels as well as the type and scope of the transferred data are in this case transparent by the cloud service provider.
-Communication partners should regularly check whether they are entitled to receive the relevant information. Thus, among other things, the company affiliation, the postal or e-mail address or the fax number may have changed and transmitted information so reach the wrong person. In the case of a first contact, the identity of the other person should also be checked, since business cards can be issued on any name. Therefore, it is recommended to consult with new business partners in their authority or company or to obtain references.
+Communication partners should regularly check if they have the right to receive the relevant information. Thus, among other things, the company affiliation, the postal or e-mail address or the fax number may have changed and transmitted information so reach the wrong person. In the case of a first contact, the identity of the other person should also be checked, since business cards can be issued on any name. Therefore, it is recommended to consult with new business partners in their authority or company or to obtain references.
 
 The way in which analogue and electronic information is to be protected during the exchange of information is described in detail in the module APP.1.1 E-Mail / Groupware.
 
@@ -78,7 +82,7 @@ Employees must be sufficiently informed as to which framework conditions and res
 * with which communication partners which information may be exchanged (see OPS.1.2.3.M1 definition of permitted communication partners),
 * that the identity of the communication partners should be checked before confidential information is disclosed,
 * in which premises information can be communicated and processed,
-* via which IT networks information may be transported and how these are to be secured,
+* via which IT networks information can be transported and how these are to be secured,
 * What types of media are allowed for media exchange and how to secure them.
 In addition, the basic steps for the course of an information and data medium exchange to fix and publish, for. On the intranet. Employees are required to comply with the regulations.
 
@@ -95,14 +99,14 @@ The sender should attach a malware audit log to the submitted volume or attach i
 
 #### OPS.1.2.3.M5 loss report [user]
 
-Loss or theft of a data carrier during data medium exchange or the suspicion of manipulation must be reported immediately. This also applies to private data media that are used for official purposes. For this, there must be clear reporting channels and contact persons in each institution. When a disk is lost, action must be taken quickly, as it is not just a question of transmitting the data, but also of preventing potential misuse of the information involved.
+Loss or theft of a data carrier during data medium exchange or the suspicion of manipulation must be reported immediately. This also applies to private data media that are used for official purposes. For this, there must be clear reporting channels and contact persons in each institution. When a disk is lost, action must be taken quickly, as it is not just a matter of transmitting the data, but also of preventing potential misuse of the information involved.
 
 If there is confidential information on the media, it must be promptly traded after it is lost, for example:
 
 * Information classified as confidential (eg, patient records): All affected areas (eg, department, customers, etc.) must be notified to take appropriate action.
 Also, defects in low-priced mobile disks should be reported so that IT management can see if larger shipments are affected. Particularly for data carriers used for data backup and archiving, high reliability and a long service life are important.
 
-If lost media reappear, they must be inspected for possible tampering. If there is a suspicion, the device must either be disposed of immediately or further examined by a specialist. To make sure there are no malicious programs or malware on the recovered disks, they should be physically deleted (see OPS.1.2.3.M8 Physical Disk Erase Before and After Use).
+If lost media reappear, they must be inspected for possible tampering. If there is a suspicion, the device must either be disposed of immediately or further examined by a specialist. To make sure there are no malicious programs or malware on the recovered media, they should be physically deleted (see OPS.1.2.3.M8 Physical Disk Erase Before and After Use).
 
 ### 2.2 Standard measures
 
@@ -155,7 +159,7 @@ Digital media should (optionally) be accompanied by a data carrier accompanying 
 * Type and amount of data carriers,
 * Serial number (if available),
 * Identifier for the contents of the disk,
-* Date of shipment, if applicable date until when the data carrier must have reached the recipient at the latest,
+* Date of shipment, if applicable date until when the data medium must have reached the recipient at the latest,
 * Note that volumes are scanned for viruses,
 * Parameters needed to read the information, eg. B. belt speed.
 However, it should not be noted
@@ -163,7 +167,7 @@ However, it should not be noted
 * which password was given for the possibly protected information,
 * which keys were used to encrypt the information
 * what content the disk has.
-The correct reception should be checked. For consignments with highly confidential or on-time content, the recipients should be informed of the despatch and the chosen route of transport. If the need for protection is high, it is advisable to ask the recipient for a confirmation of receipt.
+The correct reception should be checked. For consignments with highly confidential or on-time content, the recipients should be informed of the despatch and the selected route of transport. If the need for protection is high, it is advisable to ask the recipient for a confirmation of receipt.
 In each case responsible for the dispatch and for the receipt must be named. If there are indications of manipulation or loss, safety management must be informed immediately.
 
 #### OPS.1.2.3.M8 Physical deletion of media before and after use [user]
@@ -172,7 +176,7 @@ In addition to the instructions for deleting or destroying data carriers contain
 
 Disks intended for replacement should be physically erased before writing to the information to be transmitted. This is to ensure that no residual data is passed on, for the receipt of which the recipient has no authorization.
 
-A physical deletion sufficient for the normal protection requirement can be achieved by overwriting the entire data medium or at least the areas used with a specific pattern. For magnetic media, a single overwriting is sufficient. For data carriers that are based on flash memory, such as USB sticks, it can not be ensured for technical reasons that a complete overwriting will actually delete all stored data. However, this is also sufficient for normal protection needs. In case of increased protection requirements, the use of flash memory should be avoided, or the memory should be completely encrypted. It is also possible to format the data carrier if it can not be undone, ie no quick formatting. It should be avoided to delete only individual files, this often remains residual information obtained, which allow the reconstruction of the deleted files. Employees should be provided with appropriate physical delete programs before and after using data media.
+A physical deletion sufficient for the normal protection requirement can be achieved by overwriting the entire data medium or at least the areas used with a specific pattern. For magnetic media, a single overwriting is sufficient. For data carriers that are based on flash memory, such as USB sticks, it can not be ensured for technical reasons that a complete overwriting actually deletes all stored data. However, this is also sufficient for normal protection needs. In case of increased protection requirements, the use of flash memory should be avoided, or the memory should be completely encrypted. It is also possible to format the data carrier if it can not be undone, ie no quick formatting. It should be avoided to delete only individual files, this often remains residual information obtained, which allow the reconstruction of the deleted files. Employees should be provided with appropriate physical delete programs before and after using data media.
 
 As a rule, the transmitted data are also worth protecting for the recipient. Analogously, a physical deletion of the data carrier is also provided here after the data is re-imported.
 
@@ -182,7 +186,7 @@ The use of non-erasable data carriers (such as WORMs) must be waived for the pur
 
 Before sending a file via e-mail, IT networks or media exchange, or before publishing a file to a web server, it should be checked to see if it contains any residual information that is not intended for publication. Such residual information can be of different origin and, accordingly, the actions to be taken against it can be different. The most common causes of such residual information are described below.
 
-Generally, standard software such as For example, for word processing or spreadsheets, which additional information is stored in files created with it. Some of this information is saved with, others without the knowledge of the user.
+Generally, standard software such as For example, to check for word processing or spreadsheets, which additional information is stored in files created with it. Some of this information is saved with, others without the knowledge of the user.
 
 Before passing on files, they should at least be randomly checked for unwanted additional information. This should be done using a different editor than the one used to create the file.
 
@@ -190,7 +194,7 @@ Care must be taken to ensure that not all remaining information can be deleted w
 
 * the file can be saved in another file format, eg. As "plain text", as a printout in PDF or as HTML,
 * The user data can be copied to a second instance of the same standard software, whereas no other application should run on the IT system. This is especially useful for files with a larger history of changes.
-In order to prevent the disclosure of information that was originally introduced with the knowledge of the creators, such. For example, if it is formatted as "hidden" text but its presence has been forgotten, it may be useful to print the file. In this case, all options should be activated which also output hidden information during printing.
+In order to prevent the disclosure of information that was originally introduced with the knowledge of the creators, such. For example, if it is formatted as "hidden" text but its presence has been forgotten, it may be useful to print the file. In this case, all options should be activated, which also print information hidden during printing.
 
 ** Remaining information in the file system **
 
@@ -210,7 +214,7 @@ When editing files, it may be useful to use change markers. Since these can be h
 
 ** versioning **
 
-In virtually all current Office suites, it is possible to save different versions of a document in a ** file. This serves to be able to resort to earlier revision statuses if necessary. But this can very quickly lead to huge files, eg. B. if graphics are included. Under no circumstances should the option "Save version automatically when closing" be selected, as the complete previous version is additionally saved here each time a file is closed.
+In virtually all current Office suites, it is possible to save different versions of a document in a ** file. This serves to be able to resort to earlier revision statuses if necessary. But this can very quickly lead to huge files, eg. B. if graphics are included. Under no circumstances should the option "Automatically save version when closing" be selected, as the complete previous version is additionally saved here each time a file is closed.
 
 ** File properties **
 As file properties or file info, information is stored in the file to help later find files. Depending on the application, information such as titles, directory structures, version levels, editors (not just the undersigned), comments, processing time, last print date, document names and descriptions may be included. Some of this information is created by the programs themselves and can not be influenced by the editor. Other information must be entered manually. Before passing on a file to external users, check which additional information of this type contains the file.
@@ -258,13 +262,13 @@ With data medium exchange, information can be transmitted more or less reliably 
 * Character code (eg ASCII or EBCDIC):
  If the sender and receiver systems match the ** character code ** used, individual sectors or blocks in plain text that can be distributed unrelated on the data carrier can be read using physical reading. If the character codes used do not match, the transmitted data will be misinterpreted.
 * Formatting the operating system or file system of media:
- In addition, if the sender and receiver systems have the same operating and file system when exchanging the data medium, or if the receiver operating system prefers to read the formatting of other operating systems (eg not all Unix operating systems can read in NTFS data carriers), then all files can , as they were at the sender, be restored. This is sufficient for information that is not subject to any further formatting as done by most application programs (eg word processors).
+ In addition, if the sender and receiver systems have the same operating and file system for data medium exchange, or if the receiver operating system prefers to read formatting of other operating systems (eg not all Unix operating systems can read in NTFS data carriers), then all files can , as they were at the sender, be restored. This is sufficient for information that is not subject to any further formatting as done by most application programs (eg word processors).
 * Application software:
  If application programs were used to create the files to be transferred, it is important to ensure that these programs are identical in terms of their versions, since the file formats may differ. The version equality need not exist if the program versions are upwards or downwards compatible.
 * Security software and security parameters:
  In addition, if security products or protection mechanisms of certain application programs are used, the compatibility of these products must be ensured.
  The sender and the recipient must communicate in an appropriate way about the keys or passwords used.
-If incompatibilities arise, additional arrangements or products must be provided which provide for appropriate conversion, or the sender and receiver systems are to be equipped appropriately.
+If incompatibilities arise, additional arrangements or products should be provided which provide for appropriate conversion, or the sender and receiver systems should be equipped appropriately.
 
 #### OPS.1.2.3.M12 Appropriate marking of data carriers during shipping [user]
 In the case of sufficient labeling of data carriers to be exchanged, care must be taken to ensure that sender and (all) recipients are immediately identifiable. The identification of the data carrier or its packaging must clearly identify the contents of the data carrier for the recipient. However, in the case of information worthy of protection, it is important that this labeling does not allow unauthorized persons to infer the nature and content of the stored information.
@@ -304,23 +308,23 @@ The use of cryptographic security mechanisms (eg encryption, digital signature) 
 * Key archiving: For archiving purposes, the cryptographic key material should also be storable outside the crypto module in an encrypted form and, if necessary, readable again.
 * Access and Representation Policy: Access and proxy rights should be regulated. Appropriate mechanisms must be supported by key management and the crypto modules and devices to be deployed (eg, key deposit in case of an employee leaving the company or being out of health for a long time).
 * Key change: In the crypto policy, it must be determined based on the security policy, when and how often keys must be changed.
-* Key destruction: Keys that are no longer required (eg keys whose validity period has expired) must be securely deleted or destroyed (eg by multiple deletions / overwrites and / or mechanical destruction of the data medium).
+* Key destruction: Keys that are no longer required (eg keys whose validity period has expired) must be deleted or destroyed in a secure manner (eg by repeated deletion / overwriting and / or mechanical destruction of the data medium).
 #### OPS.1.2.3.M14 Disk Management [Head of Organization, IT Operations] (CIA)
 
-For higher protection needs, a disk management should be set up to ensure access to disk to the required extent and within a reasonable time. This requires a regular management of the data carriers, which requires uniform labeling and inventory management. Furthermore, in the context of data carrier management, the proper handling and storage of the data carriers, their proper use and transport and, last but not least, the deletion or destruction of the data carriers must be ensured. For analog media, most institutions have a well-established and proven methodology for their administrations, namely the classic file management. Therefore, in this measure the digital data carriers are placed in the foreground, but the individual recommendations apply mutatis mutandis to all types of data carriers.
+For higher protection needs, a disk management should be set up to ensure access to disk to the required extent and within a reasonable time. This requires a regular management of the data carriers, which requires uniform labeling and inventory management. Furthermore, in the context of data carrier management, the proper handling and storage of the data carriers, their proper use and transport and, last but not least, the deletion or destruction of the data carriers must be ensured. For analog media, most institutions have a well-established and proven policy for their administrations, namely the classic file management. Therefore, in this measure the digital data carriers are put in the foreground, but the individual recommendations apply mutatis mutandis to all types of data carriers.
 ** Inventories ** provide fast and targeted access to media. Inventories, for example, provide information about repository, retention period, authorized recipients.
 
 The external identification of data media enables their rapid identification. However, the marking should not allow unauthorized persons to identify the content (eg the marking of a magnetic tape with the keyword "telephone charges") in order to make it more difficult to misuse. A defined structure of identification features (eg date, filing structure, serial number) facilitates the assignment to stock records.
 
-For proper handling of data carriers, the manufacturer's instructions, which are usually found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field / dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to make.
+For the proper handling of data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field / dust-protected, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to meet.
 
-The shipping or transport of data media must be carried out in such a way that damage to the data carrier can be excluded as possible (eg magnetic tape mailing, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport types (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion. If no tools are available for this, the data carrier should at least be formatted. It should be ensured that it is not possible to reverse the command with the underlying operating system.
+The shipping or transport of data media must be carried out in such a way that damage to the data carrier can be excluded as possible (eg magnetic tape mailing, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport methods (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion. If no tools are available for this, the data carrier should at least be formatted. It should be ensured that it is not possible to reverse the command with the underlying operating system.
 
 It should also be noted that a backup copy is created before the delivery of important data carriers. ,
 
-For the internal transfer of data carriers, regulations can be made such as acknowledgment procedures, pick-up / take-along authorizations as well as the keeping of inventories of the whereabouts of data carriers.
+For the internal transfer of data carriers, regulations can be made such as acknowledgment procedures, pick-up / take-along authorizations and the keeping of inventories of the whereabouts of data carriers.
 
-In the event that ** data carriers obtained from third parties ** are used, provisions must be made regarding their treatment before use. If, for example, digital data is transmitted, a computer virus check of the data carrier or data records should generally take place. This also applies accordingly before the first use of new digital data carriers. It is recommended to check for computer viruses not only when receiving but also before sending digital media.
+In the event that ** data carriers received from third parties ** are used, regulations must be made regarding their treatment before use. If, for example, digital data are transmitted, a computer virus check of the data carrier or data records should generally take place. This also applies accordingly before the first use of new digital data carriers. It is recommended to check for computer viruses not only when receiving but also before sending digital media.
 
 A regulated procedure for the deletion or destruction of data carriers prevents the misuse of the stored data. Before re-using any media, the stored data must be completely deleted (see OPS.1.18 Deleting and destroying data).
 
@@ -328,7 +332,7 @@ A regulated procedure for the deletion or destruction of data carriers prevents 
 
 For information with increased protection needs, it should be examined how these can be adequately protected during a data medium exchange. For this purpose, a shipping method and packaging appropriate to the protection needs must be selected by the shipper. For example, one way to send information that requires high-security information is to use trusted couriers. Basically, the data should be encrypted.
 
-In addition to the implementation notes presented in OPS.1.2.3.M14 Disk Management, the shipping packaging of data carriers should be such that manipulation of the data carriers can be detected by changes to the packaging.
+In addition to the implementation notes outlined in OPS.1.2.3.M14 Disk Management, the shipping packaging of data carriers should be such that any manipulation of the data media can be detected by changes to the packaging.
 
 Possible measures are the use of
 
@@ -349,10 +353,10 @@ Before sending a data carrier, you must ensure that there is sufficient access p
 
 #### OPS.1.2.3.M17 Verifying Media Before Shipping [User] (CI)
 
-Before sending a data carrier, it must be checked to see if the desired information - and only this information - can be reconstructed from the data medium. This is to be controlled both with documents as well as with electronic data carriers. Letters and other analog media should also be re-examined prior to shipping to see if they are complete and contain no additional information that should not be shared. This is especially important if, for reasons of confidentiality, parts of processes such as attribution of names may not be transmitted to third parties. For this purpose, this partial information z. B. be made unrecognizable by blackening. However, as blackened information can often be made readable again without much effort, it is better to remove it altogether from the events, eg. By deleting them in a copy of the source file before printing. Depending on the protection requirements of the information, there are various methods for this:
+Before sending a data carrier, it must be checked to see if the desired information - and only this information - can be reconstructed from the data medium. This is to be controlled both with documents as well as with electronic data carriers. Letters and other analog media should also be re-examined prior to shipping to see if they are complete and contain no additional information that should not be shared. This is especially important if, for reasons of confidentiality, parts of transactions, such as attributions, may not be transmitted to third parties. For this purpose, this partial information z. B. be made unrecognizable by blackening. However, since blackened information can often be made readable again without much effort, it is better to remove it altogether from the processes for the purpose of passing it on. By deleting them in a copy of the source file before printing. Depending on the protection requirements of the information, there are various methods for this:
 
-* Documents should be structured as much as possible so that non-public content can be easily separated, e.g. By only appearing in an attachment. The attachment should then be available electronically in a separate file classified as confidential.
-* If the documents are already in a form that does not allow for a clean separation of confidentiality, sensitive content must be removed prior to disclosure. A basic problem is to identify and carefully remove all sensitive information. Since this often does not work in practice, it should be avoided if possible to pass on such documents "defused". If this is necessary anyway, all critical information must be removed and the security levels of the affected documents redefined. In any case, before releasing the documents, a renewed approval process must be carried out.
+* Documents should be structured where possible so that non-public content can be easily separated, e.g. By only appearing in an attachment. The attachment should then be available electronically in a separate file classified as confidential.
+* If the documents are already in a form that does not allow a clean separation of confidentiality, sensitive content must be removed prior to disclosure. A basic problem is to identify and carefully remove all sensitive information. Since this often does not work in practice, it should be avoided if possible to pass on such documents "defused". If this is necessary anyway, all critical information must be removed and the security levels of the affected documents redefined. In any case, before releasing the documents, a renewed approval process must be carried out.
 * For paper documents, sensitive information is often blacked out. This is to be done in the following steps:
 
  
@@ -363,7 +367,7 @@ Before sending a data carrier, it must be checked to see if the desired informat
 
 
  
-* In order to remove confidential information in electronic documents, the passages requiring protection must first be replaced by other symbols and then blackened. For this purpose, strings of fixed length should be used, for example "XXXXXXXXXX", so that the original meaning can no longer be guessed. Before distribution, the files should be checked to see if they contain any residual information, such as: Eg previous revision statuses (see also OPS.1.2.3.M9 Elimination of residual information in files before forwarding [user]).
+* In order to remove confidential information in electronic documents, the passages requiring protection must first be replaced by other symbols and then blackened. For this purpose, strings of fixed length should be used, for example "XXXXXXXXXX", so that the original meaning can no longer be guessed. Before distribution, the files should be checked to see if they contain any residual information, such as: Eg previous revision statuses (see also OPS.1.2.3.M9 Removal of Remaining Information in Files prior to Redistribution [User]).
 Electronic data carriers must be physically erased before further use if other data was previously stored on them (see OPS.1.2.3.M8 Physical deletion of data carriers before and after use).
 
 The correct transmission can be checked on electronic data carriers by using a program that compares the original with the transmitted file character by character.

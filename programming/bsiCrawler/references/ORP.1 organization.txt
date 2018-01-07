@@ -6,9 +6,9 @@
 #### ORP.1.A5 Authorization [Head IT]
 ### 3.2 Standard requirements
 #### ORP.1.A6 The tidy workplace [employee]
-#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Domestic Engineering]
+#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Building Services]
 #### ORP.1.A8 Resource Management [IT Leader]
-#### ORP.1.A9 Proper Disposal of Protected Equipment [Employees, Information Security Officer (ISB)]
+#### ORP.1.A9 Proper Disposal of Protected Equipment [Staff, Information Security Officer (ISB)]
 #### ORP.1.A10 Responding to security breaches [Information Security Officer (ISB)]
 #### ORP.1.A11 Timely participation of the Staff Committee [Head of IT]
 #### ORP.1.A12 Regulations for maintenance and repair work [IT operation, building services, ICS information security officer]

@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
 #### OPS.2.4.A2 Secure connection setup for remote maintenance [user]
 #### OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]
@@ -15,7 +15,7 @@
 #### OPS.2.4.A13 Data backup for remote maintenance [IT operation]
 #### OPS.2.4.A14 Dedicated systems for remote maintenance [IT operation]
 #### OPS.2.4.A15 Securing remote maintenance [IT operation]
-#### OPS.2.4.A16 Training for remote maintenance [IT-Betrieb]
+#### OPS.2.4.A16 Training for remote maintenance [IT operation]
 #### OPS.2.4.A17 Authentication mechanisms for remote maintenance [IT operation]
 #### OPS.2.4.A18 Password security for remote maintenance [IT operation]
 #### OPS.2.4.A19 Remote maintenance by third parties [IT operation]

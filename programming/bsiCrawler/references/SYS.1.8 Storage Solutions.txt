@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
 #### SYS.1.8.A2 Secure basic configuration of storage solutions
 #### SYS.1.8.A3 Restrictive rights assignment

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -24,14 +28,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 fire
 
-Buildings and the people and facilities inside them can be severely damaged by fire. In addition to direct damage caused by the fire, consequential damage must also be considered. The biggest source of danger in a fire is the toxic fire smoke. Most personal injury in a fire is caused by smoke poisoning. Even in facilities and IT systems, fire smoke can cause serious damage.
+Buildings and the people and facilities inside them can be severely damaged by fire. In addition to direct damage caused by the fire, consequential damage must also be considered. The biggest source of danger in a fire is the toxic fire smoke. Most personal injury in a fire is caused by smoke poisoning. Even at facilities and IT systems, fire smoke can cause serious damage.
 
 For example, when PVC is burned, it produces chlorine gas, which together with the humidity and extinguishing water form hydrochloric acid. Distributing the hydrochloric acid vapors through the air conditioner can cause damage to sensitive electronic equipment located in a part of the building far from the fire.
 
 ### 2 2 Flash
 Lightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
 
-If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the structure (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
+If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the building (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
 
 ### 2 3 water
 
@@ -67,9 +71,9 @@ In the event of a power outage, entire buildings or parts of them may become unu
 3 requirements
 ---------------
 
-The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the facilities of the infrastructure in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the infrastructure facilities in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -83,7 +87,7 @@ It MUST be checked regularly whether the protection and design of the circuits s
 
 #### INF.1.A3 Compliance with fire safety regulations
 
-The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be signposted and kept open in accordance with regulations. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
+The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be properly signposted and kept open. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
 
 Unnecessary fire loads MUST be avoided. This includes the regular disposal of waste paper and packaging waste.
 
@@ -104,7 +108,7 @@ Windows and outward doors (balconies, terraces) MUST be closed in times when a r
 
 Access to protected parts of buildings and rooms MUST be regulated and controlled. There SHOULD exist a concept for access control. The number of authorized persons SHOULD be kept to a minimum for each area. Additional persons may only be admitted after prior examination of the necessity. All issued access authorizations SHOULD be documented. The access control measures MUST be regularly checked for their effectiveness.
 
-#### INF.1.A8 smoking ban [employee]
+#### INF.1.A8 smoking ban [staff]
 
 For rooms with IT or data carriers (server room, data carrier archive but also document archive), in which fires or soiling can lead to high damage, a smoking ban MUST be issued. It MUST be regularly checked that the access protection is not undermined when establishing or tolerating smoking areas.
 
@@ -114,7 +118,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.1.A9 Safety Concept for Building Use [Planner, Information Security Officer (ISB)]
 
-It SHOULD give a security concept for the use of buildings. The security concept for the building SHOULD be coordinated with the overall security concept of the institution. It SHOULD be updated regularly.
+It SHOULD give a security concept for the building use. The security concept for the building SHOULD be coordinated with the overall security concept of the institution. It SHOULD be updated regularly.
 
 Protected rooms or parts of buildings SHOULD NOT be housed in exposed or endangered areas.
 
@@ -139,7 +143,7 @@ A lightning protection system should be installed according to the current stand
 
 #### INF.1.A15 Location plans of utilities
 
-There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who keeps and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
+There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who guides and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
 
 #### INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
 
@@ -194,7 +198,7 @@ It was intended to implement adequate anti-burglary measures adapted to local co
 
 #### INF.1.A28 Air conditioning for people (IA)
 
-In larger buildings, the air supply SHOULD be provided by ventilation and air conditioning (RLT) systems. The RLT systems SHOULD be designed for the actual use of the building. You SHOULD maintain RLT systems regularly.
+In larger buildings the air supply SHOULD be provided by ventilation and air conditioning (RLT) systems. The RLT systems SHOULD be designed for the actual use of the building. You SHOULD maintain RLT systems regularly.
 
 #### INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
 
@@ -202,11 +206,11 @@ It SHOULD be checked whether the employees of the commissioned cleaning company 
 
 #### INF.1.A30 Selection of a suitable building (CIA)
 
-When selecting a suitable building, it should be checked whether all safety requirements relevant for later use can also be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
+When selecting a suitable building, it should be checked whether all security requirements relevant for later use can be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
 
 #### INF.1.A31 Extract from Buildings [Inner Service] (C)
 
-In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data carriers, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
+In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data media, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
 
 #### INF.1.A32 firewall cadastre (A)
 

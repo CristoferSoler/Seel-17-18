@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -17,7 +21,7 @@ The goal of the building block is for users or even IT components to be able to 
 
 This module describes basic requirements for the development of identity and authorization management.
 
-Requirements concerning components of identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
+Requirements concerning components of an identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
 
 2 risk situation
 -----------------
@@ -42,7 +46,7 @@ If the allocation of access, access and access rights is poorly regulated, this 
 
 The following are specific requirements for identity and entitlement management. Basically, the ISB is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -50,7 +54,7 @@ The following requirements MUST be implemented as a priority:
 
 It must be governed by how users and user groups are to be set up. All users and user groups MAY ONLY be set up via separate administrative roles.
 
-#### ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
+#### ORP.4.A2 Regulation for setting up, changing, and revoking privileges [Administrator, IT Leader]
 
 User IDs and permissions MAY ONLY be assigned based on actual needs. Personnel changes MUST remove the user IDs and permissions that are no longer required. Applying Employees Authorizations that go beyond the standard may ONLY be assigned after further justification. All permissions MUST be set up via separate administrative roles.
 

@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Office products have long been an integral part of the standard IT equipment in the office environment. Editing documents digitally and creating calculations and presentations on the PC has greatly changed the office routine. Accordingly, most employees view office products as basic IT equipment. Precisely because of the widespread use of office products, these are also used as an attack path, for example, to spread malicious software using macros in office documents.
+Office products have long been an integral part of the standard IT equipment in the office environment. Editing documents digitally and creating calculations and presentations on the PC has greatly changed the office routine. Accordingly, most employees view office products as basic IT equipment. Precisely because of the widespread use of Office products, these are also used as an attack path, for example, to spread malicious software using macros in Office documents.
 
 Therefore, security measures should be planned and implemented for safe use of Office products, which are appropriate to the protection needs of the institution.
 
@@ -21,7 +25,7 @@ License management plays an important role in the procurement of office products
 
 **Implementation**
 
-Before deploying to the institution, new versions of Office products should be tested (see APP.1.1.M6 Testing New Versions of Office Products) to ensure that the institution's existing work equipment (such as templates or forms) as well work correctly with the new version. Depending on the established principles of how to work within the institution with Office products, the software used must be configured differently. During the configuration it should be ensured that the most uniform configuration of Office products has been implemented on all workstations of the institution.
+Before using in the institution, new versions of Office products should be tested (see APP.1.1.M6 Testing new versions of Office products) to ensure that the institution's existing work equipment (eg, templates or forms) as well work correctly with the new version. Depending on the established principles of how to work within the institution with Office products, the software used must be configured differently. During the configuration it should be ensured that the most uniform configuration of Office products has been implemented in all workplaces of the institution.
 
 **Business**
 
@@ -49,7 +53,7 @@ Several methods are available for LibreOffice to verify the integrity of softwar
 
 If the integrity of Office products is manually verified, the test should be on a hardened system. The integrity checking programs should be protected against manipulation.
 
-The chosen procedure for the integrity check of office products should be comprehensibly documented for third parties in a suitable place (for example in the operating manual). In the case of high demands on the integrity of Office products, it may make sense to keep the logs of the performed integrity checks.
+The selected procedure for the integrity check of office products should be comprehensibly documented for third parties in a suitable place (for example in the operating manual). In the case of high demands on the integrity of Office products, it may make sense to keep the logs of the performed integrity checks.
 
 #### APP.1.1.M2 Restricting Active Content [User]
 
@@ -61,7 +65,7 @@ In Microsoft Office, the handling of Active Content in the Security Center can b
 
 In LibreOffice you can set options for how Active Content is handled. The security options for the macros can be found under * Extras | Options | LibreOffice | Security | Macro Security *.
 
-Some Office products have the ability to enable digitally signed Active Content originating from trusted sources. This feature is especially useful when macros are needed in organization-owned Office documents. As a result, users are not unnecessarily often confronted with the Active Content Alert, which benefits the user.
+Some Office products have the ability to enable digitally signed Active Content originating from trusted sources. This feature is useful if you need macros in your organization's Office documents. As a result, users are not unnecessarily often confronted with the Active Content Alert, which benefits the user.
 In addition, users must be made aware of the dangers of Active Content. Under no circumstances should users activate the Active Content when opening it. When in doubt, users should contact the IT Service Desk of the institution, who can work with IT to decide how to handle the documents. For example, it is possible to audit Active Content documents in foreclosed IT environments.
 
 Active content in PDF files also creates security risks but is rarely needed. Therefore, automatic execution of such content should be disabled in the PDF viewer.
@@ -70,7 +74,7 @@ Active content in PDF files also creates security risks but is rarely needed. Th
 
 Office documents that originate from external sources (for example, downloaded from web pages, obtained from external employees or business partners) must be handled with particular care. No documents may be opened that have been received unexpectedly or whose sender or origin is unknown. Basically, Office documents from external sources must be treated as executable files and at least checked for malware before being opened for the first time.
 
-Microsoft has introduced the Open XML file format as standard with Microsoft Office 2007. Files in the Open XML file format that contain macros are marked with an "M" in the file extension. For example, Word documents with macros have the extension .DOCM instead of .DOCX. If an Office Open XML file contains macros without being marked, Microsoft Office denies opening the file (for example, if macros are included in a .DOCX file). Older document formats (such as .DOC) can always include macros and are handled by Microsoft Office 2007 or later as per Security Center settings (see APP.1.1.M2 Restricting Active Content). The following list shows Microsoft Office document types that can contain macros and should therefore be given special attention:
+Microsoft has introduced the Open XML file format as standard with Microsoft Office 2007. Files in the Open XML file format that contain macros are marked with an "M" in the file extension. For example, Word documents with macros have the extension .DOCM instead of .DOCX. If an Office Open XML file contains macros without being marked, Microsoft Office denies opening the file (for example, if macros are included in a .DOCX file). Older document formats (such as .DOC) can always include macros and are handled by Microsoft Office 2007 or later as per Security Center settings (see APP.1.1.M2 Restricting Active Content). The following list shows Microsoft Office document types that may contain macros and should therefore be given special attention:
 
 * .DOC
 * .DOT
@@ -115,7 +119,7 @@ Together with the basic measures, the following measures correspond to the state
 #### APP.1.1.M5 Selection of suitable Office products
 
 The functions of the Office products should be based on the needs of the users. To ensure this, future users of Office products should be properly involved in the selection process. For example, it makes sense that the criteria for the selection of office products should be set up jointly by IT operations and users. For a new procurement, a market analysis by the IT department should be carried out beforehand to define a preselection.
-Based on the market analysis and user experience, a requirements catalog should be created to support the selection of suitable Office products among the various alternatives. The requirements can be divided into the two classes MUST requirements and DESIRED requirements. Mandatory requirements must be met by the Office product available for selection in order to get a closer look. TARGET requests are optional, but they are used to choose between several Office products in the nearer selection. TARGET requests may also be weighted to indicate the order of requirements. This allows the Office products to be selected that meet all the MUST requirements and score the most points in the TARGET requirements.
+Based on the market analysis and user experience, a requirements catalog should be created to support the selection of the right Office products among the various alternatives. The requirements can be divided into the two classes MUST requirements and DESIRED requirements. Mandatory requirements must be met by the Office product available for selection in order to get a closer look. TARGET requests are optional, but they are used to choose between several Office products in the nearer selection. TARGET requests may also be weighted to indicate the order of requirements. This allows the Office products to be selected that meet all the MUST requirements and score the most points in the TARGET requirements.
 
 The following table shows an example analysis of the requirements analysis.
 
@@ -125,7 +129,7 @@ The most common applications for working with PDF files are Adobe Reader and Ado
 
 #### APP.1.1.M6 Testing new versions of Office products
 
-An orderly transfer of office products and significant changes requires a suitable procedure for testing and approval. The tests are designed to identify problems with new versions of Office products at an early stage. For the planning and implementation of tests and the approval based on them, the following levels are usually to be taken into account, in which case different functionaries are to be included with their technical perspective:
+For an orderly transfer of office products and in case of significant changes, a suitable procedure for testing and approval is required. The tests are designed to identify problems with new versions of Office products at an early stage. For the planning and implementation of tests and the approval based on them, the following levels are usually to be taken into account, in which other functionaries are to be included with their technical perspective:
 
 * the professional level (represented by specialist responsible persons)
 * the level of IT operations (represented by the IT manager)
@@ -152,9 +156,9 @@ If, during the processing of individual test contents, it becomes apparent that 
 
 On the basis of the established decision criteria, the test results are to be evaluated, all results combined and presented to the test persons with the test documentation.
 
-After completing the tests, a pilot operation of the new version of the Office products makes sense, ie use under real conditions. If real-world pilot operations in the production environment are used, a sufficient number of tests must confirm the correct and correct functioning of Office products in advance, so as not to jeopardize the integrity of the production environment. For example, the product can be installed by selected users who then use it in real production for a certain period of time.
+After completing the tests, a pilot operation of the new version of the Office products makes sense, ie a deployment under real conditions. If real-world pilot operations in the production environment are used, a sufficient number of tests must confirm the correct and correct functioning of Office products in advance, so as not to jeopardize the integrity of the production environment. For example, the product can be installed by selected users, who then use it in real production for a certain period of time.
 
-If incompatibilities with the institution's work equipment are detected during the test phase, it should be decided how this will be done. For this purpose, it makes sense to define error classes that can be used to determine whether the error prevents the widespread use of the new version of the Office products or whether the incompatibilities can be accepted for a transitional period. Troubleshooting should define what work item adjustments are required for the new version of the Office products. For the implementation of the changes, see Action APP.1.1.M10 End User Software Development.
+If incompatibilities with the institution's work equipment are identified during the test phase, it should be decided how this will be done. For this purpose, it makes sense to define error classes that can be used to determine whether the error prevents the widespread use of the new version of the Office products or whether the incompatibilities can be accepted for a transitional period. Troubleshooting should define what work item adjustments are required for the new version of the Office products. For the implementation of the changes, see Action APP.1.1.M10 End User Software Development.
 
 #### APP.1.1.M7 Installation and configuration of Office products
 
@@ -162,22 +166,22 @@ To ensure a standardized installation of the Office products, an installation an
 
 Deviations from the installation instructions and in particular the standard configuration specified there must always be approved and documented.
 
-If users are to install the software themselves, at least the pilot installation should be accompanied by a selected typical user by the IT department to verify the understandability of the installation instructions. The installation instructions should be updated and improved based on the findings from the pilot installation as well as further feedback from the users.
-Both before and after installing software, a full backup should be performed. The first backup can be used to recover a consolidated touchdown point during subsequent installation problems. After the successful installation, a complete data backup should be carried out again so that it can be restored to the state after successful installation of the product in the event of later problems.
+If users are to install the software themselves, at least the pilot installation should be accompanied by a selected typical user by the IT department to verify the understandability of the installation instructions. Based on the findings from the pilot installation and other user feedback, the installation instructions should be updated and improved.
+Both before and after installing software, a full backup should be performed. The first backup can be used to recover a consolidated touchdown point during subsequent installation problems. After the successful installation, a complete data backup should be carried out again, so that in later problems can be restored to the state after the successful installation of the product.
 
 Since Office products are usually installed on almost all workstations in an institution, it is recommended that the configuration be managed centrally. There are several options for this depending on the operating system used on the workstations:
 
-* In the Windows environment, the uniform configuration of the Office products can generally be distributed to the workplaces by means of group policies.
+* In the Windows environment, the uniform configuration of Office products can usually be distributed to the workplaces by means of group policies.
 * In the Mac OS and Unix environment, a single configuration can be managed with configuration management applications.
-The default configuration of Office products should be periodically reviewed and adjusted as needed. The custom default configuration should then be rolled out on the institution's workstations.
+The default configuration of Office products should be periodically reviewed and adjusted as needed. The customized default configuration should then be rolled out on the institution's workstations.
 
 #### APP.1.1.M8 Version Control of Office Products
 
-It should be recorded which versions of Office products are installed in the institution and in which configuration they are installed. Using different versions of Office products can cause compatibility issues when editing documents and make maintenance difficult. Documenting the rolled-out versions and configurations of Office products can be very helpful in quick troubleshooting. For the overview of the configurations, a documentation of the standard configuration can be created (for example, in the Office Products Operating or Installation Guide). So only deviations from the standard configuration have to be documented separately. Each time you change the default or default configuration, the documentation should be customized. If a configuration is used that differs from the standard configuration, the deviating configuration, the reason for it and the workstation on which the deviating configuration exists should be documented.
+It should be recorded which versions of Office products are installed in the institution and in which configuration they are installed. Using different versions of Office products can cause compatibility issues when editing documents and make maintenance difficult. Documenting the rolled-out versions and configurations of Office products can be very helpful in quick troubleshooting. For the overview of the configurations, a documentation of the standard configuration can be created (for example, in the operating or installation manual of the Office products). So only deviations from the standard configuration have to be documented separately. Each time you change the default or default configuration, the documentation should be customized. If a configuration is used that differs from the standard configuration, the deviating configuration, the reason for it and the workstation on which the deviating configuration exists should be documented.
 
 Regular checks should be carried out to verify that the versions used correspond to the officially released standard version of the institution.
 
-The specific design of the inventory management and controls depends on the size of the installations and the size of the institution. For example, for smaller organizations with fewer Office product installations, simple lists that are manually sampled against the actual installations of Office products can be sufficient. In larger institutions an inventory management software makes sense, with which it is possible to carry out automated checks of the versions used.
+The specific design of the inventory management and controls depends on the size of the installations and the size of the institution. For example, for smaller organizations with fewer Office product installations, simple lists that are manually sampled against the actual installations of Office products can be sufficient. In larger institutions, an inventory management software makes sense, with which it is possible to carry out automated checks of the versions used.
 
 #### APP.1.1.M9 Eliminate residual information before sharing documents [User]
 
@@ -203,7 +207,7 @@ Handling residual information in Office documents should be part of the user tra
 #### APP.1.1.M10 End User Software Development [User]
 In Office documents, among other things, with macros in documents or calculations and cell references in spreadsheets, extensive and complex program logic can be implemented. There is a risk that such Office documents are always developed by users in specialist departments as tools, but neither a comprehensible documentation is created, nor functional tests are performed. In the worst case, self-developed macros or programs based on Office applications become indispensable tools in the department, but can no longer be maintained or even contain undetected errors.
 
-To prevent this, management should decide to what extent such software developments are permitted by the end users in the institution. The decision should include the protection needs of the data to be processed. So it may make sense to define a protection requirement limit up to which the data can be processed in self-development. If the protection requirement of the data exceeds this limit, in-house developments must be migrated to solutions managed centrally by the IT operation.
+To prevent this, management should decide to what extent such software developments are permitted by end users in the institution. The decision should include the protection needs of the data to be processed. So it may make sense to define a protection requirement limit up to which the data can be processed in self-development. If the protection requirement of the data exceeds this limit, in-house developments must be migrated to solutions managed centrally by the IT operation.
 
 If in-house developments are allowed in principle, it should be defined how they are to be documented and tested and which quality requirements apply to in-house developments in the form of office documents or tools. For this purpose, it is advisable to record the in-house developments per department in a catalog or a list and to name a responsible person and representative for each application / office tool. This person responsible is responsible for the adherence to the quality requirements as well as care, documentation and testing of his tools. For more information about Office product testing, see APP.1.1.M6 Testing New Versions of Office Products.
 
@@ -216,25 +220,25 @@ Many office product can be customized with extensions to the needs of the instit
 * If possible check the checksums or the signatures of the extensions during the installation
 * Patch management of the extensions
 * Documentation of the configuration of the extensions
-* Testing the extensions for compatibility with the deployed versions of the Office products
+* Testing the extensions for compatibility with the deployed versions of Office products
 Special focus is on testing the extensions for compatibility with the version used. It should be noted that the development cycles of Office products and their extensions differ, so new versions of the extensions may appear much more frequently than there are new versions of the Office products.
 
-Extensions testing should be performed on isolated test systems, as for the Office products themselves, based on clearly documented test procedures with result documentation. Follow the instructions for testing the software from APP.1.1.M6 Testing new versions of Office products.
+Extensions testing should be performed on isolated test systems, as for the Office products, based on clearly documented test procedures with result documentation. Follow the instructions for testing the software from APP.1.1.M6 Testing new versions of Office products.
 
 In Microsoft Office, it is possible to allow only signed extensions (add-ins) from trusted publishers. This function can be activated in the security center. The function can be found under * File | Options | Security Center | Settings for the security center ... | Add-ins *.
 
 #### APP.1.1.M12 Waiver of Cloud Storage [User]
-Some Office products incorporate features that make it possible to store, synchronize and share documents directly online. These features can be comfortable for the home user, but more dangerous than good for business use. For example, sensitive data can be inadvertently published if the feature is used sparingly.
+Some Office products incorporate features that make it possible to store, synchronize and share documents directly online. These features can be comfortable for the home user, but more dangerous than good for business use. For example, sensitive data may be inadvertently published if the feature is used sparingly.
 
 All features of Office cloud document storage products should therefore be disabled.
 
-The need to share and collaborate on documents should not be completely ignored. This usually results in users helping themselves and using unreleased software or unauthorized cloud solutions. Therefore, in training, users should be advised of the institution's ability to back up documents, share data with external parties, and use cloud services. For example, to share documents with third parties for review or editing, appropriate collaboration platforms should be used which have security features such as encrypted data storage and distribution and a suitable user and rights management system.
+The need to share and collaborate on documents should not be completely ignored. This usually results in users helping themselves and using unreleased software or unauthorized cloud solutions. Therefore, in training, users should be advised of the institution's ability to back up documents, share data with external parties, and use cloud services. For example, to share documents with third parties for review or editing, appropriate collaboration platforms should be used that have security features such as encrypted data storage and distribution and a suitable user and rights management system.
 
 Microsoft Office 2013 integrates the SkyDrive cloud storage option. To disable them, make sure that the component "Microsoft SkyDrive Pro" is disabled in the installation options during installation. In addition, under * File | Options | Save * the items * "Do not show backstage when opening or saving files" * and "* Save to computer by default" *. The item * "Show additional storage locations, even if a login is required" * should be disabled. Cloud storage can also be disabled through group policy. The option "* Show SkyDrive Sign In *" in * User Configuration | Administrative Templates | Microsoft Office 2013 | Miscellaneous * to be set to "* Disabled *".
 
 #### APP.1.1.M13 Using Viewer Functions [User]
 
-Documents from potentially insecure sources, such as the Internet or e-mail, can contain malicious software that runs on opening. These can be both macros, as well as exploiting code of vulnerabilities of the used Office product versions. To reduce this risk, viewers should be used.
+Documents from potentially insecure sources, such as the Internet or e-mail, can contain malicious software that runs when it is opened. These can be both macros, as well as exploiting code of vulnerabilities of the used Office product versions. To reduce this risk, viewers should be used.
 
 On the one hand, these may be separate applications designed specifically for the sole purpose of displaying Office documents. However, many Office products also include a so-called protected mode, in which only a small portion of the functionality of the Office product is enabled.
 
@@ -253,7 +257,7 @@ In the following, some such security mechanisms are presented using the example 
 
  ** Protection of PDF documents **
 
-With Adobe Acrobat, the most common application for creating and editing PDF files, it is possible to assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption with AES provided. Care should be taken to encrypt at least 128 bits, otherwise the document protection can easily be undone.
+With Adobe Acrobat, the most widely used application for creating and editing PDF files, you can assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption provided with AES. Care should be taken to encrypt at least 128 bits, otherwise the document protection can easily be undone.
 
 Among other things, the following attributes can be restricted via the security attributes:
 
@@ -267,7 +271,7 @@ Thus, the rights can be very easily limited, so that no one can cut and paste th
 
 Unfortunately, this only provides rudimentary protection, since PDF files (depending on the version of the program they were created with) can also be opened with programs that ignore these security attributes. As long as z. If, for example, printing is allowed, the document can even be converted back into a PDF file at any time without any restrictions.
 
-PDF security policies can be created. Any user can create these for themselves or use security policies prescribed by the institution, which requires an Adobe Policy Server.
+PDF security policies can be created. Any user can create these for themselves or use security policies specified by the institution, which requires an Adobe Policy Server.
 
 ### 2.3 Measures for increased protection requirements
 
@@ -278,9 +282,9 @@ The following are proposed measures that go beyond the state of the art level of
 Increased demands on the authenticity, integrity and confidentiality of Office documents should use digital signatures to ensure authenticity and integrity. In addition, the documents should be encrypted to ensure confidentiality. Crucial to the security of the signature and encryption method is the quality of the algorithm used and the key selection.
 
  ** High integrity requirements: **
-If high demands are made on the integrity of Office documents, for example to guarantee non-repudiation, digital signatures can be used. When using digital signatures that are embedded in the Office documents, it should be noted that the method used for the crypto concept (see module CON.1 Crypto concept) fits the institution. It may be necessary to extend the crypto concept with the method for signing Office documents. As a rule, an institution-wide key management must be established in order to make meaningful use of the signature functions. In addition, if users work outside of the institution with the signed documents, it must also be noted that the solution used implemented an established standard that can be used easily by other institutions.
+If high demands are made on the integrity of Office documents, for example to guarantee non-repudiation, digital signatures can be used. When using digital signatures that are embedded in the Office documents, it should be noted that the method used for the crypto concept (see module CON.1 Crypto concept) fits the institution. It may be necessary to extend the crypto concept with the method for signing Office documents. As a rule, an institution-wide key management must be established in order to make meaningful use of the signature functions. In addition, if users work outside of the institution with the signed documents, it must also be noted that the solution used implements an established standard that can be easily used by other institutions.
 
-In Microsoft Office, documents can be signed with a built-in function. This can be found under * File | Information | Protect document | Add digital signature *. This assigns the document a digital signature that can be checked when opened in Microsoft Office. In addition, it is possible to insert a signature field visible in the document. This is about * insert | Signature line * possible. To sign the document, the signer must insert his signature by right-clicking on the respective signature line in the context menu at the point * "Sign ..." *.
+In Microsoft Office, documents can be signed with a built-in function. This can be found under * File | Information | Protect document | Add digital signature *. This assigns the document a digital signature that can be checked when opened in Microsoft Office. In addition, it is possible to insert a signature field visible in the document. This is about * insert | Signature line * possible. To sign the document, the signatory must insert his signature by right-clicking on the respective signature line in the context menu at the point * "Sign ..." *.
 
 In LibreOffice it is also possible to digitally sign a document. Here you can find the function under * File | Digital signatures *. The digital signatures are created according to the XML Signature specification and embedded in the LibreOffice documents.
 
@@ -290,7 +294,7 @@ Office documents with high confidentiality requirements should be encrypted duri
 
 Microsoft Office documents can be accessed via the function * File | Information | Protect document | Encrypt with password * to be encrypted. Microsoft Office has been using AES with a key length of 128 bits in CBC mode since version 2007. By default, versions prior to Microsoft Office 2007 use weaker algorithms with shorter key lengths. The built-in encryption feature of these versions should therefore not be used.
 
-LibreOffice documents can be accessed via the function * File | Properties | Security | Protect * to be encrypted. Alternatively, the option "Save with password" can be checked in the Save dialog box. LibreOffice uses AES with a key length of 256 bits in CBC mode by default in the current version. Previous versions also used Blowfish and AES with key lengths of 128 and 192 bits.
+LibreOffice documents can be accessed via the function * File | Properties | Security | Protect * to be encrypted. Alternatively, the option "Save with password" can be set in the Save dialog box. In the current version, LibreOffice uses AES with a key length of 256 bits in CBC mode by default. Previous versions also used Blowfish and AES with key lengths of 128 and 192 bits.
 
 #### APP.1.1.M16 Integrity check of documents (I)
 Documents that require a high degree of integrity should be protected during transmission using checksums (for example, CRC, MD5 hash, or SHA hash) or digital signatures (see action APP.5.2.M15 Using encryption and digital signatures). It is important to note that only digital signatures reliably detect intentional changes.

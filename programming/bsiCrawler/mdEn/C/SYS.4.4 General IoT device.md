@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -7,7 +11,7 @@ In this module, devices with functions from the field of Internet of Things (IoT
 
 IoT devices can be present in institutions because they are brought by employees or external, for. For example, smartwatches or wearables. In many institutions but also IoT devices are procured and operated, z. For example, devices such as fire, gas, and other alarms, coffee machines, or building control elements such as cameras and HVAC (Heating, Ventilation, and Air Conditioning).
 
-In general, a distinction can be made between directly addressable IoT devices and IoT devices that require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
+In general, a distinction can be made between directly addressable IoT devices and IoT devices, which require a central control unit. Directly addressable devices are usually connected to a data network with their own IP address and can act autonomously or managed by a central control unit. But there are also IoT devices that only communicate directly with control units, eg. B. over wireless networks such as Bluetooth or ZigBee, and thus not directly connected to data networks. The range of these radio links can, if provided, be increased by a separate, meshed network, with each device establishing a radio link with each device.
 
 ### 1.2 Objective
 
@@ -43,7 +47,7 @@ LAN's built-in IoT devices often connect to the Internet on their own by configu
 
 If IoT devices are not regularly patched, known vulnerabilities remain open and can be exploited for large-scale attacks. One target of an attack could be to integrate the IoT devices into a botnet. In this case, they could be used, for example, to perform Distributed Denial of Service (DDoS) attacks and to limit the availability of services.
 
-Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet automatically scanned the Internet for additional devices to infect them with malware and add them to the botnet.
+Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet independently scanned the Internet for other devices to infect them with malware and add them to the botnet.
 
 ### 2 4 espionage attacks using backdoors in IoT devices
 
@@ -54,7 +58,7 @@ At the end of September 2016, it became known that some models of surveillance c
 
 The following are specific requirements for the IoT area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -127,7 +131,7 @@ If this is not possible on the device itself, unnecessary services should be res
 Before IoT devices are used in productive operation and before they are connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be documented. For deployment clearance, the installation and configuration documentation and the functionality of the IoT devices SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
 
 #### SYS.4.4.A15 Restrictive rights assignment
-The access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible on the IoT devices themselves, you should consider to regulate this on the network side.
+The access rights to IoT devices SHOULD be assigned as restrictively as possible. If this is not possible via the IoT devices themselves, it should be considered to regulate this on the network side.
 
 #### SYS.4.4.A16 Eliminate malware on IoT devices
 
@@ -153,11 +157,11 @@ When decommissioning IoT devices, make sure that no important data that might be
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### SYS.4.4.A21 Environment and Power Supply [Information Security Officer (ISB), Home Automation] (I)
+#### SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
 
 It should be clarified whether IoT devices may be operated in the envisaged operating environment (protection requirements of other systems, data protection). IoT devices SHOULD be protected from theft, destruction and manipulation in the environment of use.
 
-It should be clarified if an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
+It should be clarified whether an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
 
 When operating IoT devices with batteries, the regular function test and replacement of the batteries SHOULD be regulated.
 

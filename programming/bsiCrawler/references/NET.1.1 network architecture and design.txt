@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 #### NET.1.1.A2 Documentation of the network [IT operation]
 #### NET.1.1.A3 requirements specification for the network

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -7,7 +11,7 @@ The use of IT for task management requires that machine data processing work as 
 
 Software can be tested at different points in the life cycle of a software. Thus, software tests may already be necessary during development, before release for productive operation or in the course of patch and change management. The software tests and releases are to be carried out for self-development as well as for the use of standard software.
 
-This module describes the test and release process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
+This module describes the test and approval process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
 
 ### 1.2 Objective
 
@@ -15,7 +19,7 @@ By implementing this module, the institution ensures that the software used meet
 
 ### 1.3 Delimitation
 
-While the module CON.3 * Software Development * covers the software development process and the software tests that are required during the development process, this module describes the special requirements that are placed on test and release management. This test and release management does not exclusively refer to self-developed or customer-supplied software, but also to the testing and release of CON.4 * selection and use of state-of-the-art software * and APP.1.1 * Office products *.
+While the module CON.3 * Software Development * covers the software development process and the software tests that are required during the development process, this module describes the special requirements that are placed on test and release management. This test and release management does not exclusively refer to self-developed or customer-supplied software, but also to the testing and release of CON.4 * Selection and use of state-of-the-art software * and APP.1.1 * Office products *.
 
 Different technical methods are used for the software tests. The procedure for penetration tests is described in more detail in the module DER.3.3 * Penetration Tests *.
 
@@ -35,11 +39,11 @@ It is often assumed that trained developers and software testers have sufficient
 
 ### 2 3 Software test with productive data
 
-Software tests with productive data or in productive operation are necessary, because only with the productive data can the function and the performance of the product be assessed. Often, developers also have a different view of the product being developed, for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
+Software tests with productive data or in productive operation are necessary, because only with the productive data can the function and the performance of the product be assessed. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
 
 Although software tests with productive data are necessary, this can lead to security problems. In particular confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
 
-Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" productive data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
+Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" production data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
 
 ### 2 4 Missing or inadequate test procedure
 
@@ -57,13 +61,13 @@ A software release can usually be issued once all tests have been performed and 
 
 ### 2 7 Missing or inadequate documentation of the approval criteria
 
-If approval criteria are not clearly communicated, this may result in the release being given prematurely or not being released, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
+If approval criteria are not clearly communicated, it may result in premature release or no release, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
 
 3 requirements
 ---------------
 The following are specific requirements for software testing and clearance. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 

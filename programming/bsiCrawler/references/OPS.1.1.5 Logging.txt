@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
 #### OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
 #### OPS.1.1.5.A3 Configuration of logging at system and network level

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,9 +17,9 @@ The objective of this module is to protect information and processes that are pr
 
 ### 1.3 Delimitation
 
-The block Windows Server 2012 (R2) is applicable to all target objects operating under the operating system Microsoft Windows Server 2012 (R2). It specifies and complements the aspects addressed in the SYS.1.1 General Server building block to specifics of Windows Server 2012 (R2) without repeating the requirements of the APP.2.2 Active Directory building block.
+The block Windows Server 2012 (R2) is to be applied to all target objects operating under the operating system Microsoft Windows Server 2012 (R2). It specifies and complements the aspects addressed in the SYS.1.1 General Server building block to specifics of Windows Server 2012 (R2) without repeating the requirements of the APP.2.2 Active Directory building block.
 
-This building block assumes default integration with an Active Directory domain, as is common in businesses and government agencies. Special features of stand-alone systems are mentioned only occasionally, where the differences appeared to be particularly relevant.
+This building block assumes default integration into an Active Directory domain, as is common in businesses and government agencies. Special features of stand-alone systems are mentioned only occasionally, where the differences appeared to be particularly relevant.
 
 Security requirements of possible server roles and functions such as file server (APP.3.3 file server), web server (APP.3.2 web server) or Exchange (APP.5.2 Exchange / Outlook) are the subject of our own components, just like the topic of virtualization (SYS.1.5 server virtualization) , This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
 
@@ -26,16 +30,16 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient Planning for Windows Server 2012 (R2)
 
-Windows Server 2012 (R2) is a complex, modern operating system that has a large number of features and configuration options. An example is the various powerful installable server roles. Each additional feature increases the attack surface and increases the likelihood of vulnerabilities and misconfigurations. There are also many degrees of freedom in the integration into the domain and the networking with other systems and services. Although modern Windows versions bring good default settings in many areas, the basic configuration is still not the safest in any case. Inadequate planning can lead to a large number of attack vectors, which attackers can easily exploit. In addition, if key decisions are not made prior to the installation, an insecure and undefined condition begins that is difficult to resolve.
+Windows Server 2012 (R2) is a complex, modern operating system that has a large number of features and configuration options. An example is the various powerful installable server roles. Each additional feature increases the attack surface and increases the likelihood of vulnerabilities and misconfigurations. Integration into the domain and networking with other systems and services are also very many degrees of freedom. Although modern Windows versions bring good default settings in many areas, the basic configuration is still not the safest in any case. Inadequate planning can lead to a large number of attack vectors, which attackers can easily exploit. In addition, if key decisions are not made prior to the installation, an insecure and undefined condition begins that is difficult to resolve.
 
 ### 2 2 Careless cloud use
-Windows Server 2012 (R2) offers the ability to use cloud services in various places without having to install any third-party software. These include, for example, Microsoft Azure Online Backup or the online storage of BitLocker recovery keys. While cloud services can offer advantages in terms of availability in particular, careless use can result in risks to confidentiality as well as dependence on service providers. Data on cloud services can thus be put in the hands of unauthorized third parties, whether attackers or state actors. If a cloud service is discontinued by the provider, this can have a significant impact on your own business processes.
+Windows Server 2012 (R2) offers the ability to use cloud services in various places without having to install any third-party software. These include, for example, Microsoft Azure Online Backup or the online storage of BitLocker recovery keys. While cloud services can offer benefits in terms of availability in particular, careless use poses risks to confidentiality and dependence on service providers. Data on cloud services can thus be put in the hands of unauthorized third parties, whether attackers or state actors. If a cloud service is discontinued by the provider, this can have a significant impact on your own business processes.
 
 ### 2 3 Incorrect administration of Windows servers
 
-Windows Server 2012 and Windows Server 2012 R2 have many new security-related features compared to the previous versions. For other features, subfunctions, parameters, or default configurations have changed. If the administrators are not sufficiently trained in the peculiarities of the systems, then configuration errors and malfunctions that could affect not only the functionality but also the security.
+Windows Server 2012 and Windows Server 2012 R2 have many new security-related features compared to the previous versions. For other features, subfunctions, parameters, or default configurations have changed. If the administrators are not adequately trained in the special features of the systems, configuration errors and malfunctions that could impair safety as well as functionality are at risk.
 
-There is a particular danger of inconsistent Windows server security settings (eg in the case of (SMB, RPC or LDAP).) If the configuration is not systematically and centrally planned, documented, checked and maintained, a so-called configuration drift threatens: the more the Concrete configurations of functionally similar systems move unfounded and undocumented, the more difficult it is to maintain an overview of the status quo and to maintain security holistically and consistently.
+There is a particular danger of inconsistent Windows server security settings (eg in the case of (SMB, RPC or LDAP).) If the configuration is not systematically and centrally planned, documented, checked and maintained, a so-called configuration drift threatens: the more Concrete configurations of functionally similar systems move unfounded and undocumented, the more difficult it is to maintain an overview of the status quo and to maintain security holistically and consistently.
 
 ### 2 4 Improper use of Group Policy (GPOs)
 
@@ -58,14 +62,14 @@ Regular work under standard user rights for administrators is now good practice.
 
 ### 2 9 Compromise of remote access
 
-Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. In many cases, other IT systems connected to the server can also be compromised.
+Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. Often, other IT systems connected to the server can also be compromised.
 
 3 requirements
 ---------------
 
 The following are specific requirements for protecting Windows Server 2012 (R2). Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 

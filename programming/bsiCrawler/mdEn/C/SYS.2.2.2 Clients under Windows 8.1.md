@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,12 +15,12 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described safety requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the module [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
+This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described security requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the area *** *** Windows 8.1:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​*** *** Windows 8.1:
 
 ### 2 1 Malware targeted to Windows
 
@@ -24,14 +28,14 @@ Malicious programs provide an attacker with extensive communication and control 
 
 ### 2 2 Software vulnerabilities or errors
 
-Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, wrong management decisions, and delays in business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read out or manipulate data.
+Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read or manipulate data.
 
 ### 2 3 Integrated cloud functionalities
 Windows 8.1 includes many features that store and synchronize data in Microsoft's cloud services. There is a risk of unconsciously (or at least carelessly) using cloud services for possibly sensitive or personal data. At the same time, data protection laws may also be violated if data is stored by third parties, especially abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up there. Thus, data of the company can be unintentionally synchronized to the employees' private devices. As another example, Windows 8 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud. This puts critical cryptographic secrets in the hands of third parties.
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
-Software that was successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
+Software that has been successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
 
 ### 2 5 Incorrect administration or use of devices and systems
 
@@ -43,13 +47,13 @@ Improper or improper use of devices, systems, and applications can also affect s
 ---------------
 The following are specific requirements for the Windows 8.1 area. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### SYS.2.2.2.A1 Appropriate selection of a Windows 8.1 version
 
-The functional scope of a Windows version MUST be checked prior to procurement for operational capability and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
+The functional scope of a Windows version MUST be checked before the procurement on the operational capability and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
 
 #### SYS.2.2.2.A2 Definition of a registration procedure
 
@@ -65,7 +69,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.2.2.2.A4 Procurement of Windows 8.1
 
-The requirements according to the Windows Hardware Certification Requirements SHOULD be taken into account when purchasing Windows 8.1 or the corresponding hardware for the Windows 8.1 system. Furthermore, the systems to be procured should have a firmware configuration interface for UEFI SecureBoot and for the TPM (if any) allowing for control by the owner. The Windows 8.1 procurement process SHOULD include the selection of a suitable license model.
+The requirements according to the Windows Hardware Certification Requirements SHOULD be taken into account when purchasing Windows 8.1 or the corresponding hardware for the Windows 8.1 system. Furthermore, the systems to be procured should have a firmware configuration interface for UEFI SecureBoot and for the TPM (if any) that allows for control by the owner. The Windows 8.1 procurement process SHOULD include the selection of a suitable license model.
 
 #### SYS.2.2.2.A5 Local Security Policy
 
@@ -79,7 +83,7 @@ In addition to authorizations on the local file system, the authorization and ac
 
 #### SYS.2.2.2.A7 Using the Windows User Account Control UAC
 
-To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the setting of UAC SHOULD be balanced between usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
+To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
 #### SYS.2.2.2.A8 Using the homegroup feature [User]
 
 Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in handling homegroup permissions.
@@ -110,7 +114,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
 
-Applications in user writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
+Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
 AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
 For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
@@ -127,7 +131,7 @@ If the Windows PowerShell (WPS) is not needed, it SHOULD be uninstalled. With Wi
 
 #### SYS.2.2.2.A17 Safe Use of the Maintenance Center (CIA)
 
-The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows backup," "User Experience Utility," and "Troubleshooting - other settings" below Windows 8.1 will be disabled.
+The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows Backup," "Ease of Use," and "Troubleshooting - other settings" below Windows 8.1 will be disabled.
 
 #### SYS.2.2.2.A18 Activation of the last-access timestamp (A)
 

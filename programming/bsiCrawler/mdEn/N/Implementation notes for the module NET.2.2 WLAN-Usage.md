@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -36,7 +40,7 @@ The following measures should be implemented as a priority:
 
 #### NET.2.2.M1 Creation of a user policy for WLAN [Head IT]
 
-In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key issues to make sure that the WLAN is safe. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
+In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the core issues to make sure that WLANs are safe. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
 
 * with which internal and external networks the WLAN clients may be connected,
 * Under what conditions you are allowed to log in to internal or external WLANs,
@@ -59,23 +63,23 @@ Today almost every employee is equipped with a mobile device and can connect to 
 
 Sensitization, especially of users who are allowed to access confidential information, should be practiced and supported by means of practical examples.
 
-A special hazard for the WLAN clients exists when public radio networks (so-called hotspots) are used. Hotspots often use no or only weak security mechanisms to give customers straightforward access. As a result, transmitted information can usually be easily intercepted. If hotspots are to be used for the dial-in to the institution or if confidential information is to be transmitted to them, users must be specifically trained in the use of hotspots and implement appropriate measures. For example, they must make sure that all connections are properly encrypted. Any suspicion of alerts or redirects to IT systems that are not part of the institution must be considered to be a security incident.
+A special hazard for the WLAN clients exists when public radio networks (so-called hotspots) are used. Hotspots often use no or only weak security mechanisms to give customers straightforward access. As a result, transmitted information can usually be easily intercepted. If hotspots are to be used for the dial-in to the institution or if confidential information is to be transmitted to them, the users must be specifically trained in the use of the hotspot and implement appropriate measures. For example, they must make sure that all connections are properly encrypted. Any suspicion of alerts or redirects to IT systems that are not part of the institution must be considered to be a security incident.
 
 It must be clear to users that using WLANs greatly enhances mobility, but it also carries risks as attackers may be out of the field of view or suspected spatial WLAN coverage.
 
 #### NET.2.2.M3 Securing WLAN Usage in Unsafe Environments [IT Operations]
-Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, railway stations and convention centers.
+Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, train stations and convention centers.
 
-Hotspots should always be seen as an insecure network, firstly because the level of security available there is difficult to assess from the outside, and secondly because most hotspots offer their services in the form of "shared networks". As a result, it is generally possible to access every other terminal in the network from each terminal. If the risk arising from the use of a hotspot can not be estimated, it may be considered that the use of hotspots should be completely prohibited by the WLAN security guideline.
+Hotspots should always be regarded as an insecure network, firstly because the level of security available there is difficult to assess from the outside, and secondly because most hotspots offer their services in the form of "shared networks". As a result, it is generally possible to access every other terminal in the network from each terminal. If the risk arising from the use of a hotspot can not be estimated, it may be considered that the use of hotspots should be completely prohibited by the WLAN security guideline.
 
 The operators of hotspots can do a lot for the security of the radio link and other services offered by them (see NET.2.3 * Operation of Hotspots *), but without the cooperation of the users a reasonable security can not be achieved. These include the following measures:
 
 * Every user of a hotspot should know his or her security requirements and decide whether or under which conditions he is allowed to use the hotspot.
 * Registration at the hotspot is usually via a web portal or via a web application. This must ensure the protection of the registration information. Authentication should always be encrypted.
-* WLANs that have been used sporadically should be removed by the users from the history. For this purpose, the identifier of the WLAN (SSID) is removed from the list. This prevents the device from unintentionally logging into the WLAN.
+* WLANs that were only sporadically used should be removed by the users from the history. For this purpose, the identifier of the WLAN (SSID) is removed from the list. This prevents the device from unintentionally logging into the WLAN.
 * If possible, special user accounts with secure basic configuration and restrictive rights should be created for the use of hotspots. Under no circumstances should a user with administrator rights log on to external WLANs from his client.
 * At the latest when financial, personal or other sensitive data such as credit card numbers, PINs, passwords or emails are to be transmitted, it must be ensured that all necessary security measures on the clients, especially encryption, are activated. An example of this would be the secure processing of e-mails via an HTTPS web interface. Confidential information may never be transmitted unencrypted over foreign networks.
-* Users can only access the institution's internal resources via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots) via VPNs. As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
+* Users can only access the institution's internal resources via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots). As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
 ### 2.2 Standard measures
 
 Together with the basic measures, the following measures correspond to the state of the art in the area of ​​"WLAN use".
@@ -87,7 +91,7 @@ If the WLAN behaves in an unintended manner (eg WLAN is not available for a long
 The Wi-Fi users should do the following:
 
 * You should back up your work, stop Wi-Fi access, and disable your client's Wi-Fi interface.
-* If error messages appear or the client did not behave normally, they should be documented by the users. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to pinpoint the cause and impact of the incident more quickly and take more targeted action.
+* If error messages appear or the client did not behave normally, they should be documented by the users. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to more quickly pinpoint the cause and impact of the incident and more effectively initiate countermeasures.
 * In addition, they should notify the IT operation via an appropriate escalation level.
 ### 2.3 Measures for increased protection requirements
 
@@ -166,7 +170,7 @@ Additional information on hazards and security measures in the area of ​​"WL
  [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
 
  
-* #### [TR03103] Technical Guidelines Secure Wireless LAN
+* #### [TR03103] Technical Guideline Secure Wireless LAN
 
   
 

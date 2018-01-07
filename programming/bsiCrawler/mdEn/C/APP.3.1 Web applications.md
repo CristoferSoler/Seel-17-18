@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -7,7 +11,7 @@ Web applications provide functions and dynamic content over the Internet protoco
 
 To run a web application, several IT system components are usually required. These typically include a web server to deliver data, an application server to run the actual application, and additional background systems attached as data sources across different interfaces (eg, database or directory service).
 
-Web applications are used in both public IT networks and corporate networks (intranets) to provide data and applications. Depending on the purpose of the web applications, they are typically used by users who need to authenticate in advance. Web applications must implement security mechanisms that protect the data and prevent its misuse. Typical security components or mechanisms are: authentication, authorization, input and output validation, session management, error handling, and logging.
+Web applications are used in both public IT networks and corporate networks (intranets) to provide data and applications. Depending on the purpose of the web applications, these are typically used by users who need to authenticate in advance. Web applications must implement security mechanisms that protect the data and prevent its misuse. Typical security components or mechanisms are: authentication, authorization, input and output validation, session management, error handling, and logging.
 
 ### 1.2 Objective
 
@@ -39,7 +43,7 @@ If errors occur during the operation of a web application, the z. B. restrict th
 
 ### 2 5 Inadequate logging of security-relevant events
 
-If security-relevant events are insufficiently logged by the Web application, they can not be traced at a later time and the cause can no longer be determined. Critical errors and attacks, such as unauthorized configuration changes to the Web application, go unnoticed and a vulnerability can then be difficult to resolve.
+If security-relevant events are insufficiently logged by the web application, they can not be traced at a later time and the cause can no longer be determined. Critical errors and attacks, such as unauthorized configuration changes to the Web application, go unnoticed and a vulnerability can then be difficult to resolve.
 
 ### 2 6 Disclosure of security-related information in web applications
 
@@ -73,18 +77,18 @@ To ensure that a valid session (session ID) was not inherited by an attacker, us
 
 If only a limited number of users are allowed to use the web application, an authorization component MUST be used to ensure that users can only perform actions for which they are authorized. Any access to protected content and features MUST be controlled before it is executed.
 
-All users MUST be assigned restrictive access rights properly. When employees get access rights to or change their web application, those in charge MUST check, confirm, and document it in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
+All users MUST be assigned restrictive access rights properly. If employees receive access rights to or change any of the web applications, those responsible MUST check, confirm, and document in a traceable way. The documentation of the granted access rights MUST always be up to date. Also, there must be a regular procedure to deprive users of access rights. Should it not be possible to assign access rights, an additional security product MUST be used for this purpose.
 All resources managed by the web application MUST be considered by the authorization component. Users MUST be server-side and centrally authorized on a trusted IT system. If the access control is faulty, requests MUST be rejected. Also, there must be an access control on URL calls and object references. Likewise, access to files must be restricted by the users with restrictive file system permissions, and secure handling of temporary files MUST be provided.
 
 #### APP.3.1.A3 Secure Session Management [Developer]
 
-Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
+Session IDs MUST be properly protected. They MUST be generated randomly (with sufficient entropy). If the web application's underlying framework can generate session IDs, then the framework's functionality MUST be used. If session IDs are managed and created using a framework, then the framework MUST be configured securely. Also, the session ID MUST be sufficiently protected when it is transmitted and stored on the client side.
 
 A web application MUST allow users to explicitly end an existing session. After the user has logged in, an existing session ID MUST be replaced with a new one. The duration of the session MUST be limited, eg For example, inactive sessions automatically become invalid after a certain time and a maximum validity period is given (timeout). After the session is invalid, all session data (both server-side and client-side) MUST be invalid and deleted.
 
 #### APP.3.1.A4 Controlled integration of data and content in web applications [developer]
 
-It MUST be ensured that a web application incorporates only intended data and content and delivers it to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, MUST ensure that a user can save files only in the specified path.
+It MUST be ensured that a web application incorporates only intended data and content and delivers it to the user. If a web application offers a file upload feature, this feature MUST be restricted (for example, to necessary file types). Also, access and execution rights MUST be set restrictive in this case. In addition, it MUST be ensured that a user can save files only in the specified path.
 
 The goals of the redirect feature of a web application MUST be sufficiently restricted so that users are redirected to trusted web pages only. If a user leaves the trust domain, he MUST be informed.
 
@@ -128,7 +132,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -155,13 +159,13 @@ The web application SHOULD NOT be administered from insecure networks. Administr
 #### APP.3.1.A14 Protection of confidential data [developer]
 
 Confidential data of a web application SHOULD be protected by secure, cryptographic algorithms. If such data is transmitted, for example, SSL / TLS encryption should be used. In addition, the HTTP post method SHOULD be used. In the case of connection errors SHOULD NOT change to an unencrypted channel on an encrypted channel.
-Also, the web application SHOULD guarantee by directives that client-side no sensitive data is cached. Furthermore, forms should not display confidential form data in plain text and should not be saved by the browser. Access data of the web application SHOULD be protected on the server side with cryptographic algorithms against unauthorized access (Salted Hash). Likewise, files with source code from the web application SHOULD NOT be retrievable. Also, web application configuration files SHOULD only be stored outside of the web root directory.
+Also, the web application SHOULD guarantee by directives that client-side no sensitive data is cached. Furthermore, forms should not display confidential form data in plain text and should not be saved by the browser. Access data of the web application SHOULD be protected on the server side with cryptographic algorithms against unauthorized access (Salted Hash). Likewise, files with source code of the web application SHOULD NOT be retrievable. Also, web application configuration files SHOULD only be stored outside of the web root directory.
 
 #### APP.3.1.A15 Verification of essential changes
 
 If important entries are to be changed, such as passwords and configurations, the entry SHOULD be re-verified by a password. Users SHOULD be notified of changes via communication paths outside the web application, for example by e-mail.
 
-#### APP.3.1.A16 Comprehensive input and output validation [Developer]
+#### APP.3.1.A16 Comprehensive Input and Output Validation [Developer]
 
 All data submitted to a web application SHOULD be treated as potentially dangerous and filtered accordingly. All input and output data as well as data streams and secondary data (eg session IDs) SHOULD be validated. On the server side, the data SHOULD be checked on a trustworthy IT system. Incorrect entries SHOULD NOT be treated automatically if possible (English * sanitizing *). However, if it is unavoidable, * SANitizing * SHOULD be implemented safely to prevent abuse.
 
@@ -177,7 +181,7 @@ Previously reserved resources SHOULD be released again during error handling. Al
 
 #### APP.3.1.A18 Control of log files
 
-For each web application, a concept SHOULD be created that determines how extensive the logging should be and how the data is to be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or another designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
+For each web application, a concept SHOULD be created to determine how extensive the logging should be and how the data should be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or another designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
 
 #### APP.3.1.A19 Protection against SQL injection
 
@@ -204,14 +208,14 @@ To complicate cross-site request forgery (CSFR) attacks, the web application SHO
 
 #### APP.3.1.A24 Preventing Blockage of Resources [Developer] (A)
 
-To protect against denial-of-service (DoS) attacks, resource intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.
+To protect against denial of service (DoS) attacks, resource-intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.
 
 4 Further Information
 ------------------------------
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the "Web Applications" area can be found in the following publications, among others:
+Further information on threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
 
 * #### [HILWEB] Help for using the web application module
 

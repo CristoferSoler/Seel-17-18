@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.4.3.A1 Creating a Security Policy for Database Systems [Information Security Officer (ISB)]
 #### APP.4.3.A2 Installation of the database management system
 #### APP.4.3.A3 Basic hardening of the database management system
@@ -10,7 +10,7 @@
 #### APP.4.3.A9 Data backup of a database system
 ### 3.2 Standard requirements
 #### APP.4.3.A10 Selection of suitable database management systems
-#### APP.4.3.A11 Sufficient dimensioning of the hardware [Head of IT, specialist responsible]
+#### APP.4.3.A11 Sufficient hardware dimensioning [Head of IT, specialist responsible]
 #### APP.4.3.A12 Unified Configuration Standard of Database Management Systems [Head of IT, Information Security Officer (ISB)]
 #### APP.4.3.A13 Restrictive handling of database links
 #### APP.4.3.A14 Checking the backup of a database system

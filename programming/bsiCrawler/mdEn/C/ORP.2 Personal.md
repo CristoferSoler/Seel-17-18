@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-The staff of a company or authority forms the basis for its or its success or failure. At the same time, employees are an integral part of information security. Experience shows that even the most complex safety precautions without the right behavior of the employees are ineffective. Awareness of what information security means to the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are therefore essential.
+The staff of a company or authority forms the basis for its or its success or failure. At the same time, employees are an integral part of information security. Experience shows that even the most complex safety precautions without the correct behavior of the employees are ineffective. Awareness of what information security means to the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are therefore essential.
 
 ### 1.2 Objective
 
@@ -36,14 +40,14 @@ The establishment of regulations alone does not ensure their compliance and trou
 
 ### 2 5 Misconduct
 
-Misbehavior of any type of person may interfere with the confidentiality, integrity or availability of information, business processes or IT systems. Depending on the need for protection of the information or the systems and depending on the authorizations of the polluters, the damage may be minor or critical.
+Misbehavior of any type of person may interfere with the confidentiality, integrity or availability of information, business processes or IT systems. Depending on the need for protection of the information or the systems and depending on the authorizations of the polluters, the damages may be minor or critical.
 
 ### 2 6 Social Engineering
 
 In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.
 ### 2 7 Carelessness in handling information
 
-Often, it can be observed that while a large number of organizational and technical security procedures exist in institutions, these are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
+Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
 
 ### 2 8 Unauthorized use of own IT systems
 
@@ -55,7 +59,7 @@ Social networks are very successful as platforms. However, in addition to the va
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
-Outside and inside perpetrators can try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
+Outside and inside perpetrators may try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
 
 3 requirements
 ---------------
@@ -85,11 +89,11 @@ Furthermore, emergency and other schedules MUST be updated. All affected entitie
 
 #### ORP.2.A3 Representation Rules [Supervisors]
 
-Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and practicable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. In this case, the simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to appoint or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external staff can be used for the substitution case.
+Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and practicable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. In this case, the simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to name or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external forces can be used for the substitution case.
 
 #### ORP.2.A4 Regulations for the use of external personnel
 
-In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated like visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be instructed in their tasks similar to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
+In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated as visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
 
 #### ORP.2.A5 Confidentiality agreements for the use of outside personnel
 
@@ -112,7 +116,7 @@ The duties and responsibilities of employees SHOULD be documented in an appropri
 
 #### ORP.2.A9 Training of employees
 
-Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to further develop within the framework of their field of activity.
+Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
 
 All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD be trained separately and used within the area of ​​activity as multipliers for the remaining employees.
 
@@ -125,7 +129,7 @@ From the point of view of information security, measures SHOULD be taken to ensu
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.2.A11 Safety Culture Analysis (CIA)
-The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
+The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Building on this, SHOULD investigate where personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 
@@ -140,7 +144,7 @@ In the high-security area, an additional security check should be performed to t
 
 ### 4.1 Literature
 
-Further information on hazards and safety measures in the area of ​​"personnel" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"Personnel" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

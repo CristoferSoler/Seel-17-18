@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,13 +9,13 @@
 
 A machine is a technical device that performs automated tasks. A typical example of this is a machine tool that processes products in a predefined manner. It is controlled by an IT system using a program that specifies the appropriate work instructions and steps. Such machines are also referred to as machines.
 
-In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. In order for the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
+In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. To enable the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
 
 Often mechanical engineering also offers remote maintenance services to detect early wear or to react quickly in problem situations.
 
 ### 1.2 Objective
 
-The module describes how electronically controlled, semi- or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, design, special purpose and location.
+The module describes how electronically controlled, semi-automatic or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, type of construction, special purpose and location.
 
 ### 1.3 Delimitation
 

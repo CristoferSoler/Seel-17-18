@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,7 +17,7 @@ This module describes the specific threats for a file server and the resulting r
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server module and in the corresponding operating system-specific components of the IT systems layer. For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
+This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server block and in the corresponding operating system-specific components of the IT systems layer, for example: For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
 
 2 risk situation
 -----------------
@@ -29,11 +33,11 @@ If a file server fails, the entire information network can be affected and thus 
 If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
 
 ### 2 3 Inadequate review of dropped files
-If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can quickly spread throughout the institution.
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
-If access authorizations and approvals are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
+If access authorizations and releases are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
 
 ### 2 5 Unstructured data management
 
@@ -41,7 +45,7 @@ If the storage structure is not specified or the employees do not stick to it, d
 
 ### 2 6 Unsuitable installation of the file server
 
-If file servers are set up in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
+If file servers are deployed in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
 
 ### 2 7 Lack of or insufficient data protection concept
 
@@ -52,11 +56,11 @@ If a file server fails completely, individual components are defective or an emp
 
 The following are specific requirements for the Fileserver area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
-#### APP.3.3.A1 Suitable installation [Building services]
+#### APP.3.3.A1 Suitable installation [building services]
 
 File servers MUST NOT be operated in offices or as workstations. They MUST be placed in locations to which only authorized persons have access. In addition, attention must be paid to a vibration-free or vibration-free environment of the file server. Even file servers with additional functions, such as NAS systems combined with a WLAN access point or with direct connections for memory cards, MUST be set up suitably. Furthermore, a safe power supply and according to the manufacturer's recommended ambient temperature and humidity MUST be ensured.
 
@@ -80,7 +84,7 @@ All data stored on the file server MUST be backed up regularly. For this, a data
 
 #### APP.3.3.A5 Restrictive allocation of rights
 
-Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can only access the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
+Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can access only the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
 
 It MUST be checked on a regular basis to see if the access permissions are still up to date and comply with the security policy. In addition, there must be a defined process to re-establish, change, or revoke permissions. All access rights MUST be traceable documented.
 
@@ -118,7 +122,7 @@ The results SHOULD be sufficiently documented. Discovered shortcomings SHOULD ca
 
 #### APP.3.3.A11 Use of Quotas
 
-It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only grant write access to the system administrator.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -126,11 +130,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.3.A12 Encryption of the data (CI)
 
-All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It SHOULD be made sure that the virus protection can check the encrypted files for malware. Cryptographic bowl SHOULD be safely generated and kept separate from the data (see also CON.1 crypto concept).
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malware. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
-For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or independent sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
 #### APP.3.3.A14 Use of Error Correction Codes (I)
 In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.

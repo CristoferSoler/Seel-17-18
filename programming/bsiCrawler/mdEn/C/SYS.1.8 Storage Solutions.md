@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -19,7 +23,7 @@ The aim of this module is to show how centralized storage solutions can be plann
 
 ### 1.3 Delimitation
 
-In this module storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
+In this module, storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
 
 If external service providers are used to run a storage solution, the requirements of the module OPS.2.1 * Outsourcing for Customers * must be considered separately.
 
@@ -41,11 +45,11 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This should avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
-Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data he does not have permission to. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
+Devices in an FC SAN are managed and assigned internally via World Wide Names (WWNs). They are somewhat the same as the MAC addresses of Ethernet network adapters. Using programs provided by the manufacturer of the Host Bus Adapter (HBA), the WWN of an HBA can be changed. This allows an attacker to access data for which he has no authorization. The manipulation of WWNs, also known as WWN spoofing, poses a considerable potential for danger for an institution. Particularly in connection with multi-tenant storage systems, unauthorized persons can access the information of other clients.
 
 ### 2 6 Overcoming the logical network separation
 
@@ -57,7 +61,7 @@ Complex, network-based storage solutions often consist of many components (such 
 
 ### 2 8 Obtaining Physical Access to SAN Switches
 
-If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be accessing the distributed zoning database to change it so that it can access the storage systems.
+If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
 
 3 requirements
 ---------------
@@ -114,7 +118,7 @@ A REQUIREMENT analysis should be carried out, which among other things considers
 * Integration into existing processes.
 #### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
 
-The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Similarly, the decision for the selection of a storage solution should be documented comprehensible.
+The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Likewise, the decision to select a storage solution SHOULD be documented comprehensible.
 
 #### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
 
@@ -126,7 +130,7 @@ It SHOULD be created an operating manual. It SHOULD document all the necessary r
 
 #### SYS.1.8.A11 Safe operation of a storage solution
 
-The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and coordinated with all involved specialists.
+The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and agreed with all involved specialist responsible persons.
 
 #### SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
 
@@ -147,7 +151,7 @@ A SAN SHOULD be segmented. A concept SHOULD be developed that maps the SAN resou
 
 It SHOULD be documented and comprehensibly documented, which requirements the institution places on the multi-client capability of a storage solution. The storage solutions used SHOULD meet these documented requirements.
 
-In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to act with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
+In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to work with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
 
 When using IP or iSCSI, the clients SHOULD be separated by segmentation in the network. If Fiber Channel is used, SHOULD be separated using VSANs and soft zoning.
 
@@ -172,7 +176,7 @@ If entire storage solutions or individual components of a storage solution are n
 #### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
 It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
 
-It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely deleted.
+It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
 
 ### 3.3 Requirements for increased protection requirements
 

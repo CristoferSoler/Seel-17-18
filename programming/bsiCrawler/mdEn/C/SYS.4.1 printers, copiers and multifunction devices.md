@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Although a great deal of information is stored digitally, paper documents can often be dispensed with. Many people also prefer to read or edit documents on paper rather than on the screen. Printers, copiers and multifunction devices will therefore be indispensable tools that can be found in virtually every office.
+Although a great deal of information is stored digitally, paper documents can often be dispensed with. Also, many people prefer to read or edit documents on paper rather than on the screen. Printers, copiers and multifunction devices will therefore be indispensable tools that can be found in virtually every office.
 
 It is often not efficient to equip every single workstation with such a device. As a result, centralized network printers, copiers, or multifunction devices are often used to allow users to print, scan, or duplicate their documents. Since there are some drawbacks when jobs are sent from the workstation PC directly to a network printer, most institutions also use a central print server that accepts the jobs and distributes them among the available printers.
 
@@ -29,7 +33,7 @@ The following specific threats and vulnerabilities are of particular importance 
 Many printers, copiers, and MFPs require a sufficient amount of consumables for smooth, uninterrupted operation. If these consumables are missing or incorrectly used, the operation process can be severely disturbed. For example, improper ink can contaminate an inkjet printer and cause the printer to malfunction. In emergencies, the agency's ability to act can be severely impaired and high follow-up costs can arise, for example if important contracts can not be printed out.
 
 ### 2 2 Unauthorized access to printed documents
-Network printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for them to print on the device, they will eventually bridge the waiting time and see what other colleagues have printed out. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
+Network printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for their device to print, they may be able to bridge the waiting time and see what other colleagues have printed. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
 
 Users often do not look for causes if they do not find their printouts at the printer. Instead, they suspect IT problems and start a new print job, as they are used to the fact that with the hardware and software always problems and inexplicable phenomena occur. However, the printouts could have been taken by others as well. Likewise, it often happens that users have accidentally selected another printer on their workstation computer. Typically, users then look for their printouts on the wrong printer, can not find them, and simply start a new print job, this time on the default printer. As a result, many network printers find misprints that are not picked up.
 
@@ -66,7 +70,7 @@ Often, digital copiers or printers are only rented. After a predetermined period
 
 ### 2 9 Yellow Dots
 
-Certain printers and copiers print so-called "yellow dots" (or "machine identification codes", "tracking dots", "secret dots") on the paper, and these often undocumented watermarks can include the date and time as well as the serial number of the printer and are barely visible to the naked eye, so that an expression can be directly attributed to an institution or even a particular user and thus traced back to the author, as well as privacy issues, so unwanted information could leave the institution.
+Certain printers and copiers print so-called "yellow dots" (or "machine identification codes", "tracking dots", "secret dots") on the paper, and these often undocumented watermarks may include the date and time as well as the serial number of the printer and are barely visible to the naked eye, so that an expression can be directly attributed to an institution or even a particular user and thus traced back to the author, as well as privacy issues, so unwanted information could leave the institution.
 
 3 requirements
 ---------------
@@ -77,12 +81,12 @@ The following are specific requirements for printers, copiers, and multifunction
 
 The following requirements MUST be implemented as a priority:
 
-#### SYS.4.1.A1 Creation of a basic concept for the use of printers, copiers and multifunction devices [Head IT]
+#### SYS.4.1.A1 Creation of a basic concept for the use of printers, copiers and multifunctional devices [Head IT]
 Before procuring printers, copiers and multifunction devices, the people responsible MUST develop a basic concept for safe use. It must be governed by where the equipment may be installed, who may access it and how it should be protected from attack.
 
 #### SYS.4.1.A2 Suitable installation of printers, copiers and multifunction devices
 
-Printers, copiers, and multifunction devices SHOULD BE set up so that only authorized users have access to them. At a minimum, they SHOULD NOT be placed in areas where there are often outside parties, not near meeting, event or training rooms. In addition, users should be made aware that no confidential documents should be left on the devices.
+Printers, copiers and multifunction devices SHOULD BE set up so that only authorized users have access to them. At a minimum, they SHOULD NOT be placed in areas where there are often outside parties, not near meeting, event or training rooms. In addition, users should be made aware that no confidential documents should be left on the devices.
 
 #### SYS.4.1.A3 Regular update
 
@@ -94,7 +98,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.4.1.A4 Planning the Use of Printers, Copiers, and Multifunction Devices [Head of IT]
 
-Based on the concept from SYS.4.1.A1 Creation of a * basic concept for the use of printers, copiers and multifunctional devices * SHOULD specific security concepts be developed for the respective subcomponents. In it, for example, general questions SHOULD be regulated. For example: Should local or network printers be used? Who is allowed to use which functions? Which guidelines should there be? Furthermore, aspects SHOULD be regulated like
+Based on the concept from SYS.4.1.A1 Creation of a * basic concept for the use of printers, copiers and multifunction devices * SHOULD specific security concepts be developed for the respective subcomponents. In it, for example, general questions SHOULD be regulated. For example: Should local or network printers be used? Who is allowed to use which functions? Which guidelines should there be? Furthermore, aspects SHOULD be regulated like
 
 * Document access,
 * Patching the devices,
@@ -120,7 +124,7 @@ Printers, copiers, and multifunction devices rely on consumer goods such as pape
 
 #### SYS.4.1.A9 Logging on printers, copiers and multifunction devices
 
-Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which time periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those responsible should abide by applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
+Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which time periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those in charge should comply with applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
 
 #### SYS.4.1.A10 Use of network-capable document scanners
 
@@ -128,7 +132,7 @@ If network-enabled scanners are used, only authorized persons should be able to 
 
 #### SYS.4.1.A11 Network separation when using multifunction devices
 
-If an institution uses multifunction devices that connect directly to the telephone network, SHOULD verify that the fax and modem functionality of the devices can be turned off. If this function is nevertheless used, then uncontrolled data connections between the LAN and external networks should be reliably prevented. Network-compatible printers, multifunctional devices and also document scanners SHOULD be connected in a separate network segment, which is especially separated from external networks.
+If an institution uses multifunction devices that connect directly to the telephone network, SHOULD check if the fax and modem functionality of the devices can be turned off. If this function is nevertheless used, then uncontrolled data connections between the LAN and external networks should be reliably prevented. Network-compatible printers, multifunctional devices and also document scanners SHOULD be connected in a separate network segment, which is especially separated from external networks.
 
 #### SYS.4.1.A12 Proper Disposal of Protected Equipment [Home Technician, User]
 
@@ -187,7 +191,7 @@ Further information on hazards and safety measures in the area of ​​"printer
 
   
 
- CSE 015, V1.0, Alliance for Cybersecurity, 10.2012 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_015.html]https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_015.html)
+ CSE 015, V1.0, Alliance for Cybersecurity, 10.2012 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_015.html](https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_015.html)
 
  
 * #### [CSE069] Secure passwords in embedded devices

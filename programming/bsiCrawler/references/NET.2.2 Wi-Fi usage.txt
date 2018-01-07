@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### NET.2.2.A1 Creation of a user policy for WLAN [Head IT]
 #### NET.2.2.A2 Sensitization and training of WLAN users [Supervisors, Head of IT]
 #### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]

@@ -1,24 +1,28 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Mobile data carriers are used for many different purposes, such as transporting data, storing data or using data on the move. There are many different variants of mobile data carriers, including removable disks, CD-ROMs, DVDs, magnetic tapes, USB hard disks and USB sticks. These various forms and applications do not always make all the necessary safety considerations.
+Mobile data carriers are used for many different purposes, such as data transport, storage of data or data use on the move. There are many different variants of mobile data carriers, including removable disks, CD-ROMs, DVDs, magnetic tapes, USB hard disks and USB sticks. These various forms and applications do not always make all the necessary safety considerations.
 
 Data carriers can be classified according to whether they are read-only, write-once or rewritable. They can also be subdivided according to further criteria, for example
 
 * according to the type of data storage: analogue or digital media, as they can be edited: without technical aids, such as. As paper, or only with technical aids, such as. As DVDs, according to their design: removable media, external data storage or media that are integrated into other devices.
 * how they can be processed: without technical aids, such as: As paper, or only with technical aids, such as. As DVDs, according to their design: removable media, external data storage or media that are integrated into other devices.
-* according to their design: removable media, external data storage or data carriers that are integrated into other devices.
+* according to their design: removable data media, external data storage media or data carriers that are integrated into other devices.
 Interchangeable media, sometimes referred to as removable media, are inserted into a drive. Examples include CD-ROMs, DVDs, Blu-ray Discs, magnetic tapes and memory cards. External data storage devices, such as USB sticks and external hard disks, can be connected directly to an IT system. Examples of disks that are integrated with other devices include the storage components in smartphones, tablets, and digital cameras.
 
-In addition to the digital data carriers, information on paper or other analog data carriers must also be taken into account in the security concept. This concerns for example printouts and copies as well as the use of fax services. Further information can be found in the blocks SYS.4.1 Printers, Copiers and Multifunction Devices and NET.4.3 Fax Machine.
+In addition to the digital data carriers, information on paper or other analog data carriers must also be taken into account in the security concept. This concerns for example printouts and copies as well as the use of fax services. Additional information can be found in the blocks SYS.4.1 Printers, Copiers and Multifunction Devices and NET.4.3 Fax Machine.
 
 These implementation notes show on the one hand how the information stored on mobile data carriers can be used safely and how on the other hand how an unauthorized disclosure of information via mobile data carriers should be prevented.
 
 ### 1.2 Life cycle
 
-For the safe handling of mobile data carriers, a number of measures have to be implemented, beginning with the planning and conception through the procurement up to the emergency preparedness. The steps that should be taken and the actions that should be followed in each step are listed below.
+For the safe handling of mobile data carriers, a number of measures have to be implemented, beginning with the planning and conception to the procurement up to the emergency preparedness. The steps that should be taken and the actions that should be followed in each step are listed below.
 
 ** planning and conception **
 
@@ -65,7 +69,7 @@ Other aspects that users should be aware of are:
 
 Loss or theft of an official mobile data carrier must be reported immediately. This also applies to private data media that are used for official purposes. For this, there must be clear reporting channels and contact persons in each institution.
 
-Failures or failures should also be reported, even on low-priced mobile disks, so that IT management can see if larger shipments are affected. Particularly for data carriers used for data backup and archiving, high reliability and a long service life are important. If an employee loses a mobile disk or is stolen, action must be taken quickly, since this is not just about recovering the device, but also about preventing potential misuse of the information involved.
+Failures or failures should also be reported, even on low-priced mobile disks, so IT management can see if larger shipments are affected. Particularly for data carriers used for data backup and archiving, high reliability and a long service life are important. If an employee loses a mobile disk or is stolen, action must be taken quickly, since this is not just about recovering the device, but also about preventing potential misuse of the information involved.
 If lost media reappear, it is strongly recommended that you investigate it for possible tampering, such as: For example, if screws have been opened, seals removed, or if the weight has changed from the delivery condition. If there is a suspicion, the device should either be disposed of immediately or further examined by a specialist. To ensure that there are no malicious programs or malware on the recovered media, the SYS.3.4.M7 Physical Disk Erase request should be implemented before and after use.
 
 If data carriers are to be disposed of, it should first be ensured that the residual information stored on the data carriers can not fall into the wrong hands. For this purpose, it should be safely deleted (SYS.3.4.M7 Physical deletion of the data carrier before and after use), generally the requirements of the module OPS.1.2.7 sale / disposition of IT should be implemented.
@@ -82,7 +86,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### SYS.3.4.M4 Creation of a policy for the safe handling of mobile data carriers [User]
 
-Depending on the technical design, a large amount of data can be exchanged at high throughput rates via mobile data carriers. The variants of mobile data carriers are now diverse. Also, they are not always recognizable as such at first glance. For example, there are wristwatches or key fobs with integrated data memory. The usual size of this disk starts here with a few hundred megabytes and can certainly reach up to several terabytes.
+Depending on the technical design, a large amount of data can be exchanged at high throughput rates via mobile data carriers. The variants of mobile data carriers are now diverse. Also, they are not always recognizable as such at first sight. For example, there are wristwatches or key fobs with integrated data memory. The usual size of this disk starts here with a few hundred megabytes and can certainly reach up to several terabytes.
 
 Therefore, some basic aspects should be considered when dealing with portable media. It is to be clarified,
 
@@ -95,7 +99,7 @@ Therefore, some basic aspects should be considered when dealing with portable me
 * how to prevent the spread of malware via the mobile data carrier.
 It should also be clarified whether employees are allowed to use their private mobile storage devices within the institution, and vice versa, whether employees may store or use private data on official mobile data carriers. It should also be clarified whether the mobile data carriers brought in by external parties may be used within the institution, for example to exchange files.
 
-The more restrictive the security requirements are for the handling of mobile data carriers, the higher are also the restrictions in the daily working routine. Therefore, all security requirements should be weighed to determine whether they are appropriate.
+The more restrictive the security requirements are for the handling of mobile data carriers, the higher are also the limitations in the daily work routine. Therefore, all security requirements should be weighed to determine whether they are appropriate.
 The variety and variants of data carriers will continue to increase. Mobile disks are becoming increasingly "invisible" as they integrate with other devices. It should be checked regularly whether the security requirements for the handling of mobile data media are still current, starting with whether all variants of currently used data media are still covered.
 
 Mobile data carriers can easily be lost or stolen while traveling. Therefore, depending on protection needs to consider whether the information stored on it should be encrypted. For this purpose, products should be used that automatically encrypt all data that users store on mobile data carriers. For more information, see SYS.3.4.M10 Disk Encryption.
@@ -116,7 +120,7 @@ The type and extent of security measures to be applied to externally deployed me
 In principle, employees should obtain the appropriate authorization for all mobile data carriers they wish to use externally. In particular outside of the institution's own real estate, users should ensure the protection of the data carriers entrusted to them. These and the precautions to be taken are to be noted. These include the following rules:
 
 * Mobile data carriers must always be stored safely. On business trips they should not be left unattended.
-* Mobile data carriers that contain sensitive data should be encrypted as completely as possible (SYS.3.4.M10 volume encryption). If such media enables encryption without any additional resources, it is recommended to use these features even if less sensitive data is contained on the media.
+* Mobile data carriers that contain sensitive data should be encrypted as completely as possible (SYS.3.4.M10 volume encryption). If such media allows encryption without any additional resources, it is recommended that you use these features even if less sensitive data is included on the media.
 * The management, maintenance and transfer of externally used mobile data storage devices should be regulated. For example, pools can be set up for this purpose.
 * It should be noted when and by whom disc was used outside the home.
 #### SYS.3.4.M6 Disk Management [Specialists]
@@ -126,15 +130,15 @@ The task of the disk management as part of the resource management is to be able
 ** Inventories ** provide fast and targeted access to mobile media. For example, they provide information about the storage location, retention period and authorized recipients.
 The external ** identification ** of mobile data carriers enables their rapid identification. However, the labeling should not allow unauthorized persons to infer the content (eg the inscription of a USB stick with the keyword "confidential") in order to make it more difficult to misuse. It should be noted, however, that flanking regulations and requirements that apply to the institution require a corresponding labeling. In this case, additional requirements from these regulations and requirements usually have to be implemented. A defined structure of identification features (eg date, filing structure, serial number) facilitates the assignment to stock records.
 
-For ** proper handling ** of mobile data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field and dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to meet.
+For ** proper handling ** of mobile data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field and dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to make.
 
-The ** shipping or transport ** of mobile data media must be carried out in such a way that they can not be damaged if possible (eg magnetic tape mailing bag, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport types (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion.
+The ** shipping or transport ** of mobile data media must be carried out in such a way that they can not be damaged if possible (eg magnetic tape mailing bag, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport methods (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion.
 
 It should also be noted that a backup copy is made before important data carriers are delivered. Further information on the shipping and transport of data media is contained in the module OPS.1.2.3 Data medium exchange.
 
-For the internal transfer of data carriers, regulations can be made such as acknowledgment procedures, pick-up / take-along authorizations as well as the keeping of inventories of the whereabouts of data carriers.
+For the internal transfer of data carriers, regulations can be made such as acknowledgment procedures, pick-up / take-along authorizations and the keeping of inventories of the whereabouts of data carriers.
 
-In the event that ** data carriers obtained from third parties ** are used, provisions must be made regarding their treatment before use. If, for example, digital data are transmitted, a computer virus check of the mobile data carrier or data records should generally take place. This also applies accordingly before the first use of new digital data carriers. It is recommended to check for computer viruses not only when receiving but also before sending digital media.
+In the event that ** data carriers received from third parties ** are used, regulations must be made regarding their treatment before use. If, for example, digital data are transmitted, a computer virus check of the mobile data carrier or data records should generally take place. This also applies accordingly before the first use of new digital data carriers. It is recommended to check for computer viruses not only when receiving but also before sending digital media.
 
 A regulated procedure for the deletion or destruction of data carriers prevents the misuse of the stored data. Before reusing mobile data carriers, the data stored on them must be securely deleted (see OPS.1.1.8 Deleting and destroying data).
 
@@ -183,7 +187,7 @@ Storage media can be used to uncheck information and programs. Therefore, they a
 #### SYS.3.4.M10 Disk Encryption (C)
 
 Confidential information can be encrypted in various ways and thus protected against unauthorized access. For example, the entire volume, a single partition or just a single file can be encrypted. From a security point of view, it is better to encrypt the entire data carrier, since then less user intervention is required and all data is protected against unauthorized access. If only individual files or file containers are encrypted, there is a risk of inadvertently removing sensitive data in unencrypted areas of the hard disk. In addition, the user must explicitly start an encryption program for this purpose.
-Disk encryption can be implemented with software, but also with hardware support. Software solutions are z. For example, BitLocker from Microsoft or the open source program VeraCrypt. Mobile data carriers, such as USB sticks, should always be completely encrypted whenever possible, even if they are occasionally used for confidential information.
+Disk encryption can be implemented with software, but also with hardware support. Software solutions are z. For example, BitLocker from Microsoft or the open source program VeraCrypt. Mobile data carriers, such as USB sticks, should always be fully encrypted whenever possible, even if they are occasionally used for confidential information.
 
 The key feature of an encryption method is the quality of the algorithm and the key selection. One recognized algorithm that is sufficient for normal protection needs is the Triple DES, which is based on the Data Encryption Standard (DES). This is easy to program, especially since the source code is printed in many textbooks in the C programming language. Another recognized algorithm is the Advanced Encryption Standard (AES).
 

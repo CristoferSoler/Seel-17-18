@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.2.3.A1 iOS usage strategy
 #### SYS.3.2.3.A2 Planning the Use of Cloud Services
 #### SYS.3.2.3.A3 Using the device code

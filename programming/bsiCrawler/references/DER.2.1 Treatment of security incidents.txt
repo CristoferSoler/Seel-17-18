@@ -2,7 +2,7 @@
 #### DER.2.1.A1 Definition of a security incident [Head IT]
 #### DER.2.1.A2 Create a policy to handle security incidents
 #### DER.2.1.A3 Definition of responsibilities and contact persons in case of security incidents [Head IT]
-#### DER.2.1.A4 Notification of affected persons in case of security incidents [Head of IT, Emergency Representative, Press Office, Data Protection Officer, Head of Institution]
+#### DER.2.1.A4 Notification of affected parties in the event of security incidents [Head of IT, Emergency Representative, Press Office, Data Protection Officer, Head of Institution]
 #### DER.2.1.A5 Security Incident [Head IT, IT Operations]
 #### DER.2.1.A6 Restoring the operating environment after security incidents [Head of IT, IT Operations]
 ### 3.2 Standard requirements

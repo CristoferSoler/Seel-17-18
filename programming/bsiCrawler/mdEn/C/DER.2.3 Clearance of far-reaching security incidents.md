@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -27,7 +31,7 @@ It also eliminates attacks that give attackers physical access to an IT environm
 The following specific threats and vulnerabilities are of particular importance in the area of ​​remediation of far-reaching security incidents:
 
 ### 2 1 Incomplete cleanup
-APT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker also modified the update routines and thus re-enters the system in this way.
+APT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker has also modified the update routines and thus re-enters the system in this way.
 
 ### 2 2 Destruction of tracks
 
@@ -96,11 +100,11 @@ After the network has been successfully cleaned up, the IT systems MUST be retur
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
 
 #### DER.2.3.A7 Targeted system hardening
 
-After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of the forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
+After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
 
 If possible, IT systems should already be hardened during cleanup. Measures that can not be implemented in the short term SHOULD be included in an action plan and implemented in the medium term. The ISB SHOULD be responsible for drawing up the plan and checking that it has been implemented correctly.
 
@@ -113,11 +117,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### DER.2.3.A9 hardware replacement of affected IT systems (CIA)
 
-In IT systems with high protection requirements SHOULD be considered to completely replace the hardware after an APT incident. Even if a suspicious behavior is observed after a cleanup of individual IT systems, eg. For example, inexplicable network traffic SHOULD the affected IT system be replaced.
+In IT systems with high protection requirements SHOULD be considered to completely replace the hardware after an APT incident. Even if a suspicious behavior is observed after a cleanup with individual IT systems, eg. For example, inexplicable network traffic SHOULD the affected IT system be replaced.
 
 #### DER.2.3.A10 Conversions to hinder a renewed attack by the same attacker (CI)
 
-To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be changed. In addition, mechanisms should be established to quickly detect a recurring attacker.
+To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be modified. In addition, mechanisms should be established to quickly detect a recurring attacker.
 
 4 Further Information
 ------------------------------

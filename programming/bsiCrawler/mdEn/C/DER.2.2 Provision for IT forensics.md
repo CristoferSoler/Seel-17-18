@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -34,7 +38,7 @@ For IT forensic investigations, all data deemed necessary are often copied, secu
 
 ### 2 2 Loss of evidence through incorrect or incomplete preservation of evidence
 
-If evidence is backed up incorrectly or not fast enough, it can cause important data to be lost that can not later be recovered. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
+If evidence is backed up incorrectly or not fast enough, it may lose important data that can not be recovered later. At worst, this leads to a fruitless forensic investigation. At least, however, the probative value is limited.
 
 The risk of losing important evidence increases when employees misuse forensic tools, back up data too slowly or practice too little. Often, evidence is lost if those responsible do not recognize and secure transient data as relevant.
 
@@ -43,7 +47,7 @@ The risk of losing important evidence increases when employees misuse forensic t
 
 The following are specific requirements for the provision of IT forensics. Basically, the information security officer is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -76,7 +80,7 @@ All responsible employees SHOULD know how to properly track and use forensic too
 
 #### DER.2.2.A7 Selection of forensic tools
 
-It SHOULD be made sure that tools used to forensically secure and analyze traces are also suitable for this purpose. Before a forensics tool is used, it should also be checked if it works properly. Also SHOULD be checked and documented that it was not manipulated.
+It SHOULD be made sure that tools used to forensically secure and analyze traces are also suitable for this purpose. Before a forensics tool is used, it should also be checked to see if it works properly. Also SHOULD be checked and documented that it was not manipulated.
 
 #### DER.2.2.A8 Selection and order of evidence to be secured [Investigator]
 
@@ -84,15 +88,15 @@ A forensic investigation SHOULD always begin by defining the goals or work assig
 
 #### DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
 
-It SHOULD be determined which secondary data (eg log data or traffic recordings) are made available in which way and for how long within the framework of the legal framework for possible forensic evidence-securing measures.
+It SHOULD be determined which secondary data (eg log data or traffic recordings) will be made available in which way and for how long within the legal framework for possible forensic evidences.
 
-#### DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+#### DER.2.2.A10 IT Forensic Security of Evidence [Investigator, Investigator]
 
 In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, in the case of volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
 
-In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be legally usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
+In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of Forensic Service Providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 
@@ -111,7 +115,7 @@ To enable IT security incidents to be investigated forensically more quickly, th
 
 #### DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
 
-For applications, IT systems or IT system groups with high protection requirements as well as for widespread system configurations, standard procedures SHOULD be created, which make it possible to secure volatile and non-volatile data as completely as possible forensically.
+For applications, IT systems or IT system groups with high protection requirements as well as for common system configurations, standard procedures SHOULD be created that allow to secure volatile and non-volatile data as completely as possible forensically.
 
 The respective system-specific standard procedures SHOULD be implemented by proven and possibly automated processes. They SHOULD also be supported by checklists and technical aids, such as: Through software, software tools on mobile devices, and IT forensic hardware such as write-blockers.
 
@@ -124,7 +128,7 @@ All employees involved in forensic analysis SHOULD regularly practice how to sec
 
 ### 4.1 Literature
 
-Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found, among others, in the following publications:
+Additional information on threats and security measures in the area of ​​"Provisioning for IT forensics" can be found in the following publications, among others:
 
 * #### [BSIFor] BSI IT Forensics Guide
 

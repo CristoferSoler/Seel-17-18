@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Web browsers are application programs that retrieve, process, display, output and store (hypertext) documents, images, video, audio and other data formats from the Internet, and store them on local IT systems. Similarly, web browsers can also transfer data to the Internet. Stationary and mobile client systems are unimaginable today without a web browser, because many private and business applications use appropriate content.
+Web browsers are application programs that retrieve, process, display, output and store (hypertext) documents, images, video, audio and other data formats from the Internet on local IT systems. Similarly, web browsers can also transfer data to the Internet. Stationary and mobile client systems are unimaginable today without a web browser, because many private and business applications use appropriate content.
 
 At the same time, these contents are becoming ever more diverse on the internet. Fewer and fewer websites can do without embedded videos, animated elements, and other active content. Modern web browsers also cover a wide range of additional features by incorporating plug-ins and external libraries. There are also extensions for certain functions, data formats and content. The complexity of modern web browsers offers a high potential for serious conceptual errors and program weaknesses. Not only does it increase the potential threat of attacks from the Internet, it also poses additional risks due to programming and operating errors.
 
@@ -11,7 +15,7 @@ The consequences for the confidentiality and integrity of data are significant. 
 
 ### 1.2 Objective
 
-This module describes security requirements for web browsers that are used on client systems, ie on stationary and mobile computers as well as partially on tablets and smartphones. Both centrally managed and individual operating environments are considered.
+This module describes security requirements for web browsers that are used on client systems, ie on stationary and mobile computers as well as partly also on tablets and smartphones. Both centrally managed and individual operating environments are considered.
 
 ### 1.3 Delimitation
 
@@ -35,17 +39,17 @@ This can be code that can be directly executed by the web browser, such as JavaS
 
 ### 2 2 Exploit Kits
 
-Vulnerability lists and so-called exploit kits greatly facilitate the development of individual malware. Cyber ​​attacks can be automated to easily use drive-by downloads or other distribution channels without expert knowledge. Attackers can exploit known web browser vulnerabilities or any associated resource or extension to prepare for follow-up attacks or to download and install malicious code on the client.
+Vulnerability lists and so-called exploit kits greatly facilitate the development of individual malware. Cyber ​​attacks can be automated to easily use drive-by downloads or other distribution channels without expert knowledge. Attackers can exploit known Web browser vulnerabilities or any associated resource or extension to prepare for follow-up attacks or to download and install malicious code on the client.
 
 ### 2 3 Reading the Internet communication
 
 The basic security of communication on the Internet depends very much on the authentication method used and the encryption of the data in transit. The necessary procedures are often poorly implemented.
 
-Weak implementations of the necessary procedures are widespread and prevent effective authentication and encryption. Many web services still use outdated encryption techniques. Thus, an attacker can undermine the authentication of servers or the communication or the data is not encrypted effectively. This information can be read or changed on the transmission path. In the past, CAs were also compromised, allowing attackers to obtain certificates for third-party sites.
+Weak implementations of the necessary procedures are widespread and prevent effective authentication and encryption. Many web services still use outdated encryption techniques. Thus, an attacker can undermine the authentication of servers or the communication or data is not encrypted effectively. This information can be read or changed on the transmission path. In the past, CAs were also compromised, allowing attackers to obtain certificates for third-party sites.
 
 ### 2 4 Loss of integrity in web browsers
 
-If browsers, plug-ins or extensions are taken from untrusted sources, malicious functions can be carried out unintentionally and unnoticed. For example, attackers can spoof components such as toolbars on web browsers to trick users into manipulated copies of web pages that cause phishing attacks. Malicious extensions can manipulate the content of the websites in question or spy on data and send it to the attacker.
+If browsers, plug-ins or extensions are taken from untrustworthy sources, malicious functions can be carried out unintentionally and unnoticed. For example, attackers can spoof components such as toolbars on web browsers to trick users into manipulated copies of web pages that cause phishing attacks. Malicious extensions can manipulate the content of the websites in question or spy on data and send it to the attacker.
 
 ### 2 5 Loss of privacy
 

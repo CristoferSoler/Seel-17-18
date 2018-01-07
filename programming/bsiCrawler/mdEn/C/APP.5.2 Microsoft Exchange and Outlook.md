@@ -1,11 +1,15 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Similarly, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
-Microsoft Outlook is a client made directly available by installing the Microsoft Office suite or integrating with the operating systems of mobile devices. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
+Microsoft Outlook is a client made available directly from mobile devices by installing the Microsoft Office suite or integrating with operating systems. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
 ### 1.2 Objective
 
@@ -105,7 +109,7 @@ The installation SHOULD be done on the basis of the mission planning of Microsof
 
 #### APP.5.2.A7 Migrating from Microsoft Exchange systems
 
-All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
+All migration steps SHOULD be thoroughly planned and documented. The Microsoft Windows system administrators SHOULD be involved in the planning. When planning your migration, you should consider mailboxes, objects, security policies, Active Directory concepts, e-mail systems, and functional differences in Microsoft Exchange and Outlook in the various versions. The new system SHOULD BE tested on a separate test network before it is installed to counteract software errors and compatibility issues.
 
 #### APP.5.2.A8 Secure operation of Microsoft Exchange
 
@@ -145,7 +149,7 @@ For the operation of the components of the Microsoft Exchange infrastructure, on
 
 #### APP.5.2.A14 Training for Security Mechanisms of Outlook for Users [Information Security Officer (ISB)]
 
-Outlook users SHOULD regularly be sensitized and trained on existing and new dangers when working with Microsoft Outlook. All users SHOULD be provided with relevant security mechanisms and procedures within Outlook. Here, regulations should z. This can be taken into account, for example, for access mechanisms, forms of authentication and cryptographic specifications for e-mail encryption.
+Outlook users SHOULD regularly be sensitized and trained on existing and new threats when working with Microsoft Outlook. All users SHOULD be provided with relevant security mechanisms and procedures within Outlook. Here, regulations should z. This can be taken into account, for example, for access mechanisms, forms of authentication and cryptographic specifications for e-mail encryption.
 
 #### APP.5.2.A15 Application documentation for Microsoft Exchange
 
@@ -153,7 +157,7 @@ The contents of the operating manual for Microsoft Exchange SHOULD be comprehens
 
 #### APP.5.2.A16 Creation of a contingency plan for the failure of Microsoft Exchange and Outlook [Emergency Response Officer]
 
-As part of the emergency preparedness SHOULD be designed a concept that can minimize the consequences of a failure of Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
+As part of the emergency preparedness SHOULD be designed a concept that can be minimized the consequences of a failure of the Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
@@ -169,7 +173,7 @@ Mechanisms such. B. Encrypting File System or Windows BitLocker Drive Encryption
 
 #### APP.5.2.A18 Regular Security Checks for Microsoft Exchange Systems (CIA)
 
-The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during a test:
+The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during an examination:
 
 * regular searches of safety-related information,
 * Authorizations for revision users,

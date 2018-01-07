@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -15,7 +19,7 @@ Directory services are optimized for read access because data is typically retri
 
 ### 1.2 Objective
 
-The aim of the module is to operate general directory services securely and to adequately protect the information processed with them.
+The aim of the module is to operate general directory services safely and to adequately protect the information processed with them.
 
 ### 1.3 Delimitation
 
@@ -41,7 +45,7 @@ Managing access and access rights in the context of a directory service is an ex
 
 ### 2 4 Incorrect administration of access and access rights
 
-Access rights to an IT system and access rights to stored data and IT applications may only be granted to the extent necessary for the tasks to be performed. This also applies to the permissions granted to users and groups managed through a directory service. If these rights are administered incorrectly, this will lead to malfunctions if necessary rights have not been assigned. On the other hand, security vulnerabilities can occur if more than necessary rights are granted. If the access rights in the directory service are assigned incorrectly or inconsistently, the security of the entire system is considerably jeopardized. A particularly critical point is also the administration rights. If these rights are assigned incorrectly, the entire administration concept can be called into question or even the administration of the directory system itself may be blocked.
+Access rights to an IT system and access rights to stored data and IT applications may only be granted to the extent necessary for the tasks to be performed. The same applies to the permissions granted to users and groups managed by a directory service. If these rights are administered incorrectly, this will lead to malfunctions if necessary rights have not been assigned. On the other hand, security vulnerabilities can occur if more than necessary rights are granted. If the access rights in the directory service are assigned incorrectly or inconsistently, the security of the entire system is considerably jeopardized. A particularly critical point is also the administration rights. If these rights are assigned incorrectly, the entire administration concept can be called into question or even the administration of the directory system itself may be blocked.
 
 ### 2 5 Incorrect configuration of access to directory services
 
@@ -52,7 +56,7 @@ In many usage scenarios, other applications, such as Internet or intranet applic
 Technical failures due to hardware or software problems may cause directory services or parts thereof to fail. As a result, the data held in the directory are temporarily inaccessible. In extreme cases, data can be lost. This can hinder business processes and internal work processes. If functional copies of the failed system parts are available, access is still possible, but depending on the selected network topology, this may only be limited.
 
 ### 2 7 Compromise of directory services due to unauthorized access
-If an attacker has succeeded in successfully bypassing a necessary authentication against the directory service, then he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
+If an attacker has managed to successfully bypass a necessary authentication against the directory service, he can generally access a variety of data for which he should not be authorized. Thus, the entire directory service can be compromised. In addition, unauthorized persons could gain access to network resources or services through extended permissions. This can lead to an attacker bypassing all directory service defenses. This could affect or even destroy the affected system. The security of a directory service can also be compromised if anonymous users are allowed. By not checking their identity, anonymous users can first direct arbitrary queries to the directory service, through which they obtain at least partial information about its structure and content. In addition, if anonymous access is allowed, DoS attacks on the directory service are easier to implement because attackers have more accessibility that is difficult to control.
 
 3 requirements
 ---------------
@@ -100,7 +104,7 @@ The security concept for directory services SHOULD regulate all security-related
 
 #### APP.2.1.A8 Planning partitioning and replication in the directory service
 
-When partitioning, the availability and protection needs of the directory service SHOULD be taken into account. The partitioning of the directory service SHOULD be documented in writing, so that it can be reconstructed manually. In order to be able to perform the replications on time, a sufficient bandwidth should be ensured.
+When partitioning, the availability and protection needs of the directory service SHOULD be taken into account. The partitioning of the directory service SHOULD be documented in writing, so that it can be reconstructed manually. In order to be able to execute the replications on time, a sufficient bandwidth should be ensured.
 
 #### APP.2.1.A9 Appropriate Selection of Directory Services Components [Specialists]
 
@@ -112,7 +116,7 @@ Administrators SHOULD be familiar with all security mechanisms and aspects of di
 
 #### APP.2.1.A11 Setting up access to directory services
 
-Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended purpose.
+Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended use.
 
 #### APP.2.1.A12 Directory Services Monitoring
 
@@ -135,7 +139,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.2.1.A16 Creation of a directory service failure plan (CIA)
 
-As part of emergency preparedness, needs-based contingency planning for directory services SHOULD be implemented. SHOULD have contingency plans in place for the failure of major directory service systems. All emergency procedures for the entire system configuration of directory service components SHOULD be documented.
+As part of emergency preparedness, needs-based contingency planning for directory services SHOULD be carried out. SHOULD have contingency plans in place for the failure of major directory service systems. All emergency procedures for the entire system configuration of directory service components SHOULD be documented.
 
 4 Further Information
 ------------------------------
@@ -170,7 +174,7 @@ Further information on threats and security measures in the area of ​​the "g
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the "general directory service" building block.
+The following elementary threats are important for the module "General directory service".
 
 * G 0.11 Failure or disruption of service providers
 * G 0.14 Spying out information (spying)

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -17,7 +21,7 @@ The aim of this module is to establish information security as an integral part 
 
 This module considers the necessary components and conceptual tasks for network management. The counterpart in the system management for networked clients and servers is described in the block SYS.5 * System Management *.
 
-The present module specifies the basic requirements of the module NET.1.1 * Network Architecture and Design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
+The present module specifies the basic requirements of the module NET.1.1 * Network architecture and design. * It also discusses how to build and secure network management and how to protect its communications. However, details regarding the protection of network components, in particular their management interfaces, are dealt with in the component groups NET.2 and NET.3.
 
 The management of the passive network infrastructure is dealt with in the building blocks of the infrastructure (building block layer INF) or industrial IT (building block layer IND). Therefore, these topics are not included in this module.
 
@@ -43,7 +47,7 @@ If attackers succeed in accessing individual network components, they can contro
 ### 2 3 Unauthorized interference with network management communication
 If the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
 
-### 2 4 Inadequate time synchronization of network management components
+### 2 4 Insufficient time synchronization of network management components
 
 If the system time of the network management components is insufficiently synchronized, the logging data may not be correlated with each other, or the correlation may lead to incorrect statements, since the different timestamps of events have no common basis. This can not properly govern events that have occurred and problems can not be resolved. As a result, for example, security incidents and data outflows can go undetected.
 
@@ -52,7 +56,7 @@ If the system time of the network management components is insufficiently synchr
 
 The following are specific requirements for network management. Basically, the IT operation is responsible for meeting the requirements. In addition, the Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and regularly reviewed in accordance with established security policies. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These roles are listed in square brackets in the heading of each requirement.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -110,7 +114,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
 
-For network management, a security policy SHOULD be created and maintained sustainably. The guideline SHOULD be known to all people involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
+For network management, a security policy SHOULD be created and sustainably maintained. The guideline SHOULD be familiar to all persons involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
 
 The security policy SHOULD define which areas of network management are implemented through centralized management tools and services. It SHOULD also define to what extent tasks should be automated in the network management of the institution.
 
@@ -206,7 +210,7 @@ Dedicated management clients SHOULD be used to administer both internal and exte
 
 #### NET.1.2.A29 Use of VLANs in the Management Zone
 
-If management networks are separated by VLANs, care should be taken that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
+If management networks are separated by VLANs, care should be taken to ensure that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -214,7 +218,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 
-Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be designed redundantly. Also, the individual components SHOULD be provided highly available.
+Central management solutions SHOULD be operated at high availability. For this purpose, the servers or tools including the network connections SHOULD be configured redundantly. Also, the individual components SHOULD be provided highly available.
 
 #### NET.1.2.A31 Basic Use of Secure Protocols (CIA)
 
@@ -224,7 +228,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 

@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Audits and revisions are fundamental to any successful information security management system (ISMS). Only when established security measures and processes are regularly reviewed, are they effective, complete, adequate and up-to-date can the overall state of information security be assessed. Audits and audits are thus a tool to identify, achieve and maintain an appropriate level of safety. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
+Audits and revisions are fundamental to any successful Information Security Management System (ISMS). Only when established security measures and processes are regularly reviewed, are they effective, complete, adequate and up-to-date can the overall state of information security be assessed. Audits and audits are thus a tool to identify, achieve and maintain an appropriate level of safety. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
 
 Auditing is a systematic, independent review of activities and their results in terms of compliance with defined requirements (eg standards, standards or guidelines). In a revision (audit = check, check) it is checked whether documents, conditions, objects or procedures are correct, effective and appropriate. In contrast to the audit, the revision does not necessarily have to be independent. In addition, the revision may already include the correction in terms of maintenance.
 
@@ -24,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Inadequate or unscheduled implementation of security measures
 
-The level of protection of an institution depends on complete and correct implementation of security measures. In particular, in the critical phase of projects or under certain circumstances, it may happen that security measures are temporarily suspended. However, some people forget to reactivate them, resulting in too low a level of security.
+The level of protection of an institution depends on complete and correct implementation of security measures. In particular, in the critical phase of projects or under certain circumstances, it may happen that security measures are temporarily suspended. However, it is sometimes forgotten to reactivate them, resulting in too low a level of security.
 
 ### 2 2 Ineffective or non-economic implementation of security measures
 
@@ -33,7 +37,7 @@ If security measures are implemented without taking into account certain practic
 Likewise, individual measures can be taken that do not make economic sense. Thus, for the protection of information with a normal confidentiality, a cleanly implemented rights and role concept is more useful and economical than a certificate authority and the subsequent certificate-based encryption of the file server.
 
 ### 2 3 Insufficient implementation of the ISMS
-In many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be impaired.
+In many institutions, the information security officer himself checks whether security measures have been implemented. Often it will forget about checking the actual ISMS. Especially as this should be done by an independent third party. This could render the processes of an ISMS inefficient or inadequate. As a result, the security level of the institution may be affected.
 
 ### 2 4 Inadequate qualification of the examiner
 
@@ -47,7 +51,7 @@ If audits and revisions are not planned on a long-term and centralized basis, it
 
 If an audit is poorly scheduled and has not been agreed with all of the institution's employees concerned, it may not have the required or the wrong contacts available during the on-site audit. As a result, individual areas may not be audited at all. Even though the auditor has set appointments too narrowly for the individual areas, the planned investigation could only be superficial if there is not enough time available.
 
-### 2 7 Lack of coordination with the staff representatives
+### 2 7 Lack of coordination with the Staff Committee
 
 Audits and revisions can also be used to examine aspects that can be used to draw conclusions about the performance of employees. Thus, these exams could be considered performance appraisals. Failure to involve staff representatives may result in violations of the applicable codetermination law.
 
@@ -60,13 +64,13 @@ Employees may fear that the audit uncovers errors and seeks to conceal security 
 
 The following are specific requirements for audit and audit. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 
-The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department should be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
+The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department is to be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
 
 #### DER.3.1.A2 Preparation for an audit or revision
 
@@ -111,7 +115,7 @@ One or more revision lists SHOULD be maintained to document the current status o
 
 It should be a suitable team for each audit or for each revision. It SHOULD appoint a senior auditor (audit team leader) or lead auditor who has overall responsibility for carrying out the audits or revisions.
 
-The size of the audit / audit team SHOULD be the same as the audit area. In particular, the competence requirements of the test topics as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
+The size of the audit / audit team SHOULD match the audit area. In particular, the competence requirements of the test topics as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
 
 The neutrality of the audit team SHOULD be ensured. In addition, the auditors should also be independent. If external service providers are used as auditors or auditors, they SHOULD check their independence and commit them to secrecy.
 
@@ -132,7 +136,7 @@ There should be an initial interview between the audit team or audit team and th
 
 #### DER.3.1.A13 Inspection and verification of documents [audit team]
 
-The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
+The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. These SHOULD be included in the on-site exam, if that makes sense.
 
 #### DER.3.1.A14 Selection of samples [audit team]
 
@@ -185,7 +189,7 @@ It should be agreed with the auditors or auditors how to handle the results. It 
 
 #### DER.3.1.A25 follow-up and initiation of follow-up
 
-The deviations or defects identified in the audit report or in a revision SHOULD be remedied in a reasonable time. In order for the implementation status to be easily understood, the corrective measures to be implemented, including the time and responsibilities, SHOULD be documented. Also completed corrective measures SHOULD be documented. For this, an established method should already exist in the ISMS, which should be used.
+The deviations or defects identified in the audit report or in a revision SHOULD be remedied in a reasonable time. In order for the implementation status to be easily understood, the corrective measures to be implemented, including the time and responsibilities, SHOULD be documented. Also completed corrective measures SHOULD be documented. For this, an established method should already exist in the ISMS, which is to be used.
 
 If there were serious deviations or defects, the audit / review team SHOULD verify that corrective action has been taken.
 
@@ -238,7 +242,7 @@ Further information on hazards and safety measures in the area of ​​"audits 
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the module "Audits and Revisions".
+The following elementary hazards are important for the module "Audits and Revisions".
 
 * G 0.18 Missing planning or missing adjustment
 * G 0.19 Disclosure of information worthy of protection

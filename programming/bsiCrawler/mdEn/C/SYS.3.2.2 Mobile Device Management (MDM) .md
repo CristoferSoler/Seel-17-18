@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-Smartphones, tablets and phablets are an indispensable part of their work for many employees. However, IT departments need to deploy more and more such devices in many different designs, while providing adequate security. In addition, mobile devices are exposed to special risks and the administration is fundamentally different from other IT systems.
+Smartphones, tablets and phablets are an indispensable part of their work for many employees. However, IT departments need to deploy more and more such devices in many different designs, while providing adequate security. In addition, mobile devices are exposed to special risks and the administration differs fundamentally from other IT systems.
 
 That is why Mobile Device Management (MDM) is indispensable for the controlled and secure operation of these devices, especially in institutions with a larger number of smartphones, tablets and phablets. With such a software, the terminals can be managed centrally, it can enforce security rules and emergency actions can be triggered. An MDM thus ensures the same or at least comparable safety standard on all devices.
 
@@ -13,7 +17,7 @@ The module shows how an MDM can be used to securely use mobile devices by instit
 
 ### 1.3 Delimitation
 
-Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module is not on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
+Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module does not focus on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
 
 2 risk situation
 -----------------
@@ -45,13 +49,13 @@ The rights management of the MDM decides who should make which settings and who 
 
 ### 2 7 No or weak encryption of communication between MDM and terminal
 
-If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
+If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms, or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
 
 ### 2 8 Unauthorized creation of motion profiles by the MDM
 
 With most MDM products, it is possible to determine where a device is currently located and data or apps can be enabled or disabled depending on location (so-called geofencing). This results in minute movement profiles of the devices and thus also the user. If these data are collected without informing the user appropriately, the persons responsible may violate data protection regulations. There is also the danger that attackers will access this data. Similarly, Geofencing can be misused to control employees inadmissible.
 
-### 2 9 Hazards of Bring Your Own Device (BYOD)
+### 2 9 Dangers of Bring Your Own Device (BYOD)
 
 If private devices are used for business purposes, there are various potential threats. For example, there may be legal issues regarding software licenses. In an emergency, when service data needs to be erased by the MDM on the device, it may also affect the user's private data. In addition, the IT managers can no longer check every single employee device to see if it can also be used in official business. There is a risk that inappropriate devices will be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their personal devices. In such a repair, for example, corporate data could be viewed without authorization. The same risk exists when there is no regulation of what should happen to the data on the device when the employee leaves the institution.
 
@@ -59,13 +63,13 @@ If private devices are used for business purposes, there are various potential t
 ---------------
 The following are specific requirements for the protection of Mobile Device Management (MDM). Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### SYS.3.2.2.A1 Definition of a strategy for Mobile Device Management
 
-A strategy MUST be developed that defines how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
+A strategy MUST be developed to define how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
 
 Can the MDM be run as a cloud service?
 * Should the MDM be operated by the institution itself?
@@ -88,13 +92,13 @@ If suitable MDM software is to be procured, it MUST be ensured that it meets all
 
 #### SYS.3.2.2.A4 Distribution of basic configuration to mobile devices
 
-All mobile devices MUST be integrated into the MDM as soon as possible so that they can be configured and managed according to the institution's policies. If the devices get the basic configuration, they MUST be in factory condition. For already used devices, all institution-related data MUST be deleted beforehand. A non-MDM terminal MUST NOT be able to access institution information.
+All mobile devices MUST be integrated into the MDM as soon as possible so that they can be configured and managed according to the institution's policies. If the devices receive the basic configuration, they MUST be in factory condition. With already used devices, all institution-related data MUST be deleted beforehand. A non-MDM terminal MUST NOT be able to access institution information.
 
 #### SYS.3.2.2.A5 Secure basic configuration for mobile devices
 
 All mobile devices MUST be configured to adequately meet their protection needs. For this, a suitable basic configuration MUST be compiled and documented. Details are defined in the specific device modules.
 
-When handing over mobile devices to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
+When mobile devices are handed over to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
 
 #### SYS.3.2.2.A6 logging
 The MDM MUST log all security-related events and configuration changes. The collected data MUST NOT be viewed by unauthorized persons and MUST be stored unchangeably. In addition, legal and internal regulations MUST be adhered to during logging.
@@ -200,7 +204,7 @@ Additional information on threats and security measures in the area of ​​"Mo
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the Mobile Device Management (MDM) building block.
+The following elementary threats are important for the "Mobile Device Management (MDM)" building block.
 
 * G 0.11 Failure or disruption of service providers
 * G 0.13 Interception of compromising radiation

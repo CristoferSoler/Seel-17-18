@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -33,7 +37,7 @@ Malicious programs are designed to perform unwanted and usually malicious functi
 
 ### 2 2 Software from third party sources
 
-With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than installing finished software packages. When ready-made software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
+With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than installing finished software packages. When finished software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -96,7 +100,7 @@ Removable drives SHOULD NOT be automatically included. The inclusion of removabl
 
 #### SYS.2.3.A7 Restrictive rights assignment to files and directories
 
-Users' access to files and directories SHOULD always be restricted to the minimum required. It should in any case be ensured that services and applications may only create, modify or delete their assigned files. On directories where all users have write permissions (eg / tmp) the sticky bit SHOULD be set.
+Users' access to files and directories SHOULD always be limited to the minimum required. It should in any case be ensured that services and applications may only create, modify or delete their assigned files. On directories where all users have write permissions (eg / tmp) the sticky bit SHOULD be set.
 
 #### SYS.2.3.A8 Use of application restriction techniques
 
@@ -133,7 +137,7 @@ Peripherals SHOULD only be usable if they are managed on a centrally managed whi
 
 #### SYS.2.3.A15 Additional protection against the execution of unwanted files (CI)
 
-Partitions and directories where users have write permissions SHOULD be mounted so that no files can be executed (/ noexec).
+Partitions and directories where users have write permission SHOULD be mounted so that no files can be executed (/ noexec).
 
 #### SYS.2.3.A16 Additional safeguarding of boot process (CIA)
 
@@ -145,7 +149,7 @@ The use of system calls SHOULD be limited to the absolutely necessary system cal
 
 #### SYS.2.3.A18 Additional Kernel Protection (CI)
 
-Special hardened kernels should use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy," "PaX").
+Special hardened kernels SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy," "PaX").
 
 #### SYS.2.3.A19 Hard Disk or File Encryption (CI)
 

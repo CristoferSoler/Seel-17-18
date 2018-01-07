@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -41,7 +45,7 @@ In addition to DDoS, other types of denial-of-service attacks can affect the ava
 
 ### 2 4 Loss of confidential data
 
-Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to an attacker being able to read or change the communication between the clients and the servers or between the servers.
+Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to attackers being able to read or change the communication between the clients and the servers or between the servers.
 
 ### 2 5 Violation of laws or regulations
 
@@ -64,7 +68,7 @@ If security-relevant events are insufficiently logged by the web server, they ca
 
 The following are specific requirements for the Web server area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -150,7 +154,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 Web servers SHOULD be configured redundantly. The Internet connection of the web server and other IT systems, such as the web application server, SHOULD be designed to be redundant.
 
 #### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
-There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
+There should be regular penetration tests. The tests SHOULD only be performed by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
 
 #### APP.3.2.A17 Advanced authentication methods for web servers (CI)
 

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -83,7 +87,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.3.3.A6 Perform a VPN requirement analysis
 
-A requirements analysis SHOULD be carried out in order to be able to determine the application scenarios for the respective VPN and derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
+A requirements analysis SHOULD be carried out in order to determine the application scenarios for the respective VPN and to be able to derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
 
 * Business processes,
 * Access paths,
@@ -95,7 +99,7 @@ A requirements analysis SHOULD be carried out in order to be able to determine t
 
 In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
 
-#### NET.3.3.A8 Create a security policy for VPN usage
+#### NET.3.3.A8 Create a security policy for VPN use
 
 A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
 

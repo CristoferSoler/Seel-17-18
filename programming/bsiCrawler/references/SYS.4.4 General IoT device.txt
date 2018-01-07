@@ -1,4 +1,4 @@
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.4.4.A1 Usage criteria for IoT devices
 #### SYS.4.4.A2 authentication
 #### SYS.4.4.A3 Regular update
@@ -21,7 +21,7 @@
 #### SYS.4.4.A19 Protection of the administration interfaces
 #### SYS.4.4.A20 Regulated decommissioning of IoT devices
 ### 3.3 Requirements for increased protection requirements
-#### SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+#### SYS.4.4.A21 Environment and Power Supply [Information Security Officer (ISB), Home Automation] (I)
 #### SYS.4.4.A22 System Monitoring (A)
 #### SYS.4.4.A23 Auditing IoT Devices (CIA)
 #### SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)

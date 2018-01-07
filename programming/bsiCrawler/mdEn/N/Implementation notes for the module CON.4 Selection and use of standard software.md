@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -19,7 +23,7 @@ When procuring standard software, it should be defined how their deliveries are 
 
 **Implementation**
 
-Before using standard software, ensure that the integrity of the installation software is guaranteed (see CON.4.M1 * Ensuring Integrity of Standard Software *). In addition, standard software should be securely installed and configured afterwards (see CON.4.M3 * Secure installation and configuration of standard software *). For each application, an installation instruction should also be provided (see CON.4.M2 * Development of the standard software installation instructions *).
+Before using standard software, ensure that the integrity of the installation software is guaranteed (see CON.4.M1 * Ensuring Integrity of Standard Software *). In addition, standard software should be securely installed and configured afterwards (see CON.4.M3 * Secure installation and configuration of standard software *). For each application an installation instruction has to be created (see CON.4.M2 * Development of the standard software installation instructions *).
 
 **Business**
 
@@ -45,7 +49,7 @@ The installation must therefore be carried out exclusively from original data me
 
 Backup copies should be made and checked from the original media. Original media and all copies must be kept secure from unauthorized access. The copies made should be numbered and included in inventories. Copies that are no longer needed should be deleted or destroyed. Also, original media and original installers must be checked for malicious software before first use.
 
-Optionally, a checksum can be generated via the original data carriers or via a reference version installed during the test. Based on this, the integrity of the media used for this or the versions stored in local networks or the correct installation can be checked prior to installation. In addition, installed programs can be provided with checksums in addition to protection against unauthorized changes to the shared configuration. In this way, even infections with previously unknown malware can be detected. It can also be determined if a virus infection occurred before or after installation.
+Optionally, a checksum can be created via the original data carriers or via a reference version installed during the test. Based on this, the integrity of the media used for this or the versions stored in local networks or the correct installation can be checked prior to installation. In addition, installed programs can be provided with checksums in addition to protection against unauthorized changes to the shared configuration. In this way, even infections with previously unknown malware can be detected. It can also be determined if a virus infection occurred before or after installation.
 
 #### CON.4.M2 Development of the installation instructions for standard software
 
@@ -112,7 +116,7 @@ Below is shown how these responsibilities can be meaningfully distributed. Howev
 * The IT security officer must check whether the products used or to be procured ensure an adequate level of security. As part of security management, he must ensure information security during ongoing operations.
 * The data protection officer must ensure that the data protection regulations are adhered to and that personal data are sufficiently protected.
 * In many cases, the Personnel / Works Council must be involved in the selection of new standard software, especially if there are major changes in the workflow or if the software to be procured is suitable for performance control.
-In the overall process "standard software", it must be determined for each individual step which of the previously described instances are responsible for the execution and which instances have to be involved. The following table shows how responsibility can be meaningfully distributed.
+In the overall process "standard software", it must be determined for each individual step which of the instances described above are responsible for the execution and which instances have to be involved. The following table shows how responsibility can be meaningfully distributed.
 
 The assignments made are binding and it must be checked regularly whether they are complied with.
 
@@ -145,7 +149,7 @@ For the selection of a suitable product, therefore, first a catalog of requireme
 
 
  
-* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information about the maximum allowable processing time should be taken. Example:
+* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information on the maximum allowable processing time should be taken. Example:
 
  
 + Other simultaneously processed processes may not be slowed down by more than 30% by the product.
@@ -239,9 +243,9 @@ The following table shows an example of such a procedure. The properties require
 
 As a result, it shows that product 3 falls out because a necessary property is missing. Otherwise, the list is headed by Product 2, followed by Products 1 and 4.
 
-The list drawn up must be presented together with the market overview of the procuring entity so that it can check to what extent the products listed there comply with internal regulations and statutory requirements. In doing so, the procuring entity must also ensure that the other bodies whose specifications must be adhered to, such as the data protection officer, the IT security officer or the personnel or works council, are involved in good time.
+The list drawn up must be presented together with the market overview of the procuring entity so that it can check to what extent the products listed there comply with internal regulations and legal requirements. In doing so, the procuring entity must also ensure that the other bodies whose specifications must be adhered to, such as the data protection officer, the IT security officer or the personnel or works council, are involved in good time.
 
-It has to be decided how many and which candidates should be tested. It makes sense to select the first two or three candidates and then test whether they actually meet the most important requirements catalog requirements. This is especially important for the necessary requirements. Test licenses should be obtained for this purpose and tests should be carried out as described in module * * OPS.1.1.7 * Software tests and approvals *.
+It has to be decided how many and which candidates should be tested. It makes sense to select the first two or three candidates and then test whether they actually meet the key criteria of the catalog of requirements. This is especially important for the necessary requirements. Test licenses should be obtained for this purpose and tests should be carried out as described in module * * OPS.1.1.7 * Software tests and approvals *.
 
 In addition to the criteria of the catalog of requirements, the following points should also be taken into account for the decision:
 
@@ -254,7 +258,7 @@ If external test results or quality statements are available for the software pr
 
 With a high level of penetration, the individual user usually has little or no influence on the manufacturer of the product when it comes to troubleshooting or implementing certain functions. But he can rather assume that such a product will be developed continuously. In some cases there are external tests commissioned by the manufacturer or carried out by specialist journals. For high-penetration products, there is generally more knowledge about vulnerabilities, so the user can assume that the major vulnerabilities are already known, or that knowledge about vulnerabilities is quickly disseminated and closed soon after they become known.
 
-With a low penetration rate, a user may have more influence on the manufacturer. However, external tests are often not available because they are too expensive and too expensive for products from small manufacturers. Low-penetration products usually contain no more or less vulnerabilities than those with high levels of prevalence. Disadvantage here is that they may not be known so quickly and thus can be fixed. When it comes to vulnerabilities, they are unlikely to be known to potential attackers or worthwhile targets.
+With a low penetration rate, a user may have more influence on the manufacturer. However, external tests are often not available because they are too expensive and too expensive for products from small manufacturers. Low-penetration products usually contain no more or less vulnerabilities than those with high levels of prevalence. Disadvantage here is that they may not be known so quickly and thus can be fixed. When it comes to security holes, they are unlikely to be known to potential attackers or worthwhile targets.
 
 ** Cost-effectiveness / costs for purchase, operation, maintenance, training **
 
@@ -281,7 +285,7 @@ The results of these tests are to be documented in a goods receiving directory t
 * Repository and
 * to whom it was passed.
 After that, the delivered products must be passed on to the IT department to perform functional testing and formally release, install, and configure the product.
-If the products are only used temporarily or made available (for example, for a test), at least the serial number and other product-specific identification features must be noted in corresponding inventories. If the delivered products are to be used permanently, they must be marked with unique identification features (eg grouped consecutive inventory numbers). Then they have to be added to an inventory. This must be able to provide information about:
+If the products are used only temporarily or made available (for example, for a test), at least the serial number and other product-specific identification features must be noted in corresponding inventories. If the delivered products are to be used permanently, they must be marked with unique identification features (eg grouped consecutive inventory numbers). Then they have to be added to an inventory. This must be able to provide information about:
 
 * Identification features,
 * Procurement sources, delivery times,
@@ -297,7 +301,7 @@ All IT systems of an institution may only use licensed software. This regulation
 
 Often, an institution uses different versions of an application. Through a license check it must be possible to get an overview of all used software versions. This should ensure that old versions are replaced with newer ones as soon as necessary and that all versions are deleted when licenses are returned.
 
-In addition, the different configurations of the installed software should be documented. Thus, it must be possible to get an overview of which IT system which security-relevant settings of a product specified by the release and which were actually installed. Thus, for example, it can be quickly clarified to which clients macro-programming has been installed for a particular product and to which not.
+In addition, the different configurations of the installed software should be documented. Thus, it must be possible to get an overview of which IT system which security-relevant settings of a product specified by the release and which were actually installed. This can be used, for example, to quickly clarify to which clients macro-programming has been installed for a particular product and which not.
 
 In order to prevent licenses from being invalidated in case of hardware defects, hardware-independent licenses should be used. This allows an IT system to be replaced with less effort if the hardware fails. If this is not possible, appropriate precautions must be taken for failure, such as agreements with the manufacturer regarding a license transfer.
 
@@ -351,7 +355,7 @@ The decisive feature of an encryption method is the quality of the algorithm as 
 In order to ensure the confidentiality of the information to be transmitted, the sender's and the recipient's IT systems must adequately protect access to the encryption program. If necessary, this program should be stored on a removable medium, usually kept locked and only played back when needed and used.
 
 ** Integrity protection through checksums, encryption or digital signature formation **
-If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
+If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error-correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
 
 3 Further information
 ------------------------------

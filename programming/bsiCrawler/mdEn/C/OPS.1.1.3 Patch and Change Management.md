@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -24,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 For example, poorly defined, overlapping, or unclarified responsibilities can slow down the categorization and prioritization of change requests, thereby delaying the distribution of patches and changes. Even if patches and changes are released prematurely without test run and consideration of all (technical) aspects, this can have a serious impact on safety.
 
-In the extreme case, poorly defined responsibilities can affect the entire institution completely or to a large extent. Faults in the operation affect the availability. Confidentiality and integrity may be affected if security-related patches are not or are distributed late.
+In extreme cases, poorly defined responsibilities may affect the entire institution in full or in large scale. Faults in the operation affect the availability. Confidentiality and integrity may be affected if security-related patches are not or are distributed late.
 
 ### 2 2 Defective communication in change management
 
@@ -39,13 +43,13 @@ If the impact, category or priority of a submitted business process change reque
 
 ### 2 4 Insufficient resources for patch and change management
 
-Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable persons. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they will prove to be more time-consuming, for example when emergency patches need to be recorded.
+Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable people. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they become even more time-consuming, for example, when emergency patches need to be recorded.
 
 ### 2 5 Problems with automated distribution of patches and changes
 
 Frequently, patches and changes are not distributed manually, but centrally software-supported. If such software is used, erroneous patches and changes in the entire information network can be deployed, which can result in mass security problems. It is especially serious when many systems simultaneously install software that contains security holes.
 
-If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a specific time frame and then not all IT systems are reachable, these systems can not be updated.
+If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a certain period of time and then not all IT systems can be reached, these systems can not be updated.
 
 ### 2 6 Poor recovery options for patch and change management
 
@@ -53,10 +57,10 @@ If patches or changes are distributed without a recovery option, or if the recov
 
 ### 2 7 Poor consideration of mobile devices
 
-Mobile devices are a particular challenge for change management, as they are not always involved in the automated distribution of patches and changes due to their changing locations and their connection to wireless networks. Also, bandwidth and stable data transmission in mobile devices are not always guaranteed. If such devices are not considered separately in patch and change management, patches and changes may be incomplete, take longer to complete, and always present a security risk.
+Mobile devices are a particular challenge for change management, as they are not always involved in the automated distribution of patches and changes because of their changing locations and their connection to wireless networks. Also, bandwidth and stable data transmission in mobile devices are not always guaranteed. If such devices are not considered separately in patch and change management, patches and changes may be incomplete, take longer to complete, and always present a security risk.
 
 ### 2 8 Inadequate emergency preparedness plan for patch and change management
-Patch and change management contributes to the technical implementation of information security in an institution. The IT systems used by this process are critical for IT operations. These include, for example, the central servers that distribute patches and changes, the databases with the current configurations of the IT systems and the backup servers for the recovery points. If, for example, the server that distributes the changes fails, any new critical updates may no longer be recorded promptly. Furthermore, missing backups of the current configurations of IT systems can mean that in an emergency it is no longer possible to ensure that important IT components can be restored to their original state as quickly as possible.
+Patch and change management contributes to the technical implementation of information security in an institution. The IT systems used by this process are critical for IT operations. These include, for example, the central servers that distribute patches and changes, the databases with the current configurations of the IT systems and the backup servers for the recovery points. If, for example, the server that distributes the changes fails, any critical updates that may appear can no longer be timely recorded. Furthermore, missing backups of the current configurations of IT systems can mean that in an emergency it is no longer possible to ensure that important IT components can be restored to their original state as quickly as possible.
 
 ### 2 9 Misjudgment of the relevance of patches and changes
 
@@ -64,14 +68,14 @@ If changes are prioritized incorrectly, for example, unimportant patches could b
 
 ### 2 10 Manipulation of data and tools in change management
 
-Patch and change management often operates from a central point. Due to its exposed position, it is particularly vulnerable: If attackers succeed in taking over the servers involved, they could simultaneously distribute manipulated software versions to a variety of IT systems via this central point. Often further points of attack arise from the fact that these systems are operated by external partners (outsourcing). Maintenance accesses could also be set up to allow attackers to access the central server for distribution of changes.
+Patch and change management often operates from a central location. Due to its exposed position, it is particularly vulnerable: If attackers succeed in taking over the servers involved, they could simultaneously distribute manipulated software versions to a variety of IT systems via this central point. Often further points of attack arise from the fact that these systems are operated by external partners (outsourcing). Maintenance accesses could also be set up to allow attackers to access the central server for distribution of changes.
 
 3 requirements
 ---------------
 
 The following are specific requirements for patch and change management. Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -80,7 +84,7 @@ The following requirements MUST be implemented as a priority:
 If changes to IT components, software or configuration data are to be implemented, there must be guidelines for them that also take security aspects into account. All patches and changes MUST be planned, tested, approved and documented. If patches and changes are made, fallback solutions MUST be present. Major changes MUST also involve information security management. Overall, it MUST be ensured that the desired level of safety is maintained during and after the changes.
 
 #### OPS.1.1.3.A2 Definition of responsibilities [Head IT]
-For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. Everyone involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
+For all organizational areas, the responsible persons for the patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. Everyone involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
 
 #### OPS.1.1.3.A3 Configuration of Auto Update Mechanisms [Administrator]
 

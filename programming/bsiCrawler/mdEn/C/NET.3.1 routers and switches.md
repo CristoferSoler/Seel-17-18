@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -47,11 +51,11 @@ Routers and switches ship with a standard configuration in which many services a
 
 ### 2 5 Incorrect planning and conception
 
-Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when it is first used. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
+Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when used for the first time. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
 
 ### 2 6 Incompatible active network components
 
-Compatibility problems can arise in particular when existing networks are supplemented by active network components from other manufacturers or when networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in a network, individual subareas of the network, certain services or even the entire network can fail.
+Compatibility problems can arise in particular if existing networks are supplemented by active network components from other manufacturers or if networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in one network, individual subareas of the network, certain services or even the entire network can fail.
 
 ### 2 7 MAC flooding
 
@@ -59,7 +63,7 @@ In MAC flooding, an attacker sends many requests with changing source MAC addres
 
 ### 2 8 spanning tree attacks
 
-In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network to rebuild the spanning tree topology, causing the network to fail due to incorrect BPDUs.
+In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network to rebuild the spanning tree topology through inappropriate BPDUs, causing the network to fail.
 
 ### 2 9 GARP attacks
 
@@ -97,16 +101,16 @@ It must be regulated, who may access a router or switch. ONLY ONCE as many acces
 
 #### NET.3.1.A4 Protection of the administration interfaces
 
-All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
+All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from non-trusted networks.
 
-To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and the administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
+To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
 All services not required for the management interface MUST be deactivated. If a network component has a dedicated hardware interface, unauthorized access to it MUST be prevented.
 
 #### NET.3.1.A5 Protection against fragmentation attacks
 
 At the router and Layer 3 switch, protections MUST be enabled to fend off both IPv4 and IPv6 fragmentation attacks.
-#### NET.3.1.A6 Emergency access to routers and switches
+#### NET.3.1.A6 Emergency Access to Routers and Switches
 
 It MUST always be possible for administrators to directly access routers and switches so that they can continue to be administered locally, even if the entire network fails.
 
@@ -131,15 +135,15 @@ The most important operational tasks of a router or switch MUST be suitably docu
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state of the art in the area of ​​routers and switches. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​routers and switches. They SHOULD be implemented in principle.
 
 #### NET.3.1.A10 Creation of a Security Policy [Information Security Officer (ISB)]
 
-On the basis of the institution's general security policy, a specific security policy SHOULD be created, in which comprehensible requirements and specifications are described, how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
+On the basis of the institution's general security policy, a specific security policy SHOULD be created in which comprehensible requirements and specifications are described, how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
 
 #### NET.3.1.A11 Obtain a router or switch
 
-Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the level of security sought by the institution can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
+Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the institution's desired level of safety can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
 
 #### NET.3.1.A12 Creation of a configuration checklist for routers and switches
 
@@ -209,7 +213,7 @@ The realization of a high-availability solution MUST NOT hamper the operation of
 
 #### NET.3.1.A27 Bandwidth Management for Critical Applications and Services (A)
 
-To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help identify applications and prioritize bandwidth.
+To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help them discover applications and prioritize bandwidth.
 
 #### NET.3.1.A28 Use of certified products (CI)
 

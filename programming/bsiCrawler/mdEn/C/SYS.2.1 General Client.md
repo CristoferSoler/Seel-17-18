@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -24,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker comprehensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
 
-Clients are particularly susceptible to malware: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
+Clients are particularly vulnerable to malicious software: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
 
 ### 2 2 Unstructured local data management
 
@@ -32,7 +36,7 @@ Despite regular contradictory recommendations, many users also store important d
 
 * Data loss on hardware defects and
 * no access to relevant data in case of substitution.
-But even if basic requirements for central storage are adhered to, often additional local copies of the centrally stored data are created. This can lead to the following problems:
+But even if basic requirements for central storage are adhered to, local copies of the centrally stored data are often created in addition. This can lead to the following problems:
 
 * Waste of local storage space,
 * premature or non-deletion of data and
@@ -81,7 +85,7 @@ To use the client, users MUST authenticate themselves to the IT system. If users
 
 The client MUST be set up so that normal activities do not take place with administration rights. Only administrators MAY receive administration rights. Only administrators can change the system configuration, install or remove applications, or modify or delete system files. Users MAY have read-only access to system files.
 
-Process, conditions and requirements for administrative tasks as well as the separation of tasks between the various roles of the users of the IT system SHOULD be codified in a user and administration concept.
+Process, conditions and requirements for administrative tasks as well as the separation of tasks between the different roles of the users of the IT system SHOULD be codified in a user and administration concept.
 
 #### SYS.2.1.A3 Enable auto-update mechanisms
 
@@ -121,7 +125,7 @@ For the secure operation of clients SHOULD be planned in advance, where and how 
 
 #### SYS.2.1.A11 Procurement of clients
 
-Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a UEFI SecureBoot firmware configuration interface and the TPM (if any) that grants control by the owner (institution) allowing self-managed operation of SecureBoot and the TPM.
+Before clients are procured, a list of requirements SHOULD be created to evaluate the products available on the market. The respective manufacturer SHOULD be able to promptly provide patches for vulnerabilities for the entire planned usage period. The systems to be sourced SHOULD have a UEFI SecureBoot firmware configuration interface and TPM (if any) that grants control by the owner (institution), enabling self-managed operation of SecureBoot and the TPM.
 
 #### SYS.2.1.A12 Compatibility check of software
 
@@ -156,7 +160,7 @@ Communication links SHOULD be protected by encryption as far as possible. Users 
 
 The IT operation SHOULD make sure that the client products used support a secure version of TLS. Clients SHOULD use cryptographic algorithms and key lengths that reflect the state of the art and the security requirements of the institution.
 
-New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session Renegotiation and TLS Compression SHOULD be disabled.
+New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session renegotiation and TLS compression SHOULD be disabled.
 
 #### SYS.2.1.A19 Restrictive rights assignment
 
@@ -175,7 +179,7 @@ All users SHOULD be required to log out of the IT system or IT application after
 
 #### SYS.2.1.A23 Use of client-server services
 
-If possible, dedicated server services should be used to exchange information and direct connections between clients should be avoided. If this is not possible, SHOULD specify which client-to-client services (formerly often referred to as "peer-to-peer") may be used and what information may be exchanged thereon. If necessary, users SHOULD be trained to use such services. Direct connections between clients SHOULD only be limited to the LAN. Auto-discovery protocols SHOULD be limited to the extent necessary.
+Whenever possible, dedicated server services should be used to exchange information and direct connections between clients should be avoided. If this is not possible, SHOULD specify which client-to-client services (formerly often referred to as "peer-to-peer") may be used and what information may be exchanged thereon. If necessary, users SHOULD be trained to use such services. Direct connections between clients SHOULD only be limited to the LAN. Auto-discovery protocols SHOULD be limited to the extent necessary.
 
 #### SYS.2.1.A24 Handling of removable media in the running system
 
@@ -190,7 +194,7 @@ A guideline SHOULD be created that transparently describes for all employees whi
 * Tasks and roles related to information security
 * Contact for information security issues
 * Safety measures to be implemented and followed by the employees
-The policy SHOULD be notified to all users. Each new user SHOULD confirm the acknowledgment of the policy before being allowed to use the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
+The policy SHOULD be made known to all users. Each new user SHOULD confirm the acknowledgment of the policy before being allowed to use the information technology. After major changes to the policy or after two years at the latest, a new confirmation should be required.
 
 #### SYS.2.1.A26 Protection of applications
 
@@ -238,7 +242,7 @@ During the procurement and installation of the client SHOULD you document which 
 
 #### SYS.2.1.A36 Self-managed use of SecureBoot and TPM
 
-On UEFI-compatible systems, the boot loader, kernel, and any required firmware components SHOULD be signed by self-controlled key material and any unneeded key material should be removed. Unless the TPM is needed it SHOULD be disabled.
+On UEFI-compatible systems, the bootloader, kernel, and any required firmware components SHOULD be signed by self-controlled key material, and unneeded key material should be removed. Unless the TPM is needed it SHOULD be disabled.
 
 #### SYS.2.1.A37 Protection against unauthorized registrations (CIA)
 
@@ -246,7 +250,7 @@ To prevent access to the system through compromised credentials, multi-factor au
 
 #### SYS.2.1.A38 Integration into contingency planning (A)
 
-The clients SHOULD be considered in the emergency management process. Clients are to be prioritized for recovery based on the business processes for which they are needed. It is appropriate to provide appropriate emergency procedures by creating at least recovery plans, generating system recovery boot media, and securely storing passwords and cryptographic keys.
+The clients SHOULD be considered in the emergency management process. The clients are to be prioritized for recovery based on the business processes for which they are needed. It is appropriate to provide appropriate emergency procedures by creating at least recovery plans, generating system recovery boot media, and securely storing passwords and cryptographic keys.
 
 #### SYS.2.1.A39 Uninterruptible and Stable Power Supply [Home Automation] (A)
 
@@ -260,7 +264,7 @@ The execution of operational tasks on clients SHOULD be traceable documented (wh
 
 #### SYS.2.1.A41 Prevention of local hard drive overload
 
-It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only grant write access to the system administrator.
 
 4 Further Information
 ------------------------------

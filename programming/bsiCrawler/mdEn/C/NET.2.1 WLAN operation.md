@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,14 +17,14 @@ This module aims to systematically show how WLANs can be safely set up and opera
 
 ### 1.3 Delimitation
 
-The module contains basic requirements that must be observed and fulfilled when setting up and operating WLANs. Requirements for secure use of WLANs are not the subject of this module. Secure use of WLANs is covered in the NET.2.2 * WLAN Usage * block. Likewise, the operation of hotspots (see NET.2.3 * Operation of hotspots *) is not discussed here.
+The module contains basic requirements that must be observed and fulfilled when setting up and operating WLANs. Requirements for secure use of WLANs are not the subject of this module. Secure use of WLANs is covered in the NET.2.2 * WLAN usage * block. Likewise, the operation of hotspots (see NET.2.3 * Operation of hotspots *) is not discussed here.
 
-WLANs can be operated in two different modes according to the needs of an operator and the hardware equipment available. In ad hoc mode, two or more mobile devices equipped with a wireless network card communicate directly with each other. Since WLANs in ad-hoc mode can build up and configure independently, ie without fixed infrastructure, and thus establish a fully meshed parallel network infrastructure, the ad hoc mode is unsuitable in an environment to be protected. This will not be considered further below. In most cases, WLANs operate in infrastructure mode, which means H. the communication of the clients and the connection to wired LAN segments takes place via the access point.
+WLANs can be operated in two different modes according to the needs of an operator and the hardware equipment available. In ad hoc mode, two or more mobile devices equipped with a wireless network card communicate directly with each other. Since WLANs in ad-hoc mode can set up and configure autonomously, ie without fixed infrastructure, and thus establish a fully meshed parallel network infrastructure, the ad hoc mode is unsuitable in an environment to be protected. This will not be considered further below. In most cases, WLANs operate in infrastructure mode, which means H. the communication of the clients and the connection to wired LAN segments takes place via the access point.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in WLAN operation:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​WLAN operation:
 
 ### 2 1 Failure or malfunction of a wireless network
 
@@ -46,11 +50,11 @@ Access points and other WLAN components (eg WLAN controllers) offer a large numb
 
 ### 2 6 Insufficient or missing Wi-Fi security mechanisms
 
-When delivered, WLAN components are often configured so that no or only a few security mechanisms are activated. Moreover, some of the mechanisms are inadequate and do not provide adequate protection. Even today, various WLAN components are used, the only insufficient security mechanisms such. B. WEP support. In part, these devices can not even be upgraded to stronger security mechanisms. If such devices are used, an attacker can easily listen to all communications and gain access to confidential information.
+In the delivery state, WLAN components are often configured so that no or only a few security mechanisms are activated. Moreover, some of the mechanisms are inadequate and do not provide adequate protection. Even today, various WLAN components are used, the only insufficient security mechanisms such. B. WEP support. In part, these devices can not even be upgraded to stronger security mechanisms. If such devices are used, an attacker can easily listen to all communications and gain access to confidential information.
 
 ### 2 7 Listening to the WLAN communication
 
-Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
+Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, wireless networks or the transmitted radio waves often exceed the limits of owner-occupied premises, so that data is also broadcast in areas that can not be controlled by users or institution and secured.
 
 ### 2 8 Imitation of a valid access point (rogue access point)
 An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial of service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
@@ -72,18 +76,18 @@ Are WLAN access points unsecured in transit ways attached, z. B. installed direc
 
 The following are specific requirements for Wi-Fi operation. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
 #### NET.2.1.A1 Definition of a strategy for the use of WLANs [Head IT]
 
-Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and stipulated in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
-In addition MUST be determined in the planning phase, who is responsible for the administration of different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible.
+Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and determined in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
+In addition MUST be determined in the planning phase, who is responsible for the administration of different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible persons.
 
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
 
-In order to avoid a malfunction of the WLAN, WLAN-MUST first determine which of the systems operated by the institution (eg microwave devices, Bluetooth) in the ISM band at 2.4 GHz and in the 5 GHz Radiate ribbon.
+In order to avoid a self-interference of the WLAN, it must first be determined within the framework of WLAN planning which of the systems operated by the institution (eg microwave devices, Bluetooth) in the ISM band at 2.4 GHz and in the 5 GHz Radiate ribbon.
 
 In addition, the existing security mechanisms of the individual WLAN standards MUST be weighed against each other. In general, it MUST be ensured that only be used as a generally secure method for authentication and encryption. Only after the individual standards have been evaluated in detail, a specific WLAN standard can be set. The reasons for the decision MUST be documented.
 
@@ -101,7 +105,7 @@ Access points MUST be mounted securely. In addition MUST be taken to ensure that
 
 #### NET.2.1.A5 Secure base configuration of access points
 
-Access Points MUST NOT be used in the configuration of the delivery state. Preset SSIDs (service set identifiers), access passwords or cryptographic keys MUST be changed immediately after commissioning. In addition, insecure administration accesses (eg Telnet or HTTP) MUST be disabled. Access points MUST be administered encrypted.
+Access Points MUST NOT be used in the configuration of the delivery state. Preset SSIDs (service set identifiers), access passwords or cryptographic keys MUST be changed immediately after commissioning. In addition, insecure administration accesses (eg Telnet or HTTP) MUST be disabled. Access Points MUST be administered encrypted.
 
 #### NET.2.1.A6 Secure configuration of the WLAN clients
 
@@ -140,7 +144,7 @@ If it has been decided to set up a WLAN infrastructure, the results of the plann
 
 #### NET.2.1.A12 Use of a suitable WLAN management solution
 
-In order to be able to guarantee an optimal configuration of the WLAN components from a security point of view, a central management solution SHOULD be used. The scope of the solution used SHOULD be in line with the requirements of the WLAN strategy.
+In order to ensure optimal configuration of the WLAN components from a security perspective, a central management solution SHOULD be used. The scope of the solution used SHOULD be in line with the requirements of the WLAN strategy.
 
 #### NET.2.1.A13 Regular security checks in WLANs
 
@@ -148,7 +152,7 @@ WLANs SHOULD regularly be checked to see if any security vulnerabilities exist. 
 
 #### NET.2.1.A14 Regular audits of the WLAN components
 
-For all components of the WLAN infrastructure (access points, distribution system, WLAN management solution, etc.) SHOULD check regularly whether all defined security measures have been implemented and correctly configured. Publicly established access points SHOULD regularly be randomly checked for violent opening or manipulation attempts. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+For all components of the WLAN infrastructure (access points, distribution system, WLAN management solution, etc.) SHOULD check regularly whether all specified security measures have been implemented and configured correctly. Publicly established access points SHOULD regularly be randomly checked for violent opening or manipulation attempts. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -206,7 +210,7 @@ Additional information on hazards and security measures in the area of ​​"WL
  <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
 
  
-* #### [TR03103] Technical Guidelines Secure Wireless LAN
+* #### [TR03103] Technical Guideline Secure Wireless LAN
 
   
 

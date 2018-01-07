@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -15,7 +19,7 @@ If a new network is to be set up, the structure of the network as a whole must f
 
 In a further step, the definition of the operating systems used at the server and client level and, if necessary, the selection of specific variants (eg Windows Server 2016 versus Windows Server 2012 or Linux versus a vendor-specific variant of Unix) follows.
 
-If a new network is set up, the detailed structure of the network must be planned as the exact technical basis for further work. The number and interaction of the intended servers must be specified. The tasks of the servers and the way of their use by the clients are to be determined. Based on the availability requirements, it must be determined to what extent redundant structures are to be provided in the network. Here are also the necessary specifications for the infrastructure (especially air conditioning and power supply, see SYS.1.1.M15 local uninterruptible and stable power supply) set. In parallel, a general security policy must be developed (see SYS.1.1.M11Setting a security policy for a general server), which must then be supplemented by system-specific security guidelines and detailed guidelines for the use of hardware and software in the network (see also the modules for the individual server operating systems).
+If a new network is set up, the detailed structure of the network must be planned as the exact technical basis for further work. The number and interaction of the intended servers must be specified. The tasks of the servers and the way of their use by the clients are to be determined. Based on the availability requirements, it must be determined to what extent redundant structures are to be provided in the network. Here are also the necessary specifications for the infrastructure (especially air conditioning and power supply, see also SYS.1.1.M15 Local Uninterruptible and Stable Power Supply). In parallel, a general security policy must be developed (see SYS.1.1.M11Setting a security policy for a general server), which must then be supplemented by system-specific security guidelines and detailed guidelines for the use of hardware and software in the network (see also the modules for the individual server operating systems).
 
 **Procurement**
 
@@ -40,7 +44,7 @@ After the organizational and planning preparatory work has been carried out, the
  
 **Business**
 
-After the initial installation and a test operation phase, normal operation is started. From a security point of view, the following aspects should be considered:
+After initial installation and a test operation phase, normal operation is started. From a security point of view, the following aspects should be considered:
 
 * Client-server networks are changing very often. It must be ensured with every change that the security is not affected even after the change. The aspects to be considered in detail are contained in the modules for the respective server operating systems. It should be remembered that the withdrawal of authorizations as well as the deletion of unneeded databases are regulated in such a way that obsolete structures do not create any security gaps. An essential help here is an efficient, comprehensive system administration, which can always rely on up-to-date information about the state of the system and its legal structures (see SYS.1.1.M3 Restrictive Rights Assignment and SYS.1.1.M21 Operating Documentation).
 * One means of maintaining the security of a server is to monitor the system or its individual components. The relevant recommendations can be found in SYS.1.1.M10 logging and SYS.1.1.M23 system monitoring. In particular, privacy aspects also play a role. The frequent vulnerabilities of most client-server systems and the plethora of attacks that address these vulnerabilities require administrators to be constantly aware of the security status of the systems and new threats, and to take timely countermeasures (see SYS .1.1.M7 updates and patches for operating system and applications).
@@ -90,13 +94,13 @@ If passwords are used for authentication in a client, the security of the access
 
 When passwords are used for authentication, the IT system should provide mechanisms that meet the following conditions:
 
-* It ensures that each user uses individual passwords (and can select them himself).
+* It ensures that each user uses individual passwords (and can choose them himself).
 * It is checked that all passwords meet the defined specifications (eg minimum length, no trivial passwords). The password quality check should be individually controllable. For example, it should be possible to specify that the passwords must contain at least one special character or that certain character combinations are prohibited.
 * The IT system generates passwords that meet the defined requirements. The IT system must offer the passwords thus generated to the user.
 * The password change should be initiated regularly by the IT systems. The lifetime of a password should be adjustable.
 * The repetition of old passwords when changing the password should be prevented by the IT system (password history).
 * When entering the password, the password should not be displayed on the screen.
-* After installing or reconfiguring users, the password system should force a password change after initial login.
+* After installing or reconfiguring users, the password system should force a password change after the initial login.
 More detailed information on authentication can be found in ORP.4 Identity and Permission Management.
 
 #### SYS.1.1.M3 Restrictive rights assignment
@@ -131,7 +135,7 @@ For all administrators, additional user IDs should be set up that have only the 
 
 Basically, a distinction can be made between identifiers for users and administrators. Only administrators manage the IT systems, while normal user IDs only have the rights to perform their work-specific tasks. Normal user IDs may not have administration rights to protect the operating system and client configuration from accidental, negligent or intentional modification by the user.
 
-If users only need to perform certain administrative tasks, it is often not necessary to give them all rights associated with their own login, or even system administrator rights. Examples include certain routine system administration activities, such as creating backups or setting up a new user menu-driven with a program, or activities that require a user to have only a single application program. In particular for temporary staff and external service providers, care should be taken that they only use the services and only access the data they actually need. When their activity is over, their accounts should be disabled and all access permissions removed.
+If users only need to perform certain administrative tasks, it is often not necessary to give them all rights associated with their own login or even system administrator rights. Examples include certain routine system administration activities, such as creating backups or setting up a new user menu-driven with a program, or activities that require a user to have only a single application program. In particular for temporary staff and external service providers, care should be taken that they only use the services and only access the data they actually need. When their activity is over, their accounts should be disabled and all access permissions removed.
 
 For these users, a limited user environment should be created. For example, it can be implemented under Unix with a restricted shell (rsh) and a restriction of the access paths with the Unix command chroot. Another possibility is to run individual application programs, such as web browsers, in the so-called kiosk mode, so that there is only limited access.
 
@@ -156,11 +160,11 @@ A server should in principle be installed in a server room or at least a lockabl
  If a central management system is to be used for the administration of the server, analogous considerations should be made for this access channel, as for the remote administration. In addition, it is important that the central management system itself be configured and administered accordingly.
 ** secure authentication **
 
-In principle, IT systems should ensure that all users who want to access them have to authenticate themselves. Only in this way can unauthorized persons prevent access to the services offered by the system or to the data stored on the system.
+In principle, IT systems should ensure that all users who want to access them have to authenticate themselves. This is the only way to prevent unauthorized persons from gaining access to the services offered by the system or to the data stored on the system.
 
 As a rule, servers are administered via a network connection. The information needed for network-based authentication must be transmitted over a LAN or WAN. Therefore, it is imperative that this information can not be read or changed.
 
-It must also be ensured that an attacker can not log in by replaying recorded credentials. Therefore, the credentials that are exchanged for authentication between the server and client must be encrypted and additionally dynamized, for example with challenge-response methods.
+It must also be ensured that an attacker can not log in by replaying recorded credentials. Therefore, the credentials that are exchanged for authentication between server and client must be encrypted and additionally dynamized, for example with challenge-response methods.
 
 After the authentication has been successfully completed, the system must ensure that users only have access to those services and data for which they have appropriate permissions.
 
@@ -168,8 +172,8 @@ If there is a danger of listening to lines to terminals, administrators should o
 
 #### SYS.1.1.M6 Deactivation of unneeded services and identifiers
 
-The default installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
-On the one hand, checking for running services can be carried out locally with the resources of the installed operating system and, on the other hand, in the case of network services, from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the system offers even more unwanted network services.
+The standard installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
+On the one hand, checking for running services can be carried out locally with the resources of the installed operating system and, on the other hand, in network services from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the system offers even more unwanted network services.
 
 ** Secure Login **
 
@@ -196,7 +200,7 @@ If a newly created user needs his or her account for a limited time, it should o
 Even if the procurement of an IT system has been made to ensure that it has enough storage space, storage space sooner or later becomes scarce in the event of prolonged use. On IT systems that are used by different users, the existing resources must therefore be divided so that all users can work as optimally as possible.
 Often you can observe the phenomenon that users want to have more storage space than is available to them. In addition to the ever-growing storage footprint of applications, another reason is that many users are reluctant to part with old and unneeded files. If no restrictions are made on storage space limitation and archiving, there is a risk that storage space for large amounts of legacy data will be wasted or the user directories will overflow.
 
-A simple solution would be to always provide more and more storage space as needed as demand increases. However, this is not always feasible in practice. Even if the users are sensitized for economical data storage, each unnecessary file is still often considered important.
+A simple solution would be to always provide more and more storage space as needed as demand increases. However, this is not always feasible in practice. Even if the users are sensitized for economical data storage, each unnecessary file is nevertheless often considered important.
 
 For users or user groups, but also for applications, Disk Quotas can set a storage volume that must not be exceeded. On servers and all IT systems that are used concurrently by multiple users or applications, disk space should therefore be restricted for individual users as well as for applications through disk quotas. This includes servers (such as file, web, and mail servers) and clients with multiple user IDs. For clients where the data is disconnected from the system partition and used by only one user, a disk quota can be omitted.
 
@@ -215,11 +219,11 @@ Often, errors in products become known, which can lead to the information securi
 
 The system administrators should therefore regularly inform themselves about known vulnerabilities.
 
-It is important that patches and updates, like any other software, can only be obtained from trustworthy sources. For each system or software product used, it must be known where security updates and patches are available. It is also important to verify the integrity and authenticity of the products already installed, or the security updates and patches to be incorporated (see the section "Ensuring the Integrity and Authenticity of Software Packages") before installing an update or patch. Before installation, they should also be checked using a computer virus protection program. This should also be done for packages whose integrity and authenticity have been verified.
+It is important that patches and updates, like any other software, can only be obtained from trustworthy sources. For each system or software product deployed, it must be known where security updates and patches are available. It is also important to verify the integrity and authenticity of the products already installed, or the security updates and patches to be incorporated (see the section "Ensuring the Integrity and Authenticity of Software Packages") before installing an update or patch. Before installation, they should also be checked using a computer virus protection program. This should also be done for packages whose integrity and authenticity have been verified.
 
 Security updates or patches, however, must not be prematurely recorded, but must be tested before importing. These tests should always use up-to-date, system-tuned test plans or automated tests for a consistent, meaningful result. Otherwise, if a conflict arises with other critical components or programs, such an update may cause the system to fail. If necessary, an affected system must be protected by other means until the tests are completed. It should be ensured that updates that are imported by automatic update mechanisms are also tested.
 
-Before installing an update or patch, you should always back up the system, which will allow it to recover to its original state if problems occur. This is especially true if detailed tests can not be performed due to time constraints or due to a lack of a suitable test system.
+Before installing an update or patch, you should always back up the system, which will allow it to recover to its original state if problems occur. This is especially true if detailed tests can not be performed due to lack of time or due to a lack of a suitable test system.
 In any case, it must be documented when, by whom and for what reason patches and updates were recorded. From the documentation the current patch level of the system must be able to be determined quickly at any time, in order to gain clarity as soon as the weaknesses become known as to whether the system is at risk.
 
 If it is determined that a security update or patch is incompatible with another major component or program or is causing problems, it is important to consider how to proceed. If it is decided that a patch will not be installed due to the problems that have arisen, this decision must be documented in any case. In addition, it must be clear in this case which measures have been taken to prevent exploitation of the vulnerability. Such a decision must not be made by the administrators alone, but must be agreed with the supervisor and the ISB.
@@ -228,7 +232,7 @@ If it is determined that a security update or patch is incompatible with another
 
 Carelessly executing programs that originate from "unsafe" sources can cause considerable harm. Malware, for example, can install password-spying programs, Trojan horses, or backdoors on a computer, or easily corrupt or erase data.
 
-Typical sources of such malware are, for example, programs that display themselves as screen savers, virus scanners or other utilities and are attached to e-mails. Often these are sent under fake sender addresses to many recipients. Often the programs are downloaded from the internet and installed without verification.
+Typical sources of such malware include programs that display themselves as screen savers, virus scanners or other utilities and are attached to e-mails. Often these are sent under fake sender addresses to many recipients. Often the programs are downloaded from the internet and installed without verification.
 
 Even if no encryption or signature techniques are used otherwise, the use should be considered to the extent described in this measure.
 
@@ -238,20 +242,20 @@ If checksums are offered for a software package, these should be checked before 
 
 A verification of authenticity can not be done with checksums. Therefore, in many cases, digital signatures are offered for programs or packages. In turn, the public keys needed to verify the signature are usually available on the manufacturer's websites or from public-key servers. Often the checksums are generated with one of the programs PGP or GnuPG.
 
-If the check reveals that it is a valid signature of the respective manufacturer, this results in a significantly higher degree of trustworthiness for the package than just the presence of a checksum.
+If the check reveals that it is a valid signature of the respective manufacturer, this results in a significantly higher degree of trustworthiness for the package than simply the presence of a checksum.
 
 Sometimes even the built-in software update mechanisms of the respective operating system or application software do not perform checksum comparisons. If possible, however, a checksum check should be performed on each software package before importing.
 Furthermore, not all checksum comparisons can be performed without the involvement of the users, since the checksums, signatures or certificates required for this purpose are not provided by the manufacturers in a uniform manner. This often requires manual verification on the manufacturer pages or customization of URLs in the patch and change software.
 
 If digital signatures are available for a software package, they should always be checked before installing the package.
 
-A fundamental problem with the use of digital signatures is the verification of the authenticity of the key used itself. If the public key carries no signature of a known trustworthy person or organization (such as a trust center), the signatures generated with the corresponding private key offer no real security in that the software package actually comes from the developer, manufacturer or distributor. Therefore, if not certified, the public keys should preferably be obtained from a source other than the software package itself, for example from a manufacturer's CD-ROM, from another mirror server on which the package can also be downloaded, or from one Public key server.
+A fundamental problem with the use of digital signatures is the verification of the authenticity of the key used itself. If the public key carries no signature of a known trustworthy person or organization (such as a trust center), the signatures generated with the corresponding private key offer no real security in that the software package actually comes from the developer, manufacturer or distributor. Therefore, if not certified, the public keys should preferably be obtained from a source other than the software package itself, such as a manufacturer's CD-ROM, another mirror server on which the package can also be downloaded, or one Public key server.
 
 To check checksums and digital signatures, the corresponding programs must be available locally. Administrators should be aware of the meaning and validity of checksums and digital signatures. In addition, the administrators must have enough time to use the appropriate programs in their daily work and familiarize themselves with the operation.
 
 Obtaining patches and email changes is not recommended for a variety of reasons. The origin of emails is difficult to determine without the use of additional security mechanisms and the recipient addresses in the institutions are often distribution lists, whose address is easy to guess. Patches and changes can also be very extensive by now. Many companies and government agencies have limited the size of email attachments and may also prohibit the adoption of executable attachments. Furthermore, the large amounts of data unnecessarily burden the e-mail systems. Therefore, a timely availability of the software changes, which can be critical, especially in the case of security patches, can not be adequately ensured via e-mail.
 
-Furthermore, some manufacturers offer to send changes and patches to the customer directly on data carriers. In this case too, the patches and changes should be verified using checksums or digital signatures, as sender information on mailpieces and manufacturer logos on CDs and DVDs can easily be faked.
+Furthermore, some manufacturers offer to send changes and patches to the customer directly on data carriers. In this case as well, the patches and changes should be verified using checksums or digital signatures, as sender information on mailpieces and manufacturer logos on CDs and DVDs can easily be faked.
 
 Another aspect of verifying the authenticity of the update may be news published by the manufacturer on its website, newsletter or similar channels. Some manufacturers have established cycles and timepoints that typically release information about changes systematically.
 
@@ -260,7 +264,7 @@ Another aspect of verifying the authenticity of the update may be news published
 Only a regular and comprehensive backup reliably ensures that all stored data can be made available even in the event of malfunction, the effects of malicious software, hardware failures or (intentional or unintentional) deletions. The necessary requirements are described in the module OPS 1.1.5 Data Backup.
 
 #### SYS.1.1.M9 Use of virus protection programs
-Different modes of action can be used to protect against malicious programs. Programs that search IT systems for all known malicious programs have proven to be an effective means of malicious program prevention in the past. Therefore, according to the requirements described in OPS1.1.4 Protection against malicious programs, virus protection programs should be used.
+Different modes of action can be used to protect against malicious programs. Programs that search IT systems for all known malicious programs have proven to be an effective means of malicious program prevention in the past. Therefore, according to the requirements described in OPS1.1.4 Protection against malware, virus protection programs should be used.
 
 #### SYS.1.1.M10 logging
 
@@ -274,7 +278,7 @@ How many events are logged depends, among other things, on the protection requir
 
 Since the log files can become very extensive over time, the evaluation intervals should be chosen so short that a meaningful evaluation is possible. In order to enable a meaningful evaluation, each protocol entry should contain user identification or process number, identification of the terminal, date and time.
 
-It is necessary to check which legal or contractual retention periods for log files have to be observed. In order to ensure the traceability of actions, a minimum storage period may be prescribed, for privacy reasons there may also be a deletion obligation.
+It must be checked which statutory or contractual retention periods for log files must be observed. In order to ensure the traceability of actions, a minimum storage period may be prescribed, for privacy reasons there may also be a deletion obligation.
 
 ### 2.2 Standard measures
 
@@ -282,7 +286,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### SYS.1.1.M11 Setting a security policy for servers
 
-The security requirements for each server are based on the organization-wide security policy. Based on the general policy, the requirements for the given context must be specified and summarized in a security policy for the server or a group of servers. In this context, it must be examined whether, in addition to the organization-wide security guideline, further overriding requirements such as IT guidelines, password guidelines or Internet usage guidelines must be taken into account.
+The security requirements for each server are based on the organization-wide security policy. Based on the general policy, the requirements for the given context must be specified and summarized in a security policy for the server or a group of servers. In this context, it must be examined whether, in addition to the organization-wide security guideline, further superordinate specifications such as IT guidelines, password guidelines or Internet usage guidelines must be taken into account.
 
 The security policy must be known to all persons and groups involved in the procurement and operation of the servers and be the basis for their work. As with all directives, their content and implementation must be regularly reviewed by a higher level audit.
 
@@ -378,14 +382,14 @@ When creating a security policy, it is advisable to proceed in such a way that f
 
 A basic requirement for a server to operate safely is an adequate level of planning in advance.
 
-Planning for the use of a server can be carried out in several steps according to the principle of top-down design. Based on a rough concept for the overall system, concrete plans for sub-components are defined in specific sub-concepts. Planning does not only concern aspects that are classically associated with the term security, but also normal operational aspects that entail security requirements.
+Planning for the use of a server can be carried out in several steps according to the principle of top-down design: Based on a rough concept for the overall system, concrete plans for sub-components are defined in specific sub-concepts. Planning does not only concern aspects that are classically associated with the term security, but also normal operational aspects that entail security requirements.
 
 In the rough concept, for example, the following typical questions should be dealt with:
 
 * Which tasks should the system to be planned fulfill? Which services should be provided by the server? Are there any special requirements for the availability of the system or for the confidentiality or integrity of the stored or processed data?
 * These specifications come from overarching planning and are determined by the general objectives. The more precisely the general conditions are known and the more precisely the requirements are formulated, the easier the following planning steps become.
 * Should specific hardware components be used in the system? This can be important, for example, for the selection of the operating system.
-* Which requirements for the hardware (CPU, RAM, capacity of the data carriers, capacity of the network, etc.) arise from the general requirements?
+* Which requirements for the hardware (CPU, main memory, capacity of the data media, capacity of the network, etc.) arise from the general requirements?
 * Is the network used a homogenous or heterogeneous computer network?
 * Does the system replace an old, existing one? Do you want to transfer datasets or hardware components from the old system?
 * Should the data be stored locally or on a SAN system?
@@ -397,18 +401,18 @@ The following subconcepts should be considered when planning the server deployme
 * User and group concept:
  Based on the organization-wide user, rights and role concept, appropriate rules for the system must be created.
 * Administration:
- How should the system be administered? Are all settings made locally or the server integrated in a central administration and configuration management?
+ How should the system be administered? Are all settings made locally or the server integrated into a central administration and configuration management?
 * Partition and file system layout:
 In the planning phase, a first estimation of the required disk space should be carried out. For ease of administration and maintenance, it is recommended that as far as possible separate the operating system (system programs and configuration), application programs and data (for example, database server and data), and possibly user data. Various operating systems offer different mechanisms for this (division into drives under Windows, file systems under Unix). Often it can be useful to save certain data even on your own hard disk or your own disk system. This allows, for example, to take over the data on the other partitions without copying when reinstalling or updating the system.
  If confidentiality data is stored on the server, the use of encrypted file systems is strongly recommended. Not necessarily all file systems need to be encrypted, but it will often be sufficient to provide encryption for the part of the file system on which the data itself is stored. This is facilitated by proper planning of the partition and file system layout. When selecting encryption of individual files and directories, users should be given the option of whether the files are encrypted or stored unencrypted. During the planning phase, the planned partitioning of the partitions and their size should be documented.
 * Network services and network connection:
  Depending on the requirements for the confidentiality, integrity and availability of the data that is to be stored or processed on the server, the network connection of the server must be planned.
- In general, it is recommended that you do not place a server directly on the same IP subnet as the clients you want to access the server. If the server is disconnected from the clients by at least one router, then there are much better ways of controlling access and detecting network traffic anomalies that indicate potential problems.
+ In general, it is recommended that you do not place a server directly on the same IP subnet as the clients you want to access the server. If the server is disconnected from the clients by at least one router, then there are much better ways to control access and detect network traffic anomalies that indicate potential problems.
 * A server that stores or processes data with a high confidentiality or integrity protection requirement should be located on its own IP subnet and at least be separated from the rest of the network by a packet filter. With a very high protection requirement, an application level gateway should be used.
 * With normal protection requirements, a server that is used exclusively by clients from the internal network can, exceptionally, also be located in the same subnet. However, in this case it is recommended to relocate the server to a separate subnet when pending changes in the network structure.
-* Depending on the intended use of the computer, access to certain services in the network (such as web, file, database, print, DNS or mail server) may also be required. This must already be taken into account in the planning, so that difficulties do not arise at a later date, for example due to insufficient transmission capacities or problems with interconnected security gateways.
+* Depending on the intended use of the computer, access to certain services in the network (such as web, file, database, print, DNS or mail servers) may also be required. This must already be taken into account in the planning, so that difficulties do not arise at a later date, for example due to insufficient transmission capacities or problems with interconnected security gateways.
 * In addition to the actual service for which a server is set up, other services are often needed to efficiently use and administer the server. For example, administration over the network requires secure access (for example, SSH), or the files for a web offer can be transferred to the web server over the network. If the resulting network communication takes place over insecure networks, appropriate secure protocols must be used. In addition, the services may only be made available to authorized users and computers. This can be realized by password assignment, by using a packet filter or other mechanisms. No service should be provided on an insecure network, such as the Internet, unless expressly provided for.
-* In the planning phase, an overview of the envisaged and required network services and the necessary network connections should be drawn up. In general, it is important to consider in the planning phase how large a system's dependence on the functioning of the network connection may be.
+* In the planning phase, an overview of the envisaged and required network services and the necessary network connections should be drawn up. In general, it is important to consider in the planning phase just how large the dependency of a system may be on the functioning of the network connection.
 * Tunnel or VPN:
  If it is foreseeable already in the planning phase that the system must be accessed via insecure networks, suitable solutions should be investigated at an early stage. For example, the access can be made via a VPN.
 * Monitoring:
@@ -417,7 +421,7 @@ In the planning phase, a first estimation of the required disk space should be c
  The logging of messages from the system and the services used plays an important role, for example in the diagnosis and correction of malfunctions or in the detection and resolution of attacks. In the planning phase it should be decided which information should be logged at least and how long the log data should be stored. In addition, it must be determined whether the log data should be stored locally on the system or on a central log server in the network. It is sensible to specify in the planning phase how and at what times data should be evaluated.
 * High availability:
  If special requirements are placed on the availability of the system and its services, consideration should already be given in the planning phase as to how these requirements can be met.
-All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other people next to the author need to evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
+All decisions made in the planning phase must be documented in such a way that they can be reconstructed at a later date. It should be noted that usually other persons besides the author have to evaluate this information. Therefore, attention must be paid to appropriate structuring and comprehensibility.
 
 #### SYS.1.1.M13 Obtaining servers
 
@@ -498,7 +502,7 @@ In this case, the costs can be considerably higher than the costs for the hardwa
 
  
 + Which logging options are available?
-The logging options offered must at least meet the requirements set out in the security policy. In particular, the following points are relevant:
+The logging options offered must at least meet the requirements specified in the security policy. In particular, the following points are relevant:
 + Is the level of detail of the logging configurable?
 + Are all relevant data recorded by logging?
 + Does the system support central logging (eg syslog)?
@@ -544,7 +548,7 @@ A local uninterruptible power supply (UPS) has the task of protecting a single I
 For larger IT structures or even the supply of entire buildings mainly central UPS systems are used.
 Regardless of whether a local UPS is used as a cradle or as a 19-inch slot, its performance and support time are dictated by device properties and typically can not be changed.
 
-With the local UPS devices available today and the low power levels that can usually be provided by them (in the range up to approximately 1 kVA), these power failures can be bridged up to 120 minutes without problems (support time). Which support time is actually required in the specific scenario depends on how long, on the one hand, the shutdown of the connected devices takes (shutdown) and how long, on the other hand, to wait for the power supply to restart (waiting time). Since a large part of all power outages only last a few minutes, a waiting time of 15 minutes is usually sufficient to bridge a supply interruption. If the supply interruption lasts longer than the waiting time, and the supplied IT system has to be shut down in order to avoid data loss, the total support time should follow the formula
+With the local UPS devices available today and the low power levels that can usually be provided by them (in the range up to approximately 1 kVA), these power failures can be bridged without any problem for up to 120 minutes (support time). Which support time is actually required in the specific scenario depends on how long, on the one hand, the shutdown of the connected devices takes (shutdown) and how long, on the other hand, to wait for the power supply to restart (waiting time). Since a large part of all power outages only last a few minutes, a waiting time of 15 minutes is usually sufficient to bridge a supply interruption. If the supply interruption lasts longer than the waiting time, and the supplied IT system has to be shut down in order to avoid data loss, the total support time should follow the formula
 
 Support time = waiting time plus twice the shutdown time
 
@@ -553,18 +557,18 @@ be dimensioned. The dual approach of the shutdown time provides a safety margin 
 Three types of UPS are to be distinguished:
 
 * VFD UPS
- In the VFD UPS (VFD stands for Voltage and Frequency Dependent) the connected loads are fed directly from the power supply network in normal operation. Smaller disturbances in the supply network can thus reach directly to the connected consumers. Only when this fails, the VFD UPS automatically turns on and takes over the supply. It takes up to 10 ms (switching gap), which can be too much for some IT devices. The VFD UPS was formerly called offline UPS.
+ In the VFD UPS (VFD stands for Voltage and Frequency Dependent), the connected loads are fed directly from the power supply network during normal operation. Smaller disturbances in the supply network can thus reach directly to the connected consumers. Only when this fails, the VFD UPS automatically turns on and takes over the supply. It takes up to 10 ms (switching gap), which can be too much for some IT devices. The VFD UPS was formerly called offline UPS.
 * VI-UPS (Voltage Independent)
  In this case, the supply voltage is readjusted for smaller fluctuations (VI stands for Voltage Independent), without the UPS as such completely taking over the supply of the connected consumers. However, the frequency at the output of a VI-UPS is directly dependent on the supply network, as with a VFD UPS. Even with the VI-UPS can occur when switching to battery operation to a switching gap.
 * VFI UPS (Voltage and Frequency Independent)
  The VFI UPS (Voltage and Frequency Independent) normally does not have a direct connection between the UPS input and output. The electrical energy is rectified on the input side and fed into the DC link. From there, the batteries are kept in the optimum state of charge and the inverter is supplied. This generates the AC voltage required for the connected loads.
  Since the output energy is generated permanently independent of the input via the inverter, there is no switching gap here. The VFI UPS was formerly referred to as an online UPS.
 Since the VFI UPS is the only one of the three systems that really works uninterrupted, it should always be given preference. Taking into account further quality features not discussed here, a UPS classified according to DIN IEC 62040-3 in accordance with VFI-SS-111 represents the optimum for IT supply.
-Contrary to an assumption made again and again, a UPS of any type does not provide overvoltage protection in the strict sense. A UPS is able to keep too high voltages from the connected consumers within the scope of its normal function. However, a UPS does not help against overvoltages such as those that are intercepted by the technical equipment of the overvoltage protection. On the contrary, a UPS, like all other electrical consumers, must be protected against overvoltages by suitable protective measures (see section "Overvoltage protection").
+Contrary to an assumption made again and again, a UPS of any type does not provide overvoltage protection in the strict sense. A UPS is able, in the context of its normal function, to keep too high voltages away from the connected consumers. However, a UPS does not help against overvoltages such as those that are intercepted by the overvoltage protection equipment. On the contrary, a UPS, like all other electrical consumers, must be protected against overvoltages by suitable protective measures (see section "Overvoltage protection").
 
 To avoid potential problems with protective earth currents, IT equipment that is powered by a local UPS should not be connected through shielded wires (such as printer cables) to other IT equipment that is powered by another path.
 
-Since the batteries of a local UPS are rarely operated in their optimal temperature range (typically around 20 ° C), the battery life of local UPS devices is quite low, in the best case up to 5 years, usually less. During this period of operation, the batteries lose power permanently, so that after about two or three years, a local UPS can provide at most half of the support time when new. To ensure that the UPS provides the necessary support time, the actual time of support should be calculated once a year. Some UPS systems have built-in testing mechanisms. If this is not the case, the value can be determined by a load test.
+Since the batteries of a local UPS are rarely operated in their optimum temperature range (typically around 20 ° C), the battery life of local UPS devices is quite low, in the best case up to 5 years, usually less. During this period of operation, the batteries permanently lose power so that a local UPS can provide at most half of the support time when new after perhaps two or three years. To ensure that the UPS provides the necessary support time, the actual time of support should be calculated once a year. Some UPS systems have built-in testing mechanisms. If this is not the case, the value can be determined by a load test.
 
 As with all other electrical equipment, care must be taken in UPS systems to operate within the temperature ranges specified by the manufacturer. This must be taken into account when dimensioning the cooling.
 
@@ -583,7 +587,7 @@ Overvoltages can enter into a building and the IT operated there, not just via t
 The necessary measures to protect IT equipment are essentially the same regardless of the cause of the overvoltage. The series of standards for lightning protection of structures DIN EN 62305 "Lightning protection" (corresponds to the standards series VDE 0185-305 and IEC 62305) describes an overall concept for lightning protection. On the basis of this series of standards DIN EN 62305 a surge protection concept is to be created.
 In its Part 2 "Risk Management", DIN EN 62305 generally describes the way to a risk-oriented lightning and surge protection. Part 3 deals with the "Protection of Structures and Persons", in Part 4 "Electrical and Electronic Systems in Buildings".
 
-In the overvoltage protection concept, of course, stand-alone power supply systems (NEA) and uninterruptible power supplies (UPSs) must be taken into account. Although UPSs provide some protection to the connected equipment, they are in no way to be considered a surge protector, but solely as an electronic device to be protected.
+In the overvoltage protection concept, of course, stand-alone power supply systems (NEA) and uninterruptible power supplies (UPSs) must also be taken into account. Although UPSs provide some protection to the connected equipment, they are in no way to be considered a surge protector, but solely as an electronic device to be protected.
 
 The former three levels of coarse, medium and fine protection have been replaced by the concept of energetic coordination. According to the standard, energetic coordination is only mandatory if there is external lightning protection. In terms of information security, the energetic coordination should also be considered in cases without external lightning protection. Simplified, this means the following:
 
@@ -597,7 +601,7 @@ For simple electrical and electromechanical devices, the LPZ 1 is usually suffic
 
 The LPZ (lightning protection zones) should not be confused with the protection classes of the external lightning protection system, which is called LPS (Lightning Protection System).
 
-Whether an LPS is required and with which protection class must be decided on the basis of the risk assessment (according to Part 2 of DIN EN 62305). The earlier sufficient view into a building list is no longer enough!
+Whether an LPS is required and with which protection class must be decided on the basis of the risk assessment (in accordance with Part 2 of DIN EN 62305). The earlier sufficient view into a building list is no longer enough!
 
 In many cases, it is not necessary to build a LPZ 2 or LPZ 3 building-wide. While the transition from LPZ 0 (which is anything outside of a building, where lightning can actually strike directly) to LPZ 1 actually has to be as close to the building envelope as possible, the construction of higher LPZ can be done anywhere and to any extent , However, it is important to ensure that no line that only enjoys the protection of the LPZ 1 (eg heating pipes) passes through higher-quality LPZ.
 
@@ -616,7 +620,7 @@ After completing the planning of a new server and creating a security policy, yo
 
 The installation of the system should only be performed by authorized persons (administrators or contracted service providers). Administrators of IT systems and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks. Since administrators have a key role to play in the functionality of the hardware and software used, the continuation of activities must be ensured even if administrators fail. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration. More detailed information can be found in ORP.4 Identity and Permission Management.
 
-It is recommended to first create a short installation concept according to the functional requirements of the planning and the specifications of the security guideline. In principle, it is advantageous to carry out the installation in two phases: First, a basic system is installed and configured, then the other required services and applications are set up. The installation programs of most operating systems support this procedure more or less well.
+It is recommended to first create a short installation concept according to the functional requirements of the planning and the requirements of the security guideline. In principle, it is advantageous to carry out the installation in two phases: First, a basic system is installed and configured, then the other required services and applications are set up. The installation programs of most operating systems support this procedure more or less well.
 
 The described steps do not necessarily need to be performed again for each server. This could even be counterproductive in that constant repetition increases the risk of error. It is therefore recommended to carry out the described steps with great care on a reference system, to document the necessary configurations precisely, and thus to obtain a customized installation concept for the respective operating system. It must be noted that this installation concept must also be checked and, if necessary, adapted for changes to the operating system that do not represent a completely new release (service packs, update releases or the like).
 In the rare case of virtual servers, a modified operating system is installed for each instance; in this case, a basic system is usually created that is copied into the instance and started as a stand-alone clone. In this instance, the next step is to install the required server services or application programs, and at any later time, a new clone can be generated, for example, to obtain multiple instances of identical server services or application programs. This can also inherit wrong decisions and wrong settings that were made during the creation of the basic system when installing the clones on numerous other instances. For each clone, therefore, all the recommendations of this measure should also be carefully implemented.
@@ -629,9 +633,9 @@ During installation and later configuration, at least the important steps should
 
 If the server is being installed from data carriers such as DVDs or other storage media, it is recommended that the installation and basic configuration be carried out offline or at least in a secure network (installation or administration network). In general, it should be prevented that other IT systems can access the IT system to be installed during installation. This is important because during the installation usually no passwords are assigned and no protection mechanisms are active, but possibly already accesses are possible. If the installation of several IT systems is partly to take place over the network (for example, reloading of packages), it is recommended to use an installation server in the administration network.
 
-Especially with the operating system itself, it is important that the installed version comes from a trustworthy source. This is especially important when, for example, CD images have been downloaded from the Internet. In this case, it is important to check for digital signatures of the packages that can be used to verify the integrity and authenticity of the packages. Packages and CD images for which there are no digital signatures or at least checksums should, if possible, not be used.
+Especially with the operating system itself, it is important that the installed version comes from a trustworthy source. This is especially important when, for example, CD images have been downloaded from the Internet. In this case, it is important to check whether digital signatures of the packages are available that can be used to verify the integrity and authenticity of the packages. Packages and CD images for which there are no digital signatures or at least checksums should, if possible, not be used.
 
-When setting up disk partitions, the concept created in the design phase must be implemented. If an encrypted file system is to be used, it usually has to be initialized before data can be copied into it, because often a file system can not be encrypted in retrospect. Also, some RAID systems and levels require a configuration that must be completed before the file systems can be set up.
+When setting up disk partitions, the concept created in the design phase must be implemented. If an encrypted file system is to be used, it usually has to be initialized before data can be copied in, because often a file system can not be encrypted in retrospect. Also, some RAID systems and levels require a configuration that must be completed before the file systems can be set up.
 
 If this has not already been done automatically, logging of the system events should be activated at the latest when completing the basic installation. The log data can provide valuable information in case of problems during further installation and configuration.
 **Update**
@@ -644,7 +648,7 @@ After the operating system has been installed and the basic configuration and up
 
 #### SYS.1.1.M17 deployment clearance
 
-Before the server system is used in productive operation and before it is connected to a productive network, an application release should be carried out and documented. The deployment clearance is based on a test of the installation and configuration documentation and the functionality of the system in a test. It is carried out by a body authorized to do so in the institution.
+Before the server system is used in productive operation and before it is connected to a productive network, an application release should be carried out, this must be documented. The deployment clearance is based on a test of the installation and configuration documentation and the functionality of the system in a test. It is carried out by a body authorized to do so in the institution.
 
 More detailed information can be found in OPS.1.1.7 Software Testing and Approvals.
 
@@ -656,7 +660,7 @@ If it is determined that a security update or patch is incompatible with another
 
 If possible, network communication should be encrypted to or from a server. The encryption depends on the service provided by the server, for more detailed information on the respective network services can be found in APP.3 Network-based services. One of the most common ways to encrypt network services is to use TLS.
 
-Transport Layer Security (TLS) is a further development of Secure Sockets Layer (SSL) and is used to cryptographically secure information during transmission in networks, usually between server services and clients or between server services. Clients can only use encryption over SSL / TLS if it is supported by the server services. SSL / TLS can be used to encrypt information from the application layer (such as HTTP, LDAP, POP3, IMAP, and SMTP) over TCP / IP. In addition, secure VPNs (Virtual Private Networks) can be established using SSL / TLS. With OpenVPN, a software freely available under the GNU GPL (General Public License), VPNs can be realized using SSL / TLS encrypted connections. More detailed information about VPNs can be found in the module NET.3.3 Virtual Private Networks (VPN).
+Transport Layer Security (TLS) is a further development of Secure Sockets Layer (SSL) and is used to cryptographically secure information during transmission in networks, usually between server services and clients or between server services. Clients can only use encryption over SSL / TLS if it is supported by the server services. SSL / TLS can be used to encrypt information from the application layer (such as HTTP, LDAP, POP3, IMAP, and SMTP) over TCP / IP. In addition, secure VPNs (Virtual Private Networks) can be established using SSL / TLS. With OpenVPN, a software freely available under the GNU GPL (General Public License), VPNs can be realized using SSL / TLS encrypted connections. More detailed information about VPNs can be found in the NET.3.3 Virtual Private Networks (VPN) building block.
 In general, many server services require little overhead to configure them to support SSL / TLS encryption or to use them exclusively for information exchange. Therefore, it must be checked for all server services whether encryption with SSL / TLS is feasible and practicable with reasonable effort. If this is possible with reasonable effort, the SSL / TLS encryption should be activated. Generally, the internal and external message stream should be encrypted to and from LDAP, email, and web servers using SSL / TLS.
 
 ** Choosing a trusted certification authority **
@@ -673,7 +677,7 @@ Due to the large number of certification bodies in the market, an institution sh
 * which security level the certification body can demonstrate
 * how good the scope and quality of technical support are, and
 * how high the certificate costs are.
-In principle, however, the cost of a certificate should by no means be the only decisive criterion. If the offered server service is used by a limited number of users, e.g. B. only within a LAN s, a certificate can be created and signed even without the participation of a certification authority itself and recorded on all clients on which the server service is to be used.
+In principle, however, the cost of a certificate should by no means be the only decisive criterion. If the offered server service is used by a limited number of users, eg. B. only within a LAN s, a certificate can be created and signed even without the participation of a certification authority itself and recorded on all clients on which the server service is to be used.
 
 ** Extended Validation Certificates **
 In order to make it harder to attack with fake websites and to counteract the problem that various certification authorities do not always reliably check SSL / TLS applications, Extended Validation Certificates have been introduced to handle certificates with higher security requirements. These are to prevent that when a certificate is issued, a CA checks only the domain name. In addition, the CA should also clearly understand by whom the domain in question was registered. Unlike the standard X.509 SSL / TLS certificates, these extended certificates (Extended Validation SSL Certificates, EV-SSL) will further verify the identity of the claimant. In doing so, the involved certification authorities and browser manufacturers undertake to adhere to the "Guidelines for the Issuance and Management of Extended Validation Certificates" of the CA / Browser Forum. According to this, the following criteria must be fulfilled by the applicant, among others:
@@ -681,10 +685,10 @@ In order to make it harder to attack with fake websites and to counteract the pr
 * Proof of identity and address of the applicant,
 * Proof that the applicant is the sole owner of the domain,
 * Confirmation that the applicant is at all entitled to make the application and
-* Mention of a main contact person.
+* Naming a main contact person.
 In addition, the applicant or the applicant may not be on a list of prohibited organizations or persons. In addition, the country in which the applicant's registered office or legal status are located may not be subject to trade embargoes or any other sanctions imposed by the country whose legislation is subject to the certification body.
 
-For users, EV-SSL certificates can be recognized by the fact that certain areas in the supported browsers, such as the URL in the address field or the padlock symbol used by many browsers, which identifies an encrypted page, have a green background. However, depending on the configuration of the security gateway (firewall) behind which users access web pages with EV SSL certificates, these markers may not appear in the clients' browsers. If, for example, the message flow between the client and the web server is encrypted by a proxy and then re-encrypted, only the SSL / TLS certificate of the security gateway is displayed in the browser.
+For users, EV-SSL certificates can be recognized by the fact that certain areas in the supported browsers, such as the URL in the address field or the padlock symbol used by many browsers, which identifies an encrypted page, have a green background. However, depending on the configuration of the security gateway (firewall) behind which users access web pages with EV SSL certificates, these markers may not be displayed in the clients' browsers. If, for example, the message flow between the client and the web server is encrypted by a proxy and then re-encrypted, only the SSL / TLS certificate of the security gateway is displayed in the browser.
 
 In addition to the higher financial costs associated with issuing an EV-SSL certificate, it usually takes longer to complete an application, as additional information is reviewed by the certification authority. If possible, it is recommended to put up with this extra effort. Especially in areas where information with higher protection requirements regarding confidentiality and integrity is transferred, EV-SSL certificates should be preferred.
 
@@ -705,7 +709,7 @@ There are currently five SSL / TLS protocol versions: SSL v2, SSL v3, TLS v1.0, 
 
 SSL / TLS uses cipher suites that determine how secure an HTTPS connection is. Each suite consists of specific modules. If a particular module is considered unsafe or weak, changing the cipher suite will allow you to switch to a more secure module.
 
-Since the use of weak cipher suites can be enforced on the client side, it is necessary to offer server-side only those that use sufficient strength for authentication and encryption. In addition, the cipher suites used should support Perfect Forward Secrecy (PFS). Further notes on cryptographic algorithms and key lengths are contained in the Technical Guideline of the BSI "Cryptographic Methods: Recommendations and Key Lengths - Part 2 Use of TLS" (TR-02102-2) and in CON.1 Crypto Concept.
+Since the use of weak cipher suites can be enforced on the client side, it is necessary to only offer server-side servers that use sufficient strength for authentication and encryption. In addition, the cipher suites used should support Perfect Forward Secrecy (PFS). Further notes on cryptographic algorithms and key lengths are contained in the Technical Guideline of the BSI "Cryptographic Methods: Recommendations and Key Lengths - Part 2 Use of TLS" (TR-02102-2) and in CON.1 Crypto Concept.
 
 ** Session Renegotiation / TLS Compression **
 
@@ -715,7 +719,7 @@ In addition, the TLS compression should be disabled.
 
 ** Web server specific aspects **
 
-In general, it is recommended to protect the content made available on web servers during the transfer from the server to the client and vice versa using SSL / TLS.
+In general, it is recommended to protect the content provided on web servers during the transfer from the server to the client and vice versa using SSL / TLS.
 
 If possible, avoid offering mixed content websites. A mixed content web page is a page that uses encryption, but also includes unencrypted content (such as JavaScript, CSS, or images). A man-in-the-middle attacker can exploit the transmission of a single unencrypted file to take over an HTTPS session. In addition, because mixed content web pages typically generate browser alerts, it will degrade usability.
 HTTP Strict Transport Security (HSTS) is another method that protects against known weaknesses of SSL. This makes it difficult for a visitor to be redirected from a secure to an unsecured page due to an attack or server-side configuration issues. For example, if an attacker is in the same WLAN as the victim, he or she could read the session cookies and take over the HTTPS session. To enable HSTS, the HSTS header must be configured on the server.
@@ -730,11 +734,11 @@ The impact of configuration changes on the server is not always predictable. Eve
 
 #### SYS.1.1.M19 Set up local packet filter
 
-The entire network of an institution should be protected by an appropriate security gateway. Servers offering services to the outside should be deployed in a Demilitarized Zone (DMZ). Nevertheless, it is recommended to set up appropriate access restrictions at application or network level on every computer. This also applies to servers that are only used internally and not least for clients.
+The entire network of an institution should be protected by an appropriate security gateway. Servers offering services to the outside should be deployed in a Demilitarized Zone (DMZ). Nevertheless, it is advisable to set up access restrictions at application or network level on every computer as well. This also applies to servers that are only used internally and not least for clients.
 
-A local packet filter can protect a machine against attacks started from the same subnet. In addition, such a packet filter can be used to realize a finer graded access control for individual services, as is possible, for example, with packet filters only at gateways.
+A local packet filter can protect a machine against attacks launched from the same subnet. In addition, such a packet filter can be used to realize a finer graded access control for individual services, as is possible, for example, with packet filters only at gateways.
 
-In addition, a local packet filter can also be used to restrict outgoing network connections, thus limiting the consequences of compromising the system. Although such protection may be disabled by an attacker after a successful compromise of the computer, on the other hand, an attacker is at least hindered in this way. In this way, crucial time can be gained in the discovery and possible reactions.
+In addition, a local packet filter can also be used to restrict outgoing network connections, thus limiting the consequences of compromising the system. Although such protection may be disabled by an attacker after a successful compromise of the computer, on the other hand, an attacker is at least hindered in this way. In this way, decisive time can be gained in the discovery and possible reactions.
 
 Lastly, the log function of a local packet filter can allow certain attacks to be detected at all.
 
@@ -794,7 +798,7 @@ The following aspects have to be considered:
 * All necessary procedure descriptions must be regularly checked and rehearsed. You may need to consider varying approaches for different operating systems.
 ** boot media **
 
-When setting up a computer, a boot medium should be created that can be used to start the system if a hard drive fails or to generate a controlled system state if a malicious program occurs. Such media may be, for example, CDs whose creation the respective operating system may offer, but it is also possible to create specially furnished CDs or portable drives (for example USB sticks or external hard disks with USB or Firewire interface). In addition to "physical" media and image files can be used, which are copied or burned on the boot medium only when needed. The nature and extent of the emergency boot medium depends on the purpose of the computer and the existing interfaces.
+When setting up a computer, a boot medium should be created that can be used to start the system if a hard drive fails or to create a controlled system state if a malicious program occurs. Such media may be, for example, CDs whose creation the respective operating system may offer, but it is also possible to create specially furnished CDs or portable drives (for example USB sticks or external hard disks with USB or Firewire interface). In addition to "physical" media and image files can be used, which are copied or burned on the boot medium only when needed. The nature and extent of the emergency boot medium depends on the purpose of the computer and the existing interfaces.
 
 The emergency boot medium can be used for problems such as:
 
@@ -816,7 +820,7 @@ In addition, programs can be added for further analysis, such as forensic invest
 
 It is important that all programs and libraries are loaded exclusively from the boot medium. No components of the installed system may be used. When creating the boot medium, it is also important to ensure that in addition to the necessary programs, all the drivers required for access to the built-in disks of the computer are also available. These include, for example, drivers for hard disk controllers (especially RAID controllers) and drivers for hard disk encryption or hard disk compression.
 
-As a rule, other programs or documentation can also be stored on the medium. For example, it can increase the efficiency of debugging if there is always up-to-date documentation of the system configuration on the boot media.
+As a rule, other programs or documentation can also be stored on the medium. For example, it can increase the efficiency of debugging if the boot media always contains up-to-date documentation of the system configuration.
 The emergency boot medium itself must be free from viruses and other malicious programs. Therefore, only programs that originate from trustworthy sources (eg directly from the manufacturer) or whose digital signature has been checked may be used. At least once after the creation and every change, the boot medium should also be checked with a virus protection program.
 
 It is not absolutely necessary to create a separate boot medium for each system. A correspondingly flexible boot medium can be sufficient for a large number of different systems. Not even the same operating system needs to be deployed on the boot medium as on the target system itself. However, for compatibility reasons, this is often beneficial. However, it must be ensured by appropriate tests that the medium really works on all computers for which it is to be used. Depending on the operating system, system-specific aspects must also be considered, which are described in the respective IT-Grundschutz modules.
@@ -852,7 +856,7 @@ In such a security check, for example, the following points should be checked:
 + User directories and data
 + the requirements of the security policy?
 * Which network services run on the individual systems? Are they configured according to the security policy?
-In a regular security check, penetration tests can also be integrated in the local subnet. In doing so, the "degree" of the penetration tests can be varied (for example: weekly simple automated checks, monthly more thorough test with partial manual execution, once a year a basic test of the entire network).
+In a regular security check, penetration tests can also be integrated in the local subnet. Here, the "degree" of penetration testing can be varied (for example: weekly simple automated checks, monthly thorough test with partially performed manually, once a year, a basic test of the entire network).
 
 When carrying out the security check, the administrators should document their steps in such a way that they can be followed (for example, in the case of a suspected compromised system). The results of the safety check must be documented, deviations from the "target state" must be investigated.
 
@@ -872,14 +876,14 @@ In particular, it is important to have an overview of what data is stored on the
 * Information of users
  If the system is shut down without replacement, users must be informed in good time of the imminent shutdown and, if necessary, have the opportunity to save their own data.
 * Remove references to the system
- When decommissioning a system, references to the system must also be deleted. This includes, for example, deleting the DNS entry and the entries in other directory services as well as other references depending on the purpose. For example, if a web server is taken out of service, then references to this server, which are still contained in their own websites should be deleted.
+ When decommissioning a system, references to the system must also be deleted. This includes, for example, deleting the DNS entry and the entries in other directory services as well as other references depending on the intended use. For example, if a web server is taken out of service, then references to this server, which are still contained in their own websites should be deleted.
 * Deleting the data on the system to be shut down
  It must be ensured that no more valuable information is available on the data media. It is not enough just to reformat the disks, but they have to be completely overwritten at least once. It should be noted that neither deleting the operating system erasure nor reformatting the disks actually removes the data from the volumes. With suitable software, data can be reconstructed in such cases, often without much effort.
 * Delete backup media
  After decommissioning a system, the corresponding backup media may need to be deleted or rendered unusable if the data stored on it is no longer needed.
 * Remove any other information
-Often, server systems contain other data (such as configuration data) stored in nonvolatile memory or are labeled externally (for example, with the computer name, IP address, and other technical information). If possible, this information should be removed prior to transfer of the device, as an attacker may be able to extract information from such information for possible attacks.
-It is recommended to use the recommendations given above to create a checklist that can be used when decommissioning a system. In this way it can be avoided that individual steps are forgotten.
+Often, server systems contain other data (such as configuration data) stored in nonvolatile memory or are labeled externally (for example, with the computer name, IP address, and other technical information). If possible, this information should be removed prior to transferring the device, as an attacker may be able to extract information from such information for possible attacks.
+It is recommended that you use the recommendations given above to create a checklist that can be used when decommissioning a system. In this way it can be avoided that individual steps are forgotten.
 
 ** Migration of a server **
 
@@ -891,7 +895,7 @@ Therefore, an appropriate migration concept must be created in advance for the m
 
 * Data migration and configuration
  After transferring the data to the new system, check that the data has been completely and correctly transferred.
- If a new version of the server software is to be used on the new system, it must be ensured that the new version can handle the existing data correctly. This not only concerns the task of correctly importing data from the old version, but also, in particular, modifying this data or adding new data records. Especially in such cases, problems often arise, so that thorough tests are recommended. It is also important that the configuration of the old service on the new system can be correctly adopted or at least "functionally equivalent reconstructed."
+ If a new version of the server software is to be used on the new system, it must be ensured that the new version can handle the existing data correctly. This not only concerns the task of correctly importing data from the old version, but also, in particular, modifying this data or adding new data records. Especially in such cases, problems often arise, so that thorough tests are recommended. It is also important that the configuration of the old service on the new system can be correctly adopted or at least "functionally equivalent" replicated.
 * Compatibility of the service
  It must be ensured that the service on the replacement system is compatible with the original service. This is particularly important if a new version of the server program is to be used on the new system as part of the migration, but this will continue to be accessed with old version clients. Even if a manufacturer provides reference customer reports of successful migrations, or assures "backward compatibility", "full backward compatibility with previous versions," or the like, it is strongly recommended that you perform the appropriate tests in advance.
 * Cryptographic keys
@@ -901,7 +905,7 @@ If a server is only accessed via its IP address or a DNS name, then a migration 
  If the system is otherwise accessed (for example, if the address is resolved by another directory service), then it must be kept in mind that the change in this way may also have some latency before it takes effect.
  The biggest problem arises when clients access the servers through an application that stores the IP address or name of the server in a local configuration file or database. If a larger number of clients have to be manually reconfigured, this can take a considerable amount of time and must be planned in advance.
 * Permanent connections
- If there are clients who build longer existing or even permanent network connections to the service that has to be migrated to a new computer (this is the case with some database applications, for example), this must be taken into account during the migration. If necessary, these connections must be terminated manually on the relevant clients. This also requires appropriate planning.
+ If there are clients that build longer existing or even permanent network connections to the service that has to be migrated to a new computer (this is the case with some database applications, for example), this must be taken into account during the migration. If necessary, these connections must be terminated manually on the respective clients. This also requires appropriate planning.
 For the implementation of the migration, it is advisable to create a checklist as part of the development of the migration concept, which can be followed through step by step during the migration. When planning the migration and creating the checklist, care must be taken that each step depends only on the previous steps.
 
 In the case of high service availability requirements, the entire transition should be pre-tested in a test environment under the most realistic conditions possible in order to identify and eliminate potential problems at an early stage.
@@ -912,9 +916,9 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### SYS.1.1.M26 Multi-factor authentication (C)
 
-There are different methods of authentication based on the following factors: knowledge, ownership, and biometric features. For higher protection needs, multi-factor authentication is recommended using two of the three factors.
+There are different methods of authentication that can be based on the following factors: knowledge, ownership, and biometric features. For higher protection needs, multi-factor authentication is recommended using two of the three factors.
 
-The most common is the use of the factors knowledge and possession. The authentication key is in this case in a hardware, eg. B. chip card, stored (factor possession), which can be used only after entering a PIN or a password (factor knowledge). Depending on the security requirements, keys can also be stored on clients (eg notebook) or servers in the network of the institution.
+The most common is the use of the factors knowledge and possession. The authentication key is in this case in a hardware, eg. B. chip card, stored (factor ownership), which can be used only after entering a PIN or password (factor knowledge). Depending on the security requirements, keys can also be stored on clients (eg notebook) or servers in the network of the institution.
 
 Alternatively, it may be recommended to use a Public Key Infrastructure (PKI) based on digital signatures and asymmetric cryptography techniques. The validity of the signatures is checked by a recognized certification authority (CA). The length of the key or the signature correlates with the security of the crypto method used.
 
@@ -923,7 +927,7 @@ Host-based Intrusion Detection Systems (IDS) should monitor system behavior for 
 
 ** Regular integrity check **
 
-Periodic control of the file system, file attributes and process information, as well as other important elements of the system configuration (for example, the Windows Registry) for unexpected changes, helps to detect inconsistencies. The detection of such inconsistencies can be used to prevent system instabilities. It can also be detected in a timely manner attacks. If an attack is actually present, it is important to reconstruct the attacker's approach. On the one hand, this serves to detect manipulation of data and, on the other hand, to detect hidden backdoors that an attacker could have installed on the computer for later access.
+Periodic control of the file system, file attributes and process information, as well as other important elements of the system configuration (for example, the Windows Registry) for unexpected changes, helps to detect inconsistencies. The detection of such inconsistencies can be used to prevent system instabilities. It can also be detected in a timely manner attacks. If an attack is actually present, it is important to reconstruct the attacker's approach. On the one hand, this serves to detect manipulation of data and, on the other hand, to detect hidden backdoors that an attacker might have installed on the computer for later access.
 
 ** Calculation of cryptographic checksums **
 
@@ -936,9 +940,9 @@ Some programs only detect if changes have been made to the file system. For this
 To prevent the integrity checker itself or the file containing the checksums of the system from being corrupted by an attacker or malicious software, they should be located on a read-only medium. However, the checksum file must also be changed if changes are allowed to the file system so that CDs, DVDs or removable disks are recommended for this purpose. Alternatively, the checksum file can also be made read-only via the network. In managing the integrity checking program over the network, this approach should also be preferred. Some malicious programs camouflage themselves so that they can not be detected with methods of the manipulated operating system. Therefore, in case of suspicion, it makes sense to examine the system using a tamper-free operating system. For this purpose, for example, an external data carrier can be created via a trusted reference system, from which the tamper-free operating system is then started.
 
 ** test interval and test scope **
-An integrity check should be performed regularly, for example every night. The choice of a suitable test interval depends heavily on the intended use of the respective IT system or the environment of use. Integrity checks should also consider the amount of disk space and computation time required to verify the checksums. Use of the Integrity Check Program must not interfere with proper operation.
+An integrity check should be performed regularly, for example every night. The choice of a suitable test interval depends heavily on the intended use of the respective IT system or the environment of use. When integrity checks are performed, the memory and computation time required to verify the checksums must also be considered. Use of the Integrity Check Program must not interfere with proper operation.
 
-In the normal operation of any major IT system, there are constantly smaller and larger changes to system files. In general, it is therefore advisable to configure the integrity checking program so that only changes to relevant files are recorded. Otherwise, there is a risk that a large number of change notifications are triggered, which are due to normal business processes and not to attack attempts (false positives). As a result, it may happen that the log files can no longer be evaluated promptly.
+In the normal operation of any major IT system, there are constantly smaller and larger changes to system files. In general, it is therefore advisable to configure the integrity checking program so that only changes to relevant files are recorded. Otherwise, there is a risk that a large number of change notifications will be triggered, which are due to normal business processes and not to attempts of attack (false positives). As a result, it may happen that the log files can no longer be evaluated promptly.
 
 ** Process information in RAM **
 
@@ -950,10 +954,10 @@ Notification of the result, even if no changes were detected, should be made aut
 
 #### SYS.1.1.M28 Redundancy (A)
 
-The availability of business processes, applications and services often depends on the functionality of a central server. But the more applications that run on a server, the more resilient it must be. As a rule, a server contains several potential sources of error ("single points of failure"), ie components whose failure can trigger the failure of the entire system: hard disks, power supply, fans, backplane, etc. Restoring the entire system can take a considerable amount of time in this case take advantage of. In addition to the provision of spare parts, the following additional options can be used to increase the availability:
+The availability of business processes, applications and services often depends on the functionality of a central server. But the more applications that run on a server, the more resilient it must be. As a rule, a server contains several potential sources of error ("single points of failure"), ie components whose failure can trigger the failure of the entire system: hard disks, power supply, fans, backplane, etc. Restoring the entire system can take a considerable amount of time in this case take advantage of. In addition to the provision of spare parts, the following additional options can be used to increase availability:
 
 Cold Standby
-* Hot-Standby (manual panning)
+* Hot Standby (manual panning)
 * Cluster (automatic panning)
 * Load balanced cluster
 * Failover cluster
@@ -981,7 +985,7 @@ It is well suited for servers with applications where short or limited downtime 
 * Least frequented servers on the internet
 ** Hot Standby (manual panning) **
 
-In the case of a hot standby, a replacement system is also available, which is kept in parallel with the production system in parallel. The function of the productive system is monitored, in case of failure the replacement system becomes active. The change can be automatic or manual. For the automatic change, additional functionalities are required in the overall system. As the automatic detection of failures. This case is covered in the next section under "Clusters".
+In the case of a hot standby, a replacement system is also available, which is kept in parallel with the production system in parallel. The function of the productive system is monitored, in case of failure the replacement system becomes active. The change can be automatic or manual. For the automatic change, additional functionalities are required in the overall system. As the automatic detection of failures. This case will be covered in the next section under "Clusters".
 
 In order to keep the downtime as low as possible, the condition of the replacement system has to be checked continuously.
 
@@ -1000,7 +1004,7 @@ The use of hot-standby systems is suitable for applications where short downtime
 
 * Web server with often varying content
 * Server in smaller networks (application server, mail server)
-* Database server and file server (for example, secondary server replicates primary server constantly and will be served as primary server in case of failure)
+* Database server and file server (eg secondary server constantly replicates primary server and will be used as primary server in case of failure)
 ** Cluster (automatic panning) **
 A cluster consists of a group of two or more computers that operate in parallel to increase the availability or performance of an application or service. The application or the service can be carried out actively on one of the computers or distributed over several (performance increase).
 
@@ -1016,7 +1020,7 @@ With the Load balanced cluster, instances of an application or service are distr
 
 One of the requirements for the use of load balancing is that the respective applications or services must not require write data access.
 
-Redundancy can be created in this case by providing systems of similar performance "side-by-side" with the help of a load-balancing process, and ensuring that if one server fails, the other servers will intercept that failure.
+Redundancy can be created in this case by providing systems of similar performance "side-by-side" with the help of a load-balancing process, and ensuring that if one server fails, the other servers will capture that outage.
 
 Advantages of a Load balanced cluster
 
@@ -1026,7 +1030,7 @@ Advantages of a Load balanced cluster
 * Complexity of the overall system is lower than with a failover cluster.
 Disadvantages of a Load balanced cluster
 
-* The use is not possible for all types of applications. In particular, applications that do not use read-only access while requiring all servers access to the same storage resources are not suitable for load balancing.
+* The use is not possible for all types of applications. In particular, applications that do not use read-only access while requiring all servers to access the same storage resources are not suitable for load balancing.
 If the performance is very important in addition to the availability and the application allows a distributed deployment, a load balanced cluster offers an optimal solution. This can z. For example:
 
 * Web server
@@ -1045,7 +1049,7 @@ The following points must be considered when using a failover cluster:
 * Portability of the application:
 Installing and deploying an application on two or more servers in parallel requires the use of additional licenses in most cases. In addition, it must be checked whether the application allows failover functionality.
 * NSPoF (No Single Points of Failure):
- If the failover functionality of the cluster can be disrupted by the failure of a single component, this contradicts the true purpose of the cluster architecture. To avoid single points of failure, you need to analyze the overall system and consider the failure of individual components (power supplies, system memory, memory, network cards, switches, hubs, etc.).
+ If the failover functionality of the cluster can be disrupted by the failure of a single component, this contradicts the true purpose of the cluster architecture. To avoid single points of failure, it is important to analyze the overall system and consider the failure of individual components (power supplies, system memory, memory, network cards, switches, hubs, etc.).
 * Operating system and cluster server configuration:
  The cluster servers should be equipped with the same operating system versions, patches, libraries and application versions. The most identical possible hardware and software configuration can ensure identical behavior in the event of a failover. Moreover, in the case of identical systems, the complexity of the entire system is reduced (use of the same failover software, network interfaces, compatibility of the shared storage system, administration, service).
 * Dedicated and redundant connection between the servers:
@@ -1075,15 +1079,15 @@ Areas typically used for failover clusters with high availability requirements a
 Whenever business processes, applications or services have high availability requirements, it is important to consider how these requirements can be met. The IT managers and the security management should develop a concept for the corresponding servers and select appropriate architectures.
 
 #### SYS.1.1.M29 Setting up a test environment (CIA)
-For servers with high security requirements, a test environment should be set up in which configuration changes, updates and patches can be pre-tested prior to importing to the production system. This applies to security patches and updates as well as normal updates issued by the manufacturer.
+For servers with high security requirements, a test environment should be set up in which configuration changes, updates, and patches can be pre-tested prior to importing to the production system. This applies to security patches and updates as well as normal updates issued by the manufacturer.
 
 The test environment must be designed to allow a "functionally equivalent" installation of hardware and software. This does not necessarily mean that a second, identically configured system has to be procured for an expensive server computer. For testing configuration changes, updates and patches of application programs and server software, a technically much more economical system is usually sufficient.
 
 However, it should also be possible to test new device drivers before importing. Therefore, it may be advantageous to use different test systems for different types of tests, such as one system for testing near-system programs or operating system patches, and another for tests related to the actual server software. In such a case, however, it is important to be aware that in this way certain types of interactions between operating system environment and server software can not be covered. In the case of special requirements for the security and reliability of a server, it may therefore be necessary to actually have a second, identically configured system as a test environment.
 
-For several typical and more frequently recurring test cases, checklists should be created that can be executed during testing and which, in addition to the pure documentation of the test, can often also contribute to increasing efficiency and avoiding errors.
+For several typical and more frequently recurring test cases, checklists should be created that can be executed during testing and that, in addition to the pure documentation of the test, can often also contribute to increasing efficiency and avoiding errors.
 
-All tests should be documented so that they can be retraced at a later date.
+All tests should be documented so that they can be understood at a later date.
 
 #### One service per server (CIA)
 
@@ -1100,7 +1104,7 @@ However, consolidating multiple servers into one hardware may require a better b
 
 ### 3.2 Literature
 
-Further information about threats and security measures in the area "general server" can be found in the following publications:
+Additional information on threats and security measures in the "General Server" area can be found in the following publications, among others:
 
 * #### [BSITLS] Minimum TLS Migration Guide 1.2
 

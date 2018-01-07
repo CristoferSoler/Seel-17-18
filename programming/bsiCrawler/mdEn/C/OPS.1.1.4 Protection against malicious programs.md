@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -26,7 +30,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Software vulnerabilities and drive-by downloads
 
-If IT systems are not adequately protected against malicious programs, which also requires, among other things, that patches are brought in quickly and the protection mechanisms of application programs such as browsers are correctly configured, software vulnerabilities can be exploited to execute malicious code. In the so-called drive-by downloads, for example, it is sufficient to visit a malicious website. A vulnerability in the browser or in an installed plug-in such as Java or Adobe Flash can then be exploited to infect the IT system and provide the attacker with extensive control and access to the network of an institution. Particularly at risk here are IT systems that are not regularly updated, such as many smartphones.
+If IT systems are not adequately protected against malicious programs, which also requires, among other things, that patches have been brought in quickly and the protection mechanisms of application programs such as browsers are correctly configured, software vulnerabilities can be exploited to execute malicious code. In the so-called drive-by downloads, for example, it is sufficient to visit a malicious website. A vulnerability in the browser or in an installed plug-in such as Java or Adobe Flash can then be exploited to infect the IT system and provide the attacker with extensive control and access to the network of an institution. Particularly at risk here are IT systems that are not regularly updated, such as many smartphones.
 
 ### 2 2 Blackmail by ransomware
 
@@ -41,18 +45,18 @@ If the users are not adequately sensitized, mobile data carriers can also serve 
 
 ### 2 5 botnets
 
-Through malicious programs, IT systems of an institution can become part of so-called botnets. For example, an attacker who frequently controls thousands of systems in such a botnet can use them to send spam or launch distributed Denial-of-Service (DDoS) attacks to third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
+Through malicious programs, IT systems of an institution can become part of so-called botnets. An attacker who frequently controls thousands of systems in such a botnet can use them, for example, to send spam or launch distributed denial-of-service attacks (DDoS) on third parties. Even if your own institution may not be directly harmed, it can still have a negative impact on the availability and integrity of your own services and IT systems, and may even cause legal problems.
 
 ### 2 6 Infection of production systems and IoT devices
 
-In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can lead to downtime and many other threats to the institution and its employees, such as fires.
+In addition to classic IT systems, devices are increasingly being attacked by malicious programs, which at first glance do not seem like obvious targets. For example, an attacker could infect a surveillance camera accessible via the Internet to spy on them. But even a networked light bulb or an app-controlled coffee maker can serve as an entry point into the institution's network or as part of a botnet if those devices are not adequately protected from malicious programs. Networked production systems or industrial controls can also be maliciously manipulated or even destroyed, which can result in downtime and many other threats to the institution and its employees, including fires.
 
 3 requirements
 ---------------
 
 The following are specific requirements for malicious program protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should at least be included in all strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined IT security concept.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -65,11 +69,11 @@ It MUST be assessed what protections the IT systems used as well as the operatin
 
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices
 
-Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific application. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+Depending on the operating system used, other existing protection mechanisms and the availability of suitable virus protection programs, such a protection program MUST be selected and installed for the specific purpose. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation mode. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A4 Selection of a virus protection program for gateways and IT systems for data exchange [specialist responsible]
 
-For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY use cloud features of such products that do not have any serious, demonstrable data or privacy protection.
+For gateways and IT systems used for data exchange, a suitable virus protection program MUST be selected and installed. ONLY Enterprise Products may be used with service and support services tailored to the institution. Products for home users or products without manufacturer support MUST NOT be used in professional operation. It may ONLY be used cloud features of products that do not have any serious, demonstrable data or privacy protection.
 
 #### OPS.1.1.4.A5 Operation of virus protection programs
 
@@ -87,7 +91,7 @@ Users MUST be regularly briefed on the threat of malware. You MUST follow the ba
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the field of malware protection. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of protection against malicious programs. They SHOULD be implemented in principle.
 
 #### OPS.1.1.4.A8 Use of cloud services
 Cloud services to improve the detection performance of virus protection programs SHOULD be used. The corresponding specifications from the requirements OPS.1.1.4.A3 Selection of a virus protection program for terminal devices and OPS.1.1.4.A4 selection of a virus protection program for gateways and IT systems for data exchange MUST be observed.
@@ -102,7 +106,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.4.A10 Use of special analysis environments (CIA)
 
-Automated analytics in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
+Automated analysis in a specialized test environment (based on sandboxing or separate virtual or physical systems) SHOULD be used as a supplement to evaluate suspicious files.
 
 #### OPS.1.1.4.A11 Using Multiple Scan Engines (CIA)
 
@@ -122,7 +126,7 @@ With increased protection requirements and appropriate threat status, the use an
 
 #### OPS.1.1.4.A15 External Consultation (CIA)
 
-When developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
+In developing a malware protection scheme, external support SHOULD be used if one's own know-how or market knowledge is insufficient. In order to prevent in particular performance problems within the IT systems and networks and to put the protection against malicious programs meaningfully into an overall concept, the implementation of protection products in complex IT infrastructures should only be carried out by experienced experts. After installing protection programs, the configuration SHOULD be subjected to an external expert review.
 
 4 Further Information
 ------------------------------

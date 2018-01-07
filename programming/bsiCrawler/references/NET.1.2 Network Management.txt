@@ -33,7 +33,7 @@
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 #### NET.1.2.A31 Basic Use of Secure Protocols (CIA)
 #### NET.1.2.A32 Physical separation of the management network (CIA)
-#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
 #### NET.1.2.A34 Logging Content of Administrative Sessions (CI)
 #### NET.1.2.A35 Preservation Requirements (CIA)
 #### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)

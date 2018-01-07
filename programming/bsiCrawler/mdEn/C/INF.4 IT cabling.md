@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -24,7 +28,7 @@ Cable fires can cause serious damage. Some of these consequences are, for exampl
 
 ### 2 2 Insufficient network dimensioning
 
-If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. However, an extension of networks is only possible to the extent permitted by the existing cables laid or the space available for additional cables.
+If an IT network is not sufficiently sized, availability suffers. When planning networks, routes, server rooms or data centers, it is often the mistake to align the functional, capacitive or safety-related design exclusively to current requirements. It is overlooked that an expansion of the capacity of the network can be just as necessary by new requirements as z. Eg by changing technical standards. An extension of networks is only possible to the extent permitted by the existing, laid cables or the space available for additional cables.
 
 ### 2 3 Insufficient documentation of the wiring
 
@@ -50,7 +54,7 @@ Listening to lines is a danger to information security that should not be neglec
 
 The following are specific requirements for IT cabling. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
@@ -71,7 +75,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.4.A4 Requirements Analysis for IT Cabling
 
-Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
+Basically, an analysis of the requirements that have an influence on the future-proof, needs-based and economic execution of IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT-use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
 
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 
@@ -79,7 +83,7 @@ The IT cabling SHOULD be subjected to a approval process. This SHOULD only take 
 
 #### INF.4.A6 Continuous updating and revision of network documentation
 
-The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In doing so, all documentation areas affected by the change SHOULD be easily captured and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
+The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In this case, all documentation areas affected by the change SHOULD easily be recorded and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
 
 #### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
 
@@ -98,7 +102,7 @@ Each distributor SHOULD have a documentation showing the current status of shunt
 
 #### INF.4.A11 Control of existing connections
 
-All distributors and drawers of the wiring SHOULD be subjected to a regular (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out. Any irregularities detected during visual inspections or functional inspections MUST be documented immediately and reported to the appropriate organizational units.
+All distributors and drawers of the wiring SHOULD be subjected to a regular (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out. Any irregularities detected during visual inspections or functional inspections MUST be promptly documented and reported to the appropriate organizational units.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -106,11 +110,11 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.4.A12 Redundancies for the wiring (A)
 
-It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire areas of the building. If redundant cabling is used, its functionality should be checked regularly.
+It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire compartments of the building. If redundant cabling is used, its functionality should be checked regularly.
 
 #### INF.4.A13 Material Assurance of IT Cabling (IA)
 
-In rooms with public access or in confusing areas of a building, cables and distribution boards SHOULD be additionally secured against unauthorized access. In any case, the number of locations where the routed cable is accessible should be minimized and the length of the connections to be protected against unauthorized access minimized.
+In rooms with public access or in confusing areas of a building, cables and distribution boards SHOULD additionally be protected against unauthorized access. In any case, the number of locations where the routed cable is accessible should be minimized and the length of the connections to be protected against unauthorized access minimized.
 
 #### INF.4.A14 Prevention of transient currents on shieldings (A)
 
@@ -137,14 +141,14 @@ Additional information on hazards and security measures in the area of ​​"IT
 
   
 
- Construction methods for electronic devices, Beuth Verlag
+ Construction methods for electronic equipment, Beuth Verlag
 
  
 * #### [DIN60297] DIN IEC 60297
 
   
 
- Construction methods for electronic devices, Beuth Verlag
+ Construction methods for electronic equipment, Beuth Verlag
 
  
 * #### [EN50173] EN 50173: 2007

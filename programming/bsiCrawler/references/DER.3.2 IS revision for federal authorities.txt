@@ -1,7 +1,7 @@
 ### 3.1 Basic requirements
 #### DER.3.2.A1 Definition of responsibilities for the IS audit
 #### DER.3.2.A2 Creation of an IS-Revision-Manual
-#### DER.3.2.A3 Definition of the basis for the audit and a common rating scheme [IS audit team]
+#### DER.3.2.A3 Definition of the basis of the audit and a common rating scheme [IS audit team]
 #### DER.3.2.A4 Preparation of a plan for the IS audit
 #### DER.3.2.A5 Selection of a suitable IS audit team
 #### DER.3.2.A6 Preparation of an IS revision [IS revision team]

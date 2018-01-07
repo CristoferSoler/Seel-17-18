@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-In outsourcing, institutions (outsourcing customers) outsource all or part of their business processes and services (eg, security or cleaning staff) to external service providers (outsourcing service providers). The operation of hardware and software can also be outsourced as a service. Regardless of what is outsourced, every outsourcing requires close ties to the external service provider and their service quality and service quality. This ratio is particularly for the customer not only opportunities, but also associated with significant risks, such. As strong dependencies, loss of their own know-how and loss of control and control. Information security aspects must therefore be adequately taken into account during the entire lifecycle of outsourcing.
+In outsourcing, institutions (outsourcing customers) outsource all or part of their business processes and services (eg, security or cleaning staff) to external service providers (outsourcing service providers). The operation of hardware and software can also be outsourced as a service. Regardless of what is outsourced, every outsourcing requires close ties to the external service provider and their service quality and service quality. This ratio is particularly for the customer not only opportunities, but also associated with significant risks, such. As strong dependencies, loss of their own know-how and loss of control and control. Information security aspects must therefore be adequately considered during the entire life cycle of outsourcing.
 
 This module focuses on requirements that outsourcing customers should adhere to or implement during each phase of an outsourcing project.
 
@@ -26,18 +30,18 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of or inadequate information security regulations
 
-An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The spectrum of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
+An outsourcing project typically transfers large amounts of information between the customer and the outsourcing service provider. Depending on the protection requirements of the information to be processed, missing or inadequate regulations can cause damage. This is the case, for example, if the regulations and instructions for controlling the service provider are not updated in the event of technical, organizational or personnel changes, for example, if contact persons change. The range of regulatory deficits ranges from ambiguity in responsibilities and control functions to incomprehensible or incoherent formulated regulations, up to completely missing regulations.
 
 ### 2 2 Inappropriate access, access and access rights management
 
 Depending on the outsourcing plans, it may be necessary for the outsourcing customer's employees to have access, access and access rights to IT systems, information, buildings or rooms of the outsourcing service provider. If the granting, administration and control of these rights is poorly regulated and, in extreme cases, even unauthorized rights are granted, it is no longer possible to guarantee the necessary protection requirements for the information provided by the outsourcing customer. For example, the uncontrolled assignment of administrative authorizations to employees of the outsourcing service provider can lead to serious security risks. These could exploit permissions and copy or manipulate sensitive information.
 
 ### 2 3 Missing or inadequate testing and approval process
-If an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not reported to the customer, this can result in significant failure. or subsequent investments.
+If an outsourcing customer has not defined adequate requirements for testing and approval procedures for the outsourcing service provider, existing errors in the hardware and software or security gaps in the configuration may not be recognized or not detected in good time. This lack can lead to the fact that the necessary protection of the information of the outsourcing customer can not be guaranteed any longer. If testing reveals that new components or updates result in significant changes to workflows, or more resources (eg, memory, processor capacity) are required for acceptable processing speed, and this is not communicated to the customer, this can result in significant failure. or subsequent investments.
 
 ### 2 4 Inadequate contractual arrangements with an outsourcing service provider
 
-Due to inadequate contractual arrangements with an outsourcing service provider, various and serious security problems can arise. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the consequence may be that security measures are not implemented due to ignorance or lack of resources. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and failure to take responsibility for loss of control and control.
+Due to inadequate contractual arrangements with an outsourcing service provider, various and serious security problems can arise. If tasks, performance parameters or expenses have been described insufficiently or misleadingly, the result may be that, due to ignorance or lack of resources, security measures are not implemented. This can have a variety of negative consequences, such as non-compliance with regulatory requirements and obligations, failure to comply with disclosure obligations and laws, and failure to take responsibility for loss of control and control.
 
 ### 2 5 Inadequate regulations for the end of an outsourcing
 
@@ -134,7 +138,7 @@ For the migration phase, a security management team of qualified employees of th
 
 #### OPS.2.1.A14 Emergency Preparedness for Outsourcing [Emergency Response Officer]
 
-There SHOULD exist an outsourcing contingency plan that includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency provision concept for outsourcing, the responsibilities, contacts and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
+There SHOULD exist an outsourcing contingency plan that includes the components of the outsourcing customer, the outsourcing service provider and the associated interfaces. In the emergency preparedness concept for outsourcing, the responsibilities, contact persons and processes between the outsourcing customer and the outsourcing service provider SHOULD be regulated. The outsourcing customer SHOULD control the implementation of the outsourcing service provider's emergency measures. It should be done to common emergency exercises of outsourcing customers and outsourcing service providers.
 
 #### OPS.2.1.A15 Orderly termination of an outsourcing relationship [Head of Procurement]
 
@@ -148,7 +152,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.2.1.A16 Security check of employees (CI)
 
-With external outsourcing service providers SHOULD be contractually agreed that the trustworthiness of the employed personnel is suitably checked. For this, criteria should be defined together.
+With external outsourcing service providers SHOULD be contractually agreed that the trustworthiness of the staff employed is suitably checked. For this, criteria should be defined together.
 
 4 Further Information
 ------------------------------
