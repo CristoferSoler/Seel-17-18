@@ -291,6 +291,7 @@ function topicBack() {
 
             $('#question').text(entryQuestionComponent);
             $('#topic').text('');
+            localStorage.setItem('currentTopic',String(currentTopic))
             localStorage.setItem('mode','c');
             clearTopicStorage();
 
@@ -302,6 +303,7 @@ function topicBack() {
                     $("#dontKnowButton").addClass('disabled');
                     $('#question').text(entryQuestionComponent);
                     $('#topic').text('');
+                    localStorage.setItem('currentTopic',String(currentTopic))
                     localStorage.setItem('mode','c');
                     clearTopicStorage();
 
@@ -311,6 +313,7 @@ function topicBack() {
                     $('#question').text(entryQuestionThread);
                      $("#dontKnowButton").addClass('disabled');
                     $('#topic').text('');
+                    localStorage.setItem('currentTopic',String(currentTopic))
                     localStorage.setItem('mode','t');
                     clearTopicStorage();
                 }
