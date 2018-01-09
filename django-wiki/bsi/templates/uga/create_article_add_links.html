@@ -2,9 +2,21 @@
 {% load wiki_tags i18n sekizai_tags static %}
 
 {% block pre_form %}
+    {% addtoblock "css" %}
+        <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/loader.css' %}"/>
+    {% endaddtoblock %}
+
     <div class="col-lg-12">
-        <h4>Search articles</h4>
-        <div class="form-group inner-addon right-addon ui-widget">
+        <div class="row">
+            <div class="col-sm-2 text-right">
+                <h4>Search articles</h4>
+            </div>
+            <div class="col-sm-10">
+                <div id="loading-spinner" class="loader"></div>
+            </div>
+        </div>
+
+        <div class="inner-addon right-addon ui-widget">
             <i class="glyphicon glyphicon-search"></i>
             <input type="search" class="form-control search-query" id="search_autocomplete" placeholder="search"/>
         </div>
@@ -14,7 +26,7 @@
         </div>
     </div>
 
-    <div class="col-lg-1"></div>
+
     <div class=" col-lg-4">
         <div class="fading-side-menu" data-spy="" data-offset-top="350">
             <h4>Table of Contents</h4>
@@ -44,45 +56,71 @@
 
 
                 $(function () {
-                    $("#search_autocomplete").autocomplete({
-                        source: "/uga/_create/get_bsi_articles/",
-                        minLength: 2
-                    }).on('keyup change', function (e) {
-                        $(this).autocomplete('close');
-                        var autocompletelistitem = $("#ui-id-1").find("> .ui-menu-item");
-                        var resultlist = $("#newList");
-                        resultlist.empty();
-                        autocompletelistitem.each(function () {
-                            resultlist.append("<li class='list-group-item search-result'>" + $(this).text() + "</li>");
+                    $("#search_autocomplete")
+                    {#    .autocomplete({#}
+                    {#    source: "/uga/_create/get_bsi_articles/",#}
+                    {#    minLength: 2#}
 
+                        .on('keyup', function (e) {
+                            var t = $(this).val();
 
-                        });
+                            // if query is too short or enter has not been hit, don't start a ajax request
+                            if (t.length < 2 || e.which !== 13) {
+                                return false;
+                            }
 
-                        $(function () {
-                            $('.search-result').each(function () {
-                                var text = $(this).text();
-                                var corresponding_field = $(':input[type=checkbox]').filter(function () {
-                                    return this.value === text
-                                });
-                                if (corresponding_field.is(':checked')) {
-                                    $(this).addClass("active");
-                                }
-                                $(this).click(function () {
-                                    if ($(this).hasClass("active")) {
-                                        $(this).removeClass("active");
-                                        corresponding_field.prop('checked', false);
-                                        corresponding_field.parent().parent().hide();
-                                    } else {
-                                        $(this).addClass("active");
-                                        corresponding_field.prop('checked', true);
-                                        corresponding_field.parent().parent().show();
+                            var $search_result = $.ajax({
+                                url: '/uga/_create/get_bsi_articles/',
+                                {#async: false,#}
+                                data: {term: t},
+                                beforeSend: function () {
+                                    if ($search_result != null) {
+                                        $search_result.abort();
+                                    }
+                                },
+                                success: function (data) {
+                                    var resultlist = $("#newList");
+                                    resultlist.empty();
+                                    for (var i = 0; i < data.length; i++) {
+                                        resultlist.append("<li class='list-group-item search-result'>" + data[i].value + "</li>");
                                     }
 
-                                });
-                            })
-
+                                    setUp();
+                                }
+                            });
                         });
-                    });
+
+                    function setUp() {
+                        $('.search-result').each(function () {
+                            var text = $(this).text();
+                            var corresponding_field = $(':input[type=checkbox]').filter(function () {
+                                return this.value === text
+                            });
+                            if (corresponding_field.is(':checked')) {
+                                $(this).addClass("active");
+                            }
+                            $(this).click(function () {
+                                if ($(this).hasClass("active")) {
+                                    $(this).removeClass("active");
+                                    corresponding_field.prop('checked', false);
+                                    corresponding_field.parent().parent().hide();
+                                } else {
+                                    $(this).addClass("active");
+                                    corresponding_field.prop('checked', true);
+                                    corresponding_field.parent().parent().show();
+                                }
+
+                            });
+                        })
+
+                    }
+
+                });
+
+                $(document).ajaxStart(function () {
+                    $('#loading-spinner').show();
+                }).ajaxStop(function () {
+                    $('#loading-spinner').hide();
                 });
 
                 $(document).ready(function () {
@@ -93,6 +131,7 @@
                         })
                     }
                 );
+
 
                 $(function () {
                     $('input[type=checkbox]').change(function () {
@@ -110,35 +149,41 @@
         </div>
     </div>
 
+
 {% endblock %}
 
 {% block form_data %}
+    {{ wizard.management_form }}
+    {% if wizard.form.forms %}
+        {{ wizard.form.management_form }}
+    {% endif %}
+    <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-6">
 
-    <div class="col-lg-6">
 
+            <table>
+                <tbody>
+                {% for field in form %}
+                    <tr>
+                        <p>
+                            {{ field.label_tag }}
+                            {{ field }}
 
-        <table>
-            <tbody>
-            {% for field in form %}
-                <tr>
-                    <p>
-                        {{ field.label_tag }}
-                        {{ field }}
+                            {% for error in field.errors %}
+                                <p style="color: red">{{ error }}</p>
+                            {% endfor %}
 
-                        {% for error in field.errors %}
-                            <p style="color: red">{{ error }}</p>
-                        {% endfor %}
+                    </tr>
+                    <tr>{{ field.help_text|safe }}</tr>
+                {% endfor %}
+                </tbody>
+            </table>
 
-                </tr>
-                <tr>{{ field.help_text|safe }}</tr>
-            {% endfor %}
-            </tbody>
-        </table>
+        </div>
+
 
     </div>
-
-
-
 
 
 {% endblock %}

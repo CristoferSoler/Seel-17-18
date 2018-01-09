@@ -50,9 +50,6 @@ TEMPLATES = {"creation": "uga/create_article_master_data.html",
 
 
 class UGACreate(SessionWizardView):
-    # template_name = 'uga/create_article.html'
-
-    # form_list = [CreateForm, AddLinksForm]
 
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):

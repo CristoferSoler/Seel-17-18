@@ -2,6 +2,10 @@
 {% load wiki_tags i18n sekizai_tags static %}
 
 {% block form_data %}
+    {% addtoblock "js" %}
+        <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
+    {% endaddtoblock %}
+
     <table>
         <tbody>
 
