@@ -122,6 +122,26 @@ def deleteAllFilesInDirectory(directory):
     except Exception as e:
         print(e)
 
+def addToStopwordList(words):
+
+
+def removingWordsAppearInEachText(directory):
+    files = readInFilesToPathList(directory)
+
+    wordsAppearInEachText = []
+
+    for file in files:
+        fileWithoutStopwordsArray, fileName = preprocessingOfFile(pathOfTxt + file)
+        fileWithoutStopwords = fileWithoutStopwordsArray[0]
+
+        if(len(wordsAppearInEachText)== 0):
+            wordsAppearInEachText = fileWithoutStopwords[:]
+        else:
+            wordsAppearInEachText = set(wordsAppearInEachText).intersection(fileWithoutStopwords)
+
+    print(list(wordsAppearInEachText))
+
+
 def topicGeneration():
     global  pathOfMd
     global pathOfTxt
@@ -134,8 +154,9 @@ def topicGeneration():
     pathOfTxt = 'txt/c/'
     path_to_corpus = 'txt/c'
     convertMDtoTxt(pathOfMd)
-    generateTopicTable()
-    writeToCSV("csv/componentsTopics.csv")
+    removingWordsAppearInEachText('txt/c')
+    #generateTopicTable()
+    #writeToCSV("csv/componentsTopics.csv")
 
     #threads
     csvFile = []
@@ -143,8 +164,9 @@ def topicGeneration():
     pathOfTxt = 'txt/t/'
     path_to_corpus = 'txt/t'
     convertMDtoTxt(pathOfMd)
-    generateTopicTable()
-    writeToCSV("csv/threadsTopics.csv")
+    removingWordsAppearInEachText('txt/t')
+    #generateTopicTable()
+    #writeToCSV("csv/threadsTopics.csv")
 
 if __name__ == "__main__":
     topicGeneration()
