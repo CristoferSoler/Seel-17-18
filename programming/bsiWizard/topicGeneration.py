@@ -11,14 +11,15 @@ import pandas
 from nltk.stem import WordNetLemmatizer
 import spacy
 
-pathToStopwordList = 'stopwordlist/en.txt'
+pathToNormalStopwordList = 'stopwordlist/en.txt'
+pathToUpgradedStopwordList = 'stopwordlist/en-upgraded.txt'
 #pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = 'mallet-2.0.8/bin/mallet'
 output = 'output/'
 lemmanizeCorpus = True
 
 def getStopWordList():
-    stopwords = [line.strip() for line in open(pathToStopwordList, 'r', encoding='utf-8')]
+    stopwords = [line.strip() for line in open(pathToUpgradedStopwordList, 'r', encoding='utf-8')]
     return stopwords
 
 def readInFilesToPathList(path):
@@ -123,7 +124,15 @@ def deleteAllFilesInDirectory(directory):
         print(e)
 
 def addToStopwordList(words):
+    with open('stopwordlist/en-upgraded.txt', "a") as file:
+        for word in words:
+            file.write(word + '\n')
 
+        file.close()
+
+def duplicateStopwordList():
+    pathStopwords = pathToNormalStopwordList.split('/')[0]
+    shutil.copyfile(pathToNormalStopwordList, pathStopwords + '/en-upgraded.txt')
 
 def removingWordsAppearInEachText(directory):
     files = readInFilesToPathList(directory)
@@ -139,7 +148,7 @@ def removingWordsAppearInEachText(directory):
         else:
             wordsAppearInEachText = set(wordsAppearInEachText).intersection(fileWithoutStopwords)
 
-    print(list(wordsAppearInEachText))
+    addToStopwordList(list(wordsAppearInEachText))
 
 
 def topicGeneration():
@@ -148,6 +157,9 @@ def topicGeneration():
     global path_to_corpus
     global csvFile
 
+    #for removing all words which appears in each text
+    duplicateStopwordList()
+
     # components
     csvFile = []
     pathOfMd = 'mdEn/C/'
@@ -155,8 +167,8 @@ def topicGeneration():
     path_to_corpus = 'txt/c'
     convertMDtoTxt(pathOfMd)
     removingWordsAppearInEachText('txt/c')
-    #generateTopicTable()
-    #writeToCSV("csv/componentsTopics.csv")
+    generateTopicTable()
+    writeToCSV("csv/componentsTopics.csv")
 
     #threads
     csvFile = []
@@ -165,8 +177,8 @@ def topicGeneration():
     path_to_corpus = 'txt/t'
     convertMDtoTxt(pathOfMd)
     removingWordsAppearInEachText('txt/t')
-    #generateTopicTable()
-    #writeToCSV("csv/threadsTopics.csv")
+    generateTopicTable()
+    writeToCSV("csv/threadsTopics.csv")
 
 if __name__ == "__main__":
     topicGeneration()
