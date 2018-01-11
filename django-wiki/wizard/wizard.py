@@ -32,18 +32,26 @@ def generateDic(list,pathlist,requestParameter):
 def readAndProcessCSV(fileName, requestParameter):
     elementWithTopics = {'element':[]}
     with open(fileName) as f:
-        pathlist =  open('./../programming/bsiCrawler/treeview/pathlist.txt')
-        jsonFile = json.loads(pathlist.read())
+        jsonFile = getPathList()
         reader = csv.reader(f)
         for row in reader:
             dic = generateDic(row,jsonFile,requestParameter)
             elementWithTopics['element'].append(dic)
     return elementWithTopics
 
+
+def getPathList():
+    pathlist = open('./../programming/bsiCrawler/treeview/pathlist.txt')
+    jsonFile = json.loads(pathlist.read())
+    return jsonFile
+
+def generateElementDic(title,path):
+    return {'title':title,'path':path}
+
 def getTopicComponent(topic):
     return {'topic':topic,'elements':[]}
 
-def generateTopicsWithRelatedElements(topics,elements):
+def generateTopicsWithRelatedElements(topics,elements,requestParameter):
     topicsWithElements = []
     listOfAllTopics = []
     listOfAllTopicNames = []
@@ -56,9 +64,13 @@ def generateTopicsWithRelatedElements(topics,elements):
         rowsOfTopicList = list(zip(*listOfAllTopics))
         for row in rowsOfTopicList:
             if(len(topicDic['elements'])< numberOfRelatedElements):
-                if(topic in row):
-                    indexTopic = row.index(topic)
-                    topicDic['elements'].append(listOfAllTopicNames[indexTopic])
+                for e in row:
+                    if e == topic:
+                        indexTopic = row.index(e)
+                        pathList = getPathList()
+                        title = listOfAllTopicNames[indexTopic]
+                        pathOfElement = getPathOfElement(title,pathList,requestParameter)
+                        topicDic['elements'].append(generateElementDic(title,pathOfElement))
             else:
                 break
         topicsWithElements.append(topicDic)
@@ -66,7 +78,7 @@ def generateTopicsWithRelatedElements(topics,elements):
     return topicsWithElements
 
 
-def getListOfFrequenceOfTopic(elements):
+def getListOfFrequenceOfTopic(elements,requestParameter):
     topics = []
     listOfAllTopics = []
     print(elements)
@@ -82,7 +94,7 @@ def getListOfFrequenceOfTopic(elements):
     for topic in randomSerializationOfTopics:
         topics.append(topic[0])
 
-    topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements)
+    topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements,requestParameter)
 
     return topicWithRelatedElements
 
@@ -118,7 +130,7 @@ def randomizeTopicSerialization(topics):
 def getSortedTopicList(request):
        fileName, requestParameter = getFileName(request)
        components = readAndProcessCSV(fileName, requestParameter)
-       frequenceOfTopics = getListOfFrequenceOfTopic(components['element'])
+       frequenceOfTopics = getListOfFrequenceOfTopic(components['element'],requestParameter)
        jsonFile = { 'sortedTopicList' : frequenceOfTopics }
        return HttpResponse(json.dumps(jsonFile), content_type='application/json')
 
