@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,7 +15,7 @@ The maintenance of information security must therefore be integrated into a comp
 
 ### 1.2 Objective
 
-The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary in order to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
+The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
 
 ### 1.3 Delimitation
 
@@ -32,7 +36,8 @@ If employees fail, z. Eg by germs in the canteen, pandemic, death or strike, the
 
 If components of an IT system fail, eg. B. by defective hardware or power failure, the entire IT operation can be disturbed. As a result, the availability of the respective information and thus of the respective business process is at risk. In addition, important information needed for recovery operations may not be available.
 
-### 2 3 Failure of a Wide Area Network (WAN)The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
+### 2 3 Failure of a Wide Area Network (WAN)
+The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
 
 ### 2 4 Failure of a building
 
@@ -74,7 +79,8 @@ The processes in the security management SHOULD be coordinated with the emergenc
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).#### DER.4.A3 Definition of Scope and Emergency Management Strategy [Institutional Management] (CIA)
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+#### DER.4.A3 Definition of Scope and Emergency Management Strategy [Institutional Management] (CIA)
 
 The scope of the emergency management system SHOULD be clearly defined. The institution's management SHOULD set out an emergency management strategy that sets out the goals and the level of risk acceptance.
 
@@ -94,7 +100,7 @@ The financial, technical and human resources for the intended goals of emergency
 
 All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept, information security SHOULD be considered and appropriate security concepts for emergency solutions developed.
 
-#### DER.4.A8 Integration of Employees in the Emergency Management Process [Supervisors, Head of Human Resources] (CIA)
+#### DER.4.A8 Integration of employees into the emergency management process [Supervisors, Head of Human Resources] (CIA)
 
 All employees SHOULD be sensitized regularly to the topic of emergency management. For emergency management, there should be a training and awareness-raising concept. The employees in the emergency management team SHOULD regularly be trained according to the required competences.
 
@@ -104,7 +110,8 @@ It SHOULD be ensured that aspects of emergency management are taken into account
 
 #### DER.4.A10 Tests and Emergency Exercises [Head of Institution] (CIA)
 
-An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.#### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
+An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
+#### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
 
 The identified measures for emergency preparedness and response SHOULD be reviewed regularly and on an ad hoc basis. The checks SHOULD be planned so that no relevant part is left out. The results of the reviews SHOULD be evaluated and, where appropriate, implemented in corrective actions. The corrective measures SHOULD be planned and the implementation monitored.
 
@@ -118,9 +125,9 @@ The management level SHOULD carry out its task of regularly reviewing, evaluatin
 
 #### DER.4.A14 Regular review and improvement of emergency response [Institutional Management] (IA)
 
-All emergency measures should be reviewed regularly or in the event of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
+All emergency measures should be reviewed regularly or in the case of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
 
-It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
+It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In the case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
 
 It should be determined in the institution's management how the review activities are coordinated. In particular, reviews carried out in the area of ​​auditing, IT, security management, information security management and emergency management SHOULD be coordinated. For this purpose, it should be regulated which measures are to be checked when and by whom.
 
@@ -132,7 +139,8 @@ The management SOLLTE decide with which measures the emergency management should
 
 #### DER.4.A16 Emergency preparedness and emergency response planning for outsourced components [Institutional Management] (IA)
 
-In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
+In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.
+The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
 
 4 Further Information
 ------------------------------
@@ -243,4 +251,5 @@ The following elementary hazards are important for the module "Emergency Managem
 
 * G 0.18 Missing planning or missing adjustment
 * G 0.27 Resource shortage
-* G 0.33 Personnel lossThe cross reference tables can be found in the download area due to their size.
+* G 0.33 Personnel loss
+The cross reference tables can be found in the download area due to their size.

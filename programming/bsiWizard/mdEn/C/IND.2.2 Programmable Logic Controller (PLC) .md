@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
+A Programmable Logic Controller (PLC) is an ICS component. It handles control and regulating tasks in operational technology (English: Operational Technology, OT). The boundaries between different device classes and designs are today fluent: For example, even a remote terminal unit (RTU) can take over the functions of a PLC or a Programmable Automation Controller (PAC) can try the advantages of a PLC and an industry To unite -PCs. However, the PLC is still the classic automation device, so in this module these terms are used synonymously.
 
 A PLC has digital inputs and outputs, a real-time operating system (firmware) and other interfaces for Ethernet or fieldbuses. The connection to sensors and actuators takes place via the analog or digital inputs or outputs or via a fieldbus. Communication with process control systems usually takes place via the Ethernet interface and IP-based networks.
 
@@ -33,7 +37,8 @@ The following specific threats and vulnerabilities are of particular importance 
 Programmable logic controllers are often incompletely documented, so not all product functions are known. Information about the services used, protocols and communication ports as well as authorization management are often particularly incomplete. However, this makes the risk analysis more difficult because interfaces, functions and security-relevant mechanisms are overlooked. As a result, potential hazards can not be taken into account. In addition, it can not or only partially react to new vulnerabilities, if this is not detected.
 
 3 requirements
----------------The following are specific requirements for the PLC area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for the PLC area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 

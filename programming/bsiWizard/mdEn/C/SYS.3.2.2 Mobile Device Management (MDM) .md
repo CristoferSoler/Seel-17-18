@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,7 +17,7 @@ The module shows how an MDM can be used to securely use mobile devices by instit
 
 ### 1.3 Delimitation
 
-Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module is not on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
+Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module does not focus on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
 
 2 risk situation
 -----------------
@@ -32,11 +36,12 @@ Like any device connected to the Internet, mobile devices are also threatened by
 
 When employees are given their own smartphones, tablets and phablets, there is always a risk that they will use the devices illegally privately. This creates several problems for the information security of the institution. For example, users could independently install apps that contain malicious software or visit web pages that could infect the device with malware. Similarly, user-installed apps can be a risk to the institution's information stored on the device, such as: For example, you can directly access contacts, calendars, e-mails, or documents. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and instant messaging apps.
 
-### 2 4 Insufficient synchronization with the MDMIn order for the MDM to be able to enforce the regulations defined by the responsible persons on the mobile devices, the devices must be regularly synchronized with the MDM. For example, if a device is not connected to the MDM for an extended period of time, new or updated rules can not be applied. Also, if there is no connection to a lost device, the data can not be deleted remotely.
+### 2 4 Insufficient synchronization with the MDM
+In order for the MDM to enforce the rules defined by the responsible parties on the mobile devices, the devices must be synchronized with the MDM on a regular basis. For example, if a device is not connected to the MDM for an extended period of time, new or updated rules can not be applied. Also, if there is no connection to a lost device, the data can not be deleted remotely.
 
 ### 2 5 Incorrect administration of the MDM
 
-MDM solutions are complex applications with typically several hundred different rules. Not all rules can be combined and vice versa many rules depend on each other. Administration errors may expose endpoints to various threats that directly or indirectly affect the confidentiality, availability or integrity of the data and applications.
+MDM solutions are complex applications with typically several hundred different rules. Not all rules can be combined and vice versa many rules depend on each other. Administration errors may expose endpoints to various threats that directly or indirectly affect the confidentiality, availability, or integrity of data and applications.
 
 ### 2 6 Inappropriate rights management in the MDM
 
@@ -50,12 +55,13 @@ If the data connection between the mobile device and the MDM server is not encry
 
 With most MDM products, it is possible to determine where a device is currently located and data or apps can be enabled or disabled depending on location (so-called geofencing). This results in minute movement profiles of the devices and thus also the user. If these data are collected without informing the user appropriately, the persons responsible may violate data protection regulations. There is also the danger that attackers will access this data. Similarly, Geofencing can be misused to control employees inadmissible.
 
-### 2 9 Hazards of Bring Your Own Device (BYOD)
+### 2 9 Dangers of Bring Your Own Device (BYOD)
 
 If private devices are used for business purposes, there are various potential threats. For example, there may be legal issues regarding software licenses. In an emergency, when service data needs to be erased by the MDM on the device, it may also affect the user's private data. In addition, the IT managers can no longer check every single employee device to see if it can also be used in official business. There is a risk that inappropriate devices will be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their personal devices. In such a repair, for example, corporate data could be viewed without authorization. The same risk exists when there is no regulation of what should happen to the data on the device when the employee leaves the institution.
 
 3 requirements
----------------The following are specific requirements for the protection of Mobile Device Management (MDM). Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for the protection of Mobile Device Management (MDM). Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -63,7 +69,7 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.3.2.2.A1 Definition of a strategy for Mobile Device Management
 
-A strategy MUST be developed that defines how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
+A strategy MUST be developed to define how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
 
 Can the MDM be run as a cloud service?
 * Should the MDM be operated by the institution itself?
@@ -84,7 +90,7 @@ It MUST be determined which mobile devices and operating systems are allowed in 
 
 If suitable MDM software is to be procured, it MUST be ensured that it meets all the requirements of the MDM strategy. It also MUST implement all technical and organizational security measures and support all approved mobile devices. Further information on purchasing can be found in the module OPS.1.2.6 * Procurement, Tendering and Purchasing *.
 
-#### SYS.3.2.2.A4 Distribution of the basic configuration to mobile devices
+#### SYS.3.2.2.A4 Distribution of basic configuration to mobile devices
 
 All mobile devices MUST be integrated into the MDM as soon as possible so that they can be configured and managed according to the institution's policies. If the devices receive the basic configuration, they MUST be in factory condition. With already used devices, all institution-related data MUST be deleted beforehand. A non-MDM terminal MUST NOT be able to access institution information.
 
@@ -92,9 +98,10 @@ All mobile devices MUST be integrated into the MDM as soon as possible so that t
 
 All mobile devices MUST be configured to adequately meet their protection needs. For this, a suitable basic configuration MUST be compiled and documented. Details are defined in the specific device modules.
 
-When handing over mobile devices to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
+When mobile devices are handed over to employees, the MDM client MUST already be installed on them. Otherwise, the users themselves MUST be able to install the client.
 
-#### SYS.3.2.2.A6 loggingThe MDM MUST log all security-related events and configuration changes. The collected data MUST NOT be viewed by unauthorized persons and MUST be stored unchangeably. In addition, legal and internal regulations MUST be adhered to during logging.
+#### SYS.3.2.2.A6 logging
+The MDM MUST log all security-related events and configuration changes. The collected data MUST NOT be viewed by unauthorized persons and MUST be stored unchangeably. In addition, legal and internal regulations MUST be adhered to during logging.
 
 ### 3.2 Standard requirements
 
@@ -132,7 +139,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 With increased protection requirements, the users of mobile devices SHOULD ONLY be allowed to install approved and approved apps. The MDM SHOULD prevent other apps from being installed or, alternatively, immediately remove unauthorized apps.
 
-#### SYS.3.2.2.A14 Using external reputation services for apps (CI)If the administrators of an institution can not select the allowed apps themselves and users can independently install apps on their devices, a so-called reputation service SHOULD be used. This is an external service that scans apps for specific criteria and provides the results as a service. The MDM SHOULD then use this information to at least limit the installation of apps.
+#### SYS.3.2.2.A14 Using external reputation services for apps (CI)
+If the administrators of an institution can not select the allowed apps themselves and users can independently install apps on their devices, a so-called reputation service SHOULD be used. This is an external service that scans apps for specific criteria and provides the results as a service. The MDM SHOULD then use this information to at least limit the installation of apps.
 
 #### SYS.3.2.2.A15 Use of PIM containers (CI)
 
@@ -140,7 +148,7 @@ To protect information on mobile devices from espionage apps, they SHOULD be enc
 
 #### SYS.3.2.2.A16 Use of Separate Work Environments (CI)
 
-If employees are allowed to use personal devices privately, they should use solutions for separate working environments on the terminal. If possible, only certified products (eg according to Common Criteria) should be procured for this purpose.
+If employees are allowed to use personal devices privately, they should use solutions for separate work environments on the end device. If possible, only certified products (eg according to Common Criteria) should be procured for this purpose.
 
 #### SYS.3.2.2.A17 Control of the use of mobile devices (I)
 
@@ -196,11 +204,12 @@ Additional information on threats and security measures in the area of ​​"Mo
 5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
-The following elementary threats are important for the Mobile Device Management (MDM) building block.
+The following elementary threats are important for the "Mobile Device Management (MDM)" building block.
 
 * G 0.11 Failure or disruption of service providers
 * G 0.13 Interception of compromising radiation
-* G 0.14 Spying out information (spying)* G 0.15 Listening
+* G 0.14 Spying out information (spying)
+* G 0.15 Listening
 * G 0.16 Theft of devices, data carriers or documents
 * G 0.17 Loss of equipment, data carriers or documents
 * G 0.18 Missing planning or missing adjustment

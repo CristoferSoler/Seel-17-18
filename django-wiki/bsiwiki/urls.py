@@ -18,12 +18,14 @@ from django.contrib import admin
 from django.contrib.auth import views as auth_views
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
+from django.views.generic import TemplateView
 from bsi import views
 
 admin.site.index_template = 'admin/index.html'
 admin.autodiscover()
 
 urlpatterns = [
+    url(r'^wizardinfo/$', TemplateView.as_view(template_name='wizard/helpWizard.html'),name = 'wizardInfo'),
     url(r'^_update/', include('BSIUpdate.urls')),
     url(r'^_treeview/', include('treeview.urls')),
     url(r'^_wizard/', include('wizard.urls')),

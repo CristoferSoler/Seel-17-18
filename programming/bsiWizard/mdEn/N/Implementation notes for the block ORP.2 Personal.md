@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,7 +9,7 @@
 
 The staff of a company or authority forms the basis for its or its success or failure. At the same time, employees are an integral part of information security. Experience shows that even the most complex safety precautions without the correct behavior of the employees are ineffective. Awareness of what information security means to the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are therefore essential.
 
-This module deals primarily with the security measures that should be implemented for and by employees of an institution. Starting with the hiring of employees until their departure, a variety of measures is required. In addition, of course, no other groups of people who come into contact with the information of the institution may be forgotten, such as employees of service providers and customers. Also for dealing with external, such. As visitors, cleaning personnel or maintenance technicians, appropriate security measures must be present.
+This module deals primarily with the security measures that should be implemented for and by employees of an institution. Starting with the hiring of employees until their departure, a variety of measures is required. In addition, of course, no other groups of people who come into contact with the information of the institution should be forgotten, such as employees of service providers and customers. Also for dealing with external, such. As visitors, cleaning personnel or maintenance technicians, appropriate security measures must be present.
 
 ### 1.2 Life cycle
 
@@ -13,17 +17,18 @@ A number of measures have to be implemented for the personnel working in a compa
 
 **Implementation**
 
-The company or the authority must announce existing regulations and instructions to new employees (see ORP.2.M1 * Regulated training of new employees *), so that they can be quickly integrated into existing processes. It is also essential to educate all employees about changes in these regulations and their specific impact on a process or individual employee. In particular, in safety-critical operating environments, it is advisable to oblige the employees accordingly and to have the trustworthiness of employees confirmed (see ORP.2.M6 * Verification of candidates in the selection of personnel *, ORP.2.M7 * Verification of the trustworthiness of employees *, ORP.2.M5 * Confidentiality Agreements * and ORP.2.M13 * Security Check *). Special emphasis is put on the trustworthiness of persons with special functions and authorizations, such as administrators.
+The company or the authority must announce existing regulations and instructions to new employees (see ORP.2.M1 * Regulated training of new employees *), so that they can be quickly integrated into existing processes. It is also essential to educate all employees about changes in these regulations and their specific impact on a process or individual employee. In particular, in safety-critical operating environments, it is advisable to oblige the employees accordingly and to have the trustworthiness of employees confirmed (see ORP.2.M6 * Verification of candidates in the selection of personnel *, ORP.2.M7 * Verification of the trustworthiness of employees *, ORP.2.M5 * Confidentiality Agreements * and ORP.2.M13 * Security Check *). Special emphasis should be put on the trustworthiness of people with special functions and permissions, such as administrators.
 
 **Business**
 
-The motivation of all employees to accept information security in the operating processes and also to implement it on their own responsibility must be motivated and supported by appropriate training and detailed knowledge of the applications at the technical level (see building block ORP.3: * Sensitization and training *).
+The motivation of all employees to accept information security in the operating processes and to implement it on their own responsibility must be motivated and supported by appropriate training and detailed knowledge of the applications at the technical level (see building block ORP.3: * Sensitization and training *).
 
 In order to achieve continuous availability of important processes, it must be ensured that key positions are always filled, if required by the procedures (see ORP.2.M3 * substitution regulations *).
 
 Communication problems, personal problems, bad working environment, far-reaching organizational changes and the like are also factors that can lead to security risks. For such cases, confidants and contact points should be set up (see ORP.2.M12 * Designation of separate contact persons *).
 
-** Function to change **For employees who leave the institution or assume other functions, existing regulations must be implemented with greater care (see ORP.2.M2 * Regulated procedure for the departure of employees *). In the case of short-term departing employees, there can be a potential risk that unauthorized confidential information is taken along or only afterward targeted manipulation of facilities, IT systems or data is noticed.
+** Function to change **
+For employees who leave the institution or assume other functions, existing regulations must be implemented with greater care (see ORP.2.M2 * Regulated procedure for the departure of employees *). In the case of short-term departing employees, there can be a potential risk that unauthorized confidential information is taken along or only afterward targeted manipulation of facilities, IT systems or data is noticed.
 
 2 measures
 -----------
@@ -48,7 +53,8 @@ The training should at least include the following points:
 If an employee leaves the institution or changes function, please note:
 
 * Prior to leaving, a timely briefing of the successor is required. For this it is desirable that the working periods overlap at least briefly.
-* The withdrawing party must recover all documents (as well as borrowed library books), keys handed over, borrowed equipment (eg portable computers, storage media, documentation). In particular, the official or company identity cards as well as other cards and access tokens as well as keys for access authorization are to be collected. Furthermore, in biometric procedures (eg iris scanners, fingerprints and hand-back recognition), corresponding access authorizations must be deleted or adapted to the representative regulation.* All access authorizations and access rights set up for the departing person must be withdrawn or deleted. This also applies to external access authorizations via data transmission facilities. If, in exceptional cases, an access authorization to an IT system has been shared between several persons (eg by means of a shared password), the access authorization must be changed after the departure of one of the persons.
+* The withdrawing party must recover all documents (as well as borrowed library books), keys handed over, borrowed equipment (eg portable computers, storage media, documentation). In particular, the official or company identity cards as well as other cards and access tokens as well as keys for access authorization are to be collected. Furthermore, in biometric procedures (eg iris scanners, fingerprints and hand-back recognition), corresponding access authorizations must be deleted or adapted to the representative regulation.
+* All access authorizations and access rights set up for the departing person must be withdrawn or deleted. This also applies to external access authorizations via data transmission facilities. If, in exceptional cases, an access authorization to an IT system has been shared between several persons (eg by means of a shared password), the access authorization must be changed after the departure of one of the persons.
 * Prior to adoption, it should again be explicitly stated that all confidentiality statements remain in force and that no information received during the work may be disclosed.
 * If the departing person is an officer in an emergency plan, the emergency plan must be updated.
 * All persons entrusted with security tasks, in particular the porter service, are to be informed about the departure and functional changes of employees.
@@ -57,7 +63,7 @@ If an employee leaves the institution or changes function, please note:
 * All necessary activities when an employee leaves the institution or changes function must be clearly regulated. As a practical tool so-called runway have been found on which the individual activities of the departing person are predetermined, which he has to do before leaving the authority or the company.
 #### ORP.2.M3 Representation Rules [Supervisors]
 
-Representation regulations have the meaning, for predictable (holiday, business trip) and also unpredictable cases (illness, accident, termination) of the personal loss to allow the continuation of the task perception. Therefore, before such a case has occurred, it must be regulated who represents whom and in which matters and with which competences. This is particularly important in the field of information processing, since this usually requires special knowledge and a timely training of ignorant employees for the substitution case is not possible.
+Representation regulations have the meaning, for predictable (holiday, business trip) and also unpredictable cases (illness, accident, termination) of the personal loss to enable the continuation of the task perception. Therefore, before such a case has occurred, it must be regulated who represents whom and in which matters and with which competences. This is particularly important in the field of information processing, since this usually requires special knowledge and a timely training of ignorant employees for the substitution case is not possible.
 
 The following boundary conditions must be observed for the substitution regulations:
 
@@ -67,7 +73,8 @@ The following boundary conditions must be observed for the substitution regulati
 * It must be determined which scope of tasks should be performed by whom in the case of substitution.
 * The representative may only obtain the necessary access, access and access authorizations in case of substitution.
 * If it is not possible in exceptional cases to appoint or train a competent representative for persons, it should be considered at an early stage which external forces can be used for the substitution case.
-#### ORP.2.M4 Regulations for the use of external personnelOften, outside authorities or companies rely on external support if the necessary human resources are not available in-house. In extreme cases, this can lead to external staff being employed in their own home for such long periods of time that many employees no longer know exactly whether they are their own or external employees. Here, it makes sense to oblige both internal and external employees to wear appropriate ID cards.
+#### ORP.2.M4 Regulations for the use of external personnel
+Often, outside authorities or companies rely on external support if the necessary human resources are not available in-house. In extreme cases, this can lead to external staff being employed in their own home for such long periods of time that many employees no longer know exactly whether they are their own or external employees. Here, it makes sense to oblige both internal and external employees to wear appropriate ID cards.
 
 External employees who work in or for an organization for an extended period of time and who may be able to gain access to confidential records and data must make a written commitment to comply with applicable applicable laws, regulations and internal regulations.
 
@@ -77,11 +84,11 @@ In addition, it should be ensured that substitution regulations also exist for e
 
 At the end of the contract, a regular handover of the work results and the documents and resources received must take place. In addition, all established access, access and access authorizations and access rights must be withdrawn or deleted. In addition, the person making the withdrawal should be explicitly informed that the obligation to maintain secrecy also remains after the end of the activity.
 
-Third-party personnel to be employed at short notice or once is to be treated as visitor, ie. H. For example, the stay in security-relevant areas is only allowed in the company of employees of the authority or the company.
+Third-party personnel to be employed at short notice or once is to be treated like visitors, ie. H. For example, the stay in security-relevant areas is only allowed in the company of employees of the authority or the company.
 
 #### ORP.2.M5 Confidentiality agreements for the use of outside personnel
 
-External employees are often given access to confidential information to perform their tasks, or to receive results that must be kept confidential. In these cases, they must be obliged to treat them accordingly. This should be followed by non-disclosure agreements, signed by external staff.
+External employees are often given access to confidential information to perform their tasks, or to receive results that must be kept confidential. In these cases, they must be obliged to treat them accordingly. This should be followed by non-disclosure agreements signed by the external employee.
 
 A confidentiality agreement should describe
 
@@ -91,7 +98,8 @@ A confidentiality agreement should describe
 * how the ownership of information is regulated,
 * what regulations apply to the use and disclosure of confidential information to other partners, if necessary
 * what consequences occur in case of breach of the agreement.
-The confidentiality agreement may also refer to the relevant security policies and other policies of the organization. In the event that external employees have access to the organization's IT infrastructure, they should sign the security policies for using the respective IT systems in addition to the confidentiality agreement.A confidentiality agreement provides the legal basis for obliging external employees to keep information confidential. For this reason, it must take into account all relevant laws and regulations for the organization in the specific area of ​​application, be clearly worded and kept up to date.
+The confidentiality agreement may also refer to the relevant security policies and other policies of the organization. In the event that external employees have access to the organization's IT infrastructure, they should sign the security policies for using the respective IT systems in addition to the confidentiality agreement.
+A confidentiality agreement provides the legal basis for obliging external employees to keep information confidential. For this reason, it must take into account all relevant laws and regulations for the organization in the specific area of ​​application, be clearly worded and kept up to date.
 
 It may be useful to use different confidentiality agreements depending on the purpose. In this case, it must be clearly defined which agreement is necessary for which cases.
 
@@ -105,7 +113,7 @@ Even when formulating the requirements, the required qualifications and skills s
 
 Individuals who are required to perform security-related tasks (such as security officers, data protection officers, administrators, employees with access to financial or confidential information) must be particularly trustworthy and reliable.
 
-Particular care must be taken to ensure that no conflicts of interest or dependencies arise which endanger the performance of the task. Conflicts of interest can occur, in particular, if an employee has various roles at the same time, which give him far-reaching rights or exclude himself. In addition, the duties of employees should not be affected by conflicts of interest outside the authority or the company, for example, by previous or other commitments. In order to avoid conflicts of interest after a job change, non-competition and waiting periods can be agreed.
+Particular care must be taken to ensure that no conflicts of interest or dependencies arise that endanger the fulfillment of the task. Conflicts of interest can occur, in particular, if an employee has various roles at the same time, which give him far-reaching rights or exclude himself. In addition, the duties of employees should not be affected by conflicts of interest outside the authority or the company, for example as a result of previous posts or other obligations. In order to avoid conflicts of interest after a job change, non-competition and waiting periods can be agreed.
 
 Insofar as the specialist qualifications in some areas are not yet sufficiently available, employees must have the opportunity to expand them. In order to maintain and update the required qualifications and skills, all employees should receive regular training and the importance of information security (see also module ORP.3: * Awareness and Training *).
 
@@ -119,15 +127,16 @@ The possibilities to have the trustworthiness of new or external personnel check
 * the submitted curriculum vitae of the candidate is meaningful and complete.
 In addition, it may be useful to have academic and professional qualifications certified, for example, by inquiring at the university or from previous employers or clients. The identity of the candidate should also be verified. B. by presentation of identity documents.
 
-If external personnel are deployed internally or can access internal applications and data in projects, collaborations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to perform such checks, to what extent these are carried out and how these are documented.
+If external personnel are deployed internally or if internal applications and data can be accessed through projects, cooperations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to perform such checks, to what extent these are carried out and how these are documented.
 
-** Selection of trusted administrators **The IT system or TK system administrators and their representatives must be able to trust the operator with great confidence. They have - depending on the system used - extensive and often all powers. Administrators and their representatives are able to access and, if necessary, modify all stored data and grant permissions in a way that would allow substantial abuse.
+** Selection of trusted administrators **
+The IT system or TK system administrators and their representatives must be able to trust the operator with great confidence. They have - depending on the system used - extensive and often all powers. Administrators and their representatives are able to access and, if necessary, modify all stored data and grant permissions in a way that would allow substantial abuse.
 
 Administrators of IT systems and their representatives must be carefully selected. You must be regularly informed that the powers may be used only for the required administrative tasks.
 
 Since the administrator has a key role regarding the functionality of the hardware and software used, the continuation of his activities must be ensured even in the event of his failure. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
 
-If a company or an authority has several administrators with comparable IT system knowledge, they can also represent each other if they still have spare capacity. In all areas in which only one administrator is mainly responsible for managing IT systems, two substitutes should be included, as experience has shown that the substitute is temporarily not available for administrative tasks if the administrator is absent for a long time.
+If a company or an authority has several administrators with comparable IT system knowledge, they can also represent each other if they still have spare capacity. In all areas in which only one administrator is mainly responsible for IT systems, two substitutes should be included, as experience has shown that the deputy is temporarily not available for administrative tasks if the administrator is absent for a long time.
 
 In order to ensure the functioning of the IT operation, it must be checked, in particular in the event of pending personnel changes or changes in the organizational structure, whether the required administrative activities can also be managed by the designated administrators and their representatives.
 
@@ -141,7 +150,8 @@ This also means that employees know that they have a responsibility for informat
 
 The Information Security Officer must ensure that all employees know their responsibilities and responsibilities in the security process. For this purpose, he can clarify, for example, with the HR department or the technical superiors, whether the corresponding processes ensure this.
 
-#### ORP.2.M9 Training of employeesEmployees should be regularly trained according to their job so that they are always up-to-date with the work assigned to them. This is particularly important in the field of IT administration and maintenance of information technology, as the fastest changes occur in this area. But also in all other areas, it should be ensured that no employee pursues his or her job based on an outdated state of knowledge. Furthermore, the employees should be given the opportunity during their employment, to further develop within the scope of their field of activity.
+#### ORP.2.M9 Training of employees
+Employees should be regularly trained according to their job so that they are always up-to-date with the work assigned to them. This is particularly important in the field of IT administration and maintenance of information technology, as the fastest changes occur in this area. But also in all other areas, it should be ensured that no employee pursues his or her job based on an outdated state of knowledge. Furthermore, the employees should be given the opportunity during their employment, to further develop within the scope of their field of activity.
 
 All employees must be trained in the equipment, applications, and activities that are used to safely process information, such as shredders, encryption programs, or authentication tokens. In addition, all employees should receive regular training in information security and be informed about everyday risks and possible countermeasures. Employees should also be motivated to implement information security regulations on their own responsibility. If there is a need for more training, it may be useful to train individual employees separately and use them within the area of ​​activity as multipliers for the remaining employees in order to minimize possible downtimes through training.
 
@@ -151,11 +161,11 @@ This topic is covered in detail in the module ORP.3: * Awareness and Training.
 
 A positive working atmosphere motivates employees on the one hand to comply with safety measures, on the other hand it reduces the risk of negligent or intentional acts that can disturb the operation. Disturbances of the working environment can have a variety of internal and external causes, but often occur in serious internal changes. Examples of such changes include restructuring, reorganization, sale or merger of organizational units and outsourcing projects. These can have a negative effect on the working climate as they usually cause fears of different kinds (eg loss of competence, fear of failure, loss of job). These can be better dealt with if the working climate is as good as possible even before the changes.
 
-From a safety perspective, attempts should therefore be made to achieve a positive working atmosphere and to maintain it permanently. The multitude of possibilities can not be cited here, so here only a selection of possible measures is mentioned whose suitability and feasibility should be examined in detail:
+From a safety perspective, attempts should therefore be made to achieve a positive working atmosphere and to maintain it permanently. The multitude of possibilities can not be cited here, therefore, here only a selection of possible measures is mentioned whose adequacy and feasibility should be examined in detail:
 
 * Establishment of a social space,
 * Avoiding overtime,
-* Avoidance of large residual vacation entitlements,
+* Avoidance of large residual holiday entitlements,
 * Observance of break times,
 * regulated distribution of tasks,
 * even workload,
@@ -165,7 +175,8 @@ Communication problems in an organization almost inevitably lead to security pro
 
 Also the transmission of bad news must be possible, without the messenger therefore has to fear sanctions. There should be a working atmosphere in which it is possible for each person concerned to report security incidents within their own company or their own authority. Only in this way can existing security deficits be addressed effectively and openly.
 
-Employees can not only be motivated by financial incentives. Above all, the recognition of their work performance is important. Employees should be involved in decisions wherever possible.At the very least, they should be informed about the reasons for making the decisions so that they actively and motivatedly participate in their implementation.
+Employees can not only be motivated by financial incentives. Above all, the recognition of their work performance is important. Employees should be involved in decisions wherever possible.
+At the very least, they should be informed about the reasons for making the decisions so that they actively and motivatedly participate in their implementation.
 
 Often z. B. Protesting the selection of certain hardware or software in that the users try to show that the enforced hardware or software is not as secure as their preferred one.
 
@@ -181,15 +192,16 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### ORP.2.M11 Safety Culture Analysis (CIA)
 
-One of the most important pillars of information security in an institution is its staff. Experience shows that even the most elaborate technical safety measures are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are essential.
+One of the most important pillars of information security in an institution is its staff. Experience shows that even the most elaborate technical safety measures are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are essential for this.
 
 The security measures selected for the institution should therefore always be based on the employees. Their knowledge and handling of information and IT should be included. Therefore, it makes sense to analyze the various factors that contribute to how employees behave from a security perspective. Building on this, it can then be examined where personal and organizational security can be improved, for example through awareness-raising and information security training.
 
 The following aspects should be examined:
 
-** ** safety cultureThe term safety culture encompasses the safety-related attitudes, values ​​and fundamental convictions of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
+** ** safety culture
+The term safety culture encompasses the safety-related attitudes, values ​​and basic beliefs of an institution and all its employees. The culture of safety also includes how open the handling of information security issues is lived in the institution. For example, a trustworthy and open communication culture is important for the effective and efficient handling of security incidents, so that security incidents can be immediately reported on and solution-oriented addressed.
 
-* What is the dealings in the agency or the company with business-related information and risks in general? Is the institution more risk-oriented or risk-avoidant? Is information given more freely or restrictively?
+* What is the dealings in the authority or the company with business-related information and risks in general? Is the institution more risk-oriented or risk-avoidant? Is information given more freely or restrictively?
 * What are the requirements for accuracy and precision? Are minor errors tolerable in texts, for example, because they still have to go through several tuning processes anyway? Can an input error already lead to serious damage?
 * What are the requirements for availability? Are there a lot of tight deadlines? Can processing times for inquiries and business processes be set flexibly? Are minor missed deadlines or changes generally acceptable or do they lead to harsh consequences?
 The security culture of an institution is strongly influenced by the industry in which it operates. In high-security areas, information is naturally less openly handled than in research institutions.
@@ -214,7 +226,8 @@ The security culture of an institution is strongly influenced by the industry in
 * The cultural background can also influence the handling of information to be protected and security requirements in general. Therefore, it should be examined whether there are regional and national differences in information security management. Above all, it should also be explored what different approaches to information security exist in the different areas of the institution. Even individual departments can already develop their own rules and behavior when dealing with business-relevant information.
 ** Changes **
 
-* All kinds of far-reaching changes for employees can change their way of handling information, business processes and IT. These include, for example, restructuring, dismissals, changes of tasks or superiors.If the analysis reveals that employees behave differently than it makes sense from a security point of view, there are several ways to deal with it. It can, for. For example, try to change the behavior (see ORP.3: * Awareness and Training *). On the other hand, in many cases it may be simpler to redesign security policies or workflows because behavioral changes can only be achieved in the long run. It should be noted that the protection requirements are taken into account unchanged by appropriate security requirements or measures implemented.
+* All kinds of far-reaching changes for employees can change their way of handling information, business processes and IT. These include, for example, restructuring, dismissals, changes of tasks or superiors.
+If the analysis reveals that employees behave differently than it makes sense from a security point of view, there are several ways to deal with it. It can, for. For example, try to change the behavior (see ORP.3: * Awareness and Training *). On the other hand, in many cases it may be simpler to redesign security policies or workflows because behavioral changes can only be achieved in the long run. It should be noted that the protection requirements are taken into account unchanged by appropriate security requirements or measures implemented.
 
 #### ORP.2.M12 Designation of separate contact persons (CIA)
 

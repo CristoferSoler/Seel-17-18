@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -13,7 +17,7 @@ Secondary area refers to the wiring between the building distributor and distrib
 
 The tertiary cabling is the connection of the terminals to a central distribution point (eg in the floor). It is always present.
 
-An often-used mixed form of structured cabling exists when the terminals are connected directly from a central point in the server room or a technical infrastructure room (often referred to as a "network room" or "TK room"). In this case, the secondary cabling may consist only of the connection cables between the switches. The tertiary cabling extends from the central distribution point in the building to the junction boxes in the rooms.
+An often-used mixed form of structured cabling exists when the terminal equipment is connected directly from a central point in the server room or a technical infrastructure room (often referred to as a "network room" or "TK room"). In this case, the secondary cabling may consist only of the connection cables between the switches. The tertiary cabling extends from the central distribution point in the building to the junction boxes in the rooms.
 
 ### 1.2 Life cycle
 
@@ -23,23 +27,24 @@ For a secure IT cabling a number of measures are to be implemented, starting wit
 
 In the planning phase, the foundations are laid for efficient, well-secured IT cabling. The starting point is a requirements analysis, which assesses the current demand and provides an outlook on upcoming developments including the IT cabling impact assessment in the institution (see INF.4.M2 Cable Management Planning and INF.4.M4 IT Requirements Analysis) -Cabling).
 
-Based on this requirement planning, the network structure is determined and fitted into the building. The mechanical and electrical properties of the wiring are largely determined by the choice of cable types to be used (see INF.4.M1 Selection of suitable cable types). Whenever possible, care should also be taken to ensure that cables and control cabinets distributed over the building are adequately physically protected against misuse (see INF.4.M13 Material security of IT cabling and INF.4.M15 Use of cubicle systems) ,
+Based on this requirement planning, the network structure is determined and fitted into the building. The mechanical and electrical properties of the wiring are largely determined by the choice of cable types to be used (see INF.4.M1 Selection of suitable cable types). Whenever possible, care should also be taken to ensure that cables and control cabinets distributed over the building are adequately physically secured against misuse (see INF.4.M13 Material Security of IT Cabling and INF.4.M15 Use of Cabinet Systems) ,
 
-**Implementation**An essential element of fire protection is the correct installation of cable ducts (see INF.4.M3 Professional Installation), which can cause considerable risks due to a lack of fire barriers (see INF.4.M8 fire barrier of paths). When installing the wiring, it is also important to pay attention to detailed and correct documentation, because without it it is usually very difficult or even impossible to determine where cables are going and what they are connecting (see INF.4.M9 documentation and marking of the cables) Cabling and INF.4.M10 neutral documentation in the distributors). For trouble-free operation, the IT cabling must be properly installed (see INF.4.M3Fixed installation).
+**Implementation**
+An essential element of fire protection is the correct installation of cable ducts (see INF.4.M3 Professional Installation), which can cause significant risks due to a lack of fire barrier insulation (see INF.4.M8 fire barrier of paths). When installing the wiring, it is also important to pay attention to detailed and correct documentation, because without it it is usually very difficult or even impossible to determine where cables are going and what they are connecting (see INF.4.M9 documentation and marking of the cables) Cabling and INF.4.M10 neutral documentation in the distributors). For trouble-free operation, the IT cabling must be properly installed (see INF.4.M3Fixed installation).
 
 Before commissioning, the installation of the IT cabling must be removed and the quality of the associated documentation checked (see INF.4.M5 Acceptance of IT cabling).
 
 **Business**
 
-To prevent unauthorized access to IT equipment, only the connections and outlets that are actually required should be activated (see INF.4.M13 Material security of IT cabling). In addition, regular checks should ensure that this activation also meets the real needs (see INF.4.M11 Control of existing compounds). In addition, it must be ensured that the documentation is kept up to date (see INF.4.M6 Ongoing updating and revision of the network documentation).
+To prevent unauthorized access to IT equipment, only the connections and outlets that are actually required should be activated (see INF.4.M13 Material security of IT cabling). In addition, regular checks should ensure that this activation also meets the real needs (see INF.4.M11 Control of existing compounds). It must also be ensured that the documentation is kept up to date (see INF.4.M6 Ongoing updating and revision of the network documentation).
 
 ** ** segregation
 
-If components of the IT cabling are no longer needed, they must be removed (see INF.4.M7 Removing and Disabling Unnecessary Cables).
+If components of the IT cabling are no longer needed, they must be removed (see INF.4.M7 Removing and Disabling Lines that are no longer required).
 
 ** Emergency Preparedness **
 
-If increased availability requirements are met, the wiring, including the external connections, if applicable, should be designed redundantly so that damage in a single location can not lead to total failure of all subscriber lines. Redundancy of the connection between buildings and within a building may be necessary (see INF.4.M12 Redundancy for the wiring).
+If increased availability requirements are met, the wiring, including the external connections, if applicable, should be designed redundantly so that damage in one location can not lead to total failure of all subscriber lines. Redundancy of the connection between buildings and within a building may be necessary (see INF.4.M12 Redundancy for the wiring).
 
 2 measures
 -----------
@@ -69,9 +74,10 @@ The further cable construction must consider the following factors:
 * Bending radius and transverse pressure stability, according to laying style and resting state in operation,
 * Damp or wet areas due to longitudinal water protection,
 * special tensile forces in the installed state, which arise due to large clamping or intercepting distances for overhead lines or extreme gradients,
-* strong electrical and inductive interference due to cable shielding.The correct and compliant selection of electric cables and compliance with the relevant standards (DIN VDE 0100 "Regulations for the installation of power installations with rated voltages up to 1000 V", DIN 4102 "Fire behavior of building materials and components") and regulations and the recognized rules of Technology represents the basic emergency precaution of the electrotechnical installation.
+* strong electrical and inductive interference due to cable shielding.
+The correct and compliant selection of electric cables and compliance with the relevant standards (DIN VDE 0100 "Regulations for the installation of power installations with rated voltages up to 1000 V", DIN 4102 "Fire behavior of building materials and components") and regulations and the recognized rules of Technology represents the basic emergency precaution of the electrotechnical installation.
 
-Individual requirements for the selection of cables must not be defined exclusively by the IT itself, especially in operating environments in which environmental influences or special structural conditions must be observed. In particular, building services personnel familiar with operations and other special conditions must be involved in the planned cable management, in determining the relevant influences and, thus, the particular requirements for the design of cables.
+Individual requirements for the selection of cables must not be defined exclusively by the IT itself, especially in operating environments in which environmental influences or special structural conditions must be observed. In particular, building engineers who are familiar with operations and other special conditions must be involved in the planned cable management, in determining the relevant influences and, thus, the particular requirement for the design of cables.
 
 The selection of the cable from a communication point of view is determined by the required transmission rate (this is also often called bandwidth, which is not entirely correct) and the distance between the transmission devices. In addition to note the structural conditions, d. H. the routes and the environmental conditions under which the cables are laid and operated. Since these also affect the cable structure, they must also be considered in the selection. Advantages and disadvantages are described below with regard to safety.
 
@@ -96,7 +102,8 @@ The TP cable is standard in cabling in the so-called access area on the floor du
 * TP cables, in particular their manufacture, are relatively cheap in comparison to optical fiber with a lower bandwidth requirement.
 * TP cables are relatively easy to lay and assemble.
 * TP cables can be considered universal cabling since other services can be used without major technical effort (eg telephony).
-* The installations can be easily checked metrologically.* TP cables provide power to devices powered by the Power over Ethernet (PoE) specification.
+* The installations can be easily checked metrologically.
+* TP cables provide power to devices powered by the Power over Ethernet (PoE) specification.
 This is offset by the following disadvantages:
 
 * The alternating currents flowing through the data transmission in the cables and the small asymmetries in the stranding of the cables which are always present in the cable generate electromagnetic fields which are perceived in the environment (danger of eavesdropping) and can disrupt systems. But also electromagnetic fields of the environment can in turn interfere with the transmission in the cable. By using screens in the cable construction, these effects are minimized (compare U / UTP to SF / FTP). The information on the minimum distance between different cables, lines and systems as well as grounding of screens must be observed.
@@ -122,23 +129,24 @@ Decisive for the quality of the connections is also the selection of the connect
 
 The use of fiber optic cables offers the following advantages:
 
-* Fiber optics allow high bandwidths in conjunction with large bridgeable distances compared to copper cables.
+* Fiber optics allow high bandwidths in combination with large bridgeable distances compared to copper cables.
 * LWL are insensitive to electromagnetic fields.
 * There are no crosstalk effects as with electrical conductors.
 * LWL provide a potential-free connection between the terminals of the cabling.
 * Listening is only possible with great technical effort.
 * High fiber count cables can be made more compact than comparable copper cables with significantly less weight.
-* The fire load is less with fiber optic cables compared to copper cables. The reasons for this are the comparatively lower required amount of material, the material mix in the cable structure and the possible high fiber numbers without the design massive increase.
-However, the use of optical waveguides has the following disadvantages:* The installation price for FO is above all due to the necessary splicing work higher than with copper cables.
-* The coupling components for operating fiber optics, especially for singlemode fiber, are more expensive than those for copper cables.
+* The fire load is less with fiber optic cables compared to copper cables. The reasons for this are the comparatively lower required amount of material, the material mix in the cable structure and the possible high fiber numbers without the design to massively increase.
+However, the use of optical waveguides has the following disadvantages:
+* The installation price for FO is above all due to the necessary splicing work higher than with copper cables.
+* The coupling components for the operation of fiber optics, especially for single-mode fiber, are more expensive than those for copper cables.
 * The LAN connection via TP cable is usually better supported by common workstation computers in the basic configuration than via fiber optic cable. Workstation clients are currently connected to the LAN via copper cables.
-It should be noted that the respective maximum length is mentioned here. This often consists of the actual installation cable and the connection cables (patch cables). For 1000Base-T so z. For example, the length of the installation cable should not exceed 90 m in order to have sufficient length clearance for patch cords.
+It should be noted that the respective maximum length is mentioned here. This often consists of the actual installation cable and the connection cables (patch cables). For 1000Base-T so z. For example, do not exceed the length of the installation cable 90 m to have enough length of play for patch cords.
 
 **Summary**
 
 In WAN and MAN, fiber optic cabling with singlemode fibers is standard. In LAN cabling, these fibers are now highly recommended between buildings and more distant floorboards due to the 10 Gigabit Ethernet length limitations.
 
-The use of fiber-optic cables to the workplace and thus the elimination of the copper cabling on the floor can only be assessed in an overall view.
+The use of fiber-optic cables to the workplace and thus the elimination of copper cabling on the floor can only be assessed in an overall view.
 
 Speak for the use of fiber:
 
@@ -157,13 +165,14 @@ For new installations as well as for modernizations, it is therefore recommended
 
 ** twisted pair **
 
-Copper cables for IT use a symmetrical cable construction. In this cable construction, two cores are twisted together to form a pair and four of these pairs are twisted together to form a cable (twisted pair cable, TP). The diameter of the cores, their insulating material including the dyes, the nature of the stranding and shielding of these pairs distinguishes the cables in terms of their possible bandwidth and immunity to interference. For a uniform designation of the cable types, ISO / IEC 11801 "Information technology - Application neutral site cabling" in the 2nd edition proposes a standardization of the type designations, which uniquely determines the design elements read from outside to inside. This is constructed according to the schema XX / YTP. XX indicates here the total screen of the cable. Possible types would be U (unshielded), F (foil shield) and SF (mesh and foil screen). Y defines the single screen with the options U and F. In any case, TP stands for twisted pair cable.
+Copper cables for IT use a symmetrical cable construction. In this cable construction, two cores are twisted together to form a pair and four of these pairs are twisted together to form a cable (twisted pair cable, TP). The diameter of the cores, their insulating material including the dyes, the type of stranding and shielding of these pairs distinguishes the cables in terms of their possible bandwidth and immunity to interference. For a uniform designation of the cable types, ISO / IEC 11801 "Information technology - Application neutral site cabling" in the 2nd edition proposes a standardization of the type designations, which uniquely determines the design elements read from outside to inside. This is constructed according to the schema XX / YTP. XX indicates here the total screen of the cable. Possible types would be U (unshielded), F (foil shield) and SF (mesh and foil screen). Y defines the single screen with the options U and F. In any case, TP stands for twisted pair cable.
 
 #### INF.4.M2 Planning of the cable management [Head of Domestic Engineering]
 
-Cable ducts (eg floor ducts, sill channels, flatbeds, outside pipes) are to be sufficiently dimensioned. On the one hand, there must be enough space to be able to make any necessary extensions of the network. On the other hand, to prevent crosstalk (interference between cables), minimum spacing between cables may be required. In particular, in the use of common routes for energy and IT cabling to ensure that the routes are separated by a central bar. Just a simple separate management of power cables and IT cables can be disrupted IT usually avoided.If it is not possible to build roads with sufficient reserves, at least care should be taken that there is enough space in the area of ​​the route to accommodate extensions. If wall and ceiling openings are designed in sufficient size, it is possible to dispense with later noise, dirt and cost-intensive work. When using fire barriers that can be retrofitted, breakthroughs can be prepared in such a way that protection against fire and smoke is always guaranteed, while the tracking of cables remains possible at any time without any problem.
+Cable ducts (eg floor ducts, sill channels, flatbeds, outside pipes) are to be sufficiently dimensioned. On the one hand, there must be enough space to be able to make any necessary extensions to the network. On the other hand, to prevent crosstalk (interference between cables), minimum spacing between cables may be required. In particular, in the use of common routes for energy and IT cabling to ensure that the routes are separated by a central bar. Just a simple separate management of power cables and IT cables can be disrupted IT usually avoided.
+If it is not possible to build roads with sufficient reserves, at least care should be taken that there is enough space in the area of ​​the route to accommodate extensions. If wall and ceiling openings are designed in sufficient size, it is possible to dispense with later noise, dirt and cost-intensive work. When using fire barriers that can be retrofitted, breakthroughs can be prepared in such a way that protection against fire and smoke is always guaranteed, while the tracking of cables remains possible at any time without any problem.
 
-It should be noted that breakthroughs through walls with a fire resistance class may only occupy up to 60% in order to achieve effective partitioning of these openings. If necessary, breakthroughs should be provided for later extensions during the construction and these should initially be closed by means of soft bulkheads or fire protection cushions.
+It should be noted that penetrations through walls with a fire resistance class may only occupy up to 60% in order to achieve effective partitioning of these openings. If necessary, breakthroughs should be provided for later extensions during the construction and these should initially be closed by means of soft bulkheads or fire protection cushions.
 
 It is important that the route dimensioning must always be planned in connection with the selection of the cable types. For example, by using several multi-core cables, space can be saved over many small cables. The use of shielded cables or fiber optic cables can prevent crosstalk. Thus, even on track paths with little space trouble-free operation can be guaranteed.
 
@@ -175,11 +184,12 @@ As a general rule, make sure there is sufficient strain relief for the cables in
 
 Underground garages are a major problem for damage-reducing cable management. Due to the safety circuits and the long open times of entrance gates, the access of third parties to underground garages can never be ruled out. Due to the usually low ceiling heights, it is possible with simple means to gain access to there running paths. Trains in the driving range can be below the permissible vehicle height. Damage or destruction of the tracks and cables due to vehicles that are too high can not be ruled out.
 
-In buildings shared with third parties, care must be taken to ensure that cables do not pass through their areas in floor, ceiling or wall ducts. All duct systems are to be closed off mechanically in relation to the externally used areas. It is better to let them end at the area borders.Due to areas with a high risk of fire, as far as possible no cables should be laid. If this is not possible and the functional integrity of all cables lying on the route is required, the corresponding route area must be provided with fire barriers. If the functional integrity is only required for individual cables, a suitable cable and the associated fastening should be selected for this purpose. A function maintenance cable can never fulfill the required function alone. The cable system is to be considered as a whole, including the attachment, such as routes, clamps or pipes. It is equally important that the cable system can not be destroyed by parts above it without function preservation, if they fall in case of fire.
+In buildings shared with third parties, care must be taken to ensure that cables do not pass through their areas in floor, ceiling or wall ducts. All duct systems are to be closed mechanically in relation to the foreign-occupied areas. It is better to let them end at the area borders.
+Due to areas with a high risk of fire, as far as possible no cables should be laid. If this is not possible and the functional integrity of all cables lying on the route is required, the corresponding route area must be provided with fire barriers. If the functional integrity is only required for individual cables, a suitable cable and the associated fastening should be selected for this purpose. A function maintenance cable can never fulfill the required function alone. The cable system is to be considered as a whole, including the attachment, such as routes, clamps or pipes. It is equally important that the cable system can not be destroyed by parts above it without function preservation, if they fall in case of fire.
 
 In production plants, high inductive loads and resulting interference fields can be expected. These are also to be considered when laying the tracks and cables. The same applies to the protection of the cables as with the fire barrier.
 
-For ground tracks, a warning tape must be laid about 10 cm above the track. With individual cables (without tube), the installation of cable covers makes sense.
+For ground tracks, a warning tape must be laid approx. 10 cm above the track. With individual cables (without tube), the installation of cable covers makes sense.
 
 Lines must be routed so that a storm can not move them. For example, care should be taken to ensure that cables on free roof surfaces are adequately secured at least every 5 m. It should be taken into account that strong forces can act on the cables or cable strands during a storm. In addition, cables must be protected against mechanical damage as objects could fall on them. Cables on roof surfaces or in areas covered with lamellar walls should therefore always be laid in protective tubes.
 
@@ -195,14 +205,15 @@ If the supplied cables and associated material are not installed immediately, ap
 
 It is recommended to leave the stored material in its original packaging until it is installed.
 
-When laying IT cables, special care should be taken to ensure that the installation does not cause damage and that the cable routes are such as to prevent damage to the routed cables due to normal use of the building.
+When laying IT cables, special care should be taken to ensure that the installation does not cause any damage and that the cable routes are selected such that damage to the routed cables due to normal use of the building is excluded.
 
 In addition, it must generally be ensured that IT cables are routed separately from the electrotechnical cabling. Even dividers on shared routes usually help to prevent interference of the IT cable with power cables.
 
 During installation, protective measures and load limits must be observed:
 
-* Prior to installation, wall openings and similar passageways must be deburred and rounded to avoid mechanical damage to the cable sheath when retracting and securing.* The minimum bending radius for laying and operation must not be undercut. If this is not noted on the cable, according to EN 50173, the minimum permissible bending radius must not be less than 8 times the outer diameter of the cable. Correspondingly it must be ensured that bends in cable ducts and cable ducts correspond to the permissible bending radii.
-* If necessary, the manufacturer specifies type-specific two bending radii in data sheets for the cables: the specified bending radius with the larger value is considered the maximum bending load for pulling in the cables. The smaller value applies to the finished cable.
+* Prior to installation, wall openings and similar passageways must be deburred and rounded to avoid mechanical damage to the cable sheath when retracting and securing.
+* The minimum bending radius for laying and operation must not be undercut. If this is not noted on the cable, according to EN 50173, the minimum permissible bending radius must not be less than 8 times the outer diameter of the cable. Correspondingly it must be ensured that bends in cable ducts and cable ducts correspond to the permissible bending radii.
+* If applicable, the manufacturer specifies type-specific two bending radii in data sheets for the cables: the specified bending radius with the larger value is considered the maximum bending load for pulling in the cables. The smaller value applies to the finished cable.
 * The data sheet also shows the maximum tensile load of the cable type.
 * When using a cable, only suitable lubricants may be used as a retraction aid. In general, oil and grease-free lubricants (eg talcum) should be used.
 * When attaching the cables to cable trays with cable ties or cable clamps, the cables must never be crushed.
@@ -210,7 +221,7 @@ Cables should be laid under plaster, in cable ducts or on cable trays. The open 
 
 For the first time in 1995, a standard was published under the term "application-neutral communication cable systems", which describes the topology and classification of transmission links with defined characteristics as well as a uniform interface for connecting the terminal devices. These specifications are not only valid for use in office buildings, but can also be applied to other areas of application.
 
-Under the responsibility of the European Committee for Electrotechnical Standardization (CENELEC), the standards are monitored, agreed with the International Committees (ISO / IEC) and further developed and refined as needed.
+Under the responsibility of the European Committee for Electrotechnical Standardization (CENELEC), the standards are monitored, agreed with the International Committees (ISO / IEC) and, if necessary, further developed and refined.
 
 The standards support users in the phases of building planning, cabling design, planning, implementation and operation of communication cable systems.
 
@@ -245,7 +256,8 @@ Transferred to the life cycle of IT cabling, standards can be assigned as follow
  7: Additional specifications for the laying of fiber optic cabling
 * EN 50174-3 - Installation of communication cabling, installation planning and practices outdoors
 * EN 50310 - Application of measures for earthing and equipotential bonding in buildings with information technology equipment
- 5.2: Common equipotential bonding system (CBN) in a building6.3: AC distribution and connection of the protective conductor (TN-S)
+ 5.2: Common equipotential bonding system (CBN) in a building
+6.3: AC distribution and connection of the protective conductor (TN-S)
 **Realization**
 
 * EN 50174-1 - Installation of communication cabling, specification and quality assurance
@@ -282,13 +294,14 @@ The most common question is the amount of data throughput required. In it, the s
 
 Two developments have to be considered:
 
-For one thing, bandwidth is getting cheaper and cheaper. As a result, services offered and purchased by third parties place ever greater demands on the capacity of IT cabling. After IT-typical services such as e-mail and WWW, voice and image transmission right through to digital TV are now becoming the content of IT network services. The increasing demand for bandwidth must be taken into account when selecting the quality of the IT cabling.
+For one thing, bandwidth is getting cheaper and cheaper. As a result, services offered and purchased by third parties place ever greater demands on the capacity of IT cabling. After IT-typical services such as e-mail and WWW, voice and image transmission right through to digital TV are now becoming the content of IT network services. The increasing demand for bandwidth must be taken into account when selecting the quality of IT cabling.
 
-Secondly, the IT network becomes the carrier for more and more applications. All applications that can use the protocols and standards of the IT world are expected to use them. This means that an IT network and thus IT cabling will no longer serve as a carrier of communication between computers in the future. Telephony and applications, which have so far relied on their own, application-specific network technology, are being further developed to use uniform IT technology. These foreseeable developments mean that the number of connections must be planned accordingly and that no part of a building can be left out of the planning of IT cabling. In addition, the internal cabling of a building must be designed to be flexible and expandable, because a change of use of rooms or parts of buildings will at the same time also represent a change in the requirements for the grid connection.Despite standardization of the technique, it is sometimes necessary to schedule different or separate cables for particular applications. It will be appropriate or even necessary to use separate cables and switching technology for such applications, especially in applications requiring special safety such as alarm-giving technology or in the control of machines and systems. If the application areas have different protection requirements and can not be protected in another way (eg with VPNs), a separation should generally take place.
+Secondly, the IT network becomes the carrier for more and more applications. All applications that can use the protocols and standards of the IT world are expected to use them. This means that an IT network and thus IT cabling will no longer serve as a carrier of communication between computers in the future. Telephony and applications, which have so far relied on their own, application-specific network technology, are being further developed to use uniform IT technology. These foreseeable developments mean that the number of connections has to be planned accordingly and that no part of a building can be left out any longer when planning an IT cabling. In addition, the internal wiring of a building must be designed to be flexible and expandable, because a change of use of rooms or parts of buildings will at the same time also represent a change in the requirements for the grid connection.
+Despite standardization of the technique, it is sometimes necessary to schedule different or separate cables for particular applications. It will be appropriate or even necessary to use separate cables and switching technology for such applications, especially in applications requiring special safety such as alarm-giving technology or in the control of machines and systems. If the application areas have different protection requirements and can not be protected in another way (eg with VPNs), a separation should generally take place.
 
 **Availability**
 
-The protection goal of availability is initially pursued through careful planning and execution of the cable routes. If the requirements of the users go so far that even with more extensive incidents the connection and the network infrastructure of the building must remain usable, then this must be striven for by a thought out redundant route guidance.
+The protection goal of availability is initially pursued through careful planning and execution of the cable routes. If the requirements of the users go so far that the connection and the network infrastructure of the building must remain usable even in the case of more extensive incidents, this must be striven for by well thought out redundant route guidance.
 
 **Integrity**
 
@@ -314,7 +327,8 @@ The most common question is the amount of data throughput required. In it, the s
 
 Two developments have to be considered:
 
-For one thing, bandwidth is getting cheaper and cheaper. As a result, services offered and purchased by third parties place ever greater demands on the capacity of IT cabling. After IT-typical services such as e-mail and WWW, voice and image transmission right through to digital TV are now becoming the content of IT network services. The increasing demand for bandwidth must be taken into account when selecting the quality of the IT cabling.Secondly, the IT network becomes the carrier for more and more applications. All applications that can use the protocols and standards of the IT world are expected to use them. This means that an IT network and thus IT cabling will no longer serve as a carrier of communication between computers in the future. Telephony and applications, which have so far relied on their own, application-specific network technology, are being further developed to use uniform IT technology. These foreseeable developments mean that the number of connections must be planned accordingly and that no part of a building can be left out of the planning of IT cabling. In addition, the internal cabling of a building must be designed to be flexible and expandable, because a change of use of rooms or parts of buildings will at the same time also represent a change in the requirements for the grid connection.
+For one thing, bandwidth is getting cheaper and cheaper. As a result, services offered and purchased by third parties place ever greater demands on the capacity of IT cabling. After IT-typical services such as e-mail and WWW, voice and image transmission right through to digital TV are now becoming the content of IT network services. The increasing demand for bandwidth must be taken into account when selecting the quality of IT cabling.
+Secondly, the IT network becomes the carrier for more and more applications. All applications that can use the protocols and standards of the IT world are expected to use them. This means that an IT network and thus IT cabling will no longer serve as a carrier of communication between computers in the future. Telephony and applications, which have so far relied on their own, application-specific network technology, are being further developed to use uniform IT technology. These foreseeable developments mean that the number of connections must be planned accordingly and that no part of a building can be left out of the planning of IT cabling. In addition, the internal cabling of a building must be designed to be flexible and expandable, because a change of use of rooms or parts of buildings will at the same time also represent a change in the requirements for the grid connection.
 
 Despite standardization of the technique, it is sometimes necessary to schedule different or separate cables for particular applications. It will be appropriate or even necessary to use separate cables and switching technology for such applications, especially in applications requiring special safety such as alarm-giving technology or in the control of machines and systems. If the application areas have different protection requirements and can not be protected in another way (eg with VPNs), a separation should generally take place.
 
@@ -340,7 +354,8 @@ It should be noted that the power supply of active components, such as IP teleph
 
 #### INF.4.M6 Ongoing updating and revision of network documentation
 
-IT cabling should undergo a process of approval after completion of the installation, including information security aspects.An acceptance may only be carried out when all the tasks to be performed have been completed, when the contractor has notified the measure for acceptance and when there are no unacceptable deficiencies in the inspections carried out by the client. The acceptance date should be selected in time so that the controls can be prepared for acceptance in sufficient time.
+IT cabling should undergo a process of approval after completion of the installation, including information security aspects.
+An acceptance may only be carried out when all the tasks to be performed have been completed, when the contractor has notified the measure for acceptance and when there are no unacceptable deficiencies in the inspections carried out by the client. The acceptance date should be selected in time so that the controls can be prepared for acceptance in sufficient time.
 
 The completion of all tasks to be performed is generally confirmed by the oversupply of these services. In addition to the correct billing and the actual extent of the services, the aspects of information security are to be checked during the acceptance.
 
@@ -361,7 +376,7 @@ It is advisable to prepare the acceptance report as a checklist. The checklist s
 
 These points are not relevant for the acceptance of the IT cabling and will be forwarded to the responsible office afterwards.
 
-It is advisable to design the acceptance checklists in such a way that they document the installation and commissioning as well as the measures for the preparation of the acceptance. The checklists should be limited to the necessary level. Therefore, it makes sense to question the points contained, to supplement where necessary and to clean up minor points.
+It is advisable to design the acceptance checklists in such a way that they document the installation and commissioning as well as the measures for the preparation of the acceptance. The checklists should be limited to the necessary level. Therefore, it is useful to question the points contained, where necessary to supplement and to clean up minor points.
 
 The acceptance protocol has to be signed legally binding by the participants and responsible persons.
 
@@ -369,12 +384,13 @@ After the acceptance, the correction of defects as well as the follow-up and rem
 
 #### INF.4.M7 Removing and Deactivating Unnecessary IT Cabling [Haustechnik Manager]
 
-Networks are subject to ongoing change from post-cabling, modification and expansion to updates and upgrades of active network components. Accordingly, the documentation of IT cabling must be considered and treated as an integral part of any change in the network. Only after the documentation has been completed is the change measure also considered completely completed.
+Networks are subject to ongoing change from post-cabling, conversion and expansion measures to updates and upgrades of active network components. Accordingly, the documentation of IT cabling must be considered and treated as an integral part of any change in the network. Only after the documentation has been completed is the change measure also considered completely completed.
 
 In addition to general operational security and traceability, consistent documentation of IT cabling also serves the following purposes:
 
 * Short switching times for network extensions,
-* Easy fault isolation and search,* Short recovery times in case of failure,
+* Easy fault isolation and search,
+* Short recovery times in case of failure,
 * Profitability of maintenance contracts.
 It is important that all documentation areas affected by the change can be easily recorded and adapted. A documentation policy simplifies the handling of the documentation. It should describe the processes, the documentation areas and the specifications, for example naming and numbering schemes.
 
@@ -394,11 +410,12 @@ For buildings with multiple fire compartments, the design of electrical wiring a
 
 If electrical cables are routed in a considerable packing density in the fire protection cut cable duct, larger temperature increases can occur. This can cause an increase in electrical line resistance with additional heating. Remedy can be achieved either by a line reduction or by a sufficient ventilation. Therefore, the specifications in DIN VDE 0100-520 "Installation of low-voltage systems - Part 5: Selection and erection of electrical equipment - Chapter 52: Cable and line systems" as German version of IEC 60364-5-52 depending on the type of installation must be observed. This is the responsibility of the electrician.
 
-The commercially available ventilation methods and techniques z. B. by ventilation modules have the disadvantage that they do not provide adequate protection against acts of sabotage. This means that lines with high or very high protection requirements that lead through unprotected areas, such. As an underground car park, are hardly protected in this embodiment against delictional acts. Here individual planning measures are required. This may be the adequate sizing of the channel, which eliminates the need to ventilate the channel in the hazardous area, or a special ventilation design that is tailored to the specific fuse requirements.Breakthroughs must be sealed after laying the pipes according to the fire resistance class of the wall or ceiling. In order to facilitate the subsequent installation, suitable materials such as soft-bulkheads or fire-protection cushions can be used for measures with a temporary character. Corresponding standards and guidelines, such as DIN 4102 "Fire behavior of building materials and components", must be observed. Cable trays stretch when heated z. B. by fire and can destroy a soft or cushion bulkhead when they are passed through walls.
+The commercially available ventilation methods and techniques z. B. by ventilation modules have the disadvantage that they do not provide adequate protection against acts of sabotage. This means that lines with high or very high protection requirements that lead through unprotected areas, such. As an underground car park, are hardly protected in this embodiment against delictional acts. Here individual planning measures are required. This may be the adequate sizing of the channel, which eliminates the need to ventilate the channel in the hazardous area, or a special ventilation design that is tailored to the specific fuse requirements.
+Breakthroughs must be sealed after laying the pipes according to the fire resistance class of the wall or ceiling. In order to facilitate the subsequent installation, suitable materials such as soft-bulkheads or fire-protection cushions can be used for measures with a temporary character. Corresponding standards and guidelines, such as DIN 4102 "Fire behavior of building materials and components", must be observed. Cable trays stretch when heated z. B. by fire and can destroy a soft or cushion bulkhead when they are passed through walls.
 
 Therefore, routes should not be passed through the bulkhead, but end on both sides at least 10 cm in front of the wall. This practice also facilitates fanning out the cables and lines that do not need to be bundled but individually routed through the bulkhead.
 
-Frequently in a route different cables, z. B. for telephone, LAN and building services. If there are any changes to the cabling, it should be clarified already in the planning phase whether other cable systems should also be replaced in the foreseeable future. A corresponding pooling of projects minimizes downtime and saves additional costs for multiple firewalling.
+Frequently in a route different cables, z. B. for telephone, LAN and building services. If there are any changes to the cabling, it should be clarified already in the planning phase whether other cable systems should also be replaced in the foreseeable future. An appropriate pooling of projects minimizes downtime and saves additional costs for multiple firewalling.
 
 If the planned route is not possible according to the fire protection regulations, an alternative route must be checked. In addition, after completion of the installation work, the fire barrier should be checked at regular intervals, for example annually.
 
@@ -424,7 +441,8 @@ The list and inventory plans shall include all matters relating to the network. 
 The inventory plans typically consist of:
 
 * Site maps and dimensioned site plans with the exact routing of the routes and the primary cabling,
-* Building sections as schematics and dimensioned floor plans with the exact location and management of the distribution rooms, routes and cables and the IT connections per room in z. B. parapet ducts and / or floor outlets,* Engineering room plans with room layout, double floor grid and cabinet positioning, power distribution and equipotential rail as well as existing air conditioning,
+* Building sections as schematics and dimensioned floor plans with the exact location and management of the distribution rooms, routes and cables and the IT connections per room in z. B. parapet ducts and / or floor outlets,
+* Engineering room plans with room layout, double floor grid and cabinet positioning, power distribution and equipotential rail as well as existing air conditioning,
 * Cabinet view plans for the correct description of the installed passive and active components including the socket strips,
 * Physical and logical connection diagrams of the network.
 It must be possible to use this documentation to quickly and easily get an accurate picture of the cabling.
@@ -441,11 +459,12 @@ If a renewal or modernization of the IT cabling is planned, it is necessary to a
 
 The internal documentation covers all records relating to the installation and operation of IT cabling. For internal documentation, it should be prepared and maintained so extensively that the operation and future development are best supported.
 
-The external documentation is the label of terminals to support the operation. In the interests of protection against sabotage and other malicious interference, the externally visible documentation of the cabling (eg the labeling of power sockets and cable ends) should be as economical as possible. Here, the goal is to give as little clues as possible to a potential attacker while at the same time providing IT personnel with the necessary markings required for proper and traceable patching and networking.Medium and large cabling projects require the use of suitable documentation software. For this reason, specifications about file formats and thus about the program and version of the software to be used must already be made in the planning phase. This ensures that the contractor can provide his documentation in a form that the client can immediately use. Similarly, naming convention requirements should be made for the files themselves as well as for elements and structures described in the files. The version of a file should, if possible, already be recognizable by the file name, for example by the fact that each file name begins with a date of the form YYYYYMMDD.
+The external documentation is the label of terminals to support the operation. In the interests of protection against sabotage and other malicious interference, the externally visible documentation of the cabling (eg the labeling of power sockets and cable ends) should be as economical as possible. Here, the goal is to give as little clues as possible to a potential attacker while at the same time providing IT personnel with the necessary markings required for proper and traceable patching and networking.
+Medium and large cabling projects require the use of suitable documentation software. For this reason, specifications about file formats and thus about the program and version of the software to be used must already be made in the planning phase. This ensures that the contractor can provide his documentation in a form that the client can immediately use. Similarly, naming convention requirements should be made for the files themselves as well as for elements and structures described in the files. The version of a file should, if possible, already be recognizable by the file name, for example by the fact that each file name begins with a date of the form YYYYYMMDD.
 
 Also for the naming conventions and markings in the documents clear specifications are to be made. For example, it is to be agreed how different classes of routed copper cables are to be distinguished in drawings (example: L123-cu6a = line 123, copper, CAT 6a).
 
-A problem often arises with room numbers: the architect usually awards these in the planning phase. These room numbers are also used in the planning and execution of IT cabling. If the user introduces a different system for the marking and labeling of rooms after taking over the building, this can lead to ambiguity, to impairment of the operation or to other security problems.
+A problem often arises with room numbers: the architect usually awards these in the planning phase. These room numbers are also used in the planning and execution of the IT cabling. If the user introduces a different system for the marking and labeling of rooms after taking over the building, this can lead to ambiguity, to impairment of the operation or to other security problems.
 
 For example, inconsistencies in room numbering can lead to cable connections to wrong rooms and thus between the wrong IT systems.
 
@@ -469,7 +488,8 @@ During operation, it is often more appropriate to emphasize logical and IT-speci
 
 Each distributor should have documentation that reflects the current status of shunting and line assignments. This documentation should be kept as neutral as possible. Only existing and used connections should be listed. Unless expressly required (eg for fire alarm lines), no information should be given on the type of use of the lines. Line, distribution and room numbers are sufficient in many cases. All further information must be listed in a revision documentation.
 
-#### INF.4.M11 Control of existing connectionsAll distribution boxes and outlets of the wiring must be subjected to a regular (at least random) visual inspection. The following points should be noted:
+#### INF.4.M11 Control of existing connections
+All distribution boxes and outlets of the wiring must be subjected to a regular (at least random) visual inspection. The following points should be noted:
 
 * Traces of violent opening attempts on sealed distributors,
 * Up-to-dateness of the documentation in the distributor,
@@ -500,11 +520,12 @@ Within the buildings, the use of suitable active network components ensures that
 
 ** Switching **
 
-If the technology used or the services implemented via the cabling do not allow parallel operation of the redundant lines, it is necessary to switch over to the respective replacement line in the event of faults in the line used. This switching can be done automatically or manually.
+If the technology used or the services implemented via the cabling do not allow parallel operation of the redundant lines, then in the event of faults in the line used, it must be switched to the respective replacement line. This switching can be done automatically or manually.
 
 If parallel operation is not possible, the replacement lines should be switched over at reasonable intervals, even if there is no actual fault. This serves to check the replacement cables for functionality. The check intervals should be derived from the availability requirements.
 
-**Monitoring**Redundancies in the communication links can usually only increase the availability level effectively if the functionality of the connections is monitored. The purpose of monitoring is to detect malfunctions, bottlenecks and other irregularities at an early stage so that problems can be promptly resolved or even avoided. Without monitoring there is, among other things, the increased risk that failures of lines will not be detected and in this case there will only be apparent but no actual redundancy.
+**Monitoring**
+Redundancies in the communication links can usually only increase the availability level effectively if the functionality of the connections is monitored. The purpose of monitoring is to detect malfunctions, bottlenecks and other irregularities at an early stage so that problems can be promptly resolved or even avoided. Without monitoring there is, among other things, the increased risk that failures of lines will not be detected and in this case there will only be apparent but no actual redundancy.
 
 In the case of high or very high availability requirements, consideration should be given to designing the secondary and tertiary cabling redundantly in the relevant buildings.
 
@@ -525,13 +546,14 @@ In rooms with public access or in confusing areas of a building, it may be usefu
 * electrical monitoring of distributors and channels.
 In any case, the number of points where the routed cable is accessible must be minimized and the length of the connections to be protected against unauthorized access minimized.
 
-In particular, the protection of central routes and cables of the electrical supply and IT cabling must be adapted to the risk situation throughout the entire cable route. In areas such as underground car parks and also in corridors used as transport routes, adequate protection against accidental mechanical damage and, if necessary, against acts of sabotage, must be provided by a stable sheathing of the route or the cable.
+In particular, the protection of central routes and cables of the electrical supply and IT cabling must be adapted to the risk situation throughout the entire cable route. In areas such as underground car parks and also in corridors used as transport routes, adequate protection against accidental mechanical damage and, if applicable, against acts of sabotage must be ensured by a stable sheathing of the route or the cable.
 
 When distributors are locked, regulations are needed that set access rights to the distributor, distribution of keys, and access modalities. Among other things, this must specify what to do before making changes to cables or distributors and after performing such work. It must be ensured that changes are coordinated and approved and that the documentation is updated.
 
-#### INF.4.M14 Prevention of transient currents on shields (A)The standards for the IT infrastructure (DIN EN 50173, DIN EN 50174-2 "Installation of communication cabling") describe both shielded and unshielded data cabling as well as the requirements for earthing and shielding of these systems. When using shielded data lines, a distinction is made in the standards between rooms used for technical purposes (eg server rooms and data centers) and rooms with general IT usage. For the technically used rooms the two-sided application of the shielding and a close meshing of the systems and components is given. For the general use of the IT infrastructure, such as the floor cabling in buildings, the standards stipulate the one-sided application of the shielding. Double-sided hanging is optional.
+#### INF.4.M14 Prevention of transient currents on shields (A)
+The standards for the IT infrastructure (DIN EN 50173, DIN EN 50174-2 "Installation of communication cabling") describe both shielded and unshielded data cabling as well as the requirements for earthing and shielding of these systems. When using shielded data lines, a distinction is made in the standards between rooms used for technical purposes (eg server rooms and data centers) and rooms with general IT usage. For the technically used rooms the two-sided application of the shielding and a close meshing of the systems and components is given. For the general use of the IT infrastructure, such as the floor cabling in buildings, the standards stipulate the one-sided application of the shielding. Double-sided hanging is optional.
 
-If mains operation is disturbed by compensating currents when using shielded cables, the cause should first be analyzed. Due to the increasing frequency of IT transmission, the systems are becoming more sensitive to high-frequency interference. In addition, under certain circumstances, they themselves become high-frequency interferers for surrounding systems and systems. If malfunctions are detected, the correct solution must be worked out depending on the local conditions. Since this requires a lot of expertise, it is generally advisable to hire a specialized company to assess, analyze and develop a solution.
+If mains operation is disturbed by compensating currents when using shielded cables, the cause should first be analyzed. Due to the increasing frequency of IT transmission, the systems are becoming more sensitive to high-frequency interference. In addition, under certain circumstances they themselves become high-frequency interferers for surrounding systems and systems. If malfunctions are detected, the correct solution must be worked out depending on the local conditions. Since this requires a lot of expertise, it is generally advisable to hire a specialized company to assess, analyze and develop a solution.
 
 For example, to prevent equalizing currents on the shielding of data lines in buildings, there are several possibilities:
 
@@ -541,7 +563,8 @@ As a measure against equalizing currents in the TN-C or TN-CS system, it is ofte
 
 * Shielded cables whose shielding is only applied on one side are significantly more affected by external interference. At the same time, they themselves emit more power than unshielded balanced cables. Thus, with one-sided shielding, more data transmission interference (eg, availability or integrity) must be expected than with all other cables.The stronger transmission of evaluable radiation of such lines is added as a risk when considering the confidentiality of information.
 * Even if all the technical disadvantages of one-sided shielding are accepted, the problem remains one of continuous implementation. It requires consistent control in all work on the data network to ensure that unilaterally placed shields are not at some point put on both sides. Such misappropriation can be found later only with great effort.
-The optimal option from a safety point of view is to design the power distribution network throughout the building completely as a TN-S system. The PE and N conductors are led separately from the equipotential bonding rail (PAS). Individual measures on IT equipment are then usually no longer required.In order to ensure the long-term effectiveness of the TN-S system, it must be ensured that the connection between the PE conductor and the neutral conductor at the PAS (zeroing) is the only one in the entire network. However, it can not be excluded in practice that when connecting new devices or when switching work in the network accidentally creates a further connection between PE and N conductor. Therefore, changes in the data network should be coordinated with the building services. In addition, a TN-S system should be checked for correct zeroing at regular intervals. This can be done with the already performed tests of the power supply network and suspicion (for example, prolonged nonspecific disturbances in the data network). As a minimum measure, a TN-S system in the low-voltage main distribution board (NSHV) must be equipped with permanent residual current monitoring via the three phases and the neutral conductor as well as a further permanent current monitoring via the central earthing point (ZEP).
+The optimal option from a safety point of view is to design the power distribution network throughout the building completely as a TN-S system. The PE and N conductors are led separately from the equipotential bonding rail (PAS). Individual measures on IT equipment are then usually no longer required.
+In order to ensure the long-term effectiveness of the TN-S system, it must be ensured that the connection between the PE conductor and the neutral conductor at the PAS (zeroing) is the only one in the entire network. However, it can not be excluded in practice that when connecting new devices or when switching work in the network accidentally creates a further connection between PE and N conductor. Therefore, changes in the data network should be coordinated with the building services. In addition, a TN-S system should be checked for correct zeroing at regular intervals. This can be done with the already performed tests of the power supply network and suspicion (for example, prolonged nonspecific disturbances in the data network). As a minimum measure, a TN-S system in the low-voltage main distribution board (NSHV) must be equipped with permanent residual current monitoring via the three phases and the neutral conductor as well as a further permanent current monitoring via the central earthing point (ZEP).
 
 #### INF.4.M15 Use of Cabinet Systems (IA)
 
@@ -551,11 +574,12 @@ System cabinets are standardized according to DIN IEC 60297 "Construction method
 
 Cabinet systems are available in various interior and exterior dimensions. Cabinets with a net capacity of 42 height units (HU) are most widespread. Depending on whether the cabinet systems are installed in closed distribution halls or in generally accessible areas, they must be equipped with adapted doors, side walls and locks that meet the respective protection requirements. Sockets under the cabinets facilitate the introduction of the required wiring. Another advantage of a socket is the additional distance between the room floor and the IT systems. In this case, the possible ingress of water due to the increased positioning of the devices does not automatically cause damage to the IT systems. In accordance with secured distribution boxes can be dispensed with doors and side walls after checking the environmental conditions.
 
-The internal structure of the cabinet should absolutely take account of maintenance aspects. For example, the fastest possible replacement of assemblies in a patched switching system should be possible without adversely affecting adjacent systems. This requires the predictive installation of all components and appropriate management of patch cables. It is therefore advantageous if the electrotechnical cabling and the IT cabling can be performed stable and protected. Many manufacturers of cabinet systems offer built-in components with which the cabinet-internal cable routing can be adapted to the specific requirements and wishes of the user. Overlength of patch cables should be avoided.
+The internal structure of the cabinet should absolutely take account of maintenance aspects. For example, the fastest possible replacement of assemblies in a patched switching system should be possible without adversely affecting adjacent systems. This requires the predictive installation of all components and appropriate management of patch cables. It is therefore advantageous if the electrotechnical cabling and the IT cabling can be guided stable and protected. Many manufacturers of cabinet systems offer built-in components with which the cabinet-internal cable routing can be adapted to the specific requirements and wishes of the user. Overlength of patch cables should be avoided.
 
 When planning the cabinet assignment, it should be noted that the capacity of the cabinet is usually limited by the heat dissipation of the installed devices and not by the possible installation dimensions. There may be problems of heat dissipation if the thermal load of the installed equipment is too large.
 
-Similar problems can arise in network cabinets, which contain a large number of passive components (patch panels) and have a too dense coverage with cables.In this case, the air flow through the cabinet can be disturbed in such a way that components or active components malfunction. This aspect must also be taken into account when planning the cabinet layout.
+Similar problems can arise in network cabinets, which contain a large number of passive components (patch panels) and have a too dense coverage with cables.
+In this case, the air flow through the cabinet can be disturbed in such a way that components or active components malfunction. This aspect must also be taken into account when planning the cabinet layout.
 
 In the case of adjacent cabinets, care must also be taken to control the airflow of the active components in adjacent cabinets. It is important to avoid that the hot air flowing out of components affects the cold air supply of an adjacent component. With the partitioning of the individual cabinets in the cabinet row this problem can be countered.
 
@@ -642,7 +666,8 @@ Additional information on hazards and security measures in the area of ​​"IT
  [http://www.ieee802.org/3/] (http://www.ieee802.org/3/)
 
  
-* #### [ISO11801] ISO / IEC 11801: 2010Information Technology - Application-neutral site cabling, ISO, 2010
+* #### [ISO11801] ISO / IEC 11801: 2010
+Information Technology - Application-neutral site cabling, ISO, 2010
 
  
 * #### [VDE100] DIN VDE 0100- Regulation for the installation of power installations with emergency voltages up to 1000V

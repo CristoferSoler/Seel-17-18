@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,9 +9,9 @@
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
-A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
+A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, for example: For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
 ### 1.2 Objective
 
@@ -28,7 +32,8 @@ Likewise, no application recognition or filtering is discussed. It is a common f
 
 The following specific threats and vulnerabilities are of particular importance in the firewall area:
 
-### 2 1 Distributed Denial of Service (DDoS)In a DDoS attack on a protected network (eg TCP-SYN-Flooding, UDP Packet Storm) the firewall may fail due to the many network connections that need to be processed. This can result in certain services in the Local Area Network (LAN) becoming unavailable or the entire LAN failing.
+### 2 1 Distributed Denial of Service (DDoS)
+In a DDoS attack on a protected network (eg TCP-SYN-Flooding, UDP Packet Storm) the firewall may fail due to the many network connections that need to be processed. This can result in certain services in the Local Area Network (LAN) becoming unavailable or the entire LAN failing.
 
 ### 2 2 Manipulation
 
@@ -57,9 +62,10 @@ The following requirements MUST be implemented as a priority:
 
 #### NET.3.2.A1 Creating a Security Policy [Information Security Officer (ISB)]
 
-On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described on how firewalls can be operated safely. The policy MUST be known and fundamental to all employees responsible for firewalls. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.#### NET.3.2.A2 Setting firewall rules
+On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described on how firewalls can be operated safely. The policy MUST be known and fundamental to all employees responsible for firewalls. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+#### NET.3.2.A2 Setting firewall rules
 
-All communications between the participating networks MUST be routed through the firewall. It MUST be ensured that no unauthorized connections to the protected network can be established from outside. Likewise, NO unauthorized connections MUST be built out of the protected network.
+All communications between the participating networks MUST be routed through the firewall. It MUST be ensured that no unauthorized connections can be established in the protected network from the outside. Likewise, NO unauthorized connections MUST be built out of the protected network.
 
 The firewall MUST have unique rules defining which communication links and data streams are allowed. All other connections MUST be blocked by the firewall (whitelist approach). The communication relationships with connected service servers (eg e-mail servers, web servers) that are routed through the firewall MUST be considered in the rules.
 
@@ -91,7 +97,8 @@ It must be regulated, who may access the firewall, z. To configure or monitor th
 
 #### NET.3.2.A6 Protection of the administration interfaces
 
-All administration and management accesses of the firewall MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that the administration interfaces can not be accessed from untrusted networks.In order to administer or monitor the firewall, only secure protocols must be used or a dedicated administration network (out-of-band management) MUST be used (see specifications from the module NET.1.1 * Network architecture and -). design and NET.1.2 network management). * Suitable time limits MUST be specified for the user interfaces.
+All administration and management accesses of the firewall MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that the administration interfaces can not be accessed from untrusted networks.
+In order to administer or monitor the firewall, only secure protocols must be used or a dedicated administration network (out-of-band management) MUST be used (see specifications from the module NET.1.1 * Network architecture and -). design and NET.1.2 network management). * Suitable time limits MUST be specified for the user interfaces.
 
 #### NET.3.2.A7 Emergency access to the firewall
 
@@ -99,7 +106,7 @@ It must always be possible to access the firewall directly so that you can conti
 
 #### NET.3.2.A8 Prevention of dynamic routing
 
-In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the building block NET.3.1 * Router and Switches *.
+In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the module NET.3.1 * Router and Switches *.
 
 #### NET.3.2.A9 logging
 
@@ -133,7 +140,8 @@ It MUST be determined how to respond to a detected attack. The tasks and compete
 
 Firewall system backups MUST be created periodically. Even before a firewall is reinstalled or otherwise configured, the system MUST be secured. If backed-up databases are restored, the security-relevant files such as access lists, password files and filter rules MUST be located on the security-required configuration status.
 
-#### NET.3.2.A14 Operation documentationThe operational tasks of a firewall MUST be comprehensibly documented. All configuration changes and security-related tasks MUST be documented, in particular changes to the system services and the rules of the firewall. The documentation MUST be protected against unauthorized access. Changes to the configuration MUST also be logged as automatically as possible.
+#### NET.3.2.A14 Operation documentation
+The operational tasks of a firewall MUST be comprehensibly documented. All configuration changes and security-related tasks MUST be documented, in particular changes to the system services and the rules of the firewall. The documentation MUST be protected against unauthorized access. Changes to the configuration MUST also be logged as automatically as possible.
 
 #### NET.3.2.A15 Obtaining a firewall
 
@@ -163,13 +171,14 @@ The packet filter, which protects server services reachable from untrusted netwo
 
 At the packet filter, which protects server services reachable from less or untrusted networks, the so-called rate limits for UDP data streams SHOULD be set.
 
-At the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
+On the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
 
-#### NET.3.2.A20 Securing basic internet protocols
+#### NET.3.2.A20 Securing Basic Internet Protocols
 
 To communicate to the Internet, the HTTP, SMTP, and DNS protocols, including their encrypted versions, SHOULD be routed through protocol-specific security proxies.
 
-#### NET.3.2.A21 Temporary decryption of trafficEncrypted connections to untrusted networks SHOULD be decrypted temporarily to verify the protocol and check the data for malicious software. Here, the legal framework MUST be observed.
+#### NET.3.2.A21 Temporary decryption of traffic
+Encrypted connections to untrusted networks SHOULD be decrypted temporarily to verify the protocol and check the data for malicious software. Here, the legal framework MUST be observed.
 
 The component that decrypts traffic temporarily SHOULD prevent outdated encryption options (such as SSL) and cryptographic algorithms (such as DES, MD5, SHA1) from being used.
 
@@ -197,7 +206,7 @@ If a system crashes, SHOULD ensure that no old or faulty configurations (includi
 
 #### NET.3.2.A26 Outsourcing of functional extensions to dedicated hardware (CIA)
 
-To further minimize the potential for attack, an organization SHOULD outsource its firewall functionality to dedicated hardware and software.
+To further minimize the potential for attack, an institution SHOULD outsource its firewall enhancements to dedicated hardware and software.
 
 #### NET.3.2.A27 Use of different firewall operating systems and products in a multi-level firewall architecture (CI)
 
@@ -207,7 +216,8 @@ In a multi-tier firewall architecture, different operating systems and products 
 
 Active content SHOULD be centrally filtered according to the security objectives of the institution. The encrypted traffic SHOULD also be decrypted. The required security proxies SHOULD support filtering active content.
 
-#### NET.3.2.A29 Use of High Availability Solutions (A)Packet filters and Application Level Gateway SHOULD be designed to be highly available. In addition, two independent access to the external network SHOULD exist, eg. B. two Internet access from different providers. Internal and external routers, as well as any other active components involved (eg, switches) that may cause loss of availability, SHOULD also be designed to be highly available.
+#### NET.3.2.A29 Use of High Availability Solutions (A)
+Packet filters and Application Level Gateway SHOULD be designed to be highly available. In addition, two independent access to the external network SHOULD exist, eg. B. two Internet access from different providers. Internal and external routers, as well as any other active components involved (eg, switches) that may cause loss of availability, SHOULD also be designed to be highly available.
 
 Even after an automatic failover, the firewall structure SHOULD meet the security requirements of the security policy (fail-safe or fail-secure).
 
@@ -215,7 +225,7 @@ Function monitoring SHOULD be done on the basis of numerous parameters and not r
 
 #### NET.3.2.A30 Bandwidth Management for Critical Applications and Services (A)
 
-To ensure bandwidth management for critical applications and services, packet filters with appropriate bandwidth management capability should be deployed at gateways and at the transition between different security zones.
+To ensure bandwidth management for critical applications and services, packet filters with appropriate bandwidth management capability SHOULD be used at gateways and at the transition between different security zones.
 
 #### NET.3.2.A31 Use of Certified Products (CI)
 
@@ -284,7 +294,8 @@ The following elementary threats are important for the "Firewall" block.
 * G 0.31 Incorrect use or administration of devices and systems
 * G 0.32 Abuse of permissions
 * G 0.39 Malware
-* G 0.40 Denial of Service* G 0.41 Sabotage
+* G 0.40 Denial of Service
+* G 0.41 Sabotage
 * G 0.43 Importing messages
 * G 0.45 data loss
 * G 0.46 Loss of integrity of sensitive information

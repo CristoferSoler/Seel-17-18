@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -30,13 +34,14 @@ Due to negligence and lack of controls, it happens again and again that people d
 
 ### 2 3 Listening to the WLAN communication
 
-Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
+Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, wireless networks or the transmitted radio waves often exceed the limits of owner-occupied premises, so that data is also broadcast in areas that can not be controlled by users or institution and secured.
 
 ### 2 4 Evaluation of connection data in wireless communication
 
-For WLANs based on IEEE 802.11, the MAC address of a WLAN card is sent with every data transfer. Since it is transmitted unencrypted, motion profiles can be created via mobile users, eg. For example, when they log into public hotspots.### 2 5 Imitation of a valid access point (rogue access point)
+For WLANs based on IEEE 802.11, the MAC address of a WLAN card is sent with every data transfer. Since it is transmitted unencrypted, motion profiles can be created via mobile users, eg. For example, when they log into public hotspots.
+### 2 5 Imitation of a valid access point (rogue access point)
 
-An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial-of-service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
+An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial of service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
 
 3 requirements
 ---------------
@@ -51,7 +56,7 @@ The following requirements MUST be implemented as a priority:
 
 On the basis of the institution's general security policy, the essential core aspects for secure WLAN use MUST be specified in a WLAN user policy. Such a user policy MUST describe the specifics of WLAN usage, eg. For example, if and how hotspots may be used.
 
-Furthermore, the Directive MUST, in particular with regard to the use of classified information, contain information about which data may be used and transmitted in the WLAN and which may not.
+Furthermore, the Directive MUST, in particular with regard to the use of classified information, contain information on which data may be used and transmitted in the WLAN and which may not.
 
 It MUST be described how to deal with client-side security solutions. The user policy MUST include a clear ban on connecting unauthorized access points to the institution's LAN. It also MUST be noted in the policy that the WLAN interface MUST be disabled if it is not used for an extended period of time.
 
@@ -59,13 +64,14 @@ It MUST be checked on a regular basis to see if the content required by the Dire
 
 #### NET.2.2.A2 Sensitization and training of WLAN users [Supervisors, Head of IT]
 
-The users of WLAN components, especially of WLAN clients, MUST be sensitized and trained on the measures listed in the user policy. Users MUST be clear about what the WLAN-specific security settings mean and why they are important. In addition, you MUST be alerted to the dangers of bypassing or disabling these security settings.
+The users of WLAN components, especially of WLAN clients, MUST be sensitized and trained on the measures listed in the user policy. Users MUST be clear about what the WLAN-specific security settings mean and why they are important. You MUST also be alerted to the dangers of bypassing or disabling these security settings.
 
 The training contents MUST always be adapted according to the respective application scenarios. However, in addition to training on WLAN security mechanisms, users MUST also be presented with the wireless security policy of their institution. Likewise, they MUST be made aware of the dangers of using foreign WLANs.
 
-#### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]MUST use external hotspots MUST be implemented:
+#### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]
+MUST use external hotspots MUST be implemented:
 
-* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under which conditions he will be allowed to use the hotspot.
+* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide whether or under what conditions he is allowed to use the hotspot.
 * WLANs that are only used sporadically SHOULD be deleted by the users from the history.
 * If possible, separate user accounts with a secure base configuration and restrictive permissions SHOULD be used.
 * It should be ensured that no user with administrator rights can log on to external WLANs from his client.
@@ -130,7 +136,8 @@ Additional information on hazards and security measures in the area of ​​"WL
  Federal Office for Information Security (BSI), 2005 [https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03103/index\_htm.html]https://www.bsi.bund.de /DE/Publikationen/TechnischeRichtlinien/tr03103/index_htm.html)
 
  
-5 Appendix: Cross reference table for elementary hazards-------------------------------------------------- --------
+5 Appendix: Cross reference table for elementary hazards
+-------------------------------------------------- --------
 
 The following elementary threats are important for the "WLAN usage" building block.
 

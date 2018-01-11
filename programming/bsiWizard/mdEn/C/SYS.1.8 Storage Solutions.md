@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -19,7 +23,7 @@ The aim of this module is to show how centralized storage solutions can be plann
 
 ### 1.3 Delimitation
 
-In this module storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
+In this module, storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
 
 If external service providers are used to run a storage solution, the requirements of the module OPS.2.1 * Outsourcing for Customers * must be considered separately.
 
@@ -32,7 +36,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 Central storage solutions increase the requirements for administration. If the responsibilities for different areas are not clearly defined, this can lead to misconfiguration. For example, if a traditional network administrator administers FC (Fiber Channel, FC) switches, he may be able to access components that he is not responsible for and not trained for. Such an operation may result in FC switches not being properly configured. This could cause important services to fail because all servers attached to the FC switches can no longer access the storage systems.
 
-### 2 2 Unsafe default settings for memory componentsFrequently, memory components are shipped with a default configuration to allow the devices to get up and running quickly with as much functionality as possible. Thus, in many devices not required functions are activated, such. HTTP, Telnet and insecure SNMP versions. If storage components with insecure factory settings are used productively, they can be accessed more easily without authorization. This can lead to z. B. Services are no longer available or unauthorized access to confidential information of the institution.
+### 2 2 Unsafe default settings for memory components
+Frequently, memory components are shipped with a default configuration to allow the devices to get up and running quickly with as much functionality as possible. Thus, in many devices not required functions are activated, such. HTTP, Telnet and insecure SNMP versions. If storage components with insecure factory settings are used productively, they can be accessed more easily without authorization. This can lead to z. B. Services are no longer available or unauthorized access to confidential information of the institution.
 
 ### 2 3 Manipulation of data via the storage system
 
@@ -40,7 +45,7 @@ An inadequately configured storage area network (SAN) can unintentionally connec
 
 ### 2 4 Loss of confidentiality through storage-based replication methods
 
-Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This is to avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
+Storage-based replication methods have the purpose of duplicating stored or archived data in real-time over a storage network and thus additionally storing them redundantly. This should avoid data loss. However, the automated replication of unencrypted data entails risks both in its own network and in the use of public networks: unauthorized access to legitimate replication traffic, for example by means of FC analyzers (FC replication) or sniffers (IP replication).
 
 ### 2 5 Access to information from other clients through WWN spoofing
 
@@ -59,7 +64,8 @@ Complex, network-based storage solutions often consist of many components (such 
 If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
 
 3 requirements
----------------The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+---------------
+The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -101,7 +107,8 @@ Based on the institution's general security policy, a specific security policy f
 
 The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
 
-#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
+#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
+A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
 
 * Selection of suitable hardware,
 * Selection of manufacturers and suppliers,
@@ -111,7 +118,7 @@ The policy SHOULD tell all administrators responsible for storage solutions and 
 * Integration into existing processes.
 #### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
 
-The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Similarly, the decision for the selection of a storage solution should be documented comprehensible.
+The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Likewise, the decision to select a storage solution SHOULD be documented comprehensible.
 
 #### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
 
@@ -123,7 +130,7 @@ It SHOULD be created an operating manual. It SHOULD document all the necessary r
 
 #### SYS.1.8.A11 Safe operation of a storage solution
 
-The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and coordinated with all involved specialists.
+The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and agreed with all involved specialist responsible persons.
 
 #### SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
 
@@ -131,7 +138,8 @@ The administrators responsible for the storage solutions SHOULD be sufficiently 
 
 #### SYS.1.8.A13 Monitoring and management of storage solutions
 
-To detect and resolve error situations and security issues, you should monitor storage solutions. All collected data SHOULD be checked as to whether the requirements of the operating manual are adhered to (see also SYS.1.8.A10 * Creation and maintenance of an operating manual *).Individual components of the storage solution and the overall system SHOULD be managed centrally. In addition, the essential messages SHOULD be filtered out to better represent them.
+To detect and resolve error situations and security issues, you should monitor storage solutions. All collected data SHOULD be checked as to whether the requirements of the operating manual are adhered to (see also SYS.1.8.A10 * Creation and maintenance of an operating manual *).
+Individual components of the storage solution and the overall system SHOULD be managed centrally. In addition, the essential messages SHOULD be filtered out to better represent them.
 
 If a storage solution is operated by an external service provider, SHOULD define and document how the contracted SLAs are monitored.
 
@@ -143,7 +151,7 @@ A SAN SHOULD be segmented. A concept SHOULD be developed that maps the SAN resou
 
 It SHOULD be documented and comprehensibly documented, which requirements the institution places on the multi-client capability of a storage solution. The storage solutions used SHOULD meet these documented requirements.
 
-In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to act with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
+In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to work with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
 
 When using IP or iSCSI, the clients SHOULD be separated by segmentation in the network. If Fiber Channel is used, SHOULD be separated using VSANs and soft zoning.
 
@@ -165,7 +173,8 @@ All used storage systems SHOULD be audited regularly. For this, a corresponding 
 
 If entire storage solutions or individual components of a storage solution are no longer needed, all existing data SHOULD be transferred to other storage solutions. A transitional phase should be planned for this. Subsequently, all user data and configuration data SHOULD be securely deleted. From all relevant documents, all references to the decommissioned storage solution SHOULD be removed.
 
-#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
+#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
+It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
 
 It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
 
@@ -194,7 +203,7 @@ To ensure the integrity of the SAN fabric, protocols with additional security fe
 * Fiber Channel Password Authentication Protocol (FCPAP).
 #### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
 
-In SAN environments, data SHOULD be deleted by overwriting the associated memory segments of a LUN multiple times.
+In SAN environments, data SHOULD be deleted by repeatedly overwriting the associated memory segments of a LUN.
 
 #### SYS.1.8.A26 Securing a SAN through hard zoning
 
@@ -228,7 +237,8 @@ Additional information on threats and security measures in the area of ​​"st
 The following elementary hazards are important for the "memory solutions" block.
 
 * G 0.8 Failure or malfunction of the power supply
-* G 0.11 Failure or disruption of service providers* G 0.15 Listening
+* G 0.11 Failure or disruption of service providers
+* G 0.15 Listening
 * G 0.16 Theft of devices, data carriers or documents
 * G 0.18 Missing planning or missing adjustment
 * G 0.19 Disclosure of information worthy of protection

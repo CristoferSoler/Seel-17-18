@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -26,18 +30,19 @@ Since a home-based workplace is located outside the institution, the employees t
 
 ### 2 2 Unauthorized access to vulnerable areas of the home workplace
 
-Domestic workplaces where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
+Rooms in a home-based workplace where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
 
 ** Examples **
 
-* One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.* When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
-### 2 3 Impairment of IT use due to unfavorable working conditions at the home workplace
+* One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
+* When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
+### 2 3 Impairment of IT use due to unfavorable working conditions at home
 
-A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
+A non-ergonomic home-based workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
-If documents, data carriers or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
+When documents, media or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
 
 * If unique items are transported (missing backup), goals and tasks can not be achieved as planned after loss.
 * If unencrypted data carriers fall into the wrong hands, this can lead to serious confidentiality losses.
@@ -54,7 +59,8 @@ IT equipment, accessories, information, and software used at the home workplace 
 
 Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" with IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
 
-### 2 8 Increased theft risk at the home workplaceThe home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service) there is the danger that someone will enter the building without authorization, much less than with a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
+### 2 8 Increased theft risk at the home workplace
+The home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service) there is the danger that someone will enter the building without authorization, much less than with a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
 
 3 requirements
 ---------------
@@ -71,11 +77,11 @@ Official documents and data carriers MUST be stored in the home office in such a
 
 #### INF.8.A2 Transportation of work material to the home workplace [Home automation]
 
-It MUST be regulated which data carriers and documents are processed at the home office and transported between the institution and the home office. In general, data carriers and other documents MUST be transported safely. The regulations MUST be appropriately communicated to the employees.
+It MUST be regulated which data carriers and documents can be processed at the home office and transported between the institution and the home office. In general, data carriers and other documents MUST be transported safely. The regulations MUST be appropriately communicated to the employees.
 
 #### INF.8.A3 Protection against unauthorized access to the home workplace [Home automation]
 
-The employees MUST be informed about the regulations and measures for burglary and access protection. MUST be warned to close windows and lock doors when the home office is empty.
+The employees MUST be informed about the regulations and measures for burglary and access protection. MUST be warned to close windows and close doors when the home office is empty.
 
 It MUST be ensured that unauthorized persons can never enter the home office and access company IT and documents. These measures MUST be checked at reasonable intervals, or at least a change in domestic circumstances.
 
@@ -91,7 +97,8 @@ The home workplace SHOULD have a suitable device that meets the ergonomic requir
 
 Similarly, the home workplace should be protected from burglary by appropriate technical safeguards. The protective measures SHOULD be adapted to the local conditions and the existing protection requirements.
 
-#### INF.8.A5 Disposal of confidential information at the home workplace [Home automation]Confidential information SHOULD be safely disposed of, so do not just throw it in the trash. In a special safety guideline SHOULD be regulated, how to remove sensitive material. The required disposal facilities SHOULD be available.
+#### INF.8.A5 Disposal of confidential information at the home workplace [Home automation]
+Confidential information SHOULD be safely disposed of, so do not just throw it in the trash. In a special safety guideline SHOULD be regulated, how to remove sensitive material. The required disposal facilities SHOULD be available.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -99,7 +106,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)
 
-If employees are required to process official documents or information with increased protection needs, they should consider giving up work at home. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
+If employees are required to handle official or highly-sensitive information, SHOULD consider considering leaving home a domestic job. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.
 
 4 Further Information
 ------------------------------

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -34,13 +38,14 @@ ICS components in industrial environments are often exposed to special condition
 
 ICS components are often incompletely documented, so not all product features are known. Information about the services used, protocols and communication ports as well as authorization management are often particularly incomplete. This makes the hazard analysis more difficult because interfaces, functions and security-relevant mechanisms are overlooked. As a result, potential hazards can not be taken into account. In addition, there are no or limited responses to new vulnerabilities in an ICS component if the services and ports used are not fully captured.
 
-### 2 3 Insecure system configuration
+### 2 3 Unsafe system configuration
 
-The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
+The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.
+It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
 
 ### 2 4 Insufficient user and authorization management
 
-Some ICS components have their own user and permission management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
+Some ICS components have their own user and authorization management. If this is poorly designed, it can happen that employees share user accounts or that the permissions of departed employees or service providers are not deleted. Overall, unauthorized persons can access ICS components.
 
 ### 2 5 Insufficient logging
 
@@ -70,7 +75,8 @@ ICS components often contain detailed information about the controlled or monito
 
 Attackers could get business secrets here (industrial espionage), eg. Recipes, procedures or other intellectual property. They can also gain information about the functioning of an ICS component and its security mechanisms, which can be used for further attacks.
 
-### 2 11 Insufficient security requirements for procurementDue to a lack of awareness of the risks and cost reasons, procurement often does not take into account information security. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
+### 2 11 Insufficient security requirements for procurement
+Due to a lack of awareness of the risks and cost reasons, information security is often not taken into account in procurement. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
 
 ### 2 12 Manipulated firmware
 
@@ -116,7 +122,8 @@ Unused and unnecessary user accounts MUST be disabled.
 
 ICS components MUST be disconnected from the office IT. If ICS components are dependent on other services in the network, this should be sufficiently documented. ICS components SHOULD communicate as little as possible with other ICS components.
 
-### 3.2 Standard requirementsTogether with the basic requirements, the following requirements correspond to the state of the art in the field of general ICS components. They SHOULD be implemented in principle.
+### 3.2 Standard requirements
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general ICS components. They SHOULD be implemented in principle.
 
 #### IND.2.1.A7 Backups [Control Center Operator]
 
@@ -124,7 +131,7 @@ Programs and data MUST be backed up regularly and after system changes.
 
 #### IND.2.1.A8 Malware Protection [ICS Administrator]
 
-ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used, the program and the virus signatures SHOULD always be up to date. If resources on the ICS component could not be sufficient or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
+ICS components SHOULD be protected from malicious programs by appropriate mechanisms. If an anti-virus program is used for this, the program and the virus signatures SHOULD always be up to date. If resources on the ICS component could not be sufficient or the real-time requirement could be jeopardized by the use of antivirus software, alternative measures, such as: As the foreclosure of the component or the production network, be taken.
 
 #### IND.2.1.A9 Communication Relationship [ICS Administrator]
 
@@ -163,7 +170,8 @@ When eliminating old or defective ICS components, all sensitive data SHOULD be s
 
 All ICS components SHOULD transmit their logging data to a central system. The logged data SHOULD be evaluated regularly. For security-critical events, an automatic alerting SHOULD be made.
 
-#### IND.2.1.A16 External Interface Protection [ICS Administrator]Externally accessible interfaces, eg. Network interfaces, USB ports or serial ports SHOULD be protected from misuse.
+#### IND.2.1.A16 External Interface Protection [ICS Administrator]
+Externally accessible interfaces, eg. Network interfaces, USB ports or serial ports SHOULD be protected from misuse.
 
 #### IND.2.1.A17 Using Secure Protocols for Information Transfer [ICS Administrator]
 
@@ -175,7 +183,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
 
-It SHOULD provide alternative and independent communication options that can be used in the event of a malfunction in order to remain able to act.
+It SHOULD provide alternative and independent means of communication that can be used in the event of a malfunction in order to remain able to act.
 
 #### IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
 
@@ -190,7 +198,7 @@ Firmware updates or new control programs SHOULD only be played if their integrit
 
 ### 4.1 Literature
 
-Further information about hazards and safety measures in the area "General ICS Component" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area "General ICS component" can be found in the following publications, among others:
 
 * #### [AHWAST] How to Use the White Paper - Requirements for Secure Control and Telecommunication Systems (Version 1.1, 2014)
 
@@ -237,7 +245,8 @@ Further information about hazards and safety measures in the area "General ICS C
 
 The following elementary hazards are important for the "General ICS component" block.
 
-* G 0.2 Unfavorable climatic conditions* G 0.4 Pollution, dust, corrosion
+* G 0.2 Unfavorable climatic conditions
+* G 0.4 Pollution, dust, corrosion
 * G 0.8 Failure or malfunction of the power supply
 * G 0.9 Failure or malfunction of communication networks
 * G 0.10 Failure or malfunction of supply networks

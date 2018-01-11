@@ -1,9 +1,13 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server literally stands for the software used, but is usually also used as a synonym for the computer on which this software is operated.
+This module considers the basic security features of the Domain Name System (DNS) and the servers required for this purpose. DNS is a network service that is used to transform host names of IT systems into IP addresses. Normally, a hostname is searched for the corresponding IP address (forward resolution). If, however, the IP address is known and the host name is searched, this is called backward resolution. DNS can be compared to a phonebook that resolves names not into phone numbers but into IP addresses. Which names belong to which IP addresses is managed in the domain namespace. This is hierarchical and is provided by DNS servers. DNS servers manage the domain name space on the Internet, but they are also often used in the institution's internal network. By default, so-called resolvers are installed on users' computers, which are used to make requests to DNS servers and return information about the domain namespace in response. The term DNS server stands for the software used in the actual sense, but is usually also used as a synonym for the computer on which this software is operated.
 
 DNS servers can be distinguished according to their tasks, there are basically two different types: Advertising DNS server and Resolving DNS server. Advertising DNS servers are usually responsible for processing requests from the Internet. Resolving DNS servers, on the other hand, process requests from the internal network.
 
@@ -15,7 +19,7 @@ This module describes the specific threats for a DNS server and the resulting re
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. However, general and operating system-specific aspects of a server are not the subject of this module, but are described in the SYS1.1. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
+This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. However, general and operating system-specific aspects of a server are not the subject of the present module, but are described in the SYS1.1 module. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
 
 2 risk situation
 -----------------
@@ -24,9 +28,10 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 DNS server failure
 
-If a DNS server fails, the entire IT operation can be affected. Since clients and other servers of the institution are then no longer able to resolve internal and external addresses, data connections can no longer be established. Also external IT systems, eg. Mobile workers, customers, and business partners, for example, can not access the institution's servers, which typically disruptes critical business processes.
+If a DNS server fails, the entire IT operation can be affected. Since clients and other servers of the institution are then no longer able to resolve internal and external addresses, data connections can no longer be established. Also external IT systems, eg. Mobile workers, customers, and business partners, for example, can not access the institution's servers, which typically disrupt critical business processes.
 
-### 2 2 Insufficient line capacityIf the line capacities for a DNS server are insufficient, access times to internal and external services may increase. As a result, these may only be limited or no longer usable. Also, attackers can more easily overload the DNS server with a denial-of-service (DoS) attack.
+### 2 2 Insufficient line capacity
+If the line capacities for a DNS server are insufficient, access times to internal and external services may increase. As a result, these may only be limited or no longer usable. Also, attackers can more easily overload the DNS server with a denial-of-service (DoS) attack.
 
 ### 2 3 Lack of or inadequate planning of DNS use
 
@@ -44,9 +49,10 @@ Similarly, in the case of incorrectly configured DNS servers, there is a risk th
 
 ### 2 6 DNS manipulation
 
-With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, it will provide the counterfeit data as an answer. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
+With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, this will deliver the counterfeit data in response. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
 
-### 2 7 DNS hijackingDNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
+### 2 7 DNS hijacking
+DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. If, after a successful DNS hijacking attack, a request is sent to a DNS server by the resolver of a client IT system, the attacker can, for example, change the assignment of name and IP address. DNS hijacking can also be combined with other attacks, especially phishing in this case.
 
 ### 2 8 DNS-DoS
 
@@ -77,13 +83,14 @@ Advertising DNS servers (external requests) MUST be designed redundantly. Theref
 
 Advertising DNS servers (external requests) and resolving DNS servers (internal requests) MUST be separate on the server side. Resolvers of internal IT systems MUST use internal Resolving DNS servers to resolve names.
 
-#### APP.3.6.A4 Secure basic configuration of a DNS serverA Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
+#### APP.3.6.A4 Secure basic configuration of a DNS server
+A Resolving DNS server MUST be configured to accept requests from the internal network only. When sending requests, it MUST use random source ports. If DNS servers that provide incorrect domain information are known, the Resolving DNS server MUST be prevented from sending requests to it. An Advertising DNS server MUST be configured to iteratively handle requests from the Internet.
 
 It MUST be ensured that DNS zone transfers between Primary and Secondary DNS servers work. In addition, zone transfers MUST be configured to only be possible between Primary and Secondary DNS servers. To secure zone transfers, they MUST be limited to specific IP addresses. The version of the used DNS server product MUST be hidden.
 
 #### APP.3.6.A5 Timely import of security-relevant patches and updates
 
-The responsible employees MUST inform themselves regularly at various sources about newly discovered vulnerabilities in the used DNS server product and import security-relevant updates in a timely manner. However, in advance, a test system MUST check to see if the security updates are compatible and do not cause errors. Unless patches are available for known vulnerabilities, other appropriate measures MUST be taken to protect the DNS servers. Before a patch is imported, the zone and configuration files MUST be backed up.
+The responsible employees MUST inform themselves regularly at various sources about newly discovered vulnerabilities in the used DNS server product and import security-relevant updates in a timely manner. First, however, a test system MUST check to see if the security updates are compatible and do not cause errors. Unless patches are available for known vulnerabilities, other appropriate measures MUST be taken to protect the DNS servers. Before a patch is imported, the zone and configuration files MUST be backed up.
 
 #### APP.3.6.A6 Secure Dynamic DNS Updates
 
@@ -109,7 +116,8 @@ Together with the basic requirements, the following requirements correspond to t
 
 If a DNS server product is procured, care should be taken to ensure that all security requirements of the institution are properly implemented. The product SHOULD have proven its worth in practice and support the current RFC standards. It SHOULD help those responsible to create syntactically correct master files. In addition, there should be enough trained personnel for the selected DNS server product.
 
-#### APP.3.6.A11 Sufficient size of DNS serversSince the hardware of a DNS server affects the performance of the entire system, it SHOULD be sufficiently sized. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
+#### APP.3.6.A11 Sufficient size of DNS servers
+Since the hardware of a DNS server affects the performance of the entire system, it SHOULD have sufficient size. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
 
 #### APP.3.6.A12 Training of Responsible Persons [Supervisors, Head of IT]
 
@@ -137,7 +145,7 @@ The DNS protocol extension DNSSEC SHOULD be activated on Resolving DNS servers a
 
 #### APP.3.6.A18 Extended protection of zone transfers
 
-In order to secure zone transfers more strongly, additional Transaction Signatures (TSIG) SHOULD be used.
+In order to secure more zone transfers, Transaction Signatures (TSIG) SHOULD also be used.
 
 #### APP.3.6.A19 Disposal of DNS servers
 
@@ -149,7 +157,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### APP.3.6.A20 Assessment of the contingency plan (A)
 
-It SHOULD be checked regularly if the emergency plan is feasible.
+It SHOULD regularly be checked if the emergency plan is feasible.
 
 #### APP.3.6.A21 Hidden Master (CIA)
 
@@ -170,7 +178,8 @@ Further information about threats and security measures in the area of ​​"DN
 
   
 
- Recommendations for Internet Service Providers (ISP) and large companies, BSI, 2013[https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_055.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_055.pdf)
+ Recommendations for Internet Service Providers (ISP) and large companies, BSI, 2013
+[https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_055.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_055.pdf)
 
  
 * #### [BSIDNSSEC] Implementation of DNSSEC

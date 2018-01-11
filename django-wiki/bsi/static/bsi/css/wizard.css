@@ -164,3 +164,19 @@
         font-size:medium;
     }
 }
+
+.collapsibleList li{
+  cursor           : auto;
+}
+
+li.collapsibleListOpen{
+  cursor           : pointer;
+}
+
+li.collapsibleListClosed{
+  cursor           : pointer;
+}
+
+.hide{
+  display:none;
+}

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,7 +15,7 @@ The aim of this module is to demonstrate how well-functioning information securi
 
 ### 1.3 Delimitation
 
-The building block is based on the BSI Standard 100-1 Information Security Management Systems and BSI Standard 100-2 Approach to IT Baseline Protection and summarizes the most important aspects of security management.
+The module builds on the BSI standard 100-1 Information Security Management Systems and BSI Standard 100-2 Approach to IT Baseline Protection and summarizes the most important aspects of security management.
 
 2 risk situation
 -----------------
@@ -28,9 +32,10 @@ Information security officers usually do not come from the level of government o
 
 ### 2 3 Insufficient strategic and conceptual requirements
 
-Although many institutions create a security concept, their content is often known only to a few insiders. This leads to the fact that the guidelines are not consciously or unconsciously adhered to in places where organizational effort would be required. If the security concept contains strategic objectives, these are often regarded as a mere collection of declarations of intent and insufficient resources are provided for their implementation. In many cases, it is erroneously assumed that safety is automatically produced in an automated environment. Cases of damage in one's own or similarly structured institutions are sometimes the trigger for more or less vigorous actionism, in which at best partial aspects are improved at best.
+Although many institutions create a security concept, their content is often known only to a few insiders. This leads to the fact that the guidelines are not consciously or unconsciously adhered to in places where organizational effort would be required. If the security concept contains strategic objectives, these are often viewed as a mere collection of declarations of intent and do not provide sufficient resources for their implementation. In many cases, it is erroneously assumed that safety is automatically produced in an automated environment. Cases of damage in one's own or similarly structured institutions are sometimes the trigger for more or less vigorous actionism, in which at best partial aspects are improved at best.
 
-### 2 4 Insufficient or misdirected investmentsIf the governance level of an institution is not adequately informed about the security status of business processes, IT systems and applications and about existing deficiencies, insufficient resources are made available or used improperly for the security process. In the latter case, this may mean that an excessively high level of safety in one area is faced with serious deficiencies in another area. It is also frequently observed that expensive technical security solutions are used incorrectly and thus are ineffective or even themselves become a source of danger.
+### 2 4 Insufficient or misdirected investments
+If the governance level of an institution is not adequately informed about the security status of business processes, IT systems and applications and about existing deficiencies, insufficient resources are made available or used improperly for the security process. In the latter case, this may mean that an excessively high level of safety in one area is faced with serious deficiencies in another area. It is also frequently observed that expensive technical security solutions are used incorrectly and thus are ineffective or even themselves become a source of danger.
 
 ### 2 5 Insufficient enforceability of security measures
 
@@ -46,9 +51,10 @@ If information, business processes and IT systems of an institution are insuffic
 
 In many industries it is customary for users to oblige their suppliers and service providers to comply with certain quality and safety standards. In this context, information security requirements are also increasing. If a contracting party violates contractually regulated security requirements, this can lead to contractual penalties, but also to contract cancellations or the loss of business relationships.
 
-### 2 8 Business disruption due to security incidentsSecurity incidents can be triggered by a singular event or concatenation of unfortunate circumstances that may compromise the confidentiality, integrity, or availability of information and IT systems. This then quickly has a negative effect on essential specialist tasks and business processes of the institution concerned. Even if not all security incidents become known to the public, they can still have a negative impact on relationships with business partners and customers. It is not even the case that the most significant and far-reaching security incidents were triggered by the largest security vulnerabilities. In many cases, the chaining of small causes has led to huge damage.
+### 2 8 Business disruption due to security incidents
+Security incidents can be triggered by a singular event or concatenation of unfortunate circumstances that may compromise the confidentiality, integrity, or availability of information and IT systems. This then quickly has a negative effect on essential specialist tasks and business processes of the institution concerned. Even if not all security incidents become known to the public, they can still have a negative impact on relationships with business partners and customers. It is not even the case that the most significant and far-reaching security incidents were triggered by the largest security vulnerabilities. In many cases, the chaining of small causes has led to huge damage.
 
-### 2 9 Inefficient use of resources due to inadequate safety management
+### 2 9 Inefficient use of resources due to inadequate security management
 
 Inadequate security management can lead to the setting of wrong priorities and not investing in those areas that bring the greatest added value to the institution. This can lead to the following errors:
 
@@ -70,9 +76,10 @@ The following requirements MUST be implemented as a priority:
 
 The management level MUST assume overall responsibility for information security in the institution so that it is clearly visible to all involved. The management level of the institution MUST initiate, control and control the security process. The management level MUST live the information security.
 
-The CA must define the information security responsibilities and provide the appropriate people with the necessary skills and resources. The management level MUST regularly be informed about the status of information security, in particular MUST be informed about possible risks and consequences due to lack of security measures.
+The CA must define information security responsibilities and provide the appropriate people with the necessary skills and resources. The management level MUST regularly be informed about the status of information security, in particular MUST be informed about possible risks and consequences due to lack of security measures.
 
-#### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]The security process MUST be initiated and established by the management. Appropriate security objectives and an information security strategy MUST be defined and documented. It is necessary to develop conceptual guidelines and organizational frameworks to enable the proper and secure handling of information within all business processes of the company or the authority.
+#### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]
+The security process MUST be initiated and established by the management. Appropriate security objectives and an information security strategy MUST be defined and documented. It is necessary to develop conceptual guidelines and organizational frameworks to enable the proper and secure handling of information within all business processes of the company or the authority.
 
 The security strategy and objectives MUST be borne and held by the institution's leadership. Security objectives and strategy MUST be regularly reviewed to see if they are up to date, appropriate and effective.
 
@@ -90,13 +97,14 @@ The Information Security Officer MUST be involved early in all major projects, a
 
 #### ISMS.1.A5 Contract drafting when ordering an external information security officer [institutional management]
 
-If the role of Information Security Officer can not be filled by an internal employee, an external information security officer MUST be appointed. The service contract concluded for this MUST include all tasks of the Information Security Officer as well as the associated rights and obligations. The contract MUST include an appropriate confidentiality agreement. The external information security officer MUST have the necessary qualifications. The contract MUST ensure a controlled termination of the contractual relationship, including the transfer of the tasks to the client.
+If the role of Information Security Officer can not be filled by an internal employee, an external information security officer MUST be appointed. The service contract must include all tasks of the Information Security Officer and the associated rights and obligations. The contract MUST include an appropriate confidentiality agreement. The external information security officer MUST have the necessary qualifications. The contract MUST ensure a controlled termination of the contractual relationship, including the transfer of the tasks to the client.
 
-#### ISMS.1.A6 Establishment of a suitable organizational structure for information security [Institutional Management]
+#### ISMS.1.A6 Establishment of a suitable organizational structure for information security [Head of Institution]
 
-There must be an appropriate, comprehensive organizational structure for information security. For this, roles MUST be defined that perform the various tasks required to achieve the security goals. You must also name people who are qualified and have sufficient resources to complete these roles. The tasks, responsibilities and competencies in security management MUST be comprehensibly defined and assigned. For all major functions of the IS organization, there must be effective representation arrangements.
+There must be an appropriate, comprehensive organizational structure for information security. For this, roles MUST be defined that perform the various tasks required to achieve the security goals. You must also name people who are qualified and have sufficient resources to complete these roles. The tasks, responsibilities and competencies in security management MUST be comprehensibly defined and assigned. For all major functions of the IS organization there must be effective representation arrangements.
 
-Communication channels MUST be planned, described, set up and made public. It MUST be defined for all tasks and roles, who informs whom and who has to be informed about which actions and to what extent.It is MUST be checked regularly whether the organizational structure for information security is still appropriate or needs to be adapted to new framework conditions.
+Communication channels MUST be planned, described, set up and made public. It MUST be defined for all tasks and roles, who informs whom and who needs to be informed about which actions and to what extent.
+It is MUST be checked on a regular basis if the organizational structure for information security is still appropriate or needs to be adapted to new framework conditions.
 
 #### ISMS.1.A7 Determination of security measures
 
@@ -122,19 +130,20 @@ Together with the basic requirements, the following requirements correspond to t
 
 For the defined scope (information network), an appropriate security concept SHOULD be created as the central document in the security process. The security concept can also consist of several sub-concepts, which are created successively in order to initially produce the required level of security in selected areas.
 
-In the security concept, the security objectives of the institution, the identified protection requirements and the risk assessment MUST be used to derive concrete security measures appropriate to the considered information network. Security process and security concept MUST consider the individual rules and regulations.
+In the security concept, the security objectives of the institution, the identified protection requirements and the risk assessment MUST be used to derive concrete security measures appropriate to the observed information network. Security process and security concept MUST consider the individual rules and regulations.
 
-The measures provided for in the security concept MUST be implemented promptly in practice. This MUST be planned and the implementation controlled. It SHOULD periodically review the suitability, adequacy, feasibility and efficiency of the measures selected to achieve the safety objectives and requirements.
+The measures provided for in the security concept MUST be implemented promptly in practice. This MUST be planned and the implementation controlled. It SHOULD periodically review the suitability, adequacy, feasibility and efficiency of the measures selected to achieve the security objectives and requirements.
 
 Each employee SHOULD at least be informed about the parts of the security concept directly related to him.
 
 #### ISMS.1.A11 maintaining information security
 
-The security process, security concepts, information security guideline, and information security organizational structure SHOULD regularly be reviewed and updated for effectiveness and appropriateness. For this purpose, completeness or update checks of the security concept SHOULD be carried out regularly. Likewise, regular security audits should be carried out. For this purpose, it should be regulated which areas and security measures are to be checked when and by whom. Safety level checks SHOULD be carried out regularly (at least annually) and on an ad hoc basis.The tests SHOULD be performed by qualified and independent persons. The determined results of the checks SHOULD be comprehensibly documented. Based on this, deficiencies SHOULD be remedied and corrective measures taken.
+The security process, security concepts, information security guideline, and information security organizational structure SHOULD be regularly reviewed for effectiveness and appropriateness and updated. For this purpose, completeness or update checks of the security concept SHOULD be carried out regularly. Likewise, regular security audits should be carried out. For this purpose, it should be regulated which areas and security measures are to be checked when and by whom. Safety level checks SHOULD be carried out regularly (at least annually) and on an ad hoc basis.
+The tests SHOULD be performed by qualified and independent persons. The determined results of the checks SHOULD be comprehensibly documented. Based on this, deficiencies SHOULD be remedied and corrective measures taken.
 
 #### ISMS.1.A12 Information Security Management Reports [Institutional Management]
 
-The management level SHOULD regularly be informed about the state of information security, above all about the current threat situation and effectiveness and efficiency of the security process in order to be able to control the further procedure in the security process. The management reports SHOULD include the key relevant information about the security process, in particular about issues, achievements, and opportunities for improvement. They SHOULD contain clearly prioritized and proposed measures with realistic estimates of the expected implementation effort.
+The management level SHOULD regularly be informed about the state of information security, above all about the current threat situation and the effectiveness and efficiency of the security process in order to be able to control the further procedure in the security process. The management reports SHOULD include the key relevant information about the security process, in particular about issues, achievements, and opportunities for improvement. They SHOULD contain clearly prioritized and proposed measures with realistic estimates of the expected implementation effort.
 
 The management decisions about necessary actions, dealing with residual risks and with changes of security relevant processes SHOULD be documented. The management reports and management decisions SHOULD be archived audit-proof.
 
@@ -142,7 +151,7 @@ The management decisions about necessary actions, dealing with residual risks an
 
 The course of the security process, important decisions and the work results of the individual phases such as security concept, guidelines or investigation results of security incidents SHOULD be sufficiently documented.
 
-It SHOULD provide a well-regulated procedure for the creation and archiving of documentation in the context of the security process. There SHOULD exist rules to maintain the timeliness and confidentiality of the documentation. Of the existing documents, the current version SHOULD be accessible at short notice. In addition, all previous versions SHOULD be centrally archived.
+It SHOULD provide a regular procedure for the creation and archiving of documentation in the context of the security process. There SHOULD exist rules to maintain the timeliness and confidentiality of the documentation. Of the existing documents, the current version SHOULD be accessible at short notice. In addition, all previous versions SHOULD be centrally archived.
 
 #### ISMS.1.A14 Information security awareness
 
@@ -152,13 +161,14 @@ All staff members of the institution and other relevant persons (such as externa
 
 Information security requires sufficient financial and human resources as well as appropriate equipment. The need SHOULD be communicated by the ISB to the management level, which SHOULD provide the required resources.
 
-The security strategy SHOULD consider economic aspects. When establishing security measures, the resources required for implementation SHOULD be quantified. The resources scheduled for information security SHOULD be delivered on schedule. The information security officer or information security management team MUST have enough time for their security tasks. In the event of peak work or special tasks, additional internal staff should be employed or external experts should be recruited.
+The security strategy SHOULD consider economic aspects. When establishing security measures, the resources required for implementation SHOULD be quantified. The resources scheduled for information security SHOULD be delivered on schedule. The Information Security Officer or Information Security Management Team MUST have enough time to complete their security tasks. In the event of peak work or special tasks, additional internal staff should be employed or external experts should be recruited.
 
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### ISMS.1.A16 Creation of Targeted Security Policies (CIA)All employees SHOULD know and respect the safety aspects of their work area. In order to convey security topics in a way that suits the target group, there should be not only the general but also target-group-oriented security guidelines that depict the relevant security topics as needed.
+#### ISMS.1.A16 Creation of Targeted Security Policies (CIA)
+All employees SHOULD know and respect the safety aspects of their work area. In order to impart security topics in a way that suits the target group, there should be not only the general but also target-group-oriented security guidelines that depict the relevant security topics as needed.
 
 #### ISMS.1.A17 Completing Insurance (A)
 
