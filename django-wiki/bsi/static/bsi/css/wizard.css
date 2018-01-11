@@ -176,3 +176,7 @@ li.collapsibleListOpen{
 li.collapsibleListClosed{
   cursor           : pointer;
 }
+
+.hide{
+  display:none;
+}

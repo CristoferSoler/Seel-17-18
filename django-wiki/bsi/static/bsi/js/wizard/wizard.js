@@ -16,6 +16,17 @@ function setValid(validValue) {
     valid = validValue;
 }
 
+function showElements() {
+    $('#articleTopicList').empty();
+    var currentElements = currentSortedTopic[currentTopic]['elements'];
+     $('#topicWord').text( currentSortedTopic[currentTopic]['topic']);
+    currentElements.forEach(function(element) {
+        var path = element['path'];
+        var title = element['title'];
+        $('#articleTopicList').append('<li href=' + path + '>'+ title + '</li>');
+    });
+}
+
 
 function inilizeData() {
     getDataFromServer();
@@ -37,7 +48,7 @@ function inilizeData() {
         localStorage.setItem('listOfBack', JSON.stringify(listOfBack));
     }
 
-    $("#topic").text(sortedTopics[currentTopic] + '?');
+    $("#topic").text(sortedTopics[currentTopic]['topic'] + '?');
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
@@ -61,6 +72,7 @@ function inilizeData() {
     } else{
         $("#topicBack").removeClass('disabled');
     }
+
 }
 
 function initWizard() {
@@ -139,7 +151,7 @@ function noPress() {
 }
 
 function checkTopicStayInside(yes) {
-    var currentTopicString = currentSortedTopic[currentTopic];
+    var currentTopicString = currentSortedTopic[currentTopic]['topic'];
     remainingComponents.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
         if (yes) {
@@ -156,7 +168,7 @@ function checkTopicStayInside(yes) {
 }
 
 function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goForward) {
-    var currentTopicString = currentSortedTopic[nextTopic];
+    var currentTopicString = currentSortedTopic[nextTopic]['topic'];
     topicElements.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
         if (yes) {
@@ -215,11 +227,13 @@ function checkTopics(yes) {
 
 function checkPresentResults() {
         if (remainingComponents.length <= thresholdTopicNumber) {
-            $("#topic").text(currentSortedTopic[currentTopic] + '?');
+            $("#topic").text(currentSortedTopic[currentTopic]['topic'] + '?');
+            showElements();
             presentResults();
         } else {
             $("#list").empty();
-            $("#topic").text(currentSortedTopic[currentTopic]+ '?');
+            $("#topic").text(currentSortedTopic[currentTopic]['topic']+ '?');
+            showElements();
         }
         safeData();
     }
@@ -232,7 +246,8 @@ function dontknowPress() {
 
     currentTopic = currentTopic + 1;
     addGoBackListTopicList();
-    $("#topic").text(currentSortedTopic[currentTopic] + '?');
+    $("#topic").text(currentSortedTopic[currentTopic]['topic'] + '?');
+    showElements();
 
     checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
     checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),true;

@@ -55,17 +55,21 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
     topicsWithElements = []
     listOfAllTopics = []
     listOfAllTopicNames = []
+
+    for element in elements:
+        listOfAllTopics.append(element['topics'])
+        listOfAllTopicNames.append(element['name'])
+    rowsOfTopicList = list(zip(*listOfAllTopics))
+
     for topic in topics:
         topicDic = getTopicComponent(topic)
-        for element in elements:
-            listOfAllTopics.append(element['topics'])
-            listOfAllTopicNames.append(element['name'])
 
-        rowsOfTopicList = list(zip(*listOfAllTopics))
         for row in rowsOfTopicList:
             if(len(topicDic['elements'])< numberOfRelatedElements):
                 for e in row:
                     if e == topic:
+                        #print(e )
+                        #print(topic)
                         indexTopic = row.index(e)
                         pathList = getPathList()
                         title = listOfAllTopicNames[indexTopic]
@@ -81,7 +85,7 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
 def getListOfFrequenceOfTopic(elements,requestParameter):
     topics = []
     listOfAllTopics = []
-    print(elements)
+
     for element in elements:
         listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
     listOfAllTopics = list(listOfAllTopics)
@@ -126,25 +130,56 @@ def randomizeTopicSerialization(topics):
 
     return randomSerializationTopics
 
+def generateSortedTopicList(fakeRequest):
+    global topicListThread
+    global topicListComponent
+
+    fileName, requestParameter = getFileName(fakeRequest)
+    components = readAndProcessCSV(fileName, requestParameter)
+    frequenceOfTopics = getListOfFrequenceOfTopic(components['element'], requestParameter)
+
+    if(fakeRequest == 't'):
+        topicListThread = json.dumps({'sortedTopicList': frequenceOfTopics})
+
+    elif(fakeRequest == 'c'):
+        topicListComponent = json.dumps({'sortedTopicList': frequenceOfTopics})
+    return
+
+def generateElementTopics(fakeRequest):
+    global elementTopicThread
+    global elementTopicComponent
+
+    fileName, requestParameter = getFileName(fakeRequest)
+    components = readAndProcessCSV(fileName, requestParameter)
+    if (fakeRequest == 't'):
+        elementTopicThread = json.dumps(components)
+    elif (fakeRequest == 'c'):
+        elementTopicComponent = json.dumps(components)
+
+    return
 
 def getSortedTopicList(request):
-       fileName, requestParameter = getFileName(request)
-       components = readAndProcessCSV(fileName, requestParameter)
-       frequenceOfTopics = getListOfFrequenceOfTopic(components['element'],requestParameter)
-       jsonFile = { 'sortedTopicList' : frequenceOfTopics }
-       return HttpResponse(json.dumps(jsonFile), content_type='application/json')
+    requestParamter = dict(request.GET)['element'][0]
+    if (requestParamter == 't'):
+        return HttpResponse(topicListThread, content_type='application/json')
+    elif (requestParamter == 'c'):
+        return HttpResponse(topicListComponent, content_type='application/json')
+
+
 
 
 def getElementsTopics(request):
-    fileName, requestParameter = getFileName(request)
-    components = readAndProcessCSV(fileName,requestParameter)
-    jsonFile = json.dumps(components)
-    return HttpResponse(jsonFile, content_type='application/json')
+    requestParamter = dict(request.GET)['element'][0]
+    if (requestParamter == 't'):
+        return HttpResponse(elementTopicThread, content_type='application/json')
+    elif (requestParamter == 'c'):
+        return HttpResponse(elementTopicComponent, content_type='application/json')
+
 
 
 def getFileName(request):
     fileName = ''
-    requestParameter = dict(request.GET)['element'][0]
+    requestParameter = request
     if (requestParameter == 'c'):
         fileName = pathOfComponentsCSV
     elif (requestParameter == 't'):
