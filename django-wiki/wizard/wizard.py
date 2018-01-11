@@ -55,6 +55,7 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
     topicsWithElements = []
     listOfAllTopics = []
     listOfAllTopicNames = []
+    pathList = getPathList()
 
     for element in elements:
         listOfAllTopics.append(element['topics'])
@@ -65,18 +66,15 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
         topicDic = getTopicComponent(topic)
 
         for row in rowsOfTopicList:
-            if(len(topicDic['elements'])< numberOfRelatedElements):
-                for e in row:
-                    if e == topic:
-                        #print(e )
-                        #print(topic)
-                        indexTopic = row.index(e)
-                        pathList = getPathList()
-                        title = listOfAllTopicNames[indexTopic]
-                        pathOfElement = getPathOfElement(title,pathList,requestParameter)
-                        topicDic['elements'].append(generateElementDic(title,pathOfElement))
-            else:
-                break
+                for i in range(0,len(row)):
+                    if (len(topicDic['elements']) < numberOfRelatedElements):
+                        if row[i] == topic:
+                            title = listOfAllTopicNames[i]
+                            pathOfElement = getPathOfElement(title,pathList,requestParameter)
+                            topicDic['elements'].append(generateElementDic(title,pathOfElement))
+                    else:
+                        break
+
         topicsWithElements.append(topicDic)
 
     return topicsWithElements

@@ -16,6 +16,11 @@ function setValid(validValue) {
     valid = validValue;
 }
 
+/*
+* <li class="list-group-item">One</li>
+*
+* */
+
 function showElements() {
     $('#articleTopicList').empty();
     var currentElements = currentSortedTopic[currentTopic]['elements'];
