@@ -5,8 +5,8 @@
                 <hr class="no-margin">
                 <div class="row">
                     <div class="col-md-12">
-                        <button title="Expand All"><span class="glyphicon glyphicon-plus-sign"></span></button>
-                        <button title="Collapse All"><span class="glyphicon glyphicon-minus-sign"></span></button>
+                        <button onclick="expandAll()" title="Expand All"><span class="glyphicon glyphicon-plus-sign"></span></button>
+                        <button onclick="collapseAll()" title="Collapse All"><span class="glyphicon glyphicon-minus-sign"></span></button>
                     </div>
                 </div>
                 <div id="treeview1"></div>
@@ -17,7 +17,13 @@
 
 
   <script type="text/javascript">
+        function expandAll() {
+            $('#treeview1').treeview('expandAll', { silent: true });
+        }
 
+        function collapseAll() {
+            $('#treeview1').treeview('collapseAll', { silent: true });
+        }
 
         $(function () {
             $('#treeview1').treeview({
