@@ -12,6 +12,10 @@ const questionComponent = 'Do you have a problem with '
 
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
+function setValid(validValue) {
+    valid = validValue;
+}
+
 
 function inilizeData() {
     getDataFromServer();
@@ -404,6 +408,7 @@ function clearLocalStorage(){
     localStorage.removeItem('visible');
     localStorage.removeItem('listOfBack');
     localStorage.removeItem('mode');
+    localStorage.removeItem('selectedNode');
 }
 
 function buttonsWizard() {

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -38,7 +42,8 @@ In a DDoS attack on a protected network, for example, by TCP SYN flooding or UDP
 
 If an attacker succeeds in gaining unauthorized access to a router or switch, he can reconfigure the devices or start additional services. For example, the configuration can be changed to block services, clients, or entire network segments.
 
-### 2 3 Software vulnerabilities or errorsRouting and switch manufacturers regularly release updates and patches to address software bugs and known vulnerabilities in their products. However, if these are not recorded or played too late, the router or switch can be successfully attacked. This makes it possible for attackers to manipulate systems so that business-critical data drains, services fail, or entire production processes stand still.
+### 2 3 Software vulnerabilities or errors
+Routing and switch manufacturers regularly release updates and patches to address software bugs and known vulnerabilities in their products. However, if these are not recorded or played too late, the router or switch can be successfully attacked. This makes it possible for attackers to manipulate systems so that business-critical data drains, services fail, or entire production processes stand still.
 
 ### 2 4 Incorrect configuration of a router or switch
 
@@ -46,11 +51,11 @@ Routers and switches ship with a standard configuration in which many services a
 
 ### 2 5 Incorrect planning and conception
 
-Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when it is first used. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
+Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when used for the first time. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
 
 ### 2 6 Incompatible active network components
 
-Compatibility problems can arise in particular when existing networks are supplemented by active network components from other manufacturers or when networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in one network, individual subareas of the network, certain services or even the entire network can fail.
+Compatibility problems can arise in particular if existing networks are supplemented by active network components from other manufacturers or if networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in one network, individual subareas of the network, certain services or even the entire network can fail.
 
 ### 2 7 MAC flooding
 
@@ -62,7 +67,7 @@ In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units
 
 ### 2 9 GARP attacks
 
-For Gratuitous ARP (GARP) attacks, the attacker sends unsolicited ARP responses to specific victims or to all IT systems on the same subnet. In this spoofed ARP response, the attacker enters his MAC address as a mapping to a foreign IP address and causes the victim to change his ARP table to send network traffic to the attacker instead of the valid target. Thereby he can record the communication between the victims or manipulate them.
+For Gratuitous ARP (GARP) attacks, the attacker sends unsolicited ARP responses to specific victims or to all IT systems on the same subnet. In this spoofed ARP response, the attacker enters his MAC address as a mapping to a foreign IP address and causes the victim to change his ARP table so that network traffic is now sent to the attacker instead of the valid target. Thereby he can record the communication between the victims or manipulate them.
 
 3 requirements
 ---------------
@@ -73,7 +78,8 @@ The following are specific requirements for protecting * routers and switches *.
 
 The following requirements MUST be implemented as a priority:
 
-#### NET.3.1.A1 Secure basic configuration of a router or switchBefore a router or switch is used, it MUST be securely configured. The devices MUST ONLY be installed and configured by authorized persons. All configuration changes SHOULD be traceable documented (see NET.3.2.A9 * operating documentation *). The integrity of the configuration files MUST be properly protected. Access passwords MUST be stored encrypted.
+#### NET.3.1.A1 Secure basic configuration of a router or switch
+Before a router or switch is used, it MUST be securely configured. The devices MUST ONLY be installed and configured by authorized persons. All configuration changes SHOULD be traceable documented (see NET.3.2.A9 * operating documentation *). The integrity of the configuration files MUST be properly protected. Access passwords MUST be stored encrypted.
 
 Routers and switches MUST be configured to use only mandatory services, protocols, and functional enhancements. Unnecessary services, protocols, and enhancements MUST be disabled or completely uninstalled. Also, unused interfaces MUST be disabled on routers and switches, or at least assigned to a dedicated * unassigned VLAN *.
 
@@ -93,17 +99,18 @@ It MUST be taken care that patches and updates are obtained only from trustworth
 
 It must be regulated, who may access a router or switch. ONLY ONCE as many access rights must be granted as are required for the respective tasks (minimum principle). Unused user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
-#### NET.3.1.A4 Protection of administration interfaces
+#### NET.3.1.A4 Protection of the administration interfaces
 
-All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
+All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from non-trusted networks.
 
-To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and thus insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
+To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
 All services not required for the management interface MUST be deactivated. If a network component has a dedicated hardware interface, unauthorized access to it MUST be prevented.
 
 #### NET.3.1.A5 Protection against fragmentation attacks
 
-At the router and Layer 3 switch, protections MUST be enabled to fend off both IPv4 and IPv6 fragmentation attacks.#### NET.3.1.A6 Emergency access to routers and switches
+At the router and Layer 3 switch, protections MUST be enabled to fend off both IPv4 and IPv6 fragmentation attacks.
+#### NET.3.1.A6 Emergency Access to Routers and Switches
 
 It MUST always be possible for administrators to directly access routers and switches so that they can continue to be administered locally, even if the entire network fails.
 
@@ -136,7 +143,7 @@ On the basis of the institution's general security policy, a specific security p
 
 #### NET.3.1.A11 Obtain a router or switch
 
-Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the level of security sought by the institution can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
+Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the institution's desired level of safety can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
 
 #### NET.3.1.A12 Creation of a configuration checklist for routers and switches
 
@@ -150,7 +157,8 @@ Routers and switches SHOULD only be administered via a separate management netwo
 
 IT SHOULD be ensured that the ICMP and ICMPv6 protocols are filtered restrictively.
 
-#### NET.3.1.A15 Bogon and spoofing filteringIt SHOULD prevent intruders from entering the routers and switches using forged, reserved or unassigned IP addresses.
+#### NET.3.1.A15 Bogon and spoofing filtering
+It SHOULD prevent intruders from entering the routers and switches using forged, reserved or unassigned IP addresses.
 
 #### NET.3.1.A16 Protection against "IPv6 Routing Header Type-0" attacks
 
@@ -180,9 +188,9 @@ Routers and switches SHOULD be connected to a central identity and authorization
 
 #### NET.3.1.A22 Emergency Prevention for Routers and Switches
 
-In order to be able to react effectively and quickly in disruptive situations, diagnosis and troubleshooting should be planned and prepared in advance. For typical failure scenarios, appropriate action instructions SHOULD be defined.
+To be able to react effectively and quickly in disruptive situations, diagnosis and troubleshooting should be planned and prepared in advance. For typical failure scenarios, appropriate action instructions SHOULD be defined.
 
-The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and are based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
+The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
 
 #### NET.3.1.A23 Revision and Penetration Tests
 
@@ -196,7 +204,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 A port based access control according to IEEE 802.1x based on EAP-TLS SHOULD be implemented. It SHOULD NOT be an implementation according to the standards IEEE 802.1x-2001 and IEEE 802.1x-2004.
 
-#### NET.3.1.A25 Extended integrity protection for configuration files (I)If a router or switch crashes, make sure that no old or faulty configurations (including ACLs) are used during recovery or reboot.
+#### NET.3.1.A25 Extended integrity protection for configuration files (I)
+If a router or switch crashes, make sure that no old or faulty configurations (including ACLs) are used during recovery or reboot.
 
 #### NET.3.1.A26 High Availability (A)
 
@@ -204,7 +213,7 @@ The realization of a high-availability solution MUST NOT hamper the operation of
 
 #### NET.3.1.A27 Bandwidth Management for Critical Applications and Services (A)
 
-To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help identify applications and prioritize bandwidth.
+To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help them discover applications and prioritize bandwidth.
 
 #### NET.3.1.A28 Use of certified products (CI)
 

@@ -33,8 +33,11 @@
                 selectedBackColor: '#337ab7'
             })
 
+
             $('#treeview1').on('nodeSelected', function(event, data) {
+                setValid(true);
                 console.log(data);
+                localStorage.setItem('selectedNode',JSON.stringify(data))
             });
         });
 

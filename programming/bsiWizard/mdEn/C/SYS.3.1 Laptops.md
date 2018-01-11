@@ -1,11 +1,15 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
 ### 1.1 Introduction
 
-A laptop (or notebook) is a PC that can be used as a mobile device. It has a compact design, integrates peripheral devices such as keyboard and screen, is temporarily independent of an external power supply via batteries and often consists of hardware components specially designed for mobile use. Laptops can be operated with all common operating systems like Windows, Apple macOS or Linux. The devices are common in most institutions and replace the classic desktop PC for some employees.
+A laptop (or notebook) is a PC that can be used as a mobile device. It has a compact design, integrates peripherals such as keyboard and screen, is at times independent of an external power supply via batteries and often consists of specially designed for mobile use hardware components. Laptops can be operated with all common operating systems like Windows, Apple macOS or Linux. The devices are common in most institutions and replace the classic desktop PC for some employees.
 
-Often, laptops are not permanently connected to the institution's LAN because they are often used as mobile devices. They can usually dial in via the Internet or other data networks via Virtual Private Network (VPN) to access the resources of the LAN. Also, the infrastructure of a classic office environment, such as controllable environmental influences, a stable power supply or access protected areas, can not be expected for the mobile use of laptops.
+As laptops are often used on the move, they are often not permanently attached to the institution's LAN, but can usually dial in via the Internet or other data networks via Virtual Private Network (VPN) to access the resources of the LAN. Also, the infrastructure of a classic office environment, such as controllable environmental influences, a stable power supply or access protected areas, can not be expected for the mobile use of laptops.
 
 ### 1.2 Objective
 
@@ -30,17 +34,18 @@ Laptops are used in very different environments and are therefore exposed to man
 
 ### 2 2 Theft
 
-Employees also regularly use their laptops outside the institution. The devices are transported in private motor vehicles or public transport, left in other offices in breaks or placed in hotel rooms unguarded. Due to these environmental conditions, laptops are naturally exposed to a higher theft risk. If a laptop is stolen, costs for the recovery and for the restoration of a working condition arise. Likewise, this could also be disclosed to unauthorized data worthy of protection, which can lead to further damage. In many cases, these weigh considerably more heavily than the mere material loss of the device.### 2 3 Unsolicited user switching on laptops
+Employees also regularly use their laptops outside the institution. The devices are transported in private motor vehicles or public transport, left in other offices in breaks or placed in hotel rooms unguarded. Due to these environmental conditions, laptops are naturally exposed to a higher theft risk. If a laptop is stolen, costs for the recovery and for the restoration of a working condition arise. Likewise, this could also be disclosed to unauthorized data worthy of protection, which can lead to further damage. In many cases, these weigh considerably heavier than the mere material loss of the device.
+### 2 3 Unsolicited user switching on laptops
 
-When employees seldom need mobile IT systems, such as infrequent business travel, it is often more convenient to have a few laptops for many users to pass on. However, if the laptop is simply handed over to the next employee during a user change, there is a risk that the device still stores sensitive data and that it is contaminated with malware. In addition, after some time is no longer understandable who used the laptop when or who is currently using it. The unordered change of users without memory controls and without corresponding documentation can lead to the fact that the laptop is only limited available and residual data on the hard disk can be read without authorization.
+When employees seldom need mobile IT systems, such as infrequent business travel, it is often more convenient to have a few laptops available to many users who are being passed on. However, if the laptop is simply handed over to the next employee during a user change, there is a risk that the device still stores sensitive data and that it is contaminated with malware. In addition, after some time is no longer understandable who used the laptop when or who is currently using it. The unordered change of users without memory controls and without corresponding documentation can lead to the fact that the laptop is only limited available and residual data on the hard disk can be read without authorization.
 
 ### 2 4 Synchronization error
 
-When data is edited locally on a laptop, it must be synchronized with the institution's file servers whenever possible, e.g. For example, if the employee logs in again via the VPN. However, the data can also be destroyed. In general, before synchronization, you have to set how to handle conflicting data reconciliation: whether, for example, the version on the laptop or the version also edited by another employee on the server is updated on the server without being asked, or if the user should decide. This is often configured once and often forgotten afterwards. But if data is changed in a different order than originally thought, important information will quickly be lost.
+When data is edited locally on a laptop, it must be synchronized with the institution's file servers whenever possible, e.g. For example, if the employee logs in again via the VPN. However, the data can also be destroyed. In general, before synchronization, you have to set how to handle conflicting data reconciliation: whether, for example, the version on the laptop or the version also edited by another employee on the server is updated on the server without being asked, or if the user should decide. This is often configured once and then often forgotten. But if data is changed in a different order than originally thought, important information will quickly be lost.
 
 ### 2 5 Data loss in mobile use
 
-For laptops, the risk of data loss is higher than for inpatient systems. Cause may be theft or loss of equipment, but also technical problems or simple lack of power. For example, a laptop's data may be temporarily unavailable when the battery is empty. You may be able to B. in older devices, but also completely destroyed, if in addition to the battery and any backup battery is empty and thus all not already synchronized data are lost.
+For laptops, the risk of data loss is higher than for inpatient systems. The cause may be theft or loss of equipment, but also technical problems or simple lack of power. For example, a laptop's data may be temporarily unavailable when the battery is empty. You may be able to B. in older devices, but also completely destroyed, if in addition to the battery and any backup battery is empty and thus all not yet synchronized data are lost.
 
 ### 2 6 Data theft with laptops
 
@@ -57,7 +62,8 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.3.1.A1 Regulations for the mobile use of laptops
 
-It MUST be clear what employees should consider when they take laptops. In particular, it must be determined which laptops may be taken outside the home, who can take them with them, and what basic security measures should be followed. Users MUST be advised of the regulations.#### SYS.3.1.A2 Laptop access protection [user]
+It MUST be clear what employees should consider when they take laptops. In particular, it is necessary to specify which laptops may be taken outside the home, who may take them with them and what basic security measures should be taken. Users MUST be advised of the regulations.
+#### SYS.3.1.A2 Laptop access protection [user]
 
 All laptops MUST have adequate access protection to prevent unauthorized use of the device. It MUST be checked whether all employees comply with the rules for the correct handling of the established access protection.
 
@@ -91,13 +97,14 @@ For laptops, a security policy SHOULD be created that governs how the devices ma
 
 If laptops are used in turn by different people, SHOULD it be regulated how laptops can be safely handed over to employees or how they can be safely taken back. When changing the user of a laptop, any existing sensitive data SHOULD be safely deleted. If the laptop is not replaced after the user has changed, make sure that there is no malware on the system or any other media attached to it. With a laptop SHOULD give the staff a leaflet for the safe handling of the device.
 
-#### SYS.3.1.A8 Secure connection of laptops to data networks [user]It was intended to regulate how laptops are securely connected to own or foreign networks and to the Internet. Laptops SHOULD be effectively protected against malicious code and attacks from third-party networks and the Internet. For this, the operating system and the installed software of laptops SHOULD always be up to date. Only approved laptops should be able to log into the institution's internal network. Unnecessary interfaces SHOULD be disabled on all laptops.
+#### SYS.3.1.A8 Secure connection of laptops to data networks [user]
+It was intended to regulate how laptops are securely connected to own or foreign networks and to the Internet. Laptops SHOULD be effectively protected against malicious code and attacks from third-party networks and the Internet. For this, the operating system and the installed software of laptops SHOULD always be up to date. Only approved laptops should be able to log into the institution's internal network. Unnecessary interfaces SHOULD be disabled on all laptops.
 
 #### SYS.3.1.A9 Secure remote access from the road [user]
 
 Data transmitted between a laptop from outside and the institution's internal network SHOULD be adequately protected by appropriate means, such as a VPN or TLS. Also, the laptop SHOULD be secured by itself when sharing data with other IT systems.
 
-#### SYS.3.1.A10 Synchronization of Laptop Databases [User]
+#### SYS.3.1.A10 Synchronization of Laptop Datasets [User]
 
 It was intended to regulate how data from laptops are transferred to the information network of the institution. When using a synchronization tool, make sure that synchronization conflicts can be resolved, the synchronization process is logged, and users are instructed to check the synchronization logs.
 
@@ -125,7 +132,8 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 Before laptops are procured, the people in charge SHOULD perform a requirements analysis. It SHOULD also focus on additional hardware needed, such as: As docking stations and monitors to be extended. Based on the results, all candidate devices SHOULD be evaluated. The procurement decision SHOULD be coordinated with the administrators and the technical staff.
 
-#### SYS.3.1.A16 Central administration of laptops (CI)It should be defined a suitable approach, how to centrally manage laptops, as not only easier to distribute software and information, but also the institution's own security policies can be better enforced. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
+#### SYS.3.1.A16 Central administration of laptops (CI)
+It should be defined a suitable approach, how to centrally manage laptops, as not only easier to distribute software and information, but also the institution's own security policies can be better enforced. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
 
 #### SYS.3.1.A17 Collective Storage (A)
 

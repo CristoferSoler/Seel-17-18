@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -34,7 +38,8 @@ If, due to insufficient documentation, the exact position of pipes is not known,
 
 If cable connections are made between IT systems or other technical components that are not intended, there is a risk that this will cause safety problems or malfunction. For example, due to such improper cable connections, it is possible for unauthorized access to networks, systems, information or applications. Due to impermissible cable connections, information can be transmitted additionally or exclusively to incorrect receivers. The normal connection can be disturbed.
 
-### 2 5 Line damageThe more unprotected a cable is, the greater the risk of damage. Damage does not necessarily lead immediately to a failure of connections, but can also cause sporadic, difficult to detect transmission errors. The accidental formation of impermissible connections is possible if, for example, cable sheaths or insulation are no longer completely intact. Damage does not necessarily have to be intentional, but may also occur unintentionally.
+### 2 5 Line damage
+The more unprotected a cable is, the greater the risk of damage. Damage does not necessarily lead immediately to a failure of connections, but can also cause sporadic, difficult to detect transmission errors. The accidental formation of impermissible connections is possible if, for example, cable sheaths or insulation are no longer completely intact. Damage does not necessarily have to be intentional, but may also occur unintentionally.
 
 ### 2 6 Line impairment
 
@@ -61,7 +66,8 @@ When selecting cables, consideration must be given to transmission requirements 
 
 Cables, cable trays and cable trays MUST be adequately dimensioned from a technical as well as a physical point of view before they are laid. In doing so, future transmission-related necessities MUST be taken into account as well as sufficient space for possible technical expansions in cable ducts and routes. When co-routing IT and power cabling in a path, care must be taken to avoid crosstalk between the individual cables. It MUST be taken to avoid identifiable sources of danger.
 
-#### INF.4.A3 Professional Installation [Head of Domestic Engineering]Installation work on the IT cabling MUST be carried out carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the IT cabling MUST be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When laying IT cables, special care must be taken to ensure that the installation does not cause any damage and that the cable routes are selected such that damage to the routed cables due to normal use of the building is ruled out. In addition, care must generally be taken that IT cables are routed separately from the electrotechnical cabling.
+#### INF.4.A3 Professional Installation [Head of Domestic Engineering]
+Installation work on the IT cabling MUST be carried out carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the IT cabling MUST be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When laying IT cables, special care must be taken to ensure that the installation does not cause any damage and that the cable routes are selected such that damage to the routed cables due to normal use of the building is ruled out. In addition, care must generally be taken that IT cables are routed separately from the electrotechnical cabling.
 
 ### 3.2 Standard requirements
 
@@ -69,7 +75,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.4.A4 Requirements Analysis for IT Cabling
 
-Basically, an analysis of the requirements that have an influence on a future-proof, needs-based and economic execution of the IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
+Basically, an analysis of the requirements that have an influence on the future-proof, needs-based and economic execution of IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT-use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
 
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 
@@ -87,15 +93,16 @@ If IT cabling is no longer needed, it should be removed professionally and compl
 
 To avoid cable fires, ROADS SHOULD have sufficient ventilation. The fire protection conditions MUST be complied with. In addition, after completion of the installation work, the fire barrier should be checked at regular intervals.
 
-#### INF.4.A9 Documentation and labeling of IT cablingAn institution SHOULD make sure that it has internal and external documentation for its IT cabling. The internal documentation MUST include all records relating to the installation and operation of IT cabling. The internal documentation SHOULD be prepared and maintained so extensively that the operation and the future further development of the IT networks are best supported. The external documentation of the wiring SHOULD be as economical as possible.
+#### INF.4.A9 Documentation and labeling of IT cabling
+An institution SHOULD make sure that it has internal and external documentation for its IT cabling. The internal documentation MUST include all records relating to the installation and operation of IT cabling. The internal documentation SHOULD be prepared and maintained so extensively that the operation and the future further development of the IT networks are best supported. The external documentation of the wiring SHOULD be as economical as possible.
 
 #### INF.4.A10 Neutral documentation in the distributors
 
-Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indication of the type of use of the lines. All further information MUST be listed in a revision documentation.
+Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indications as to the type of use of the pipes. All further information MUST be listed in a revision documentation.
 
 #### INF.4.A11 Control of existing connections
 
-All distributors and drawers of the wiring SHOULD be subjected to a regular (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out. Any irregularities detected during visual inspections or functional inspections MUST be documented immediately and reported to the appropriate organizational units.
+All distributors and drawers of the wiring SHOULD be subjected to a regular (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out. Any irregularities detected during visual inspections or functional inspections MUST be promptly documented and reported to the appropriate organizational units.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -120,7 +127,8 @@ To improve the operational safety of active and passive network components, thes
 4 Further Information
 ------------------------------
 
-### 4.1 LiteratureAdditional information on hazards and security measures in the area of ​​"IT cabling" can be found in the following publications, among others:
+### 4.1 Literature
+Additional information on hazards and security measures in the area of ​​"IT cabling" can be found in the following publications, among others:
 
 * #### [DIN4102] DIN 4102: 2016-05
 

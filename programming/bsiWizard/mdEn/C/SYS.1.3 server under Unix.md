@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -23,7 +27,7 @@ The goal of the module is to protect information processed by Unix servers. The 
 
 The module contains basic requirements for setting up and operating Unix servers. It concretizes and complements the aspects that are dealt with in the module SYS.1.1 General Server to specifics of Unix systems.
 
-If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own modules, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board resources, regardless of the intended use of the server.
+If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing Usage must additionally be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
 
 2 risk situation
 -----------------
@@ -36,7 +40,8 @@ Through various Unix programs it is possible to query data that the IT system st
 
 For example, with a simple program that evaluates the information provided by the "who" command at a particular time interval, each user can create an accurate usage profile for an account. For example, this can be used to determine the absence time of the system administrator or administrators in order to use these times for unauthorized actions. It is also possible to determine which terminals are allowed for privileged access. Other programs with similar abuses are "finger" or "ruser".
 
-### 2 2 Exploitation of the script environmentIn Unix operating systems, the use of scripting languages ​​is widespread. Scripts are a collection of individual commands that are stored and called up in a text file. The rich functionality of the scripting environment allows attackers to leverage scripts for their own purposes. In addition, the containment of activated scripting languages ​​is very difficult.
+### 2 2 Exploitation of the script environment
+In Unix operating systems, the use of scripting languages ​​is widespread. Scripts are a collection of individual commands that are stored and called up in a text file. The rich functionality of the scripting environment allows attackers to leverage scripts for their own purposes. In addition, the containment of activated scripting languages ​​is very difficult.
 
 ### 2 3 Dynamic loading of shared libraries
 
@@ -77,7 +82,8 @@ If the software is translated from the source code then the selected parameters 
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​servers under Unix. They SHOULD be implemented in principle.
 
-#### SYS.1.3.A6 Administration of users and groupsTo manage users and groups SHOULD use the appropriate administration tools. From a direct editing of the configuration files "/ etc / passwd" and "/ etc / group" and "/ etc / sudoers" SHOULD be omitted.
+#### SYS.1.3.A6 Administration of users and groups
+To manage users and groups SHOULD use the appropriate administration tools. From a direct editing of the configuration files "/ etc / passwd" and "/ etc / group" and "/ etc / sudoers" SHOULD be omitted.
 
 #### SYS.1.3.A7 Additional protection for single-user and recovery mode access
 
@@ -117,7 +123,8 @@ Also, administrative accounts SHOULD be set up to be locked after a predetermine
 
 The output of information about the operating system and the access to protocol and configuration files SHOULD be limited to the necessary extent for users. In addition, no sensitive information should be passed as parameter during command calls.
 
-#### SYS.1.3.A15 Additional safeguarding of boot process (CIA)Bootloader and Kernel SHOULD be signed by self-controlled key material and unneeded key material should be removed.
+#### SYS.1.3.A15 Additional safeguarding of boot process (CIA)
+Bootloader and Kernel SHOULD be signed by self-controlled key material and unneeded key material should be removed.
 
 #### SYS.1.3.A16 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
 
@@ -125,7 +132,7 @@ The use of system calls SHOULD be limited to the absolutely necessary system cal
 
 #### SYS.1.3.A17 Additional Kernel Protection (CI)
 
-With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control designed to prevent exploitation of vulnerabilities and propagation in the operating system.
+With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent exploitation of vulnerabilities and propagation in the operating system.
 
 4 Further Information
 ------------------------------

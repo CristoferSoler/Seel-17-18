@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -29,13 +33,14 @@ The inadequate implementation of information security can lead to violations of 
 * Many cloud service providers offer their services in an international environment. Thus, the providers are often subject to other national laws. Often, cloud users only see at low costs and estimate the legal framework to be complied with, such as data protection, information requirements, insolvency law, liability, information access for third parties.
 ### 2 2 Improper disclosure of information
 
-Due to the misconduct of persons, it can happen that information worth protecting is inadmissibly passed on. Examples for this are:
+Due to the misconduct of persons, it may happen that information worth protecting is inadmissible. Examples for this are:
 
-* Confidential information is discussed within earshot of other people, such as in a talk break from meetings or via mobile phones in public environments.
-* The manager of a department suspects an employee to work with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
-### 2 3 Inadequate identification check of communication partnersIn personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
+* Confidential information is discussed within earshot of other people, for example, during breaks in meetings or via mobile phones in public environments.
+* The manager of a department suspects an employee to cooperate with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
+### 2 3 Inadequate identification check of communication partners
+In personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
 
-* An employee receives an e-mail from an alleged acquaintance of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
+* An employee receives an e-mail from an alleged friend of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
 * A man in a blue suit with a mounting case gains access to the data center after mumbling something about "water pipes".
 ### 2 4 Accidental disclosure of internal information
 
@@ -64,7 +69,8 @@ Managers who have the legal responsibility for the local institution MUST ensure
 
 Appropriate measures MUST be identified and implemented to avoid violations of relevant requirements. If violations of relevant requirements are identified, appropriate corrective actions MUST be taken to correct the deviations.
 
-#### ORP.5.A3 Employee commitment to comply with applicable laws, regulations and regulations [Supervisor, Human Resources]All employees MUST be trained in and required to comply with applicable laws (eg privacy), regulations and internal regulations. Employees MUST know which legal framework determines their activity.
+#### ORP.5.A3 Employee commitment to comply with applicable laws, regulations and regulations [Supervisor, Human Resources]
+All employees MUST be trained in and required to comply with applicable laws (eg privacy), regulations and internal regulations. Employees MUST know which legal framework determines their activity.
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​compliance management. They SHOULD be implemented in principle.
 
@@ -80,7 +86,7 @@ Compliance Managers and ISB SHOULD collaborate regularly. Together, they SHOULD 
 
 #### ORP.5.A5 Exemptions [Supervisors, Information Security Officer (ISB)]
 
-In individual cases, it may be necessary to deviate from the provisions made. However, justified exceptions SHOULD in any case be approved by an authorized body after a risk assessment. It SHOULD give an approval procedure for exemptions. It SHOULD give an overview of all issued exemptions. A corresponding procedure for documentation and a review process SHOULD be established. All exemptions SHOULD be temporary.
+In individual cases, it may be necessary to deviate from the provisions made. However, justified exceptions SHOULD in any case be approved by an authorized body after a risk assessment. It SHOULD give an approval procedure for exemptions. It SHOULD give an overview of all issued exemptions. An appropriate procedure for documentation and a review process SHOULD be established. All exemptions SHOULD be temporary.
 
 #### ORP.5.A6 Instructing the staff in the safe handling of IT [Supervisors, Human Resources]
 
@@ -88,13 +94,14 @@ All employees and all external IT users SHOULD be instructed in the safe handlin
 
 #### ORP.5.A7 Maintaining Information Security [Information Security Officer (ISB)]
 
-In order to maintain and continuously improve the existing security level, all security measures of the security concept should be regularly checked for compliance and improvement. The tests SHOULD be carried out by independent, professionally qualified, internal or external persons. The results of the checks SHOULD be comprehensibly documented and announced to the management. Defects found SHOULD be corrected promptly.
+In order to maintain and continuously improve the existing security level, all security measures of the security concept should be regularly checked for compliance and improvement. The tests SHOULD be carried out by independent, qualified, internal or external persons. The results of the checks SHOULD be comprehensibly documented and announced to the management. Defects found SHOULD be corrected promptly.
 
 #### ORP.5.A8 Regular reviews of Compliance Management
 
 The aim was to establish a procedure for regularly checking compliance management and the resulting requirements and measures for efficiency and effectiveness (see also DER.1.3 Audits and Revisions). It SHOULD regularly be checked if the organizational structure and the processes of compliance management are still appropriate.
 
-### 3.3 Requirements for increased protection requirementsListed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.5.A9 Protection against subsequent changes to information [Information Security Officer (ISB), user] (I)
 

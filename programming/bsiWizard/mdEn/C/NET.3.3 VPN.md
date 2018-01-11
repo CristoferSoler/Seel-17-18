@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -22,9 +26,9 @@ Recommendations on how to configure the operating systems of the VPN endpoints a
 
 The following specific threats and vulnerabilities are of particular importance in the area of ​​VPN:
 
-### 2 1 Lack of or inadequate planning and regulation of VPN deployment
+### 2 1 Lacking or inadequate planning and regulation of VPN deployment
 
-If the VPN is not carefully planned, set up, or configured, security vulnerabilities may occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
+If the VPN is not carefully planned, set up, or configured, security vulnerabilities can occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
 
 For example, with inadequate VPN scheduling and regimentation, it is possible that users were not properly trained, thereby using the VPN in an insecure environment or dialing in from an insecure client. This may allow attackers to access the entire corporate network.
 
@@ -34,7 +38,8 @@ Even if the regular monitoring of access to the VPN was inadequately planned, at
 
 VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an insecure VPN service offered by attackers could be used by attackers to steal targeted information.
 
-### 2 3 Problems with local storage of authentication data for VPNsMany VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
+### 2 3 Problems with local storage of authentication data for VPNs
+Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
 
 ### 2 4 Insecure configuration of VPN clients for remote access
 
@@ -65,7 +70,8 @@ Before the introduction of a VPN, careful planning MUST be done. The responsibil
 
 With a VPN service provider, Service Level Agreements (SLAs) MUST be negotiated and documented in writing. It MUST be regularly checked if the VPN service provider complies with the agreed SLAs.
 
-#### NET.3.3.A3 Secure installation of VPN terminalsThe underlying operating system of the VPN platform MUST be securely configured. If an appliance is used, there must be a valid maintenance contract. It MUST be ensured that only qualified personnel install VPN components. The installation of the VPN components as well as possible deviations from the planning specifications SHOULD be documented. The functionality and the chosen security mechanisms of the VPN MUST be checked before commissioning.
+#### NET.3.3.A3 Secure installation of VPN terminals
+The underlying operating system of the VPN platform MUST be securely configured. If an appliance is used, there must be a valid maintenance contract. It MUST be ensured that only qualified personnel install VPN components. The installation of the VPN components as well as possible deviations from the planning specifications SHOULD be documented. The functionality and the chosen security mechanisms of the VPN MUST be checked before commissioning.
 
 #### NET.3.3.A4 Secure configuration of a VPN
 
@@ -81,7 +87,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.3.3.A6 Perform a VPN requirement analysis
 
-A requirements analysis SHOULD be carried out in order to be able to determine the application scenarios for the respective VPN and derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
+A requirements analysis SHOULD be carried out in order to determine the application scenarios for the respective VPN and to be able to derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
 
 * Business processes,
 * Access paths,
@@ -93,7 +99,7 @@ A requirements analysis SHOULD be carried out in order to be able to determine t
 
 In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
 
-#### NET.3.3.A8 Create a security policy for VPN usage
+#### NET.3.3.A8 Create a security policy for VPN use
 
 A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
 
@@ -107,11 +113,12 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 
 #### NET.3.3.A11 Secure connection of an external network
 
-If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with a sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
+If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
-#### NET.3.3.A12 User and Access Management for Remote Access VPNsFor remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
+#### NET.3.3.A12 User and Access Management for Remote Access VPNs
+For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
 
-When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+When using standalone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 
 #### NET.3.3.A13 Integration of VPN components in a firewall
 
@@ -126,7 +133,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 ### 4.1 Literature
 
-Further information on threats and security measures in the "VPN" area can be found in the following publications, among others:
+Additional information on threats and security measures in the "VPN" area can be found in the following publications, among others:
 
 * #### [27033-5] ISO / IEC 27033-5: 2013
 

@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -30,11 +34,12 @@ In particular, errors in server services can have serious consequences. In the c
 
 ### 2 2 Data loss
 
-The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
+The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.
+If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
 
 ### 2 3 Prevention of services
 
-One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. Often, this attack is associated with distributed resources, as an attacker uses these resources to the detriment of other users and prevents them from accessing the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
+One type of availability attack called "denial of service" aims to prevent users from using features or devices normally available to them. This attack is often associated with distributed resources by an attacker consuming these resources to the extent that other users are prevented from working and can no longer access the resources they depend on. In general, IT systems are also highly dependent on each other, the scarcity of resources of a server are quickly affected more servers. For example, CPU time, memory or bandwidth may be artificially curtailed, which may result in the service or resource being unusable at all.
 
 ### 2 4 Provision of unused operating system components and applications
 
@@ -42,19 +47,20 @@ Even with the installation of the server operating system, it is possible to ins
 
 Such unused applications and services can contain vulnerabilities. If the applications are no longer updated then they can be an attack gate for attackers. If the installed applications and services are unknown, the IT operation is unaware that they also need to be updated.
 
-### 2 5 overloading of servers
+### 2 5 Overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative consequences, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable or data loss occurring. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
 * installed services or applications are misconfigured, unnecessarily consuming memory
 * existing storage capacities are exceeded,
-Numerous requests at the same time overstrain a system and overload the processors,
+Numerous requests at the same time overstrain a system and overload the processors
 * too much computing power is claimed by the services or
 * a large number of messages will be sent at the same time.
 3 requirements
----------------The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+---------------
+The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
 
 ### 3.1 Basic requirements
 
@@ -84,13 +90,14 @@ It MUST be ensured that identifiers with administrator rights are only used for 
 
 Depending on the type of access used (local, remote or central system management), suitable security measures MUST be taken. The methods used for administration MUST be specified in the security policy. The administration MUST be performed according to the security policy.
 
-To register users and services with the system, authentication procedures MUST be used that are appropriate to the protection needs of the servers. This should be taken into special account for administrative access. As far as possible, use should be made of central, network-based authentication services.The administration MUST be done via secure protocols. It SHOULD be considered, alternatively set up a separate administration network.
+To register users and services with the system, authentication procedures MUST be used that are appropriate to the protection needs of the servers. This should be taken into special account for administrative access. As far as possible, use should be made of central, network-based authentication services.
+The administration MUST be done via secure protocols. It SHOULD be considered, alternatively set up a separate administration network.
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
-All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably restricted for individual users, but also for applications.
+All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably limited for individual users, but also for applications.
 
-The decisions made SHOULD be documented in such a way that it is possible to trace the configuration and software equipment selected for the servers.
+The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the servers.
 
 #### SYS.1.1.A7 Updates and patches for firmware, operating system and applications
 
@@ -121,7 +128,8 @@ It MUST be decided which information should be logged by the server at least, ho
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
 
-#### SYS.1.1.A11 Setting a security policy for serversBased on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
+#### SYS.1.1.A11 Setting a security policy for servers
+Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
 
 #### SYS.1.1.A12 Planning the server deployment
 
@@ -146,7 +154,7 @@ Before one or more servers are procured, a list of requirements SHOULD be create
 
 Process, conditions and requirements for administrative tasks, as well as the task separation between the different roles of the users of the IT system SHOULD be codified in a user and administration concept.
 
-#### SYS.1.1.A15 Uninterruptible and stable power supply [Building Services]
+#### SYS.1.1.A15 Uninterruptible and stable power supply [building services]
 
 Each server SHOULD be connected to an uninterruptible power supply (UPS). The UPS SHOULD be sufficiently dimensioned in terms of power and support time. If changes have been made to the consumers, SHOULD check again if the support time is sufficient. Both the UPS devices and the servers SHOULD have an overvoltage protection.
 
@@ -160,7 +168,8 @@ All installation steps SHOULD be documented in such a way that the installation 
 
 The default settings of servers SHOULD be reviewed and, if necessary, adjusted according to the security policy. Only after the installation and the configuration is completed, the server SHOULD be connected to the internet.
 
-#### SYS.1.1.A17 deployment clearanceBefore the server system is used in productive operation and before it is connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be suitably documented. For deployment clearance, the installation and configuration documentation and system functionality SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
+#### SYS.1.1.A17 deployment clearance
+Before the server system is used in productive operation and before it is connected to a productive network, a deployment clearance SHOULD be made. This SHOULD be suitably documented. For deployment clearance, the installation and configuration documentation and system functionality SHOULD be tested in a test. It SHOULD be done by a body authorized to do so in the institution.
 
 #### SYS.1.1.A18 Encryption of communication links
 
@@ -186,15 +195,16 @@ The server SHOULD be considered in the emergency management process. To this end
 
 #### SYS.1.1.A23 system monitoring
 
-The server system SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
+The server system SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.1.1.A24 security checks
 
-Server systems SHOULD undergo regular security testing that verifies compliance with security requirements and identifies any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
+Server systems SHOULD undergo regular security testing to verify compliance with security requirements and to identify any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
-When decommissioning a server SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the server. It SHOULD also be ensured that services offered by the server have been taken over by another server, if necessary.It SHOULD create a checklist that can be processed when a server is decommissioned. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
+When decommissioning a server SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the server. It SHOULD also be ensured that services offered by the server have been taken over by another server, if necessary.
+It SHOULD create a checklist that can be processed when a server is decommissioned. This checklist SHOULD include at least aspects of data backup, migration of services and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -216,7 +226,7 @@ Server systems with high availability requirements SHOULD be suitably protected 
 
 #### SYS.1.1.A29 Setting up a test environment (CIA)
 
-In order to be able to test changes to the system or the configuration without jeopardizing the productive operation, appropriate test systems SHOULD be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
+In order to be able to test changes to the system or the configuration without jeopardizing productive operation, appropriate test systems should be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
 
 #### SYS.1.1.A30 One service per server (CIA)
 
@@ -246,7 +256,8 @@ Additional information on threats and security measures in the "General Server" 
   
 
  Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>5 Appendix: Cross reference table for elementary hazards
+ <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
+5 Appendix: Cross reference table for elementary hazards
 -------------------------------------------------- --------
 
 The following elementary threats are important for the module "General Server".

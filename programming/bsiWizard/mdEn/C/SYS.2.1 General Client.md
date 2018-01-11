@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,7 +15,7 @@ The goal of this module is to protect information that is created, read, edited,
 
 ### 1.3 Delimitation
 
-Typically, client systems operate under an operating system that requires its own security measures. Common client operating systems have their own blocks that supplement this block. The module "general client" forms the basis for the concrete building blocks on which they are based. If a concrete module exists for a considered IT system, it must be used in addition to the module General Client. If no specific module exists for deployed client systems, the requirements of this module must be suitably adapted. Safety recommendations for mobile devices that can not be freely configured, such as smartphones or tablets, can generally be found in the SYS.3 Mobile Devices layer.
+Typically, client systems operate under an operating system that requires its own security measures. Common client operating systems have their own blocks that supplement this block. The module "general client" forms the basis for the concrete building blocks on which they are based. If a concrete block exists for a considered IT system, it must be used in addition to the module General Client. If no specific module exists for deployed client systems, the requirements of this module must be suitably adapted. Safety recommendations for mobile devices that can not be freely configured, such as smartphones or tablets, can generally be found in the SYS.3 Mobile Devices layer.
 
 If the client has other interfaces for data exchange, such. As USB, Bluetooth, LAN or WLAN, they must be secured according to the security requirements of the institution, as described in the corresponding modules. For this, information can be found in SYS.3.4 Mobile Disk, NET.2.3 Near Field Radio and NET.2.2 WLAN Usage.
 
@@ -22,16 +26,17 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware
 
-Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker extensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
+Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker comprehensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
 
 Clients are particularly vulnerable to malicious software: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
 
 ### 2 2 Unstructured local data management
 
-Despite regular contradictory recommendation, many users also store important data exclusively locally. For example, data is often stored in local user directories rather than on a central file server. E-mails are often only archived locally. This procedure can lead to the following problems:
+Despite regular contradictory recommendations, many users also store important data exclusively locally. For example, data is often stored in local user directories rather than on a central file server. E-mails are often only archived locally. This procedure can lead to the following problems:
 
 * Data loss on hardware defects and
-* no access to relevant data in case of substitution.But even if basic requirements for central storage are adhered to, often additional local copies of the centrally stored data are created. This can lead to the following problems:
+* no access to relevant data in case of substitution.
+But even if basic requirements for central storage are adhered to, local copies of the centrally stored data are often created in addition. This can lead to the following problems:
 
 * Waste of local storage space,
 * premature or non-deletion of data and
@@ -56,7 +61,8 @@ If software errors are not detected or not rectified immediately, this can lead 
 
 The identification and authentication of users should prevent a client from being used unauthorized. But also IT systems, where users have to identify and authenticate themselves via user IDs and passwords, can be used without authorization if an attacker succeeds in spying on or guessing the access data. If no screen lock is activated, the client can be used without authorization even in the case of a short-term absence.
 
-### 2 7 Provision of unneeded operating system components and applicationsWhen installing an operating system, it is usually possible to install optional software. Software is also regularly installed and tested during operation. With each additional application, not only the computing and memory load of a client is steadily increasing, but also the likelihood of finding vulnerabilities in it. Unnecessary software is also often not subject to regular patch management, so that known vulnerabilities are not closed promptly. This allows attackers to exploit known vulnerabilities for a long time.
+### 2 7 Provision of unneeded operating system components and applications
+When installing an operating system, it is usually possible to install optional software. Software is also regularly installed and tested during operation. With each additional application, not only the computing and memory load of a client is steadily increasing, but also the likelihood of finding vulnerabilities in it. Unnecessary software is also often not subject to regular patch management, so that known vulnerabilities are not closed promptly. This allows attackers to exploit known vulnerabilities for a long time.
 
 ### 2 8 Listening to rooms using a microphone and a camera
 
@@ -65,7 +71,7 @@ Many clients have a microphone and a camera. These can be used by anyone who has
 3 requirements
 ---------------
 
-The following are specific requirements for client protection. Basically, the * IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+The following are specific requirements for protecting clients. Basically, the * IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -79,17 +85,18 @@ To use the client, users MUST authenticate themselves to the IT system. If users
 
 The client MUST be set up so that normal activities do not take place with administration rights. Only administrators MAY receive administration rights. Only administrators can change the system configuration, install or remove applications, or modify or delete system files. Users MAY have read-only access to system files.
 
-Process, conditions and requirements for administrative tasks as well as the separation of tasks between the various roles of the users of the IT system SHOULD be codified in a user and administration concept.
+Process, conditions and requirements for administrative tasks as well as the separation of tasks between the different roles of the users of the IT system SHOULD be codified in a user and administration concept.
 
 #### SYS.2.1.A3 Enable auto-update mechanisms
 
-Automatic update mechanisms (auto-update) MUST be enabled unless other mechanisms such as regular manual maintenance or a central software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
+Automatic update mechanisms (autoupdate) MUST be enabled unless other mechanisms such as regular manual maintenance or a centralized software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
 
-#### SYS.2.1.A4 Regular backupTo avoid data loss, regular backups MUST be created. In most computer systems, these can be largely automated. Regulations MUST be made as to which locally stored data will be backed up by whom and when. At least the data that can not be derived from other information MUST be backed up on a regular basis. Clients MUST also be included in the institution's data protection concept. For confidential and paged backups, the backed up data SHOULD be stored encrypted. For deployed software SHOULD you decide separately whether it has to be recorded by the regular data backup. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed. Users SHOULD be informed about the rules of who and how backups are created.
+#### SYS.2.1.A4 Regular backup
+To avoid data loss, regular backups MUST be created. In most computer systems, these can be largely automated. Regulations MUST be made as to which locally stored data will be backed up by whom and when. At least the data that can not be derived from other information MUST be backed up on a regular basis. Clients MUST also be included in the institution's data protection concept. For confidential and paged backups, the backed up data SHOULD be stored encrypted. For deployed software SHOULD you decide separately whether it has to be recorded by the regular data backup. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed. Users SHOULD be informed about the rules of who and how backups are created.
 
 #### SYS.2.1.A5 Screen Lock [User]
 
-A screen lock MUST be used to prevent unauthorized access to the activated clients. It SHOULD be manually activated by the user as well as be automatically started after a specified inactivity period. It MUST be ensured that the screen lock can only be deactivated after successful user authentication.
+A screen lock MUST be used to prevent unauthorized access to the activated clients. It SHOULD be manually activated by the user as well as automatically started after a specified inactivity period. It MUST be ensured that the screen lock can only be deactivated after successful user authentication.
 
 #### SYS.2.1.A6 Use of virus protection programs
 
@@ -111,7 +118,8 @@ Together with the basic requirements, the following requirements are state of th
 
 #### SYS.2.1.A9 Setting a security policy for clients
 
-Based on the general security policy of the institution, the requirements for general clients SHOULD be specified. The policy SHOULD be known to all users and all persons involved in the procurement and operation of the clients and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.#### SYS.2.1.A10 Planning the use of clients
+Based on the general security policy of the institution, the requirements for general clients SHOULD be specified. The policy SHOULD be known to all users and all persons involved in the procurement and operation of the clients and should be the basis for their work. The implementation of the content required in the guideline SHOULD be regularly reviewed and the results documented in a meaningful way.
+#### SYS.2.1.A10 Planning the use of clients
 
 For the secure operation of clients SHOULD be planned in advance, where and how the clients should be used. The design should not only concern aspects that are classically linked to the term security, but also normal operational aspects that entail safety requirements. In addition to client-type-specific requirement profiles, specifications for authentication and user administration SHOULD be defined. All decisions made in the planning phase SHOULD be documented in a way that can be understood later.
 
@@ -137,7 +145,8 @@ As long as patches are not available, other appropriate IT system protection mea
 
 It SHOULD be determined which components of the operating system, specialized applications and other tools should be installed. ** ** The installation and configuration of the IT systems SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined process. All installation and configuration steps SHOULD be documented so that the installation and configuration can be reconstructed and repeated by a knowledgeable third party based on the documentation (see also SYS.2.1.A36 Operating Documentation).
 
-The basic settings of clients SHOULD be checked and, if necessary, adjusted according to the guidelines of the security policy. Only after the installation and configuration is complete, the client SHOULD connect to the Internet.#### SYS.2.1.A16 Disabling and uninstalling unneeded components and identifiers
+The basic settings of clients SHOULD be checked and, if necessary, adjusted according to the guidelines of the security policy. Only after the installation and configuration is complete, the client SHOULD connect to the Internet.
+#### SYS.2.1.A16 Disabling and uninstalling unneeded components and identifiers
 
 After installation, SHOULD check which components of the firmware, operating system, applications, and other tools are installed and enabled on the clients. Unnecessary modules, programs, services, user IDs and interfaces SHOULD be disabled or completely uninstalled. In addition, unused runtime environments, interpreter languages ​​and compilers SHOULD be uninstalled. Corresponding, unneeded components that are firmly connected to the IT system SHOULD be disabled. Also in the firmware existing, unnecessary components (such as theft protection, remote maintenance) SHOULD be turned off. It SHOULD be prevented that these components can be reactivated. The decisions made SHOULD be documented in such a way that it is possible to understand which configuration and software equipment have been selected for the IT systems.
 
@@ -151,7 +160,7 @@ Communication links SHOULD be protected by encryption as far as possible. Users 
 
 The IT operation SHOULD make sure that the client products used support a secure version of TLS. Clients SHOULD use cryptographic algorithms and key lengths that reflect the state of the art and the security requirements of the institution.
 
-New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session Renegotiation and TLS Compression SHOULD be disabled.
+New certificates SHOULD only be activated after checking the "fingerprint". Validation of certificates SHOULD be enabled in application programs such as browsers and email clients. Session renegotiation and TLS compression SHOULD be disabled.
 
 #### SYS.2.1.A19 Restrictive rights assignment
 
@@ -161,7 +170,8 @@ The available functionality of the IT system SHOULD be restricted for individual
 
 Depending on whether clients are administered locally, over the network or via central network-based tools, appropriate security precautions should be taken. The methods used for administration SHOULD be specified in the security policy and the administration SHOULD be performed according to the security policy. Administration over the network SHOULD be done via secure protocols.
 
-#### SYS.2.1.A21 Prevention of unauthorized use of computer microphones and camerasAccess to the microphone and camera of a client SHOULD only be possible by the user as long as he works locally on the IT system. If an existing microphone or camera is not to be used and their misuse is to be prevented, they should, if possible, be switched off, covered (camera only), deactivated or physically disconnected from the device. It should be regulated how cameras and microphones are used in clients and how the rights are granted.
+#### SYS.2.1.A21 Prevention of unauthorized use of computer microphones and cameras
+Access to the microphone and camera of a client SHOULD only be possible by the user as long as he works locally on the IT system. If an existing microphone or camera is not to be used and their misuse is to be prevented, they should, if possible, be switched off, covered (camera only), deactivated or physically disconnected from the device. It should be regulated how cameras and microphones are used in clients and how the rights are granted.
 
 #### SYS.2.1.A22 Log out after task completion [User]
 
@@ -169,7 +179,7 @@ All users SHOULD be required to log out of the IT system or IT application after
 
 #### SYS.2.1.A23 Use of client-server services
 
-If possible, dedicated server services should be used to exchange information and direct connections between clients should be avoided. If this is not possible, SHOULD specify which client-to-client services (formerly often referred to as "peer-to-peer") may be used and what information may be exchanged thereon. If necessary, users SHOULD be trained to use such services. Direct connections between clients SHOULD only be limited to the LAN. Auto-discovery protocols SHOULD be limited to the extent necessary.
+Whenever possible, dedicated server services should be used to exchange information and direct connections between clients should be avoided. If this is not possible, SHOULD specify which client-to-client services (formerly often referred to as "peer-to-peer") may be used and what information may be exchanged thereon. If necessary, users SHOULD be trained to use such services. Direct connections between clients SHOULD only be limited to the LAN. Auto-discovery protocols SHOULD be limited to the extent necessary.
 
 #### SYS.2.1.A24 Handling of removable media in the running system
 
@@ -192,7 +202,8 @@ To make it difficult to exploit vulnerabilities in applications, ASLR and DEP / 
 
 #### SYS.2.1.A27 Controlled decommissioning of a client
 
-When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist SHOULD be created that can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.### 3.3 Requirements for increased protection requirements
+When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist should be created, which can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
@@ -204,7 +215,7 @@ Users SHOULD be informed about how to behave if they lose an authentication medi
 
 #### SYS.2.1.A29 System Monitoring (A)
 
-The clients SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the clients and reports fault conditions as well as the exceeding of defined limit values ​​to the operating personnel.
+The clients SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the clients and reports fault conditions as well as the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.2.1.A30 Setting Up a Client Reference Installation (CIA)
 
@@ -216,13 +227,14 @@ On each computer, in addition to the central security gateways used, local packe
 
 #### SYS.2.1.A32 Use of Additional Exploit Prevention Measures (CIA)
 
-The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. If it is not possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
+The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. Should it not be possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
 
-#### SYS.2.1.A33 Application Whitelisting (CIA)It should be ensured via application whitelisting that only permitted programs and scripts are executed. The rules SHOULD be made as narrow as possible. If paths and hashes can not be specified explicitly, alternatively certificate based or path rules should be used.
+#### SYS.2.1.A33 Application Whitelisting (CIA)
+It should be ensured via application whitelisting that only permitted programs and scripts are executed. The rules SHOULD be made as narrow as possible. If paths and hashes can not be specified explicitly, alternatively certificate based or path rules should be used.
 
 #### SYS.2.1.A34 Application Isolation (CIA)
 
-Applications that manipulate external data SHOULD only be operated in a run-time environment isolated from the operating system.
+Applications that manipulate external data SHOULD only be operated in a runtime environment isolated from the operating system.
 
 #### SYS.2.1.A35 Active Management of Root Certificates (CI)
 
@@ -230,7 +242,7 @@ During the procurement and installation of the client SHOULD you document which 
 
 #### SYS.2.1.A36 Self-managed use of SecureBoot and TPM
 
-On UEFI-compatible systems, the boot loader, kernel, and any required firmware components SHOULD be signed by self-controlled key material and any unneeded key material should be removed. Unless the TPM is needed it SHOULD be disabled.
+On UEFI-compatible systems, the bootloader, kernel, and any required firmware components SHOULD be signed by self-controlled key material, and unneeded key material should be removed. Unless the TPM is needed it SHOULD be disabled.
 
 #### SYS.2.1.A37 Protection against unauthorized registrations (CIA)
 
@@ -238,7 +250,7 @@ To prevent access to the system through compromised credentials, multi-factor au
 
 #### SYS.2.1.A38 Integration into contingency planning (A)
 
-The clients SHOULD be considered in the emergency management process. Clients are to be prioritized for recovery based on the business processes for which they are needed. It is appropriate to provide appropriate emergency procedures by creating at least recovery plans, generating system recovery boot media, and securely storing passwords and cryptographic keys.
+The clients SHOULD be considered in the emergency management process. The clients are to be prioritized for recovery based on the business processes for which they are needed. It is appropriate to provide appropriate emergency procedures by creating at least recovery plans, generating system recovery boot media, and securely storing passwords and cryptographic keys.
 
 #### SYS.2.1.A39 Uninterruptible and Stable Power Supply [Home Automation] (A)
 
@@ -257,7 +269,8 @@ It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file
 4 Further Information
 ------------------------------
 
-### 4.1 LiteratureFurther information on threats and security measures in the "General Client" area can be found in the following publications, among others:
+### 4.1 Literature
+Further information on threats and security measures in the "General Client" area can be found in the following publications, among others:
 
 * #### [ISiClient] Securing a PC client (ISi client),
 

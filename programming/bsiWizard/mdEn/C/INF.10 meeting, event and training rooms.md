@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -11,7 +15,7 @@ The aim of the module is to protect the information that is processed in meeting
 
 ### 1.3 Delimitation
 
-This module considers all technical and non-technical safety aspects for the use of meeting, event and training rooms. Detailed recommendations on how to configure and secure the IT systems in these rooms are not covered in this module, which can be found in SYS.2.1 General Client and OS-specific system building blocks. Other typical for meeting rooms aspects such. B. WLAN or video conferencing systems are considered in the building blocks of the layers NET.2 radio networks or NET.4 telecommunications. The wiring in these rooms is in the module INF. 3 Electrotechnical cabling and INF.4 IT cabling considered separately. Requirements for fire protection can be found in building block INF.1 General building.
+This module considers all technical and non-technical safety aspects for the use of meeting, event and training rooms. Detailed recommendations on how to configure and secure the IT systems in these rooms are not covered in this module, which can be found in SYS.2.1 General Client and the OS-specific system building blocks. Other typical for meeting rooms aspects such. B. WLAN or video conferencing systems are considered in the building blocks of the layers NET.2 radio networks or NET.4 telecommunications. The wiring in these rooms is in the module INF. 3 Electrotechnical cabling and INF.4 IT cabling considered separately. Requirements for fire protection can be found in building block INF.1 General building.
 
 2 risk situation
 -----------------
@@ -26,7 +30,8 @@ If z. For example, if employees do not close the windows and doors when they lea
 
 IT systems are becoming increasingly mobile and increasingly used in different environments. Mobile IT users often find scenarios in which the IT systems can not be used as planned due to incompatibility. For example, older devices do not have the same connectors and connectors as newer devices. In addition, devices are manufactured that are not compatible with other devices without a suitable adapter. So is z. For example, if a matching adapter is not available, a laptop that has been prepared with all the important data for a meeting can not be used on a projector. In addition, attempts to connect the IT systems may cause damage to the equipment or stored data.
 
-### 2 3 Danger to visitorsIt is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors are on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
+### 2 3 Danger to visitors
+It is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
 
 ### 2 4 Flying wiring
 
@@ -49,7 +54,8 @@ Specific requirements for the protection of meeting, event and training rooms * 
 
 ### 3.1 Basic requirements
 
-The following requirements MUST be implemented as a priority:#### INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
+The following requirements MUST be implemented as a priority:
+#### INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
 
 Equipment in the rooms MUST be adequately secured against theft. In addition, it MUST be determined who administers the permanently existing IT and other systems in the rooms. It MUST also be determined if and under what conditions visitors may use IT systems brought along. Furthermore, it must be determined whether and to which network access and TK interfaces visitors may access.
 
@@ -83,7 +89,8 @@ In addition, the power supply SHOULD be built out of a subdivision separate from
 
 Dedicated training and presentation calculators SHOULD be provided with a minimal configuration. It should be determined which applications can be used on training and presentation computers in the respective event. The training and presentation computers SHOULD only be connected to a separate network separate from the institution's LAN. Other networks SHOULD only be accessible restrictively.
 
-#### INF.10.A8 Creation of a proof of use for roomsDepending on the type of use of the meeting, event and training rooms, it should be clear who used the rooms at what time. For premises where training on IT systems or particularly confidential meetings are carried out, proof of use should also be provided. It SHOULD be considered to introduce evidence of use for premises accessible to each employee.
+#### INF.10.A8 Creation of a proof of use for rooms
+Depending on the type of use of the meeting, event and training rooms, it should be clear who used the rooms at what time. For premises where training on IT systems or particularly confidential meetings are carried out, proof of use should also be provided. It SHOULD be considered to introduce proof of use for premises that are accessible to each employee.
 
 ### 3.3 Requirements for increased protection requirements
 

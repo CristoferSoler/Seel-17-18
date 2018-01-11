@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,7 +9,7 @@
 
 Buildings form the outer physical framework for the execution of business processes. A building comprises the stationary workstations, the processed information as well as the established information technology and thus ensures an external protection for them. In addition, the infrastructure of a building often enables the execution of business processes and IT operations. Therefore, not only the building itself, so walls, ceilings, floors, roof, windows and doors to look at, but also all building-wide infrastructure and utilities such as electricity, water, gas, heating and cooling.
 
-Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional customers (citizens, customers, suppliers). If a building is used by different parties in such a way, the design and equipment of the building and the concept of use for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
+Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional users (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
 
 ### 1.2 Objective
 
@@ -28,13 +32,14 @@ Buildings and the people and facilities inside them can be severely damaged by f
 
 For example, when PVC is burned, it produces chlorine gas, which together with the humidity and extinguishing water form hydrochloric acid. Distributing the hydrochloric acid vapors through the air conditioner can cause damage to sensitive electronic equipment located in a part of the building far from the fire.
 
-### 2 2 FlashLightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
+### 2 2 Flash
+Lightning is the essential hazard during a thunderstorm for buildings and the information technology contained therein. Lightning reaches currents of up to 200,000 amperes at voltages of several 100,000 volts. This enormous electrical energy is released and mined within 50-100 microseconds. A lightning strike with these values, which strikes at a distance of about 2 km, still causes power surges in the building in the building, which can lead to the destruction of sensitive electronic devices. These indirect damages increase with decreasing distance.
 
 If the lightning strikes a building directly, the dynamic energy of the lightning causes damage. This can be damage to the building (roof and facade), damage caused by fires or overvoltage damage to electrical equipment.
 
 ### 2 3 water
 
-Water can cause damage to a building and its facilities from outside, for example, from rain, flood or floods, or from the inside, for example from defects in water pipes.
+Water can cause damage to a building and its facilities from the outside, for example from rain, flood or floods, or from the inside, for example from defects in water pipes.
 
 ### 2 4 Natural damage and natural disasters
 
@@ -56,7 +61,8 @@ When constructing buildings, a large number of laws and regulations must be obse
 
 ### 2 8 Insufficient firing
 
-Every building in which IT operates is criss-crossed by a multitude of wires and cables. Fresh and sewer pipes, heating pipes, energy supply and data transmission are mentioned as examples. It is inevitable that such pipe and cable routes must cross fire walls and floors. If suitable fire barriers are not installed in such places, fires and smoke may spread uncontrollably.The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can thus expand into the area actually protected by the bulkhead.
+Every building in which IT operates is criss-crossed by a multitude of wires and cables. Fresh and sewer pipes, heating pipes, energy supply and data transmission are mentioned as examples. It is inevitable that such pipe and cable routes must cross fire walls and floors. If suitable fire barriers are not installed in such places, fires and smoke may spread uncontrollably.
+The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can thus expand into the area actually protected by the bulkhead.
 
 ### 2 9 Power failure
 
@@ -65,29 +71,30 @@ In the event of a power outage, entire buildings or parts of them may become unu
 3 requirements
 ---------------
 
-The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the facilities of the infrastructure in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the infrastructure facilities in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
-#### INF.1.A1 Planning of building security [Planner, Information Security Officer (ISB)]
+#### INF.1.A1 Planning of building security [planner, information security officer (ISB)]
 
 Based on the planned or existing use of a building and the protection requirements of the business processes operated there, it MUST be determined how the building is to be secured. For a building, many different aspects of security MUST be respected for the protection of people in the building, the protection of assets and the IT, from fire protection to electrical systems to access control. The safety requirements from the different areas MUST be coordinated with each other.
 
-#### INF.1.A2 Adapted circuits
+#### INF.1.A2 Adjusted distribution of circuits
 
 It MUST be checked regularly whether the protection and design of the circuits still meet the actual needs.
 
 #### INF.1.A3 Compliance with fire safety regulations
 
-The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be signposted and kept open in accordance with regulations. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
+The existing fire protection regulations as well as the requirements of the construction supervision MUST be complied with. The escape routes MUST be properly signposted and kept open. The local fire brigade SHOULD be called in during the fire protection planning. The regulations for fire protection resulting from the building regulations are not sufficient for the requirements of the fire protection of the IT. Therefore, an IT-related fire protection concept MUST be created and implemented.
 
 Unnecessary fire loads MUST be avoided. This includes the regular disposal of waste paper and packaging waste.
 
 There MUST be a fire safety officer or a person entrusted with the task, who is also properly trained.
 
-#### INF.1.A4 fire detection in buildings [planner]Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
+#### INF.1.A4 fire detection in buildings [planner]
+Buildings MUST be equipped with a sufficient number of smoke detectors. For larger buildings, a fire alarm panel (BMZ) SHOULD be used, to which all detectors are connected. In the case of smoke detection, an alarm MUST be triggered in the building to ensure that all persons present in the building can perceive it. The functionality of all smoke detectors or all components of a fire alarm system MUST be checked regularly. It MUST be regularly checked that the escape routes are usable and free from obstructions, so that the building can be cleared quickly in a dangerous situation.
 
 #### INF.1.A5 Hand Fire Extinguisher
 
@@ -125,7 +132,8 @@ Employees SHOULD be instructed to close their office when absent or to close the
 
 #### INF.1.A12 key management
 
-For all keys of the building (of floors, corridors and rooms) SHOULD have a locking plan. The production, storage, administration and issuing of keys SHOULD be centrally regulated. Reserve keys SHOULD be kept and secured, but kept handy for emergencies. Unissued keys SHOULD be stored safely. Each key issue SHOULD be documented.#### INF.1.A13 Regulations for access to distribution boards
+For all keys of the building (of floors, corridors and rooms) SHOULD have a locking plan. The production, storage, administration and issuing of keys SHOULD be centrally regulated. Reserve keys SHOULD be kept and secured, but kept handy for emergencies. Unissued keys SHOULD be stored safely. Each key issue SHOULD be documented.
+#### INF.1.A13 Regulations for access to distribution boards
 
 The access to the distributors of all utilities in a building SHOULD be quickly possible if needed. The access to distributors SHOULD be limited to a narrow circle of beneficiaries.
 
@@ -135,7 +143,7 @@ A lightning protection system should be installed according to the current stand
 
 #### INF.1.A15 Location plans of utilities
 
-There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who keeps and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
+There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who guides and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
 
 #### INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
 
@@ -173,7 +181,8 @@ Doors and windows SHOULD be selected according to the protection goals of the ar
 
 Rooms with similar protection requirements SHOULD be zoned together to treat comparable risks consistently and to reduce the cost of required security measures. A security zone concept for buildings and land SHOULD be developed and documented.
 
-#### INF.1.A24 Automatic drainage (A)All water hazard areas SHOULD be equipped with automatic drainage. The functionality of active and passive drainage systems SHOULD be checked regularly.
+#### INF.1.A24 Automatic drainage (A)
+All water hazard areas SHOULD be equipped with automatic drainage. The functionality of active and passive drainage systems SHOULD be checked regularly.
 
 #### INF.1.A25 Suitable Location Selection [Institutional Management] (A)
 
@@ -193,15 +202,15 @@ In larger buildings the air supply SHOULD be provided by ventilation and air con
 
 #### INF.1.A29 Organizational requirements for the cleaning of buildings (CIA)
 
-It SHOULD be checked whether the employees of the commissioned cleaning company use the issued keys or ID cards according to the contract. The cleaning staff SHOULD be sufficiently informed about the handling of the IT. Cleaners SHOULD be supervised in the most sensitive areas at work.
+It SHOULD be checked whether the employees of the commissioned cleaning company use the issued keys or badges according to the contract. The cleaning staff SHOULD be sufficiently informed about the handling of the IT. Cleaners SHOULD be supervised in the most sensitive areas at work.
 
 #### INF.1.A30 Selection of a suitable building (CIA)
 
-When selecting a suitable building, it should be checked whether all safety requirements relevant for later use can also be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
+When selecting a suitable building, it should be checked whether all security requirements relevant for later use can be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
 
 #### INF.1.A31 Extract from Buildings [Inner Service] (C)
 
-In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data carriers, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
+In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data media, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
 
 #### INF.1.A32 firewall cadastre (A)
 
@@ -218,7 +227,8 @@ It SHOULD provide a hazard warning system appropriate to the premises and the ri
 4 Further Information
 ------------------------------
 
-### 4.1 LiteratureFurther information about hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
+### 4.1 Literature
+Further information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
 
 * #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
 

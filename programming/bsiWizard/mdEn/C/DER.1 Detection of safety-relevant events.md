@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -5,11 +9,11 @@
 
 In order to be able to protect IT systems, security-relevant events must be detected and dealt with in good time. For this purpose it is necessary that institutions plan, implement and regularly practice suitable organizational, personnel and technical measures in advance. For if a predefined and proven procedure can be used, reaction times can be shortened and existing processes optimized.
 
-A security event is an event that affects information security and may affect confidentiality, integrity, and availability. Typical consequences of such events are spied out, manipulated or destroyed information. The reasons for this are manifold: Malware, obsolete system infrastructures or culprits play a role. Attackers often exploit zero-day exploits, which are security holes in programs, before there is a patch for them. Another growing threat is Advanced Persistent Threats (APT). These are targeted cyber attacks on selected institutions and facilities where an attacker gains permanent access to a network and extends it to other systems. The attacks are characterized by a very high use of resources and considerable technical capabilities on the part of the attackers and are often difficult to detect.
+As a security incident an event is called, has an impact on information security and may adversely affect the confidentiality, integrity and availability. Typical consequences of such events are spied out, manipulated or destroyed information. The reasons for this are manifold: Malware, obsolete system infrastructures or culprits play a role. Attackers often exploit zero-day exploits, which are security holes in programs, before there is a patch for them. Another growing threat is Advanced Persistent Threats (APT). It is targeted cyber attacks to selected institutions and organizations in which an attacker is permanent access to a network and this spreads to other systems. The attacks are characterized by a very high use of resources and considerable technical capabilities on the part of the attackers and are often difficult to detect.
 
 ### 1.2 Objective
 
-This module shows a systematic way in which information can be collected, correlated and evaluated in order to detect safety-related events as completely as possible and in a timely manner. The lessons learned from detection are designed to enhance the ability of institutions to identify and respond appropriately to security-related events.
+This block shows a systematic way information is collected, correlated and can be evaluated to detect security events as completely and promptly. The lessons learned from detection are designed to enhance the ability of institutions to identify and respond to security-related events.
 
 ### 1.3 Delimitation
 
@@ -26,7 +30,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Disregard of legal regulations and company participation rights
 
-Programs that detect security-related events and evaluate log data often gather much information about the network structure and internal processes of an institution. This can z. B. Protected data, such as personal data, classified information or work processes of employees be included. However, the fact that such data are stored may violate personal rights or co-determination rights of employees. Under certain circumstances, the institution may also violate the respective state data protection laws or the Federal Data Protection Act.### 2 2 Insufficient qualification of those responsible
+Programs that detect security-related events and evaluate log data often gather much information about the network structure and internal processes of an institution. This can z. B. Protected data, such as personal data, classified information or work processes of employees be included. However, the fact that such data are stored may violate personal rights or co-determination rights of employees. Under certain circumstances, the institution may also violate the respective state data protection laws or the Federal Data Protection Act.
+### 2 2 Insufficient qualification of those responsible
 
 In the daily IT operation of an institution, many errors and errors can occur (for example, a large increase in incoming protocol data). If the responsible employees are not adequately sensitized and trained, there is a risk that they will not identify security-relevant events as such and thus an attack remains undetected.
 
@@ -36,7 +41,7 @@ If security-relevant events are recorded inadequately or not at all, it is not p
 
 ### 2 4 Incorrect administration of the detection systems used
 
-Incorrect configurations can cause the detection systems used to function incorrectly. If, for example, the alarm is set incorrectly, increased false alarms can occur. The responsible employees may then no longer be able to differentiate between a false alarm and a security-relevant event. Also, they may not catch the messages promptly, as too many alarms are generated. This may leave attacks undetected. Similarly, the effort increases greatly to evaluate the amount of messages.
+Incorrect configurations can cause the detection systems used to function incorrectly. If, for example, the alarm is set incorrectly, increased false alarms can occur. The responsible employees may then no longer be able to distinguish between a false alarm and a security-relevant event. Also, they may not catch the messages promptly because too many alarms are generated. This may leave attacks undetected. Similarly, the effort increases greatly to evaluate the amount of messages.
 
 ### 2 5 Missing information about the protected information network
 
@@ -44,7 +49,7 @@ If there is no information or only insufficient information about the informatio
 
 ### 2 6 Inadequate use of detection systems
 
-If detection systems are not used, and the security-related events detection functions used in IT systems and applications are not used, it is easier for attackers to penetrate the institution's network and gain unauthorized access to sensitive information. It is particularly critical if the transitions between network boundaries are insufficiently monitored.
+If detection systems are not used, and the security-related events detection functions used in IT systems and applications are not used, it is easier for attackers to penetrate the institution's network unnoticed and access unauthorized sensitive information. It is particularly critical if the transitions between network boundaries are insufficiently monitored.
 
 ### 2 7 Insufficient human resources
 
@@ -59,7 +64,8 @@ The following are specific requirements for the detection of safety-related even
 
 The following requirements MUST be implemented as a priority:
 
-#### DER.1.A1 Creation of a security policy for the detection of security-relevant events [Information Security Officer (ISB)]On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the detection of security-relevant events can be planned, constructed and operated safely. The policy MUST be known to all employees responsible for detection and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be coordinated and documented with the responsible ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+#### DER.1.A1 Creation of a security policy for the detection of security-relevant events [Information Security Officer (ISB)]
+On the basis of the institution's general security policy, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the detection of security-relevant events can be planned, constructed and operated safely. The policy MUST be known to all employees responsible for detection and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be coordinated and documented with the responsible ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 
 #### DER.1.A2 Compliance with legal conditions when evaluating log data [Information Security Officer (ISB)]
 
@@ -79,11 +85,12 @@ Employees MUST also be made aware that they will not simply ignore or close clie
 
 Each employee MUST report a detected incident immediately to Incident Management.
 
-#### DER.1.A5 Use of supplied system functions for detection [specialist responsible]
+#### DER.1.A5 Use of supplied system functions for detection [specialist responsible persons]
 
 If IT systems or applications have functions that can be used to detect safety-related events, they MUST be activated and used.
 
-Logging must be activated on all components used (see OPS.1.1.5 * Logging *). If a security-relevant incident occurs, the messages MUST be evaluated at least locally. In addition, the logged events of other IT systems MUST be checked. Also the collected messages SHOULD be checked punctually in binding fixed periods.It MUST be checked whether additional malicious code scanners should be installed on central IT systems (see also SYS.1.1 * General Server *). If so, they MUST allow them to centrally access their messages and logs. In addition, they MUST be updated regularly. It MUST be ensured that the malicious code scanners automatically report safety-relevant events to the persons responsible and that the messages are also evaluated and examined.
+Logging must be activated on all components used (see OPS.1.1.5 * Logging *). If a security-relevant incident occurs, the messages MUST be evaluated at least locally. In addition, the logged events of other IT systems MUST be checked. Also the collected messages SHOULD be checked punctually in binding fixed periods.
+It MUST be checked whether additional malicious code scanners should be installed on central IT systems (see also SYS.1.1 * General Server *). If so, they MUST allow them to centrally access their messages and logs. In addition, they MUST be updated regularly. It MUST be ensured that the malicious code scanners automatically report safety-relevant events to the persons responsible and that the messages are also evaluated and examined.
 
 ### 3.2 Standard requirements
 
@@ -115,9 +122,10 @@ At transitions to external networks, TLS / SSH proxies SHOULD be used to break t
 
 #### DER.1.A11 Use of a central logging infrastructure for the evaluation of security-relevant events [responsible persons]
 
-The collected event messages of the IT systems and application systems SHOULD be stored on a central protocol infrastructure (see OPS1.1.5 * Logging *). The delivered event messages SHOULD be centrally stored, evaluated and retrieved using a tool. In order for the data to be correlated and reconciled, they SHOULD all be synchronized in time. The collected event messages SHOULD be regularly checked for abnormalities. So that safety-related events can also be detected retrospectively, the signatures of the detection systems SHOULD be up to date and up-to-date.#### DER.1.A12 Evaluation of information from external sources [Information Security Officer (ISB), specialist responsible]
+The collected event messages of the IT systems and application systems SHOULD be stored on a central protocol infrastructure (see OPS1.1.5 * Logging *). The submitted event messages SHOULD be centrally stored, evaluated and retrieved using a tool. In order for the data to be correlated and reconciled, they SHOULD all be synchronized in time. The collected event messages SHOULD be regularly checked for abnormalities. So that safety-related events can also be detected retrospectively, the signatures of the detection systems SHOULD be up to date and up-to-date.
+#### DER.1.A12 Evaluation of information from external sources [Information Security Officer (ISB), specialist responsible]
 
-In order to gain new insights into security-relevant events for their own information network, external sources SHOULD be consulted and evaluated. Since messages are delivered to an institution via different channels, it should be ensured that these messages are also recognized by the employees as being relevant and forwarded to the right place. If information comes from qualified sources, they SHOULD be evaluated in principle. All submitted information SHOULD be evaluated as to whether it is relevant to its own information network. If this is the case, the information SHOULD be escalated according to the incident handling procedure (see DER.2.1. * Incident Management *).
+In order to gain new insights into security-relevant events for their own information network, external sources SHOULD be consulted and evaluated. Since messages are delivered to an institution via different channels, it should be ensured that these messages are also recognized as relevant by the employees and forwarded to the right place. If information comes from qualified sources, they SHOULD be evaluated in principle. All submitted information SHOULD be evaluated as to whether it is relevant to its own information network. If this is the case, the information SHOULD be escalated according to the incident handling procedure (see DER.2.1. * Incident Management *).
 
 #### DER.1.A13 Regular audits of the detection systems
 
@@ -139,13 +147,14 @@ The system managers should regularly audit the analysis parameters and, if neces
 
 #### DER.1.A16 Use of detection systems according to protection requirements (CIA)
 
-Applications with increased protection requirements SHOULD be protected by additional detection measures. For this purpose, for. B. such detection systems are used, with which the increased protection requirements can be technically ensured.
+Applications with increased protection requirements SHOULD be protected by additional detection measures. For this purpose, z. B. such detection systems are used with which the increased protection requirements can be technically ensured.
 
-#### DER.1.A17 Automatic response to security events (CI)In a safety-relevant event, the detection systems used should automatically report the event and react with suitable protective measures. In doing so, procedures should be used that automatically detect possible attacks, attempted abuse or security breaches. It SHOULD be possible to automatically intervene in the data stream to prevent a possible security incident.
+#### DER.1.A17 Automatic response to security events (CI)
+In a safety-relevant event, the detection systems used should automatically report the event and react with suitable protective measures. In doing so, procedures should be used that automatically detect possible attacks, attempted abuse or security breaches. It SHOULD be possible to automatically intervene in the data stream to prevent a possible security incident.
 
 #### DER.1.A18 Conduct regular integrity checks (CI)
 
-All detection systems SHOULD regularly be checked to see if they are still integer. Also, the user rights SHOULD be controlled. In addition, the sensors SHOULD perform integrity checks on files and trigger automatic alerts as the values ​​change.
+All detection systems SHOULD regularly be checked to see if they are still integer. Also, the user rights SHOULD be controlled. In addition, the sensors SHOULD perform integrity checks on files and trigger automatic alerts as values ​​change.
 
 4 Further Information
 ------------------------------

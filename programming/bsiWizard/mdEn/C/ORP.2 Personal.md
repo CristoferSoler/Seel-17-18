@@ -1,3 +1,7 @@
+Table of content
+
+[toc]
+ 
 1 description
 --------------
 
@@ -24,7 +28,7 @@ The loss of personnel can mean that certain tasks can no longer or not be perfor
 
 ### 2 2 Abuse of Permissions
 
-Anyone who wants to edit information needs appropriate permissions. Users may misuse them by exploiting them to manipulate, transmit, or otherwise harm information.
+Anyone who wants to edit information needs appropriate permissions. Users may misuse them by exploiting them to manipulate, transmit, or otherwise harm the institution.
 
 ### 2 3 Missing or inadequate regulations
 
@@ -32,7 +36,7 @@ If information security regulations are lacking, inadequate, unworkable or incom
 
 ### 2 4 Insufficient knowledge of regulations
 
-The determination of regulations alone does not ensure their observance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
+The establishment of regulations alone does not ensure their compliance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
 
 ### 2 5 Misconduct
 
@@ -40,7 +44,8 @@ Misbehavior of any type of person may interfere with the confidentiality, integr
 
 ### 2 6 Social Engineering
 
-In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.### 2 7 Carelessness in handling information
+In social engineering, human characteristics such as Helpfulness, trust, fear or respect for authority are exploited to gain unauthorized access to information or IT systems through "listening out". This allows employees to be manipulated to act improperly.
+### 2 7 Carelessness in handling information
 
 Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted.
 
@@ -54,7 +59,7 @@ Social networks are very successful as platforms. However, in addition to the va
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
-Outside and inside perpetrators can try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
+Outside and inside perpetrators may try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
 
 3 requirements
 ---------------
@@ -67,19 +72,20 @@ The following requirements MUST be implemented as a priority:
 
 #### ORP.2.A1 Regulated training of new employees [supervisors]
 
-The personnel department and the supervisor MUST ensure that new employees incorporated at the beginning of their employment in their new tasks and be informed about existing regulations, practices and procedures. Here, a checklist SHOULD be supportive.
+The HR department and supervisors MUST ensure that new employees become familiar with their new responsibilities at the beginning of their employment and are informed about existing regulations, practices and procedures. Here, a checklist SHOULD be supportive.
 
 For the regular training of new employees, they MUST be made aware of existing regulations and instructions for information security. All employees MUST be informed about information security regulations, their changes and their specific impact on a business process or work environment.
 
-All employees MUST be explicitly required to comply with applicable laws, regulations and internal regulations. In addition, all employees MUST be noted that all information obtained during the work are intended solely for internal use, as long as they are not marked otherwise.
+All employees MUST be explicitly required to comply with applicable laws, regulations and internal regulations. In addition, all employees MUST be advised that all information received during the work is for internal use only, unless otherwise indicated.
 
-#### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]Before the departure of an employee, a timely briefing of the successor MUST be carried out, ideally by the departing employee. If a direct handover is not possible, a detailed documentation MUST be prepared by the departing employee. In addition, any outgoing employees MUST be required to collect all documents, keys, equipment, and IDs and access privileges received as part of their duties.
+#### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]
+Before the departure of an employee, a timely briefing of the successor MUST be carried out, ideally by the departing employee. If a direct handover is not possible, a detailed documentation MUST be prepared by the departing employee. In addition, any outgoing employees MUST be required to collect all documents, keys, equipment, and IDs and access privileges received as part of their duties.
 
 The IT administration must also ensure that former employees are deprived of all access rights to IT systems or that they are adjusted when tasks change.
 
 Before the adoption MUST again be made explicit on confidentiality obligations.
 
-Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security personnel, MUST also be informed of the employee's departure. In order to handle all activities that accompany the departure of employees in a regulated manner, the setting and the processing of a checklist SHOULD be helpful in a similar way to the attitude here.
+Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security staff, MUST also be informed of the employee's departure. In order to handle all activities that accompany the departure of employees in a regulated manner, the setting and the processing of a checklist SHOULD be helpful in a similar way to the attitude here.
 
 #### ORP.2.A3 Representation Rules [Supervisors]
 
@@ -87,7 +93,7 @@ Supervisors MUST ensure the establishment and maintenance of representation arra
 
 #### ORP.2.A4 Regulations for the use of external personnel
 
-In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated like visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
+In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated as visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
 
 #### ORP.2.A5 Confidentiality agreements for the use of outside personnel
 
@@ -97,7 +103,8 @@ Prior to receiving External Access and access to confidential information, it MU
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the field of personnel. They SHOULD be implemented in principle.
 
-#### ORP.2.A6 Review of candidates in the selection of staffWhen selecting new employees, the required qualifications and skills SHOULD be precisely formulated. Subsequently, it should be checked on the basis of the documents and in the interview whether they actually exist among the candidates. Particular care should be taken to ensure that no conflicts of interest occur. In order to avoid conflicts of interest after a job change, non-competition and waiting periods should be agreed.
+#### ORP.2.A6 Review of candidates in the selection of staff
+When selecting new employees, the required qualifications and skills SHOULD be precisely formulated. Subsequently, it should be checked on the basis of the documents and in the interview whether they actually exist among the candidates. Particular care should be taken to ensure that no conflicts of interest occur. In order to avoid conflicts of interest after a job change, non-competition and waiting periods should be agreed.
 
 #### ORP.2.A7 Checking the trustworthiness of employees
 
@@ -105,7 +112,7 @@ New employees SHOULD be checked for trustworthiness before they are hired. There
 
 #### ORP.2.A8 Tasks and Responsibilities of Employees [Information Security Officer (ISB)]
 
-The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that every employee has a responsibility for information security outside of working hours and outside the premises.
+The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that each employee has a responsibility for information security outside of working hours and outside the premises.
 
 #### ORP.2.A9 Training of employees
 
@@ -121,11 +128,12 @@ From the point of view of information security, measures SHOULD be taken to ensu
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### ORP.2.A11 Safety Culture Analysis (CIA)The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
+#### ORP.2.A11 Safety Culture Analysis (CIA)
+The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Building on this, SHOULD investigate where personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 
-To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact person SHOULD be checked.
+To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact should be checked.
 
 #### ORP.2.A13 Security Check (CIA)
 
