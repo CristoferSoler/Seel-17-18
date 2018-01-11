@@ -54,6 +54,8 @@ function inilizeData() {
 
     if (currentTopic === -2) {
         $("#topicBack").addClass('disabled');
+    } else{
+        $("#topicBack").removeClass('disabled');
     }
 }
 
