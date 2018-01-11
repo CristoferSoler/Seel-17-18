@@ -9,6 +9,8 @@ from random import shuffle
 pathOfComponentsCSV = './../programming/bsiWizard/csv/componentsTopics.csv'
 pathOfThreadsCSV = './../programming/bsiWizard/csv/threadsTopics.csv'
 
+numberOfRelatedElements = 5
+
 def getPathOfElement(title,pathlist,requestParameter):
     checkPath = ''
     if(requestParameter == 'c'):
@@ -38,9 +40,36 @@ def readAndProcessCSV(fileName, requestParameter):
             elementWithTopics['element'].append(dic)
     return elementWithTopics
 
+def getTopicComponent(topic):
+    return {'topic':topic,'elements':[]}
+
+def generateTopicsWithRelatedElements(topics,elements):
+    topicsWithElements = []
+    listOfAllTopics = []
+    listOfAllTopicNames = []
+    for topic in topics:
+        topicDic = getTopicComponent(topic)
+        for element in elements:
+            listOfAllTopics.append(element['topics'])
+            listOfAllTopicNames.append(element['name'])
+
+        rowsOfTopicList = list(zip(*listOfAllTopics))
+        for row in rowsOfTopicList:
+            if(len(topicDic['elements'])< numberOfRelatedElements):
+                if(topic in row):
+                    indexTopic = row.index(topic)
+                    topicDic['elements'].append(listOfAllTopicNames[indexTopic])
+            else:
+                break
+        topicsWithElements.append(topicDic)
+
+    return topicsWithElements
+
+
 def getListOfFrequenceOfTopic(elements):
     topics = []
     listOfAllTopics = []
+    print(elements)
     for element in elements:
         listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
     listOfAllTopics = list(listOfAllTopics)
@@ -52,7 +81,10 @@ def getListOfFrequenceOfTopic(elements):
 
     for topic in randomSerializationOfTopics:
         topics.append(topic[0])
-    return topics
+
+    topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements)
+
+    return topicWithRelatedElements
 
 def randomizeTopicSerialization(topics):
     gtFourty = []

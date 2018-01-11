@@ -10,6 +10,7 @@
     {% load staticfiles %}
     <link href="{% static "bsi/bootstrap/css/wiki-bootstrap.min.css" %}" rel="stylesheet">
     <script src="{% static "bsi/js/jquery.min.js" %}"></script>
+    <script src="{% static "bsi/js/CollapsibleLists.js" %}"></script>
     <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
     <script src="{% static "bsi/js/core.js" %}"></script>
     <script src="{% static "bsi/bootstrap/js/bootstrap.min.js" %}"></script>
@@ -169,6 +170,19 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="pull-left">
+                                    <ul class="collapsibleList">
+                                      <li>
+                                        Articles about <span id="topicWord"></span>:
+                                        <ul id="articleTopicList">
+                                          <li>Child item</li>
+                                          <li>Child item</li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-2"></div>
                                 <div class="col-md-9">
                                     <ul id="list">
@@ -245,6 +259,7 @@
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
+        CollapsibleLists.apply();
 
     });
 
