@@ -444,6 +444,11 @@ function buttonsWizard() {
             valid = false;
         }
     })
+
+    $('#help').on('click', function (e) {
+        valid = true;
+
+    })
 }
 
 
