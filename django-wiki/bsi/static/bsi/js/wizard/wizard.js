@@ -337,6 +337,9 @@ function topicBack() {
         checkEnableButtons();
         setCurrentTopicWordPanel();
         showElements();
+        if (remainingComponents.length > thresholdTopicNumber) {
+            $('#results').addClass('invisible');
+        }
 
     } else{
         if(currentTopic - 1 == -2){
@@ -406,7 +409,6 @@ function showResults() {
     $('#results').removeClass('invisible');
     //console.log(remainingComponents);
     $("#list").empty();
-    console.log(remainingComponents.length);
     //$("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
         $("#list").append("<li class='list-group-item'><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
@@ -416,6 +418,10 @@ function showResults() {
     console.log(isExpanded);
     if(isExpanded){
          $(".panel-collapse").collapse("hide");
+         //$("#collapseDiv").collapse("show");
+        $('#collapseResults').collapse("show");
+    } else {
+        $('#collapseResults').collapse("show");
     }
 
     valid = false;

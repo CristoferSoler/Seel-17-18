@@ -53,7 +53,7 @@
         position: absolute;
         float: right;
         margin-left: 50px;
-        height: 400px;
+        height: 550px;
         width: 500px;
         border: black;
     }
@@ -64,7 +64,7 @@
     }
 
     .contentPanel {
-        height: 400px;
+        height: 550px;
         width: 500px;
         overflow-y: scroll;
     }
@@ -175,8 +175,4 @@ li.collapsibleListOpen{
 
 li.collapsibleListClosed{
   cursor           : pointer;
-}
-
-.hide{
-  display:none;
 }
