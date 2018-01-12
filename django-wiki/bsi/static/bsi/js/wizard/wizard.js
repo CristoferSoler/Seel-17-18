@@ -21,10 +21,14 @@ function setValid(validValue) {
 *
 * */
 
+function setCurrentTopicWordPanel() {
+    $('#topicWord').text(currentSortedTopic[currentTopic]['topic']);
+}
+
 function showElements() {
     $('#articleTopicList').empty();
     var currentElements = currentSortedTopic[currentTopic]['elements'];
-     $('#topicWord').text( currentSortedTopic[currentTopic]['topic']);
+    setCurrentTopicWordPanel();
     currentElements.forEach(function(element) {
         var path = element['path'];
         var title = element['title'];
@@ -38,6 +42,12 @@ function showElements() {
 
 function inilizeData() {
     getDataFromServer();
+
+    if(currentTopic < 0){
+       invisbaleTopicResutlPanel()
+    } else{
+        $('#topics').removeClass('invisible');
+    }
 
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
@@ -60,6 +70,7 @@ function inilizeData() {
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
+        $('#results').removeClass('invisible')
         showResults();
     }
     var mode = localStorage.getItem('mode');
@@ -95,6 +106,12 @@ function initWizard() {
     } else{
         currentTopic = parseInt(localStorage.getItem('currentTopic'));
     }
+
+    if(currentTopic < 0){
+        $('#topics').addClass('invisible')
+        $('#results').addClass('invisible')
+    }
+
     if(currentTopic < 0){
         if(currentTopic == -1){
             $('#question').text(entryQuestionThread);
@@ -279,6 +296,8 @@ function addGoBackListTopicList() {
 
 
 function restart(){
+    invisbaleTopicResutlPanel();
+
     currentTopic = -2;
     localStorage.setItem('currentTopic',currentTopic);
 
@@ -316,6 +335,9 @@ function topicBack() {
         remainingComponents = listOfBack[currentTopicString];
         checkPresentResults();
         checkEnableButtons();
+        setCurrentTopicWordPanel();
+        showElements();
+
     } else{
         if(currentTopic - 1 == -2){
             currentTopic = - 2;
@@ -350,6 +372,8 @@ function topicBack() {
                     localStorage.setItem('mode','t');
                     clearTopicStorage();
                 }
+
+                invisbaleTopicResutlPanel();
             }
 
         }
@@ -366,8 +390,20 @@ function clearTopicStorage() {
     localStorage.removeItem('listOfBack');
 }
 
+function invisbaleTopicResutlPanel() {
+    $('#topics').addClass('invisible');
+    $('#results').addClass('invisible');
+}
+
+
+function visbaleTopicResutl() {
+    $('#topics').removeClass('invisible')
+    $('#results').removeClass('invisible')
+}
+
 
 function showResults() {
+    $('#results').removeClass('invisible');
     //console.log(remainingComponents);
     $("#list").empty();
     console.log(remainingComponents.length);
@@ -376,7 +412,11 @@ function showResults() {
         $("#list").append("<li class='list-group-item'><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
     }
 
-    var isExpanded = $('#').attr("aria-expanded");
+    var isExpanded = $('#collapse1').attr("aria-expanded");
+    console.log(isExpanded);
+    if(isExpanded){
+         $(".panel-collapse").collapse("hide");
+    }
 
     valid = false;
 
