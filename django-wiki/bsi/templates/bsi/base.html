@@ -157,19 +157,21 @@
                                 <div class="row abstandButtonToBottom" >
                                     <ul class="wizardList">
                                         <li class="wizard-buttons">
-                                            <a id="yesButton" class="btn btn-primary btn-block" >Yes</a>
+                                            <a id="yesButton" class="btn btn-primary btn-block validFalse" >Yes</a>
                                         </li>
                                         <li>
-                                            <a id="noButton" class="btn btn-primary btn-block" >No</a>
+                                            <a id="noButton" class="btn btn-primary btn-block validFalse" >No</a>
                                         </li>
                                         <li>
-                                            <a id="dontKnowButton" class="btn btn-primary disabled btn-block" >I don't know</a>
+                                            <a id="dontKnowButton" class="btn btn-primary disabled btn-block validFalse" >I don't know</a>
                                         </li>
                                     </ul>
                                     <div class="col-md-2"></div>
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
                                     <div class="panel-group center-block">
                                       <div class="panel panel-default">
                                         <div class="panel-heading">
@@ -184,16 +186,28 @@
                                         </div>
                                       </div>
                                     </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-2"></div>
-                                <div class="col-md-9">
-                                    <ul id="list">
-                                    </ul>
                                 </div>
                                 <div class="col-md-1"></div>
                             </div>
-
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <div class="panel-group center-block">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h4 class="panel-title">
+                                            <a data-toggle="collapse" href="#collapseResults">Results:</a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseResults" class="panel-collapse collapse">
+                                          <ul id="list" class="list-group">
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,6 +270,16 @@
             $("html, body").animate({scrollTop: 0}, 600);
             return false;
         });
+
+        $('.panel-title').click(function () {
+            valid = false;
+            console.log('Klappt');
+        });
+
+        $('.validFalse').click(function () {
+            valid = false;
+            console.log('Klappt');
+        })
     });
 
     $(document).ready(function () {

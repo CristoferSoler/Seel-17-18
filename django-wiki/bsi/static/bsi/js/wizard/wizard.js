@@ -28,8 +28,11 @@ function showElements() {
     currentElements.forEach(function(element) {
         var path = element['path'];
         var title = element['title'];
-        $('#articleTopicList').append('<li href=' + path + '>'+ title + '</li>');
+
+        $('#articleTopicList').append("<li class='list-group-item'><a href='" + path+"'>" + title +"</a></li>");
+        valid = false;
     });
+
 }
 
 
@@ -57,7 +60,7 @@ function inilizeData() {
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
-        presentResults();
+        showResults();
     }
     var mode = localStorage.getItem('mode');
     if(mode !== null){
@@ -76,6 +79,10 @@ function inilizeData() {
         $("#topicBack").addClass('disabled');
     } else{
         $("#topicBack").removeClass('disabled');
+    }
+
+    if(currentTopic >= 0){
+        showElements();
     }
 
 }
@@ -234,7 +241,7 @@ function checkPresentResults() {
         if (remainingComponents.length <= thresholdTopicNumber) {
             $("#topic").text(currentSortedTopic[currentTopic]['topic'] + '?');
             showElements();
-            presentResults();
+            showResults();
         } else {
             $("#list").empty();
             $("#topic").text(currentSortedTopic[currentTopic]['topic']+ '?');
@@ -360,22 +367,25 @@ function clearTopicStorage() {
 }
 
 
-function presentResults() {
+function showResults() {
     //console.log(remainingComponents);
     $("#list").empty();
     console.log(remainingComponents.length);
     //$("#list").append('<ul class="urd-square-success">');
     for(i=0;i<remainingComponents.length;i++) {
-        $("#list").append("<li><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
+        $("#list").append("<li class='list-group-item'><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
     }
 
-    $("#list").append('</ul>');
+    var isExpanded = $('#').attr("aria-expanded");
 
+    valid = false;
+
+    /*
     $('li a').bind('click',function () {
         valid = true;
         console.log('in Bind of test');
     });
-
+    */
     //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
 
@@ -434,22 +444,25 @@ function clearLocalStorage(){
 function buttonsWizard() {
     $('#yesButton').on('click', function (e) {
         if(!($('#yesButton').hasClass('disabled'))){
-            yesPress();
             valid = false;
+            yesPress();
+
         }
     })
 
     $('#noButton').on('click', function (e) {
         if(!($('#noButton').hasClass('disabled'))) {
-            noPress();
             valid = false;
+            noPress();
+
         }
     })
 
     $('#dontKnowButton').on('click', function (e) {
         if(!($('#dontKnowButton').hasClass('disabled'))){
-            dontknowPress();
             valid = false;
+            dontknowPress();
+
         }
     })
 
