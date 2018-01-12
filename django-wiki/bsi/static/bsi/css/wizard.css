@@ -47,6 +47,11 @@
         float:left;
         padding: 15px;
         border-radius: 0;
+        background-color: Transparent;
+        background-repeat:no-repeat;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
     }
 
     #content {
