@@ -27,7 +27,7 @@
     </div>
 
 
-    <div class=" col-lg-4">
+    <div class=" col-lg-5">
         <div class="fading-side-menu" data-spy="" data-offset-top="350">
             <h4>Table of Contents</h4>
             <hr class="no-margin">
@@ -41,8 +41,13 @@
                         levels: 1,
                         data: getData(),
                         enableLinks: false,
+                        multiSelect: true,
                         selectedBackColor: '#337ab7'
-                    })
+                    }).on('nodeSelected nodeUnselected',
+                        function (event, data) {
+                            var correspondingField = getFormField(data.text);
+                            toggleFormField(correspondingField);
+                        });
                 });
 
 
@@ -90,32 +95,86 @@
                             });
                         });
 
+                    // each search result gets a click listener, so that the corresponding multipleChoiceField will be
+                    // checked/unchecked and made visible/invisible.
                     function setUp() {
                         $('.search-result').each(function () {
                             var text = $(this).text();
-                            var corresponding_field = $(':input[type=checkbox]').filter(function () {
-                                return this.value === text
-                            });
-                            if (corresponding_field.is(':checked')) {
+                            var correspondingField = getFormField(text);
+                            if (correspondingField.is(':checked')) {
                                 $(this).addClass("active");
                             }
                             $(this).click(function () {
-                                if ($(this).hasClass("active")) {
-                                    $(this).removeClass("active");
-                                    corresponding_field.prop('checked', false);
-                                    corresponding_field.parent().parent().hide();
-                                } else {
-                                    $(this).addClass("active");
-                                    corresponding_field.prop('checked', true);
-                                    corresponding_field.parent().parent().show();
-                                }
-
+                                toggleFormField(correspondingField);
                             });
                         })
 
                     }
 
                 });
+
+                function getSearchResultEntry(text) {
+                    return $('.search-result').filter(function () {
+                        return $(this).html() === text
+                    });
+                }
+
+                function getTreeviewDataNode(text) {
+                    var nodeId = null;
+                    $(".node-treeview1").filter(function () {
+                        if ($(this).text() === text) {
+                            nodeId = $(this).attr("data-nodeid");
+                        }
+                    });
+                    if (nodeId === null) {
+                        return null;
+                    }
+                    return $("#treeview1").treeview('getNode', nodeId);
+                }
+
+                function getFormField(text) {
+                    return $(':input[type=checkbox]').filter(function () {
+                        return this.value === text
+                    });
+                }
+
+                function checkFormField(field) {
+                    field.prop('checked', true);
+                    field.parent().parent().show();
+
+                    var searchResultEntry = getSearchResultEntry(field.val());
+                    if (!searchResultEntry.hasClass("active")) {
+                        searchResultEntry.addClass("active");
+                    }
+
+                    var treeviewEntry = getTreeviewDataNode(field.val());
+                    if (treeviewEntry !== null) {
+                        $('#treeview1').treeview('selectNode', [treeviewEntry, {silent: true}]);
+                    }
+                }
+
+                function uncheckFormField(field) {
+                    field.prop('checked', false);
+                    field.parent().parent().hide();
+
+                    var searchResultEntry = getSearchResultEntry(field.val());
+                    if (searchResultEntry.hasClass("active")) {
+                        searchResultEntry.removeClass("active");
+                    }
+
+                    var treeviewEntry = getTreeviewDataNode(field.val());
+                    if (treeviewEntry !== null) {
+                        $('#treeview1').treeview('unselectNode', [treeviewEntry, {silent: true}]);
+                    }
+                }
+
+                function toggleFormField(field) {
+                    if (field.prop("checked")) {
+                        uncheckFormField(field);
+                    } else {
+                        checkFormField(field);
+                    }
+                }
 
                 $(document).ajaxStart(function () {
                     $('#loading-spinner').show();
@@ -127,6 +186,9 @@
                         $('input[type=checkbox]').each(function () {
                             if (!$(this).is(':checked')) {
                                 $(this).parent().parent().hide()
+                            } else {
+                                var field = getFormField($(this).val());
+                                checkFormField(field);
                             }
                         })
                     }
@@ -140,7 +202,11 @@
                         } else {
                             $(this).parent().parent().hide();
                             var val = $(this).val();
+                            var treeviewNode = getTreeviewDataNode(val);
                             $('li:contains(' + val + ')').removeClass('active');
+                            if (treeviewNode !== null) {
+                                $('#treeview1').treeview('unselectNode', [treeviewNode, {silent: true}]);
+                            }
                         }
                     });
                 });
@@ -159,7 +225,7 @@
     {% endif %}
     <div class="row">
         <div class="col-lg-1"></div>
-        <div class="col-lg-6">
+        <div class="col-lg-5">
 
 
             <table>
