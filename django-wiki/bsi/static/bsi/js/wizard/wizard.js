@@ -398,6 +398,12 @@ function clearTopicStorage() {
 }
 
 function invisbaleTopicResutlPanel() {
+    $('.panel-collapse').collapse('hide');
+    $('#topicIcon').removeClass('glyphicon-minus');
+    $('#topicIcon').addClass('glyphicon-plus');
+    $('#resultIcon').removeClass('glyphicon-minus');
+    $('#resultIcon').addClass('glyphicon-plus');
+
     $('#topics').addClass('invisible');
     $('#results').addClass('invisible');
 }
