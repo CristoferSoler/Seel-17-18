@@ -91,9 +91,9 @@ def getListOfFrequenceOfTopic(elements,requestParameter):
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
 
     #randomize the serialization of the topics regarding the intervall x>40, 40>x>20, 20>x>10, 10>x>5,x<5
-    randomSerializationOfTopics = randomizeTopicSerialization(numberOfEachTopic)
+    #randomSerializationOfTopics = randomizeTopicSerialization(numberOfEachTopic)
 
-    for topic in randomSerializationOfTopics:
+    for topic in numberOfEachTopic:
         topics.append(topic[0])
 
     topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements,requestParameter)
@@ -162,9 +162,6 @@ def getSortedTopicList(request):
         return HttpResponse(topicListThread, content_type='application/json')
     elif (requestParamter == 'c'):
         return HttpResponse(topicListComponent, content_type='application/json')
-
-
-
 
 def getElementsTopics(request):
     requestParamter = dict(request.GET)['element'][0]
