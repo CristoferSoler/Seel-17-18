@@ -16,10 +16,14 @@ function setValid(validValue) {
     valid = validValue;
 }
 
-/*
-* <li class="list-group-item">One</li>
-*
-* */
+function stringToBoolean(isExpandedString) {
+        if (isExpandedString == 'true') {
+            isExpanded = true;
+        } else {
+            isExpanded = false;
+        }
+        return isExpanded;
+    }
 
 function setCurrentTopicWordPanel() {
     $('#topicWord').text(currentSortedTopic[currentTopic]['topic']);
@@ -419,6 +423,8 @@ function showResults() {
          $(".panel-collapse").collapse("hide");
          //$("#collapseDiv").collapse("show");
         $('#collapseResults').collapse("show");
+        $('#topicIcon').removeClass('glyphicon-minus');
+        $('#topicIcon').addClass('glyphicon-plus');
         $('#resultIcon').removeClass('glyphicon-plus');
         $('#resultIcon').addClass('glyphicon-minus');
 
@@ -549,6 +555,36 @@ function initWizardsComponents(){
         valid = true;
         console.log('in Bind of test');
     });
+
+    $('#topicList').click(function () {
+            var isExpandedString = $('#collapse1').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#topicIcon').removeClass('glyphicon-minus');
+                $('#topicIcon').addClass('glyphicon-plus');
+            } else {
+                $('#topicIcon').removeClass('glyphicon-plus');
+                $('#topicIcon').addClass('glyphicon-minus');
+            }
+
+        });
+
+        $('#resultList').click(function () {
+            var isExpandedString = $('#collapseResults').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#resultIcon').removeClass('glyphicon-minus');
+                $('#resultIcon').addClass('glyphicon-plus');
+            } else {
+                $('#resultIcon').removeClass('glyphicon-plus');
+                $('#resultIcon').addClass('glyphicon-minus');
+            }
+        });
+
 
     $('#opener').on('click', function() {
         initWizard();

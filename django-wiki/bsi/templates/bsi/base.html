@@ -258,14 +258,6 @@
 </html>
 
 <script>
-    function stringToBoolean(isExpandedString) {
-        if (isExpandedString == 'true') {
-            isExpanded = true;
-        } else {
-            isExpanded = false;
-        }
-        return isExpanded;
-    }
 
     $(document).ready(function () {
         $(window).scroll(function () {
@@ -283,35 +275,6 @@
         $('.panel-title').click(function () {
             valid = false;
 
-        });
-
-        $('#topicList').click(function () {
-            var isExpandedString = $('#collapse1').attr("aria-expanded");
-            var isExpanded;
-            isExpanded = stringToBoolean(isExpandedString);
-
-            if(isExpanded){
-                $('#topicIcon').removeClass('glyphicon-minus');
-                $('#topicIcon').addClass('glyphicon-plus');
-            } else {
-                $('#topicIcon').removeClass('glyphicon-plus');
-                $('#topicIcon').addClass('glyphicon-minus');
-            }
-
-        });
-
-        $('#resultList').click(function () {
-            var isExpandedString = $('#collapseResults').attr("aria-expanded");
-            var isExpanded;
-            isExpanded = stringToBoolean(isExpandedString);
-
-            if(isExpanded){
-                $('#resultIcon').removeClass('glyphicon-minus');
-                $('#resultIcon').addClass('glyphicon-plus');
-            } else {
-                $('#resultIcon').removeClass('glyphicon-plus');
-                $('#resultIcon').addClass('glyphicon-minus');
-            }
         });
 
 
