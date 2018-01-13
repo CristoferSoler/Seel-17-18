@@ -17,10 +17,10 @@
     <!-- Optionally enable responsive features in IE8 -->
     <script src="{% static "bsi/js/respond.min.js" %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/style.css' %}"/>
-    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <script src="{% static "bsi/js/bootstrap-treeview.js" %}"></script>
     <script src="{% static 'bsi/js/wizard/wizard.js' %}"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/bootstrap-treeview.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
 
 
     <!--Icon -->
@@ -127,7 +127,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="slide-panel">
-                <a href="#" class="btn btn-warning" id="opener"><i class="icon-magic-wand text-primary"></i></a>
+                <a href="#" class="btn" id="opener"><i class="icon-magic-wand text-primary"></i></a>
                 <div id="content" class="panel panel-primary">
                     <div class="panel panel-default contentPanel">
                         <div class="panel-heading">
@@ -175,10 +175,10 @@
                                     <div class="panel-group center-block">
                                       <div class="panel panel-default " id="topics">
                                         <div class="panel-heading">
-                                          <h4 class="panel-title">
-                                            <a data-toggle="collapse" href="#collapse1">Articles about <span
+                                          <h6 class="panel-title" id="topicList">
+                                              <a data-toggle="collapse" href="#collapse1"><span id="topicIcon" class="glyphicon glyphicon-plus"></span> Articles about <span
                                                     id="topicWord"></span>:</a>
-                                          </h4>
+                                          </h6>
                                         </div>
                                         <div id="collapse1" class="panel-collapse collapse">
                                           <ul id="articleTopicList" class="list-group">
@@ -195,8 +195,8 @@
                                     <div class="panel-group center-block " id="results">
                                       <div class="panel panel-default">
                                         <div class="panel-heading">
-                                          <h4 class="panel-title">
-                                            <a  id="toggle" data-toggle="collapse" data-target="#collapseResults">Results:</a>
+                                          <h4 class="panel-title" id="resultList">
+                                            <a  id="toggle" data-toggle="collapse" data-target="#collapseResults"><span id="resultIcon" class="glyphicon glyphicon-plus"></span> Results:</a>
                                           </h4>
                                         </div>
                                         <div id="collapseResults" class="panel-collapse collapse">
@@ -258,6 +258,15 @@
 </html>
 
 <script>
+    function stringToBoolean(isExpandedString) {
+        if (isExpandedString == 'true') {
+            isExpanded = true;
+        } else {
+            isExpanded = false;
+        }
+        return isExpanded;
+    }
+
     $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -273,8 +282,38 @@
 
         $('.panel-title').click(function () {
             valid = false;
-            console.log('Klappt');
+
         });
+
+        $('#topicList').click(function () {
+            var isExpandedString = $('#collapse1').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#topicIcon').removeClass('glyphicon-minus');
+                $('#topicIcon').addClass('glyphicon-plus');
+            } else {
+                $('#topicIcon').removeClass('glyphicon-plus');
+                $('#topicIcon').addClass('glyphicon-minus');
+            }
+
+        });
+
+        $('#resultList').click(function () {
+            var isExpandedString = $('#collapseResults').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#resultIcon').removeClass('glyphicon-minus');
+                $('#resultIcon').addClass('glyphicon-plus');
+            } else {
+                $('#resultIcon').removeClass('glyphicon-plus');
+                $('#resultIcon').addClass('glyphicon-minus');
+            }
+        });
+
 
         $('.validFalse').click(function () {
             valid = false;
@@ -286,8 +325,6 @@
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
-        CollapsibleLists.apply();
-
     });
 
 

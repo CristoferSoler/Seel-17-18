@@ -415,13 +415,17 @@ function showResults() {
     }
 
     var isExpanded = $('#collapse1').attr("aria-expanded");
-    console.log(isExpanded);
     if(isExpanded){
          $(".panel-collapse").collapse("hide");
          //$("#collapseDiv").collapse("show");
         $('#collapseResults').collapse("show");
+        $('#resultIcon').removeClass('glyphicon-plus');
+        $('#resultIcon').addClass('glyphicon-minus');
+
     } else {
         $('#collapseResults').collapse("show");
+        $('#resultIcon').removeClass('glyphicon-plus');
+        $('#resultIcon').addClass('glyphicon-minus');
     }
 
     valid = false;
