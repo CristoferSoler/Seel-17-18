@@ -16,13 +16,13 @@ function setValid(validValue) {
     valid = validValue;
 }
 
-function stringToBoolean(isExpandedString) {
-        if (isExpandedString == 'true') {
-            isExpanded = true;
+function stringToBoolean(boolString) {
+        if (boolString == 'true') {
+            bool = true;
         } else {
-            isExpanded = false;
+            bool = false;
         }
-        return isExpanded;
+        return bool;
     }
 
 function setCurrentTopicWordPanel() {
@@ -41,6 +41,15 @@ function showElements() {
         valid = false;
     });
 
+    var visible = stringToBoolean(localStorage.getItem('topicListVisible'))
+    if(localStorage.getItem('topicListVisible')!==null){
+        if(visible){
+            $('#collapse1').collapse("show");
+            $('#topicIcon').removeClass('glyphicon-plus');
+            $('#topicIcon').addClass('glyphicon-minus');
+        }
+    }
+
 }
 
 
@@ -51,7 +60,9 @@ function inilizeData() {
        invisbaleTopicResutlPanel()
     } else{
         $('#topics').removeClass('invisible');
+        $('#results').addClass('invisible')
     }
+
 
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
@@ -74,7 +85,7 @@ function inilizeData() {
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
-        $('#results').removeClass('invisible')
+        $('#results').removeClass('invisible');
         showResults();
     }
     var mode = localStorage.getItem('mode');
@@ -501,6 +512,7 @@ function clearLocalStorage(){
     localStorage.removeItem('listOfBack');
     localStorage.removeItem('mode');
     localStorage.removeItem('selectedNode');
+    localStorage.removeItem('topicListVisible');
 }
 
 function buttonsWizard() {
@@ -575,6 +587,9 @@ function initWizardsComponents(){
                 $('#topicIcon').addClass('glyphicon-minus');
             }
 
+            localStorage.setItem('topicListVisible',String(!isExpanded));
+
+
         });
 
         $('#resultList').click(function () {
@@ -589,6 +604,9 @@ function initWizardsComponents(){
                 $('#resultIcon').removeClass('glyphicon-plus');
                 $('#resultIcon').addClass('glyphicon-minus');
             }
+
+            localStorage.setItem('resultListVisible',String(!isExpanded));
+
         });
 
 
