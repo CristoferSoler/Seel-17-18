@@ -16,10 +16,14 @@ function setValid(validValue) {
     valid = validValue;
 }
 
-/*
-* <li class="list-group-item">One</li>
-*
-* */
+function stringToBoolean(boolString) {
+        if (boolString == 'true') {
+            bool = true;
+        } else {
+            bool = false;
+        }
+        return bool;
+    }
 
 function setCurrentTopicWordPanel() {
     $('#topicWord').text(currentSortedTopic[currentTopic]['topic']);
@@ -37,6 +41,15 @@ function showElements() {
         valid = false;
     });
 
+    var visible = stringToBoolean(localStorage.getItem('topicListVisible'))
+    if(localStorage.getItem('topicListVisible')!==null){
+        if(visible){
+            $('#collapse1').collapse("show");
+            $('#topicIcon').removeClass('glyphicon-plus');
+            $('#topicIcon').addClass('glyphicon-minus');
+        }
+    }
+
 }
 
 
@@ -47,7 +60,9 @@ function inilizeData() {
        invisbaleTopicResutlPanel()
     } else{
         $('#topics').removeClass('invisible');
+        $('#results').addClass('invisible')
     }
+
 
     var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
     var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
@@ -70,7 +85,7 @@ function inilizeData() {
     currentSortedTopic = sortedTopics.slice();
 
     if (remainingComponents.length <= thresholdTopicNumber) {
-        $('#results').removeClass('invisible')
+        $('#results').removeClass('invisible');
         showResults();
     }
     var mode = localStorage.getItem('mode');
@@ -394,6 +409,12 @@ function clearTopicStorage() {
 }
 
 function invisbaleTopicResutlPanel() {
+    $('.panel-collapse').collapse('hide');
+    $('#topicIcon').removeClass('glyphicon-minus');
+    $('#topicIcon').addClass('glyphicon-plus');
+    $('#resultIcon').removeClass('glyphicon-minus');
+    $('#resultIcon').addClass('glyphicon-plus');
+
     $('#topics').addClass('invisible');
     $('#results').addClass('invisible');
 }
@@ -415,13 +436,19 @@ function showResults() {
     }
 
     var isExpanded = $('#collapse1').attr("aria-expanded");
-    console.log(isExpanded);
     if(isExpanded){
          $(".panel-collapse").collapse("hide");
          //$("#collapseDiv").collapse("show");
         $('#collapseResults').collapse("show");
+        $('#topicIcon').removeClass('glyphicon-minus');
+        $('#topicIcon').addClass('glyphicon-plus');
+        $('#resultIcon').removeClass('glyphicon-plus');
+        $('#resultIcon').addClass('glyphicon-minus');
+
     } else {
         $('#collapseResults').collapse("show");
+        $('#resultIcon').removeClass('glyphicon-plus');
+        $('#resultIcon').addClass('glyphicon-minus');
     }
 
     valid = false;
@@ -485,6 +512,7 @@ function clearLocalStorage(){
     localStorage.removeItem('listOfBack');
     localStorage.removeItem('mode');
     localStorage.removeItem('selectedNode');
+    localStorage.removeItem('topicListVisible');
 }
 
 function buttonsWizard() {
@@ -545,6 +573,42 @@ function initWizardsComponents(){
         valid = true;
         console.log('in Bind of test');
     });
+
+    $('#topicList').click(function () {
+            var isExpandedString = $('#collapse1').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#topicIcon').removeClass('glyphicon-minus');
+                $('#topicIcon').addClass('glyphicon-plus');
+            } else {
+                $('#topicIcon').removeClass('glyphicon-plus');
+                $('#topicIcon').addClass('glyphicon-minus');
+            }
+
+            localStorage.setItem('topicListVisible',String(!isExpanded));
+
+
+        });
+
+        $('#resultList').click(function () {
+            var isExpandedString = $('#collapseResults').attr("aria-expanded");
+            var isExpanded;
+            isExpanded = stringToBoolean(isExpandedString);
+
+            if(isExpanded){
+                $('#resultIcon').removeClass('glyphicon-minus');
+                $('#resultIcon').addClass('glyphicon-plus');
+            } else {
+                $('#resultIcon').removeClass('glyphicon-plus');
+                $('#resultIcon').addClass('glyphicon-minus');
+            }
+
+            localStorage.setItem('resultListVisible',String(!isExpanded));
+
+        });
+
 
     $('#opener').on('click', function() {
         initWizard();
