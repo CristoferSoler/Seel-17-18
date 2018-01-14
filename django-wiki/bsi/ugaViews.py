@@ -129,7 +129,7 @@ class UGEditView(Edit):
         self.sidebar = []
         self.checked = ArticleRevisionValidation.objects.get(revision=article.current_revision).status
 
-        if request.user.has_perm('wiki:uncheck_article') and request.user.has_perm('wiki:check_article'):
+        if request.user.has_perm('wiki.uncheck_article') and request.user.has_perm('wiki.check_article'):
             self.form_class = forms.UGEditForm
         else:
             self.form_class = forms.EditForm
@@ -150,9 +150,9 @@ class UGEditView(Edit):
             self.request,
             _('A new revision of the article was successfully added.'))
         validation = ArticleRevisionValidation.get_or_create(revision)
-        if self.request.user.has_perm('wiki:check_article') and form.checked:
+        if self.request.user.has_perm('wiki.check_article') and form.checked:
             validation.check_article(self.request.user)
-        elif self.request.user.has_perm('wiki:uncheck_article') and not form.checked:
+        elif self.request.user.has_perm('wiki.uncheck_article') and not form.checked:
             validation.uncheck_article(self.request.user)
         return self.get_success_url()
 
@@ -171,7 +171,7 @@ class UGEditView(Edit):
             kwargs['files'] = None
             kwargs['no_clean'] = True
 
-        if self.request.user.has_perm('wiki:uncheck_article') and self.request.user.has_perm('wiki:check_article'):
+        if self.request.user.has_perm('wiki.uncheck_article') and self.request.user.has_perm('wiki.check_article'):
             form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
         else:
             form = form_class(self.request, self.article.current_revision, **kwargs)
