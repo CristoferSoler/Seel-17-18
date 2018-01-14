@@ -31,14 +31,10 @@ def topicDic(name):
     return dict(name=name,state='n')
 
 
-def generateDic(listDummy, pathlist, requestParameter):
-    title = listDummy[0]
+def generateDic(listt, pathlist, requestParameter):
+    title = listt[0]
     path = getPathOfElement(title, pathlist, requestParameter)
-    topicWithoutState = listDummy[1:]
-
-    topics = []
-    for topic in topicWithoutState:
-        topics.append(topicDic(topic))
+    topics = list(map(topicDic,listt[1:]))
 
     componentDic = dict(name=title, percentage=1, path=path, topics=topics)
     return componentDic
