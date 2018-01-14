@@ -47,7 +47,6 @@
         float:left;
         padding: 15px;
         border-radius: 0;
-        background-color: Transparent;
         background-repeat:no-repeat;
         border: none;
         cursor:pointer;
@@ -185,4 +184,8 @@ li.collapsibleListClosed{
 .panel-heading-sm{
     height: 28px;
     padding: 4px 10px;
+}
+
+.btn-panel{
+    background:orangered;
 }
