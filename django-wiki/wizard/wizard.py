@@ -31,7 +31,10 @@ def getPathOfElement(title, pathlist, requestParameter):
 def generateDic(list, pathlist, requestParameter):
     title = list[0]
     path = getPathOfElement(title, pathlist, requestParameter)
-    componentDic = {'name': title, 'path': path, 'topics': list[1:]}
+
+    #TODO convert list of topics to object list with name and state
+
+    componentDic = dict(name=title, percentage=1, path=path, topics=list[1:])
     return componentDic
 
 
@@ -53,11 +56,11 @@ def getPathList():
 
 
 def generateElementDic(title, path):
-    return {'title': title, 'path': path}
+    return dict(title=title, path=path)
 
 
 def getTopicComponent(topic):
-    return {'topic': topic, 'elements': []}
+    return dict(topic=topic, elements=[])
 
 
 def generateTopicsWithRelatedElements(topics, elements, requestParameter):
