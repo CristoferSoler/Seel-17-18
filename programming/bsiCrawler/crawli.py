@@ -1,9 +1,8 @@
-import scrapy as sc
-import os
-import re
 import functools
-from markdownify import markdownify as md
+import re
 
+import scrapy as sc
+from markdownify import markdownify as md
 
 '''
 This module collects roughly the data from the BSI.
@@ -12,7 +11,7 @@ Elementary Hazards, Building Blocks, and Implementation Notes and from there all
  of the BSI. Next, the content is converted from html to md and stored in a folder structure.  
 '''
 
-#directorys for the german content of the bsi
+# directorys for the german content of the bsi
 directoryContent = './md/'
 directoryContentComponent = '/C/'
 directoryContentNotes = '/N/'
@@ -20,7 +19,7 @@ directoryContentThreats = '/T/'
 xpathString = '.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li'
 
 
-#get all links under a h2Headline what can be Elemetare Gefährdungen, Bausteine and Umsetzungshinweise
+# get all links under a h2Headline what can be Elemetare Gefährdungen, Bausteine and Umsetzungshinweise
 def get_links(response, h2Headline):
     links = []
 
@@ -39,28 +38,28 @@ def get_links(response, h2Headline):
             return links
 
 
-
 class bsiSpider(sc.Spider):
     name = "bsiSpider"
-    #startpage to crawl
-    start_urls = ['https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
+    # startpage to crawl
+    start_urls = [
+        'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
 
     def parse(self, response):
         print('Start Crawling the content of the BSI')
-        #get all links under Bausteine, Elementare Gefährdungen und Umsetzungshinweise
-        urlsG = get_links(response,'Elementare Gefährdungen')
-        urlsB = get_links(response,'Bausteine')
-        urlsU = get_links(response,'Umsetzungshinweise')
+        # get all links under Bausteine, Elementare Gefährdungen und Umsetzungshinweise
+        urlsG = get_links(response, 'Elementare Gefährdungen')
+        urlsB = get_links(response, 'Bausteine')
+        urlsU = get_links(response, 'Umsetzungshinweise')
 
-        #go to every link
+        # go to every link
         for g in urlsG:
-           yield sc.Request(g, callback=self.parseLinkList_G, dont_filter=True)
+            yield sc.Request(g, callback=self.parseLinkList_G, dont_filter=True)
 
         for b in urlsB:
-           yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
+            yield sc.Request(b, callback=self.parseLinkList, dont_filter=True)
 
         for u in urlsU:
-           yield sc.Request(u, callback=self.parseLinkList_H, dont_filter=True)
+            yield sc.Request(u, callback=self.parseLinkList_H, dont_filter=True)
 
     def parseLinkList(self, response):
         siteUrl = []
@@ -89,7 +88,7 @@ class bsiSpider(sc.Spider):
         for link in siteUrl:
             yield sc.Request(link, callback=self.parse_following_urls_of_G, dont_filter=True)
 
-    def parse_following_urls_of_G(self,response):
+    def parse_following_urls_of_G(self, response):
         SET_SELCTOR = '#content'
         content = response.css(SET_SELCTOR)
         h1 = content.xpath('h1/text()').extract()[0].strip()
@@ -103,7 +102,6 @@ class bsiSpider(sc.Spider):
         f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
-
     def parse_following_urls_H(self, response):
 
         SET_SELCTOR = '#content'
@@ -113,7 +111,7 @@ class bsiSpider(sc.Spider):
         h2Element = content.xpath('h2')
 
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
-        allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
+        allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
         f = open(directoryContent + '/' + directoryContentNotes + re.sub('/', '-', h1) + '.md', 'w')
         f.write(md(allRelatedContentOneStringHTML))
@@ -128,7 +126,7 @@ class bsiSpider(sc.Spider):
         h2Element = content.xpath('h2')
 
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
-        allRelatedContentOneStringHTML = functools.reduce(lambda x,y: x+y,allRelatedContentHTML)
+        allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
         f = open(directoryContent + '/' + directoryContentComponent + re.sub('/', '-', h1) + '.md', 'w')
         f.write(md(allRelatedContentOneStringHTML))

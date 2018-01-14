@@ -1,10 +1,11 @@
 import csv
 import itertools
+import json
 from collections import Counter
 from operator import itemgetter
-from django.http import HttpResponse
-import json
 from random import shuffle
+
+from django.http import HttpResponse
 
 topicAndNumber = []
 
@@ -13,31 +14,34 @@ pathOfThreadsCSV = './../programming/bsiWizard/csv/threadsTopics.csv'
 
 numberOfRelatedElements = 5
 
-def getPathOfElement(title,pathlist,requestParameter):
+
+def getPathOfElement(title, pathlist, requestParameter):
     checkPath = ''
-    if(requestParameter == 'c'):
+    if (requestParameter == 'c'):
         checkPath = 'components'
-    elif(requestParameter == 't'):
+    elif (requestParameter == 't'):
         checkPath = 'threats'
 
     for el in pathlist:
-        if(el['name'].lower() == title.lower() and checkPath in el['path']):
+        if (el['name'].lower() == title.lower() and checkPath in el['path']):
             return el['path']
     return ''
 
-def generateDic(list,pathlist,requestParameter):
+
+def generateDic(list, pathlist, requestParameter):
     title = list[0]
-    path = getPathOfElement(title,pathlist,requestParameter)
-    componentDic = {'name':title,'path':path ,'topics':list[1:]}
+    path = getPathOfElement(title, pathlist, requestParameter)
+    componentDic = {'name': title, 'path': path, 'topics': list[1:]}
     return componentDic
 
+
 def readAndProcessCSV(fileName, requestParameter):
-    elementWithTopics = {'element':[]}
+    elementWithTopics = {'element': []}
     with open(fileName) as f:
         jsonFile = getPathList()
         reader = csv.reader(f)
         for row in reader:
-            dic = generateDic(row,jsonFile,requestParameter)
+            dic = generateDic(row, jsonFile, requestParameter)
             elementWithTopics['element'].append(dic)
     return elementWithTopics
 
@@ -47,13 +51,16 @@ def getPathList():
     jsonFile = json.loads(pathlist.read())
     return jsonFile
 
-def generateElementDic(title,path):
-    return {'title':title,'path':path}
+
+def generateElementDic(title, path):
+    return {'title': title, 'path': path}
+
 
 def getTopicComponent(topic):
-    return {'topic':topic,'elements':[]}
+    return {'topic': topic, 'elements': []}
 
-def generateTopicsWithRelatedElements(topics,elements,requestParameter):
+
+def generateTopicsWithRelatedElements(topics, elements, requestParameter):
     topicsWithElements = []
     listOfAllTopics = []
     listOfAllTopicNames = []
@@ -68,14 +75,14 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
         topicDic = getTopicComponent(topic)
 
         for row in rowsOfTopicList:
-                for i in range(0,len(row)):
-                    if (len(topicDic['elements']) < numberOfRelatedElements):
-                        if row[i] == topic:
-                            title = listOfAllTopicNames[i]
-                            pathOfElement = getPathOfElement(title,pathList,requestParameter)
-                            topicDic['elements'].append(generateElementDic(title,pathOfElement))
-                    else:
-                        break
+            for i in range(0, len(row)):
+                if (len(topicDic['elements']) < numberOfRelatedElements):
+                    if row[i] == topic:
+                        title = listOfAllTopicNames[i]
+                        pathOfElement = getPathOfElement(title, pathList, requestParameter)
+                        topicDic['elements'].append(generateElementDic(title, pathOfElement))
+                else:
+                    break
 
         topicsWithElements.append(topicDic)
 
@@ -83,17 +90,18 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
 
 
 def filterTopicElementList(topicWithRelatedElements, name):
-    return list(filter(lambda x: x['topic'] == name,topicWithRelatedElements))[0]
+    return list(filter(lambda x: x['topic'] == name, topicWithRelatedElements))[0]
+
 
 def orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic):
     topicListSortedByNumber = []
     currentNumber = numberOfEachTopic[0][1]
     currentNumberTopicList = []
     for index, topicNumber in enumerate(numberOfEachTopic):
-        if(topicNumber[1] == currentNumber):
-            currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements,topicNumber[0]))
+        if (topicNumber[1] == currentNumber):
+            currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements, topicNumber[0]))
         else:
-            if(numberOfEachTopic[index] == len(numberOfEachTopic) -1):
+            if (numberOfEachTopic[index] == len(numberOfEachTopic) - 1):
                 currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements, topicNumber[0]))
                 break
             else:
@@ -105,7 +113,7 @@ def orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic):
     return topicListSortedByNumber
 
 
-def getListOfFrequenceOfTopic(elements,requestParameter):
+def getListOfFrequenceOfTopic(elements, requestParameter):
     topics = []
     listOfAllTopics = []
 
@@ -118,10 +126,11 @@ def getListOfFrequenceOfTopic(elements,requestParameter):
     for topic in numberOfEachTopic:
         topics.append(topic[0])
 
-    topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements,requestParameter)
+    topicWithRelatedElements = generateTopicsWithRelatedElements(topics, elements, requestParameter)
     orderedTopic = orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic)
 
     return orderedTopic
+
 
 def randomizeTopicSerialization(topicLists):
     randomizeTopicList = []
@@ -131,6 +140,7 @@ def randomizeTopicSerialization(topicLists):
 
     return randomizeTopicList
 
+
 def generateSortedTopicList(fakeRequest):
     global topicListThread
     global topicListComponent
@@ -139,12 +149,13 @@ def generateSortedTopicList(fakeRequest):
     components = readAndProcessCSV(fileName, requestParameter)
     orderdTopicList = getListOfFrequenceOfTopic(components['element'], requestParameter)
 
-    if(fakeRequest == 't'):
+    if (fakeRequest == 't'):
         topicListThread = orderdTopicList
 
-    elif(fakeRequest == 'c'):
+    elif (fakeRequest == 'c'):
         topicListComponent = orderdTopicList
     return
+
 
 def generateElementTopics(fakeRequest):
     global elementTopicThread
@@ -158,6 +169,7 @@ def generateElementTopics(fakeRequest):
         elementTopicComponent = json.dumps(components)
     return
 
+
 def getSortedTopicList(request):
     requestParamter = dict(request.GET)['element'][0]
 
@@ -170,12 +182,14 @@ def getSortedTopicList(request):
         randomizeTopicString = json.dumps({'sortedTopicList': randomizeTopic})
         return HttpResponse(randomizeTopicString, content_type='application/json')
 
+
 def getElementsTopics(request):
     requestParamter = dict(request.GET)['element'][0]
     if (requestParamter == 't'):
         return HttpResponse(elementTopicThread, content_type='application/json')
     elif (requestParamter == 'c'):
         return HttpResponse(elementTopicComponent, content_type='application/json')
+
 
 def getFileName(request):
     fileName = ''
@@ -184,4 +198,4 @@ def getFileName(request):
         fileName = pathOfComponentsCSV
     elif (requestParameter == 't'):
         fileName = pathOfThreadsCSV
-    return fileName,requestParameter
+    return fileName, requestParameter

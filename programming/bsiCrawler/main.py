@@ -1,13 +1,14 @@
+import os
+import shutil
 from multiprocessing import Pool
-from threading import Thread
-from translatorMultiProcessing import  translate
-import os, shutil
-import time
+
+from translatorMultiProcessing import translate
 
 '''
 This module is the main module for retrieving data from the BSI. It generates all necessary folder structures, 
 retrieves the content from the BSI and translates it into English.
 '''
+
 
 def deleteAllFilesInDirectory(directory):
     for the_file in os.listdir(directory):
@@ -20,16 +21,17 @@ def deleteAllFilesInDirectory(directory):
         except Exception as e:
             print(e)
 
+
 def crawlTranslateTreeview():
-    #directorys to store the content of the bsi
+    # directorys to store the content of the bsi
     directoryC = './md/C'
     directoryT = './md/T'
     directoryN = './md/N'
 
     print('Getting Started with Data from the BSI')
     print('Delete all Files of the md directory')
-    #deleteAllFilesInDirectory('./md')
-    #deleteAllFilesInDirectory('./mdEn')
+    # deleteAllFilesInDirectory('./md')
+    # deleteAllFilesInDirectory('./mdEn')
     print('Deleting is is completed')
 
     print('Missing folder structures are created.')
@@ -67,7 +69,7 @@ def crawlTranslateTreeview():
 
     os.system("scrapy runspider crawli.py --nolog")
 
-    #start translation with Multiprocessing
+    # start translation with Multiprocessing
     print('Start the translation')
     files = os.listdir(directoryC)
     files.extend(os.listdir(directoryT))
@@ -80,6 +82,7 @@ def crawlTranslateTreeview():
     print('Generate treeview of the BSI')
     os.system("scrapy runspider crawliTree.py --nolog")
     print('Generation of the treeview is finshed')
+
 
 if __name__ == "__main__":
     crawlTranslateTreeview()

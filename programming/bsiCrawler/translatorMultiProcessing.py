@@ -1,9 +1,11 @@
-from googletrans import Translator
+import functools
 import os
 import re
 import time
+
 import progressbar
-import functools
+from googletrans import Translator
+
 
 def content_from_list(content):
     mdFilePart = ''
@@ -103,7 +105,7 @@ def check15k(list, component):
                 threats = True
                 referenceList.append(line)
 
-            if(threats and '* ' in line):
+            if (threats and '* ' in line):
                 referenceList.append(line)
 
             if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
