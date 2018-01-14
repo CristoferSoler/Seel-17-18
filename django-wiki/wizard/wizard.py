@@ -6,6 +6,8 @@ from django.http import HttpResponse
 import json
 from random import shuffle
 
+topicAndNumber = []
+
 pathOfComponentsCSV = './../programming/bsiWizard/csv/componentsTopics.csv'
 pathOfThreadsCSV = './../programming/bsiWizard/csv/threadsTopics.csv'
 
@@ -80,6 +82,29 @@ def generateTopicsWithRelatedElements(topics,elements,requestParameter):
     return topicsWithElements
 
 
+def filterTopicElementList(topicWithRelatedElements, name):
+    return list(filter(lambda x: x['topic'] == name,topicWithRelatedElements))[0]
+
+def orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic):
+    topicListSortedByNumber = []
+    currentNumber = numberOfEachTopic[0][1]
+    currentNumberTopicList = []
+    for index, topicNumber in enumerate(numberOfEachTopic):
+        if(topicNumber[1] == currentNumber):
+            currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements,topicNumber[0]))
+        else:
+            if(numberOfEachTopic[index] == len(numberOfEachTopic) -1):
+                currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements, topicNumber[0]))
+                break
+            else:
+                topicListSortedByNumber.append(currentNumberTopicList)
+                currentNumber = numberOfEachTopic[index][1]
+                currentNumberTopicList = []
+                currentNumberTopicList.append(filterTopicElementList(topicWithRelatedElements, topicNumber[0]))
+
+    return topicListSortedByNumber
+
+
 def getListOfFrequenceOfTopic(elements,requestParameter):
     topics = []
     listOfAllTopics = []
@@ -90,43 +115,21 @@ def getListOfFrequenceOfTopic(elements,requestParameter):
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
 
-    #randomize the serialization of the topics regarding the intervall x>40, 40>x>20, 20>x>10, 10>x>5,x<5
-    #randomSerializationOfTopics = randomizeTopicSerialization(numberOfEachTopic)
-
     for topic in numberOfEachTopic:
         topics.append(topic[0])
 
     topicWithRelatedElements = generateTopicsWithRelatedElements(topics,elements,requestParameter)
+    orderedTopic = orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic)
 
-    return topicWithRelatedElements
+    return orderedTopic
 
-def randomizeTopicSerialization(topics):
-    gtFourty = []
-    btwFourtyAndtwenty = []
-    btwTwentyAndTen = []
-    btwTenAndFive = []
-    smFive = []
-    for topic in topics:
-        countOfTopic = topic[1]
-        if countOfTopic > 40:
-            gtFourty.append(topic)
-        if countOfTopic <= 40 and countOfTopic > 20:
-            btwFourtyAndtwenty.append(topic)
-        if countOfTopic <= 20 and countOfTopic > 10:
-            btwTwentyAndTen.append(topic)
-        if countOfTopic <= 10 and countOfTopic > 5:
-            btwTenAndFive.append(topic)
-        if countOfTopic <= 5:
-            smFive.append(topic)
-    shuffle(gtFourty)
-    shuffle(btwFourtyAndtwenty)
-    shuffle(btwTwentyAndTen)
-    shuffle(btwTenAndFive)
-    shuffle(smFive)
+def randomizeTopicSerialization(topicLists):
+    randomizeTopicList = []
+    for topicList in topicLists:
+        shuffle(topicList)
+        randomizeTopicList += topicList
 
-    randomSerializationTopics = gtFourty + btwFourtyAndtwenty +btwTwentyAndTen + btwTenAndFive + smFive
-
-    return randomSerializationTopics
+    return randomizeTopicList
 
 def generateSortedTopicList(fakeRequest):
     global topicListThread
@@ -134,13 +137,13 @@ def generateSortedTopicList(fakeRequest):
 
     fileName, requestParameter = getFileName(fakeRequest)
     components = readAndProcessCSV(fileName, requestParameter)
-    frequenceOfTopics = getListOfFrequenceOfTopic(components['element'], requestParameter)
+    orderdTopicList = getListOfFrequenceOfTopic(components['element'], requestParameter)
 
     if(fakeRequest == 't'):
-        topicListThread = json.dumps({'sortedTopicList': frequenceOfTopics})
+        topicListThread = orderdTopicList
 
     elif(fakeRequest == 'c'):
-        topicListComponent = json.dumps({'sortedTopicList': frequenceOfTopics})
+        topicListComponent = orderdTopicList
     return
 
 def generateElementTopics(fakeRequest):
@@ -153,15 +156,19 @@ def generateElementTopics(fakeRequest):
         elementTopicThread = json.dumps(components)
     elif (fakeRequest == 'c'):
         elementTopicComponent = json.dumps(components)
-
     return
 
 def getSortedTopicList(request):
     requestParamter = dict(request.GET)['element'][0]
+
     if (requestParamter == 't'):
-        return HttpResponse(topicListThread, content_type='application/json')
+        randomizeTopic = randomizeTopicSerialization(topicListThread)
+        randomizeTopicString = json.dumps({'sortedTopicList': randomizeTopic})
+        return HttpResponse(randomizeTopicString, content_type='application/json')
     elif (requestParamter == 'c'):
-        return HttpResponse(topicListComponent, content_type='application/json')
+        randomizeTopic = randomizeTopicSerialization(topicListComponent)
+        randomizeTopicString = json.dumps({'sortedTopicList': randomizeTopic})
+        return HttpResponse(randomizeTopicString, content_type='application/json')
 
 def getElementsTopics(request):
     requestParamter = dict(request.GET)['element'][0]
@@ -169,8 +176,6 @@ def getElementsTopics(request):
         return HttpResponse(elementTopicThread, content_type='application/json')
     elif (requestParamter == 'c'):
         return HttpResponse(elementTopicComponent, content_type='application/json')
-
-
 
 def getFileName(request):
     fileName = ''
