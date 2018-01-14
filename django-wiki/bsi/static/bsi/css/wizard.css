@@ -37,7 +37,7 @@
         position: fixed;
         float: right;
         text-align: left;
-        margin-top: 5%;
+        margin-top: 8%;
         right: 50px;
         z-index: 10;
     }
@@ -47,16 +47,24 @@
         float:left;
         padding: 15px;
         border-radius: 0;
-        background-repeat:no-repeat;
+        background-color: Transparent;
+        color: #000000;
         border: none;
         cursor:pointer;
         overflow: hidden;
     }
 
+    #opener img {
+        background: url("../images/wizard.png") no-repeat scroll 0 0 transparent;
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+    }
+
     #content {
         position: absolute;
         float: right;
-        margin-left: 50px;
+        margin-left: 110px;
         height: 550px;
         width: 500px;
         border: black;
@@ -127,7 +135,7 @@
         position: fixed;
         float: right;
         text-align: left;
-        margin-top:20%;
+        margin-top:30%;
         right: 50px;
         z-index: 10;
     }
@@ -139,10 +147,17 @@
         border-radius: 0;
     }
 
+        #opener img {
+        background: url("../images/wizard.png") no-repeat scroll 0 0 transparent;
+        width: 38px;
+        height: 38px;
+        display: inline-block;
+    }
+
     #content {
         position: absolute;
         float: right;
-        margin-left: 50px;
+        margin-left: 70px;
         height: 320px;
         width: 270px;
         border: black;
@@ -184,8 +199,4 @@ li.collapsibleListClosed{
 .panel-heading-sm{
     height: 28px;
     padding: 4px 10px;
-}
-
-.btn-panel{
-    background:orangered;
 }
