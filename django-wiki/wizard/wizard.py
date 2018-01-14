@@ -27,13 +27,18 @@ def getPathOfElement(title, pathlist, requestParameter):
             return el['path']
     return ''
 
+def topicDic(name):
+    return dict(name=name,state='n')
+
 
 def generateDic(listDummy, pathlist, requestParameter):
     title = listDummy[0]
     path = getPathOfElement(title, pathlist, requestParameter)
-    topicWithState = listDummy[1:]
-    print(topicWithState)
-    topics = list(map(lambda x:dict(name=x),topicWithState))
+    topicWithoutState = listDummy[1:]
+
+    topics = []
+    for topic in topicWithoutState:
+        topics.append(topicDic(topic))
 
     componentDic = dict(name=title, percentage=1, path=path, topics=topics)
     return componentDic
@@ -122,7 +127,11 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
     listOfAllTopics = []
 
     for element in elements:
-        listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
+        topicList = []
+        for topic in element['topics']:
+            topicList.append(topic['name'])
+        listOfAllTopics = itertools.chain(listOfAllTopics, topicList)
+
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
