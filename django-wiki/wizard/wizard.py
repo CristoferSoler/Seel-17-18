@@ -28,13 +28,14 @@ def getPathOfElement(title, pathlist, requestParameter):
     return ''
 
 
-def generateDic(list, pathlist, requestParameter):
-    title = list[0]
+def generateDic(listDummy, pathlist, requestParameter):
+    title = listDummy[0]
     path = getPathOfElement(title, pathlist, requestParameter)
+    topicWithState = listDummy[1:]
+    print(topicWithState)
+    topics = list(map(lambda x:dict(name=x),topicWithState))
 
-    #TODO convert list of topics to object list with name and state
-
-    componentDic = dict(name=title, percentage=1, path=path, topics=list[1:])
+    componentDic = dict(name=title, percentage=1, path=path, topics=topics)
     return componentDic
 
 
