@@ -4,7 +4,6 @@ import json
 import logging
 
 from django.contrib import messages
-from django.core import serializers
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -93,24 +92,10 @@ def get_bsi_articles(request):
             title_json['value'] = bsi.url.article.current_revision.title
             results.append(title_json)
         data = json.dumps(results)
-        # data = serializers.serialize('json', results)
     else:
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
-
-
-# class UGCreateAddLinksView(FormView, ArticleMixin):
-#     template_name = "uga/create_article_add_links.html"
-#     form_class = AddLinksForm
-#
-#     @method_decorator(get_article(can_write=True, can_create=True))
-#     def dispatch(self, request, article, *args, **kwargs):
-#         return super(UGCreateAddLinksView, self).dispatch(request, article, *args, **kwargs)
-#
-#     def get_form(self, form_class=None):
-#         form = super(UGCreateAddLinksView, self).get_form(form_class=form_class)
-#         return form
 
 
 class UGEditView(Edit):
