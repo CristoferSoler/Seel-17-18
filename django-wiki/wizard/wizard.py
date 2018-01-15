@@ -72,7 +72,8 @@ def generateTopicsWithRelatedElements(topics, elements, requestParameter):
     pathList = getPathList()
 
     for element in elements:
-        listOfAllTopics.append(element['topics'])
+        topicWithoutDic = list(map(lambda x: x['name'], element['topics']))
+        listOfAllTopics.append(topicWithoutDic)
         listOfAllTopicNames.append(element['name'])
     rowsOfTopicList = list(zip(*listOfAllTopics))
 
@@ -123,10 +124,8 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
     listOfAllTopics = []
 
     for element in elements:
-        topicList = []
-        for topic in element['topics']:
-            topicList.append(topic['name'])
-        listOfAllTopics = itertools.chain(listOfAllTopics, topicList)
+        topicWithoutDic = list(map(lambda x:x['name'],element['topics']))
+        listOfAllTopics = itertools.chain(listOfAllTopics, topicWithoutDic)
 
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
@@ -136,6 +135,8 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
         topics.append(topic[0])
 
     topicWithRelatedElements = generateTopicsWithRelatedElements(topics, elements, requestParameter)
+
+    print(topicWithRelatedElements)
     orderedTopic = orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic)
 
     return orderedTopic
