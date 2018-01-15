@@ -513,6 +513,7 @@ function clearLocalStorage(){
     localStorage.removeItem('mode');
     localStorage.removeItem('selectedNode');
     localStorage.removeItem('topicListVisible');
+    localStorage.removeItem('resultListVisible');
 }
 
 function buttonsWizard() {
