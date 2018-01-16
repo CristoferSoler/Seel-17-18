@@ -15,7 +15,7 @@ class Question(models.Model):
     url = models.ForeignKey(URLPath, on_delete=models.CASCADE)
 
     @classmethod
-    def delete_old_questions():
+    def delete_old_questions(self):
         Question.objects.filter(timestamp__lte=datetime.now()-timedelta(days=30)).delete()
 
     @transaction.atomic
@@ -32,12 +32,26 @@ class Question(models.Model):
         return self.answer_set.create(answer=text, user=user)
 
     def delete_question(self):
-        # TODO
-        pass
+        if(self):
+            if(self.get_answers()):
+                answers = self.get_answers().delete()
+                answers.delete()
+                answers.save()
+            self.delete()
+            self.save()
+            return True
+        else:
+            return False
 
-    def edit_question(self, text):
-        # TODO
-        pass
+
+    def edit_question(self,text):
+        if(self):
+            self.question = text
+            self.save()
+            return True
+        else:
+            return False
+
 
     def get_answers(self):
         return self.answer_set.all()
@@ -50,5 +64,9 @@ class Answer(models.Model):
     timestamp = models.DateTimeField(default=get_timestamp_now)
 
     def edit_answer(self, text):
-        # TODO
-        pass
+        if(self):
+            self.answer = text
+            self.save()
+            return True
+        else:
+            return False
