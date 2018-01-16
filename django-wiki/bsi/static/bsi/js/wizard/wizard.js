@@ -74,11 +74,14 @@ function inilizeData() {
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
 
     //TODO
+    //showResults();
     /*
     if (remainingComponents.length <= thresholdTopicNumber) {
         $('#results').removeClass('invisible');
         showResults();
     }*/
+    $('#results').removeClass('invisible');
+    showResults();
 
     var mode = localStorage.getItem('mode');
     if (mode !== null) {
@@ -501,7 +504,6 @@ function safeData() {
     localStorage.setItem('answerList', JSON.stringify(answerList));
     localStorage.setItem('amountOfTotalTopics', String(amountOfTotalTopics));
     localStorage.setItem('elementWithTopicsList', JSON.stringify(elementWithTopicsList))
-    localStorage.removeItem('mode');
 }
 
 function clearLocalStorage() {
