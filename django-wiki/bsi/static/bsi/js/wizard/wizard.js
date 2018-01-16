@@ -1,9 +1,10 @@
-var orginalTopic;
-var remainingComponents;
-var currentTopic = 0;
-var currentSortedTopic;
+//TODO Back,Restart,PresentResult
+
+var amountOfTotalTopics = 0;
 const thresholdTopicNumber = 10;
+var elementWithTopicsList;
 var valid = false;
+var sortedTopicList;
 
 const entryQuestionThread = 'Would you like to know more about a specific IT Threat?';
 const entryQuestionComponent = 'Do you have a specific IT problem and would you like to know more about it and see its solutions?';
@@ -26,12 +27,12 @@ function stringToBoolean(boolString) {
     }
 
 function setCurrentTopicWordPanel() {
-    $('#topicWord').text(currentSortedTopic[currentTopic]['topic']);
+    $('#topicWord').text(sortedTopicList[amountOfTotalTopics]['topic']);
 }
 
 function showElements() {
     $('#articleTopicList').empty();
-    var currentElements = currentSortedTopic[currentTopic]['elements'];
+    var currentElements = sortedTopicList[amountOfTotalTopics]['elements'];
     setCurrentTopicWordPanel();
     currentElements.forEach(function(element) {
         var path = element['path'];
@@ -56,34 +57,19 @@ function showElements() {
 function inilizeData() {
     getDataFromServer();
 
-    if(currentTopic < 0){
+    if(amountOfTotalTopics < 0){
        invisbaleTopicResutlPanel()
     } else{
         $('#topics').removeClass('invisible');
         $('#results').addClass('invisible')
     }
 
+    elementWithTopicsList = JSON.parse(localStorage.getItem('elementWithTopicsList'))['element'];
+    sortedTopicList = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
-    var components = JSON.parse(localStorage.getItem('componentsTopic'))['element'];
-    var sortedTopics = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
+    $("#topic").text(sortedTopics[amountOfTotalTopics]['topic'] + '?');
 
-    if (localStorage.getItem('remainingComponents') === null) {
-        remainingComponents = components.slice();
-        localStorage.setItem('remainingComponents', JSON.stringify(remainingComponents));
-    } else {
-        remainingComponents = JSON.parse(localStorage.getItem('remainingComponents'));
-    }
-
-    if (localStorage.getItem('listOfBack') === null) {
-        var currentTopicString = String(currentTopic);
-        var listOfBack = {};
-        listOfBack[currentTopicString] = remainingComponents;
-        localStorage.setItem('listOfBack', JSON.stringify(listOfBack));
-    }
-
-    $("#topic").text(sortedTopics[currentTopic]['topic'] + '?');
-    currentSortedTopic = sortedTopics.slice();
-
+    //TODO
     if (remainingComponents.length <= thresholdTopicNumber) {
         $('#results').removeClass('invisible');
         showResults();
@@ -101,13 +87,13 @@ function inilizeData() {
 
     $("#dontKnowButton").removeClass('disabled');
 
-    if (currentTopic === -2) {
+    if (amountOfTotalTopics === -2) {
         $("#topicBack").addClass('disabled');
     } else{
         $("#topicBack").removeClass('disabled');
     }
 
-    if(currentTopic >= 0){
+    if(amountOfTotalTopics >= 0){
         showElements();
     }
 
@@ -115,24 +101,24 @@ function inilizeData() {
 
 function initWizard() {
 
-    if(localStorage.getItem('currentTopic')=== null){
-        currentTopic = -2;
-        localStorage.setItem('currentTopic',String(currentTopic));
+    if(localStorage.getItem('amountOfTotalTopics')=== null){
+        amountOfTotalTopics = -2;
+        localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
     } else{
-        currentTopic = parseInt(localStorage.getItem('currentTopic'));
+        amountOfTotalTopics = parseInt(localStorage.getItem('amountOfTotalTopics'));
     }
 
-    if(currentTopic < 0){
+    if(amountOfTotalTopics < 0){
         $('#topics').addClass('invisible')
         $('#results').addClass('invisible')
     }
 
-    if(currentTopic < 0){
-        if(currentTopic == -1){
+    if(amountOfTotalTopics < 0){
+        if(amountOfTotalTopics == -1){
             $('#question').text(entryQuestionThread);
             $('#topic').text('');
         } else{
-            if(currentTopic == - 2){
+            if(amountOfTotalTopics == - 2){
                 $('#question').text(entryQuestionComponent);
                 $('#topic').text('');
             }
@@ -144,11 +130,11 @@ function initWizard() {
 }
 
 function yesPress() {
-    console.log(currentTopic);
-    if(currentTopic < 0){
-        if(currentTopic == -2){
-            currentTopic = 0;
-            localStorage.setItem('currentTopic',String(currentTopic));
+    console.log(amountOfTotalTopics);
+    if(amountOfTotalTopics < 0){
+        if(amountOfTotalTopics == -2){
+            amountOfTotalTopics = 0;
+            localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
             localStorage.setItem('mode','c');
             $('#question').text(questionComponent);
             $('#dontKnowButton').removeClass('disabled');
@@ -156,30 +142,30 @@ function yesPress() {
 
             initWizard()
         } else {
-            if(currentTopic == -1){
-                currentTopic = 0;
-                localStorage.setItem('currentTopic',String(currentTopic));
+            if(amountOfTotalTopics == -1){
+                amountOfTotalTopics = 0;
+                localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
                 localStorage.setItem('mode','t');
                 $('#question').text(questionThread);
                 initWizard();
             }
         }
     } else{
-        checkTopics(true);
+        checkTopics('y');
     }
 }
 
 function noPress() {
-    if(currentTopic < 0){
-        if(currentTopic == -2){
-            currentTopic = currentTopic + 1;
-            localStorage.setItem('currentTopic',String(currentTopic));
+    if(amountOfTotalTopics < 0){
+        if(amountOfTotalTopics == -2){
+            amountOfTotalTopics = amountOfTotalTopics + 1;
+            localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
             $('#question').text(entryQuestionThread);
             $('#topic').text('');
             $('#topicBack').removeClass('disabled');
 
         } else {
-            if(currentTopic == -1){
+            if(amountOfTotalTopics == -1){
                 $('#question').text('Would you like to find out if you have a problem you are not aware of? Unfortunately this feature is not available yet. Please press restart');
                 $('#topic').text('');
                 $('#yesButton').addClass('disabled');
@@ -189,30 +175,90 @@ function noPress() {
             }
         }
     } else {
-        checkTopics(false);
+        checkTopics('n');
     }
 
 }
 
-function checkTopicStayInside(yes) {
-    var currentTopicString = currentSortedTopic[currentTopic]['topic'];
-    remainingComponents.forEach(function (element) {
-        var check = element['topics'].includes(currentTopicString)
-        if (yes) {
-            check = !check;
+function dontknowPress() {
+    if($("#topicBack").hasClass('disabled')){
+        $("#topicBack").removeClass('disabled');
+    }
+    checkTopics('d');
+}
+
+function setStateForTopic(topic) {
+    if (this.currentTopic === topic['name']){
+        return topic['state'] = this.pick;
+    } else{
+        return topic;
+    }
+}
+
+function filterState(topic) {
+    return topic['state'] === this.pick;
+}
+
+function filterTopic(topic) {
+    return topic['name'] === this.currentTopic;
+}
+
+function amountOfStates(changedTopicsOfElements) {
+    var amountOfCorrectTopics = 0;
+    var amountOfNotSureTopics = 0;
+
+    if (this.pick !== 'n') {
+        var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
+        var filteredTopicOfElementsDontKnow = changedTopicsOfElements.filter(filterState, {pick: 'd'});
+        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length;
+        amountOfNotSureTopics = filteredTopicOfElementsDontKnow.length;
+    } else {
+        var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
+        var filteredCurrentTopicInElementsTopic = changedTopicsOfElements.filter(filterTopic, {currentTopic: this.currentTopic});
+
+        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length;
+        if (filteredCurrentTopicInElementsTopic.length === 0) {
+            amountOfCorrectTopics += 1;
         }
 
-        if (check) {
-            var index = remainingComponents.indexOf(element)
-            if (index > -1) {
-                remainingComponents.splice(index, 1);
-            }
-        }
-    })
+        var filteredTopicOfElementsDontKnow = changedTopicsOfElements.filter(filterState, {pick: 'd'});
+        amountOfNotSureTopics = filteredTopicOfElementsDontKnow.length;
+    }
+
+    return{
+        notSure:amountOfNotSureTopics,
+        correct:amountOfCorrectTopics
+    }
+
+}
+
+function calculatePercentage(amountOfCorrent, amountOfNotSure) {
+    var dividend = amountOfCorrent + 0.5 * amountOfNotSure + 1;
+    var divisor = amountOfTotalTopics + 1;
+    result = dividend/divisor;
+    return result;
+}
+
+function calculatePercentageOfOneElement(element) {
+    var topicsOfElement = element['topics'];
+    var changedTopicsOfElements = topicsOfElement.map(setStateForTopic,{pick:this.pick,name:element['name'],currentTopic:this.currentTopic});
+    amount = amountOfStates.call(this, changedTopicsOfElements);
+
+    percentage = calculatePercentage(amount.correct,amount.notSure);
+
+    element['topics'] = changedTopicsOfElements;
+    element['percentage'] = percentage;
+
+    return element;
+}
+
+function calculatePercentageOfAllElements(pick) {
+    var currentTopicString = sortedTopicList[amountOfTotalTopics-1]['topic'];
+    elementWithTopicsList = elementWithTopicsList.map(calculatePercentageOfOneElement ,{pick: pick,currentTopic:currentTopicString});
 }
 
 function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goForward) {
-    var currentTopicString = currentSortedTopic[nextTopic]['topic'];
+    var currentTopicString = sortedTopicList[nextTopic]['topic'];
     topicElements.forEach(function (element) {
         var check = element['topics'].includes(currentTopicString)
         if (yes) {
@@ -252,57 +298,31 @@ function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goFo
 
 }
 
-function checkTopics(yes) {
+function checkTopics(pick) {
 
     if($("#topicBack").hasClass('disabled')){
         $("#topicBack").removeClass('disabled');
     }
 
-    checkTopicStayInside(yes);
+    amountOfTotalTopics = amountOfTotalTopics + 1;
+    calculatePercentageOfAllElements(pick);
 
-    currentTopic = currentTopic + 1;
+    //checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),amountOfTotalTopics,true);
+    //checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),amountOfTotalTopics,true);
+    //addGoBackListTopicList();
 
-    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
-    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic,true);
-
-    addGoBackListTopicList();
-    checkPresentResults();
+    postprocessingCalculation();
 }
 
-function checkPresentResults() {
-        if (remainingComponents.length <= thresholdTopicNumber) {
-            $("#topic").text(currentSortedTopic[currentTopic]['topic'] + '?');
-            showElements();
-            showResults();
-        } else {
-            $("#list").empty();
-            $("#topic").text(currentSortedTopic[currentTopic]['topic']+ '?');
-            showElements();
-        }
-        safeData();
-    }
-
-
-function dontknowPress() {
-    if($("#topicBack").hasClass('disabled')){
-        $("#topicBack").removeClass('disabled');
-    }
-
-    currentTopic = currentTopic + 1;
-    addGoBackListTopicList();
-    $("#topic").text(currentSortedTopic[currentTopic]['topic'] + '?');
-    showElements();
-
-    checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,true);
-    checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),true;
-
-    addGoBackListTopicList()
-
+function postprocessingCalculation() {
     safeData();
-}
+    $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
+    showElements();
+    //showResults();
+    }
 
 function addGoBackListTopicList() {
-    var topicString = String(currentTopic);
+    var topicString = String(amountOfTotalTopics);
     var goBackList = JSON.parse(localStorage.getItem('listOfBack'));
     console.log(goBackList);
     goBackList[topicString] = remainingComponents;
@@ -313,8 +333,8 @@ function addGoBackListTopicList() {
 function restart(){
     invisbaleTopicResutlPanel();
 
-    currentTopic = -2;
-    localStorage.setItem('currentTopic',currentTopic);
+    amountOfTotalTopics = -2;
+    localStorage.setItem('amountOfTotalTopics',amountOfTotalTopics);
 
     $("#list").empty();
     $('#dontKnowButton').addClass('disabled');
@@ -337,18 +357,18 @@ function restart(){
 
 function checkEnableButtons () {
     if(remainingComponents.length >= 1){
-        checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),currentTopic,false);
-        checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),currentTopic),false;
+        checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),amountOfTotalTopics,false);
+        checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),amountOfTotalTopics),false;
     }
 }
 
 function topicBack() {
-    if((currentTopic -1) >= 0) {
-        currentTopic = currentTopic - 1;
-        var currentTopicString = String(currentTopic);
+    if((amountOfTotalTopics -1) >= 0) {
+        amountOfTotalTopics = amountOfTotalTopics - 1;
+        var currentTopicString = String(amountOfTotalTopics);
         var listOfBack = JSON.parse(localStorage.getItem('listOfBack'));
         remainingComponents = listOfBack[currentTopicString];
-        checkPresentResults();
+        postprocessingCalculation();
         checkEnableButtons();
         setCurrentTopicWordPanel();
         showElements();
@@ -357,55 +377,51 @@ function topicBack() {
         }
 
     } else{
-        if(currentTopic - 1 == -2){
-            currentTopic = - 2;
+        if(amountOfTotalTopics - 1 == -2){
+            amountOfTotalTopics = - 2;
             $("#topicBack").addClass('disabled');
             $("#dontKnowButton").addClass('disabled');
 
             $('#question').text(entryQuestionComponent);
             $('#topic').text('');
-            localStorage.setItem('currentTopic',String(currentTopic))
+            localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics))
             localStorage.setItem('mode','c');
             clearTopicStorage();
 
         } else {
-            if(currentTopic -1 == -1){
+            if(amountOfTotalTopics -1 == -1){
                 if(localStorage.getItem('mode') == 'c'){
-                    currentTopic = - 2;
+                    amountOfTotalTopics = - 2;
                     $("#topicBack").addClass('disabled');
                     $("#dontKnowButton").addClass('disabled');
                     $('#question').text(entryQuestionComponent);
                     $('#topic').text('');
-                    localStorage.setItem('currentTopic',String(currentTopic))
+                    localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics))
                     localStorage.setItem('mode','c');
                     clearTopicStorage();
 
                 }
                 if(localStorage.getItem('mode') == 't'){
-                    currentTopic = currentTopic -1;
+                    amountOfTotalTopics = amountOfTotalTopics -1;
                     $('#question').text(entryQuestionThread);
                      $("#dontKnowButton").addClass('disabled');
                     $('#topic').text('');
-                    localStorage.setItem('currentTopic',String(currentTopic))
+                    localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics))
                     localStorage.setItem('mode','t');
                     clearTopicStorage();
                 }
 
                 invisbaleTopicResutlPanel();
             }
-
         }
     }
-
-
-
 }
 
 function clearTopicStorage() {
-   localStorage.removeItem('componentsTopic');
-    localStorage.removeItem('remainingComponents');
-    localStorage.removeItem('sortedTopics');
-    localStorage.removeItem('listOfBack');
+   localStorage.removeItem('elementWithTopicsList');
+   localStorage.removeItem('remainingComponents');
+   localStorage.removeItem('sortedTopics');
+   localStorage.removeItem('listOfBack');
 }
 
 function invisbaleTopicResutlPanel() {
@@ -417,12 +433,6 @@ function invisbaleTopicResutlPanel() {
 
     $('#topics').addClass('invisible');
     $('#results').addClass('invisible');
-}
-
-
-function visbaleTopicResutl() {
-    $('#topics').removeClass('invisible')
-    $('#results').removeClass('invisible')
 }
 
 
@@ -452,14 +462,6 @@ function showResults() {
     }
 
     valid = false;
-
-    /*
-    $('li a').bind('click',function () {
-        valid = true;
-        console.log('in Bind of test');
-    });
-    */
-    //localStorage.setItem("wizard", JSON.stringify(remainingComponents))
 }
 
 function getDataFromServer(){
@@ -472,14 +474,14 @@ function getDataFromServer(){
         }
     }
 
-    if(localStorage.getItem('componentsTopic') === null){
+    if(localStorage.getItem('elementWithTopicsList') === null){
         $.ajax({
             dataType:'json',
             url:'/_wizard/elementsPlusTopics/',
             data: data,
             async: false,
             success:function (result) {
-                localStorage.setItem('componentsTopic',JSON.stringify(result));
+                localStorage.setItem('elementWithTopicsList',JSON.stringify(result));
             }
         });
     }
@@ -499,13 +501,13 @@ function getDataFromServer(){
 }
 
 function safeData() {
-    localStorage.setItem('currentTopic',String(currentTopic));
-    localStorage.setItem('remainingComponents',JSON.stringify(remainingComponents))
+    localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
+    localStorage.setItem('elementWithTopicsList',JSON.stringify(elementWithTopicsList))
 }
 
 function clearLocalStorage(){
-    localStorage.removeItem('componentsTopic');
-    localStorage.removeItem('currentTopic');
+    localStorage.removeItem('elementWithTopicsList');
+    localStorage.removeItem('amountOfTotalTopics');
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
     localStorage.removeItem('visible');
