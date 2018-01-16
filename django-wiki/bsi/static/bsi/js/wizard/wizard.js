@@ -324,14 +324,14 @@ function temp(element) {
 }
 
 function postprocessingCalculation() {
-    tempEl = jQuery.extend(true, [], elementWithTopicsList);
+    /*tempEl = jQuery.extend(true, [], elementWithTopicsList);
     tempElements = tempEl.map(temp);
 
-    window.alert(JSON.stringify(tempElements));
+    window.alert(JSON.stringify(tempElements));*/
     safeData();
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
     showElements();
-    //showResults();
+    showResults();
     }
 
 function addGoBackListTopicList() {
@@ -454,9 +454,12 @@ function showResults() {
     //console.log(remainingComponents);
     $("#list").empty();
     //$("#list").append('<ul class="urd-square-success">');
-    for(i=0;i<remainingComponents.length;i++) {
+    /*for(i=0;i<remainingComponents.length;i++) {
         $("#list").append("<li class='list-group-item'><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
-    }
+    }*/
+    elementWithTopicsList.forEach(function (element) {
+        $("#list").append("<li class='list-group-item'>" + element.name + ': ' + element.percentage + "</li>");
+    });
 
     var isExpanded = $('#collapse1').attr("aria-expanded");
     if(isExpanded){
