@@ -28,7 +28,7 @@ def getPathOfElement(title, pathlist, requestParameter):
     return ''
 
 def topicDic(name):
-    return dict(name=name,state='n')
+    return dict(name=name,state='i')
 
 
 def generateDic(listt, pathlist, requestParameter):

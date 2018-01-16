@@ -67,13 +67,15 @@ function inilizeData() {
     elementWithTopicsList = JSON.parse(localStorage.getItem('elementWithTopicsList'))['element'];
     sortedTopicList = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
-    $("#topic").text(sortedTopics[amountOfTotalTopics]['topic'] + '?');
+    $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
 
     //TODO
+    /*
     if (remainingComponents.length <= thresholdTopicNumber) {
         $('#results').removeClass('invisible');
         showResults();
-    }
+    }*/
+
     var mode = localStorage.getItem('mode');
     if(mode !== null){
         if(mode == 't'){
@@ -188,19 +190,20 @@ function dontknowPress() {
 }
 
 function setStateForTopic(topic) {
-    if (this.currentTopic === topic['name']){
-        return topic['state'] = this.pick;
+    if (this.currentTopic === topic.name){
+        topic.state = this.pick;
+        return topic
     } else{
         return topic;
     }
 }
 
 function filterState(topic) {
-    return topic['state'] === this.pick;
+    return topic.state === this.pick;
 }
 
 function filterTopic(topic) {
-    return topic['name'] === this.currentTopic;
+    return topic.name === this.currentTopic;
 }
 
 function amountOfStates(changedTopicsOfElements) {
@@ -246,8 +249,8 @@ function calculatePercentageOfOneElement(element) {
 
     percentage = calculatePercentage(amount.correct,amount.notSure);
 
-    element['topics'] = changedTopicsOfElements;
-    element['percentage'] = percentage;
+    element.topics = changedTopicsOfElements;
+    element.percentage = percentage;
 
     return element;
 }
@@ -314,7 +317,17 @@ function checkTopics(pick) {
     postprocessingCalculation();
 }
 
+function temp(element) {
+    delete element.topics;
+    delete element.path;
+    return element;
+}
+
 function postprocessingCalculation() {
+    tempEl = jQuery.extend(true, [], elementWithTopicsList);
+    tempElements = tempEl.map(temp);
+
+    window.alert(JSON.stringify(tempElements));
     safeData();
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
     showElements();
