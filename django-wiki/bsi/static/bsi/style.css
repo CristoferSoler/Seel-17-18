@@ -348,14 +348,14 @@ section {
     border-radius: 2px 2px 0 0;
     text-transform: uppercase;
     text-align: center;
-    background: #38BDFF;
+    background: #6ca9ea;
     color: white;
 }
 .widget .widget-body {
     padding: 10px 15px;
     font-size: 15px;
     font-weight: 200;
-    background: #8FDEFF;
+    background: #6ca9ea;
 }
 
 /*Expanding-search from https://github.com/chin8628/Expanding-search*/
@@ -374,7 +374,7 @@ section {
     margin-left: 2px;
 }
 
-.glyphicon{
+.glyphicon.glyphicon-search{
     top: 4px;
 }
 
