@@ -1,5 +1,5 @@
 //TODO Back,Restart,PresentResult
-
+var answerList;
 var amountOfTotalTopics = 0;
 const thresholdTopicNumber = 10;
 var elementWithTopicsList;
@@ -56,6 +56,12 @@ function showElements() {
 
 function inilizeData() {
     getDataFromServer();
+
+    if(localStorage.getItem('answerList') === null){
+        answerList = [];
+    } else {
+        answerList = JSON.parse(localStorage.getItem('answerList'));
+    }
 
     if(amountOfTotalTopics < 0){
        invisbaleTopicResutlPanel()
@@ -153,7 +159,7 @@ function yesPress() {
             }
         }
     } else{
-        checkTopics('y');
+        checkTopics('y',false);
     }
 }
 
@@ -177,7 +183,7 @@ function noPress() {
             }
         }
     } else {
-        checkTopics('n');
+        checkTopics('n',false);
     }
 
 }
@@ -186,7 +192,7 @@ function dontknowPress() {
     if($("#topicBack").hasClass('disabled')){
         $("#topicBack").removeClass('disabled');
     }
-    checkTopics('d');
+    checkTopics('d',false);
 }
 
 function setStateForTopic(topic) {
@@ -244,20 +250,28 @@ function calculatePercentage(amountOfCorrent, amountOfNotSure) {
 
 function calculatePercentageOfOneElement(element) {
     var topicsOfElement = element['topics'];
-    var changedTopicsOfElements = topicsOfElement.map(setStateForTopic,{pick:this.pick,name:element['name'],currentTopic:this.currentTopic});
+    var changedTopicsOfElements;
+    if(this.goBack){
+        changedTopicsOfElements = topicsOfElement.map(setStateForTopic,{pick:'i',name:element['name'],currentTopic:this.currentTopic});
+    } else{
+        changedTopicsOfElements = topicsOfElement.map(setStateForTopic,{pick:this.pick,name:element['name'],currentTopic:this.currentTopic});
+    }
+
     amount = amountOfStates.call(this, changedTopicsOfElements);
-
     percentage = calculatePercentage(amount.correct,amount.notSure);
-
     element.topics = changedTopicsOfElements;
     element.percentage = percentage;
 
     return element;
 }
 
-function calculatePercentageOfAllElements(pick) {
+function calculatePercentageOfAllElements(pick,goBack) {
     var currentTopicString = sortedTopicList[amountOfTotalTopics-1]['topic'];
-    elementWithTopicsList = elementWithTopicsList.map(calculatePercentageOfOneElement ,{pick: pick,currentTopic:currentTopicString});
+    if(goBack){
+        amountOfTotalTopics = amountOfTotalTopics -1;
+    }
+    elementWithTopicsList = elementWithTopicsList.map(calculatePercentageOfOneElement ,{pick: pick,currentTopic:currentTopicString,goBack:goBack});
+
 }
 
 function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goForward) {
@@ -301,33 +315,23 @@ function checkExistsThereATopicAfterClickButton(yes,topicElements,nextTopic,goFo
 
 }
 
-function checkTopics(pick) {
+function checkTopics(pick,goBack) {
 
     if($("#topicBack").hasClass('disabled')){
         $("#topicBack").removeClass('disabled');
     }
+    //List for go a question back
 
-    amountOfTotalTopics = amountOfTotalTopics + 1;
-    calculatePercentageOfAllElements(pick);
+    if(!goBack){
+        answerList.push(pick);
+        amountOfTotalTopics = amountOfTotalTopics + 1;
+    }
 
-    //checkExistsThereATopicAfterClickButton(true,remainingComponents.slice(),amountOfTotalTopics,true);
-    //checkExistsThereATopicAfterClickButton(false,remainingComponents.slice(),amountOfTotalTopics,true);
-    //addGoBackListTopicList();
-
+    calculatePercentageOfAllElements(pick,goBack);
     postprocessingCalculation();
 }
 
-function temp(element) {
-    delete element.topics;
-    delete element.path;
-    return element;
-}
-
 function postprocessingCalculation() {
-    /*tempEl = jQuery.extend(true, [], elementWithTopicsList);
-    tempElements = tempEl.map(temp);
-
-    window.alert(JSON.stringify(tempElements));*/
     safeData();
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
     showElements();
@@ -375,20 +379,24 @@ function checkEnableButtons () {
     }
 }
 
+function redoOneStepOfOneTopicStates(element) {
+    var topicsOfElement = element['topics'];
+    var changedTopicsOfElements = topicsOfElement.map(setStateForTopic,{pick:'i',name:element['name'],currentTopic:this.currentTopic});
+
+    element.topics = changedTopicsOfElements;
+
+    return element;
+}
+
+function redoOneStepOfAllTopicStates() {
+    var currentTopicString = sortedTopicList[amountOfTotalTopics]['topic'];
+    elementWithTopicsList = elementWithTopicsList.map(redoOneStepOfOneTopicStates ,{currentTopic:currentTopicString});
+}
+
 function topicBack() {
     if((amountOfTotalTopics -1) >= 0) {
-        amountOfTotalTopics = amountOfTotalTopics - 1;
-        var currentTopicString = String(amountOfTotalTopics);
-        var listOfBack = JSON.parse(localStorage.getItem('listOfBack'));
-        remainingComponents = listOfBack[currentTopicString];
-        postprocessingCalculation();
-        checkEnableButtons();
-        setCurrentTopicWordPanel();
-        showElements();
-        if (remainingComponents.length > thresholdTopicNumber) {
-            $('#results').addClass('invisible');
-        }
-
+        var lastAnswer = answerList.pop();
+        checkTopics(lastAnswer,true);
     } else{
         if(amountOfTotalTopics - 1 == -2){
             amountOfTotalTopics = - 2;
@@ -517,6 +525,7 @@ function getDataFromServer(){
 }
 
 function safeData() {
+    localStorage.setItem('answerList',JSON.stringify(answerList));
     localStorage.setItem('amountOfTotalTopics',String(amountOfTotalTopics));
     localStorage.setItem('elementWithTopicsList',JSON.stringify(elementWithTopicsList))
 }
@@ -532,6 +541,7 @@ function clearLocalStorage(){
     localStorage.removeItem('selectedNode');
     localStorage.removeItem('topicListVisible');
     localStorage.removeItem('resultListVisible');
+    localStorage.removeItem('answerList');
 }
 
 function buttonsWizard() {
