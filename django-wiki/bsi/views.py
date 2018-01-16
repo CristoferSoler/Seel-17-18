@@ -49,8 +49,8 @@ class WikiArticleView(ArticleView):
             self.template_name = "uga/view.html"
         elif path.startswith('bsi'):
             self.template_name = "bsi/article_bsi.html"
-        elif path.startswith('news'):
-            """ todo set news template """
+        elif path.startswith('new'):
+            self.template_name = "bsi/update-list.html"
 
         return super(
             ArticleView,
@@ -150,4 +150,11 @@ def register(request):
 def create(request):
     return render(request, 'bsi/create_article.html')
 
+def about(request):
+    return render(request, 'bsi/footer/about.html')
 
+def faq(request):
+    return render(request, 'bsi/footer/faq.html')
+
+def contact(request):
+    return render(request, 'bsi/footer/contact.html')

@@ -22,7 +22,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/bootstrap-treeview.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
 
-
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
     <title>SEEL</title>
@@ -31,7 +30,7 @@
 
 <body>
 <div class="wrapper">
-<nav class="navbar navbar-fixed-top navbar-default">
+<nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -58,13 +57,14 @@
                     <a href="{% url 'get_article' path='bsi' %}">BSI Compendium</a>
                 </li>
                 <li class="">
-                    <a href="{% url 'get_article' path='uga' %}">UG Articles</a>
+                    <a href="{% url 'get_article' path='uga' %}">User Articles</a>
                 </li>
                 <li class="">
                     <a href="{% url 'archive_dir' path='' %}">Archive</a>
                 </li>
 
             </ul>
+
             <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                 <div class="form-group inner-addon right-addon">
                     <i class="glyphicon glyphicon-search"></i>
@@ -107,7 +107,7 @@
                     </ul>
                 {% else %}
                     <ul class="nav navbar-nav">
-                        <li>
+                       <li class="no-dropdown">
                             <a href="{% url 'login' %}">Log in</a>
                         </li>
                         {% if "ACCOUNT_HANDLING" %}
@@ -234,15 +234,15 @@
                 </li>
 
                 <li>
-                    <a href="#">/About</a>
+                    <a href="/about">About</a>
                 </li>
 
                 <li>
-                    <a href="#">/FAQ</a>
+                    <a href="/faq">FAQ</a>
                 </li>
 
                 <li>
-                    <a href="#">/Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
 
             </ul>
