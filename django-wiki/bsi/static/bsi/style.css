@@ -357,3 +357,36 @@ section {
     font-weight: 200;
     background: #8FDEFF;
 }
+
+/*Expanding-search from https://github.com/chin8628/Expanding-search*/
+.navbar #icon-search{ font-size: 20px; }
+.navbar #icon-search:hover{ cursor:pointer; }
+.navbar #search-expanding{ margin-right: 5px; }
+.navbar #search-expanding > a{
+    padding-top: 14px !important;
+    padding-bottom: 11px !important;
+}
+.navbar #search-input{
+    display: none;
+    overflow: hidden;
+    width: 0px;
+    border-style: none;
+    margin-left: 2px;
+}
+
+.glyphicon{
+    top: 4px;
+}
+
+
+@media (max-width: 767px) {
+ .navbar #search-expanding{
+     display: none;
+ }
+}
+
+@media (min-width: 767px) {
+ .search-expanding-dis{
+     display: none;
+ }
+}
