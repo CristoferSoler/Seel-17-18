@@ -1,5 +1,16 @@
-{% extends 'bsi/base.html' %} {% block bsi_contents %}
-    <div class="margin-after-nav">
-    <p>update list</p>
-    </div>
+{% extends 'bsi/article_base.html' %}
+
+{% block contents_article %}
+
+        <div class="col-xs-12 col-sm-12 col-lg-12">
+
+            <h2> What's new</h2>
+
+            {{ article.render }}
+            <hr>
+
+
+        </div>
+
+
 {% endblock %}
