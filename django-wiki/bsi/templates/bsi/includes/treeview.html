@@ -17,6 +17,18 @@
 
 
   <script type="text/javascript">
+
+        $(document).ready(function () {
+            setTimeout(
+                function() {
+                     if(localStorage.getItem('selectedNode') !== null){
+                         var stringNode = JSON.parse(localStorage.getItem('selectedNode'));
+                         var expandedNode = findExpandibleNodess(stringNode);
+                         $('#treeview1').treeview('expandNode', [ expandedNode[0], {silent: true } ]);
+                       }
+                }, 1000);
+        });
+
         function expandAll() {
             $('#treeview1').treeview('expandAll', { silent: true });
         }
@@ -24,6 +36,10 @@
         function collapseAll() {
             $('#treeview1').treeview('collapseAll', { silent: true });
         }
+
+        function findExpandibleNodess(expandNode) {
+          return $('#treeview1').treeview('search', [expandNode, { ignoreCase: true, exactMatch: true } ]);
+        };
 
         $(function () {
             $('#treeview1').treeview({
@@ -36,8 +52,7 @@
 
             $('#treeview1').on('nodeSelected', function(event, data) {
                 setValid(true);
-                console.log(data);
-                localStorage.setItem('selectedNode',JSON.stringify(data))
+                localStorage.setItem('selectedNode',JSON.stringify(data.text))
             });
         });
 
