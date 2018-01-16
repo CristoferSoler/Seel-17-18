@@ -65,7 +65,7 @@ function inilizeData() {
         invisbaleTopicResutlPanel()
     } else {
         $('#topics').removeClass('invisible');
-        $('#results').addClass('invisible')
+        $('#results').addClass('invisible');
     }
 
     elementWithTopicsList = JSON.parse(localStorage.getItem('elementWithTopicsList'))['element'];
@@ -301,11 +301,26 @@ function checkTopics(pick, goBack) {
     postprocessingCalculation();
 }
 
+function checkExistsThereATopic() {
+    var numberOfTopics = sortedTopicList.length;
+    console.log(sortedTopicList[130]['topic']);
+
+    if(amountOfTotalTopics === numberOfTopics-1){
+        $('#yesButton').addClass('disabled');
+        $('#noButton').addClass('disabled');
+        $('#dontKnowButton').addClass('disabled');
+        $('#question').text('No more topics available. Please try again and press restart.');
+        $('#topic').text('');
+        invisbaleTopicResutlPanel()
+    }
+}
+
 function postprocessingCalculation() {
     safeData();
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
     showElements();
     showResults();
+    checkExistsThereATopic();
 }
 
 
@@ -332,10 +347,28 @@ function restart() {
     clearTopicStorage();
 }
 
+function checkGui() {
+    if ($('#yesButton').hasClass('disabled')) {
+        $('#yesButton').removeClass('disabled');
+    }
+    if ($('#noButton').hasClass('disabled')) {
+        $('#noButton').removeClass('disabled');
+    }
+    if ($('#dontKnowButton').hasClass('disabled')) {
+        $('#dontKnowButton').removeClass('disabled');
+    }
+
+    $('#question').text(questionComponent);
+
+    $('#topics').removeClass('invisible');
+    $('#results').removeClass('invisible');
+}
+
 function topicBack() {
     if ((amountOfTotalTopics - 1) >= 0) {
         var lastAnswer = answerList.pop();
         checkTopics(lastAnswer, true);
+        checkGui();
     } else {
         if (amountOfTotalTopics - 1 == -2) {
             amountOfTotalTopics = -2;
@@ -382,6 +415,7 @@ function clearTopicStorage() {
     localStorage.removeItem('remainingComponents');
     localStorage.removeItem('sortedTopics');
     localStorage.removeItem('listOfBack');
+    localStorage.removeItem('answerList');
 }
 
 function invisbaleTopicResutlPanel() {
@@ -467,6 +501,7 @@ function safeData() {
     localStorage.setItem('answerList', JSON.stringify(answerList));
     localStorage.setItem('amountOfTotalTopics', String(amountOfTotalTopics));
     localStorage.setItem('elementWithTopicsList', JSON.stringify(elementWithTopicsList))
+    localStorage.removeItem('mode');
 }
 
 function clearLocalStorage() {
