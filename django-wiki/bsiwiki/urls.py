@@ -20,6 +20,7 @@ from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
 from django.views.generic import TemplateView
 from bsi import views
+from infopage import views as info_views
 
 admin.site.index_template = 'admin/index.html'
 admin.autodiscover()
@@ -39,6 +40,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls, name='adminpage'),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
+    url(r'^_information/', include('infopage.urls')),
     url(r'^_treeview/', include('treeview.urls')),
     url(r'^', include('bsi.urls')),
     url(r'^', get_pattern()),

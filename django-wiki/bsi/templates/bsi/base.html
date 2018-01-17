@@ -30,6 +30,8 @@
 
 <body>
 <div class="wrapper">
+
+
 <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,19 +66,33 @@
                 </li>
 
             </ul>
+                        <div id="search-expanding">
+                                <form class="navbar-form navbar-right" role="search" id="search-input" method="GET" action="{% url 'bsisearch' %}">
+                                    <div class="form-group navbar-right">
+                                         <input type="search" class="form-control search-query" name="q" placeholder="search"/>
+                                    </div>
+                                </form>
+                            <div class="navbar-form navbar-right">
+                                 <a id="icon-search" style="color: #FFFFFF">
+                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                 </a>
+                                </div>
+                            </div>
 
-            <form class="navbar-form navbar-right" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
+            <form class="navbar-form navbar-right search-expanding-dis" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
                 <div class="form-group inner-addon right-addon">
-                    <i class="glyphicon glyphicon-search"></i>
+                    <i class="glyphicon glyphicon-search top4"></i>
                     <input type="search" class="form-control search-query" name="q" placeholder="search"/>
                 </div>
             </form>
+
             <div class="navbar-right">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <span class="badge notification-cnt">0</span>
+                                <!--<span class="badge notification-cnt">0</span>-->
+                                <span class="fa fa-user"></span>
                                 {{ user }}
                                 <b class="caret"></b>
                             </a>
@@ -290,5 +306,28 @@
         initWizardsComponents();
     });
 
+    $(document).ready(function() {
+
+    $('#search-expanding').click(function () {
+        if ( $(this).is(".expanded") ) {
+            $(this).removeClass('expanded');
+            $('#search-input').animate({width: 0}, function(){
+                $('#search-input').hide();
+                $('#icon-search').show();
+            });
+        }
+        else {
+            $(this).addClass('expanded');
+            $('#icon-search').hide();
+            $('#search-input').show().animate({width: 200});
+            $("#search-input input").focus();
+        }
+    })
+
+    $("#search-input input").blur(function () {
+        $('#search-expanding').click();
+    });
+
+});
 
 </script>

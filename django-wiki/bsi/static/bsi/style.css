@@ -303,3 +303,90 @@ section {
   background-color: transparent;
   border-color: #ccc;
 }
+
+
+.full-width-image-2 {
+    /*image source: https://pixabay.com/en/people-man-office-work-computer-2567566/*/
+	background:  linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../bsi/images/people-2567566_1280.jpg") no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	height: 250px;
+    background-color: deepskyblue;
+    background-position: right top;
+}
+
+.image-aboutus-para {
+    color:#fff;
+}
+
+
+.lg-text {
+    padding-top: 60px;
+    font-size:45px;
+    font-weight: 500;
+    text-transform: none;
+    color:#fff;
+}
+
+
+.margin-image{
+    margin-top: 50px;
+}
+
+
+.widget {
+    margin: 0 0 25px 0;
+    display: block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.widget .widget-heading {
+    padding: 7px 15px;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    background: #6ca9ea;
+    color: white;
+}
+.widget .widget-body {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 200;
+    background: #6ca9ea;
+}
+
+/*Expanding-search from https://github.com/chin8628/Expanding-search*/
+.navbar #icon-search{ font-size: 20px; }
+.navbar #icon-search:hover{ cursor:pointer; }
+.navbar #search-expanding{ margin-right: 5px; }
+.navbar #search-expanding > a{
+    padding-top: 14px !important;
+    padding-bottom: 11px !important;
+}
+.navbar #search-input{
+    display: none;
+    overflow: hidden;
+    width: 0px;
+    border-style: none;
+    margin-left: 2px;
+}
+
+.glyphicon.glyphicon-search{
+    top: 4px;
+}
+
+
+@media (max-width: 767px) {
+ .navbar #search-expanding{
+     display: none;
+ }
+}
+
+@media (min-width: 767px) {
+ .search-expanding-dis{
+     display: none;
+ }
+}
