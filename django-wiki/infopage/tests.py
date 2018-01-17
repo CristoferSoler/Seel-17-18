@@ -11,10 +11,8 @@ class InitTestCase(TestCase):
         url = URLPath.create_urlpath(parent=root, slug='informationPage', title='bsi', **rev_kwargs)
         q_user = User.objects.create_user('user0', None, '1234')
         a_user = User.objects.create_user('user1', None, '1234')
-        q = Question()
-        q.create_question(question="How can I test your website",user=q_user,url=url)
+        q = Question.create_question(text="How can I test your website",user=q_user,url=url)
         answer = q.add_answer(text="you can run the test unit :)", user=a_user)
-        answer.save()
 
 
 class QuestionTestCase(InitTestCase):

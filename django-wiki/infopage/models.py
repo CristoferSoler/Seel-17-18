@@ -18,18 +18,18 @@ class Question(models.Model):
     def delete_old_questions(cls):
         cls.objects.filter(timestamp__lte=datetime.now()-timedelta(days=30)).delete()
 
-
+    @transaction.atomic
     @classmethod
-    def create_question(cls,question, user, url):
-        q = cls(question =question,user= user,url= url)
-        q.save()
+    def create_question(cls,text, user, url):
+            q = cls(question=text,user= user,url= url)
+            q.save()
 
     @classmethod
     def get_questions(cls,url):
         return cls.objects.filter(url=url)
 
     def add_answer(self, text, user):
-       return  self.answer_set.create(answer=text, user=user)
+            return  self.answer_set.create(answer=text, user=user)
 
     def delete_question(self):
             if(self.get_answers()):
