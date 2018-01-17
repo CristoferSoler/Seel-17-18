@@ -18,11 +18,12 @@ class Question(models.Model):
     def delete_old_questions(cls):
         cls.objects.filter(timestamp__lte=datetime.now()-timedelta(days=30)).delete()
 
-    @transaction.atomic
+
     @classmethod
     def create_question(cls,text, user, url):
             q = cls(question=text,user= user,url= url)
             q.save()
+            return q
 
     @classmethod
     def get_questions(cls,url):
@@ -32,14 +33,10 @@ class Question(models.Model):
             return  self.answer_set.create(answer=text, user=user)
 
     def delete_question(self):
-            if(self.get_answers()):
-                answers = self.get_answers().delete()
-                answers.delete()
-                answers.save()
             self.delete()
             self.save()
 
-
+    @transaction.atomic
     def edit_question(self,text):
             self.question = text
             self.save()
@@ -55,6 +52,7 @@ class Answer(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
 
+    @transaction.atomic
     def edit_answer(self, text):
             self.answer = text
             self.save()

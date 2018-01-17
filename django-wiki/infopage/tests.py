@@ -8,7 +8,7 @@ class InitTestCase(TestCase):
     def setUp(self):
         rev_kwargs = {'content': '', 'user_message': 'QuestionTestCase.setUp', 'ip_address': 'None'}
         root = URLPath.create_root(title='root', **rev_kwargs)
-        url = URLPath.create_urlpath(parent=root, slug='informationPage', title='bsi', **rev_kwargs)
+        url = URLPath.create_urlpath(parent=root, slug='informationPage', title='information page', **rev_kwargs)
         q_user = User.objects.create_user('user0', None, '1234')
         a_user = User.objects.create_user('user1', None, '1234')
         q = Question.create_question(text="How can I test your website",user=q_user,url=url)
@@ -18,16 +18,6 @@ class InitTestCase(TestCase):
 class QuestionTestCase(InitTestCase):
     def setUp(self):
         super(QuestionTestCase, self).setUp()
-
-    # def test_add_answer(self):
-    #     user = User.objects.get(username="user0")
-    #     a_user = User.objects.get(username="user1")
-    #     q = Question.objects.get(question="How can I test your website", user=user)
-    #     q.answer_set.create(answer="you can run the test unit :)", user=a_user)
-    #     q.save()
-    #     answer = Answer.objects.filter(question=q, user=a_user).count()
-    #     self.assertTrue(answer ==1, "There should be one answer")
-
 
     def test_get_questions(self):
         url = URLPath.objects.get(slug = "informationPage")
@@ -43,9 +33,6 @@ class QuestionTestCase(InitTestCase):
     def test_delete_question(self):
         user = User.objects.get(username="user0")
         q = Question.objects.get(question="How can I test your website")
-        answers = q.get_answers().delete()
-        answers = Answer.objects.filter(question=q).count()
-        self.assertTrue( answers == 0, "There should be no answers")
         q.delete()
         d_question = Question.objects.filter(question=q.question, user =user).count()
         self.assertTrue(d_question == 0, "There should be no question")
