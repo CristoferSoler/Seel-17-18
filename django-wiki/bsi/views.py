@@ -113,8 +113,9 @@ def index(request):
     template = loader.get_template('bsi/index.html')
     componentsString = json.dumps(components)
     sortedTopicsString = json.dumps(sortedTopics)
+    new_page = check_new_page()
 
-    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
+    return HttpResponse(template.render({'newpage':new_page,'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
 def bsicatalog(request):
@@ -144,7 +145,7 @@ def register(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-        return render(request, 'bsi/account/register.html', {'form': form})
+    return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
@@ -158,3 +159,10 @@ def faq(request):
 
 def contact(request):
     return render(request, 'bsi/footer/contact.html')
+
+def check_new_page():
+    try:
+        URLPath.objects.get(slug='new')
+        return True
+    except:
+        return False
