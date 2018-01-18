@@ -45,9 +45,11 @@ class UGA(models.Model):
         uga.save()
         return uga
 
-    def add_links_to_bsi(self, list):
-        for item in list:
-            self.add_link_to_bsi(item)
+    def set_links_to_bsi(self, list):
+        self.is_linked_to.set(list)
+        #
+        # for item in list:
+        #     self.add_link_to_bsi(item)
 
     def add_link_to_bsi(self, bsi):
         bsi.references.add(self)
@@ -59,6 +61,15 @@ class UGA(models.Model):
     def get_active_children(cls):
         parent = URLPath.get_by_path("uga/")
         return URLPath.objects.filter(parent=parent).exclude(Q(article__current_revision__deleted=True))
+
+    @classmethod
+    def get_references_by_revision(cls, revision):
+        # todo not tested yet
+        uga = UGA.objects.get(Q(url__article__current_revision=revision))
+        # uga.is_linked_to
+        references = BSI.objects.filter(references=uga)
+        return references
+
 
     def __str__(self):
         return 'UGA with path: ' + self.url.__str__()

@@ -1,0 +1,124 @@
+{% load static i18n sekizai_tags %}
+
+<div class="col-sm-4">
+    <div class="fading-side-menu" data-spy="" data-offset-top="350">
+        <h4>Link to BSI</h4>
+        <hr class="no-margin">
+        <div id="treeview1"></div>
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#treeview1').treeview({
+            levels: 1,
+            data: getData(),
+            enableLinks: false,
+            multiSelect: true,
+            selectedBackColor: '#337ab7'
+        }).on('nodeSelected nodeUnselected',
+            function (event, data) {
+                var correspondingField = getFormField(data.text);
+                toggleFormField(correspondingField);
+            });
+    });
+
+
+    function getData() {
+        return $.ajax({
+            url: '/_treeview/gettreeview/',
+            async: false
+        }).responseText
+    }
+
+
+    function getTreeviewDataNode(text) {
+        var nodeId = null;
+        $(".node-treeview1").filter(function () {
+            if ($(this).text() === text) {
+                nodeId = $(this).attr("data-nodeid");
+            }
+        });
+        if (nodeId === null) {
+            return null;
+        }
+        return $("#treeview1").treeview('getNode', nodeId);
+    }
+
+    function getFormField(text) {
+        return $("input[type=checkbox][name='links']").filter(function () {
+            return $(this).parent().text().trim() === text;
+        });
+    }
+
+    function checkFormField(field) {
+        field.prop('checked', true);
+        field.parent().parent().show();
+
+        var text = field.parent().text().trim();
+        var treeviewEntry = getTreeviewDataNode(text);
+        if (treeviewEntry !== null) {
+            $('#treeview1').treeview('selectNode', [treeviewEntry, {silent: true}]);
+        }
+    }
+
+    function uncheckFormField(field) {
+        field.prop('checked', false);
+        field.parent().parent().hide();
+
+        var treeviewEntry = getTreeviewDataNode(field.parent().text().trim());
+        if (treeviewEntry !== null) {
+            $('#treeview1').treeview('unselectNode', [treeviewEntry, {silent: true}]);
+        }
+    }
+
+    function toggleFormField(field) {
+        if (field.prop("checked")) {
+            uncheckFormField(field);
+        } else {
+            checkFormField(field);
+        }
+    }
+
+    $(document).ajaxStart(function () {
+        $('#loading-spinner').show();
+    }).ajaxStop(function () {
+        $('#loading-spinner').hide();
+    });
+
+    $(document).ready(function () {
+            $('#treeview1').treeview('expandAll', {silent: true});
+            setupLinks();
+        }
+    );
+
+    function setupLinks() {
+        $("input[type=checkbox][name='links']").each(function () {
+            if (!$(this).prop('checked')) {
+                $(this).parent().parent().hide();
+            } else {
+                var field = getFormField($(this).parent().text());
+                checkFormField($(this));
+            }
+        });
+    }
+
+
+    $(function () {
+        $("input[type=checkbox][name='links']").change(function () {
+            if ($(this).prop('checked')) {
+                $(this).parent().parent().show()
+            } else {
+                $(this).parent().parent().hide();
+                var val = $(this).parent().text().trim();
+                var treeviewNode = getTreeviewDataNode(val);
+                $('li:contains(' + val + ')').removeClass('active');
+                if (treeviewNode !== null) {
+                    $('#treeview1').treeview('unselectNode', [treeviewNode, {silent: true}]);
+                }
+            }
+        });
+    });
+
+</script>
