@@ -1,29 +1,43 @@
 {% extends 'bsi/base.html' %}
 {% block bsi_contents %}
-      <div class="margin-image">
-          <div class="full-width-image-2">
-              <div class="container">
-            <div class="row text-center">
-                <div class="col-md-12">
-                 <h1 class="lg-text">Contact us</h1>
-                 <p class="image-aboutus-para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-               </div>
+<div class="jumbotron jumbroton-blue jumbotron-sm">
+    <div class="container margin-image text-center">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h2>
+                    Information Page</h2>
             </div>
-             </div>
-          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 col-lg-2">
 
-
-      	<div class="row">
-             <div class="jumbotron">
-		<div class="site-heading text-center">
-
-
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim </p>
-						<div class="border"></div>
-					</div>
-	</div>
-  </div>
-
+            </div>
+             <div class="col-sm-8 col-lg-8">
+                   <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea name="message" id="message" class="form-control" rows="3" cols="10" required="required"
+                                placeholder="Feel free to ask"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-warning" id="btnContactUs">
+                            Submit</button>
+                    </div>
+                </div>
+                </form>
+              </div>
+            <div class="col-sm-2 col-lg-2">
+            </div>
+        </div>
     </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
