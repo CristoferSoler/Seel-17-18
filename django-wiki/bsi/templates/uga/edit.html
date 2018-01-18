@@ -1,41 +1,67 @@
 {% extends 'uga/article.html' %}
-{% load wiki_tags bsi_tags i18n sekizai_tags %}
+{% load static wiki_tags bsi_tags i18n sekizai_tags %}
 
 {% block wiki_contents_tab %}
 
-    <div class="row">
+    <div class="container">
+        <div class="row">
+            {% include "uga/includes/add_links.html" %}
 
-        <div class="col-lg-8">
-            <form method="POST" class="form-horizontal" id="article_uga_edit_form">
-                {% with edit_form as form %}
-                    {% include "wiki/includes/editor.html" %}
-                {% endwith %}
+            <div class="col-sm-8">
+                <form method="POST" class="form-horizontal" id="article_uga_edit_form"> {% csrf_token %}
+                    {% with edit_form as form %}
+                        {% include "wiki/includes/editor.html" %}
+                    {% endwith %}
+                    {#                #}
+                    {#                    {% for field in form.visible_fields %}#}
+                    {#                        <div class="form-group">#}
+                    {#                            <div class="wiki-label col-xs-3 col-lg-2">#}
+                    {#                                {{ field.label_tag }}#}
+                    {#                            </div>#}
+                    {#                            <div class="wiki-control col-xs-9 col-lg-10">#}
+                    {#                                {% if form.links == field %}#}
+                    {##}
+                    {#                                {% endif %}#}
+                    {#                                {{ field }}#}
+                    {#                                <p class="help-block">{{ field.help_text|safe }}</p>#}
+                    {#                                {% for error in field.errors %}#}
+                    {#                                    <p style="color: red">{{ error }}</p>#}
+                    {#                                {% endfor %}#}
+                    {#                            </div>#}
+                    {##}
+                    {##}
+                    {#                        </div>#}
+                    {##}
+                    {#                    {% endfor %}#}
 
-                <div class="form-group form-actions">
-                    <div class="col-lg-12">
-                        <div class="col-lg-offset-2">
-                            <button class="btn btn-primary" type="submit" name="save" value="1" id="id_save">
-                                <span class="fa fa-check"></span>
-                                {% trans "Save changes" %}
-                            </button>
+
+                    <div class="form-group form-actions">
+                        <div class="col-lg-12">
+                            <div class="col-lg-offset-2">
+                                <a href="{% url 'get_article' path=urlpath.path %}"
+                                   class="btn btn-default">{% trans "Cancel" %}</a>
+                                <button class="btn btn-primary" type="submit" name="save" value="1" id="id_save">
+                                    <span class="fa fa-check"></span>
+                                    {% trans "Save changes" %}
+                                </button>
 
 
-                            <div class="btn-toolbar pull-right">
-                                {% if article|can_delete:user and article|can_moderate:user %}
-                                    <a href="{% url 'delete' path=urlpath.path %}"
-                                       class="btn btn-danger">
-                                        <span class="fa fa-trash-o"></span>
-                                        {% trans "Delete article" %}
-                                    </a>
-                                {% endif %}
+                                <div class="btn-toolbar pull-right">
+                                    {% if article|can_delete:user and article|can_moderate:user %}
+                                        <a href="{% url 'delete' path=urlpath.path %}"
+                                           class="btn btn-danger">
+                                            <span class="fa fa-trash-o"></span>
+                                            {% trans "Delete article" %}
+                                        </a>
+                                    {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </form>
+            </div>
 
-            </form>
         </div>
-
     </div>
 
     <div style="clear: both"></div>
@@ -61,6 +87,13 @@
             </div>
         </div>
     </div>
+
+
+
+    {% addtoblock "css" %}
+        <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/loader.css' %}"/>
+    {% endaddtoblock %}
+
 
     {% addtoblock "js" %}
         <script language="javascript">

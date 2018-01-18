@@ -4,7 +4,6 @@ import json
 import logging
 
 from django.contrib import messages
-from django.core import serializers
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -15,6 +14,7 @@ from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
 from wiki.decorators import get_article
+from wiki.forms import EditForm
 from wiki.models import URLPath, ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
@@ -93,24 +93,10 @@ def get_bsi_articles(request):
             title_json['value'] = bsi.url.article.current_revision.title
             results.append(title_json)
         data = json.dumps(results)
-        # data = serializers.serialize('json', results)
     else:
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
-
-
-# class UGCreateAddLinksView(FormView, ArticleMixin):
-#     template_name = "uga/create_article_add_links.html"
-#     form_class = AddLinksForm
-#
-#     @method_decorator(get_article(can_write=True, can_create=True))
-#     def dispatch(self, request, article, *args, **kwargs):
-#         return super(UGCreateAddLinksView, self).dispatch(request, article, *args, **kwargs)
-#
-#     def get_form(self, form_class=None):
-#         form = super(UGCreateAddLinksView, self).get_form(form_class=form_class)
-#         return form
 
 
 class UGEditView(Edit):
@@ -122,6 +108,7 @@ class UGEditView(Edit):
 
     '''
     template_name = "uga/edit.html"
+    form_class = forms.UGEditForm
 
     @method_decorator(get_article(can_read=True))
     def dispatch(self, request, article, *args, **kwargs):
@@ -130,9 +117,11 @@ class UGEditView(Edit):
         self.checked = ArticleRevisionValidation.objects.get(revision=article.current_revision).status
 
         if request.user.has_perm('wiki.uncheck_article') and request.user.has_perm('wiki.check_article'):
-            self.form_class = forms.UGEditForm
+            pass
+            # self.form_class = forms.UGEditForm
         else:
-            self.form_class = forms.EditForm
+            pass
+            # self.form_class = forms.EditForm
         return super(Edit, self).dispatch(request, article, *args, **kwargs)
 
     def form_valid(self, form):
@@ -154,8 +143,10 @@ class UGEditView(Edit):
             validation.check_article(self.request.user)
         elif self.request.user.has_perm('wiki.uncheck_article') and not form.checked:
             validation.uncheck_article(self.request.user)
+        UGA.objects.get(Q(url__article__current_revision=revision)).set_links_to_bsi(form.cleaned_data['links'])
         return self.get_success_url()
 
+    #
     def get_form(self, form_class=None):
         """
         Checks from querystring data that the edit form is actually being saved,
@@ -171,12 +162,14 @@ class UGEditView(Edit):
             kwargs['files'] = None
             kwargs['no_clean'] = True
 
-        if self.request.user.has_perm('wiki.uncheck_article') and self.request.user.has_perm('wiki.check_article'):
-            form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
-        else:
-            form = form_class(self.request, self.article.current_revision, **kwargs)
-
+        form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
         return form
+    #
+    def get_success_url(self):
+        """Go to the article view page when the article has been saved"""
+        if self.urlpath:
+            return redirect("get_article", path=self.urlpath.path)
+        return redirect('get_article', path="uga")
 
 
 class UGDeleteView(Delete):

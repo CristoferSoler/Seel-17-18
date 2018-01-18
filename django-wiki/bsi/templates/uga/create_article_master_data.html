@@ -6,24 +6,25 @@
         <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
     {% endaddtoblock %}
 
-    <table>
-        <tbody>
 
-        {% for field in form %}
-            <tr>
-                <p>
-                    {{ field.label_tag }}
-                    {{ field }}
 
-                    {% for error in field.errors %}
-                        <p style="color: red">{{ error }}</p>
-                    {% endfor %}
+    {% for field in form %}
+        <div class="form-group">
+            <div class="wiki-label col-xs-3 col-lg-2">
+                {{ field.label_tag }}
+            </div>
+            <div class="wiki-control col-xs-9 col-lg-10">
+                {{ field }}
+                <p class="help-block">{{ field.help_text|safe }}</p>
+                {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                {% endfor %}
+            </div>
 
-            </tr>
-            <tr>{{ field.help_text|safe }}</tr>
-        {% endfor %}
-        </tbody>
-    </table>
+
+        </div>
+
+    {% endfor %}
 
     <script type="text/javascript">
         {% if not form.slug.value %}
@@ -37,6 +38,8 @@
                             e.value = slug;
                         }
                     });
+
+
                 });
             })(jQuery);
             //]]>

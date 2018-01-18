@@ -1,15 +1,15 @@
 from django import forms
+from django.forms import ModelMultipleChoiceField, HiddenInput
 from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
 from wiki import models
 from wiki.core.diff import simple_merge
 from wiki.editors import getEditor
-from wiki.forms import EditForm
-from wiki.forms import _clean_slug, SpamProtectionMixin, WikiSlugField, SearchForm
+from wiki.forms import _clean_slug, WikiSlugField, SearchForm, SpamProtectionMixin
 from wiki.models import URLPath
 
-from bsi.models import BSI
+from bsi.models import UGA, BSI
 
 
 class UserRegistrationForm(forms.Form):
@@ -75,42 +75,85 @@ class CreateForm(forms.Form):
         # self.check_spam()
         return self.cleaned_data
 
+
+def get_available_links():
+    # BSI.objects.all()
+    # bsi = URLPath.get_by_path('bsi/')
+    # children = bsi.get_children()
+    # list = []
+    # for child in children:
+    #     art = child.get_children()
+    #     for a in art:
+    #         list.append([a.article.current_revision.title, a.article.current_revision.title])
+    bsi = BSI.objects.all()
+    # ArticleRevision.objects.filter(article=)
+    # url.values("article").values("current_revision").values("title")
+    return bsi
+
+
+def get_links(revision):
+    references = UGA.get_references_by_revision(revision)
+    # list = []
+    # for child in references.all():
+    #     art = child.url.article
+    #     list.append([art.current_revision.title, art.current_revision.title])
+    return references
+
+
+class ArticleMultipleChoiceField(ModelMultipleChoiceField):
+    def label_from_instance(self, obj):
+        return obj.url.article.current_revision.title
+
+
 class AddLinksForm(forms.Form):
-    links = forms.MultipleChoiceField(
-            label=pgettext_lazy('Revision comment', 'BSI'),
-            widget=forms.CheckboxSelectMultiple,
-            help_text=_("Associate with a BSI article when creating an article."),
-            required=False)
+    links = ArticleMultipleChoiceField(
+        label=pgettext_lazy('Revision comment', 'BSI'),
+        queryset=get_available_links(),
+        widget=forms.CheckboxSelectMultiple,
+        help_text=_("Associate with a BSI article when creating an article"),
+        required=False)
 
     def __init__(self, *args, **kwargs):
         super(AddLinksForm, self).__init__(*args, **kwargs)
-        bsi = URLPath.get_by_path('bsi/')
-        children = bsi.get_children()
-        liste = []
-        for child in children:
-            art = child.get_children()
-            for a in art:
-                liste.append([a.article.current_revision.title, a.article.current_revision.title])
-        self.fields['links'].choices = liste
 
 
-class UGEditForm(EditForm):
-    checked = forms.BooleanField(label="Reviewed", required=False)
+class UGEditForm(forms.Form, SpamProtectionMixin):
+    title = forms.CharField(label=_('Title'), )
+    content = forms.CharField(
+        label=_('Contents'),
+        required=False,
+        widget=getEditor().get_widget())  # @UndefinedVariable
+
+    summary = forms.CharField(
+        label=_('Summary'),
+        help_text=_(
+            'Give a short reason for your edit, which will be stated in the revision log.'),
+        required=False)
+
+    current_revision = forms.IntegerField(
+        required=False,
+        widget=forms.HiddenInput())
+    # checked = forms.BooleanField(label="Reviewed", required=False)
+    links = ArticleMultipleChoiceField(
+        label=pgettext_lazy('Revision comment', 'BSI'),
+        queryset=get_available_links(),
+        widget=forms.CheckboxSelectMultiple,
+        help_text=_("Linked to these BSI articles"),
+        required=False)
 
     def __init__(self, request, current_revision, checked, *args, **kwargs):
-
-        self.request = request
         self.no_clean = kwargs.pop('no_clean', False)
         self.preview = kwargs.pop('preview', False)
+        self.request = request
         self.initial_revision = current_revision
-        self.checked = forms.BooleanField(label="Reviewed", required=False, initial=checked)
-
         self.presumed_revision = None
+
         if current_revision:
             initial = {'content': current_revision.content,
                        'title': current_revision.title,
                        'current_revision': current_revision.id,
-                       'checked': checked}
+                       'checked': checked,
+                       'links': UGA.get_references_by_revision(current_revision)}
             initial.update(kwargs.get('initial', {}))
 
             # Manipulate any data put in args[0] such that the current_revision
@@ -133,6 +176,7 @@ class UGEditForm(EditForm):
                     newdata['current_revision'] = self.initial_revision.id
                     newdata['content'] = simple_merge(self.initial_revision.content, data.get('content', ""))
                     newdata['title'] = current_revision.title
+                    newdata['links'] = UGA.get_references_by_revision(current_revision)
                     kwargs['data'] = newdata
                 else:
                     # Always pass as kwarg
@@ -141,7 +185,18 @@ class UGEditForm(EditForm):
 
             kwargs['initial'] = initial
 
-        super(EditForm, self).__init__(*args, **kwargs)
+        super(UGEditForm, self).__init__(*args, **kwargs)
+        if self.request.user.has_perm('wiki.uncheck_article') and self.request.user.has_perm('wiki.check_article'):
+            self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False)
+        else:
+            self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False, widget=HiddenInput)
+
+    def clean_title(self):
+        title = self.cleaned_data.get('title', None)
+        title = (title or "").strip()
+        if not title:
+            raise forms.ValidationError(ugettext('Article is missing title or has an invalid title'))
+        return title
 
     def clean(self):
         """Validates form data by checking for the following
@@ -157,7 +212,7 @@ class UGEditForm(EditForm):
                     'While you were editing, someone else changed the revision. Your contents have been automatically merged with the new contents. Please review the text below.'))
         if ('title' in cd) and cd['title'] == self.initial_revision.title and cd[
             'content'] == self.initial_revision.content and ('checked' in cd) and cd['checked'] == self.initial.get(
-            "checked"):
+            "checked") and cd['links'] == self.initial.get('links'):
             raise forms.ValidationError(
                 ugettext('No changes made. Nothing to save.'))
         self.check_spam()
