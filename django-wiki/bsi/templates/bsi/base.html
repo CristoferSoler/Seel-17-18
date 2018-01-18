@@ -260,6 +260,17 @@
 
 <script>
 
+    function clearTreeStorage() {
+        var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
+        var url = location.pathname;
+        var match = url.match(regexBSI);
+        if(match != null && match.length != 0){
+
+        } else {
+            localStorage.removeItem('selectedNode');
+        }
+    }
+
     $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -277,6 +288,8 @@
             valid = false;
 
         });
+
+        clearTreeStorage();
 
         if(localStorage.getItem('visible')!== null && stringToBoolean(localStorage.getItem('visible')) === true){
             console.log('darf nicht');
@@ -306,6 +319,7 @@
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
+
     });
 
 
