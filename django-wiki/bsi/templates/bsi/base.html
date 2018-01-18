@@ -258,6 +258,16 @@
 </html>
 
 <script>
+    function clearTreeStorage() {
+        var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
+        var url = location.pathname;
+        var match = url.match(regexBSI);
+        if(match != null && match.length != 0){
+
+        } else {
+            localStorage.removeItem('selectedNode');
+        }
+    }
 
     $(document).ready(function () {
         $(window).scroll(function () {
@@ -271,6 +281,8 @@
             $("html, body").animate({scrollTop: 0}, 600);
             return false;
         });
+
+        clearTreeStorage();
 
         $('.panel-title').click(function () {
             valid = false;
