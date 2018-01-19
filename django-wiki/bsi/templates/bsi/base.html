@@ -106,6 +106,15 @@
                                 </li>
                                 {% endif %}
 
+                                {% if user.is_staff %}
+                                <li>
+                                    <a href="{% url 'adminControlPanel' %}">
+                                        <i class="fa fa-wrench"></i>
+                                        Admin Control Panel
+                                    </a>
+                                </li>
+                                {% endif %}
+
                                 <li>
                                     <a href="{% url 'password_change' %}">
                                         <i class="fa fa-gear"></i>
