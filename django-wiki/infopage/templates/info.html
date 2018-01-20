@@ -36,15 +36,19 @@
   <div>
     <p>{{ q.question }}</p>
   </div>
-  <!-- {% for a in q.get_answers %}
+  <div>
+    <p> Answers:
+    </p>
+  </div>
+  {% for a in q.get_answers %}
     <div>
     <p>{{ a.answer }}</p>
     </div>
-  {% endfor %}  -->
+  {% endfor %}
   <form method="post">
     {% csrf_token %}
     {{ a_form }}
-    <!-- <input type="hidden" class="yuy" name="answer-question2" value={{ q.id }} /> -->
+    <input type="hidden" class="yuy" name="question3" value="{{ q.id }}" />
     <input type="submit" name="answer_button" value="Submit" />
 </form> 
 {% endfor %}
