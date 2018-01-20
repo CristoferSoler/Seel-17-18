@@ -36,10 +36,30 @@
 
 <form method="post">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
+    {{ q_form }}
+    <input type="submit" name="question_button" value="Submit" />
 </form>
 
+{% for q in questions %}
+  <div>
+    <p>{{ q.question }}</p>
+  </div>
+  <div>
+    <p> Answers:
+    </p>
+  </div>
+  {% for a in q.get_answers %}
+    <div>
+    <p>{{ a.answer }}</p>
+    </div>
+  {% endfor %}
+  <form method="post">
+    {% csrf_token %}
+    {{ a_form }}
+    <input type="hidden" name="answer_from" value="{{ q.id }}" />
+    <input type="submit" name="answer_button" value="Submit" />
+</form> 
+{% endfor %}
 <div>
   <p>{{ question.question }}</p>
 </div>
