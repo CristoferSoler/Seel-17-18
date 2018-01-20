@@ -38,6 +38,13 @@ class Question(models.Model):
         return q
 
     @classmethod
+    @transaction.atomic
+    def create_question(cls, text, url):
+        q = cls(question=text, url=url)
+        q.save()
+        return q
+
+    @classmethod
     def get_questions(cls, url):
         return cls.objects.filter(url=url)
 
@@ -50,6 +57,9 @@ class Question(models.Model):
 
     def add_answer(self, text, user):
         return self.answer_set.create(answer=text, user=user)
+
+    def add_answer(self, text):
+        return self.answer_set.create(answer=text)
 
     def delete_question(self):
         self.delete()

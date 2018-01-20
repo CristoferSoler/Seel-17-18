@@ -42,7 +42,11 @@
 
 {% for q in questions %}
   <div>
-    <p>{{ q.question }}</p>
+    {% if q.user %}
+      <p>{{ q.question }}, User: {{ q.user }}, Timestamp: {{ q.timestamp }}</p>
+    {% else %}
+      <p>{{ q.question }}, User: <i>Anonymous</i>, Timestamp: {{ q.timestamp }}</p>
+    {% endif %}
   </div>
   <div>
     <p> Answers:
@@ -50,7 +54,11 @@
   </div>
   {% for a in q.get_answers %}
     <div>
-    <p>{{ a.answer }}</p>
+    {% if a.user %}
+      <p>{{ a.answer }}, User: {{ a.user }}, Timestamp: {{ a.timestamp }}</p>
+    {% else %}
+      <p>{{ a.answer }}, User: <i>Anonymous</i>, Timestamp: {{ a.timestamp }}</p>
+    {% endif %}
     </div>
   {% endfor %}
   <form method="post">
