@@ -9,6 +9,7 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from archive.models import Archive
+from django.template.response import TemplateResponse
 from django.utils.decorators import method_decorator
 from wiki.decorators import get_article
 from wiki.models import URLPath, models
@@ -21,6 +22,7 @@ from wiki import models
 
 from bsi.models import BSI_Article_type
 from bsi.ugaViews import overview_uga
+from django.contrib.admin.sites import AdminSite
 from .models.article_extensions import BSI
 from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
 import csv
@@ -166,3 +168,7 @@ def check_new_page():
         return True
     except:
         return False
+
+
+def control_panel(request):
+    return render(request, 'bsi/adminControlPanel.html')
