@@ -14,10 +14,10 @@ def information(request):
         elif 'answer_button' in request.POST:
             a_form = AnswerForm(request.POST)
             if a_form.is_valid():
-                print(a_form.cleaned_data['question3'])
-                q = Question.get_question(a_form.cleaned_data['question3'])
+                q = Question.get_question(a_form.cleaned_data['answer_from'])
                 q.add_answer(a_form.cleaned_data['answer'], request.user)
 
     q_form = QuestionForm()
     a_form = AnswerForm()
+
     return render(request, 'info.html', {'q_form': q_form, 'a_form': a_form, 'questions': Question.get_questions(PageType.INFO_PAGE)})

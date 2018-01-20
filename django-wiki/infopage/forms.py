@@ -6,6 +6,6 @@ class QuestionForm(forms.Form):
 
 
 class AnswerForm(forms.Form):
-    question3 = forms.CharField(widget=forms.HiddenInput(attrs={
-                'class': 'yuy'}), required=False)
-    answer = forms.CharField(label='Write your answer here', max_length=1000, required=False, strip=True)
+    answer_from = forms.CharField(widget=forms.HiddenInput(), required=True)
+    answer_id = forms.CharField(widget=forms.HiddenInput(), required=False)
+    answer = forms.CharField(label='Write your answer here', max_length=1000, required=True, strip=True)
