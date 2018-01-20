@@ -203,7 +203,7 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/ISMS.1/",
-                        "text": "Implementation notes for the module ISMS.1 Sicherheitsmanagement"
+                        "text": "ISMS.1 Sicherheitsmanagement"
                     }
                 ],
                 "text": "ISMS: Security Management"
@@ -225,19 +225,19 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/APP.1.1/",
-                        "text": "Implementation notes for the module APP.1.1 Office Products"
+                        "text": "APP.1.1 Office Products"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/APP.2.2/",
-                        "text": "Implementation notes for the module APP.2.2 Active Directory"
+                        "text": "APP.2.2 Active Directory"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/APP.3.1/",
-                        "text": "Implementation notes for the module APP.3.1 Web applications"
+                        "text": "APP.3.1 Web applications"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/APP.3.6/",
-                        "text": "Implementation notes for the module APP.3.6 DNS server"
+                        "text": "APP.3.6 DNS server"
                     }
                 ],
                 "text": "APP: Applications"
@@ -246,39 +246,39 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.1.1/",
-                        "text": "Implementation notes for the block SYS.1.1 General Server"
+                        "text": "SYS.1.1 General Server"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.1.2.2/",
-                        "text": "Implementation notes for the block SYS.1.2.2 Windows Server 2012"
+                        "text": "SYS.1.2.2 Windows Server 2012"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.2.1/",
-                        "text": "Implementation notes for the block SYS.2.1 General Client"
+                        "text": "SYS.2.1 General Client"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.3.1/",
-                        "text": "Implementation notes for the block SYS.3.1 Laptops"
+                        "text": "SYS.3.1 Laptops"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.2/",
-                        "text": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) "
+                        "text": "SYS.3.2.2 Mobile Device Management (MDM) "
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.3/",
-                        "text": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) "
+                        "text": "SYS.3.2.3 iOS (for Enterprise) "
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.3.4/",
-                        "text": "Implementation notes for the block SYS.3.4 Mobile data carrier"
+                        "text": "SYS.3.4 Mobile data carrier"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.4.1/",
-                        "text": "Implementation notes for the block SYS.4.1 printers, copiers and multifunction devices"
+                        "text": "SYS.4.1 printers, copiers and multifunction devices"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/SYS.4.4/",
-                        "text": "Implementation notes for the block SYS.4.4 General IoT device"
+                        "text": "SYS.4.4 General IoT device"
                     }
                 ],
                 "text": "SYS: IT systems"
@@ -287,7 +287,7 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/IND.1/",
-                        "text": "Implementation notes for the module IND.1 Operating and Control Technology"
+                        "text": "IND.1 Operating and Control Technology"
                     }
                 ],
                 "text": "IND: Industrial IT"
@@ -296,19 +296,19 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/ORP.1/",
-                        "text": "Implementation notes for the block ORP.1 Organization"
+                        "text": "ORP.1 Organization"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/ORP.2/",
-                        "text": "Implementation notes for the block ORP.2 Personal"
+                        "text": "ORP.2 Personal"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/ORP.3/",
-                        "text": "Implementation notes for the module ORP.3 Sensitization and Training"
+                        "text": "ORP.3 Sensitization and Training"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/ORP.5/",
-                        "text": "Implementation notes for the module ORP.5 Compliance Management (Request Management) "
+                        "text": "ORP.5 Compliance Management (Request Management) "
                     }
                 ],
                 "text": "ORP: organization and staff"
@@ -317,7 +317,7 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/DER.2.3/",
-                        "text": "Implementation notes for module DER.2.3 Clearance of far-reaching security incidents"
+                        "text": "DER.2.3 Clearance of far-reaching security incidents"
                     }
                 ],
                 "text": "DER: detection and reaction"
@@ -326,15 +326,15 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/CON.3/",
-                        "text": "Implementation notes for the module CON.3 Data backup concept"
+                        "text": "CON.3 Data backup concept"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/CON.4/",
-                        "text": "Implementation notes for the module CON.4 Selection and use of standard software"
+                        "text": "CON.4 Selection and use of standard software"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/CON.7/",
-                        "text": "Implementation notes for the module CON.7 Information security on trips abroad"
+                        "text": "CON.7 Information security on trips abroad"
                     }
                 ],
                 "text": "CON: conception and procedure"
@@ -343,31 +343,31 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.2/",
-                        "text": "Implementation notes for the block OPS.1.1.2 Proper IT administration"
+                        "text": "OPS.1.1.2 Proper IT administration"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.3/",
-                        "text": "Implementation notes for the block OPS.1.1.3 Patch and Change Management"
+                        "text": "OPS.1.1.3 Patch and Change Management"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.3/",
-                        "text": "Implementation notes for the module OPS.1.2.3 Information and data medium exchange"
+                        "text": "OPS.1.2.3 Information and data medium exchange"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.4/",
-                        "text": "Implementation notes for the OPS.1.2.4 Telework"
+                        "text": "OPS.1.2.4 Telework"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.2.1/",
-                        "text": "Implementation notes for the module OPS.2.1 Outsourcing for customers"
+                        "text": "OPS.2.1 Outsourcing for customers"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.2.4/",
-                        "text": "Implementation notes for the module OPS.2.4 Remote maintenance"
+                        "text": "OPS.2.4 Remote maintenance"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/OPS.3.1/",
-                        "text": "Implementation notes for the module OPS.3.1 Outsourcing for Dienstleister"
+                        "text": "OPS.3.1 Outsourcing for Dienstleister"
                     }
                 ],
                 "text": "OPS: operation"
@@ -376,23 +376,23 @@
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/INF.1/",
-                        "text": "Implementation notes for building block INF.1 General Building"
+                        "text": "INF.1 General Building"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/INF.3/",
-                        "text": "Implementation notes for the module INF.3 Electrotechnical cabling"
+                        "text": "INF.3 Electrotechnical cabling"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/INF.4/",
-                        "text": "Implementation notes for the module INF.4 IT- cabling"
+                        "text": "INF.4 IT- cabling"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/INF.8/",
-                        "text": "Implementation notes for the module INF.8 Domestic workstation"
+                        "text": "INF.8 Domestic workstation"
                     },
                     {
                         "href": "http://localhost:8000/bsi/implementationnotes/INF.9/",
-                        "text": "Implementation notes for module INF.9 Mobile workstation"
+                        "text": "INF.9 Mobile workstation"
                     }
                 ],
                 "text": "INF: Infrastructure"
