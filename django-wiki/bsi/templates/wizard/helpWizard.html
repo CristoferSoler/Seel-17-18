@@ -6,11 +6,66 @@
 
 {% block bsi_contents %}
 <div class="container margin-after-nav">
-     <div class="jumbotron-margin text-center">
-    	 <h1>Wizard Info Page</h1>
-         <div class="row">
+     <div class="jumbotron-margin">
+    	 <h1>Virtual Assistant</h1>
+         <div class="jumbotron">
+             <div class="row">
+                <p class="text-center">The virtual assistant is a program which helps you to find articles from the BSI compendium.
+                    By asking yes/no questions, the virtual assistant can calculate which article is the most likely
+                    you are searching for.</p>
+             </div>
+             <div class="row">
+                 <div class="col-md-5">
+                     <img class=" marginTopInfo img-responsive img-rounded" src="../../static/bsi/images/wizardInfoPage/wizardOverview.png">
+                 </div>
+                 <div class="col-md-7">
+                     <table border=0 class="underlined marginTopInfo">
+                        <tr>
+                            <td>
+                            <ol id="example1">
+                                <li><p>Button to return to the previous question.</p></li>
+                                <li><p>Restart the virtual assistant.</p></li>
+                                <li><p>Go to the info page.</p></li>
+                                <li><p>Press „Yes“ if you believe the topic is related with the article your are looking
+                                    for.</p></li>
+                                <li><p>Press „No“ if you believe the topic is NOT related with the article you are
+                                    looking for.</p></li>
+                                <li><p>Press „I don’t know“ if you are not sure if this topic is related.</p></li>
+                            </ol>
+                            </td>
+                        </tr>
+                    </table>
+                 </div>
+             </div>
+             <div class="row">
+                 <div class="col-md-12">
+                     <p class="bg-primary lead marginTopInfo">Information: Even if you press „no“, the current topic is not completely
+                         excluded.</p>
+                 </div>
+            </div>
+             <div class="row">
+                 <div class="col-md-5">
+                     <img class="img-responsive marginTopInfo" src="../../static/bsi/images/wizardInfoPage/topicAboutAll.png">
+                 </div>
+                 <div class="col-md-7">
+                    <ul class="marginTopInfo">
+                        <li><p>Click here to show example articles about the topic currently asked in the question.</p></li>
+                        <li><p>Click on an article in the list to see it.</p></li>
+                    </ul>
+                 </div>
+             </div>
+             <div class="row row-eq-height">
+                 <div class="col-md-5">
+                     <img class="img-responsive marginTopInfo" src="../../static/bsi/images/wizardInfoPage/results.png">
+                 </div>
+                 <div class="col-md-7">
+                    <ul class="marginTopInfo">
+                        <li><p>Once enough questions are answered, results will be displayed. Keep in mind this is not
+                            final and if you continue to answer those can change.</p></li>
+                    </ul>
+                 </div>
+             </div>
 
-        </div>
 	 </div>
 </div>
 {% endblock %}
