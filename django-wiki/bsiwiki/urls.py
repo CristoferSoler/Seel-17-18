@@ -41,8 +41,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls, name='adminpage'),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
-    url(r'^_information/', include('infopage.urls')),
-    url(r'^_treeview/', include('treeview.urls')),
+    url(r'^information_page', include('infopage.urls')),
     url(r'^', include('bsi.urls')),
     url(r'^', get_pattern()),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
