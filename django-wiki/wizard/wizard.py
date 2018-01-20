@@ -27,14 +27,16 @@ def getPathOfElement(title, pathlist, requestParameter):
             return el['path']
     return ''
 
+def topicDic(name):
+    return dict(name=name,state='i')
 
-def generateDic(list, pathlist, requestParameter):
-    title = list[0]
+
+def generateDic(listt, pathlist, requestParameter):
+    title = listt[0]
     path = getPathOfElement(title, pathlist, requestParameter)
+    topics = list(map(topicDic,listt[1:]))
 
-    #TODO convert list of topics to object list with name and state
-
-    componentDic = dict(name=title, percentage=1, path=path, topics=list[1:])
+    componentDic = dict(name=title, percentage=1, path=path, topics=topics)
     return componentDic
 
 
@@ -70,7 +72,8 @@ def generateTopicsWithRelatedElements(topics, elements, requestParameter):
     pathList = getPathList()
 
     for element in elements:
-        listOfAllTopics.append(element['topics'])
+        topicWithoutDic = list(map(lambda x: x['name'], element['topics']))
+        listOfAllTopics.append(topicWithoutDic)
         listOfAllTopicNames.append(element['name'])
     rowsOfTopicList = list(zip(*listOfAllTopics))
 
@@ -121,7 +124,9 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
     listOfAllTopics = []
 
     for element in elements:
-        listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
+        topicWithoutDic = list(map(lambda x:x['name'],element['topics']))
+        listOfAllTopics = itertools.chain(listOfAllTopics, topicWithoutDic)
+
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
@@ -130,6 +135,8 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
         topics.append(topic[0])
 
     topicWithRelatedElements = generateTopicsWithRelatedElements(topics, elements, requestParameter)
+
+    print(topicWithRelatedElements)
     orderedTopic = orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic)
 
     return orderedTopic
