@@ -2,6 +2,7 @@
 {% block sidebar %}
         {{ block.super }}
 
+
 	<div class="module">
         <table>
         <caption>
@@ -17,6 +18,22 @@
 				<td scope="row"><button onclick="postUpdate()">Start</button></td>
 			</tr>
 
+        </table>
+        </div>
+
+
+<div class="module">
+        <table>
+        <caption>
+            <a href="#" class="section" title="Models in the Wiki images application">Users</a>
+        </caption>
+
+            <tr class="model-image">
+				<th scope="row"><a href="{% url 'banUsers' %}">Ban Users</a></th>
+            </tr>
+			<tr class="model-image">
+				<th scope="row"><a href="{% url 'assignUsers' %}">Assign Users To Groups</a></th>
+            </tr>
         </table>
         </div>
 

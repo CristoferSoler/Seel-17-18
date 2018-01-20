@@ -19,7 +19,7 @@ from wiki.views.article import SearchView
 from .models.article_extensions import BSI_Article_type
 from .forms import FilterForm
 from wiki import models
-
+from django.contrib import admin
 from bsi.models import BSI_Article_type
 from bsi.ugaViews import overview_uga
 from django.contrib.admin.sites import AdminSite
@@ -169,6 +169,3 @@ def check_new_page():
     except:
         return False
 
-
-def control_panel(request):
-    return render(request, 'bsi/adminControlPanel.html')
