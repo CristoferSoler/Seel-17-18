@@ -135,8 +135,6 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
         topics.append(topic[0])
 
     topicWithRelatedElements = generateTopicsWithRelatedElements(topics, elements, requestParameter)
-
-    print(topicWithRelatedElements)
     orderedTopic = orderdTopicWithTheSameNumber(topicWithRelatedElements, numberOfEachTopic)
 
     return orderedTopic
