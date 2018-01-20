@@ -3,6 +3,19 @@ from datetime import timedelta
 from wiki.models import URLPath, transaction
 from django.contrib.auth.models import User
 from django.utils import timezone
+from enumfields import Enum
+from enumfields import EnumField
+
+
+class BSI_Article_type(Enum):
+    COMPONENT = 'C'
+    THREAT = 'G'
+    IMPLEMENTATIONNOTES = 'N'
+
+    class Labels:
+        COMPONENT = 'Components'
+        THREAT = 'Threat'
+        IMPLEMENTATIONNOTES = 'Implementation Notes'
 
 
 def get_timestamp_now():
