@@ -1,11 +1,13 @@
 from django.db import models
-from datetime import datetime, timedelta
+from datetime import timedelta
 from wiki.models import URLPath, transaction
 from django.contrib.auth.models import User
+from django.utils import timezone
 
 
 def get_timestamp_now():
-    return datetime.now()
+    # this sets the TZ to utc by default
+    return timezone.now()
 
 
 class Question(models.Model):
@@ -16,34 +18,35 @@ class Question(models.Model):
 
     @classmethod
     def delete_old_questions(cls):
-        cls.objects.filter(timestamp__lte=datetime.now()-timedelta(days=30)).delete()
-
-
-    @classmethod
-    def create_question(cls,text, user, url):
-            q = cls(question=text,user= user,url= url)
-            q.save()
-            return q
+        cls.objects.filter(timestamp__lte=timezone.now()-timedelta(days=30)).delete()
 
     @classmethod
-    def get_questions(cls,url):
+    @transaction.atomic
+    def create_question(cls, text, user, url):
+        q = cls(question=text, user=user, url=url)
+        q.save()
+        return q
+
+    @classmethod
+    def get_questions(cls, url):
         return cls.objects.filter(url=url)
 
     def add_answer(self, text, user):
-            return  self.answer_set.create(answer=text, user=user)
+        return self.answer_set.create(answer=text, user=user)
 
     def delete_question(self):
-            self.delete()
-            self.save()
+        self.delete()
 
     @transaction.atomic
-    def edit_question(self,text):
-            self.question = text
-            self.save()
-
+    def edit_question(self, text):
+        self.question = text
+        self.save()
 
     def get_answers(self):
         return self.answer_set.all()
+
+    def __str__(self):
+        return 'Question: ' + self.question
 
 
 class Answer(models.Model):
@@ -54,5 +57,8 @@ class Answer(models.Model):
 
     @transaction.atomic
     def edit_answer(self, text):
-            self.answer = text
-            self.save()
+        self.answer = text
+        self.save()
+
+    def __str__(self):
+        return 'Answer: ' + self.answer
