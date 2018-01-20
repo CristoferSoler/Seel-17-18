@@ -1,21 +1,18 @@
 from django.db import models
 from datetime import timedelta
-from wiki.models import URLPath, transaction
+from wiki.models import transaction
 from django.contrib.auth.models import User
 from django.utils import timezone
-from enumfields import Enum
-from enumfields import EnumField
+from enumfields import Enum, EnumField
 
 
-class BSI_Article_type(Enum):
-    COMPONENT = 'C'
-    THREAT = 'G'
-    IMPLEMENTATIONNOTES = 'N'
+class PageType(Enum):
+    FAQ = 'FAQ'
+    INFO_PAGE = 'INFO_PAGE'
 
     class Labels:
-        COMPONENT = 'Components'
-        THREAT = 'Threat'
-        IMPLEMENTATIONNOTES = 'Implementation Notes'
+        FAQ = 'Frequently Asked Questions'
+        INFO_PAGE = 'Information Page'
 
 
 def get_timestamp_now():
@@ -27,7 +24,7 @@ class Question(models.Model):
     question = models.TextField(max_length=500)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
-    url = models.ForeignKey(URLPath, on_delete=models.CASCADE)
+    url = EnumField(PageType)
 
     @classmethod
     def delete_old_questions(cls):
@@ -43,6 +40,13 @@ class Question(models.Model):
     @classmethod
     def get_questions(cls, url):
         return cls.objects.filter(url=url)
+
+    @classmethod
+    def get_question(cls, q_id):
+        try:
+            return Question.objects.get(id=q_id)
+        except Exception:
+            return None
 
     def add_answer(self, text, user):
         return self.answer_set.create(answer=text, user=user)
