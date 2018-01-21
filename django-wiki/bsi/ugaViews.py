@@ -172,6 +172,7 @@ class UGEditView(Edit):
         return redirect('get_article', path="uga")
 
 
+@method_decorator(login_required, name='dispatch')
 class UGDeleteView(Delete):
     form_class = wiki_forms.DeleteForm
     template_name = "uga/delete.html"
