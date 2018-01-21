@@ -1,4 +1,3 @@
-# from bsi.decorators import get_article
 import difflib
 import json
 import logging
@@ -14,8 +13,7 @@ from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
 from wiki.decorators import get_article
-from wiki.forms import EditForm
-from wiki.models import URLPath, ArticleRevision, reverse
+from wiki.models import ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
 from wiki.views.article import Edit, Delete, History, Preview
@@ -23,14 +21,12 @@ from wiki.views.article import Edit, Delete, History, Preview
 from bsi import forms
 from bsi.models.article_extensions import BSI
 from .forms import AddLinksForm, CreateForm
+from bsi.models.article_extensions import UGA, ArticleRevisionValidation
 
 log = logging.getLogger(__name__)
 
-from bsi.models.article_extensions import UGA, ArticleRevisionValidation
-
 
 def overview_uga(request):
-    uga = URLPath.get_by_path('uga/')
     children = UGA.get_active_children()
 
     return render(request, 'uga/overview_uga.html', {'articles': children})
@@ -110,7 +106,7 @@ class UGEditView(Edit):
     template_name = "uga/edit.html"
     form_class = forms.UGEditForm
 
-    @method_decorator(get_article(can_read=True))
+    @method_decorator(get_article(can_write=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
         self.sidebar = []
@@ -164,7 +160,7 @@ class UGEditView(Edit):
 
         form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
         return form
-    #
+
     def get_success_url(self):
         """Go to the article view page when the article has been saved"""
         if self.urlpath:
