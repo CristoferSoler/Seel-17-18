@@ -49,7 +49,7 @@
   <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h2 class="page-header">Questions</h2>
+      <h2 class="page-header margintop">Questions</h2>
         <div class="comment-list">
           <!-- First Comment -->
              {% for q in questions %}
@@ -57,9 +57,11 @@
             <div class="col-md-12 col-sm-12">
               <div class="panel panel-default arrow left">
                 <div class="panel-body">
+                <div class="btn-group pull-right">
+                 <a href="#" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a>
+                </div>
                   <div class="text-left">
                        {% if q.user %}
-
                            <div class="comment-user"><i class="fa fa-user"></i> {{ q.user }}</div>
                            {% else%}
                            <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
@@ -85,7 +87,7 @@
                         </div>
                         {% endfor %}
                 <input type="hidden" name="answer_from" value="{{ q.id }}" />
-                 <p class="text-right"><button type="submit" class="btn" name="answer_button">
+                 <p class="text-right"><button type="submit" class="btn btn-default" name="answer_button">
                      <i class="fa fa-reply"></i> reply</button></p>
             </form>
                 </div>
@@ -100,6 +102,9 @@
             <div class="col-md-11 col-sm-11">
               <div class="panel panel-default arrow left">
                 <div class="panel-heading right">Reply</div>
+               <div class="btn-group pull-right" style="margin-right: 60px">
+                 <a href="#" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a>
+                </div>
                 <div class="panel-body">
                   <div class="text-left">
                        {% if a.user %}
