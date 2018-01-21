@@ -148,6 +148,9 @@ def doUpdate(file):
             id = get_bsi_article_id(sub_article_type, file_name)
             # if the file is new or modified, add to database under /new
             if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
+                if sub_article_type == "C" and isdir(crfDir):
+                    appendThreatMeasureRelation(path_and_file, id)
+
                 # import the content to the database
                 with open(path_and_file) as data_file:
                     content = data_file.read()
