@@ -42,7 +42,7 @@ class Question(models.Model):
 
     @classmethod
     def get_questions(cls, url):
-        return cls.objects.filter(url=url)
+        return cls.objects.filter(url=url).order_by('-timestamp')
 
     @classmethod
     def get_question(cls, q_id):
@@ -66,7 +66,7 @@ class Question(models.Model):
         self.save()
 
     def get_answers(self):
-        return self.answer_set.all()
+        return self.answer_set.all().order_by('-timestamp')
 
     def __str__(self):
         return 'Question: ' + self.question
