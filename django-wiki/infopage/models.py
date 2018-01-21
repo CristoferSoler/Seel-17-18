@@ -32,15 +32,11 @@ class Question(models.Model):
 
     @classmethod
     @transaction.atomic
-    def create_question(cls, text, user, url):
-        q = cls(question=text, user=user, url=url)
-        q.save()
-        return q
-
-    @classmethod
-    @transaction.atomic
-    def create_question(cls, text, url):
-        q = cls(question=text, url=url)
+    def create_question(cls, text, url, user=None):
+        if user:
+            q = cls(question=text, user=user, url=url)
+        else:
+            q = cls(question=text, url=url)
         q.save()
         return q
 
@@ -55,11 +51,11 @@ class Question(models.Model):
         except Exception:
             return None
 
-    def add_answer(self, text, user):
-        return self.answer_set.create(answer=text, user=user)
-
-    def add_answer(self, text):
-        return self.answer_set.create(answer=text)
+    def add_answer(self, text, user=None):
+        if user:
+            return self.answer_set.create(answer=text, user=user)
+        else:
+            return self.answer_set.create(answer=text)
 
     def delete_question(self):
         self.delete()

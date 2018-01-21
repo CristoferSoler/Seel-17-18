@@ -1,11 +1,9 @@
-from django.shortcuts import redirect, render
-from django.http import HttpResponseRedirect, Http404
+from django.shortcuts import render
+from django.http import HttpResponseRedirect
 from .forms import QuestionForm, AnswerForm
 from .models import Question, PageType
-from wiki.models import URLPath
-import pdb
 from django.urls import reverse
-
+import pdb
 
 def information(request):
     #pdb.set_trace()
@@ -14,7 +12,7 @@ def information(request):
             q_form = QuestionForm(request.POST)
             if q_form.is_valid():
                 if(request.user.is_authenticated):
-                    Question.create_question(q_form.cleaned_data['question'], request.user, PageType.INFO_PAGE)
+                    Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE, request.user)
                 else:
                     Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE)
         elif 'answer_button' in request.POST:
