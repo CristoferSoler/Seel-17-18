@@ -62,7 +62,7 @@
                     <form action="{% url 'delete_q' %}" method="post">
                       {% csrf_token %}
                       <input type="hidden" name="q_id" value="{{ q.id }}" />
-                      <button type="submit" class="btn btn-warning" name="button">Delete</button>
+                      <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
                      <!-- <a href="{% url 'delete_q' %}" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a> -->
                     </form>
                   {% endif %}
@@ -109,19 +109,23 @@
             <div class="col-md-11 col-sm-11">
               <div class="panel panel-default arrow left">
                 <div class="panel-heading right">Reply</div>
-               <div class="btn-group pull-right" style="margin-right: 60px">
-                   <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#myModal">
-                     <i class="fa fa-edit"></i> Edit</button>
-                     {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}
-                    <form action="{% url 'delete_a' %}" method="post">
-                      {% csrf_token %}
-                      <input type="hidden" name="a_id" value="{{ a.id }}" />
-                      <button type="submit" class="btn btn-warning" name="button">Delete</button>
-                     <!-- <a href="{% url 'delete_q' %}" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a> -->
-                    </form>
-                  {% endif %}
-                </div>
+                   <div class="btn-group pull-right" style="margin-right: 60px">
 
+                            {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}
+                            <form action="{% url 'delete_a' %}" method="post">
+                              {% csrf_token %}
+                              <input type="hidden" name="a_id" value="{{ a.id }}" />
+                             <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
+                            </form>
+                          {% endif %}
+
+                   </div>
+                   <div class="btn-group pull-right">
+                          <input type="hidden" name="a_id" value="{{ a.id }}" />
+                        <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                         <i class="fa fa-pencil"></i></button>
+
+                    </div>
                <!-- modal edit form-->
               <div id="myModal" class="modal fade" role="dialog">
               <div class="modal-dialog">
