@@ -4,6 +4,7 @@ from django.contrib.auth import login, authenticate
 import pdb
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import Group
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -143,6 +144,8 @@ def register(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
+            # by default add user to users group
+            user.groups.add(Group.objects.get(name='users'))
             login(request, user)
             return redirect('index')
     else:

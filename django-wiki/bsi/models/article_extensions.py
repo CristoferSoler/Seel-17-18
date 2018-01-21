@@ -1,13 +1,11 @@
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 from django.db.models import Q
 from django.db.models import signals
 from enumfields import Enum
 from enumfields import EnumField
-# from wiki.models.article import Article
-from wiki.models import URLPath, Site, ArticleRevision, transaction, Article
-
+from wiki.models import URLPath, ArticleRevision, transaction, Article
 from . import permissions
 
 
@@ -35,10 +33,12 @@ class UGA(models.Model):
         return uga
 
     @classmethod
+    @transaction.atomic
     def create_by_request(cls, request, article, parent, slug, title, content, summary):
         url = URLPath._create_urlpath_from_request(request=request, perm_article=article, parent_urlpath=parent,
                                                    slug=slug, title=title,
                                                    content=content, summary=summary)
+        set_permission(url.article, request.user)
         if not url.path.startswith('uga') or len(url.path) == 3:
             raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
@@ -47,9 +47,6 @@ class UGA(models.Model):
 
     def set_links_to_bsi(self, list):
         self.is_linked_to.set(list)
-        #
-        # for item in list:
-        #     self.add_link_to_bsi(item)
 
     def add_link_to_bsi(self, bsi):
         bsi.references.add(self)
@@ -69,7 +66,6 @@ class UGA(models.Model):
         # uga.is_linked_to
         references = BSI.objects.filter(references=uga)
         return references
-
 
     def __str__(self):
         return 'UGA with path: ' + self.url.__str__()
@@ -126,17 +122,10 @@ class BSI(models.Model):
             bsiRoot = URLPath.objects.get(slug='bsi')
 
         except URLPath.DoesNotExist:
-            root = URLPath.objects.filter(slug=None)
-            if (not root):
-                site = Site.objects.get_current()
-                kwargs = {'content': "", 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
-                root = URLPath.create_root(site=site, title="BSI Overview", request=None, **kwargs)
-            else:
-                root = root[0]
+            root = URLPath.objects.filter(slug=None)[0]
             rev_kwargs = {'content': content, 'user_message': 'BSI.create', 'ip_address': '0.0.0.0'}
-            bsiRoot = URLPath.create_urlpath(parent=root, slug='bsi', title='BSI',
-                                             **rev_kwargs)
-
+            bsiRoot = URLPath.create_urlpath(parent=root, slug='bsi', title='BSI Overview', **rev_kwargs)
+            set_permission(bsiRoot.article, None)
         return bsiRoot
 
     @classmethod
@@ -144,8 +133,8 @@ class BSI(models.Model):
         subroot = URLPath.objects.filter(slug=slug, parent=parent)
         if (not subroot):
             rev_kwargs = {'content': content, 'user_message': user_msg, 'ip_address': '0.0.0.0'}
-            subroot = URLPath.create_urlpath(parent=parent, slug=slug, title=title,
-                                             **rev_kwargs)
+            subroot = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
+            set_permission(subroot.article, None)
         else:
             subroot = subroot[0]
         return subroot
@@ -154,6 +143,7 @@ class BSI(models.Model):
     @transaction.atomic
     def create(cls, parent, slug, title, article_type, **rev_kwargs):
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
+        set_permission(url.article, None)
         # if not url.path.startswith('bsi') or len(url.path) == 3:
         #    raise ValueError("A bsi article is supposed to be a child of 'bsi' and it cannot be 'bsi' itself.")
         bsi = cls(url=url, articleType=article_type)
@@ -173,6 +163,14 @@ class BSI(models.Model):
 
     def __str__(self):
         return 'BSI article with path: ' + self.url.__str__()
+
+
+def set_permission(article, owner):
+    article.group = Group.objects.get(name='administrators')
+    article.other_write = False
+    if owner:
+        article.owner = owner
+    article.save()
 
 
 signals.post_save.connect(ArticleRevisionValidation.get_or_create, sender=ArticleRevision)
