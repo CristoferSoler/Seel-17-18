@@ -2,6 +2,7 @@ import difflib
 import json
 import logging
 
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
@@ -35,6 +36,7 @@ def overview_uga(request):
 class CreateRoot(CreateRootView):
     template_name = "uga/create-root.html"
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super(CreateRoot, self).dispatch(request, *args, **kwargs)
 
@@ -47,6 +49,7 @@ TEMPLATES = {"creation": "uga/create_article_master_data.html",
 
 class UGACreate(SessionWizardView):
 
+    @method_decorator(login_required)
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
@@ -106,6 +109,7 @@ class UGEditView(Edit):
     template_name = "uga/edit.html"
     form_class = forms.UGEditForm
 
+    @method_decorator(login_required)
     @method_decorator(get_article(can_write=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
