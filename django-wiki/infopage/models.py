@@ -63,6 +63,7 @@ class Question(models.Model):
     @transaction.atomic
     def edit_question(self, text):
         self.question = text
+        self.timestamp = get_timestamp_now()
         self.save()
 
     def get_answers(self):
@@ -78,10 +79,18 @@ class Answer(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
 
+    @classmethod
+    def get_answer(cls, id):
+        return Answer.objects.filter(id=id)[0]
+
     @transaction.atomic
     def edit_answer(self, text):
         self.answer = text
+        self.timestamp = get_timestamp_now()
         self.save()
+
+    def delete_answer(self):
+        self.delete()
 
     def __str__(self):
         return 'Answer: ' + self.answer
