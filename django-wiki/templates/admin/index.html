@@ -1,4 +1,8 @@
 {% extends "admin/index.html" %}
+{% block branding %}
+            <h1 id="site-name"><a href="/admin/">Administration Control Panel</a></h1>
+{% endblock %}
+
 {% block sidebar %}
 
 	<div class="module">
@@ -18,23 +22,6 @@
 
         </table>
         </div>
-<!--
-<div class="module">
-        <table>
-        <caption>
-            <a href="#" class="section" title="Models in the Wiki images application">Users</a>
-        </caption>
-
-            <tr class="model-image">
-				<th scope="row"><a href="{% url 'banUsers' %}">Ban Users</a></th>
-            </tr>
-			<tr class="model-image">
-				<th scope="row"><a href="{% url 'assignUsers' %}">Assign Users To Groups</a></th>
-            </tr>
-        </table>
-        </div>
--->
-
 
 
 
