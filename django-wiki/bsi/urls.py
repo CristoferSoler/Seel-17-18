@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^about$', views.about, name='about'),
     url(r'^faq$', views.faq, name='faq'),
     url(r'^contact$', views.contact, name='contact'),
-    url(r'^new$', WikiArticleView.as_view, name='new'),
+    url(r'^new$', WikiArticleView.as_view(), name='new'),
     # url(r'^article/(?P<path>.+/|)$', WikiArticleView.as_view(), name='bsiarticle'),
     # url(r'^article/(?P<path>.+|)$', BSIArticleView.as_view(), name='bsiarticle'),
     # url(r'^(?P<article_id>[0-9]+|)/$', BSIArticleView.as_view(), name='bsiarticle'),
@@ -40,7 +40,7 @@ urlpatterns = [
         name='change_revision'),
     url(r'^(?P<path>.+/|)delete/$', UGDeleteView.as_view(), name='delete'),
     # the following url handles any article! The template that should be used is depending from the url, see WikiArticleView
-    url(r'^(?P<path>.+/|)_create/$', UGACreate.as_view(ugaViews.FORMS), name='create'),
+    url(r'^uga/_create/$', UGACreate.as_view(ugaViews.FORMS), name='create'),
     url(r'^uga/_create/get_bsi_articles/$', ugaViews.get_bsi_articles, name='get_bsi_articles'),
     # url(r'^(?P<path>.+/|)_create/_add_links/$', UGCreateAddLinksView.as_view(), name='add_links'),
     url(r'^(?P<path>.+|)$', WikiArticleView.as_view(), name='get_article'),

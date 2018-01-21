@@ -54,7 +54,6 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
 
     def wrapper(request, *args, **kwargs):
         from wiki import models
-
         path = kwargs.pop('path', None)
         article_id = kwargs.pop('article_id', None)
 
@@ -99,7 +98,11 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
                 urlpath = None
 
         else:
-            raise TypeError('You should specify either article_id or path')
+            #raise TypeError('You should specify either article_id or path')
+            return HttpResponseNotFound(
+                    render_to_string(
+                        "wiki/error.html",
+                        request=request))
 
         if article.current_revision.locked and not_locked:
             return response_forbidden(request, article, urlpath)
