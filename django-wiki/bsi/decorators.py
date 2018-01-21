@@ -1,18 +1,16 @@
-from __future__ import absolute_import, unicode_literals
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
 
 from functools import wraps
 
-import sys
 from django.core.urlresolvers import reverse
 from django.http import (HttpResponseForbidden, HttpResponseNotFound,
                          HttpResponseRedirect)
 from django.shortcuts import get_object_or_404, redirect
 from django.template.loader import render_to_string
 from django.utils.http import urlquote
-from six.moves import filter
 from wiki.conf import settings
 from wiki.core.exceptions import NoRootURL
-from wiki.models import URLPath, Article,Site
 
 
 def response_forbidden(request, article, urlpath):
@@ -33,6 +31,7 @@ def response_forbidden(request, article, urlpath):
         )
 
 
+# TODO: This decorator is too complex (C901)
 def get_article(func=None, can_read=True, can_write=False,  # noqa
                 deleted_contents=False, not_locked=False,
                 can_delete=False, can_moderate=False,
@@ -40,74 +39,38 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
     """View decorator for processing standard url keyword args: Intercepts the
     keyword args path or article_id and looks up an article, calling the decorated
     func with this ID.
-
     Will accept a func(request, article, *args, **kwargs)
-
     NB! This function will redirect if an article does not exist, permissions
     are missing or the article is deleted.
-
     Arguments:
-
     can_read=True and/or can_write=True: Check that the current request.user
     has correct permissions.
-
     can_delete and can_moderate: Verifies with wiki.core.permissions
-
     can_create: Same as can_write but adds an extra global setting for anonymous access (ANONYMOUS_CREATE)
-
     deleted_contents=True: Do not redirect if the article has been deleted.
-
     not_locked=True: Return permission denied if the article is locked
-
     Also see: wiki.views.mixins.ArticleMixin
     """
 
     def wrapper(request, *args, **kwargs):
+        from wiki import models
 
-        #path = kwargs.pop('path', None)
-        site = Site.objects.get_current()
-        path = 'uga/'
-        parent = URLPath.objects.get(slug='uga')
-
+        path = kwargs.pop('path', None)
         article_id = kwargs.pop('article_id', None)
 
-        #print('Request: ' + request)
-        #print('Kwargs: ' + kwargs)
-
         urlpath = None
-        #print('Path: ' + path)
 
         # fetch by urlpath.path
         if path is not None:
             try:
-                urlpath = URLPath.get_by_path(path, select_related=True)
-                #urlpath = URLPath.create_urlpath(parent,'/' )
-                print(urlpath)
+                urlpath = models.URLPath.get_by_path(path, select_related=True)
             except NoRootURL:
                 return redirect('root_create')
-            except URLPath.DoesNotExist:
-                try:
-                    print('Hello')
-                    pathlist = list(
-                        filter(
-                            lambda x: x != "",
-                            path.split("/"),
-                        ))
-                    path = "/".join(pathlist[:-1])
-                    parent = URLPath.get_by_path(path)
-                    return HttpResponseRedirect(
-                        reverse(
-                            "create", kwargs={'path': parent.path, }) +
-                        "?slug=%s" % pathlist[-1].lower())
-                except URLPath.DoesNotExist:
-                    print('Hello 123123132')
-                    return HttpResponseNotFound(
-                        render_to_string(
-                            "wiki/error.html",
-                            context={
-                                'error_type': 'ancestors_missing'
-                            },
-                            request=request))
+            except models.URLPath.DoesNotExist:
+                return HttpResponseNotFound(
+                    render_to_string(
+                        "wiki/error.html",
+                        request=request))
             if urlpath.article:
                 # urlpath is already smart about prefetching items on article
                 # (like current_revision), so we don't have to
@@ -116,7 +79,7 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
                 # Be robust: Somehow article is gone but urlpath exists...
                 # clean up
                 return_url = reverse(
-                    'wiki:get',
+                    'get_article',
                     kwargs={
                         'path': urlpath.parent.path})
                 urlpath.delete()
@@ -127,25 +90,16 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             # TODO We should try to grab the article form URLPath so the
             # caching is good, and fall back to grabbing it from
             # Article.objects if not
-            articles = Article.objects
+            articles = models.Article.objects
 
             article = get_object_or_404(articles, id=article_id)
             try:
-                urlpath = URLPath.objects.get(articles__article=article)
-            except (URLPath.DoesNotExist, URLPath.MultipleObjectsReturned):
+                urlpath = models.URLPath.objects.get(articles__article=article)
+            except (models.URLPath.DoesNotExist, models.URLPath.MultipleObjectsReturned):
                 urlpath = None
 
         else:
             raise TypeError('You should specify either article_id or path')
-
-        if not deleted_contents:
-            # If the article has been deleted, show a special page.
-            if urlpath:
-                if urlpath.is_deleted():  # This also checks all ancestors
-                    return redirect('wiki:deleted', path=urlpath.path)
-            else:
-                if article.current_revision and article.current_revision.deleted:
-                    return redirect('wiki:deleted', article_id=article.id)
 
         if article.current_revision.locked and not_locked:
             return response_forbidden(request, article, urlpath)
@@ -167,7 +121,7 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             return response_forbidden(request, article, urlpath)
 
         kwargs['urlpath'] = urlpath
-        print('hello1')
+
         return func(request, article, *args, **kwargs)
 
     if func:
@@ -182,3 +136,16 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             can_delete=can_delete,
             can_moderate=can_moderate,
             can_create=can_create)
+
+
+def disable_signal_for_loaddata(signal_handler):
+    """
+    Decorator that turns off signal handlers when loading fixture data.
+    """
+
+    @wraps(signal_handler)
+    def wrapper(*args, **kwargs):
+        if kwargs.get('raw', False):
+            return
+        return signal_handler(*args, **kwargs)
+    return wrapper
