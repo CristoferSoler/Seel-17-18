@@ -1,5 +1,8 @@
 {% extends 'bsi/base.html' %}
 {% block bsi_contents %}
+    {% load widget_tweaks %}
+
+
 <div class="jumbotron jumbroton-blue jumbotron-sm">
     <div class="container margin-image text-center">
         <div class="row">
@@ -13,16 +16,25 @@
 
             </div>
              <div class="col-sm-8 col-lg-8">
-                   <form>
+                <form method="post">
+                     {% csrf_token %}
+                     {% for hidden in form.hidden_fields %}
+                      {{ hidden }}
+                    {% endfor %}
+
                 <div class="row">
                     <div class="col-md-12">
+                        {% for field in q_form.visible_fields %}
                         <div class="form-group">
-                            <textarea name="message" id="message" class="form-control" rows="3" cols="10" required="required"
-                                placeholder="Feel free to ask"></textarea>
+                            {{ field|attr:"class:form-control"|attr:"placeholder:Write your question here"|attr:"rows:3"|attr:"required:required" }}
+                              {% for error in field.errors %}
+                              <span class="help-block">{{ error }}</span>
+                              {% endfor %}
                         </div>
+                        {% endfor %}
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-warning" id="btnContactUs">
+                        <button type="submit" class="btn btn-warning" name="question_button">
                             Submit</button>
                     </div>
                 </div>
@@ -34,79 +46,55 @@
     </div>
 </div>
 
-<form method="post">
-    {% csrf_token %}
-    {{ q_form }}
-    <input type="submit" name="question_button" value="Submit" />
-</form>
-
-{% for q in questions %}
-  <div>
-    {% if q.user %}
-      <p>{{ q.question }}, User: {{ q.user }}, Timestamp: {{ q.timestamp }}</p>
-    {% else %}
-      <p>{{ q.question }}, User: <i>Anonymous</i>, Timestamp: {{ q.timestamp }}</p>
-    {% endif %}
-  </div>
-  <div>
-    <p> Answers:
-    </p>
-  </div>
-  {% for a in q.get_answers %}
-    <div>
-    {% if a.user %}
-      <p>{{ a.answer }}, User: {{ a.user }}, Timestamp: {{ a.timestamp }}</p>
-    {% else %}
-      <p>{{ a.answer }}, User: <i>Anonymous</i>, Timestamp: {{ a.timestamp }}</p>
-    {% endif %}
-    </div>
-  {% endfor %}
-  <form method="post">
-    {% csrf_token %}
-    {{ a_form }}
-    <input type="hidden" name="answer_from" value="{{ q.id }}" />
-    <input type="submit" name="answer_button" value="Submit" />
-</form> 
-{% endfor %}
-<div>
-  <p>{{ question.question }}</p>
-</div>
-
   <div class="container">
   <div class="row">
     <div class="col-md-12">
       <h2 class="page-header">Questions</h2>
         <div class="comment-list">
           <!-- First Comment -->
+             {% for q in questions %}
           <article class="row">
             <div class="col-md-12 col-sm-12">
               <div class="panel panel-default arrow left">
                 <div class="panel-body">
                   <div class="text-left">
-                    <div class="comment-user"><i class="fa fa-user"></i> That Guy</div>
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                       {% if q.user %}
+
+                           <div class="comment-user"><i class="fa fa-user"></i> {{ q.user }}</div>
+                           {% else%}
+                           <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
+                      {% endif %}
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ q.timestamp }}</time>
                   </div>
                   <div class="comment-post">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      {{ q.question }}
                     </p>
                   </div>
-                    <div>
-                        <form>
-                         <div class="form-group">
-                            <textarea name="message" id="message" class="form-control" rows="2" cols="5" required="required"
-                                placeholder="answer"></textarea>
+                <form method="post">
+                {% csrf_token %}
+                    {% for hidden in form.hidden_fields %}
+                      {{ hidden }}
+                    {% endfor %}
+               {% for field2 in a_form.visible_fields %}
+                        <div class="form-group">
+                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your question here"|attr:"rows:2"|attr:"required:required" }}
+                              {% for error in field.errors %}
+                              <span class="help-block">{{ error }}</span>
+                              {% endfor %}
                         </div>
-                            </form>
-                    </div>
-                  <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+                        {% endfor %}
+                <input type="hidden" name="answer_from" value="{{ q.id }}" />
+                 <p class="text-right"><button type="submit" class="btn" name="answer_button">
+                     <i class="fa fa-reply"></i> reply</button></p>
+            </form>
                 </div>
-
               </div>
+
             </div>
           </article>
-
-             <article class="row">
+                 {% for a in q.get_answers %}
+                  <article class="row">
             <div class="col-md-1 col-sm-1 col-md-offset-0 col-sm-offset-0 hidden-xs">
             </div>
             <div class="col-md-11 col-sm-11">
@@ -114,18 +102,25 @@
                 <div class="panel-heading right">Reply</div>
                 <div class="panel-body">
                   <div class="text-left">
-                    <div class="comment-user"><i class="fa fa-user"></i> That Guy</div>
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                       {% if a.user %}
+                           <div class="comment-user"><i class="fa fa-user"></i> {{ a.user }}</div>
+                      {% else %}
+                           <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
+                      {% endif %}
+                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ a.timestamp }}</time>
                   </div>
                   <div class="comment-post">
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                     {{ a.answer }}
                     </p>
               </div>
             </div>
               </div>
               </div>
           </article>
+                 {% endfor %}
+             {% endfor %}
+
 
 
         </div>

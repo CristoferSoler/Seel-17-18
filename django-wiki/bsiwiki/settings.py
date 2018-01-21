@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'wizard',
     'BSIUpdate',
     'infopage',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
