@@ -3,9 +3,12 @@ from django.http import HttpResponseRedirect, Http404
 from .forms import QuestionForm, AnswerForm
 from .models import Question, PageType
 from wiki.models import URLPath
+import pdb
+from django.urls import reverse
 
 
 def information(request):
+    #pdb.set_trace()
     if request.method == 'POST':
         if 'question_button' in request.POST:
             q_form = QuestionForm(request.POST)
@@ -23,8 +26,10 @@ def information(request):
                         q.add_answer(a_form.cleaned_data['answer'], request.user)
                     else:
                         q.add_answer(a_form.cleaned_data['answer'])
-
-    q_form = QuestionForm()
-    a_form = AnswerForm()
-
-    return render(request, 'info.html', {'q_form': q_form, 'a_form': a_form, 'questions': Question.get_questions(PageType.INFO_PAGE)})
+        q_form = QuestionForm()
+        a_form = AnswerForm()
+        return HttpResponseRedirect(reverse('information'))
+    else:
+        q_form = QuestionForm()
+        a_form = AnswerForm()
+        return render(request, 'info.html', {'q_form': q_form, 'a_form': a_form, 'questions': Question.get_questions(PageType.INFO_PAGE)})
