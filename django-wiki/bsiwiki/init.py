@@ -1,8 +1,20 @@
 from wiki.models import URLPath
 from bsiwiki import settings
-from bsi.models.article_extensions import UGA
+from django.contrib.sites.models import Site
+from django.contrib.auth.models import User, Group
+
 
 def init():
+    # set the domain
+    site = Site.objects.all()[0]
+    site.domain = 'it-gs.ziik.tu-berlin.de:8000'
+    site.save()
+
+    superusers = User.objects.filter(is_superuser=True)
+    for suser in superusers:
+        if not suser.groups.filter(name='administrators').exists():
+            suser.groups.add(Group.objects.get(name='administrators'))
+
     revision_kwargs = {'content': '', 'user_message': 'Initializer Service', 'ip_address': '0.0.0.0'}
     queryset_root = URLPath.objects.filter(slug=None)
 
