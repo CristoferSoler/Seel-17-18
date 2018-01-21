@@ -12,7 +12,8 @@ from django.template import loader
 from archive.models import Archive
 from django.template.response import TemplateResponse
 from django.utils.decorators import method_decorator
-from wiki.decorators import get_article
+#from wiki.decorators import get_article
+from .decorators import get_article
 from wiki.models import URLPath, models
 from wiki.models.article import Article
 from wiki.views.article import ArticleView

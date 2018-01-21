@@ -13,7 +13,8 @@ from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
-from wiki.decorators import get_article
+#from wiki.decorators import get_article
+from .decorators import get_article
 from wiki.models import ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
