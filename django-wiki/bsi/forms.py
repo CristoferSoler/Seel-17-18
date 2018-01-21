@@ -52,11 +52,11 @@ class CreateForm(forms.Form):
         #     required=False)
 
     title = forms.CharField(label=_('Title'), )
-    slug = WikiSlugField(
-        label=_('Slug'),
-        help_text=_(
-            "This will be the address where your article can be found. Use only alphanumeric characters and - or _.<br>Note: If you change the slug later on, links pointing to this article are <b>not</b> updated."),
-        max_length=models.URLPath.SLUG_MAX_LENGTH)
+    #slug = WikiSlugField(
+    #    label=_('Slug'),
+    #    help_text=_(
+    #        "This will be the address where your article can be found. Use only alphanumeric characters and - or _.<br>Note: If you change the slug later on, links pointing to this article are <b>not</b> updated."),
+    #    max_length=models.URLPath.SLUG_MAX_LENGTH)
     content = forms.CharField(
         label=_('Contents'),
         required=False,
@@ -67,8 +67,8 @@ class CreateForm(forms.Form):
         help_text=_("Write a brief message for the article's history log."),
         required=False)
 
-    def clean_slug(self):
-        return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
+    #def clean_slug(self):
+    #    return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
 
     def clean(self):
         super(CreateForm, self).clean()

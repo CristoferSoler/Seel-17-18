@@ -64,13 +64,13 @@ class UGACreate(SessionWizardView):
         return [TEMPLATES[self.steps.current]]
 
     def done(self, form_list, **kwargs):
-        slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']
         content = kwargs.get('form_dict')['creation'].cleaned_data['content']
         summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
         self.uga = UGA.create_by_request(request=self.request, article=self.article,
                                          parent=self.urlpath,
-                                         slug=slug, title=title,
+                                         slug=title.strip().replace(' ', '_'), title=title,
                                          content=content,
                                          summary=summary)
         links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
