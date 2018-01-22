@@ -8,11 +8,14 @@ from .ugaViews import CreateRoot, UGEditView, UGACreate, UGDeleteView, UGHistory
     UGChangeRevisionView
 from .views import BSISearchView, WikiArticleView
 from .wizard import getSortedTopicList
+from django.views.generic import TemplateView
 
 article_create_view_class = article.Create
 # article_diff_view = staticmethod(ugaViews.diff)
 
 urlpatterns = [
+    url(r'^robots.txt$', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
+        name="robots_file"),
     url(r'^$', views.index, name='index'),
     # url(r'^bsicatalog/', views.bsicatalog, name='bsicatalog'),
     url(r'^create-root/$', CreateRoot.as_view(), name='root_create'),
