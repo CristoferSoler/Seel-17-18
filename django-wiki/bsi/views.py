@@ -3,6 +3,7 @@ from operator import itemgetter
 from django.contrib.auth import login, authenticate
 import pdb
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.http import Http404
 from django.http import HttpResponse
@@ -16,7 +17,7 @@ from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 from .models.article_extensions import BSI_Article_type
-from .forms import FilterForm
+from .forms import FilterForm, UserRegistrationForm
 from wiki import models
 
 from bsi.models import BSI_Article_type
@@ -134,16 +135,15 @@ def home(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
+            user = User.objects.create_user(username=form.cleaned_data['username'],
+                                            password=form.cleaned_data['password1'],
+                                            email=form.cleaned_data['email'])
             login(request, user)
             return redirect('index')
     else:
-        form = UserCreationForm()
+        form = UserRegistrationForm()
         return render(request, 'bsi/account/register.html', {'form': form})
 
 
