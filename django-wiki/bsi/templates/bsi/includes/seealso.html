@@ -1,25 +1,49 @@
-
+{% load bsi_tags %}
 <h3>See Also</h3>
-                {% if urlpath.parent.slug == 'uga' %}
-                 {% for artpath in urlpath.uga.is_linked_to.all %}
-                    <ul>
-                        <li>
-                          <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
-                          </a>
-                        </li>
-                    </ul>
-                      {% empty %}
-                    <em>There are no BSI article linked in this level</em>
-                {% endfor %}
-                {% else %}
-                {% for artpath in urlpath.bsi.references.all %}
-                    <ul>
-                        <li>
-                          <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
-                          </a>
-                        </li>
-                    </ul>
-                    {% empty %}
-                    <em>There are no user article linked in this level</em>
-                {% endfor %}
-                {% endif %}
+  {% if urlpath.parent.slug == 'uga' %}
+  {% for artpath in urlpath.uga.is_linked_to.all %}
+  <ul>
+    <li>
+      <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <em>There are no BSI article linked in this level</em>
+  {% endfor %}
+  {% elif urlpath.parent.parent.slug == 'bsi' %}
+  {% for artpath in urlpath.bsi.references.all %}
+  <ul>
+    <li>
+      <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <em>There are no user article linked in this level</em>
+  {% endfor %}
+  {% else %}
+  {% if urlpath|is_uga %}
+  {% for artpath in urlpath.uga.is_linked_to.all %}
+  <ul>
+    <li>
+      <a href="{% url 'archive_get' path=artpath.url.parent.slug article=artpath.url.slug %}">{{ artpath.url.article.current_revision.title }}
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <em>There are no BSI article linked in this level</em>
+  {% endfor %}
+  {% else %}
+  {% for artpath in urlpath.bsi.references.all %}
+  <ul>
+    <li>
+      <a href="{% url 'archive_get' path=artpath.url.parent.slug article=artpath.url.slug %}">{{ artpath.url.article.current_revision.title }}
+      </a>
+    </li>
+  </ul>
+  {% empty %}
+  <em>There are no user article linked in this level</em>
+  {% endfor %}
+  {% endif %}
+  {% endif %}
