@@ -52,13 +52,12 @@ def overview_archive(request, **kwargs):
 
 class ArchiveArticleView(ArticleView):
 
-    # TODO
     template_name = "archive/article.html"
 
     def dispatch(self, request, article, *args, **kwargs):
         # check ArchiveTransaction here
-        kwargs['path'] = ArchiveTransaction.get_path_by_slug(kwargs.get('path'), article)
-        article = kwargs.get('path').article
+        kwargs['urlpath'] = ArchiveTransaction.get_path_by_slug(kwargs.get('path'), article)
+        article = kwargs.get('urlpath').article
         return super(ArticleView, self).dispatch(request, article, *args, **kwargs)
 
     def get_context_data(self, **kwargs):

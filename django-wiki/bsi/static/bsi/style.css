@@ -406,6 +406,11 @@ color: #FFF;
 
 /*https://bootsnipp.com/snippets/featured/comment-posts-layout*/
 /*Comment List styles*/
+
+.page-header .margintop{
+    margin: 0px 0 20px;
+}
+
 .comment-list .row {
   margin-bottom: 0px;
 }

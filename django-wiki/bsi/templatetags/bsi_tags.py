@@ -32,3 +32,8 @@ def is_checked(obj):
     """
     rev = obj.current_revision
     return ArticleRevisionValidation.objects.get(revision=rev).status
+
+
+@register.filter
+def is_uga(url):
+    return hasattr(url, 'uga')

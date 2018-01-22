@@ -2,6 +2,7 @@ import difflib
 import json
 import logging
 
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
@@ -12,7 +13,8 @@ from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
-from wiki.decorators import get_article
+#from wiki.decorators import get_article
+from .decorators import get_article
 from wiki.models import ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
@@ -35,6 +37,7 @@ def overview_uga(request):
 class CreateRoot(CreateRootView):
     template_name = "uga/create-root.html"
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super(CreateRoot, self).dispatch(request, *args, **kwargs)
 
@@ -47,6 +50,7 @@ TEMPLATES = {"creation": "uga/create_article_master_data.html",
 
 class UGACreate(SessionWizardView):
 
+    @method_decorator(login_required)
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
@@ -60,13 +64,13 @@ class UGACreate(SessionWizardView):
         return [TEMPLATES[self.steps.current]]
 
     def done(self, form_list, **kwargs):
-        slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']
         content = kwargs.get('form_dict')['creation'].cleaned_data['content']
         summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
         self.uga = UGA.create_by_request(request=self.request, article=self.article,
                                          parent=self.urlpath,
-                                         slug=slug, title=title,
+                                         slug=title.strip().replace(' ', '_'), title=title,
                                          content=content,
                                          summary=summary)
         links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
@@ -106,6 +110,7 @@ class UGEditView(Edit):
     template_name = "uga/edit.html"
     form_class = forms.UGEditForm
 
+    @method_decorator(login_required)
     @method_decorator(get_article(can_write=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
@@ -168,6 +173,7 @@ class UGEditView(Edit):
         return redirect('get_article', path="uga")
 
 
+@method_decorator(login_required, name='dispatch')
 class UGDeleteView(Delete):
     form_class = wiki_forms.DeleteForm
     template_name = "uga/delete.html"

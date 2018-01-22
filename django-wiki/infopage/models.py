@@ -32,21 +32,17 @@ class Question(models.Model):
 
     @classmethod
     @transaction.atomic
-    def create_question(cls, text, user, url):
-        q = cls(question=text, user=user, url=url)
-        q.save()
-        return q
-
-    @classmethod
-    @transaction.atomic
-    def create_question(cls, text, url):
-        q = cls(question=text, url=url)
+    def create_question(cls, text, url, user=None):
+        if user:
+            q = cls(question=text, user=user, url=url)
+        else:
+            q = cls(question=text, url=url)
         q.save()
         return q
 
     @classmethod
     def get_questions(cls, url):
-        return cls.objects.filter(url=url)
+        return cls.objects.filter(url=url).order_by('-timestamp')
 
     @classmethod
     def get_question(cls, q_id):
@@ -55,11 +51,11 @@ class Question(models.Model):
         except Exception:
             return None
 
-    def add_answer(self, text, user):
-        return self.answer_set.create(answer=text, user=user)
-
-    def add_answer(self, text):
-        return self.answer_set.create(answer=text)
+    def add_answer(self, text, user=None):
+        if user:
+            return self.answer_set.create(answer=text, user=user)
+        else:
+            return self.answer_set.create(answer=text)
 
     def delete_question(self):
         self.delete()
@@ -67,10 +63,11 @@ class Question(models.Model):
     @transaction.atomic
     def edit_question(self, text):
         self.question = text
+        self.timestamp = get_timestamp_now()
         self.save()
 
     def get_answers(self):
-        return self.answer_set.all()
+        return self.answer_set.all().order_by('-timestamp')
 
     def __str__(self):
         return 'Question: ' + self.question
@@ -82,10 +79,18 @@ class Answer(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
 
+    @classmethod
+    def get_answer(cls, id):
+        return Answer.objects.filter(id=id)[0]
+
     @transaction.atomic
     def edit_answer(self, text):
         self.answer = text
+        self.timestamp = get_timestamp_now()
         self.save()
+
+    def delete_answer(self):
+        self.delete()
 
     def __str__(self):
         return 'Answer: ' + self.answer
