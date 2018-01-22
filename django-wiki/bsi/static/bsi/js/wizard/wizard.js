@@ -237,7 +237,13 @@ function amountOfStates(changedTopicsOfElements) {
 
         amountOfCorrectTopics = filteredTopicOfElementsCorrect.length;
         if (filteredCurrentTopicInElementsTopic.length === 0) {
-            amountOfCorrectTopics += 1;
+            if(answerList !== null && answerList.length >= 1){
+                amountOfCorrectTopics += 1;
+            } else {
+                amountOfCorrectTopics = 0;
+            }
+
+
         }
 
         var filteredTopicOfElementsDontKnow = changedTopicsOfElements.filter(filterState, {pick: 'd'});
