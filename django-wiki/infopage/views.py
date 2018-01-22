@@ -78,7 +78,7 @@ def edit_question(request):
         q_id = request.POST.get('q_id')
         if q_form.is_valid() and q_id:
             q = Question.get_question(q_id)
-            q.edit_question(q_form.cleaned_data['question'])
+            q.edit_question(q_form.cleaned_data['question'], request.user)
     return HttpResponseRedirect(reverse('information'))
 
 
@@ -89,7 +89,7 @@ def edit_answer(request):
         if a_form.is_valid():
             a = Answer.get_answer(a_form.cleaned_data['answer_id'])
             if a.user == request.user or has_permission(request.user):
-                a.edit_answer(a_form.cleaned_data['answer'])
+                a.edit_answer(a_form.cleaned_data['answer'], request.user)
             else:
                 raise PermissionDenied
     return HttpResponseRedirect(reverse('information'))

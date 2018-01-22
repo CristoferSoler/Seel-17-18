@@ -25,6 +25,8 @@ class Question(models.Model):
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
     url = EnumField(PageType)
+    edited = models.BooleanField(default=False)
+    edited_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='q_edited_by')
 
     @classmethod
     def delete_old_questions(cls):
@@ -61,9 +63,11 @@ class Question(models.Model):
         self.delete()
 
     @transaction.atomic
-    def edit_question(self, text):
+    def edit_question(self, text, user):
         self.question = text
         self.timestamp = get_timestamp_now()
+        self.edited = True
+        self.edited_by = user
         self.save()
 
     def get_answers(self):
@@ -78,15 +82,19 @@ class Answer(models.Model):
     answer = models.TextField(max_length=1000)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     timestamp = models.DateTimeField(default=get_timestamp_now)
+    edited = models.BooleanField(default=False)
+    edited_by = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='a_edited_by')
 
     @classmethod
     def get_answer(cls, id):
         return Answer.objects.filter(id=id)[0]
 
     @transaction.atomic
-    def edit_answer(self, text):
+    def edit_answer(self, text, user):
         self.answer = text
         self.timestamp = get_timestamp_now()
+        self.edited = True
+        self.edited_by = user
         self.save()
 
     def delete_answer(self):

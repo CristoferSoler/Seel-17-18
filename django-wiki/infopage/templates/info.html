@@ -77,7 +77,11 @@
                   </div>
                   <div class="comment-post">
                     <p>
-                      {{ q.question }}
+                      {% if q.edited %}
+                           <div> {{ q.question }} (<i>modified</i> by {{ q.edited_by }})</div>
+                      {% else %}
+                          <div> {{ q.question }}</div>
+                      {% endif %}
                     </p>
                   </div>
                 <form action="{% url 'post_a' %}" method="post">
@@ -135,19 +139,11 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit answer</h4>
                   </div>
-                  <div class="modal-body">
-                    <p>{{ a.answer }}</p>
-                  </div>
                   <form action="{% url 'edit_a' %}", method="post">
                     {% csrf_token %}
-                    <!-- this part is not working, i tried to copy the existing answer -->
                     <div class="col-md-12">
-                        {% for field in a_form.visible_fields %}
-                            {{ field.errors }}
-                            {% render_field field label=a.answer %}
-                        {% endfor %}
+                        <input id="answer" type="text" name="answer" maxlength="1000" required value="{{ a.answer }}" />
                     </div>
-                    <!-- end error part -->
                     <input type="hidden" name="answer_from" value="{{ q.id }}" />
                     <input type="hidden" name="answer_id" value="{{ a.id }}" />
                     <button type="submit" class="btn btn-link" name="button">Edit</button>
@@ -172,7 +168,11 @@
                   </div>
                   <div class="comment-post">
                     <p>
-                     {{ a.answer }}
+                     {% if a.edited %}
+                           <div> {{ a.answer }} (<i>modified</i> by {{ a.edited_by }})</div>
+                      {% else %}
+                          <div> {{ a.answer }}</div>
+                      {% endif %}
                     </p>
               </div>
             </div>
