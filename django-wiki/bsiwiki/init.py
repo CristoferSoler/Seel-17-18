@@ -1,6 +1,5 @@
 from wiki.models import URLPath
 from bsiwiki import settings
-<<<<<<< Updated upstream
 from django.contrib.sites.models import Site
 from django.contrib.auth.models import User, Group
 
