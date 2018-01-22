@@ -63,7 +63,6 @@
                       {% csrf_token %}
                       <input type="hidden" name="q_id" value="{{ q.id }}" />
                       <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
-                     <!-- <a href="{% url 'delete_q' %}" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a> -->
                     </form>
                   {% endif %}
                 </div>
@@ -91,7 +90,7 @@
                     {% endfor %}
                {% for field2 in a_form.visible_fields %}
                         <div class="form-group">
-                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required" }}
+                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required"}}
                               {% for error in field.errors %}
                               <span class="help-block">{{ error }}</span>
                               {% endfor %}
@@ -152,7 +151,6 @@
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   </div>
                 </div>
-
               </div>
             </div>
 
