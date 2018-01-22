@@ -20,7 +20,7 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/ORP.4/"
     },
     {
-        "name": "ORP.5 Compliance Management (Requirements Management)",
+        "name": "ORP.5 Compliance Management (Requirements Management) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/ORP.5/"
     },
     {
@@ -97,11 +97,7 @@
     },
     {
         "name": "APP.1.1 Office Products",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/APP.1.1/"
-    },
-    {
-        "name": "APP.1.2 Web browser",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/APP.1.2/"
+        "path": "http://it-gs.ziik.tu-berlin.de:8000/APP.1.1/"
     },
     {
         "name": "APP.2.1 General Directory Service",
@@ -188,11 +184,11 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/SYS.3.2.1/"
     },
     {
-        "name": "SYS.3.2.2 Mobile Device Management (MDM)",
+        "name": "SYS.3.2.2 Mobile Device Management (MDM) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/SYS.3.2.2/"
     },
     {
-        "name": "SYS.3.2.3 iOS (for Enterprise)",
+        "name": "SYS.3.2.3 iOS (for Enterprise) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/SYS.3.2.3/"
     },
     {
@@ -220,7 +216,7 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/IND.2.1/"
     },
     {
-        "name": "IND.2.2 Programmable Logic Controller (PLC)",
+        "name": "IND.2.2 Programmable Logic Controller (PLC) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/IND.2.2/"
     },
     {
@@ -300,10 +296,6 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.2/"
     },
     {
-        "name": "G 0.3 water",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.3/"
-    },
-    {
         "name": "G 0.4 Contamination, dust, corrosion",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.4/"
     },
@@ -312,12 +304,8 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.5/"
     },
     {
-        "name": "G 0.6 disasters in the area",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.6/"
-    },
-    {
         "name": "G 0.7 Major events in the area",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.7/"
+        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/components/G0.7/"
     },
     {
         "name": "G 0.8 Failure or malfunction of the power supply",
@@ -344,7 +332,7 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.13/"
     },
     {
-        "name": "G 0.14 Spying on information (spying)",
+        "name": "G 0.14 Spying on information (spying) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.14/"
     },
     {
@@ -448,7 +436,7 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.39/"
     },
     {
-        "name": "G 0.40 Denial of Service",
+        "name": "G 0.40 Denial of Service ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.40/"
     },
     {
@@ -480,151 +468,151 @@
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/G0.47/"
     },
     {
-        "name": "ISMS.1 Sicherheitsmanagement",
+        "name": "Implementation notes for the module ISMS.1 Sicherheitsmanagement",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/ISMS.1/"
     },
     {
-        "name": "ORP.1 Organization",
+        "name": "Implementation notes for the block ORP.1 Organization",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/ORP.1/"
     },
     {
-        "name": "ORP.2 Personal",
+        "name": "Implementation notes for the block ORP.2 Personal",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/ORP.2/"
     },
     {
-        "name": "ORP.3 Sensitization and Training",
+        "name": "Implementation notes for the module ORP.3 Sensitization and Training",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/ORP.3/"
     },
     {
-        "name": "ORP.5 Compliance Management (Request Management)",
+        "name": "Implementation notes for the module ORP.5 Compliance Management (Request Management) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/ORP.5/"
     },
     {
-        "name": "CON.3 Data backup concept",
+        "name": "Implementation notes for the module CON.3 Data backup concept",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/CON.3/"
     },
     {
-        "name": "CON.4 Selection and use of standard software",
+        "name": "Implementation notes for the module CON.4 Selection and use of standard software",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/CON.4/"
     },
     {
-        "name": "CON.7 Information security on trips abroad",
+        "name": "Implementation notes for the module CON.7 Information security on trips abroad",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/CON.7/"
     },
     {
-        "name": "OPS.1.1.2 Proper IT administration",
+        "name": "Implementation notes for the block OPS.1.1.2 Proper IT administration",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.1.1.2/"
     },
     {
-        "name": "OPS.1.1.3 Patch and Change Management",
+        "name": "Implementation notes for the block OPS.1.1.3 Patch and Change Management",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.1.1.3/"
     },
     {
-        "name": "OPS.1.2.3 Information and data medium exchange",
+        "name": "Implementation notes for the module OPS.1.2.3 Information and data medium exchange",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.1.2.3/"
     },
     {
-        "name": "OPS.1.2.4 Telework",
+        "name": "Implementation notes for the OPS.1.2.4 Telework",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.1.2.4/"
     },
     {
-        "name": "OPS.2.1 Outsourcing for customers",
+        "name": "Implementation notes for the module OPS.2.1 Outsourcing for customers",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.2.1/"
     },
     {
-        "name": "OPS.2.4 Remote maintenance",
+        "name": "Implementation notes for the module OPS.2.4 Remote maintenance",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.2.4/"
     },
     {
-        "name": "OPS.3.1 Outsourcing for Dienstleister",
+        "name": "Implementation notes for the module OPS.3.1 Outsourcing for Dienstleister",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/OPS.3.1/"
     },
     {
-        "name": "DER.2.3 Clearance of far-reaching security incidents",
+        "name": "Implementation notes for module DER.2.3 Clearance of far-reaching security incidents",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/DER.2.3/"
     },
     {
-        "name": "APP.1.1 Office Products",
+        "name": "Implementation notes for the module APP.1.1 Office Products",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/APP.1.1/"
     },
     {
-        "name": "APP.2.2 Active Directory",
+        "name": "Implementation notes for the module APP.2.2 Active Directory",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/APP.2.2/"
     },
     {
-        "name": "APP.3.1 Web applications",
+        "name": "Implementation notes for the module APP.3.1 Web applications",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/APP.3.1/"
     },
     {
-        "name": "APP.3.6 DNS server",
+        "name": "Implementation notes for the module APP.3.6 DNS server",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/APP.3.6/"
     },
     {
-        "name": "SYS.1.1 General Server",
+        "name": "Implementation notes for the block SYS.1.1 General Server",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.1.1/"
     },
     {
-        "name": "SYS.1.2.2 Windows Server 2012",
-        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.1.2.2/"
+        "name": "Implementation notes for the block SYS.1.2.2 Windows Server 2012",
+        "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/threats/SYS.1.2.2/"
     },
     {
-        "name": "SYS.2.1 General Client",
+        "name": "Implementation notes for the block SYS.2.1 General Client",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.2.1/"
     },
     {
-        "name": "SYS.3.1 Laptops",
+        "name": "Implementation notes for the block SYS.3.1 Laptops",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.3.1/"
     },
     {
-        "name": "SYS.3.2.2 Mobile Device Management (MDM)",
+        "name": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.3.2.2/"
     },
     {
-        "name": "SYS.3.2.3 iOS (for Enterprise)",
+        "name": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) ",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.3.2.3/"
     },
     {
-        "name": "SYS.3.4 Mobile data carrier",
+        "name": "Implementation notes for the block SYS.3.4 Mobile data carrier",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.3.4/"
     },
     {
-        "name": "SYS.4.1 printers, copiers and multifunction devices",
+        "name": "Implementation notes for the block SYS.4.1 printers, copiers and multifunction devices",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.4.1/"
     },
     {
-        "name": "SYS.4.4 General IoT device",
+        "name": "Implementation notes for the block SYS.4.4 General IoT device",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/SYS.4.4/"
     },
     {
-        "name": "IND.1 Operating and Control Technology",
+        "name": "Implementation notes for the module IND.1 Operating and Control Technology",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/IND.1/"
     },
     {
-        "name": "NET.2.1 WLAN operation",
+        "name": "Implementation notes for the block NET.2.1 WLAN operation",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/NET.2.1/"
     },
     {
-        "name": "NET.2.2 WLAN-Usage",
+        "name": "Implementation notes for the module NET.2.2 WLAN-Usage",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/NET.2.2/"
     },
     {
-        "name": "INF.1 General Building",
+        "name": "Implementation notes for building block INF.1 General Building",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/INF.1/"
     },
     {
-        "name": "INF.3 Electrotechnical cabling",
+        "name": "Implementation notes for the module INF.3 Electrotechnical cabling",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/INF.3/"
     },
     {
-        "name": "INF.4 IT- cabling",
+        "name": "Implementation notes for the module INF.4 IT- cabling",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/INF.4/"
     },
     {
-        "name": "INF.8 Domestic workstation",
+        "name": "Implementation notes for the module INF.8 Domestic workstation",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/INF.8/"
     },
     {
-        "name": "INF.9 Mobile workstation",
+        "name": "Implementation notes for module INF.9 Mobile workstation",
         "path": "http://it-gs.ziik.tu-berlin.de:8000/bsi/implementationnotes/INF.9/"
     }
 ]
