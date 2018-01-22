@@ -121,13 +121,12 @@
 
                    </div>
                    <div class="btn-group pull-right">
-                          <input type="hidden" name="a_id" value="{{ a.id }}" />
-                        <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#myModal">
+                        <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#{{ a.id }}">
                          <i class="fa fa-pencil"></i></button>
 
                     </div>
                <!-- modal edit form-->
-              <div id="myModal" class="modal fade" role="dialog">
+              <div id="{{ a.id }}" class="modal fade" role="dialog">
               <div class="modal-dialog">
 
                 <!-- Modal content-->
@@ -139,6 +138,20 @@
                   <div class="modal-body">
                     <p>{{ a.answer }}</p>
                   </div>
+                  <form action="{% url 'edit_a' %}", method="post">
+                    {% csrf_token %}
+                    <!-- this part is not working, i tried to copy the existing answer -->
+                    <div class="col-md-12">
+                        {% for field in a_form.visible_fields %}
+                            {{ field.errors }}
+                            {% render_field field label=a.answer %}
+                        {% endfor %}
+                    </div>
+                    <!-- end error part -->
+                    <input type="hidden" name="answer_from" value="{{ q.id }}" />
+                    <input type="hidden" name="answer_id" value="{{ a.id }}" />
+                    <button type="submit" class="btn btn-link" name="button">Edit</button>
+                  </form>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   </div>
