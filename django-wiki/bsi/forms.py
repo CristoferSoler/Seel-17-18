@@ -35,7 +35,7 @@ class UserRegistrationForm(forms.Form):
     )
     password2 = forms.CharField(
         required=True,
-        label='Password2',
+        label='Please repeat the password',
         max_length=32,
         widget=forms.PasswordInput()
     )
