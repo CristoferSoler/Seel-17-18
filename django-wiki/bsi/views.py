@@ -81,7 +81,7 @@ class BSISearchView(SearchView):
         self.filter_form = FilterForm(request.GET)
         if self.filter_form.is_valid():
             self.filter = self.filter_form.cleaned_data['f']
-            assert (int(self.filter) > 0 and int(self.filter) < 6)
+            assert (int(self.filter) > 0 and int(self.filter) < 7)
         else:
             self.filter = None
         return super(BSISearchView, self).dispatch(request, *args, **kwargs)
@@ -110,6 +110,9 @@ class BSISearchView(SearchView):
                 elif self.filter == '4':
                     if url.bsi.articleType == BSI_Article_type.IMPLEMENTATIONNOTES:
                         filtered_result.append(article.pk)
+            if hasattr(url, 'uga'):
+                if self.filter == '6':
+                    filtered_result.append(article.pk)
         return search_result.filter(id__in=filtered_result)
 
     def get_context_data(self, **kwargs):
@@ -124,7 +127,6 @@ def index(request):
     componentsString = json.dumps(components)
     sortedTopicsString = json.dumps(sortedTopics)
     new_page = check_new_page()
-
     return HttpResponse(template.render({'newpage':new_page,'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
