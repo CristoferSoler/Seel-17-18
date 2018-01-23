@@ -4,12 +4,11 @@ from django.contrib.auth import login, authenticate
 import pdb
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
-from django.contrib.auth.models import User
 from archive.models import Archive
 from django.template.response import TemplateResponse
 from django.utils.decorators import method_decorator
@@ -146,9 +145,10 @@ def register(request):
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             # by default add user to users group
-            user = User.objects.create_user(username=form.cleaned_data['username'],
-                                            password=form.cleaned_data['password1'],
-                                            email=form.cleaned_data['email'])
+            #user.groups.add(Group.objects.get(name='users'))
+	    user = User.objects.create_user(username=form.cleaned_data['username'],
+					password=form.cleaned_data['password1'],
+					email=form.cleaned_data['email'])
             login(request, user)
             return redirect('index')
     else:

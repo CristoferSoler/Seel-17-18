@@ -266,6 +266,8 @@
 
             </ul>
         </div>
+
+    </div>
 </footer>
 
 {% render_block "js" %}
@@ -280,13 +282,10 @@
          var url = location.pathname;
          var match = url.match(regexBSI);
          if(match != null && match.length != 0){
-
          } else {
              localStorage.removeItem('selectedNode');
          }
      }
-
-
     $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -299,25 +298,19 @@
             $("html, body").animate({scrollTop: 0}, 600);
             return false;
         });
-
         $('.panel-title').click(function () {
             valid = false;
-
         });
-
-
         $('.validFalse').click(function () {
             valid = false;
             console.log('Klappt');
         })
     });
-
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
     });
-
     $(document).ready(function() {
     $('#search-expanding').click(function () {
       if ( $(this).is(".expanded") ) {$(this).removeClass('expanded');
@@ -333,10 +326,8 @@
              $("#search-input input").focus();
          }
      })
-
      $("#search-input input").blur(function () {
          $('#search-expanding').click();
-
      });
     });
 </script>

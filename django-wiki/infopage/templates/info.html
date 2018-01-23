@@ -135,17 +135,16 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                      <form action="{% url 'edit_a' %}", method="post">
-
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit answer</h4>
                   </div>
 
                      <div class="modal-body">
-                         <textarea class="form-control" id="answer" type="text" name="answer" rows="3" required>{{ a.answer }}</textarea>
-
+                     <textarea class="form-control" id="answer" type="text" name="answer" rows="3" required>{{ a.answer }}</textarea>
 
                     </div>
+
                             <input type="hidden" name="answer_from" value="{{ q.id }}" />
                             <input type="hidden" name="answer_id" value="{{ a.id }}" />
 
