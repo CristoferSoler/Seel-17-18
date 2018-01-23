@@ -182,8 +182,10 @@ function noPress() {
 
         } else {
             if (amountOfTotalTopics == -1) {
-                $('#question').text('Would you like to find out if you have a problem you are not aware of? ' +
+                $('#question').text('Would you like to find out if you have a problem you are not aware of?\n\n ' +
                     'Unfortunately this feature is not available yet. Please press restart');
+
+                $('#question').html($('#question').html().replace(/\n/g,'<br/>'));
                 $('#topic').text('');
                 $('#yesButton').addClass('disabled');
                 $('#noButton').addClass('disabled');
