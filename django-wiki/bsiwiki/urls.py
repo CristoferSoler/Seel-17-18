@@ -21,6 +21,7 @@ from wiki.urls import get_pattern
 from django.views.generic import TemplateView
 from bsi import views
 
+
 admin.site.index_template = 'admin/index.html'
 admin.autodiscover()
 
@@ -28,6 +29,7 @@ urlpatterns = [
     url(r'^wizardinfo/$', TemplateView.as_view(template_name='wizard/helpWizard.html'),name = 'wizardInfo'),
     url(r'^_update/', include('BSIUpdate.urls')),
     url(r'^_treeview/', include('treeview.urls')),
+    url(r'^information/', include('infopage.urls')),
     url(r'^_wizard/', include('wizard.urls')),
     url(r'^login/', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
     url(r'^logout/', auth_views.logout, {'next_page': '/'}, name='logout'),
@@ -39,7 +41,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls, name='adminpage'),
     url(r'^notifications/', get_nyt_pattern()),
     url(r'^archive/', include('archive.urls')),
-    url(r'^_treeview/', include('treeview.urls')),
+    url(r'^information_page', include('infopage.urls')),
+    url(r'^users/', include('templates.urls')),
     url(r'^', include('bsi.urls')),
     url(r'^', get_pattern()),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki

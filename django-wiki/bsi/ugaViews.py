@@ -1,10 +1,9 @@
-# from bsi.decorators import get_article
 import difflib
 import json
 import logging
 
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
-from django.core import serializers
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -14,8 +13,9 @@ from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
-from wiki.decorators import get_article
-from wiki.models import URLPath, ArticleRevision, reverse
+#from wiki.decorators import get_article
+from .decorators import get_article
+from wiki.models import ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
 from wiki.views.article import Edit, Delete, History, Preview
@@ -23,14 +23,12 @@ from wiki.views.article import Edit, Delete, History, Preview
 from bsi import forms
 from bsi.models.article_extensions import BSI
 from .forms import AddLinksForm, CreateForm
+from bsi.models.article_extensions import UGA, ArticleRevisionValidation
 
 log = logging.getLogger(__name__)
 
-from bsi.models.article_extensions import UGA, ArticleRevisionValidation
-
 
 def overview_uga(request):
-    uga = URLPath.get_by_path('uga/')
     children = UGA.get_active_children()
 
     return render(request, 'uga/overview_uga.html', {'articles': children})
@@ -39,6 +37,7 @@ def overview_uga(request):
 class CreateRoot(CreateRootView):
     template_name = "uga/create-root.html"
 
+    @method_decorator(login_required)
     def dispatch(self, request, *args, **kwargs):
         return super(CreateRoot, self).dispatch(request, *args, **kwargs)
 
@@ -51,6 +50,7 @@ TEMPLATES = {"creation": "uga/create_article_master_data.html",
 
 class UGACreate(SessionWizardView):
 
+    @method_decorator(login_required)
     @method_decorator(get_article(can_write=True, can_create=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
@@ -64,13 +64,13 @@ class UGACreate(SessionWizardView):
         return [TEMPLATES[self.steps.current]]
 
     def done(self, form_list, **kwargs):
-        slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']
         content = kwargs.get('form_dict')['creation'].cleaned_data['content']
         summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
         self.uga = UGA.create_by_request(request=self.request, article=self.article,
                                          parent=self.urlpath,
-                                         slug=slug, title=title,
+                                         slug=title.strip().replace(' ', '_'), title=title,
                                          content=content,
                                          summary=summary)
         links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
@@ -93,24 +93,10 @@ def get_bsi_articles(request):
             title_json['value'] = bsi.url.article.current_revision.title
             results.append(title_json)
         data = json.dumps(results)
-        # data = serializers.serialize('json', results)
     else:
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
-
-
-# class UGCreateAddLinksView(FormView, ArticleMixin):
-#     template_name = "uga/create_article_add_links.html"
-#     form_class = AddLinksForm
-#
-#     @method_decorator(get_article(can_write=True, can_create=True))
-#     def dispatch(self, request, article, *args, **kwargs):
-#         return super(UGCreateAddLinksView, self).dispatch(request, article, *args, **kwargs)
-#
-#     def get_form(self, form_class=None):
-#         form = super(UGCreateAddLinksView, self).get_form(form_class=form_class)
-#         return form
 
 
 class UGEditView(Edit):
@@ -122,17 +108,21 @@ class UGEditView(Edit):
 
     '''
     template_name = "uga/edit.html"
+    form_class = forms.UGEditForm
 
-    @method_decorator(get_article(can_read=True))
+    @method_decorator(login_required)
+    @method_decorator(get_article(can_write=True))
     def dispatch(self, request, article, *args, **kwargs):
         self.sidebar_plugins = plugin_registry.get_sidebar()
         self.sidebar = []
         self.checked = ArticleRevisionValidation.objects.get(revision=article.current_revision).status
 
         if request.user.has_perm('wiki.uncheck_article') and request.user.has_perm('wiki.check_article'):
-            self.form_class = forms.UGEditForm
+            pass
+            # self.form_class = forms.UGEditForm
         else:
-            self.form_class = forms.EditForm
+            pass
+            # self.form_class = forms.EditForm
         return super(Edit, self).dispatch(request, article, *args, **kwargs)
 
     def form_valid(self, form):
@@ -154,8 +144,10 @@ class UGEditView(Edit):
             validation.check_article(self.request.user)
         elif self.request.user.has_perm('wiki.uncheck_article') and not form.checked:
             validation.uncheck_article(self.request.user)
+        UGA.objects.get(Q(url__article__current_revision=revision)).set_links_to_bsi(form.cleaned_data['links'])
         return self.get_success_url()
 
+    #
     def get_form(self, form_class=None):
         """
         Checks from querystring data that the edit form is actually being saved,
@@ -171,14 +163,17 @@ class UGEditView(Edit):
             kwargs['files'] = None
             kwargs['no_clean'] = True
 
-        if self.request.user.has_perm('wiki.uncheck_article') and self.request.user.has_perm('wiki.check_article'):
-            form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
-        else:
-            form = form_class(self.request, self.article.current_revision, **kwargs)
-
+        form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
         return form
 
+    def get_success_url(self):
+        """Go to the article view page when the article has been saved"""
+        if self.urlpath:
+            return redirect("get_article", path=self.urlpath.path)
+        return redirect('get_article', path="uga")
 
+
+@method_decorator(login_required, name='dispatch')
 class UGDeleteView(Delete):
     form_class = wiki_forms.DeleteForm
     template_name = "uga/delete.html"

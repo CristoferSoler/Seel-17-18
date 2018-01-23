@@ -1,6 +1,9 @@
 {% extends "admin/index.html" %}
+{% block branding %}
+            <h1 id="site-name"><a href="/admin/">Administration Control Panel</a></h1>
+{% endblock %}
+
 {% block sidebar %}
-        {{ block.super }}
 
 	<div class="module">
         <table>
@@ -19,8 +22,6 @@
 
         </table>
         </div>
-
-
 
 
 

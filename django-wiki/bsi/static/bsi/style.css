@@ -303,3 +303,188 @@ section {
   background-color: transparent;
   border-color: #ccc;
 }
+
+
+.full-width-image-2 {
+    /*image source: https://pixabay.com/en/people-man-office-work-computer-2567566/*/
+	background:  linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../bsi/images/people-2567566_1280.jpg") no-repeat center center;
+	background-size: cover;
+	text-align: center;
+	height: 250px;
+    background-color: deepskyblue;
+    background-position: right top;
+}
+
+.image-aboutus-para {
+    color:#fff;
+}
+
+
+.lg-text {
+    padding-top: 60px;
+    font-size:45px;
+    font-weight: 500;
+    text-transform: none;
+    color:#fff;
+}
+
+
+.margin-image{
+    margin-top: 50px;
+}
+
+
+.widget {
+    margin: 0 0 25px 0;
+    display: block;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.widget .widget-heading {
+    padding: 7px 15px;
+    -webkit-border-radius: 2px 2px 0 0;
+    -moz-border-radius: 2px 2px 0 0;
+    border-radius: 2px 2px 0 0;
+    text-transform: uppercase;
+    text-align: center;
+    background: #6ca9ea;
+    color: white;
+}
+.widget .widget-body {
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 200;
+    background: #6ca9ea;
+}
+
+/*Expanding-search from https://github.com/chin8628/Expanding-search*/
+.navbar #icon-search{ font-size: 20px; }
+.navbar #icon-search:hover{ cursor:pointer; }
+.navbar #search-expanding{ margin-right: 5px; }
+.navbar #search-expanding > a{
+    padding-top: 14px !important;
+    padding-bottom: 11px !important;
+}
+.navbar #search-input{
+    display: none;
+    overflow: hidden;
+    width: 0px;
+    border-style: none;
+    margin-left: 2px;
+}
+
+.glyphicon.glyphicon-search{
+    top: 4px;
+}
+
+
+@media (max-width: 767px) {
+ .navbar #search-expanding{
+     display: none;
+ }
+}
+
+@media (min-width: 767px) {
+ .search-expanding-dis{
+     display: none;
+ }
+}
+
+.jumbotron.jumbroton-blue {
+background: #358CCE;
+color: #FFF;
+border-radius: 0px;
+}
+.jumbotron-sm { padding-top: 20px;
+padding-bottom: 24px; }
+.jumbotron small {
+color: #FFF;
+}
+
+
+
+/*https://bootsnipp.com/snippets/featured/comment-posts-layout*/
+/*Comment List styles*/
+
+.page-header .margintop{
+    margin: 0px 0 20px;
+}
+
+.comment-list .row {
+  margin-bottom: 0px;
+}
+.comment-list .panel .panel-heading {
+  padding: 4px 15px;
+  position: absolute;
+  border:none;
+  /*Panel-heading border radius*/
+  border-top-right-radius:0px;
+  top: 1px;
+}
+.comment-list .panel .panel-heading.right {
+  border-right-width: 0px;
+  /*Panel-heading border radius*/
+  border-top-left-radius:0px;
+  right: 16px;
+}
+.comment-list .panel .panel-heading .panel-body {
+  padding-top: 6px;
+}
+.comment-list figcaption {
+  /*For wrapping text in thumbnail*/
+  word-wrap: break-word;
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 768px) {
+  .comment-list .arrow:after, .comment-list .arrow:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+  .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
+    border-left: 0;
+  }
+  /*****Left Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.left:before {
+    left: 0px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-right-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.left:after {
+    left: 1px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-right-color: #FFFFFF;
+    border-width: 15px;
+  }
+  /*****Right Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.right:before {
+    right: -16px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-left-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.right:after {
+    right: -14px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-left-color: #FFFFFF;
+    border-width: 15px;
+  }
+}
+.comment-list .comment-post {
+  margin-top: 6px;
+}
+
+

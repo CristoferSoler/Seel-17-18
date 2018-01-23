@@ -54,6 +54,8 @@ INSTALLED_APPS = [
     'formtools',
     'wizard',
     'BSIUpdate',
+    'infopage',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

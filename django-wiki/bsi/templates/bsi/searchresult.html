@@ -20,9 +20,9 @@
                             </button>
                             <ul class="dropdown-menu pull-right" role="menu">
                                 <li data-value="1" class=""><a href="#">All</a></li>
-                                <li data-value="2" class=""><a href="#">componenets</a></li>
+                                <li data-value="2" class=""><a href="#">Componenets</a></li>
                                 <li data-value="3" class=""><a href="#">Threats</a></li>
-                                <li data-value="4" class=""><a href="#">implementation Notes</a></li>
+                                <li data-value="4" class=""><a href="#">Implementation Notes</a></li>
                                 <li data-value="5" class=""><a href="#">Archive</a></li>
                             </ul>
                         </div>
@@ -67,7 +67,7 @@
 
                         <td>
                            {% if urlpath.parent.slug == 'uga' %}
-                            <small>UGA article</small>
+                            <small>User article</small>
                            {% elif urlpath.parent.parent.slug == 'archive' %}
                             <small>Archive article</small>
                             {% else %}
@@ -109,7 +109,17 @@
             });
         });
 
+$(document).ready(function() {
+  var btnGroup = $("span[data-bind='bs-drp-sel-label']");
+  localStorage.setItem('searchToken', btnGroup.text());
 
+  if (localStorage.getItem(('searchTocken') !== undefined)){
+      btnGroup.text(localStorage.getItem('searchToken'));
+  }
+  $("a[href='#']").click(function(){
+      localStorage.setItem('searchToken', $(this).text());
+  })
+});
     </script>
 
 

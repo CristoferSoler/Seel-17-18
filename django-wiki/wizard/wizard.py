@@ -27,11 +27,16 @@ def getPathOfElement(title, pathlist, requestParameter):
             return el['path']
     return ''
 
+def topicDic(name):
+    return dict(name=name,state='i')
 
-def generateDic(list, pathlist, requestParameter):
-    title = list[0]
+
+def generateDic(listt, pathlist, requestParameter):
+    title = listt[0]
     path = getPathOfElement(title, pathlist, requestParameter)
-    componentDic = {'name': title, 'path': path, 'topics': list[1:]}
+    topics = list(map(topicDic,listt[1:]))
+
+    componentDic = dict(name=title, percentage=1, path=path, topics=topics)
     return componentDic
 
 
@@ -53,11 +58,11 @@ def getPathList():
 
 
 def generateElementDic(title, path):
-    return {'title': title, 'path': path}
+    return dict(title=title, path=path)
 
 
 def getTopicComponent(topic):
-    return {'topic': topic, 'elements': []}
+    return dict(topic=topic, elements=[])
 
 
 def generateTopicsWithRelatedElements(topics, elements, requestParameter):
@@ -67,7 +72,8 @@ def generateTopicsWithRelatedElements(topics, elements, requestParameter):
     pathList = getPathList()
 
     for element in elements:
-        listOfAllTopics.append(element['topics'])
+        topicWithoutDic = list(map(lambda x: x['name'], element['topics']))
+        listOfAllTopics.append(topicWithoutDic)
         listOfAllTopicNames.append(element['name'])
     rowsOfTopicList = list(zip(*listOfAllTopics))
 
@@ -118,7 +124,9 @@ def getListOfFrequenceOfTopic(elements, requestParameter):
     listOfAllTopics = []
 
     for element in elements:
-        listOfAllTopics = itertools.chain(listOfAllTopics, element['topics'])
+        topicWithoutDic = list(map(lambda x:x['name'],element['topics']))
+        listOfAllTopics = itertools.chain(listOfAllTopics, topicWithoutDic)
+
     listOfAllTopics = list(listOfAllTopics)
     numberOfEachTopic = list(Counter(listOfAllTopics).items())
     numberOfEachTopic = sorted(numberOfEachTopic, key=itemgetter(1), reverse=True)
