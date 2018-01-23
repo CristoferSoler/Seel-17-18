@@ -4,6 +4,7 @@ import logging
 
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
@@ -65,6 +66,13 @@ class UGACreate(SessionWizardView):
 
     def done(self, form_list, **kwargs):
         #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
+        links_to_set = []
+        for l in links:
+            try:
+                links_to_set.append(BSI.objects.filter(Q(url=l))[0])
+            except:
+                raise ObjectDoesNotExist("No such article object found: " + l)
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']
         content = kwargs.get('form_dict')['creation'].cleaned_data['content']
         summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
@@ -73,10 +81,8 @@ class UGACreate(SessionWizardView):
                                          slug=title.strip().replace(' ', '_'), title=title,
                                          content=content,
                                          summary=summary)
-        links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
-        for l in links:
-            bsi = BSI.objects.filter(Q(url__article__current_revision__title=l))[0]
-            self.uga.add_link_to_bsi(bsi)
+        for link in links_to_set:
+            self.uga.add_link_to_bsi(link)
 
         return redirect(reverse('get_article', kwargs={'path': self.uga.url.path}))
 

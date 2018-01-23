@@ -45,7 +45,7 @@
                         selectedBackColor: '#337ab7'
                     }).on('nodeSelected nodeUnselected',
                         function (event, data) {
-                            var correspondingField = getFormField(data.text);
+                            var correspondingField = getFormField(data.text.trim());
                             toggleFormField(correspondingField);
                         });
                 });
@@ -134,7 +134,8 @@
 
                 function getFormField(text) {
                     return $(':input[type=checkbox]').filter(function () {
-                        return this.value === text
+                        {#return this.value === text#}
+                        return $(this).parent().text().trim() === text;
                     });
                 }
 
@@ -142,12 +143,12 @@
                     field.prop('checked', true);
                     field.parent().parent().show();
 
-                    var searchResultEntry = getSearchResultEntry(field.val());
+                    var searchResultEntry = getSearchResultEntry(field.parent().text().trim());
                     if (!searchResultEntry.hasClass("active")) {
                         searchResultEntry.addClass("active");
                     }
 
-                    var treeviewEntry = getTreeviewDataNode(field.val());
+                    var treeviewEntry = getTreeviewDataNode(field.parent().text().trim());
                     if (treeviewEntry !== null) {
                         $('#treeview1').treeview('selectNode', [treeviewEntry, {silent: true}]);
                     }
@@ -157,12 +158,12 @@
                     field.prop('checked', false);
                     field.parent().parent().hide();
 
-                    var searchResultEntry = getSearchResultEntry(field.val());
+                    var searchResultEntry = getSearchResultEntry(field.parent().text().trim());
                     if (searchResultEntry.hasClass("active")) {
                         searchResultEntry.removeClass("active");
                     }
 
-                    var treeviewEntry = getTreeviewDataNode(field.val());
+                    var treeviewEntry = getTreeviewDataNode(field.parent().text().trim());
                     if (treeviewEntry !== null) {
                         $('#treeview1').treeview('unselectNode', [treeviewEntry, {silent: true}]);
                     }
@@ -187,7 +188,7 @@
                             if (!$(this).is(':checked')) {
                                 $(this).parent().parent().hide()
                             } else {
-                                var field = getFormField($(this).val());
+                                var field = getFormField($(this).parent().text().trim());
                                 checkFormField(field);
                             }
                         })
@@ -201,9 +202,9 @@
                             $(this).parent().parent().show()
                         } else {
                             $(this).parent().parent().hide();
-                            var val = $(this).val();
-                            var treeviewNode = getTreeviewDataNode(val);
-                            $('li:contains(' + val + ')').removeClass('active');
+                            var text = $(this).parent().text().trim();
+                            var treeviewNode = getTreeviewDataNode(text);
+                            $('li:contains(' + text + ')').removeClass('active');
                             if (treeviewNode !== null) {
                                 $('#treeview1').treeview('unselectNode', [treeviewNode, {silent: true}]);
                             }
