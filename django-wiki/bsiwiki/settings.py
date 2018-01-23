@@ -25,6 +25,7 @@ SECRET_KEY = 'lbwd(*iuixgii-z9-_54#fk4v1*#p^9-gnj3i+#*$e%dzx80nf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'it-gs.ziik.tu-berlin.de']
 
 # Application definition
@@ -66,10 +67,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+
 ]
-
+APPEND_SLASH = False
 ROOT_URLCONF = 'bsiwiki.urls'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
