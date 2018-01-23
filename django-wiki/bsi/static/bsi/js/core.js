@@ -25,7 +25,7 @@ $(document).ready(function() {
   if (localStorage.getItem(('searchTocken') !== undefined)){
       btnGroup.text(localStorage.getItem('searchToken'));
   }
-  $("a[href='#']").click(function(){
+  $("ul.dropdown > li > a[href='#']").click(function(){
       localStorage.setItem('searchToken', $(this).text());
   })
 });
