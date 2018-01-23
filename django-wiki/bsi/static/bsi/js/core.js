@@ -30,7 +30,7 @@ $(document).ready(function() {
     localStorage.setItem('searchToken', defaultValue);
   }
 
-  $("a[href='#']").click(function(){
+  $("ul.dropdown-menu > li > a[href='#']").click(function(){
       localStorage.setItem('searchToken', $(this).text());
   })
 });

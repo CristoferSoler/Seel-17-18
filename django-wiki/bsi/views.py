@@ -10,7 +10,6 @@ from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
-from django.contrib.auth.models import User
 from archive.models import Archive
 from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
