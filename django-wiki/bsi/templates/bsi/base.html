@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="google-site-verification" content="QcF7iuoaehLx3D3huCR_MM3NOp3qXeA_cu1ZS6c4l6g" />
+    <meta name="google-site-verification" content="0CxtCFoadsG6w5hvYqL93Q1vtAxIFWEWTHDy6pA887o" />
 
     <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
     {% load staticfiles %}
@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/bootstrap-treeview.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/animate.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/footer.css' %}"/>
+
 
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
@@ -32,7 +34,7 @@
 
 <body>
 <div class="wrapper">
-<nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
+    <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -141,7 +143,6 @@
         <!-- /.container-fluid -->
     </div>
 </nav>
-
     <div class="row">
         <div class="col-md-12">
             <div id="slide-panel">
@@ -243,24 +244,23 @@
 <div class="push"></div>
   </div>
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <ul class="menu list-inline">
+    <div class="row">
+            <ul class="text-center list-inline">
 
                 <li>
-                    <a> Copyright © 2017 All rights reserved</a>
+                    <p class="text-primary"> Copyright © 2017 All rights reserved</p>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">About</a>
+                    <a class="text-primary" href="{% url 'about' %}">About</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'faq' %}">FAQ</a>
+                    <a class="text-primary" href="{% url 'faq' %}">FAQ</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">Contact</a>
+                    <a class="text-primary" href="{% url 'contact' %}">Contact</a>
                 </li>
 
             </ul>
@@ -277,17 +277,14 @@
 
 <script>
     function clearTreeStorage() {
-       var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
-         var url = location.pathname;
-         var match = url.match(regexBSI);
-         if(match != null && match.length != 0){
-
-         } else {
-             localStorage.removeItem('selectedNode');
-         }
-     }
-
-
+        var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
+        var url = location.pathname;
+        var match = url.match(regexBSI);
+        if(match != null && match.length != 0){
+        } else {
+            localStorage.removeItem('selectedNode');
+        }
+    }
     $(document).ready(function () {
         $(window).scroll(function () {
             if ($(this).scrollTop() > 100) {
@@ -300,44 +297,52 @@
             $("html, body").animate({scrollTop: 0}, 600);
             return false;
         });
-
+        clearTreeStorage();
         $('.panel-title').click(function () {
             valid = false;
-
         });
-
-
+        if(localStorage.getItem('visible')!== null && stringToBoolean(localStorage.getItem('visible')) === true){
+            console.log('darf nicht');
+        } else {
+            console.log('hier');
+            $('#opener').addClass('slideInRight animated');
+            var myTimer = setInterval(function(){
+                addSwing();
+            },800);
+        }
+        function addSwing() {
+            clearInterval(myTimer)
+            $('#opener').removeClass('slideInRight animated');
+            $('#opener').addClass('animated swing');
+         }
         $('.validFalse').click(function () {
             valid = false;
             console.log('Klappt');
         })
     });
-
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
     });
-
     $(document).ready(function() {
     $('#search-expanding').click(function () {
-      if ( $(this).is(".expanded") ) {$(this).removeClass('expanded');
-    $('#search-input').animate({width: 0}, function(){
-    $('#search-input').hide();
-                 $('#icon-search').show();
-             });
-         }
-         else {
-             $(this).addClass('expanded');
-             $('#icon-search').hide();
-             $('#search-input').show().animate({width: 200});
-             $("#search-input input").focus();
-         }
-     })
-
-     $("#search-input input").blur(function () {
-         $('#search-expanding').click();
-
-     });
+        if ( $(this).is(".expanded") ) {
+            $(this).removeClass('expanded');
+            $('#search-input').animate({width: 0}, function(){
+                $('#search-input').hide();
+                $('#icon-search').show();
+            });
+        }
+        else {
+            $(this).addClass('expanded');
+            $('#icon-search').hide();
+            $('#search-input').show().animate({width: 200});
+            $("#search-input input").focus();
+        }
+    })
+    $("#search-input input").blur(function () {
+        $('#search-expanding').click();
     });
+});
 </script>

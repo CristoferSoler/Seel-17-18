@@ -22,7 +22,7 @@ class UserRegistrationForm(forms.Form):
         label='Username',
         max_length=32
     )
-    email = forms.CharField(
+    email = forms.EmailField(
         required=True,
         label='Email',
         max_length=32,
@@ -35,10 +35,24 @@ class UserRegistrationForm(forms.Form):
     )
     password2 = forms.CharField(
         required=True,
-        label='Password2',
+        label='Please repeat the password',
         max_length=32,
         widget=forms.PasswordInput()
     )
+
+    def clean_email(self):
+        # Get the email
+        email = self.cleaned_data.get('email')
+
+        # Check to see if any users already exist with this email as a username.
+        try:
+            User.objects.get(email=email)
+        except User.DoesNotExist:
+            # Unable to find a user, this is fine
+            return email
+
+        # A user was found with this as a username, raise an error.
+        raise forms.ValidationError('This email address is already in use.')
 
     def clean_password2(self):
         if 'password1' in self.cleaned_data:

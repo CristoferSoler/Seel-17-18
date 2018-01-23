@@ -16,6 +16,8 @@ article_create_view_class = article.Create
 urlpatterns = [
     url(r'^robots.txt$', TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
         name="robots_file"),
+    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        views.activate, name='activate'),
     url(r'^$', views.index, name='index'),
     # url(r'^bsicatalog/', views.bsicatalog, name='bsicatalog'),
     url(r'^create-root/?$', CreateRoot.as_view(), name='root_create'),
