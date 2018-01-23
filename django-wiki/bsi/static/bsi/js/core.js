@@ -17,3 +17,20 @@ function jsonWrapper(url, callback) {
     }
   });
 }
+
+$(document).ready(function() {
+  var btnGroup = $("span[data-bind='bs-drp-sel-label']");
+  var defaultValue = "All";
+
+  if (localStorage.getItem('searchToken')) {
+    btnGroup.text(localStorage.getItem('searchToken'));
+  }
+  else
+  {
+    localStorage.setItem('searchToken', defaultValue);
+  }
+
+  $("a[href='#']").click(function(){
+      localStorage.setItem('searchToken', $(this).text());
+  })
+});

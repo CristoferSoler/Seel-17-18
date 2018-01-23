@@ -111,7 +111,7 @@ def check15k(list, component):
             if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
                 referenceList.append(line)
 
-        if((functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
+        if(not(ref or threats) and (functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
                 listOf15kElement.append(line)
 
         else:
