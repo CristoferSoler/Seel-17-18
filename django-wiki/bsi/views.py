@@ -166,7 +166,9 @@ def register(request):
                 mail_subject, message, to=[to_email]
             )
             email.send()
-            return HttpResponse('Please confirm your email address to complete the registration')
+            return render(request, 'bsi/account/registerNotifications.html', {'notification': 'Please confirm your email address to '
+                                                                                 'complete the registration'})
+            #return HttpResponse('')
     else:
         form = UserRegistrationForm()
     return render(request, 'bsi/account/register.html', {'form': form})
@@ -184,8 +186,8 @@ def activate(request, uidb64, token):
         # return redirect('home')
         return redirect('index')
     else:
-        #TODO
-        return HttpResponse('Activation link is invalid!')
+        return render(request, 'bsi/account/registerNotifications.html',
+                      {'notification': 'Activation link is invalid!'})
 
 
 def create(request):
