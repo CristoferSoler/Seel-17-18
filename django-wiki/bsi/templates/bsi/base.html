@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/bootstrap-treeview.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/animate.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/footer.css' %}"/>
+
 
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
@@ -243,30 +245,27 @@
 <div class="push"></div>
   </div>
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <ul class="menu list-inline">
+    <div class="row">
+            <ul class="text-center list-inline">
 
                 <li>
-                    <a> Copyright © 2017 All rights reserved</a>
+                    <p class="text-primary"> Copyright © 2017 All rights reserved</p>
                 </li>
 
                 <li>
-                    <a href="{% url 'about' %}">About</a>
+                    <a class="text-primary" href="{% url 'about' %}">About</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'faq' %}">FAQ</a>
+                    <a class="text-primary" href="{% url 'faq' %}">FAQ</a>
                 </li>
 
                 <li>
-                    <a href="{% url 'contact' %}">Contact</a>
+                    <a class="text-primary" href="{% url 'contact' %}">Contact</a>
                 </li>
 
             </ul>
         </div>
-
-    </div>
 </footer>
 
 {% render_block "js" %}
