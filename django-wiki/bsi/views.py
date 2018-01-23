@@ -3,25 +3,28 @@ from operator import itemgetter
 from django.contrib.auth import login, authenticate
 import pdb
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import Group
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from archive.models import Archive
+from django.template.response import TemplateResponse
 from django.utils.decorators import method_decorator
-from wiki.decorators import get_article
+#from wiki.decorators import get_article
+from .decorators import get_article
 from wiki.models import URLPath, models
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 from .models.article_extensions import BSI_Article_type
-from .forms import FilterForm, UserRegistrationForm
+from .forms import FilterForm
 from wiki import models
-
+from django.contrib import admin
 from bsi.models import BSI_Article_type
 from bsi.ugaViews import overview_uga
+from django.contrib.admin.sites import AdminSite
 from .models.article_extensions import BSI
 from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
 import csv
@@ -50,8 +53,8 @@ class WikiArticleView(ArticleView):
             self.template_name = "uga/view.html"
         elif path.startswith('bsi'):
             self.template_name = "bsi/article_bsi.html"
-        elif path.startswith('news'):
-            """ todo set news template """
+        elif path.startswith('new'):
+            self.template_name = "bsi/update-list.html"
 
         return super(
             ArticleView,
@@ -114,8 +117,9 @@ def index(request):
     template = loader.get_template('bsi/index.html')
     componentsString = json.dumps(components)
     sortedTopicsString = json.dumps(sortedTopics)
+    new_page = check_new_page()
 
-    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
+    return HttpResponse(template.render({'newpage':new_page,'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
 def bsicatalog(request):
@@ -135,31 +139,37 @@ def home(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
+        form = UserCreationForm(request.POST)
         if form.is_valid():
-            user = User.objects.create_user(username=form.cleaned_data['username'],
-                                            password=form.cleaned_data['password1'],
-                                            email=form.cleaned_data['email'])
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            # by default add user to users group
+            user.groups.add(Group.objects.get(name='users'))
             login(request, user)
             return redirect('index')
     else:
-        form = UserRegistrationForm()
-        return render(request, 'bsi/account/register.html', {'form': form})
+        form = UserCreationForm()
+    return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
     return render(request, 'bsi/create_article.html')
 
+def about(request):
+    return render(request, 'bsi/footer/about.html')
 
-def register(request):
-    if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
-        if form.is_valid():
-            user = User.objects.create_user(username=form.cleaned_data['username'],
-                                            password=form.cleaned_data['password1'],
-                                            email=form.cleaned_data['email'])
-            login(request, user)
-            return redirect('index')
-    else:
-        form = UserRegistrationForm()
-        return render(request, 'bsi/account/register.html', {'form': form})
+def faq(request):
+    return render(request, 'bsi/footer/faq.html')
+
+def contact(request):
+    return render(request, 'bsi/footer/contact.html')
+
+def check_new_page():
+    try:
+        URLPath.objects.get(slug='new')
+        return True
+    except:
+        return False
+
