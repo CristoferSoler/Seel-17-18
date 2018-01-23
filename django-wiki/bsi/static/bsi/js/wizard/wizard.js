@@ -92,7 +92,7 @@ function inilizeData() {
     sortedTopicList = JSON.parse(localStorage.getItem('sortedTopics'))['sortedTopicList'];
 
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
-
+    showElements();
     showResults();
 
     var mode = localStorage.getItem('mode');
