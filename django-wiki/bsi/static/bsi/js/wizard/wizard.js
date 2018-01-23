@@ -5,11 +5,23 @@ var valid = false;
 var sortedTopicList;
 
 const entryQuestionThread = 'Would you like to know more about a specific IT Threat?';
-const entryQuestionComponent = 'Do you have a specific IT problem and would you like to know more about it and see its solutions?';
+const entryQuestionComponent = 'Do you have a specific problem concerning the protection of an IT System or IT Process, or\n' +
+    'generally a problem about IT Security?';
 const questionThread = 'Do you have a problem with ';
 const questionComponent = 'Do you have a problem with '
 
 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+const showResultCount = 10;
+const numberOfShownResults = 5;
+
+
+function sortArrayByKey(array, key) {
+    return array.sort(function(a, b) {
+        var x = a[key]; var y = b[key];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+    });
+}
 
 function setValid(validValue) {
     valid = validValue;
@@ -82,13 +94,6 @@ function inilizeData() {
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
 
     //TODO
-    //showResults();
-    /*
-    if (remainingComponents.length <= thresholdTopicNumber) {
-        $('#results').removeClass('invisible');
-        showResults();
-    }*/
-    $('#results').removeClass('invisible');
     showResults();
 
     var mode = localStorage.getItem('mode');
@@ -446,35 +451,37 @@ function invisbaleTopicResutlPanel() {
     $('#results').addClass('invisible');
 }
 
-
 function showResults() {
-    $('#results').removeClass('invisible');
-    //console.log(remainingComponents);
-    $("#list").empty();
-    //$("#list").append('<ul class="urd-square-success">');
-    /*for(i=0;i<remainingComponents.length;i++) {
-        $("#list").append("<li class='list-group-item'><a href='" + remainingComponents[i].path+"'>" + remainingComponents[i].name +"</a></li>");
-    }*/
-    elementWithTopicsList.forEach(function (element) {
-        $("#list").append("<li class='list-group-item'>" + element.name + ': ' + element.percentage + "</li>");
-    });
+    var answserList = JSON.parse(localStorage.getItem('answerList'));
+    if (answserList !== null && answserList.length >= showResultCount ){
 
-    var isExpanded = $('#collapse1').attr("aria-expanded");
-    if (isExpanded) {
-        $(".panel-collapse").collapse("hide");
-        //$("#collapseDiv").collapse("show");
-        $('#collapseResults').collapse("show");
-        $('#topicIcon').removeClass('glyphicon-minus');
-        $('#topicIcon').addClass('glyphicon-plus');
-        $('#resultIcon').removeClass('glyphicon-plus');
-        $('#resultIcon').addClass('glyphicon-minus');
+        $('#results').removeClass('invisible');
+        $("#list").empty();
 
-    } else {
-        $('#collapseResults').collapse("show");
-        $('#resultIcon').removeClass('glyphicon-plus');
-        $('#resultIcon').addClass('glyphicon-minus');
+        //Deep Copy
+        var copyOfElementsWithTopicLists = JSON.parse(JSON.stringify(elementWithTopicsList));
+        var sortedElementswithTopicLists = sortArrayByKey(copyOfElementsWithTopicLists, 'percentage').reverse();
+
+        sortedElementswithTopicLists.slice(0,numberOfShownResults).forEach(function (element) {
+            $("#list").append("<li class='list-group-item'>" + element.name + ': ' + element.percentage + "</li>");
+        });
+
+        var isExpanded = $('#collapse1').attr("aria-expanded");
+        if (isExpanded) {
+            $(".panel-collapse").collapse("hide");
+            //$("#collapseDiv").collapse("show");
+            $('#collapseResults').collapse("show");
+            $('#topicIcon').removeClass('glyphicon-minus');
+            $('#topicIcon').addClass('glyphicon-plus');
+            $('#resultIcon').removeClass('glyphicon-plus');
+            $('#resultIcon').addClass('glyphicon-minus');
+
+        } else {
+            $('#collapseResults').collapse("show");
+            $('#resultIcon').removeClass('glyphicon-plus');
+            $('#resultIcon').addClass('glyphicon-minus');
+        }
     }
-
     valid = false;
 }
 
