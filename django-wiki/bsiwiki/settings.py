@@ -56,8 +56,8 @@ INSTALLED_APPS = [
     'BSIUpdate',
     'infopage',
     'widget_tweaks',
-    'djangosecure',
-    'sslserver',
+    #'djangosecure',
+    #'sslserver',
 ]
 
 MIDDLEWARE = [
