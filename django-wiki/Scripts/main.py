@@ -44,11 +44,11 @@ def update_phase():
 
 def demo_mid_phase():
     # for the demo we don't call crawlers and co
-    doUpdate('../programming/bsiComparator/example_modified_files.txt')
+    doUpdate('/home/ziik/Seel-17-18/programming/bsiComparator/example_modified_files.txt')
 
 
 def demo_post_phase():
-    post_phase('2018-03' , '../programming/bsiComparator/example_modified_files.txt')
+    post_phase(datetime.now().strftime("%Y-%m-%d") , '/home/ziik/Seel-17-18/programming/bsiComparator/example_modified_files.txt')
 
 
 if __name__ == "__main__":

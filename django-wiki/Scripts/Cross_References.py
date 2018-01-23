@@ -13,9 +13,9 @@ from bsiwiki import settings
 from wiki.models import URLPath
 
 
-csvDir = './Cross_Reference_Tables/'
-txtDir = './Cross_Reference_Files/'
-crfDir = './CRF/'
+csvDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/'
+txtDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Files/'
+crfDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/CRF/'
 
 def extraction(oldFolderPath, newFolderPath):
     # main function of extraction the cross rreference tables relations
