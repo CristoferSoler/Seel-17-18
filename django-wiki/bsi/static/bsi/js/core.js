@@ -20,11 +20,16 @@ function jsonWrapper(url, callback) {
 
 $(document).ready(function() {
   var btnGroup = $("span[data-bind='bs-drp-sel-label']");
-  localStorage.setItem('searchToken', btnGroup.text());
+  var defaultValue = "All";
 
-  if (localStorage.getItem(('searchTocken') !== undefined)){
-      btnGroup.text(localStorage.getItem('searchToken'));
+  if (localStorage.getItem('searchToken')) {
+    btnGroup.text(localStorage.getItem('searchToken'));
   }
+  else
+  {
+    localStorage.setItem('searchToken', defaultValue);
+  }
+
   $("a[href='#']").click(function(){
       localStorage.setItem('searchToken', $(this).text());
   })

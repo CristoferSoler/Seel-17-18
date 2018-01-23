@@ -9,8 +9,8 @@ from django.http import HttpResponse
 
 topicAndNumber = []
 
-pathOfComponentsCSV = './../programming/bsiWizard/csv/componentsTopics.csv'
-pathOfThreadsCSV = './../programming/bsiWizard/csv/threadsTopics.csv'
+pathOfComponentsCSV = '../programming/bsiWizard/csv/componentsTopics.csv'
+pathOfThreadsCSV = '../programming/bsiWizard/csv/threadsTopics.csv'
 
 numberOfRelatedElements = 5
 
@@ -52,7 +52,7 @@ def readAndProcessCSV(fileName, requestParameter):
 
 
 def getPathList():
-    pathlist = open('./../programming/bsiCrawler/treeview/pathlist.txt')
+    pathlist = open('../programming/bsiCrawler/treeview/pathlist.txt')
     jsonFile = json.loads(pathlist.read())
     return jsonFile
 

@@ -3,7 +3,7 @@
 
 {% extends 'bsi/base.html'%} {% block bsi_contents %}
 <div class="container margin-after-nav">
-     <div class=" jumbotron-margin text-center">
+     <div class="text-center row">
     	<h1 class="page-header">Register</h1>
 		 <form id="register-form" action="{% url 'register' %}" method="post" role="form" style="display: block;">
 			{% csrf_token %}

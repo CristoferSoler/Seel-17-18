@@ -16,4 +16,3 @@ G 0.6 disasters in the area.md
 Implementation notes for the block SYS.1.2.2 Windows Server 2012
 %a
 %d
-Implementation notes for the block OPS.1.1.3 Patch and Change Management.md
