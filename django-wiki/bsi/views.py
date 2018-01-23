@@ -1,248 +1,165 @@
-import difflib
-import json
-import logging
-
+import os
+from operator import itemgetter
+from django.contrib.auth import login, authenticate
+import pdb
 from django.contrib.auth.decorators import login_required
-from django.contrib import messages
-from django.db.models.query_utils import Q
-from django.http.response import HttpResponse
-from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django.http import Http404
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.template import loader
+from archive.models import Archive
 from django.utils.decorators import method_decorator
-from django.utils.translation import ugettext as _
-from formtools.wizard.views import SessionWizardView
-from wiki import forms as wiki_forms
-from wiki.core.plugins import registry as plugin_registry
-from wiki.core.utils import object_to_json_response
-#from wiki.decorators import get_article
-from .decorators import get_article
-from wiki.models import ArticleRevision, reverse
-from wiki.views.article import ChangeRevisionView
-from wiki.views.article import CreateRootView
-from wiki.views.article import Edit, Delete, History, Preview
+from wiki.decorators import get_article
+from wiki.models import URLPath, models
+from wiki.models.article import Article
+from wiki.views.article import ArticleView
+from wiki.views.article import SearchView
+from .models.article_extensions import BSI_Article_type
+from .forms import FilterForm, UserRegistrationForm
+from wiki import models
 
-from bsi import forms
-from bsi.models.article_extensions import BSI
-from .forms import AddLinksForm, CreateForm
-from bsi.models.article_extensions import UGA, ArticleRevisionValidation
-
-log = logging.getLogger(__name__)
-
-
-def overview_uga(request):
-    children = UGA.get_active_children()
-
-    return render(request, 'uga/overview_uga.html', {'articles': children})
+from bsi.models import BSI_Article_type
+from bsi.ugaViews import overview_uga
+from .models.article_extensions import BSI
+from .wizard import readAndProcessCSV,getListOfFrequenceOfTopic
+import csv
+import json
+import itertools
+from collections import Counter
 
 
-class CreateRoot(CreateRootView):
-    template_name = "uga/create-root.html"
-
-    @method_decorator(login_required)
-    def dispatch(self, request, *args, **kwargs):
-        return super(CreateRoot, self).dispatch(request, *args, **kwargs)
-
-
-FORMS = [("creation", CreateForm), ("add_links", AddLinksForm)]
-
-TEMPLATES = {"creation": "uga/create_article_master_data.html",
-             "add_links": "uga/create_article_add_links.html"}
-
-
-class UGACreate(SessionWizardView):
-
-    @method_decorator(login_required)
-    @method_decorator(get_article(can_write=True, can_create=True))
-    def dispatch(self, request, article, *args, **kwargs):
-        self.sidebar_plugins = plugin_registry.get_sidebar()
-        self.sidebar = []
-        self.urlpath = kwargs.pop('urlpath', None)
-        self.article = article
-        self.request = request
-        return super(UGACreate, self).dispatch(request, *args, **kwargs)
-
-    def get_template_names(self):
-        return [TEMPLATES[self.steps.current]]
-
-    def done(self, form_list, **kwargs):
-        #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
-        title = kwargs.get('form_dict')['creation'].cleaned_data['title']
-        content = kwargs.get('form_dict')['creation'].cleaned_data['content']
-        summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
-        self.uga = UGA.create_by_request(request=self.request, article=self.article,
-                                         parent=self.urlpath,
-                                         slug=title.strip().replace(' ', '_'), title=title,
-                                         content=content,
-                                         summary=summary)
-        links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
-        for l in links:
-            bsi = BSI.objects.filter(Q(url__article__current_revision__title=l))[0]
-            self.uga.add_link_to_bsi(bsi)
-
-        return redirect(reverse('get_article', kwargs={'path': self.uga.url.path}))
-
-
-def get_bsi_articles(request):
-    if request.is_ajax():
-        q = request.GET.get('term', '')
-        bsis = BSI.objects.filter(url__article__current_revision__title__icontains=q)[:20]
-        results = []
-        for bsi in bsis:
-            title_json = {}
-            title_json['id'] = bsi.url.path
-            title_json['label'] = bsi.url.article.current_revision.title
-            title_json['value'] = bsi.url.article.current_revision.title
-            results.append(title_json)
-        data = json.dumps(results)
-    else:
-        data = 'fail'
-    mimetype = 'application/json'
-    return HttpResponse(data, mimetype)
-
-
-class UGEditView(Edit):
-    '''
-    Depending from user rights, the form differs. Moderators and Admins get the UGAEditForm which contains the
-    'Reviewed' checkbox. Normal users get the django-wiki EditForm without 'Reviewed' checkbox.
-    # form_class = forms.UGAEditForm
-    # form_class = forms.EditForm
-
-    '''
-    template_name = "uga/edit.html"
-    form_class = forms.UGEditForm
-
-    @method_decorator(login_required)
-    @method_decorator(get_article(can_write=True))
-    def dispatch(self, request, article, *args, **kwargs):
-        self.sidebar_plugins = plugin_registry.get_sidebar()
-        self.sidebar = []
-        self.checked = ArticleRevisionValidation.objects.get(revision=article.current_revision).status
-
-        if request.user.has_perm('wiki.uncheck_article') and request.user.has_perm('wiki.check_article'):
-            pass
-            # self.form_class = forms.UGEditForm
-        else:
-            pass
-            # self.form_class = forms.EditForm
-        return super(Edit, self).dispatch(request, article, *args, **kwargs)
-
-    def form_valid(self, form):
-        """Create a new article revision when the edit form is valid
-        (does not concern any sidebar forms!)."""
-        revision = ArticleRevision()
-        revision.inherit_predecessor(self.article)
-        revision.title = form.cleaned_data['title']
-        revision.content = form.cleaned_data['content']
-        revision.user_message = form.cleaned_data['summary']
-        revision.deleted = False
-        revision.set_from_request(self.request)
-        self.article.add_revision(revision)
-        messages.success(
-            self.request,
-            _('A new revision of the article was successfully added.'))
-        validation = ArticleRevisionValidation.get_or_create(revision)
-        if self.request.user.has_perm('wiki.check_article') and form.checked:
-            validation.check_article(self.request.user)
-        elif self.request.user.has_perm('wiki.uncheck_article') and not form.checked:
-            validation.uncheck_article(self.request.user)
-        UGA.objects.get(Q(url__article__current_revision=revision)).set_links_to_bsi(form.cleaned_data['links'])
-        return self.get_success_url()
-
-    #
-    def get_form(self, form_class=None):
-        """
-        Checks from querystring data that the edit form is actually being saved,
-        otherwise removes the 'data' and 'files' kwargs from form initialisation.
-        """
-        if form_class is None:
-            form_class = self.get_form_class()
-        kwargs = self.get_form_kwargs()
-        if self.request.POST.get(
-                'save',
-                '') != '1' and self.request.POST.get('preview') != '1':
-            kwargs['data'] = None
-            kwargs['files'] = None
-            kwargs['no_clean'] = True
-
-        form = form_class(self.request, self.article.current_revision, self.checked, **kwargs)
-        return form
-
-    def get_success_url(self):
-        """Go to the article view page when the article has been saved"""
-        if self.urlpath:
-            return redirect("get_article", path=self.urlpath.path)
-        return redirect('get_article', path="uga")
-
-
-@method_decorator(login_required, name='dispatch')
-class UGDeleteView(Delete):
-    form_class = wiki_forms.DeleteForm
-    template_name = "uga/delete.html"
-
-    def get_form(self, form_class=None):
-        form = super(Delete, self).get_form(form_class=form_class)
-        # if self.article.can_moderate(self.request.user):
-        #     form.fields['purge'].widget = forms.forms.CheckboxInput()
-        return form
-
-    def form_valid(self, form):
-        form.cleaned_data['purge'] = True
-        return super(UGDeleteView, self).form_valid(form)
-
-
-class UGHistoryView(History):
-    template_name = "uga/history.html"
+class WikiArticleView(ArticleView):
 
     @method_decorator(get_article(can_read=True))
     def dispatch(self, request, article, *args, **kwargs):
-        return super(History, self).dispatch(request, article, *args, **kwargs)
+        """
+        The dispatch method decides which template is used to display an article. Depending from its parent (uga or bsi) different templates will be used.
+        """
+        urlpath = kwargs.get('urlpath')
+        if not urlpath:
+            raise Http404("No urlpath specified")
+        path = urlpath.path
+        slug = urlpath.slug
+
+        if path.startswith('uga') and len(path) == 4:
+            self.template_name = "uga/overview_base.html"
+            return overview_uga(request)
+        elif path.startswith('uga'):
+            self.template_name = "uga/view.html"
+        elif path.startswith('bsi'):
+            self.template_name = "bsi/article_bsi.html"
+        elif path.startswith('news'):
+            """ todo set news template """
+
+        return super(
+            ArticleView,
+            self).dispatch(
+            request,
+            article,
+            *args,
+            **kwargs)
+
+    def post(self, request, *args, **kwargs):
+        pass
 
 
-def diff(request, revision_id, other_revision_id=None):
-    revision = get_object_or_404(ArticleRevision, id=revision_id)
+class BSISearchView(SearchView):
+    template_name = "bsi/searchresult.html"
 
-    if not other_revision_id:
-        other_revision = revision.previous_revision
+    def dispatch(self, request, *args, **kwargs):
+        self.filter_form = FilterForm(request.GET)
+        if self.filter_form.is_valid():
+            self.filter = self.filter_form.cleaned_data['f']
+            assert (int(self.filter) > 0 and int(self.filter) < 6)
+        else:
+            self.filter = None
+        return super(BSISearchView, self).dispatch(request, *args, **kwargs)
 
-    baseText = other_revision.content if other_revision else ""
-    newText = revision.content
+    def get_queryset(self):
+        #import pdb
+        #pdb.set_trace()
+        search_result = super(BSISearchView, self).get_queryset()
+        # store the ids only
+        filtered_result = []
+        if (not self.filter) or (self.filter == '1'):
+            return search_result
+        for article in search_result:
+            url = URLPath.objects.get(article=article)
+            if url.parent.parent == Archive.get_or_create_archive_root():
+                if self.filter == '5':
+                    filtered_result.append(article.pk)
+                continue
+            if hasattr(url, 'bsi'):
+                if self.filter == '2':
+                    if url.bsi.articleType == BSI_Article_type.COMPONENT:
+                        filtered_result.append(article.pk)
+                elif self.filter == '3':
+                    if url.bsi.articleType == BSI_Article_type.THREAT:
+                        filtered_result.append(article.pk)
+                elif self.filter == '4':
+                    if url.bsi.articleType == BSI_Article_type.IMPLEMENTATIONNOTES:
+                        filtered_result.append(article.pk)
+        return search_result.filter(id__in=filtered_result)
 
-    differ = difflib.Differ(charjunk=difflib.IS_CHARACTER_JUNK)
-    diff = differ.compare(baseText.splitlines(1), newText.splitlines(1))
+    def get_context_data(self, **kwargs):
+        k = super(BSISearchView, self).get_context_data(**kwargs)
+        k['filter'] = self.filter
+        return k
 
-    other_changes = []
+def index(request):
+    components = readAndProcessCSV()
+    sortedTopics = getListOfFrequenceOfTopic(components['components'])
+    template = loader.get_template('bsi/index.html')
+    componentsString = json.dumps(components)
+    sortedTopicsString = json.dumps(sortedTopics)
 
-    if not other_revision or other_revision.title != revision.title:
-        other_changes.append((_('New title'), revision.title))
-
-    return object_to_json_response(
-        dict(diff=list(diff), other_changes=other_changes)
-    )
-
-
-class UGPreviewView(Preview):
-    template_name = "uga/preview_inline.html"
+    return HttpResponse(template.render({'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
-class UGChangeRevisionView(ChangeRevisionView):
-    permanent = False
+def bsicatalog(request):
+    all_articles = Article.objects.all()
 
-    # @method_decorator(get_article(can_write=True, not_locked=True))
-    # def dispatch(self, request, article, *args, **kwargs):
-    #     self.article = article
-    #     self.urlpath = kwargs.pop('kwargs', False)
-    #     self.change_revision()
-    #
-    #     return super(
-    #         ChangeRevisionView,
-    #         self).dispatch(
-    #         request,
-    #         *args,
-    #         **kwargs)
+    template = loader.get_template('bsi/article_base.html')
+    context = {
+        'all_articles': all_articles,
+    }
+    return HttpResponse(template.render(context, request))
 
-    def get_redirect_url(self, **kwargs):
-        # if self.urlpath:
-        #     return reverse("history", kwargs={'path': self.urlpath.path})
-        # else:
-        #     return reverse('history', kwargs={'article_id': self.article.id})
 
-        return reverse("get_article", kwargs={'path': kwargs.get('urlpath')})
+@login_required
+def home(request):
+    return render(request, 'home.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(username=form.cleaned_data['username'],
+                                            password=form.cleaned_data['password1'],
+                                            email=form.cleaned_data['email'])
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserRegistrationForm()
+        return render(request, 'bsi/account/register.html', {'form': form})
+
+
+def create(request):
+    return render(request, 'bsi/create_article.html')
+
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = User.objects.create_user(username=form.cleaned_data['username'],
+                                            password=form.cleaned_data['password1'],
+                                            email=form.cleaned_data['email'])
+            login(request, user)
+            return redirect('index')
+    else:
+        form = UserRegistrationForm()
+        return render(request, 'bsi/account/register.html', {'form': form})
