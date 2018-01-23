@@ -23,6 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/bootstrap-treeview.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/wizard.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/animate.min.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'bsi/css/footer.css' %}"/>
+
 
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
@@ -32,8 +34,6 @@
 
 <body>
 <div class="wrapper">
-
-
 <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,40 +61,42 @@
                     <a href="{% url 'get_article' path='bsi' %}">BSI Compendium</a>
                 </li>
                 <li class="">
-                    <a href="{% url 'get_article' path='uga' %}">User Articles</a>
+                      <a href="{% url 'get_article' path='uga' %}">User Articles</a>
                 </li>
                 <li class="">
                     <a href="{% url 'archive_dir' path='' %}">Archive</a>
                 </li>
 
             </ul>
-                        <div id="search-expanding">
-                                <form class="navbar-form navbar-right" role="search" id="search-input" method="GET" action="{% url 'bsisearch' %}">
-                                    <div class="form-group navbar-right">
-                                         <input type="search" class="form-control search-query" name="q" placeholder="search"/>
-                                    </div>
-                                </form>
-                            <div class="navbar-form navbar-right">
-                                 <a id="icon-search" style="color: #FFFFFF">
-                                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                                 </a>
-                                </div>
-                            </div>
 
-            <form class="navbar-form navbar-right search-expanding-dis" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
+         <div id="search-expanding">
+                                 <form class="navbar-form navbar-right" role="search" id="search-input" method="GET" action="{% url 'bsisearch' %}">
+                                     <div class="form-group navbar-right">
+                                          <input type="search" class="form-control search-query" name="q" placeholder="search"/>
+                                     </div>
+                                 </form>
+                             <div class="navbar-form navbar-right">
+                                  <a id="icon-search" style="color: #FFFFFF">
+                                     <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                  </a>
+                                 </div>
+                             </div>
+
+             <form class="navbar-form navbar-right search-expanding-dis" id="wiki-search-form" method="GET" action="{% url 'bsisearch' %}">
+
                 <div class="form-group inner-addon right-addon">
-                    <i class="glyphicon glyphicon-search top4"></i>
+                <i class="glyphicon glyphicon-search top4"></i>
+
+
                     <input type="search" class="form-control search-query" name="q" placeholder="search"/>
                 </div>
             </form>
-
             <div class="navbar-right">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <!--<span class="badge notification-cnt">0</span>-->
-                                <span class="fa fa-user"></span>
+                                 <span class="fa fa-user"></span>
                                 {{ user }}
                                 <b class="caret"></b>
                             </a>
@@ -125,7 +127,7 @@
                     </ul>
                 {% else %}
                     <ul class="nav navbar-nav">
-                       <li class="no-dropdown">
+                        <li class="no-dropdown">
                             <a href="{% url 'login' %}">Log in</a>
                         </li>
                         {% if "ACCOUNT_HANDLING" %}
@@ -145,7 +147,7 @@
     <div class="row">
         <div class="col-md-12">
             <div id="slide-panel">
-                <a href="#" class="btn" id="opener"><img src={% static "bsi/images/wizard.png" %}></a>
+                <a href="#" class="btn" id="opener"><img src="../../static/bsi/images/wizard.png"></a>
                 <div id="content" class="panel panel-primary">
                     <div class="panel panel-default contentPanel">
                         <div class="panel-heading">
@@ -243,30 +245,27 @@
 <div class="push"></div>
   </div>
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <ul class="menu list-inline">
+    <div class="row">
+            <ul class="text-center list-inline">
 
                 <li>
-                    <a> Copyright © 2017 All rights reserved</a>
+                    <p class="text-primary"> Copyright © 2017 All rights reserved</p>
                 </li>
 
                 <li>
-                    <a href="/about">About</a>
+                    <a class="text-primary" href="{% url 'about' %}">About</a>
                 </li>
 
                 <li>
-                    <a href="/faq">FAQ</a>
+                    <a class="text-primary" href="{% url 'faq' %}">FAQ</a>
                 </li>
 
                 <li>
-                    <a href="/contact">Contact</a>
+                    <a class="text-primary" href="{% url 'contact' %}">Contact</a>
                 </li>
 
             </ul>
         </div>
-
-    </div>
 </footer>
 
 {% render_block "js" %}
@@ -277,15 +276,16 @@
 
 <script>
     function clearTreeStorage() {
-        var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
-        var url = location.pathname;
-        var match = url.match(regexBSI);
-        if(match != null && match.length != 0){
+       var regexBSI = new RegExp('/bsi\/.*\/.*|/bsi');
+         var url = location.pathname;
+         var match = url.match(regexBSI);
+         if(match != null && match.length != 0){
 
-        } else {
-            localStorage.removeItem('selectedNode');
-        }
-    }
+         } else {
+             localStorage.removeItem('selectedNode');
+         }
+     }
+
 
     $(document).ready(function () {
         $(window).scroll(function () {
@@ -300,29 +300,11 @@
             return false;
         });
 
-        clearTreeStorage();
-
         $('.panel-title').click(function () {
             valid = false;
 
         });
 
-        if(localStorage.getItem('visible')!== null && stringToBoolean(localStorage.getItem('visible')) === true){
-            console.log('darf nicht');
-        } else {
-            console.log('hier');
-            $('#opener').addClass('slideInRight animated');
-            var myTimer = setInterval(function(){
-                addSwing();
-            },800);
-        }
-
-        function addSwing() {
-            clearInterval(myTimer)
-            $('#opener').removeClass('slideInRight animated');
-            $('#opener').addClass('animated swing');
-
-         }
 
         $('.validFalse').click(function () {
             valid = false;
@@ -330,36 +312,31 @@
         })
     });
 
-
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
-
     });
 
     $(document).ready(function() {
-
     $('#search-expanding').click(function () {
-        if ( $(this).is(".expanded") ) {
-            $(this).removeClass('expanded');
-            $('#search-input').animate({width: 0}, function(){
-                $('#search-input').hide();
-                $('#icon-search').show();
-            });
-        }
-        else {
-            $(this).addClass('expanded');
-            $('#icon-search').hide();
-            $('#search-input').show().animate({width: 200});
-            $("#search-input input").focus();
-        }
-    })
+      if ( $(this).is(".expanded") ) {$(this).removeClass('expanded');
+    $('#search-input').animate({width: 0}, function(){
+    $('#search-input').hide();
+                 $('#icon-search').show();
+             });
+         }
+         else {
+             $(this).addClass('expanded');
+             $('#icon-search').hide();
+             $('#search-input').show().animate({width: 200});
+             $("#search-input input").focus();
+         }
+     })
 
-    $("#search-input input").blur(function () {
-        $('#search-expanding').click();
+     $("#search-input input").blur(function () {
+         $('#search-expanding').click();
+
+     });
     });
-
-});
-
 </script>

@@ -12,12 +12,12 @@ django.setup()
 
 from wiki.models import URLPath
 from bsi.models.article_extensions import BSI_Article_type, BSI
-
+from django.contrib.sites.models import Site
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-path_to_treeview = '../../programming/bsiCrawler/treeview/bsiTree.txt'
-path_to_treeview_with_links = '../../programming/bsiCrawler/treeview/bsiTreeLinks.txt'
-path_to_pathlist = '../../programming/bsiCrawler/treeview/pathlist.txt'
+path_to_treeview = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/bsiTree.txt'
+path_to_treeview_with_links = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/bsiTreeLinks.txt'
+path_to_pathlist = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/pathlist.txt'
 
 def addLinksToTreeView():
     print('Loading the tree view file ' + path_to_treeview)
@@ -33,8 +33,8 @@ def addLinksToTreeView():
         raise ValueError('Loaded json file turned up empty. Please check the tree view file.')
 
     path_list = []
-    # site = 'http://' + str(Site.objects.get_current()) + '/'
-    site = 'http://localhost:8000/'
+    site = 'http://' + str(Site.objects.get_current()) + '/'
+    #site = 'http://localhost:8000/'
     parent = BSI.get_or_create_bsi_root('')
     for elem in parsed:
         # print json.dumps(elem, indent=4)
@@ -58,7 +58,7 @@ def addLinksToTreeView():
             if(bsi_type == BSI_Article_type.COMPONENT):
                 parents = URLPath.objects.filter(slug='components')
             elif(bsi_type == BSI_Article_type.THREAT):
-                parents = URLPath.objects.filter(slug='threats', parent=parent)
+                parents = URLPath.objects.filter(slug='threats')
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
                 parents = URLPath.objects.filter(slug='implementationnotes')
 
@@ -110,6 +110,13 @@ def clean(path):
         return path.replace('bsi', '')
     return path
 
+def clean_text(text):
+    return text.replace('Implementation notes for the block', '')\
+            .replace('Implementation notes for the module', '')\
+            .replace('Implementation notes for the', '')\
+            .replace('Implementation notes for module', '')\
+            .replace('Implementation notes for building block', '')\
+            .strip()
 
 def get_bsi_article_id(file_name):
     # search the BSI id in the file name
@@ -134,7 +141,15 @@ def get_bsi_article_id(file_name):
                 match = matchObj.group()
                 match = fix_threat_id(match)
             else:
-                print('No BSI ID found in ' + file_name + '. Skipped...')
+                # e.g G 0.1
+                regex = r"([A-Z])+\s([0-9]+)\.([0-9]+)+"
+                matchObj = re.search(regex, file_name)
+                if(matchObj):
+                    match = matchObj.group()
+                    match = match.replace(" ", "")
+                else:
+                    print('No BSI ID found in ' + file_name + '. Skipped...')
+    print(file_name + ' matched to ' + match)
     return match
 
 
