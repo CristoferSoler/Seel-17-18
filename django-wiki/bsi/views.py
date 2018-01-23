@@ -146,14 +146,14 @@ def register(request):
             user = authenticate(username=username, password=raw_password)
             # by default add user to users group
             #user.groups.add(Group.objects.get(name='users'))
-	    user = User.objects.create_user(username=form.cleaned_data['username'],
+            newUser = User.objects.create_user(username=form.cleaned_data['username'],
 					password=form.cleaned_data['password1'],
 					email=form.cleaned_data['email'])
             login(request, user)
             return redirect('index')
-    else:
-        form = UserRegistrationForm()
-    return render(request, 'bsi/account/register.html', {'form': form})
+        else:
+            form = UserRegistrationForm()
+        return render(request, 'bsi/account/register.html', {'form': form})
 
 
 def create(request):
