@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'BSIUpdate',
     'infopage',
     'widget_tweaks',
+    #'djangosecure',
+    #'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +69,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'bsiwiki.urls'
 
@@ -162,6 +165,15 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Options for secure requests and responses (HTTPS)
+
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SECURE_HSTS_SECONDS = 3600
+
+X_FRAME_OPTIONS = 'DENY'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 

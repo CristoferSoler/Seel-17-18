@@ -92,7 +92,6 @@
                     <input type="search" class="form-control search-query" name="q" placeholder="search"/>
                 </div>
             </form>
-
             <div class="navbar-right">
                 {% if user.is_authenticated %}
                     <ul class="nav navbar-nav">
@@ -268,6 +267,8 @@
 
             </ul>
         </div>
+
+    </div>
 </footer>
 
 {% render_block "js" %}
@@ -303,7 +304,6 @@
 
         $('.panel-title').click(function () {
             valid = false;
-
         });
 
         if(localStorage.getItem('visible')!== null && stringToBoolean(localStorage.getItem('visible')) === true){
@@ -328,18 +328,32 @@
             console.log('Klappt');
         })
     });
-
-
     $(document).ready(function () {
         $('li.active').removeClass('active');
         $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
         initWizardsComponents();
-
     });
 
     $(document).ready(function() {
 
     $('#search-expanding').click(function () {
+      if ( $(this).is(".expanded") ) {$(this).removeClass('expanded');
+    $('#search-input').animate({width: 0}, function(){
+    $('#search-input').hide();
+                 $('#icon-search').show();
+             });
+         }
+         else {
+             $(this).addClass('expanded');
+             $('#icon-search').hide();
+             $('#search-input').show().animate({width: 200});
+             $("#search-input input").focus();
+         }
+     })
+     $("#search-input input").blur(function () {
+         $('#search-expanding').click();
+     });
+    });
         if ( $(this).is(".expanded") ) {
             $(this).removeClass('expanded');
             $('#search-input').animate({width: 0}, function(){
