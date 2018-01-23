@@ -4,9 +4,9 @@ import sys
 
 sys.path.append(r'..')
 
-from Scripts.main import demo_mid_phase, demo_post_phase
+from Scripts.main import update_phase#,demo_mid_phase, demo_post_phase
 
-
+'''
 def performMidPhase(request):
     demo_mid_phase()
     print('MidPhase')
@@ -15,6 +15,11 @@ def performMidPhase(request):
 def performPostPhase(request):
     demo_post_phase()
     print('PostPhase')
+    return HttpResponse('', content_type='application/json')
+'''
+def performUpdate(request):
+    update_phase()
+    print('Update')
     return HttpResponse('', content_type='application/json')
 
 

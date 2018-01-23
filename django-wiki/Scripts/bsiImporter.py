@@ -18,11 +18,12 @@ from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
 from django.contrib.sites.models import Site
 
-new_temp_bsi_folder = '/home/ziik/Seel-17-18/django-wiki/Scripts/mdNew'
-crfDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/CRF/'
+
+new_temp_bsi_folder = './../Seel-17-18/django-wiki/Scripts/mdNew'
+crfDir = './../django-wiki/Scripts/CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-txtDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Files/'
-csvDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/'
+txtDir = './../django-wiki/Scripts/Cross_Reference_Files/'
+csvDir = './../django-wiki/Scripts/Cross_Reference_Tables/'
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
