@@ -24,7 +24,7 @@ from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 from .models.article_extensions import BSI_Article_type
-from .forms import FilterForm, UserRegistrationForm
+from .forms import FilterForm, UserRegistrationForm, LoginForm
 from wiki import models
 from django.contrib import admin
 from bsi.models import BSI_Article_type
@@ -143,6 +143,15 @@ def bsicatalog(request):
 @login_required
 def home(request):
     return render(request, 'home.html')
+
+def login_view(request):
+    form = LoginForm(request.POST or None)
+    if request.POST and form.is_valid():
+        user = form.login(request)
+        if user:
+            login(request, user)
+            return render(request,"bsi/index.html")# Redirect to a success page.
+    return render(request, 'bsi/account/login.html', {'form': form })
 
 
 def register(request):

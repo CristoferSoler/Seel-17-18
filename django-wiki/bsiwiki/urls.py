@@ -31,7 +31,7 @@ urlpatterns = [
     url(r'^_treeview/?', include('treeview.urls')),
     url(r'^information/?', include('infopage.urls')),
     url(r'^_wizard/?', include('wizard.urls')),
-    url(r'^login/?', auth_views.login, {'template_name': 'bsi/account/login.html'}, name='login'),
+    url(r'^login/?', views.login_view, name='login'),
     url(r'^logout/?', auth_views.logout, {'next_page': '/'}, name='logout'),
     url(r'^register/?', views.register, name='register'),
     url(r'changePassword/?', auth_views.password_change, {'template_name': 'bsi/account/accountsSettings.html'},

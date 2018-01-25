@@ -72,6 +72,9 @@ MIDDLEWARE = [
 APPEND_SLASH = False
 ROOT_URLCONF = 'bsiwiki.urls'
 
+#We need because that banned users are inactive and without that the authenticate method returns None instead of the user
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

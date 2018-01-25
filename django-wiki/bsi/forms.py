@@ -1,6 +1,7 @@
 import re
 
 from django import forms
+from django.contrib.auth import authenticate
 from django.forms import ModelMultipleChoiceField, HiddenInput
 from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext
@@ -14,6 +15,32 @@ from wiki.models import URLPath
 from django.core.exceptions import ObjectDoesNotExist
 
 from bsi.models import UGA, BSI
+
+class LoginForm(forms.Form):
+    username = forms.CharField(max_length=255, required=True)
+    password = forms.CharField(widget=forms.PasswordInput, required=True)
+
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+
+        #Error password or username is invalid
+        if not user:
+                raise forms.ValidationError("Username or password is invalid. Please try again.")
+
+        #banned or not activate
+        if user != None and not user.is_active:
+            raise forms.ValidationError("Your account is not active yet. Please checkout your mails \n"
+                                        "or you are banned form the platform.")
+
+        return self.cleaned_data
+
+    def login(self, request):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        return user
 
 
 class UserRegistrationForm(forms.Form):
