@@ -17,8 +17,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from bsi.models import UGA, BSI
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=255, required=True)
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
+    username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}),max_length=255, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}), required=True)
 
     def clean(self):
         username = self.cleaned_data.get('username')
