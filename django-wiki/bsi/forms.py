@@ -17,8 +17,8 @@ from django.core.exceptions import ObjectDoesNotExist
 from bsi.models import UGA, BSI
 
 class LoginForm(forms.Form):
-    username = forms.CharField(max_length=255, required=True)
-    password = forms.CharField(widget=forms.PasswordInput, required=True)
+    username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}),max_length=255, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}), required=True)
 
     def clean(self):
         username = self.cleaned_data.get('username')
@@ -45,26 +45,24 @@ class LoginForm(forms.Form):
 
 class UserRegistrationForm(forms.Form):
     username = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
         required=True,
-        label='Username',
         max_length=32
     )
     email = forms.EmailField(
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
         required=True,
-        label='Email',
         max_length=32,
     )
     password1 = forms.CharField(
         required=True,
-        label='Password',
         max_length=32,
-        widget=forms.PasswordInput()
+        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'})
     )
     password2 = forms.CharField(
         required=True,
-        label='Please repeat the password',
         max_length=32,
-        widget=forms.PasswordInput()
+        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Retype password'})
     )
 
     def clean_email(self):
@@ -87,7 +85,7 @@ class UserRegistrationForm(forms.Form):
             password2 = self.cleaned_data['password2']
             if password1 == password2:
                 return password2
-        raise forms.ValidationError('Passwords do not match.')
+        raise forms.ValidationError('Passwords don\'t match.')
 
     def clean_username(self):
         username = self.cleaned_data['username']
