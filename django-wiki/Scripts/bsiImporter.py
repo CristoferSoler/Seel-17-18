@@ -16,12 +16,14 @@ from bsi.models.article_extensions import BSI, BSI_Article_type
 from wiki.models import URLPath, ArticleRevision, Article
 from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
+from django.contrib.sites.models import Site
 
-new_temp_bsi_folder = './Scripts/mdNew'
-crfDir = './CRF/'
+
+new_temp_bsi_folder = './../Seel-17-18/django-wiki/Scripts/mdNew'
+crfDir = './../django-wiki/Scripts/CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-txtDir = './Cross_Reference_Files/'
-csvDir = './Cross_Reference_Tables/'
+txtDir = './../django-wiki/Scripts/Cross_Reference_Files/'
+csvDir = './../django-wiki/Scripts/Cross_Reference_Tables/'
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
@@ -148,8 +150,6 @@ def doUpdate(file):
             id = get_bsi_article_id(sub_article_type, file_name)
             # if the file is new or modified, add to database under /new
             if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
-                if sub_article_type == "C" and isdir(crfDir):
-                    appendThreatMeasureRelation(path_and_file, id)
 
                 # import the content to the database
                 with open(path_and_file) as data_file:
@@ -162,8 +162,8 @@ def doUpdate(file):
 
     # append the Cross reference relation files to the content
     # of each component article before import it in the database
-    if isdir(crfDir) and doCR:
-        appendThreatMeasureRelation()
+    #if isdir(crfDir) and doCR:
+    #    appendThreatMeasureRelation()
 
     fillNewPage(modified, added, deleted, new_page)
 
@@ -193,6 +193,7 @@ def is_contained_in(dic, bsi_type, bsi_id):
 
 
 def fillNewPage(modified, added, deleted, new_page):
+    site = 'http://' + str(Site.objects.get_current()) + '/'
     bsi = BSI.get_or_create_bsi_root('')
     content = 'The following articles have been changed in the new BSI Catalogue:<br />'
     for bsi_type in new_page.get_children():
@@ -201,37 +202,38 @@ def fillNewPage(modified, added, deleted, new_page):
             content += '<br />Components:<br />'
             for article in bsi_type.get_children():
                 if(is_contained_in(modified, 'component', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
+                    print(content)
                 elif(is_contained_in(added, 'component', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
             for del_article in deleted.get('type'):
                 if(del_article.get('name') == 'component'):
                     for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
         if(bsi_type.slug == 'threats'):
             bsi_parent = URLPath.objects.filter(slug='threats', parent=bsi)[0]
             content += '<br />Threats:<br />'
             for article in bsi_type.get_children():
                 if(is_contained_in(modified, 'threat', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
                 elif(is_contained_in(added, 'threat', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
             for del_article in deleted.get('type'):
                 if(del_article.get('name') == 'threat'):
                     for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
         elif(bsi_type.slug == 'implementationnotes'):
             bsi_parent = URLPath.objects.filter(slug='implementationnotes', parent=bsi)[0]
             content += '<br />Implementation Notes:<br />'
             for article in bsi_type.get_children():
                 if(is_contained_in(modified, 'implementationnotes', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (modified)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
                 elif(is_contained_in(added, 'implementationnotes', article.slug)):
-                    content += '[' + article.slug + '](' + article.path.replace('new/', '') + ') (new)<br />'
+                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
             for del_article in deleted.get('type'):
                 if(del_article.get('name') == 'implementationnotes'):
                     for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
     revision = ArticleRevision()
     revision.inherit_predecessor(new_page.article)
     from markdownify import markdownify as md
@@ -316,6 +318,8 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
                 for ancestor in Article.objects.get(pk=old_article.article.pk).ancestor_objects():
                     ancestor.article.clear_cache()
                 ArchiveTransaction.create(archive, old_article).archive()
+                old_article.set_cached_ancestors_from_parent(archive.archive_url)
+                old_article.save()
                 post_phase_move_references(archive, old_article)
             except Exception:
                 # if old article not found, this means this is a newly added article
@@ -329,6 +333,8 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
             new_article.save()
             for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
                 ancestor.article.clear_cache()
+            new_article.set_cached_ancestors_from_parent(bsi_type)
+            new_article.save()
             # print(new_article.parent.parent.path)
             # print(new_article.parent.path)
             # print(new_article.path)
@@ -338,7 +344,12 @@ def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
     uga_ref = bsi_article.bsi.references.all()
     for ref in uga_ref:
+        for ancestor in Article.objects.get(pk=ref.url.article.pk).ancestor_objects():
+            ancestor.article.clear_cache()
         ArchiveTransaction.create(archive, ref.url).archive()
+        ref.url.set_cached_ancestors_from_parent(archive.archive_url)
+        ref.url.save()
+        #Article.objects.get(pk=ref.url.article.pk).clear_cache()
 
 def post_phase_move_deleted_articles(archive, new_file, bsi):
     # move the bsi deleted articles directly to archive
@@ -355,13 +366,19 @@ def post_phase_move_deleted_articles(archive, new_file, bsi):
             bsi_type = URLPath.objects.get(parent=bsi, slug="implementationnotes")
 
         for file in elem.get('files'):
+            import pdb
             bsi_id = file.get('file')
             deleted_article = URLPath.objects.get(parent=bsi_type, slug=bsi_id)
             for ancestor in Article.objects.get(pk=deleted_article.article.pk).ancestor_objects():
                     ancestor.article.clear_cache()
             ArchiveTransaction.create(archive, deleted_article).archive()
+            new = URLPath.objects.get(pk=deleted_article.pk)
+            
+            new.set_cached_ancestors_from_parent(archive.archive_url)
+            #Article.objects.get(pk=deleted_article.article.pk).clear_cache()
+            #pdb.set_trace()
             post_phase_move_references(archive, deleted_article)
-            deleted_article.save()
+            new.save()
 
 def post_phase_delete_url(path):
     # delete the new page and its subroots
@@ -446,8 +463,8 @@ def initDict():
 
 def appendThreatMeasureRelation():
     Cross_References.extraction(csvDir,txtDir)
-    # site = str(Site.objects.get_current()) + '/'
-    site = 'http://localhost:8000/'
+    site = 'http://' + str(Site.objects.get_current()) + '/'
+    #site = 'http://localhost:8000/'
     try:
         components_articles = BSI.get_articles_by_type('C')
         for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:

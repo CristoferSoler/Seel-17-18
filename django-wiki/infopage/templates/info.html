@@ -63,7 +63,6 @@
                       {% csrf_token %}
                       <input type="hidden" name="q_id" value="{{ q.id }}" />
                       <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
-                     <!-- <a href="{% url 'delete_q' %}" class="btn btn-inverse disabled"><i class="glyphicon glyphicon-trash"></i></a> -->
                     </form>
                   {% endif %}
                 </div>
@@ -91,7 +90,7 @@
                     {% endfor %}
                {% for field2 in a_form.visible_fields %}
                         <div class="form-group">
-                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required" }}
+                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required"}}
                               {% for error in field.errors %}
                               <span class="help-block">{{ error }}</span>
                               {% endfor %}
@@ -135,24 +134,27 @@
 
                 <!-- Modal content-->
                 <div class="modal-content">
+                     <form action="{% url 'edit_a' %}", method="post">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit answer</h4>
                   </div>
-                  <form action="{% url 'edit_a' %}", method="post">
-                    {% csrf_token %}
-                    <div class="col-md-12">
-                        <input id="answer" type="text" name="answer" maxlength="1000" required value="{{ a.answer }}" />
+
+                     <div class="modal-body">
+                     <textarea class="form-control" id="answer" type="text" name="answer" rows="3" required>{{ a.answer }}</textarea>
+
                     </div>
-                    <input type="hidden" name="answer_from" value="{{ q.id }}" />
-                    <input type="hidden" name="answer_id" value="{{ a.id }}" />
-                    <button type="submit" class="btn btn-link" name="button">Edit</button>
-                  </form>
+
+                            <input type="hidden" name="answer_from" value="{{ q.id }}" />
+                            <input type="hidden" name="answer_id" value="{{ a.id }}" />
+
+
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       <button type="submit" class="btn btn-primary" name="button">Save</button>
                   </div>
+                     </form>
                 </div>
-
               </div>
             </div>
 
@@ -169,7 +171,8 @@
                   <div class="comment-post">
                     <p>
                      {% if a.edited %}
-                           <div> {{ a.answer }} (<i>modified</i> by {{ a.edited_by }})</div>
+                           <div> {{ a.answer }} </div>
+                        <p class="small" style="color: #808080;"> (<i>modified</i> by {{ a.edited_by }}) <p>
                       {% else %}
                           <div> {{ a.answer }}</div>
                       {% endif %}

@@ -71,7 +71,7 @@ class Question(models.Model):
         self.save()
 
     def get_answers(self):
-        return self.answer_set.all().order_by('-timestamp')
+        return self.answer_set.all()
 
     def __str__(self):
         return 'Question: ' + self.question

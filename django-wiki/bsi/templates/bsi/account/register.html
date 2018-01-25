@@ -3,32 +3,41 @@
 
 {% extends 'bsi/base.html'%} {% block bsi_contents %}
 <div class="container margin-after-nav">
-     <div class=" jumbotron-margin text-center">
-    	<h1 class="page-header">Register</h1>
-		 <form id="register-form" action="{% url 'register' %}" method="post" role="form" style="display: block;">
-			{% csrf_token %}
-				{% for field in form %}
-				  <p>
-					{{ field.label_tag }} <br>
-					{{ field }}
-					{% if field.help_text %}
-					<br>
-					  <small style="color: grey">{{ field.help_text }}</small>
-					<br>
-					{% endif %}
-					{% for error in field.errors %}
-					  <p style="color: red">{{ error }}</p>
-					{% endfor %}
-				  </p>
-				{% endfor %}
-			<div class="form-group">
+          <div class="jumbotron-margin text-center">
 				<div class="row">
-					<div class="col-sm-6 col-sm-offset-3">
-						<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary btn-mg" value="Register Now">
-					</div>
-				</div>
-			</div>
-		</form>
+				  <div class="col-lg-3"></div>
+				  <div class="col-lg-6">
+					<h2	 class="page-header">Sign up</h2>
+					<form id="register-form" action="{% url 'register' %}" method="post" role="form" style="display: block;">
+							{% csrf_token %}
+							{% for field in form %}
+								<div class="form-group row">
+									<div class="col-md-offset-2 col-md-8">
+										{{ field }}
+									</div>
+								</div>
+								{% for error in field.errors %}
+									<div class="row">
+										<div class="col-md-offset-2 col-md-8">
+											 <p class="text-danger pull-left">{{ error }}</p>
+										</div>
+									</div>
+								{% endfor %}
+							{% endfor %}
+							<div class="form-group">
+								<div class="row">
+									<div class="col-sm-8 col-sm-offset-2">
+										<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary btn-mg pull-left" value="Register Now">
+									</div>
+								</div>
+							</div>
+					</form>
+		  </div>
+		  <div class="col-lg-3"></div>
+		</div>
 	 </div>
 </div>
 {% endblock %}
+
+
+

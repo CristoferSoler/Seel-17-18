@@ -1,35 +1,101 @@
+import re
+
 from django import forms
+from django.contrib.auth import authenticate
 from django.forms import ModelMultipleChoiceField, HiddenInput
 from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
+from django.contrib.auth.models import User
 from wiki import models
 from wiki.core.diff import simple_merge
 from wiki.editors import getEditor
 from wiki.forms import _clean_slug, WikiSlugField, SearchForm, SpamProtectionMixin
 from wiki.models import URLPath
+from django.core.exceptions import ObjectDoesNotExist
 
 from bsi.models import UGA, BSI
+
+class LoginForm(forms.Form):
+    username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}),max_length=255, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}), required=True)
+
+    def clean(self):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+
+        #Error password or username is invalid
+        if not user:
+                raise forms.ValidationError("Username or password is invalid. Please try again.")
+
+        #banned or not activate
+        if user != None and not user.is_active:
+            raise forms.ValidationError("Your account is not active yet. Please checkout your mails \n"
+                                        "or you are banned form the platform.")
+
+        return self.cleaned_data
+
+    def login(self, request):
+        username = self.cleaned_data.get('username')
+        password = self.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        return user
 
 
 class UserRegistrationForm(forms.Form):
     username = forms.CharField(
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
         required=True,
-        label='Username',
         max_length=32
     )
-    email = forms.CharField(
+    email = forms.EmailField(
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
         required=True,
-        label='Email',
         max_length=32,
     )
-    password = forms.CharField(
+    password1 = forms.CharField(
         required=True,
-        label='Password',
         max_length=32,
-        widget=forms.PasswordInput()
+        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'})
+    )
+    password2 = forms.CharField(
+        required=True,
+        max_length=32,
+        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Retype password'})
     )
 
+    def clean_email(self):
+        # Get the email
+        email = self.cleaned_data.get('email')
+
+        # Check to see if any users already exist with this email as a username.
+        try:
+            User.objects.get(email=email)
+        except User.DoesNotExist:
+            # Unable to find a user, this is fine
+            return email
+
+        # A user was found with this as a username, raise an error.
+        raise forms.ValidationError('This email address is already in use.')
+
+    def clean_password2(self):
+        if 'password1' in self.cleaned_data:
+            password1 = self.cleaned_data['password1']
+            password2 = self.cleaned_data['password2']
+            if password1 == password2:
+                return password2
+        raise forms.ValidationError('Passwords don\'t match.')
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if not re.search(r'^\w+$', username):
+            raise forms.ValidationError('Username can only contain alphanumeric characters and the underscore.')
+        try:
+            User.objects.get(username=username)
+        except ObjectDoesNotExist:
+            return username
+        raise forms.ValidationError('Username is already taken.')
 
 class CreateForm(forms.Form):
     def __init__(self, *args, **kwargs):

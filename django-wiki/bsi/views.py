@@ -4,22 +4,27 @@ from django.contrib.auth import login, authenticate
 import pdb
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import Group
+from django.contrib.auth.models import Group, User
+from django.core.mail import EmailMessage
 from django.http import Http404
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template import loader
 from archive.models import Archive
+from django.template.loader import render_to_string
 from django.template.response import TemplateResponse
 from django.utils.decorators import method_decorator
 #from wiki.decorators import get_article
+from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_bytes, force_text
+
 from .decorators import get_article
 from wiki.models import URLPath, models
 from wiki.models.article import Article
 from wiki.views.article import ArticleView
 from wiki.views.article import SearchView
 from .models.article_extensions import BSI_Article_type
-from .forms import FilterForm
+from .forms import FilterForm, UserRegistrationForm, LoginForm
 from wiki import models
 from django.contrib import admin
 from bsi.models import BSI_Article_type
@@ -31,7 +36,8 @@ import csv
 import json
 import itertools
 from collections import Counter
-
+from django.contrib.sites.shortcuts import get_current_site
+from .token import account_activation_token
 
 class WikiArticleView(ArticleView):
 
@@ -75,7 +81,7 @@ class BSISearchView(SearchView):
         self.filter_form = FilterForm(request.GET)
         if self.filter_form.is_valid():
             self.filter = self.filter_form.cleaned_data['f']
-            assert (int(self.filter) > 0 and int(self.filter) < 6)
+            assert (int(self.filter) > 0 and int(self.filter) < 7)
         else:
             self.filter = None
         return super(BSISearchView, self).dispatch(request, *args, **kwargs)
@@ -104,6 +110,9 @@ class BSISearchView(SearchView):
                 elif self.filter == '4':
                     if url.bsi.articleType == BSI_Article_type.IMPLEMENTATIONNOTES:
                         filtered_result.append(article.pk)
+            if hasattr(url, 'uga'):
+                if self.filter == '6':
+                    filtered_result.append(article.pk)
         return search_result.filter(id__in=filtered_result)
 
     def get_context_data(self, **kwargs):
@@ -118,7 +127,6 @@ def index(request):
     componentsString = json.dumps(components)
     sortedTopicsString = json.dumps(sortedTopics)
     new_page = check_new_page()
-
     return HttpResponse(template.render({'newpage':new_page,'components':componentsString,'sortedTopics':sortedTopicsString},request))
 
 
@@ -136,22 +144,60 @@ def bsicatalog(request):
 def home(request):
     return render(request, 'home.html')
 
+def login_view(request):
+    form = LoginForm(request.POST or None)
+    if request.POST and form.is_valid():
+        user = form.login(request)
+        if user:
+            login(request, user)
+            return render(request,"bsi/index.html")# Redirect to a success page.
+    return render(request, 'bsi/account/login.html', {'form': form })
+
 
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            # by default add user to users group
-            user.groups.add(Group.objects.get(name='users'))
-            login(request, user)
-            return redirect('index')
+            user = User.objects.create_user(username=form.cleaned_data['username'],
+                                            password=form.cleaned_data['password1'],
+                                            email=form.cleaned_data['email'])
+            user.is_active = False
+            user.save()
+            current_site = get_current_site(request)
+            mail_subject = 'Activate your Seel Account'
+            message = render_to_string('bsi/account/acc_active_email.html', {
+                'user': user,
+                'domain': current_site.domain,
+                'uid': urlsafe_base64_encode(force_bytes(user.pk)),
+                'token': account_activation_token.make_token(user),
+            })
+            to_email = form.cleaned_data.get('email')
+            email = EmailMessage(
+                mail_subject, message, to=[to_email]
+            )
+            email.send()
+            return render(request, 'bsi/account/registerNotifications.html', {'notification': 'Please confirm your email address to '
+                                                                                 'complete the registration'})
+            #return HttpResponse('')
     else:
-        form = UserCreationForm()
+        form = UserRegistrationForm()
     return render(request, 'bsi/account/register.html', {'form': form})
+
+def activate(request, uidb64, token):
+    try:
+        uid = force_text(urlsafe_base64_decode(uidb64))
+        user = User.objects.get(pk=uid)
+    except(TypeError, ValueError, OverflowError, User.DoesNotExist):
+        user = None
+    if user is not None and account_activation_token.check_token(user, token):
+        user.is_active = True
+        user.save()
+        login(request, user)
+        # return redirect('home')
+        return redirect('index')
+    else:
+        return render(request, 'bsi/account/registerNotifications.html',
+                      {'notification': 'Activation link is invalid!'})
 
 
 def create(request):

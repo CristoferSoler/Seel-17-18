@@ -8,13 +8,14 @@
 	<div class="module">
         <table>
         <caption>
-            <a href="#" class="section" title="Models in the Wiki images application">BSI Update</a>
+            <a href="#" class="section" title="Update the BSI version">BSI Update</a>
         </caption>
 
             <tr class="model-image">
-				<th>Mid Phase</th>
+				<th>Update</th>
 				<td scope="row"><button onclick="startUpdate()">Start</button></td>
             </tr>
+            <!---
 			<tr class="model-image">
 				<th>Post Phase</th>
 				<td scope="row"><button onclick="postUpdate()">Start</button></td>
@@ -22,6 +23,7 @@
 
         </table>
         </div>
+        --->
 
 
 
@@ -35,19 +37,19 @@
 		var data = {'user':'test'};
 		$.ajax({
             dataType:'json',
-            url:'/_update/performMidPhase/',
+            url:'/_update/performUpdate/',
             data: data,
         });
     }
 
-    function postUpdate() {
+   /*function postUpdate() {
 		var data = {'user':'test'};
 		$.ajax({
             dataType:'json',
             url:'/_update/performPostPhase/',
             data: data,
         });
-    }
+    }*/
 
 </script>
 

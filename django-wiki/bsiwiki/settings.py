@@ -25,7 +25,7 @@ SECRET_KEY = 'lbwd(*iuixgii-z9-_54#fk4v1*#p^9-gnj3i+#*$e%dzx80nf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'it-gs.ziik.tu-berlin.de']
 
 # Application definition
 
@@ -56,6 +56,8 @@ INSTALLED_APPS = [
     'BSIUpdate',
     'infopage',
     'widget_tweaks',
+    #'djangosecure',
+    #'sslserver',
 ]
 
 MIDDLEWARE = [
@@ -67,8 +69,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+APPEND_SLASH = False
 ROOT_URLCONF = 'bsiwiki.urls'
+
+#We need because that banned users are inactive and without that the authenticate method returns None instead of the user
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.AllowAllUsersModelBackend']
 
 TEMPLATES = [
     {
@@ -162,4 +167,23 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
 MEDIA_URL = '/media/'
+
+#Options for secure requests and responses (HTTPS)
+
+#SECURE_SSL_REDIRECT = True
+#SESSION_COOKIE_SECURE = True
+#CSRF_COOKIE_SECURE = True
+#SECURE_HSTS_SECONDS = 3600
+
+X_FRAME_OPTIONS = 'DENY'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_HOST_USER = 'seel.tuberlin@gmail.com'
+EMAIL_HOST_PASSWORD = 'seel1718'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
 
