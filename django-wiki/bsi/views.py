@@ -177,7 +177,7 @@ def register(request):
             )
             email.send()
             return render(request, 'bsi/account/registerNotifications.html', {'notification': 'Please confirm your email address to '
-                                                                                 'complete the registration'})
+                                                                                 'complete the registration. Check your spam mails as well.'})
             #return HttpResponse('')
     else:
         form = UserRegistrationForm()

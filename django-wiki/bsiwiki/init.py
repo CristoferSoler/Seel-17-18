@@ -1,8 +1,22 @@
 from wiki.models import URLPath
 from bsiwiki import settings
 from django.contrib.sites.models import Site
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import User, Group, Permission
+from django.contrib.contenttypes.models import ContentType
 
+
+def assign_all_permissions(app_label, model, group):
+    content_type = ContentType.objects.get(app_label=app_label, model=model)
+    # get all permssions for this model
+    perms = Permission.objects.filter(content_type=content_type)
+    group = Group.objects.get(name=group)
+
+    for p in perms:
+        group.permissions.add(p)
+
+def assign_permission(group, perm_name):
+    permission = Permission.objects.get(name=perm_name)
+    group.permissions.add(permission)
 
 def init():
     # set the domain
@@ -10,10 +24,27 @@ def init():
     site.domain = 'it-gs.ziik.tu-berlin.de:8000'
     site.save()
 
+    #superuser group and permissions
     superusers = User.objects.filter(is_superuser=True)
     for suser in superusers:
         if not suser.groups.filter(name='administrators').exists():
             suser.groups.add(Group.objects.get(name='administrators'))
+    assign_all_permissions('bsi', 'uga', 'administrators')
+    assign_all_permissions('bsi', 'bsi', 'administrators')
+    assign_all_permissions('archive', 'archive', 'administrators')
+    assign_all_permissions('infopage', 'answer', 'administrators')
+    assign_all_permissions('infopage', 'question', 'administrators')
+
+   #moderator group and permissions
+    assign_all_permissions('bsi', 'uga', 'moderators')
+    assign_all_permissions('infopage', 'answer', 'moderators')
+    assign_all_permissions('infopage', 'question', 'moderators')
+
+
+    #user group and permissions
+    assign_all_permissions('bsi', 'uga', 'users')
+    assign_all_permissions('infopage', 'answer', 'users')
+    assign_all_permissions('infopage', 'question', 'users')
 
     revision_kwargs = {'content': '', 'user_message': 'Initializer Service', 'ip_address': '0.0.0.0'}
     queryset_root = URLPath.objects.filter(slug=None)
