@@ -7,6 +7,7 @@ from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.models import User
+from profanity import profanity
 from wiki import models
 from wiki.core.diff import simple_merge
 from wiki.editors import getEditor
@@ -91,6 +92,8 @@ class UserRegistrationForm(forms.Form):
         username = self.cleaned_data['username']
         if not re.search(r'^\w+$', username):
             raise forms.ValidationError('Username can only contain alphanumeric characters and the underscore.')
+        elif profanity.contains_profanity(username):
+            raise forms.ValidationError('Username is not accepted by insult detector. Please choose a different one.')
         try:
             User.objects.get(username=username)
         except ObjectDoesNotExist:
