@@ -459,7 +459,7 @@ function showResults() {
         var sortedElementswithTopicLists = sortArrayByKey(copyOfElementsWithTopicLists, 'percentage').reverse();
 
         sortedElementswithTopicLists.slice(0,numberOfShownResults).forEach(function (element) {
-            $("#list").append("<li class='list-group-item'>" + element.name + "</li>");
+            $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
 
         var isExpanded = $('#collapse1').attr("aria-expanded");

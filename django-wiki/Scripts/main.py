@@ -3,7 +3,6 @@ import time
 import sys
 from sched import scheduler
 from .bsiImporter import doUpdate, post_phase, doImport
-#import schedule
 from .treeview_importer import addLinksToTreeView
 
 sys.path.append(r'../../')

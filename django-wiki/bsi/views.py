@@ -177,7 +177,7 @@ def register(request):
             )
             email.send()
             return render(request, 'bsi/account/registerNotifications.html', {'notification': 'Please confirm your email address to '
-                                                                                 'complete the registration'})
+                                                                                 'complete the registration. Check your spam mails as well.'})
             #return HttpResponse('')
     else:
         form = UserRegistrationForm()
@@ -211,6 +211,9 @@ def faq(request):
 
 def contact(request):
     return render(request, 'bsi/footer/contact.html')
+
+def admin_control(request):
+    return render(request, 'bsi/account/admin_control_panel_main.html')
 
 def check_new_page():
     try:
