@@ -20,7 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'lbwd(*iuixgii-z9-_54#fk4v1*#p^9-gnj3i+#*$e%dzx80nf'
+with open('/etc/secret_key.txt') as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -170,20 +171,20 @@ MEDIA_URL = '/media/'
 
 #Options for secure requests and responses (HTTPS)
 
-#SECURE_SSL_REDIRECT = True
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#SECURE_HSTS_SECONDS = 3600
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_HSTS_SECONDS = 3600
 
 X_FRAME_OPTIONS = 'DENY'
 
 #EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-EMAIL_HOST = 'smtp.googlemail.com'
-EMAIL_HOST_USER = 'seel.tuberlin@gmail.com'
-EMAIL_HOST_PASSWORD = 'seel1718'
+with open('/etc/email_django.txt') as f:
+    EMAIL_HOST = f.readline().strip()
+    EMAIL_HOST_USER = f.readline().strip()
+    EMAIL_HOST_PASSWORD = f.readline().strip()
+
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-
-
-
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')

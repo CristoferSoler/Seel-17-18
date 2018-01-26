@@ -177,7 +177,7 @@ def _filter_permissions(qs):
     .exclude(codename__endswith='userobjectpermission') \
     .exclude(codename__endswith='groupobjectpermission')  # django-guardian
 
-admin.site.unregister(Site)
+#admin.site.unregister(Site)
 admin.site.unregister(ArticleRevision)
 admin.site.unregister(Article)
 admin.site.unregister(URLPath)

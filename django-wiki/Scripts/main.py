@@ -3,14 +3,14 @@ import time
 import sys
 from sched import scheduler
 from .bsiImporter import doUpdate, post_phase, doImport
-import schedule
+#import schedule
 from .treeview_importer import addLinksToTreeView
 
 sys.path.append(r'../../')
 
 #from programming.bsiCrawler.main import crawlTranslateTreeview
 #from programming.bsiWizard.topicGeneration import topicGeneration
-from programming.bsiComparator.bsicomparator import compare
+#from programming.bsiComparator.bsicomparator import compare
 
 
 def update_phase():
@@ -33,7 +33,7 @@ def update_phase():
     #addLinksToTreeView()
 
     # enter mid phase
-    doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
+    #doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
 
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)

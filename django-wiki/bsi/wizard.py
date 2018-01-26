@@ -23,7 +23,7 @@ def generateDic(list):
 
 def readAndProcessCSV():
     componentsWithTopics = {'components':[]}
-    with open('./bsi/static/bsi/csv/topics.csv') as f:
+    with open('/home/ziik/Seel-17-18/django-wiki/bsi/static/bsi/csv/topics.csv') as f:
         reader = csv.reader(f)
         for row in reader:
             componentsWithTopics['components'].append(generateDic(row))
