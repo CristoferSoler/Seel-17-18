@@ -33,6 +33,33 @@
       "group_id" : ["administrators"],
       "permission_id": ["uncheck_article", "wiki", "article"]
     }
+  },
+
+  {
+    "model": "auth.group_permissions",
+    "pk": 5,
+    "fields": {
+      "group_id" : ["administrators"],
+      "permission_id": ["add_user", "auth", "user"]
+    }
+  },
+
+    {
+    "model": "auth.group_permissions",
+    "pk": 6,
+    "fields": {
+      "group_id" : ["administrators"],
+      "permission_id": ["change_user", "auth", "user"]
+    }
+  },
+
+   {
+    "model": "auth.group_permissions",
+    "pk": 7,
+    "fields": {
+      "group_id" : ["administrators"],
+      "permission_id": ["delete_user", "auth", "user"]
+    }
   }
 
 ]
