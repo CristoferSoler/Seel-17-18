@@ -212,6 +212,9 @@ def faq(request):
 def contact(request):
     return render(request, 'bsi/footer/contact.html')
 
+def admin_control(request):
+    return render(request, 'bsi/account/admin_control_panel_main.html')
+
 def check_new_page():
     try:
         URLPath.objects.get(slug='new')

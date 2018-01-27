@@ -3,14 +3,14 @@ import time
 import sys
 from sched import scheduler
 from .bsiImporter import doUpdate, post_phase, doImport
-import schedule
+# import schedule
 from .treeview_importer import addLinksToTreeView
 
 sys.path.append(r'../../')
 
 #from programming.bsiCrawler.main import crawlTranslateTreeview
 #from programming.bsiWizard.topicGeneration import topicGeneration
-from programming.bsiComparator.bsicomparator import compare
+# from programming.bsiComparator.bsicomparator import compare
 
 
 def update_phase():
