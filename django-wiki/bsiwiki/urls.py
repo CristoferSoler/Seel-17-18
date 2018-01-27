@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
 from django.views.generic import TemplateView
-from bsi import views
+from bsi import views, controlPanelSite
 from bsi.forms import PasswordResetForm,SetPasswordForm
 
 
@@ -51,6 +51,7 @@ urlpatterns = [
     url(r'^information_page/?', include('infopage.urls')),
     url(r'^', include('bsi.urls')),
     url(r'^', get_pattern()),
+    # url(r'^controlPanel/', controlPanelSite.AdminSite.urls),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
 
 ]
