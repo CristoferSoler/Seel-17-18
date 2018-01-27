@@ -160,7 +160,7 @@ def translate(fileMD):
         r = open('references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
         r.write(references)
         r.close()
-    textEl = 'Table of content\n\n[toc]\n \n' + textEl
+    textEl = '[toc]\n \n' + textEl
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)
     f.close()
