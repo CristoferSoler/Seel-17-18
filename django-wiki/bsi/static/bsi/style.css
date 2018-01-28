@@ -7,7 +7,7 @@
 body{
     height: 100%;
     width: 100%;
-
+    background-color: white;
 }
 
 
@@ -108,6 +108,7 @@ p.small.text-muted {
 /*picture source:https://pixabay.com/get//afghanistan-80360_1920.jpg?attachment*/
 
 header {
+    color: #FFFFFF;
   padding: 154px 0 100px;
     width:100%;
   height:95%;
@@ -115,8 +116,8 @@ header {
   top:0;
   left:0;
     background: linear-gradient(
-                     rgba(20,20,20, .5),
-                     rgba(20,20,20, .5)),
+                     rgba(20,20,20, .6),
+                     rgba(20,20,20, .6)),
                      url( "../bsi/images/afghanistan-80360_1920.jpg");
 
 }
@@ -238,7 +239,7 @@ section {
     border-bottom: 18px solid transparent
 }
 .breadcrumb-arrow li a:before {
-    right: -10px;
+    right: -8px;
     z-index: 3;
     border-left-color: #007a36;
     border-left-style: solid;
@@ -262,9 +263,12 @@ section {
 }
 
 a {
-    color: #007a36;
+    color: #47aa61;
 }
 
+a:hover {
+    color: #007a36;
+}
 .text-primary {
     color: #007a36;
 }
@@ -302,7 +306,7 @@ btn-success:active:focus{
     cursor:pointer;
     width:50px;
     height:50px;
-    background-color:#3498db;
+    background-color:#007a36;
     text-indent:-9999px;
     display:none;
     -webkit-border-radius:60px;
@@ -353,7 +357,6 @@ btn-success:active:focus{
 	background-size: cover;
 	text-align: center;
 	height: 250px;
-    background-color: deepskyblue;
     background-position: right top;
 }
 
@@ -390,14 +393,14 @@ btn-success:active:focus{
     border-radius: 2px 2px 0 0;
     text-transform: uppercase;
     text-align: center;
-    background: #6ca9ea;
+    background: #007a36;
     color: white;
 }
 .widget .widget-body {
     padding: 10px 15px;
     font-size: 15px;
     font-weight: 200;
-    background: #6ca9ea;
+    background: #007a36;
 }
 
 /*Expanding-search from https://github.com/chin8628/Expanding-search*/
@@ -434,7 +437,7 @@ btn-success:active:focus{
 }
 
 .jumbotron.jumbroton-blue {
-background: #358CCE;
+background: grey;
 color: #FFF;
 border-radius: 0px;
 }

@@ -34,7 +34,7 @@
                         {% endfor %}
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-warning" name="question_button">
+                        <button type="submit" class="btn btn-success" name="question_button">
                             Submit</button>
                     </div>
                 </div>
@@ -148,7 +148,7 @@
             </div>
             <div class="col-md-11 col-sm-11">
               <div class="panel panel-default arrow left">
-                <div class="panel-heading right">Reply</div>
+                <div class="panel-heading right">Answer</div>
                    <div class="btn-group pull-right" style="margin-right: 60px">
 
                             {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}

@@ -2,28 +2,27 @@
  {% include "bsi/includes/update.html" %}
 
 
-<header class="bg-primary text-white">
+<header class="text-white">
         <div class="container text-center">
             <div class="row">
 
-                  <div class="col-sm-5">
+
 
                       <h1>Welcome to XYZ!</h1>
-                  <p class="lead">
-                      This platform provides an English version of the basic IT protection compendium by the German Federal Office for Information Security.
+                  <p class="lead" >
+                      This platform provides an English version of the basic <a href="https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html"> IT protection compendium </a> <br/> by the <a href="https://www.bsi.bund.de/EN/TheBSI/thebsi_node.html" >German Federal Office for Information Security</a>.
                       <br/>
-                        First time you visit this platform?
                       <br/>
-                      Click here!
+                        First time you visit this platform? <a href="" style="font-weight: bold"> here!</a>
                       <br/>
                       You do not know exactly where or what your IT security problem is?
                       <br/>
-                      Let the“Visual Assistant” help you or  ask  the community on the “Information Page”.
+                      Let the <a href="/wizardinfo?" style="font-weight: bold">“Visual Assistant”</a> help you or  ask  the community on the <a href="/information_page" style="font-weight: bold">“Information Page”</a>.
                   </p>
 
-                  </div>
-                  <div class="col-sm-7">
-                      <p class="lead">We provide advanced search to get quickly results of the BSI Compendium</p>
+
+                <br>
+
                     <form id="wiki-search-form-big" method="GET" action="{% url 'bsisearch' %}">
                         <div class="form-group">
                             <div class="input-group">
@@ -57,7 +56,7 @@
 
 
 
-            </div>
+
         </div>
     </header>
 
