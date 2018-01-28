@@ -15,12 +15,12 @@
              {% if urlpath.slug ==  'bsi' or urlpath.slug ==  'threats' or urlpath.slug ==  'implementationnotes' or  urlpath.slug ==  'components'  %}
 
               <h2>BSI/IT Baseline Security Compendium </h2>
-                <p>Note:
+                <p style="text-align: justify">Note:
                 The first edition of the IT-Grundschutz Compendium has been published. migrated the most commonly used building blocks of the 15th Supplemental Delivery of IT-Grundschutz Catalogs. The second edition expands the IT-Grundschutz Compendium with new modules and other migrated components. A unique IT-Grundschutz Compendium will be distributed to building blocks that are not part of the first edition, but will be recreated with the second edition. For target objects, in the IT-Grundschutz Compendium there are no components yet, the corresponding modules of the IT-Grundschutz Catalogs should be used.
 
                 An overview of the structure of the first version of the IT-Grundschutz Compendium and the associated 80 building blocks is provided by Mindmap.</p>
               <h2>Get Started</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commod. </p>
@@ -28,7 +28,7 @@
 
              {% else %}
                  <h2>{{ article.current_revision.title}}</h2>
-                 <div style="word-wrap: break-word;"> {{ article.render }} </div>
+                 <div style="word-wrap: break-word;text-align: justify"> {{ article.render }} </div>
                     {% include "bsi/includes/seealso.html" %}
 
               {% endif %}

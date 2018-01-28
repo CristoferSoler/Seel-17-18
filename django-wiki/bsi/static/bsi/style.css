@@ -1,26 +1,38 @@
+/*!
+ * Start Bootstrap - Full (https://startbootstrap.com/template-overviews/full)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full/blob/master/LICENSE)
+ */
+
 body{
     height: 100%;
+    width: 100%;
+
 }
+
 
 .wrapper{
     min-height:93%;
     margin-bottom: -50px;
+
+
 }
 
 .footer,
 .push {
   height: 50px;
+
 }
 
 footer {
     min-height: 50px;
     padding: 20px 0 10px 0;
-    background-color: #E1E2E1;
+
 }
 
 footer .menu li a {
     font-family: Roboto;
-    color:  #1b4f84;
+    color:  #007a36;
     padding: 0;
     text-decoration: none;
 }
@@ -36,8 +48,9 @@ footer .menu li a:hover {
 
 
 .navbar-default {
-    background-color: #004e87;
-    border-color: #004e87;
+    background-color: #424242;
+    border-bottom-color: #424242;
+
 }
 
 .navbar-default .navbar-brand {
@@ -45,16 +58,17 @@ footer .menu li a:hover {
 }
 
 
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: grey;
+  color: #bdbdbd;
 }
 
 @media (max-width: 767px) {
  .navbar-default .navbar-nav .open .dropdown-menu>li>a{
     color: white;
     }
+
+
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -91,16 +105,23 @@ p.small.text-muted {
     transform: translateY(-50%);
 }
 
+/*picture source:https://pixabay.com/get//afghanistan-80360_1920.jpg?attachment*/
 
 header {
   padding: 154px 0 100px;
+    width:100%;
+  height:95%;
+  position:absolute;
+  top:0;
+  left:0;
+    background: linear-gradient(
+                     rgba(20,20,20, .5),
+                     rgba(20,20,20, .5)),
+                     url( "../bsi/images/afghanistan-80360_1920.jpg");
+
 }
 
-@media (min-width: 992px) {
-  header {
-    padding: 156px 0 100px;
-  }
-}
+
 
 
 section {
@@ -201,8 +222,8 @@ section {
     position: relative;
     color: #fff;
     text-decoration: none;
-    background-color: #337AB7;
-    border: 1px solid #337AB7
+    background-color: #007a36;
+    border: 1px solid #007a36
 }
 .breadcrumb-arrow li:first-child a {
     padding-left: 10px
@@ -219,36 +240,58 @@ section {
 .breadcrumb-arrow li a:before {
     right: -10px;
     z-index: 3;
-    border-left-color: #337AB7;
+    border-left-color: #007a36;
     border-left-style: solid;
     border-left-width: 11px
 }
 .breadcrumb-arrow li a:after {
     right: -11px;
     z-index: 2;
-    border-left: 11px solid  #004e87;
+    border-left: 11px solid #004d0c;
 }
 .breadcrumb-arrow li a:focus, .breadcrumb-arrow li a:hover {
-    background-color: #6ca9ea;
-    border: 1px solid #6ca9ea
+    background-color: #47aa61;
+    border: 1px solid  #007a36
 }
 .breadcrumb-arrow li a:focus:before, .breadcrumb-arrow li a:hover:before {
-    border-left-color: #6ca9ea
+    border-left-color: #47aa61
 }
 .breadcrumb-arrow li a:active {
-    background-color: #2494be;
-    border: 1px solid #2494be
+    background-color: #47aa61;
+    border: 1px solid  #007a36;
 }
 
-.breadcrumb-arrow li a:active:after{
-    padding-left: 10px !important;
+a {
+    color: #007a36;
 }
 
-.breadcrumb-arrow li a:active:after, .breadcrumb-arrow li a:active:before {
-    border-left-color: #2494be;
-    padding-left: 50px !important;
+.text-primary {
+    color: #007a36;
+}
+
+.btn-success{
+    background-color: #007a36;
 
 }
+.btn-success:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+ background-color:#47aa61;
+
+}
+btn-success:active:focus{
+    background-color:#47aa61;
+}
+
+.btn-static {
+  background-color: white;
+  border: 1px solid lightgrey;
+  cursor: default;
+}
+.btn-static:active {
+  -moz-box-shadow:    inset 0 0 0px white;
+  -webkit-box-shadow: inset 0 0 0px white;
+  box-shadow:         inset 0 0 0px white;
+}
+
 
 /* floating-button-to-the-top  */
 /* credit : Rohan Hapani https://codepen.io/desirecode/pen/MJPJqV  */

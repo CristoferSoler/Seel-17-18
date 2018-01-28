@@ -66,6 +66,43 @@
                     </form>
                   {% endif %}
                 </div>
+
+                  {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" %}
+                <div class="btn-group pull-right" >
+                  <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#{{ q.id }}">
+                         <i class="fa fa-pencil"></i></button>
+                 </div>
+                  {% endif %}
+
+                  <!-- modal edit form-->
+              <div id="{{ q.id }}" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+
+                     <form action="{% url 'edit_q' %}", method="post">
+                           {% csrf_token %}
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Edit answer</h4>
+                  </div>
+                     <div class="modal-body">
+                     <textarea class="form-control" id="question" type="text" name="answer" rows="3" required>{{ q.question }}</textarea>
+                    </div>
+
+                            <input type="hidden" name="quesiton_id" value="{{ q.id }}" />
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       <button type="submit" class="btn btn-primary" name="button">Save</button>
+                  </div>
+                     </form>
+                </div>
+              </div>
+            </div>
+
+
                   <div class="text-left">
                        {% if q.user %}
                            <div class="comment-user"><i class="fa fa-user"></i> {{ q.user }}</div>
@@ -123,11 +160,13 @@
                           {% endif %}
 
                    </div>
+
                    <div class="btn-group pull-right">
                         <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#{{ a.id }}">
                          <i class="fa fa-pencil"></i></button>
-
                     </div>
+
+
                <!-- modal edit form-->
               <div id="{{ a.id }}" class="modal fade" role="dialog">
               <div class="modal-dialog">
@@ -135,19 +174,16 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                      <form action="{% url 'edit_a' %}", method="post">
+                           {% csrf_token %}
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title">Edit answer</h4>
                   </div>
-
                      <div class="modal-body">
                      <textarea class="form-control" id="answer" type="text" name="answer" rows="3" required>{{ a.answer }}</textarea>
-
                     </div>
-
                             <input type="hidden" name="answer_from" value="{{ q.id }}" />
                             <input type="hidden" name="answer_id" value="{{ a.id }}" />
-
 
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

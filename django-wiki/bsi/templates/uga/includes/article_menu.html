@@ -7,22 +7,22 @@
 
         	   <span class="pull-right">
                    {% if article|is_checked %}
-                        <a href="#" class="btn btn-success">
-                        <span class="glyphicon glyphicon-checked"></span> Checked </a>
+                        <a href="#" class="btn  btn-static">
+                        <span class="glyphicon glyphicon-check"></span> Checked </a>
                         {% else %}
-                       <a href="#" class="btn btn-warning">
+                       <a href="#" class="btn btn-static">
                         <span class="glyphicon glyphicon-unchecked"></span>
                         Unchecked
                    {% endif %}
                         </a>
                    {% if not user.is_anonymous %}
-                     <a href="{% url 'history' path=urlpath.path %}" class="btn btn btn-primary">
+                     <a href="{% url 'history' path=urlpath.path %}" class="btn btn btn-success">
                         <span class="glyphicon glyphicon-time"></span> Changes
                    {% endif %}
                      </a>
 
                  {% if article|can_write:user and not article.current_revision.locked %}
-                    <a href="{% url 'edit' path=urlpath.path %}" class="btn btn btn-primary">
+                    <a href="{% url 'edit' path=urlpath.path %}" class="btn btn btn-success">
                     <span class="glyphicon glyphicon-edit"></span> Edit
                       {% endif %}
                    </a>

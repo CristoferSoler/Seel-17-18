@@ -1,11 +1,29 @@
 {% extends 'bsi/base.html' %} {% block bsi_contents %}
  {% include "bsi/includes/update.html" %}
-    <header class="bg-primary text-white">
+
+
+<header class="bg-primary text-white">
         <div class="container text-center">
-            <h1>Welcome to the Seel page</h1>
-            <p class="lead">We provide advanced search to get quickly results of the BSI Catalog</p>
-            <div class="container">
-                <div class="row">
+            <div class="row">
+
+                  <div class="col-sm-5">
+
+                      <h1>Welcome to XYZ!</h1>
+                  <p class="lead">
+                      This platform provides an English version of the basic IT protection compendium by the German Federal Office for Information Security.
+                      <br/>
+                        First time you visit this platform?
+                      <br/>
+                      Click here!
+                      <br/>
+                      You do not know exactly where or what your IT security problem is?
+                      <br/>
+                      Let the“Visual Assistant” help you or  ask  the community on the “Information Page”.
+                  </p>
+
+                  </div>
+                  <div class="col-sm-7">
+                      <p class="lead">We provide advanced search to get quickly results of the BSI Compendium</p>
                     <form id="wiki-search-form-big" method="GET" action="{% url 'bsisearch' %}">
                         <div class="form-group">
                             <div class="input-group">
@@ -32,43 +50,16 @@
                                 </div>
                             </div>
                             </br>
-                            <button type="submit" class="btn btn-warning">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
-
                     </form>
-                </div>
+                  </div>
+
+
 
             </div>
         </div>
     </header>
-
-
-
- <!-- /.container-fluid
-    <section class="features-icons bg-light text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 center-items">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-magic-wand m-auto text-primary" data-target="#wizard"></i>
-                        </div>
-                        <h3>Wizard</h3>
-                        <p class="lead mb-0">We help you to find the right BSI catalog through wizard!</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-                        <div class="features-icons-icon d-flex">
-                            <i class="icon-directions m-auto text-primary"></i>
-                        </div>
-                        <h3>Tutorials</h3>
-                        <p class="lead mb-0">stuck with the problem? go to the tutorials!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>-->
 
     <script>
         $(document).ready(function (e) {
