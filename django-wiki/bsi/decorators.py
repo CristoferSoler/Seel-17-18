@@ -68,7 +68,7 @@ def get_article(func=None, can_read=True, can_write=False,  # noqa
             except models.URLPath.DoesNotExist:
                 return HttpResponseNotFound(
                     render_to_string(
-                        "wiki/error.html",
+                        "bsi/error.html",
                         request=request))
             if urlpath.article:
                 # urlpath is already smart about prefetching items on article

@@ -8,6 +8,7 @@
     <meta name="google-site-verification" content="0CxtCFoadsG6w5hvYqL93Q1vtAxIFWEWTHDy6pA887o" />
 
     <link href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" rel="Stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,700i" rel="stylesheet">
     {% load staticfiles %}
     <link href="{% static "bsi/bootstrap/css/wiki-bootstrap.min.css" %}" rel="stylesheet">
     <script src="{% static "bsi/js/jquery.min.js" %}"></script>
@@ -28,13 +29,15 @@
 
     <!--Icon -->
     <link href="{% static 'bsi/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
-    <title>SEEL</title>
+    <title>ISAM</title>
     {% render_block "css" %}
 </head>
 
-<body>
+
+<body class="img-cover">
+
 <div class="wrapper">
-    <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default">
+    <nav class="navbar navbar-toggleable-md navbar-fixed-top navbar-default main-navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -46,9 +49,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">SEEL</a>
+            <a class="navbar-brand" href="/">ISAM</a>
         </div>
-
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
@@ -176,13 +178,13 @@
                                 <div class="row abstandButtonToBottom" >
                                     <ul class="wizardList">
                                         <li class="wizard-buttons">
-                                            <a id="yesButton" class="btn btn-primary btn-block validFalse" >Yes</a>
+                                            <a id="yesButton" class="btn btn-success btn-block validFalse" >Yes</a>
                                         </li>
                                         <li>
-                                            <a id="noButton" class="btn btn-primary btn-block validFalse" >No</a>
+                                            <a id="noButton" class="btn btn-success btn-block validFalse" >No</a>
                                         </li>
                                         <li>
-                                            <a id="dontKnowButton" class="btn btn-primary disabled btn-block validFalse" >I don't know</a>
+                                            <a id="dontKnowButton" class="btn btn-success disabled btn-block validFalse" >I don't know</a>
                                         </li>
                                     </ul>
                                     <div class="col-md-2"></div>
