@@ -13,8 +13,13 @@
 
             <tr class="model-image">
 				<th>Update</th>
-				<td scope="row"><button onclick="startUpdate()">Start</button></td>
+				<td scope="row"><button id="update_btn" onclick="startUpdate()">Start</button></td>
             </tr>
+
+            <tr class="model-image">
+				<th><p id="update"></p></th>
+            </tr>
+
             <!---
 			<tr class="model-image">
 				<th>Post Phase</th>
@@ -30,15 +35,30 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
-
+        $('#update').html(window.localStorage.getItem('update'));
     });
 
 	function startUpdate() {
+	    var id =  $("#update")
 		var data = {'user':'test'};
 		$.ajax({
             dataType:'json',
-            url:'/_update/performUpdate/',
+            url:'/_update/Update/',
             data: data,
+             beforeSend: function() {
+                  $("#update_btn").prop('disabled', true); // disable button
+                 },
+            success: function(data) {
+            if(data.status == 'ok'){
+              id.text(data.msg);
+              $("#update_btn").prop('disabled', false); // disable button
+                localStorage.setItem('update', data.msg);
+            }else if(data.status == 'error'){
+                 id.text(data.msg);
+                 localStorage.setItem('update', data.msg);
+                  $("#update_btn").prop('disabled', false); // disable button
+                }
+               },
         });
     }
 

@@ -92,14 +92,12 @@ def check15k(list, component):
     referenceList = []
     ref = False
     threats = False
+    text = True
 
     for line in splitList:
         if(component):
-            if ('3.1 Basis-Anforderung' in line):
-                ref = True
-
-            if ('Weiterführende Literatur' in line):
-                ref = False
+            if('3 Anforderungen' in line):
+                text = False
 
             if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
                 threats = True
@@ -108,16 +106,16 @@ def check15k(list, component):
             if (threats and '* ' in line):
                 referenceList.append(line)
 
-            if (ref and '##' in line and '* ' not in line and '4.1 Literatur' not in line):
+            if ('##' in line and '* ' not in line and '4.1 Literatur' not in line):
                 referenceList.append(line)
 
-        if(not(ref or threats) and (functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
+        if(text and (functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
                 listOf15kElement.append(line)
 
         else:
-            listOf15k.append('\n'.join(listOf15kElement))
-
-            listOf15kElement = [line]
+            if(text):
+                listOf15k.append('\n'.join(listOf15kElement))
+                listOf15kElement = [line]
 
     listOf15k.append('\n'.join(listOf15kElement))
 
@@ -160,7 +158,7 @@ def translate(fileMD):
         r = open('references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
         r.write(references)
         r.close()
-    textEl = 'Table of content\n\n[toc]\n \n' + textEl
+    textEl = '[toc]\n \n' + textEl
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)
     f.close()

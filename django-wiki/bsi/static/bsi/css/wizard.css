@@ -200,3 +200,18 @@ li.collapsibleListClosed{
     height: 28px;
     padding: 4px 10px;
 }
+
+.margin-left{
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.notes{
+    list-style:circle;
+    margin-top:20px;
+}
+
+.marginImage{
+    margin: 0 auto;
+}
