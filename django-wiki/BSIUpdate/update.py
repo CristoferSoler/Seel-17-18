@@ -6,10 +6,11 @@ from django.http import Http404
 
 sys.path.append(r'..')
 
-from Scripts.main import update_phase#,demo_mid_phase, demo_post_phase
+from Scripts.main import update_phase, check_update_progress#,demo_mid_phase, demo_post_phase
 
-update_done = dict(status='ok',msg='Update done! After 30 days will update the BSI version')
-error_update = dict(status='error',msg='Already updated')
+update_done = dict(status='ok',msg='Update done!')
+error_update = dict(status='error',msg='Already updated or there is error')
+
 '''
 def performMidPhase(request):
     demo_mid_phase()
@@ -22,16 +23,14 @@ def performPostPhase(request):
     return HttpResponse('', content_type='application/json')
 
 '''
-
-def performUpdate():
-    try:
-        update_phase()
-        return True
-    except:
-        return False
+def check_update(request):
+    isRunning = check_update_progress()
+    print(isRunning)
+    update_running = dict(status = isRunning, msg = 'Update still running')
+    return HttpResponse(json.dumps(update_running), content_type='application/json')
 
 def Update(request):
-    if(performUpdate()):
+    if(update_phase()):
         return HttpResponse(json.dumps(update_done), content_type='application/json')
     else:
         return HttpResponse(json.dumps(error_update), content_type='application/json')
