@@ -6,9 +6,9 @@
 
 body{
     height: 100%;
-    width: 96%;
+    width: 100%;
     background-color: white;
-    overflow-y: auto;
+    overflow-x:hidden;
 }
 
 
@@ -200,7 +200,8 @@ section {
 }
 .breadcrumb-arrow li, .breadcrumb-arrow li a, .breadcrumb-arrow li span {
     display: inline-block;
-    vertical-align: top
+
+    margin-top: -20px;
 }
 .breadcrumb-arrow li:not(:first-child) {
     margin-left: -5px
