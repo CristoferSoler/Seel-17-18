@@ -1,31 +1,45 @@
 {% extends 'bsi/base.html' %} {% block bsi_contents %}
- {% include "bsi/includes/update.html" %}
+    {% include "bsi/includes/update.html" %}
 
 
-<header class="text-white">
+    <header class="">
         <div class="container text-center">
             <div class="row">
 
-                      <h1>Welcome to XYZ!</h1>
-                  <p class="lead" >
-                      This platform provides an English version of the basic <a href="https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html"> IT protection compendium </a> <br/> by the <a href="https://www.bsi.bund.de/EN/TheBSI/thebsi_node.html" >German Federal Office for Information Security</a>.
-                      <br/>
-                      <br/>
-                        First time you visit this platform? <a href="" style="font-weight: bold"> here!</a>
-                      <br/>
-                      You do not know exactly where or what your IT security problem is?
-                      <br/>
-                      Let the <a href="/wizardinfo?" style="font-weight: bold">“Visual Assistant”</a> help you or  ask  the community on the <a href="/information_page" style="font-weight: bold">“Information Page”</a>.
-                  </p>
+                <h1 style="font-family: 'Noto Sans', sans-serif;font-weight: bold;">Welcome to ISAM!</h1>
+                {% load staticfiles %}
+                <img src="{% static "bsi/images/Icons-AFGB-top-flag.png" %}" style="max-width: 40%">
+                <h4 style="font-family: 'Noto Sans', sans-serif;font-style:italic;">- Information Security Advice Manual -</h4>
+
+             <p style="font-family: 'Noto Sans', sans-serif;font-weight: lighter;">
+                    <mark>This platform provides an English version of the basic <a
+                        href="https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html">
+                        <strong>IT protection compendium</strong> </a>  by the <a
+                        href="https://www.bsi.bund.de/EN/TheBSI/thebsi_node.html"><strong>German Federal Office for Information
+                        Security</strong></a>.</mark></p>
+                    <br/>
+
+                 <p style="font-family: 'Noto Sans', sans-serif;font-weight: lighter;font-size: 15px "><mark>
+                        First time you visit this platform? <a href="" ><strong> Click here!</strong></a>
+                    <br/>
+                    You do not know exactly where or what your IT security problem is?
+                    <br/>
+                        Let the <a href="/wizardinfo?"><strong>“Visual Assistant”</strong></a> help you or ask the
+                        community on the <a href="/information_page"><strong>"Information Page”</strong></a>.
+                </mark></p>
 
 
                 <br>
-                    <div class="container">
-                    <form id="wiki-search-form-big" method="GET" action="{% url 'bsisearch' %}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-8">
+                        <form id="wiki-search-form-big" method="GET" action="{% url 'bsisearch' %}">
                         <div class="form-group">
                             <div class="input-group">
                                 <input type="search" value="" class="form-control form-control-lg" name="q"
-                                       placeholder="Search BSI article">
+                                       placeholder="Search BSI article ">
                                 <div class="input-group-btn bs-dropdown-to-select-group">
                                     <button type="button"
                                             class="btn btn-default dropdown-toggle bs-dropdown-to-select"
@@ -44,14 +58,20 @@
                                         <li data-value="5"><a href="#">Archive</a></li>
                                         <li data-value="6"><a href="#">User Articles</a></li>
                                     </ul>
+                                    <button type="submit" class="btn btn-success"> search</button>
                                 </div>
                             </div>
                             </br>
-                            <button type="submit" class="btn btn-success">Submit</button>
+                            <!--<button type="submit" class="btn btn-success btn-lg">search</button>-->
                         </div>
                     </form>
                         </div>
-                  </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </header>
 

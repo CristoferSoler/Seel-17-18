@@ -4,24 +4,22 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-full/blob/master/LICENSE)
  */
 
-body{
+body {
     height: 100%;
     width: 100%;
     background-color: white;
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
-
-.wrapper{
-    min-height:93%;
+.wrapper {
+    min-height: 93%;
     margin-bottom: -50px;
-
 
 }
 
 .footer,
 .push {
-  height: 50px;
+    height: 50px;
 
 }
 
@@ -33,7 +31,7 @@ footer {
 
 footer .menu li a {
     font-family: Roboto;
-    color:  #007a36;
+    color: #007a36;
     padding: 0;
     text-decoration: none;
 }
@@ -42,11 +40,9 @@ footer .menu li a:hover {
     color: #ffffff;
 }
 
-
-.margin-after-nav{
+.margin-after-nav {
     margin-top: 70px;
 }
-
 
 .navbar-default {
     background-color: #424242;
@@ -61,18 +57,17 @@ footer .menu li a:hover {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #bdbdbd;
+    color: #bdbdbd;
 }
 
 @media (max-width: 767px) {
- .navbar-default .navbar-nav .open .dropdown-menu>li>a{
-    color: white;
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: white;
     }
-
 
 }
 
-.navbar-default .navbar-nav>li>a {
+.navbar-default .navbar-nav > li > a {
     color: #ffffff;
 }
 
@@ -84,9 +79,7 @@ footer .menu li a:hover {
 @import url(//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css);
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css);
 
-
 /* FOR DEMO ONLY */
-
 
 p.small.text-muted {
     margin-bottom: 0px;
@@ -108,26 +101,27 @@ p.small.text-muted {
 
 /*picture source:https://pixabay.com/get//afghanistan-80360_1920.jpg?attachment*/
 
+.input-group-btn:last-child>.btn, .input-group-btn:last-child>.btn-group{
+        margin-left: -5px;
+}
+
 header {
-    color: #FFFFFF;
-  padding: 154px 0 100px;
-    width:100%;
-  height:95%;
-  position:absolute;
-  top:0;
-  left:0;
+    padding: 154px 0 100px;
+    width: 100%;
+    height: 95%;
+    position: absolute;
+    top: 0;
+    left: 0;
     background: linear-gradient(
-                     rgba(20,20,20, .6),
-                     rgba(20,20,20, .6)),
-                     url( "../bsi/images/afghanistan-80360_1920.jpg");
+            rgba(238, 238, 238, 0.4),
+            rgba(238, 238, 238, 0.4)),
+            url("../bsi/images/afghanistan-80360_1920.jpg");
+    background-size: cover;
 
 }
 
-
-
-
 section {
-  padding: 130px 0;
+    padding: 130px 0;
     display: flex;
 }
 
@@ -137,20 +131,26 @@ section {
 }
 
 .features-icons {
-  padding-top: 7rem;
-  padding-bottom: 7rem; }
-  .features-icons .features-icons-item {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
     max-width: 50rem;
 
+}
 
-   }
-    .features-icons .features-icons-item .features-icons-icon {
-      height: 7rem; }
-      .features-icons .features-icons-item .features-icons-icon i {
-        font-size: 6rem; }
-    .features-icons .features-icons-item:hover .features-icons-icon i {
-      font-size: 5rem; }
+.features-icons .features-icons-item .features-icons-icon {
+    height: 7rem;
+}
 
+.features-icons .features-icons-item .features-icons-icon i {
+    font-size: 6rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+    font-size: 5rem;
+}
 
 .inner-addon {
     position: relative;
@@ -158,32 +158,42 @@ section {
 
 /* style icon */
 .inner-addon .glyphicon {
-  position: absolute;
-  padding: 10px;
-  pointer-events: none;
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
 }
 
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.left-addon .glyphicon {
+    left: 0px;
+}
+
+.right-addon .glyphicon {
+    right: 0px;
+}
 
 /* add padding  */
-.left-addon input  { padding-left:  30px; }
-.right-addon input { padding-right: 30px; }
+.left-addon input {
+    padding-left: 30px;
+}
+
+.right-addon input {
+    padding-right: 30px;
+}
 
 /* breadcrumb-arrow  */
 /* credit: TonetIds https://bootsnipp.com/snippets/4O9nR  */
 
 @media (max-width: 767px) {
- .breadcrumb-arrow{
-     display: none;
- }
+    .breadcrumb-arrow {
+        display: none;
+    }
 }
 
 @media (min-width: 767px) {
- .breadcrumb-arrow-dis{
-     display: none;
- }
+    .breadcrumb-arrow-dis {
+        display: none;
+    }
 }
 
 .breadcrumb-arrow {
@@ -193,34 +203,42 @@ section {
     list-style: none;
     background-color: #E1E2E1;
 }
+
 .breadcrumb-arrow li:first-child a {
     border-radius: 4px 0 0 4px;
     -webkit-border-radius: 4px 0 0 4px;
     -moz-border-radius: 4px 0 0 4px
 }
+
 .breadcrumb-arrow li, .breadcrumb-arrow li a, .breadcrumb-arrow li span {
     display: inline-block;
 
     margin-top: -20px;
 }
+
 .breadcrumb-arrow li:not(:first-child) {
     margin-left: -5px
 }
-.breadcrumb-arrow li+li:before {
-    padding:0;
+
+.breadcrumb-arrow li + li:before {
+    padding: 0;
     content: ""
 }
+
 .breadcrumb-arrow li span {
     padding: 0 10px
 }
+
 .breadcrumb-arrow li a, .breadcrumb-arrow li:not(:first-child) span {
     height: 36px;
     padding: 0 10px 0 25px;
     line-height: 36px
 }
+
 .breadcrumb-arrow li:first-child a {
     padding: 0 10px
 }
+
 .breadcrumb-arrow li a {
     position: relative;
     color: #fff;
@@ -228,9 +246,11 @@ section {
     background-color: #007a36;
     border: 1px solid #007a36
 }
+
 .breadcrumb-arrow li:first-child a {
     padding-left: 10px
 }
+
 .breadcrumb-arrow li a:after, .breadcrumb-arrow li a:before {
     position: absolute;
     top: -1px;
@@ -240,6 +260,7 @@ section {
     border-top: 18px solid transparent;
     border-bottom: 18px solid transparent
 }
+
 .breadcrumb-arrow li a:before {
     right: -8px;
     z-index: 3;
@@ -247,99 +268,111 @@ section {
     border-left-style: solid;
     border-left-width: 11px
 }
+
 .breadcrumb-arrow li a:after {
     right: -11px;
     z-index: 2;
     border-left: 11px solid #004d0c;
 }
+
 .breadcrumb-arrow li a:focus, .breadcrumb-arrow li a:hover {
     background-color: #47aa61;
-    border: 1px solid  #007a36
+    border: 1px solid #007a36
 }
+
 .breadcrumb-arrow li a:focus:before, .breadcrumb-arrow li a:hover:before {
     border-left-color: #47aa61
 }
+
 .breadcrumb-arrow li a:active {
     background-color: #47aa61;
-    border: 1px solid  #007a36;
+    border: 1px solid #007a36;
+}
+
+mark{
+    background-color: whitesmoke;
 }
 
 a {
-    color: #47aa61;
+    color: #007a36;
 }
 
 a:hover {
-    color: #007a36;
+        color: #47aa61;
 }
+
 .text-primary {
     color: #007a36;
 }
 
-.btn-success{
+.btn-success {
     background-color: #007a36;
 
 }
-.btn-success:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
- background-color:#47aa61;
+
+.btn-success:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background-color: #47aa61;
 
 }
-btn-success:active:focus{
-    background-color:#47aa61;
+
+btn-success:active:focus {
+    background-color: #47aa61;
 }
 
 .btn-static {
-  background-color: white;
-  border: 1px solid lightgrey;
-  cursor: default;
-}
-.btn-static:active {
-  -moz-box-shadow:    inset 0 0 0px white;
-  -webkit-box-shadow: inset 0 0 0px white;
-  box-shadow:         inset 0 0 0px white;
+    background-color: white;
+    border: 1px solid lightgrey;
+    cursor: default;
 }
 
+.btn-static:active {
+    -moz-box-shadow: inset 0 0 0px white;
+    -webkit-box-shadow: inset 0 0 0px white;
+    box-shadow: inset 0 0 0px white;
+}
 
 /* floating-button-to-the-top  */
 /* credit : Rohan Hapani https://codepen.io/desirecode/pen/MJPJqV  */
 #scroll {
-    position:fixed;
-    right:30px !important;
-    bottom:10px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    background-color:#007a36;
-    text-indent:-9999px;
-    display:none;
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px
+    position: fixed;
+    right: 30px !important;
+    bottom: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #007a36;
+    text-indent: -9999px;
+    display: none;
+    -webkit-border-radius: 60px;
+    -moz-border-radius: 60px;
+    border-radius: 60px
 }
+
 #scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -12px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #ffffff;
     font-family: 'glyphicon glyphicon-pencil';
 }
+
 #scroll:hover {
-    background-color:#e74c3c;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
+    background-color: #e74c3c;
+    opacity: 1;
+    filter: "alpha(opacity=100)";
+    -ms-filter: "alpha(opacity=100)";
 }
 
-
 /*article menu*/
-.pull-right{
+.pull-right {
     float: right;
     margin-bottom: 10px;
 }
-
 
 .wizardButton {
     position: fixed;
@@ -348,38 +381,34 @@ btn-success:active:focus{
 }
 
 .btn-primary-outline {
-  background-color: transparent;
-  border-color: #ccc;
+    background-color: transparent;
+    border-color: #ccc;
 }
-
 
 .full-width-image-2 {
     /*image source: https://pixabay.com/en/people-man-office-work-computer-2567566/*/
-	background:  linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../bsi/images/people-2567566_1280.jpg") no-repeat center center;
-	background-size: cover;
-	text-align: center;
-	height: 250px;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("../bsi/images/people-2567566_1280.jpg") no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    height: 250px;
     background-position: right top;
 }
 
 .image-aboutus-para {
-    color:#fff;
+    color: #fff;
 }
-
 
 .lg-text {
     padding-top: 60px;
-    font-size:45px;
+    font-size: 45px;
     font-weight: 500;
     text-transform: none;
-    color:#fff;
+    color: #fff;
 }
 
-
-.margin-image{
+.margin-image {
     margin-top: 50px;
 }
-
 
 .widget {
     margin: 0 0 25px 0;
@@ -388,6 +417,7 @@ btn-success:active:focus{
     -moz-border-radius: 2px;
     border-radius: 2px;
 }
+
 .widget .widget-heading {
     padding: 7px 15px;
     -webkit-border-radius: 2px 2px 0 0;
@@ -398,6 +428,7 @@ btn-success:active:focus{
     background: #007a36;
     color: white;
 }
+
 .widget .widget-body {
     padding: 10px 15px;
     font-size: 15px;
@@ -406,14 +437,27 @@ btn-success:active:focus{
 }
 
 /*Expanding-search from https://github.com/chin8628/Expanding-search*/
-.navbar #icon-search{ font-size: 20px; }
-.navbar #icon-search:hover{ cursor:pointer; }
-.navbar #search-expanding{ margin-right: 5px; }
-.navbar #search-expanding > a{
+.main-navigation {
+ box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2);
+}
+.navbar #icon-search {
+    font-size: 20px;
+}
+
+.navbar #icon-search:hover {
+    cursor: pointer;
+}
+
+.navbar #search-expanding {
+    margin-right: 5px;
+}
+
+.navbar #search-expanding > a {
     padding-top: 14px !important;
     padding-bottom: 11px !important;
 }
-.navbar #search-input{
+
+.navbar #search-input {
     display: none;
     overflow: hidden;
     width: 0px;
@@ -421,117 +465,129 @@ btn-success:active:focus{
     margin-left: 2px;
 }
 
-.glyphicon.glyphicon-search{
+.glyphicon.glyphicon-search {
     top: 4px;
 }
 
-
 @media (max-width: 767px) {
- .navbar #search-expanding{
-     display: none;
- }
+    .navbar #search-expanding {
+        display: none;
+    }
 }
 
 @media (min-width: 767px) {
- .search-expanding-dis{
-     display: none;
- }
+    .search-expanding-dis {
+        display: none;
+    }
 }
 
 .jumbotron.jumbroton-blue {
-background: grey;
-color: #FFF;
-border-radius: 0px;
+    background: grey;
+    color: #FFF;
+    border-radius: 0px;
 }
-.jumbotron-sm { padding-top: 20px;
-padding-bottom: 24px; }
+
+.jumbotron-sm {
+    padding-top: 20px;
+    padding-bottom: 24px;
+}
+
 .jumbotron small {
-color: #FFF;
+    color: #FFF;
 }
-
-
 
 /*https://bootsnipp.com/snippets/featured/comment-posts-layout*/
 /*Comment List styles*/
 
-.page-header .margintop{
+.page-header .margintop {
     margin: 0px 0 20px;
 }
 
 .comment-list .row {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
 }
+
 .comment-list .panel .panel-heading {
-  padding: 4px 15px;
-  position: absolute;
-  border:none;
-  /*Panel-heading border radius*/
-  border-top-right-radius:0px;
-  top: 1px;
+    padding: 4px 15px;
+    position: absolute;
+    border: none;
+    /*Panel-heading border radius*/
+    border-top-right-radius: 0px;
+    top: 1px;
 }
+
 .comment-list .panel .panel-heading.right {
-  border-right-width: 0px;
-  /*Panel-heading border radius*/
-  border-top-left-radius:0px;
-  right: 16px;
+    border-right-width: 0px;
+    /*Panel-heading border radius*/
+    border-top-left-radius: 0px;
+    right: 16px;
 }
+
 .comment-list .panel .panel-heading .panel-body {
-  padding-top: 6px;
+    padding-top: 6px;
 }
+
 .comment-list figcaption {
-  /*For wrapping text in thumbnail*/
-  word-wrap: break-word;
+    /*For wrapping text in thumbnail*/
+    word-wrap: break-word;
 }
+
 /* Portrait tablets and medium desktops */
 @media (min-width: 768px) {
-  .comment-list .arrow:after, .comment-list .arrow:before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-  }
-  .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
-    border-left: 0;
-  }
-  /*****Left Arrow*****/
-  /*Outline effect style*/
-  .comment-list .panel.arrow.left:before {
-    left: 0px;
-    top: 30px;
-    /*Use boarder color of panel*/
-    border-right-color: inherit;
-    border-width: 16px;
-  }
-  /*Background color effect*/
-  .comment-list .panel.arrow.left:after {
-    left: 1px;
-    top: 31px;
-    /*Change for different outline color*/
-    border-right-color: #FFFFFF;
-    border-width: 15px;
-  }
-  /*****Right Arrow*****/
-  /*Outline effect style*/
-  .comment-list .panel.arrow.right:before {
-    right: -16px;
-    top: 30px;
-    /*Use boarder color of panel*/
-    border-left-color: inherit;
-    border-width: 16px;
-  }
-  /*Background color effect*/
-  .comment-list .panel.arrow.right:after {
-    right: -14px;
-    top: 31px;
-    /*Change for different outline color*/
-    border-left-color: #FFFFFF;
-    border-width: 15px;
-  }
+    .comment-list .arrow:after, .comment-list .arrow:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+    }
+
+    .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
+        border-left: 0;
+    }
+
+    /*****Left Arrow*****/
+    /*Outline effect style*/
+    .comment-list .panel.arrow.left:before {
+        left: 0px;
+        top: 30px;
+        /*Use boarder color of panel*/
+        border-right-color: inherit;
+        border-width: 16px;
+    }
+
+    /*Background color effect*/
+    .comment-list .panel.arrow.left:after {
+        left: 1px;
+        top: 31px;
+        /*Change for different outline color*/
+        border-right-color: #FFFFFF;
+        border-width: 15px;
+    }
+
+    /*****Right Arrow*****/
+    /*Outline effect style*/
+    .comment-list .panel.arrow.right:before {
+        right: -16px;
+        top: 30px;
+        /*Use boarder color of panel*/
+        border-left-color: inherit;
+        border-width: 16px;
+    }
+
+    /*Background color effect*/
+    .comment-list .panel.arrow.right:after {
+        right: -14px;
+        top: 31px;
+        /*Change for different outline color*/
+        border-left-color: #FFFFFF;
+        border-width: 15px;
+    }
 }
+
 .comment-list .comment-post {
-  margin-top: 6px;
+    margin-top: 6px;
 }
 
 
