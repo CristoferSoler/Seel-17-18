@@ -289,6 +289,9 @@ section {
     border: 1px solid #007a36;
 }
 
+.form-control:focus{border-color: #5cb85c;  box-shadow: none; -webkit-box-shadow: none;}
+.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
+
 mark{
     background-color: whitesmoke;
 }
