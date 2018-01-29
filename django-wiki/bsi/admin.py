@@ -25,10 +25,10 @@ class MyGroupAdmin(PermissionFilterMixin, GroupAdmin):
 class MyUserAdmin(PermissionFilterMixin, UserAdmin):
     pass
 
-admin.site.unregister(User)
-admin.site.unregister(Group)
-admin.site.register(User, MyUserAdmin)
-admin.site.register(Group, MyGroupAdmin)
+# admin.site.unregister(User)
+# admin.site.unregister(Group)
+# admin.site.register(User, MyUserAdmin)
+# admin.site.register(Group, MyGroupAdmin)
 
 
 def _filter_permissions(qs):
@@ -177,9 +177,9 @@ def _filter_permissions(qs):
     .exclude(codename__endswith='userobjectpermission') \
     .exclude(codename__endswith='groupobjectpermission')  # django-guardian
 
-admin.site.unregister(Site)
-admin.site.unregister(ArticleRevision)
-admin.site.unregister(Article)
-admin.site.unregister(URLPath)
-admin.site.unregister(Image)
-admin.site.unregister(Attachment)
+# admin.site.unregister(Site)
+# admin.site.unregister(ArticleRevision)
+# admin.site.unregister(Article)
+# admin.site.unregister(URLPath)
+# admin.site.unregister(Image)
+# admin.site.unregister(Attachment)

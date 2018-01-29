@@ -1,4 +1,4 @@
-{% load sekizai_tags %}
+{% load sekizai_tags bsi_tags %}
 <html lang="en">
 
 <head>
@@ -101,9 +101,9 @@
                                 <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                {% if user.is_superuser %}
+                                {% if user|is_admin %}
                                 <li>
-                                    <a href="/admin-control">
+                                    <a href="control_panel">
                                         <i class="fa fa-wrench"></i>
                                         Admin Settings
                                     </a>

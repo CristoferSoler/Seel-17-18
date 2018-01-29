@@ -145,7 +145,7 @@ class LoginForm(forms.Form):
         if not user:
                 raise forms.ValidationError("Username or password is invalid. Please try again.")
 
-        #banned or not activate
+        #banned or not activated
         if user != None and not user.is_active:
             raise forms.ValidationError("Your account is not active yet. Please checkout your mails \n"
                                         "or you are banned form the platform.")

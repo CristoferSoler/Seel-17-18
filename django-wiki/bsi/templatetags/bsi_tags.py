@@ -37,3 +37,8 @@ def is_checked(obj):
 @register.filter
 def is_uga(url):
     return hasattr(url, 'uga')
+
+
+@register.filter
+def is_admin(user):
+    return permissions.can_add_change_delete_users(user)
