@@ -2,8 +2,10 @@ import re
 
 from django import forms
 from django.contrib.auth import authenticate, get_user_model, password_validation
+from django.contrib.auth.models import User
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.sites.shortcuts import get_current_site
+from django.core.exceptions import ObjectDoesNotExist
 from django.core.mail import EmailMultiAlternatives
 from django.forms import ModelMultipleChoiceField, HiddenInput
 from django.template import loader
@@ -12,16 +14,14 @@ from django.utils.http import urlsafe_base64_encode
 from django.utils.translation import pgettext_lazy
 from django.utils.translation import ugettext
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.auth.models import User
 from profanity import profanity
-from wiki import models
 from wiki.core.diff import simple_merge
 from wiki.editors import getEditor
-from wiki.forms import _clean_slug, WikiSlugField, SearchForm, SpamProtectionMixin
+from wiki.forms import SearchForm, SpamProtectionMixin
 from wiki.models import URLPath
-from django.core.exceptions import ObjectDoesNotExist
 
 from bsi.models import UGA, BSI
+
 
 class SetPasswordForm(forms.Form):
     """
@@ -34,15 +34,15 @@ class SetPasswordForm(forms.Form):
     new_password1 = forms.CharField(
         required=True,
         label=_("New password"),
-        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'New Password'}),
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'New Password'}),
         strip=False,
-        #help_text=password_validation.password_validators_help_text_html(),
+        # help_text=password_validation.password_validators_help_text_html(),
     )
     new_password2 = forms.CharField(
         required=True,
         label=_("New password confirmation"),
         strip=False,
-        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'New password confirmation'}),
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'New password confirmation'}),
     )
 
     def __init__(self, user, *args, **kwargs):
@@ -70,7 +70,8 @@ class SetPasswordForm(forms.Form):
 
 
 class PasswordResetForm(forms.Form):
-    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),label=_("Email"), max_length=254)
+    email = forms.EmailField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
+                             label=_("Email"), max_length=254)
 
     def send_mail(self, subject_template_name, email_template_name,
                   context, from_email, to_email, html_email_template_name=None):
@@ -101,7 +102,7 @@ class PasswordResetForm(forms.Form):
             email__iexact=email, is_active=True)
         return (u for u in active_users if u.has_usable_password())
 
-    def save(self, extra_email_context=None,domain_override=None,
+    def save(self, extra_email_context=None, domain_override=None,
              subject_template_name='bsi/registration/password_reset_subject.txt',
              email_template_name='bsi/registration/password_reset_email.html',
              use_https=False, token_generator=default_token_generator,
@@ -132,20 +133,23 @@ class PasswordResetForm(forms.Form):
                            context, from_email, user.email,
                            html_email_template_name=html_email_template_name)
 
+
 class LoginForm(forms.Form):
-    username = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Username'}),max_length=255, required=True)
-    password = forms.CharField(widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'}), required=True)
+    username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
+                               max_length=255, required=True)
+    password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}),
+                               required=True)
 
     def clean(self):
         username = self.cleaned_data.get('username')
         password = self.cleaned_data.get('password')
         user = authenticate(username=username, password=password)
 
-        #Error password or username is invalid
+        # Error password or username is invalid
         if not user:
-                raise forms.ValidationError("Username or password is invalid. Please try again.")
+            raise forms.ValidationError("Username or password is invalid. Please try again.")
 
-        #banned or not activate
+        # banned or not activated
         if user != None and not user.is_active:
             raise forms.ValidationError("Your account is not active yet. Please checkout your mails \n"
                                         "or you are banned form the platform.")
@@ -173,12 +177,12 @@ class UserRegistrationForm(forms.Form):
     password1 = forms.CharField(
         required=True,
         max_length=32,
-        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Password'})
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'})
     )
     password2 = forms.CharField(
         required=True,
         max_length=32,
-        widget=forms.PasswordInput(attrs={'class':'form-control','placeholder':'Retype password'})
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Retype password'})
     )
 
     def clean_email(self):
@@ -215,32 +219,13 @@ class UserRegistrationForm(forms.Form):
             return username
         raise forms.ValidationError('Username is already taken.')
 
+
 class CreateForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(CreateForm, self).__init__(*args, **kwargs)
-        # self.request = kwargs.get('request')
         self.urlpath_parent = URLPath.get_by_path('uga/')
-        # bsi = URLPath.get_by_path('bsi/')
-        # bsi = BSI.objects.all()
-        # liste = []
-        # for bsi_article in bsi:
-        #     urlpath = bsi_article.url
-        #     liste.append([urlpath, urlpath.article.current_revision.title])
-        #
-        # # liste.append([a.get_absolute_url(), a.get_absolute_url()])
-        # self.fields['article'] = forms.MultipleChoiceField(
-        #     label=pgettext_lazy('Revision comment', 'BSI'),
-        #     choices=liste,
-        #     widget=forms.CheckboxSelectMultiple,
-        #     help_text=_("Associate with a BSI article when creating an article."),
-        #     required=False)
 
     title = forms.CharField(label=_('Title'), )
-    #slug = WikiSlugField(
-    #    label=_('Slug'),
-    #    help_text=_(
-    #        "This will be the address where your article can be found. Use only alphanumeric characters and - or _.<br>Note: If you change the slug later on, links pointing to this article are <b>not</b> updated."),
-    #    max_length=models.URLPath.SLUG_MAX_LENGTH)
     content = forms.CharField(
         label=_('Contents'),
         required=False,
@@ -251,36 +236,34 @@ class CreateForm(forms.Form):
         help_text=_("Write a brief message for the article's history log."),
         required=False)
 
-    #def clean_slug(self):
-    #    return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
-
     def clean(self):
         super(CreateForm, self).clean()
         # self.check_spam()
         return self.cleaned_data
 
+    def clean_content(self):
+        if profanity.contains_profanity(self.cleaned_data['content']):
+            raise forms.ValidationError("The content is offensive.")
+        return self.cleaned_data['content']
+
+    def clean_title(self):
+        if profanity.contains_profanity(self.cleaned_data['title']):
+            raise forms.ValidationError("The title is offensive.")
+        return self.cleaned_data['title']
+
+    def clean_summary(self):
+        if profanity.contains_profanity(self.cleaned_data['summary']):
+            raise forms.ValidationError("The summary is offensive.")
+        return self.cleaned_data['summary']
+
 
 def get_available_links():
-    # BSI.objects.all()
-    # bsi = URLPath.get_by_path('bsi/')
-    # children = bsi.get_children()
-    # list = []
-    # for child in children:
-    #     art = child.get_children()
-    #     for a in art:
-    #         list.append([a.article.current_revision.title, a.article.current_revision.title])
     bsi = BSI.objects.all()
-    # ArticleRevision.objects.filter(article=)
-    # url.values("article").values("current_revision").values("title")
     return bsi
 
 
 def get_links(revision):
     references = UGA.get_references_by_revision(revision)
-    # list = []
-    # for child in references.all():
-    #     art = child.url.article
-    #     list.append([art.current_revision.title, art.current_revision.title])
     return references
 
 
@@ -380,7 +363,16 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
         title = (title or "").strip()
         if not title:
             raise forms.ValidationError(ugettext('Article is missing title or has an invalid title'))
+
+        if profanity.contains_profanity(title):
+            raise forms.ValidationError(ugettext('The title is offensive.'))
         return title
+
+    def clean_content(self):
+        content = self.cleaned_data.get('content', None)
+        if profanity.contains_profanity(content):
+            raise forms.ValidationError(ugettext('The content is offensive.'))
+        return content
 
     def clean(self):
         """Validates form data by checking for the following

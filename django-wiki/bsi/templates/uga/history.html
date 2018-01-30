@@ -128,7 +128,7 @@
 {#          <span class="fa fa-random"></span>#}
 {#          {% trans "Merge selected with current..." %}#}
 {#        </button>#}
-        <button type="submit" name="save" value="1" class="btn btn-primary" onclick="this.form.target='_self'; this.form.action=$('input[type=radio]:checked').attr('switch-button-href')">
+        <button type="submit" name="save" value="1" class="btn btn-success" onclick="this.form.target='_self'; this.form.action=$('input[type=radio]:checked').attr('switch-button-href')">
           <span class="fa fa-flag"></span>
           {% trans "Switch to selected version" %}
         </button>
@@ -152,12 +152,12 @@
             {% trans "Back to history view" %}
           </a>
           {% if article|can_write:user %}
-          <a href="#" class="btn btn-lg btn-primary switch-to-revision">
+          <a href="#" class="btn btn-lg btn-success switch-to-revision">
             <span class="fa fa-flag"></span>
             {% trans "Switch to this version" %}
           </a>
           {% else %}
-            <a href="#" class="btn btn-lg btn-primary disabled">
+            <a href="#" class="btn btn-lg btn-success disabled">
               <span class="fa fa-lock"></span>
               {% trans "Switch to this version" %}
             </a>
@@ -183,12 +183,12 @@
             {% trans "Back to history view" %}
           </a>
           {% if article|can_write:user %}
-          <a href="#" class="btn btn-lg btn-primary merge-revision-commit">
+          <a href="#" class="btn btn-lg btn-success merge-revision-commit">
             <span class="fa fa-file"></span>
             {% trans "Create new merged version" %}
           </a>
           {% else %}
-            <a href="#" class="btn btn-lg btn-primary disabled">
+            <a href="#" class="btn btn-lg btn-success disabled">
               <span class="fa fa-lock"></span>
               {% trans "Create new merged version" %}
             </a>

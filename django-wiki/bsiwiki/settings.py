@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'bsi',
     'archive',
     'treeview',
+    'control_panel',
     'formtools',
     'wizard',
     'BSIUpdate',
@@ -103,8 +104,8 @@ WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
 # Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'../../programming/bsiCrawler/mdEn'
-REFERENCE_DIRECTORY = r'../../programming/bsiCrawler/references'
+CRAWLER_DIRECTORY = r'C:/Users/Peter/projects/Seel-17-18/programming/bsiCrawler/mdEn'
+REFERENCE_DIRECTORY = r'C:/Users/Peter/projects/Seel-17-18/programming/bsiCrawler/references'
 
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'
@@ -121,7 +122,7 @@ LOGIN_URL = 'login'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3NEW'),
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 

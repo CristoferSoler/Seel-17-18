@@ -49,7 +49,7 @@
                 {% for urlpath in article.urlpath_set.all %}
                     <tr>
                         <td>
-                            <small class="muted"><a href="{% url 'get_article' path=urlpath.path %}"><strong>{{ article.current_revision.title }}</strong>
+                            <small class="muted" style="word-wrap: break-word"><a href="{% url 'get_article' path=urlpath.path %}"><strong>{{ article.current_revision.title }}</strong>
                                    <br/>
                              /{{ urlpath.path }}
                                </a></small>
@@ -60,7 +60,7 @@
                             <span class="fa fa-lock"></span>
                         {% endif %}
                             {% if urlpath %}
-                                <p class="muted">
+                                <p class="muted" style="word-wrap: break-word;text-align: justify">
                                     <small>{{ article.render|get_content_snippet:search_query }}</small>
                                 </p>
                             {% endif %}

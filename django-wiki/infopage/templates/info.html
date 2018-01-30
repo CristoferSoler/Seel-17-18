@@ -1,196 +1,271 @@
 {% extends 'bsi/base.html' %}
 {% block bsi_contents %}
-    {% load widget_tweaks %}
+    {% load static widget_tweaks sekizai_tags bsi_tags %}
     {% load perm %}
 
-<div class="jumbotron jumbroton-blue jumbotron-sm">
-    <div class="container margin-image text-center">
-        <div class="row">
-            <div class="col-sm-12 col-lg-12">
-                <h2>
-                    Information Page</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-2 col-lg-2">
+    {% addtoblock "css" %}
+        <link type="text/css" href="{% static 'bsi/bootstrap/css/wiki-bootstrap.min.css' %}">
+    {% endaddtoblock %}
 
-            </div>
-             <div class="col-sm-8 col-lg-8">
-                <form action="{% url 'post_q' %}" method="post">
-                     {% csrf_token %}
-                     {% for hidden in form.hidden_fields %}
-                      {{ hidden }}
-                    {% endfor %}
-
-                <div class="row">
-                    <div class="col-md-12">
-                        {% for field in q_form.visible_fields %}
-                        <div class="form-group">
-                            {{ field|attr:"class:form-control"|attr:"placeholder:Write your question here"|attr:"rows:3"|attr:"required:required" }}
-                              {% for error in field.errors %}
-                              <span class="help-block">{{ error }}</span>
-                              {% endfor %}
-                        </div>
-                        {% endfor %}
-                    </div>
-                    <div class="col-md-12">
-                        <button type="submit" class="btn btn-warning" name="question_button">
-                            Submit</button>
-                    </div>
+    <div class="jumbotron jumbroton-blue jumbotron-sm">
+        <div class="container margin-image text-center">
+            <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                    <h2>
+                        Information Page</h2>
                 </div>
-                </form>
-              </div>
-            <div class="col-sm-2 col-lg-2">
             </div>
-        </div>
-    </div>
-</div>
+            <div class="row">
+                <div class="col-sm-2 col-lg-2">
 
-  <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="page-header" style="margin-top: 5px">Questions</h2>
-        <div class="comment-list">
-          <!-- First Comment -->
-             {% for q in questions %}
-          <article class="row">
-            <div class="col-md-12 col-sm-12">
-              <div class="panel panel-default arrow left">
-                <div class="panel-body">
-                <div class="btn-group pull-right">
-                  {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" %}
-                    <form action="{% url 'delete_q' %}" method="post">
-                      {% csrf_token %}
-                      <input type="hidden" name="q_id" value="{{ q.id }}" />
-                      <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
+                </div>
+                <div class="col-sm-8 col-lg-8">
+                    <form action="{% url 'post_q' %}" method="post">
+                        {% csrf_token %}
+                        {% for hidden in form.hidden_fields %}
+                            {{ hidden }}
+                        {% endfor %}
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% for field in q_form.visible_fields %}
+                                    <div id="container_{{ field.name }}" class="form-group">
+                                        {{ field|attr:"class:form-control"|attr:"placeholder:Write your question here"|attr:"rows:3"|attr:"required:required" }}
+                                        {% if field.errors %}
+                                            <script type="text/javascript">
+                                                $("#container_{{ field.name }}").addClass("has-error");
+                                            </script>
+                                            {% for error in field.errors %}
+                                                <div id="error_{{ field.name }}" class="help-block">
+                                                    <strong>{{ error }}</strong>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-success" name="question_button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
                     </form>
-                  {% endif %}
                 </div>
-                  <div class="text-left">
-                       {% if q.user %}
-                           <div class="comment-user"><i class="fa fa-user"></i> {{ q.user }}</div>
-                           {% else%}
-                           <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
-                      {% endif %}
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ q.timestamp }}</time>
-                  </div>
-                  <div class="comment-post">
-                    <p>
-                      {% if q.edited %}
-                           <div> {{ q.question }} (<i>modified</i> by {{ q.edited_by }})</div>
-                      {% else %}
-                          <div> {{ q.question }}</div>
-                      {% endif %}
-                    </p>
-                  </div>
-                <form action="{% url 'post_a' %}" method="post">
-                {% csrf_token %}
-                    {% for hidden in form.hidden_fields %}
-                      {{ hidden }}
-                    {% endfor %}
-               {% for field2 in a_form.visible_fields %}
-                        <div class="form-group">
-                            {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required"}}
-                              {% for error in field.errors %}
-                              <span class="help-block">{{ error }}</span>
-                              {% endfor %}
-                        </div>
-                        {% endfor %}
-                <input type="hidden" name="answer_from" value="{{ q.id }}" />
-                 <p class="text-right"><button type="submit" class="btn btn-default" name="answer_button">
-                     <i class="fa fa-reply"></i> reply</button></p>
-            </form>
+
+                <div class="col-sm-2 col-lg-2">
                 </div>
-              </div>
-
             </div>
-          </article>
-                 {% for a in q.get_answers %}
-                  <article class="row">
-            <div class="col-md-1 col-sm-1 col-md-offset-0 col-sm-offset-0 hidden-xs">
-            </div>
-            <div class="col-md-11 col-sm-11">
-              <div class="panel panel-default arrow left">
-                <div class="panel-heading right">Reply</div>
-                   <div class="btn-group pull-right" style="margin-right: 60px">
-
-                            {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}
-                            <form action="{% url 'delete_a' %}" method="post">
-                              {% csrf_token %}
-                              <input type="hidden" name="a_id" value="{{ a.id }}" />
-                             <button type="submit" class="btn btn-link" name="button"><i class="glyphicon glyphicon-trash"></i></button>
-                            </form>
-                          {% endif %}
-
-                   </div>
-                   <div class="btn-group pull-right">
-                        <button type="submit" class="btn btn-link" data-toggle="modal" data-target="#{{ a.id }}">
-                         <i class="fa fa-pencil"></i></button>
-
-                    </div>
-               <!-- modal edit form-->
-              <div id="{{ a.id }}" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
-                     <form action="{% url 'edit_a' %}", method="post">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Edit answer</h4>
-                  </div>
-
-                     <div class="modal-body">
-                     <textarea class="form-control" id="answer" type="text" name="answer" rows="3" required>{{ a.answer }}</textarea>
-
-                    </div>
-
-                            <input type="hidden" name="answer_from" value="{{ q.id }}" />
-                            <input type="hidden" name="answer_id" value="{{ a.id }}" />
-
-
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       <button type="submit" class="btn btn-primary" name="button">Save</button>
-                  </div>
-                     </form>
-                </div>
-              </div>
-            </div>
-
-
-                <div class="panel-body">
-                  <div class="text-left">
-                       {% if a.user %}
-                           <div class="comment-user"><i class="fa fa-user"></i> {{ a.user }}</div>
-                      {% else %}
-                           <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
-                      {% endif %}
-                    <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> {{ a.timestamp }}</time>
-                  </div>
-                  <div class="comment-post">
-                    <p>
-                     {% if a.edited %}
-                           <div> {{ a.answer }} </div>
-                        <p class="small" style="color: #808080;"> (<i>modified</i> by {{ a.edited_by }}) <p>
-                      {% else %}
-                          <div> {{ a.answer }}</div>
-                      {% endif %}
-                    </p>
-              </div>
-            </div>
-              </div>
-              </div>
-          </article>
-                 {% endfor %}
-             {% endfor %}
-
-
-
         </div>
     </div>
-  </div>
-  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="page-header" style="margin-top: 5px">Questions</h2>
+                <div class="comment-list">
+                    <!-- First Comment -->
+                    {% for q in questions %}
+                        <article class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="panel panel-default arrow left">
+                                    <div class="panel-body">
+                                        <div class="btn-group pull-right">
+                                            {% if request.user|info_delete_question:q %}
+                                                <form action="{% url 'delete_q' %}" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="q_id" value="{{ q.id }}"/>
+                                                    <button type="submit" class="btn btn-link" name="button"><i
+                                                            class="glyphicon glyphicon-trash"
+                                                            style="color: #00A000"></i></button>
+                                                </form>
+                                            {% endif %}
+                                        </div>
+
+                                        {% if request.user|info_change_question:q %}
+                                            <div class="btn-group pull-right">
+                                                <button type="submit" class="btn btn-link" data-toggle="modal"
+                                                        data-target="#{{ q.id }}">
+                                                    <i class="fa fa-pencil" style="color: #00A000"></i></button>
+                                            </div>
+                                        {% endif %}
+                                        <!-- modal edit form-->
+                                        <div id="{{ q.id }}" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
+                                                <!-- Modal content-->
+                                                <div class="modal-content">
+                                                    <form action="{% url 'post_q' %}" method="post">
+                                                        {% csrf_token %}
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">
+                                                                &times;
+                                                            </button>
+                                                            <h4 class="modal-title">Edit answer</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <textarea class="form-control" id="question" type="text"
+                                                                      name="edit" rows="3"
+                                                                      required>{{ q.question }}</textarea>
+                                                        </div>
+
+                                                        <input type="hidden" name="quesiton_id" value="{{ q.id }}"/>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default"
+                                                                    data-dismiss="modal">Close
+                                                            </button>
+                                                            <button type="submit" class="btn btn-success"
+                                                                    name="question_button">
+                                                                Save
+                                                            </button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-left">
+                                            {% if q.user %}
+                                                <div class="comment-user"><i class="fa fa-user"></i> {{ q.user }}</div>
+                                            {% else %}
+                                                <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
+                                            {% endif %}
+                                            <time class="comment-date" datetime="16-12-2014 01:05"><i
+                                                    class="fa fa-clock-o"></i> {{ q.timestamp }}</time>
+                                        </div>
+                                        <div class="comment-post">
+                                            <p>
+                                                {% if q.edited %}
+                                                    <div> {{ q.question }} (<i>modified</i> by {{ q.edited_by }})</div>
+                                                {% else %}
+                                                    <div> {{ q.question }}</div>
+                                                {% endif %}
+                                            </p>
+                                        </div>
+
+                                        <form action="{% url 'post_a' %}" method="post">
+                                            {% csrf_token %}
+                                            {% for hidden in form.hidden_fields %}
+                                                {{ hidden }}
+                                            {% endfor %}
+                                            {% for field2 in a_form.visible_fields %}
+                                                <div class="form-group">
+                                                    {{ field2|attr:"class:form-control"|attr:"placeholder:Write your answer here"|attr:"rows:2"|attr:"required:required" }}
+                                                    {% for error in field.errors %}
+                                                        <span class="help-block">{{ error }}</span>
+                                                    {% endfor %}
+                                                </div>
+                                            {% endfor %}
+                                            <input type="hidden" name="answer_from" value="{{ q.id }}"/>
+                                            <p class="text-right">
+                                                <button type="submit" class="btn btn-default" name="answer_button">
+                                                    <i class="fa fa-reply"></i> reply
+                                                </button>
+                                            </p>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </article>
+
+                        {% for a in q.get_answers %}
+                            <article class="row">
+                                <div class="col-md-1 col-sm-1 col-md-offset-0 col-sm-offset-0 hidden-xs">
+                                </div>
+                                <div class="col-md-11 col-sm-11">
+                                    <div class="panel panel-default arrow left">
+                                        <div class="panel-heading right"> Answer</div>
+                                        <div class="btn-group pull-right" style="margin-right: 60px">
+
+                                            {% if request.user|info_delete_answer:a %}
+                                                <form action="{% url 'delete_a' %}" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="a_id" value="{{ a.id }}"/>
+                                                    <button type="submit" class="btn btn-link" name="button"><i
+                                                            class="glyphicon glyphicon-trash"
+                                                            style="color: #00A000"></i></button>
+                                                </form>
+                                            {% endif %}
+
+                                        </div>
+
+                                        {% if request.user|info_change_answer:a %}
+                                            <div class="btn-group pull-right">
+                                                <button type="submit" class="btn btn-link" data-toggle="modal"
+                                                        data-target="#{{ a.id }}">
+                                                    <i class="fa fa-pencil" style="color: #00A000"></i></button>
+                                            </div>
+                                            <!-- modal edit form-->
+                                            <div id="{{ a.id }}" class="modal fade" role="dialog">
+                                                <div class="modal-dialog">
+
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <form action="{% url 'edit_a' %}" method="post">
+                                                            {% csrf_token %}
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close"
+                                                                        data-dismiss="modal">
+                                                                    &times;
+                                                                </button>
+                                                                <h4 class="modal-title">Edit answer</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                            <textarea class="form-control" id="answer" type="text"
+                                                                      name="answer" rows="3"
+                                                                      required>{{ a.answer }}</textarea>
+                                                            </div>
+                                                            <input type="hidden" name="answer_from" value="{{ q.id }}"/>
+                                                            <input type="hidden" name="answer_id" value="{{ a.id }}"/>
+
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default"
+                                                                        data-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="submit" class="btn btn-success"
+                                                                        name="button">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endif %}
+
+                                        <div class="panel-body">
+                                            <div class="text-left">
+                                                {% if a.user %}
+                                                    <div class="comment-user"><i class="fa fa-user"></i> {{ a.user }}
+                                                    </div>
+                                                {% else %}
+                                                    <div class="comment-user"><i class="fa fa-user"></i> Anonymous</div>
+                                                {% endif %}
+                                                <time class="comment-date" datetime="16-12-2014 01:05"><i
+                                                        class="fa fa-clock-o"></i> {{ a.timestamp }}</time>
+                                            </div>
+                                            <div class="comment-post">
+                                                <p>
+                                                    {% if a.edited %}
+                                                        <div> {{ a.answer }} </div>
+                                                        <p class="small" style="color: #808080;"> (<i>modified</i>
+                                                            by {{ a.edited_by }}) <p>
+                                                        {% else %}
+                                                        <div> {{ a.answer }}</div>
+                                                    {% endif %}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        {% endfor %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
 
