@@ -6,22 +6,30 @@
         <script type="text/javascript" src="{% static "/bsi/js/urlify.js" %}"></script>
     {% endaddtoblock %}
 
-
+    {% addtoblock "css" %}
+        <link href="{% static 'bsi/bootstrap/css/wiki-bootstrap.min.css' %}">
+    {% endaddtoblock %}
 
     {% for field in form %}
-        <div class="form-group">
+        <div id="container_{{ field.name }}" class="form-group">
             <div class="wiki-label col-xs-3 col-lg-2">
-                {{ field.label_tag }}
+                <label class="control-label" for="{{ field.name }}">{{ field.label }}</label>
+                {#{{ field.label_tag }}#}
             </div>
             <div class="wiki-control col-xs-9 col-lg-10">
                 {{ field }}
                 <p class="help-block">{{ field.help_text|safe }}</p>
-                {% for error in field.errors %}
-                    <p style="color: red">{{ error }}</p>
-                {% endfor %}
+                {% if field.errors %}
+                    <script type="text/javascript">
+                        $("#container_{{ field.name }}").addClass("has-error");
+                    </script>
+                    {% for error in field.errors %}
+                        <div id="error_{{ field.name }}" class="help-block">
+                            <strong>{{ error }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endif %}
             </div>
-
-
         </div>
 
     {% endfor %}
