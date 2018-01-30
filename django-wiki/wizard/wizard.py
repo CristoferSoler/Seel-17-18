@@ -36,7 +36,7 @@ def generateDic(listt, pathlist, requestParameter):
     path = getPathOfElement(title, pathlist, requestParameter)
     topics = list(map(topicDic,listt[1:]))
 
-    componentDic = dict(name=title, percentage=1, path=path, topics=topics)
+    componentDic = dict(name=title, percentage=1, amountOfNoCorrect=0, path=path, topics=topics)
     return componentDic
 
 

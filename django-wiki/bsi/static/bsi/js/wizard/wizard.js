@@ -223,7 +223,7 @@ function filterTopic(topic) {
     return topic.name === this.currentTopic;
 }
 
-function amountOfStates(changedTopicsOfElements) {
+function amountOfStates(changedTopicsOfElements,amountOfNoCorrect) {
     var amountOfCorrectTopics = 0;
     var amountOfNotSureTopics = 0;
 
@@ -236,16 +236,15 @@ function amountOfStates(changedTopicsOfElements) {
         var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
         var filteredCurrentTopicInElementsTopic = changedTopicsOfElements.filter(filterTopic, {currentTopic: this.currentTopic});
 
-        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length;
         if (filteredCurrentTopicInElementsTopic.length === 0) {
             if(answerList !== null && answerList.length >= 1){
-                amountOfCorrectTopics += 1;
+                amountOfNoCorrect += 1;
             } else {
-                amountOfCorrectTopics = 0;
+                amountOfNoCorrect = 0;
             }
-
-
         }
+
+        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length + amountOfNoCorrect;
 
         var filteredTopicOfElementsDontKnow = changedTopicsOfElements.filter(filterState, {pick: 'd'});
         amountOfNotSureTopics = filteredTopicOfElementsDontKnow.length;
@@ -253,7 +252,8 @@ function amountOfStates(changedTopicsOfElements) {
 
     return {
         notSure: amountOfNotSureTopics,
-        correct: amountOfCorrectTopics
+        correct: amountOfCorrectTopics,
+        correctNo: amountOfNoCorrect
     }
 
 }
@@ -282,10 +282,11 @@ function calculatePercentageOfOneElement(element) {
         });
     }
 
-    amount = amountOfStates.call(this, changedTopicsOfElements);
+    amount = amountOfStates.call(this, changedTopicsOfElements,element['amountOfNoCorrect']);
     percentage = calculatePercentage(amount.correct, amount.notSure);
     element.topics = changedTopicsOfElements;
     element.percentage = percentage;
+    element.amountOfNoCorrect = amount.correctNo;
 
     return element;
 }
@@ -300,6 +301,8 @@ function calculatePercentageOfAllElements(pick, goBack) {
         currentTopic: currentTopicString,
         goBack: goBack
     });
+    console.log(amountOfTotalTopics);
+    console.log(elementWithTopicsList);
 
 }
 
@@ -385,7 +388,7 @@ function checkGui() {
 function topicBack() {
     if ((amountOfTotalTopics - 1) >= 0) {
         var lastAnswer = answerList.pop();
-        checkTopics(lastAnswer, true);
+        amountOfTotalTopics(lastAnswer, true);
         checkGui();
     } else {
         if (amountOfTotalTopics - 1 == -2) {
@@ -457,7 +460,6 @@ function showResults() {
         //Deep Copy
         var copyOfElementsWithTopicLists = JSON.parse(JSON.stringify(elementWithTopicsList));
         var sortedElementswithTopicLists = sortArrayByKey(copyOfElementsWithTopicLists, 'percentage').reverse();
-
         sortedElementswithTopicLists.slice(0,numberOfShownResults).forEach(function (element) {
             $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
