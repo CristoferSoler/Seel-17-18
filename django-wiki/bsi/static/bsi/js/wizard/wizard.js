@@ -23,7 +23,7 @@ const showResultCount = 10;
 // define the ammount of results which are displayed
 const numberOfShownResults = 5;
 // define if there is a dynamic or strict border of results
-const dynamicBorderOfResults = true;
+const dynamicBorderOfResults = false;
 
 function sortArrayByKey(array, key) {
     return array.sort(function(a, b) {
