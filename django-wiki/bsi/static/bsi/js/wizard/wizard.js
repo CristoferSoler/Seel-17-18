@@ -1,20 +1,29 @@
+/*
+* Wizard modul
+* This file contains all functions needed for the wizard aka Virtual Assistant. Questions are created based
+* on the topics of articles. After a certain number of x, suitable articles are displayed.
+* */
+
+//Variablen
 var answerList;
 var amountOfTotalTopics = 0;
 var elementWithTopicsList;
 var valid = false;
 var sortedTopicList;
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
+//Question for the wizard
 const entryQuestionThread = 'Would you like to know more about a specific IT Threat?';
 const entryQuestionComponent = 'Do you have a specific problem concerning the protection of an IT System or IT Process, or\n' +
     'generally a problem about IT Security?';
 const questionThread = 'Do you have a problem with ';
 const questionComponent = 'Do you have a problem with '
-
-var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
+// define how many answer must answer before results are displayed
 const showResultCount = 10;
+// define the ammount of results which are displayed
 const numberOfShownResults = 5;
-
+// define if there is a dynamic or strict border of results
+const dynamicBorderOfResults = true;
 
 function sortArrayByKey(array, key) {
     return array.sort(function(a, b) {
@@ -460,7 +469,20 @@ function showResults() {
         //Deep Copy
         var copyOfElementsWithTopicLists = JSON.parse(JSON.stringify(elementWithTopicsList));
         var sortedElementswithTopicLists = sortArrayByKey(copyOfElementsWithTopicLists, 'percentage').reverse();
-        sortedElementswithTopicLists.slice(0,numberOfShownResults).forEach(function (element) {
+
+
+        if(dynamicBorderOfResults){
+            var pecenatageOfNumberOfShownResults = sortedElementswithTopicLists[numberOfShownResults-1]['percentage'];
+            var counter = numberOfShownResults +1;
+            while(sortedElementswithTopicLists[counter]['percentage'] === pecenatageOfNumberOfShownResults){
+                counter += 1;
+            }
+        } else {
+            counter = numberOfShownResults + 1;
+        }
+
+
+        sortedElementswithTopicLists.slice(0,counter-1).forEach(function (element) {
             $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
 
