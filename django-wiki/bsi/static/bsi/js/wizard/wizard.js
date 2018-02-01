@@ -385,14 +385,14 @@ function checkGui() {
 
     $('#question').text(questionComponent);
 
-    $('#topics').removeClass('invisible');
-    $('#results').removeClass('invisible');
+    //$('#topics').removeClass('invisible');
+    //$('#results').removeClass('invisible');
 }
 
 function topicBack() {
     if ((amountOfTotalTopics - 1) >= 0) {
         var lastAnswer = answerList.pop();
-        amountOfTotalTopics(lastAnswer, true);
+        checkTopics(lastAnswer, true);
         checkGui();
     } else {
         if (amountOfTotalTopics - 1 == -2) {
@@ -456,7 +456,7 @@ function invisbaleTopicResutlPanel() {
 
 function showResults() {
     var answserList = JSON.parse(localStorage.getItem('answerList'));
-    if (answserList !== null && answserList.length >= showResultCount ){
+    if (answserList !== null && answserList.length >= showResultCount ) {
 
         $('#results').removeClass('invisible');
         $("#list").empty();
@@ -503,6 +503,9 @@ function showResults() {
                 $('#resultIcon').addClass('glyphicon-minus');
             }
         }
+    } else{
+        $('#results').addClass('invisible');
+        $("#list").empty();
     }
     valid = false;
 }
