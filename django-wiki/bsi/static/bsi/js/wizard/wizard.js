@@ -474,13 +474,13 @@ function showResults() {
                     counter += 1;
                 }
             } else{
-                counter = numberOfShownResults +1;
+                counter = numberOfShownResults;
             }
         } else {
-            counter = numberOfShownResults + 1;
+            counter = numberOfShownResults;
         }
 
-        sortedElementswithTopicLists.slice(0,counter-1).forEach(function (element) {
+        sortedElementswithTopicLists.slice(0,counter).forEach(function (element) {
             $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
 
