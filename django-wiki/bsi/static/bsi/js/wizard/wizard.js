@@ -23,7 +23,7 @@ const showResultCount = 10;
 // define the ammount of results which are displayed
 const numberOfShownResults = 5;
 // define if there is a dynamic or strict border of results
-const dynamicBorderOfResults = false;
+const dynamicBorderOfResults = true;
 
 function sortArrayByKey(array, key) {
     return array.sort(function(a, b) {
@@ -470,17 +470,21 @@ function showResults() {
         var copyOfElementsWithTopicLists = JSON.parse(JSON.stringify(elementWithTopicsList));
         var sortedElementswithTopicLists = sortArrayByKey(copyOfElementsWithTopicLists, 'percentage').reverse();
 
-
+        console.log(sortedElementswithTopicLists);
         if(dynamicBorderOfResults){
-            var pecenatageOfNumberOfShownResults = sortedElementswithTopicLists[numberOfShownResults-1]['percentage'];
-            var counter = numberOfShownResults +1;
-            while(sortedElementswithTopicLists[counter]['percentage'] === pecenatageOfNumberOfShownResults){
-                counter += 1;
+            var highestPercentage = sortedElementswithTopicLists[0]['percentage'];
+
+            if(sortedElementswithTopicLists[numberOfShownResults]['percentage'] === highestPercentage) {
+                var counter = numberOfShownResults + 1;
+                while (sortedElementswithTopicLists[counter]['percentage'] === highestPercentage) {
+                    counter += 1;
+                }
+            } else{
+                counter = numberOfShownResults +1;
             }
         } else {
             counter = numberOfShownResults + 1;
         }
-
 
         sortedElementswithTopicLists.slice(0,counter-1).forEach(function (element) {
             $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
