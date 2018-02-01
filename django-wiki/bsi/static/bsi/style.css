@@ -113,8 +113,8 @@ header {
     top: 0;
     left: 0;
     background: linear-gradient(
-            rgba(238, 238, 238, 0.4),
-            rgba(238, 238, 238, 0.4)),
+            rgba(238, 238, 238, 0.65),
+            rgba(238, 238, 238, 0.65)),
             url("../bsi/images/afghanistan-80360_1920.jpg");
     background-size: cover;
 

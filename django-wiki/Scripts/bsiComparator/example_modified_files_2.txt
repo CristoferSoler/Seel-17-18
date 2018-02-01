@@ -1,0 +1,21 @@
+#C
+%m
+CON.7 Informationssicherheit auf Auslandsreisen.md
+%a
+APP.3.4 Samba.md
+%d
+APP.1.1 Office-Produkte.md
+#T
+%m
+%a
+G 0.14 Ausspähen von Informationen (Spionage).md
+%d
+G 0.47 Schädliche Seiteneffekte IT-gestützter Angriffe.md
+G 0.46 Integritätsverlust schützenswerter Informationen.md
+#N
+%m
+%a
+Umsetzungshinweise zum Baustein INF.3 Elektrotechnische Verkabelung.md
+%d
+Umsetzungshinweise zum Baustein SYS.3.2.2 Mobile Device Management (MDM).md
+Umsetzungshinweise zum Baustein SYS.3.2.3 iOS (for Enterprise).md

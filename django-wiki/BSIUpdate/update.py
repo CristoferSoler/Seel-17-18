@@ -9,7 +9,7 @@ sys.path.append(r'..')
 from Scripts.main import update_phase, check_update_progress#,demo_mid_phase, demo_post_phase
 
 update_done = dict(status='ok',msg='Update done!')
-error_update = dict(status='error',msg='Already updated or there is error')
+error_update = dict(status='error',msg='Already updated')
 
 '''
 def performMidPhase(request):
@@ -25,14 +25,14 @@ def performPostPhase(request):
 '''
 def check_update(request):
     isRunning = check_update_progress()
-    print(isRunning)
     update_running = dict(status = isRunning, msg = 'Update still running')
     return HttpResponse(json.dumps(update_running), content_type='application/json')
 
 def Update(request):
-    if(update_phase()):
-        return HttpResponse(json.dumps(update_done), content_type='application/json')
-    else:
+    try:
+        if(update_phase()):
+            return HttpResponse(json.dumps(update_done), content_type='application/json')
+    except:
         return HttpResponse(json.dumps(error_update), content_type='application/json')
 #
 '''

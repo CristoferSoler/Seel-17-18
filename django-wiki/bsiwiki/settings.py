@@ -103,10 +103,6 @@ SITE_ID = 1
 WIKI_ACCOUNT_HANDLING = True
 WIKI_ACCOUNT_SIGNUP_ALLOWED = True
 
-# Overwrite according to your crawler content folder
-CRAWLER_DIRECTORY = r'C:/Users/Peter/projects/Seel-17-18/programming/bsiCrawler/mdEn'
-REFERENCE_DIRECTORY = r'C:/Users/Peter/projects/Seel-17-18/programming/bsiCrawler/references'
-
 #LOGIN_REDIRECT_URL = reverse_lazy('wiki:get', kwargs={'path': ''})
 LOGIN_REDIRECT_URL = 'index'
 
@@ -163,10 +159,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
-
-PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 #Options for secure requests and responses (HTTPS)
@@ -186,5 +180,40 @@ EMAIL_HOST_PASSWORD = 'seel1718'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
+### PATHS ###
+SCRIPT_DIR = os.path.join(BASE_DIR, 'Scripts')
+CRAWLER_DIR = os.path.join(SCRIPT_DIR, 'bsiCrawler')
+TREEVIEW_DIR = os.path.join(CRAWLER_DIR, 'treeview')
 
+# english version of bsi
+BSI_EN = os.path.join(CRAWLER_DIR, 'mdEn')
+# original version of bsi
+BSI_DE = os.path.join(CRAWLER_DIR, 'md')
+# references folder needed by the importer
+REFERENCE_DIR = os.path.join(CRAWLER_DIR, 'references')
 
+# for update: temp folder for bsi english version
+TEMP_BSI_EN = os.path.join(SCRIPT_DIR, 'mdNew')
+# path to CRF folder
+CRF_DIR = os.path.join(SCRIPT_DIR, 'CRF')
+# path to extracted CR data
+CR_TXT_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Files')
+# path to csv CR gotten from BSI website
+CR_CSV_DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Tables')
+CR_CSV_DIR = os.path.join(CR_CSV_DOWNLOAD_DIR, 'csv')
+
+COMPARATOR_OUTPUT = os.path.join(SCRIPT_DIR, 'bsiComparator/example_modified_files.txt')
+
+### treeview ###
+# path to json file containing bsi tree generated from crawler
+BSI_TREE = os.path.join(TREEVIEW_DIR, 'bsiTree.txt')
+# path to json file containing bsi tree with links from database
+BSI_TREE_LINKS = os.path.join(TREEVIEW_DIR, 'bsiTreeLinks.txt')
+# path to json file containing bsi tree with links, but in flat-hierarchy
+# this is needed for the wizard
+PATH_LIST = os.path.join(TREEVIEW_DIR, 'pathlist.txt')
+
+### wizard stuff ###
+WIZARD_DIR = os.path.join(SCRIPT_DIR, 'bsiWizard')
+COMP_CSV = os.path.join(WIZARD_DIR, 'csv/componentsTopics.csv')
+THREAT_CSV = os.path.join(WIZARD_DIR, 'csv/threadsTopics.csv')
