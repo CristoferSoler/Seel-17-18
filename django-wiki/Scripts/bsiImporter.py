@@ -16,16 +16,11 @@ from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
 from django.contrib.sites.models import Site
 from Scripts.bsiCrawler.main import deleteAllFilesInDirectory
+from Scripts.bsiComparator import readConfig
 
 new_temp_bsi_folder = settings.TEMP_BSI_EN
 crfDir = settings.CRF_DIR
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-
-
-def readConfig(varname):
-    configParser = configparser.RawConfigParser()
-    configParser.read("config.cfg")
-    return configParser.get('bsi', varname)
 
 
 def doImport():
@@ -362,31 +357,36 @@ def checkFileAction():
     currentSep1 = file.readline().rstrip()
     currentSep2 = file.readline().rstrip()
 
+    modSym = readConfig('modified_symbol')
+    addSym = readConfig('added_symbol')
+    delSym = readConfig('deleted_symbol')
+    compSym = readConfig('component_symbol')
+
     for line in file:
         line = line.rstrip()
-        if(line.startswith('#')):
+        if(line.startswith(compSym)):
             currentSep1 = line
             continue
         if(line.startswith('%')):
             currentSep2 = line
             continue
 
-        if(currentSep2.startswith('%m')):
+        if(currentSep2.startswith(modSym)):
             types = modified.get('type')
-        elif(currentSep2.startswith('%a')):
+        elif(currentSep2.startswith(addSym)):
             types = added.get('type')
-        elif(currentSep2.startswith('%d')):
+        elif(currentSep2.startswith(delSym)):
             types = deleted.get('type')
         else:
             raise ValueError('Input file might be corrupted.')
 
-        if(currentSep1.startswith('#C')):
+        if(currentSep1.startswith(compSym + 'C')):
             name = 'component'
             sub = 'C'
-        elif(currentSep1.startswith('#T')):
+        elif(currentSep1.startswith(compSym + 'T')):
             name = 'threat'
             sub = 'T'
-        elif(currentSep1.startswith('#N')):
+        elif(currentSep1.startswith(compSym + 'N')):
             name = 'implementationnotes'
             sub = 'N'
         else:
@@ -441,4 +441,6 @@ def cleanUp():
     deleteAllFilesInDirectory(settings.CR_TXT_DIR)
     deleteAllFilesInDirectory(settings.CRF_DIR)
     # deleteAllFilesInDirectory(settings.REFERENCE_DIR)
+    # deleteAllFilesInDirectory(settings.TEMP_BSI_EN)
+    # deleteAllFilesInDirectory(settings.TEMP_BSI_DE)
     return

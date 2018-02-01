@@ -18,7 +18,7 @@ newDir = settings.TEMP_BSI_DE
 
 def readConfig(varname):
     configParser = configparser.RawConfigParser()
-    configParser.read("config.cfg")
+    configParser.read(settings.COMPARATOR_CONFIG)
     return configParser.get('bsi', varname)
 
 

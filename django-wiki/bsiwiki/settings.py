@@ -203,7 +203,9 @@ CR_TXT_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Files')
 CR_CSV_DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Tables')
 CR_CSV_DIR = os.path.join(CR_CSV_DOWNLOAD_DIR, 'csv')
 
-COMPARATOR_OUTPUT = os.path.join(SCRIPT_DIR, 'bsiComparator/changelog.txt')
+COMPARATOR_DIR = os.path.join(SCRIPT_DIR, 'bsiComparator')
+COMPARATOR_OUTPUT = os.path.join(COMPARATOR_DIR, 'changelog.txt')
+COMPARATOR_CONFIG = os.path.join(COMPARATOR_DIR, 'config.cfg')
 
 ### treeview ###
 # path to json file containing bsi tree generated from crawler
