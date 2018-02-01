@@ -3,6 +3,9 @@ import django
 import os
 import sys
 from os import listdir
+import urllib.request
+import zipfile
+from io import BytesIO
 #import win32com.client
 
 
@@ -13,9 +16,18 @@ from bsiwiki import settings
 from wiki.models import URLPath
 
 
-csvDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/'
+csvDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/csv/'
 txtDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/Cross_Reference_Files/'
 crfDir = '/home/ziik/Seel-17-18/django-wiki/Scripts/CRF/'
+CR_website_path = "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Kompendium/krt.zip?__blob=publicationFile&v=1"
+local_path = "C:/githubRepo/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/"
+
+def get_CR_Tables(CR_website_path, local_path):
+    # extract the Cross References automatically from the BSI website
+    cr = urllib.request.urlopen(CR_website_path)
+    zip_ref = zipfile.ZipFile(BytesIO(cr.read()))
+    zip_ref.extractall(local_path)
+    zip_ref.close()
 
 def extraction(oldFolderPath, newFolderPath):
     # main function of extraction the cross rreference tables relations
@@ -109,5 +121,6 @@ def find_BSI_threats(threatName, site):
     return mdThreat
 
 if __name__ == '__main__':
-    extraction(csvDir,txtDir)
+   # extraction(csvDir,txtDir)
+    get_CR_Tables(CR_website_path, local_path)
     print("worked!")

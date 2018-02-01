@@ -23,7 +23,9 @@ new_temp_bsi_folder = './../Seel-17-18/django-wiki/Scripts/mdNew'
 crfDir = './../django-wiki/Scripts/CRF/'
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
 txtDir = './../django-wiki/Scripts/Cross_Reference_Files/'
-csvDir = './../django-wiki/Scripts/Cross_Reference_Tables/'
+csvDir = './../django-wiki/Scripts/Cross_Reference_Tables/csv/'
+CR_website_path = "https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Kompendium/krt.zip?__blob=publicationFile&v=1"
+local_path = "C:/githubRepo/Seel-17-18/django-wiki/Scripts/Cross_Reference_Tables/"
 # temporary variable for cross reference files. If set to TRUE, append CR to files, otherwise don't
 # for testing, we should not append the CR everytime we run the importer, because then the files would contain 
 # multiple CR
@@ -462,6 +464,7 @@ def initDict():
 
 
 def appendThreatMeasureRelation():
+    Cross_References.get_CR_Tables(CR_website_path, local_path)
     Cross_References.extraction(csvDir,txtDir)
     site = 'http://' + str(Site.objects.get_current()) + '/'
     #site = 'http://localhost:8000/'
@@ -495,8 +498,8 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-      #file = parseArgs()
-      #main(file)
+      file = parseArgs()
+      main(file)
       #appendThreatMeasureRelation()
       #archive = Archive.get_or_create('2018-01')
       #post_phase_move_deleted_articles('2018-01','../../programming/bsiComparator/example_modified_files.txt')
