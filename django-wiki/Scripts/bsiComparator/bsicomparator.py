@@ -31,6 +31,9 @@ def compare():
     # find the common dirs
     commondirs = dircomp.common_dirs
 
+    # create or overwrite
+    file = open(settings.COMPARATOR_OUTPUT, "w")
+
     if(commondirs):
         for subdir in commondirs:
             newDirpath = newDir + "/" + subdir
@@ -47,13 +50,12 @@ def compare():
                 modified = dircomp.diff_files
 
                 # generate a text file to store the names to the updated files
-                generateTextFile(subdir, added, modified, deleted)
+                generateTextFile(file, subdir, added, modified, deleted)
+
+    file.close()
 
 
-def generateTextFile(dir, added, modified, deleted):
-    # create or overwrite
-    file = open(settings.COMPARATOR_OUTPUT, "a")
-
+def generateTextFile(file, dir, added, modified, deleted):
     modSym = readConfig('modified_symbol')
     addSym = readConfig('added_symbol')
     delSym = readConfig('deleted_symbol')
@@ -76,8 +78,6 @@ def generateTextFile(dir, added, modified, deleted):
     file.write(delSym + "\n")
     for f in deleted:
         file.write(f + "\n")
-
-    file.close()
 
 
 # should not be imported by other module
