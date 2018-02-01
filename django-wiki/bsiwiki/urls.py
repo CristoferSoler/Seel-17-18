@@ -16,12 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.views.generic import TemplateView
 from django_nyt.urls import get_pattern as get_nyt_pattern
 from wiki.urls import get_pattern
-from django.views.generic import TemplateView
-from bsi import views, controlPanelSite
-from bsi.forms import PasswordResetForm,SetPasswordForm
 
+from bsi import views
+from bsi.forms import PasswordResetForm, SetPasswordForm
 
 admin.site.index_template = 'admin/index.html'
 admin.autodiscover()
@@ -35,12 +35,19 @@ urlpatterns = [
         name='password_change'),
     url(r'^accounts/password/change/done/?', auth_views.password_change_done,
         {'template_name': 'bsi/account/passwordChangeDone.html'}, name='password_change_done'),
-    url(r'^password_reset/$', auth_views.password_reset,{'template_name': 'bsi/account/password_reset_form.html','password_reset_form': PasswordResetForm,'subject_template_name':'bsi/account/password_reset_subject.txt','email_template_name':'bsi/account/password_reset_email.html'}, name='password_reset'),
-    url(r'^password_reset/done/$', auth_views.password_reset_done,{'template_name': 'bsi/account/password_reset_done.html'}, name='password_reset_done'),
+    url(r'^password_reset/$', auth_views.password_reset,
+        {'template_name': 'bsi/account/password_reset_form.html', 'password_reset_form': PasswordResetForm,
+         'subject_template_name': 'bsi/account/password_reset_subject.txt',
+         'email_template_name': 'bsi/account/password_reset_email.html'}, name='password_reset'),
+    url(r'^password_reset/done/$', auth_views.password_reset_done,
+        {'template_name': 'bsi/account/password_reset_done.html'}, name='password_reset_done'),
     url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
-        auth_views.password_reset_confirm,{'template_name': 'bsi/account/password_reset_confirm.html','set_password_form':SetPasswordForm}, name='password_reset_confirm'),
-    url(r'^reset/done/$', auth_views.password_reset_complete,{'template_name': 'bsi/account/password_reset_complete.html'}, name='password_reset_complete'),
-    url(r'^wizardinfo/?', TemplateView.as_view(template_name='wizard/helpWizard.html'),name = 'wizardInfo'),
+        auth_views.password_reset_confirm,
+        {'template_name': 'bsi/account/password_reset_confirm.html', 'set_password_form': SetPasswordForm},
+        name='password_reset_confirm'),
+    url(r'^reset/done/$', auth_views.password_reset_complete,
+        {'template_name': 'bsi/account/password_reset_complete.html'}, name='password_reset_complete'),
+    url(r'^wizardinfo/?', TemplateView.as_view(template_name='wizard/helpWizard.html'), name='wizardInfo'),
     url(r'^_update/?', include('BSIUpdate.urls')),
     url(r'^_treeview/?', include('treeview.urls')),
     url(r'^information/?', include('infopage.urls')),
@@ -49,9 +56,9 @@ urlpatterns = [
     url(r'^notifications/?', get_nyt_pattern()),
     url(r'^archive/?', include('archive.urls')),
     url(r'^information_page/?', include('infopage.urls')),
+    url(r'^control_panel/?', include('control_panel.urls')),
     url(r'^', include('bsi.urls')),
     url(r'^', get_pattern()),
-    # url(r'^controlPanel/', controlPanelSite.AdminSite.urls),
     # so far anything that cannot be handled by our urls, is forwarded to django-wiki
 
 ]

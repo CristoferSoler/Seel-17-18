@@ -29,13 +29,26 @@
         </table>
         </div>
         --->
-
-
-
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
-        $('#update').html(window.localStorage.getItem('update'));
+       // $('#update').html(window.localStorage.getItem('update'));
+        var id =  $("#update")
+        var data = {'user':'test'};
+        $.ajax({
+            dataType:'json',
+            url:'/_update/check_update/',
+            data: data,
+            success: function(data) {
+            if(data.status == true){
+                id.text(data.msg);
+                $("#update_btn").prop('disabled', true); // disable button
+
+            }else if(data.status == false){
+                $("#update_btn").prop('disabled', false); // enable button
+            }
+            },
+        });
     });
 
 	function startUpdate() {
@@ -45,18 +58,17 @@
             dataType:'json',
             url:'/_update/Update/',
             data: data,
+
              beforeSend: function() {
                   $("#update_btn").prop('disabled', true); // disable button
+                 id.text('Update is start')
                  },
             success: function(data) {
             if(data.status == 'ok'){
               id.text(data.msg);
               $("#update_btn").prop('disabled', false); // disable button
-                localStorage.setItem('update', data.msg);
             }else if(data.status == 'error'){
-                 id.text(data.msg);
-                 localStorage.setItem('update', data.msg);
-                  $("#update_btn").prop('disabled', false); // disable button
+                $("#update_btn").prop('disabled', false); // disable button
                 }
                },
         });

@@ -1,7 +1,7 @@
 from django import template
 
-from bsi.models.article_extensions import ArticleRevisionValidation
 from bsi.models import permissions
+from bsi.models.article_extensions import ArticleRevisionValidation
 
 register = template.Library()
 
@@ -37,3 +37,38 @@ def is_checked(obj):
 @register.filter
 def is_uga(url):
     return hasattr(url, 'uga')
+
+
+@register.filter
+def is_admin(user):
+    return permissions.can_add_change_delete_users(user)
+
+
+@register.filter
+def info_answer(user):
+    return user.has_perm('infopage.add_answer')
+
+
+@register.filter
+def info_change_answer(user, answer):
+    return user.has_perm('infopage.change_answer') or answer.user == user
+
+
+@register.filter
+def info_delete_answer(user, answer):
+    return user.has_perm('infopage.delete_answer') or answer.user == user
+
+
+@register.filter
+def info_ask(user):
+    return user.has_perm('infopage.add_question')
+
+
+@register.filter
+def info_change_question(user, question):
+    return user.has_perm('infopage.change_question') or question.user == user
+
+
+@register.filter
+def info_delete_question(user, question):
+    return user.has_perm('infopage.delete_question') or question.user == user

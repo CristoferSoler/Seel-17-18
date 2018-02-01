@@ -9,10 +9,12 @@ sys.path.append(r'../../')
 
 #from programming.bsiCrawler.main import crawlTranslateTreeview
 #from programming.bsiWizard.topicGeneration import topicGeneration
-#from programming.bsiComparator.bsicomparator import compare
-
+# from programming.bsiComparator.bsicomparator import compare
+isRunning = False
 
 def update_phase():
+    global isRunning
+    isRunning = True
     now = datetime.now()
     archive_date = str(now.year) + '-' + str(now.month)
     delay = timedelta(days =30).total_seconds()
@@ -31,17 +33,22 @@ def update_phase():
     # call treeview importer
     #addLinksToTreeView()
 
-    # enter mid phase
-    #doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
 
+    # enter mid phase
+    doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)
-    print(s)
     s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") ,
-                                  './../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
-                                                        , archive_date)
+                                './../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
+                                                       , archive_date)
     s.run()
+
     print('Post-phase has been executed.')
+    isRunning = False
+
+
+def check_update_progress():
+    return isRunning
 
 '''
 def demo_mid_phase():
@@ -50,7 +57,7 @@ def demo_mid_phase():
 
 
 def demo_post_phase():
-    post_phase(datetime.now().strftime("%Y-%m-%d") , './../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
+    post_phase(datetime.now().strftime("%Y-%m-%d") , '/home/ziik/Seel-17-18/programming/bsiComparator/example_modified_files.txt')
 
 '''
 
