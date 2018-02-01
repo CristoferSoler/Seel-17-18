@@ -498,8 +498,8 @@ def cleanUp():
 
 # should not be imported by other module
 if __name__ == '__main__':
-      file = parseArgs()
-      main(file)
+      # file = parseArgs()
+      # main(file)
       #appendThreatMeasureRelation()
       #archive = Archive.get_or_create('2018-01')
       #post_phase_move_deleted_articles('2018-01','../../programming/bsiComparator/example_modified_files.txt')

@@ -28,6 +28,7 @@ def get_CR_Tables(CR_website_path, local_path):
     zip_ref = zipfile.ZipFile(BytesIO(cr.read()))
     zip_ref.extractall(local_path)
     zip_ref.close()
+    os.remove(zip_ref)
 
 def extraction(oldFolderPath, newFolderPath):
     # main function of extraction the cross rreference tables relations
@@ -122,5 +123,5 @@ def find_BSI_threats(threatName, site):
 
 if __name__ == '__main__':
    # extraction(csvDir,txtDir)
-    get_CR_Tables(CR_website_path, local_path)
+    #get_CR_Tables(CR_website_path, local_path)
     print("worked!")
