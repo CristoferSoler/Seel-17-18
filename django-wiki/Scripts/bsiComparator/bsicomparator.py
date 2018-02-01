@@ -1,10 +1,19 @@
 from os.path import isdir
 import filecmp
 import configparser
+import django
+import sys
+from os import environ
 
+sys.path.append(r'../..')
+environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
 
+from bsiwiki import settings
+
+# oldDir = settings.BSI_DE
 oldDir = './md'
-newDir = './mdNew'
+newDir = settings.TEMP_BSI_DE
 
 
 def readConfig(varname):
@@ -43,7 +52,7 @@ def compare():
 
 def generateTextFile(dir, added, modified, deleted):
     # create or overwrite
-    file = open(readConfig('comparator_output'), "a")
+    file = open(settings.COMPARATOR_OUTPUT, "a")
 
     modSym = readConfig('modified_symbol')
     addSym = readConfig('added_symbol')
