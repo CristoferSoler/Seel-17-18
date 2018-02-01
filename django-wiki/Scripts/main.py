@@ -9,7 +9,7 @@ sys.path.append(r'..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
-from Scripts.treeview_importer import addLinksToTreeView
+from Scripts.treeview_links import addLinksToTreeView
 from Scripts.bsiImporter import doUpdate, post_phase, doImport
 from bsiwiki import settings
 

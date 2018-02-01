@@ -193,7 +193,8 @@ BSI_DE = os.path.join(CRAWLER_DIR, 'md')
 REFERENCE_DIR = os.path.join(CRAWLER_DIR, 'references')
 
 # for update: temp folder for bsi english version
-TEMP_BSI_EN = os.path.join(SCRIPT_DIR, 'mdNew')
+TEMP_BSI_EN = os.path.join(CRAWLER_DIR, 'temp_en')
+TEMP_BSI_DE = os.path.join(CRAWLER_DIR, 'temp_de')
 # path to CRF folder
 CRF_DIR = os.path.join(SCRIPT_DIR, 'CRF')
 # path to extracted CR data
@@ -202,7 +203,7 @@ CR_TXT_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Files')
 CR_CSV_DOWNLOAD_DIR = os.path.join(SCRIPT_DIR, 'Cross_Reference_Tables')
 CR_CSV_DIR = os.path.join(CR_CSV_DOWNLOAD_DIR, 'csv')
 
-COMPARATOR_OUTPUT = os.path.join(SCRIPT_DIR, 'bsiComparator/example_modified_files.txt')
+COMPARATOR_OUTPUT = os.path.join(SCRIPT_DIR, 'bsiComparator/changelog.txt')
 
 ### treeview ###
 # path to json file containing bsi tree generated from crawler

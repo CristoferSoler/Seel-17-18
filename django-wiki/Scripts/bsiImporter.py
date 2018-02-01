@@ -231,7 +231,7 @@ def get_bsi_article_id(type, file_name):
     return id
 
 
-def post_phase(archiving_data, new_file):
+def post_phase(archiving_data):
         # after 30 days
         # create archive
         # move the old bsi articles with their related uga articles to archive
@@ -243,7 +243,7 @@ def post_phase(archiving_data, new_file):
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
 
-        post_phase_move_deleted_articles(archive, new_file, bsi)
+        post_phase_move_deleted_articles(archive, bsi)
 
         for new_type in types:
                 if new_type.slug == "components":
@@ -305,9 +305,9 @@ def post_phase_move_references(archive, bsi_article):
         ref.url.save()
 
 
-def post_phase_move_deleted_articles(archive, new_file, bsi):
+def post_phase_move_deleted_articles(archive, bsi):
     # move the bsi deleted articles directly to archive
-    modified, added, deleted = checkFileAction(new_file)
+    modified, added, deleted = checkFileAction()
     for elem in deleted.get('type'):
         if(elem.get('name') == "component"):
             bsi_type = URLPath.objects.get(parent=bsi, slug="components")
@@ -349,7 +349,8 @@ def updateModificationTime():
     return
 
 
-def checkFileAction(filepath):
+def checkFileAction():
+    filepath = settings.COMPARATOR_OUTPUT
     modified = initDict()
     added = initDict()
     deleted = initDict()
@@ -439,4 +440,5 @@ def cleanUp():
     deleteAllFilesInDirectory(settings.CR_CSV_DOWNLOAD_DIR)
     deleteAllFilesInDirectory(settings.CR_TXT_DIR)
     deleteAllFilesInDirectory(settings.CRF_DIR)
+    # deleteAllFilesInDirectory(settings.REFERENCE_DIR)
     return
