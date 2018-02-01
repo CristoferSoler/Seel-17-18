@@ -486,8 +486,8 @@ function showResults() {
 
         var isExpanded = $('#collapse1').attr("aria-expanded");
         if (stringToBoolean(isExpanded)) {
-            $(".panel-collapse").collapse("hide");
-            //$("#collapseDiv").collapse("show");
+            $("#collapse1").collapse("hide");
+            localStorage.setItem('topicListVisible','false');
             $('#collapseResults').collapse("show");
             $('#topicIcon').removeClass('glyphicon-minus');
             $('#topicIcon').addClass('glyphicon-plus');
