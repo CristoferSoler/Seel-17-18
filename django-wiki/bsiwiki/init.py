@@ -20,10 +20,11 @@ def assign_permission(group, perm_name):
 
 def init():
     # set the domain
-    # site = Site.objects.all()[0]
+    site = Site.objects.all()[0]
     # # site.domain = 'it-gs.ziik.tu-berlin.de:8000'
-    # site.domain = 'localhost:8000'
-    # site.save()
+    # The following is not commented for testing sake
+    site.domain = 'localhost:8000'
+    site.save()
 
     #superuser group and permissions
     superusers = User.objects.filter(is_superuser=True)
@@ -36,7 +37,7 @@ def init():
     assign_all_permissions('infopage', 'answer', 'administrators')
     assign_all_permissions('infopage', 'question', 'administrators')
 
-   #moderator group and permissions
+    #moderator group and permissions
     assign_all_permissions('bsi', 'uga', 'moderators')
     assign_all_permissions('infopage', 'answer', 'moderators')
     assign_all_permissions('infopage', 'question', 'moderators')

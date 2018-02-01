@@ -6,11 +6,12 @@ from operator import itemgetter
 from random import shuffle
 
 from django.http import HttpResponse
+from bsiwiki import settings
 
 topicAndNumber = []
 
-pathOfComponentsCSV = '../programming/bsiWizard/csv/componentsTopics.csv'
-pathOfThreadsCSV = '../programming/bsiWizard/csv/threadsTopics.csv'
+pathOfComponentsCSV = settings.COMP_CSV
+pathOfThreadsCSV = settings.THREAT_CSV
 
 numberOfRelatedElements = 5
 
@@ -52,7 +53,7 @@ def readAndProcessCSV(fileName, requestParameter):
 
 
 def getPathList():
-    pathlist = open('../programming/bsiCrawler/treeview/pathlist.txt')
+    pathlist = open(settings.PATH_LIST)
     jsonFile = json.loads(pathlist.read())
     return jsonFile
 

@@ -4,20 +4,20 @@ import os
 import sys
 import django
 
-# THIS FILE IS TO BE MERGED WITH BSIIMPORTER.PY
 sys.path.append("..")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
-
+from bsiwiki import settings
 from wiki.models import URLPath
 from bsi.models.article_extensions import BSI_Article_type, BSI
 from django.contrib.sites.models import Site
 
 system_devices = ["APP", "SYS", "IND", "CON", "ISMS", "ORP", "OPS", "DER", "NET", "INF"]
-path_to_treeview = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/bsiTree.txt'
-path_to_treeview_with_links = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/bsiTreeLinks.txt'
-path_to_pathlist = '/home/ziik/Seel-17-18/programming/bsiCrawler/treeview/pathlist.txt'
+path_to_treeview = settings.BSI_TREE
+path_to_treeview_with_links = settings.BSI_TREE_LINKS
+path_to_pathlist = settings.PATH_LIST
+
 
 def addLinksToTreeView():
     print('Loading the tree view file ' + path_to_treeview)
@@ -34,10 +34,8 @@ def addLinksToTreeView():
 
     path_list = []
     site = 'http://' + str(Site.objects.get_current()) + '/'
-    #site = 'http://localhost:8000/'
     parent = BSI.get_or_create_bsi_root('')
     for elem in parsed:
-        # print json.dumps(elem, indent=4)
         text = elem.get('text')
         if(text):
             bsi_type = ''
@@ -110,6 +108,7 @@ def clean(path):
         return path.replace('bsi', '')
     return path
 
+
 def clean_text(text):
     return text.replace('Implementation notes for the block', '')\
             .replace('Implementation notes for the module', '')\
@@ -117,6 +116,7 @@ def clean_text(text):
             .replace('Implementation notes for module', '')\
             .replace('Implementation notes for building block', '')\
             .strip()
+
 
 def get_bsi_article_id(file_name):
     # search the BSI id in the file name
@@ -149,7 +149,6 @@ def get_bsi_article_id(file_name):
                     match = match.replace(" ", "")
                 else:
                     print('No BSI ID found in ' + file_name + '. Skipped...')
-    print(file_name + ' matched to ' + match)
     return match
 
 
@@ -168,4 +167,3 @@ def fix_typo(id):
 
 if __name__ == '__main__':
     addLinksToTreeView()
-

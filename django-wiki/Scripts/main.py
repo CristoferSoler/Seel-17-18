@@ -2,15 +2,20 @@ from datetime import datetime, timedelta
 import time
 import sys
 from sched import scheduler
-from .bsiImporter import doUpdate, post_phase, doImport
-# import schedule
-from .treeview_importer import addLinksToTreeView
+import os
+import django
 
-sys.path.append(r'../../')
+sys.path.append(r'..')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
 
-#from programming.bsiCrawler.main import crawlTranslateTreeview
-#from programming.bsiWizard.topicGeneration import topicGeneration
-# from programming.bsiComparator.bsicomparator import compare
+from Scripts.treeview_importer import addLinksToTreeView
+from Scripts.bsiImporter import doUpdate, post_phase, doImport
+from bsiwiki import settings
+
+#from Scripts.bsiCrawler.main import crawlTranslateTreeview
+#from Scripts.bsiWizard.topicGeneration import topicGeneration
+#from Scripts.bsiComparator.bsicomparator import compare
 isRunning = False
 
 def update_phase():
@@ -36,11 +41,10 @@ def update_phase():
 
 
     # enter mid phase
-    doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
+    doUpdate(settings.COMPARATOR_OUTPUT)
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)
-    s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") ,
-                                './../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
+    s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") , settings.COMPARATOR_OUTPUT)
                                                        , archive_date)
     s.run()
 
