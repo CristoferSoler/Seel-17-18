@@ -1,7 +1,11 @@
 {% extends 'bsi/base.html' %}
 {% block bsi_contents %}
-    {% load widget_tweaks %}
+    {% load static widget_tweaks sekizai_tags bsi_tags %}
     {% load perm %}
+
+    {% addtoblock "css" %}
+        <link type="text/css" href="{% static 'bsi/bootstrap/css/wiki-bootstrap.min.css' %}">
+    {% endaddtoblock %}
 
     <div class="jumbotron jumbroton-blue jumbotron-sm">
         <div class="container margin-image text-center">
@@ -25,11 +29,18 @@
                         <div class="row">
                             <div class="col-md-12">
                                 {% for field in q_form.visible_fields %}
-                                    <div class="form-group">
+                                    <div id="container_{{ field.name }}" class="form-group">
                                         {{ field|attr:"class:form-control"|attr:"placeholder:Write your question here"|attr:"rows:3"|attr:"required:required" }}
-                                        {% for error in field.errors %}
-                                            <span class="help-block">{{ error }}</span>
-                                        {% endfor %}
+                                        {% if field.errors %}
+                                            <script type="text/javascript">
+                                                $("#container_{{ field.name }}").addClass("has-error");
+                                            </script>
+                                            {% for error in field.errors %}
+                                                <div id="error_{{ field.name }}" class="help-block">
+                                                    <strong>{{ error }}</strong>
+                                                </div>
+                                            {% endfor %}
+                                        {% endif %}
                                     </div>
                                 {% endfor %}
                             </div>
@@ -60,17 +71,18 @@
                                 <div class="panel panel-default arrow left">
                                     <div class="panel-body">
                                         <div class="btn-group pull-right">
-                                            {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" %}
+                                            {% if request.user|info_delete_question:q %}
                                                 <form action="{% url 'delete_q' %}" method="post">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="q_id" value="{{ q.id }}"/>
                                                     <button type="submit" class="btn btn-link" name="button"><i
-                                                            class="glyphicon glyphicon-trash" style="color: #00A000"></i></button>
+                                                            class="glyphicon glyphicon-trash"
+                                                            style="color: #00A000"></i></button>
                                                 </form>
                                             {% endif %}
                                         </div>
 
-                                        {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" %}
+                                        {% if request.user|info_change_question:q %}
                                             <div class="btn-group pull-right">
                                                 <button type="submit" class="btn btn-link" data-toggle="modal"
                                                         data-target="#{{ q.id }}">
@@ -102,7 +114,8 @@
                                                             <button type="button" class="btn btn-default"
                                                                     data-dismiss="modal">Close
                                                             </button>
-                                                            <button type="submit" class="btn btn-success" name="question_button">
+                                                            <button type="submit" class="btn btn-success"
+                                                                    name="question_button">
                                                                 Save
                                                             </button>
                                                         </div>
@@ -171,7 +184,8 @@
                                                     {% csrf_token %}
                                                     <input type="hidden" name="a_id" value="{{ a.id }}"/>
                                                     <button type="submit" class="btn btn-link" name="button"><i
-                                                            class="glyphicon glyphicon-trash" style="color: #00A000"></i></button>
+                                                            class="glyphicon glyphicon-trash"
+                                                            style="color: #00A000"></i></button>
                                                 </form>
 
 
@@ -187,37 +201,39 @@
                                         <div id="{{ a.id }}" class="modal fade" role="dialog">
                                             <div class="modal-dialog">
 
-                                                <!-- Modal content-->
-                                                <div class="modal-content">
-                                                    <form action="{% url 'edit_a' %}"  method="post">
-                                                        {% csrf_token %}
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal">
-                                                                &times;
-                                                            </button>
-                                                            <h4 class="modal-title">Edit answer</h4>
-                                                        </div>
-                                                        <div class="modal-body">
+                                                    <!-- Modal content-->
+                                                    <div class="modal-content">
+                                                        <form action="{% url 'edit_a' %}" method="post">
+                                                            {% csrf_token %}
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close"
+                                                                        data-dismiss="modal">
+                                                                    &times;
+                                                                </button>
+                                                                <h4 class="modal-title">Edit answer</h4>
+                                                            </div>
+                                                            <div class="modal-body">
                                                             <textarea class="form-control" id="answer" type="text"
                                                                       name="answer" rows="3"
                                                                       required>{{ a.answer }}</textarea>
-                                                        </div>
-                                                        <input type="hidden" name="answer_from" value="{{ q.id }}"/>
-                                                        <input type="hidden" name="answer_id" value="{{ a.id }}"/>
+                                                            </div>
+                                                            <input type="hidden" name="answer_from" value="{{ q.id }}"/>
+                                                            <input type="hidden" name="answer_id" value="{{ a.id }}"/>
 
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default"
-                                                                    data-dismiss="modal">Close
-                                                            </button>
-                                                            <button type="submit" class="btn btn-success" name="button">
-                                                                Save
-                                                            </button>
-                                                        </div>
-                                                    </form>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default"
+                                                                        data-dismiss="modal">Close
+                                                                </button>
+                                                                <button type="submit" class="btn btn-success"
+                                                                        name="button">
+                                                                    Save
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-
+                                        {% endif %}
 
                                         <div class="panel-body">
                                             <div class="text-left">

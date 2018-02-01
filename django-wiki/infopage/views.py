@@ -1,29 +1,36 @@
-from django.shortcuts import render
-from django.http import HttpResponseRedirect
-from .forms import QuestionForm, AnswerForm
-from .models import Question, PageType, Answer
-from django.urls import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import PermissionDenied
+from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
+
+from .forms import QuestionForm, AnswerForm
+from .models import Question, PageType, Answer
 
 
 def information(request):
     if request.method == 'GET':
         q_form = QuestionForm()
         a_form = AnswerForm()
-        return render(request, 'info.html', {'q_form': q_form, 'a_form': a_form, 'questions': Question.get_questions(PageType.INFO_PAGE)})
+        return render(request, 'info.html',
+                      {'q_form': q_form, 'a_form': a_form, 'questions': Question.get_questions(PageType.INFO_PAGE)})
 
 
 def post_question(request):
     if request.method == 'POST':
         if 'question_button' in request.POST:
             q_form = QuestionForm(request.POST)
+            # a_form = AnswerForm(request.POST)
+
             if q_form.is_valid():
-                if(request.user.is_authenticated):
+                if request.user.is_authenticated:
                     Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE, request.user)
                 else:
                     Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE)
-    return HttpResponseRedirect(reverse('information'))
+                return HttpResponseRedirect(reverse('information'))
+            return render(request, 'info.html', {'q_form': q_form,
+                                                     'questions': Question.get_questions(
+                                                         PageType.INFO_PAGE)})
 
 
 def post_answer(request):
@@ -31,13 +38,14 @@ def post_answer(request):
         if 'answer_button' in request.POST:
             a_form = AnswerForm(request.POST)
             if a_form.is_valid():
-                if(a_form.cleaned_data['answer_from']):
+                if (a_form.cleaned_data['answer_from']):
                     q = Question.get_question(a_form.cleaned_data['answer_from'])
-                    if(request.user.is_authenticated):
+                    if (request.user.is_authenticated):
                         q.add_answer(a_form.cleaned_data['answer'], request.user)
                     else:
                         q.add_answer(a_form.cleaned_data['answer'])
-    return HttpResponseRedirect(reverse('information'))
+                return HttpResponseRedirect(reverse('information'))
+            return render(request, 'info.html', {'a_form': a_form})
 
 
 def has_permission(user):
