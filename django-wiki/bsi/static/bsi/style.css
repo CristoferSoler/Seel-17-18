@@ -75,6 +75,10 @@ footer .menu li a:hover {
     max-height: 380px;
 }
 
+.navbar .bg-secondary{
+    background-color: #0e84b5;
+}
+
 /*for article content */
 @import url(//cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/paper/bootstrap.min.css);
 @import url(//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css);
@@ -113,8 +117,8 @@ header {
     top: 0;
     left: 0;
     background: linear-gradient(
-            rgba(238, 238, 238, 0.65),
-            rgba(238, 238, 238, 0.65)),
+            rgba(238, 238, 238, 0.6),
+            rgba(238, 238, 238, 0.6)),
             url("../bsi/images/afghanistan-80360_1920.jpg");
     background-size: cover;
 
