@@ -117,7 +117,7 @@ def doUpdate():
                             addToDB(data_file.read(), parent, id, file_name, article_type)
                         except Exception:
                             print("Article with the ID " + id + " has already been saved under \
-                                the What's New page. Skipped...")
+                                   the What's New page. Skipped...")
                             continue
 
         appendThreatMeasureRelation_update()
@@ -197,30 +197,26 @@ def post_phase():
     # change the url of the new one to the old one
     # delete the new (change log) page
 
-    try:
-        archive_date = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
-        archive = Archive.get_or_create(archive_date)
-        new = URLPath.objects.get(slug='new')
-        bsi = URLPath.objects.get(slug='bsi')
-        types = URLPath.objects.filter(parent=new)
+    archive_date = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+    archive = Archive.get_or_create(archive_date)
+    new = URLPath.objects.get(slug='new')
+    bsi = URLPath.objects.get(slug='bsi')
+    types = URLPath.objects.filter(parent=new)
 
-        post_phase_move_deleted_articles(archive, bsi)
+    post_phase_move_deleted_articles(archive, bsi)
 
-        for new_type in types:
-            if new_type.slug == "components":
-                post_phase_move_bsi(new_type=new_type, default_type="components", old_parent=bsi, archive=archive)
-            elif new_type.slug == "threats":
-                post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
-            elif new_type.slug == "implementationnotes":
-                post_phase_move_bsi(new_type=new_type, default_type="implementationnotes",
-                                    old_parent=bsi, archive=archive)
+    for new_type in types:
+        if new_type.slug == "components":
+            post_phase_move_bsi(new_type=new_type, default_type="components", old_parent=bsi, archive=archive)
+        elif new_type.slug == "threats":
+            post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
+        elif new_type.slug == "implementationnotes":
+            post_phase_move_bsi(new_type=new_type, default_type="implementationnotes",
+                                old_parent=bsi, archive=archive)
 
-        post_phase_delete_url(new)
-        updateModificationTime()
-        cleanUp()
-    except Exception as e:
-        print(e)
-        return "An error has occurred. Update process aborted."
+    post_phase_delete_url(new)
+    updateModificationTime()
+    cleanUp()
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
