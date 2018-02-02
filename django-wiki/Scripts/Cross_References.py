@@ -3,7 +3,6 @@ import django
 import os
 import sys
 from os import listdir
-from os.path import isdir
 from urllib.request import urlopen
 import zipfile
 from io import BytesIO
@@ -83,7 +82,7 @@ def csv_parser(path_and_file, newFolderPath):
                 csv_to_txt.write("  " + requirement + '\n')
         csv_to_txt.close()
     except IOError:
-        print('An error occurred trying to open (read/write) the file.')
+        print('An error has occurred while trying to open (read/write) the Cross Reference files. Aborted...')
 
 
 def get_cr_relation():
@@ -116,7 +115,7 @@ def get_cr_relation():
                                         new_component_file.write(line)
                         new_component_file.close()
     except IOError:
-        print('An error occurred trying to open (read/write) the file.')
+        print('An error has occurred while trying to open (read/write) the Cross Reference files. Aborted...')
 
 
 def find_BSI_threats(threatName, site):

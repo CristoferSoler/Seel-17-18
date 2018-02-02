@@ -41,7 +41,7 @@ def update_phase():
 
 
     # enter mid phase
-    doUpdate(settings.COMPARATOR_OUTPUT)
+    doUpdate()
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)
     s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") , settings.COMPARATOR_OUTPUT)
