@@ -158,8 +158,6 @@ def fillNewPage(modified, added, deleted, new_page):
         if(bsi_type.slug == 'components'):
             content = addToNewPage(site, content, 'Components', bsi_type.slug, bsi, bsi_type, modified, added, deleted)
         if(bsi_type.slug == 'threats'):
-            #import pdb
-            #pdb.set_trace()
             content = addToNewPage(site, content, 'Threats', bsi_type.slug, bsi, bsi_type, modified, added, deleted)
         elif(bsi_type.slug == 'implementationnotes'):
             content = addToNewPage(site, content, 'Implementation Notes', bsi_type.slug, bsi, bsi_type,
@@ -192,14 +190,16 @@ def addToNewPage(site, content, title, slug, parent, bsi_type, modified, added, 
     return content
 
 
-def post_phase(archiving_data):
-        # after 30 days
-        # create archive
-        # move the old bsi articles with their related uga articles to archive
-        # change the url of he new one to the old one
-        # delete the new (change log) page
+def post_phase():
+    # after 30 days
+    # create archive
+    # move the old bsi articles with their related uga articles to archive
+    # change the url of the new one to the old one
+    # delete the new (change log) page
 
-        archive = Archive.get_or_create(archiving_data)
+    try:
+        archive_date = datetime.now().strftime("%Y-%m-%d_%H:%M:%S")
+        archive = Archive.get_or_create(archive_date)
         new = URLPath.objects.get(slug='new')
         bsi = URLPath.objects.get(slug='bsi')
         types = URLPath.objects.filter(parent=new)
@@ -207,88 +207,107 @@ def post_phase(archiving_data):
         post_phase_move_deleted_articles(archive, bsi)
 
         for new_type in types:
-                if new_type.slug == "components":
-                    post_phase_move_bsi(new_type=new_type, default_type="components", old_parent=bsi, archive=archive)
-                elif new_type.slug == "threats":
-                    post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
-                elif new_type.slug == "implementationnotes":
-                    post_phase_move_bsi(new_type=new_type, default_type="implementationnotes",
-                                        old_parent=bsi, archive=archive)
+            if new_type.slug == "components":
+                post_phase_move_bsi(new_type=new_type, default_type="components", old_parent=bsi, archive=archive)
+            elif new_type.slug == "threats":
+                post_phase_move_bsi(new_type=new_type, default_type="threats", old_parent=bsi, archive=archive)
+            elif new_type.slug == "implementationnotes":
+                post_phase_move_bsi(new_type=new_type, default_type="implementationnotes",
+                                    old_parent=bsi, archive=archive)
 
         post_phase_delete_url(new)
         updateModificationTime()
-        # cleanUp()
+        cleanUp()
+    except Exception as e:
+        print(e)
+        return "An error has occurred. Update process aborted."
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
-    # for each type append the new updates
-    if default_type == "components":
-        type_symbol = BSI_Article_type.COMPONENT
-    elif default_type == "threats":
-        type_symbol = BSI_Article_type.THREAT
-    elif default_type == "implementationnotes":
-        type_symbol = BSI_Article_type.IMPLEMENTATIONNOTES
+    try:
+        # for each type append the new updates
+        if default_type == "components":
+            type_symbol = BSI_Article_type.COMPONENT
+        elif default_type == "threats":
+            type_symbol = BSI_Article_type.THREAT
+        elif default_type == "implementationnotes":
+            type_symbol = BSI_Article_type.IMPLEMENTATIONNOTES
 
-    if new_type.slug == default_type:
-        bsi_type = URLPath.objects.get(parent=old_parent, slug=default_type)
-        new_articles = new_type.get_children()
-        for new_article in new_articles:
-            try:
-                old_article = URLPath.objects.get(parent=bsi_type, slug=new_article.slug)
-                old_article.slug = type_symbol.label.lower()[:1] + "_" + old_article.slug
-                old_article.save()
-                for ancestor in Article.objects.get(pk=old_article.article.pk).ancestor_objects():
-                    ancestor.article.clear_cache()
-                ArchiveTransaction.create(archive, old_article).archive()
-                old_article.set_cached_ancestors_from_parent(archive.archive_url)
-                old_article.save()
-                post_phase_move_references(archive, old_article)
-            except Exception:
-                # if old article not found, this means this is a newly added article
-                pass
+        if new_type.slug == default_type:
+            bsi_type = URLPath.objects.get(parent=old_parent, slug=default_type)
+            new_articles = new_type.get_children()
+            for new_article in new_articles:
+                try:
+                    old_article = URLPath.objects.get(parent=bsi_type, slug=new_article.slug)
+                    old_article.slug = type_symbol.label.lower()[:1] + "_" + old_article.slug
+                    old_article.save()
+                    for ancestor in Article.objects.get(pk=old_article.article.pk).ancestor_objects():
+                        ancestor.article.clear_cache()
+                    ArchiveTransaction.create(archive, old_article).archive()
+                    old_article.set_cached_ancestors_from_parent(archive.archive_url)
+                    old_article.save()
+                    post_phase_move_references(archive, old_article)
+                except Exception:
+                    # if old article not found, this means this is a newly added article
+                    pass
 
-            new_article.parent = bsi_type
-            new_article.parent.parent = bsi_type.parent
-            new_article.save()
-            for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
-                ancestor.article.clear_cache()
-            new_article.set_cached_ancestors_from_parent(bsi_type)
-            new_article.save()
+                try:
+                    new_article.parent = bsi_type
+                    new_article.parent.parent = bsi_type.parent
+                    new_article.save()
+                    for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
+                        ancestor.article.clear_cache()
+                    new_article.set_cached_ancestors_from_parent(bsi_type)
+                    new_article.save()
+                except Exception as e:
+                    print(e)
+                    pass
+    except Exception as e:
+        print(e)
+        return
 
 
 def post_phase_move_references(archive, bsi_article):
     # move the uga articles that related to the old bsi to archive
     uga_ref = bsi_article.bsi.references.all()
     for ref in uga_ref:
-        for ancestor in Article.objects.get(pk=ref.url.article.pk).ancestor_objects():
-            ancestor.article.clear_cache()
-        ArchiveTransaction.create(archive, ref.url).archive()
-        ref.url.set_cached_ancestors_from_parent(archive.archive_url)
-        ref.url.save()
+        try:
+            for ancestor in Article.objects.get(pk=ref.url.article.pk).ancestor_objects():
+                ancestor.article.clear_cache()
+            ArchiveTransaction.create(archive, ref.url).archive()
+            ref.url.set_cached_ancestors_from_parent(archive.archive_url)
+            ref.url.save()
+        except Exception:
+            pass
 
 
 def post_phase_move_deleted_articles(archive, bsi):
-    # move the bsi deleted articles directly to archive
-    modified, added, deleted = checkFileAction()
-    for elem in deleted.get('type'):
-        if(elem.get('name') == "components"):
-            bsi_type = URLPath.objects.get(parent=bsi, slug="components")
-        if(elem.get('name') == "threats"):
-            bsi_type = URLPath.objects.get(parent=bsi, slug="threats")
-        if (elem.get('name') == "implementationnotes"):
-            bsi_type = URLPath.objects.get(parent=bsi, slug="implementationnotes")
+    try:
+        # move the bsi deleted articles to archive
+        modified, added, deleted = checkFileAction()
+        for elem in deleted.get('type'):
+            if(elem.get('name') == "components"):
+                bsi_type = URLPath.objects.get(parent=bsi, slug="components")
+            if(elem.get('name') == "threats"):
+                bsi_type = URLPath.objects.get(parent=bsi, slug="threats")
+            if (elem.get('name') == "implementationnotes"):
+                bsi_type = URLPath.objects.get(parent=bsi, slug="implementationnotes")
 
-        for file in elem.get('files'):
-            bsi_id = file.get('file')
-            deleted_article = URLPath.objects.get(parent=bsi_type, slug=bsi_id)
-            for ancestor in Article.objects.get(pk=deleted_article.article.pk).ancestor_objects():
-                    ancestor.article.clear_cache()
-            ArchiveTransaction.create(archive, deleted_article).archive()
-            new = URLPath.objects.get(pk=deleted_article.pk)
-            new.set_cached_ancestors_from_parent(archive.archive_url)
-
-            post_phase_move_references(archive, deleted_article)
-            new.save()
+            for file in elem.get('files'):
+                try:
+                    bsi_id = file.get('file')
+                    deleted_article = URLPath.objects.get(parent=bsi_type, slug=bsi_id)
+                    for ancestor in Article.objects.get(pk=deleted_article.article.pk).ancestor_objects():
+                            ancestor.article.clear_cache()
+                    ArchiveTransaction.create(archive, deleted_article).archive()
+                    new = URLPath.objects.get(pk=deleted_article.pk)
+                    new.set_cached_ancestors_from_parent(archive.archive_url)
+                    new.save()
+                    post_phase_move_references(archive, deleted_article)
+                except Exception:
+                    pass
+    except Exception:
+        return
 
 
 def post_phase_delete_url(path):
@@ -301,7 +320,7 @@ def post_phase_delete_url(path):
 
 
 def updateModificationTime():
-    # update the date for all unchange and change articles
+    # update the date for all unchanged and changed articles
     new_date = datetime.now()
     for bsi in BSI.objects.all():
         bsi.url.article.modified = new_date
@@ -358,7 +377,8 @@ def checkFileAction():
 
         obj = [c for c in types if c.get('name') == name][0]
         if obj:
-            obj['files'].append({'file': get_bsi_article_id(line)})
+            obj['files'].append({'file': get_bsi_article_id(line),
+                                 'filename': line})
 
     return modified, added, deleted
 

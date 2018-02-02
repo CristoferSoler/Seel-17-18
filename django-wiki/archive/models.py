@@ -91,7 +91,7 @@ class ArchiveTransaction(models.Model):
 
     @classmethod
     def get_path_by_slug(cls, archive_slug, article_slug):
-        # try to find the URLPath, given the archive slug and the article slug 
+        # try to find the URLPath, given the archive slug and the article slug
         # first check if the archive exists
         archive = Archive.get_archive_by_slug(archive_slug)
         # find all transactions with that archive as the root
@@ -100,11 +100,12 @@ class ArchiveTransaction(models.Model):
             raise Http404("No archive found that matches the specified slug: " + archive_slug)
         for t in trans:
             try:
-                if(t.urlpath == URLPath.objects.get(slug=article_slug)):
+                if(t.urlpath == URLPath.objects.get(parent=archive.archive_url, slug=article_slug)):
                     return t.urlpath
-            except:
+            except Exception:
                 continue
-        raise Http404("No archived article found in " + archive_slug + " that matches the specified slug: " + article_slug)
+        raise Http404("No archived article found in " + archive_slug + " that matches the specified slug: " +
+                      article_slug)
 
     @classmethod
     def get_all_archive_urlpaths(cls):
