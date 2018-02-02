@@ -11,8 +11,8 @@ django.setup()
 
 from bsiwiki import settings
 
-# oldDir = settings.BSI_DE
-oldDir = './md'
+oldDir = settings.BSI_DE
+# oldDir = './md'
 newDir = settings.TEMP_BSI_DE
 
 
