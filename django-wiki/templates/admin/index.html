@@ -20,32 +20,23 @@
 				<th><p id="update"></p></th>
             </tr>
 
-            <!---
-			<tr class="model-image">
-				<th>Post Phase</th>
-				<td scope="row"><button onclick="postUpdate()">Start</button></td>
-			</tr>
-
-        </table>
-        </div>
-        --->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 	$(document).ready(function () {
-       // $('#update').html(window.localStorage.getItem('update'));
         var id =  $("#update")
-        var data = {'user':'test'};
+        var data = {};
         $.ajax({
             dataType:'json',
             url:'/_update/check_update/',
             data: data,
+
             success: function(data) {
             if(data.status == true){
                 $("#update_btn").prop('disabled', true); // disable button
                 id.text(data.msg);
-            }else if(data.status == false){
+            }else {
                 $("#update_btn").prop('disabled', false); // enable button
-                id.text("The update is finished")
+                id.text("No running update")
             }
             },
         });
@@ -53,35 +44,28 @@
 
 	function startUpdate() {
 	    var id =  $("#update")
-		var data = {'user':'test'};
+		var data = {};
 		$.ajax({
             dataType:'json',
-            url:'/_update/Update/',
+            url:'/_update/update/',
             data: data,
 
-             beforeSend: function(data) {
+            beforeSend: function(data) {
                   $("#update_btn").prop('disabled', true); // disable button
-                  id.text('Update is start')
-                 },
+                  id.text('Starting update...')
+            },
+
             success: function(data) {
             if(data.status == 'ok'){
+              $("#update_btn").prop('disabled', false);
               id.text(data.msg);
-            }else if(data.status == 'error'){
+            } else if(data.status == 'error'){
                 $("#update_btn").prop('disabled', false); // disable button
                 id.text(data.msg);
                 }
                },
         });
     }
-
-   /*function postUpdate() {
-		var data = {'user':'test'};
-		$.ajax({
-            dataType:'json',
-            url:'/_update/performPostPhase/',
-            data: data,
-        });
-    }*/
 
 </script>
 
