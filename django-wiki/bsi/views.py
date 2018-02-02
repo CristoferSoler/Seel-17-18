@@ -210,7 +210,7 @@ def faq(request):
     return render(request, 'bsi/footer/faq.html')
 
 def contact(request):
-    return render(request, 'bsi/footer/contact.html')
+    return render(request, 'bsi/footer/policy.html')
 
 def admin_control(request):
     return render(request, 'bsi/account/admin_control_panel_main.html')
