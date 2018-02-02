@@ -11,8 +11,6 @@ django.setup()
 
 from Scripts.treeview_links import addLinksToTreeView
 from Scripts.bsiImporter import doUpdate, post_phase, doImport
-from bsiwiki import settings
-# from Scripts.bsiCrawler.main import crawlTranslateTreeview
 # from Scripts.bsiWizard.topicGeneration import topicGeneration
 # from Scripts.bsiComparator.bsicomparator import compare
 
@@ -25,14 +23,14 @@ def update_phase():
 
     print('Entering mid-phase on:', datetime.now())
 
-    # call crawler + translator + treeview generation
-    # crawlTranslateTreeview()
-
-    # call topic generation for the wizard
-    # topicGeneration()
+    # call crawler
+    # os.system('scrapy runspider bsiCrawler/crawli.py -a phase=1 --nolog')
 
     # call comparator
-    # file = compare()
+    # compare()
+
+    # call translator
+    # os.system('python3 bsiCrawler/translatorMultiProcessing.py 1')
 
     # enter mid phase
     res = doUpdate()
@@ -51,7 +49,10 @@ def update_phase():
         return 'An error has occurred. Update process aborted'
 
     # call treeview importer
-    # addLinksToTreeView()
+    addLinksToTreeView()
+
+    # call topic generation for the wizard
+    # topicGeneration()
 
     print('Post-phase has been executed.')
     isRunning = False
@@ -63,4 +64,16 @@ def check_update_progress():
 
 
 if __name__ == "__main__":
+    # call crawler
+    # os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
+
+    # call translator
+    # os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
+
     doImport()
+
+    # call treeview importer
+    addLinksToTreeView()
+
+    # call topic generation for the wizard
+    # topicGeneration()

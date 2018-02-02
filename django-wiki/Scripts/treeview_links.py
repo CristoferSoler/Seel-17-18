@@ -54,11 +54,11 @@ def addLinksToTreeView():
             parents = []
             # find in database
             if(bsi_type == BSI_Article_type.COMPONENT):
-                parents = URLPath.objects.filter(slug='components')
+                parents = URLPath.objects.filter(slug='components', parent=parent)
             elif(bsi_type == BSI_Article_type.THREAT):
-                parents = URLPath.objects.filter(slug='threats')
+                parents = URLPath.objects.filter(slug='threats', parent=parent)
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
-                parents = URLPath.objects.filter(slug='implementationnotes')
+                parents = URLPath.objects.filter(slug='implementationnotes', parent=parent)
 
             if(parents):
                 parent = parents[0]
@@ -83,6 +83,7 @@ def addLinksToTreeView():
 
 def find_BSI_articles(nodes, type, children, site, path_list):
     if(nodes):
+        delete = []
         for node in nodes:
             text = node.get('text').lstrip()
             if(text):
@@ -97,9 +98,12 @@ def find_BSI_articles(nodes, type, children, site, path_list):
                             new_dict = {'name': node.get('text'), 'path': node.get('href')}
                             path_list.append(new_dict)
                     if(not path):
+                        delete.append(node)
                         print('WARNING: Path not found for ' + id + '. Please check the DB or the tree view file.')
-
+                        continue
             node = find_BSI_articles(node.get('nodes'), type, children, site, path_list)
+        for n in delete:
+            nodes.remove(n)
     return nodes
 
 
