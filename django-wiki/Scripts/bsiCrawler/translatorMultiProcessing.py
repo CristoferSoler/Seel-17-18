@@ -3,9 +3,20 @@ import os
 import re
 import time
 
+import django
 import progressbar
+import sys
 from googletrans import Translator
+from multiprocessing import Pool
 
+from Scripts.bsiImporter import checkFileAction
+
+
+sys.path.append(r'../..')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
+
+from bsiwiki import settings
 
 def content_from_list(content):
     mdFilePart = ''
@@ -54,36 +65,6 @@ urls = [
         'translate.google.hr',
         'translate.google.ht',
         'translate.google.hu',]
-
-directoryContentEN = './contentEn/'
-directoryContent = './content/'
-directoryC = './md/C'
-directoryN = './md/N'
-directoryT = './md/T'
-directoryEN = './mdEn'
-fertig = False
-
-def checkStatus(filesLenght):
-    bar = progressbar.ProgressBar(maxval=filesLenght).start()
-    files = os.listdir(directoryEN)
-    lastFile = len(files)
-    while (fertig != True):
-
-        filesC = os.listdir(directoryC)
-        filesN = os.listdir(directoryN)
-        filesT = os.listdir(directoryT)
-
-        lenFiles = len(filesC) + len(filesN) + len(filesT)
-        if(lastFile != lenFiles):
-            bar.update(lenFiles)
-            lastFile = lenFiles
-        else:
-            pass
-        time.sleep(0.1)
-
-    bar.finish()
-    return
-
 
 def check15k(list, component):
     listOf15k = []
@@ -162,3 +143,53 @@ def translate(fileMD):
     f = open(directoryEN + '/' + dir + re.sub('/', '-', filenameEn),'w', encoding='utf-8' )
     f.write(textEl)
     f.close()
+
+
+if __name__ == "__main__":
+    global directoryC
+    global directoryN
+    global directoryT
+    global directoryEN
+
+    filesForTranslation = []
+    phase = str(sys.argv[1])
+
+    if(phase == '0'):
+        directoryC = settings.BSI_DE + '/C'
+        directoryN = settings.BSI_DE + '/N'
+        directoryT = settings.BSI_DE + '/T'
+        directoryEN = settings.BSI_EN
+
+        files = os.listdir(directoryC)
+        files.extend(os.listdir(directoryT))
+        files.extend(os.listdir(directoryN))
+
+    elif(phase == '1'):
+        directoryC = settings.TEMP_BSI_DE + '/C'
+        directoryN = settings.TEMP_BSI_DE + '/N'
+        directoryT = settings.TEMP_BSI_DE + '/T'
+        directoryEN = settings.TEMP_BSI_EN
+
+        modified, added, deleted = checkFileAction()
+
+        typesModified = modified('type')
+        typesAdded = added.get('type')
+
+        for el in typesModified:
+            files = el['files']
+            for file in files:
+                filesForTranslation.append(file['filename'])
+
+        for el in typesAdded:
+            files = el['files']
+            for file in files:
+                filesForTranslation.append(file['filename'])
+
+
+    else:
+        raise ValueError('Please set a phase with phase 0|1')
+
+
+
+    pool = Pool()
+    pool.map(translate, files)
