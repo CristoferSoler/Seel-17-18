@@ -1,9 +1,10 @@
 import django
-import configparser
 import sys
 from os.path import isdir, join, basename, split, splitext
 from os import listdir, environ, walk
 from datetime import datetime
+from distutils.dir_util import copy_tree
+
 
 sys.path.append(r'..')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -435,12 +436,20 @@ def appendThreatMeasureRelation():
 
 
 def cleanUp():
-    # TODO remove all temp dirs and update files in current dirs
-    # We need the path to old BSI dir to update its content?
+    # remove all temp dirs and update files in current dirs
+    # delete old content in bsi_de
+    # deleteAllFilesInDirectory(settings.BSI_DE)
+    # copy new content to bsi_de
+    # copy_tree(settings.TEMP_BSI_DE, settings.BSI_DE)
+    # delete temp_de
+    # deleteAllFilesInDirectory(settings.TEMP_BSI_DE)
+
+    # delete deleted articles in bsi_en
+    # copy and replace articles from temp_en to bsi_en
+    # delete temp_en
+    # deleteAllFilesInDirectory(settings.TEMP_BSI_EN)
+
     deleteAllFilesInDirectory(settings.CR_CSV_DOWNLOAD_DIR)
     deleteAllFilesInDirectory(settings.CR_TXT_DIR)
     deleteAllFilesInDirectory(settings.CRF_DIR)
     # deleteAllFilesInDirectory(settings.REFERENCE_DIR)
-    # deleteAllFilesInDirectory(settings.TEMP_BSI_EN)
-    # deleteAllFilesInDirectory(settings.TEMP_BSI_DE)
-    return
