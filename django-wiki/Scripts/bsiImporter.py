@@ -2,7 +2,7 @@ import django
 import sys
 import os
 from os.path import isdir, join, basename, split, splitext
-from os import listdir, environ, walk, path
+from os import listdir, environ, walk
 from datetime import datetime
 from distutils.dir_util import copy_tree
 import shutil
@@ -17,7 +17,6 @@ from wiki.models import URLPath, ArticleRevision, Article
 from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
 from django.contrib.sites.models import Site
-from Scripts.bsiCrawler.main import deleteAllFilesInDirectory
 from Scripts.bsiComparator.bsicomparator import readConfig
 
 new_temp_bsi_folder = settings.TEMP_BSI_EN
@@ -437,22 +436,66 @@ def appendThreatMeasureRelation():
 
 def cleanUp():
     # remove all temp dirs and update files in current dirs
+
     # delete old content in bsi_de
-    # deleteAllFilesInDirectory(settings.BSI_DE)
+    # clearDir(settings.BSI_DE)
+
     # copy new content to bsi_de
     # copy_tree(settings.TEMP_BSI_DE, settings.BSI_DE)
+
     # delete temp_de
-    # deleteAllFilesInDirectory(settings.TEMP_BSI_DE)
+    # clearDir(settings.TEMP_BSI_DE)
 
     # delete deleted articles in bsi_en
-    # copy and replace articles from temp_en to bsi_en
-    # delete temp_en
-    # deleteAllFilesInDirectory(settings.TEMP_BSI_EN)
+    # deleteOldFiles()
 
-    if os.path.exists(settings.CR_CSV_DOWNLOAD_DIR):
-        shutil.rmtree(settings.CR_CSV_DOWNLOAD_DIR)
-    if os.path.exists(settings.CR_TXT_DIR):
-        shutil.rmtree(settings.CR_TXT_DIR)
-    if os.path.exists(settings.CRF_DIR):
-        shutil.rmtree(settings.CRF_DIR)
-    # deleteAllFilesInDirectory(settings.REFERENCE_DIR)
+    # copy and replace articles from temp_en to bsi_en
+    # putNewFiles()
+
+    # delete temp_en
+    # clearDir(settings.TEMP_BSI_EN)
+
+    clearDir(settings.CR_CSV_DOWNLOAD_DIR)
+    clearDir(settings.CR_TXT_DIR)
+    clearDir(settings.CRF_DIR)
+    # clearDir(settings.REFERENCE_DIR)
+
+
+def clearDir(path):
+    if os.path.exists(path) and isdir(path):
+        shutil.rmtree(path)
+        os.makedirs(path)
+
+
+def deleteOldFiles():
+    modified, added, deleted = checkFileAction()
+    for elem in deleted.get('type'):
+        t = elem.get('name')
+        for file in elem.get('files'):
+            bsi_id = file.get('file')
+            for dirpath, dirnames, filenames in walk(settings.BSI_EN):
+                if not filenames:
+                    continue
+                if basename(dirpath) != t:
+                    continue
+                for f in filenames:
+                    # prone to typo error
+                    if bsi_id in f:
+                        os.remove(f)
+
+
+def putNewFiles():
+    c = os.join(settings.TEMP_BSI_EN, 'C')
+    n = os.join(settings.TEMP_BSI_EN, 'N')
+    t = os.join(settings.TEMP_BSI_EN, 'T')
+
+    s_c = os.join(settings.BSI_EN, 'C')
+    s_n = os.join(settings.BSI_EN, 'N')
+    s_t = os.join(settings.BSI_EN, 'T')
+
+    if os.path.exists(c) and os.path.exists(s_c):
+        copy_tree(c, s_c)
+    if os.path.exists(n) and os.path.exists(s_n):
+        copy_tree(n, s_n)
+    if os.path.exists(t) and os.path.exists(s_t):
+        copy_tree(t, s_t)
