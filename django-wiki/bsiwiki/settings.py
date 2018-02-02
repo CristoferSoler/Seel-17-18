@@ -172,8 +172,7 @@ MEDIA_URL = '/media/'
 
 X_FRAME_OPTIONS = 'DENY'
 
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-
+# Email settings
 EMAIL_HOST = 'smtp.googlemail.com'
 EMAIL_HOST_USER = 'seel.tuberlin@gmail.com'
 EMAIL_HOST_PASSWORD = 'seel1718'

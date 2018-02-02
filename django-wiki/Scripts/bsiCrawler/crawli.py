@@ -1,7 +1,10 @@
 import functools
 import re
+from os import environ
 
 import scrapy as sc
+import django
+import sys
 from markdownify import markdownify as md
 
 '''
@@ -11,8 +14,15 @@ Elementary Hazards, Building Blocks, and Implementation Notes and from there all
  of the BSI. Next, the content is converted from html to md and stored in a folder structure.  
 '''
 
+sys.path.append(r'../..')
+environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
+
+from bsiwiki import settings
+
 # directorys for the german content of the bsi
-directoryContent = './md/'
+#directoryContent = './md/'
+directoryContent = settings.BSI_DE
 directoryContentComponent = '/C/'
 directoryContentNotes = '/N/'
 directoryContentThreats = '/T/'
