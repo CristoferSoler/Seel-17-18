@@ -6,6 +6,7 @@ from os import listdir, environ, walk
 from datetime import datetime
 from distutils.dir_util import copy_tree
 import shutil
+from markdownify import markdownify as md
 
 sys.path.append(r'..')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -46,7 +47,7 @@ def doImport():
                 # import the content to the database
                 with open(join(dirpath, filename)) as data_file:
                     try:
-                        addToDB(data_file.read(), parent, id, filename, article_type)
+                        addToDB(data_file.read(), parent, id, file_name, article_type)
                     except Exception:
                         print("Article with the ID " + id + " already exists in the DB. Skipped...")
                         continue
@@ -63,7 +64,7 @@ def doImport():
 def checkBSItype(article_type, root):
     if article_type == "C":
         article_type = BSI_Article_type.COMPONENT
-        bsi_type = 'component'
+        bsi_type = 'components'
         parent = BSI.get_or_create_bsi_subroots(root, "components", "BSI.importer", "", "Components")
     elif article_type == "N":
         article_type = BSI_Article_type.IMPLEMENTATIONNOTES
@@ -72,7 +73,7 @@ def checkBSItype(article_type, root):
                                                 "Implementation Notes")
     elif article_type == "T":
         article_type = BSI_Article_type.THREAT
-        bsi_type = 'threat'
+        bsi_type = 'threats'
         parent = BSI.get_or_create_bsi_subroots(root, "threats", "BSI.importer", "", "Threats")
     else:
         return None, None, None, False
@@ -88,40 +89,43 @@ def addToDB(content, parent, id, filename, articletype):
 
 
 def doUpdate():
-    # find out which files should be m/a/d
-    modified, added, deleted = checkFileAction()
-    new_page = createNewPage()
+    try:
+        # find out which files should be m/a/d
+        modified, added, deleted = checkFileAction()
+        new_page = createNewPage()
 
-    # go through the dir and read the content of each file
-    for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
-        if not filenames:
-            continue
+        # go through the dir and read the content of each file
+        for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
+            if not filenames:
+                continue
 
-        # check the bsi article type is a component or threat or implementation notes
-        article_type, bsi_type, parent, flag = checkBSItype(basename(dirpath), new_page)
-        if not flag:
-            continue
+            # check the bsi article type is a component or threat or implementation notes
+            article_type, bsi_type, parent, flag = checkBSItype(basename(dirpath), new_page)
+            if not flag:
+                continue
 
-        for filename in [f for f in filenames if f.endswith(".md")]:
-            # get the article id and the title
-            file_name = splitext(filename)[0]
-            id = get_bsi_article_id(file_name)
+            for filename in [f for f in filenames if f.endswith(".md")]:
+                # get the article id and the title
+                file_name = splitext(filename)[0]
+                id = get_bsi_article_id(file_name)
 
-            # if the file is new or modified, add to database under /new
-            if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
-                # import the content to the database
-                with open(join(dirpath, filename)) as data_file:
-                    try:
-                        addToDB(data_file.read(), parent, id, filename, article_type)
-                    except Exception:
-                        print("Article with the ID " + id + " has already been saved under \
-                            the What's New page. Skipped...")
-                        continue
+                # if the file is new or modified, add to database under /new
+                if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
+                    # import the content to the database
+                    with open(join(dirpath, filename)) as data_file:
+                        try:
+                            addToDB(data_file.read(), parent, id, file_name, article_type)
+                        except Exception:
+                            print("Article with the ID " + id + " has already been saved under \
+                                the What's New page. Skipped...")
+                            continue
 
-    # appendThreatMeasureRelation()
-    fillNewPage(modified, added, deleted, new_page)
-    cleanUp()
-    return
+        appendThreatMeasureRelation_update()
+        fillNewPage(modified, added, deleted, new_page)
+        return ''
+    except Exception as e:
+        print(e)
+        return "An error has occurred. Update process aborted."
 
 
 def createNewPage():
@@ -152,48 +156,40 @@ def fillNewPage(modified, added, deleted, new_page):
     content = 'The following articles have been changed in the new BSI Catalogue:<br />'
     for bsi_type in new_page.get_children():
         if(bsi_type.slug == 'components'):
-            bsi_parent = URLPath.objects.filter(slug='components', parent=bsi)[0]
-            content += '<br />Components:<br />'
-            for article in bsi_type.get_children():
-                if(is_contained_in(modified, 'component', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
-                    print(content)
-                elif(is_contained_in(added, 'component', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
-            for del_article in deleted.get('type'):
-                if(del_article.get('name') == 'component'):
-                    for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+            content = addToNewPage(site, content, 'Components', bsi_type.slug, bsi, bsi_type, modified, added, deleted)
         if(bsi_type.slug == 'threats'):
-            bsi_parent = URLPath.objects.filter(slug='threats', parent=bsi)[0]
-            content += '<br />Threats:<br />'
-            for article in bsi_type.get_children():
-                if(is_contained_in(modified, 'threat', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
-                elif(is_contained_in(added, 'threat', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
-            for del_article in deleted.get('type'):
-                if(del_article.get('name') == 'threat'):
-                    for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+            #import pdb
+            #pdb.set_trace()
+            content = addToNewPage(site, content, 'Threats', bsi_type.slug, bsi, bsi_type, modified, added, deleted)
         elif(bsi_type.slug == 'implementationnotes'):
-            bsi_parent = URLPath.objects.filter(slug='implementationnotes', parent=bsi)[0]
-            content += '<br />Implementation Notes:<br />'
-            for article in bsi_type.get_children():
-                if(is_contained_in(modified, 'implementationnotes', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (modified)<br />'
-                elif(is_contained_in(added, 'implementationnotes', article.slug)):
-                    content += '[' + article.slug + '](' + article.path + ') (new)<br />'
-            for del_article in deleted.get('type'):
-                if(del_article.get('name') == 'implementationnotes'):
-                    for file in del_article.get('files'):
-                        content += '[' + file.get('file') + '](' + site + URLPath.objects.get(slug=file.get('file'), parent=bsi_parent).path + ') (deleted)<br />'
+            content = addToNewPage(site, content, 'Implementation Notes', bsi_type.slug, bsi, bsi_type,
+                                   modified, added, deleted)
+
     revision = ArticleRevision()
     revision.inherit_predecessor(new_page.article)
-    from markdownify import markdownify as md
     revision.content = md(content)
     new_page.article.add_revision(revision)
     print('Content of ' + new_page.path + ' is updated!')
+
+
+def addToNewPage(site, content, title, slug, parent, bsi_type, modified, added, deleted):
+    bsi_parent = URLPath.objects.filter(slug=slug, parent=parent)[0]
+    content += '<br />' + title + ':<br />'
+    for article in bsi_type.get_children():
+        if(is_contained_in(modified, slug, article.slug)):
+            content += '[' + article.article.current_revision.title + '](' + article.path + ') (updated)<br />'
+        elif(is_contained_in(added, slug, article.slug)):
+            content += '[' + article.article.current_revision.title + '](' + article.path + ') (new)<br />'
+    for del_article in deleted.get('type'):
+        if(del_article.get('name') == slug):
+            for file in del_article.get('files'):
+                try:
+                    url = URLPath.objects.get(slug=file.get('file'), parent=bsi_parent)
+                    content += '[' + url.article.current_revision.title + '](' + site + \
+                               url.path + ') (deleted)<br />'
+                except Exception:
+                    pass
+    return content
 
 
 def post_phase(archiving_data):
@@ -221,6 +217,7 @@ def post_phase(archiving_data):
 
         post_phase_delete_url(new)
         updateModificationTime()
+        # cleanUp()
 
 
 def post_phase_move_bsi(new_type, default_type, old_parent, archive):
@@ -274,9 +271,9 @@ def post_phase_move_deleted_articles(archive, bsi):
     # move the bsi deleted articles directly to archive
     modified, added, deleted = checkFileAction()
     for elem in deleted.get('type'):
-        if(elem.get('name') == "component"):
+        if(elem.get('name') == "components"):
             bsi_type = URLPath.objects.get(parent=bsi, slug="components")
-        if(elem.get('name') == "threat"):
+        if(elem.get('name') == "threats"):
             bsi_type = URLPath.objects.get(parent=bsi, slug="threats")
         if (elem.get('name') == "implementationnotes"):
             bsi_type = URLPath.objects.get(parent=bsi, slug="implementationnotes")
@@ -351,9 +348,9 @@ def checkFileAction():
             raise ValueError('Input file might be corrupted.')
 
         if(currentSep1.startswith(compSym + 'C')):
-            name = 'component'
+            name = 'components'
         elif(currentSep1.startswith(compSym + 'T')):
-            name = 'threat'
+            name = 'threats'
         elif(currentSep1.startswith(compSym + 'N')):
             name = 'implementationnotes'
         else:
@@ -368,12 +365,12 @@ def checkFileAction():
 
 def initDict():
     return {'type': [
-            {'name': 'component', 'files': []},
-            {'name': 'threat', 'files': []},
+            {'name': 'components', 'files': []},
+            {'name': 'threats', 'files': []},
             {'name': 'implementationnotes', 'files': []}]}
 
 
-def appendThreatMeasureRelation():
+def appendThreatMeasureRelation(files=None):
     try:
         res = Cross_References.get_CR_Tables()
         if res == -1:
@@ -381,7 +378,10 @@ def appendThreatMeasureRelation():
         Cross_References.extraction()
         site = 'http://' + str(Site.objects.get_current()) + '/'
         try:
-            components_articles = BSI.get_articles_by_type('C')
+            if files:
+                components_articles = files
+            else:
+                components_articles = BSI.get_articles_by_type('C')
             for cr_file in [f for f in listdir(crfDir) if f.endswith(".md")]:
                 path_and_ref = join(crfDir, cr_file)
                 for article in components_articles:
@@ -403,6 +403,12 @@ def appendThreatMeasureRelation():
     except Exception as e:
         print(e)
         print("An error has occurred during Cross Reference processing. Aborted...")
+
+
+def appendThreatMeasureRelation_update():
+    parent = URLPath.objects.get(slug='new')
+    comp = URLPath.objects.get(slug='components', parent=parent)
+    appendThreatMeasureRelation(comp.get_children())
 
 
 def cleanUp():

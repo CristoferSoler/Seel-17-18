@@ -23,8 +23,8 @@ def update_phase():
     isRunning = True
     now = datetime.now()
     archive_date = str(now.year) + '-' + str(now.month)
-    delay = timedelta(days =30).total_seconds()
-
+    #delay = timedelta(days =30).total_seconds()
+    delay = timedelta(minutes =1).total_seconds()
     print('Entering mid-phase on:', now)
 
     # call crawler + translator + treeview generation
@@ -41,7 +41,10 @@ def update_phase():
 
 
     # enter mid phase
-    doUpdate()
+    res = doUpdate()
+    if res:
+        return res
+    '''
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)
     s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") , settings.COMPARATOR_OUTPUT)
@@ -49,6 +52,7 @@ def update_phase():
     s.run()
 
     print('Post-phase has been executed.')
+    '''
     isRunning = False
 
 

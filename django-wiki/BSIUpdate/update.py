@@ -29,11 +29,11 @@ def check_update(request):
     return HttpResponse(json.dumps(update_running), content_type='application/json')
 
 def Update(request):
-    try:
-        if(update_phase()):
+    res = update_phase()
+    if not res:
             return HttpResponse(json.dumps(update_done), content_type='application/json')
-    except:
-        return HttpResponse(json.dumps(error_update), content_type='application/json')
+    else:
+        return HttpResponse(json.dumps(res), content_type='application/json')
 #
 '''
 def getTreeview(request):
