@@ -1,7 +1,16 @@
 import json
+from os import environ
 
+import django
 import scrapy as sc
+import sys
 from googletrans import Translator
+
+sys.path.append(r'../..')
+environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
+
+from bsiwiki import settings
 
 '''
 This module is responsible for generating a treeview from the BSI page layout for the overview of BSI articles. For the 
@@ -79,7 +88,7 @@ def generateTree(tree):
 
         bootstrapTree.append(dummy)
 
-    f = open('treeview/bsiTree' + '.txt', 'w')
+    f = open(settings.TREEVIEW_DIR + '/bsiTree' + '.txt', 'w')
     treeJson = json.dumps(bootstrapTree)
     f.write(treeJson)
     f.close()
