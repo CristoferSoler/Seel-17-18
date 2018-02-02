@@ -1,7 +1,7 @@
 import django
 import sys
 import os
-from os.path import isdir, join, basename, split, splitext
+from os.path import isdir, join, basename, splitext
 from os import listdir, environ, walk
 from datetime import datetime
 from distutils.dir_util import copy_tree
@@ -27,46 +27,26 @@ crfDir = settings.CRF_DIR
 def doImport():
     try:
         # Root article must exist!
-        bsi_root = BSI.get_or_create_bsi_root('')
         # go through the bsi dir
         for dirpath, dirnames, filenames in walk(settings.BSI_EN):
             if not filenames:
                 continue
 
             # check the bsi article type is a component or threat or implementation notes
-            sub_article_type = basename(dirpath)
-            if sub_article_type == "C":
-                article_type = BSI_Article_type.COMPONENT
-                parent = BSI.get_or_create_bsi_subroots(bsi_root, "components", "BSI.importer", "", "Components")
-            elif sub_article_type == "N":
-                article_type = BSI_Article_type.IMPLEMENTATIONNOTES
-                parent = BSI.get_or_create_bsi_subroots(bsi_root, "implementationnotes", "BSI.importer", "",
-                                                        "Implementation Notes")
-            elif sub_article_type == "T":
-                article_type = BSI_Article_type.THREAT
-                parent = BSI.get_or_create_bsi_subroots(bsi_root, "threats", "BSI.importer", "", "Threats")
-            else:
+            article_type, bsi_type, parent, flag = checkBSItype(basename(dirpath), BSI.get_or_create_bsi_root(''))
+            if not flag:
                 continue
 
             # read the content of each file
             for filename in [f for f in filenames if f.endswith(".md")]:
-                # get the dir and the filepath
-                path_and_file = join(dirpath, filename)
-                # get the path and file name
-                location, file = split(path_and_file)
-                # get the file id and the titel
-                file_name = splitext(file)[0]
+                # get the article id and the title
+                file_name = splitext(filename)[0]
                 id = get_bsi_article_id(file_name)
 
                 # import the content to the database
-                with open(path_and_file) as data_file:
-                    content = data_file.read()
-                    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
-                                       'ip_address': '0.0.0.0'}
+                with open(join(dirpath, filename)) as data_file:
                     try:
-                        BSI.create(parent=parent, slug=id, title=file_name, article_type=article_type,
-                                   **revision_kwargs)
-                        print(file_name + " is saved")
+                        addToDB(data_file.read(), parent, id, filename, article_type)
                     except Exception:
                         print("Article with the ID " + id + " already exists in the DB. Skipped...")
                         continue
@@ -80,6 +60,33 @@ def doImport():
         print("An error has occurred. Import process aborted.")
 
 
+def checkBSItype(article_type, root):
+    if article_type == "C":
+        article_type = BSI_Article_type.COMPONENT
+        bsi_type = 'component'
+        parent = BSI.get_or_create_bsi_subroots(root, "components", "BSI.importer", "", "Components")
+    elif article_type == "N":
+        article_type = BSI_Article_type.IMPLEMENTATIONNOTES
+        bsi_type = 'implementationnotes'
+        parent = BSI.get_or_create_bsi_subroots(root, "implementationnotes", "BSI.importer", "",
+                                                "Implementation Notes")
+    elif article_type == "T":
+        article_type = BSI_Article_type.THREAT
+        bsi_type = 'threat'
+        parent = BSI.get_or_create_bsi_subroots(root, "threats", "BSI.importer", "", "Threats")
+    else:
+        return None, None, None, False
+    return article_type, bsi_type, parent, True
+
+
+def addToDB(content, parent, id, filename, articletype):
+    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
+                       'ip_address': '0.0.0.0'}
+    BSI.create(parent=parent, slug=id, title=filename, article_type=articletype,
+               **revision_kwargs)
+    print(filename + " is saved")
+
+
 def doUpdate():
     # find out which files should be m/a/d
     modified, added, deleted = checkFileAction()
@@ -89,49 +96,29 @@ def doUpdate():
     for dirpath, dirnames, filenames in walk(new_temp_bsi_folder):
         if not filenames:
             continue
-        sub_article_type = basename(dirpath)
-        if sub_article_type == "C":
-            article_type = BSI_Article_type.COMPONENT
-            bsi_type = 'component'
-            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "components", "BSI.importer", "", "Components")
-        elif sub_article_type == "N":
-            article_type = BSI_Article_type.IMPLEMENTATIONNOTES
-            bsi_type = 'implementationnotes'
-            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "implementationnotes", "BSI.importer", "",
-                                                             "Implementation Notes")
-        elif sub_article_type == "T":
-            article_type = BSI_Article_type.THREAT
-            bsi_type = 'threat'
-            new_bsi_subroot = BSI.get_or_create_bsi_subroots(new_page, "threats", "BSI.importer", "", "Threats")
-        else:
+
+        # check the bsi article type is a component or threat or implementation notes
+        article_type, bsi_type, parent, flag = checkBSItype(basename(dirpath), new_page)
+        if not flag:
             continue
 
         for filename in [f for f in filenames if f.endswith(".md")]:
-            # get the drive and the filepath
-            path_and_file = join(dirpath, filename)
-            # get the path and file name
-            location, file = split(path_and_file)
-            # get the file id and the titel
-            file_name = splitext(file)[0]
+            # get the article id and the title
+            file_name = splitext(filename)[0]
             id = get_bsi_article_id(file_name)
+
             # if the file is new or modified, add to database under /new
             if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
-
                 # import the content to the database
-                with open(path_and_file) as data_file:
-                    content = data_file.read()
-                    revision_kwargs = {'content': content, 'user_message': 'BSI.importer',
-                                       'ip_address': '0.0.0.0'}
-                    BSI.create(parent=new_bsi_subroot, slug=id, title=file_name, article_type=article_type,
-                               **revision_kwargs)
-                    print(new_bsi_subroot)
-                    print(file_name + " " + id + " " + bsi_type + " is saved")
+                with open(join(dirpath, filename)) as data_file:
+                    try:
+                        addToDB(data_file.read(), parent, id, filename, article_type)
+                    except Exception:
+                        print("Article with the ID " + id + " has already been saved under \
+                            the What's New page. Skipped...")
+                        continue
 
-    # append the Cross reference relation files to the content
-    # of each component article before import it in the database
-    # if isdir(crfDir):
-    #   appendThreatMeasureRelation()
-
+    # appendThreatMeasureRelation()
     fillNewPage(modified, added, deleted, new_page)
     cleanUp()
     return
