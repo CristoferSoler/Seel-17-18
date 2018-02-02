@@ -1,10 +1,11 @@
 import django
 import sys
+import os
 from os.path import isdir, join, basename, split, splitext
-from os import listdir, environ, walk
+from os import listdir, environ, walk, path
 from datetime import datetime
 from distutils.dir_util import copy_tree
-
+import shutil
 
 sys.path.append(r'..')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
@@ -17,7 +18,7 @@ from archive.models import Archive, ArchiveTransaction
 from Scripts import Cross_References
 from django.contrib.sites.models import Site
 from Scripts.bsiCrawler.main import deleteAllFilesInDirectory
-from Scripts.bsiComparator import readConfig
+from Scripts.bsiComparator.bsicomparator import readConfig
 
 new_temp_bsi_folder = settings.TEMP_BSI_EN
 crfDir = settings.CRF_DIR
@@ -69,8 +70,7 @@ def doImport():
 
         # append the Cross reference relation files to the content
         # of each component article before import it in the database
-        if isdir(crfDir):
-            appendThreatMeasureRelation()
+        appendThreatMeasureRelation()
         cleanUp()
 
 
@@ -449,7 +449,10 @@ def cleanUp():
     # delete temp_en
     # deleteAllFilesInDirectory(settings.TEMP_BSI_EN)
 
-    deleteAllFilesInDirectory(settings.CR_CSV_DOWNLOAD_DIR)
-    deleteAllFilesInDirectory(settings.CR_TXT_DIR)
-    deleteAllFilesInDirectory(settings.CRF_DIR)
+    if os.path.exists(settings.CR_CSV_DOWNLOAD_DIR):
+        shutil.rmtree(settings.CR_CSV_DOWNLOAD_DIR)
+    if os.path.exists(settings.CR_TXT_DIR):
+        shutil.rmtree(settings.CR_TXT_DIR)
+    if os.path.exists(settings.CRF_DIR):
+        shutil.rmtree(settings.CRF_DIR)
     # deleteAllFilesInDirectory(settings.REFERENCE_DIR)

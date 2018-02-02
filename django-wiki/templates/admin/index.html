@@ -41,11 +41,11 @@
             data: data,
             success: function(data) {
             if(data.status == true){
-                id.text(data.msg);
                 $("#update_btn").prop('disabled', true); // disable button
-
+                id.text(data.msg);
             }else if(data.status == false){
                 $("#update_btn").prop('disabled', false); // enable button
+                id.text("The update is finished")
             }
             },
         });
@@ -59,16 +59,16 @@
             url:'/_update/Update/',
             data: data,
 
-             beforeSend: function() {
+             beforeSend: function(data) {
                   $("#update_btn").prop('disabled', true); // disable button
-                 id.text('Update is start')
+                  id.text('Update is start')
                  },
             success: function(data) {
             if(data.status == 'ok'){
               id.text(data.msg);
-              $("#update_btn").prop('disabled', false); // disable button
             }else if(data.status == 'error'){
                 $("#update_btn").prop('disabled', false); // disable button
+                id.text(data.msg);
                 }
                },
         });

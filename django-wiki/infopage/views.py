@@ -29,8 +29,8 @@ def post_question(request):
                     Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE)
                 return HttpResponseRedirect(reverse('information'))
             return render(request, 'info.html', {'q_form': q_form,
-                                                     'questions': Question.get_questions(
-                                                         PageType.INFO_PAGE)})
+                                                 'questions': Question.get_questions(
+                                                     PageType.INFO_PAGE)})
 
 
 def post_answer(request):

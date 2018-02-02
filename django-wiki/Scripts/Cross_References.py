@@ -3,6 +3,7 @@ import django
 import os
 import sys
 from os import listdir
+from os.path import isdir
 from urllib.request import urlopen
 import zipfile
 from io import BytesIO
@@ -25,6 +26,8 @@ def get_CR_Tables():
     # extract the Cross References automatically from the BSI website
     try:
         cr = urlopen(CR_website_path)
+        if not os.path.exists(local_path):
+            os.makedirs(local_path)
         zip_ref = zipfile.ZipFile(BytesIO(cr.read()))
         zip_ref.extractall(local_path)
         zip_ref.close()
