@@ -22,7 +22,6 @@ from bsiwiki import settings
 
 # directorys for the german content of the bsi
 #directoryContent = './md/'
-directoryContent = settings.BSI_DE
 directoryContentComponent = '/C/'
 directoryContentNotes = '/N/'
 directoryContentThreats = '/T/'
@@ -53,6 +52,18 @@ class bsiSpider(sc.Spider):
     # startpage to crawl
     start_urls = [
         'https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzKompendium/itgrundschutzKompendium_node.html']
+
+    #update = 0|1: 0 means first setup 1 means update the bsi
+    def __init__(self,phase='',*args, **kwargs):
+        #set directory
+        global directoryContent
+        if(phase == '0'):
+            directoryContent = settings.BSI_DE
+        elif(phase == '1'):
+            directoryContent = settings.TEMP_BSI_DE
+        else:
+            raise ValueError('Please set a phase with -a phase=x x = [0|1]')
+        super(bsiSpider, self).__init__(*args, **kwargs)
 
     def parse(self, response):
         print('Start Crawling the content of the BSI')
