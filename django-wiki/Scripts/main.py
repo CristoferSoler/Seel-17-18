@@ -36,39 +36,28 @@ def update_phase():
     # call comparator
    # file = compare()
 
-    # call treeview importer
-    #addLinksToTreeView()
-
 
     # enter mid phase
     res = doUpdate()
     if res:
         return res
-    '''
+
     # wait 30 days and then execute post phase
     s = scheduler(time.time, time.sleep)
-    s.enter(delay, 1,  post_phase(datetime.now().strftime("%Y-%m-%d") , settings.COMPARATOR_OUTPUT)
-                                                       , archive_date)
+    s.enter(delay, 1,  post_phase)
     s.run()
 
-    print('Post-phase has been executed.')
-    '''
-    isRunning = False
+    # call treeview importer
+    #addLinksToTreeView()
 
+    print('Post-phase has been executed.')
+
+    isRunning = False
+    return ''
 
 def check_update_progress():
     return isRunning
 
-'''
-def demo_mid_phase():
-    # for the demo we don't call crawlers and co
-    doUpdate('./../Seel-17-18/programming/bsiComparator/example_modified_files.txt')
-
-
-def demo_post_phase():
-    post_phase(datetime.now().strftime("%Y-%m-%d") , '/home/ziik/Seel-17-18/programming/bsiComparator/example_modified_files.txt')
-
-'''
 
 if __name__ == "__main__":
     doImport()
