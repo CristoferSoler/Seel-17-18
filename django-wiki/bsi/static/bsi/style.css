@@ -18,7 +18,7 @@ body {
 }
 
 footer {
-      min-height: 50px; 
+      min-height: 50px;
     padding: 20px 0 10px 0;
 
 }
@@ -27,6 +27,8 @@ footer {
     height: 50px;
 
 }
+
+
 
 footer .menu li a {
     font-family: Roboto;
@@ -37,6 +39,10 @@ footer .menu li a {
 
 footer .menu li a:hover {
     color: #ffffff;
+}
+
+.list-group-item .active{
+    background-color:#007a36 ;
 }
 
 .margin-after-nav {
