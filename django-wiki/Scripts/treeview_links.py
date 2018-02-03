@@ -95,7 +95,7 @@ def find_BSI_articles(nodes, type, children, site, path_list):
                         if(child.slug == id):
                             child.refresh_from_db()
                             node['text'] = child.article.current_revision.title
-                            node['href'] = site + child.path
+                            node['href'] = site + child.parent.path + child.slug
                             path = child.path
                             new_dict = {'name': node.get('text'), 'path': node.get('href')}
                             path_list.append(new_dict)
