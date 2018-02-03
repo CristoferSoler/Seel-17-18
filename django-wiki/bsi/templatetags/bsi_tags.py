@@ -72,3 +72,8 @@ def info_change_question(user, question):
 @register.filter
 def info_delete_question(user, question):
     return user.has_perm('infopage.delete_question') or question.user == user
+
+
+@register.filter
+def get_path(url):
+    return url.parent.path + url.slug
