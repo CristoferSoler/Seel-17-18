@@ -11,7 +11,7 @@ django.setup()
 
 from Scripts.treeview_links import addLinksToTreeView
 from Scripts.bsiImporter import doUpdate, post_phase, doImport
-# from Scripts.bsiWizard.topicGeneration import topicGeneration
+from Scripts.bsiWizard.topicGeneration import topicGeneration
 # from Scripts.bsiComparator.bsicomparator import compare
 
 isRunning = False
@@ -38,6 +38,7 @@ def update_phase():
         return res
 
     try:
+        #TODO CHANGE TO 30 DAYS
         # wait 30 days and then execute post phase
         delay = timedelta(minutes=1).total_seconds()
         s = scheduler(time.time, time.sleep)
@@ -65,10 +66,11 @@ def check_update_progress():
 
 if __name__ == "__main__":
     # call crawler
-    # os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
+    #os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
 
     # call translator
-    # os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
+    #os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
+
 
     doImport()
 
@@ -76,4 +78,4 @@ if __name__ == "__main__":
     addLinksToTreeView()
 
     # call topic generation for the wizard
-    # topicGeneration()
+    topicGeneration()
