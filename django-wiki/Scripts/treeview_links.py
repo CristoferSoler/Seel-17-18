@@ -93,6 +93,7 @@ def find_BSI_articles(nodes, type, children, site, path_list):
                     path = ''
                     for child in children:
                         if(child.slug == id):
+                            child.refresh_from_db()
                             node['text'] = child.article.current_revision.title
                             node['href'] = site + child.path
                             path = child.path
