@@ -1,0 +1,10 @@
+0	0,5	disruption 
+1	0,5	required 
+2	0,5	service 
+3	0,5	internet 
+4	0,5	time 
+5	0,5	link 
+6	0,5	communication 
+7	0,5	customer 
+8	0,5	process 
+9	0,5	data 

@@ -11,7 +11,7 @@ from dariah_topics import postprocessing
 from dariah_topics import preprocessing
 from nltk.stem import WordNetLemmatizer
 
-sys.path.append(r'../..')
+sys.path.append(r'..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
@@ -43,7 +43,7 @@ def convertMDtoTxt(path):
 
 def getNameOfFile(file):
     splitFiles = file.split('/')
-    name = splitFiles[len(splitFiles)-1]
+    name = splitFiles[len(splitFiles)-1].replace('.txt', '')
     return name
 
 

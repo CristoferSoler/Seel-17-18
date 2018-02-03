@@ -1,10 +1,14 @@
 {% autoescape off %}
-Hi {{ author }},
-The answer to your question: {{question}}
-is:{{answer}}
+Hello {{ author }},
 
-For further questions visit the information page: https://it-gs.ziik.tu-berlin.de/information_page
+Your question, "{{question}}",
+from the {{date}} on the ISAM information page received an answer.
 
-Yours sincerely,
-The ISAM team
+The answer: "{{answer}}"
+
+To see the whole thread on ISAM click here:
+https://it-gs.ziik.tu-berlin.de/information_page
+
+Best regards,
+Your ISAM Team
 {% endautoescape %}

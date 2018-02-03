@@ -12,22 +12,25 @@ def save(sender,instance,pk_set,action, **kwargs):
         groups = Group.objects.filter(id=pk)
         for g in groups:
             if action == 'pre_remove':
-                print('Remove Group: ' + str(g))
-                sendMail(True,str(g),user)
+                if(str(g) == 'moderators'):
+                    subject = 'Your moderator status has changed'
+                    text = '\nYour moderator permissions have been revoked. \n \nThe reasons for this decision could be:\n- You behaved inappropriately. \n- You misused the authority.'
+                    sendMail(str(g),user,subject,text)
             if action == 'pre_add':
-                print('Added Group: ' + str(g))
-                sendMail(False, str(g), user)
+                if(str(g) == 'moderators'):
+                    subject = 'Your user  status has changed'
+                    text = '\nWe are gladly informing you that you are now enjoying the status “Moderator”. We would like ' \
+                           'to thank you for your contribution to ISAM, keep up the good work.\n\n As a moderator it is ' \
+                           'now your task to:\n- Review articles, links, content and approve UAs \n- Protect Website Rules in' \
+                           ' UA and in Info Page'
+                    sendMail(str(g), user,subject,text)
 
 
-def sendMail(remove,group,user):
+def sendMail(group,user,subject,text):
     userEmail = getEmailOfUser(user)
     if(userEmail != None):
-        mail_subject = 'ISAM: Your permission group is changed'
-
-        if(remove):
-            messageBody = 'You have lost the permissions of the ' + group + ' group.'
-        else:
-            messageBody = 'You have got the permissions of the ' + group + ' group.'
+        mail_subject = subject
+        messageBody = text
 
         message = render_to_string('email/permissionChanged.html', {
             'messageBody': messageBody,

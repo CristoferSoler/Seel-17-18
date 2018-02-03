@@ -55,10 +55,11 @@ def post_answer(request):
 def sendResponseMail(q,answer):
     authorEmail = getEmailOfAuthor(q)
     if(authorEmail != None):
-        mail_subject = 'ISAM: Answer to your question'
+        mail_subject = 'Somebody answered your question on the Information Page'
         message = render_to_string('email/answerQuestion.html', {
             'question': q.question,
             'author': q.user,
+            'date':q.timestamp,
             'answer': answer,
         })
 

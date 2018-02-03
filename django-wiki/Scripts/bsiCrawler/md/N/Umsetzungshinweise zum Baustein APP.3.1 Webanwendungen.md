@@ -1,7 +1,3 @@
-Table of content
-
-[toc]
-
 1 Beschreibung
 --------------
 

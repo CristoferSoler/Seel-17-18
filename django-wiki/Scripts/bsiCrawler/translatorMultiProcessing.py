@@ -1,21 +1,18 @@
 import functools
 import os
 import re
-import time
-
 import django
-import progressbar
 import sys
 from googletrans import Translator
 from multiprocessing import Pool
 
-from Scripts.bsiImporter import checkFileAction
 
-
-sys.path.append(r'../..')
+sys.path.append(r'..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
+
+from Scripts import bsiImporter
 from bsiwiki import settings
 
 def content_from_list(content):
@@ -136,7 +133,7 @@ def translate(fileMD):
         textEl += translator.translate(el, dest='en', src='de').text + '\n'
 
     if(component):
-        r = open('references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
+        r = open(settings.CRAWLER_DIR + '/references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
         r.write(references)
         r.close()
     textEl = '[toc]\n \n' + textEl
@@ -154,7 +151,7 @@ if __name__ == "__main__":
     filesForTranslation = []
     phase = str(sys.argv[1])
 
-    if(phase == '0'):
+    if(str(phase) == '0'):
         directoryC = settings.BSI_DE + '/C'
         directoryN = settings.BSI_DE + '/N'
         directoryT = settings.BSI_DE + '/T'
@@ -164,13 +161,13 @@ if __name__ == "__main__":
         files.extend(os.listdir(directoryT))
         files.extend(os.listdir(directoryN))
 
-    elif(phase == '1'):
+    elif(str(phase) == '1'):
         directoryC = settings.TEMP_BSI_DE + '/C'
         directoryN = settings.TEMP_BSI_DE + '/N'
         directoryT = settings.TEMP_BSI_DE + '/T'
         directoryEN = settings.TEMP_BSI_EN
 
-        modified, added, deleted = checkFileAction()
+        modified, added, deleted = bsiImporter.checkFileAction()
 
         typesModified = modified('type')
         typesAdded = added.get('type')
