@@ -126,13 +126,14 @@ def doUpdate():
     except Exception as e:
         print(e)
         removeNewPage()
+
         return "An error has occurred. Update process aborted."
 
 
 def removeNewPage():
     try:
         new = URLPath.objects.get(slug='new')
-        new.delete()
+        post_phase_delete_url(new)
     except Exception:
         return
 
