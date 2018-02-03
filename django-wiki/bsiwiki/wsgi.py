@@ -8,10 +8,13 @@ https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
 """
 
 import os
-#from . import init
 from django.core.wsgi import get_wsgi_application
+import django
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
+
+from bsiwiki import init
 
 """
 if necessary, this init function creates a root article, uga, bsi and archive head articles (below root).

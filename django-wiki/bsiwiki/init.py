@@ -21,9 +21,9 @@ def assign_permission(group, perm_name):
 def init():
     # set the domain
     site = Site.objects.all()[0]
-    # # site.domain = 'it-gs.ziik.tu-berlin.de:8000'
+    site.domain = 'it-gs.ziik.tu-berlin.de'
     # The following is not commented for testing sake
-    site.domain = 'localhost:8000'
+    # site.domain = 'localhost:8000'
     site.save()
 
     #superuser group and permissions

@@ -182,7 +182,7 @@ with open('/etc/email_django.txt') as f:
 
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ### PATHS ###
 SCRIPT_DIR = os.path.join(BASE_DIR, 'Scripts')
