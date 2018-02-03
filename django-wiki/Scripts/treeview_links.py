@@ -34,7 +34,7 @@ def addLinksToTreeView():
 
     path_list = []
     site = 'http://' + str(Site.objects.get_current()) + '/'
-    parent = BSI.get_or_create_bsi_root('')
+
     for elem in parsed:
         text = elem.get('text')
         if(text):
@@ -51,12 +51,14 @@ def addLinksToTreeView():
             raise ValueError('No text found in JSON.')
         nodes = elem.get('nodes')
         if(nodes):
+            parent = BSI.get_or_create_bsi_root('')
             parents = []
             # find in database
             if(bsi_type == BSI_Article_type.COMPONENT):
                 parents = URLPath.objects.filter(slug='components', parent=parent)
             elif(bsi_type == BSI_Article_type.THREAT):
                 parents = URLPath.objects.filter(slug='threats', parent=parent)
+                print(parents)
             elif(bsi_type == BSI_Article_type.IMPLEMENTATIONNOTES):
                 parents = URLPath.objects.filter(slug='implementationnotes', parent=parent)
 
@@ -160,6 +162,7 @@ def fix_threat_id(id):
     if('.' not in id):
         regex = r"^([A-Z])([0-9])"
         id = re.sub(regex, r"\1\2.", id)
+        print(id)
     return id
 
 
