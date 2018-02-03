@@ -17,8 +17,13 @@ body {
 
 }
 
-.footer,
-.push {
+footer {
+      min-height: 50px; 
+    padding: 20px 0 10px 0;
+
+}
+
+ .push {
     height: 50px;
 
 }
