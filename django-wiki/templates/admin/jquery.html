@@ -1,0 +1,49 @@
+{% load static %}
+<script src="{% static "bsi/js/jquery.min.js" %}"></script>
+<script>
+	$(document).ready(function () {
+		        var id =  $("#update")
+				        var data = {};
+			        $.ajax({
+					            dataType:'json',
+						                url:'/_update/check_update/',
+								            data: data,
+
+									                success: function(data) {
+												            if(data.status == true){
+														                    $("#update_btn").prop('disabled', true); // disable button
+																                    id.text(data.msg);
+																		                }else {
+																					                $("#update_btn").prop('disabled', false); // enable button
+																							                id.text("No running update")
+																										            }
+													                },
+											        });
+				    });
+
+	function startUpdate() {
+			    var id =  $("#update")
+				    		var data = {};
+			    		$.ajax({
+						            dataType:'json',
+							                url:'/_update/update/',
+									            data: data,
+
+										                beforeSend: function(data) {
+													                  $("#update_btn").prop('disabled', true); // disable button
+															                    id.text('Starting update...')
+																		                },
+
+												            success: function(data) {
+														                if(data.status == 'ok'){
+																	              $("#update_btn").prop('disabled', false);
+																		                    id.text(data.msg);
+																				                } else if(data.status == 'error'){
+																							                $("#update_btn").prop('disabled', false); // disable button
+																									                id.text(data.msg);
+																											                }
+																               },
+													            });
+					    }
+
+</script>
