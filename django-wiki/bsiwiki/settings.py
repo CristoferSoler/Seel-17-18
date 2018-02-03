@@ -183,6 +183,7 @@ EMAIL_USE_TLS = True
 SCRIPT_DIR = os.path.join(BASE_DIR, 'Scripts')
 CRAWLER_DIR = os.path.join(SCRIPT_DIR, 'bsiCrawler')
 TREEVIEW_DIR = os.path.join(CRAWLER_DIR, 'treeview')
+TOPICGENERATION_DIR = os.path.join(SCRIPT_DIR,'bsiWizard')
 
 # english version of bsi
 BSI_EN = os.path.join(CRAWLER_DIR, 'mdEn')

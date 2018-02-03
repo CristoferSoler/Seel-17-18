@@ -3,17 +3,25 @@ import shutil
 import warnings
 from operator import itemgetter
 
+import django
 import pandas
+import sys
 from dariah_topics import mallet
 from dariah_topics import postprocessing
 from dariah_topics import preprocessing
 from nltk.stem import WordNetLemmatizer
 
-pathToNormalStopwordList = 'stopwordlist/en.txt'
-pathToUpgradedStopwordList = 'stopwordlist/en-upgraded.txt'
+sys.path.append(r'../..')
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
+django.setup()
+
+from bsiwiki import settings
+
+pathToNormalStopwordList = settings.TOPICGENERATION_DIR + '/stopwordlist/en.txt'
+pathToUpgradedStopwordList = settings.TOPICGENERATION_DIR + '/stopwordlist/en-upgraded.txt'
 # pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
-pathToMallet = 'mallet-2.0.8/bin/mallet'
-output = 'output/'
+pathToMallet = settings.TOPICGENERATION_DIR + '/mallet-2.0.8/bin/mallet'
+output = settings.TOPICGENERATION_DIR + '/output/'
 lemmanizeCorpus = True
 
 
@@ -30,13 +38,12 @@ def readInFilesToPathList(path):
 def convertMDtoTxt(path):
     files = readInFilesToPathList(path)
     for file in files:
-        shutil.copyfile(path + file, pathOfTxt + file.replace('md', 'txt').replace(' Md', 'txt'))
+        shutil.copyfile(path + '/' + file, pathOfTxt + file.replace('md', 'txt').replace(' Md', 'txt'))
 
 
 def getNameOfFile(file):
-    name = file.replace('.txt', '')
-    name = name.replace('txt/c/', '')
-    name = name.replace('txt/t/', '')
+    splitFiles = file.split('/')
+    name = splitFiles[len(splitFiles)-1]
     return name
 
 
@@ -93,16 +100,16 @@ def modelCreation(cleanTokenizedCorpus, fileNames):
         os.makedirs(os.path.join('tutorial_supplementals', 'mallet_output'))
 
     Mallet.train_topics(malletCorpus,
-                        output_topic_keys='tutorial_supplementals/mallet_output/topic_keys.txt',
-                        output_doc_topics='tutorial_supplementals/mallet_output/doc_topics.txt',
+                        output_topic_keys= settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/topic_keys.txt',
+                        output_doc_topics= settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/doc_topics.txt',
                         num_topics=10,
                         num_iterations=5000,
                         num_top_words=1)
 
-    topics = postprocessing.show_topics(topic_keys_file='tutorial_supplementals/mallet_output/topic_keys.txt',
+    topics = postprocessing.show_topics(topic_keys_file=settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/topic_keys.txt',
                                         num_keys=1)
     document_topics = postprocessing.show_document_topics(topics=topics,
-                                                          doc_topics_file='tutorial_supplementals/mallet_output/doc_topics.txt',
+                                                          doc_topics_file=settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/doc_topics.txt',
                                                           num_keys=1)
 
     return document_topics
@@ -113,7 +120,7 @@ def generateTopicTable():
     files = readInFilesToPathList(path_to_corpus)
 
     for file in files:
-        deleteAllFilesInDirectory('tutorial_supplementals/mallet_output')
+        deleteAllFilesInDirectory(settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output')
         cleanTokenizedCorpus, fileName = preprocessingOfFile(pathOfTxt + file)
         print(fileName)
         document_topics = modelCreation(cleanTokenizedCorpus, fileName)
@@ -136,7 +143,7 @@ def deleteAllFilesInDirectory(directory):
 
 
 def addToStopwordList(words):
-    with open('stopwordlist/en-upgraded.txt', "a") as file:
+    with open(settings.TOPICGENERATION_DIR + '/stopwordlist/en-upgraded.txt', "a") as file:
         for word in words:
             file.write(word + '\n')
 
@@ -145,7 +152,7 @@ def addToStopwordList(words):
 
 def duplicateStopwordList():
     pathStopwords = pathToNormalStopwordList.split('/')[0]
-    shutil.copyfile(pathToNormalStopwordList, pathStopwords + '/en-upgraded.txt')
+    shutil.copy(pathToNormalStopwordList, settings.TOPICGENERATION_DIR + '/stopwordlist/en-upgraded.txt')
 
 
 def removingWordsAppearInEachText(directory):
@@ -176,23 +183,23 @@ def topicGeneration():
 
     # components
     csvFile = []
-    pathOfMd = 'mdEn/C/'
-    pathOfTxt = 'txt/c/'
-    path_to_corpus = 'txt/c'
+    pathOfMd = settings.BSI_EN + '/C'
+    pathOfTxt = settings.TOPICGENERATION_DIR + '/txt/c/'
+    path_to_corpus = settings.TOPICGENERATION_DIR + '/txt/c'
     convertMDtoTxt(pathOfMd)
-    removingWordsAppearInEachText('txt/c')
+    removingWordsAppearInEachText(settings.TOPICGENERATION_DIR + '/txt/c')
     generateTopicTable()
-    writeToCSV("csv/componentsTopics.csv")
+    writeToCSV(settings.TOPICGENERATION_DIR + "/csv/componentsTopics.csv")
 
     # threads
     csvFile = []
-    pathOfMd = 'mdEn/T/'
-    pathOfTxt = 'txt/t/'
-    path_to_corpus = 'txt/t'
+    pathOfMd = settings.BSI_EN + '/T'
+    pathOfTxt = settings.TOPICGENERATION_DIR + '/txt/t/'
+    path_to_corpus = settings.TOPICGENERATION_DIR + '/txt/t'
     convertMDtoTxt(pathOfMd)
-    removingWordsAppearInEachText('txt/t')
+    removingWordsAppearInEachText(settings.TOPICGENERATION_DIR + '/txt/t')
     generateTopicTable()
-    writeToCSV("csv/threadsTopics.csv")
+    writeToCSV(settings.TOPICGENERATION_DIR + "/csv/threadsTopics.csv")
 
 
 if __name__ == "__main__":
