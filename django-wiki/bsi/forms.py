@@ -258,8 +258,34 @@ class CreateForm(forms.Form):
 
 
 def get_available_links():
-    bsi = BSI.objects.all()
-    return bsi
+    # during mid phase, show only updated articles, and not the old ones
+    # new articles are not shown, while deleted articles are still shown
+    # because the treeview stays the same (FIXME)
+    new = URLPath.objects.filter(slug='new')
+    bsi_root = URLPath.objects.get(slug='bsi')
+    if new:
+        new_comp = URLPath.objects.filter(slug='components', parent=new[0])[0]
+        new_threat = URLPath.objects.filter(slug='threats', parent=new[0])[0]
+        new_impl = URLPath.objects.filter(slug='implementationnotes', parent=new[0])[0]
+        new_comps = BSI.objects.filter(url__parent=new_comp)
+        new_threats = BSI.objects.filter(url__parent=new_threat)
+        new_impls = BSI.objects.filter(url__parent=new_impl)
+        new_list = new_comps | new_threats | new_impls
+
+        bsi_root = URLPath.objects.get(slug='bsi')
+        bsi_comp_subroot = URLPath.objects.filter(slug='components', parent=bsi_root)[0]
+        bsi_threat_subroot = URLPath.objects.filter(slug='threats', parent=bsi_root)[0]
+        bsi_impl_subroot = URLPath.objects.filter(slug='implementationnotes', parent=bsi_root)[0]
+
+        bsi_comps = BSI.objects.filter(url__parent=bsi_comp_subroot).exclude(url__slug__in=[e.url.slug for e in new_comps])
+        bsi_threats = BSI.objects.filter(url__parent=bsi_threat_subroot).exclude(url__slug__in=[e.url.slug for e in new_threats])
+        bsi_impls = BSI.objects.filter(url__parent=bsi_impl_subroot).exclude(url__slug__in=[e.url.slug for e in new_impls])
+        return new_list | bsi_comps | bsi_threats | bsi_impls
+
+    return BSI.objects.filter(url__parent__parent=bsi_root)
+
+    # bsi = BSI.objects.all()
+    # return bsi
 
 
 def get_links(revision):
@@ -273,15 +299,15 @@ class ArticleMultipleChoiceField(ModelMultipleChoiceField):
 
 
 class AddLinksForm(forms.Form):
-    links = ArticleMultipleChoiceField(
-        label=pgettext_lazy('Revision comment', 'BSI'),
-        queryset=get_available_links(),
-        widget=forms.CheckboxSelectMultiple,
-        help_text=_("Associate with a BSI article when creating an article"),
-        required=False)
 
     def __init__(self, *args, **kwargs):
         super(AddLinksForm, self).__init__(*args, **kwargs)
+        self.fields['links'] = ArticleMultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            queryset=get_available_links(),
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Associate with a BSI article when creating an article"),
+            required=False)
 
 
 class UGEditForm(forms.Form, SpamProtectionMixin):
@@ -301,12 +327,6 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
         required=False,
         widget=forms.HiddenInput())
     # checked = forms.BooleanField(label="Reviewed", required=False)
-    links = ArticleMultipleChoiceField(
-        label=pgettext_lazy('Revision comment', 'BSI'),
-        queryset=get_available_links(),
-        widget=forms.CheckboxSelectMultiple,
-        help_text=_("Linked to these BSI articles"),
-        required=False)
 
     def __init__(self, request, current_revision, checked, *args, **kwargs):
         self.no_clean = kwargs.pop('no_clean', False)
@@ -357,6 +377,12 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
             self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False)
         else:
             self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False, widget=HiddenInput)
+        self.fields['links'] = ArticleMultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            queryset=get_available_links(),
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Linked to these BSI articles"),
+            required=False)
 
     def clean_title(self):
         title = self.cleaned_data.get('title', None)
