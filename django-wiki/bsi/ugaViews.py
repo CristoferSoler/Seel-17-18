@@ -23,7 +23,7 @@ from wiki.views.article import Edit, Delete, History, Preview
 
 from bsi import forms
 from bsi.models.article_extensions import BSI
-from .forms import AddLinksForm, CreateForm
+from .forms import AddLinksForm, CreateForm, get_available_links
 from bsi.models.article_extensions import UGA, ArticleRevisionValidation
 
 log = logging.getLogger(__name__)
@@ -91,6 +91,7 @@ def get_bsi_articles(request):
     if request.is_ajax():
         q = request.GET.get('term', '')
         bsis = BSI.objects.filter(url__article__current_revision__title__icontains=q)[:20]
+        # bsis = get_available_links().filter(url__article__current_revision__title__icontains=q)[:20]
         results = []
         for bsi in bsis:
             title_json = {}

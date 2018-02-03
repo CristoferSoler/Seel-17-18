@@ -1,0 +1,19 @@
+#C
+%m
+APP.1.2 Web-Browser.md
+%a
+CON.7 Informationssicherheit auf Auslandsreisen.md
+%d
+APP.3.6 DNS-Server.md
+#T
+%m
+G 0.8 Ausfall oder Störung der Stromversorgung.md
+%a
+%d
+G 0.3 Wasser.md
+#N
+%m
+Umsetzungshinweise zum Baustein APP.3.6 DNS-Server.md
+%a
+%d
+Umsetzungshinweise zum Baustein INF.9 Mobiler Arbeitsplatz.md

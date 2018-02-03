@@ -2,7 +2,8 @@
 <script src="../../static/bsi/js/login.js"></script>>
 
 {% extends 'bsi/base.html'%} {% block bsi_contents %}
-<div class="container margin-after-nav">
+    <header>
+<div class="container">
           <div class="jumbotron-margin text-center">
 				<div class="row">
 				  <div class="col-lg-3"></div>
@@ -26,7 +27,7 @@
 							{% endfor %}
 							<div class="form-group">
 								<div class="row">
-									<div class="col-sm-8 col-sm-offset-2">
+									<div class="col-sm-9 col-sm-offset-5">
 										<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-success btn-mg pull-left" value="Register Now">
 									</div>
 								</div>
@@ -37,6 +38,7 @@
 		</div>
 	 </div>
 </div>
+    </header>
 {% endblock %}
 
 

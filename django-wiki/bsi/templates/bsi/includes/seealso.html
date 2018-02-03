@@ -4,7 +4,7 @@
   {% for artpath in urlpath.uga.is_linked_to.all %}
   <ul>
     <li>
-      <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
+      <a href="{% url 'get_article' path=artpath.url|get_path %}">{{ artpath.url.article.current_revision.title }}
       </a>
     </li>
   </ul>
@@ -15,7 +15,7 @@
   {% for artpath in urlpath.bsi.references.all %}
   <ul>
     <li>
-      <a href="{% url 'get_article' path=artpath.url.path %}">{{ artpath.url.article.current_revision.title }}
+      <a href="{% url 'get_article' path=artpath.url|get_path %}">{{ artpath.url.article.current_revision.title }}
       </a>
     </li>
   </ul>

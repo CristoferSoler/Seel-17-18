@@ -13,6 +13,7 @@
                 <div class="col-sm-12 col-lg-12">
                     <h2>
                         Information Page</h2>
+                    <h5><mark><i><a href="/login">Sign in</a> in to get notifications from your question</i></mark></h5>
                 </div>
             </div>
             <div class="row">
@@ -94,21 +95,21 @@
                                             <div class="modal-dialog">
                                                 <!-- Modal content-->
                                                 <div class="modal-content">
-                                                    <form action="{% url 'post_q' %}" method="post">
+                                                    <form action="{% url 'edit_q' %}" method="post">
                                                         {% csrf_token %}
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal">
                                                                 &times;
                                                             </button>
-                                                            <h4 class="modal-title">Edit answer</h4>
+                                                            <h4 class="modal-title">Edit Question</h4>
                                                         </div>
                                                         <div class="modal-body">
                                                             <textarea class="form-control" id="question" type="text"
-                                                                      name="edit" rows="3"
+                                                                      name="question" rows="3"
                                                                       required>{{ q.question }}</textarea>
                                                         </div>
 
-                                                        <input type="hidden" name="quesiton_id" value="{{ q.id }}"/>
+                                                        <input type="hidden" name="q_id" value="{{ q.id }}"/>
 
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default"
@@ -136,7 +137,8 @@
                                         <div class="comment-post">
                                             <p>
                                                 {% if q.edited %}
-                                                    <div> {{ q.question }} (<i>modified</i> by {{ q.edited_by }})</div>
+                                                    <div> {{ q.question }} </div>
+                                                    <p class="small" style="color: #808080;"><i>(modified</i> by {{ q.edited_by }})</p>
                                                 {% else %}
                                                     <div> {{ q.question }}</div>
                                                 {% endif %}
@@ -175,10 +177,10 @@
                                 </div>
                                 <div class="col-md-11 col-sm-11">
                                     <div class="panel panel-default arrow left">
-                                        <div class="panel-heading right"> Answer</div>
-                                        <div class="btn-group pull-right" style="margin-right: 60px">
 
-                                            {% if request.user|info_delete_answer:a %}
+                                        <div class="btn-group pull-right" >
+
+                                            {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}
                                                 <form action="{% url 'delete_a' %}" method="post">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="a_id" value="{{ a.id }}"/>
@@ -186,19 +188,19 @@
                                                             class="glyphicon glyphicon-trash"
                                                             style="color: #00A000"></i></button>
                                                 </form>
-                                            {% endif %}
+
 
                                         </div>
 
-                                        {% if request.user|info_change_answer:a %}
-                                            <div class="btn-group pull-right">
-                                                <button type="submit" class="btn btn-link" data-toggle="modal"
-                                                        data-target="#{{ a.id }}">
-                                                    <i class="fa fa-pencil" style="color: #00A000"></i></button>
-                                            </div>
-                                            <!-- modal edit form-->
-                                            <div id="{{ a.id }}" class="modal fade" role="dialog">
-                                                <div class="modal-dialog">
+                                        <div class="btn-group pull-right">
+                                            <button type="submit" class="btn btn-link" data-toggle="modal"
+                                                    data-target="#{{ a.id }}">
+                                                <i class="fa fa-pencil" style="color: #00A000"></i></button>
+                                              {% endif %}
+                                        </div>
+                                        <!-- modal edit form-->
+                                        <div id="{{ a.id }}" class="modal fade" role="dialog">
+                                            <div class="modal-dialog">
 
                                                     <!-- Modal content-->
                                                     <div class="modal-content">
@@ -232,7 +234,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        {% endif %}
+
 
                                         <div class="panel-body">
                                             <div class="text-left">

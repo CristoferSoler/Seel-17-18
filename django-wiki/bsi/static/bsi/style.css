@@ -17,17 +17,18 @@ body {
 
 }
 
-.footer,
-.push {
+footer {
+      min-height: 50px;
+    padding: 20px 0 10px 0;
+
+}
+
+ .push {
     height: 50px;
 
 }
 
-footer {
-    min-height: 50px;
-    padding: 20px 0 10px 0;
 
-}
 
 footer .menu li a {
     font-family: Roboto;
@@ -38,6 +39,10 @@ footer .menu li a {
 
 footer .menu li a:hover {
     color: #ffffff;
+}
+
+.list-group-item .active{
+    background-color:#007a36 ;
 }
 
 .margin-after-nav {
@@ -73,6 +78,10 @@ footer .menu li a:hover {
 
 .navbar-fixed-top .navbar-collapse, .navbar-fixed-bottom .navbar-collapse {
     max-height: 380px;
+}
+
+.navbar .bg-secondary{
+    background-color: #0e84b5;
 }
 
 /*for article content */
@@ -113,44 +122,15 @@ header {
     top: 0;
     left: 0;
     background: linear-gradient(
-            rgba(238, 238, 238, 0.4),
-            rgba(238, 238, 238, 0.4)),
+            rgba(238, 238, 238, 0.6),
+            rgba(238, 238, 238, 0.6)),
             url("../bsi/images/afghanistan-80360_1920.jpg");
     background-size: cover;
 
 }
 
-section {
-    padding: 130px 0;
-    display: flex;
-}
 
-.center-items {
-    display: flex;
-    align-items: center;
-}
 
-.features-icons {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
-
-.features-icons .features-icons-item {
-    max-width: 50rem;
-
-}
-
-.features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon i {
-    font-size: 6rem;
-}
-
-.features-icons .features-icons-item:hover .features-icons-icon i {
-    font-size: 5rem;
-}
 
 .inner-addon {
     position: relative;

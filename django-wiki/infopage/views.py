@@ -1,8 +1,11 @@
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.core.exceptions import PermissionDenied
+from django.core.mail import EmailMessage
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.template.loader import render_to_string
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 from .forms import QuestionForm, AnswerForm
 from .models import Question, PageType, Answer
@@ -29,8 +32,8 @@ def post_question(request):
                     Question.create_question(q_form.cleaned_data['question'], PageType.INFO_PAGE)
                 return HttpResponseRedirect(reverse('information'))
             return render(request, 'info.html', {'q_form': q_form,
-                                                     'questions': Question.get_questions(
-                                                         PageType.INFO_PAGE)})
+                                                 'questions': Question.get_questions(
+                                                     PageType.INFO_PAGE)})
 
 
 def post_answer(request):
@@ -44,8 +47,36 @@ def post_answer(request):
                         q.add_answer(a_form.cleaned_data['answer'], request.user)
                     else:
                         q.add_answer(a_form.cleaned_data['answer'])
+
+                    sendResponseMail(q,a_form.cleaned_data['answer'])
                 return HttpResponseRedirect(reverse('information'))
             return render(request, 'info.html', {'a_form': a_form})
+
+def sendResponseMail(q,answer):
+    authorEmail = getEmailOfAuthor(q)
+    if(authorEmail != None):
+        mail_subject = 'ISAM: Answer to your question'
+        message = render_to_string('email/answerQuestion.html', {
+            'question': q.question,
+            'author': q.user,
+            'answer': answer,
+        })
+
+        email = EmailMessage(
+            mail_subject, message, to=[authorEmail]
+        )
+        email.send()
+        print('Email send')
+
+
+def getEmailOfAuthor(q):
+    authorUsername = q.user
+    if(authorUsername == None):
+        return None
+    else:
+        author = User.objects.get(username=authorUsername)
+        authorEmail = author.email
+        return authorEmail
 
 
 def has_permission(user):
