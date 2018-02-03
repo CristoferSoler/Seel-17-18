@@ -299,15 +299,15 @@ class ArticleMultipleChoiceField(ModelMultipleChoiceField):
 
 
 class AddLinksForm(forms.Form):
-    links = ArticleMultipleChoiceField(
-        label=pgettext_lazy('Revision comment', 'BSI'),
-        queryset=get_available_links(),
-        widget=forms.CheckboxSelectMultiple,
-        help_text=_("Associate with a BSI article when creating an article"),
-        required=False)
 
     def __init__(self, *args, **kwargs):
         super(AddLinksForm, self).__init__(*args, **kwargs)
+        self.fields['links'] = ArticleMultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            queryset=get_available_links(),
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Associate with a BSI article when creating an article"),
+            required=False)
 
 
 class UGEditForm(forms.Form, SpamProtectionMixin):
@@ -327,12 +327,6 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
         required=False,
         widget=forms.HiddenInput())
     # checked = forms.BooleanField(label="Reviewed", required=False)
-    links = ArticleMultipleChoiceField(
-        label=pgettext_lazy('Revision comment', 'BSI'),
-        queryset=get_available_links(),
-        widget=forms.CheckboxSelectMultiple,
-        help_text=_("Linked to these BSI articles"),
-        required=False)
 
     def __init__(self, request, current_revision, checked, *args, **kwargs):
         self.no_clean = kwargs.pop('no_clean', False)
@@ -383,6 +377,12 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
             self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False)
         else:
             self.fields['checked'] = forms.BooleanField(label="Reviewed", required=False, widget=HiddenInput)
+        self.fields['links'] = ArticleMultipleChoiceField(
+            label=pgettext_lazy('Revision comment', 'BSI'),
+            queryset=get_available_links(),
+            widget=forms.CheckboxSelectMultiple,
+            help_text=_("Linked to these BSI articles"),
+            required=False)
 
     def clean_title(self):
         title = self.cleaned_data.get('title', None)
