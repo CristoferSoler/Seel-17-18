@@ -57,8 +57,7 @@ function showElements() {
         var path = element['path'];
         var title = element['title'];
 
-        $('#articleTopicList').append("<li class='list-group-item'><a href='" + path + "'>" + title + "</a></li>");
-        valid = false;
+        $('#articleTopicList').append("<a class=\"list-group-item list-group-item-action\" href='" + path + "'>" + title + "</a>");
     });
 
     var visible = stringToBoolean(localStorage.getItem('topicListVisible'))
@@ -69,6 +68,7 @@ function showElements() {
             $('#topicIcon').addClass('glyphicon-minus');
         }
     }
+    valid = false;
 
 }
 
@@ -154,7 +154,7 @@ function initWizard() {
     }
 }
 
-function yesPress() {
+function  yesPress() {
     if (amountOfTotalTopics < 0) {
         if (amountOfTotalTopics == -2) {
             amountOfTotalTopics = 0;
@@ -481,7 +481,7 @@ function showResults() {
         }
 
         sortedElementswithTopicLists.slice(0,counter).forEach(function (element) {
-            $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
+            $("#list").append("<li class='list-group-item'><a class='test' href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
 
         var isExpanded = $('#collapse1').attr("aria-expanded");
@@ -607,6 +607,15 @@ function buttonsWizard() {
         valid = true;
 
     })
+
+    $('#collapse1').on('show.bs.collapse', function () {
+       valid = false
+    });
+
+    $('#collapseResults').on('show.bs.collapse', function () {
+       valid = false
+    });
+
 }
 
 
@@ -620,6 +629,10 @@ function initWizardsComponents() {
     });
 
     $('li a').bind('click', function () {
+        valid = true;
+    });
+
+    $(document).on('click', '.list-group-item', function(e){
         valid = true;
     });
 
