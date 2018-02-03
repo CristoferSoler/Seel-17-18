@@ -125,7 +125,16 @@ def doUpdate():
         return ''
     except Exception as e:
         print(e)
+        removeNewPage()
         return "An error has occurred. Update process aborted."
+
+
+def removeNewPage():
+    try:
+        new = URLPath.objects.get(slug='new')
+        new.delete()
+    except Exception:
+        return
 
 
 def createNewPage():
