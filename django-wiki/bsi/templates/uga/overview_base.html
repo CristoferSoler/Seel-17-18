@@ -1,14 +1,30 @@
 <script src="../../static/bsi/js/jquery.min.js"></script>
+<script src="../../static/bsi/js/table/bootstrap-table.js"></script>
+<link rel="stylesheet" type="text/css" href="../../static/bsi/js/table/bootstrap-table.css"/>
+
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
-<!-- Latest compiled and minified Locales -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>
+
 <script>
     $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
+
+    function dateSorter(a, b) {
+      var d1 = new Date(a);
+      var d2 = new Date(b);
+
+      if (d1 < d2) return -1;
+      if (d1 > d2) return 1;
+      return 0;
+    }
+
+     function priceSorter(a, b) {
+        a = +a.substring(1); // remove $
+        b = +b.substring(1);
+        if (a > b) return 1;
+        if (a < b) return -1;
+        return 0;}
+
 </script>
 
 {% extends 'bsi/base.html' %}
@@ -38,16 +54,17 @@
                        data-pagination="true"
                        data-height="550"
                        data-locale="en-US"
-                       data-page-list="[15, 30, 90, 200]">
+                       data-page-list="[15, 30, 90, 200]"
+                       data-sort-name="date">
+
 
               <thead>
                     <tr>
                         <th data-sortable="true">Article Name</th>
                         <th data-sortable="true">Author</th>
-                        <th data-sortable="true">Date</th>
+                        <th data-sortable="true" data-sorter = "priceSorter">Date</th>
                     </tr>
-                    </thead>
-
+              </thead>
             <!-- tbody should be displayed from overview_uga.html -->
              {% block tbody_overview %}
 
@@ -60,3 +77,4 @@
         </div>
 
 {% endblock %}
+

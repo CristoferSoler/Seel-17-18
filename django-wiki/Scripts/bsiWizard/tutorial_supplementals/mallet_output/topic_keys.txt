@@ -1,0 +1,10 @@
+0	0,5	company 
+1	0,5	service 
+2	0,5	including 
+3	0,5	institution 
+4	0,5	required 
+5	0,5	error 
+6	0,5	communication 
+7	0,5	link 
+8	0,5	network 
+9	0,5	data 
