@@ -23,12 +23,6 @@ body {
 
 }
 
-footer {
-    min-height: 50px;
-    padding: 20px 0 10px 0;
-
-}
-
 footer .menu li a {
     font-family: Roboto;
     color: #007a36;
@@ -124,37 +118,8 @@ header {
 
 }
 
-section {
-    padding: 130px 0;
-    display: flex;
-}
 
-.center-items {
-    display: flex;
-    align-items: center;
-}
 
-.features-icons {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
-
-.features-icons .features-icons-item {
-    max-width: 50rem;
-
-}
-
-.features-icons .features-icons-item .features-icons-icon {
-    height: 7rem;
-}
-
-.features-icons .features-icons-item .features-icons-icon i {
-    font-size: 6rem;
-}
-
-.features-icons .features-icons-item:hover .features-icons-icon i {
-    font-size: 5rem;
-}
 
 .inner-addon {
     position: relative;
