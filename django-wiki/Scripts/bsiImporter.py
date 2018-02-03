@@ -248,13 +248,15 @@ def post_phase_move_bsi(new_type, default_type, old_parent, archive):
                     pass
 
                 try:
-                    new_article.parent = bsi_type
-                    new_article.parent.parent = bsi_type.parent
-                    new_article.save()
                     for ancestor in Article.objects.get(pk=new_article.article.pk).ancestor_objects():
                         ancestor.article.clear_cache()
-                    new_article.set_cached_ancestors_from_parent(bsi_type)
+                    new_article.parent = bsi_type
                     new_article.save()
+                    new = URLPath.objects.get(pk=new_article.pk)
+                    for ancestor in Article.objects.get(pk=new.article.pk).ancestor_objects():
+                        ancestor.article.clear_cache()
+                    new.set_cached_ancestors_from_parent(bsi_type)
+                    new.save()
                 except Exception as e:
                     print(e)
                     pass
