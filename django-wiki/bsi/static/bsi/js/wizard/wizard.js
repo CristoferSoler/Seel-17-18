@@ -63,9 +63,11 @@ function showElements() {
     var visible = stringToBoolean(localStorage.getItem('topicListVisible'))
     if (localStorage.getItem('topicListVisible') !== null) {
         if (visible) {
-            $('#collapse1').collapse("show");
-            $('#topicIcon').removeClass('glyphicon-plus');
-            $('#topicIcon').addClass('glyphicon-minus');
+            if(amountOfTotalTopics < showResultCount-1){
+                $('#collapse1').collapse("show");
+                $('#topicIcon').removeClass('glyphicon-plus');
+                $('#topicIcon').addClass('glyphicon-minus');
+            }
         }
     }
     valid = false;
@@ -640,6 +642,11 @@ function initWizardsComponents() {
         var isExpandedString = $('#collapse1').attr("aria-expanded");
         var isExpanded;
         isExpanded = stringToBoolean(isExpandedString);
+
+        if(isExpanded == undefined){
+            $('#topicIcon').removeClass('glyphicon-plus');
+            $('#topicIcon').addClass('glyphicon-minus');
+        }
 
         if (isExpanded) {
             $('#topicIcon').removeClass('glyphicon-minus');
