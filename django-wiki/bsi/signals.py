@@ -39,9 +39,6 @@ def userInActive(sender, instance, *args, **kwargs):
             text = 'Dummy Text'
             sendMail(user, subject, text)
 
-
-
-
 def sendMail(user,subject,text):
     userEmail = getEmailOfUser(user)
     if(userEmail != None):
