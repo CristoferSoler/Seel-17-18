@@ -52,8 +52,3 @@ If an attacker can authenticate himself through the Google ID, he can use all of
 With the operating system, manufacturers often ship deeply integrated and pre-installed apps (such as the Play Store and associated Play Services) and interfaces to third-party services (Twitter, Facebook, etc.). Some of these apps can not be removed by the user. This increases the attack surface of the Android operating system. The non-erasable or non-configurable interfaces are often not desired in institutions.
 
 Overall, the deep integration of apps and third-party interfaces increases the risk that the device will become infected with malicious software or that an attacker may gain unauthorized access. The protection of data on the device decreases.
-
-3 requirements
----------------
-
-The following are specific requirements for the Android section. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.

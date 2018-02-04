@@ -1,4 +1,13 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Software vulnerabilities and drive-by downloads
+### 2 2 Blackmail by ransomware
+### 2 3 Targeted Attacks and Social Engineering
+### 2 4 Mobile media infections
+### 2 5 botnets
+### 2 6 Infection of production systems and IoT devices
+### 3.1 Basic Requirements
 #### OPS.1.1.4.A1 Creation of a concept for protection against malicious programs
 #### OPS.1.1.4.A2 Use of system-specific protection mechanisms
 #### OPS.1.1.4.A3 Selection of a virus protection program for terminal devices

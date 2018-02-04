@@ -1,4 +1,16 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 DNS server failure
+### 2 2 Insufficient line capacity
+### 2 3 Lack of or inadequate planning of DNS use
+### 2 4 Bad domain information
+### 2 5 Incorrect configuration of a DNS server
+### 2 6 DNS manipulation
+### 2 7 DNS hijacking
+### 2 8 DNS-DoS
+### 2 9 DNS Reflection
+### 3.1 Basic Requirements
 #### APP.3.6.A1 Planning the DNS deployment
 #### APP.3.6.A2 Use of redundant DNS servers
 #### APP.3.6.A3 Use of separate DNS servers for internal and external requests

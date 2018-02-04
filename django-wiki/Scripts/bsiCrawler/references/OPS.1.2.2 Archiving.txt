@@ -1,7 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Insufficient migration of archive systems
+### 2 2 Inadequate classification criteria for archives
+### 2 3 Inadequate documentation of archive accesses
+### 2 4 Inadequate transfer of paper data to an electronic archive
+### 2 5 Insufficient renewal of cryptographic procedures during archiving
+### 2 6 Insufficient performance of archival revisions
+### 2 7 Infringement of the legal framework when using archiving
+### 3.1 Basic Requirements
 #### OPS.1.2.2.A1 Identification of influencing factors for electronic archiving
 #### OPS.1.2.2.A2 Development of an archiving concept
-#### OPS.1.2.2.A3 Appropriate installation of archive systems and storage of archive media [Head IT, IT operation]
+#### OPS.1.2.2.A3 Appropriate installation of archive systems and storage of archive media [Head of IT, IT operation]
 #### OPS.1.2.2.A4 Consistent indexing of data during archiving [IT, IT operation, user]
 #### OPS.1.2.2.A5 Regular processing of archived data [Head IT]
 #### OPS.1.2.2.A6 Protection of the integrity of the index database of archive systems [Head IT, IT Operations]

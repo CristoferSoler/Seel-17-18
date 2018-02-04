@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Listening to unprotected communications from Samba
+### 2 2 Incorrect logging in Samba
+### 2 3 Incorrect emergency preparedness in Samba
+### 2 4 Missing adaptation of Samba
+### 2 5 Software vulnerabilities or errors in Samba
+### 2 6 Unauthorized use or administration of Samba
+### 2 7 Incorrect administration of Samba
+### 2 8 Malicious programs around Samba services
+### 2 9 Data loss at Samba
+### 2 10 Integrity loss of sensitive information at Samba
+### 3.1 Basic Requirements
 #### APP.3.4.A1 Planning the use of a Samba server [Head IT]
 #### APP.3.4.A2 Secure basic configuration of a Samba server
 ### 3.2 Standard requirements

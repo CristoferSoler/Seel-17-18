@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -11,7 +9,7 @@ As a rule, each institution has one or more rooms in which meetings, trainings o
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate spaces, treated.
+The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate rooms, treated.
 
 ### 1.3 Delimitation
 
@@ -46,8 +44,3 @@ In addition to expensive IT systems, mobile devices are often stolen, which are 
 ### 2 6 Confidentiality loss of sensitive information
 
 By technical failure, carelessness, ignorance also by intentional acts confidential information can be disclosed. This confidential information may be available in different places, such. For example, on storage media within computers (such as hard drives), on removable storage media (such as USB sticks or optical media), in printed form on paper and on whiteboards or flipcharts. If information is read or disclosed unjustifiably, it can have serious consequences for the institution, such as violations of law, competitive disadvantages or financial repercussions.
-
-3 requirements
----------------
-
-Specific requirements for the protection of meeting, event and training rooms * are listed below. In principle, the head of organization is responsible for the fulfillment of the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.

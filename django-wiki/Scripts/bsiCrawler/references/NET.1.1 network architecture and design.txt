@@ -1,4 +1,10 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Failure or inadequate performance of communication links
+### 2 2 Insufficiently secured network access
+### 2 3 Improper construction of networks
+### 3.1 Basic Requirements
 #### NET.1.1.A1 Network Security Policy [IT Director, Information Security Officer (ISB)]
 #### NET.1.1.A2 Documentation of the network [IT operation]
 #### NET.1.1.A3 requirements specification for the network
@@ -35,7 +41,7 @@
 #### NET.1.1.A32 Physical separation of management segments (CIA)
 #### NET.1.1.A33 Network microsegmentation (CIA)
 #### NET.1.1.A34 Use of cryptographic procedures at network level (CI)
-#### NET.1.1.A35 Use of Net-based DLP [Information Security Officer (ISB)] (CI)
+#### NET.1.1.A35 Deployment of Net-based DLP [Information Security Officer (ISB)] (CI)
 #### NET.1.1.A36 Separation via VLAN with very high protection requirement
 5 Appendix: Cross reference table for elementary hazards
 * G 0.9 Failure or malfunction of communication networks

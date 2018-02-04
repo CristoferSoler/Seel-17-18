@@ -58,7 +58,3 @@ If browsers are configured insecure, trusted data can be made available to unaut
 ### 2 6 Error during administration and operation
 
 Errors in the administration of the web browser can lead to unsafe configuration and unsafe operation. An essential threat potential arises in the lack of timeliness and maintenance of the web browser used. In addition, browser manufacturers often do not provide security updates in a timely manner. This significantly increases the spread of exploitable vulnerabilities.
-
-3 requirements
----------------
-The following are the specific requirements for Web browsers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer should always be involved in strategic decisions. In addition, the Information Security Officer is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.

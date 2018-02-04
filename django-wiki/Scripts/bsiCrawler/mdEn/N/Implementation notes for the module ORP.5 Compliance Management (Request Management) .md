@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -61,7 +59,7 @@ If passwords are used for authentication in a client, the security of the access
 
 When passwords are used for authentication, the IT system should provide mechanisms that meet the following conditions:
 
-* It ensures that each user uses individual passwords (and can choose them himself).
+* It ensures that each user uses individual passwords (and can select them himself).
 * It is checked that all passwords meet the defined specifications (eg minimum length, no trivial passwords). The password quality check should be individually controllable. For example, it should be possible to specify that the passwords must contain at least one special character or that certain character combinations are prohibited.
 * The IT system generates passwords that meet the defined requirements. The IT system must offer the passwords thus generated to the user.
 * The password change should be initiated regularly by the IT systems. The lifetime of a password should be adjustable.
@@ -91,7 +89,7 @@ It is necessary to check sporadically the above specifications for their correct
 
 ** Administrators identifiers **
 
-In many complex IT systems, eg. For example, on Unix or in a network, there is an administrator role that is not restricted. Under Unix, this is the super user root, in a Novell network the SUPERVISOR or admin. Missing restrictions increase the risk of errors or misuse.
+In many complex IT systems, eg. For example, on Unix or in a network, there is an administrator role that has no restrictions. Under Unix, this is the super user root, in a Novell network the SUPERVISOR or admin. Missing restrictions increase the risk of errors or misuse.
 
 In order to avoid mistakes, the super-user login should only be used if necessary; Other work should not be performed by administrators under an administrator ID, but by a personal ID. In particular, no programs of other users with administrator rights may be called. If administrative rights are required for certain activities, it is recommended to create and implement a role-based administration concept (see SYS.1.1.M14 Creation of a user and administration concept). In addition, routine system administration (for example, backup, setting up a new user) should only be menu-driven.
 By division of tasks, regulations and agreement it must be ensured that administrators do not inconsistent or incomplete interventions. For example, a file may not be edited and changed by several administrators at the same time, as only the last saved version will be preserved.
@@ -108,7 +106,7 @@ Basically, a distinction can be made between identifiers for users and administr
 
 If users only need to perform certain administrative tasks, it is often not necessary to give them all rights associated with their own login or even system administrator rights. Examples include certain routine system administration activities, such as creating backups or setting up a new user menu-driven with a program, or activities that require a user to have only a single application program. In particular for temporary staff and external service providers, care should be taken that they only use the services and only access the data they actually need. When their activity is over, their accounts should be disabled and all access permissions removed.
 
-For these users, a limited user environment should be created. For example, it can be implemented under Unix with a restricted shell (rsh) and a restriction of the access paths with the Unix command chroot. Another possibility is to run individual application programs, such as web browsers, in the so-called kiosk mode, so that there is only limited access.
+For these users, a limited user environment should be created. For example, it can be implemented under Unix with a restricted shell (rsh) and a restriction of the access paths with the Unix command chroot. Another possibility is to execute individual application programs, such as web browsers, in the so-called kiosk mode, so that there is only limited access.
 
 If particularly extensive rights are assigned to user IDs, this should be as restrictive as possible. On the one hand the circle of privileged users should be restricted as far as possible and on the other hand only the rights needed for the execution of the work should be assigned. For all tasks that can be performed without extended rights, privileged users should also work under identifiers with standard rights.
 
@@ -128,18 +126,18 @@ should be carried out. It is recommended to provide an overview of the various t
 * Administration via a central management systemIf a central management system is to be used for the administration of the server, analogous considerations should be made for this access channel, as for remote administration. In addition, it is important that the central management system itself be configured and administered accordingly.
 ** secure authentication **
 
-In principle, IT systems should ensure that all users who want to access them have to authenticate themselves. This is the only way to prevent unauthorized persons from gaining access to the services offered by the system or to the data stored on the system.
+In principle, IT systems should ensure that all users who want to access them have to authenticate themselves. Only in this way can unauthorized persons prevent access to the services offered by the system or to the data stored on the system.
 
 As a rule, servers are administered via a network connection. The information needed for network-based authentication must be transmitted over a LAN or WAN. Therefore, it is imperative that this information can not be read or changed.
 
-It must also be ensured that an attacker can not log in by replaying recorded credentials. Therefore, the credentials that are exchanged for authentication between server and client must be encrypted and additionally dynamized, for example with challenge-response methods.
+It must also be ensured that an attacker can not log in by replaying recorded credentials. Therefore, the credentials that are exchanged for authentication between the server and client must be encrypted and additionally dynamized, for example with challenge-response methods.
 
 After the authentication has been successfully completed, the system must ensure that users only have access to those services and data for which they have appropriate permissions.
 
 If there is a danger of listening to lines to terminals, administrators should only work on the console so that passwords can not be intercepted. When administering Unix systems, encrypted communication can be done using the Secure Shell protocol, for example. This allows secure administration from remote workstations.
 
 #### ORP.5.M6 Instructing the staff in the safe handling of IT [Supervisors, Human Resources]
-The standard installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
+The default installation of an operating system often includes a number of programs and services that are not normally needed and that can be a source of security vulnerabilities for that very reason. This applies in particular to network services. After installation, it therefore needs to be checked which services are installed and activated on the system. Unnecessary services must be disabled or completely uninstalled.
 
 On the one hand, checking for running services can be carried out locally with the resources of the installed operating system and, on the other hand, in network services from the outside through a port scan from another system. By a combination of both methods can be largely excluded that the system offers even more unwanted network services.
 
@@ -170,7 +168,7 @@ Often you can observe the phenomenon that users want to have more storage space 
 
 A simple solution would be to always provide more and more storage space as needed as demand increases. However, this is not always feasible in practice. Even if the users are sensitized for economical data storage, each unnecessary file is nevertheless often considered important.
 
-For users or user groups, but also for applications, Disk Quotas can set a storage volume that must not be exceeded. On servers and all IT systems that are used concurrently by multiple users or applications, disk space should therefore be restricted for individual users as well as for applications through disk quotas. This includes servers (such as file, web, and mail servers) and clients with multiple user IDs. For clients where the data is disconnected from the system partition and used by only one user, a disk quota can be omitted.
+For users or user groups, but also for applications, Disk Quotas can set a storage volume that must not be exceeded. On servers and all IT systems that are used concurrently by multiple users or applications, disk space should therefore be restricted for individual users as well as for applications through disk quotas. This includes servers (such as file, web, and mail servers) and clients with multiple user IDs. For clients where the data is separated from the system partition and used by only one user, a disk quota can be omitted.
 
 The choice of the quota volume is important. If all users are to receive the same quota volume, the required volume can be calculated by dividing the space to be used by the number of users. In addition, however, a space reserve should be scheduled. The problem is the choice of a too small disk quota. If users have too little disk space available, they might try to store the information outside the intended directories to circumvent the restrictions. For this purpose, then frequently used locations that are not suitable for such. Temporary directories or other directories writable to all users. When space on file servers is too tight, users often rely on local disks. In many cases, this violates the regulations and may, for example, result in the files not being included in the central backup.
 
@@ -200,13 +198,13 @@ If it is determined that a security update or patch is incompatible with another
 
 Carelessly executing programs that originate from "unsafe" sources can cause considerable harm. Malware, for example, can install password-spying programs, Trojan horses, or backdoors on a computer, or easily corrupt or erase data.
 
-Typical sources of such malware include programs that display themselves as screen savers, virus scanners or other utilities and are attached to e-mails. Often these are sent under fake sender addresses to many recipients. Often the programs are downloaded from the internet and installed without verification.
+Typical sources of such malware are, for example, programs that display themselves as screen savers, virus scanners or other utilities and are attached to e-mails. Often these are sent under fake sender addresses to many recipients. Often the programs are downloaded from the internet and installed without verification.
 
 Even if no encryption or signature techniques are used otherwise, the use should be considered to the extent described in this measure.
 
 In principle, software should only be installed from well-known sources, especially if it has not been delivered on data carriers but has been downloaded from the internet, for example. This is especially true for updates or patches that are typically no longer delivered on disk. Most manufacturers and distributors offer checksums that allow at least an integrity check of a package. The checksums are usually published on the websites of manufacturers or sent by e-mail. To verify the integrity of a downloaded program or archive file, the published checksum is then compared to a locally generated checksum by a corresponding program.
 
-If checksums are offered for a software package, these should be checked before installing the package.
+If checksums are offered for a software package, these should be checked before the package is installed.
 
 A verification of authenticity can not be done with checksums. Therefore, in many cases, digital signatures are offered for programs or packages. In turn, the public keys needed to verify the signature are usually available on the manufacturer's websites or from public-key servers. Often the checksums are generated with one of the programs PGP or GnuPG.
 
@@ -217,13 +215,13 @@ Furthermore, not all checksum comparisons can be performed without the involveme
 
 If digital signatures are available for a software package, they should always be checked before installing the package.
 
-A fundamental problem with the use of digital signatures is the verification of the authenticity of the key used itself. If the public key carries no signature of a known trustworthy person or organization (such as a trust center), the signatures generated with the corresponding private key offer no real security in that the software package actually comes from the developer, manufacturer or distributor. Therefore, if not certified, the public keys should preferably be obtained from a source other than the software package itself, such as a manufacturer's CD-ROM, another mirror server on which the package can also be downloaded, or one Public key server.
+A fundamental problem with the use of digital signatures is the verification of the authenticity of the key used itself. If the public key carries no signature of a known trustworthy person or organization (such as a trust center), the signatures generated with the corresponding private key offer no real security in that the software package actually comes from the developer, manufacturer or distributor. Therefore, if not certified, the public keys should preferably be obtained from a source other than the software package itself, for example from a manufacturer's CD-ROM, from another mirror server on which the package can also be downloaded, or from one Public key server.
 
 To check checksums and digital signatures, the corresponding programs must be available locally. Administrators should be aware of the meaning and validity of checksums and digital signatures. In addition, the administrators must have enough time to use the appropriate programs in their daily work and familiarize themselves with the operation.
 
 Obtaining patches and email changes is not recommended for a variety of reasons. The origin of emails is difficult to determine without the use of additional security mechanisms and the recipient addresses in the institutions are often distribution lists, whose address is easy to guess. Patches and changes can also be very extensive by now. Many companies and government agencies have limited the size of email attachments and may also prohibit the adoption of executable attachments. Furthermore, the large amounts of data unnecessarily burden the e-mail systems. Therefore, a timely availability of the software changes, which can be critical, especially in the case of security patches, can not be adequately ensured via e-mail.
 
-Furthermore, some manufacturers offer to send changes and patches to the customer directly on data carriers. In this case as well, the patches and changes should be verified using checksums or digital signatures, as sender information on mailpieces and manufacturer logos on CDs and DVDs can easily be faked.
+Furthermore, some manufacturers offer to send changes and patches to the customer directly on data carriers. In this case too, the patches and changes should be verified using checksums or digital signatures, as sender information on mailpieces and manufacturer logos on CDs and DVDs can easily be faked.
 
 Another aspect of verifying the authenticity of the update may be news published by the manufacturer on its website, newsletter or similar channels. Some manufacturers have established cycles and timepoints that typically release information about changes systematically.
 
@@ -238,7 +236,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 Files that are passed on to third parties can generally be further processed by them. This is not always in the sense of the creator. Therefore, data should be protected against subsequent changes, partial disclosure or processing.
 
-Frequently, the problem is that information via the Internet or other networks should be made available to third parties, but not printed out hundredfold or seamlessly integrated into other works.
+The problem often arises that information via the Internet or other networks should be made available to third parties but not printed out hundredfold or seamlessly integrated into other works.
 
 There are various solutions for this, some of which can be combined with each other. Examples for this are:
 
@@ -249,12 +247,12 @@ Many application programs provide security mechanisms to limit further handling 
 
 ** Protection of PDF documents **
 
-PDF documents can be provided with access restrictions during creation. So z. For example, the opening, printing, or copying of PDF files can be restricted.
+PDF documents can be provided with access restrictions during creation. So z. For example, the opening, printing or copying of PDF files can be restricted.
 
 * Often, individual passages in a document are to be rendered unrecognizable before publication. A popular, but extremely error-prone method is to "blacken" text passages electronically. However, the overpainted information is in many cases easily readable. Therefore, this is absolutely necessary.
 * By using cryptographic methods, PDF documents can be signed or encrypted so that only certain users can use them.
 * PDF security policies can be created. Any user can create these for themselves or use security policies specified by the institution, which requires an Adobe Policy Server.
-* File ProtectionWith Adobe Acrobat, the most popular application for creating and editing PDF files, you can assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption provided with AES. Care should be taken to encrypt at least 128 bits, as document protection can otherwise be easily undone. The following security features can be limited, among others:
+* File ProtectionWith Adobe Acrobat, the most popular application for creating and editing PDF files, you can assign two types of passwords. Some are needed to open the document, the others are needed to change the security attributes. When assigning a password, it first asks which program versions the protection function should be compatible with. Up to the version "Adobe 5.0 and higher", only a 40-bit encryption with RC4 is possible, from "Adobe 5.0 and higher" is a 128-bit encryption with RC4 and from "Adobe 7.0 and higher" is a 128- Bit encryption with AES provided. Care should be taken to encrypt at least 128 bits, as document protection can otherwise be easily undone. The following security features can be limited, among others:
 
  
 + Open the document
@@ -279,7 +277,7 @@ Basically, employees should, of course, handle all information carefully. In add
 Of course, the protection required by data directly affects all media on which they are stored or processed. Data with special protection requirements may be incurred in a wide variety of areas, eg. For example, fax or e-mail. There should therefore be regulations in all areas which also specify who may read, process or pass on such data. This includes, if necessary, the regular check for correctness and completeness of the data.
 
 Many information, but also applications, are subject to copyright notices or passing restrictions ("for internal use only"). All employees must be made aware that no documents, files or software may be copied without taking into account any copyright notices or license terms.
-Special attention must also be paid to all information that forms the basis for the task. This includes all business-relevant data, so z. For example, those data that, if lost, could incapacitate the institution that may affect the economic relationships of collaborating companies, or from whose knowledge a third party (eg, competitor) may derive financial benefits. Every agency and every business should have an overview of what data is critical to their business. In addition to the general due diligence requirements, special rules and regulations may apply to these data for storage, processing, transfer and destruction. This business critical information needs to be protected against loss, manipulation and falsification. Longer-term stored or archived data must be regularly tested for readability. Information that is no longer required must be reliably deleted (see also CON.7 Delete and Destroy).
+Special attention must also be paid to all information that forms the basis for the task. This includes all business-relevant data, so z. For example, those data that, if lost, could incapacitate the institution that may affect the economic relationships of collaborating companies, or from whose knowledge a third party (such as a competitor) may derive financial benefits. Every agency and every business should have an overview of what data is critical to their business. In addition to the general due diligence requirements, special rules and regulations may apply to these data for storage, processing, transfer and destruction. This business critical information needs to be protected against loss, manipulation and falsification. Longer-term stored or archived data must be regularly tested for readability. Information that is no longer required must be reliably deleted (see also CON.7 Delete and Destroy).
 
 #### ORP.5.M11 Survey of the legal framework for cryptographic processes and products [IT operation, person responsible for the individual applications] (CI)
 

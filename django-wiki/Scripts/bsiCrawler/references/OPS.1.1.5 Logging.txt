@@ -1,6 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Missing or insufficient logging
+### 2 2 Incorrect selection of relevant logging data
+### 2 3 Missing time synchronization during logging
+### 2 4 Incorrect planning during logging
+### 2 5 Confidentiality and integrity loss of logging data
+### 2 6 Incorrectly configured logging
+### 2 7 Failure of data sources
+### 2 8 Insufficiently sized logging infrastructure
+### 3.1 Basic Requirements
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
-#### OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
+#### OPS.1.1.5.A2 Definition of roles and responsibilities [Head IT]
 #### OPS.1.1.5.A3 Configuration of logging at system and network level
 #### OPS.1.1.5.A4 Time synchronization of the IT systems
 #### OPS.1.1.5.A5 Compliance with legal framework [Information Security Officer (ISB)]

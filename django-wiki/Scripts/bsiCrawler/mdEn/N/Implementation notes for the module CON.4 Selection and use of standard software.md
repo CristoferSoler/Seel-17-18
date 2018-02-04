@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -15,7 +13,7 @@ These implementation notes for the relevant module show how institutions should 
 
 ** planning and conception **
 
-In the planning and design phase, an employee responsible for procuring the standard software should be named (see CON.4.M4 * Definition of responsibilities in the area of ​​standard software *). The requirements for the standard software to be procured should be analyzed and recorded in a requirements catalog (CON.4.M5 * Creation of a requirements catalog for standard software *). Then a suitable product can be selected (CON.4.M6 * Selection of a suitable software product *). In the case of increased protection requirements, it should also be decided whether and how an application to be procured should be certified in order to demonstrate a certain level of security (see CON.4.M11 * Use of certified standard software *).
+In the planning and conception phase, an employee responsible for procuring the standard software should be named (see CON.4.M4 * Definition of responsibilities in the area of ​​standard software *). The requirements for the standard software to be procured should be analyzed and recorded in a requirements catalog (CON.4.M5 * Creation of a requirements catalog for standard software *). Then a suitable product can be selected (CON.4.M6 * Selection of a suitable software product *). In the case of increased protection requirements, it should also be decided whether and how an application to be procured should be certified in order to demonstrate a certain level of security (see CON.4.M11 * Use of certified standard software *).
 
 **Procurement**
 
@@ -100,7 +98,7 @@ Together with the basic measures, the following measures correspond to the state
 
 #### CON.4.M4 Definition of responsibilities in the area of ​​standard software [department]
 
-Before the introduction of standard software, a number of responsibilities have to be B .:
+Before the introduction of standard software, a number of responsibilities have to be regulated, such as: B .:
 
 * Who creates a requirements catalog?
 * Who chooses products?
@@ -116,7 +114,7 @@ Below is shown how these responsibilities can be meaningfully distributed. Howev
 * The IT security officer must check whether the products used or to be procured ensure an adequate level of security. As part of security management, he must ensure information security during ongoing operations.
 * The data protection officer must ensure that the data protection regulations are adhered to and that personal data are sufficiently protected.
 * In many cases, the Personnel / Works Council must be involved in the selection of new standard software, especially if there are major changes in the workflow or if the software to be procured is suitable for performance control.
-In the overall process "standard software", it must be determined for each individual step which of the instances described above are responsible for the execution and which instances have to be involved. The following table shows how responsibility can be meaningfully distributed.
+In the overall process "standard software", it must be determined for each individual step which of the previously described instances are responsible for the execution and which instances have to be involved. The following table shows how responsibility can be meaningfully distributed.
 
 The assignments made are binding and it must be checked regularly whether they are complied with.
 
@@ -149,10 +147,10 @@ For the selection of a suitable product, therefore, first a catalog of requireme
 
 
  
-* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information on the maximum allowable processing time should be taken. Example:
+* Performance requirements describe the required performance in terms of throughput and runtime behavior. For the required functions as accurate as possible information about the maximum allowable processing time should be taken. Example:
 
  
-+ Other simultaneously processed processes may not be slowed down by more than 30% by the product.
++ Other simultaneously processed processes must not be slowed down by more than 30% by the product.
 
 
  
@@ -218,15 +216,15 @@ Typical safety requirements that a product can fulfill are briefly explained bel
 * Identification and Authentication: To many products, there will be requirements to identify and monitor those users who have access to the product. In addition to verifying the identity of the user, it is important to verify that the user is actually the person he claims to be. This is done by providing the product with information that is permanently linked to the user.
 * Access Control: For many products, it will be necessary to ensure that users are prevented from accessing information that they do not have access to or do not want to access. It may also be necessary to prevent users from creating, modifying or deleting information without authorization.
 * Preservation of evidence: For many products, it must be ensured that users' actions are recorded. Thus, the consequences can later be assigned to the user in question and the user can be made responsible for his actions.
-* Log Evaluation: For many products, it will be necessary to ensure that sufficient information is recorded about both normal and exceptional occurrences so that it can later be determined whether security breaches actually occurred and what information or other equipment was affected.
+* Log Evaluation: For many products, it will be necessary to ensure that sufficient information is recorded about both normal and exceptional occurrences so that it can be determined later whether there have actually been any security breaches and what information or other equipment has been affected.
 * Unadulterability: For many products, it will be necessary to ensure that certain relationships between different data remain correct and that data is transferred between individual processes without modification. In addition, functions must also be provided which allow the transfer of data between individual processes, users and objects to detect or prevent losses, additions or changes, and which make it impossible to determine the alleged or actual origin or destination of the data Change data transfer.
 Reliability: For many products, it will be necessary to ensure that time-critical tasks are performed at the exact time it is needed, not sooner or later. It will also be ensured that non-time-critical tasks can not be converted into time-critical ones. Similarly, for many products, it will be necessary to ensure that access is possible at the required moment and resources are not unnecessarily requested or retained.
 * Transmission security: This term covers all functions intended to protect the data during transmission via communication channels: authentication, access control, data confidentiality, data integrity, transmission and receipt verification. Some of these functions are realized by means of cryptographic methods.
 In addition, further security requirements for standard software can be specified.
 
-* Data backup: The availability of the data processed with the product is subject to special requirements. This includes features integrated into the product that are designed to prevent data loss, such as: For example, automatically saving intermediate results or automatically creating backup copies before major changes are made.
+* Data backup: The availability of the data processed with the product is subject to special requirements. These include integrated features in the product that are designed to prevent data loss, such as: For example, automatically saving intermediate results or automatically creating backup copies before major changes are made.
 * Encryption: For many products, it will be necessary to encrypt user data before transmission or after processing and to decrypt it after receipt or further processing. For this purpose, a recognized encryption method is to be used. It must be ensured that the parameters required for decryption (eg keys) are suitably protected.
-* Data Integrity Features: Data that may cause loss of integrity can use features that detect or remediate errors through redundancy. In most cases, integrity checking methods are used that can reliably detect whether a product or the data created with it has been deliberately manipulated or data has been restored without authorization.
+* Data Integrity Features: Data that may cause loss of integrity may use features that detect errors or correct them through redundancy. In most cases, integrity checking methods are used that can reliably detect whether a product or the data created with it has been deliberately manipulated or data has been restored without authorization.
 * Data protection requirements: If the product is intended to process personal data, additional special technical requirements must be made in addition to the aforementioned security functions in order to comply with data protection regulations.
 Security functions are implemented by mechanisms. Depending on the intended use, these mechanisms must have different strengths, with which they can ward off attacks. The required strength of the mechanisms must be specified in the catalog of requirements. Applying the Common Criteria (CC) assesses the attack resistance of an IT product operating in a particular deployment environment. Criteria for the evaluation are the threats defined in the security specifications or in a protection profile of the data objects to be protected. The required test depth includes the specification of the attack resistance and depends on the protection requirement and the intended use of the product. The test depth is determined by means of a catalog (see CC, Part 3) mostly by means of predefined evaluation levels (EAL 1 to 7).
 For attack resistance assessment, state-of-the-art attacks relevant to the mission scenario are analyzed to a certain strength, taking into account the attacking time required, technical expertise of the attacker, knowledge of the product, opportunity to attack, and resources required. The confirmation of the attack resistance in the course of the certification then takes place in the gradations low (basic), extended (enhanced basic), medium (moderate) and high (high). Basic means protection against publicly known attacks and against attackers with very limited capabilities and capabilities. High means that a successful attack requires very good expertise, product knowledge, opportunities and resources, and is therefore considered extremely burdensome overall.
@@ -243,7 +241,7 @@ The following table shows an example of such a procedure. The properties require
 
 As a result, it shows that product 3 falls out because a necessary property is missing. Otherwise, the list is headed by Product 2, followed by Products 1 and 4.
 
-The list drawn up must be presented together with the market overview of the procuring entity so that it can check to what extent the products listed there comply with internal regulations and legal requirements. In doing so, the procuring entity must also ensure that the other bodies whose specifications must be adhered to, such as the data protection officer, the IT security officer or the personnel or works council, are involved in good time.
+The list drawn up must be presented together with the market overview of the procuring entity so that it can check to what extent the products listed there comply with internal regulations and statutory requirements. In doing so, the procuring entity must also ensure that the other bodies whose specifications must be adhered to, such as the data protection officer, the IT security officer or the personnel or works council, are involved in good time.
 
 It has to be decided how many and which candidates should be tested. It makes sense to select the first two or three candidates and then test whether they actually meet the key criteria of the catalog of requirements. This is especially important for the necessary requirements. Test licenses should be obtained for this purpose and tests should be carried out as described in module * * OPS.1.1.7 * Software tests and approvals *.
 
@@ -252,13 +250,13 @@ In addition to the criteria of the catalog of requirements, the following points
 **Credentials**
 
 If the manufacturer or distributor can provide reference installations for his product, the experiences made there can be questioned and included in the product assessment.
-If external test results or quality statements are available for the software product being tested (eg test results in professional journals, conformity tests according to proprietary standards, tests and certificates according to relevant standards and standards such as ISO 9001), these results should also be taken into account in the selection.
+If external test results or quality statements are available for the software product to be tested (eg test results in professional journals, conformity tests according to proprietary standards, tests and certificates according to relevant standards and standards such as ISO 9001), these results should also be taken into account in the selection.
 
 ** Dissemination rate of the product **
 
 With a high level of penetration, the individual user usually has little or no influence on the manufacturer of the product when it comes to troubleshooting or implementing certain functions. But he can rather assume that such a product will be developed continuously. In some cases there are external tests commissioned by the manufacturer or carried out by specialist journals. For high-penetration products, there is generally more knowledge about vulnerabilities, so the user can assume that the major vulnerabilities are already known, or that knowledge about vulnerabilities is quickly disseminated and closed soon after they become known.
 
-With a low penetration rate, a user may have more influence on the manufacturer. However, external tests are often not available because they are too expensive and too expensive for products from small manufacturers. Low-penetration products usually contain no more or less vulnerabilities than those with high levels of prevalence. Disadvantage here is that they may not be known so quickly and thus can be fixed. When it comes to security holes, they are unlikely to be known to potential attackers or worthwhile targets.
+With a low penetration rate, a user may have more influence on the manufacturer. However, external tests are often not available because they are too expensive and too expensive for products from small manufacturers. Low-penetration products usually contain no more or less vulnerabilities than those with high levels of prevalence. Disadvantage here is that they may not be known so quickly and can be resolved. When it comes to security holes, they are unlikely to be known to potential attackers or worthwhile targets.
 
 ** Cost-effectiveness / costs for purchase, operation, maintenance, training **
 
@@ -285,7 +283,7 @@ The results of these tests are to be documented in a goods receiving directory t
 * Repository and
 * to whom it was passed.
 After that, the delivered products must be passed on to the IT department to perform functional testing and formally release, install, and configure the product.
-If the products are used only temporarily or made available (for example, for a test), at least the serial number and other product-specific identification features must be noted in corresponding inventories. If the delivered products are to be used permanently, they must be marked with unique identification features (eg grouped consecutive inventory numbers). Then they have to be added to an inventory. This must be able to provide information about:
+If the products are only used temporarily or made available (for example, for a test), at least the serial number and other product-specific identification features must be noted in corresponding inventories. If the delivered products are to be used permanently, they must be marked with unique identification features (eg grouped consecutive inventory numbers). Then they have to be added to an inventory. This must be able to provide information about:
 
 * Identification features,
 * Procurement sources, delivery times,
@@ -355,7 +353,7 @@ The decisive feature of an encryption method is the quality of the algorithm as 
 In order to ensure the confidentiality of the information to be transmitted, the sender's and the recipient's IT systems must adequately protect access to the encryption program. If necessary, this program should be stored on a removable medium, usually kept locked and only played back when needed and used.
 
 ** Integrity protection through checksums, encryption or digital signature formation **
-If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error-correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
+If only the integrity of the data to be transmitted is to be ensured for the exchange of data, a distinction must be made as to whether protection should be provided only against accidental changes, such as: B. by transmission errors, or against manipulation should be realized. If only random changes are to be detected, checksum methods (eg Cyclic Redundancy Checks) or error-correcting codes can be used. In addition, protection against manipulation is provided by methods which generate a so-called Message Authentication Code (MAC) from the information to be transmitted by using a symmetric encryption algorithm (eg Triple-DES). Other methods use an asymmetric encryption algorithm (eg RSA) in combination with a hash function and generate a digital signature. The respective generated fingerprints (checksum, error correcting codes, MAC, digital signature) are transmitted together with the information to the receiver and can be checked by the latter.
 
 3 Further information
 ------------------------------

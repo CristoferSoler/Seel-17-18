@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Insufficient sizing of system resources
+### 2 2 Enabled standard user accounts
+### 2 3 Insufficient allocation of authorizations
+### 2 4 Unencrypted database connection
+### 2 5 Data loss in the database
+### 2 6 Loss of integrity of stored data
+### 2 7 SQL injections
+### 2 8 Insufficient patch management
+### 2 9 Insecure configuration of the database management system
+### 2 10 malware and insecure database scripts
+### 3.1 Basic Requirements
 #### APP.4.3.A1 Creating a Security Policy for Database Systems [Information Security Officer (ISB)]
 #### APP.4.3.A2 Installation of the database management system
 #### APP.4.3.A3 Basic hardening of the database management system

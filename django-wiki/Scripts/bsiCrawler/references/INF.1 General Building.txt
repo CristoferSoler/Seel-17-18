@@ -1,4 +1,16 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 fire
+### 2 2 Flash
+### 2 3 water
+### 2 4 Natural damage and natural disasters
+### 2 5 Environmental hazards
+### 2 6 Unauthorized access
+### 2 7 Violation of laws or regulations
+### 2 8 Insufficient firing
+### 2 9 Power failure
+### 3.1 Basic Requirements
 #### INF.1.A1 Planning of building security [Planner, Information Security Officer (ISB)]
 #### INF.1.A2 Adjusted distribution of circuits
 #### INF.1.A3 Compliance with fire safety regulations
@@ -23,7 +35,7 @@
 ### 3.3 Requirements for increased protection requirements
 #### INF.1.A21 Independent electrical supply strands (A)
 #### INF.1.A22 Safe Doors and Windows (CIA)
-#### INF.1.A23 Formation of Security Zones [Planner] (C)
+#### INF.1.A23 Formation of security zones [planner] (C)
 #### INF.1.A24 Automatic drainage (A)
 #### INF.1.A25 Suitable Location Selection [Institutional Management] (A)
 #### INF.1.A26 porter or security service (CIA)

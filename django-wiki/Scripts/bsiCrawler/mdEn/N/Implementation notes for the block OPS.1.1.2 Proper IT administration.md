@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -15,7 +13,7 @@ The module * OPS.1.1.2 * * Proper IT administration * describes IT processes. Th
 
 ** planning and conception **
 
-In order to establish a proper IT administration process, several preliminary considerations are required. Tasks and authority in the IT-operation must be clear for the involved ones, important basic rules should be fixed in a guideline (see for this * OPS.1.1.2.M7 regulation of the IT-administration activity *). Because of the comprehensive permissions, administrative activities are particularly sensitive. This is due to corresponding requirements for the recruitment of personnel (see * OPS.1.1.2.M3 Regulated recruitment of IT administrators *) and for the release (see * OPS.1.1.2.M4 Termination of activity as IT Administrator *).
+In order to establish a proper IT administration process, several preliminary considerations are required. Tasks and authority in the IT-operation must be clear for the involved ones, important basic rules should be fixed in a guideline (see for this * OPS.1.1.2.M7 regulation of the IT-administration activity *). Because of the comprehensive permissions, administrative activities are particularly sensitive. This is due to corresponding requirements for the recruitment of personnel (see * OPS.1.1.2.M3 Regulated recruitment of IT administrators *) and for the release (see * OPS.1.1.2.M4 Termination of the activity as IT Administrator *).
 
 If high availability requirements exist for the IT environment, it must be ensured that the components, architectures and processes used meet these requirements (see * OPS.1.1.2.M19 Consideration of High Availability Requirements *).
 
@@ -29,7 +27,7 @@ When implementing a proper administration process, different security requiremen
 
 Administrative access is not only at the system level, but often also within specialized applications. Such administrative tasks must also be suitably mapped during operation (see * OPS.1.1.2.M8 Administration of Specialist Applications *). If the size of the organization allows it, or if increased integrity requirements require it, different administrative tasks should be separated from one another (see * OPS.1.1.2.M15 Distribution of IT Administration Activities *). The human resources available for IT operations must be sufficient to maintain proper system operation even in the event of incidents or downtime (see * OPS.1.1.2.M9 Resource Planning *).
 
-In the case of increased protection requirements, it may also be necessary to log administrative activities consistently (see * OPS.1.1.2.M18 Continuous Logging of Administrative Activities *) and / or to carry out a continuous four-eyes principle (see * OPS.1.1. 2.M17 IT administration in the four-eyes principle *).
+In the case of increased protection requirements, it may also be necessary to log administrative activities consistently (see * OPS.1.1.2.M18 Continuous logging of administrative activities *) and / or to carry out a continuous four-eyes principle (see * OPS.1.1. 2.M17 IT administration in the four-eyes principle *).
 
  **Business**
 In particular, it must be ensured during ongoing operations that administrative activities are suitably documented (see * OPS.1.1.2.M11 Documentation of IT Administration Activities *). In order for the deployed personnel to keep pace with developments that affect the security of their information network, appropriate measures for continuous qualification and information are required (see * OPS.1.1.2.M10 Training and Information *).
@@ -57,14 +55,14 @@ IT administrators must have the necessary professional qualifications to properl
 
 Employees who have an administrative role can not simultaneously assume a controlling role (for example, auditing). In addition, the role of administration is not compatible with all other roles in an institution, as conflicts of interest can occur here.
 
-In order to take on administrative tasks, it must be ensured that every administrator and also the representatives are provided with the necessary time to perform their tasks carefully. It must also be taken into account that education and training are required.
+In order to take on administrative tasks, it must be ensured that every administrator and also the representatives are provided with the necessary time to perform their tasks carefully. It must also be taken into account that education and training measures are required.
 
-In order to determine which specialized skills are required in the IT administration and how they can be covered, it is advisable to first provide an overview of the platforms, products and techniques used. It is important to distinguish which skills must be mastered by each individual IT administrator and which must be covered by the IT administration team as a whole. A matrix can then be used to identify the persons with the relevant knowledge and how they were acquired (study, training, professional practice or training). If no candidate with all the required qualifications can be found, it can be checked whether existing gaps can be closed within the framework of qualification measures.
+In order to determine which specialized skills are required in the IT administration and how they can be covered, it is advisable to first of all outline the platforms, products and techniques used. It is important to distinguish which skills must be mastered by each individual IT administrator and which must be covered by the IT administration team as a whole. A matrix can then be used to identify the persons with the relevant knowledge and how they were acquired (study, training, professional practice or training). If no candidate with all the required qualifications can be found, it can be checked whether existing gaps can be closed in the context of qualification measures.
 
 Language skills must also be taken into account when acquiring the necessary qualifications: to avoid misunderstandings, IT administrators need to know the language spoken by the users of their systems so that they can understand and work on their requirements or problem descriptions. In multinational institutions, an agreed group language, usually English, can also be used as a substitute.
 
 Good English literacy, including industry terminology, is important to IT administrators because information from system documentation, guides, or forums is often available in English only.
-If administrative tasks are outsourced to third parties (eg external service providers or freelancers), the necessary qualifications must also be taken into account when selecting the contractors and awarding the contract. For this purpose, appropriate agreements should be made as to which minimum qualifications the employed personnel must fulfill and which ongoing qualification measures are to be carried out.
+If administrative tasks are outsourced to third parties (eg external service providers or freelancers), the necessary qualifications must also be taken into account when selecting the contractors and awarding the contract. For this purpose, appropriate agreements should be made as to which minimum qualifications the employed personnel must fulfill and which ongoing qualification measures should be carried out.
 
 IT administrators must have the right personality to do their jobs reliably and carefully. When filling positions with internal staff, the previous leadership of the persons concerned provides good information. For this purpose, appropriate information should be obtained from the previous superiors. In the case of external candidates, the examination of work certificates and other application documents provide important insights into the professional career and can give indications of the general suitability for the respective job and the reliability in general. Within the agreed probationary period, it must be checked whether the persons are actually suitable for the tasks entrusted to them.
 
@@ -83,12 +81,12 @@ One possibility is the storage of authentication means in a protective cabinet a
 
 #### OPS.1.1.2.M3 Regulated recruitment of IT administrators [Head of Human Resources]
 
-When people in the institution take on administrative tasks, their tasks and responsibilities must be defined in writing. B. in the form of a job description with tasks and competences.
+When people in the institution assume administrative responsibilities, their duties and responsibilities must be defined in writing, eg. B. in the form of a job description with tasks and competences.
 
 If suitable internal or external staff members meet the relevant requirements (see * OPS.1.1.2.M1 Personnel Selection for Administrative Activities *), they must be introduced to their job in accordance with a regular procedure. At least the following aspects should be considered:
 
 * The evidence of the fulfillment of professional and personal requirements must be systematically filed (eg in a personnel file).
-* Any existing skills gaps must be closed by suitable training before starting the related tasks.
+* Any existing skills gaps must be closed by suitable training before the related tasks are completed.
 * Obligations and instructions are to be carried out (usually at least one obligation on the data secrecy according to § 5 BDSG).
 * Security guidelines and security regulations of the institutions as well as the structural and procedural organization in the ISMS must be communicated.
 * Reporting channels and contact persons for security incidents must be made known.
@@ -116,15 +114,15 @@ For the release of IT administrators, it is also advisable to use appropriate ch
 
 #### OPS.1.1.2.M5 Administration IDs
 
-For administrative access to IT systems and applications, personal administration identifiers must be set up and used as far as technically possible. The use of a central administration ID by several persons means that transactions can not be assigned to the executing person. Therefore, an additional administrative identifier must be provided for each administrative person.
+For administrative access to IT systems and applications, personal administration identifiers must be set up and used where technically possible. The use of a central administration ID by several persons means that transactions can not be assigned to the executing person. Therefore, an additional administrative identifier must be provided for each administrative person.
 
-If the use of general, non-personal administrative identifiers is unavoidable in individual cases, it should be ensured that the use of the identifier is comprehensibly documented. This can be z. B. on Unix systems can be achieved by first logging in with a personal identifier and from there with the command "su" on the overarching identifier (eg "root") is changed. It would also be conceivable to prove this by using so-called jump servers on which administrative accesses are used from a personal session. If technical implementation is not possible at all due to special circumstances, the IT administrators should keep a record of the use of general administration IDs.
+If the use of general, non-personal administrative identifiers is unavoidable in individual cases, it should be ensured that the use of the identifier is comprehensibly documented. This can be z. B. on Unix systems can be achieved by first logging in with a personal identifier and from there with the command "su" to the overarching identifier (eg "root") is changed. It would also be conceivable to prove this by using so-called jump servers on which administrative accesses are used from a personal session. If technical implementation is not possible at all due to special circumstances, the IT administrators should keep a record of the use of general administration IDs.
 
 The rights of the administration access must always be adapted to the respective requirements. For example, an employee who only administers the database does not need any system administrator rights or access to configure the mail server. Any rights derived therefrom, such as the ability to start and stop the database service at the operating system level, must also be granted if necessary.
 
 For routine activities, a personal, unprivileged identifier must be used. This includes all non-administrative activities, such as research activities or e-mail communication. This ensures that, on the one hand, there are no unintentional administrative changes to the information network, but on the other hand, attacks via external communication interfaces (e-mail, WWW) can not directly affect access with administrative authorizations.
 
-For example, accidentally running an encryption trojan under an administrative handle as an e-mail attachment could allow the malware to quickly encrypt all documents in the file racks on the network. If the same scenario is used using a limited user ID, the damage is limited to the files that are accessible under this ID in write access.
+For example, accidentally running an encryption trojan under an administrative handle as an e-mail attachment could allow the malware to quickly encrypt all documents in the file racks on the network. If the same scenario is used using a restricted user ID, the damage is limited to the files that are accessible under this ID in write access.
 
 #### OPS.1.1.2.M6 Protection of administrative identifiers
 
@@ -136,10 +134,10 @@ Access to administration IDs must be adequately protected by appropriate authent
 * biometric authentication procedures provided they provide sufficient reliability and security.
 With increased protection requirements, a two-factor authentication must be used.
 
-This prevents a potential attacker from gaining access to protected systems simply by spying on passwords, as another factor, such As the possession of hardware or corresponding biometric properties, is required for a login.
+This prevents a potential attacker from gaining access to protected systems simply by spying on passwords, since another factor, such As the possession of hardware or corresponding biometric properties, is required for a login.
 A somewhat weaker protection is provided by cryptographic certificates that are stored in software and protected by a password. The use of such certificates may, for. For example, when using SSH. The storage of the certificates should take place in such a way that an unauthorized access is excluded. Compared to hardware-bound certificates, there is the fundamental danger that the certificate is copied by an attacker and the password is spied or guessed, but this method offers a clear gain in security over passwords alone.
 
-When using usernames and passwords, a password policy with correspondingly high password complexity requirements must apply. Because long and complex passwords are difficult to remember, password management programs that store passwords in an encrypted database can be used. This database must itself be protected with a strong password.
+When using usernames and passwords, a password policy with correspondingly high complexity requirements for passwords must be used. Because long and complex passwords are difficult to remember, password management programs that store passwords in an encrypted database can be used. This database must itself be protected with a strong password.
 
 Passwords for infrequently-used, privileged accesses (such as stored emergency users or technical users of services or databases) that require IT administrators to log in only in exceptional cases should be dialed much longer than the minimum password for user passwords in require the institution to increase the robustness against attacks.
 
@@ -160,7 +158,7 @@ The institution should therefore make arrangements for the IT administration and
 * The role of administration is not compatible with all other roles in an institution. For example, when using logging, you must pay attention to the role separation of administration and revision. In areas with increased security requirements, additional role exclusions may be required (see OPS.1.1.2.M14).
 * For larger institutions with a variety of IT systems and subnets, it must also be ensured that the tasks are distributed among the different administrators in such a way that no responsibility problems arise, that is to say neither overlaps nor gaps in the distribution of tasks. In addition, the communication between the various administrators should run as smoothly as possible. For this purpose, for. For example, regular administrators meetings will be held to discuss typical problems and solutions in their daily work.
 * Rules for dealing with administrative access should be defined (see OPS.1.1.2.M4).
-* Authorities and responsibilities of administrators should be described. This includes, in particular, a ban on access to sensitive data (eg e-mail inboxes, log data) if there is no operational necessity for access.
+* Authorities and duties of administrators should be described. This includes, in particular, a ban on access to sensitive data (eg e-mail inboxes, log data) if there is no operational necessity for access.
 * Application and approval procedures should be established for changes to the information network. IT administrators must not make changes that do not have an order and clearance, or are required for immediate security.
 * Documentation requirements of IT administrators should be described. This includes the form of the documentation, its location and obligations for an appropriate update check.
 * The duties and powers of the IT administrators in the context of the investigation and defense against security incidents should be regulated.
@@ -206,13 +204,13 @@ In any case, administrators should also use product-specific sources of informat
 #### OPS.1.1.2.M11 Documentation of IT Administration Activities [IT Operations]
 
 Changes made to systems or specialized applications should be documented in an appropriate form. A traceable documentation is necessary in order to have an overview of the IT systems of the information network at all times and to be able to guarantee a smooth operation. This must also be possible for representatives if an administrator fails unexpectedly. A comprehensible documentation is also a prerequisite for being able to carry out system checks (eg on problematic settings, consistency in case of changes). Therefore, the changes that administrators make to the system should be documented, automated if possible. This applies in particular to changes to system directories and files. Existing logging mechanisms of systems and applications should be activated to an appropriate extent.
-For all changes, it should also be documented who has hired the change, who is performing it, and what should be the purpose. Corresponding system-related documents (system logbooks) can be used for this, but also central ticket systems in which, among other things, the executing employee, the cause, the time and the description of the changes themselves are recorded. If the ticket system is linked to a CMDB (Configuration Management Database), all changes can be directly assigned to systems, employees and categories and tracked.
+For all changes, it should also be documented who has hired the change, who is performing it, and what should be the purpose. Corresponding system-related documents (system logbooks) can be used for this, as well as central ticket systems in which, among other things, the executing employee, the cause, the time and the description of the changes themselves are recorded. If the ticket system is linked to a CMDB (Configuration Management Database), all changes can be directly assigned to systems, employees and categories and tracked.
 
 #### OPS.1.1.2.M12 Regulations for maintenance and repair work [IT operation]
 
-In order to protect the IT against disturbances, maintenance work must be carried out regularly. The timely initiation of maintenance and the review of its implementation should be carried out by a central body (eg procuring entity). Maintenance should be carried out by trustworthy persons or companies if they can not be carried out by own personnel. The instructions of the manufacturer must be strictly observed. In the case of regular maintenance by external persons, the conclusion of a maintenance contract may be advantageous.
+In order to protect the IT against disturbances, maintenance work must be carried out regularly. The timely initiation of maintenance and the review of its implementation should be carried out by a central body (eg procuring entity). The maintenance should be carried out by trustworthy persons or companies, if they can not be carried out by own personnel. The instructions of the manufacturer must be strictly observed. In the case of regular maintenance by external persons, the conclusion of a maintenance contract may be advantageous.
 
-For every IT system, it should be documented when it was maintained and which errors were corrected (eg device passport or device or configuration management system). It is also advisable to set up an information system for maintenance and repair work. With such a system, upcoming work can be planned and documented work can be documented and the successful course can be controlled.
+For every IT system, it should be documented when it was maintained and which errors were rectified (eg device pass or device or configuration management system). It is also advisable to set up an information system for maintenance and repair work. With such a system, upcoming work can be planned and documented work can be documented and the successful course can be controlled.
 
 It should also document who is responsible for the maintenance or repair of equipment.
 
@@ -235,7 +233,7 @@ For maintenance and repair work in the home, especially when carried out by exte
 As measures before and after maintenance and repair work are to be planned:
 * Maintenance and repair work must be announced to the affected employees in good time.
 * Maintenance technicians must identify themselves on request.
-* Access to data by the service technician should be avoided as much as possible. If necessary, storage media must first be removed or deleted (after a complete backup), especially if the work has to be done externally. If deletion is not possible (eg due to a defect), the work must also be observed externally or special contractual agreements must be made and trusted companies selected.
+* Access to data by the service technician should be avoided as much as possible. If necessary, storage media must first be removed or deleted (after a complete backup), especially if the work has to be done externally. If deletion is not possible (eg due to a defect), the work must also be monitored externally or special contractual agreements must be made and trustworthy companies selected.
 * The access, access and access rights granted to the maintenance technician must be limited to the necessary minimum and be revoked or deleted after the work.
 * After performing maintenance or repair work, password changes are required, depending on the "depth of penetration" of the maintenance personnel. In the IT area, a check for malicious software should be carried out.
 * The maintenance work carried out must be documented (scope, results, time, company name and possibly the name of the service technician).
@@ -243,12 +241,12 @@ As measures before and after maintenance and repair work are to be planned:
 * After maintenance or repair work, check the proper functioning of the maintained system. In particular, the withdrawal of the interventions for testing purposes must be checked.
 ** External maintenance and repair work **
 
-If IT systems are outsourced for maintenance or repair, all sensitive data located on data media must be physically cleared beforehand. If this is not possible because the data carriers can no longer be accessed due to a defect, the companies responsible for the repair must undertake to comply with the required information security measures. With these, contractual rules on the confidentiality of data must be taken (confidentiality agreements, see also ORP.1 organization). In particular, it should be stipulated that data stored externally during maintenance should be carefully deleted after completion of the work. Likewise, the duties and responsibilities of the external maintenance personnel must be carefully defined.
+If IT systems are outsourced for maintenance or repair, all sensitive data stored on data media must be physically cleared beforehand. If this is not possible because the data carriers can no longer be accessed due to a defect, the companies responsible for the repair must undertake to comply with the required information security measures. With these, contractual rules on the confidentiality of data must be taken (confidentiality agreements, see also ORP.1 organization). In particular, it should be stipulated that data stored externally during maintenance should be carefully deleted after completion of the work. Likewise, the duties and responsibilities of the external maintenance personnel must be carefully defined.
 
-When carrying out external maintenance work, it must be recorded which IT systems or components have been given to whom for repair, who caused this, what the maintenance or repair order includes, when the repair should be completed and when the device should be back was returned. In order to keep up with this, it is necessary to identify the IT systems or components that identify which organization they belong to and how they can be clearly assigned within the organization.
+When carrying out external maintenance work, it must be recorded which IT systems or components have been given to whom for repair, who initiated this, what the maintenance or repair order includes, when the repair should be completed and when the device should be back was returned. In order to keep up with this, it is necessary to identify the IT systems or components that identify which organization they belong to and how they can be clearly assigned within the organization.
 
 When shipping or transporting the components to be repaired care should be taken to prevent damage and theft. If there is still sensitive information on the IT systems, they must be transported protected accordingly, eg. B. in sealed containers or by couriers. Furthermore, evidence of the shipping (repair order, accompanying note, dispatch notes) and receipt at the recipient (receipt confirmation) must be kept and archived.
-For IT systems protected by passwords, depending on the scope of the repair work and the type of password protection, all or some of the passwords must either be posted or set to specified settings such as "REPAIR" so that the service technicians can access the devices.
+For IT systems protected by passwords, depending on the scope of the repair work and the type of password protection, all or some passwords must be either announced or set to specified settings such as "REPAIR" so that the service technicians can access the devices.
 
 After the return of the IT systems or components, these must be checked for completeness. All passwords have to be changed. Data carriers are to be checked for computer viruses after being returned using a current virus search program. All data or programs residing on the repaired device should be checked for integrity.
 
@@ -290,7 +288,7 @@ The possibilities to have the trustworthiness of new or external personnel check
 * the submitted curriculum vitae of the candidate is meaningful and complete.
 In addition, it may be useful to have academic and professional qualifications certified, for example, by inquiring at the university or from previous employers or clients. The identity of the candidate should also be verified. B. by presentation of identity documents.
 
-If external personnel are deployed internally or if internal applications and data can be accessed through projects, cooperations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to carry out such checks and to what extent.
+If external personnel are deployed internally or can access internal applications and data in projects, collaborations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to carry out such checks and to what extent.
 
 #### OPS.1.1.2.M15 Distribution of administrative activities (CI)
 Many operating systems, applications, and IT components provide the ability to split the administration role and distribute administrative activities to different users. If there are special task administration roles, it should be used. In particular, when multiple people need to be assigned administrative tasks in large systems, the risk of over-relinquishing the administrative role of administrative roles can be reduced through appropriate task sharing so that administrators can not uncontrollably make unauthorized or unintentional changes to the system.
@@ -305,9 +303,9 @@ With limited human resources, the division of administrative activities can also
 
 #### OPS.1.1.2.M16 Access restriction for administrative access (CIA)
 
-The protection of administrative access to IT systems and components can be significantly increased if the access is not only protected by an authentication mechanism for the administrators (see OPS.1.1.2.M5), but is also restricted on the network side. Administrative accesses and interfaces can then only be accessed from a network segment that is separate from the networks in which the system offers its services.
+The protection of administrative access to IT systems and components can be significantly increased if the access is not only protected by an authentication mechanism for the administrators (see OPS.1.1.2.M5), but is also limited on the network side. Administrative accesses and interfaces can then only be accessed from a network segment that is separate from the networks in which the system offers its services.
 
-So z. For example, SSH accesses or web interfaces for administration can be linked to a separate network card, which is integrated in a separate administration network. A user who addresses the system via a different network card and a different network can then not call these accesses. It should be noted that a segmentation of the network in different protection zones must then be reflected in the administration network - otherwise there is a risk that an attacker abused after the successful adoption of a system, the administration network to bypass security gateways.
+So z. For example, SSH accesses or web interfaces for administration can be linked to a separate network card, which is integrated in a separate administration network. A user who addresses the system via a different network card and a different network can then not call these accesses. It should be noted that a segmentation of the network must be reflected in different protection zones then in the administration network - otherwise there is a risk that an attacker after the successful adoption of a system abused the administration network to bypass security gateways.
 
 Then selected client systems can be integrated into the administration network, from which the administrative accesses of the systems can be achieved. Even better is the establishment of a jump server, on which the IT administrators must log in to get from there into the administration network. All administrative accesses can be controlled, logged and, if necessary, recorded.
 
@@ -334,11 +332,11 @@ In order to achieve the purpose of protection, the recorded logs may not be chan
 
 #### OPS.1.1.2.M19 Consideration of High Availability Requirements [Information Security Officer (ISB)] (A)
 
-If high-availability requirements exist in the IT environment to be administered, appropriate concepts and measures must be implemented to meet these requirements. As a rule, this requires an overarching approach. In its High Availability Compendium ("HV Compendium"), the BSI has compiled a suitable methodology and numerous assistance in the analysis, planning and implementation of highly available IT environments. The compendium is available free of charge on the BSI website and is divided into several volumes and sections:
+If high availability requirements exist in the IT environment to be administered, suitable concepts and measures must be implemented to meet these requirements. As a rule, this requires an overarching approach. In its High Availability Compendium ("HV Compendium"), the BSI has compiled a suitable methodology and numerous assistance in the analysis, planning and implementation of highly available IT environments. The compendium is available free of charge on the BSI website and is divided into several volumes and sections:
 
 High availability planning should be documented with the underlying methods, assumptions and outcomes. Responsibility for the preparation and updating of the high availability concept must be transferred to a suitable body within the institution, eg. B. an IT architect.
 
-High availability planning and security management must mesh. Thus, the HV requirements for the determination of protection requirements in the information security process with regard to the protection goal availability must be considered. Conversely, findings from security incidents that affect this protection objective must be fed back into the HV planning.
+High availability planning and security management must mesh. Thus, the HV requirements for the determination of protection requirements must be taken into account in the information security process with regard to the protection goal availability. Conversely, findings from security incidents that affect this protection objective must be fed back into the HV planning.
 The realization of high availability requirements should also be taken into account during audits and revisions. This can be z. These include, for example, carrying out load tests or testing the intended high availability measures (eg pivoting data centers).
 
 3 Further information

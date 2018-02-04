@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Undefined responsibilities
+### 2 2 Defective communication in change management
+### 2 3 Poor consideration of business processes
+### 2 4 Insufficient resources for patch and change management
+### 2 5 Problems with automated distribution of patches and changes
+### 2 6 Poor recovery options for patch and change management
+### 2 7 Poor consideration of mobile devices
+### 2 8 Inadequate emergency preparedness plan for patch and change management
+### 2 9 Misjudgment of the relevance of patches and changes
+### 2 10 Manipulation of data and tools in change management
+### 3.1 Basic Requirements
 #### OPS.1.1.3.A1 Concept for Patch and Change Management [Administrator, Specialist]
 #### OPS.1.1.3.A2 Definition of responsibilities [Head IT]
 #### OPS.1.1.3.A3 Configuration of Auto Update Mechanisms [Administrator]
@@ -9,7 +22,7 @@
 #### OPS.1.1.3.A7 Integration of Change Management in the Business Processes [Change Manager]
 #### OPS.1.1.3.A8 Secure Use of Patch and Change Management Tools [IT Leader]
 #### OPS.1.1.3.A9 Testing and acceptance procedure for new hardware and software [IT Manager]
-#### OPS.1.1.3.A10 Ensuring the Integrity and Authenticity of Software Packages [Administrator]
+#### OPS.1.1.3.A10 Ensuring the integrity and authenticity of software packages [Administrator]
 #### OPS.1.1.3.A11 Continuous Documentation of Information Processing [IT Manager, Change Manager]
 ### 3.3 Requirements for increased protection requirements
 #### OPS.1.1.3.A12 Scalability in Change Management (A)
