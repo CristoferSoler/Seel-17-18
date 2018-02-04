@@ -675,15 +675,23 @@ function initWizardsComponents() {
     $('#opener').on('click', function () {
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'right': '50px'});
+            if(width >= 576){
+                panel.removeClass('visible').animate({'right': '50px'});
+            } else {
+                panel.removeClass('visible').animate({'right': '35px'});
+            }
             localStorage.removeItem('visible');
         } else {
             localStorage.setItem('visible', String(true));
             initWizard();
-            if (width > 1200) {
-                panel.addClass('visible').animate({'right': '550px'});
+            if (width >= 992) {
+                panel.addClass('visible').animate({'right': '560px'});
             } else {
-                panel.addClass('visible').animate({'right': '320px'});
+                if (width < 992 && width >= 576) {
+                panel.addClass('visible').animate({'right': '550px'});
+                } else {
+                    panel.addClass('visible').animate({'right': '320px'});
+                }
             }
         }
         valid = false;
@@ -706,10 +714,15 @@ function askWheatherToClose(event) {
 function setPanel() {
     var panel = $('#slide-panel');
     if (localStorage.getItem('visible') !== null) {
-        if (width > 1200) {
+        if (width >= 992 ) {
             panel.addClass('visible').animate({'right': '550px'});
         } else {
-            panel.addClass('visible').animate({'right': '320px'});
+            if (width < 992 && width >= 576) {
+                panel.addClass('visible').animate({'right': '550px'});
+            }
+            else {
+                panel.addClass('visible').animate({'right': '320px'});
+            }
         }
         initWizard();
     }

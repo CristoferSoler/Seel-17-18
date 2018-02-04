@@ -1,4 +1,4 @@
-@media (min-width: 1280px) {
+@media (min-width: 992px) {
     .text-center {
         text-align: center;
     }
@@ -38,12 +38,12 @@
         float: right;
         text-align: left;
         margin-top: 8%;
-        right: 50px;
+        right: 40px;
         z-index: 10;
     }
 
     #opener {
-        margin: 0px -50px 0px 0px;
+        margin: 0px -40px 0px 0px;
         float:left;
         padding: 15px;
         border-radius: 0;
@@ -56,8 +56,8 @@
 
     #opener img {
         background: url("../images/wizard.png") no-repeat scroll 0 0 transparent;
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         display: inline-block;
     }
 
@@ -86,7 +86,95 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 1279px) {
+@media (min-width: 577px) and (max-width: 991px) {
+    .text-center {
+        text-align: center;
+    }
+
+    .abstandToButton {
+        margin-bottom: 15px;
+    }
+
+    .abstandButtonToBottom {
+        margin-bottom: 10px;
+    }
+
+    .wizardList {
+        text-align: left;
+        font-size: large;
+        list-style-type: none;
+    }
+
+    .wizardList li {
+        margin-top: 10px;
+    }
+
+    .wizardListTopMargin {
+        margin-top: 20px;
+    }
+
+    .modal-body {
+        overflow-y: auto;
+    }
+
+    .modal-backdrop {
+        background: none;
+    }
+
+    #slide-panel {
+        position: fixed;
+        float: right;
+        text-align: left;
+        margin-top: 10%;
+        right: 35px;
+        z-index: 10;
+    }
+
+    #opener {
+        margin: 0px -35px 0px 0px;
+        float:left;
+        padding: 15px;
+        border-radius: 0;
+        background-color: Transparent;
+        color: #000000;
+        border: none;
+        cursor:pointer;
+        overflow: hidden;
+    }
+
+    #opener img {
+        background: url("../images/wizard.png") no-repeat scroll 0 0 transparent;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+
+    #content {
+        position: absolute;
+        float: right;
+        margin-left: 100px;
+        height: 300px;
+        width: 500px;
+        border: black;
+    }
+
+    .center {
+        height: 290px;
+        background: orange;
+    }
+
+    .contentPanel {
+        height: 300px;
+        width: 500px;
+        overflow-y: scroll;
+    }
+
+    .marginTop {
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 576px) {
     .text-center {
         text-align: center;
     }
@@ -135,29 +223,29 @@
         position: fixed;
         float: right;
         text-align: left;
-        margin-top:30%;
-        right: 50px;
+        margin-top:20%;
+        right: 20px;
         z-index: 10;
     }
 
     #opener {
-        margin: 0px -50px 0px 0px;
-        padding: 15px;
+        margin: 0px -20px 0px 0px;
+        padding: 5px;
         float:left;
         border-radius: 0;
     }
 
         #opener img {
         background: url("../images/wizard.png") no-repeat scroll 0 0 transparent;
-        width: 38px;
-        height: 38px;
+        width: 45px;
+        height: 45px;
         display: inline-block;
     }
 
     #content {
         position: absolute;
         float: right;
-        margin-left: 70px;
+        margin-left: 100px;
         height: 320px;
         width: 270px;
         border: black;
@@ -214,4 +302,8 @@ li.collapsibleListClosed{
 
 .marginImage{
     margin: 0 auto;
+}
+
+.wrap{
+    flex-wrap: wrap;
 }
