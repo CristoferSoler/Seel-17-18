@@ -20,6 +20,6 @@ from bsiwiki import init
 if necessary, this init function creates a root article, uga, bsi and archive head articles (below root).
 todo this is not the best place to put a startup script because dummy threads may run it over time :/
 """
-#init.init()
+init.init()
 
 application = get_wsgi_application()

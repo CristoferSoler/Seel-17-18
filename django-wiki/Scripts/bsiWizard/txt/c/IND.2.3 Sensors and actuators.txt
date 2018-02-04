@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,7 +17,7 @@ The goal of the device is to protect all types of intelligent sensors, regardles
 
 The present system block is to be used to secure intelligent sensors. It supplements and presupposes the higher-level module IND.2.1 * General ICS Component *.
 
-Simple sensors without configuration interfaces or more complex processing logic are not detected by the module, since the possible protective measures are limited to securing access to the sensor and monitoring whether it is active.
+Simple sensors without configuration interfaces or more complex processing logic are not detected by the module, since the possible protective measures are limited to ensuring access to the sensor and to monitor whether it is active.
 
 Also, the device does not address the protection of complex wireless sensor networks. It merely describes how individual sensors can be protected. Furthermore, no safety requirements for operating and control technology are described. For this, the block IND.1 * Operating and Control Technology * must be implemented.
 
@@ -33,8 +31,3 @@ The following specific threats and vulnerabilities are of particular importance 
 Due to a lack of awareness of the risks and cost reasons, information security is often not taken into account in procurement. As a result, sensors can sometimes contain serious weaknesses that can only be remedied with great difficulty later on.
 
 Sensors for ICS components in industrial environments are often exposed to special conditions that may affect safe operation. Examples include extreme heat, cold, moisture, dust, vibration or corrosive or corrosive atmospheres. Frequently, several factors occur simultaneously. Such adverse environmental effects can cause the sensors of ICS components to wear faster and fail earlier or measure erroneous values.
-
-3 requirements
----------------
-
-The following are specific requirements for the sensors area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.

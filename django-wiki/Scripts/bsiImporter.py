@@ -45,7 +45,7 @@ def doImport():
                 id = get_bsi_article_id(file_name)
 
                 # import the content to the database
-                with open(join(dirpath, filename)) as data_file:
+                with open(join(dirpath, filename), encoding='utf-8') as data_file:
                     try:
                         addToDB(data_file.read(), parent, id, file_name, article_type)
                     except Exception:
@@ -112,10 +112,11 @@ def doUpdate():
                 # if the file is new or modified, add to database under /new
                 if(is_contained_in(modified, bsi_type, id) or is_contained_in(added, bsi_type, id)):
                     # import the content to the database
-                    with open(join(dirpath, filename)) as data_file:
+                    with open(join(dirpath, filename), encoding='utf-8') as data_file:
                         try:
                             addToDB(data_file.read(), parent, id, file_name, article_type)
-                        except Exception:
+                        except Exception as e:
+                            print(e)
                             print("Article with the ID " + id + " has already been saved under \
                                    the What's New page. Skipped...")
                             continue
@@ -347,7 +348,7 @@ def checkFileAction():
     # sanity check
     assert(filepath is not None)
     # look in the text file and check if the files shoul be m/a/d
-    file = open(filepath, "r")
+    file = open(filepath, "r", encoding="utf-8")
     currentSep1 = file.readline().rstrip()
     currentSep2 = file.readline().rstrip()
 
@@ -415,7 +416,7 @@ def appendThreatMeasureRelation(files=None):
                 for article in components_articles:
                     cr_data = ""
                     if article.slug in cr_file:
-                        with open(path_and_ref, 'r')as cr:
+                        with open(path_and_ref, 'r', encoding='utf-8') as cr:
                             cr_data_line = cr.readline().rstrip()
                             while cr_data_line:
                                 if (cr_data_line.strip('* ').startswith('G')):

@@ -27,8 +27,9 @@ def get_CR_Tables():
         cr = urlopen(CR_website_path)
         if not os.path.exists(local_path):
             os.makedirs(local_path)
-        zip_ref = zipfile.ZipFile(BytesIO(cr.read()))
+        zip_ref = zipfile.ZipFile(BytesIO(cr.read().decode(cr.headers.get_content_charset())))
         zip_ref.extractall(local_path)
+        os.chmod(os.path.join(local_path,'csv'), 0o766)
         zip_ref.close()
         return 0
     except Exception as e:
@@ -55,7 +56,7 @@ def csv_parser(path_and_file, newFolderPath):
     try:
         if not os.path.exists(txtDir):
             os.makedirs(txtDir)
-        with open(path_and_file) as csvfile:
+        with open(path_and_file, encoding='utf-8') as csvfile:
             rows = []
             readCSV = csv.reader(csvfile, delimiter=';')
             for row in readCSV:
@@ -64,7 +65,7 @@ def csv_parser(path_and_file, newFolderPath):
         location, file = os.path.split(path_and_file)
         file_name = os.path.splitext(file)[0]
         newDir = os.path.join(newFolderPath, file_name + ".txt")
-        csv_to_txt = open(newDir, 'w+')
+        csv_to_txt = open(newDir, 'w+', encoding='utf-8')
         componentId = rows[0][0]
         csv_to_txt.write(componentId + '\n')
         index = 0
@@ -93,7 +94,7 @@ def get_cr_relation():
         for filename in [f for f in listdir(txtDir) if f.endswith(".txt")]:
             # extract the component, threats and requirements ids from the macro files
             path_and_file = os.path.join(txtDir, filename)
-            with open(path_and_file) as data_file:
+            with open(path_and_file, encoding='utf-8') as data_file:
                 componentId = data_file.readline().rstrip()
                 threats_requirements_id = data_file.read().splitlines()
 
@@ -105,10 +106,10 @@ def get_cr_relation():
                         path_and_reference = os.path.join(settings.REFERENCE_DIR, referencename)
                         reference_name = os.path.splitext(referencename)[0]
                         component_file = os.path.join(crfDir, reference_name)
-                        new_component_file = open(component_file + '.md', "w+")
+                        new_component_file = open(component_file + '.md', "w+",encoding='utf-8')
 
                         for id in threats_requirements_id:
-                            with open(path_and_reference) as reference_file:
+                            with open(path_and_reference, encoding='utf-8') as reference_file:
                                 for line in reference_file:
                                     if id.strip() in line:
                                         line = line.replace("####", "         *")

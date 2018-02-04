@@ -14,7 +14,7 @@ Elementary Hazards, Building Blocks, and Implementation Notes and from there all
  of the BSI. Next, the content is converted from html to md and stored in a folder structure.  
 '''
 
-sys.path.append(r'..')
+sys.path.append(r'/home/ziik/Seel-17-18/django-wiki/')
 environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 

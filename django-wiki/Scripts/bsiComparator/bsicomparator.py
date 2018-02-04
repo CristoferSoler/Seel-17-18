@@ -32,7 +32,7 @@ def compare():
     commondirs = dircomp.common_dirs
 
     # create or overwrite
-    file = open(settings.COMPARATOR_OUTPUT, "w")
+    file = open(settings.COMPARATOR_OUTPUT, "w", encoding='utf-8', errors='surrogateescape')
 
     if(commondirs):
         for subdir in commondirs:

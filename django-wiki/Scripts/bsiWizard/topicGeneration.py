@@ -95,10 +95,10 @@ def preprocessingOfFile(file):
 
 def modelCreation(cleanTokenizedCorpus, fileNames):
     Mallet = mallet.Mallet(pathToMallet)
+
     malletCorpus = Mallet.import_tokenized_corpus(cleanTokenizedCorpus, fileNames)
     if not os.path.exists(os.path.join(settings.TOPICGENERATION_DIR + '/tutorial_supplementals', 'mallet_output')):
         os.makedirs(os.path.join(settings.TOPICGENERATION_DIR + '/tutorial_supplementals', 'mallet_output'))
-
     Mallet.train_topics(malletCorpus,
                         output_topic_keys= settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/topic_keys.txt',
                         output_doc_topics= settings.TOPICGENERATION_DIR + '/tutorial_supplementals/mallet_output/doc_topics.txt',
