@@ -14,8 +14,8 @@ def save(sender,instance,pk_set,action, **kwargs):
             if action == 'pre_remove':
                 if(str(g) == 'moderators'):
                     subject = 'Your moderator status has changed'
-                    text = '\nYour moderator permissions have been revoked. \n \nThe reasons for this decision could be:\n- You behaved inappropriately. \n- You misused the authority.'
-                    sendMail(str(g),user,subject,text)
+                    text = '\nYour moderator permissions have been revoked. \n \nThe reasons for this decision could be:\n- You behaved inappropriately. \n- You misused your authority.'
+                    sendMail(user,subject,text)
             if action == 'pre_add':
                 if(str(g) == 'moderators'):
                     subject = 'Your user  status has changed'
@@ -23,10 +23,26 @@ def save(sender,instance,pk_set,action, **kwargs):
                            'to thank you for your contribution to ISAM, keep up the good work.\n\n As a moderator it is ' \
                            'now your task to:\n- Review articles, links, content and approve UAs \n- Protect Website Rules in' \
                            ' UA and in Info Page'
-                    sendMail(str(g), user,subject,text)
+                    sendMail(user,subject,text)
+
+@receiver(pre_save, sender=User)
+def userInActive(sender, instance, *args, **kwargs):
+    if instance.is_active != User.objects.get(id=instance.id).is_active:
+        if(instance.is_active != True):
+            user = instance
+            subject = 'You got banned from ISAM!'
+            text = 'Dummy Text'
+            sendMail(user,subject,text)
+        elif(instance.is_active != False):
+            user = instance
+            subject = 'Your account is activated!'
+            text = 'Dummy Text'
+            sendMail(user, subject, text)
 
 
-def sendMail(group,user,subject,text):
+
+
+def sendMail(user,subject,text):
     userEmail = getEmailOfUser(user)
     if(userEmail != None):
         mail_subject = subject
