@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -17,7 +15,7 @@ This module shows how the infrastructure of a home-based workplace can be safely
 
 ### 1.3 Delimitation
 
-The module contains basic requirements that must be observed and fulfilled in order to be able to counteract specific hazards to a home-based workplace. However, only specific infrastructure requirements for a fixed workplace with access by third parties are defined. However, security requirements for the IT systems used (eg computers) and in particular for the technical components of teleworking (eg communication links) are not the subject of this module but are described in OPS.1.2.4 * Telework * and described in the respective system-specific building blocks.
+The module contains basic requirements which must be observed and fulfilled in order to be able to counteract the specific hazards for a domestic workplace. However, only specific infrastructure requirements for a fixed workplace with access by third parties are defined. However, security requirements for the IT systems used (eg computers) and in particular for the technical components of teleworking (eg communication links) are not the subject of this module but are described in OPS.1.2.4 * Telework * and described in the respective system-specific building blocks.
 
 2 risk situation
 -----------------
@@ -35,10 +33,10 @@ Rooms in a home-based workplace where sensitive information is kept and processe
 ** Examples **
 
 * One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
-* When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to do some quick research on the computer while the computer was not locked up and inadvertently infected it with malicious software.
+* When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to quickly research something on the Internet while he was not locked up, and inadvertently infected him with malicious software.
 ### 2 3 Impairment of IT use due to unfavorable working conditions at home
 
-A non-ergonomic home-based workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
+A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
@@ -57,7 +55,53 @@ IT equipment, accessories, information, and software used at the home workplace 
 
 ### 2 7 Danger by cleaning or external personnel
 
-Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" with IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
+Cleaning and contracting personnel can jeopardize internal information, business processes and IT systems in various ways, ranging from improper handling of technical equipment, through attempts to "play" IT systems, to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved, get water in the IT, documents laid or even removed with the waste.
 
 ### 2 8 Increased theft risk at the home workplace
 The home office is usually not as well secured as the workplace in a company or agency. By more elaborate precautions (eg security doors, porter service) there is the danger that someone will enter the building without authorization, much less than with a private home. Burglars mostly steal items that are quick and easy to sell. It can also be stolen official IT. However, the information available on the stolen official IT systems often has a higher value than the IT systems themselves. Burglars could try to obtain a higher profit by extorting or distributing the data to competing companies than by selling the hardware.
+
+3 requirements
+---------------
+
+The following are specific requirements for the protection of the home workplace. Basically, the employee is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### INF.8.A1 Securing official documents at the home office
+
+Official documents and data carriers MUST be stored in the home office in such a way that no unauthorized persons can access them. Therefore, there must be sufficient closable containers (desk, roll container, cabinet, etc.). Each employee MUST leave his / her domestic workplace tidy and ensure that no sensitive information is freely accessible.
+
+#### INF.8.A2 Transportation of work material to the home workplace [Home automation]
+
+It MUST be regulated which data carriers and documents can be processed at the home office and transported back and forth between the institution and the home office. In general, data carriers and other documents MUST be transported safely. The regulations MUST be appropriately communicated to the employees.
+
+#### INF.8.A3 Protection against unauthorized access to the home workplace [Home automation]
+
+The employees MUST be informed about the regulations and measures for burglary and access protection. MUST be warned to close windows and lock doors when the home office is empty.
+
+It MUST be ensured that unauthorized persons can never enter the home office and access company IT and documents. These measures MUST be checked at reasonable intervals, or at least a change in domestic circumstances.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements are in line with the state of the art in the field of home work. They SHOULD be implemented in principle.
+
+#### INF.8.A4 Adequate home-work equipment [Home automation]
+
+The home office SHOULD be separated from the private areas of the home by a suitable layout.
+
+The home workplace SHOULD have a suitable device that meets the ergonomic requirements.
+
+Similarly, the home workplace should be protected from burglary by appropriate technical safeguards. The protective measures SHOULD be adapted to the local conditions and the existing protection requirements.
+
+#### INF.8.A5 Disposal of confidential information at the home workplace [Home automation]
+Confidential information SHOULD be safely disposed of, so do not just throw it in the trash. In a special safety guideline SHOULD be regulated, how to remove sensitive material. The required disposal facilities SHOULD be available.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### INF.8.A6 Dealing with official documents in case of increased need for protection at home [Information Security Officer (ISB)] (CIA)
+
+If employees are required to handle official or highly-sensitive information, SHOULD consider considering leaving home a domestic job. Otherwise, the home workplace SHOULD be protected by advanced, high quality technical safeguards.

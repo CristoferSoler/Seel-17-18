@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -48,3 +46,78 @@ The transmission properties of cables with electrical signal transmission can be
 ### 2 7 Listening and manipulation of lines
 
 Listening to lines is a danger to information security that should not be neglected. Basically there are no tap-proof cables. Only with regard to the effort required for listening the cables differ. Whether a line is actually monitored is only detectable with high metrological effort. In addition to listening to lines, further deliberate manipulation or even the destruction of IT lines pose a danger to the institution. Malfunctions of lines can be deliberately and in a manipulative manner. Such manipulations often have the goal of disrupting IT operations or causing financial damage to the institution.
+
+3 requirements
+---------------
+
+The following are specific requirements for IT cabling. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### INF.4.A1 Selection of suitable cable types [Head of Building Services]
+
+When selecting cables, consideration must be given to transmission requirements and environmental conditions during installation and operation. The choice of cables from a communication point of view MUST be determined by the required transmission rate and the distance between the transmission equipment. With regard to the environmental conditions, factors such as As the temperatures, cable routes, tensile forces during installation, the type of installation and any sources of interference are observed. Furthermore, the applicable standards and regulations MUST be taken into account when selecting cables.
+
+#### INF.4.A2 Planning the cable management [Head of Domestic Engineering]
+
+Cables, cable trays and cable trays MUST be adequately dimensioned from a technical as well as a physical point of view before they are laid. In doing so, future transmission-related necessities MUST be taken into account as well as sufficient space for possible technical expansions in cable ducts and routes. When co-routing IT and power cabling in a path, care must be taken to avoid crosstalk between the individual cables. It MUST be taken to avoid identifiable sources of danger.
+
+#### INF.4.A3 Professional Installation [Head of Domestic Engineering]
+Installation work on the IT cabling MUST be carried out carefully and expertly. At the same time, all relevant standards MUST be observed. The decisive criteria for a professional execution of the IT cabling MUST be checked by the client in all phases. Upon delivery of the material, MUST verify that the correct cables and connectors have been supplied. When laying IT cables, special care must be taken to ensure that the installation does not cause any damage and that the cable routes are selected such that damage to the routed cables due to normal use of the building is ruled out. In addition, care must generally be taken that IT cables are routed separately from the electrotechnical cabling.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of IT cabling. They SHOULD be implemented in principle.
+
+#### INF.4.A4 Requirements Analysis for IT Cabling
+
+Basically, an analysis of the requirements that have an influence on the future-proof, needs-based and economic execution of IT cabling should be carried out. In it SHOULD first the short-term planned use by the users in the institution and on that basis the longer-term development of the IT use be estimated. In addition, the protection goals of availability, integrity, and confidentiality must be considered in IT cabling requirements analysis.
+
+#### INF.4.A5 Decrease in IT cabling [Head of Building Services]
+
+The IT cabling SHOULD be subjected to a approval process. This SHOULD only take place when all the tasks to be carried out have been completed, the contractor has notified the measure of acceptance and the inspections by the contracting authority have revealed no unacceptable shortcomings. The acceptance date SHOULD be selected in time so that the controls can be prepared for acceptance in sufficient time. Upon acceptance, the information security aspects MUST be controlled. For the acceptance protocol a checklist SHOULD be prepared. The checklist SHOULD also contain points regarding general requirements for the operating rooms. The acceptance report MUST be signed by the participants and responsible persons.
+
+#### INF.4.A6 Continuous updating and revision of network documentation
+
+The documentation of IT cabling SHOULD be considered and treated as an integral part of any change in the network. In this case, all documentation areas affected by the change SHOULD easily be recorded and adapted. It should also be examined whether the use of document management for network documentation is appropriate.
+
+#### INF.4.A7 Removing and Deactivating Unnecessary IT Cabling [Haustechnik Manager]
+
+If IT cabling is no longer needed, it should be removed professionally and completely. IT cabling, which can be usefully used as a reserve with existing technology, SHOULD be maintained in an operational condition. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the documentation listing the inventory of IT cabling MUST be updated.
+
+#### INF.4.A8 Fire isolation of paths [Head of Building Services]
+
+To avoid cable fires, ROADS SHOULD have sufficient ventilation. The fire protection conditions MUST be complied with. In addition, after completion of the installation work, the fire barrier should be checked at regular intervals.
+
+#### INF.4.A9 Documentation and labeling of IT cabling
+An institution SHOULD make sure that it has internal and external documentation for its IT cabling. The internal documentation MUST include all records relating to the installation and operation of IT cabling. The internal documentation SHOULD be prepared and maintained so extensively that the operation and the future further development of the IT networks are best supported. The external documentation of the wiring SHOULD be as economical as possible.
+
+#### INF.4.A10 Neutral documentation in the distributors
+
+Each distributor SHOULD have a documentation showing the current status of shunting and line assignments. This documentation SHOULD be kept as neutral as possible. Only existing and used connections SHOULD be listed. Unless expressly required, there should be no indications as to the type of use of the pipes. All further information MUST be listed in a revision documentation.
+
+#### INF.4.A11 Control of existing connections
+
+All distributors and drawers of the wiring SHOULD be subjected to a regular (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out. Any irregularities detected during visual inspections or functional inspections MUST be documented immediately and reported to the appropriate organizational units.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### INF.4.A12 Redundancies for the wiring (A)
+
+It was to be examined whether, at least for important buildings, a redundant, independent track-guided primary IT cabling should be created. It should also be checked whether the connections to IT or telecommunications providers should be designed redundantly. In the case of high or very high availability requirements SHOULD be considered to design the secondary and tertiary cabling redundant in the relevant buildings. The secondary cabling SHOULD be guided over at least two riser shafts, which should be located in different fire areas of the building. If redundant cabling is used, its functionality should be checked regularly.
+
+#### INF.4.A13 Material Assurance of IT Cabling (IA)
+
+In rooms with public access or in confusing areas of a building, cables and distribution boards SHOULD additionally be protected against unauthorized access. In any case, the number of locations where the routed cable is accessible should be minimized and the length of the connections to be protected against unauthorized access minimized.
+
+#### INF.4.A14 Prevention of transient currents on shieldings (A)
+
+The power supply of the IT components SHOULD be selected so that interference due to equalization currents on the shielding of data lines is prevented. Depending on the form of the grid, it is also advisable to take precautions against external radiation, radiation through the line and the detection of equalizing currents.
+
+#### INF.4.A15 Use of Cabinet Systems (IA)
+
+To improve the operational safety of active and passive network components, these devices SHOULD be installed or installed in cabinet systems.

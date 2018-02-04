@@ -7,13 +7,19 @@ from googletrans import Translator
 from multiprocessing import Pool
 
 
-sys.path.append(r'..')
+sys.path.append(r'../..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
 
 from Scripts import bsiImporter
 from bsiwiki import settings
+
+
+directoryC = settings.BSI_DE + '/C'
+directoryN = settings.BSI_DE + '/N'
+directoryT = settings.BSI_DE + '/T'
+directoryEN = settings.BSI_EN
 
 def content_from_list(content):
     mdFilePart = ''
@@ -74,18 +80,20 @@ def check15k(list, component):
 
     for line in splitList:
         if(component):
-            if('3 Anforderungen' in line):
-                text = False
-
             if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
                 threats = True
                 referenceList.append(line)
 
+
             if (threats and '* ' in line):
                 referenceList.append(line)
 
+            if ('4 Weiterführende Informationen' in line):
+                text = False
+
             if ('##' in line and '* ' not in line and '4.1 Literatur' not in line):
                 referenceList.append(line)
+
 
         if(text and (functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
                 listOf15kElement.append(line)
@@ -143,10 +151,6 @@ def translate(fileMD):
 
 
 if __name__ == "__main__":
-    global directoryC
-    global directoryN
-    global directoryT
-    global directoryEN
 
     filesForTranslation = []
     phase = str(sys.argv[1])

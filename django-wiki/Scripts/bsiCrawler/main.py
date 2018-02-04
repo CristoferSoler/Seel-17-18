@@ -2,7 +2,7 @@ import os
 import shutil
 from multiprocessing import Pool
 
-from Scripts.bsiCrawler.translatorMultiProcessing import translate
+from translatorMultiProcessing import translate
 
 '''
 This module is the main module for retrieving data from the BSI. It generates all necessary folder structures, 

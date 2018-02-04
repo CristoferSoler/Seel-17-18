@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -28,13 +26,13 @@ The following specific threats and vulnerabilities are of particular importance 
 
 For example, poorly defined, overlapping, or unclarified responsibilities can slow down the categorization and prioritization of change requests, thereby delaying the distribution of patches and changes. Even if patches and changes are released prematurely without test run and consideration of all (technical) aspects, this can have a serious impact on safety.
 
-In extreme cases, poorly defined responsibilities may affect the entire institution in full or in large scale. Faults in the operation affect the availability. Confidentiality and integrity may be affected if security-related patches are not or are distributed late.
+In the extreme case, poorly defined responsibilities can affect the entire institution completely or to a large extent. Faults in the operation affect the availability. Confidentiality and integrity may be affected if security-related patches are not or are distributed late.
 
 ### 2 2 Defective communication in change management
 
 If the patch and change management within the institution is poorly accepted or the people involved communicate poorly, it may cause change requests to be delayed, or incorrectly decided on by a change request.
 
-This can reduce overall security levels and seriously disrupt IT operations. In any case, inadequate communication makes the change process inefficient, as it often requires too much time and resources to be invested. This has a negative impact on the institution's responsiveness and, in extreme cases, can lead to security vulnerabilities or important business goals being missed.
+This can reduce overall security levels and seriously disrupt IT operations. In any case, the lack of communication makes the change process inefficient, as it often requires too much time and resources to be invested. This has a negative impact on the institution's responsiveness and, in extreme cases, can lead to security vulnerabilities or important business goals being missed.
 
 ### 2 3 Poor consideration of business processes
 Incorrect changes can, among other things, affect the smooth running of business processes or even lead to the IT systems involved completely failing. Even a comprehensive test procedure can not completely rule out that a change in the subsequent productive operation proves to be faulty.
@@ -43,13 +41,13 @@ If the impact, category or priority of a submitted business process change reque
 
 ### 2 4 Insufficient resources for patch and change management
 
-Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable people. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they become even more time-consuming, for example, when emergency patches need to be recorded.
+Effective patch and change management requires adequate human, time and financial resources. If these are not available, for example, the necessary roles can be filled with unsuitable people. Also, interfaces for certain information, for example, between IT and the corresponding contact persons in the departments, can not be created, or the required capacities for the infrastructure of the test and distribution environments are not provided. If the staffing, time and financial shortcomings in regular operations can often be compensated, they will prove to be more time-consuming, for example when emergency patches need to be recorded.
 
 ### 2 5 Problems with automated distribution of patches and changes
 
 Frequently, patches and changes are not distributed manually, but centrally software-supported. If such software is used, erroneous patches and changes in the entire information network can be deployed, which can result in mass security problems. It is especially serious when many systems simultaneously install software that contains security holes.
 
-If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a certain period of time and then not all IT systems can be reached, these systems can not be updated.
+If only a few mistakes occur, they can often be remedied by hand. However, it will be problematic if IT systems can not be permanently accessed on the LAN. One example is sales representatives who rarely and irregularly connect their IT systems to the LAN. If the tool is configured to distribute the updates only within a specific time frame and then not all IT systems are reachable, these systems can not be updated.
 
 ### 2 6 Poor recovery options for patch and change management
 
@@ -68,4 +66,75 @@ If changes are prioritized incorrectly, for example, unimportant patches could b
 
 ### 2 10 Manipulation of data and tools in change management
 
-Patch and change management often operates from a central location. Due to its exposed position, it is particularly vulnerable: If attackers succeed in taking over the servers involved, they could simultaneously distribute manipulated software versions to a variety of IT systems via this central point. Often further points of attack arise from the fact that these systems are operated by external partners (outsourcing). Maintenance accesses could also be set up to allow attackers to access the central server for distribution of changes.
+Patch and change management often operates from a central point. Due to its exposed position, it is particularly vulnerable: If attackers succeed in taking over the servers involved, they could simultaneously distribute manipulated software versions to a variety of IT systems via this central point. Often further points of attack arise from the fact that these systems are operated by external partners (outsourcing). Maintenance accesses could also be set up to allow attackers to access the central server for distribution of changes.
+
+3 requirements
+---------------
+
+The following are specific requirements for patch and change management. Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### OPS.1.1.3.A1 Concept for Patch and Change Management [Administrator, Specialist]
+
+If changes to IT components, software or configuration data are to be implemented, there must be guidelines for them that also take security aspects into account. All patches and changes MUST be planned, tested, approved and documented. If patches and changes are made, fallback solutions MUST be present. Major changes MUST also involve information security management. Overall, it MUST be ensured that the desired level of safety is maintained during and after the changes.
+
+#### OPS.1.1.3.A2 Definition of responsibilities [Head IT]
+For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. Everyone involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
+
+#### OPS.1.1.3.A3 Configuration of Auto Update Mechanisms [Administrator]
+
+It is MUST be defined within the patch and change management strategy how to handle integrated update mechanisms (auto update) of the software used. In particular, it MUST be determined how these mechanisms are secured and appropriately configured. In addition, new components SHOULD be checked to see if and which update mechanisms they have.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements are state-of-the-art in patch and change management. They SHOULD be implemented in principle.
+
+#### OPS.1.1.3.A4 Planning the Change Management Process [Change Manager]
+
+A change management process SHOULD be defined, with institutions able to adapt to the change management process of the IT Infrastructure Library (ITIL). All changes to hardware and software versions as well as configurations SHOULD be controlled and controlled through the change management process.
+
+#### OPS.1.1.3.A5 Dealing with Change Requests [Change Manager]
+
+Requests for changes SHOULD be submitted and processed according to a specified procedure. All change requests (Request for Changes, RfCs) SHOULD be recorded, documented, and then reviewed by the Change Manager. Once a change request has been accepted, it SHOULD be prioritized and categorized. It should be ensured that the required resources are available for the respective priorities.
+
+#### OPS.1.1.3.A6 Change Request Reconciliation [Change Manager]
+
+When a change is implemented, the associated reconciliation process SHOULD consider all relevant audiences. The target groups affected by the change SHOULD have demonstrably been able to comment. Also, there SHOULD be a set procedure that can speed up important change requests.
+
+#### OPS.1.1.3.A7 Integration of Change Management in the Business Processes [Change Manager]
+
+The change management process SHOULD be integrated into the business processes. Thus, in the case of planned changes, the current situation of the affected business processes SHOULD be taken into account. All relevant departments SHOULD be informed about upcoming changes. Also, there SHOULD be an escalation level, whose members belong to the management level of the institution and which decides in case of doubt about the priority and scheduling of a hardware or software change.
+
+#### OPS.1.1.3.A8 Secure Use of Patch and Change Management Tools [IT Leader]
+
+It SHOULD define requirements and frameworks for selecting patch and change management tools. In addition, a specific security policy for the tools used SHOULD be created.
+
+#### OPS.1.1.3.A9 Testing and acceptance procedure for new hardware and software [IT Manager]
+
+New hardware and software SHOULD BE tested before it is used. For this purpose only isolated test systems should be used. Also, there SHOULD be an acceptance procedure and release statement for software. The responsible person SHOULD file the release declaration in a suitable place in writing. In the event that errors are detected in the software despite the acceptance and release procedures during operation, there should be a troubleshooting procedure.
+#### OPS.1.1.3.A10 Ensuring the Integrity and Authenticity of Software Packages [Administrator]
+
+Throughout the patching and modification process, the authenticity and integrity of software packages SHOULD be ensured. For this purpose, it should be checked whether checksums or digital signatures are available for the software packages used. Likewise, care should be taken to ensure that the necessary programs are available for review.
+
+#### OPS.1.1.3.A11 Continuous Documentation of Information Processing [IT Manager, Change Manager]
+
+Changes SHOULD be documented in all phases, all applications and all systems. For this purpose, appropriate regulations should be developed.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### OPS.1.1.3.A12 Scalability in Change Management (A)
+
+If a change management tool is used, the implementation speed should be carefully checked before startup. It should be possible to define break points at which the distribution of a faulty change is stopped.
+
+#### OPS.1.1.3.A13 Measuring Change Requirement Success (IA)
+
+To check if a change was successful, the change manager SHOULD perform so-called post-tests. For this he SHOULD select suitable reference systems as quality assurance systems. The results of the night tests SHOULD be documented as part of the change process.
+
+#### OPS.1.1.3.A14 Synchronization within Change Management [Change Manager] (CIA)
+
+As institutions make changes to the IT infrastructure, the change management process SHOULD respond. Temporarily or permanently unavailable devices SHOULD be considered in the change management process through appropriate mechanisms.

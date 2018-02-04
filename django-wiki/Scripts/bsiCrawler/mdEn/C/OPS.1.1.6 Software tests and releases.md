@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,11 +5,11 @@ Table of content
 
 ### 1.1 Introduction
 
-The use of IT for task management requires that machine data processing work as smoothly as possible, since the individual results can not be controlled in most cases. As part of the software tests, it is therefore checked whether the software in question works without errors. To do this, the software must reliably provide the required functionality and, in addition, must not have any unwanted side effects. With the subsequent release of the software by the responsible organizational unit, the basic permission is given to use the software productively in the institution. At the same time, this organizational unit assumes responsibility for the IT process, which is supported by the software.
+The use of IT for task management requires that machine data processing work as smoothly as possible, since the individual results can not be controlled in most cases. As part of the software tests, it is therefore checked whether the software in question works without errors. To do this, the software must reliably provide the required functionality and, in addition, must not have any unwanted side effects. With the subsequent release of the software by the responsible organizational unit, the basic permission is given to use the software productively in the institution. At the same time, this organizational unit assumes responsibility for the IT process that is supported by the software.
 
-Software can be tested at different points in the life cycle of a software. Thus, software tests may already be necessary during development, before release for productive operation or in the course of patch and change management. The software tests and releases are to be carried out for self-development as well as for the use of standard software.
+Software can be tested at different points in the software lifecycle. Thus, software tests may already be necessary during development, before release for productive operation or in the course of patch and change management. The software tests and releases are to be carried out for self-development as well as for the use of standard software.
 
-This module describes the test and approval process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
+This module describes the test and release process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
 
 ### 1.2 Objective
 
@@ -39,11 +37,11 @@ It is often assumed that trained developers and software testers have sufficient
 
 ### 2 3 Software test with productive data
 
-Software tests with productive data or in productive operation are necessary, because only with the productive data can the function and the performance of the product be assessed. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
+Software tests with productive data or in productive operation are necessary, because only with the productive data the function and the performance of the product can be evaluated. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
 
-Although software tests with productive data are necessary, this can lead to security problems. In particular confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
+Although software tests with productive data are necessary, this can lead to security problems. In particular, confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
 
-Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" production data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
+Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" productive data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
 
 ### 2 4 Missing or inadequate test procedure
 
@@ -61,4 +59,83 @@ A software release can usually be issued once all tests have been performed and 
 
 ### 2 7 Missing or inadequate documentation of the approval criteria
 
-If approval criteria are not clearly communicated, it may result in premature release or no release, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
+If approval criteria are not clearly communicated, this may result in the release being given prematurely or not being released, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
+
+3 requirements
+---------------
+The following are specific requirements for software testing and clearance. Basically, the IT manager is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### OPS.1.1.6.A1 Planning the software tests
+
+Before the software tests can be carried out, the framework conditions within the institution MUST be determined according to the protection requirements, organizational units, technical possibilities and test environments. The software tests MUST be based on the specifications of the specifications.
+
+When selecting the test cases MUST be taken to ensure that they are as representative as possible of the functions to be tested.
+
+#### OPS.1.1.6.A2 Performing Functional Software Tests [Tester]
+
+Functional software tests MUST be performed to verify the proper and complete operation of the software. The functional software tests MUST be performed in such a way that they do not affect the productive operation.
+
+#### OPS.1.1.6.A3 Evaluation of test results [Tester]
+
+The results of the software tests MUST be evaluated. A nominal and actual comparison SHOULD be carried out via the comparison with defined specifications. The evaluation MUST be documented.
+
+#### OPS.1.1.6.A4 Sharing the Software [Specialists]
+
+The functional unit MUST release the software as soon as the software tests have been successfully completed. The release MUST be documented in the form of a release declaration.
+
+The releasing organizational unit MUST verify that the software has been tested as required. The results of the software tests MUST match the predefined expectations. It MUST also be checked whether compliance with legal or organizational requirements is ensured.
+
+#### OPS.1.1.6.A5 Performing Non-Functional Software Tests [Tester]
+
+Non-functional tests MUST be performed. In particular, security-specific software tests SHOULD be performed if the application has security-critical features. The test cases as well as the test results SHOULD be documented.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements are state of the art in software testing and clearance. They SHOULD be implemented in principle.
+
+#### OPS.1.1.6.A6 Orderly briefing of the software testers [IT-Betrieb, Fachverantwortliche]
+
+A software tester SHOULD be informed about the types of tests to be performed and the areas of software to be tested by IT operations. In addition, the software tester SHOULD be informed about the use cases and possible further requirements of the software.
+
+#### OPS.1.1.6.A7 Software Tester Personal Selection [Human Resources]
+
+When selecting software testers, separate selection criteria SHOULD be taken into account. The persons SHOULD have the required professional qualifications. There should be sufficient knowledge of the programming language to be tested, the development environment and the test methods to be used.
+
+In public institutions and institutions protected by copyright, SHOULD check if a security clearance is required.
+
+#### OPS.1.1.6.A8 Continuing Education of the Software Tester [Head of Human Resources]
+The software testers SHOULD be trained according to the module OPS.3 Sensitization and Training. Procedures should be established to inform the software testers about innovations that are relevant to their particular task.
+
+#### OPS.1.1.6.A9 Procurement of test software [tester, IT operation]
+
+The test software SHOULD be procured according to a catalog of requirements. It SHOULD also undergo the testing and approval process. It should be checked whether the assistance and support services of the software manufacturer are sufficient.
+
+#### OPS.1.1.6.A10 Creation of an acceptance plan
+
+The acceptance plan SHOULD document the test types, test cases and expected results to be performed. In addition, the acceptance plan SHOULD include the approval criteria. The procedure for rejecting a release SHOULD be defined.
+
+#### OPS.1.1.6.A11 Use of anonymised or pseudonymised test data [Tester, Data Protection Officer]
+
+Only anonymized or pseudonymized test data should be used for software testing. Insofar as the productive data have a personal reference, institutions SHOULD use only anonymized test data. If a personal reference could be derived from the test data, the data protection officer and possibly the staff representatives should be consulted.
+
+#### OPS.1.1.6.A12 Performing Regression Tests [Tester]
+
+If software tests are to be performed after a software change, regression tests should be performed. Regression tests SHOULD be completed. The omission of test cases SHOULD be substantiated and documented. The test cases and the test results SHOULD be documented.
+
+#### OPS.1.1.6.A13 Separation of Test and Quality Management Environment from the Production Environment [IT Operations]
+
+Software SHOULD only be tested in a dedicated test and quality management environment. The test and quality management environments SHOULD be operated separately from the production environment. The architectures and mechanisms used in the test landscape SHOULD be documented. The quality management environment SHOULD be adapted to the production environment. Procedures should be documented on how to handle the test landscape after the software test has been completed.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### OPS.1.1.6.A14 Performing Penetration Tests [Tester] (CIA)
+
+It should be carried out for applications or IT systems with increased protection required penetration tests as a test method. It SHOULD be created a penetration test concept. In the penetration test concept, the criteria of success SHOULD be documented in addition to the test methods to be used.
+
+The penetration test SHOULD be based on the framework conditions of the penetration test concept. The vulnerabilities identified by the penetration test SHOULD be classified and documented.

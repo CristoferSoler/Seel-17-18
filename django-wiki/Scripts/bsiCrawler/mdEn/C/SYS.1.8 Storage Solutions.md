@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -23,7 +21,7 @@ The aim of this module is to show how centralized storage solutions can be plann
 
 ### 1.3 Delimitation
 
-In this module, storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
+In this module storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
 
 If external service providers are used to run a storage solution, the requirements of the module OPS.2.1 * Outsourcing for Customers * must be considered separately.
 
@@ -63,3 +61,148 @@ Complex, network-based storage solutions often consist of many components (such 
 
 If an institution has inadequate access and access controls to the components of a storage system or if these are completely lacking, an attacker can gain physical access to existing switches or connect additional FC SAN switches to the network. The target of the attacker could be to access the distributed zoning database to change it so that it can access the storage systems.
 
+3 requirements
+---------------
+The following are specific requirements for storage solutions. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
+
+The IT components MUST be installed in secured rooms. These rooms must ONLY have authorized access. In addition, a safe power supply and according to the manufacturer's specifications recommended ambient temperature and humidity must be ensured.
+
+#### SYS.1.8.A2 Secure basic configuration of storage solutions
+
+Before a storage solution is used productively, it MUST be ensured that all software and firmware components used are up-to-date. After that, a secure basic configuration MUST be made.
+
+Unused user accounts MUST be disabled. Also, you MUST change default passwords in accordance with the password policy or create new accounts.
+
+Unused interfaces of the storage system MUST be deactivated. The default configuration, the basic configuration made and the current configuration SHOULD be kept redundant and protected.
+
+#### SYS.1.8.A3 Restrictive rights assignment
+
+For storage solutions, a rights and roles concept MUST be created. All user accounts created on each solution MUST conform to this concept. All user accounts MUST be set up according to the principle of minimum permissions.
+
+#### SYS.1.8.A4 Protection of the administration interfaces
+
+All administration and management accesses of the storage systems MUST be restricted. It MUST be ensured that the administration interfaces can not be accessed from untrusted networks.
+
+Sufficient encrypted protocols SHOULD be used. However, if unencrypted and therefore unsecure protocols are used, a separate administration network MUST be used for the administration.
+
+#### SYS.1.8.A5 Logging on storage systems
+
+The internal logging of the storage systems MUST be configured to log information used to detect problems early.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of storage solutions. They SHOULD be implemented in principle.
+
+#### SYS.1.8.A6 Creating a Security Policy for Storage Solutions [Information Security Officer (ISB)]
+
+Based on the institution's general security policy, a specific security policy for storage solutions SHOULD be created. It should describe in a comprehensible way requirements and specifications how storage solutions can be safely planned, administered, installed, configured and operated.
+
+The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
+
+#### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
+A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
+
+* Selection of suitable hardware,
+* Selection of manufacturers and suppliers,
+* Decision for or against central management systems,
+* Planning the grid connection,
+* Planning the infrastructure as well
+* Integration into existing processes.
+#### SYS.1.8.A8 Selecting a suitable storage solution [Information Security Officer (ISB), IT Leader]
+
+The technical basics of different storage solutions SHOULD be examined in detail and their effects on the possible use in the institution should be examined. The possibilities and limits of the different types of storage systems SHOULD be presented transparently to the responsible persons of the institution. The decision criteria for a storage solution SHOULD be documented comprehensibly. Likewise, the decision to select a storage solution SHOULD be documented comprehensible.
+
+#### SYS.1.8.A9 Selection of vendors for a storage solution [Information Security Officer (ISB), IT Leader]
+
+Based on the specified requirements for a storage solution, a suitable supplier SHOULD be selected. The selection criteria and the decision for a supplier SHOULD be traceable documented. In addition, aspects of maintenance and servicing SHOULD be written down in Service Level Agreements (SLAs). The SLAs SHOULD be clear and quantifiable. It SHOULD be precisely regulated when the contract with the supplier ends.
+
+#### SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
+
+It SHOULD be created an operating manual. It SHOULD document all the necessary rules, requirements and settings required to operate storage solutions. The operation manual SHOULD be updated regularly.
+
+#### SYS.1.8.A11 Safe operation of a storage solution
+
+The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and coordinated with all involved specialists.
+
+#### SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
+
+The administrators responsible for the storage solutions SHOULD be sufficiently trained. The training SHOULD impart knowledge with which procedures, techniques and tools storage systems and their components can be set up and operated safely. In addition, manufacturer-specific aspects of individual products and components SHOULD be addressed. If an institution uses new products, administrators SHOULD be trained to do so.
+
+#### SYS.1.8.A13 Monitoring and management of storage solutions
+
+To detect and resolve error situations and security issues, you should monitor storage solutions. All collected data SHOULD be checked as to whether the requirements of the operating manual are adhered to (see also SYS.1.8.A10 * Creation and maintenance of an operating manual *).
+Individual components of the storage solution and the overall system SHOULD be managed centrally. In addition, the essential messages SHOULD be filtered out to better represent them.
+
+If a storage solution is operated by an external service provider, SHOULD define and document how the contracted SLAs are monitored.
+
+#### SYS.1.8.A14 Securing a SAN by segmentation
+
+A SAN SHOULD be segmented. A concept SHOULD be developed that maps the SAN resources to the respective servers. For this purpose it should be decided based on the security requirements and the administrative effort which segmentation should be used in which application scenario. The current resource allocation SHOULD be easily and clearly visible using management tools. Furthermore, the current zoning configuration SHOULD be documented. The documentation SHOULD also be available in emergencies.
+
+#### SYS.1.8.A15 Secure separation of clients in storage solutions
+
+It SHOULD be documented and comprehensibly documented, which requirements the institution places on the multi-client capability of a storage solution. The storage solutions used SHOULD meet these documented requirements.
+
+In the block storage environment, * LUN Masking * SHOULD be used to separate clients. In file service environments SHOULD it be possible to work with virtual file servers. In this case, each client SHOULD be assigned a separate file service.
+
+When using IP or iSCSI, the clients SHOULD be separated by segmentation in the network. If Fiber Channel is used, SHOULD be separated using VSANs and soft zoning.
+
+#### SYS.1.8.A16 Secure deletion in SAN environments
+
+For the storage system SHOULD be determined which information is to be deleted with which method. In multi-tenant storage systems, it should be ensured that logical unit numbers (LUNs) assigned to a specific client are deleted.
+
+#### SYS.1.8.A17 Documentation of the system settings of storage systems
+
+All system settings of storage systems SHOULD be documented. The documentation SHOULD include the technical and organizational requirements as well as all specific configurations of the storage systems of the institution.
+
+If the documentation of the system settings contains confidential information, these should be protected against unauthorized access. The documentation SHOULD be regularly reviewed and always up to date, especially with regard to the assignment of rights. Also SHOULD be made sure that it is available in all emergency scenarios.
+
+#### SYS.1.8.A18 Security audits and reporting on storage systems [Information Security Officer (ISB)]
+
+All used storage systems SHOULD be audited regularly. For this, a corresponding process SHOULD be set up. It SHOULD be regulated, which security reports with which contents are to be created regularly. In addition, it should also be regulated how deviations from specifications are handled and how often and to what extent audits are carried out.
+
+#### SYS.1.8.A19 Disposal of storage solutions
+
+If entire storage solutions or individual components of a storage solution are no longer needed, all existing data SHOULD be transferred to other storage solutions. A transitional phase should be planned for this. Subsequently, all user data and configuration data SHOULD be securely deleted. From all relevant documents, all references to the decommissioned storage solution SHOULD be removed.
+
+#### SYS.1.8.A20 Emergency Preparedness and Emergency Reaction for Storage Solutions [IT Leader]
+It SHOULD create an emergency plan for the storage solution used. The plan SHOULD describe exactly how to handle certain emergency situations. Also SHOULD include instructions in the form of actions and commands that support error analysis and error correction. To correct errors, suitable tools should be used.
+
+It should be done regular exercises and tests of the emergency plan. After the exercises and tests as well as after an emergency, the generated data SHOULD be safely erased.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
+
+Clients SHOULD be allocated storage resources from different storage pools. In this case, a storage medium should always be assigned to only one pool. The logical disks (LUNs) that are generated from such a pool SHOULD only be assigned to a single tenant.
+
+#### SYS.1.8.A22 Deploying a Highly Available SAN Solution [Information Security Officer (ISB)] (A)
+
+It SHOULD use a high-availability SAN solution. The replication mechanisms used SHOULD meet the institution's availability requirements for the storage solution. The configuration of the storage solution SHOULD meet the availability requirements. In addition, a test and consolidation system SHOULD be in place.
+
+#### SYS.1.8.A23 Using Encryption for Storage Solutions [Information Security Officer (ISB)] (CI)
+
+All data stored in storage solutions SHOULD be encrypted. It SHOULD be determined on which levels (data-in-motion and data-in-rest) is encrypted. It should be noted that encryption on the transport path is also relevant for replication and backup traffic.
+
+#### SYS.1.8.A24 Ensuring SAN Fabric Integrity (I)
+
+To ensure the integrity of the SAN fabric, protocols with additional security features SHOULD be used. The following protocols SHOULD consider their security properties and use appropriate configurations:
+
+* Diffie Hellman Challenge Handshake Authentication Protocol (DH-CHAP)
+* Fiber Channel Authentication Protocol (FCAP) and
+* Fiber Channel Password Authentication Protocol (FCPAP).
+#### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
+
+In SAN environments, data SHOULD be deleted by overwriting the associated memory segments of a LUN multiple times.
+
+#### SYS.1.8.A26 Securing a SAN through hard zoning
+
+To segment SANs, hard zoning should be used.
