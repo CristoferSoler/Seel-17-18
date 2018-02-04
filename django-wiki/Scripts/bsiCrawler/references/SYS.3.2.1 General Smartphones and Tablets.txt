@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Loss of the mobile device
+### 2 2 Missing OS updates
+### 2 3 Software vulnerabilities in applications (apps)
+### 2 4 Manipulation
+### 2 5 Malware
+### 2 6 Web-based attacks on mobile browsers
+### 2 7 Abuse of fitness or location data
+### 2 8 Misuse of sensitive data in the lock screen
+### 2 9 Dangers from private use of mobile devices
+### 2 10 Dangers of Bring Your Own Device (BYOD)
+### 3.1 Basic Requirements
 #### SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
 #### SYS.3.2.1.A2 Defining a strategy for cloud deployment
 #### SYS.3.2.1.A3 Secure basic configuration for mobile devices

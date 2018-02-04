@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Violation of the requirements of the UP Bund
+### 2 2 Override security measures
+### 2 3 Ineffective or non-economic implementation of security measures
+### 2 4 Insufficient implementation of the information security management system
+### 2 5 Inadequate qualification of the examiner
+### 2 6 Lack of long-term planning
+### 2 7 Lack of planning and coordination when performing IS revisions
+### 2 8 Lack of coordination with the Staff Committee
+### 2 9 Intentional concealment of deviations or problems
+### 2 10 Confidentiality loss of sensitive information
+### 3.1 Basic Requirements
 #### DER.3.2.A1 Definition of responsibilities for the IS audit
 #### DER.3.2.A2 Creation of an IS-Revision-Manual
 #### DER.3.2.A3 Definition of the basis of the audit and a common rating scheme [IS audit team]

@@ -1,4 +1,15 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Inadequate or unscheduled implementation of security measures
+### 2 2 Ineffective or non-economic implementation of security measures
+### 2 3 Insufficient implementation of the ISMS
+### 2 4 Inadequate qualification of the examiner
+### 2 5 Lack of long-term planning
+### 2 6 Lack of planning and coordination when conducting an audit
+### 2 7 Lack of coordination with the Staff Committee
+### 2 8 Intentional concealment of deviations
+### 3.1 Basic Requirements
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 #### DER.3.1.A2 Preparation for an audit or revision
 #### DER.3.1.A3 Conducting an audit

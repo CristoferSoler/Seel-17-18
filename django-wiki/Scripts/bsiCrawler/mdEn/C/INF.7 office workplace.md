@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -34,7 +32,7 @@ An office space that is not ergonomically designed or an unfavorable working env
 
 ### 2 3 Cleaning and external staff or visitors
 
-For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, from improper handling of technical equipment to attempts to "play" IT systems to theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
+For smaller or short meetings, it is usually more efficient to receive a visit to the office. Visitors as well as cleaners and third-party personnel can view internal information in various ways, endanger business processes and manipulate IT systems, ranging from the improper handling of technical equipment to the attempt to "play" IT systems and theft of documents or IT components. For example, by cleaning personnel accidentally a plug connection can be solved or water get into the IT, even documents can be misplaced or even disposed of with the waste.
 
 ### 2 4 Manipulation or destruction of IT, accessories, information and software in the office
 
@@ -52,8 +50,3 @@ Depending on the location of the connection points of the sockets, the power sup
 ### 2 7 Vandalism
 
 Vandalism destroys or damages foreign property. The effects are very similar to those of an attack, only that vandalism is not deliberately planned and implemented like this, but is usually the expression of spontaneous, blind destructive rage. Both external perpetrators (disappointed burglars) and culprits (frustrated or mentally unstable staff) are eligible. Possible triggers for vandalism may include disagreements, personal problems, bullying or a bad working atmosphere.
-
-3 requirements
----------------
-
-The following are specific requirements for office protection. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The ISB should always be involved in strategic decisions. He is also responsible for ensuring that all requirements are met and verified in accordance with the established security policy.

@@ -1,4 +1,15 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Deficiencies in the development and enhancement of web applications
+### 2 2 Avoiding Web application authorization
+### 2 3 Inadequate validation of input and output data
+### 2 4 Missing or poor web application error handling
+### 2 5 Inadequate logging of security-relevant events
+### 2 6 Disclosure of security-related information in web applications
+### 2 7 Abuse of a web application through automated use
+### 2 8 Insufficient Session Management of Web Applications
+### 3.1 Basic Requirements
 #### APP.3.1.A1 Web Application Authentication [Developer]
 #### APP.3.1.A2 Web Application Access Control [Developer]
 #### APP.3.1.A3 Secure Session Management [Developer]

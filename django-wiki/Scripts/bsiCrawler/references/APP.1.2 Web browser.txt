@@ -1,4 +1,13 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Execution of malicious code by web browser
+### 2 2 Exploit Kits
+### 2 3 Reading the Internet communication
+### 2 4 Loss of integrity in web browsers
+### 2 5 Loss of privacy
+### 2 6 Error during administration and operation
+### 3.1 Basic Requirements
 #### APP.1.2.A1 Using sandboxing
 #### APP.1.2.A2 Encryption of communication
 #### APP.1.2.A3 Use of certificates [user]

@@ -1,4 +1,16 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Loss of the terminal
+### 2 2 Danger from malicious software
+### 2 3 Dangers from private use of mobile devices
+### 2 4 Insufficient synchronization with the MDM
+### 2 5 Incorrect administration of the MDM
+### 2 6 Inappropriate rights management in the MDM
+### 2 7 No or weak encryption of communication between MDM and terminal
+### 2 8 Unauthorized creation of motion profiles by the MDM
+### 2 9 Hazards of Bring Your Own Device (BYOD)
+### 3.1 Basic Requirements
 #### SYS.3.2.2.A1 Definition of a strategy for Mobile Device Management
 #### SYS.3.2.2.A2 Setting Allowed Mobile Devices
 #### SYS.3.2.2.A3 Selection of an MDM product

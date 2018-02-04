@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Staff shortage
+### 2 2 Abuse of Permissions
+### 2 3 Missing or inadequate regulations
+### 2 4 Insufficient knowledge of regulations
+### 2 5 Misconduct
+### 2 6 Social Engineering
+### 2 7 Carelessness in handling information
+### 2 8 Unauthorized use of own IT systems
+### 2 9 Abuse of social networks
+### 2 10 Manipulation or destruction of equipment, information or software
+### 3.1 Basic Requirements
 #### ORP.2.A1 Regulated training of new employees [supervisors]
 #### ORP.2.A2 Regulated procedure for the departure of employees [supervisors, IT operations]
 #### ORP.2.A3 Representation Rules [Supervisors]
@@ -11,7 +24,7 @@
 #### ORP.2.A9 Training of employees
 #### ORP.2.A10 Avoidance of disturbances of the working environment
 ### 3.3 Requirements for increased protection requirements
-#### ORP.2.A11 Safety Culture Analysis (CIA)
+#### ORP.2.A11 Safety culture analysis (CIA)
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 #### ORP.2.A13 Security Check (CIA)
 5 Appendix: Cross reference table for elementary hazards

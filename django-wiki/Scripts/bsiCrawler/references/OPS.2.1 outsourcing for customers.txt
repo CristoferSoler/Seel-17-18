@@ -1,4 +1,18 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Lack of or inadequate information security regulations
+### 2 2 Inappropriate access, access and access rights management
+### 2 3 Missing or inadequate testing and approval process
+### 2 4 Inadequate contractual arrangements with an outsourcing service provider
+### 2 5 Inadequate regulations for the end of an outsourcing
+### 2 6 Dependence on an outsourcing service provider
+### 2 7 Disruption of the working climate due to an outsourcing project
+### 2 8 Poor information security in the outsourcing implementation phase
+### 2 9 Failure of the systems of an outsourcing service provider
+### 2 10 Weaknesses when connecting to an outsourcing service provider
+### 2 11 Lack of multi-client capability at the outsourcing service provider
+### 3.1 Basic Requirements
 #### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
 ### 3.2 Standard requirements
 #### OPS.2.1.A2 Timely participation of the Staff Committee [Head of Organization]

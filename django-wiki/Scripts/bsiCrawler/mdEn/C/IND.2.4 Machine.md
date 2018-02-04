@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -9,13 +7,13 @@ Table of content
 
 A machine is a technical device that performs automated tasks. A typical example of this is a machine tool that processes products in a predefined manner. It is controlled by an IT system using a program that specifies the appropriate work instructions and steps. Such machines are also referred to as machines.
 
-In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. To enable the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
+In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. In order for the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
 
 Often mechanical engineering also offers remote maintenance services to detect early wear or to react quickly in problem situations.
 
 ### 1.2 Objective
 
-The module describes how electronically controlled, semi-automatic or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, type of construction, special purpose and location.
+The module describes how electronically controlled, semi- or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, type of construction, special purpose and location.
 
 ### 1.3 Delimitation
 
@@ -30,13 +28,8 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Failure or malfunction due to insufficient maintenance
 
-If machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
+When machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
 
 ### 2 2 Targeted manipulations
 
 If the interfaces of a machine are insufficiently protected, attackers can manipulate the parameters of the machine, eg. Via local programming devices or network services. As a result, workpieces can be damaged or entire product series can be faulty. The attackers can also damage the machine itself, which also causes an economic loss.
-
-3 requirements
----------------
-
-The following are specific requirements for the machine area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.

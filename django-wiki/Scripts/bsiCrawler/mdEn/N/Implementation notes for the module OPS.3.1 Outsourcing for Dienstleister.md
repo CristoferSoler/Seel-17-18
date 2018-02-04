@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -24,7 +22,7 @@ In order to promote the success of an outsourcing service, it is important for t
 In order to ensure that services are provided in accordance with the requirements, agreements such as service descriptions and safety requirements etc. must be contractually agreed in advance (see OPS.3.1.M2 Contract design with the outsourcing customer). In addition, the security requirements of the customer throughout the outsourcing process should be met and the resources required should be kept (see, among others, OPS.3.1.M3 Creation of a security concept for the outsourcing service, OPS.3.2.M13 ** ** Secure Migration for outsourcing projects) **. **
 
 **Business**
-In addition to the continuous provision of services in accordance with the contractually stipulated Service Level Agreements (SLAs), a safety culture coordinated with the customer must be lived out for the entire operating phase. This must be ensured by a regular and event-based exchange of information and regular monitoring of the implementation and effectiveness of agreed security measures (OPS.3.1.M10 Planning and maintaining information security in ongoing outsourcing operations).
+In addition to the continuous provision of services in accordance with the contractually stipulated service level agreements (SLAs), a safety culture coordinated with the customer must be lived out for the entire operating phase. This must be ensured by a regular and event-based exchange of information and regular monitoring of the implementation and effectiveness of agreed security measures (OPS.3.1.M10 Planning and maintaining information security in ongoing outsourcing operations).
 
 ** ** segregation
 
@@ -87,7 +85,7 @@ By the outsourcing service provider z. To represent:
 * Cooperation with third parties in connection with emergency preparedness (eg alternative workplaces)
 ** ** safety culture
 
-An important factor in a long-term commitment as part of an outsourcing service is the consideration of the different safety cultures. For this purpose, the security culture of both the outsourcing service provider and the outsourcing customer should be considered in a reflective manner. For example:
+An important factor in a long-term commitment in the context of an outsourcing service is the consideration of the different safety cultures. For this purpose, the safety culture of both the outsourcing service provider and the outsourcing customer should be considered in a reflective manner. For example:
 
 * Socio-cultural differences and similarities that also shape the organizational culture
 * Company values ​​and visions
@@ -95,7 +93,7 @@ An important factor in a long-term commitment as part of an outsourcing service 
 * Formal and informal social codes
 * Ethical standards
 * Attitude to risks, risk appetite
-In particular, the secure handling of data and information by the employees of the outsourcing service provider should be clearly regulated. The outsourcing customer relies first and foremost on the reliability of the outsourcing service provider when selecting their employees. The outsourcing service provider should therefore pay attention to the working environment in the respective teams when assigning tasks to employees.
+In particular, the secure handling of data and information by the employees of the outsourcing service provider should be clearly regulated. The outsourcing customer relies primarily on the reliability of the outsourcing service provider in selecting its employees. The outsourcing service provider should therefore pay attention to the working environment in the respective teams when assigning tasks to employees.
 
 ### 2.2 Standard measures
 
@@ -104,7 +102,7 @@ Together with the basic measures, the following measures correspond to the state
 #### OPS.3.1.M2 Contract Design with Outsourcing Customers [ISB Outsourcing Service Provider]
 
 When designing outsourcing contracts, it is important to consider all aspects of an outsourced contracting process through so-called service level agreements (SLAs) and, together with the outsourcing client, to closely analyze the tasks and processes to be undertaken to perform. All features not defined in advance usually result in additional costs, especially for outsourcing customers. This damages the business relationship between the contracting parties and weakens the negotiating position of the outsourcing service provider in case of contract extensions.
-In order to take this into account, it is advisable to take into account and define as accurately as possible all relevant service descriptions for the outsourcing service in the contract. This is particularly important in that any discrepancies between the outsourcing service provider and the outsourcing customer with regard to different concepts of service provision in the course of the outsourcing project can be prevented in advance. In the event of unlawful allegations on the part of the outsourcing customer with regard to a service that is not or not sufficiently performed, the outsourcing customer may refer to the corresponding service description within the framework of the contract.
+To take account of this fact, it is advisable to take into account and define as accurately as possible all relevant service descriptions for the outsourcing service in the contract. This is particularly important in that any discrepancies between the outsourcing service provider and the outsourcing customer with regard to different concepts of service provision in the course of the outsourcing project can be prevented in advance. In the event of unlawful allegations on the part of the outsourcing customer with regard to a service that is not or not sufficiently performed, the outsourcing customer may refer to the corresponding service description within the framework of the contract.
 
 The type, scope and level of detail of the contractual arrangements always depend on the respective outsourcing service. For example, the greater the need for protection of the outsourced customer's outsourced IT systems and applications, the more carefully and in detail the contract between outsourcing customers and outsourcing service providers must be negotiated with regard to the security measures to be taken. In addition to the requirements of the IT-Grundschutz Compendium, the outsourcing service provider often has to meet additional security requirements due to increased protection requirements (see, among others, OPS.3.1.A3 Creation of a security concept for the outsourcing service).
 
@@ -117,7 +115,7 @@ The following listed aspects should be regulated from the point of view of the o
 * The property rights of all components of the infrastructure
 ** Organizational regulations / processes (see, for example, module ORP.1 Organization) **
 
-* Non-Disclosure Agreements must be contractually agreed. This should already be taken into account during the contract design phase itself, as security requirements of the outsourcing customer may allow conclusions to be drawn about existing security systems.
+* Non-Disclosure Agreements must be contractually agreed. This should already be taken into account during the contract design phase itself, since security requirements of the outsourcing customer may allow conclusions to be drawn about existing security systems.
 * Definition of communication channels and contact persons
 * Definition of processes, work processes and responsibilities
 * Integration of the service into the value added process of the outsourcing customer
@@ -155,15 +153,15 @@ The ownership and copyright of systems, software and interfaces must be specifie
 
 There are reasonable notice periods to agree. In this context, it should be ensured that sufficient time remains for the outsourcing customer within the notice periods to take over the outsourced processes themselves or to transfer them to another service provider (15 Orderly termination of an outsourcing relationship).
 
-Often, outsourcing customers seek to set penalties or compensation for eventual non-compliance with service quality. From the point of view of the outsourcing service provider, the following aspects must be taken into account or regulated with the outsourcing customer:
+Often, outsourcing customers seek to set penalties or compensation for possible non-compliance with the quality of service. From the point of view of the outsourcing service provider, the following aspects must be taken into account or regulated with the outsourcing customer:
 
 * Quantification of damage occurred
 * Measurability of image damage
-* Proceedings in case of insolvency of the outsourcing service provider
+* Proceedings in the event of insolvency of the outsourcing service provider
 * Procedure for catastrophic damage
 ** Next relocations **
 
-The possibilities for the integration of third parties, subcontractors and subcontractors by the outsourcing service provider are to be regulated. In general, it is advisable not to exclude this principle, but to establish meaningful conditions. In principle, any further relocation should only be permissible if all the requirements that are met by the service provider under the existing outsourcing relationship are met.
+The possibilities for the integration of third parties, subcontractors and subcontractors by the outsourcing service provider are to be regulated. In general, it is advisable not to exclude this in principle, but to establish meaningful conditions. In principle, any further relocation should only be permissible if all the requirements that are met by the service provider under the existing outsourcing relationship are met.
 
 ** Client capability **
 
@@ -196,7 +194,7 @@ Service quality and information security must be monitored on a regular basis. T
 
 The service provider must grant all institutions that are required to carry out audits on the customer (eg supervisory authorities) the appropriate control options (eg access rights, data access).
 
-#### OPS.3.1.M3 Creation of a security concept for the outsourcing project [ISB outsourcing service provider]
+#### OPS.3.1.M3 Development of a security concept for the outsourcing project [ISB outsourcing service provider]
 
 The outsourcing customer should create his own security concept for the outsourcing project (see building block OPS.2.1 outsourcing for customers). This forms the basis for the security requirements of the outsourcing service provider in the context of the joint outsourcing project. Based on this, the outsourcing service provider was to create a security concept for the respective outsourcing project and continuously update it. The following general aspects should be considered:
 
@@ -236,7 +234,7 @@ In addition, the outsourcing service provider should ensure that all employees w
 
 There must be representation arrangements in all areas. In order to achieve continuous availability of important processes, particular care must be taken to ensure that key positions are always filled as soon as this is required by the processes.
 
-For employees who leave the institution or take on other functions, existing regulations must be examined with great care. Successors must be trained, documents must be returned and granted authorizations are revoked. Before the adoption should again be explicitly referred to secrecy obligations.
+For employees who leave the institution or take on other functions, existing regulations must be examined with greater care. Successors must be trained, documents must be returned and granted authorizations are revoked. Before the adoption should again be explicitly referred to secrecy obligations.
 
 #### OPS.3.1.M6 Regulations for the Use of External Personnel [Head of Personnel, ISB Outsourcing Service Provider]
 
@@ -247,7 +245,7 @@ External employees who work for the outsourcing service provider for an extended
 In addition, it should be ensured that substitution regulations also exist for external employees. It should also be ensured that they are familiar with the IT applications they use and that they also have the necessary security measures.
 
 If external personnel (eg maintenance technicians) are to be called in as part of the tasks to be performed, this external personnel should be treated like visitors. For this purpose, the usual regulations for visitor management should be adhered to. It must be understandable what powers the outside personnel have and the deployment should be properly trained and supported according to the need for protection.
-At the end of the contract, a regular handover of the work results, received documents and equipment must be carried out. In addition, the outsourcing customer must be provided with physical means of access (eg keys, access cards). Any existing confidentiality obligations remain valid even after the cooperation with the outsourcing customer and must therefore continue to be complied with (see also ORP.2 Personnel).
+At the end of the contract, a regular handover of the work results, received documents and resources must be carried out. In addition, the outsourcing customer must be provided with physical means of access (eg keys, access cards). Any existing confidentiality obligations remain valid even after the cooperation with the outsourcing customer and must therefore continue to be complied with (see also ORP.2 Personnel).
 
 #### OPS.3.1.M7 Creation of a client concept by the outsourcing service provider [ISB outsourcing service provider]
 
@@ -272,7 +270,7 @@ The implementation of these requirements can be done in many ways. An outstandin
 
 * Use of different databases (also called instances) in a common database management system (DBMS)
 * VPD (Virtual Private Database) at the service level for databases
-* Store tenant-tagged records in a shared database and shared tables so that client separation occurs through the application.
+* Store tenant-tagged records in a common database and tables, so that client separation occurs through the application.
 * Virtual machines at the system level
 * Virtual LAN (VLAN), Virtual Routing and Forwarding (VRF), Virtual Private Network (VPN) in the network infrastructure
 The outsourcing customer should check whether the solution chosen by the outsourcing service provider for client separation is effective.
@@ -299,15 +297,15 @@ The agreement should include the following components:
 * What security measures must be taken and how compliance is checked
 * A Non-Disclosure Agreement, d. H. an agreement that information obtained by one of the parties involved in the collaboration will not be disclosed to outsiders
 * A liability or compensation regulation (this should include the conditions for the separation of the network connection, liability for malicious programs or hacker attacks, penalties for non-performance or liability for use of third-party content to be clarified)
-* A regulation on obligations to provide information in the event of security breaches
+* A regulation on information obligations in the event of security breaches
 * A specification of which data may be used for which purposes (eg in the case of further use of work results)
-* A description of the extent to which other contractors are involved in the agreement, eg. B. by sharing applications or as a service provider for one of the contractors
-* The duration and possibilities of adaptation of the agreement (technology is developing fast, ie the agreements on their use have to be constantly adapted)
+* A description of the extent to which other contractors are involved in the agreement, eg B. by sharing applications or as a service provider for one of the contractors
+* The duration and possibilities of adaptation of the agreement (technology is developing rapidly, ie the agreements on their use must be constantly adapted)
 The persons responsible for drawing up the agreement should be those who are also responsible for compliance with the regulations. If, due to problems, the connection of the networks has to be temporarily disconnected, however, all affected persons should be included, as their requirements can vary widely but should be taken into account.
 
 A network connection to third-party networks should only be activated if both partners have implemented all security measures that are appropriate for the agreed protection requirements and no identifiable security deficiencies are left. Outsourcing service providers should also be convinced by the security level of their outsourcing customers, for example through an IT-Grundschutz check or spot checks. If the common IT infrastructure is compromised by a vulnerability of the outsourcing customer, the outsourcing service provider will also be confronted with the accusation of negligence in retrospect. In addition, an immediate elimination of all identified safety deficiencies should be sought. In real operation, the availability of an executable product is usually prioritized much higher than the elimination of any security flaws that can then become permanent vulnerabilities.
 
-The outsourcing customer and potential third parties should only be provided with the services that have been contractually agreed upon and are absolutely necessary. Which areas of the own network are granted access to third parties, must be made dependent on the nature of the existing relationships between the contracting parties and mutual trust between them. Foreign partners must be aware of their national laws, eg. In the fields of cryptography, privacy and copyright.
+The outsourcing customer and potential third parties should only be provided with the services that have been contractually agreed and are absolutely necessary. Which areas of the own network are granted access to third parties, must be made dependent on the nature of existing relationships between the contractors and on mutual trust between them. Foreign partners must be aware of their national laws, eg. In the fields of cryptography, privacy and copyright.
 
 In the event of security incidents that require disconnection, it is important to clearly define who is allowed to do so and when. It must also be clarified which persons should be informed about this process and which escalation steps are planned.
 
@@ -322,7 +320,7 @@ Such agreements should include in particular the following components:
 
  
 + which applications and data formats are supported and
-+ what availability and speed of reaction the partners have to guarantee (how often are messages read and how fast are they to answer)
++ what availability and speed of reaction the partners have to ensure (how often are messages readable and how fast can they be answered)
 
 
  
@@ -355,7 +353,7 @@ Once an outsourcing project has been implemented, information security must be g
 * Furthermore, the outsourcing service provider should take part in regular voting rounds on the following points:
 
  
-+ Exchange of information (eg personnel news, organizational regulations, changes to the law, planned projects, planned tests and system changes that can lead to impairment of service quality)
++ Exchange of information (eg personnel news, organizational regulations, changes to the law, planned projects, planned tests and system changes that may affect the quality of service)
 + Information about security risks and dealing with them
 + Problem identification and analysis
 + Mutual feedback and the identification of potential for improvement (to motivate employees, particularly positive examples of successful cooperation can be presented)
@@ -376,7 +374,7 @@ Once an outsourcing project has been implemented, information security must be g
 
 An outsourcing service provider typically services several outsourcing clients at the same time, sending in their own staff, as well as auditors and other auditors. It must be ensured that customers do not get access to IT systems, networks or data of other customers.
 
-In order to adequately protect the outsourcing service provider's business processes, information and IT systems as well as the various outsourcing customers, access, access and access rights must be regulated and an appropriate organizational framework created (see also ORP.4 Identity and Access Rights) authorization management).
+In order to adequately protect the outsourcing service provider's business processes, information and IT systems as well as the various outsourcing customers, access, access and access permissions must be regulated and an appropriate organizational framework created (see also ORP.4 Identity and Access Rights) authorization management).
 
 Appropriate and workable authorizations must be granted at various levels (eg for access to premises, access to IT systems, access to applications). Only as many rights should be assigned as are necessary for the task perception. There must be a regulated procedure for the allocation, management and withdrawal of entitlements.
 
@@ -388,7 +386,7 @@ The allocation of authorizations should be based on the functions of the authori
 
 #### OPS.3.1.M12 Change Management [IT Operations, Change Manager]
 
-With the complexity of today's IT systems, even minor changes to running systems can lead to security issues, such as: Due to unexpected system behavior or system failures. In terms of information security, change management is responsible for identifying new security requirements that result from changes to IT systems. In case of breakdowns or underpayments by the outsourcing service provider, sensitive contractual penalties may be due. In addition, the outsourcing customer's value creation process and thus the relationship between the outsourcing partners suffer, which could result in a sustained loss of reputation for the outsourcing service provider.
+With the complexity of today's IT systems, even minor changes to running systems can lead to security issues, such as: Due to unexpected system behavior or system failures. In terms of information security, change management is responsible for identifying new security requirements that result from changes to IT systems. In the event of breakdowns or under-performance by the outsourcing service provider, sensitive contractual penalties may be due. In addition, the outsourcing customer's value creation process and thus the relationship between the outsourcing partners suffer, which could result in a sustained loss of reputation for the outsourcing service provider.
 If significant hardware or software changes to an IT system are planned, the implications for overall system security must be investigated. Changes to an IT system must not lead to a reduction in the efficiency of individual security measures.
 
 Therefore, there should be guidelines for making changes to IT components, software or configuration data (see module OPS.1.2.1 Change Management). Any changes to IT components, software, or configuration data should follow a standardized process. This process must ensure that changes
@@ -411,7 +409,7 @@ Before changes are approved and implemented, checks and tests of planned actions
 
 * Only those who are allowed to make changes should have access privileges to the relevant system areas.
 * There should be mechanisms to ensure that all significant changes have been agreed in advance.
-Note: When making changes, it should always be kept in mind that changes in an IT system or its operating conditions may require changes in the implementation of individual security measures, the creation of a new security concept or even the revision of the organization-wide information security guideline. For major changes, therefore, the information security management of the outsourcing service provider and the outsourcing customer should be involved.
+Note: When making changes, it should always be noted that changes in an IT system or its operating conditions may require changes in the implementation of individual security measures, the creation of a new security plan, or even the revision of the organization-wide information security guideline. For major changes, therefore, the information security management of the outsourcing service provider and the outsourcing customer should be involved.
 
 #### OPS.3.1.M13 Secure migration for outsourcing projects
 
@@ -425,7 +423,7 @@ After being commissioned by the outsourcing customer, a security management team
 
 In order to promote the success of the migration phase, the outsourcing customer - in particular its security management team - should be actively involved in the project during the entire migration phase by the outsourcing service provider. In particular, it should be ensured that it is informed in good time about current progress, developments and possible complications.
 
-For this purpose a committee with qualified contact persons of both sides for the migration management should be established and the frequency of working meetings should be determined. The respective responsibilities are to be defined in advance and fixed in writing, as well as possible posts that support the committee.
+For this purpose, a committee with qualified contact persons on both sides for migration management should be established and the frequency of working meetings should be determined. The respective responsibilities are to be defined in advance and fixed in writing, as well as possible posts that support the committee.
 
 "Qualified contacts" in this context means those who have the necessary expertise and skills required for the outsourcing service and are trained in the specific tasks and challenges of an outsourcing project (organization, communication, conflict management ).
 
@@ -433,7 +431,7 @@ All members of the committee should be experienced in communicating with employe
 
 The outsourcing customer has the justified interest in monitoring their implementation during the migration phase. To this end, the necessary structures and resources should be created and provided, such as: For example, defined communication channels and procedures, as well as escalation templates and regular reporting. Thus, the migration can be carried out transparently, which makes the achievement of goals by both sides measurable and leads to a sustainable, trusting outsourcing relationship.
 
-In addition, a training course for the staff of the outsourcing customer should be planned during this phase. These will work on newly created interfaces in the future. The outsourcing service provider should support this. The implementation of training and its sustainability are in the interest of the outsourcing service provider, as this can not provide its service to the agreed extent or with the required quality level due to insufficient additional work. This in turn can negatively affect the outsourcing relationship and thus the reputation of the outsourcing service provider.
+In addition, a training course for the staff of the outsourcing customer should be planned during this phase. These will work in future on newly created interfaces. The outsourcing service provider should support this. The implementation of training and its sustainability are in the interest of the outsourcing service provider, as this can not provide its service to the agreed extent or with the required quality level due to insufficient additional work. This in turn can negatively affect the outsourcing relationship and thus the reputation of the outsourcing service provider.
 
 In the course of the migration, the test operation is of great importance. Especially for test purposes and in phases of heavy workload, "flexible" and "uncomplicated" solutions are often chosen, which are often uncertain. This should be avoided. For example, it should be ensured that productive data are not used as test data without special protection. This must be excluded by the security concept accordingly.
 The following aspects should be considered by the outsourcing service provider during the migration phase:
@@ -467,16 +465,16 @@ Basically, the emergency plans of both parties should be coordinated. Since this
 In the emergency preparedness concept, the following aspects must be precisely specified and described in detail:
 
 * Responsibilities, contacts and processes must be clearly regulated and fully documented.
-* Detailed regulations for the data backup (see module OPS.1.1.5 Data backup) are to be created (eg separate backup media for each client, availability, substitution regulations, escalation strategies, virus protection).
+* Detailed regulations for the data backup (see module OPS.1.1.5 Data backup) are to be created (eg separate backup media for each client, availability, substitution rules, escalation strategies, virus protection).
 * Make detailed work instructions with specific arrangements for specific error situations.
-* A concept for periodic emergency exercises needs to be developed and agreed with the outsourcing client.
+* A concept for periodic emergency exercises must be developed and agreed with the outsourcing customer.
 When an emergency occurs in the outsourcer's home, the quality of emergency work instructions is critical to the effectiveness of the emergency response. For this reason, the outsourcing customer should be interested in coordinating the emergency measures to be taken with the outsourcing service provider. However, it is also in the interest of the outsourcing service provider to ensure a competent and rapid response to outsourcing customer emergencies, as the customer's continued existence and reputation may be compromised.
 
 The outsourcing service provider must be aware that the outsourcing customer may lose essential know-how for the outsourced area as a result of outsourcing and that an adequate emergency response is often only possible with the support of the outsourcing service provider.
 
 It is also possible that IT systems of the outsourcing customer are operated by employees of the outsourcing service provider, without them having detailed knowledge of the applications that are operated on the IT systems. If an error occurs in an application, the outsourcing service provider may need to troubleshoot without having extensive knowledge of the overall system. The outsourcing service provider should therefore ensure that the emergency preparedness plan contains detailed instructions on how to proceed in the context of emergency management. It may also make sense to define actions that are explicitly forbidden (eg reboot a machine).
 
-Misbehavior of an application may be technical (eg full disk, network problems) or application specific causes (eg processing of a wrong record, program error, wrong parameter setting). In the event of technical errors without any impact on other applications, the outsourcing service provider will be able to correct the error itself, but cooperation with the outsourcing customer is usually necessary to prevent undesirable side effects at the application level. Especially with problems with complicated applications or with extensive batch processes, often knowledge is required which only one of the contracting parties has. Therefore, cooperative approaches, communication and escalation plans must be planned in advance.
+Misbehavior of an application may be technical (eg full disk, network problems) or application specific causes (eg processing of a wrong record, program error, wrong parameter setting). In the event of technical errors without any impact on other applications, the outsourcing service provider will be able to correct the error itself, but cooperation with the outsourcing customer is usually necessary to prevent undesirable side effects at the application level. Especially with problems with complicated applications or with extensive batch processes, knowledge is often required that only one of the contracting parties has. Therefore, cooperative approaches, communication and escalation plans must be planned in advance.
 In addition, the outsourcing service provider and the outsourcing customer should conduct joint exercises on a regular basis to verify or prove the effectiveness of the emergency preparedness of the tasks and processes transferred. The outsourcing service provider should consider the resources needed to plan, conduct and follow up the exercises in its calculations.
 
 #### OPS.3.1.M15 Orderly termination of an outsourcing ratio [Institutional Management]
@@ -489,10 +487,10 @@ The following aspects should be considered:
 
 * Property rights to hardware and software (interface programs, tools, batch processes, macros, licenses, backups) must be regulated.
 * The re-use of the tools, procedures, scripts and other software used by the outsourcing service provider is to be regulated in the event of the termination of the contractual relationship.
-* IT systems, IT applications and workflows should be sufficiently documented to help outsourcing customers reintegrate outsourced processes and activities.
+* IT systems, IT applications, and workflows should be sufficiently documented to help outsourcing customers reintegrate outsourced processes and activities.
 * All necessary information and data must be transferred from the outsourcing service provider to the outsourcing customer.
 * All data stocks of the outsourcing customer at the outsourcing service provider must be securely deleted.
-* All permissions that have been set up as part of the outsourcing project should be reviewed. The outsourcing service provider should delete all authorizations set up for the outsourcing customer or third parties.
+* All permissions that have been set up as part of the outsourcing project should be reviewed. The outsourcing service provider should delete all permissions set up for the outsourcing customer or third parties.
 ### 2.3 Measures for increased protection requirements
 
 The following are proposed measures that go beyond the state of the art level of protection and should be considered in case of increased protection needs. The letters in brackets indicate which basic values ​​are given priority protection by the measure (C = confidentiality, I = integrity, A = availability).
@@ -503,9 +501,9 @@ The possibilities of having the trustworthiness of new or foreign personnel chec
 
 In addition, it may be useful to have academic and professional qualifications certified, for example by inquiring at the university or from previous employers or clients. The identity of the candidate should also be verified. B. by presentation of identity documents.
 
-The outsourcing service provider should therefore coordinate with the outsourcing customers in advance of the service provision with regard to the requirements of the personnel to be deployed. These requirements should be taken into account with every change of personnel or new employees.
+The outsourcing service provider should therefore coordinate with the outsourcing customers in advance of the service provision with regard to the requirements of the personnel to be deployed. These requirements should be taken into account with each change of personnel or new entry.
 
-When drafting the contract between the outsourcing service provider and the outsourcing customer, it should be noted which side has to carry out which checks, if necessary, and to what extent these have to be carried out.
+When drafting the contract between the outsourcing service provider and the outsourcing customer, it should be noted which side should carry out which checks, if necessary, and to what extent these must be performed.
 
 3 Further information
 ------------------------------

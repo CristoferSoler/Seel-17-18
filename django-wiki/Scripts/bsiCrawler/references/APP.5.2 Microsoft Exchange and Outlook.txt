@@ -1,4 +1,15 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Missing or inadequate rules for Microsoft Exchange and Outlook
+### 2 2 Bad migration from Microsoft Exchange
+### 2 3 Illegal browser access to Microsoft Exchange
+### 2 4 Unauthorized connection of other systems to Microsoft Exchange
+### 2 5 Incorrect administration of access and access rights under Microsoft Exchange and Outlook
+### 2 6 Incorrect configuration of Microsoft Exchange
+### 2 7 Incorrect configuration of Outlook
+### 2 8 Malfunctions and misuse of self-developed macros and programming interfaces under Microsoft Outlook
+### 3.1 Basic Requirements
 #### APP.5.2.A1 Planning the Use of Microsoft Exchange and Outlook [IT Director, Information Security Officer (ISB)]
 #### APP.5.2.A2 Choosing a Suitable Microsoft Exchange Infrastructure [IT Leader]
 #### APP.5.2.A3 Authorization Management
