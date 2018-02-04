@@ -31,12 +31,12 @@ def userInActive(sender, instance, *args, **kwargs):
         if(instance.is_active != True):
             user = instance
             subject = 'You got banned from ISAM!'
-            text = 'Dummy Text'
+            text = 'Thous to miss behavior you have been baned from the platform for an uncertain period of time'
             sendMail(user,subject,text)
         elif(instance.is_active != False):
             user = instance
-            subject = 'Your account is activated!'
-            text = 'Dummy Text'
+            subject = 'Your account is activated again!'
+            text = 'You have been reactivated. Now you are able to login again.'
             sendMail(user, subject, text)
 
 def sendMail(user,subject,text):
