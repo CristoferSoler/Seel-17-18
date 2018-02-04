@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -21,7 +19,7 @@ Another major difference for OT is the high availability and integrity requireme
 
 The goal of the module is to demonstrate suitable requirements for the information security of the OT. He addresses cross-component, conceptual and architectural security requirements.
 
-The module is to be modeled and implemented across the board. In this case, multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out since there are different requirements with regard to information security.
+The module is to be modeled and implemented across the board. Multiple use in different areas of the OT in an institution (operator within the meaning of VDI 2182) can not be ruled out, since they have different requirements with regard to information security.
 
 ### 1.3 Delimitation
 
@@ -39,7 +37,7 @@ Different framework conditions, knowledge and procedures in the areas of office 
 
 ### 2 2 Inappropriate integration of OT into operational processes
 
-Despite the increasing convergence of OT and IT, there are peculiarities that make it difficult to transfer established business operations. Operational interventions in the context of change and (security) incident management for secure configuration, troubleshooting or the implementation of security updates, for example, can lead to a renewed official release or the loss of manufacturer's support. Unauthorized changes can affect the function of a component and potentially have an impact on its safety functions.
+Despite the increasing convergence of OT and IT, there are peculiarities that make it difficult to transfer established business operations. Operational interventions in the context of change and (security) incident management for secure configuration, troubleshooting or the import of security updates, for example, can lead to a renewed official release or the loss of manufacturer's support. Unauthorized changes can affect the function of a component and potentially have an impact on its safety functions.
 
 The OT is used to monitor, control and automate technical processes. Disruptions to these systems can lead to production losses, technical or personal damage and environmental damage. These potential effects must be taken into account during operational interventions.
 
@@ -47,7 +45,7 @@ The OT is used to monitor, control and automate technical processes. Disruptions
 
 Industrial control systems are increasingly rarely operated completely independently from the outside world. Modern manufacturing and manufacturing processes require an information exchange with upstream and downstream production steps and are often linked to central production planning and control systems (Manifacturing Execution System / Enterprise Resource Planning) of an institution. The electronic exchange of information requires networking of production facilities with third party networks such as office IT or the networks of partners and service providers. Requirements for interactive access from office or mobile workstations as well as operational requirements for the electronic data exchange, such as the provision of software and updates, or for the realization of remote access for a call or service providers promote networking with the outside world.
 
-If the necessary communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
+If the required communication channels are too broad or insufficiently secured, attackers can use these access routes for network-based access and for compromising the automation system.
 
 ### 2 4 Insufficient protection against malicious programs for OT
 
@@ -58,19 +56,19 @@ In addition, the use of anti-virus software requires regular updates. If this is
 
 ### 2 5 Unsafe projecting process / application development process
 
-Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Faults can arise from functional errors in the case of inadequate test and validation steps, incorrect or manipulated configuration data or weak points in the software, if important safety functions such as on- and off-hook Issuance or authorization checks are implemented inadequately.
+Adaptations and advancements of IT systems, applications and control programs represent a critical intervention in the control system. Malfunctions can arise from functional errors in the case of inadequate test and validation steps, faulty or manipulated configuration data or weak points in the software, if important safety functions such as on- and off-hook Issuance or authorization checks are implemented inadequately.
 
 Further dangers may arise from unsafe development environments, improper storage of program code, documentation or project data, as well as from the data transfer interfaces.
 
 ### 2 6 Insecure administration concept and remote administration
 
-The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, then attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
+The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
 
 Local administrators also have privileged rights that make abusive intrusion or compromised accounts attractive to attackers.
 
 ### 2 7 Insufficient monitoring and detection procedures
 
-The monitoring of operating states of the process to be automated is an essential function of industrial control systems. For example, warnings that are relevant to the process (eg if levels are exceeded) and technical parameters (eg temperatures, valve positions) are displayed. In contrast, there is often a lack of adequate monitoring of the supporting IT infrastructure.
+The monitoring of operating states of the process to be automated is an essential function of industrial control systems. For example, warnings that are relevant to the process (eg if levels are exceeded) and technical parameters (eg temperatures, valve positions) are displayed. On the other hand, there is often a lack of adequate monitoring of the supporting IT infrastructure.
 
 If unusual or security-relevant events of such operating environments are not or only insufficiently monitored, attempts to attack, network bottlenecks or foreseeable failures can not be detected early.
 
@@ -93,11 +91,11 @@ The long operating times can also lead to problems in the procurement of spare p
 
 The OT components communicate with each other via various network protocols and technologies. In addition to protocols and technologies from office IT (eg Ethernet, TCP / IP, WLAN, GSM), ICS-specific protocols are used. These have not always been developed from the point of view of information security and accordingly provide, in part, no or only limited security mechanisms. Information is often transmitted in plain text and without integrity assurance or authentication.
 
-An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by feigning sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
+An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by faking sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
 
 ### 2 11 Unsafe configurations
 
-In the default configuration of OT components, security measures are not always enabled, which makes unauthorized access much easier. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or trusted by other systems.
+In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or trusted by other systems.
 
 Examples of insecure configurations include the use of standard passwords, the use of system administration plaintext protocols, the operation of unneeded services, unsecured interfaces, such as: USB or Firewire ports, or disabled security features.
 
@@ -139,7 +137,7 @@ Additional information is described in the ORP.3 Sensitization and Training modu
 
 In order to prevent risks from malicious programs, a concept for the protection against malicious programs MUST be created and implemented. It must consider the threatened IT systems as well as the possible infection pathways (external interfaces, removable media, service and parameterization / programming devices) and determine appropriate technical and organizational protective measures.
 
-When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection procedures MUST be considered in a risk analysis.
+When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection mechanisms MUST be considered in a risk analysis.
 
 Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of updating. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
 
@@ -156,7 +154,7 @@ Since the documentation contains confidential information, all documents must be
 
 #### IND.1.A5 Development of a suitable zone concept [IT operation]
 
-There SHOULD be a zone concept that defines different levels with different protection requirements and includes the complete OT infrastructure and at least the transition to Office IT. The network SHOULD be segmented according to the zones and the flow of data between the zones should be properly controlled to make attacks more complex, unlikely and easier to detect.
+There SHOULD be a zone concept that defines different levels with different protection requirements and includes the complete OT infrastructure and at least the transition to Office IT. The network SHOULD be segmented according to the zones and the flow of data between the zones should be properly controlled to make attacks more cumbersome, unlikely and easier to detect.
 
 It should also be a horizontal segmentation in independent functional areas (such as plants) done. The individual zones SHOULD be independent of each other as much as possible during operation. In particular, the zones in which the technical process is controlled SHOULD continue to be operable for a predetermined period of time in the event of failure of the other zones or their intentional decoupling following compromise. This period SHOULD be defined and documented as part of the risk analysis or alternatively in the context of emergency planning. The network SHOULD therefore be designed stably in the sense of manipulation- and error-resistant.
 
@@ -173,17 +171,17 @@ Further information is described in the module OPS.1.2.1 Change Management.
 #### IND.1.A7 Establish Permission Management
 
 The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.
-The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned for misconduct.
+The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
 
 Further information is described in the module ORP.4 Identity and Authorization Management.
 
 #### IND.1.A8 Secure Administration [IT Operations]
 
-For initial configuration, administration and remote maintenance in the OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions required for the respective administration task.
+For initial configuration, administration and remote maintenance in the OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions needed for the respective administration task.
 
 The systems and communication channels used for administration or remote maintenance should have the same level of protection as the managed OT components. All remote maintenance and monitoring SHOULD be authorized, monitored and controlled by the institution. For this, the remote maintenance access SHOULD only be activated for use and then deactivated again. This SHOULD be documented
 
-It should be ensured that it is not possible to build unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
+It should be ensured that it is not possible to build up unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
 
 #### IND.1.A9 Restrictive use of removable media and mobile devices
 
@@ -191,17 +189,17 @@ For the use of removable media and mobile devices SHOULD regulations for handlin
 
 On the OT components, all unnecessary interfaces SHOULD be disabled. At the active interfaces, the use of certain devices or media can be restricted.
 
-Further information is described in the block SYS.3.4 Mobile data carrier.
+Further information is described in block SYS.3.4 Mobile data carriers.
 
 #### IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
 
 To limit the potential impact of security incidents, business and security-related events SHOULD be identified promptly. For this, a suitable log and event management SHOULD be developed and implemented. Log and event management SHOULD include appropriate measures for the collection and detection of security-related events and a response plan (security incident response).
 
-The response plan SHOULD set procedures for incident handling. It should cover the classification of events, reporting channels and the definition of the organizational units to be included, damage limitation reaction plans, analysis and restoration of systems and services, and the documentation and follow-up of incidents. The reaction plan SHOULD be tested regularly and checked for up-to-dateness.
+The response plan SHOULD set procedures for incident handling. It should cover the classification of events, reporting routes and determination of the organizational units to be included, damage limitation response plans, analysis and recovery of systems and services, and the documentation and follow-up of incidents. The reaction plan SHOULD be tested regularly and checked for up-to-dateness.
 
 #### IND.1.A11 Secure Procurement and System Development
 
-For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the invitation to tender.
+For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the tender.
 In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
 
 The institution SHOULD document how the system fits in with the concepts of zoning, entitlement, vulnerability management, and antivirus protection, and adjust it if necessary. It should be regulated how the operation can be maintained if one of the partners stops providing services.
@@ -241,7 +239,7 @@ To enable effective verification of privileges, the institution SHOULD maintain 
 All critical administrative activities SHOULD be logged. The IT operation SHOULD NOT be able to erase or manipulate the logs.
 
 #### IND.1.A16 Greater foreclosure of zones (IA)
-For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventive use of interface systems with security check functions is required to prevent risks from external connections.
+For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with safety testing functions is required to prevent risks from external connections.
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
@@ -256,92 +254,3 @@ The safety configuration of OT components SHOULD be checked in an appropriate cy
 The realized security concept SHOULD be checked regularly.
 
 The security check SHOULD be done as a configuration check or through automated conformance checks.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area of ​​"control technology" can be found in the following publications, among others:
-
-* #### [27019] ISO / IEC TR 27019: 2013
-
-  
-
- Information technology- Security techniques- Information security management guidelines based on ISO / IEC 27002 for process control systems specific to the energy utility industry, International Organization for Standardization, 07.2013
- <Https://www.iso.org/standard/43759.html>
-
- 
-* #### [AHWAST] How to Use the White Paper - Requirements for Secure Control and Telecommunication Systems (Version 1.1, 2014)
-
-  
-
- BDEW Federal Association of Energy and Water Management e.V. and Austria's e-Economy, Version 1.1, 2014
- [Https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge](https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge?open&ccm)
-
- 
-* #### [CSE] Recommendations for training and qualification measures in the ICS environment
-
-  
-
- BSI publications on cyber security (BSI-CS 123), Federal Office for Information Security, 11.2015
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_123.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_123.pdf)
-
- 
-* #### [ICSSK] ICS Security Compendium
-
-  
-
- Federal Office for Information Security (BSI), 2016
- [https://www.bsi.bund.de/DE/Themen/Industrie\_KRITIS/Empfehlungen/ICS/empfehlungen\_node.html](https://www.bsi.bund.de/DE/Themen/Industrie_KRITIS/ recommendations / ICS / empfehlungen_node.html)
-
- 
-* #### [ICSSKfH] ICS Security Compendium for Manufacturers and Integrators
-
-  
-
- Federal Office for Information Security (BSI), 2014
- <Https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ICS/ICS-Security-Kompendium-Hersteller.html>
-
- 
-* #### [IEC62443] IEC 62443-2-1: 2010 Industrial communication networks - Network and system security - Part 2-1:
-
-  
-
- Establishing an industrial automation and control system security program, International Electrotechnical Commission (IEC), 2010
- <Https://webstore.iec.ch/publication/7030>
-* #### [WAST] Whitepaper Requirements for secure control and telecommunication systems
-
-  
-
- BDEW Federal Association of the Energy and Water Industry e.V, Version 1.1, 01.2015
- [Https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge](https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge?open&ccm)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the block "Operating and Control Technology".
-
-* G 0.5 natural disasters
-* G 0.6 disasters in the environment
-* G 0.9 Failure or malfunction of communication networks
-* G 0.11 Failure or disruption of service providers
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.39 Malware
-* G 0.41 Sabotage
-* G 0.42 Social engineering
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

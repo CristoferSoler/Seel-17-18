@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -30,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Violation of the requirements of the UP Bund
 
-Among other things, the UP Bund envisages that all federal authorities that do not yet have full ISO 27001 certification on the basis of IT-Grundschutz be subject to a regular IS audit. If federal authorities do not regularly carry out IS revisions, they violate these requirements.
+Among other things, the UP Bund envisages that all federal authorities that do not yet have full ISO 27001 certification based on IT-Grundschutz be subject to a regular IS audit. If federal authorities do not regularly carry out IS revisions, they violate these requirements.
 
 ### 2 2 Override security measures
 
@@ -91,7 +89,7 @@ The audit basis for the IS audit MUST be the UP Bund, the Information Security R
 
 #### DER.3.2.A4 Preparation of a plan for the IS audit
 
-Federal agencies that do not yet have ISO 27001 certification based on IT-Grundschutz MUST perform a comprehensive IS audit at least every 3 years. In addition, further revisions for critical business processes SHOULD be scheduled. The person responsible for the IS audit should therefore prepare a multi-year rough planning (meaningfully for at least 3 years) for the audit project based on the information security audit guideline. This SHOULD then be substantiated by an annual detailed planning.
+Federal agencies that do not yet have ISO 27001 certification based on IT-Grundschutz MUST perform a comprehensive IS audit at least every 3 years. In addition, further revisions for critical business processes SHOULD be scheduled. The person responsible for the IS audit should therefore prepare a multi-year rough planning (meaningfully for at least 3 years) for the audit project based on the information security audit guideline. This SHOULD then be specified by an annual detailed plan.
 
 #### DER.3.2.A5 Selection of a suitable IS audit team
 
@@ -146,7 +144,7 @@ The document review SHOULD be done on the basis of the measures defined in the t
 Furthermore, it should be checked whether the documents available and the decisions made therein are comprehensible. The results of the document review SHOULD be documented and, where appropriate, incorporated into the on-site inspection.
 
 #### DER.3.2.A14 Selection of target objects and measures [IS-Revision-Team]
-In an IS cross-sectional revision or IS partial revision, the IS audit team SHOULD use the results of the document review to select the POU target objects for on-site inspection. The module for information security management (see ISMS.1 * Security Management *) including all related requirements SHOULD always be fully tested. Additional POU objects SHOULD be selected in a risk-oriented manner according to the procedure defined in the * Information Security Revision Guide *. The selection SHOULD be documented comprehensibly in writing.
+In an IS cross-sectional revision or IS partial revision, the IS audit team SHOULD use the results of the document review to select the POU target objects for on-site inspection. The module for information security management (see ISMS.1 * Security Management *) including all related requirements SHOULD always be fully tested. Further building block target objects SHOULD be selected in a risk-oriented manner according to the procedure defined in the * Information Security Revision Guide *. The selection SHOULD be documented comprehensibly in writing.
 
 In addition, the selection SHOULD consider the criticized requirements from previous IS revisions. All actions with serious security deficiencies from previous IS revisions SHOULD be considered.
 
@@ -191,7 +189,7 @@ The IS audit team SHOULD transfer the results obtained to an IS audit report and
 
 A draft version of the report SHOULD be submitted to the audited federal authority in advance to verify that the issues identified by the audit team were properly recorded. It SHOULD be considered that the IS audit team explains the results of the IS audit in a presentation to those responsible.
 
-The audited federal authority SHOULD make sure that all relevant bodies in the federal authority receive within a reasonable time the passages of the IS audit report that are important and necessary for them. In particular, the content SHOULD be communicated to the authorities, to those responsible for the IS audit and to the ISB.
+The audited federal authority SHOULD make sure that all relevant bodies in the federal authority receive within a reasonable time the passages of the IS auditing report that are important and necessary for them. In particular, the content SHOULD be communicated to the authorities, to those responsible for the IS audit and to the ISB.
 
 IS audit reports SHOULD at least be classified as classified for "for business use only" (VS-NfD).
 
@@ -207,56 +205,6 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### DER.3.2.A23 Security Review of IS Auditors (CI)
 
-Insofar as the IS auditors access sensitive information, they should seek evidence of their integrity and reputation, such as a police certificate of good conduct or references.
+Insofar as the IS auditors access sensitive information, they should be required to provide evidence of their integrity and reputation, such as a police certificate of good conduct or references.
 
 If classified information classified according to secrecy is concerned, the IS auditors SHOULD undergo a security check according to the Security Review Act (SÜG). In this regard, the ISB SHOULD include the intelligence officer or security officer of its authority.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​"IS audit for federal authorities" can be found in the following publications, among others:
-
-* #### [ISKR] Binding review topics for the IS review
-
-  
-
- BSI, Version 1.1, 11.2010
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ISRevision/Pruefthemen\_IS-Kurzrevision\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / ISRevision / Pruefthemen_IS-Kurzrevision_pdf.pdf)
-
- 
-* #### [ISR] Information Security Audit
-
-  
-
- A guideline for the IS revision based on IT-Grundschutz, BSI, Version 2.0, 03.2010
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ISRevision/Leitfaden\_IS-Revision-v1\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/ Downloads / DE / BSI / ISRevision / Leitfaden_IS revision v1_pdf.pdf)
-
- 
-* #### [RH] UPU Information Security Review Manual (Sample)
-
-  
-
- BSI, Version 1.0, 09.2008
-[https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ISRevision/Muster\_ISRevisionshandbuch-v1\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / ISRevision / Muster_ISRevisionshandbuch-v1_pdf.pdf)
-
- 
-* #### [VSA] General administrative regulation of the Federal Ministry of the Interior on the material and organizational protection of classified information
-
-  
-
- (VS instruction - VSA), 31.03.2006
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the module "IS Revision for Federal Authorities".
-
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

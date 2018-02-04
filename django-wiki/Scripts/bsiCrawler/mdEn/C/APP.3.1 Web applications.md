@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,7 +17,7 @@ The goal of the module is the secure operation of web applications and the prote
 
 ### 1.3 Delimitation
 
-This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-Oriented Architectures *) are not considered in this module.
+This module considers the threats and requirements specific to web applications. While web servers deliver the web pages (see also APP.3.2 * web server *), web applications provide functions and prepare dynamic content delivered by the web server. The module APP.3.2 * Webserver * also contains the editorial planning of the website as well as the emergency management, these aspects are therefore not treated again in this module. The security-relevant aspects of a service-oriented architecture (SOA) (see APP.3.7 * Service-oriented architectures *) are not considered in this module.
 
 2 risk situation
 -----------------
@@ -43,7 +41,7 @@ If errors occur during the operation of a web application, the z. B. restrict th
 
 ### 2 5 Inadequate logging of security-relevant events
 
-If security-relevant events are insufficiently logged by the web application, they can not be traced at a later time and the cause can no longer be determined. Critical errors and attacks, such as unauthorized configuration changes to the Web application, go unnoticed and a vulnerability can then be difficult to resolve.
+If security-relevant events are insufficiently logged by the Web application, they can not be traced at a later time and the cause can no longer be determined. Critical errors and attacks, such as unauthorized configuration changes to the Web application, go unnoticed and a vulnerability can then be difficult to resolve.
 
 ### 2 6 Disclosure of security-related information in web applications
 
@@ -71,7 +69,7 @@ In order to access protected resources of a web application, users MUST authenti
 
 A central authentication component MUST be used, which has been implemented as far as possible with established standard components. The component MUST force users to use secure passwords according to a password policy. If a web application stores authentication data on a client, the user MUST explicitly consent ("opt-in") and be alerted to the risks of the function.
 
-To ensure that a valid session (session ID) was not inherited by an attacker, users must re-authenticate to critical features. Also, the web application MUST set limits for failed login attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately when the password has been reset.
+To ensure that a valid session (session ID) is not inherited by an attacker, users must re-authenticate themselves to critical functions. Also, the web application MUST set limits for failed login attempts. All offered authentication methods of the web application MUST have the same security level. In addition, users MUST be informed immediately when the password has been reset.
 
 #### APP.3.1.A2 Web Application Access Control [Developer]
 
@@ -132,7 +130,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -154,7 +152,7 @@ Web pages and Web application responses SHOULD NOT contain information that coul
 * limited access to security-related documentation
 * regular deletion of unneeded files
 * secure registration by external search engines as well as the renunciation of absolute path information
-The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network. Configuration files of the web application SHOULD be stored outside the web root directory.
+The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network, be limited. Configuration files of the web application SHOULD be stored outside the web root directory.
 
 #### APP.3.1.A14 Protection of confidential data [developer]
 
@@ -165,7 +163,7 @@ Also, the web application SHOULD guarantee by directives that client-side no sen
 
 If important entries are to be changed, such as passwords and configurations, the entry SHOULD be re-verified by a password. Users SHOULD be notified of changes via communication paths outside the web application, for example by e-mail.
 
-#### APP.3.1.A16 Comprehensive Input and Output Validation [Developer]
+#### APP.3.1.A16 Comprehensive input and output validation [Developer]
 
 All data submitted to a web application SHOULD be treated as potentially dangerous and filtered accordingly. All input and output data as well as data streams and secondary data (eg session IDs) SHOULD be validated. On the server side, the data SHOULD be checked on a trustworthy IT system. Incorrect entries SHOULD NOT be treated automatically if possible (English * sanitizing *). However, if it is unavoidable, * SANitizing * SHOULD be implemented safely to prevent abuse.
 
@@ -181,7 +179,7 @@ Previously reserved resources SHOULD be released again during error handling. Al
 
 #### APP.3.1.A18 Control of log files
 
-For each web application, a concept SHOULD be created to determine how extensive the logging should be and how the data should be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or another designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
+For each web application, a concept SHOULD be created to determine how extensive the logging should be and how the data should be evaluated. In addition, a responsible person who evaluates the protocols SHOULD be named. The results SHOULD be submitted to ISB or any other designated employee. Furthermore, existing legal requirements with regard to the protocol data SHOULD be adhered to, such as data protection aspects.
 
 #### APP.3.1.A19 Protection against SQL injection
 
@@ -189,7 +187,7 @@ Web applications SHOULD carefully review and filter all inputs and parameters be
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.3.1.A20 Use of Web Application Firewalls (CIA)
 To filter data at higher protocol levels, institutions SHOULD use Web Application Firewalls (WAF). If a WAF is used, the configuration SHOULD be adapted to the web application to be protected. The configuration of the WAF SHOULD be checked after every update of the web application.
@@ -209,49 +207,3 @@ To complicate cross-site request forgery (CSFR) attacks, the web application SHO
 #### APP.3.1.A24 Preventing Blockage of Resources [Developer] (A)
 
 To protect against denial of service (DoS) attacks, resource-intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the area of ​​"web applications" can be found in the following publications, among others:
-
-* #### [HILWEB] Help for using the web application module
-
-  
-
- BSI, (last accessed on 29.09.2017)
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Download/Vorabversionen/Baustein\_Webanwendungen\_Hilfsmittel.pdf](https://www.bsi.bund.de/SharedDocs/ Downloads / DE / BSI / Grundschutz / download / pre-release / Baustein_Webanwendungen_Hilfsmittel.pdf)
-
- 
-* #### [OWASP] Open Web Application Security Project
-
-  
-
- OWASP, (last accessed on 28.09.2017)
- <Https://www.owasp.org>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Web applications" building block.
-
-* G 0.14 Spying out information (spying)
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

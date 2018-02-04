@@ -1,4 +1,17 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Incorrect planning
+### 2 2 Unauthorized access
+### 2 3 Insufficient monitoring
+### 2 4 Insufficient air conditioning in the data center
+### 2 5 fire
+### 2 6 water
+### 2 7 Missing or inadequate burglary protection
+### 2 8 Power failure
+### 2 9 pollution
+### 2 10 Insufficient roadway dimensioning
+### 3.1 Basic Requirements
 #### INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
 #### INF.2.A2 Fire department formation [planner]
 #### INF.2.A3 Use of an Uninterruptible Power Supply [Building Services]
@@ -8,7 +21,7 @@
 #### INF.2.A7 Closing and securing [staff, building services]
 #### INF.2.A8 Use of a fire alarm system [planner]
 #### INF.2.A9 Use of extinguishing or fire prevention system [Planner]
-#### INF.2.A10 Inspection and maintenance of infrastructure [IT operation, building services, maintenance personnel]
+#### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
 #### INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
 ### 3.2 Standard requirements
 #### INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
@@ -21,13 +34,13 @@
 #### INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
 #### INF.2.A20 Regular updates of infrastructure and construction plans [planner]
 ### 3.3 Requirements for increased protection requirements
-#### INF.2.A21 Dodge Data Center (A)
+#### INF.2.A21 Backup data center (A)
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 #### INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
 #### INF.2.A25 Redundant design of uninterruptible power supplies [Planner]
 #### INF.2.A26 Redundant design of emergency power systems (A)
-#### INF.2.A27 Conducting Alerting and Fire Prevention Practices (CA)
+#### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 5 Appendix: Cross reference table for elementary hazards
 * G 0.5 natural disasters

@@ -57,18 +57,20 @@ function showElements() {
         var path = element['path'];
         var title = element['title'];
 
-        $('#articleTopicList').append("<li class='list-group-item'><a href='" + path + "'>" + title + "</a></li>");
-        valid = false;
+        $('#articleTopicList').append("<a class=\"list-group-item list-group-item-action\" href='" + path + "'>" + title + "</a>");
     });
 
     var visible = stringToBoolean(localStorage.getItem('topicListVisible'))
     if (localStorage.getItem('topicListVisible') !== null) {
         if (visible) {
-            $('#collapse1').collapse("show");
-            $('#topicIcon').removeClass('glyphicon-plus');
-            $('#topicIcon').addClass('glyphicon-minus');
+            if(amountOfTotalTopics < showResultCount-1){
+                $('#collapse1').collapse("show");
+                $('#topicIcon').removeClass('glyphicon-plus');
+                $('#topicIcon').addClass('glyphicon-minus');
+            }
         }
     }
+    valid = false;
 
 }
 
@@ -154,7 +156,7 @@ function initWizard() {
     }
 }
 
-function yesPress() {
+function  yesPress() {
     if (amountOfTotalTopics < 0) {
         if (amountOfTotalTopics == -2) {
             amountOfTotalTopics = 0;
@@ -481,7 +483,7 @@ function showResults() {
         }
 
         sortedElementswithTopicLists.slice(0,counter).forEach(function (element) {
-            $("#list").append("<li class='list-group-item'><a href='" + element["path"] + "'>" + element["name"] + "</a></li>");
+            $("#list").append("<li class='list-group-item'><a class='test' href='" + element["path"] + "'>" + element["name"] + "</a></li>");
         });
 
         var isExpanded = $('#collapse1').attr("aria-expanded");
@@ -607,6 +609,15 @@ function buttonsWizard() {
         valid = true;
 
     })
+
+    $('#collapse1').on('show.bs.collapse', function () {
+       valid = false
+    });
+
+    $('#collapseResults').on('show.bs.collapse', function () {
+       valid = false
+    });
+
 }
 
 
@@ -623,10 +634,19 @@ function initWizardsComponents() {
         valid = true;
     });
 
+    $(document).on('click', '.list-group-item', function(e){
+        valid = true;
+    });
+
     $('#topicList').click(function () {
         var isExpandedString = $('#collapse1').attr("aria-expanded");
         var isExpanded;
         isExpanded = stringToBoolean(isExpandedString);
+
+        if(isExpanded == undefined){
+            $('#topicIcon').removeClass('glyphicon-plus');
+            $('#topicIcon').addClass('glyphicon-minus');
+        }
 
         if (isExpanded) {
             $('#topicIcon').removeClass('glyphicon-minus');
@@ -662,15 +682,23 @@ function initWizardsComponents() {
     $('#opener').on('click', function () {
         var panel = $('#slide-panel');
         if (panel.hasClass("visible")) {
-            panel.removeClass('visible').animate({'right': '50px'});
+            if(width >= 576){
+                panel.removeClass('visible').animate({'right': '50px'});
+            } else {
+                panel.removeClass('visible').animate({'right': '35px'});
+            }
             localStorage.removeItem('visible');
         } else {
             localStorage.setItem('visible', String(true));
             initWizard();
-            if (width > 1200) {
-                panel.addClass('visible').animate({'right': '550px'});
+            if (width >= 992) {
+                panel.addClass('visible').animate({'right': '560px'});
             } else {
-                panel.addClass('visible').animate({'right': '320px'});
+                if (width < 992 && width >= 576) {
+                panel.addClass('visible').animate({'right': '550px'});
+                } else {
+                    panel.addClass('visible').animate({'right': '320px'});
+                }
             }
         }
         valid = false;
@@ -693,10 +721,15 @@ function askWheatherToClose(event) {
 function setPanel() {
     var panel = $('#slide-panel');
     if (localStorage.getItem('visible') !== null) {
-        if (width > 1200) {
+        if (width >= 992 ) {
             panel.addClass('visible').animate({'right': '550px'});
         } else {
-            panel.addClass('visible').animate({'right': '320px'});
+            if (width < 992 && width >= 576) {
+                panel.addClass('visible').animate({'right': '550px'});
+            }
+            else {
+                panel.addClass('visible').animate({'right': '320px'});
+            }
         }
         initWizard();
     }

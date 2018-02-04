@@ -1,4 +1,13 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Lacking or inadequate planning and regulation of VPN deployment
+### 2 2 Insecure VPN service providers
+### 2 3 Problems with local storage of authentication data for VPNs
+### 2 4 Insecure configuration of VPN clients for remote access
+### 2 5 Insecure default settings on VPN components
+### 2 6 Theft of mobile devices with VPN client
+### 3.1 Basic Requirements
 #### NET.3.3.A1 Planning the VPN deployment
 #### NET.3.3.A2 Selection of a VPN Service Provider [Information Security Officer (ISB)]
 #### NET.3.3.A3 Secure installation of VPN terminals

@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,7 +17,7 @@ The goal of the device is to protect all types of intelligent sensors, regardles
 
 The present system block is to be used to secure intelligent sensors. It supplements and presupposes the higher-level module IND.2.1 * General ICS Component *.
 
-Simple sensors without configuration interfaces or more complex processing logic are not detected by the module, since the possible protective measures are limited to securing access to the sensor and monitoring whether it is active.
+Simple sensors without configuration interfaces or more complex processing logic are not detected by the module, since the possible protective measures are limited to ensuring access to the sensor and to monitor whether it is active.
 
 Also, the device does not address the protection of complex wireless sensor networks. It merely describes how individual sensors can be protected. Furthermore, no safety requirements for operating and control technology are described. For this, the block IND.1 * Operating and Control Technology * must be implemented.
 
@@ -38,3 +36,26 @@ Sensors for ICS components in industrial environments are often exposed to speci
 ---------------
 
 The following are specific requirements for the sensors area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### IND.2.3.A1 Sensor Installation [ICS Administrator, Maintenance Staff]
+
+Sensors MUST be installed properly. The sensors MUST be able to measure sufficiently robust and reliable under the intended environmental conditions (climate, dust, vibration, corrosion, etc.).
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of sensors and actuators. They SHOULD be implemented in principle.
+
+#### IND.2.3.A2 Calibration of sensors [maintenance personnel]
+
+If necessary, sensors should be calibrated regularly. The calibrations SHOULD be suitably documented. Access to calibration MUST be protected as a deliberate mis-calibration of a sensor can become an attack vector.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### IND.2.3.A3 Wireless Communication (C)
+
+With increased protection requirements, wireless management interfaces such as Bluetooth, WLAN or NFC SHOULD NOT be used. All unused communication interfaces MUST be disabled.

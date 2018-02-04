@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -15,9 +13,9 @@ The goal of this module is to protect information that is processed, offered or 
 
 ### 1.3 Delimitation
 
-Usually, server systems are run under operating systems that have specific security requirements in each case. For common server operating systems, the IT-Grundschutz Compendium has its own modules that specify this module. The module "general server" forms the basis for the concrete building blocks on which they are based. If a specific block exists for a considered system, it must be used in addition to the module General Server. If no specific module exists for server systems used, the requirements of this module must be suitably specified.
+Usually, server systems are run under operating systems that have specific security requirements in each case. For common server operating systems, the IT-Grundschutz Compendium has its own modules that specify this module. The module "general server" forms the basis for the concrete building blocks on which they are based. If a concrete block exists for a considered system, it must be used in addition to the module General Server. If no specific module exists for server systems used, the requirements of this module must be suitably specified.
 
-The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are likewise to be considered separately, for example by applying the corresponding concretized components.
+The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are likewise to be considered separately, for example by applying the corresponding specified blocks.
 
 2 risk situation
 -----------------
@@ -35,7 +33,7 @@ In particular, errors in server services can have serious consequences. In the c
 ### 2 2 Data loss
 
 The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.
-If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
+If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, in particular to long-term consequences, such as loss of confidence among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
 
 ### 2 3 Prevention of services
 
@@ -47,15 +45,15 @@ Even with the installation of the server operating system, it is possible to ins
 
 Such unused applications and services can contain vulnerabilities. If the applications are no longer updated then they can be an attack gate for attackers. If the installed applications and services are unknown, the IT operation is unaware that they also need to be updated.
 
-### 2 5 Overloading of servers
+### 2 5 overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable or data loss occurring. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
 * installed services or applications are misconfigured, unnecessarily consuming memory
 * existing storage capacities are exceeded,
-Numerous requests at the same time overstrain a system and overload the processors
+Numerous requests at the same time overstrain a system and overload the processors,
 * too much computing power is claimed by the services or
 * a large number of messages will be sent at the same time.
 3 requirements
@@ -88,14 +86,14 @@ It MUST be ensured that identifiers with administrator rights are only used for 
 
 #### SYS.1.1.A5 Protection of administration interfaces
 
-Depending on the type of access used (local, remote or central system management), suitable security measures MUST be taken. The methods used for administration MUST be specified in the security policy. The administration MUST be performed according to the security policy.
+Depending on the type of access used (local, remote or central system management), appropriate security measures MUST be taken. The methods used for administration MUST be specified in the security policy. The administration MUST be performed according to the security policy.
 
 To register users and services with the system, authentication procedures MUST be used that are appropriate to the protection needs of the servers. This should be taken into special account for administrative access. As far as possible, use should be made of central, network-based authentication services.
 The administration MUST be done via secure protocols. It SHOULD be considered, alternatively set up a separate administration network.
 
 #### SYS.1.1.A6 Deactivation of unneeded services and identifiers
 
-All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers, the space SHOULD be suitably limited for individual users, but also for applications.
+All unnecessary services MUST be disabled or uninstalled by servers, especially network services. Unnecessary user IDs MUST either be deleted or at least deactivated in such a way that no logins to the system are possible under these IDs. Existing standard IDs MUST be changed or deactivated as far as possible. Default passwords of standard identifiers MUST be changed. On servers SHOULD the space for the individual users, but also for applications, should be suitably limited.
 
 The decisions made SHOULD be documented so that it can be reconstructed which configuration and software equipment were chosen for the servers.
 
@@ -107,7 +105,7 @@ Unless patches are available, other appropriate measures to protect the system M
 
 #### SYS.1.1.A8 Regular backup
 
-Data backups MUST be made prior to installation and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
+Data backups MUST be made prior to installations and extensive configuration changes, as well as at fixed intervals. These MUST allow you to restore the data stored on the server. In virtual environments, SHOULD check if the system backup can be realized by snapshot mechanisms of the virtualization environment.
 
 #### SYS.1.1.A9 Use of virus protection programs
 
@@ -126,7 +124,7 @@ It MUST be decided which information should be logged by the server at least, ho
 * Warning messages from security systems (eg virus protection).
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general servers. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general servers. They SHOULD be implemented in principle.
 
 #### SYS.1.1.A11 Setting a security policy for servers
 Based on the general security policy of the institution, the requirements for servers SHOULD be specified. The policy SHOULD be known to all administrators and other persons involved in the procurement and operation of the servers and should be the basis for their work. The implementation of the content required in the directive SHOULD be regularly reviewed and the results SHOULD be documented in a meaningful way.
@@ -162,7 +160,7 @@ The actual capacity of the battery and thus the support time of the UPS SHOULD b
 
 #### SYS.1.1.A16 Secure installation and basic configuration of servers
 
-Servers SHOULD be set up so that only the required services are selected during installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
+Servers SHOULD be set up so that only the required services are selected during the installation. Installations on a server SHOULD only be performed by authorized persons (administrators or contracted service providers) according to a defined installation process. System and application software SHOULD be obtained from trusted installation sources. For repetitive installations, suitable installation templates SHOULD be created and applied.
 
 All installation steps SHOULD be documented in such a way that the installation can be reconstructed and repeated by a knowledgeable third party based on the documentation.
 
@@ -177,7 +175,7 @@ For all network services offered and used by the server, it should be checked wh
 
 #### SYS.1.1.A19 Set up local packet filter
 
-Existing local packet filters SHOULD be configured via a set of rules so that the incoming and outgoing communication is restricted to the required communication partners, communication protocols or ports and interfaces.
+Existing local packet filters SHOULD be configured via a set of rules so that the incoming and outgoing communication is limited to the required communication partners, communication protocols or ports and interfaces.
 
 #### SYS.1.1.A20 Restriction of access via networks
 
@@ -195,11 +193,11 @@ The server SHOULD be considered in the emergency management process. To this end
 
 #### SYS.1.1.A23 system monitoring
 
-The server system SHOULD be integrated into a suitable system monitoring or monitoring concept that constantly monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
+The server system SHOULD be integrated into a suitable system monitoring or monitoring concept, which continuously monitors the system status and the functionality of the system and the services operated on it, and reports fault conditions and the exceeding of defined limit values ​​to the operating personnel.
 
 #### SYS.1.1.A24 security checks
 
-Server systems SHOULD undergo regular security testing to verify compliance with security requirements and to identify any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
+Server systems SHOULD undergo regular security testing that verifies compliance with security requirements and identifies any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
@@ -208,7 +206,7 @@ It SHOULD create a checklist that can be processed when a server is decommission
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.1.1.A26 Multi-factor authentication (C)
 
@@ -235,54 +233,3 @@ Depending on the threat situation and the protection requirements of the service
 #### SYS.1.1.A31 Application whitelisting (CI)
 
 It should be ensured with increased protection requirements via application whitelisting that only permitted programs are executed. On the one hand, complete paths or directories should be defined from which this may be possible. On the other hand, alternatively, individual applications should explicitly be allowed execution.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the "General Server" area can be found in the following publications, among others:
-
-* #### [ISi server] Securing a server (ISi server), BSI, 09.2013
-
-  
-
- Federal Office for Security in Information Technology, 02.2017
- <Https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR02102/BSI-TR-02102-2.pdf>
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the module "General Server".
-
-* G 0.8 Failure or malfunction of the power supply
-* G 0.9 Failure or malfunction of communication networks
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.44 Unauthorized intrusion into premises
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

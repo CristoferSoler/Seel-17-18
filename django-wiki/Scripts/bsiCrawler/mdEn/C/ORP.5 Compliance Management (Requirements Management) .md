@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -36,18 +34,18 @@ The inadequate implementation of information security can lead to violations of 
 Due to the misconduct of persons, it may happen that information worth protecting is inadmissible. Examples for this are:
 
 * Confidential information is discussed within earshot of other people, for example, during breaks in meetings or via mobile phones in public environments.
-* The manager of a department suspects an employee to cooperate with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
+* The manager of a department suspects an employee to work with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
 ### 2 3 Inadequate identification check of communication partners
 In personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
 
-* An employee receives an e-mail from an alleged friend of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
-* A man in a blue suit with a mounting case gains access to the data center after mumbling something about "water pipes".
+* An employee receives an e-mail from an alleged acquaintance of his supervisor, allegedly agreeing to the fast transfer of an outstanding amount.
+* A man in a blue jacket with a mounting case gains access to the data center after mumbling something about "water pipes".
 ### 2 4 Accidental disclosure of internal information
 
 When passing on information, it happens again and again that in addition to the desired information inadvertently also other information is transmitted. This may result in confidential, appropriate information falling into the wrong hands. examples for this are
 
 * old files or residual information on shared media, transmission of data other than intended or sent to wrong recipients.
-* In 2015, a French TV station was unable to broadcast a program for hours after hackers gained access to internal IT systems. In a press conference, after the station was able to work again, a notice board was transmitted in the background around the world, where passwords for all sorts of internal and external identifiers hung.
+* In 2015, a French television station was unable to broadcast a program for hours after hackers gained access to internal IT systems. In a press conference, after the station was able to work again, a notice board was transmitted in the background around the world, where passwords for all sorts of internal and external identifiers hung.
 3 requirements
 ---------------
 
@@ -80,7 +78,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### ORP.5.A4 Conception and Organization of Compliance Management [Institutional Management]
 
-Appropriate processes and organizational structures SHOULD be established to provide an overview of the different legal requirements for each area of ​​the institution. For this purpose, responsible persons SHOULD be named and their responsibilities with regard to compliance management determined.
+Appropriate processes and organizational structures SHOULD be established to provide an overview of the different legal requirements for each area of ​​the institution. For this purpose, responsible persons SHOULD be named and their duties in relation to compliance management determined.
 
 Compliance Managers and ISB SHOULD collaborate regularly. Together, they SHOULD integrate security requirements into compliance management, translate security-relevant requirements into security measures and monitor their implementation.
 
@@ -101,7 +99,7 @@ In order to maintain and continuously improve the existing security level, all s
 The aim was to establish a procedure for regularly checking compliance management and the resulting requirements and measures for efficiency and effectiveness (see also DER.1.3 Audits and Revisions). It SHOULD regularly be checked if the organizational structure and the processes of compliance management are still appropriate.
 
 ### 3.3 Requirements for increased protection requirements
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.5.A9 Protection against subsequent changes to information [Information Security Officer (ISB), user] (I)
 
@@ -114,32 +112,3 @@ There are in many areas of an institution information that has a higher need for
 #### ORP.5.A11 Survey of the legal framework for cryptographic processes and products [IT operation, person responsible for the individual applications] (CI)
 
 When using cryptographic products, various legal conditions must be observed. The legal framework for the use of cryptographic processes and products SHOULD be determined and documented for all countries in which they are to be used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​compliance management can be found in the following publications:
-
-* #### [19600] ISO 19600: 2014
-
-  
-
- ISO, compliance management systems, 2014
-
- 
-* #### [27002K18] ISO / IEC 27002: 2013 Chapter 18 Compliance
-
-  
-
- ISO, Information Technology-Security Technique- Code of Practice for Information on Security Controls, especially Chapter 18 "Compliance", 2013
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Compliance Management".
-
-* G 0.29 Violation of laws or regulations
-The cross reference tables can be found in the download area due to their size.

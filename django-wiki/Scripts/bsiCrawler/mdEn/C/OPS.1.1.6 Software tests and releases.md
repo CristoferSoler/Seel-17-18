@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,11 +5,11 @@ Table of content
 
 ### 1.1 Introduction
 
-The use of IT for task management requires that machine data processing work as smoothly as possible, since the individual results can not be controlled in most cases. As part of the software tests, it is therefore checked whether the software in question works without errors. To do this, the software must reliably provide the required functionality and, in addition, must not have any unwanted side effects. With the subsequent release of the software by the responsible organizational unit, the basic permission is given to use the software productively in the institution. At the same time, this organizational unit assumes responsibility for the IT process, which is supported by the software.
+The use of IT for task management requires that machine data processing work as smoothly as possible, since the individual results can not be controlled in most cases. As part of the software tests, it is therefore checked whether the software in question works without errors. To do this, the software must reliably provide the required functionality and, in addition, must not have any unwanted side effects. With the subsequent release of the software by the responsible organizational unit, the basic permission is given to use the software productively in the institution. At the same time, this organizational unit assumes responsibility for the IT process that is supported by the software.
 
-Software can be tested at different points in the life cycle of a software. Thus, software tests may already be necessary during development, before release for productive operation or in the course of patch and change management. The software tests and releases are to be carried out for self-development as well as for the use of standard software.
+Software can be tested at different points in the software lifecycle. Thus, software tests may already be necessary during development, before release for productive operation or in the course of patch and change management. The software tests and releases are to be carried out for self-development as well as for the use of standard software.
 
-This module describes the test and approval process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
+This module describes the test and release process for self-developed or customized software as well as for standard software. The test and release process is characterized by the fact that it can be run several times depending on the result.
 
 ### 1.2 Objective
 
@@ -39,11 +37,11 @@ It is often assumed that trained developers and software testers have sufficient
 
 ### 2 3 Software test with productive data
 
-Software tests with productive data or in productive operation are necessary, because only with the productive data can the function and the performance of the product be assessed. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
+Software tests with productive data or in productive operation are necessary, because only with the productive data the function and the performance of the product can be evaluated. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
 
-Although software tests with productive data are necessary, this can lead to security problems. In particular confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
+Although software tests with productive data are necessary, this can lead to security problems. In particular, confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
 
-Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" production data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
+Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" productive data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
 
 ### 2 4 Missing or inadequate test procedure
 
@@ -61,7 +59,7 @@ A software release can usually be issued once all tests have been performed and 
 
 ### 2 7 Missing or inadequate documentation of the approval criteria
 
-If approval criteria are not clearly communicated, it may result in premature release or no release, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
+If approval criteria are not clearly communicated, this may result in the release being given prematurely or not being released, although it could be granted. As a result, versions with unrecognized software errors can be released, which can interfere with productive operation, and secondly, this can lead to a project delay with financial losses.
 
 3 requirements
 ---------------
@@ -141,90 +139,3 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 It should be carried out for applications or IT systems with increased protection required penetration tests as a test method. It SHOULD be created a penetration test concept. In the penetration test concept, the criteria of success SHOULD be documented in addition to the test methods to be used.
 
 The penetration test SHOULD be based on the framework conditions of the penetration test concept. The vulnerabilities identified by the penetration test SHOULD be classified and documented.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​"Software tests and releases" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-* #### [29119] ISO / IEC 29119-2: 2013-09
-
-  
-
- Software and systems engineering - Software testing, ISO, 09.2013
- [Http://www.iso.org/iso/catalogue\_detail.htm?csnumber=56736](http://www.iso.org/iso/catalogue_detail.htm?csnumber=56736)
-
- 
-* #### [BSIPEN] BSI Study "Implementation Concept for Penetration Testing
-
-  
-
- Federal Office for Security in Information Technology, 11.2013
- [Https://www.bsi.bund.de/DE/Publikationen/Studien/Pentest/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/Studien/Pentest/index_htm. html)
-
- 
-* #### [BSIWEB] BSI Guides for Building Secure Web Applications
-
-  
-
- Federal Office for Security in Information Technology, 2013
- [Https://www.bsi.bund.de/DE/Publikationen/Studien/Webanwendungen/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/Studien/Webanwendungen/index_htm. html)
-
- 
-* #### [CVSS] Common Vulnerability Scoring System
-
-  
-
- CVSS, (last accessed on 28.09.2017)
- <Https://www.first.org/cvss>
-
- 
-* #### [GLEN] The Art of Software Testing
-
-  
-
- Glenford J. Myers, Corey Sandler, Tom Badgett, Todd M. Thomas John Wiley & Sons, 2004
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NIST80053] Security and Privacy Controls for Federal Information Systems and Organizations
-
-  
-
- Special Publication 800-53, Revision 4, NIST, 04.2013 <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "Software tests and releases" block.
-
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.38 Abuse of personal data
-* G 0.42 Social engineering
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -17,7 +15,7 @@ This module describes the specific threats for a file server and the resulting r
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server block and in the corresponding operating system-specific components of the IT systems layer, for example: For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
+This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server module and in the corresponding operating system-specific components of the IT systems layer. For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
 
 2 risk situation
 -----------------
@@ -30,22 +28,22 @@ If a file server fails, the entire information network can be affected and thus 
 
 ### 2 2 Inadequate dimensioning of the file server
 
-If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
+If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
 
 ### 2 3 Inadequate review of dropped files
-If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can spread very quickly throughout the institution.
+If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can quickly spread throughout the institution.
 
 ### 2 4 Missing or insufficient access authorization concept
 
-If access authorizations and releases are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
+If access authorizations and approvals are not properly designed and assigned, third parties may be able to access data without authorization. This allows attackers to modify, delete or copy data.
 
 ### 2 5 Unstructured data management
 
-If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files reside in directories or file systems that are made accessible to third parties, or that are not consistent versions.
+If the storage structure is not specified or the employees do not stick to it, data can be stored in a confusing and uncoordinated manner on the file server. This leads to various problems, such as space wastage due to redundancy, unauthorized access when z. For example, files may be located in directories or file systems that are made accessible to third parties or that are not consistent versions.
 
 ### 2 6 Unsuitable installation of the file server
 
-If file servers are deployed in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
+If file servers are set up in easily accessible locations, attackers can directly access their components and thus the stored data, eg. B. by removing drives or remove and take away. Smaller NAS systems can also be easily stolen completely. It is also possible that an attacker directly leverages the access restrictions on the file server and thus can view sensitive data. Once he has access, he can also import malicious programs and thus jeopardize the security of the entire network.
 
 ### 2 7 Lack of or insufficient data protection concept
 
@@ -60,7 +58,7 @@ The following are specific requirements for the Fileserver area. Basically, the 
 
 The following requirements MUST be implemented as a priority:
 
-#### APP.3.3.A1 Suitable installation [building services]
+#### APP.3.3.A1 Suitable installation [Building services]
 
 File servers MUST NOT be operated in offices or as workstations. They MUST be placed in locations to which only authorized persons have access. In addition, attention must be paid to a vibration-free or vibration-free environment of the file server. Even file servers with additional functions, such as NAS systems combined with a WLAN access point or with direct connections for memory cards, MUST be set up suitably. Furthermore, a safe power supply and according to the manufacturer's recommended ambient temperature and humidity MUST be ensured.
 
@@ -80,11 +78,11 @@ All data MUST be scanned for malware by the antivirus solution before it is plac
 
 #### APP.3.3.A4 Regular backup
 
-All data stored on the file server MUST be backed up regularly. For this, a data backup concept MUST be created, which among other things defines in which intervals the backup should be carried out. In addition, a backup MUST be performed if something is installed or reconfigured on the file server. All secured data MUST be restored at any time. The maximum recovery time SHOULD be collected and taken into account in the data backup concept.
+All data stored on the file server MUST be backed up regularly. For this purpose, a data backup concept MUST be created, which defines among other things, in which intervals the backup should be performed. In addition, a backup MUST be performed if something is installed or reconfigured on the file server. All secured data MUST be restored at any time. The maximum recovery time SHOULD be collected and taken into account in the data backup concept.
 
 #### APP.3.3.A5 Restrictive allocation of rights
 
-Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can access only the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
+Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can only access the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
 
 It MUST be checked on a regular basis to see if the access permissions are still up to date and comply with the security policy. In addition, there must be a defined process to re-establish, change, or revoke permissions. All access rights MUST be traceable documented.
 
@@ -122,7 +120,7 @@ The results SHOULD be sufficiently documented. Discovered shortcomings SHOULD ca
 
 #### APP.3.3.A11 Use of Quotas
 
-It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only grant write access to the system administrator.
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -134,64 +132,7 @@ All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD 
 
 #### APP.3.3.A13 Replicating Between Sites (A)
 
-For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or independent sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
 
 #### APP.3.3.A14 Use of Error Correction Codes (I)
 In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​"file servers" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [HVK] High Availability Compendium
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/Sicherheitsberatung/Hochverfuegbarkeit/HVKompendium/hvkompendium\_node.html](https://www.bsi.bund.de/DE/Themen/Sicherheitsberatung/Hochverfuegbarkeit/ HVKompendium / hvkompendium_node.html)
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "file server" building block.
-
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.44 Unauthorized intrusion into premises
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

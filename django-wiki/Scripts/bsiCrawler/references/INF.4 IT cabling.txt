@@ -1,4 +1,14 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Cable fire
+### 2 2 Insufficient network dimensioning
+### 2 3 Insufficient documentation of the wiring
+### 2 4 Illegal cable connections
+### 2 5 Line damage
+### 2 6 Line impairment
+### 2 7 Listening and manipulation of lines
+### 3.1 Basic Requirements
 #### INF.4.A1 Selection of suitable cable types [Head of Building Services]
 #### INF.4.A2 Planning the cable management [Head of Domestic Engineering]
 #### INF.4.A3 Professional Installation [Head of Domestic Engineering]
@@ -6,7 +16,7 @@
 #### INF.4.A4 Requirements Analysis for IT Cabling
 #### INF.4.A5 Decrease in IT cabling [Head of Building Services]
 #### INF.4.A6 Continuous updating and revision of network documentation
-#### INF.4.A7 Removing and Deactivating Unnecessary IT Cabling [Head of Building Services]
+#### INF.4.A7 Removing and Disabling IT Cabling No More Needed [Home Applicator]
 #### INF.4.A8 Fire isolation of paths [Head of Building Services]
 #### INF.4.A9 Documentation and labeling of IT cabling
 #### INF.4.A10 Neutral documentation in the distributors

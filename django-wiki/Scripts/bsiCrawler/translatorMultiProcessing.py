@@ -74,18 +74,20 @@ def check15k(list, component):
 
     for line in splitList:
         if(component):
-            if('3 Anforderungen' in line):
-                text = False
-
             if ('5 Anlage: Kreuzreferenztabelle zu elementaren Gefährdungen' in line):
                 threats = True
                 referenceList.append(line)
 
+
             if (threats and '* ' in line):
                 referenceList.append(line)
 
+            if ('4 Weiterführende Informationen' in line):
+                text = False
+
             if ('##' in line and '* ' not in line and '4.1 Literatur' not in line):
                 referenceList.append(line)
+
 
         if(text and (functools.reduce(lambda x,y: x+y,map(len, listOf15kElement),0)+ len(line))< 3999):
                 listOf15kElement.append(line)

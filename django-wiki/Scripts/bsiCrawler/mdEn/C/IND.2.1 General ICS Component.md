@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -38,9 +36,9 @@ ICS components in industrial environments are often exposed to special condition
 
 ICS components are often incompletely documented, so not all product features are known. Information about the services used, protocols and communication ports as well as authorization management are often particularly incomplete. This makes the hazard analysis more difficult because interfaces, functions and security-relevant mechanisms are overlooked. As a result, potential hazards can not be taken into account. In addition, there are no or limited responses to new vulnerabilities in an ICS component if the services and ports used are not fully captured.
 
-### 2 3 Unsafe system configuration
+### 2 3 Insecure system configuration
 
-The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, preset permissions often remain unchanged.
+The standard configuration of ICS components is often designed to allow the components to function properly and be easy to commission. Security mechanisms often do not play a sufficient role. By default, all services, protocols, and ports are often turned on and remain active even when they are not in use. Likewise, default permissions often remain unchanged.
 It is easy for attackers to take over and manipulate such components. It is also possible for an attacker to exploit the insecure system configuration to use the ICS component as a starting point for further attacks. As a result, business-critical information can flow away or the entire operation of the institution can be affected.
 
 ### 2 4 Insufficient user and authorization management
@@ -53,7 +51,7 @@ For ICS components, logging is often limited to process-related events. Informat
 
 ### 2 6 Manipulation and sabotage of an ICS component
 
-The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally, but also across all locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
+The multiple interfaces of ICS components lead to an increased risk of manipulation of systems, software and transmitted information. Depending on the motivation and knowledge of the perpetrator, this can have an impact locally but also across locations. In addition, status and alarm messages or other measured values ​​can be suppressed or changed.
 
 Manipulated readings can lead to incorrect decisions of ICS components or operating personnel. Manipulated systems can be used to attack other systems or sites or to cover up ongoing manipulation.
 
@@ -76,7 +74,7 @@ ICS components often contain detailed information about the controlled or monito
 Attackers could get business secrets here (industrial espionage), eg. Recipes, procedures or other intellectual property. They can also gain information about the functioning of an ICS component and its security mechanisms, which can be used for further attacks.
 
 ### 2 11 Insufficient security requirements for procurement
-Due to a lack of awareness of the risks and cost reasons, information security is often not taken into account in procurement. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
+Due to a lack of awareness of the risks and cost reasons, procurement often does not take information security into account. As a result, ICS components can sometimes contain serious vulnerabilities that can only be remedied later on.
 
 ### 2 12 Manipulated firmware
 
@@ -192,81 +190,3 @@ Regular security tests SHOULD check to see if the technical security measures ha
 #### IND.2.1.A20 Trusted Code [ICS Administrator] (IA)
 
 Firmware updates or new control programs SHOULD only be played if their integrity and authenticity has been checked beforehand.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area "General ICS component" can be found in the following publications, among others:
-
-* #### [AHWAST] How to Use the White Paper - Requirements for Secure Control and Telecommunication Systems (Version 1.1, 2014)
-
-  
-
- BDEW Federal Association of Energy and Water Management e.V. and Austria's e-Economy, Version 1.1, 2014
- [Https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge](https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge?open&ccm)
-
- 
-* #### [ICSSK] ICS Security Compendium
-
-  
-
- Federal Office for Information Security (BSI), 2016
- [https://www.bsi.bund.de/DE/Themen/Industrie\_KRITIS/Empfehlungen/ICS/empfehlungen\_node.html](https://www.bsi.bund.de/DE/Themen/Industrie_KRITIS/ recommendations / ICS / empfehlungen_node.html)
-
- 
-* #### [ICSSKfH] ICS Security Compendium for Manufacturers and Integrators
-
-  
-
- Federal Office for Information Security (BSI), 2014
- <Https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/ICS/ICS-Security-Kompendium-Hersteller.html>
-
- 
-* #### [NIST80082] NIST Special Publication 800-82, Revision 2
-
-  
-
- Guide to Industrial Control Systems (ICS) Security, National Institute of Standards and Technology (NIST), 2015
- [Http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-82r2.pdf](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-81-2. pdf)
-
- 
-* #### [WAST] Whitepaper Requirements for secure control and telecommunication systems
-
-  
-
- BDEW Federal Association of the Energy and Water Industry e.V, Version 1.1, 01.2015
- [Https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge](https://www.bdew.de/internet.nsf/id/it-sicherheitsempfehlunge?open&ccm)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "General ICS component" block.
-
-* G 0.2 Unfavorable climatic conditions
-* G 0.4 Pollution, dust, corrosion
-* G 0.8 Failure or malfunction of the power supply
-* G 0.9 Failure or malfunction of communication networks
-* G 0.10 Failure or malfunction of supply networks
-* G 0.12 Electromagnetic interference
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.37 denying actions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.41 Sabotage
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

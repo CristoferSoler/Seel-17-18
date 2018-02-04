@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Database systems (DBS) are a widely-used tool for organizing, creating, modifying, and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
+Database systems (DBS) are a widely used tool for organizing, creating, modifying and managing large collections of data. A DBS consists of the so-called database management system (DBMS) and one or more databases. A database is a collection of data together with their description (metadata), which are stored persistently in the database system. Since database systems are of central importance in an IT infrastructure, they result in essential security requirements. In most cases, the core processes of an institution depend on the information from the databases, resulting in corresponding availability requirements. In addition, there are often high demands on the confidentiality and integrity of the information stored in the databases.
 
 ### 1.2 Objective
 
@@ -37,7 +35,7 @@ During the initial installation or in the delivery state of a database managemen
 ### 2 3 Insufficient allocation of authorizations
 If authorizations are assigned or managed incorrectly, persons in charge or users of the database management system can receive authorizations that go beyond what is absolutely necessary. Thus, it is possible that the overly entitled persons or users carry out unauthorized actions on the database management system that have far-reaching consequences, as the following example shows:
 
-An incorrect SQL statement (for example, in an installation script) unintentionally deletes a large number of records in the database. Afterwards it is determined that the user actually only needed read-only rights for these data records, but also unnecessarily had delete rights.
+An incorrect SQL statement (for example, in an installation script) unintentionally deletes a large number of records in the database. Afterwards it is determined that the user actually only needed reading rights for these datasets, but also possessed unnecessary deletion rights.
 
 ### 2 4 Unencrypted database connection
 
@@ -49,7 +47,7 @@ Hardware or software failure as well as human error may cause data loss in the d
 
 ### 2 6 Loss of integrity of stored data
 
-Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) is concerned.
+Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed in productive operation or not at all, not only the inconsistent data must be extensively cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) is concerned.
 
 ### 2 7 SQL injections
 
@@ -57,7 +55,7 @@ One common attack on database systems is SQL injection. If an application access
 
 ### 2 8 Insufficient patch management
 
-Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, shut down services or shut down entire production processes.
+Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, disrupt services or shut down entire production processes.
 
 ### 2 9 Insecure configuration of the database management system
 Often, in the default configuration of the database management system, unneeded features are enabled that make it easier for a potential attacker to read or manipulate information from the database. For example, an attacker can connect to an unused programming interface by an unmodified default installation to administer the DBMS without having to authenticate. This allows him to access the databases of the institution without authorization.
@@ -79,7 +77,7 @@ The following requirements MUST be implemented as a priority:
 
 #### APP.4.3.A1 Creating a Security Policy for Database Systems [Information Security Officer (ISB)]
 
-Based on the institution's general security policy, a specific security policy for database systems MUST be established, which comprehensibly describes requirements and requirements for how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+On the basis of the institution's general security policy, a specific security policy for database systems MUST be created, which comprehensibly describes requirements and specifications on how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 
 #### APP.4.3.A2 Installation of the database management system
 
@@ -191,63 +189,4 @@ The data in the databases SHOULD be encrypted. The following factors SHOULD be c
 * functional effects on the database, such as sorting options.
 #### APP.4.3.A25 Database System Security Checks (CIA)
 
-Database systems SHOULD be regularly audited using security audits. The security reviews SHOULD consider the systemic and vendor-specific aspects of the database infrastructure used (eg directory services) as well as the database management system used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on hazards and security measures in the area of ​​"Relational Database Systems" can be found in the following publications, among others:
-
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-
- 
-* #### [TELEKOM \ _DB] Security Requirements Database Systems
-
-  
-
- Privacy and Security Assessment Procedures: Security Requirements Database Systems, Deutsche Telekom, 06.2014
- <Https://www.telekom.com/de/verantwortung/datenschutz-und-datensicherheit/sicherheit/sicherheit/privacy-and-security-assessment-verfahren-342724>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Relational Database Systems".
-
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+Database systems SHOULD regularly be audited using security audits. The security reviews SHOULD consider the systemic and vendor-specific aspects of the database infrastructure used (eg directory services) as well as the database management system used.

@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -25,7 +23,7 @@ The present module specifies the basic requirements of the module NET.1.1 * Netw
 
 The management of the passive network infrastructure is dealt with in the building blocks of the infrastructure (building block layer INF) or industrial IT (building block layer IND). Therefore, these topics are not included in this module.
 
-The logging addressed in this module should be integrated into a comprehensive logging and archiving concept. (see OPS.1.1.5 * Logging *).
+The logging addressed in this module should be integrated in a comprehensive logging and archiving concept. (see OPS.1.1.5 * Logging *).
 
 The subject of outsourcing is not dealt with in detail in this module. Further requirements are described in the module OPS.2.1 * Outsourcing *.
 
@@ -47,7 +45,7 @@ If attackers succeed in accessing individual network components, they can contro
 ### 2 3 Unauthorized interference with network management communication
 If the management communication is intercepted and manipulated, active network components can be misconfigured or controlled in this way. This can violate network integrity and limit the availability of the network infrastructure. In addition, the transmitted data can be recorded and viewed.
 
-### 2 4 Insufficient time synchronization of network management components
+### 2 4 Inadequate time synchronization of network management components
 
 If the system time of the network management components is insufficiently synchronized, the logging data may not be correlated with each other, or the correlation may lead to incorrect statements, since the different timestamps of events have no common basis. This can not properly govern events that have occurred and problems can not be resolved. As a result, for example, security incidents and data outflows can go undetected.
 
@@ -94,7 +92,7 @@ All network management solutions MUST be integrated into the institution's data 
 
 #### NET.1.2.A7 Basic logging of events
 
-The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg during configuration distribution) as well as limited accessibility of network components.
+The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg in configuration distribution) as well as limited accessibility of network components.
 
 #### NET.1.2.A8 time synchronization
 
@@ -106,7 +104,7 @@ If network management communication is via the productive infrastructure, then s
 
 #### NET.1.2.A10 Limitation of SNMP communication
 
-Network management MUST NOT use unsafe versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
+Network management MUST NOT use insecure versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
 
 ### 3.2 Standard requirements
 
@@ -210,7 +208,7 @@ Dedicated management clients SHOULD be used to administer both internal and exte
 
 #### NET.1.2.A29 Use of VLANs in the Management Zone
 
-If management networks are separated by VLANs, care should be taken to ensure that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
+If management networks are separated by VLANs, care should be taken that the external packet filter and the devices connected to it are in their own subnetwork. In addition, it should be ensured that the ALG is not bypassed.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -228,7 +226,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 
@@ -249,48 +247,4 @@ The time synchronization SHOULD be ensured across all locations of the instituti
 
 #### NET.1.2.A38 Definition of emergency forms of operation for the network management infrastructure (A)
 
-In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to set up adequate backup solutions to perform the administrative tasks in an emergency.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"network management" can be found in the following publications, among others:
-
-* #### [ISI] BSI Internet Security Standards (Isi Series)
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-Reihe\_node.html](https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ ISi series / ISi Reihe_node.html)
-
- 
-* #### [TR21022] BSI Technical Guideline, Cryptographic Procedures
-
-  
-
- Use of Transport Layer Security (TLS), Federal Office for Information Security (BSI), 2017
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Network Management".
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.11 Failure or disruption of service providers
-* G 0.14 Spying out information (spying)
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-The cross reference tables can be found in the download area due to their size.
+In order to quickly restore the software or firmware setpoints and to configure the components in the network management infrastructure, it is important to establish adequate backup solutions that can be used to perform the administrative tasks in an emergency.

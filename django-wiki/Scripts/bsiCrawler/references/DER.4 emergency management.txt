@@ -1,4 +1,12 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Staff shortage
+### 2 2 Failure of IT systems
+### 2 3 Failure of a Wide Area Network (WAN)
+### 2 4 Failure of a building
+### 2 5 Failure of a supplier or service provider
+### 3.1 Basic Requirements
 ### 3.2 Standard requirements
 #### DER.4.A1 Creation of an emergency manual [Information Security Officer (ISB)]
 #### DER.4.A2 Integration of emergency management into organizational processes and processes [institutional management]

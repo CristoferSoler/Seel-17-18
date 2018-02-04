@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -21,7 +19,7 @@ The goal of the building block is for users or even IT components to be able to 
 
 This module describes basic requirements for the development of identity and authorization management.
 
-Requirements concerning components of an identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
+Requirements concerning components of identity and authorization management, such as operating systems or directory services, can be found in the corresponding blocks (eg SYS.1.3 Unix server, SYS.1.2.2 Windows Server 2012, APP.2.1 General directory service, APP.2.2 Active Directory).
 
 2 risk situation
 -----------------
@@ -39,7 +37,7 @@ Also, it is possible that employees who have been moved to a new department reta
 In institutions, employees often have user access to various IT systems such as production, test, quality assurance or project systems. These are usually in different areas of responsibility and are managed by different administrators. As a result, an identical and unique user ID is not used on all IT systems and there is usually no central overview of the user access on the individual IT systems. In such a scenario, it is not possible to immediately disable all user accesses of an employee in the event of an attack or password theft. Also, when an employee leaves the institution, all receipts can not be blocked immediately.
 
 ### 2 3 Inappropriate access, access and access rights management
-If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to receive permissions on demand, or conversely, only through unnecessarily complicated ways to get them. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
+If the allocation of access, access and access rights is poorly regulated, this will quickly lead to serious security vulnerabilities, eg. B. by wild growth in the rights allocation. When introducing identity management systems or revisions, it often turns out that different people in different organizational units are responsible for assigning authorizations. This quickly causes users to receive permissions on demand, or conversely, only over unnecessarily complicated ways to get them. Thus, on the one hand, missing authorizations can hinder the daily work, on the other hand, authorizations can be granted without requirement and thus pose a security risk.
 
 3 requirements
 ---------------
@@ -54,7 +52,7 @@ The following requirements MUST be implemented as a priority:
 
 It must be governed by how users and user groups are to be set up. All users and user groups MAY ONLY be set up via separate administrative roles.
 
-#### ORP.4.A2 Regulation for setting up, changing, and revoking privileges [Administrator, IT Leader]
+#### ORP.4.A2 Regulation for setting up, changing and revoking privileges [Administrator, Head of IT]
 
 User IDs and permissions MAY ONLY be assigned based on actual needs. Personnel changes MUST remove the user IDs and permissions that are no longer required. Applying Employees Authorizations that go beyond the standard may ONLY be assigned after further justification. All permissions MUST be set up via separate administrative roles.
 
@@ -103,7 +101,7 @@ An authentication concept SHOULD be created. In it, it should be defined for eac
 
 #### ORP.4.A13 Appropriate selection of authentication mechanisms [Head IT]
 
-SHOULD use identification and authentication mechanisms appropriate to the protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
+SHOULD use identification and authentication mechanisms appropriate to protection needs. Authentication data SHOULD be protected by the IT system or IT applications during processing against spying, alteration and destruction at any time.
 
 #### ORP.4.A14 Checking the effectiveness of user separation on the IT system [Administrator]
 
@@ -136,7 +134,7 @@ All employees SHOULD be instructed in the correct handling of the authentication
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.4.A20 Emergency Prevention for the Identity and Entitlement Management System [IT Leader] (CIA)
 
@@ -145,50 +143,3 @@ It SHOULD be examined to what extent a failed identity and authorization managem
 #### ORP.4.A21 Multi-Factor Authentication [IT Leader] (C)
 
 With a higher protection requirement, a secure two- or more-factor authentication, eg. As with cryptographic certificates, smart cards or tokens, are used for authentication.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the area of ​​"identity and authorization management" can be found in the following publications, among others:
-
-* #### [29146] ISO / IEC 29146: 2016
-
-  
-
- Information technology - Security techniques - A framework for access management, 06.2016
-
- 
-* #### [ISFTS14] The Standard of Good Practices Area TS1.4 Identity and Access Management
-
-  
-
- ISF, especially Area TS1.4 Identity and Access Management, June 2016
-
- 
-* #### [NIST80053A] NIST Special Publication 800-53A
-Assessing Security and Privacy Controls at Federal Information Systems, especially Areas AC and IA, 12.2014
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the module "identity and authorization management".
-
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.44 Unauthorized intrusion into premises
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

@@ -1,4 +1,13 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Impairment due to changing operating environment
+### 2 2 Theft
+### 2 3 Unsolicited user switching on laptops
+### 2 4 Synchronization error
+### 2 5 Data loss in mobile use
+### 2 6 Data theft with laptops
+### 3.1 Basic Requirements
 #### SYS.3.1.A1 Regulations for the mobile use of laptops
 #### SYS.3.1.A2 Laptop access protection [user]
 #### SYS.3.1.A3 Use of personal firewalls

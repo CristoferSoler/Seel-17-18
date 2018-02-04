@@ -1,4 +1,11 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Unauthorized access to central network management components
+### 2 2 Unauthorized access to individual network components
+### 2 3 Unauthorized interference with network management communication
+### 2 4 Inadequate time synchronization of network management components
+### 3.1 Basic Requirements
 #### NET.1.2.A1 Planning the network management
 #### NET.1.2.A2 Requirements Specification for Network Management [IT Leader]
 #### NET.1.2.A3 Role and authorization concept for network management
@@ -33,7 +40,7 @@
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 #### NET.1.2.A31 Basic Use of Secure Protocols (CIA)
 #### NET.1.2.A32 Physical separation of the management network (CIA)
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 #### NET.1.2.A34 Logging Content of Administrative Sessions (CI)
 #### NET.1.2.A35 Preservation Requirements (CIA)
 #### NET.1.2.A36 Integration of network management logging into a SIEM solution (CIA)

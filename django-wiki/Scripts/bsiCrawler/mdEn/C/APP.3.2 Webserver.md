@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -17,7 +15,7 @@ The goal of the module is to protect the web server and the information provided
 
 ### 1.3 Delimitation
 
-The term web server is used for both the software that answers the HTTP requests and the IT systems that run this software. This module primarily looks at the web server software. Security aspects of the IT system on which the web server software is installed are handled in the appropriate building blocks of the IT systems layer (see SYS.1.1 * General Server * and, for example, SYS.1.3 * Server under Linux or * SYS.1.2. 2 * Windows Server 2012 *).
+The term web server is used for both the software that answers the HTTP requests and the IT systems that run this software. This module primarily looks at the web server software. Security aspects of the IT system on which the web server software is installed are handled in the corresponding building blocks of the IT systems layer (see SYS.1.1 * General Server * and, for example, SYS.1.3 * Server under Linux or * SYS.1.2. 2 * Windows Server 2012 *).
 
 Recommendations on how to integrate web servers into the network architecture and secure them with firewalls can be found in the building blocks NET.1.1 * Network Architecture and Design * or NET.3.2 * Firewall *.
 
@@ -40,7 +38,7 @@ An attacker can gain access to a web server to manipulate files. For example, he
 
 ### 2 3 Distributed Denial of Service (DDoS)
 
-DDoS attacks can partially or completely disable a web server. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.
+Due to DDoS attacks, a web server can partially or completely fail. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.
 In addition to DDoS, other types of denial-of-service attacks can affect the availability of a website specifically for individual users by, for example, blocking individual accounts from incorrect logins. An attacker could z. For example, a user account lock could be triggered by invalid login attempts.
 
 ### 2 4 Loss of confidential data
@@ -120,10 +118,10 @@ In order to select suitable security measures for the web server, it should be p
 
 #### APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
 
-A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how to implement security measures, and how to proceed when security incidents occur.
+A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
-If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when choosing a suitable web host:
+If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
 
 * It SHOULD be contractually regulated how the services are to be provided. Security aspects should be recorded in writing in the contract in a Service Level Agreement (SLA).
 * For all products offered, the basic installation should be made safe. The service provider SHOULD inform its customers about the risks of additional applications and extensions (plug-ins). In addition, he SHOULD commit himself to regularly refer to existing updates of the programs used.
@@ -154,7 +152,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 Web servers SHOULD be configured redundantly. The Internet connection of the web server and other IT systems, such as the web application server, SHOULD be designed to be redundant.
 
 #### APP.3.2.A16 Penetration Test and Revision [Information Security Officer (ISB), IT Leader] (CIA)
-There should be regular penetration tests. The tests SHOULD only be performed by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
+There should be regular penetration tests. The tests SHOULD only be done by reliable, trustworthy and qualified employees or service providers. In advance, all contractors for penetration testing SHOULD make detailed arrangements to conduct and evaluate the tests. Also the consent of all competent authorities SHOULD be obtained. For the test period the respective contact persons SHOULD be binding and reachable. After the penetration test, the results SHOULD be sufficiently protected and treated confidentially. The final report SHOULD be submitted to the ISB.
 
 #### APP.3.2.A17 Advanced authentication methods for web servers (CI)
 
@@ -166,82 +164,4 @@ To detect denial-of-service attacks at an early stage, the web server SHOULD be 
 
 #### APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
 
-To maintain web offers, a self-employed Internet editorial team should be set up. The Internet editorial team SHOULD include all the roles that were named in the concept for web offers. For extensive web offers, a contact person for web applications SHOULD additionally be determined. Likewise, processes, procedures, and people responsible should be named in case of problems or security incidents.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the "Web server" area can be found in the following publications, among others:
-
-* #### [CS068] BSI publication on cyber security and secure web hosting
-
-  
-
- Federal Office for Security in Information Technology (BSI), 08.2013
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_068.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_068.pdf)
-
- 
-* #### [HVK] High Availability Compendium
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/Sicherheitsberatung/Hochverfuegbarkeit/HVKompendium/hvkompendium\_node.html](https://www.bsi.bund.de/DE/Themen/Sicherheitsberatung/Hochverfuegbarkeit/ HVKompendium / hvkompendium_node.html)
-
- 
-* #### [ISIWEB] BSI Internet security standards, Secure web offerings
-
-  
-
- Federal Office for Information Security (BSI), (last accessed on 29.08.2017)
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-Web-Server/web\_server\_node.html](https://www.bsi.bund.de/ DE / topics / standard criteria / ISi series / ISi Web server / web_server_node.html)
-
- 
-* #### [MLFTLS] BSI Policy Guide, Migration to TLS 1.2
-
-  
-
- Federal Office for Security in Information Technology (BSI), Version 1.2, 06.2016
- [Https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Migrationsleitfaden\_Mindeststandard\_BSI\_TLS\_1\_2\_Version\_1\_2.pdf](https://www. bsi.bund.de/SharedDocs/Downloads/DE/BSI/Mindeststandards/Migrationsleitfaden_Mindeststandard_BSI_TLS_1_2_Version_1_2.pdf)
-
- 
-* #### [NIST80044] NIST Special Publication (SP) 800-44
-
-  
-
- Guideline on Securing Public Web Servers, NIST, 09.2017
- <Https://csrc.nist.gov/publications/detail/sp/800-44/version-2/final>
-
- 
-* #### [TR21022] BSI Technical Guideline, Cryptographic Procedures
-
-  
-
- Use of Transport Layer Security (TLS), Federal Office for Information Security (BSI), 2017
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Web server" building block.
-
-* G 0.11 Failure or disruption of service providers
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+To maintain web offers, a self-employed Internet editorial team should be set up. The Internet editorial team SHOULD include all the roles that were named in the concept for web offers. For extensive web offers, a contact person for web applications SHOULD also be determined. Likewise, processes, procedures, and people responsible should be named in case of problems or security incidents.

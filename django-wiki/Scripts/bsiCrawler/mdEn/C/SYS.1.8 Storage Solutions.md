@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -23,7 +21,7 @@ The aim of this module is to show how centralized storage solutions can be plann
 
 ### 1.3 Delimitation
 
-In this module, storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
+In this module storage systems are considered together with the associated storage networks. Backup devices that are connected to the storage system or to the storage network are not considered here, but are treated in block OPS.1.2.2 * Archiving *. Conceptual aspects of data backup are explained in the module CON.3 * Data backup concept *. In addition, no requirements for file servers are described. These can be found in the module APP.3.3 * Fileserver *.
 
 If external service providers are used to run a storage solution, the requirements of the module OPS.2.1 * Outsourcing for Customers * must be considered separately.
 
@@ -105,7 +103,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 Based on the institution's general security policy, a specific security policy for storage solutions SHOULD be created. It should describe in a comprehensible way requirements and specifications how storage solutions can be safely planned, administered, installed, configured and operated.
 
-The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
+The policy SHOULD tell all administrators responsible for storage solutions and be fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be sensibly documented.
 
 #### SYS.1.8.A7 Planning Storage Solutions [Information Security Officer (ISB), IT Leader]
 A REQUIREMENT analysis should be carried out, which among other things considers the topics performance and capacity. Based on the identified requirements, SHOULD then create a detailed planning for storage solutions. The following points should be considered:
@@ -130,7 +128,7 @@ It SHOULD be created an operating manual. It SHOULD document all the necessary r
 
 #### SYS.1.8.A11 Safe operation of a storage solution
 
-The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and agreed with all involved specialist responsible persons.
+The storage system SHOULD be monitored for availability of internal applications, system load, and critical events (see also SYS.1.8.A13 * Monitoring and Management of Storage Solutions *). Furthermore, for storage solutions, fixed maintenance windows should be defined in which changes can be made. In particular, firmware or operating system updates of storage systems or the network components of a storage solution SHOULD only be performed within such a maintenance window. All changes SHOULD also be activated via the change management and coordinated with all involved specialists.
 
 #### SYS.1.8.A12 Administrator Training [Supervisor, IT Leader]
 
@@ -180,7 +178,7 @@ It should be done regular exercises and tests of the emergency plan. After the e
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.1.8.A21 Use of Client Separation Storage Pools (CI)
 
@@ -203,60 +201,8 @@ To ensure the integrity of the SAN fabric, protocols with additional security fe
 * Fiber Channel Password Authentication Protocol (FCPAP).
 #### SYS.1.8.A25 Multiple overwriting of the data of a LUN (C)
 
-In SAN environments, data SHOULD be deleted by repeatedly overwriting the associated memory segments of a LUN.
+In SAN environments, data SHOULD be deleted by overwriting the associated memory segments of a LUN multiple times.
 
 #### SYS.1.8.A26 Securing a SAN through hard zoning
 
 To segment SANs, hard zoning should be used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​"storage solutions" can be found in the following publications, among others:
-
-* #### [27040] ISO / IEC 27040: 2015
-
-  
-
- Information technology - Security techniques - Storage security, 01.2015
- <Https://www.iso.org/standard/44404.html>
-
- 
-* #### [ISFSY14] Information Security Forum (ISF)
-
-  
-
- The Standard of Good Practice - especially Area SY1.4 Network Storage Systems, 06.2016
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "memory solutions" block.
-
-* G 0.8 Failure or malfunction of the power supply
-* G 0.11 Failure or disruption of service providers
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.40 Denial of Service
-* G 0.44 Unauthorized intrusion into premises
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

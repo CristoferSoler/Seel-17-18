@@ -1,4 +1,16 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Lack of personal responsibility in the security process
+### 2 2 Lack of support from senior management
+### 2 3 Insufficient strategic and conceptual requirements
+### 2 4 Insufficient or misdirected investments
+### 2 5 Insufficient enforceability of security measures
+### 2 6 Missing update in the security process
+### 2 7 Breach of legal regulations and contractual agreements
+### 2 8 Business disruption due to security incidents
+### 2 9 Inefficient use of resources due to inadequate safety management
+### 3.1 Basic Requirements
 #### ISMS.1.A1 Assumption of overall responsibility for information security by the management level [Institutional Management]
 #### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]
 #### ISMS.1.A3 Creation of an information security guideline [Head of Institution]

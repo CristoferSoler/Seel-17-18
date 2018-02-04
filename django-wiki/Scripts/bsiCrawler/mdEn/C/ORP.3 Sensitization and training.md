@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -13,7 +11,7 @@ Employees must be made aware of relevant hazards and how they can affect their i
 
 ### 1.2 Objective
 
-This module describes how to build and maintain an effective information security awareness and training program. The aim of awareness-raising and information security training is to enhance employees' perceptions of safety-critical situations and their impact, as well as providing them with the necessary knowledge and skills for safety-conscious behavior.
+This module describes how to build and maintain an effective information security awareness and training program. The aim of awareness-raising and information security training is to increase employee awareness of safety-critical situations and their impact, as well as to provide them with the necessary knowledge and skills for safety-conscious behavior.
 
 ### 1.3 Delimitation
 
@@ -32,7 +30,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient knowledge of regulations
 
-Just setting information security regulations does not guarantee that they will be respected. All employees must also be aware of the applicable regulations, in particular the officials. In many security incidents, failure to comply with regulations is not the sole cause of the incident, but a reason for its effectiveness. Vulnerabilities due to insufficient knowledge of regulations may compromise the confidentiality, availability and integrity of the information being processed. The fulfillment of tasks and the processing of business processes can be restricted in every respect (eg temporal, qualitative, with regard to liability).
+Just setting information security regulations does not guarantee that they will be respected. All employees must also be aware of the applicable regulations, in particular the officials. In many security incidents, ignoring regulations is not the sole cause of the incident, but a reason for its effectiveness. Vulnerabilities due to insufficient knowledge of regulations may compromise the confidentiality, availability and integrity of the information being processed. The fulfillment of tasks and the processing of business processes can be restricted in every respect (eg temporal, qualitative, with regard to liability).
 ### 2 2 Insufficient awareness of information security
 
 Experience shows that it is not enough just to order the implementation of certain security measures. Without an understanding of the reasons for the measures and the purpose they serve, the measures often fail or are ignored. If employees become insufficiently sensitized to information security issues, operational and implementation-related risks arise in the technical and organizational business processes. The security culture, security objectives and security strategy of the institution may be jeopardized if employees are unable to relate directly to their real world of work, unless they are taught the purpose of security measures. This leads to a lack of acceptance of security measures and deficiencies in compliance.
@@ -62,17 +60,17 @@ For a variety of reasons, such as carelessness or rush, it can happen that so co
 
 ### 2 7 Carelessness in handling information
 
-Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted. Likewise, a hard drive encryption on the laptop does not protect the confidential information from the seat neighbor in the train can be easily read. The best technical security solutions do not help when printouts with confidential information are left on the printer or end up in open-access waste paper containers.
+Often it can be observed that while institutions have a large number of organizational and technical security procedures, they are again undermined by the careless handling of specifications and technology. A typical example of this are the almost proverbial notes on the monitor, on which access passwords are noted. Likewise, a hard drive encryption on the laptop does not protect the confidential information from the seat neighbor in the train can be easily read. The best technical security solutions do not help when printouts with confidential information are left on the printer or end up in accessible waste paper containers.
 
-When employees carelessly deal with information, established information security processes become ineffective. Unauthorized persons could, for. B. Use negligence in dealing with information in order to pursue targeted economic espionage.
+When employees carelessly deal with information, established information security processes become ineffective. Unauthorized persons could, for. B. Use negligence in dealing with information in order to deliberately pursue economic espionage.
 
 ### 2 8 Poor acceptance of information security
 
-Various circumstances may mean that information security requirements and requirements are not accepted in an institution or in parts of an institution and that there is therefore no insight into the need to implement security measures. This can, for example, be conditioned by the culture of the institution (motto: "That has always been so with us!") Or lack of role model function by the management. But even inappropriate or exaggerated security requirements can cause employees to reject security measures. Likewise, a different social environment or cultural background ("other countries, other customs") could lead to security measures not being implemented. Problems could also arise from the fact that certain user rights or the equipment with certain hardware or software are seen as a status symbol. Restrictions in these areas can meet with great resistance.
+Various circumstances may mean that information security requirements and requirements are not accepted in an institution or even in parts of an institution and that there is therefore no insight into the need to implement security measures. This can, for example, be conditioned by the culture of the institution (motto: "That has always been so with us!") Or lack of role model function by the management. But even inappropriate or exaggerated security requirements can cause employees to reject security measures. Likewise, a different social environment or cultural background ("other countries, other customs") could lead to security measures not being implemented. Problems could also arise because certain user rights or the equipment with certain hardware or software are seen as a status symbol. Restrictions in these areas can meet with great resistance.
 
 ### 2 9 Social Engineering
 
-Social engineering is a way to gain unauthorized access to information or IT systems by "listening" to employees. In social engineering, an attacker usually builds up a direct contact with a victim, eg. B. by phone, e-mail or via social networks. Social engineering attacks are often multi-level. By simulating insider knowledge and at the same time appealing to helpfulness, the attacker can expand his knowledge in further steps. If employees are not adequately sensitized to this type of attack, there is a danger that they will be manipulated by skilful communication to act improperly. As a result, they may leak internal information, catch malware, or even transfer money to alleged business partners.
+Social engineering is a way to gain unauthorized access to information or IT systems by "listening" to employees. In social engineering, an attacker usually builds up a direct contact with a victim, eg. B. by phone, e-mail or via social networks. Social engineering attacks are often multi-level. By simulating insider knowledge and at the same time appealing to helpfulness, the attacker can expand his knowledge in further steps. If employees are not adequately sensitized to this type of attack, there is a danger that they will be manipulated through skilful communication to act inappropriately. As a result, they may leak internal information, catch malware, or even transfer money to alleged business partners.
 
 In the "boss trick" - the English term is CEO Fraud - is a fictitious order of the boss is fooled by clerks who are allowed to transfer money on behalf of the company. They are to carry out transactions for an allegedly urgent and secretive business, which are extremely important for the further existence of the enterprise. In the course of 2016, fraudsters managed to cause damage in the range of six to eight figures to thousands of companies in thousands of companies. The damage worldwide is in the billions.
 
@@ -86,7 +84,7 @@ The following requirements MUST be implemented as a priority:
 
 #### ORP.3.A1 Sensitization of Information Security Management [Supervisors, Institutional Management]
 
-Institutional leadership MUST strongly and actively support safety campaigns and training for employees. Therefore, the support of management MUST be obtained before the start of an information security awareness and training program. The management MUST be sufficiently sensitized to safety issues.
+Institutional leadership MUST strongly and actively support safety campaigns and training for employees. Therefore, the support of management MUST be obtained before the start of an information security awareness and training program. The management MUST be sufficiently sensitized to security issues.
 
 All supervisors MUST support information security by setting a good example. Managers MUST enforce safety standards and alert their employees to compliance.
 
@@ -100,7 +98,7 @@ All employees and external users MUST be instructed and sensitized in the safe h
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are in line with the state of the art in the area of ​​awareness and training. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are in line with the state of the art in the field of awareness and training. They SHOULD be implemented in principle.
 
 #### ORP.3.A4 Designing an information security awareness and training program
 
@@ -127,54 +125,4 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### ORP.3.A9 Specialized Training of Exposed Persons and Institutions (CIA)
 
-Particularly exposed persons such as officials as well as employees in particularly exposed institutions or organizational areas SHOULD receive in-depth training in terms of possible hazards as well as appropriate behaviors and precautionary measures.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area of ​​"awareness and training" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NIST80053] Security and Privacy Controls for Federal Information Systems and Organizations
-
-  
-
- Special Publication 800-53, Revision 4, NIST, 04.2013 <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Sensitization and Training".
-
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.19 Disclosure of information worthy of protection
-* G 0.24 Destruction of equipment or data media
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.42 Social engineering
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+Particularly exposed persons such as officials as well as employees in particularly exposed institutions or organizational areas SHOULD receive in-depth training with regard to possible hazards as well as appropriate behaviors and precautionary measures.

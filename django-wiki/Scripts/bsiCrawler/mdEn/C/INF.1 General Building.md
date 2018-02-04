@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -9,7 +7,7 @@ Table of content
 
 Buildings form the outer physical framework for the execution of business processes. A building comprises the stationary workstations, the processed information as well as the established information technology and thus ensures an external protection for them. In addition, the infrastructure of a building often enables the execution of business processes and IT operations. Therefore, not only the building itself, so walls, ceilings, floors, roof, windows and doors to look at, but also all building-wide infrastructure and utilities such as electricity, water, gas, heating and cooling.
 
-Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional users (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
+Considered is a building that is used by one or more organizational units of an institution. These can have quite different security requirements. In addition, it must be taken into account in all considerations that a building can and should almost always be entered by non-institutional customers (citizens, customers, suppliers). If a building is used by different parties in such a way, then the design and equipment of the building and the usage concept for the building must fit together. It is intended to ensure an optimal environment for people working in the building. Unauthorized persons should not be allowed access there, where they could impair safety, and the technology deployed in the building should be safe and efficient.
 
 ### 1.2 Objective
 
@@ -62,7 +60,7 @@ When constructing buildings, a large number of laws and regulations must be obse
 ### 2 8 Insufficient firing
 
 Every building in which IT operates is criss-crossed by a multitude of wires and cables. Fresh and sewer pipes, heating pipes, energy supply and data transmission are mentioned as examples. It is inevitable that such pipe and cable routes must cross fire walls and floors. If suitable fire barriers are not installed in such places, fires and smoke may spread uncontrollably.
-The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can thus expand into the area actually protected by the bulkhead.
+The high dynamics of the IT also make it necessary to relocate, even beyond the firebox, in the pipeline network. In what form that can be done correctly depends directly on the existing bulkhead and can be very different. If changes to a firewall are not carried out in accordance with the requirements of the respective bulkhead manufacturer, there is a risk that it will fail in the event of a fire and the fire can expand into the area actually protected by the bulkhead.
 
 ### 2 9 Power failure
 
@@ -71,13 +69,13 @@ In the event of a power outage, entire buildings or parts of them may become unu
 3 requirements
 ---------------
 
-The following are specific requirements for the General Building area. Basically, the building services is responsible for meeting the requirements, ie the organizational unit that is responsible for the infrastructure facilities in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+The following are specific requirements for the General Building area. Basically, the building services are responsible for meeting the requirements, ie the organizational unit that is responsible for the facilities of the infrastructure in a building or in a property. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
 The following requirements MUST be implemented as a priority:
 
-#### INF.1.A1 Planning of building security [planner, information security officer (ISB)]
+#### INF.1.A1 Planning of building security [Planner, Information Security Officer (ISB)]
 
 Based on the planned or existing use of a building and the protection requirements of the business processes operated there, it MUST be determined how the building is to be secured. For a building, many different aspects of security MUST be respected for the protection of people in the building, the protection of assets and the IT, from fire protection to electrical systems to access control. The safety requirements from the different areas MUST be coordinated with each other.
 
@@ -143,7 +141,7 @@ A lightning protection system should be installed according to the current stand
 
 #### INF.1.A15 Location plans of utilities
 
-There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who guides and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
+There SHOULD have up-to-date maps of all supply lines. It SHOULD be regulated who keeps and updates the site plans of all utilities. The plans SHOULD be kept in such a way that only authorized persons can access them, but they are quickly available when needed.
 
 #### INF.1.A16 Avoidance of position information on parts of buildings that are to be protected
 
@@ -177,7 +175,7 @@ The IT SHOULD be fed by two independent supply strings.
 
 Doors and windows SHOULD be selected according to the protection goals of the area to be protected and the protection needs of the institution as well as the appropriate classification in the relevant standards. All room enclosing security measures through windows, doors and walls SHOULD be equivalent and appropriate in terms of burglary, fire and smoke. It SHOULD be checked regularly that the security doors and windows are functional.
 
-#### INF.1.A23 Formation of Security Zones [Planner] (C)
+#### INF.1.A23 Formation of security zones [planner] (C)
 
 Rooms with similar protection requirements SHOULD be zoned together to treat comparable risks consistently and to reduce the cost of required security measures. A security zone concept for buildings and land SHOULD be developed and documented.
 
@@ -206,11 +204,11 @@ It SHOULD be checked whether the employees of the commissioned cleaning company 
 
 #### INF.1.A30 Selection of a suitable building (CIA)
 
-When selecting a suitable building, it should be checked whether all security requirements relevant for later use can be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
+When selecting a suitable building, it should be checked whether all safety requirements relevant for later use can also be implemented. For each building, the existing hazards and the necessary damage prevention or reduction measures SHOULD be documented in advance.
 
 #### INF.1.A31 Extract from Buildings [Inner Service] (C)
 
-In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data media, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
+In the run-up to the excerpt, an inventory of all things relevant to information security (hardware, software, data carriers, folders, documents, etc.) SHOULD be compiled. After moving out, all rooms SHOULD be searched for left behind things.
 
 #### INF.1.A32 firewall cadastre (A)
 
@@ -223,53 +221,3 @@ Protected rooms or parts of buildings SHOULD NOT be housed in exposed or endange
 #### INF.1.A34 Alarm system (A)
 
 It SHOULD provide a hazard warning system appropriate to the premises and the risks. The alarm system SHOULD be regularly serviced or tested. It SHOULD be checked whether the recipients of hazard reports are able to respond appropriately to the alarm technically and personally.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-Further information on hazards and safety measures in the area of ​​"General Building" can be found in the following publications, among others:
-
-* #### [27001A11] ISO / IEC 27001: 2013 - Annex A.11 Physical and envionmental security
-
-  
-
- ISO, Information technology - Security techniques - Information security management systems - Requirements, in particular Annex A, A.11 Physical and environmental security, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [ISFCF19] The Standard of Good Practice - AREA CF19 Physical and Environmental Security
-
-  
-
- especially AREA CF19 Physical and Environmental Security, ISF, 06.2014
-
- 
-* #### [NIST80053PEP] NIST Special Publication 800-53 Revision 4 - APPENDIX PAGE F-213
-
-  
-
- Assesing Security and Privacy Controls for Federal Information Systems and Organizations, in particular APPENDIX F-PS PAGE F-213, FAMILY: PHYSICAL AND ENVIRONMENTAL PROTECTION, NIST, 2013
- <Http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "General Building".
-
-* G 0.1 fire
-* G 0.2 Unfavorable climatic conditions
-* G 0.3 water
-* G 0.4 Pollution, dust, corrosion
-* G 0.5 natural disasters
-* G 0.6 disasters in the environment
-* G 0.7 Major events in the environment
-* G 0.8 Failure or malfunction of the power supply
-* G 0.10 Failure or malfunction of supply networks
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.29 Violation of laws or regulations
-* G 0.34 stop
-* G 0.44 Unauthorized intrusion into premises
-The cross reference tables can be found in the download area due to their size.

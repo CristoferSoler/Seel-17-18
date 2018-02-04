@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Although a great deal of information is stored digitally, paper documents can often be dispensed with. Also, many people prefer to read or edit documents on paper rather than on the screen. Printers, copiers and multifunction devices will therefore be indispensable tools that can be found in virtually every office.
+Although a great deal of information is stored digitally, paper documents can often be dispensed with. Many people also prefer to read or edit documents on paper rather than on the screen. Printers, copiers and multifunction devices will therefore be indispensable tools that can be found in virtually every office.
 
 It is often not efficient to equip every single workstation with such a device. As a result, centralized network printers, copiers, or multifunction devices are often used to allow users to print, scan, or duplicate their documents. Since there are some drawbacks when jobs are sent from the workstation PC directly to a network printer, most institutions also use a central print server that accepts the jobs and distributes them among the available printers.
 
@@ -15,7 +13,7 @@ This module covers the security of networked printers, copiers, multifunction de
 
 ### 1.2 Objective
 
-The aim of the module is to describe how printers, copiers and multifunction devices can be operated safely, so that neither information can flow away from them nor the security of the internal IT networks is impaired.
+The aim of the module is to describe how printers, copiers and multifunction devices can be operated safely, so that neither information can flow away from them nor the security of internal IT networks is impaired.
 
 ### 1.3 Delimitation
 
@@ -33,7 +31,7 @@ The following specific threats and vulnerabilities are of particular importance 
 Many printers, copiers, and MFPs require a sufficient amount of consumables for smooth, uninterrupted operation. If these consumables are missing or incorrectly used, the operation process can be severely disturbed. For example, improper ink can contaminate an inkjet printer and cause the printer to malfunction. In emergencies, the agency's ability to act can be severely impaired and high follow-up costs can arise, for example if important contracts can not be printed out.
 
 ### 2 2 Unauthorized access to printed documents
-Network printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for their device to print, they may be able to bridge the waiting time and see what other colleagues have printed. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
+Network printers often leave printed documents in the output tray for a long time. Especially if the printers are not in the immediate vicinity, users often print multiple files before collecting them all together. Since floor or departmental printers are used by many employees, unauthorized persons can also view or steal printouts containing sensitive information. This does not even have to be malicious: if, for example, employees have to wait a long time for them to print on the device, they will eventually bridge the waiting time and see what other colleagues have printed out. Also on copiers are always confidential documents that were forgotten there, for example, in the feeder.
 
 Users often do not look for causes if they do not find their printouts at the printer. Instead, they suspect IT problems and start a new print job, as they are used to the fact that with the hardware and software always problems and inexplicable phenomena occur. However, the printouts could have been taken by others as well. Likewise, it often happens that users have accidentally selected another printer on their workstation computer. Typically, users then look for their printouts on the wrong printer, can not find them, and simply start a new print job, this time on the default printer. As a result, many network printers find misprints that are not picked up.
 
@@ -41,11 +39,11 @@ Users often do not look for causes if they do not find their printouts at the pr
 
 For some printers, copiers and multifunction devices, access to the administration interface can not be secured, ie it can not be protected by password prompting. With administrator rights an attacker could manipulate the devices. In some cases this is not only possible from local network workstations, but also from the Internet.
 
-Many network printers and high-performance copiers have built-in web servers for easier administration. However, convenience comes with additional risks: often the web interface is neglected during configuration, allowing internal or even external users to manipulate printer configuration and usage. For example, any user may intentionally or unintentionally delete print jobs from others or compromise the availability of the device. Some web servers also return diagnostic data if an overlong URL is specified. Attacks can be developed with this information.
+Many network printers and high-performance copiers have built-in web servers for easier administration. However, convenience comes with additional risks: often the web interface is neglected during configuration, allowing internal or even external users to manipulate printer configuration and usage. For example, any user could intentionally or unintentionally delete print jobs from others or compromise the availability of the device. Some web servers also return diagnostic data when an overlong URL is specified. Attacks can be developed with this information.
 
 ### 2 4 Abuse of the address book function
 
-Several manufacturers have implemented an address book function for integrated e-mail or fax transmission on printers, copiers and multifunction devices. If such functions are used, it is difficult to rule out that data will be forwarded unauthorized by the printer, eg. B. the Internet.
+Several manufacturers have implemented an address book function for integrated e-mail or fax transmission on printers, copiers and multifunction devices. If such functions are used, it is difficult to rule out that data will be passed through the printer without authorization, eg. B. the Internet.
 
 ### 2 5 Unencrypted printer communication
 
@@ -86,7 +84,7 @@ Before procuring printers, copiers and multifunction devices, the people respons
 
 #### SYS.4.1.A2 Suitable installation of printers, copiers and multifunction devices
 
-Printers, copiers and multifunction devices SHOULD BE set up so that only authorized users have access to them. At a minimum, they SHOULD NOT be placed in areas where there are often outside parties, not near meeting, event or training rooms. In addition, users should be made aware that no confidential documents should be left on the devices.
+Printers, copiers, and multifunction devices SHOULD BE set up so that only authorized users have access to them. At a minimum, they SHOULD NOT be placed in areas where there are often outside parties, not near meeting, event or training rooms. In addition, users should be made aware that no confidential documents should be left on the devices.
 
 #### SYS.4.1.A3 Regular update
 
@@ -98,7 +96,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.4.1.A4 Planning the Use of Printers, Copiers, and Multifunction Devices [Head of IT]
 
-Based on the concept from SYS.4.1.A1 Creation of a * basic concept for the use of printers, copiers and multifunction devices * SHOULD specific security concepts be developed for the respective subcomponents. In it, for example, general questions SHOULD be regulated. For example: Should local or network printers be used? Who is allowed to use which functions? Which guidelines should there be? Furthermore, aspects SHOULD be regulated like
+Based on the concept from SYS.4.1.A1 Creation of a * basic concept for the use of printers, copiers and multifunctional devices * SHOULD specific security concepts be developed for the respective subcomponents. In it, for example, general questions SHOULD be regulated. For example: Should local or network printers be used? Who is allowed to use which functions? Which guidelines should there be? Furthermore, aspects SHOULD be regulated like
 
 * Document access,
 * Patching the devices,
@@ -124,7 +122,7 @@ Printers, copiers, and multifunction devices rely on consumer goods such as pape
 
 #### SYS.4.1.A9 Logging on printers, copiers and multifunction devices
 
-Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which time periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those in charge should comply with applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
+Activities on printers, copiers and multifunction devices SHOULD be logged. It SHOULD be tuned, what is logged, where this is stored and who evaluates this in which periods. Only authorized persons SHOULD have access to the logged information. When evaluating the logs, those in charge should comply with applicable laws and regulations, such as privacy. Unauthorized persons should NOT be able to access the log data. In addition, it should be ensured that all devices have a correct system time.
 
 #### SYS.4.1.A10 Use of network-capable document scanners
 
@@ -146,7 +144,7 @@ Before * disposing, returning or replacing printers, copiers and multifunction d
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.4.1.A14 Authentication for printers, copiers and multifunction devices (CI)
 
@@ -159,78 +157,9 @@ Furthermore, it should be ensured by suitable mechanisms that deleted data from 
 
 #### SYS.4.1.A16 Emergency Preparedness for Printers, Copiers and Multifunction Devices
 
-The downtime of printers, copiers and multifunction devices SHOULD be as low as possible. Therefore, with higher protection needs, among other things
+The downtime of printers, copiers and multifunction devices SHOULD be as low as possible. Therefore, with higher protection needs, among others
 
 * Have spare equipment ready,
 * in maintenance contracts to ensure a reasonable response time,
 * keep a list of resellers to quickly find replacement parts or parts; and
 * If necessary, spare parts that are frequently needed.
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area of ​​"printers, copiers and multifunctional devices" can be found in the following publications, among others:
-
-* #### [ACSD] Privacy and security in print infrastructures
-
-  
-
- mc² management consulting GmbH, 12.2016 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/partner/161219\_mc2\_drucker\_sicherheit.pdf](https://www.allianz-fuer -cybersicherheit.de/ACS/DE/_/partner/161219_mc2_drucker_sicherheit.pdf)
-
- 
-* #### [CERT] Information about vulnerabilities and vulnerabilities in printers and related services, alert and information service
-
-  
-
- CERT-Bund, (last accessed on 28.09.2017)
- <Https://www.cert-bund.de/search>
-
- 
-* #### [CSE015] Network-connected office equipment
-
-  
-
- CSE 015, V1.0, Alliance for Cybersecurity, 10.2012 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_015.html](https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_015.html)
-
- 
-* #### [CSE069] Secure passwords in embedded devices
-
-  
-
- CSE 069, V1.0, Alliance for Cyber ​​Security from 12.2013 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_069.html](https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_069.html)
-
- 
-* #### [NIST80053] Security and Privacy Controls for Federal Information Systems and Organizations
-
-  
-
- Special Publication 800-53, Revision 4, NIST, 04.2013 <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-* #### [PP0058] IEEE Standard Protection Profiles for Hardcopy Devices in IEEE Std 2600-2008
-
-  
-
- Operational Environment B, IEEE Std 2600.2-2009, IEEE Computer Society, Information Assurance (C / IA) Committee, BSI-CC-PP-0058-2010, 07.2010
- [https://www.bsi.bund.de/SharedDocs/Zertifikate\_CC/PP/aktuell/PP\_0058.html](https://www.bsi.bund.de/SharedDocs/Zertifikate_CC/PP/aktuell/ PP_0058.html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Printer, Copier and Multifunction Device" module.
-
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.27 Resource shortage
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.37 denying actions
-* G 0.39 Malware
-The cross reference tables can be found in the download area due to their size.

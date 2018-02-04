@@ -1,4 +1,20 @@
-### 3.1 Basic requirements
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Failure of a wide area network (WAN)
+### 2 2 Missing or inadequate information security regulations
+### 2 3 Inappropriate access, access and access rights management
+### 2 4 Missing or inadequate testing and approval process
+### 2 5 Unsecured file and disk transport
+### 2 6 Insufficient information security management at the outsourcing service provider
+### 2 7 Inadequate contractual arrangements with an outsourcing customer
+### 2 8 Insufficient regulations for the end of an outsourcing
+### 2 9 Inadequate emergency preparedness concept for outsourcing
+### 2 10 Failure of the systems of an outsourcing service provider
+### 2 11 Weaknesses in the connection to an outsourcing service provider
+### 2 12 Social Engineering
+### 2 13 Lack of multi-client capability at the outsourcing service provider
+### 3.1 Basic Requirements
 #### OPS.3.1.A1 Creation of a rough concept for the outsourcing service
 ### 3.2 Standard requirements
 #### OPS.3.1.A2 Contract Design with Outsourcing Clients [ISB Outsourcing Service Provider]

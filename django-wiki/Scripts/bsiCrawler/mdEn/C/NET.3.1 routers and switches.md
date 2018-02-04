@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -36,7 +34,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Distributed Denial of Service (DDoS)
 
-In a DDoS attack on a protected network, for example, by TCP SYN flooding or UDP packet storm, the router can fail due to the many network connections that need to be processed. This can result in certain services in the Local Area Network (LAN) becoming unavailable or the entire LAN failing.
+In a DDoS attack on a protected network, for example by TCP SYN flooding or UDP packet storm, the router can fail due to the many network connections that need to be processed. This can result in certain services in the Local Area Network (LAN) becoming unavailable or the entire LAN failing.
 
 ### 2 2 Manipulation
 
@@ -55,7 +53,7 @@ Many institutions plan and design the use of routers and switches incorrectly. A
 
 ### 2 6 Incompatible active network components
 
-Compatibility problems can arise in particular if existing networks are supplemented by active network components from other manufacturers or if networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in one network, individual subareas of the network, certain services or even the entire network can fail.
+Compatibility problems can arise in particular when existing networks are supplemented by active network components from other manufacturers or when networks are operated with network components from different manufacturers. If active network components with different implementations of the same communication method are operated together in a network, individual subareas of the network, certain services or even the entire network can fail.
 
 ### 2 7 MAC flooding
 
@@ -63,7 +61,7 @@ In MAC flooding, an attacker sends many requests with changing source MAC addres
 
 ### 2 8 spanning tree attacks
 
-In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network to rebuild the spanning tree topology through inappropriate BPDUs, causing the network to fail.
+In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network to rebuild the spanning tree topology, causing the network to fail due to incorrect BPDUs.
 
 ### 2 9 GARP attacks
 
@@ -99,9 +97,9 @@ It MUST be taken care that patches and updates are obtained only from trustworth
 
 It must be regulated, who may access a router or switch. ONLY ONCE as many access rights must be granted as are required for the respective tasks (minimum principle). Unused user accounts MUST be removed. It MUST be ensured that administrator rights (or root rights) are only used when necessary.
 
-#### NET.3.1.A4 Protection of the administration interfaces
+#### NET.3.1.A4 Protection of administration interfaces
 
-All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from non-trusted networks.
+All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
 
 To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
@@ -110,7 +108,7 @@ All services not required for the management interface MUST be deactivated. If a
 #### NET.3.1.A5 Protection against fragmentation attacks
 
 At the router and Layer 3 switch, protections MUST be enabled to fend off both IPv4 and IPv6 fragmentation attacks.
-#### NET.3.1.A6 Emergency Access to Routers and Switches
+#### NET.3.1.A6 Emergency access to routers and switches
 
 It MUST always be possible for administrators to directly access routers and switches so that they can continue to be administered locally, even if the entire network fails.
 
@@ -135,15 +133,15 @@ The most important operational tasks of a router or switch MUST be suitably docu
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​routers and switches. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are state of the art in the area of ​​routers and switches. They SHOULD be implemented in principle.
 
 #### NET.3.1.A10 Creation of a Security Policy [Information Security Officer (ISB)]
 
-On the basis of the institution's general security policy, a specific security policy SHOULD be created in which comprehensible requirements and specifications are described, how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked regularly to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
+On the basis of the institution's general security policy, a specific security policy SHOULD be created that comprehensibly describes requirements and requirements for how routers and switches can be operated safely. The policy SHOULD be known to all administrators and fundamental to their work. If the policy is changed or deviated from the requirements, this should be agreed and documented with the ISB. It SHOULD be checked on a regular basis to see if the directive is still correctly implemented. The results SHOULD be suitably documented.
 
 #### NET.3.1.A11 Obtain a router or switch
 
-Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the institution's desired level of safety can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
+Before routers or switches are procured, a list of requirements SHOULD be created to evaluate the products available on the market. It SHOULD be ensured that the level of security sought by the institution can be achieved with the equipment to be procured. Therefore, the basis for procurement SHOULD be the requirements of the security guideline.
 
 #### NET.3.1.A12 Creation of a configuration checklist for routers and switches
 
@@ -213,98 +211,8 @@ The realization of a high-availability solution MUST NOT hamper the operation of
 
 #### NET.3.1.A27 Bandwidth Management for Critical Applications and Services (A)
 
-To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help them discover applications and prioritize bandwidth.
+To ensure bandwidth management for critical applications and services, routers and switches should include and deploy features that help identify applications and prioritize bandwidth.
 
 #### NET.3.1.A28 Use of certified products (CI)
 
 Routers and switches should be deployed with a Common Criteria security evaluation, at least EAL4 level.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the area of ​​"routers and switches" can be found in the following publications, among others:
-
-* #### [8021AD] IEEE 802.1ad
-
-  
-
- Provider Bridges, 2006
- <Http://www.ieee802.org/1/pages/802.1ad.html>
-
- 
-* #### [8021AE] IEEE 802.1AE
-
-  
-
- Media Access Control (MAC) Security, 2006
- <Http://www.ieee802.org/1/pages/802.1ae.html>
-
- 
-* #### [ISI] BSI Internet Security Standards (Isi Series)
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-Reihe\_node.html](https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ ISi series / ISi Reihe_node.html)
-
- 
-* #### [NIST80046] NIST Special Publication 800-46 Revision 2
-
-  
-
- Guide to Enterprise Telework, Remote Access and Bring Your Own Device (BYOD) Security, NIST, 07.2016
- <Http://dx.doi.org/10.6028/NIST.SP.800-46r2>
-
- 
-* #### [RFC6165] Extensions to IS-IS for Layer-2 Systems
-
-  
-
- RFC, 2011
- <Https://tools.ietf.org/html/rfc6165>
-
- 
-* #### [RFC7348] Virtual Extensible Local Area Network (VXLAN)
-
-  
-
- A Framework for Overlaying Virtualized Layer 2 Networks over Layer 3 Networks, 2014
- <Https://tools.ietf.org/html/rfc7348>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Routers and Switches" block.
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.11 Failure or disruption of service providers
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.40 Denial of Service
-* G 0.42 Social engineering
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

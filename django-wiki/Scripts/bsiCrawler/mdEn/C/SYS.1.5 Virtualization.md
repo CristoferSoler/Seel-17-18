@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -39,7 +37,7 @@ The following specific threats and vulnerabilities are of particular importance 
 A virtualization server enables the operation of virtual IT systems, integrates the systems in the data center and controls their connection to other infrastructure elements, eg. B. networks and storage networks. Failure to plan how to integrate the virtualization servers technically and organizationally into the existing infrastructure can result in responsibilities for different areas not being clearly defined, such as: For applications, operating systems and network components. Furthermore, the responsibilities of different areas may overlap, or there may be no appropriate rights structure to separate administrative accesses for the different areas.
 ### 2 2 Incorrect virtualization configuration
 
-Virtualization changes the way servers are provisioned. Resources such as CPU, RAM, network connectivity, and storage are typically configured centrally through a management system and are no longer dictated by hardware and cabling. This can lead to faster configuration errors. If, for example, a highly vulnerable virtual IT system is incorrectly placed in an external DMZ, this can be accessed from the Internet and thus exposed to an increased risk.
+Virtualization changes the way servers are provisioned. Resources such as CPU, RAM, network connectivity, and storage are typically configured centrally through a management system and are no longer dictated by hardware and cabling. This can lead to faster configuration errors. If, for example, a highly vulnerable virtual IT system is mistakenly placed in an external DMZ, it can be reached from the Internet and thus be exposed to an increased risk.
 
 ### 2 3 Insufficient resources for virtual IT systems
 
@@ -51,7 +49,7 @@ Bottlenecks can not only affect the storage space on hard disks or in storage ne
 
 A snapshot can be used to freeze and secure the state of a virtual machine. If such a snapshot is restored at a later time, any changes made in the meantime will be lost. As a result, already patched security vulnerabilities can be open again. In addition, open files, file transfers, or database transactions can result in inconsistent data at the time of the snapshot.
 
-In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main storage are also backed up to disk and can be recovered and analyzed in a virtual environment outside of the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
+In addition, attackers can use snapshots to gain unauthorized access to the data of a virtual IT system. Because if the snapshot was taken on the fly, the contents of main memory are also backed up to disk and can be recovered and analyzed in a virtual environment outside the original IT infrastructure. Likewise, snapshots can become very large and thus the storage capacity can be scarce.
 
 ### 2 5 Failure of the management server for virtualization systems
 
@@ -91,7 +89,7 @@ Virtual IT systems SHOULD be configured and protected according to the security 
 
 #### SYS.1.5.A4 Secure configuration of a network for virtual infrastructures
 
-It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It also MUST be ruled out that unwanted network connections can be established via virtual IT systems that are connected to multiple networks.
+It MUST be ensured that existing security mechanisms (eg firewalls) and monitoring systems can not be circumvented by virtual networks. It MUST also be excluded that unwanted network connections can be established via virtual IT systems connected to multiple networks.
 
 Network connections between virtual IT systems and physical IT systems, as well as virtual security gateways, SHOULD be configured according to the institution's security policies.
 
@@ -165,15 +163,15 @@ The operating state of the virtual infrastructure SHOULD be monitored. It SHOULD
 
 Furthermore, the configuration files of the virtual IT systems SHOULD regularly be checked for unauthorized changes. It should also be monitored whether the virtual networks are correctly assigned to the respective virtual IT systems.
 
-When configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
+If configuration changes are made to the virtualization infrastructure, they SHOULD be tested or tested before they are implemented.
 
-#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, IT Leaders, Network Leaders]
+#### SYS.1.5.A18 Training Virtual Site Administrators [Supervisors, Head of IT, Heads of Networks]
 
 All administrators of the virtual environment SHOULD be adequately trained. The training course SOLLTE teaches how virtual infrastructures can be safely set up and operated.
 
 #### SYS.1.5.A19 Regular audits of the virtualization infrastructure
 
-It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be documented comprehensibly. Deviations SHOULD be corrected.
+It SHOULD be routinely audited whether the current state of the virtual infrastructure complies with the state defined in the planning and whether the configuration of the virtual components complies with the given default configuration. The audit results SHOULD be traceable documented. Deviations SHOULD be corrected.
 
 ### 3.3 Requirements for increased protection requirements
 
@@ -213,57 +211,3 @@ It SHOULD use certified EAL 4 or higher virtualization software.
 #### SYS.1.5.A28 Encryption of virtual IT systems (CI)
 
 All virtual IT systems SHOULD be encrypted.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the area of ​​"virtualization" can be found in the following publications, among others:
-
-* #### [CSE113] CSE-113: Server virtualization
-
-  
-
- CSE-113: Server Virtualization, BSI Cyber ​​Security Release, 03.2015
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_113.htm](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_113.htm)
-
- 
-* #### [ISFSY13] Information Security Forum (ISF)
-
-  
-
- especially Area SY1.3 - Virtual Servers, 06.2016
-
- 
-* #### [NIST800125] NIST Special Publication (SP) 800-125, Guide to Security for Full Virtualization Technologies, 01-2011
-
-  
-
- <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-125.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "virtualization" building block.
-
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

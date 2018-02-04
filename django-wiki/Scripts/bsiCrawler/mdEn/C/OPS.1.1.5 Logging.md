@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -21,14 +19,14 @@ The present module only considers general aspects that are necessary for adequat
 
 Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. B. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
 
-The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): both aspects are not dealt with in the logging module, or only in passing.
+The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): Both aspects are not dealt with in the Logging module, or only in passing.
 
 Guidelines on how to deal with personal data are regulated in the module CON.2 * Privacy *. How long and extensive logging data must be archived is also explained in the module OPS.1.1.2 * Archiving *.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the area of ​​logging:
+The following specific threats and vulnerabilities are of particular importance in logging:
 
 ### 2 1 Missing or insufficient logging
 
@@ -64,7 +62,7 @@ If IT systems in an information network no longer provide the necessary logging 
 
 ### 2 8 Insufficiently sized logging infrastructure
 
-Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a large number of logging data must be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only insufficiently evaluated and security incidents remain undetected.
+Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a great deal of logging data has to be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only inadequately evaluated and security incidents remain undetected.
 
 3 requirements
 ---------------
@@ -77,9 +75,9 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
 
-Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what should be logged. The nature and extent of the logging should be based on the protection requirements of the information.
+Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what to log. The nature and extent of the logging should be based on the protection requirements of the information.
 
-The guideline MUST be compiled by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
+The guideline MUST be prepared by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
 
 #### OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
 
@@ -133,7 +131,7 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### OPS.1.1.5.A11 Increase Logging Scope (CIA)
 
-With increased protection requirements of applications or IT systems, the amount and type of logged events SHOULD be extended so that security-relevant incidents can be traced as completely as possible.
+With increased protection requirements of applications or IT systems, the amount and type of logged events SHOULD be extended so that security-related incidents can be traced as completely as possible.
 
 In order to enable a real-time evaluation of the logging data, the logging data from the logging IT systems and applications SHOULD be stored centrally at shorter intervals (see also OPS.1.1.5.A6 * Structure of a central logging infrastructure *). The logging SHOULD enable an evaluation over the entire information network.
 
@@ -145,59 +143,3 @@ In order to transfer logging data securely, they SHOULD be encrypted. Furthermor
 #### OPS.1.1.5.A13 Fault-tolerant Logging Systems [Information Security Officer (ISB)] (A)
 
 With increased protection requirements, a highly available logging infrastructure SHOULD be set up.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"logging" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "logging" block.
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.40 Denial of Service
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

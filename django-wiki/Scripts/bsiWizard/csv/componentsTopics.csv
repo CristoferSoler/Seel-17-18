@@ -1,80 +1,80 @@
-APP.1.1 Office Products,office,product,document,business,institution,requirement,function,result,lack,integrity
-APP.1.2 Web browser,browser,data,malicious,security,extension,function,operating,authentication,error,encryption
-APP.2.1 General Directory Service,service,directory,lead,data,example,planning,administration,security,failure,addition
-APP.2.2 Active Directory,domain,additional,attacker,security,service,system,active,general,gain,attack
-APP.3.1 Web applications,web,attacker,session,error,management,example,development,data,access,security
-APP.3.2 Webserver,server,web,service,attack,error,ddos,website,content,regulation,attacker
-APP.3.3 Fileserver,server,data,system,storage,access,network,concept,time,malicious,centrally
-APP.3.4 Samba,lead,file,samba,samba,server,example,administration,data,option,app
-APP.3.6 DNS server,dns,request,domain,hijacking,address,system,internal,overloaded,advertising,incorrect
-APP.4.3 Relational Database Systems,database,system,attacker,data,sql,management,example,script,configuration,incorrectly
-APP.5.1 General Groupware,groupware,application,system,example,access,error,service,malicious,message,service
-APP.5.2 Microsoft Exchange and Outlook,microsoft,exchange,security,access,outlook,connector,incorrect,browser,unauthorized,service
-CON.1 crypto concept,key,cryptographic,data,product,example,certificate,person,access,longer,encryption
-CON.2 Privacy,data,protection,requirement,institution,service,measure,fundamental,personal,standard,model
-CON.3 data backup concept,data,backup,institution,protection,damage,requirement,example,missing,concept,institution
-CON.4 Selection and use of standard software,software,standard,incorrect,process,requirement,result,lead,access,institution,license
-CON.5 Development and use of professional applications,access,security,application,error,mechanism,data,requirement,planning,management,integrity
-CON.6 Delete and destroy,file,access,data,medium,stored,deleted,paging,party,disposal,disk
-CON.7 Information security on trips abroad,abroad,destination,institution,foreign,security,data,device,requirement,traveling,address
-DER.1 Detection of safety-relevant events,event,system,access,security-related,attack,alarm,error,responsible,penetrate,institution
-DER.2.1 Treatment of security incidents,security,incident,example,handling,data,damage,emergency,confidential,software,file
-DER.2.2 Provision for IT forensics,forensics,data,security,forensic,investigation,forensically,incident,der,system,responsible
-DER.2.3 Clearance of far-reaching security incidents,attacker,attack,system,block,backdoor,incident,environment,discovered,institution,targeted
-DER.3.1 Audits and revisions,audit,security,area,institution,ism,revision,status,check,existing,correct
-DER.3.2 IS revision for federal authorities,security,measure,authority,implemented,revision,auditor,individual,agency,staff,institution
-DER.4 emergency management,emergency,process,management,task,crisis,area,longer,system,network,event
-IND.1 Operating and Control Technology,requirement,example,security,system,control,update,component,service,access,operational
-IND.2.1 General ICS Component,component,control,block,requirement,manipulated,system,security,port,interface,device
-IND.2.2 Programmable Logic Controller (PLC) ,system,plc,logic,function,device,programmable,plcs,type,control,output
-IND.2.3 Sensors and actuators,sensor,data,measure,control,intelligent,security,output,component,interface,lack
-IND.2.4 Machine,machine,technology,malfunction,example,control,operating,safety,ind,attacker,programming
-INF.1 General Building,example,building,system,fire,lightning,damage,requirement,unauthorized,facility,form
-"INF.10 meeting, event and training rooms",room,system,example,event,equipment,wiring,visitor,institution,people,data
-INF.2 data center and server room,data,center,insufficient,fire,server,system,power,air,room,security
-INF.3 Electrical wiring,damage,cable,cabling,socket,supply,power,insufficient,wiring,fluctuation,failure
-INF.4 IT cabling,connection,network,cable,development,damage,component,manipulation,institution,documentation,provider
-INF.7 office workplace,vandalism,office,damage,room,space,system,device,data,building,result
-INF.8 Domestic work place,office,workplace,home-based,institution,data,system,work,environment,data,unfavorable
-INF.9 Mobile Workplace,mobile,data,institution,carrier,security,example,unauthorized,observed,addition,loss
-ISMS.1 Security Management,security,management,institution,level,case,international,process,insufficient,negative,task
-NET.1.1 network architecture and design,network,security,limited,communication,area,block,net,example,attacker,additional
-NET.1.2 Network Management,network,management,logging,component,access,ops,building,communication,requirement,general
-NET.2.1 WLAN operation,wlan,point,access,network,communication,mechanism,method,security,infrastructure,authentication
-NET.2.2 Wi-Fi usage,wlan,point,network,access,measure,transmitted,communication,security,easily,wi-fi
-NET.3.1 routers and switches,network,router,switch,attacker,system,switch,device,service,operated,data
-NET.3.2 Firewall,firewall,block,network,attacker,service,protected,attack,router,order,component
-NET.3.3 VPN,network,vpn,access,data,client,attacker,security,insecure,change,insecure
-OPS.1.1.2 Proper IT Administration,system,operation,security,area,requirement,administration,incident,institution,proper,properly
-OPS.1.1.3 Patch and Change Management,change,patch,software,point,institution,process,example,distribution,operation,server
-OPS.1.1.4 Protection against malicious programs,malicious,institution,system,network,attacker,software,protection,device,block,ransomware
-OPS.1.1.5 Logging,logging,system,data,incident,relevant,stored,network,central,requirement,attack
-OPS.1.1.6 Software tests and releases,software,test,requirement,testing,data,productive,missing,technical,missing,tested
-OPS.1.2.2 Archiving,document,storage,archive,electronic,data,archived,system,term,measure,stored
-OPS.1.2.3 Information and media exchange,data,carrier,medium,transport,disk,stored,network,transmitted,secure,exchange
-OPS.1.2.4 Telework,teleworking,teleworker,institution,teleworkstation,measure,teleworkers,computer,work,employer,problem
-OPS.2.1 outsourcing for customers,outsourcing,customer,project,provider,inadequate,resource,system,requirement,employee,outsourced
-OPS.2.4 remote maintenance,system,remote,maintenance,unauthorized,component,data,user,security,administrator,third
-OPS.3.1 Outsourcing for service providers,outsourcing,customer,provider,security,access,requirement,employee,institution,client,area
-ORP.1 organization,data,access,process,carrier,example,regulation,organizational,damage,sufficient,sabotage
-ORP.2 Personal,security,employee,system,data,institution,exploited,unauthorized,personnel,access,software
-ORP.3 Sensitization and training,security,security,training,activity,measure,requirement,technical,insufficient,institution,organizational
-ORP.4 Identity and Permission Management,access,user,identity,authorization,process,management,component,security,system,conversely
-ORP.5 Compliance Management (Requirements Management) ,management,requirement,legal,addition,internal,compliance,example,contractual,e-mail,service
-SYS.1.1 General Server,service,server,system,data,application,block,resource,general,installed,operating
-SYS.1.2.2 Windows Server 2012,window,system,server,service,increase,operating,administrator,feature,result,process
-SYS.1.3 server under Unix,unix,server,system,script,addition,operating,user,scripting,time,security
-SYS.1.5 Virtualization,virtualization,system,virtual,resource,storage,management,infrastructure,environment,main,configuration
-SYS.1.8 Storage Solutions,storage,network,system,component,institution,san,attacker,solution,wwn,stored
-SYS.2.1 General Client,software,client,example,system,loss,operating,data,error,mobile,lead
-SYS.2.2.2 Clients under Windows 8.1,window,system,operating,security,data,device,application,cloud,service,error
-SYS.2.2.3 Clients on Windows 10,window,operating,service,version,security,microsoft,data,system,cloud,individual
-SYS.2.3 Clients under Unix,system,client,unix,operating,source,unix-like,malicious,block,application,addition
-SYS.3.1 Laptops,laptop,data,system,employee,mobile,addition,user,theft,version,environment
-SYS.3.2.1 General Smartphones and Tablets,device,operating,data,mobile,apps,security,version,employee,attack,software
-SYS.3.2.2 Mobile Device Management (MDM) ,device,institution,software,data,data,mobile,institution's,integrity,user,profile
-SYS.3.2.3 iOS (for Enterprise) ,device,data,access,system,store,operating,infrastructure,attack,set,integrated
-SYS.3.2.4 Android,android,operating,device,update,store,version,service,user,requirement,smartphones
-SYS.3.4 Mobile Disk,data,device,mobile,medium,security,changing,digital,exchange,mobile,addition
-"SYS.4.1 printers, copiers and multifunction devices",device,copier,printer,document,internet,printer,multifunction,read,attacker,dot
-SYS.4.4 General IoT device,iot,system,device,attack,surveillance,network,block,camera,video,compromised
+APP.1.1 Office Products,product,app,office,document,test,application,system,software,check,configuration
+APP.1.2 Web browser,web,browser,data,content,plug-in,malicious,version,password,server,attacker
+APP.2.1 General Directory Service,directory,service,access,app,system,policy,planning,permission,change,granted
+APP.2.2 Active Directory,domain,directory,service,dns,administrator,password,administration,policy,server,system
+APP.3.1 Web applications,application,web,access,service,user,data,attacker,operation,session,authentication
+APP.3.2 Webserver,web,server,error,app,software,data,file,isb,authentication,http
+APP.3.3 Fileserver,data,file,server,access,system,addition,raid,included,institution,mechanism
+APP.3.4 Samba,samba,file,server,system,service,access,app,setting,configuration,window
+APP.3.6 DNS server,dns,server,app,data,server,addition,domain,plan,advertising,operation
+APP.4.3 Relational Database Systems,database,data,database,app,configuration,documented,user,created,regularly,documented
+APP.5.1 General Groupware,groupware,server,system,officer,application,data,head,service,app,policy
+APP.5.2 Microsoft Exchange and Outlook,microsoft,system,exchange,server,access,exchange,connector,communication,mechanism,emergency
+CON.1 crypto concept,crypto,cryptographic,data,key,con,product,institution,longer,certificate,result
+CON.2 Privacy,data,sdm,institution,personal,party,procedure,privacy,high,model,measure
+CON.3 data backup concept,data,con,storage,informed,lost,system,created,operation,volume,head
+CON.4 Selection and use of standard software,software,con,data,product,license,created,installation,ensure,access,institution
+CON.5 Development and use of professional applications,application,operation,data,mechanism,con,concept,specialized,service,process,specialist
+CON.6 Delete and destroy,destruction,data,institution,con,provider,regulation,employee,system,process,guideline
+CON.7 Information security on trips abroad,data,mobile,system,institution,operation,abroad,user,addition,sensitive,business
+DER.1 Detection of safety-relevant events,detection,data,event,addition,system,security-relevant,der,network,employee,evaluated
+DER.2.1 Treatment of security incidents,incident,der,employee,institution,team,emergency,head,external,damage,policy
+DER.2.2 Provision for IT forensics,forensic,data,der,incident,provider,created,service,data,system,checksum
+DER.2.3 Clearance of far-reaching security incidents,attack,system,attacker,access,incident,cleanup,der,network,forensic,institution
+DER.3.1 Audits and revisions,audit,team,result,der,review,inspection,document,auditor,ism,revision
+DER.3.2 IS revision for federal authorities,audit,revision,authority,plan,der,result,federal,reference,team,implementation
+DER.4 emergency management,emergency,management,resource,der,institutional,organizational,process,failure,officer,checked
+IND.1 Operating and Control Technology,component,system,zone,process,software,access,control,data,service,concept
+IND.2.1 General ICS Component,component,system,ind,industrial,access,maintenance,administrator,addition,operator,mechanism
+IND.2.2 Programmable Logic Controller (PLC) ,plc,controller,interface,logic,user,programmable,function,addition,communication,assigned
+IND.2.3 Sensors and actuators,sensor,addition,measure,protected,calibration,interface,ind,wireless,procurement,environmental
+IND.2.4 Machine,maintenance,machine,access,agreed,ind,protected,defined,technology,builder,service
+INF.1 General Building,building,inf,area,officer,access,key,natural,burglary,safety,person
+"INF.10 meeting, event and training rooms",room,system,training,inf,confidential,event,addition,presentation,computer,sensitive
+INF.2 data center and server room,data,area,fire,regularly,access,planning,power,technical,service,employee
+INF.3 Electrical wiring,cable,documentation,supply,inf,power,strip,cabling,wiring,network,functional
+INF.4 IT cabling,cabling,connection,cable,documentation,cable,current,network,inf,basically,listening
+INF.7 office workplace,room,inf,office,data,employee,staff,locked,access,door,workplace
+INF.8 Domestic work place,workplace,document,data,employee,institution,inf,access,system,software,official
+INF.9 Mobile Workplace,system,workstation,mobile,employee,addition,environment,inf,user,workplace,third-party
+ISMS.1 Security Management,institution,measure,process,management,ism,officer,business,organizational,informed,task
+NET.1.1 network architecture and design,network,net,connection,segment,firewall,architecture,separation,internet,element,system
+NET.1.2 Network Management,management,network,component,solution,access,logging,authentication,system,infrastructure,secure
+NET.2.1 WLAN operation,wlan,access,communication,point,lan,network,addition,infrastructure,system,intrusion
+NET.2.2 Wi-Fi usage,wlan,point,policy,user,network,access,radio,user,net,transmitted
+NET.3.1 routers and switches,switch,router,network,net,service,administration,policy,protocol,entire,configuration
+NET.3.2 Firewall,net,service,network,firewall,system,management,filter,ipv,application,proxy
+NET.3.3 VPN,vpn,network,user,net,access,attacker,configuration,client,provider,doe
+OPS.1.1.2 Proper IT Administration,system,task,ops,administration,access,administrative,employee,responsibility,measure,area
+OPS.1.1.3 Patch and Change Management,management,change,patch,request,software,data,system,business,mechanism,release
+OPS.1.1.4 Protection against malicious programs,program,institution,system,file,malicious,virus,product,infection,untrusted,concept
+OPS.1.1.5 Logging,logging,data,system,application,ops,relevant,incident,isb,addition,lead
+OPS.1.1.6 Software tests and releases,software,release,test,test,tester,inadequate,data,ops,installation,error
+OPS.1.2.2 Archiving,archive,data,archiving,head,medium,document,electronic,ops,archived,stored
+OPS.1.2.3 Information and media exchange,data,medium,carrier,user,exchange,shipping,system,key,network,encryption
+OPS.1.2.4 Telework,teleworking,safety,ops,teleworkers,work,teleworker,computer,software,telework,purpose
+OPS.2.1 outsourcing for customers,service,outsourcing,outsourcing,change,project,exist,data,ops,access,lead
+OPS.2.4 remote maintenance,remote,maintenance,system,ops,operation,third,data,network,internal,unauthorized
+OPS.3.1 Outsourcing for service providers,outsourcing,service,data,provider,customer,access,isb,contractual,management,provided
+ORP.1 organization,unauthorized,access,equipment,employee,data,head,vandalism,control,orp,sufficient
+ORP.2 Personal,employee,regulation,system,personnel,access,employee,process,employee,departure,representation
+ORP.3 Sensitization and training,training,employee,awareness,institution,incident,program,order,target,measure,insufficient
+ORP.4 Identity and Permission Management,identity,access,user,orp,authorized,administrator,leader,central,control,head
+ORP.5 Compliance Management (Requirements Management) ,compliance,orp,legal,compliance,management,process,officer,employee,cryptographic,regulation
+SYS.1.1 General Server,server,data,installation,software,access,user,general,regularly,error,task
+SYS.1.2.2 Windows Server 2012,window,server,system,operating,attacker,virtual,data,configuration,system,cloud
+SYS.1.3 server under Unix,system,unix,server,sys,linux,additional,file,directory,software,profile
+SYS.1.5 Virtualization,virtual,virtualization,network,storage,management,resource,machine,hardware,access,failure
+SYS.1.8 Storage Solutions,storage,solution,access,component,system,sys,institution,replication,data,emergency
+SYS.2.1 General Client,system,client,data,installation,component,application,stored,software,camera,access
+SYS.2.2.2 Clients under Windows 8.1,window,sys,user,application,disabled,policy,access,operating,cloud,window
+SYS.2.2.3 Clients on Windows 10,system,window,user,policy,access,client,microsoft,sys,application,disabled
+SYS.2.3 Clients under Unix,operating,sys,application,system,unix,user,client,installed,malicious,boot
+SYS.3.1 Laptops,laptop,system,data,user,institution,sys,device,synchronization,malicious,program
+SYS.3.2.1 General Smartphones and Tablets,device,sys,mobile,institution,operating,data,update,tablet,configuration,mobile
+SYS.3.2.2 Mobile Device Management (MDM) ,mobile,mdm,system,data,device,institution,device,service,institution's,terminal
+SYS.3.2.3 iOS (for Enterprise) ,sys,data,configuration,device,apple,mdm,apps,access,user,option
+SYS.3.2.4 Android,android,apps,access,sys,device,data,malicious,regularly,store,version
+SYS.3.4 Mobile Disk,carrier,data,mobile,sys,observed,system,storage,loss,institution,device
+"SYS.4.1 printers, copiers and multifunction devices",printer,device,multifunction,access,document,concept,sys,protected,time,configuration
+SYS.4.4 General IoT device,device,network,iot,configuration,directly,radio,attack,control,installation,isb

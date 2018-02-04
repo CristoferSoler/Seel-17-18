@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -17,7 +15,7 @@ This module aims to secure Active Directory in the regular operation of an insti
 
 ### 1.3 Delimitation
 
-This module considers the threats and measures specific to Active Directory. General security recommendations for directory services can be found in the module APP.2.1 General directory service. The general measures described there are specified and supplemented in the present module. This module does not repeat the requirements for securing the operating systems of the servers and clients used for the operation and management of the AD (eg SYS.1.2.2 Windows Server 2012 or SYS.2.2.3 client under Windows 10) and the underlying network infrastructure. Even processes such as data backup and patch management are treated only to the extent that special features are to be considered in the field of AD.
+This module considers the threats and measures specific to Active Directory. General security recommendations for directory services can be found in the module APP.2.1 General directory service. The general measures described there are specified and supplemented in the present module. This module does not repeat the requirements of securing the operating systems of the servers and clients used for the operation and administration of the AD (eg SYS.1.2.2 Windows Server 2012 or SYS.2.2.3 client under Windows 10) and the underlying network infrastructure. Even processes such as data backup and patch management are treated only to the extent that special features are to be considered in the field of AD.
 
 2 risk situation
 -----------------
@@ -26,16 +24,16 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Insufficient planning of safety limits
 
-An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. The forest thus represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
+An AD instance creates a Forest as a top-level container for all domains of that instance. A forest can contain one or more domain container objects that share a common logical structure, global catalog, schema, and automatic transitive trust relationships. So the forest represents the security boundary within which information is passed by default in the AD, not a single tree. If these boundaries are not planned consciously and in a structured manner, it can happen that information flows off unintentionally and the security concept of the institution fails. Therefore, it may be necessary to build more forests if different security requirements apply to parts of the infrastructure. However, this adds complexity in setup and administration.
 
 ### 2 2 Too many or too lax relationships of trust
-If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, when the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
+If trust relationships between forests and domains are not regularly evaluated to determine whether they are still needed and justified, if they are of the correct type (ie, whether a two-way trust relationship is really necessary) and if the security controls are sufficient to ensure that they are guaranteed Issues with permissions occur and information flows away. In particular, if the default active SID (Security Identifier) ​​filtering is disabled, complex, hard-to-see vulnerabilities can occur. The same applies to the waiver of selective authentication in trust relationships between Forests.
 
 ### 2 3 Lack of security features due to older operating systems and domain functional level
 
 Every new generation of the Windows Server operating system brings additional security features and enhancements to AD. In addition, the default settings are usually set more and more secure with each new release. Some of them are usable once the new system is installed, others only when the domain / forest functional level has been raised. The use of older operating systems as a (primary) domain controller or obsolete domain functional level thus prevents the use of modern security functions and increases the risk of unsafe default settings. An insecurely configured domain jeopardizes the information processed in it and facilitates attacks by third parties.
 
-### 2 4 Operating Other Roles and Services on Domain Controllers
+### 2 4 Operating additional roles and services on domain controllers
 
 Any additional domain controller-side service, other than the AD itself, as well as less essential ancillary services such as DNS, increases the attack surface of these core infrastructure components through potential additional vulnerabilities and misconfigurations. These can be abused consciously or unconsciously, for. B. to copy information unauthorized or change.
 
@@ -56,11 +54,11 @@ It has to be assumed that malicious code reaches different systems such as norma
 
 ### 2 9 Lack of supervision of privileged group membership
 
-In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads attackers to have more and more opportunities to gain and abuse additional privileges.
+In most institutions, the number of accounts with administrative rights is steadily growing and is rarely or never adjusted. This violates the principle of least privilege and leads to more and more opportunities for attackers to gain and abuse additional privileges.
 
 ### 2 10 Too powerful or poorly secured service accounts
 
-Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Since the credentials of a service running in the context of a service account are held in the LSASS's protected memory, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
+Application software vendors sometimes require DA privileges on service accounts to simplify testing and deploying their products, although significantly fewer rights would be required to operate. The additional rights of the service account can be exploited by attackers to move on to the domain. Because the credentials of a service running in the context of a service account are held in LSASS's protected storage, the attacker can extract them there. For example, a single low-security service account can compromise the entire domain.
 
 In particular, this applies if the service account is secured with a weak password. For an attacker can easily request a TGS (Ticket Granting Service) ticket when using Kerberos authentication, in which the password of the service account is processed, and the latter offline break brute force.
 
@@ -127,7 +125,7 @@ The number of Active Directory service administrators and data administrators MU
 The default account "Administrator" SHOULD be renamed and an unprivileged account named "Administrator" SHOULD be created. Everyday, non-administrative tasks MUST be done with unprivileged user accounts.
 
 It MUST be ensured that the administration of service administrator accounts is done exclusively by members of the service administrator group. The group "Account Operators" SHOULD be empty.
-Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Enterprise Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
+Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Organization Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
 
 The workstations for the administration of Active Directory MUST be adequately secured. For remote administration of the domain controllers, the traffic MUST be properly encrypted.
 
@@ -184,108 +182,4 @@ The administration of Active Directory SHOULD be restricted to dedicated adminis
 
 #### APP.2.2.A15 Separation of administration and production environment (CIA)
 
-Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust towards the production forest.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the "Active Directory" area can be found in the following publications, among others:
-
-* #### [ADRL] AD Reading Library
-
-  
-
- With further literature from the AD Security Blog, (last accessed on 28.09.2017)
- [https://adsecurity.org/page\_id=41] (https://adsecurity.org/page_id=41)
-
- 
-* #### [ADSB] Active Directory Security Blog
-
-  
-
- Sean Metcalf, (last accessed on 28.09.2017)
- [https://adsecurity.org] (https://adsecurity.org)
-
- 
-* #### [ADSR] List of security resources
-
-  
-
- AD Security Blog (last accessed on 28.09.2017)
- [Https://adsecurity.org/page\_id=399](https://adsecurity.org/page_id=399)
-
- 
-* #### [ESAE] Enhanced Security Administrative Environment
-
-  
-
- Microsoft TechNet (last accessed on 28.09.2017)
- <Https://docs.microsoft.com/de-de/windows-server/identity/securing-privileged-access/securing-privileged-access>
-
- 
-* #### [PAW] Privileged Access Workstations
-
-  
-
- Microsoft TechNet, 04.2016
- [http://download.microsoft.com/download/9/3/9/9392A4D2-D530-4344-8447-4A7CF1C01AEE/Privileged%20Access%20Workstation\_Datasheet.pdf](http://download.microsoft.com/ download / 9/3/9 / 9392A4D2-D530-4344-8447-4A7CF1C01AEE / Privileged% 20Access 20Workstation_Datasheet.pdf%)
-
- 
-* #### [TN283324] Entry Point Active Directory for Windwos Server 2012 (R2)
-
-  
-
- Microsoft TechNet, (last accessed on 28.09.2017)
- [https://technet.microsoft.com/en-us/library/dn283324.aspx] (https://technet.microsoft.com/en-us/library/dn283324.aspx)
-
- 
-* #### [TN378801] Active Directory entry point for Windows Server 2008 R2
-
-  
-
- Microsoft TechNet, 05.2009
- <Https://technet.microsoft.com/en-us/library/dd378801.aspx>
-
- 
-* #### [TNAD] Entry point for Active Directoy for Windows Server currently
-
-  
-
- Microsoft TechNet
- https://technet.microsoft.com/en-us/windows-server-docs/identity/ad-ds/active-directory-domain-services
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Active Directory" block.
-
-* G 0.11 Failure or disruption of service providers
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.33 Personnel loss
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.42 Social engineering
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust in the direction of the production forest.

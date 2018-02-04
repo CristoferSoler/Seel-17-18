@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -9,7 +7,7 @@ Table of content
 
 Wireless LANs (WLANs) can be used to set up wireless local area networks or extend existing wired networks. To date, almost all WLAN components available on the market are based on the IEEE 802.11 standard and its additions. A special role is played by the manufacturer consortium Wi-Fi Alliance, which has created an industry standard based on the IEEE 802.11 standard with "Wi-Fi". The Wi-Fi Alliance confirms with the Wi-Fi seal of approval that a device has passed certain interoperability and conformance tests.
 
-All users (including management of the institution) must be informed about WLAN basics and sensitized to possible dangers that may arise if WLANs are used improperly. They must have the necessary knowledge to properly understand and apply safety measures. In particular, they must be aware of what is expected of them in terms of information security and how they should react in certain situations when using WLANs.
+All users (including management of the institution) must be informed about WLAN basics and sensitized to possible dangers that may arise if WLANs are used improperly. They must have the necessary knowledge to properly understand and apply safety measures. In particular, they must be aware of what is expected of them in terms of information security and how they should respond to the use of WLANs in certain situations.
 
 ### 1.2 Life cycle
 
@@ -40,7 +38,7 @@ The following measures should be implemented as a priority:
 
 #### NET.2.2.M1 Creation of a user policy for WLAN [Head IT]
 
-In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the core issues to make sure that WLANs are safe. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
+In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key aspects of how to use WLANs safely. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
 
 * with which internal and external networks the WLAN clients may be connected,
 * Under what conditions you are allowed to log in to internal or external WLANs,
@@ -63,14 +61,14 @@ Today almost every employee is equipped with a mobile device and can connect to 
 
 Sensitization, especially of users who are allowed to access confidential information, should be practiced and supported by means of practical examples.
 
-A special hazard for the WLAN clients exists when public radio networks (so-called hotspots) are used. Hotspots often use no or only weak security mechanisms to give customers straightforward access. As a result, transmitted information can usually be easily intercepted. If hotspots are to be used for the dial-in to the institution or if confidential information is to be transmitted to them, the users must be specifically trained in the use of the hotspot and implement appropriate measures. For example, they must make sure that all connections are properly encrypted. Any suspicion of alerts or redirects to IT systems that are not part of the institution must be considered to be a security incident.
+A special hazard for the WLAN clients exists when public radio networks (so-called hotspots) are used. Hotspots often use no or only weak security mechanisms to give customers straightforward access. As a result, transmitted information can usually be easily intercepted. If hotspots are to be used for the dial-in to the institution or if confidential information is to be transmitted to them, users must be specifically trained in the use of hotspots and implement appropriate measures. For example, they must make sure that all connections are properly encrypted. Any suspicion of alerts or redirects to IT systems that are not part of the institution must be considered to be a security incident.
 
 It must be clear to users that using WLANs greatly enhances mobility, but it also carries risks as attackers may be out of the field of view or suspected spatial WLAN coverage.
 
 #### NET.2.2.M3 Securing WLAN Usage in Unsafe Environments [IT Operations]
-Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, train stations and convention centers.
+Hotspots are a limited radio area. Most hotspots are explicitly built so that they can be used by foreign participants. Their main purpose is usually wireless access to the Internet. Often you can find such hotspots in hotels, airports, exhibition halls, railway stations and convention centers.
 
-Hotspots should always be regarded as an insecure network, firstly because the level of security available there is difficult to assess from the outside, and secondly because most hotspots offer their services in the form of "shared networks". As a result, it is generally possible to access every other terminal in the network from each terminal. If the risk arising from the use of a hotspot can not be estimated, it may be considered that the use of hotspots should be completely prohibited by the WLAN security guideline.
+Hotspots should always be seen as an insecure network, firstly because the level of security available there is difficult to assess from the outside, and secondly because most hotspots offer their services in the form of "shared networks". As a result, it is generally possible to access every other terminal in the network from each terminal. If the risk arising from the use of a hotspot can not be estimated, it may be considered that the use of hotspots should be completely prohibited by the WLAN security guideline.
 
 The operators of hotspots can do a lot for the security of the radio link and other services offered by them (see NET.2.3 * Operation of Hotspots *), but without the cooperation of the users a reasonable security can not be achieved. These include the following measures:
 
@@ -170,7 +168,7 @@ Additional information on hazards and security measures in the area of ​​"WL
  [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
 
  
-* #### [TR03103] Technical Guideline Secure Wireless LAN
+* #### [TR03103] Technical Guidelines Secure Wireless LAN
 
   
 

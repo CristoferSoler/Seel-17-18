@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -11,11 +9,11 @@ In a constantly more digitized work environment, institutions supplementing or e
 
 Whether an institution wants to address the opportunities and risks of mobile devices is no longer relevant today. Because with high priority, the question must be answered, whether this dispute has not already occurred or when this happens. If an institution fundamentally decides against mobile devices, then at least the risks that could arise through the use of and interaction with private devices are to be considered.
 
-Mobile terminals are fundamentally different in procurement, operation and use than a workstation PC or server. In order to be able to operate such devices safely, it is essential to understand these differences and to incorporate this understanding into the decisions about processes and procedures.
+Mobile terminals are fundamentally different in procurement, operation and use than a workstation PC or server. In order to operate such devices safely, it is essential to understand these differences and to incorporate this understanding in the decisions about processes and procedures.
 
 For example, workstation PCs and servers can be purchased and then equipped with any operating system. The administrators can thus completely customize the devices. This is different with mobile devices. Here, the hardware is purchased along with an operating system, and with few exceptions, only the operating system provided by the manufacturer works on these devices. Thus, the institution can not control the mobile devices as usual. Even if a mobile device management (MDM) system is used, the manufacturer always has some control over the device because it controls the operating system.
 
-Also new to the operating processes is that it is no longer up to the user alone to determine updates, as the device manufacturer controls this process. For Android-based devices, the mobile service provider is often involved in this process as it often adjusts the manufacturer's updates before submitting them to their customers.
+Also new to the operating processes is that it is no longer up to the user alone to determine updates, as the device manufacturer controls this process. For Android-based devices, the mobile service provider is often involved in this process as it often adjusts the manufacturer's updates and then passes them on to their customers.
 
 The mobile service provider is an important partner for the operation of mobile devices. He not only controls the data connection to the devices, but he also configures them depending on the contract or terminal. Any mobile device with a SIM card is thus potentially remotely controlled by the mobile operator.
 
@@ -45,9 +43,9 @@ In the planning and design phase, the institution has to decide which operating 
 
 Another very important question is the extent to which users may or must install their own apps on their mobile device, whether the employees themselves may add additional apps for private use and whether they will take over part of the administration themselves.
 
-Based on the protection needs of the information (compare also the three fictional scenarios) and the possibilities of IT operation, an MDM solution should be chosen (see SYS.3.2.2.M3 Selection of an MDM product), which ensures that the data the institution are secured in accordance with the internally documented requirements.
+Based on the protection needs of the information (compare also the three fictitious scenarios) and the possibilities of IT operation, an MDM solution should be chosen (see SYS.3.2.2.M3 Selection of an MDM product), which ensures that the data the institution are secured in accordance with the internally documented requirements.
 
-The operating model of the future MDM solution is to be selected depending on the protection requirements of the mobile devices. A separate company, in which the servers of the MDM solution are installed in their own premises and thus including the data contained under the control of the institution, is possible with all solutions. Almost all MDM providers offer their solutions as a cloud variant, where the software is operated on the servers of the respective provider and the customer receives a web access, with which he can manage the applications and linked mobile devices.
+The operating model of the future MDM solution is to be selected depending on the protection requirements of the mobile devices. A separate company, in which the servers of the MDM solution are installed in their own premises and thus including the data contained under the control of the institution, is possible with all solutions. Almost all MDM providers also offer their solutions as a cloud variant, where the software is operated on the servers of the respective provider and the customer receives a web access, with which he can manage the applications and linked mobile devices.
 
 **Procurement**
 
@@ -78,7 +76,7 @@ The segregation of a server or the complete MDM solution must be documented. Inv
 
 ** Emergency Preparedness **
 
-As with all other central IT systems, an appropriate contingency plan must be created for an MDM solution. A central element of emergency preparedness is data protection, which should also include relevant areas of the operating system and security management. In the case of increased requirements for the availability of the MDM solution, redundancies can additionally be provided for.
+As with all other central IT systems, an appropriate contingency plan must be prepared for an MDM solution. A central element of emergency preparedness is data protection, which should also include relevant areas of the operating system and security management. In the case of increased requirements for the availability of the MDM solution, redundancies can additionally be provided for.
 
 As part of the emergency preparedness arrangements should be made in a cloud solution with the contractors corresponding agreements regarding the MDM solution used.
 
@@ -98,36 +96,36 @@ The basis for all further steps is the definition of a strategy that determines 
 ** May the MDM be run as a cloud service? **
 If cloud services are used, legal aspects must always be taken into account if personal data are transferred in the meaning of the Federal Data Protection Act (BDSG, § 3 (1)). Such order data processing, depending on the actual location of the data, is only possible under certain conditions (§ 11 BDSG) and also bound to a written order. If institutions do not stick to it, they violate existing law. As a result, they not only damage their reputation, but can also face claims for damages or fines.
 
-If the data protection requirements can be met by the service provider and the institution, it should be checked whether the internal business and security-relevant requirements can also be met in the case of a cloud solution. Here u. a. consider the location of the MDM provider.
+If the data protection requirements can be met by the service provider and the institution, then it should be checked whether the internal business and security-relevant requirements can be met in the case of a cloud solution. Here u. a. consider the location of the MDM provider.
 
 ** Should the MDM be operated by the institution itself? **
 
-In order to be able to answer this question, it is recommended in the first step to determine your own requirements regarding the economic, safety and data protection requirements. It is also important to answer the question of how critical it is for the institution if the MDM is partially or completely canceled. Would such an emergency be manageable? Can security incidents be detected and dealt with professionally?
+In order to be able to answer this question, it is recommended in the first step to determine your own requirements regarding the economic, security and data protection requirements. It is also important to answer the question of how critical it is for the institution if the MDM is partially or completely canceled. Would such an emergency be manageable? Can security incidents be detected and dealt with professionally?
 
 The next step should be to decide whether to integrate an internal directory service and what needs to be met.
 
 ** Which compliance requirements must be enforced? **
 
-If violations of internal regulations of the institution are to be recognized and automated actions are carried out, compliance requirements must be enforced on the mobile devices of the institution. The response to compliance violations can vary, as it depends on the protection requirements of the information and the implementation variant (* devices of the institution * or * BYOD *). Once the need has been determined, the strategy should formulate a technical implementation that meets compliance requirements for procurement and design.
+If violations of internal regulations of the institution are to be recognized and automated actions are carried out, compliance requirements must be enforced on the mobile devices of the institution. The response to compliance violations can vary, as it depends on the protection needs of the information and the implementation variant (* devices of the institution * or * BYOD *). Once the need has been determined, the strategy should formulate a technical implementation that meets compliance requirements for procurement and design.
 
 ** Which mobile devices and which operating systems must support the MDM? **
 
 In order to achieve high productivity and to support the safety-conscious handling of the users, it is recommended to make use of the existing experience of the employees with mobile terminals of the institution. The following questions should help those responsible to determine the need for the strategy:
 
-* Are mobile device users allowed to access institution information using the preferred device? Should this be done regardless of which operating system it is operated on?
+* Are mobile device users allowed to access institution information using the preferred device? Should this be done independently of which operating system it is operated on?
 * Should users be able to search for and install applications in the institution's own app store to access confidential information?
 * Should private and business information of the institution be separated and managed on the mobile device? Should this be done without affecting the existing experience of employees with mobile devices of the institution?
 * Should highly effective security measures be implemented that are invisible to the user of the mobile device?
 * Should users be supported in meeting the institution's requirements with freely selectable mobile devices and the resulting better acceptance of implemented technical safeguards?
 * What is the administration overhead if operating systems from different manufacturers are supported in various versions?
 ** Does the MDM solution have to be multi-client capable? **
-A multi-tenant MDM solution is unlikely to be necessary for smaller environments with fewer users. However, for a large number of users, the desire for separate clients can quickly arise for different reasons. Whether or not a multi-client MDM solution is necessary depends on how complex complex authorization structures can be mapped within the solution. For the user of a mobile device, without this possibility, the best MDM solution may be worthless, since each submitted authorization is automatically inherited by all and thus follows the maximum principle. If organizational structures are to be mapped, this is a clear indication of the need for a multi-client MDM solution. In order to be future-proof, the solution should then work in the hosted variant as well as in the cloud variant.
+A multi-tenant MDM solution is unlikely to be necessary for smaller environments with fewer users. However, for a large number of users, the desire for separate clients can quickly arise for different reasons. Whether or not a multi-client MDM solution is necessary depends on how complex complex authorization structures can be mapped within the solution. For the user of a mobile device, without this possibility, the best MDM solution may be worthless, since each submitted authorization is automatically inherited by all and thus follows the maximum principle. If organizational structures are to be mapped, this is a clear indication of the need for a multi-client MDM solution. In order to be sustainable, the solution should then work in the hosted version as well as in the cloud variant.
 
 A multi-tenant solution may also be useful if you want to provide access to the back end of the MDM solution for different stakeholders, such as: For responsible administrators, auditors, internal audit or controlling.
 
 ** Do cloud services have to be integrated? **
 
-When using online storage services (eg cloud services from Microsoft, Google or Apple, Dropbox and similar), a distinction can be made between different variants. Online backup, where data is stored once or at regular intervals via the Internet in order to be retrieved after a loss of data, represents the simplest form of use. In the so-called online hard disk, depending on the service provider pure data storage also additional functions available. For example, data and documents can be shared or shared with employees or business partners, and synchronized across multiple devices.
+When using online storage services (eg cloud services from Microsoft, Google or Apple, Dropbox and similar), a distinction can be made between different variants. Online backup, where data is stored once or at regular intervals over the Internet in order to be retrieved after a loss of data, represents the simplest form of use. In the so-called online hard disk depending on the service provider pure data storage also additional functions available. For example, data and documents can be shared or shared with employees or business partners, and synchronized across multiple devices.
 
 If the data of the institution can not be accessed because the online storage service is not available due to a failure of the service provider or the connection to the service, this can disrupt the business processes or they can completely fail. In particular, the protection requirements for the information concerned are important. If the processes have to be highly available, financial losses or damage to the image may be the result of longer downtimes of the online service. In addition to the availability of the online storage and the information stored therein, especially the confidentiality of the information has a high priority. Attackers are able to access confidential information of the institution and this z. B. make it accessible to a wider group of people threatened image loss as well as legal consequences and financial losses.
 
@@ -140,7 +138,7 @@ If at the end of the contract the information of the institution is not properly
 The question of whether to integrate document management systems is closely related to the multi-client capability requirement of the MDM solution. For the strategy, this means that the MDM solution must be able to pass information to other enterprise systems. Eg via web services. Here it must be ensured that this is scalable and independent of the number of other integrated systems.
 
 ** Do peripheral devices have to be integrated and managed in addition to the mobile devices? **
-When mobile devices are introduced, those responsible must also define the data protection, safety and operational requirements for the integration of peripheral devices. For example, it is often far from easy to implement a mobile printing strategy within the institution, taking into account the different mobile device deployments. The reason for this is that within most institutions, a wide range of hardware, software, and service offerings must be considered, depending on the printer and the underlying printer infrastructure.
+When mobile devices are introduced, those responsible must also define the data protection, safety and operational requirements for the integration of peripheral devices. For example, it is often far from easy to implement a mobile printing strategy within the institution, taking into account the different locations of mobile devices. The reason for this is that within most institutions, a wide range of hardware, software, and service offerings must be considered, depending on the printer and the underlying printer infrastructure.
 
 Using integrated solutions in the operating system becomes more difficult the more mobile platforms are supported. Should z. For example, if existing network printers can be reached via the mobile devices, partner solutions of the MDM providers usually have to be integrated or cloud-based solutions must be used. Evaluating which solution best supports the institution's security strategy should be an integral part of the planning and design phase. If this is forgotten at this point, it can be expected that the users of mobile devices will build up "workarounds" that bypass the established security measures.
 
@@ -152,12 +150,12 @@ One of the most important questions when using mobile devices is which operating
 * Bring Your Own Device (BYOD) Employees of the institution use existing private mobile devices to access information from the institution.
 Whether BYOD can be approved within the institution should be answered and evaluated based on the following questions regarding acceptable risk.
 
-* Are the legal conflicts in the use of private mobile devices with regard to the software license right clarified or resolved, z. B. professional use of private licenses or private and professional use of official licenses?
+* Are the legal conflicts in the use of private mobile devices with regard to the software license right clarified or resolved, eg. B. professional use of private licenses or private and professional use of official licenses?
 * In the context of emergency management, have measures been agreed with the owners of the mobile devices with regard to the deletion of the entire database?
 * Are IT managers able to test every single private device for its suitability for institutional deployment?
 * Have options been evaluated on how to properly implement internal privacy and security requirements?
 * Is it ensured that unauthorized third parties can not access information about the institution when repairing and maintaining private mobile devices?
-* Is it ensured that after an employment has been terminated, the former employee can no longer access information from the institution and all official information can be deleted on the mobile device?
+* Is it ensured that after an employment relationship has been terminated, the former employee can no longer access information from the institution and all official information on the mobile device can be deleted?
 * Is it ensured that enough resources are available for user support at all times?
 Should one of the questions be unworkable, ie be answered with no, the use of BYOD is at least not recommended for the scenarios 2 and 3 mentioned in the beginning.
 
@@ -229,7 +227,7 @@ Table: App Store Integration and Apps Sharing
 
 #### SYS.3.2.2.M8 Definition of permitted information on mobile devices
 
-The institution should determine the conditions under which mobile devices may process which information. The definition must relate to the classification or protection needs of the information or its underlying processes and to clearly define the conditions for processing, such as: Encryption, containers, or shared with the cloud. This definition should be used as the basis for the MDM's configuration of the mobile devices and for any additional security infrastructures needed. All regulations should be documented for the users and handed over in a suitable form. In order to automatically detect security incidents, technical measures should be implemented as far as possible, with which the established internal rules can be enforced.
+The institution should determine the conditions under which mobile devices may process which information. The definition must refer to the classification or protection needs of the information or its underlying processes and to clearly define the conditions for processing, such as: Encryption, containers, or shared with the cloud. This definition should be used as the basis for the MDM's configuration of the mobile devices and for any additional security infrastructures needed. All regulations should be documented for the users and handed over in a suitable form. In order to automatically detect security incidents, technical measures should be implemented as far as possible, with which the established internal rules can be enforced.
 
 #### SYS.3.2.2.M9 Selection of security apps
 
@@ -246,7 +244,7 @@ Based on the chosen strategy, the selection of security apps must be formulated 
 
 If an institution-specific access point name (APN) is used on the basis of mobile radio, this can form the basis for limiting the permitted pool of devices. All of the institution's mobile devices using this APN will be provided by the wireless service provider with an IP address range coordinated with the institution. To avoid security incidents caused by too short passwords for authentication, a complex password (up to a maximum of 64 and at least 10 digits) should be agreed with the mobile service provider. When using an institution-related APN, it should also be authenticated using the CHAP protocol.
 
-The secure connection of the mobile devices to the institution should be done with a VPN, as this ensures the confidentiality and integrity of the information transmitted between the mobile devices and the IT network of the institution. For example, to configure the VPN connections to the servers of * Aruba VIA *, * Check Point Mobile VPN *, * Cisco AnyConnect *, * F5 SSL *, * Juniper SSL *, * SonicWALL Mobile Connect *, * NCP *, * Genoa * or * SINA * offer MDM vendors frequently tuned settings with VPN vendors. However, in addition to the configuration profile for the VPN connection, the apps of the VPN server manufacturer from the respective app store often have to be installed. Recommendations for the use of IPSec and SSL / TLS are made in the document * Technical Guideline TR-02102 * of the BSI (see chapter 3.2 of the TR).
+The secure connection of the mobile devices to the institution should be done with a VPN, as this ensures the confidentiality and integrity of the information transmitted between the mobile devices and the IT network of the institution. For example, to configure the VPN connections to the servers of * Aruba VIA *, * Check Point Mobile VPN *, * Cisco AnyConnect *, * F5 SSL *, * Juniper SSL *, * SonicWALL Mobile Connect *, * NCP *, * Genoa * or * SINA * MDM vendors often provide settings tuned to VPN vendors. However, in addition to the configuration profile for the VPN connection, the apps of the VPN server manufacturer from the respective app store often have to be installed. Recommendations for the use of IPSec and SSL / TLS are made in the document * Technical Guideline TR-02102 * of the BSI (see chapter 3.2 of the TR).
 
 When implementing a VPN, regardless of the algorithm and protocol used, it is possible to configure a VPN permanently, only as needed or for individual managed apps.
 
@@ -256,7 +254,7 @@ A permanent VPN makes it possible to control all communication connections. The 
 
 ** VPN On-Demand **
 
-With VPN On-Demand, mobile devices can automatically establish a VPN connection to the institution. The stored arrangements for the recognition of the need by the mobile terminal usually take place in two stages, the network identification and the connection evaluation.
+With VPN On-Demand, mobile devices can automatically establish a VPN connection to the institution. The stored arrangements for the recognition of the demand by the mobile terminal usually take place in two stages, the network recognition and the connection evaluation.
 
 ** App-based VPN **
 
@@ -278,11 +276,11 @@ To determine the required function separations and authorizations, the following
 * Which information on the mobile device or the information on it can the administrators access?
 * Do internal audit or external auditors always need access to the MDM solution?
 * Does security management always need access to the MDM solution?
-Requirements for this may result from the tasks themselves or from legal or internal requirements. The established authorization management must be regularly checked to ensure that the assigned rights still correspond to the tasks.
+Requirements for this may result from the tasks themselves or from legal or internal requirements. The established authorization management must be regularly checked to ensure that the allocated rights still correspond to the tasks.
 
 #### SYS.3.2.2.M12 Hidden MDM operating environment
 
-An MDM solution is operated on IT systems that are either the sole responsibility of the institution or that are operated by an outsourcing partner on behalf of the institution. In both cases, the institution is responsible for securing the MDM components and assigning network segments as needed. Also, those responsible must ensure that the supporting IT systems for the MDM are adequately protected in accordance with the identified protection requirements. It should be noted that the security of mobile devices is directly dependent on the security of the MDM. To ensure adequate protection, the following requirements should be met:
+An MDM solution operates on IT systems that are either the sole responsibility of the institution or that are operated by an outsourcing partner on behalf of the institution. In both cases, the institution is responsible for securing the MDM components and assigning network segments as needed. Also, those responsible must ensure that the supporting IT systems for the MDM are adequately protected in accordance with the identified protection requirements. It should be noted that the security of mobile devices is directly dependent on the security of the MDM. To ensure adequate protection, the following requirements should be met:
 
 * the operating system of the MDM solution is hardened,
 * the administrative accesses are controlled,

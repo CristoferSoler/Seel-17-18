@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Every company and authority must have an organization that controls the interaction of the various roles and units with the business processes and resources in the institution. Most institutions have an organizational unit responsible for the regulation and management of the general operation as well as for the planning, organization and execution of all administrative services. Various information security tasks must be implemented or supported by this unit.
+Every company and authority must have an organization that controls the interaction of the various roles and units with the business processes and resources in the institution. Most institutions have an organizational unit responsible for the regulation and control of the general operation as well as for the planning, organization and execution of all administrative services. Various information security tasks must be implemented or supported by this unit.
 
 ### 1.2 Objective
 
@@ -42,13 +40,13 @@ Examples of consequential damage caused by non-compliance with regulations are:
 Insufficient supply of equipment can significantly affect operation. Faults may arise if the required resources are not available in sufficient quantity or are not made available in due time. It may also be the case that inappropriate or even incompatible equipment is procured which consequently can not be used.
 
 ** Example: ** The hard disk space of PCs and servers as well as the mobile data carriers is constantly increasing. Unfortunately, it is often forgotten to procure IT components and data carriers that provide sufficient capacity for regular data backup.
-Likewise, the functionality of the equipment used must be guaranteed. If maintenance work is not carried out or only insufficiently carried out, it can cause serious damage. Examples:
+Likewise, the functionality of the equipment used must be guaranteed. If maintenance work is not carried out or only insufficiently carried out, it can cause great damage. Examples:
 
 * The batteries of an uninterruptible power supply (UPS) have an insufficient capacity due to lack of maintenance (too low acid content). The UPS can not bridge a power outage for a sufficient amount of time.
 * The fire extinguishers are due to lack of maintenance no longer sufficient pressure, so that their fire-fighting effect is no longer guaranteed.
 ### 2 4 Unauthorized access to vulnerable rooms
 
-All rooms, including offices in the home or on the road, where sensitive information is stored or processed must be protected against unauthorized access by third parties. Unauthorized persons may cause damage in such areas through deliberate acts (manipulation or vandalism), but also through unintentional misconduct (due to a lack of specialist knowledge). Even if no direct damage can be detected, the operating procedure can be disturbed even if it must be investigated how such an incident was possible or whether damage has occurred or manipulations have been made.
+All rooms, including offices in the home or on the road, where sensitive information is stored or processed must be protected against unauthorized access by third parties. Unauthorized persons may cause damage in such areas through deliberate acts (manipulation or vandalism), but also through unintentional misconduct (due to a lack of specialist knowledge). Even if no direct damage can be detected, the operating procedure can be disturbed even if it must be investigated how such an incident was possible or whether damage occurred or tampering was carried out.
 
 For example, intruders could reset passwords, access servers directly, or manipulate active network components. Also, they could have stolen or altered sensitive information on paper or disk.
 
@@ -75,7 +73,7 @@ Outsiders, but also culprits, can use deficiencies in the organization and try t
 ### 2 8 Destruction, vandalism, sabotage
 For various reasons (revenge, malice, frustration), people can try to disrupt business processes, manipulate or destroy devices or information.
 
-Both outside perpetrators (eg, disappointed burglars, out-of-control demonstrators) and culprits (eg, frustrated or mentally unstable staff) may destroy or damage someone else's property through vandalism. While vandalism is usually an expression of spontaneous, blind destructiveness, sabotage is the willful manipulation or damage of things with the aim to harm the victim. Particularly attractive targets of sabotage can be data centers or communication links of authorities or companies, since a relatively small amount of funds can make a big impact.
+Both outside perpetrators (eg, disappointed burglars, out-of-control demonstrators) and culprits (eg, frustrated or mentally unstable staff) can destroy or damage someone else's property through vandalism. While vandalism is usually an expression of spontaneous, blind destructiveness, sabotage is the willful manipulation or damage of things with the aim to harm the victim. Particularly attractive targets of sabotage can be data centers or communication links of authorities or companies, since a relatively small amount of funds can make a big impact.
 
 ### 2 9 Theft and loss of information and equipment
 
@@ -96,7 +94,7 @@ For all security-related tasks, both responsibilities and authority MUST be defi
 
 #### ORP.1.A2 Assignment of responsibility for information, applications and IT components [Head of IT, Information Security Officer (ISB), Head of Institution]
 
-All information, business processes, applications and IT components MUST be determined who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
+All information, business processes, applications and IT components MUST be defined as who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
 
 #### ORP.1.A3 Supervision or assistance of third parties [employees]
 
@@ -117,15 +115,15 @@ Together with the basic requirements, the following requirements correspond to t
 
 All employees SHOULD be advised that neither sensitive information nor IT systems should be freely accessible at unattended workplaces. Workplaces SHOULD be randomly checked to see if vulnerable information is open to the public.
 
-#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Domestic Engineering]
+#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Building Services]
 
 It SHOULD have an overview of all devices that are used in the institution and that can have an impact on information security. In addition to IT systems and ICS components, these also include Internet of Things. It SHOULD give appropriate testing and approval procedures before using the equipment.
 
 #### ORP.1.A8 Resource Management [IT Leader]
 
-The resources required to perform the task and to meet safety requirements SHOULD be available in sufficient quantities. It SHOULD give appropriate test procedures before use of the equipment. For inventory management, the resources SHOULD be listed in inventories. In order to prevent the misuse of data, the reliable deletion or destruction of resources SHOULD be regulated.
+The resources required to perform the task and meet safety requirements SHOULD be in sufficient quantity. It SHOULD give appropriate test procedures before use of the equipment. For inventory management, the resources SHOULD be listed in inventories. In order to prevent the misuse of data, the reliable deletion or destruction of resources SHOULD be regulated.
 
-#### ORP.1.A9 Proper Disposal of Protected Equipment [Employees, Information Security Officer (ISB)]
+#### ORP.1.A9 Proper Disposal of Protected Equipment [Staff, Information Security Officer (ISB)]
 
 Operating and material resources SHOULD be disposed of in such a way that no conclusions can be drawn as to their use or contents. The disposal of protective materials SHOULD be regulated. All employees SHOULD know these regulations. To dispose of sensitive material, appropriate disposal facilities, such as: B. shredder available. Protective material collected for disposal SHOULD be protected against unauthorized access.
 
@@ -143,7 +141,7 @@ Technical devices SHOULD be maintained regularly. It should be regulated which s
 
 #### ORP.1.A13 Relocation Security [Head of IT, Head of Domestic Engineering, Information Security Officer (ISB)]
 
-Before a planned move, security guidelines for this purpose SHOULD be prepared or updated in good time. All employees SHOULD be informed about the safety measures to be followed before, during and after the move. During the move a minimum level of access and access control SHOULD be present. It SHOULD be checked after the move that the moving goods to be transported has arrived completely undamaged or unchanged.
+Before a planned move, security guidelines for this purpose SHOULD be developed or updated in good time. All employees SHOULD be informed about the security measures to be followed before, during and after the move. During the move a minimum level of access and access control SHOULD be present. It should SHOULD be checked after the move that the moving goods to be transported has arrived completely undamaged or unchanged.
 
 ### 3.3 Requirements for increased protection requirements
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
@@ -151,30 +149,3 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 #### ORP.1.A14 Inspections [Building Services, Information Security Officer (ISB)] (CIA)
 
 Checks should be carried out to check the extent to which security requirements are implemented. Easy to correct negligence SHOULD be rectified immediately (eg Close window). In addition, causes should be questioned and eliminated.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"Organization" can be found in the following publications, among others
-
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "organization" building block.
-
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.38 Abuse of personal data
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

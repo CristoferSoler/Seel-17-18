@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,12 +17,12 @@ The goal of this module is to protect information that is created, edited, store
 
 ### 1.3 Delimitation
 
-This module contains basic requirements for operating unix-like clients on standard IT systems. He concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the module SYS.2.4 client under Apple OS X.
+This module contains basic requirements for operating unix-like clients on standard IT systems. It concretizes and complements the aspects that are dealt with in the building block SYS.2.1 General Client to specifics of Unix systems. Even if Apple OS X is a unix-like operating system, this operating system is not covered in this module, recommendations can be found in the block SYS.2.4 client under Apple OS X.
 
 If the client is not to be managed by itself, but is managed by a third party, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account.
 
-The building block includes only the Unix-like operating system that is typically installed in a base installation of a Linux desktop distribution. The module includes, in particular, software that does not rely on it, such as e-mail clients or office software. Requirements for this can be found in the IT-Grundschutz Compendium layer APP.1 Client Applications. If the client has interfaces for data exchange, such. As CD / DVD, USB, Bluetooth or WLAN, the security requirements of the block SYS.3.4 Mobile data carrier must be met
-It is assumed in this client module that in addition to the administrator, only an unchanged person with an interactive user account is permanently active. Clients that are used by several people, one after the other or at the same time, require additional measures, which are not dealt with in this module.
+The building block includes only the Unix-like operating system, which is usually installed in a basic installation of a Linux desktop distribution. The module includes, in particular, software that does not rely on it, such as e-mail clients or office software. Requirements for this can be found in the IT-Grundschutz Compendium layer APP.1 Client Applications. If the client has interfaces for data exchange, such. As CD / DVD, USB, Bluetooth or WLAN, the security requirements of the block SYS.3.4 Mobile data carrier must be met
+It is assumed in this client module that in addition to the administrator, only an unchanged person with an interactive user account is permanently active. Clients that are used consecutively or simultaneously by several people require additional measures that are not covered in this module.
 
 2 risk situation
 -----------------
@@ -33,11 +31,11 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware
 
-Malicious programs are designed to perform unwanted and usually malicious functions. Malicious programs are usually secretly, without the knowledge and consent of the user active. Malicious programs nowadays provide an attacker with extensive communication and control options and have a large number of functions. Among other things, the programs can specifically search passwords, remotely control systems, disable protection functions and spy on data. In particular, users who rely on the inherently higher security of unix-like systems are often more careless when dealing with unknown files.
+Malicious programs are designed to perform unwanted and usually malicious functions. Malicious programs are usually secretly active without the knowledge and consent of the user. Malicious programs nowadays provide an attacker with extensive communication and control options and have a large number of functions. Among other things, the programs can specifically search passwords, remotely control systems, disable protection functions and spy on data. In particular, users who rely on the inherently higher security of unix-like systems are often more careless when dealing with unknown files.
 
 ### 2 2 Software from third party sources
 
-With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than installing finished software packages. When finished software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
+With unix-like IT systems, it is not uncommon to download and compile software yourself, rather than install finished software packages. When ready-made software packages are used, they are often not only installed from the existing package sources of the Unix derivative, but are sourced from third-party sources without further testing. Each of these alternative ways of installing software entails additional risks in installing faulty or incompatible software and malicious software.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -100,7 +98,7 @@ Removable drives SHOULD NOT be automatically included. The inclusion of removabl
 
 #### SYS.2.3.A7 Restrictive rights assignment to files and directories
 
-Users' access to files and directories SHOULD always be limited to the minimum required. It should in any case be ensured that services and applications may only create, modify or delete their assigned files. On directories where all users have write permissions (eg / tmp) the sticky bit SHOULD be set.
+Users' access to files and directories SHOULD always be restricted to the minimum required. It should in any case be ensured that services and applications may only create, modify or delete their assigned files. On directories where all users have write permissions (eg / tmp) the sticky bit SHOULD be set.
 
 #### SYS.2.3.A8 Use of application restriction techniques
 
@@ -143,13 +141,13 @@ Partitions and directories where users have write permission SHOULD be mounted s
 
 Bootloader and Kernel SHOULD be signed by self-controlled key material and unneeded key material should be removed.
 
-#### SYS.2.3.A17 Additional prevention of spread when exploiting vulnerabilities (CI)
+#### SYS.2.3.A17 Additional prevention of propagation in the exploitation of vulnerabilities (CI)
 
 The use of system calls SHOULD be limited to the absolutely necessary system calls, in particular for exposed services and applications (eg by "seccomp"). The existing default profiles or rules of "SELinux", "AppArmor" as well as alternative extensions SHOULD be checked manually and, if necessary, adapted to your own security policy. If necessary, new rules or profiles SHOULD be created.
 
 #### SYS.2.3.A18 Additional Kernel Protection (CI)
 
-Special hardened kernels SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy," "PaX").
+Special hardened kernels should use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent the exploitation of vulnerabilities and propagation in the operating system (eg, "grsecurtiy", "PaX").
 
 #### SYS.2.3.A19 Hard Disk or File Encryption (CI)
 
@@ -158,46 +156,3 @@ Hard drives or the files stored on them SHOULD be encrypted. The associated keys
 #### SYS.2.3.A20 Shutdown Critical SysRq Functions (CIA)
 
 SHOULD critical SysRq functions be disabled.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information about threats and security measures in the section "Clients under Unix" can be found in the following publications:
-
-* #### [ISiClient] Securing a PC client (ISi client),
-
-  
-
- (last accessed on 27.09.2017)
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/Isi-Reihe/Isi-Client/client\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / Isi-series / Isi client / client_node.html)
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Clients under Unix" building block.
-
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

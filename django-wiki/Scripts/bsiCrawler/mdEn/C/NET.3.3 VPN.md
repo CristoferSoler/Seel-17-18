@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -28,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lacking or inadequate planning and regulation of VPN deployment
 
-If the VPN is not carefully planned, set up, or configured, security vulnerabilities can occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
+If the VPN is not carefully planned, set up, or configured, security vulnerabilities may occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
 
 For example, with inadequate VPN scheduling and regimentation, it is possible that users were not properly trained, thereby using the VPN in an insecure environment or dialing in from an insecure client. This may allow attackers to access the entire corporate network.
 
@@ -39,7 +37,7 @@ Even if the regular monitoring of access to the VPN was inadequately planned, at
 VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an insecure VPN service offered by attackers could be used by attackers to steal targeted information.
 
 ### 2 3 Problems with local storage of authentication data for VPNs
-Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
+Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in accessing the VPN client, he may be able to read access data and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
 
 ### 2 4 Insecure configuration of VPN clients for remote access
 
@@ -87,7 +85,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.3.3.A6 Perform a VPN requirement analysis
 
-A requirements analysis SHOULD be carried out in order to determine the application scenarios for the respective VPN and to be able to derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
+A requirements analysis SHOULD be carried out in order to be able to determine the application scenarios for the respective VPN and derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
 
 * Business processes,
 * Access paths,
@@ -99,9 +97,9 @@ A requirements analysis SHOULD be carried out in order to determine the applicat
 
 In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
 
-#### NET.3.3.A8 Create a security policy for VPN use
+#### NET.3.3.A8 Create a security policy for VPN usage
 
-A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
+A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, SHOULD he be given a leaflet containing the most important VPN security mechanisms. All VPN users SHOULD be required to comply with security policies.
 
 #### NET.3.3.A9 Appropriate selection of VPN products
 
@@ -113,12 +111,12 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 
 #### NET.3.3.A11 Secure connection of an external network
 
-If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
+If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD conform to the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
 #### NET.3.3.A12 User and Access Management for Remote Access VPNs
 For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
 
-When using standalone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 
 #### NET.3.3.A13 Integration of VPN components in a firewall
 
@@ -127,53 +125,3 @@ The VPN components SHOULD be integrated into the firewall so that traffic can be
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the "VPN" area can be found in the following publications, among others:
-
-* #### [27033-5] ISO / IEC 27033-5: 2013
-
-  
-
- Information technology - Security techniques - Network Security - Part 5: Securing communications across networks using Virtual Private Networks (VPNs), ISO, 08.2013
- <Https://www.iso.org/standard/51584.html>
-
- 
-* #### [ISIVPN] Virtual Private Network (ISi-VPN)
-
-  
-
- BSI Guideline on Internet Security (ISi-L), BSI, 2009
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/isi\_vpn\_leitlinie\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / Internet security / isi_vpn_leitlinie_pdf.pdf)
-
- 
-* #### [NIST80077] NIST Special Publication 800-77
-
-  
-
- Guide to IPsec VPNs, NIST, 12.2005
- <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-77.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "VPN" block.
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.11 Failure or disruption of service providers
-* G 0.14 Spying out information (spying)
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.32 Abuse of permissions
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

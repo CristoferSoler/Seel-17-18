@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -40,3 +38,26 @@ If the interfaces of a machine are insufficiently protected, attackers can manip
 ---------------
 
 The following are specific requirements for the machine area. Basically, the ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the defined security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### IND.2.4.A1 Remote Maintenance by Machine and Plant Builder [ICS Administrator]
+
+For the remote maintenance of a machine SHOULD there be a central guideline. In it SHOULD be regulated how the respective remote maintenance solutions are to be used and how communication links are protected. It SHOULD also describe what activities should be monitored during remote maintenance.
+In addition, it should NOT be possible to remotely access a machine to other systems or machines of the institution.
+
+It should be agreed with a service provider how to use the information stored in the machine.
+
+#### IND.2.4.A2 Post-warranty Operation [ICS Administrator]
+
+A process SHOULD be established to ensure that the machine can continue to operate safely beyond the warranty period. For this purpose, further support services should be contractually agreed with the supplier.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of machines. They SHOULD be implemented in principle.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

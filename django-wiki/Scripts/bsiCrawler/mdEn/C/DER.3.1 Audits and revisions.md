@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Audits and revisions are fundamental to any successful Information Security Management System (ISMS). Only when established security measures and processes are regularly reviewed, are they effective, complete, adequate and up-to-date can the overall state of information security be assessed. Audits and audits are thus a tool to identify, achieve and maintain an appropriate level of safety. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
+Audits and revisions are fundamental to any successful information security management system (ISMS). Only when established security measures and processes are regularly reviewed, are they effective, complete, adequate and up-to-date can the overall state of information security be assessed. Audits and audits are thus a tool to identify, achieve and maintain an appropriate level of safety. Through them, it is possible to detect undesirable developments and existing security deficiencies and initiate appropriate countermeasures.
 
 Auditing is a systematic, independent review of activities and their results in terms of compliance with defined requirements (eg standards, standards or guidelines). In a revision (audit = check, check) it is checked whether documents, conditions, objects or procedures are correct, effective and appropriate. In contrast to the audit, the revision does not necessarily have to be independent. In addition, the revision may already include the correction in terms of maintenance.
 
@@ -17,7 +15,7 @@ The module defines requirements for audits and audits with the aim of improving 
 
 ### 1.3 Delimitation
 
-The module describes how audits and revisions can be planned, carried out and followed up from the point of view of the ISMS. This concerns internal audits (so-called first-party audits) and audits as well as audits of service providers and partners (so-called second-party audits) of the institution. Certification audits (so-called third-party audits) are not included in this module.
+The module describes how audits and revisions can be planned, executed and followed up from the point of view of the ISMS. This concerns internal audits (so-called first-party audits) and audits as well as audits of service providers and partners (so-called second-party audits) of the institution. Certification audits (so-called third-party audits) are not included in this module.
 
 Similarly, the mandatory for Federal authorities IS audit is not considered. This is dealt with in module DER 3.2: * IS-Revision *. Furthermore, it does not take into account how audits and revisions can be integrated into any existing, higher-level test organization of an institution.
 
@@ -49,7 +47,7 @@ If audits and revisions are not planned on a long-term and centralized basis, it
 
 ### 2 6 Lack of planning and coordination when conducting an audit
 
-If an audit is poorly scheduled and has not been agreed with all of the institution's employees concerned, it may not have the required or the wrong contacts available during the on-site audit. As a result, individual areas may not be audited at all. Even though the auditor has set appointments too narrowly for the individual areas, the planned investigation could only be superficial if there is not enough time available.
+If an audit is poorly scheduled and has not been agreed with all of the institution's employees concerned, it may not have the required or the wrong contacts available during the on-site audit. As a result, individual areas may not be audited at all. Even if the auditor has set the appointments too narrowly for the individual areas, the planned examination could only be carried out superficially if there is not enough time available.
 
 ### 2 7 Lack of coordination with the Staff Committee
 
@@ -70,7 +68,7 @@ The following requirements MUST be implemented as a priority:
 
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 
-The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department is to be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
+The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department should be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
 
 #### DER.3.1.A2 Preparation for an audit or revision
 
@@ -115,7 +113,7 @@ One or more revision lists SHOULD be maintained to document the current status o
 
 It should be a suitable team for each audit or for each revision. It SHOULD appoint a senior auditor (audit team leader) or lead auditor who has overall responsibility for carrying out the audits or revisions.
 
-The size of the audit / audit team SHOULD match the audit area. In particular, the competence requirements of the test topics as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
+The size of the audit / audit team SHOULD be the same as the audit area. In particular, the competence requirements of the test subjects as well as the size and local distribution of the test area SHOULD be taken into account. The members of the audit / audit team SHOULD be adequately qualified.
 
 The neutrality of the audit team SHOULD be ensured. In addition, the auditors should also be independent. If external service providers are used as auditors or auditors, they SHOULD check their independence and commit them to secrecy.
 
@@ -204,49 +202,8 @@ Audit programs as well as documents for audits and audits SHOULD be filed and ke
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### DER.3.1.A28 Security auditing of auditors (CI)
 
 If auditors need access to sensitive information, they should be asked to provide evidence of their integrity and reputation. In the case of classified classified information, the members of the audit team SHOULD submit to a security clearance under the Security Review Act (SÜG). In this regard, the ISB SHOULD include the secret service officer or security officer of the institution.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area of ​​"audits and revisions" can be found in the following publications, among others:
-
-* #### [19011] DIN EN ISO 19011 Guidelines for auditing management systems
-
-  
-
- [Http://www.iso.org/iso/catalogue\_detail?csnumber=50675](http://www.bsi.bund.de/cyberglossar)
-
- 
-* #### [27007] ISO / IEC 27007: 2011
-
-  
-
- Information technology - Security techniques - Guidelines for information security management systems auditing, 11.2011
- [Http://www.iso.org/iso/catalogue\_detail?csnumber=42506](http://www.iso.org/iso/catalogue_detail?csnumber=42506)
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Audits and Revisions".
-
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

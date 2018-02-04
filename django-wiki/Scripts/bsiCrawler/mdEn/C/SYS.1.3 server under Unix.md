@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -27,7 +25,7 @@ The goal of the module is to protect information processed by Unix servers. The 
 
 The module contains basic requirements for setting up and operating Unix servers. It concretizes and complements the aspects that are dealt with in the module SYS.1.1 General Server to specifics of Unix systems.
 
-If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing Usage must additionally be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
+If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing Usage must additionally be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board resources, regardless of the intended use of the server.
 
 2 risk situation
 -----------------
@@ -132,48 +130,4 @@ The use of system calls SHOULD be limited to the absolutely necessary system cal
 
 #### SYS.1.3.A17 Additional Kernel Protection (CI)
 
-With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control to prevent exploitation of vulnerabilities and propagation in the operating system.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the section "Servers under Unix" can be found in the following publications, among others:
-
-* #### [ISi server] Securing a server (ISi server), BSI, 09.2013
-
-  
-
- Federal Office for Security in Information Technology, 02.2017
- <Https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/TechnischeRichtlinien/TR02102/BSI-TR-02102-2.pdf>
-
- 
-* #### [NISTSP800123] NIST Special Publication 800-123
-
-  
-
- Guide to General Server Security, NIST, 07.2008
- <Https://csrc.nist.gov/publications/nistpubs/800-123/SP800-123.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Server under Unix" building block.
-
-* G 0.14 Spying out information (spying)
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+With specially hardened kernels, it SHOULD use appropriate protection mechanisms such as storage protection, file system protection, and role-based access control designed to prevent exploitation of vulnerabilities and propagation in the operating system.
