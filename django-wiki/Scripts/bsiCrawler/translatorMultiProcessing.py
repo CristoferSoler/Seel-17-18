@@ -7,19 +7,13 @@ from googletrans import Translator
 from multiprocessing import Pool
 
 
-sys.path.append(r'../..')
+sys.path.append(r'..')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "bsiwiki.settings")
 django.setup()
 
 
 from Scripts import bsiImporter
 from bsiwiki import settings
-
-
-directoryC = settings.BSI_DE + '/C'
-directoryN = settings.BSI_DE + '/N'
-directoryT = settings.BSI_DE + '/T'
-directoryEN = settings.BSI_EN
 
 def content_from_list(content):
     mdFilePart = ''
@@ -151,6 +145,10 @@ def translate(fileMD):
 
 
 if __name__ == "__main__":
+    global directoryC
+    global directoryN
+    global directoryT
+    global directoryEN
 
     filesForTranslation = []
     phase = str(sys.argv[1])

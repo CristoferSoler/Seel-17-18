@@ -72,10 +72,10 @@ if __name__ == "__main__":
     #os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
 
 
-    doImport()
+    #doImport()
 
     # call treeview importer
-    addLinksToTreeView()
+    #addLinksToTreeView()
 
     # call topic generation for the wizard
     topicGeneration()
