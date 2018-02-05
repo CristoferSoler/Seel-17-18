@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -18,7 +16,7 @@ The aim of this module is to secure the exchange of information between differen
 This module is always to be used if there is an exchange of information with offices outside of your own institution or property and the internal network is not used. He is especially to be applied when
 
 * new transport routes are built up (new communication partners, new media, new networks),
-* the exchange of information takes place with the help of data carriers. In addition to the transmission, the storage and handling of the data carriers must be taken into account.
+* the exchange of information takes place with the help of data carriers. In addition to the transmission, the storage and handling of the data carriers must be taken into consideration.
 The protection of network connections is covered in other components of the IT-Grundschutz Compendium. Further processing in the target IT system is not considered. In this module, the basic rules for a secure exchange of information are in the foreground, especially in the use of mobile data carriers. The reasons why there is no or no sufficiently trusted network between the affected IT systems are not considered.
 
 In addition, this module also takes into account the storage of the data on the sender and receiver system, insofar as it is directly related to the data medium exchange, as well as the handling of the data carriers before or after the transfer. This module considers mobile data carriers such. As removable disks, optical media, USB sticks and hard drives and not to forget paper documents.
@@ -30,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Defective media
 
-All types of media can cause damage, errors, or failures. The problem arises when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
+All types of media can cause damage, errors, or failures. They become a problem when the information stored on the data carriers is not stored elsewhere and can not be reconstructed quickly and easily.
 
 ** Impermissible temperature and humidity **
 
@@ -67,7 +65,7 @@ When passing on information, it often happens that other information is transmit
 
 ### 2 7 Theft, tampering or destruction of data media
 
-Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content changes of data to the destruction of data carriers.
+Outsiders, but also inner perpetrators, can try for various reasons (spying, revenge, malice, frustration) to steal, manipulate or destroy data carriers. The manipulations range from the unauthorized access to sensitive data about content modification of data to the destruction of data carriers.
 
 ### 2 8 Malicious programs in transferred files or on data carriers
 If the work environment is insufficiently secured against malicious programs, malicious programs could be located on data media that are forwarded to external users. This could destroy or corrupt the stored data, but above all IT systems at the receiving end could be compromised. But the loss of image and the financial damage caused by malicious programs are also of great importance.
@@ -93,7 +91,7 @@ The institution MUST specify which communication partners may receive and share 
 
 If information is exchanged, it MUST be clarified in advance how vulnerable the relevant information is, with whom the information may be exchanged and how it should be specifically protected. The employees MUST be sufficiently sensitized. Recipients MUST be advised that the data transmitted may only be used for the purpose for which they were disclosed.
 
-#### OPS.1.2.3.A3 Instructing staff to exchange information [Specialists]
+#### OPS.1.2.3.A3 Instructing the staff to exchange information [Specialists]
 
 Staff MUST be informed about the framework conditions for the exchange of information. It MUST know what information they are allowed to give when, where and how.
 
@@ -103,7 +101,7 @@ Digital data MUST be checked for malware both by the sender before sending and b
 
 #### OPS.1.2.3.A5 loss report [user]
 
-It MUST be reported immediately if a data carrier is lost, stolen or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
+It MUST be reported immediately if a data carrier is lost, stolen, or suspected of being tampered with during media exchange. For this there must be clear reporting channels and contact persons in each institution.
 
 ### 3.2 Standard requirements
 
@@ -130,15 +128,15 @@ External parties SHOULD make confidentiality agreements before gaining access to
 
 #### OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
 
-Before exchanging information, the systems and products used on the transmitter and receiver side SHOULD be checked for compatibility.
+Before exchanging information, the systems and products used on the sender and receiver side SHOULD be checked for compatibility.
 
-#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [user]
+#### OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
 
 When tagging media, SHOULD ensure that sender and recipient are immediately identifiable. The marking of the data carriers or their packaging SHOULD make the contents of the data carriers clearly identifiable to the recipient. The labeling of data carriers with information worth protecting SHOULD NOT allow any conclusions as to the nature and content of the information.
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
 
@@ -164,51 +162,3 @@ SHOULD BE CHECKED BEFORE SENDING MEDIA,
 #### OPS.1.2.3.A18 Backup copy of submitted data [user] (A)
 
 If the data to be transmitted has been created or compiled solely for the purpose of data transmission and is not stored on another medium, a backup copy of this data SHOULD be provided. In case of loss or damage of the data during the transport, the shipment can be made again with little effort.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"information and data medium exchange" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [NIST800150] Guide to Cyber ​​Threat Information Sharing
-
-  
-
- Special Publication 800-150, National Institute of Standards and Technology (NIST), 10-2016
- <Http://dx.doi.org/10.6028/NIST.SP.800-150>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Information and data medium exchange".
-
-* G 0.2 Unfavorable climatic conditions
-* G 0.4 Pollution, dust, corrosion
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.22 Manipulation of information
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.29 Violation of laws or regulations
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.42 Social engineering
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

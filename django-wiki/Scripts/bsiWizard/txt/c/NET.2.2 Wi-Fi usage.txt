@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -34,7 +32,7 @@ Due to negligence and lack of controls, it happens again and again that people d
 
 ### 2 3 Listening to the WLAN communication
 
-Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, wireless networks or the transmitted radio waves often exceed the limits of owner-occupied premises, so that data is also broadcast in areas that can not be controlled by users or institution and secured.
+Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
 
 ### 2 4 Evaluation of connection data in wireless communication
 
@@ -71,7 +69,7 @@ The training contents MUST always be adapted according to the respective applica
 #### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]
 MUST use external hotspots MUST be implemented:
 
-* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide whether or under what conditions he is allowed to use the hotspot.
+* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under which conditions he will be allowed to use the hotspot.
 * WLANs that are only used sporadically SHOULD be deleted by the users from the history.
 * If possible, separate user accounts with a secure base configuration and restrictive permissions SHOULD be used.
 * It should be ensured that no user with administrator rights can log on to external WLANs from his client.
@@ -91,59 +89,3 @@ For WLAN security incidents, users SHOULD implement the following:
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on hazards and security measures in the area of ​​"WLAN use" can be found in the following publications, among others:
-
-* #### [BSIDKS] Wireless communication systems and their security aspects
-
-  
-
- Federal Office for Information Security (BSI), 2009 <https://www.bsi.bund.de/DE/Publikationen/Broschueren/Drahtloskom/drahtloskom.html>
-
- 
-* #### [ISIWLAN] BSI Internet Security Standard (ISi Series)
-
-  
-
- Secure connection of local networks to the Internet (Isi-LANA), Federal Office for Information Security (BSI), 2014
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
-
- 
-* #### [NIST800153] NIST Special Publication 800-153
-
-  
-
- Guidelines for Securing Wireless Local Area Networks (WLANs), NIST, 02-2012 http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-153.pdf
-
- 
-* #### [NIST80097] NIST Special Publication 800-97
-
-  
-
- Establishing Wireless Robust Security Networks, A Guide to IEEE 802.11, NIST, 02.2007
- <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
-
- 
-* #### [TR03103] Technical Guideline Secure Wireless LAN
-
-  
-
- Federal Office for Information Security (BSI), 2005 [https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03103/index\_htm.html]https://www.bsi.bund.de /DE/Publikationen/TechnischeRichtlinien/tr03103/index_htm.html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "WLAN usage" building block.
-
-* G 0.15 Listening
-* G 0.18 Missing planning or missing adjustment
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.43 Importing messages
-The cross reference tables can be found in the download area due to their size.

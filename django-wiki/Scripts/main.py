@@ -12,7 +12,7 @@ django.setup()
 from Scripts.treeview_links import addLinksToTreeView
 from Scripts.bsiImporter import doUpdate, post_phase, doImport
 from Scripts.bsiWizard.topicGeneration import topicGeneration
-# from Scripts.bsiComparator.bsicomparator import compare
+from Scripts.bsiComparator.bsicomparator import compare
 
 isRunning = False
 
@@ -22,19 +22,24 @@ def update_phase():
     isRunning = True
 
     print('Entering mid-phase on:', datetime.now())
+    try:
+        # call crawler
+        os.system('scrapy runspider bsiCrawler/crawli.py -a phase=1 --nolog')
 
-    # call crawler
-    # os.system('scrapy runspider bsiCrawler/crawli.py -a phase=1 --nolog')
+        # call comparator
+        compare()
 
-    # call comparator
-    # compare()
-
-    # call translator
-    # os.system('python3 bsiCrawler/translatorMultiProcessing.py 1')
+        # call translator
+        os.system('python3 bsiCrawler/translatorMultiProcessing.py 1')
+    except Exception as e:
+        print(e)
+        isRunning = False
+        return 'An error has occurred. Update process aborted'
 
     # enter mid phase
     res = doUpdate()
     if res:
+        isRunning = False
         return res
 
     try:
@@ -66,11 +71,10 @@ def check_update_progress():
 
 if __name__ == "__main__":
     # call crawler
-    #os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
+    os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
 
     # call translator
-    #os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
-
+    os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
 
     #doImport()
 

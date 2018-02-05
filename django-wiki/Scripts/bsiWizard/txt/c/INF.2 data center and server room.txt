@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -21,7 +19,7 @@ On the one hand, the module addresses institutions that run a data center and wa
 
 ### 1.3 Delimitation
 
-The subject of this module are only data centers of medium type and quality. The security requirements described here are not sufficient to protect high-security data centers, such as those used in the banking sector. A high-security data center is different, especially in the points high availability, disaster tolerance, redundancy of components, resistance to natural hazards, energy efficiency and data security of the consideration here mean data centers.
+The subject of this module are only data centers of medium type and quality. The security requirements described here are not sufficient to protect high-security data centers, such as those used in the banking sector. A high-security data center differs above all in terms of high availability, disaster tolerance, component redundancy, elemental damage resistance, energy efficiency and data security from the average data centers considered here.
 
 Furthermore, the present module is not suitable for small information networks with z. B. only one or very few servers or IT systems. An example of this is a small, medium-sized enterprise (SME) with few IT workstations and a server that is located in a separate room. In such cases, it is often sufficient to implement the INF.6 * protective cabinet / technical room * module.
 
@@ -34,14 +32,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Incorrect planning
 
-If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to incorrect design or if the energy supply at the selected location is insufficient.
+If a data center is designed and ignored to protect against elementary threats, there is a very high risk of failure. So z. For example, site risks such as air traffic, earthquakes, floods, or political issues may jeopardize operational safety and availability. It can also have a massive impact on the operation of a new data center if there is insufficient bandwidth available due to a faulty design or if the energy supply at the selected location is insufficient.
 
 ### 2 2 Unauthorized access
 Lack of access controls or these are insufficient, increases the risk that unauthorized persons enter the data center and there negligent, z. B. due to lack of expertise, or intentionally cause damage. Attackers can so z. For example, stealing sensitive data, stealing devices or manipulating servers. Inadequate access controls thus have a particular impact on the availability, confidentiality and integrity of data or IT components.
 
 ### 2 3 Insufficient monitoring
 
-If the IT and infrastructure operated in the data center are insufficiently monitored and maintained, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring, they might be noticed too late. It is then often not possible to react in time.
+If the IT and infrastructure operated in the data center are insufficiently supervised and looked after, components can go unnoticed. This may severely affect the availability and accuracy of the data center. In addition, failures often occur creepingly. Without active monitoring they could be noticed too late. It is then often not possible to react in time.
 
 ### 2 4 Insufficient air conditioning in the data center
 
@@ -57,7 +55,7 @@ Leakages in the data center infrastructure, floods, burst pipes, faulty sprinkle
 
 ### 2 7 Missing or inadequate burglary protection
 
-Missing or inadequate intruder protection makes it easy for unauthorized individuals to invade a data center. Offenders can so z. B. stealing or manipulating IT components and accessing confidential information. They could also destroy the devices or damage the data center as a whole.
+A missing or poor burglary protection makes it easy for unauthorized persons to penetrate a data center. Offenders can so z. B. stealing or manipulating IT components and accessing confidential information. They could also destroy the devices or damage the data center as a whole.
 
 ### 2 8 Power failure
 
@@ -68,7 +66,7 @@ If the power fails and there is no redundant power supply, this can lead to sign
 Dust and other contaminants in a data center can cause the technology to stop working. Due to contamination, it precipitates more often and wears out sooner.
 
 ### 2 10 Insufficient roadway dimensioning
-If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that holes for fire-rated cable glands may only be laid with cables at 60% of the cross-section. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
+If cable runs are not routed separately and minimum clearances are not met, data center IT disruptions can occur. Also extensions of the network can be problematic, so that the protection against fire and smoke developments may no longer be guaranteed. It should also be noted that holes for cable penetrations in fire walls may only be laid with cables at 60% of the cross-section. 40% must be filled with fire-retardant mortar or another material approved for firefighting. If this requirement is not observed, a fire from the adjacent room may easily spread to the RZ.
 
 3 requirements
 ---------------
@@ -100,7 +98,7 @@ For all operational components of the data center, an uninterruptible power supp
 The UPS MUST be adequately dimensioned so that all components are powered on in the event of a power failure, so that no data loss occurs.
 In the case of relevant changes, it MUST be checked whether the existing UPS systems are still sufficiently dimensioned. The battery of the UPS MUST be maintained in the required temperature range and preferably placed in a separate area.
 
-The UPS MUST be regularly maintained and tested for functionality. For this, the maintenance intervals provided by the manufacturer MUST be adhered to * (* see * INF.2.A10 Infrastructure Inspection and Maintenance) *. In order to ensure that the UPS provides the necessary support time, the actual support time MUST be determined on a regular basis and, in addition, if there is a change in the consumer.
+The UPS MUST be regularly maintained and tested for functionality. For this, the maintenance intervals provided by the manufacturer MUST be adhered to * (* see * INF.2.A10 Infrastructure Inspection and Maintenance) *. In order to ensure that the UPS provides the required support time, the actual support time MUST be determined regularly and additionally, if there is a change in the consumers.
 
 If IT equipment is powered by a UPS, DO NOT connect it to other IT equipment using shielded wires.
 
@@ -112,9 +110,9 @@ In the event of an emergency, there must be suitable possibilities for disconnec
 
 In order to be able to operate IT systems reliably in accordance with the manufacturer's recommendations, it MUST be ensured that the air temperature and humidity in the IT operating range are within the prescribed limits.
 
-The actual heat load in the refrigerated areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
+The actual heat load in the cooled areas MUST be checked at regular intervals and after major modifications by calculation or measurement.
 
-Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period in a time interval adapted to the situation.
+Also, any existing air conditioning MUST be maintained regularly. If the two parameters "temperature" and "humidity" deviate from the standard value, they MUST be recorded over a representative period of time in a time interval adapted to the situation.
 
 #### INF.2.A6 Access control [IT operation, information security officer (ISB), building services]
 
@@ -174,7 +172,7 @@ A suitable alarm system (GMA) should be installed for the respective field of ap
 
 #### INF.2.A14 Use of a network replacement system [planner, building services]
 
-The energy supply from the network of a power supply company () SHOULD be supplemented by a power supply system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
+The energy supply from the network of a power supply company () SHOULD be supplemented by a network backup system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
 
 #### INF.2.A15 Surge protection device [Planner, building services]
 
@@ -184,7 +182,7 @@ Lightning and overvoltage protection devices SHOULD be periodically and after kn
 
 #### INF.2.A16 Air conditioning in the data center [Building Services]
 
-It SHOULD be ensured that the climatic conditions for air temperature and humidity in the data center (see INF.2.A5 * Compliance with Air Temperature and Humidity *) as well as for fresh air and suspended solids are created and maintained. The air conditioning SHOULD be sufficiently dimensioned for the data center. All relevant values ​​SHOULD be constantly monitored. If a value deviates from the norm, an automatic alerting should take place.
+It SHOULD be made sure that the climatic conditions for air temperature and humidity (see INF.2.A5 * compliance with air temperature and humidity *) in the data center and also for the areas of fresh air and suspended matter are maintained and maintained. The air conditioning SHOULD be sufficiently dimensioned for the data center. All relevant values ​​SHOULD be constantly monitored. If a value deviates from the norm, an automatic alerting should take place.
 
 The air conditioning systems SHOULD be as fail-safe as possible in computer room areas, z. B. by redundant designed components.
 
@@ -219,7 +217,7 @@ A geographically separated alternative data center SHOULD be set up and used. Th
 
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 
-When an existing data center is expanded, appropriate dust control measures should be defined, planned and implemented. Persons who themselves are not involved in the construction measures should check at sufficiently close intervals whether the dust protection measures are working properly and the regulations on dust protection are complied with.
+When an existing data center is expanded, appropriate dust control measures should be defined, planned and implemented. Persons who themselves are not involved in the construction measures should check at sufficiently close intervals whether the dust protection measures are functioning properly and the regulations on dust protection are complied with.
 
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 
@@ -238,79 +236,12 @@ To ensure the availability of a data center, the UPS systems SHOULD be redundant
 
 #### INF.2.A26 Redundant design of emergency power systems (A)
 
-In case of increased protection requirements, emergency power supply systems SHOULD be designed redundantly. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
+In the case of increased protection requirements, emergency power supply systems SHOULD be designed redundantly. It SHOULD be ensured that these systems are also regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *).
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-The staff of the institution SHOULD have regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+With the employees of the institution SHOULD be carried out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 
 For data center areas with increased protection requirements, only danger signaling systems of the VDS Class C should be used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area "data center and server room" can be found in the following publications, among others:
-
-* #### [BKRZ] Guide Reliable Data Center
-
-  
-
- Federal Association for Information Technology, Telecommunications and New Media e.V. (BITKOM), 2013 (last accessed 04.10.2017)
- <Http://www.bitkom.org/Bitkom/Publikationen/Betriebssicheres-Rechenzentrum.html>
-
- 
-* #### [DIN50600-1] DIN EN 50600-1, Information technology - Data center facilities and infrastructures
-
-  
-
- Part 1: General Concepts, DIN, 2012
-
- 
-* #### [DIN62305-4] IEC 62305-4 (VDE 0185-305 / DIN EN 62305) - Lightning protection
-
-  
-
- Part 4: Electrical and Electronic Systems in Structural Installations, DIN, 2011
-
- 
-* #### [VdSPeri] Safety Guide Perimeter
-
-  
-
- VdS Schadenverhütung GmbH, 2012 (last accessed 04.10.2017)
- [Http://vds.de/fileadmin/vds\_publikationen/vds\_3143\_web.pdf](http://vds.de/fileadmin/vds_publikationen/vds_3143_web.pdf)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the building block "data center and server room".
-
-* G 0.5 natural disasters
-* G 0.6 disasters in the environment
-* G 0.4 Pollution, dust, corrosion
-* G 0.2 Unfavorable climatic conditions
-* G 0.3 water
-* G 0.1 fire
-* G 0.7 Major events in the environment
-* G 0.8 Failure or malfunction of the power supply
-* G 0.10 Failure or malfunction of supply networks
-* G 0.11 Failure or disruption of service providers
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.33 Personnel loss
-* G 0.34 stop
-* G 0.41 Sabotage
-* G 0.44 Unauthorized intrusion into premises
-The cross reference tables can be found in the download area due to their size.

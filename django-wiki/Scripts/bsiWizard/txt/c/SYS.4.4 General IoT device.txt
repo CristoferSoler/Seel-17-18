@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -47,7 +45,7 @@ LAN's built-in IoT devices often connect to the Internet on their own by configu
 
 If IoT devices are not regularly patched, known vulnerabilities remain open and can be exploited for large-scale attacks. One target of an attack could be to integrate the IoT devices into a botnet. In this case, they could be used, for example, to perform Distributed Denial of Service (DDoS) attacks and to limit the availability of services.
 
-Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet independently scanned the Internet for other devices to infect them with malware and add them to the botnet.
+Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet automatically scanned the Internet for additional devices to infect them with malware and add them to the botnet.
 
 ### 2 4 espionage attacks using backdoors in IoT devices
 
@@ -151,17 +149,17 @@ Depending on whether IoT devices are administered locally, directly via the netw
 
 #### SYS.4.4.A20 Regulated decommissioning of IoT devices
 
-When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be processed when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning IoT devices, make sure that no important data that may be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be used when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### SYS.4.4.A21 Operating environment and power supply [Information Security Officer (ISB), Building Services] (I)
+#### SYS.4.4.A21 Environment and Power Supply [Information Security Officer (ISB), Home Automation] (I)
 
 It should be clarified whether IoT devices may be operated in the envisaged operating environment (protection requirements of other systems, data protection). IoT devices SHOULD be protected from theft, destruction and manipulation in the environment of use.
 
-It should be clarified whether an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
+It should be clarified if an IoT device has specific physical environment requirements, such as: As humidity, temperature or energy supply. If necessary, complementary infrastructure measures SHOULD be implemented.
 
 When operating IoT devices with batteries, the regular function test and replacement of the batteries SHOULD be regulated.
 
@@ -177,77 +175,3 @@ In safety-critical areas, all IoT devices used should be checked by experts for 
 #### SYS.4.4.A24 Secure Configuration and Use of an Embedded Web Server (CIA)
 
 Web servers integrated in IoT devices SHOULD be configured as restrictively as possible. It SHOULD only the required components and functions are installed or activated. The web server SHOULD NOT be operated under a privileged account, as far as possible. Security relevant events SHOULD be logged. The access MUST be possible only after authentication. The transmission SHOULD be encrypted.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-More detailed information on hazards and safety measures in the area of ​​"general IoT device" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [ACS1] Security of IP-based surveillance cameras
-
-  
-
- CSE 128, Version 1.0, Alliance for Cyber ​​Security, 11.2016
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_128.html](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_128.html)
-
- 
-* #### [ACS2] Espionage attacks using backdoors in security cameras and room sensors
-
-  
-
- How To Protect Your Business, Expert Group Cyber ​​Security, Alliance for Cyber ​​Security, 10-2016
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/partner/161010\_expkr\_statement01.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/partner/161010_expkr_statement01.pdf)
-
- 
-* #### [DHS] Department of Homeland Security
-
-  
-
- Securing the Internet of Things, 12.2016,
- <Https://www.dhs.gov/securingtheIoT>
-
- 
-* #### [OWASP] Open Web Application Security Project
-
-  
-
- OWASP, (last accessed on 28.09.2017)
- <Https://www.owasp.org>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "General IoT device" block.
-
-* G 0.2 Unfavorable climatic conditions
-* G 0.4 Pollution, dust, corrosion
-* G 0.8 Failure or malfunction of the power supply
-* G 0.9 Failure or malfunction of communication networks
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.40 Denial of Service
-The cross reference tables can be found in the download area due to their size.

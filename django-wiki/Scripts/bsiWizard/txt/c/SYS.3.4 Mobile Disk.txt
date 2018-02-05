@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -23,7 +21,7 @@ The different and sometimes complex requirements for devices that can be used in
 
 Mobile data carriers can be exchanged during personal meetings or by mail. The exchange of digital and analog data carriers to transfer information between different communication partners and IT systems is not considered in this module. For this purpose, the requirements of block OPS.1.2.3 Data medium exchange must be implemented.
 
-In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data media and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
+In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data carriers and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
 
 2 risk situation
 -----------------
@@ -32,18 +30,18 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Carelessness in handling information
 
-Frequently it can be observed that organizational regulations and technical security procedures for mobile data carriers exist in institutions, but these are again undermined by the careless handling of specifications and technology. For example, it can be observed again and again that mobile data carriers brought along are left unattended in the meeting room or in the train compartment during the breaks.
+It is frequently observed that organizational regulations and technical security procedures for mobile data carriers exist in institutions, but these are again undermined by the careless handling of specifications and technology. For example, it can be observed again and again that mobile data carriers brought along are left unattended in the meeting room or in the train compartment during the breaks.
 
 ### 2 2 Insufficient knowledge of regulations
 
-If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not comply with them. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
+If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
 
 ### 2 3 Data loss in mobile use
 For mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
 
 ### 2 4 Broken disk
 
-Because of their size and application fields, mobile data carriers are susceptible to damage, errors or failures. Cause are, for example, constantly changing operating environments or mechanical effects.
+Mobile data carriers are susceptible to damage, errors or failures due to their size and application fields. Cause are, for example, constantly changing operating environments or mechanical effects.
 
 ### 2 5 Theft
 
@@ -55,11 +53,11 @@ Mobile data carriers are used in very different environments and are therefore e
 
 ### 2 7 Spread of malware
 
-Mobile data carriers are often used to exchange data between different devices and workplaces. There is a danger that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
+Mobile data carriers are often used to exchange data between different devices and workplaces. There is a risk that malware will nest on the mobile data carriers and thus transfer to the workstation systems.
 
 ### 2 8 Data theft with mobile data carriers
 
-Mobile data carriers, such as. As USB sticks or memory cards are usually small, unobtrusive and have a high storage capacity. Since almost all IT systems have an appropriate interface for the use of replaceable data carriers, there is a risk that they can copy large amounts of data without authorization and inconspicuity.
+Mobile data carriers, such as. As USB sticks or memory cards, are usually small, unobtrusive and have a high storage capacity. Since almost all IT systems have an appropriate interface for the use of replaceable data carriers, there is a risk that they can copy large amounts of data without authorization and inconspicuity.
 
 3 requirements
 ---------------
@@ -92,16 +90,16 @@ A policy SHOULD be created that determines how mobile media is handled. The foll
 * which mobile data carriers are actually used and who can use them,
 * which data may be stored on mobile data carriers and which not,
 * how data stored on mobile data carriers is protected against unauthorized access, manipulation and loss,
-* how the data on the mobile data carriers should be deleted,
+* how the data on the mobile data carriers should be deleted
 * if and how private media may be used,
 * with which external employees or service providers data carriers may be exchanged and which safety regulations must be observed,
 how to prevent the use of mobile data carriers for the unauthorized disclosure of information and
 * how to prevent the spread of malware via mobile data carriers.
-In addition, it should be regulated how private mobile data media may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
+In addition, it was intended to regulate how private mobile data carriers may be used in the institution. In addition, it should be checked regularly whether the security requirements for the handling of mobile data carriers are still current.
 
 #### SYS.3.4.A5 Control of the transport of mobile data carriers
 
-There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data carriers may be transported outside the home, who may take them away from home, and which basic security measures must be observed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
+There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data media may be transported outside the home, who may take them away from home and which basic security measures must be followed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
 
 #### SYS.3.4.A6 Disk Management [Specialists]
 
@@ -128,56 +126,4 @@ Mobile data carriers SHOULD always be completely encrypted when the need for pro
 
 #### SYS.3.4.A11 Integrity Protection by Checksums or Digital Signatures (I)
 
-In order to ensure only the integrity of confidential information when exchanging data using mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"Mobile data carriers" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [NIST800150] Guide to Cyber ​​Threat Information Sharing
-
-  
-
- Special Publication 800-150, National Institute of Standards and Technology (NIST), 10-2016
- <Http://dx.doi.org/10.6028/NIST.SP.800-150>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "Mobile data carrier" building block.
-
-* G 0.1 fire
-* G 0.2 Unfavorable climatic conditions
-* G 0.3 water
-* G 0.4 Pollution, dust, corrosion
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.41 Sabotage
-* G 0.42 Social engineering
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+In order to ensure only the integrity of confidential information when exchanging data using mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error-correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.

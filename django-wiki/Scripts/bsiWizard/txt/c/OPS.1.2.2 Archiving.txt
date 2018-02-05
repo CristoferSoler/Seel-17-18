@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Archiving plays a special role in the document management process, as it is expected that the documents will be available until the expiration of a given retention period and, on the other hand, their confidentiality and integrity will be preserved. In addition, the context must be preserved so that the respective stored process can be reconstructed.
+Archiving plays a special role in the document management process, as it is expected that the documents will be available until the expiration of a given retention period and, on the other hand, their confidentiality and integrity will be preserved. In addition, the context must be preserved so that the respective stored process can be reconstructed again.
 
 Throughout the duration of long-term storage, measures to preserve information and, if necessary, evidential conservation measures must be implemented.
 
@@ -39,7 +37,7 @@ If the aging of the existing system is unresponsive, it can be expected in the l
 
 ### 2 2 Inadequate classification criteria for archives
 
-Electronic archives can contain very large amounts of data. The individual data records are stored according to certain classification criteria, which are to be distinguished into index data of the business applications and index data of the archive system. If unsuitable ordering criteria are used, archived documents may not be retrievable, or only very laboriously re-searched, or the semantics of the documents can not be determined unambiguously. Likewise, there is a risk that retention targets will be missed by an unsuitable or limited selection of ordering criteria, e.g. B. the ability to prove to third parties.
+Electronic archives can contain very large amounts of data. The individual data records are stored according to certain classification criteria, which are to be distinguished into index data of the business applications and index data of the archive system. If unsuitable classification criteria are used, archived documents may not be retrieved or can only be re-searched with great difficulty, or the semantics of the documents can not be determined unambiguously. Likewise, there is a risk that retention targets will be missed by an unsuitable or limited selection of ordering criteria, e.g. B. the ability to prove to third parties.
 
 ### 2 3 Inadequate documentation of archive accesses
 
@@ -85,7 +83,7 @@ Since archive systems centrally store sensitive data of an institution, their IT
 
 #### OPS.1.2.2.A4 Consistent indexing of data during archiving [IT, IT operation, user]
 
-All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to quickly find them again in future search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
+All data, documents and data records stored in an archive MUST be clearly indexed in order to be able to find them quickly in future search queries. For this, it must already be determined during the conception, which structure and which extent the index data for an archive should have.
 
 #### OPS.1.2.2.A5 Regular processing of archived data [Head IT]
 
@@ -93,14 +91,14 @@ It MUST be ensured throughout the archiving period that
 
 * the used data format can be processed by the used applications,
 * the stored data will remain readable and reproducible in the future so that semantics and probative value can be maintained,
-* the used file system can be processed on the storage medium by all involved components,
+* the used file system can be processed on the storage medium by all components involved,
 * the storage media can be read at any time technically flawlessly and
 * the cryptographic methods used for encryption and evidential value preservation by means of digital signature, seal, time stamp or technical evidence data (Evidence Records) correspond to the state of the art.
 #### OPS.1.2.2.A6 Protection of the integrity of the index database of archive systems [Head IT, IT Operations]
 
 The integrity of the index database MUST be ensured and verifiable. In addition, the index database MUST be backed up regularly. The backups MUST be recoverable. Medium and large archives MUST have redundant index databases.
 
-#### OPS.1.2.2.A7 Regular data backup of system and archive data [Head IT, IT Operations]
+#### OPS.1.2.2.A7 Regular backup of system and archive data [Head IT, IT Operations]
 
 All archive data, the associated index databases and the system data MUST be backed up regularly (see OPS.1.1.6 * Data backup). *).
 
@@ -156,7 +154,7 @@ The implementation and participation in the training SHOULD be documented.
 The available free space on the archive media MUST be monitored continuously. As soon as a defined limit value is undershot, a responsible employee MUST be alerted automatically. It SHOULD be ensured that the alerting takes place according to the role. There must always be enough empty archive media available to quickly prevent memory bottlenecks.
 
 #### OPS.1.2.2.A13 Regular revision of the archiving processes
-IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+IT SHOULD check regularly whether the archiving processes are still working correctly and correctly. For this, a checklist should be created, which contains questions about responsibilities, organizational processes, use of archiving, redundancy of archive data, administration and the technical evaluation of the archive system. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 #### OPS.1.2.2.A14 Regular monitoring of the archive system [Head IT]
 
@@ -182,7 +180,7 @@ A new archive system SHOULD always be selected based on the specifications descr
 
 For archiving, suitable media SHOULD be selected and used. The aspects to be archived data volume, average access times and average concurrent accesses to the archive system SHOULD be taken into account. Likewise, the archive media SHOULD meet the requirements for long-term archiving with regard to audit security and service life.
 
-#### OPS.1.2.2.A19 Regular function and recovery tests during archiving [Head of IT, IT operation]
+#### OPS.1.2.2.A19 Regular function and recovery tests during archiving [Head IT, IT Operations]
 
 For archiving, there should be regular functional and recovery tests. The archiving media SHOULD be checked at least once a year to see if they are still readable and with integrity. For troubleshooting, suitable processes SHOULD be defined.
 
@@ -198,40 +196,3 @@ In order to cover long retention periods, archive data should only be backed up 
 #### OPS.1.2.2.A21 Transfer of paper data to electronic archives (CI)
 
 If documents are digitized on paper and objects of inspection and transferred to an electronic archive, it should be ensured that the digital copy matches the original document visually and in terms of content.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the field of "archiving" can be found in the following publications, among others:
-
-* #### [AlgKat] Notice on the electronic signature according to the Signature Act and the Signature Ordinance
-
-  
-
- Overview of suitable algorithms, BNetzA, 2017
- [https://www.bundesnetzagentur.de/DE/Service-Funktionen/ElektronischeVertrauensdienste/QES/WelcheAufgabenhatdieBundesnetzagentur/GeeigneteAlgorithmenfestlegen/geeignetealgorithmenfestlegen\_node.html](https://www.bundesnetzagentur.de/DE/Service-Funktionen/ElektronischeVertrauensdienste/ QES / WelcheAufgabenhatdieBundesnetzagentur / Suitable algorithms commiting / geeignetealgorithmenfestlegen_node.html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "Archiving" block.
-
-* G 0.2 Unfavorable climatic conditions
-* G 0.4 Pollution, dust, corrosion
-* G 0.14 Spying out information (spying)
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.37 denying actions
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

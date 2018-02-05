@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -15,7 +13,7 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-Based on the SYS.2.1 General Client block, this block contains specific requirements that must be observed and fulfilled for the secure operation of clients under the Windows 10 operating system in addition to the requirements from the SYS.2.1 General Client block. The included requirements must always be considered in conjunction with the requirements of the "General Client". Protection against advanced and persistent threats must be realized by meeting additional requirements of the different layers of modernized IT-Grundschutz.
+Based on the SYS.2.1 General Client block, this block contains specific requirements that must be observed and fulfilled for the secure operation of clients under the Windows 10 operating system in addition to the requirements of the SYS.2.1 General Client block. The included requirements must always be considered in conjunction with the requirements of the "General Client". Protection against advanced and persistent threats must be realized by meeting additional requirements of the different layers of modernized IT-Grundschutz.
 
 2 risk situation
 -----------------
@@ -24,11 +22,11 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware on Windows 10
 
-Due to the high prevalence of Windows operating systems and the backwards compatibility with older versions, which is often present between the system generations, the threat from malicious programs and unauthorized intrusion into the IT system is comparatively high. Malicious programs can have a variety of functions and provide an attacker with extensive control options. Among other things, malicious programs can specifically search passwords, remotely control systems, deactivate protection software and spy on data. In particular, loss or falsification of information or applications is of paramount importance. But also a loss of image and financial damage, which can thus result from malicious programs, is of great importance. Windows is a primary target for malware attacks due to its widespread use, posing a major threat from numerous attackers and attack types.
+Due to the high prevalence of Windows operating systems and the backwards compatibility with older versions, which is often present between the system generations, the threat from malicious programs and unauthorized intrusion into the IT system is comparatively high. Malicious programs can have a variety of functions and provide an attacker with extensive control options. Among other things, malicious programs can specifically search passwords, remotely control systems, deactivate protection software and spy on data. In particular, loss or falsification of information or applications is of paramount importance. But also a loss of image and financial damage, which can thus result from malicious programs, is of great importance. Windows is a primary target for malicious software because of its widespread adoption, posing a major threat from many attackers and attack types.
 
 ### 2 2 Software Vulnerabilities in Windows 10
 
-Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read data or tampering.
+Windows 10, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can lead to serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows may be exploited by attackers to infiltrate malicious software, unauthorized read data, or tampering.
 
 ### 2 3 Integrated cloud functionalities
 Windows 10 has many features that store and sync data using Microsoft's services ("cloud services"). As a result, there is a risk of unconsciously (or at least carelessly) using it for possibly sensitive or personal data. At the same time, violations of data protection laws may result if data is stored with third parties, usually abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up. Thus, data of the institution can be unintentionally synchronized to the employees' private devices. As another example, Windows 10 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud, leaving critical cryptographic secrets in the hands of third parties.
@@ -53,7 +51,7 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.2.2.3.A1 Planning the use of cloud services
 
-Windows 10-based devices are closely interlinked with the cloud services of the manufacturer Microsoft. Therefore, before using Windows 10-based devices, it is MUST be strategically determined which cloud services are or should be used.
+Windows 10-based devices are closely interlinked with the cloud services of the manufacturer Microsoft. Therefore, prior to using Windows 10-based devices, it is MUST be strategically determined which cloud services are or should be used.
 
 #### SYS.2.2.3.A2 Appropriate selection of Windows 10 version and procurement
 
@@ -80,7 +78,7 @@ The registration on the system and the domain MAY ONLY be possible with the acco
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clients under Windows 10. They SHOULD be implemented in principle.
 
 #### SYS.2.2.3.A7 Local Security Policy
-All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other requirements of IT Baseline Protection or the organization. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
+All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other IT security or organization requirements. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
 
 #### SYS.2.2.3.A8 Central management of client security policies
 
@@ -100,7 +98,7 @@ If Windows 10 is (native) installed on a hardware system in the Enterprise versi
 
 #### SYS.2.2.3.A12 File and Share Permissions
 
-Access to files and folders on the local system and network shares SHOULD be configured according to an authorization and access concept. This includes in particular the standard administrative shares on the system. The write permissions for users SHOULD be limited to a defined area in the file system. In particular, users SHOULD NOT receive write permissions to folders in the operating system or installed applications.
+Access to files and folders on the local system and network shares SHOULD be configured according to an authorization and access concept. This includes in particular the standard administrative shares on the system. The write permissions for users SHOULD be limited to a defined area in the file system. In particular, users SHOULD NOT receive write permissions to folders of the operating system or installed applications.
 
 #### SYS.2.2.3.A13 Using SmartScreen features
 
@@ -141,18 +139,18 @@ The configuration parameters of the User Account Control (UAC) SHOULD be used fo
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.2.3.A21 Use of the Encrypting File System EFS (CI)
-Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in using EFS correctly.
+Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in the correct handling of EFS.
 
 #### SYS.2.2.3.A22 Windows PowerShell (CIA)
 
-The execution of PowerShell and WPS files SHOULD only be granted to administrators. The PowerShell version itself SHOULD be centrally logged and the logs monitored. The execution of PowerShell scripts SHOULD be restricted by the Set-ExecutionPolicy-AllSigned command to prevent the accidental execution of unsigned scripts.
+The execution of PowerShell and WPS files SHOULD only be granted to administrators. The PowerShell execution itself SHOULD be centrally logged and the logs monitored. The execution of PowerShell scripts SHOULD be restricted by the Set-ExecutionPolicy-AllSigned command to prevent the accidental execution of unsigned scripts.
 
 #### SYS.2.2.3.A23 Extended Credential Protection in Windows 10 (CI)
 
-On UEFI-based systems, SecureBoot SHOULD use and monitor the status of LSASS protected mode at system startup (see SYS.2.2.3.A11 Credential protection in Windows 10). If remote maintenance of the client systems is provided by means of RDP, the option "restrictedAdmin" SHOULD be used when using Windows 10 in a domain from the functional level 2012 R2.
+On UEFI-based systems, SecureBoot SHOULD use and monitor the status of LSASS protected mode at system startup (see SYS.2.2.3.A11 Credential Protection in Windows 10). If remote maintenance of the client systems is provided by means of RDP, the option "restrictedAdmin" SHOULD be used when using Windows 10 in a domain from the functional level 2012 R2.
 
 #### SYS.2.2.3.A24 Activation of the last-access timestamp (A)
 
@@ -161,68 +159,3 @@ To facilitate the analysis of system abuse, the NTFS load access timestamp SHOUL
 #### SYS.2.2.3.A25 Handling Connected User Experience and Telemetry (CI) Remote Access Features
 
 The Connected User Experience and Telemetry (CUET) component of Windows 10 is an integral part of the operating system and provides telemetry functionality as well as remote access for the OS vendor to the local system. A remote access to the Windows 10 client by the operating system manufacturer SHOULD be logged on the network side and blocked if necessary.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the section "Clients under Windows 10" can be found in the following publications, among others:
-
-* #### [TN408187] Configuring Additional LSA Protection
-
-  
-
- Microsoft Technet, 03.2014
- <Https://technet.microsoft.com/en-us/library/dn408187.aspx>
-
- 
-* #### [TN621547] Credential Guard - Overview
-
-  
-
- Microsoft, (last accessed on 27.09.2017)
- <Https://docs.microsoft.com/de-de/windows/access-protection/credential-guard/credential-guard-requirements>
-
- 
-* #### [TN986865] Device Guard - Overview
-
-  
-
- Microsoft, (last accessed on 27.09.2017)
- <Https://technet.microsoft.com/de-de/library/dn986865.aspx>
-
- 
-* #### [WIN10E] Compare Windows 10 editions
-
-  
-
- Microsoft, (last accessed on 27.09.2017)
- <Https://www.microsoft.com/de-de/WindowsForBusiness/Compare>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Clients under Windows 10" block.
-
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.39 Malware
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

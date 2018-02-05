@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mails, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
 Microsoft Outlook is a client made available directly from mobile devices by installing the Microsoft Office suite or integrating with operating systems. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
@@ -89,7 +87,7 @@ Before Microsoft Exchange and Outlook can be used, the use of Microsoft Exchange
 It MUST be decided with which systems and application components, as well as in which hierarchical gradation the Microsoft Exchange infrastructure should be realized. The selection MUST also decide whether to run the systems as a cloud or local service.
 
 #### APP.5.2.A3 Authorization Management
-For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as is necessary for the task fulfillment (minimum principle). It MUST be checked on a regular basis to see if the allocated rights are still appropriate.
+For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as are necessary for the task fulfillment (minimum principle). It MUST be checked on a regular basis to see if the allocated rights are still appropriate.
 
 #### APP.5.2.A4 Access rights to Microsoft Exchange objects
 
@@ -149,7 +147,7 @@ For the operation of the components of the Microsoft Exchange infrastructure, on
 
 #### APP.5.2.A14 Training for Security Mechanisms of Outlook for Users [Information Security Officer (ISB)]
 
-Outlook users SHOULD regularly be sensitized and trained on existing and new threats when working with Microsoft Outlook. All users SHOULD be provided with relevant security mechanisms and procedures within Outlook. Here, regulations should z. This can be taken into account, for example, for access mechanisms, forms of authentication and cryptographic specifications for e-mail encryption.
+Outlook users SHOULD regularly be sensitized and trained on existing and new dangers when working with Microsoft Outlook. All users SHOULD be provided with relevant security mechanisms and procedures within Outlook. Here, regulations should z. This can be taken into account, for example, for access mechanisms, forms of authentication and cryptographic specifications for e-mail encryption.
 
 #### APP.5.2.A15 Application documentation for Microsoft Exchange
 
@@ -173,7 +171,7 @@ Mechanisms such. B. Encrypting File System or Windows BitLocker Drive Encryption
 
 #### APP.5.2.A18 Regular Security Checks for Microsoft Exchange Systems (CIA)
 
-The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during an examination:
+The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during a test:
 
 * regular searches of safety-related information,
 * Authorizations for revision users,
@@ -181,40 +179,3 @@ The Microsoft Exchange system SHOULD regularly be checked for misconfigurations 
 * Checking the timeliness of updates and
 * Checking the security of the communication interfaces.
 The Microsoft Exchange permissions SHOULD regularly be checked at least randomly.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the "Microsoft Exchange and Outlook" area can be found in the following publications, among others:
-
-* #### [TecNet] Microsoft Technet
-
-  
-
- Microsoft Technet, (last accessed on 29.09.2017)
- <Https://technet.microsoft.com/de-de>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Microsoft Exchange and Outlook" building block.
-
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.40 Denial of Service
-* G 0.45 data loss
-The cross reference tables can be found in the download area due to their size.

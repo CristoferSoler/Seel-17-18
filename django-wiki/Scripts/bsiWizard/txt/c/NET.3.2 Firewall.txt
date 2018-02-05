@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -9,9 +7,9 @@ Table of content
 
 A firewall is a system of software and hardware components that is used to securely couple IP-based data networks. For this purpose, the technically possible is restricted to the communication defined as secure in a security policy by means of a firewall structure. Security here means that only the desired accesses or data streams between different networks are allowed.
 
-In order to secure gateways, it is often not just a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
+In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
-A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, for example: For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
+A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
 ### 1.2 Objective
 
@@ -37,7 +35,7 @@ In a DDoS attack on a protected network (eg TCP-SYN-Flooding, UDP Packet Storm) 
 
 ### 2 2 Manipulation
 
-If an attacker succeeds in gaining unauthorized access to a firewall system or a corresponding administration interface, he can arbitrarily manipulate files there. For example, he can change the configuration, start additional services or install malicious software. Likewise, he can record the communication connections on the manipulated system. For example, the firewall rules can be changed to access the firewall and intranet of the institution from the Internet. Furthermore, an attacker can initiate a denial of service (DoS) attack by blocking access to individual server services in the policy.
+If an attacker succeeds in gaining unauthorized access to a firewall system or a corresponding administration interface, he can manipulate files there as he sees fit. For example, he can change the configuration, start additional services or install malicious software. Likewise, he can record the communication connections on the manipulated system. For example, the firewall rules can be changed to access the firewall and intranet of the institution from the Internet. Furthermore, an attacker can initiate a denial of service (DoS) attack by blocking access to individual server services in the policy.
 
 ### 2 3 Software vulnerabilities or errors
 
@@ -83,7 +81,7 @@ A packet filter MUST be set to discard all invalid TCP flag combinations. Basica
 
 Before a firewall is used, it MUST be configured securely.
 
-A firewall may ONLY be installed and configured ONLY by authorized persons, eg. B. Persons responsible for their own IT operations or contracted service providers.
+A firewall must ONLY be installed and configured ONLY by authorized persons, eg. B. Persons responsible for their own IT operations or contracted service providers.
 
 All configuration changes MUST be traceable documented (see NET.3.2.A14 * operating documentation *). The integrity of the configuration files SHOULD be properly protected. Access passwords MUST be stored encrypted.
 
@@ -106,7 +104,7 @@ It must always be possible to access the firewall directly so that you can conti
 
 #### NET.3.2.A8 Prevention of dynamic routing
 
-In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the module NET.3.1 * Router and Switches *.
+In the settings of the firewall, the dynamic routing MUST be deactivated, unless the packet filter is used as a perimeter router according to the building block NET.3.1 * Router and Switches *.
 
 #### NET.3.2.A9 logging
 
@@ -159,11 +157,11 @@ The structure of a "Packet Filter - Application Level Gateway Packet Filter" (P-
 
 #### NET.3.2.A17 Disabling IPv4 or IPv6
 
-If the IPv4 or IPv6 protocol is not needed in a network segment, it SHOULD be disabled at the respective firewall network access point (eg at the corresponding firewall interface). If the IPv4 or IPv6 protocol is not needed or used at all, it SHOULD be completely disabled on the firewall.
+If the IPv4 or IPv6 protocol is not required in a network segment, it SHOULD be disabled at the respective firewall network access point (eg at the corresponding firewall interface). If the IPv4 or IPv6 protocol is not needed or used at all, it SHOULD be completely disabled on the firewall.
 
 #### NET.3.2.A18 Administration via a separate management network
 
-Firewalls SHOULD only be administered via a separate management network (out-of-band management). Any existing administration interface via the actual data network (in-band) MUST be deactivated. Communication in the management network SHOULD be limited to a few management protocols with well-defined origins and goals via management firewalls (see NET.1.1 * network architecture and design *). The available security mechanisms of the used management protocols for authentication, integrity assurance and encryption SHOULD be activated and all insecure management protocols deactivated (see NET.1.2 * Network Management *).
+Firewalls SHOULD only be administered via a separate management network (out-of-band management). Any existing administration interface via the actual data network (in-band) MUST be deactivated. Communication in the management network SHOULD be limited to a few management protocols with well-defined origins and goals via management firewalls (see NET.1.1 * Network architecture and design *). The available security mechanisms of the used management protocols for authentication, integrity assurance and encryption SHOULD be activated and all insecure management protocols deactivated (see NET.1.2 * Network Management *).
 
 #### NET.3.2.A19 Protection against TCP SYN Flooding, UDP Packet Storm and Sequence Number Guessing on Packet Filter
 
@@ -173,7 +171,7 @@ At the packet filter, which protects server services reachable from less or untr
 
 On the outer packet filter, a random generation of initial sequence numbers (ISN) SHOULD be activated for outgoing connections for TCP, if this is not already implemented by security proxies.
 
-#### NET.3.2.A20 Securing Basic Internet Protocols
+#### NET.3.2.A20 Securing basic internet protocols
 
 To communicate to the Internet, the HTTP, SMTP, and DNS protocols, including their encrypted versions, SHOULD be routed through protocol-specific security proxies.
 
@@ -190,7 +188,7 @@ There SHOULD be a secure time synchronization with a Network Time Protocol (NTP)
 
 #### NET.3.2.A23 System Monitoring and Evaluation
 
-Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined, which regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
+Firewalls SHOULD be integrated into a suitable system monitoring or monitoring concept. Furthermore, a process SHOULD be defined that regulates how log data should be evaluated and which logs should be evaluated regularly, sporadically or only on an ad hoc basis. It SHOULD constantly be monitored to see if the firewall itself and the services running on it are working properly. In case of errors or if limit values ​​are exceeded, the operating personnel SHOULD be alerted. In addition, ALARMS SHOULD automatically be generated, which are triggered by defined events. Protocol data or status messages SHOULD only be transmitted via secure communication channels.
 
 #### NET.3.2.A24 Revision and Penetration Tests
 
@@ -198,7 +196,7 @@ The firewall structure SHOULD regularly be checked for known security issues. Th
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### NET.3.2.A25 Extended integrity protection for configuration files (CI)
 
@@ -230,73 +228,3 @@ To ensure bandwidth management for critical applications and services, packet fi
 #### NET.3.2.A31 Use of Certified Products (CI)
 
 Firewalls should be deployed with a Common Criteria security evaluation, at least EAL4 level.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the "Firewall" area can be found in the following publications, among others:
-
-* #### [BSICS112] Next Generation Firewalls - Cyber ​​Security Publications
-
-  
-
- Recommendation of possible uses for the normal protection requirement, BSI, 04.2015
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/infos/20150407\_BSI\_Empfehlung\_NGFW.htm](https://www.allianz-fuer-cybersicherheit.de/ACS /DE/_/infos/20150407_BSI_Empfehlung_NGFW.htm)
-
- 
-* #### [ISILANA] BSI Internet Security Standard (Isi Series):
-
-  
-
- Secure connection of local networks to the Internet (Isi-LANA), Federal Office for Information Security (BSI), 2014
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
-
- 
-* #### [NIST80041] NIST Special Publication 800-41
-
-  
-
- Guidelines on Firewalls and Firewall Policy, 09.2009
- <Http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-40r3.pdf>
-
- 
-* #### [TR21022] BSI Technical Guideline, Cryptographic Procedures
-
-  
-
- Use of Transport Layer Security (TLS), Federal Office for Information Security (BSI), 2017
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Firewall" block.
-
-* G 0.8 Failure or malfunction of the power supply
-* G 0.9 Failure or malfunction of communication networks
-* G 0.14 Spying out information (spying)
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.41 Sabotage
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

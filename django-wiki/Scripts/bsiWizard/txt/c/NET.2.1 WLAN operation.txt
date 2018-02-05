@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -24,7 +22,7 @@ WLANs can be operated in two different modes according to the needs of an operat
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in the area of ​​WLAN operation:
+The following specific threats and vulnerabilities are of particular importance in WLAN operation:
 
 ### 2 1 Failure or malfunction of a wireless network
 
@@ -46,7 +44,7 @@ If authentication methods and mechanisms are missing or insufficient, security g
 
 ### 2 5 Incorrect configuration of the WLAN infrastructure
 
-Access points and other WLAN components (eg WLAN controllers) offer a large number of configuration settings, which in particular also concern security functions. If wrong settings are made here, either no communication via an access point is possible or communication takes place unprotected or with a too low protection level.
+Access points and other WLAN components (eg WLAN controllers) offer a large number of configuration settings, which in particular also concern security functions. If incorrect settings are made here, either no communication via an access point is possible or communication takes place unprotected or with too low a level of protection.
 
 ### 2 6 Insufficient or missing Wi-Fi security mechanisms
 
@@ -54,14 +52,14 @@ In the delivery state, WLAN components are often configured so that no or only a
 
 ### 2 7 Listening to the WLAN communication
 
-Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, wireless networks or the transmitted radio waves often exceed the limits of owner-occupied premises, so that data is also broadcast in areas that can not be controlled by users or institution and secured.
+Since radio is a medium that several users can share ("shared medium"), the data transmitted via WLANs can be easily monitored and recorded. If the data is not or insufficiently encrypted, transmitted payload data can be easily obtained. In addition, radio networks or the radio waves transmitted often exceed the limits of the self-occupied premises, so that data are also broadcast in areas that can not be controlled and secured by the users or an institution.
 
 ### 2 8 Imitation of a valid access point (rogue access point)
 An attacker can pretend to be part of the WLAN infrastructure by installing their own access point with a properly chosen SSID near a client. This fake access point is called a rogue access point. If this provides the WLAN client with a higher transmission power than the real access point, the client will use it as the base station if two-sided authentication is not enforced. In addition, the real access point could be turned off by a denial of service attack. Users log on to a network that only pretends to be the destination network. This makes it possible for an attacker to listen to the communication. Poisoning or spoofing methods also allow an attacker to fake a false identity or to redirect network traffic to his systems. So he can eavesdrop and control the communication. Especially in public radio networks (so-called hotspots) a rogue access point is a popular means of attack.
 
 ### 2 9 Unprotected LAN access at the access point
 
-If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface, but do not consider the Ethernet connection further.
+If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface but do not consider the Ethernet connection further.
 
 ### 2 10 hardware damage
 
@@ -83,7 +81,7 @@ The following requirements MUST be implemented as a priority:
 #### NET.2.1.A1 Definition of a strategy for the use of WLANs [Head IT]
 
 Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and determined in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
-In addition MUST be determined in the planning phase, who is responsible for the administration of different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible persons.
+In addition MUST be determined in the planning phase, who is responsible for the administration of different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible.
 
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
 
@@ -152,14 +150,14 @@ WLANs SHOULD regularly be checked to see if any security vulnerabilities exist. 
 
 #### NET.2.1.A14 Regular audits of the WLAN components
 
-For all components of the WLAN infrastructure (access points, distribution system, WLAN management solution, etc.) SHOULD check regularly whether all specified security measures have been implemented and configured correctly. Publicly established access points SHOULD regularly be randomly checked for violent opening or manipulation attempts. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
+For all components of the WLAN infrastructure (access points, distribution system, WLAN management solution, etc.) SHOULD check regularly whether all defined security measures have been implemented and correctly configured. Publicly established access points SHOULD regularly be randomly checked for violent opening or manipulation attempts. The audit results SHOULD be traceable documented and compared with the target state. Deviations SHOULD be investigated.
 
 ### 3.3 Requirements for increased protection requirements
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### NET.2.1.A15 Using a VPN to Secure WLANs (CI)
-With increased protection requirements, a VPN SHOULD be used to additionally secure the communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
+With increased protection requirements, a VPN SHOULD be used to additionally secure communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
 
 #### NET.2.1.A16 Additional protection for the connection of WLANs to a LAN (CIA)
 
@@ -172,66 +170,3 @@ The communication between the access points via the radio interface and the LAN 
 #### NET.2.1.A18 Using Wireless Intrusion Detection / Wireless Intrusion Prevention Systems (CIA)
 
 In order to detect security incidents and vulnerabilities in a timely manner and initiate appropriate countermeasures, wireless intrusion detection systems or wireless intrusion prevention systems should be used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on hazards and security measures in the area of ​​"WLAN operation" can be found in the following publications, among others:
-
-* #### [BSIDKS] Wireless communication systems and their security aspects
-
-  
-
- Federal Office for Information Security (BSI), 2009 <https://www.bsi.bund.de/DE/Publikationen/Broschueren/Drahtloskom/drahtloskom.html>
-
- 
-* #### [ISIWLAN] BSI Internet Security Standard (ISi Series)
-
-  
-
- Secure connection of local networks to the Internet (Isi-LANA), Federal Office for Information Security (BSI), 2014
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
-
- 
-* #### [NIST800153] NIST Special Publication 800-153
-
-  
-
- Guidelines for Securing Wireless Local Area Networks (WLANs), NIST, 02-2012 http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-153.pdf
-
- 
-* #### [NIST80097] NIST Special Publication 800-97
-
-  
-
- Establishing Wireless Robust Security Networks, A Guide to IEEE 802.11, NIST, 02.2007
- <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-97.pdf>
-
- 
-* #### [TR03103] Technical Guideline Secure Wireless LAN
-
-  
-
- Federal Office for Information Security (BSI), 2005 [https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr03103/index\_htm.html]https://www.bsi.bund.de /DE/Publikationen/TechnischeRichtlinien/tr03103/index_htm.html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "WLAN operation".
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.44 Unauthorized intrusion into premises
-The cross reference tables can be found in the download area due to their size.

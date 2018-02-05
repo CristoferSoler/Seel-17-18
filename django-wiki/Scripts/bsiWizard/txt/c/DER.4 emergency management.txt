@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -37,7 +35,7 @@ If employees fail, z. Eg by germs in the canteen, pandemic, death or strike, the
 If components of an IT system fail, eg. B. by defective hardware or power failure, the entire IT operation can be disturbed. As a result, the availability of the respective information and thus of the respective business process is at risk. In addition, important information needed for recovery operations may not be available.
 
 ### 2 3 Failure of a Wide Area Network (WAN)
-The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures that can cause massive problems in communication and accessibility.
+The causes of the failure of a wide area network (WAN) can be manifold. Therefore, it is possible that a network outage will affect only individual users, a vendor or a specific region. Frequently, such failures only last a short time and only affect the business processes and specialized tasks that require a correspondingly high availability of the WAN. But there are also always longer failures, which can cause massive problems in communication and accessibility.
 
 ### 2 4 Failure of a building
 
@@ -79,7 +77,7 @@ The processes in the security management SHOULD be coordinated with the emergenc
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 #### DER.4.A3 Definition of Scope and Emergency Management Strategy [Institutional Management] (CIA)
 
 The scope of the emergency management system SHOULD be clearly defined. The institution's management SHOULD set out an emergency management strategy that sets out the goals and the level of risk acceptance.
@@ -98,9 +96,9 @@ The financial, technical and human resources for the intended goals of emergency
 
 #### DER.4.A7 Creation of an emergency concept [institutional management] (CIA)
 
-All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept, information security SHOULD be considered and appropriate security concepts for emergency solutions developed.
+All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept SHOULD information security be considered and appropriate security concepts for emergency solutions developed.
 
-#### DER.4.A8 Integration of employees into the emergency management process [Supervisors, Head of Human Resources] (CIA)
+#### DER.4.A8 Integration of Employees in the Emergency Management Process [Supervisors, Head of Human Resources] (CIA)
 
 All employees SHOULD be sensitized regularly to the topic of emergency management. For emergency management, there should be a training and awareness-raising concept. The employees in the emergency management team SHOULD regularly be trained according to the required competences.
 
@@ -127,13 +125,13 @@ The management level SHOULD carry out its task of regularly reviewing, evaluatin
 
 All emergency measures should be reviewed regularly or in the case of major changes to ensure that they are still respected and correctly implemented and that they are still capable of achieving the defined goals.
 
-It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In the case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
+It should be investigated whether technical measures were correctly implemented and configured and whether organizational measures are implemented effectively and efficiently. In case of deviations, the causes of defects SHOULD be determined and improvement measures initiated. This summary of results SHOULD be released by the management level. In addition, a process should be initiated that controls and monitors whether and how the improvement measures are implemented. In case of default, this SHOULD be escalated to the management level at an early stage.
 
 It should be determined in the institution's management how the review activities are coordinated. In particular, reviews carried out in the area of ​​auditing, IT, security management, information security management and emergency management SHOULD be coordinated. For this purpose, it should be regulated which measures are to be checked when and by whom.
 
 #### DER.4.A15 Assessment of the Efficiency of the Emergency Management System [Institutional Management] (IA)
 
-It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​differ negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
+It SHOULD regularly be assessed how powerful and effective the emergency management system is. As a basis SHOULD measure and evaluation criteria, such. B. Key performance indicators (Key Performance Indicators) are defined. These measured values ​​SHOULD be determined regularly and compared with the previous year's values. If the values ​​deviate negatively, the causes SHOULD be determined and improvement measures defined. The results of the evaluation SHOULD be reported to the management.
 
 The management SOLLTE decide with which measures the emergency management should be further developed. All decisions of the management level SHOULD be documented and the previous records updated.
 
@@ -141,115 +139,3 @@ The management SOLLTE decide with which measures the emergency management should
 
 In emergency preparedness and response planning for outsourced components, the contractor's emergency management SHOULD check the supplier's or service provider's emergency management. This examination SHOULD be performed regularly by a person in charge of the institution's management. Also, the procedures in emergency tests and exercises SHOULD be coordinated with the supplier or outsourcing service provider and possibly carried out together.
 The results and evaluations SHOULD be exchanged regularly between the institution's management and the supplier or service provider. This should include any improvement measures.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on hazards and safety measures in the area of ​​emergency management can be found in the following publications, among others:
-
-* #### [22301] ISO 22301: 2012
-
-  
-
- Scietal security - Business continuity management systems - Requirements, ISO, 2012
- <Https://www.iso.org/standard/50038.html>
-
- 
-* #### [27001A17] ISO / IEC 27001: 2013 - Annex A.17 Information security aspects of buisiness continuity management
-
-  
-
- Information technology - Security techniques - Information security management systems - Requirements, in particular A.17 Information security aspects of business continuity management, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [27031] ISO / IEC 27031: 2011
-
-  
-
- Information technology - Security techniques - Guidelines for information and communications technology readiness for business continuity, 02.2011
- <Https://www.iso.org/standard/44374.html>
-
- 
-* #### [BSI3] Risk analysis based on IT-Grundschutz, BSI standard 200-3
-
-  
-
- BSI, 2017
- [https://www.bsi.bund.de/DE/Themen/ITGrundschutz/IT-Grundschutz-Modernisierung/GS\_Standards/gs\_standards\_node.html](https://www.bsi.bund.de/ DE / topics / IT baseline protection / IT baseline protection modernization / GS_Standards / gs_standards_node.html)
-
- 
-* #### [BSI4] Emergency Management, BSI Standard 100-4
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzStandards/Standard04/ITGStandard04\_node.html](https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzStandards/ Standard04 / ITGStandard04_node.html)
-
- 
-* #### [BWV] Report of the Federal Commissioner for Economic Efficiency in Administration
-
-  
-
- Model of Risk Management for the Federal Administration, Bundesrechnungshof, 04.2017
- <Https://www.bundesrechnungshof.de/de/veroeffentlichungen/gutachten-berichte-bwv/berichte/sammlung/2017-bwv-bericht-modell-eines-risikomanagements-fuer-die-bundesverwaltung>
-
- 
-* #### [ISFBC] The Standard of Good Practices Area BC Business Continuity
-
-  
-
- ISF, especially Area BC Business Continuity, June 2016
-
- 
-* #### [LFKK] Crisis Communication - Guide to Government and Business
-
-  
-
- BMI, 2014
- <Https://www.bmi.bund.de/SharedDocs/Downloads/DE/Broschueren/2014/leitfaden-krisenkommunikation.pdf>
-
- 
-* #### [LFKRITIS] Critical Infrastructure Protection - Risk and Crisis Management (Business and Government Guide)
-
-  
-
- BMI, 05.2011
- [https://www.bmi.bund.de/SharedDocs/Downloads/DE/Broschueren/2011/leitfaden\_schutz-kritischer-infrastrukturn.pdf](https://www.bmi.bund.de/SharedDocs/Downloads/ DE / booklets / 2011 / leitfaden_schutz-critical-infrastrukturn.pdf)
-
- 
-* #### [NIST80034] NIST Special Publication 800-34
-
-  
-
- Contingency Planning Guide for Federal Information Systems, Revision 1, 05-2010
- <Http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf>
-
- 
-* #### [UMRA] Implementation framework for emergency management according to BSI standard 100-4
-
-  
-
- BSI, (last accessed on 28.09.2017)
- <Https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzStandards/Umsetzungsrahmenwerk/umra.html>
-
- 
-* #### [WKN] Web course emergency management according to BSI standard 100-4
-
-  
-
- BSI, (last accessed on 28.09.2017)
- [https://www.bsi.bund.de/DE/Themen/ITGrundschutz/ITGrundschutzSchulung/Webkurs1004/0\_Startseite/nfm00\_Start.html](https://www.bsi.bund.de/DE/Themen/ IT baseline protection / ITGrundschutzSchulung / Webkurs1004 / 0_Startseite / nfm00_Start.html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Emergency Management".
-
-* G 0.18 Missing planning or missing adjustment
-* G 0.27 Resource shortage
-* G 0.33 Personnel loss
-The cross reference tables can be found in the download area due to their size.

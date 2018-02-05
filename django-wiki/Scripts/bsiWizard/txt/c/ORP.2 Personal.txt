@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -55,11 +53,11 @@ The unauthorized use of own IT systems by employees can generally be difficult t
 
 ### 2 9 Abuse of social networks
 
-Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as here, on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed under "acquaintance" can be exploited.
+Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed in "acquaintance" can be exploited.
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
-Outside and inside perpetrators may try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
+Outside and inside perpetrators can try to manipulate or destroy devices, information or software for various reasons. The effects range from unauthorized access to sensitive data to the destruction of IT systems that can cause significant downtime.
 
 3 requirements
 ---------------
@@ -85,15 +83,15 @@ The IT administration must also ensure that former employees are deprived of all
 
 Before the adoption MUST again be made explicit on confidentiality obligations.
 
-Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security staff, MUST also be informed of the employee's departure. In order to handle all activities that accompany the departure of employees in a regulated manner, the setting and the processing of a checklist SHOULD be helpful in a similar way to the attitude here.
+Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security personnel, MUST also be informed of the employee's departure. In order to handle all activities that accompany the departure of employees in a regulated manner, the setting and the processing of a checklist SHOULD be helpful in a similar way to the attitude here.
 
 #### ORP.2.A3 Representation Rules [Supervisors]
 
-Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and practicable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. In this case, the simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to name or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external forces can be used for the substitution case.
+Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and workable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. In this case, the simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to name or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external forces can be used for the substitution case.
 
 #### ORP.2.A4 Regulations for the use of external personnel
 
-In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated as visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
+In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated as visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be instructed in their tasks similar to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
 
 #### ORP.2.A5 Confidentiality agreements for the use of outside personnel
 
@@ -112,13 +110,13 @@ New employees SHOULD be checked for trustworthiness before they are hired. There
 
 #### ORP.2.A8 Tasks and Responsibilities of Employees [Information Security Officer (ISB)]
 
-The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that each employee has a responsibility for information security outside of working hours and outside the premises.
+The duties and responsibilities of employees SHOULD be documented in an appropriate manner, for example through employment contracts or agreements. The IT Security Officer SHOULD make sure that all employees know their duties and responsibilities in the security process. In particular, it SHOULD be agreed that every employee has a responsibility for information security outside of working hours and outside the premises.
 
 #### ORP.2.A9 Training of employees
 
 Employees SHOULD be trained on a regular basis according to their job so that they are always up-to-date with the work assigned to them. In all areas SHOULD be made sure that no employee based on an outdated state of knowledge of his work. Furthermore, the employees SHOULD be given the opportunity during their employment to continue their education within the scope of their field of activity.
 
-All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. In the case of a greater need for training, individual employees SHOULD be trained separately and used within the area of ​​activity as multipliers for the remaining employees.
+All employees SHOULD be briefed on the equipment, applications, and activities that are used to safely process information. In addition, all employees SHOULD regularly be trained in information security and informed about everyday risks and possible countermeasures. The employees SHOULD also be encouraged to implement information security policies on their own responsibility. If there is a need for more training, individual employees SHOULD train separately and be used within the area of ​​activity as multipliers for the remaining employees.
 
 #### ORP.2.A10 Avoidance of disturbances of the working environment
 
@@ -128,8 +126,8 @@ From the point of view of information security, measures SHOULD be taken to ensu
 
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
-#### ORP.2.A11 Safety Culture Analysis (CIA)
-The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Building on this, SHOULD investigate where personal and organizational security can be improved.
+#### ORP.2.A11 Safety culture analysis (CIA)
+The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 
@@ -138,58 +136,3 @@ To the satisfaction of the coworkers a responsible person SHOULD be named as a t
 #### ORP.2.A13 Security Check (CIA)
 
 In the high-security area, an additional security check should be performed to thoroughly verify the trustworthiness of employees.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area of ​​"Personnel" can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NIST80053] Security and Privacy Controls for Federal Information Systems and Organizations
-
-  
-
- Special Publication 800-53, Revision 4, NIST, 04.2013 <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the "Personnel" block.
-
-* G 0.14 Spying out information (spying)
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.32 Abuse of permissions
-* G 0.33 Personnel loss
-* G 0.34 stop
-* G 0.35 coercion, blackmail or corruption
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.41 Sabotage
-* G 0.42 Social engineering
-* G 0.44 Unauthorized intrusion into premises
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

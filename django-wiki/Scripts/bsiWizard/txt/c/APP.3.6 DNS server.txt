@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,7 +17,7 @@ This module describes the specific threats for a DNS server and the resulting re
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. However, general and operating system-specific aspects of a server are not the subject of the present module, but are described in the SYS1.1 module. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
+This module contains basic requirements that must be observed and fulfilled when an institution operates DNS servers. The focus here is on the availability of DNS servers, the integrity of the information transmitted, and the problems that can arise when operating DNS servers. General and operating system-specific aspects of a server, however, are not the subject of this module, but are described in the SYS1.1 building block. * General server * and handled in the appropriate OS-specific building blocks of the IT systems layer, eg. SYS.1.3 * Unix server * or SYS.1.2.2 * Windows Server 2012 *.
 
 2 risk situation
 -----------------
@@ -28,7 +26,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 DNS server failure
 
-If a DNS server fails, the entire IT operation can be affected. Since clients and other servers of the institution are then no longer able to resolve internal and external addresses, data connections can no longer be established. Also external IT systems, eg. Mobile workers, customers, and business partners, for example, can not access the institution's servers, which typically disrupt critical business processes.
+If a DNS server fails, the entire IT operation can be affected. Since clients and other servers of the institution are then no longer able to resolve internal and external addresses, data connections can no longer be established. Also external IT systems, eg. Mobile workers, customers, and business partners, for example, can not access the institution's servers, which typically disruptes critical business processes.
 
 ### 2 2 Insufficient line capacity
 If the line capacities for a DNS server are insufficient, access times to internal and external services may increase. As a result, these may only be limited or no longer usable. Also, attackers can more easily overload the DNS server with a denial-of-service (DoS) attack.
@@ -49,10 +47,10 @@ Similarly, in the case of incorrectly configured DNS servers, there is a risk th
 
 ### 2 6 DNS manipulation
 
-With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, this will deliver the counterfeit data in response. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the resolving DNS server is asked for a manipulated address, it will not ask another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
+With a DNS cache poisoning attack, the target is tracked that the compromised machine stores incorrect mappings of IP addresses and names. It exploits the fact that DNS servers cached received domain information for a certain period of time in the cache. Fake data can spread that far. If corresponding queries are made to the manipulated DNS server, it will provide the counterfeit data as an answer. The recipient of the response stores this between and his cache is thus also "poisoned". The stored data has a defined shelf life (Time-To-Live, TTL). If the Resolving DNS server is asked for a manipulated address, it will not request another DNS server until its expiration date. So it is possible that manipulated DNS information last long, even though they are already corrected on the originally attacked DNS server. If, for example, an attacker succeeds in taking over the name resolution for a domain by manipulating the entries in such a way that his DNS servers are interrogated, all subdomains are automatically affected. DNS cache poisoning attacks are often conducted with the goal of redirecting requests to malicious servers.
 
 ### 2 7 DNS hijacking
-DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. If, after a successful DNS hijacking attack, a request is sent to a DNS server by the resolver of a client IT system, the attacker can, for example, change the assignment of name and IP address. DNS hijacking can also be combined with other attacks, especially phishing in this case.
+DNS hijacking is an attacking technique used to direct communication between Advertising DNS servers and resolvers through an attacker's IT system. The attacker can use this man-in-the-middle attack to intercept and record communication between servers. The far greater danger, however, is that a successful attacker can arbitrarily change any traffic between the two communication partners. For example, if a request is sent to a DNS server by the resolver of a client IT system after a successful DNS hijacking attack, the attacker can change the name and IP address mapping. DNS hijacking can also be combined with other attacks, especially phishing in this case.
 
 ### 2 8 DNS-DoS
 
@@ -90,7 +88,7 @@ It MUST be ensured that DNS zone transfers between Primary and Secondary DNS ser
 
 #### APP.3.6.A5 Timely import of security-relevant patches and updates
 
-The responsible employees MUST inform themselves regularly at various sources about newly discovered vulnerabilities in the used DNS server product and import security-relevant updates in a timely manner. First, however, a test system MUST check to see if the security updates are compatible and do not cause errors. Unless patches are available for known vulnerabilities, other appropriate measures MUST be taken to protect the DNS servers. Before a patch is imported, the zone and configuration files MUST be backed up.
+The responsible employees MUST inform themselves regularly at various sources about newly discovered vulnerabilities in the used DNS server product and import security-relevant updates in a timely manner. However, in advance, a test system MUST check to see if the security updates are compatible and do not cause errors. Unless patches are available for known vulnerabilities, other appropriate measures MUST be taken to protect the DNS servers. Before a patch is imported, the zone and configuration files MUST be backed up.
 
 #### APP.3.6.A6 Secure Dynamic DNS Updates
 
@@ -102,7 +100,7 @@ In order to operate DNS servers smoothly and to detect possible malfunctions or 
 
 #### APP.3.6.A8 Domain Name Management [IT Leader]
 
-It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control of the domains.
+It MUST be ensured that registrations for all domains used by an institution are renewed on a regular and timely basis. It MUST be determined by an employee who is responsible for managing the Internet domain names. If an Internet service provider is commissioned with the domain administration, MUST be taken to ensure that the institution retains control over the domains.
 
 #### APP.3.6.A9 Create an emergency plan for DNS servers
 
@@ -117,7 +115,7 @@ Together with the basic requirements, the following requirements correspond to t
 If a DNS server product is procured, care should be taken to ensure that all security requirements of the institution are properly implemented. The product SHOULD have proven its worth in practice and support the current RFC standards. It SHOULD help those responsible to create syntactically correct master files. In addition, there should be enough trained personnel for the selected DNS server product.
 
 #### APP.3.6.A11 Sufficient size of DNS servers
-Since the hardware of a DNS server affects the performance of the entire system, it SHOULD have sufficient size. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
+Since the hardware of a DNS server affects the performance of the entire system, it SHOULD be sufficiently sized. Also, the hardware SHOULD only be used to operate a DNS server. Likewise, the network connection of the DNS server SHOULD be sufficiently dimensioned.
 
 #### APP.3.6.A12 Training of Responsible Persons [Supervisors, Head of IT]
 
@@ -145,7 +143,7 @@ The DNS protocol extension DNSSEC SHOULD be activated on Resolving DNS servers a
 
 #### APP.3.6.A18 Extended protection of zone transfers
 
-In order to secure more zone transfers, Transaction Signatures (TSIG) SHOULD also be used.
+In order to secure zone transfers more strongly, additional Transaction Signatures (TSIG) SHOULD be used.
 
 #### APP.3.6.A19 Disposal of DNS servers
 
@@ -166,67 +164,3 @@ To complicate attacks on the primary advertising DNS server, a so-called hidden 
 #### APP.3.6.A22 Connection of DNS servers via different providers [Head IT] (IA)
 
 Externally accessible DNS servers SHOULD be connected via different providers.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information about threats and security measures in the area of ​​"DNS servers" can be found in the following publications, among others:
-
-* #### [BSICS055] Secure Deployment of DNS Services:
-
-  
-
- Recommendations for Internet Service Providers (ISP) and large companies, BSI, 2013
-[https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_055.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_055.pdf)
-
- 
-* #### [BSIDNSSEC] Implementation of DNSSEC
-
-  
-
- Recommendations for setting up and operating Domain Name Security Extensions, BSI, 2015
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Cyber-Sicherheit/Themen/Umsetzung\_von\_DNSSEC.pdf](https://www.bsi.bund.de/SharedDocs/ Downloads / DE / BSI / cyber security / topics / Umsetzung_von_DNSSEC.pdf)
-
- 
-* #### [ISILANA] BSI Internet Security Standard (Isi Series):
-
-  
-
- Secure connection of local networks to the Internet (Isi-LANA), Federal Office for Information Security (BSI), 2014
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
-
- 
-* #### [NIST800-81-2] NIST Special Publication 800-81-2:
-
-  
-
- Secure Domain Name System (DNS) - Deployment Guide, NIST, 09.2013
- <Http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-81-2.pdf>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "DNS server" building block.
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.27 Resource shortage
-* G 0.28 Software vulnerabilities or errors
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

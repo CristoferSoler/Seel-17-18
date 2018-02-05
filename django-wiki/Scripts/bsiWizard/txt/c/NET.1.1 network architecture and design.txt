@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -19,7 +17,7 @@ The aim of this module is to establish information security as an integral part 
 
 The module contains basic requirements that must be observed and fulfilled when networks are planned, constructed and operated. Requirements for the safe operation of the corresponding network components, including safety components such. As Firewalls and Intrusion Detection Systems / Intrusion Prevention Systems (IDS / IPS), are not the subject of this module. These are handled in the block group NET.3 * Network Components *.
 
-The focus of this module is on wired networks and data communication. However, general architectural and design requirements, e.g. For example, separate security zones and segments for all network technologies. Further specific requirements for network areas such as wireless LAN (WLAN) or storage area networks (SAN) are dealt with in the block groups NET.2 * wireless networks * or in the block SYS.1.8 * storage systems *. In addition, the topics UCC and Voice over IP (VoIP) as well as the underlying security infrastructure are not discussed in this module, but are treated in the respective modules NET.4.2 * VoIP * and NET.4.5 * Unified Communications *.
+The focus of this module is on wired networks and data communication. However, general architectural and design requirements, e.g. For example, separate security zones and segments for all network technologies. Additional specific requirements for network areas such as wireless LAN (WLAN) or storage area networks (SAN) are dealt with in the block groups NET.2 * wireless networks * or in the block SYS.1.8 * storage systems *. In addition, the topics UCC and Voice over IP (VoIP) as well as the underlying security infrastructure are not discussed in this module, but are treated in the respective modules NET.4.2 * VoIP * and NET.4.5 * Unified Communications *.
 
 Specific security requirements for Virtual Private Clouds and Hybrid Clouds are not the focus of this module (see OPS.3.2 * Cloud Providers * and OPS.3.4 * Managed Security Services *).
 
@@ -39,7 +37,7 @@ Is the internal network connected to the Internet and the transition not suffici
 
 ### 2 3 Improper construction of networks
 
-If a network is improperly set up or expanded incorrectly, unsafe network topologies and network configurations can arise. This makes it easier for attackers to find security holes, penetrate the institution's internal network and extract information, manipulate data or disrupt entire production systems. Also, attackers in a faulty network, which the security systems can only monitor to a limited extent, remain unrecognized for longer.
+If a network is improperly constructed or improperly extended, unsafe network topologies and network configurations can arise. This makes it easier for attackers to find security holes, penetrate the institution's internal network and extract information, manipulate data or disrupt entire production systems. Also, attackers in a faulty network, which the security systems can only monitor to a limited extent, remain unrecognized for longer.
 
 3 requirements
 ---------------
@@ -156,7 +154,7 @@ Based on the network architecture, the network design for the security zones inc
 * Specifications on how to secure WAN and radio links
 * Connection of terminals to switching components, connections between network elements and use of communication protocols,
 * Redundancy mechanisms for all network elements,
-* Address concept for IPv4 and IPv6 as well as associated routing and switching concepts,
+* Address concept for IPv4 and IPv6 as well as related routing and switching concepts,
 * virtualized networks in virtualization hosts including NVO,
 * Setting up, connecting and securing private clouds as well as secure connection of virtual private clouds, hybrid clouds and public clouds,
 * Network design specifications for secure administration and monitoring of the IT infrastructure.
@@ -183,13 +181,13 @@ Segment (s) for IT systems responsible for the authentication and authorization 
 * Segment (s) for the administration of IT systems,
 * Segment (s) for monitoring and monitoring,
 * Segment (s) containing central logging including syslog server and SIEM server
-* Segment (s) of IT systems needed for basic management services
+* Segment (s) for IT systems needed for basic management services
 * Segment (s) for the management interface of the IT systems to be administered.
 The various management interfaces of the IT systems MUST be separated according to their purpose and their network placement via a stateful packet filter (firewall). The IT systems (management interface) in addition to the following affiliation SHOULD be separated via dedicated firewalls:
 
 * IT systems that are accessible from the Internet,
 * IT systems in the internal network,
-* Security components that are located between the IT systems accessible from the Internet and the internal network.
+* Security components located between the IT systems accessible from the Internet and the internal network.
 It MUST be ensured that the segmentation can not be undermined by the management communication, i. H. a bridging of segments MUST be excluded.
 
 #### NET.1.1.A22 Specification of the segmentation concept
@@ -207,7 +205,7 @@ Depending on the security policy and the requirement specification, SHOULD be de
 
 #### NET.1.1.A23 Separation of security segments
 
-IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further subdivided depending on their size and the requirements of the segmentation concept. It MUST be ensured that no bridging of segments or even zones is possible.
+IT systems with different protection requirements SHOULD be placed in different security segments. If this is not possible, the protection requirement is based on the highest protection requirement occurring in the security segment. In addition, the security segments SHOULD be further sub-divided depending on their size and the requirements of the segmentation concept. It MUST be ensured that bridging of segments or even zones is not possible.
 If the VLANs on a switch belong to different institutions, the separation should be either physical or encryption SHOULD be used to protect the transmitted information from unauthorized access.
 
 #### NET.1.1.A24 Secure logical separation via VLAN
@@ -222,7 +220,7 @@ A detailed and implementation planning for the network architecture and the netw
 
 #### NET.1.1.A26 Specification of operating processes for the network
 
-For a secure and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
+For a safe and effective network operation SHOULD business processes be generated or adapted and documented as required (see the block group Core IT Operations, in particular OPS.1.1.3 * Patch and Change Management *). In particular, it should be considered how the zoning and the segmentation concept affect IT operations.
 
 #### NET.1.1.A27 Integration of network architecture into contingency planning [Head IT]
 
@@ -270,61 +268,3 @@ At the network level, data loss prevention (DLP) systems should be used to reduc
 #### NET.1.1.A36 Separation via VLAN with very high protection requirement
 
 For very high protection requirements, NO VLANs SHOULD BE used.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and security measures in the area of ​​"network architecture and design" can be found in the following publications, among others:
-
-* #### [27033-5] ISO / IEC 27033-5: 2013
-
-  
-
- Information technology - Security techniques - Network Security - Part 5: Securing communications across networks using Virtual Private Networks (VPNs), ISO, 08.2013
- <Https://www.iso.org/standard/51584.html>
-
- 
-* #### [ISILANA] BSI Internet Security Standard (Isi Series):
-
-  
-
- Secure connection of local networks to the Internet (Isi-LANA), Federal Office for Information Security (BSI), 2014
- [https://www.bsi.bund.de/DE/Themen/StandardsKriterien/ISi-Reihe/ISi-LANA/lana\_node.html](https://www.bsi.bund.de/DE/Themen/ standard criteria / ISi series / ISi-LANA / lana_node.html)
-
- 
-* #### [TL2103] BSI TL-02103 - Version 2.0 "Technical Guideline for Organizational Telecommunication Systems with Increased Protection Needs"
-
-  
-
- Federal Office for Security in Information Technology, 2014
- [https://www.bsi.bund.de/DE/Publikationen/TL-sichere-TK-Anlagen/TL02103\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TL- secure PBXs / TL02103_htm.html)
-
- 
-* #### [TR21022] BSI Technical Guideline, Cryptographic Procedures
-
-  
-
- Use of Transport Layer Security (TLS), Federal Office for Information Security (BSI), 2017
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the building block "network architecture and design".
-
-* G 0.9 Failure or malfunction of communication networks
-* G 0.11 Failure or disruption of service providers
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.27 Resource shortage
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.43 Importing messages
-The cross reference tables can be found in the download area due to their size.

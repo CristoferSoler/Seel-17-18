@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -15,7 +13,7 @@ The goal of this module is to protect information that will be processed by and 
 
 ### 1.3 Delimitation
 
-This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described security requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
+This block applies to all target objects on which the operating system Windows 8.1 is operated. Insofar as the described safety requirements and threats apply exclusively to Windows 8, this is explicitly stated in the texts. The requirements from the block [* SYS.2.1 General Client *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_2_1_General_Client.html? Nn = 10137184 "SYS.2.1 General Client") must also be met in every case. This module clarifies and complements requirements that are specific to Windows 8.1. Application programs that are used on the Windows clients must meet the requirements of the corresponding blocks, for example APP.1.1 Office products or APP.1.6 Browser. When used in a Windows domain, the requirements of the corresponding components such as APP.2.2 Active Directory must be met.
 
 2 risk situation
 -----------------
@@ -28,14 +26,14 @@ Malicious programs provide an attacker with extensive communication and control 
 
 ### 2 2 Software vulnerabilities or errors
 
-Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read or manipulate data.
+Windows 8.1, including its many included applications, is a very complex software product. If software errors are not detected in time, the crashes or errors that occur during the application can lead to far-reaching consequences (such as incorrect calculation results, incorrect management decisions, and delays in the course of business processes). Software vulnerabilities or errors can cause serious security vulnerabilities in individual applications, in the entire IT system, or even in all connected IT systems. Vulnerabilities in Windows can sometimes be exploited by attackers to inject malicious software, unauthorized read out or manipulate data.
 
 ### 2 3 Integrated cloud functionalities
 Windows 8.1 includes many features that store and synchronize data in Microsoft's cloud services. There is a risk of unconsciously (or at least carelessly) using cloud services for possibly sensitive or personal data. At the same time, data protection laws may also be violated if data is stored by third parties, especially abroad. If a user with an already activated Microsoft account logs on to a new device, the Microsoft cloud services he uses are automatically set up there. Thus, data of the company can be unintentionally synchronized to the employees' private devices. As another example, Windows 8 provides the ability to back up the Bitlocker recovery key directly from the Microsoft account in the cloud. This puts critical cryptographic secrets in the hands of third parties.
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
-Software that has been successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
+Software that was successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
 
 ### 2 5 Incorrect administration or use of devices and systems
 
@@ -53,7 +51,7 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.2.2.2.A1 Appropriate selection of a Windows 8.1 version
 
-The functional scope of a Windows version MUST be checked before the procurement on the operational capability and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
+The functional scope of a Windows version MUST be checked prior to procurement for operational capability and a suitable version must be selected. It is preferable to use 64-bit versions that include advanced security features.
 
 #### SYS.2.2.2.A2 Definition of a registration procedure
 
@@ -69,7 +67,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### SYS.2.2.2.A4 Procurement of Windows 8.1
 
-The requirements according to the Windows Hardware Certification Requirements SHOULD be taken into account when purchasing Windows 8.1 or the corresponding hardware for the Windows 8.1 system. Furthermore, the systems to be procured should have a firmware configuration interface for UEFI SecureBoot and for the TPM (if any) that allows for control by the owner. The Windows 8.1 procurement process SHOULD include the selection of a suitable license model.
+The requirements according to the Windows Hardware Certification Requirements SHOULD be taken into account when purchasing Windows 8.1 or the corresponding hardware for the Windows 8.1 system. Furthermore, the systems to be procured should have a firmware configuration interface for UEFI SecureBoot and for the TPM (if any) allowing for control by the owner. The Windows 8.1 procurement process SHOULD include the selection of a suitable license model.
 
 #### SYS.2.2.2.A5 Local Security Policy
 
@@ -114,12 +112,12 @@ Listed below are exemplary proposals for requirements that exceed the state of t
 
 #### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
 
-Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The administration of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
+Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The management of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
 AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
 For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
 
-The implementation of the SRP and AppLocker rules SHOULD be tested on a test system or operating in the monitoring mode before being used on a productive system.
+Implementation of the SRP and AppLocker rules SHOULD be tested on a test system or by operation in monitoring mode before being used on a productive system.
 
 #### SYS.2.2.2.A15 Encrypting the file system with EFS (CI)
 
@@ -131,7 +129,7 @@ If the Windows PowerShell (WPS) is not needed, it SHOULD be uninstalled. With Wi
 
 #### SYS.2.2.2.A17 Safe Use of the Maintenance Center (CIA)
 
-The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows Backup," "Ease of Use," and "Troubleshooting - other settings" below Windows 8.1 will be disabled.
+The security policy SHOULD define the way the user interacts with the maintenance center. Changes to the default startup settings of the Windows 8 services DPS, WDiSvcHost, and WerSvc are required. Get the settings for "Get latest troubleshooting from Windows online troubleshooting service", "Send problem reports", "Send data to computer via Microsoft on a regular basis," "Windows Backup," "User Experience Utility," and "Troubleshooting Other Settings" below Windows 8.1 will be disabled.
 
 #### SYS.2.2.2.A18 Activation of the last-access timestamp (A)
 
@@ -146,56 +144,4 @@ The impact on the configuration of the local firewall SHOULD be taken into accou
 
 #### SYS.2.2.2.A21 Using File and Registry Virtualization (CI)
 
-It SHOULD be checked if the operation of legacy applications is still necessary, which require write access to critical system folders or registry keys or if they need to be run with administrator rights. If this is the case, then a strategy SHOULD be developed to convert the legacy applications still needed to secure alternatives. Until the old applications have been replaced, the use of the Windows techniques File Virtualization and Registry Virtualization SHOULD be checked for security. In addition, Registry Virtualization SHOULD only have access to the necessary registry keys.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information about threats and security measures in the section "Clients under Windows 8.1" can be found in the following publications:
-
-* #### [MicSAO] Security Auditing Overview, Microsoft, 07.2013
-
-  
-
- <Https://technet.microsoft.com/en-us/library/dn319078.aspx>
-
- 
-* #### [MicSE] List of security events: Windows 8 and Windows Server 2012, Microsoft, (most recently downloaded on Sep 27, 2017)
-
-  
-
- <Https://www.microsoft.com/en-us/download/confirmation.aspx?id=50034>
-
- 
-* #### [WIN8] Information about deployment, deployment and administration of Windows 8.1, Micorosoft, (last accessed on 27.09.2017)
-
-  
-
- <Https://technet.microsoft.com/de-de/windows/windows-8.aspx>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Clients under Windows 8.1" block.
-
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.25 Failure of devices or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.39 Malware
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+It SHOULD be checked if the operation of legacy applications is still necessary, which require write access to critical system folders or registry keys, or if they need to be run with administrator rights. If this is the case, then a strategy SHOULD be developed to convert the legacy applications still needed to secure alternatives. Until the old applications have been replaced, the use of the Windows techniques File Virtualization and Registry Virtualization SHOULD be checked for security. In addition, Registry Virtualization SHOULD only have access to the necessary registry keys.

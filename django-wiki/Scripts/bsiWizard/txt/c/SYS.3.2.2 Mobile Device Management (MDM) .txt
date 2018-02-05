@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -7,7 +5,7 @@ Table of content
 
 ### 1.1 Introduction
 
-Smartphones, tablets and phablets are an indispensable part of their work for many employees. However, IT departments need to deploy more and more such devices in many different designs, while providing adequate security. In addition, mobile devices are exposed to special risks and the administration differs fundamentally from other IT systems.
+Smartphones, tablets and phablets are an indispensable part of their work for many employees. However, IT departments need to deploy more and more such devices in many different designs, while providing adequate security. In addition, mobile devices are exposed to special risks and the administration is fundamentally different from other IT systems.
 
 That is why Mobile Device Management (MDM) is indispensable for the controlled and secure operation of these devices, especially in institutions with a larger number of smartphones, tablets and phablets. With such a software, the terminals can be managed centrally, it can enforce security rules and emergency actions can be triggered. An MDM thus ensures the same or at least comparable safety standard on all devices.
 
@@ -17,7 +15,7 @@ The module shows how an MDM can be used to securely use mobile devices by instit
 
 ### 1.3 Delimitation
 
-Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other modules. Also, this module does not focus on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
+Mobile devices in the sense of this component are smartphones, tablets and phablets, on which mobile operating systems such as Android, iOS, Windows Phone and BlackBerry OS are installed. The security requirements of notebooks and tablets with desktop operating systems are described in other building blocks. Also, this module does not focus on how the smartphones, tablets and phablets of different manufacturers are specifically secured, as this is described in detail in the blocks for the respective operating systems, eg. Eg SYS.3.2.3 * iOS (for Enterprise) * or SYS.3.2.4 * Android. *
 
 2 risk situation
 -----------------
@@ -37,7 +35,7 @@ Like any device connected to the Internet, mobile devices are also threatened by
 When employees are given their own smartphones, tablets and phablets, there is always a risk that they will use the devices illegally privately. This creates several problems for the information security of the institution. For example, users could independently install apps that contain malicious software or visit web pages that could infect the device with malware. Similarly, user-installed apps can be a risk to the institution's information stored on the device, such as: For example, you can directly access contacts, calendars, e-mails, or documents. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and instant messaging apps.
 
 ### 2 4 Insufficient synchronization with the MDM
-In order for the MDM to enforce the rules defined by the responsible parties on the mobile devices, the devices must be synchronized with the MDM on a regular basis. For example, if a device is not connected to the MDM for an extended period of time, new or updated rules can not be applied. Also, if there is no connection to a lost device, the data can not be deleted remotely.
+In order for the MDM to be able to enforce the regulations defined by the responsible persons on the mobile devices, the devices must be regularly synchronized with the MDM. For example, if a device is not connected to the MDM for an extended period of time, new or updated rules can not be applied. Also, if there is no connection to a lost device, the data can not be deleted remotely.
 
 ### 2 5 Incorrect administration of the MDM
 
@@ -49,13 +47,13 @@ The rights management of the MDM decides who should make which settings and who 
 
 ### 2 7 No or weak encryption of communication between MDM and terminal
 
-If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms, or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
+If the data connection between the mobile device and the MDM server is not encrypted at all or encrypted with outdated algorithms or if insufficient key lengths are used, the confidentiality and integrity of all transmitted data is compromised. For example, an attacker could then spend his IT system as an MDM server, gaining valuable information or changing settings on all of the institution's mobile devices.
 
 ### 2 8 Unauthorized creation of motion profiles by the MDM
 
-With most MDM products, it is possible to determine where a device is currently located and data or apps can be enabled or disabled depending on location (so-called geofencing). This results in minute movement profiles of the devices and thus also the user. If these data are collected without informing the user appropriately, the persons responsible may violate data protection regulations. There is also the danger that attackers will access this data. Similarly, Geofencing can be misused to control employees inadmissible.
+With most MDM products, it is possible to determine where a device is currently located, and data or apps can be enabled or disabled depending on location (so-called geofencing). This results in minute movement profiles of the devices and thus also the user. If these data are collected without informing the user appropriately, the persons responsible may violate data protection regulations. There is also the danger that attackers will access this data. Similarly, Geofencing can be misused to control employees inadmissible.
 
-### 2 9 Dangers of Bring Your Own Device (BYOD)
+### 2 9 Hazards of Bring Your Own Device (BYOD)
 
 If private devices are used for business purposes, there are various potential threats. For example, there may be legal issues regarding software licenses. In an emergency, when service data needs to be erased by the MDM on the device, it may also affect the user's private data. In addition, the IT managers can no longer check every single employee device to see if it can also be used in official business. There is a risk that inappropriate devices will be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their personal devices. In such a repair, for example, corporate data could be viewed without authorization. The same risk exists when there is no regulation of what should happen to the data on the device when the employee leaves the institution.
 
@@ -69,7 +67,7 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.3.2.2.A1 Definition of a strategy for Mobile Device Management
 
-A strategy MUST be developed to define how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
+A strategy MUST be developed that defines how employees are allowed to use mobile devices and how the devices are integrated into the institution's IT structures. The basis for this is the protection requirement of the information to be processed. The strategy MUST cover at least the following aspects:
 
 Can the MDM be run as a cloud service?
 * Should the MDM be operated by the institution itself?
@@ -133,7 +131,7 @@ The MDM itself SHOULD be protected by technical measures to meet the protection 
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.2.A13 Restricting the app installation via whitelist (CIA)
 
@@ -161,72 +159,3 @@ There are several providers of specially secured mobile devices, some of which a
 #### SYS.3.2.2.A19 Geofencing (CI)
 
 Using geofencing policies it is possible to allow or prohibit certain features or apps only at predefined locations. A protection needs analysis SHOULD identify areas where these additional security measures are needed. Subsequently, they SHOULD be implemented in compliance with legal and internal regulations.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the area of ​​"Mobile Device Management (MDM)" can be found in the following publications, among others:
-
-* #### [BSICS052] Mobile Device Management BSI-CS 052
-
-  
-
- BSI, Version 1.00, 03.2013
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_052.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_052.pdf)
-
- 
-* #### [BYOD] Outline Consumerization and BYOD
-
-  
-
- BSI, Version 1.2, 07.2013
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Grundschutz/Download/Ueberblickspapier\_BYOD\_pdf.pdf](https://www.bsi.bund.de/SharedDocs/Downloads/ DE / BSI / Grundschutz / download / Ueberblickspapier_BYOD_pdf.pdf)
-
- 
-* #### [NIST18001D] SECURING ELECTRONIC HEALTH RECORDS ON MOBILE DEVICES
-
-  
-
- SPECIAL PUBLICATION 1800-1d, NIST, 07.2015
- [https://nccoe.nist.gov/sites/default/files/nccoe/NIST\_SP1800-1d\_Draft\_HIT\_Mobile-StandardsControls.pdf] (https://nccoe.nist.gov/sites/default/ files / nccoe / NIST_SP1800-1d_Draft_HIT_Mobile-StandardsControls.pdf)
-
- 
-* #### [NIST800124] Guidelines for Managing the Security of Mobile Devices in the Enterprise
-
-  
-
- Special Publication 800-124 Revision 1, NIST, 06.2013
- [http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r1.pdf] (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r1.pdf)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Mobile Device Management (MDM)" building block.
-
-* G 0.11 Failure or disruption of service providers
-* G 0.13 Interception of compromising radiation
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.45 data loss
-The cross reference tables can be found in the download area due to their size.

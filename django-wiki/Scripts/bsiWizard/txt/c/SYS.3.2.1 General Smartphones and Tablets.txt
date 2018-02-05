@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -57,13 +55,13 @@ Many mobile operating systems have a feature to display messages from enabled wi
 
 ### 2 9 Dangers from private use of mobile devices
 
-If employees are given proprietary smartphones, tablets and phablets, they may be allowed to use the devices privately without permission. This creates several problems for the information security of the institution. So a user could independently install apps that contain malicious features or visit a web page that infects the device with malware. Likewise, many user-privately-installed apps pose a risk to the institution's information stored on the device, as they may be compromised. For example, transfer address books to unknown servers or access e-mail or documents directly. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and chat apps.
+If employees are given proprietary smartphones, tablets and phablets, they may be allowed to use the devices privately without permission. This creates several problems for the information security of the institution. So a user could independently install apps that contain malicious features or visit a web page that infects the device with malware. Similarly, many user-privately-installed apps pose a risk to the institution's information stored on the device, as they may be compromised. For example, transfer address books to unknown servers or access e-mail or documents directly. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and chat apps.
 
 ### 2 10 Dangers of Bring Your Own Device (BYOD)
 
 If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in case of emergency, the user may not agree.
 
-Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
+Often IT managers can no longer check every single device brought by the employee to see if it can be used in the office. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
 3 requirements
 ---------------
@@ -97,7 +95,7 @@ It SHOULD use a complex device password.
 
 #### SYS.3.2.1.A5 Automatic updates of operating system and apps
 
-A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices for which no more current versions are provided MUST be discarded and replaced with devices supported by the manufacturer.
+A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices that are no longer supplied with current versions MUST be discarded and replaced with devices supported by the manufacturer.
 
 #### SYS.3.2.1.A6 privacy settings
 
@@ -114,7 +112,7 @@ It MUST be prevented that apps can be installed from alternative markets or from
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​general smartphones and tablets. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of general smartphones and tablets. They SHOULD be implemented in principle.
 
 #### SYS.3.2.1.A9 Use of functional extensions
 
@@ -150,11 +148,11 @@ Unused communication interfaces SHOULD be disabled. Necessary interfaces SHOULD 
 
 #### SYS.3.2.1.A17 Using the SIM card PIN
 
-The use of the SIM card of the institution SHOULD be protected by a PIN. The Super PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
+The use of the SIM card of the institution SHOULD be protected by a PIN. The Super-PIN / PUK SHOULD only be used within the framework of the defined processes by those responsible.
 
 #### SYS.3.2.1.A18 Using a fingerprint sensor
 
-If you want to use a biometric fingerprint sensor, you should check to see if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
+When using a biometric fingerprint sensor, SHOULD it be checked if similar or higher protection can be achieved than with a device password. In case of doubt or worse protection, a biometric fingerprint sensor SHOULD NOT be used. Users SHOULD be made aware of the falsifiability of fingerprints.
 
 #### SYS.3.2.1.A19 Using a language assistant
 
@@ -187,7 +185,7 @@ The password for the access point name (APN) of a closed user group SHOULD be co
 
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 
-It was intended to use solutions for separate work environments. For this purpose, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
+It was intended to use solutions for separate work environments. For this, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
 
 #### SYS.3.2.1.A26 Use of PIM containers (CIA)
 
@@ -196,97 +194,3 @@ Information on the mobile terminals SHOULD be encapsulated, for example in a PIM
 #### SYS.3.2.1.A27 Use of Safe Operating Systems (CIA)
 
 Institution SHOULD use a device that is certified to process information in accordance with legal information protection classifications.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on threats and security measures in the "General Smartphones and Tablets" area can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [BSICS052] Mobile Device Management BSI-CS 052
-
-  
-
- BSI, Version 1.00, 03.2013
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_052.pdf](https://www.allianz-fuer-cybersicherheit.de/ACS/DE /_/downloads/BSI-CS_052.pdf)
-
- 
-* #### [ISF] The Standard of Good Practice
-
-  
-
- Information Security Forum (ISF), 06.2016
-
- 
-* #### [NIST18001D] SECURING ELECTRONIC HEALTH RECORDS ON MOBILE DEVICES
-
-  
-
- SPECIAL PUBLICATION 1800-1d, NIST, 07.2015
-[https://nccoe.nist.gov/sites/default/files/nccoe/NIST\_SP1800-1d\_Draft\_HIT\_Mobile-StandardsControls.pdf] (https://nccoe.nist.gov/sites/default/ files / nccoe / NIST_SP1800-1d_Draft_HIT_Mobile-StandardsControls.pdf)
-
- 
-* #### [NIST800124] Guidelines for Managing the Security of Mobile Devices in the Enterprise
-
-  
-
- Special Publication 800-124 Revision 1, NIST, 06.2013
- [http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r1.pdf] (http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-124r1.pdf)
-
- 
-* #### [NIST80053] Security and Privacy Controls for Federal Information Systems and Organizations
-
-  
-
- Special Publication 800-53, Revision 4, NIST, 04.2013 <http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-53r4.pdf>
-
- 
-* #### [TR02102] Cryptographic method recommendations and key lengths
-
-  
-
- BSI, (last accessed on 27.09.2017)
- [Https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index\_htm.html](https://www.bsi.bund.de/DE/Publikationen/TechnischeRichtlinien/tr02102/index_htm. html)
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the building block "General Smartphones and Tablets".
-
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.17 Loss of equipment, data carriers or documents
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.25 Failure of devices or systems
-* G 0.26 Malfunction of equipment or systems
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.30 Unauthorized use or administration of devices and systems
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.36 Identity theft
-* G 0.37 denying actions
-* G 0.38 Abuse of personal data
-* G 0.39 Malware
-* G 0.42 Social engineering
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.

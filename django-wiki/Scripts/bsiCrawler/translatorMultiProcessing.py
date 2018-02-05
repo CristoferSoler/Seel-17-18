@@ -111,15 +111,15 @@ def translate(fileMD):
     component = False
 
     try:
-        f = open(directoryC + '/' + fileMD)
+        f = open(directoryC + '/' + fileMD, encoding='utf-8')
         dir += 'C/'
         component = True
     except:
         try:
-            f = open(directoryN + '/' + fileMD)
+            f = open(directoryN + '/' + fileMD, encoding='utf-8')
             dir += 'N/'
         except:
-            f = open(directoryT + '/' + fileMD)
+            f = open(directoryT + '/' + fileMD, encoding='utf-8')
             dir += 'T/'
 
     contentOfMdDE = f.read()
@@ -171,7 +171,7 @@ if __name__ == "__main__":
 
         modified, added, deleted = bsiImporter.checkFileAction()
 
-        typesModified = modified('type')
+        typesModified = modified.get('type')
         typesAdded = added.get('type')
 
         for el in typesModified:
@@ -184,7 +184,7 @@ if __name__ == "__main__":
             for file in files:
                 filesForTranslation.append(file['filename'])
 
-
+        files = filesForTranslation
     else:
         raise ValueError('Please set a phase with phase 0|1')
 

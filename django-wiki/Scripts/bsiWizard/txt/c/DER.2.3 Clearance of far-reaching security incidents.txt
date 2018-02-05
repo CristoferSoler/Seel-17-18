@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -9,7 +7,7 @@ Table of content
 
 Advanced Persistent Threats (APT) are targeted cyber attacks on selected institutions and facilities where an attacker gains permanent access to a network and subsequently broadens it to other IT systems. The attacks are characterized by a very high use of resources and considerable technical capabilities on the part of the attackers and are usually difficult to detect.
 
-After an APT attack is discovered, those in charge in the affected institutions face the challenge of having to clean up beyond the usual IT incident handling procedures. Because it can be assumed that the discovered attackers have been able to access the affected IT infrastructure for quite some time and use complex attack tools to bypass the standard security mechanisms and establish various backdoors. In addition, there is a danger that the attackers will closely monitor the infected environment and respond to cleanup attempts by blurring their tracks and sabotaging the investigation.
+After an APT attack is discovered, those in charge in the affected institutions face the challenge of having to clean up beyond the usual IT incident handling procedures. Because it can be assumed that the discovered attackers have been able to access the affected IT infrastructure for some time and use complex attack tools to bypass the standard security mechanisms and to establish various backdoors. In addition, there is a danger that the attackers will closely monitor the infected environment and respond to cleanup attempts by blurring their tracks and sabotaging the investigation.
 
 In general, the building block assumes a high threat situation through a targeted, motivated attacker with above-average resources. In principle, a (certified) forensic service provider should always be involved in such an incident if the institution itself does not have its own forensic experts. Forensic service providers should already be consulted during the forensic analysis phase, but the service provider should also be consulted at least in an advisory capacity
 
@@ -19,7 +17,7 @@ This module describes how an institution should proceed to clean up the IT syste
 
 ### 1.3 Delimitation
 
-An information network can only be purged if the APT incident was previously successfully detected and forensically analyzed. Detection and forensics, however, are not the subject of this module, but are dealt with in DER.1 * Detection of security-relevant events * and DER.2.2 * Precaution for IT forensics *.
+An information network can only be purged if the APT incident was previously successfully detected and forensically analyzed. However, detection and forensics are not the subject of this module, but are dealt with in DER.1 * Detection of Security-Relevant Events * and DER.2.2 * Precaution for IT Forensics *.
 
 In this module, only the cleanup of APT incidents is considered. Common incidents are dealt with in module DER.2.1 * Incident Management *. Also, the building block does not describe how so-called "Indicators of Compromise" (IOCs), ie burglary traces, are derived and how they can be used to detect recurring attackers. It also does not discuss how any backdoors overlooked during analysis and cleanup can be found. Furthermore, the building block has to be demarcated from the higher-level incident management process (see DER.2.1 * Incident Management *), in which the cleanup is embedded.
 
@@ -31,11 +29,11 @@ It also eliminates attacks that give attackers physical access to an IT environm
 The following specific threats and vulnerabilities are of particular importance in the area of ​​remediation of far-reaching security incidents:
 
 ### 2 1 Incomplete cleanup
-APT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker has also modified the update routines and thus re-enters the system in this way.
+APT attackers usually want to permanently infiltrate an information network. They have the resources they need and are able to launch long-term offensive campaigns. For this they use tools and methods that are attuned to an attack target. Even if an APT incident is detected, it can not be assumed that all access routes were found, all malware infections and communication channels were eliminated, and all backdoors were removed. However, with an incomplete cleanup, it is highly probable that an attacker would later, e.g. B. after a long period of rest, accesses the IT systems again and expanded its access again. He can, for example, by placing backdoors not only in operating systems and application software, but also manipulating hardware-related components, such as firmware. Such modifications are very difficult to identify, and the knowledge needed to extract and analyze them is poorly understood. Try the responsible z. For example, to clean up the IT components by overwriting or updating the firmware, it can still happen that the attacker also modified the update routines and thus re-enters the system in this way.
 
 ### 2 2 Destruction of tracks
 
-After an APT incident, IT systems are often reinstalled or completely decommissioned. However, if no forensic copy was previously made by the IT systems, traces could be destroyed that would be necessary for further investigation of the incident or even for legal proceedings.
+After an APT incident, IT systems are often reinstalled or completely retired. However, if no forensic copy was previously made by the IT systems, traces could be destroyed that would be necessary for further investigation of the incident or even for legal proceedings.
 
 ### 2 3 Early warning of the attacker
 
@@ -104,7 +102,7 @@ Together with the basic requirements, the following requirements are state-of-th
 
 #### DER.2.3.A7 Targeted system hardening
 
-After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
+After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of the forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
 
 If possible, IT systems should already be hardened during cleanup. Measures that can not be implemented in the short term SHOULD be included in an action plan and implemented in the medium term. The ISB SHOULD be responsible for drawing up the plan and checking that it has been implemented correctly.
 
@@ -121,87 +119,4 @@ In IT systems with high protection requirements SHOULD be considered to complete
 
 #### DER.2.3.A10 Conversions to hinder a renewed attack by the same attacker (CI)
 
-To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be modified. In addition, mechanisms should be established to quickly detect a recurring attacker.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Further information on hazards and safety measures in the area "Clean-up of far-reaching security incidents" can be found in the following publications, among others:
-
-* #### [CS072] First aid with an APT attack
-
-  
-
- Federal Office for Security in Information Technology, Version 3.0, 01.2016
- [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_072\_TLP-White.pdf](https://www.allianz-fuer-cybersicherheit.de /ACS/DE/_/downloads/BSI-CS_072_TLP-White.pdf)
-
- 
-* #### [DRP] Data Breach Response Guide
-
-  
-
- Experian Data Breach Resolution, 2013
- <Https://www.experian.com/assets/data-breach/brochures/response-guide.pdf>
-
- 
-* #### [KGT] Protection from Kerberos Golden Ticket
-
-  
-
- CERT-EU, 06.2014
- [https://cert.europa.eu/static/WhitePapers/CERT-EU-SWP\_14\_07\_PassTheGolden\_Ticket\_v1\_1.pdf](https://cert.europa.eu/static/WhitePapers/ CERT-EU SWP_14_07_PassTheGolden_Ticket_v1_1.pdf)
-
- 
-* #### [ReCoBS] Common Criteria Protection Profile for Remote Controlled Browsers System (ReCoBS)
-
-  
-
- BSI, BSI-PP-0040; Version 1.0, 2008
- [https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Internetsicherheit/recobslanginfo\_pdf.pdf?\_blob=publicationBundesamt](https://www.bsi.bund.de/SharedDocs/Downloads /DE/BSI/Internetsicherheit/recobslanginfo_pdf.pdf?_blob=publicationBundesamt)
-
- 
-* #### [SANS1] When Breaches Happen: Top Five Questions to Prepare For
-
-  
-
- SANS Institute, 2000
- <Https://www.sans.org/reading-room/whitepapers/analyst/breaches-happen-top-questions-prepare-35220>
-
- 
-* #### [SANS2] Detection and Recovery from a Major Security Breach
-
-  
-
- SANS Institute, 2000
- <Https://giac.org/paper/gcux/50/detection-recovery-major-security-breach/100810>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary hazards are important for the module "Cleaning up far-reaching security incidents".
-
-* G 0.14 Spying out information (spying)
-* G 0.15 Listening
-* G 0.16 Theft of devices, data carriers or documents
-* G 0.19 Disclosure of information worthy of protection
-* G 0.18 Missing planning or missing adjustment
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.23 Unauthorized intrusion into IT systems
-* G 0.24 Destruction of equipment or data media
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.31 Incorrect use or administration of devices and systems
-* G 0.32 Abuse of permissions
-* G 0.39 Malware
-* G 0.40 Denial of Service
-* G 0.41 Sabotage
-* G 0.42 Social engineering
-* G 0.43 Importing messages
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+To prevent the same attacker from performing another APT attack on the institution's IT systems, the internal structure of the network environment SHOULD be changed. In addition, mechanisms should be established to quickly detect a recurring attacker.

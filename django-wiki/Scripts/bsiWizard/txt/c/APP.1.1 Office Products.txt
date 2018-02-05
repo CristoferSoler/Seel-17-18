@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 1 description
@@ -24,14 +22,14 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lack of adaptation of Office products to the needs of the institution
 
-Lack of attention to Office product requirements when purchasing or customizing the software can significantly disrupt operations. This may be due to lack of compatibility with existing templates and documents, lack of functionality of the version used or lack of interoperability with business partner applications. If office products are not adapted to the needs of the institution, this can lead to performance losses, disruptions or errors within the business processes.
+Lack of attention to Office product requirements when purchasing or customizing the software can significantly disrupt operations. This may be due to lack of compatibility with existing templates and documents, lack of functionality of the version used or lack of interoperability with business partner applications. If Office products are not adapted to the needs of the institution, this can lead to performance losses, disruptions or errors in the business processes.
 
 ### 2 2 Lack of or insufficient testing and approval of Office products
 
-If new Office products and their integration into the institution are not or insufficiently tested and released without installation instructions, it may happen that errors are not detected or that the installation parameters that are necessarily observed are not recognized or ignored. Errors in Office products that result from a missing or inadequate testing and approval process pose a significant threat to IT operations. Workflows can be significantly hampered by Office product errors. Incorrect updates to the Office products can lead to data loss or reduce the availability of used databases.
+If new Office products and their integration into the institution are not or insufficiently tested and released without installation instructions, it may happen that errors are not detected or that the installation parameters that are necessarily observed are not recognized or ignored. Errors in Office products that result from a missing or inadequate testing and approval process pose a significant threat to IT operations. Workflows can be significantly hampered by Office Product Errors. Incorrect updates to the Office products can lead to data loss or reduce the availability of used databases.
 
 ### 2 3 Protective data in residual information in Office documents
-Office documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflow of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information, causing financial, procedural and image damage.
+Office documents typically store metadata about the document itself, as well as author and institution information. This meta-information can be extended to any, user-defined entries, support the workflow of the business processes and ensure appropriate transparency. In addition, Office products provide the ability to create comments in the document and add or modify information in Review mode. This and other residual information may contain confidential information that may not be disclosed to third parties. Otherwise, this may result in a loss of confidentiality and subsequent falsification of the residual information and cause financial, procedural and image damage.
 
 ### 2 4 Obtain Office products and updates from unreliable sources
 
@@ -39,11 +37,11 @@ If you obtain installation sources or updates of Office products from unofficial
 
 ### 2 5 Manipulation of Office documents
 
-The manipulation of Office documents means changing information. Office documents can typically contain a variety of Active Content, sometimes used for complex automation. However, active content may also contain malicious code that runs when the user opens the document with the rights. Such malicious programs in Office documents, in addition to manipulation of the affected document, change other documents unrecognized or spread in other documents. All affected business processes of the institution can be disturbed or blocked in their functions. In the worst case, the manipulation remains undetected and leads to security vulnerabilities and processing of corrupted information.
+The manipulation of Office documents means changing information. Office documents can typically contain a variety of Active Content, sometimes used for complex automation. However, active content may also contain malicious code that runs when the user opens the document with the rights. Such malicious programs in Office documents, in addition to manipulation of the document affected unrecognized change other documents or spread in other documents. All affected business processes of the institution can be disturbed or blocked in their functions. In the worst case, the manipulation remains undetected and leads to security vulnerabilities and processing of corrupted information.
 
 ### 2 6 Lack of commitment of Office documents
 
-Depending on the intended use, it may be necessary to be able to assign Office documents to one or more authors in a binding manner or to prove that someone has taken note of a document. If this function can easily be circumvented or is it not intended, or if it does not meet the legal requirements, invalid contracts can be created or the legality of existing contracts can be challenged.
+Depending on the intended use, it may be necessary to be able to assign Office documents to one or more authors in a binding manner or to prove that someone has taken note of a document. If this function can easily be bypassed or is it not intended or if it does not comply with legal requirements, invalid contracts may be created or the legality of existing contracts may be challenged.
 
 ### 2 7 Loss of Office document integrity
 
@@ -54,7 +52,7 @@ Software vulnerabilities in Office products are often not fully discovered befor
 
 ### 2 9 Use of unlicensed Office products
 
-Unlicensed office products are a potential source of financial risk to institutions. If Office products are used without a valid software license because, for example, the license volume has been exceeded unnoticed, this can result in contractual penalties upon discovery. Conversely, excessive licensing costs may be incurred because office products are installed in workplaces where they are not needed.
+Unlicensed office products are a potential financial hazard for institutions. If Office products are used without a valid software license because, for example, the license volume has been exceeded unnoticed, this can lead to contractual penalties upon discovery. Conversely, excessive licensing costs may be incurred because office products are installed in workplaces where they are not needed.
 
 ### 2 10 Data loss due to password protection of Office documents
 
@@ -62,7 +60,7 @@ Data loss on Office documents can block business processes. Typically, Office pr
 
 ### 2 11 Unauthorized exercise of rights in Office products
 
-Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise through incorrect rights. Affected business processes can be corrupted, inadvertently process erroneous information or disclose sensitive information.
+Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise due to incorrect rights. Affected business processes can be corrupted, inadvertently process erroneous information or disclose sensitive information.
 
 3 requirements
 ---------------
@@ -111,7 +109,7 @@ There SHOULD be a regular check of the installed versions of Office products. Th
 
 #### APP.1.1.A9 Removal of residual information before forwarding documents [User]
 
-Before passing on any documents to third parties, you should remove any unwanted and confidential residual information from Office documents. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained in the risks of residual information as well as the possibilities of elimination in the office products used. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
+Before passing on documents to third parties, all unnecessary and confidential residual information from Office documents SHOULD be removed. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained in the risks of residual information as well as the possibilities of elimination in the office products used. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
 
 #### APP.1.1.A10 End User Software Development [User]
 
@@ -125,7 +123,7 @@ All Office product enhancements SHOULD be tested on new releases prior to produc
 
 The cloud storage features built into some Office products SHOULD be disabled. All cloud drives SHOULD be disabled. All documents SHOULD be stored on centrally managed file servers of the institution. To share documents with others for review or editing, use specialized applications such as appropriate data rooms that have security features such as encrypted data storage and distribution, and a suitable user and rights management system.
 
-#### APP.1.1.A13 Using Viewer Features [User]
+#### APP.1.1.A13 Using Viewer Functions [User]
 
 Data from potentially insecure sources such as the Internet or e-mail attachments SHOULD automatically be opened in a protected mode where they can not be edited immediately. Only a general navigation SHOULD be enabled. This feature SHOULD NOT be disabled by the user. SHOULD use appropriate viewer applications if they are available. A list of trusted places can be defined from which content can be opened and edited immediately.
 
@@ -134,61 +132,12 @@ Depending on the intended use of documents, the existing security mechanisms in 
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.1.1.A15 Use of encryption and digital signatures (CI)
 
-Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD check if it provides adequate protection, especially for older product versions. The IT systems of sender and recipient SHOULD ensure access protection to the encryption method used. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
+Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD it check to see if it provides adequate protection, especially for older product versions. The IT systems of sender and recipient SHOULD ensure access protection to the method used for encryption. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
 
 #### APP.1.1.A16 Integrity check of documents (I)
 
-To protect against accidental alteration of data with increased protection requirements during transmission and / or storage, checksum procedures SHOULD be used. A method should be selected that is able to independently correct the data. In addition, cryptographic checksum procedures SHOULD be used to protect against manipulation.
-
-4 Further Information
-------------------------------
-
-### 4.1 Literature
-
-Additional information on threats and security measures in the "Office Products" area can be found in the following publications, among others:
-
-* #### [27001] ISO / IEC 27001: 2013
-
-  
-
- Information technology- Security techniques- Information security management system- Requirements, ISO, 2013
- <Https://www.iso.org/obp/ui/#iso:std:iso-iec:27001:ed-2:v1:en>
-
- 
-* #### [LIBRE] LibreOffice
-
-  
-
- The Document Foundation - LibreOffice, (last accessed on 28.09.2017)
- <Https://de.libreoffice.org>
-
- 
-* #### [MSTN] Microsoft Technet
-
-  
-
- Microsoft, (last accessed on 28.09.2017)
- <Https://technet.microsoft.com/de-de>
-
- 
-5 Appendix: Cross reference table for elementary hazards
--------------------------------------------------- --------
-
-The following elementary threats are important for the "Office Products" building block.
-
-* G 0.18 Missing planning or missing adjustment
-* G 0.19 Disclosure of information worthy of protection
-* G 0.20 Information or products from unreliable sources
-* G 0.21 Manipulation of hardware or software
-* G 0.22 Manipulation of information
-* G 0.28 Software vulnerabilities or errors
-* G 0.29 Violation of laws or regulations
-* G 0.37 denying actions
-* G 0.39 Malware
-* G 0.45 data loss
-* G 0.46 Loss of integrity of sensitive information
-The cross reference tables can be found in the download area due to their size.
+To protect against random change of data with increased protection requirements during transmission and / or storage, checksum procedures SHOULD be used. A method should be selected that is able to independently correct the data. In addition, cryptographic checksum procedures SHOULD be used to protect against manipulation.

@@ -1,630 +1,630 @@
 [
     {
-        "path": "http://localhost:8000/bsi/components/ISMS.1/",
-        "name": "ISMS.1 Security Management"
+        "name": "ISMS.1 Security Management",
+        "path": "http://localhost:8000/bsi/components/ISMS.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/ORP.1/",
-        "name": "ORP.1 organization"
+        "name": "ORP.1 organization",
+        "path": "http://localhost:8000/bsi/components/ORP.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/ORP.2/",
-        "name": "ORP.2 Personal"
+        "name": "ORP.2 Personal",
+        "path": "http://localhost:8000/bsi/components/ORP.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/ORP.3/",
-        "name": "ORP.3 Sensitization and training"
+        "name": "ORP.3 Sensitization and training",
+        "path": "http://localhost:8000/bsi/components/ORP.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/ORP.4/",
-        "name": "ORP.4 Identity and Permission Management"
+        "name": "ORP.4 Identity and Permission Management",
+        "path": "http://localhost:8000/bsi/components/ORP.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/ORP.5/",
-        "name": "ORP.5 Compliance Management (Requirements Management) "
+        "name": "ORP.5 Compliance Management (Requirements Management) ",
+        "path": "http://localhost:8000/bsi/components/ORP.5"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.1.2/",
-        "name": "OPS.1.1.2 Proper IT Administration"
+        "name": "OPS.1.1.2 Proper IT Administration",
+        "path": "http://localhost:8000/bsi/components/OPS.1.1.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.1.3/",
-        "name": "OPS.1.1.3 Patch and Change Management"
+        "name": "OPS.1.1.3 Patch and Change Management",
+        "path": "http://localhost:8000/bsi/components/OPS.1.1.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.1.4/",
-        "name": "OPS.1.1.4 Protection against malicious programs"
+        "name": "OPS.1.1.4 Protection against malicious programs",
+        "path": "http://localhost:8000/bsi/components/OPS.1.1.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.1.5/",
-        "name": "OPS.1.1.5 Logging"
+        "name": "OPS.1.1.5 Logging",
+        "path": "http://localhost:8000/bsi/components/OPS.1.1.5"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.1.6/",
-        "name": "OPS.1.1.6 Software tests and releases"
+        "name": "OPS.1.1.6 Software tests and releases",
+        "path": "http://localhost:8000/bsi/components/OPS.1.1.6"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.2.2/",
-        "name": "OPS.1.2.2 Archiving"
+        "name": "OPS.1.2.2 Archiving",
+        "path": "http://localhost:8000/bsi/components/OPS.1.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.2.3/",
-        "name": "OPS.1.2.3 Information and media exchange"
+        "name": "OPS.1.2.3 Information and media exchange",
+        "path": "http://localhost:8000/bsi/components/OPS.1.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.1.2.4/",
-        "name": "OPS.1.2.4 Telework"
+        "name": "OPS.1.2.4 Telework",
+        "path": "http://localhost:8000/bsi/components/OPS.1.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.2.1/",
-        "name": "OPS.2.1 outsourcing for customers"
+        "name": "OPS.2.1 outsourcing for customers",
+        "path": "http://localhost:8000/bsi/components/OPS.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.2.4/",
-        "name": "OPS.2.4 remote maintenance"
+        "name": "OPS.2.4 remote maintenance",
+        "path": "http://localhost:8000/bsi/components/OPS.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/OPS.3.1/",
-        "name": "OPS.3.1 Outsourcing for service providers"
+        "name": "OPS.3.1 Outsourcing for service providers",
+        "path": "http://localhost:8000/bsi/components/OPS.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.1/",
-        "name": "DER.1 Detection of safety-relevant events"
+        "name": "DER.1 Detection of safety-relevant events",
+        "path": "http://localhost:8000/bsi/components/DER.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.2.1/",
-        "name": "DER.2.1 Treatment of security incidents"
+        "name": "DER.2.1 Treatment of security incidents",
+        "path": "http://localhost:8000/bsi/components/DER.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.2.2/",
-        "name": "DER.2.2 Provision for IT forensics"
+        "name": "DER.2.2 Provision for IT forensics",
+        "path": "http://localhost:8000/bsi/components/DER.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.2.3/",
-        "name": "DER.2.3 Clearance of far-reaching security incidents"
+        "name": "DER.2.3 Clearance of far-reaching security incidents",
+        "path": "http://localhost:8000/bsi/components/DER.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.3.1/",
-        "name": "DER.3.1 Audits and revisions"
+        "name": "DER.3.1 Audits and revisions",
+        "path": "http://localhost:8000/bsi/components/DER.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.3.2/",
-        "name": "DER.3.2 IS revision for federal authorities"
+        "name": "DER.3.2 IS revision for federal authorities",
+        "path": "http://localhost:8000/bsi/components/DER.3.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/DER.4/",
-        "name": "DER.4 emergency management"
+        "name": "DER.4 emergency management",
+        "path": "http://localhost:8000/bsi/components/DER.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.1.1/",
-        "name": "APP.1.1 Office Products"
+        "name": "APP.1.1 Office Products",
+        "path": "http://localhost:8000/bsi/components/APP.1.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.1.2/",
-        "name": "APP.1.2 Web browser"
+        "name": "APP.1.2 Web browser",
+        "path": "http://localhost:8000/bsi/components/APP.1.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.2.1/",
-        "name": "APP.2.1 General Directory Service"
+        "name": "APP.2.1 General Directory Service",
+        "path": "http://localhost:8000/bsi/components/APP.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.2.2/",
-        "name": "APP.2.2 Active Directory"
+        "name": "APP.2.2 Active Directory",
+        "path": "http://localhost:8000/bsi/components/APP.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.3.1/",
-        "name": "APP.3.1 Web applications"
+        "name": "APP.3.1 Web applications",
+        "path": "http://localhost:8000/bsi/components/APP.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.3.2/",
-        "name": "APP.3.2 Webserver"
+        "name": "APP.3.2 Webserver",
+        "path": "http://localhost:8000/bsi/components/APP.3.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.3.3/",
-        "name": "APP.3.3 Fileserver"
+        "name": "APP.3.3 Fileserver",
+        "path": "http://localhost:8000/bsi/components/APP.3.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.3.4/",
-        "name": "APP.3.4 Samba"
+        "name": "APP.3.4 Samba",
+        "path": "http://localhost:8000/bsi/components/APP.3.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.3.6/",
-        "name": "APP.3.6 DNS server"
+        "name": "APP.3.6 DNS server",
+        "path": "http://localhost:8000/bsi/components/APP.3.6"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.4.3/",
-        "name": "APP.4.3 Relational Database Systems"
+        "name": "APP.4.3 Relational Database Systems",
+        "path": "http://localhost:8000/bsi/components/APP.4.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.5.1/",
-        "name": "APP.5.1 General Groupware"
+        "name": "APP.5.1 General Groupware",
+        "path": "http://localhost:8000/bsi/components/APP.5.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/APP.5.2/",
-        "name": "APP.5.2 Microsoft Exchange and Outlook"
+        "name": "APP.5.2 Microsoft Exchange and Outlook",
+        "path": "http://localhost:8000/bsi/components/APP.5.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.1.1/",
-        "name": "SYS.1.1 General Server"
+        "name": "SYS.1.1 General Server",
+        "path": "http://localhost:8000/bsi/components/SYS.1.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.1.2.2/",
-        "name": "SYS.1.2.2 Windows Server 2012"
+        "name": "SYS.1.2.2 Windows Server 2012",
+        "path": "http://localhost:8000/bsi/components/SYS.1.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.1.3/",
-        "name": "SYS.1.3 server under Unix"
+        "name": "SYS.1.3 server under Unix",
+        "path": "http://localhost:8000/bsi/components/SYS.1.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.1.5/",
-        "name": "SYS.1.5 Virtualization"
+        "name": "SYS.1.5 Virtualization",
+        "path": "http://localhost:8000/bsi/components/SYS.1.5"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.1.8/",
-        "name": "SYS.1.8 Storage Solutions"
+        "name": "SYS.1.8 Storage Solutions",
+        "path": "http://localhost:8000/bsi/components/SYS.1.8"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.2.1/",
-        "name": "SYS.2.1 General Client"
+        "name": "SYS.2.1 General Client",
+        "path": "http://localhost:8000/bsi/components/SYS.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.2.2.2/",
-        "name": "SYS.2.2.2 Clients under Windows 8.1"
+        "name": "SYS.2.2.2 Clients under Windows 8.1",
+        "path": "http://localhost:8000/bsi/components/SYS.2.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.2.2.3/",
-        "name": "SYS.2.2.3 Clients on Windows 10"
+        "name": "SYS.2.2.3 Clients on Windows 10",
+        "path": "http://localhost:8000/bsi/components/SYS.2.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.2.3/",
-        "name": "SYS.2.3 Clients under Unix"
+        "name": "SYS.2.3 Clients under Unix",
+        "path": "http://localhost:8000/bsi/components/SYS.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.1/",
-        "name": "SYS.3.1 Laptops"
+        "name": "SYS.3.1 Laptops",
+        "path": "http://localhost:8000/bsi/components/SYS.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.2.1/",
-        "name": "SYS.3.2.1 General Smartphones and Tablets"
+        "name": "SYS.3.2.1 General Smartphones and Tablets",
+        "path": "http://localhost:8000/bsi/components/SYS.3.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.2.2/",
-        "name": "SYS.3.2.2 Mobile Device Management (MDM) "
+        "name": "SYS.3.2.2 Mobile Device Management (MDM) ",
+        "path": "http://localhost:8000/bsi/components/SYS.3.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.2.3/",
-        "name": "SYS.3.2.3 iOS (for Enterprise) "
+        "name": "SYS.3.2.3 iOS (for Enterprise) ",
+        "path": "http://localhost:8000/bsi/components/SYS.3.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.2.4/",
-        "name": "SYS.3.2.4 Android"
+        "name": "SYS.3.2.4 Android",
+        "path": "http://localhost:8000/bsi/components/SYS.3.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.3.4/",
-        "name": "SYS.3.4 Mobile Disk"
+        "name": "SYS.3.4 Mobile Disk",
+        "path": "http://localhost:8000/bsi/components/SYS.3.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.4.1/",
-        "name": "SYS.4.1 printers, copiers and multifunction devices"
+        "name": "SYS.4.1 printers, copiers and multifunction devices",
+        "path": "http://localhost:8000/bsi/components/SYS.4.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/SYS.4.4/",
-        "name": "SYS.4.4 General IoT device"
+        "name": "SYS.4.4 General IoT device",
+        "path": "http://localhost:8000/bsi/components/SYS.4.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/IND.1/",
-        "name": "IND.1 Operating and Control Technology"
+        "name": "IND.1 Operating and Control Technology",
+        "path": "http://localhost:8000/bsi/components/IND.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/IND.2.1/",
-        "name": "IND.2.1 General ICS Component"
+        "name": "IND.2.1 General ICS Component",
+        "path": "http://localhost:8000/bsi/components/IND.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/IND.2.2/",
-        "name": "IND.2.2 Programmable Logic Controller (PLC) "
+        "name": "IND.2.2 Programmable Logic Controller (PLC) ",
+        "path": "http://localhost:8000/bsi/components/IND.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/IND.2.3/",
-        "name": "IND.2.3 Sensors and actuators"
+        "name": "IND.2.3 Sensors and actuators",
+        "path": "http://localhost:8000/bsi/components/IND.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/IND.2.4/",
-        "name": "IND.2.4 Machine"
+        "name": "IND.2.4 Machine",
+        "path": "http://localhost:8000/bsi/components/IND.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.1.1/",
-        "name": "NET.1.1 network architecture and design"
+        "name": "NET.1.1 network architecture and design",
+        "path": "http://localhost:8000/bsi/components/NET.1.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.1.2/",
-        "name": "NET.1.2 Network Management"
+        "name": "NET.1.2 Network Management",
+        "path": "http://localhost:8000/bsi/components/NET.1.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.2.1/",
-        "name": "NET.2.1 WLAN operation"
+        "name": "NET.2.1 WLAN operation",
+        "path": "http://localhost:8000/bsi/components/NET.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.2.2/",
-        "name": "NET.2.2 Wi-Fi usage"
+        "name": "NET.2.2 Wi-Fi usage",
+        "path": "http://localhost:8000/bsi/components/NET.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.3.1/",
-        "name": "NET.3.1 routers and switches"
+        "name": "NET.3.1 routers and switches",
+        "path": "http://localhost:8000/bsi/components/NET.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.3.2/",
-        "name": "NET.3.2 Firewall"
+        "name": "NET.3.2 Firewall",
+        "path": "http://localhost:8000/bsi/components/NET.3.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/NET.3.3/",
-        "name": "NET.3.3 VPN"
+        "name": "NET.3.3 VPN",
+        "path": "http://localhost:8000/bsi/components/NET.3.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.1/",
-        "name": "INF.1 General Building"
+        "name": "INF.1 General Building",
+        "path": "http://localhost:8000/bsi/components/INF.1"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.2/",
-        "name": "INF.2 data center and server room"
+        "name": "INF.2 data center and server room",
+        "path": "http://localhost:8000/bsi/components/INF.2"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.3/",
-        "name": "INF.3 Electrical wiring"
+        "name": "INF.3 Electrical wiring",
+        "path": "http://localhost:8000/bsi/components/INF.3"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.4/",
-        "name": "INF.4 IT cabling"
+        "name": "INF.4 IT cabling",
+        "path": "http://localhost:8000/bsi/components/INF.4"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.7/",
-        "name": "INF.7 office workplace"
+        "name": "INF.7 office workplace",
+        "path": "http://localhost:8000/bsi/components/INF.7"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.8/",
-        "name": "INF.8 Domestic work place"
+        "name": "INF.8 Domestic work place",
+        "path": "http://localhost:8000/bsi/components/INF.8"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.9/",
-        "name": "INF.9 Mobile Workplace"
+        "name": "INF.9 Mobile Workplace",
+        "path": "http://localhost:8000/bsi/components/INF.9"
     },
     {
-        "path": "http://localhost:8000/bsi/components/INF.10/",
-        "name": "INF.10 meeting, event and training rooms"
+        "name": "INF.10 meeting, event and training rooms",
+        "path": "http://localhost:8000/bsi/components/INF.10"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.1/",
-        "name": "G 0.1 fire"
+        "name": "G 0.1 fire",
+        "path": "http://localhost:8000/bsi/threats/G0.1"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.2/",
-        "name": "G 0.2 Unfavorable climatic conditions"
+        "name": "G 0.2 Unfavorable climatic conditions",
+        "path": "http://localhost:8000/bsi/threats/G0.2"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.3/",
-        "name": "G 0.3 water"
+        "name": "G 0.3 water",
+        "path": "http://localhost:8000/bsi/threats/G0.3"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.4/",
-        "name": "G 0.4 Contamination, dust, corrosion"
+        "name": "G 0.4 Contamination, dust, corrosion",
+        "path": "http://localhost:8000/bsi/threats/G0.4"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.5/",
-        "name": "G 0.5 natural catastrophes"
+        "name": "G 0.5 natural catastrophes",
+        "path": "http://localhost:8000/bsi/threats/G0.5"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.6/",
-        "name": "G 0.6 disasters in the area"
+        "name": "G 0.6 disasters in the area",
+        "path": "http://localhost:8000/bsi/threats/G0.6"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.7/",
-        "name": "G 0.7 Major events in the area"
+        "name": "G 0.7 Major events in the area",
+        "path": "http://localhost:8000/bsi/threats/G0.7"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.8/",
-        "name": "G 0.8 Failure or malfunction of the power supply"
+        "name": "G 0.8 Failure or malfunction of the power supply",
+        "path": "http://localhost:8000/bsi/threats/G0.8"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.9/",
-        "name": "G 0.9 Failure or malfunction of communication networks"
+        "name": "G 0.9 Failure or malfunction of communication networks",
+        "path": "http://localhost:8000/bsi/threats/G0.9"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.10/",
-        "name": "G 0.10 Failure or malfunction of supply networks"
+        "name": "G 0.10 Failure or malfunction of supply networks",
+        "path": "http://localhost:8000/bsi/threats/G0.10"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.11/",
-        "name": "G 0.11 Failure or disruption of service providers"
+        "name": "G 0.11 Failure or disruption of service providers",
+        "path": "http://localhost:8000/bsi/threats/G0.11"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.12/",
-        "name": "G 0.12 Electromagnetic interference"
+        "name": "G 0.12 Electromagnetic interference",
+        "path": "http://localhost:8000/bsi/threats/G0.12"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.13/",
-        "name": "G 0.13 Interception of compromising radiation"
+        "name": "G 0.13 Interception of compromising radiation",
+        "path": "http://localhost:8000/bsi/threats/G0.13"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.14/",
-        "name": "G 0.14 Spying on information (spying) "
+        "name": "G 0.14 Spying on information (spying) ",
+        "path": "http://localhost:8000/bsi/threats/G0.14"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.15/",
-        "name": "G 0.15 Listening"
+        "name": "G 0.15 Listening",
+        "path": "http://localhost:8000/bsi/threats/G0.15"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.16/",
-        "name": "G 0.16 Theft of devices, data carriers or documents"
+        "name": "G 0.16 Theft of devices, data carriers or documents",
+        "path": "http://localhost:8000/bsi/threats/G0.16"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.17/",
-        "name": "G 0.17 Loss of equipment, data carriers or documents"
+        "name": "G 0.17 Loss of equipment, data carriers or documents",
+        "path": "http://localhost:8000/bsi/threats/G0.17"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.18/",
-        "name": "G 0.18 Misplanned planning or missing adjustment"
+        "name": "G 0.18 Misplanned planning or missing adjustment",
+        "path": "http://localhost:8000/bsi/threats/G0.18"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.19/",
-        "name": "G 0.19 Disclosure of information worthy of protection"
+        "name": "G 0.19 Disclosure of information worthy of protection",
+        "path": "http://localhost:8000/bsi/threats/G0.19"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.20/",
-        "name": "G 0.20 Information or products from unreliable source"
+        "name": "G 0.20 Information or products from unreliable source",
+        "path": "http://localhost:8000/bsi/threats/G0.20"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.21/",
-        "name": "G 0.21 Manipulation of hardware or software"
+        "name": "G 0.21 Manipulation of hardware or software",
+        "path": "http://localhost:8000/bsi/threats/G0.21"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.22/",
-        "name": "G 0.22 Manipulation of information"
+        "name": "G 0.22 Manipulation of information",
+        "path": "http://localhost:8000/bsi/threats/G0.22"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.23/",
-        "name": "G 0.23 Unauthorized intrusion into IT systems"
+        "name": "G 0.23 Unauthorized intrusion into IT systems",
+        "path": "http://localhost:8000/bsi/threats/G0.23"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.24/",
-        "name": "G 0.24 Destruction of devices or data carriers"
+        "name": "G 0.24 Destruction of devices or data carriers",
+        "path": "http://localhost:8000/bsi/threats/G0.24"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.25/",
-        "name": "G 0.25 Failure of devices or systems"
+        "name": "G 0.25 Failure of devices or systems",
+        "path": "http://localhost:8000/bsi/threats/G0.25"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.26/",
-        "name": "G 0.26 Malfunction of devices or systems"
+        "name": "G 0.26 Malfunction of devices or systems",
+        "path": "http://localhost:8000/bsi/threats/G0.26"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.27/",
-        "name": "G 0.27 Resource shortage"
+        "name": "G 0.27 Resource shortage",
+        "path": "http://localhost:8000/bsi/threats/G0.27"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.28/",
-        "name": "G 0.28 Software vulnerabilities or errors"
+        "name": "G 0.28 Software vulnerabilities or errors",
+        "path": "http://localhost:8000/bsi/threats/G0.28"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.29/",
-        "name": "G 0.29 Violation of laws or regulations"
+        "name": "G 0.29 Violation of laws or regulations",
+        "path": "http://localhost:8000/bsi/threats/G0.29"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.30/",
-        "name": "G 0.30 Unauthorized use or administration of devices and systems"
+        "name": "G 0.30 Unauthorized use or administration of devices and systems",
+        "path": "http://localhost:8000/bsi/threats/G0.30"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.31/",
-        "name": "G 0.31 Incorrect use or administration of devices and systems"
+        "name": "G 0.31 Incorrect use or administration of devices and systems",
+        "path": "http://localhost:8000/bsi/threats/G0.31"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.32/",
-        "name": "G 0.32 Abuse of permissions"
+        "name": "G 0.32 Abuse of permissions",
+        "path": "http://localhost:8000/bsi/threats/G0.32"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.33/",
-        "name": "G 0.33 Staff loss"
+        "name": "G 0.33 Staff loss",
+        "path": "http://localhost:8000/bsi/threats/G0.33"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.34/",
-        "name": "G 0.34 stop"
+        "name": "G 0.34 stop",
+        "path": "http://localhost:8000/bsi/threats/G0.34"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.35/",
-        "name": "G 0.35 coercion, extortion or corruption"
+        "name": "G 0.35 coercion, extortion or corruption",
+        "path": "http://localhost:8000/bsi/threats/G0.35"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.36/",
-        "name": "G 0.36 Identity theft"
+        "name": "G 0.36 Identity theft",
+        "path": "http://localhost:8000/bsi/threats/G0.36"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.37/",
-        "name": "G 0.37 Denying actions"
+        "name": "G 0.37 Denying actions",
+        "path": "http://localhost:8000/bsi/threats/G0.37"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.38/",
-        "name": "G 0.38 Abuse of personal data"
+        "name": "G 0.38 Abuse of personal data",
+        "path": "http://localhost:8000/bsi/threats/G0.38"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.39/",
-        "name": "G 0.39 Malware"
+        "name": "G 0.39 Malware",
+        "path": "http://localhost:8000/bsi/threats/G0.39"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.40/",
-        "name": "G 0.40 Denial of Service "
+        "name": "G 0.40 Denial of Service ",
+        "path": "http://localhost:8000/bsi/threats/G0.40"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.41/",
-        "name": "G 0.41 sabotage"
+        "name": "G 0.41 sabotage",
+        "path": "http://localhost:8000/bsi/threats/G0.41"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.42/",
-        "name": "G 0.42 Social Engineering"
+        "name": "G 0.42 Social Engineering",
+        "path": "http://localhost:8000/bsi/threats/G0.42"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.43/",
-        "name": "G 0.43 Importing messages"
+        "name": "G 0.43 Importing messages",
+        "path": "http://localhost:8000/bsi/threats/G0.43"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.44/",
-        "name": "G 0.44 Unauthorized intrusion into premises"
+        "name": "G 0.44 Unauthorized intrusion into premises",
+        "path": "http://localhost:8000/bsi/threats/G0.44"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.45/",
-        "name": "G 0.45 data loss"
+        "name": "G 0.45 data loss",
+        "path": "http://localhost:8000/bsi/threats/G0.45"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.46/",
-        "name": "G 0.46 Integrity loss of sensitive information"
+        "name": "G 0.46 Integrity loss of sensitive information",
+        "path": "http://localhost:8000/bsi/threats/G0.46"
     },
     {
-        "path": "http://localhost:8000/bsi/threats/G0.47/",
-        "name": "G 0.47 Adverse effects of IT-based attacks"
+        "name": "G 0.47 Adverse effects of IT-based attacks",
+        "path": "http://localhost:8000/bsi/threats/G0.47"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/ISMS.1/",
-        "name": "Implementation notes for the module ISMS.1 Sicherheitsmanagement"
+        "name": "Implementation notes for the module ISMS.1 Sicherheitsmanagement",
+        "path": "http://localhost:8000/bsi/implementationnotes/ISMS.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/ORP.1/",
-        "name": "Implementation notes for the block ORP.1 Organization"
+        "name": "Implementation notes for the block ORP.1 Organization",
+        "path": "http://localhost:8000/bsi/implementationnotes/ORP.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/ORP.2/",
-        "name": "Implementation notes for the block ORP.2 Personal"
+        "name": "Implementation notes for the block ORP.2 Personal",
+        "path": "http://localhost:8000/bsi/implementationnotes/ORP.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/ORP.3/",
-        "name": "Implementation notes for the module ORP.3 Sensitization and Training"
+        "name": "Implementation notes for the module ORP.3 Sensitization and Training",
+        "path": "http://localhost:8000/bsi/implementationnotes/ORP.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/ORP.5/",
-        "name": "Implementation notes for the module ORP.5 Compliance Management (Request Management) "
+        "name": "Implementation notes for the module ORP.5 Compliance Management (Request Management) ",
+        "path": "http://localhost:8000/bsi/implementationnotes/ORP.5"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/CON.3/",
-        "name": "Implementation notes for the module CON.3 Data backup concept"
+        "name": "Implementation notes for the module CON.3 Data backup concept",
+        "path": "http://localhost:8000/bsi/implementationnotes/CON.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/CON.4/",
-        "name": "Implementation notes for the module CON.4 Selection and use of standard software"
+        "name": "Implementation notes for the module CON.4 Selection and use of standard software",
+        "path": "http://localhost:8000/bsi/implementationnotes/CON.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/CON.7/",
-        "name": "Implementation notes for the module CON.7 Information security on trips abroad"
+        "name": "Implementation notes for the module CON.7 Information security on trips abroad",
+        "path": "http://localhost:8000/bsi/implementationnotes/CON.7"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.2/",
-        "name": "Implementation notes for the block OPS.1.1.2 Proper IT administration"
+        "name": "Implementation notes for the block OPS.1.1.2 Proper IT administration",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.3/",
-        "name": "Implementation notes for the block OPS.1.1.3 Patch and Change Management"
+        "name": "Implementation notes for the block OPS.1.1.3 Patch and Change Management",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.1.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.3/",
-        "name": "Implementation notes for the module OPS.1.2.3 Information and data medium exchange"
+        "name": "Implementation notes for the module OPS.1.2.3 Information and data medium exchange",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.4/",
-        "name": "Implementation notes for the OPS.1.2.4 Telework"
+        "name": "Implementation notes for the OPS.1.2.4 Telework",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.1.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.1/",
-        "name": "Implementation notes for the module OPS.2.1 Outsourcing for customers"
+        "name": "Implementation notes for the module OPS.2.1 Outsourcing for customers",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.4/",
-        "name": "Implementation notes for the module OPS.2.4 Remote maintenance"
+        "name": "Implementation notes for the module OPS.2.4 Remote maintenance",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.2.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/OPS.3.1/",
-        "name": "Implementation notes for the module OPS.3.1 Outsourcing for Dienstleister"
+        "name": "Implementation notes for the module OPS.3.1 Outsourcing for Dienstleister",
+        "path": "http://localhost:8000/bsi/implementationnotes/OPS.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/DER.2.3/",
-        "name": "Implementation notes for module DER.2.3 Clearance of far-reaching security incidents"
+        "name": "Implementation notes for module DER.2.3 Clearance of far-reaching security incidents",
+        "path": "http://localhost:8000/bsi/implementationnotes/DER.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/APP.1.1/",
-        "name": "Implementation notes for the module APP.1.1 Office Products"
+        "name": "Implementation notes for the module APP.1.1 Office Products",
+        "path": "http://localhost:8000/bsi/implementationnotes/APP.1.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/APP.2.2/",
-        "name": "Implementation notes for the module APP.2.2 Active Directory"
+        "name": "Implementation notes for the module APP.2.2 Active Directory",
+        "path": "http://localhost:8000/bsi/implementationnotes/APP.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.1/",
-        "name": "Implementation notes for the module APP.3.1 Web applications"
+        "name": "Implementation notes for the module APP.3.1 Web applications",
+        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.6/",
-        "name": "Implementation notes for the module APP.3.6 DNS server"
+        "name": "Implementation notes for the module APP.3.6 DNS server",
+        "path": "http://localhost:8000/bsi/implementationnotes/APP.3.6"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.1/",
-        "name": "Implementation notes for the block SYS.1.1 General Server"
+        "name": "Implementation notes for the block SYS.1.1 General Server",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.2.2/",
-        "name": "Implementation notes for the block SYS.1.2.2 Windows Server 2012"
+        "name": "Implementation notes for the block SYS.1.2.2 Windows Server 2012",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.1.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.2.1/",
-        "name": "Implementation notes for the block SYS.2.1 General Client"
+        "name": "Implementation notes for the block SYS.2.1 General Client",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.1/",
-        "name": "Implementation notes for the block SYS.3.1 Laptops"
+        "name": "Implementation notes for the block SYS.3.1 Laptops",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.2/",
-        "name": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) "
+        "name": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) ",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.3/",
-        "name": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) "
+        "name": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) ",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.2.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.4/",
-        "name": "Implementation notes for the block SYS.3.4 Mobile data carrier"
+        "name": "Implementation notes for the block SYS.3.4 Mobile data carrier",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.3.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.1/",
-        "name": "Implementation notes for the block SYS.4.1 printers, copiers and multifunction devices"
+        "name": "Implementation notes for the block SYS.4.1 printers, copiers and multifunction devices",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.4/",
-        "name": "Implementation notes for the block SYS.4.4 General IoT device"
+        "name": "Implementation notes for the block SYS.4.4 General IoT device",
+        "path": "http://localhost:8000/bsi/implementationnotes/SYS.4.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/IND.1/",
-        "name": "Implementation notes for the module IND.1 Operating and Control Technology"
+        "name": "Implementation notes for the module IND.1 Operating and Control Technology",
+        "path": "http://localhost:8000/bsi/implementationnotes/IND.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.1/",
-        "name": "Implementation notes for the block NET.2.1 WLAN operation"
+        "name": "Implementation notes for the block NET.2.1 WLAN operation",
+        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.2/",
-        "name": "Implementation notes for the module NET.2.2 WLAN-Usage"
+        "name": "Implementation notes for the module NET.2.2 WLAN-Usage",
+        "path": "http://localhost:8000/bsi/implementationnotes/NET.2.2"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/INF.1/",
-        "name": "Implementation notes for building block INF.1 General Building"
+        "name": "Implementation notes for building block INF.1 General Building",
+        "path": "http://localhost:8000/bsi/implementationnotes/INF.1"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/INF.3/",
-        "name": "Implementation notes for the module INF.3 Electrotechnical cabling"
+        "name": "Implementation notes for the module INF.3 Electrotechnical cabling",
+        "path": "http://localhost:8000/bsi/implementationnotes/INF.3"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/INF.4/",
-        "name": "Implementation notes for the module INF.4 IT- cabling"
+        "name": "Implementation notes for the module INF.4 IT- cabling",
+        "path": "http://localhost:8000/bsi/implementationnotes/INF.4"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/INF.8/",
-        "name": "Implementation notes for the module INF.8 Domestic workstation"
+        "name": "Implementation notes for the module INF.8 Domestic workstation",
+        "path": "http://localhost:8000/bsi/implementationnotes/INF.8"
     },
     {
-        "path": "http://localhost:8000/bsi/implementationnotes/INF.9/",
-        "name": "Implementation notes for module INF.9 Mobile workstation"
+        "name": "Implementation notes for module INF.9 Mobile workstation",
+        "path": "http://localhost:8000/bsi/implementationnotes/INF.9"
     }
 ]

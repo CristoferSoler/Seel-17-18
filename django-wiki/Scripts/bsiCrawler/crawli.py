@@ -28,7 +28,7 @@ directoryContentThreats = '/T/'
 xpathString = '.|following-sibling::h3|following-sibling::h4|following-sibling::p[not(@class)]|following-sibling::ul|following-sibling::h2|following-sibling::h1|following-sibling::li'
 
 
-# get all links under a h2Headline what can be Elemetare Gefährdungen, Bausteine and Umsetzungshinweise
+# get all links under a h2Headline what can be Elemetare Gefaehrdungen, Bausteine and Umsetzungshinweise
 def get_links(response, h2Headline):
     links = []
 
@@ -67,7 +67,7 @@ class bsiSpider(sc.Spider):
 
     def parse(self, response):
         print('Start Crawling the content of the BSI')
-        # get all links under Bausteine, Elementare Gefährdungen und Umsetzungshinweise
+        # get all links under Bausteine, Elementare Gefaehrdungen und Umsetzungshinweise
         urlsG = get_links(response, 'Elementare Gefährdungen')
         urlsB = get_links(response, 'Bausteine')
         urlsU = get_links(response, 'Umsetzungshinweise')
@@ -119,7 +119,7 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h1Element[0].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
-        f = open(directoryContent + '/' + directoryContentThreats + re.sub('/', '-', h1) + '.md', 'w')
+        f = open(directoryContent + '/' + directoryContentThreats + re.sub('/', '-', h1) + '.md', 'w', encoding='utf-8')
         f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
@@ -134,7 +134,7 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
-        f = open(directoryContent + '/' + directoryContentNotes + re.sub('/', '-', h1) + '.md', 'w')
+        f = open(directoryContent + '/' + directoryContentNotes + re.sub('/', '-', h1) + '.md', 'w', encoding='utf-8')
         f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
@@ -149,7 +149,7 @@ class bsiSpider(sc.Spider):
         allRelatedContentHTML = h2Element[1].xpath(xpathString).extract()
         allRelatedContentOneStringHTML = functools.reduce(lambda x, y: x + y, allRelatedContentHTML)
 
-        f = open(directoryContent + '/' + directoryContentComponent + re.sub('/', '-', h1) + '.md', 'w')
+        f = open(directoryContent + '/' + directoryContentComponent + re.sub('/', '-', h1) + '.md', 'w', encoding='utf-8')
         f.write(md(allRelatedContentOneStringHTML))
         f.close()
 
