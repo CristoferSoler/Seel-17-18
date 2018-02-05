@@ -50,3 +50,78 @@ The default settings of VPN components do not always have all the features of a 
 ### 2 6 Theft of mobile devices with VPN client
 
 Mobile devices are often stolen or otherwise lost. As a result, the danger exists that attackers can access the institution's internal network via the VPN connection established there. Often missing loss reporting processes, so z. For example, if a stolen laptop is not promptly reported to the correct location in the institution. As a result, the attacker may have long been unnoticed in the internal network and copy numerous information worthy of protection.
+
+3 requirements
+---------------
+
+The following are specific requirements for the VPN area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### NET.3.3.A1 Planning the VPN deployment
+
+Before the introduction of a VPN, careful planning MUST be done. The responsibilities for the VPN operation MUST be defined. It also MUST be scheduled for the VPN user groups and their permissions. It also MUST be defined how documented, changed or revoked access permissions are to be documented.
+
+#### NET.3.3.A2 Selection of a VPN Service Provider [Information Security Officer (ISB)]
+
+With a VPN service provider, Service Level Agreements (SLAs) MUST be negotiated and documented in writing. It MUST be regularly checked if the VPN service provider complies with the agreed SLAs.
+
+#### NET.3.3.A3 Secure installation of VPN terminals
+The underlying operating system of the VPN platform MUST be securely configured. If an appliance is used, there must be a valid maintenance contract. It MUST be ensured that only qualified personnel install VPN components. The installation of the VPN components as well as possible deviations from the planning specifications SHOULD be documented. The functionality and the chosen security mechanisms of the VPN MUST be checked before commissioning.
+
+#### NET.3.3.A4 Secure configuration of a VPN
+
+For VPN clients, VPN servers and VPN connections, a secure configuration MUST be set. This SHOULD be suitably documented. Also, the responsible administrator MUST check regularly whether the configuration is still secure and possibly adapt it for all IT systems.
+
+#### NET.3.3.A5 Blocking of unneeded VPN accesses
+
+It must be regularly checked if only authorized IT systems and users can access the VPN. No longer required VPN access MUST be deactivated in a timely manner. VPN access MUST be limited to the required usage times.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of VPN. They SHOULD be implemented in principle.
+
+#### NET.3.3.A6 Perform a VPN requirement analysis
+
+A requirements analysis SHOULD be carried out in order to be able to determine the application scenarios for the respective VPN and derive therefrom requirements for the required hardware and software components. In the requirements analysis the following points SHOULD be considered:
+
+* Business processes,
+* Access paths,
+* Identification and authentication procedures,
+* Users and user permissions,
+* Responsibilities and
+* Reporting channels.
+#### NET.3.3.A7 Planning of technical VPN realization
+
+In addition to the general planning (see NET.3.3.A1 * Planning the VPN deployment *), the technical aspects of a VPN should be carefully planned. For example, VPN encryption procedures, VPN endpoints, allowed access protocols, services and resources should be specified. In addition, the subnets (see NET.1.1 * Network Architecture and Design *) that can be reached via the VPN SHOULD be defined.
+
+#### NET.3.3.A8 Create a security policy for VPN usage
+
+A security policy for VPN usage SHOULD be created and communicated to employees. The security measures SHOULD be explained during training sessions. If a VPN access is set up for an employee, a leaflet containing the most important VPN security mechanisms SHOULD be handed to him. All VPN users SHOULD be required to comply with security policies.
+
+#### NET.3.3.A9 Appropriate selection of VPN products
+
+When selecting VPN products, the requirements of the institutions for the networking of different locations and the connection of mobile employees or teleworkers SHOULD be taken into account.
+
+#### NET.3.3.A10 Secure operation of a VPN
+
+For VPNs, an operating concept SHOULD be created. This should include the aspects quality management, monitoring, maintenance, training and authorization.
+
+#### NET.3.3.A11 Secure connection of an external network
+
+If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD comply with the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
+
+#### NET.3.3.A12 User and Access Management for Remote Access VPNs
+For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * Identity and Authorization Management * module.
+
+When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+
+#### NET.3.3.A13 Integration of VPN components in a firewall
+
+The VPN components SHOULD be integrated into the firewall so that traffic can be effectively controlled and filtered. It SHOULD document how the VPN components are integrated into the firewall.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

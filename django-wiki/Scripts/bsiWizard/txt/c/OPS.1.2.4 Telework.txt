@@ -59,3 +59,64 @@ The tasks of the teleworker are usually designed so that he can work independent
 ### 2 7 Non-compliance with safety measures
 
 Especially at the teleworkplace, due to a lack of control options, employees may not or not fully implement recommended or ordered security measures. It may cause damage that would otherwise be prevented or at least reduced. Depending on the function of the employee and the importance of the disregarded measure even serious damage can occur, eg. For example, confidential information can fall into the wrong hands. These may then be used to the serious disadvantage of the institution.
+
+3 requirements
+---------------
+
+The following are specific requirements for the protection of teleworking. Basically, the Information Security Officer (ISB) is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### OPS.1.2.4.A1 Teleworking Regulations [Supervisor, Human Resources]
+All relevant aspects of teleworking MUST be regulated. For information purposes, teleworkers MUST be given the applicable rules or a leaflet intended to explain the security measures to be followed. All points in dispute MUST be settled either by company agreements or by individual agreements between the teleworker and the employer in addition to the employment contract. For each teleworker, a representative MUST be named. The substitution case SHOULD be rehearsed regularly. The regulations MUST be updated regularly.
+
+#### OPS.1.2.4.A2 Safety requirements for the teleworking computer [Head IT, IT operation]
+
+All safety requirements that a telework computer must meet must be specified. All access and access to the institution's communication computers MUST be kept to the minimum necessary.
+
+It MUST be ensured that only authorized persons can access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
+
+#### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
+
+It is necessary to define safety requirements for the communication link between the teleworking computer and the institution. It MUST be ensured that the confidentiality, integrity and authenticity of the transmitted data is guaranteed.
+
+All communication protocols and security mechanisms MUST meet the defined requirements of the institution. The strength of the required security mechanisms SHOULD be based on the protection needs of the transmitted data. In addition, the authenticity of the communication partners MUST be guaranteed.
+
+#### OPS.1.2.4.A4 Data protection in teleworking [Teleworker, IT operation]
+
+All data processed during teleworking MUST be saved in a timely manner. For this purpose, data backups MUST be carried out either locally on external data carriers or centrally via the connection to the network of the institution.
+
+The selected backup method MUST be appropriate and sufficient for the volume of data. In order to ensure a smooth process, as few backup actions as possible have to be made by the teleworker. There SHOULD be deposited a generation of backup volumes in the institution.
+
+#### OPS.1.2.4.A5 Awareness and Training of Teleworkers [Supervisors, Head of IT]
+
+Using a memo, teleworkers MUST be made aware of the dangers associated with teleworking. In addition, they MUST be trained in the appropriate security measures of the institution and trained in dealing with them. Training and awareness raising for teleworkers SHOULD be repeated regularly.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in teleworking. They SHOULD be implemented in principle.
+
+#### OPS.1.2.4.A6 Creating a security concept for teleworking [Supervisor, Head of Organization, Head of IT]
+
+A teleworking security concept SHOULD be created describing security objectives, protection needs, security requirements and risks. The concept SHOULD be regularly updated and revised. The security concept for telework SHOULD be coordinated with the overarching security concept of the institution.
+
+#### OPS.1.2.4.A7 Regulated use of communication options for teleworking [teleworkers, IT operations]
+It SHOULD be clearly defined which communication options may be used for teleworking under which conditions. The official and private use of Internet services in telework SHOULD be regulated. It should also be clarified whether a private use is generally allowed or prevented.
+
+#### OPS.1.2.4.A8 Flow of information between teleworker and institution [supervisor, teleworker]
+
+A regular in-house exchange of information between teleworkers, work colleagues and the institution SHOULD be ensured. All teleworkers SHOULD receive timely information about changed security requirements and other security-related aspects. All colleagues of the respective teleworker SHOULD know when and where this can be achieved. Technical and organizational teleworking arrangements for task management, security incidents and other problems SHOULD be regulated and communicated to teleworkers.
+
+#### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
+
+For teleworking places, a special care and maintenance concept SHOULD be created. The following aspects SHOULD be regulated: contact person for the user service, maintenance appointments, remote maintenance, transport of the IT equipment and introduction of standard teleworking computers. In order for the teleworkers to remain operational, they should be named contact persons for hardware and software problems.
+
+#### OPS.1.2.4.A10 Implementation of a requirement analysis for the teleworking station [Head IT, IT operation]
+
+Before a teleworkstation is set up, a requirement analysis SHOULD be performed. From this SHOULD z. For example, you can see which hardware and software components are needed for the teleworkstation. The requirements for the respective teleworkplace SHOULD be coordinated with the IT managers. It SHOULD ALWAYS BE DETERMINED AND documented, which protection requirements the information processed at the teleworkstation has.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

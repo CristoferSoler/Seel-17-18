@@ -3,7 +3,7 @@
 G 0.24 Destruction of equipment or data carriers
 ===============================================
 
-Negligence, improper use, but also untrained handling can lead to destruction of devices and data carriers that can seriously disrupt the operation of the IT system.
+Negligence, improper use, as well as untrained handling can lead to destruction of devices and data carriers that can severely disrupt the operation of the IT system.
 
 There is also the danger that the destruction will destroy important information that can not be reconstructed or can only be reconstructed with great effort.
 

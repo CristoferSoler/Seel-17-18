@@ -27,7 +27,8 @@ def get_CR_Tables():
         cr = urlopen(CR_website_path)
         if not os.path.exists(local_path):
             os.makedirs(local_path)
-        zip_ref = zipfile.ZipFile(BytesIO(cr.read().decode(cr.headers.get_content_charset())))
+        zip_ref = zipfile.ZipFile(BytesIO(cr.read()))
+        #zip_ref = zipfile.ZipFile(BytesIO(cr.read().decode(cr.headers.get_content_charset())))
         zip_ref.extractall(local_path)
         os.chmod(os.path.join(local_path,'csv'), 0o766)
         zip_ref.close()

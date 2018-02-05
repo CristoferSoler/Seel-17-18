@@ -1,47 +1,47 @@
-G 0.1 fire,fire,insulation,breakdown,missing,material,area,electrical,machine,extinguishing,appliance
-G 0.10 Failure or malfunction of supply networks,network,failure,supply,technology,affect,ventilation,building,malfunction,control,affect
-G 0.11 Failure or disruption of service providers,provider,service,failure,subcontractor,process,client,supplier,company,result,outsourcing
-G 0.12 Electromagnetic interference,component,electromagnetic,electronic,communication,impair,large,radiation,regulation,strong,technology
-G 0.13 Interception of compromising radiation,radiation,electromagnetic,device,carry,wave,printer,case,reflected,called,keyboard
-G 0.14 Spying on information (spying) ,attacker,pin,horse,trojan,password,intended,user,spy,well,gain
-G 0.15 Listening,unprotected,attacker,effort,data,intercept,conversation,entire,easily,transmitted,case
-"G 0.16 Theft of devices, data carriers or documents",data,carrier,customer,stolen,device,employee,call,copy,theft,center
-"G 0.17 Loss of equipment, data carriers or documents",confidential,document,customer,data,paper,result,accidentally,carrier,update,loss
-G 0.18 Misplanned planning or missing adjustment,process,account,time,processing,planning,dependency,receiving,readable,issue,transmitting
-G 0.19 Disclosure of information worthy of protection,data,negative,transmission,calculator,disclosed,disclosure,hard,cell,account,number
-G 0.2 Unfavorable climatic conditions,temperature,high,device,unfavorable,lead,malfunction,excessively,damage,insufficient,equipment
-G 0.20 Information or products from unreliable source,internet,incorrect,decision,side,code,unwanted,verified,e-mail,infected,software
-G 0.21 Manipulation of hardware or software,software,data,result,manipulation,application,hardware,money,attacker,expense,discovered
-G 0.22 Manipulation of information,access,serious,change,manipulation,sheet,company,impact,unauthorized,annual,data
-G 0.23 Unauthorized intrusion into IT systems,access,unauthorized,secured,interface,case,corresponding,software,medium,malicious,active
-G 0.24 Destruction of devices or data carriers,day,server,data,hard,circuit,short,unusable,failed,stored,carrier
-G 0.25 Failure of devices or systems,actual,day,file,failure,shut,power,unavailable,imported,inconsistency,server
-G 0.26 Malfunction of devices or systems,malfunction,time,database,identified,application,sampling,stored,calculated,wrong,statistical
-G 0.27 Resource shortage,resource,financial,time,happen,service,network,paid,web,making,area
-G 0.28 Software vulnerabilities or errors,software,browser,occur,application,error,response,error,affect,buffer,misused
-G 0.29 Violation of laws or regulations,regulation,data,processing,germany,safety,business,industry,management,law,include
-G 0.3 water,water,supply,building,leaking,time,final,underneath,switched,fairing,connection
-G 0.30 Unauthorized use or administration of devices and systems,unauthorized,authorization,access,device,mechanism,morning,mobile,identification,person,internet
-G 0.31 Incorrect use or administration of devices and systems,cable,application,connection,employee,power,stumble,incorrect,causing,maintain,erase
-G 0.32 Abuse of permissions,access,foreign,people,password,individual,permission,task,tempted,privilege,needed
-G 0.33 Staff loss,network,administrator,staff,institution,vacation,data,vault,care,loss,afforded
-G 0.34 stop,attack,office,destroyed,institution,center,police,authority,ass,considerable,area
-"G 0.35 coercion, extortion or corruption",coercion,attack,corruption,blackmail,danger,attacker,confidential,business,target,trust
-G 0.36 Identity theft,identity,address,theft,manipulating,account,masquerade,partner,e-mail,attacker,connection
-G 0.37 Denying actions,received,message,denied,repudiation,denies,e.g,receipt,supplier,well,origin
-G 0.38 Abuse of personal data,personal,control,circumstance,abuse,guest,company,behavior,collected,stored,legal
-G 0.39 Malware,malicious,program,virus,recipient,html,control,disinfection,error,book,klez
-"G 0.4 Contamination, dust, corrosion",supply,power,result,device,office,work,ventilation,returning,contamination,lead
-G 0.40 Denial of Service ,attack,service,resource,denial,site,result,capacity,estonia,time,business
-G 0.41 sabotage,center,sabotage,manipulation,water,business,data,technical,small,damage,great
-G 0.42 Social Engineering,social,engineering,password,victim,attacker,attacker,help,user,referred,trust
-G 0.43 Importing messages,message,password,attacker,attack,recipient,record,actual,authorization,user's,case
-G 0.44 Unauthorized intrusion into premises,unauthorized,premise,intrusion,stolen,repaired,application,manipulated,cleverly,routine,replaced
-G 0.45 data loss,data,online,password,mobile,lead,data,event,stored,clock,method
-G 0.46 Integrity loss of sensitive information,archive,document,data,authenticity,electronic,lose,changing,checked,transmission,manipulate
-G 0.47 Adverse effects of IT-based attacks,target,attack,iot,perpetrator,object,ddos,turn,lead,fact,carry
-G 0.5 natural catastrophes,natural,disaster,location,center,earthquake,supply,rest,infrastructure,geographic,volcanic
-G 0.6 disasters in the area,measure,employee,rescue,switched,time,air,fire,manually,property,cloud
-G 0.7 Major events in the area,data,failure,violence,street,existing,major,network,backup,additional,operation
-G 0.8 Failure or malfunction of the power supply,power,supply,operation,supply,community,california,facility,lock,affect,addition
-G 0.9 Failure or malfunction of communication networks,network,link,communication,internet,service,connection,longer,business,increase,converge
+G 0.12 Electromagnetic interference,electromagnetic,component,interference,network,emvg,memory,electronic,communication,radiation,topic
+"G 0.4 Contamination, dust, corrosion",device,power,server,building,work,corrosion,supply,dust,drilling,eventually
+G 0.10 Failure or malfunction of supply networks,network,fire,affect,operation,building,failure,degree,ventilation,result,provide
+G 0.15 Listening,attacker,case,cable,conversation,letter,effort,unprotected,question,listening,transmitted
+G 0.23 Unauthorized intrusion into IT systems,unauthorized,interface,gain,storage,component,administrative,data,amount,usb,hacker
+"G 0.16 Theft of devices, data carriers or documents",confidential,data,document,company,disappeared,stolen,call,copy,mobile,computer
+G 0.42 Social Engineering,social,access,engineering,learns,attacker,call,victim,password,desired,visible
+G 0.45 data loss,data,loss,mobile,event,online,service,medium,database,performed,malfunction
+G 0.8 Failure or malfunction of the power supply,power,day,disturbance,supply,failure,operation,interruption,affect,restoration,left
+G 0.41 sabotage,center,damage,manipulated,data,water,failure,manipulation,clogging,document,deal
+G 0.3 water,frost,water,pipe,damage,caused,switched,power,building,final,distributor
+G 0.19 Disclosure of information worthy of protection,data,negative,transmission,listening,file,confidential,device,reading,financial,drive
+G 0.14 Spying on information (spying) ,trojan,attacker,spy,pin,user,intended,well,gain,order,direct
+G 0.18 Misplanned planning or missing adjustment,process,adjustment,technology,required,processing,planning,building,issue,readable,lead
+G 0.13 Interception of compromising radiation,wave,carry,exposing,radiation,keyboard,processed,accepted,electromagnetic,manipulation,external
+G 0.47 Adverse effects of IT-based attacks,target,attack,lead,iot,party,major,it-based,ddos,device,pose
+G 0.7 Major events in the area,violence,major,event,street,center,data,accidentally,led,failure,constructing
+G 0.36 Identity theft,identity,masquerade,internet,communication,provider,connection,manipulating,participant,register,theft
+G 0.26 Malfunction of devices or systems,device,database,malfunction,result,documentation,issue,analysis,doe,grille,identified
+G 0.20 Information or products from unreliable source,origin,source,patch,will,infected,unreliable,lead,incorrect,decision,e-mail
+G 0.37 Denying actions,message,received,order,denies,loss,delivery,high,participant,cost,incurred
+G 0.25 Failure of devices or systems,unavailable,failure,remedied,web,restarted,server,isp-operated,day,storage,shut
+G 0.39 Malware,program,computer,malicious,loss,infested,considerably,recipient,book,spread,locating
+G 0.40 Denial of Service ,attack,service,resource,estonia,denial,it-based,internet,result,cpu,numerous
+G 0.29 Violation of laws or regulations,regulation,law,management,processing,company,business,proper,data,serious,code
+G 0.30 Unauthorized use or administration of devices and systems,unauthorized,device,waiting,access,authentication,administration,building,mobile,internet,corresponding
+G 0.22 Manipulation of information,access,document,result,department,manipulation,change,sheet,impact,colleague,gained
+G 0.24 Destruction of devices or data carriers,server,carrier,day,hard,circuit,entering,coffee,computer,innate,injured
+G 0.5 natural catastrophes,natural,location,disaster,damage,phase,center,amounted,time,area,insurance
+G 0.43 Importing messages,authentication,actual,message,attacker,communication,case,attack,time,multiple,employee
+G 0.46 Integrity loss of sensitive information,key,longer,archive,authenticity,lose,bit,error,stored,record,checked
+G 0.21 Manipulation of hardware or software,manipulation,data,money,hardware,implication,cash,abused,gain,damage,repeatedly
+G 0.33 Staff loss,illness,vacation,loss,network,personnel,administrator,service,company,institution,entitlement
+G 0.27 Resource shortage,resource,operation,overloaded,task,occur,server,money,bandwidth,service,data
+"G 0.17 Loss of equipment, data carriers or documents",document,confidential,software,data,carrier,scan,lost,accidentally,malfunction,purpose
+G 0.28 Software vulnerabilities or errors,software,error,internet,lead,error,browser,occur,government,accessing,manipulation
+G 0.32 Abuse of permissions,access,privilege,authorization,permission,password,people,individual,foreign,attacker,change
+G 0.44 Unauthorized intrusion into premises,unauthorized,time,damaged,break-in,discovered,premise,server,result,stolen,application
+G 0.9 Failure or malfunction of communication networks,network,communication,communication,service,required,fail,process,voip,institution,publicity
+"G 0.35 coercion, extortion or corruption",corruption,attack,threatening,target,coercion,high-level,process,fundamentally,danger,forward
+G 0.31 Incorrect use or administration of devices and systems,cable,device,maintain,incorrect,connection,equipment,laid,employee,data,accidentally
+G 0.2 Unfavorable climatic conditions,temperature,cooling,technical,lead,range,condition,failure,climatic,demagnetized,permissible
+G 0.38 Abuse of personal data,personal,data,purpose,credential,guest,advertising,sell,hotel,access,file
+G 0.1 fire,fire,electrical,equipment,building,extinguishing,improper,complete,machine,favored,lead
+G 0.11 Failure or disruption of service providers,service,provider,center,company,supplier,result,business,problem,client,banking
+G 0.34 stop,attack,institution,killed,office,result,destroyed,considerable,authority,politically,task
+G 0.6 disasters in the area,center,air,data,hour,manually,supply,happened,measure,property,time

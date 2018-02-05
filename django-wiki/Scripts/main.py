@@ -13,10 +13,7 @@ from Scripts.treeview_links import addLinksToTreeView
 from Scripts.bsiImporter import doUpdate, post_phase, doImport
 from Scripts.bsiWizard.topicGeneration import topicGeneration
 from Scripts.bsiComparator.bsicomparator import compare
-<<<<<<< HEAD
 from bsiwiki import settings
-=======
->>>>>>> origin/django-wiki
 
 isRunning = False
 
@@ -34,14 +31,8 @@ def update_phase():
         # compare()
 
         # call translator
-        os.system('python3 bsiCrawler/translatorMultiProcessing.py 1')
-    except Exception as e:
-        print(e)
-        isRunning = False
-        return 'An error has occurred. Update process aborted'
-
-        # call translator
-        os.system('python3.6 ' + os.path.join(settings.CRAWLER_DIR, 'translatorMultiProcessing.py') + ' 1')
+        # os.system('python3.6 ' + os.path.join(settings.CRAWLER_DIR, 'translatorMultiProcessing.py') + ' 1')
+        pass
     except Exception as e:
         print(e)
         isRunning = False
@@ -85,11 +76,12 @@ if __name__ == "__main__":
     os.system('scrapy runspider bsiCrawler/crawli.py -a phase=0 --nolog')
 
     # call translator
-    # os.system('python3.6 bsiCrawler/translatorMultiProcessing.py 0')
-    # doImport()
+    #os.system('python3 bsiCrawler/translatorMultiProcessing.py 0')
+    
+    doImport()
 
     # call treeview importer
-    # addLinksToTreeView()
+    addLinksToTreeView()
 
     # call topic generation for the wizard
-    topicGeneration()
+    #topicGeneration()

@@ -3,7 +3,7 @@
 G 0.33 Personnel loss
 ======================
 
-The loss of personnel can have a significant impact on an institution and its business processes. Personnel can be unpredictable due to illness, accident, death or strike, for example. In addition, the predictable loss of staff for vacation, training or a regular termination of the employment relationship must be taken into account, especially if the remaining working time z. B. is shortened by a leave entitlement. A staff shortage can also be caused by an internal change of workplace.
+The loss of personnel can have a significant impact on an institution and its business processes. Personnel may be unpredictable due to illness, accident, death or strike, for example. In addition, the predictable loss of staff for vacation, training or a regular termination of the employment relationship must be taken into account, especially if the remaining working time z. B. is shortened by a leave entitlement. A staff shortage can also be caused by an internal change of workplace.
 
 Examples:
 

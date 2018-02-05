@@ -11,7 +11,7 @@ The industry, which includes Critical Infrastructures, includes industrial contr
 
 The customary physical separation of OT from other IT systems and networks in office applications is nowadays only applicable in exceptional cases with increased protection requirements due to increasing integration requirements. Multi-level production steps and their overall control as well as regulatory requirements require an increasing opening across organizational boundaries. This trend is accelerated by the trend towards optimizing manufacturing processes to increase competitiveness in the context of Industry 4.0.
 
-As IT components and technologies from office IT are increasingly being used in OT in addition to OT-specific components, they are now exposed to comparable hazards. At the same time, OTs differ significantly from traditional IT, making it difficult to apply established security procedures. For example, there may be restrictions based on manufacturer specifications or legal requirements that prevent or hinder changes to components. An example of this is the application of security updates or subsequent hardening measures. The OT is generally also subject to significantly longer lifecycles, even beyond the manufacturer support, so that the availability of security updates can not be consistently ensured.
+As IT components and technologies from office IT are increasingly being used in OT in addition to OT-specific components, they are now exposed to comparable hazards. At the same time, OTs differ significantly from traditional IT, making it difficult to apply established security procedures. For example, there may be restrictions based on manufacturer specifications or legal requirements that prevent or hinder changes to components. An example of this is the application of security updates or subsequent hardening measures. The OT is usually also subject to significantly longer lifecycles, even beyond the manufacturer support, so that the availability of security updates can not be consistently guaranteed.
 
 Another major difference for OT is the high availability and integrity requirements, whereas confidentiality is often of secondary importance compared to office IT. Disturbances of these systems can cause risks to life, limb and environment and can usually not be remedied by restarting.
 
@@ -19,7 +19,7 @@ Another major difference for OT is the high availability and integrity requireme
 
 The goal of the module is to demonstrate suitable requirements for the information security of the OT. He addresses cross-component, conceptual and architectural security requirements.
 
-The module is to be modeled and implemented across the board. In this case, multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out since there are different requirements with regard to information security.
+The module is to be modeled and implemented across the board. Multiple use in different areas of the OT in an institution (operator within the meaning of VDI 2182) can not be ruled out, since they have different requirements with regard to information security.
 
 ### 1.3 Delimitation
 
@@ -91,7 +91,7 @@ The long operating times can also lead to problems in the procurement of spare p
 
 The OT components communicate with each other via various network protocols and technologies. In addition to protocols and technologies from office IT (eg Ethernet, TCP / IP, WLAN, GSM), ICS-specific protocols are used. These have not always been developed from the point of view of information security and accordingly provide, in part, no or only limited security mechanisms. Information is often transmitted in plain text and without integrity assurance or authentication.
 
-An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by feigning sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
+An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by faking sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
 
 ### 2 11 Unsafe configurations
 
@@ -106,3 +106,151 @@ The OT is now operated less and less self-sufficient. If there are dependencies 
 In particular, if these systems and networks are not under the control of the institution (the operator of the ICS infrastructure), this can severely affect the availability of OTs and processes. In addition, the incident or error can usually only be remedied with external support.
 
 Examples of dependencies on other systems and networks include Internet connectivity (both wired and wireless), shared infrastructure components, operations management and monitoring by service providers, or the use of cloud services.
+
+3 requirements
+---------------
+The following are specific requirements for the area of ​​operating and control technology. Basically, ICS Information Security Officer (ICS-ISB) is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### IND.1.A1 Integration into the security organization
+
+An Information Security Management System (ISMS) for operating the OT infrastructure MUST exist either as an independent ISMS or as part of an overall ISMS, and MUST explicitly specify within its scope the definition of goals and values, processes, roles, responsibilities, and specifications for the OT include.
+
+The management level of the institution MUST initiate, control and control the security process. The institution MUST establish a security organization that governs the roles and responsibilities for the information security of the OT infrastructure and components.
+
+There is a need to appoint an overall information security officer in OT and to announce it within the institution. Legal, regulatory and other specific requirements for the OT sector and the sector or sector MUST be known and their impact on the institution evaluated.
+
+There MUST exist a process of writing, communicating, implementing, updating, evaluating and improving concrete guidelines for specific topics in the process area.
+
+Further information is described in the ISMS Security Management module.
+
+#### IND.1.A2 Awareness and training of staff
+
+Operating staff MUST be regularly informed and sensitized to relevant IT security threats in the field of OT. OT managers MUST be regularly informed or trained about the threat situation and need for action.
+
+Additional information is described in the ORP.3 Sensitization and Training module.
+
+#### IND.1.A3 Protection against malicious programs
+
+In order to prevent risks from malicious programs, a concept for the protection against malicious programs MUST be created and implemented. It must consider the threatened IT systems as well as the possible infection pathways (external interfaces, removable media, service and parameterization / programming devices) and determine appropriate technical and organizational protective measures.
+
+When using anti-virus software on OT components, it must be considered whether and in what configuration the operation of anti-virus software is supported by the manufacturer. If this is not the case, the need for alternative protection mechanisms MUST be considered in a risk analysis.
+
+Used virus protection software MUST be supplied with current signatures. The antivirus concept MUST set the update strategy. This includes the reference to signatures, their distribution methods and the frequency of the update. The reference and distribution of signatures can be automated. The receipt of virus signatures by OT systems MUST NOT take place directly from the Internet, but must be done indirectly via a proxy or virus signature distribution service. The interface systems MUST be operated separately from the OT environment in a standalone zone (eg, DMZ).
+
+### 3.2 Standard requirements
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​operating and control technology. They SHOULD be implemented in principle.
+
+#### IND.1.A4 Documentation of the OT infrastructure
+
+The safety-relevant parameters of the OT infrastructure SHOULD be documented. All software and system components SHOULD be kept in an inventory. From this, the product and protocol versions used as well as the responsibilities should emerge. The components used SHOULD include any manufacturer restrictions or regulatory requirements such as certifications. This documentation and a system inventory SHOULD be kept in a control system, for example.
+
+In addition, a current network SHOULD document zones, conduit transitions, communication protocols and procedures used, and outside interfaces. The interfaces SHOULD consider active network components as well as manual data transfer methods (eg using removable data carriers). The documentation SHOULD capture redundancies, IP addresses or ranges, and the assignment to physical security zones.
+
+Since the documentation contains confidential information, all documents must be stored securely and given a classification regarding protection requirements.
+
+#### IND.1.A5 Development of a suitable zone concept [IT operation]
+
+There SHOULD be a zone concept that defines different levels with different protection requirements and includes the complete OT infrastructure and at least the transition to Office IT. The network SHOULD be segmented according to the zones and the flow of data between the zones should be properly controlled to make attacks more cumbersome, unlikely and easier to detect.
+
+It should also be a horizontal segmentation in independent functional areas (such as plants) done. The individual zones SHOULD be independent of each other as much as possible during operation. In particular, the zones in which the technical process is controlled SHOULD continue to be operable for a predetermined period of time in the event of failure of the other zones or their intentional decoupling following compromise. This period SHOULD be defined and documented as part of the risk analysis or alternatively in the context of emergency planning. The network SHOULD therefore be designed stably in the sense of manipulation- and error-resistant.
+
+All interfaces / connections between the zones SHOULD be risk assessed. The outside interfaces SHOULD use authenticated users and integrity-protected protocols.
+
+#### IND.1.A6 Change management in OT operation
+
+For changes to the OT, a change process (change management) SHOULD be defined, documented and lived. The change process SHOULD ensure that changes are planned, documented, adequately tested for undesirable side effects and functionality, objectively evaluated and approved for safety or operational impact.
+
+There SHOULD be a concept for the safe testing of changes. The system time of the OT infrastructure SHOULD be kept synchronous. This SHOULD be done with an external reference.
+
+Further information is described in the module OPS.1.2.1 Change Management.
+
+#### IND.1.A7 Establish Permission Management
+
+The institution SHOULD establish a process for managing user access and associated permissions to access the OT. Permission management SHOULD include the process, execution, and documentation for requesting, establishing, and revoking privileges.
+The authorization management SHOULD ensure that authorizations are granted according to the minimum principle and regularly checked. Permission management SHOULD regulate access to IT systems for employees, administrators and third parties. Each participant SHOULD regularly be trained on the regulations to be followed. Compliance SHOULD be reviewed and sanctioned misconduct.
+
+Further information is described in the module ORP.4 Identity and Authorization Management.
+
+#### IND.1.A8 Secure Administration [IT Operations]
+
+For initial configuration, administration and remote maintenance in the OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions needed for the respective administration task.
+
+The systems and communication channels used for administration or remote maintenance should have the same level of protection as the managed OT components. All remote maintenance and monitoring SHOULD be authorized, monitored and controlled by the institution. For this, the remote maintenance access SHOULD only be activated for use and then deactivated again. This SHOULD be documented
+
+It should be ensured that it is not possible to build up unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
+
+#### IND.1.A9 Restrictive use of removable media and mobile devices
+
+For the use of removable media and mobile devices SHOULD regulations for handling be set up and publicized. Basically, the use of removable media and mobile devices in ICS environments SHOULD be limited. For media and devices of service providers, an approval process and a request list SHOULD exist. The specifications SHOULD be known to each service provider and confirmed by them in writing.
+
+On the OT components, all unnecessary interfaces SHOULD be disabled. At the active interfaces, the use of certain devices or media can be restricted.
+
+Further information is described in block SYS.3.4 Mobile data carriers.
+
+#### IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
+
+To limit the potential impact of security incidents, business and security-related events SHOULD be identified promptly. For this, a suitable log and event management SHOULD be developed and implemented. Log and event management SHOULD include appropriate measures for the collection and detection of security-related events and a response plan (security incident response).
+
+The response plan SHOULD set procedures for incident handling. It should cover the classification of events, reporting routes and determination of the organizational units to be included, damage limitation response plans, analysis and recovery of systems and services, and the documentation and follow-up of incidents. The reaction plan SHOULD be tested regularly and checked for up-to-dateness.
+
+#### IND.1.A11 Secure Procurement and System Development
+
+For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the tender.
+In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
+
+The institution SHOULD document how the system fits in with the concepts of zoning, entitlement, vulnerability management, and antivirus protection, and adjust it if necessary. It should be regulated how the operation can be maintained if one of the partners stops providing services.
+
+Further information is described in the module OPS.2.1 Outsourcing Usage.
+
+#### IND.1.A12 Establish Vulnerability Management
+
+For the secure operation of an ICS environment, the institution SHOULD establish a vulnerability management. Vulnerability Management SHOULD identify gaps in the software, components, protocols, and external interfaces of the environment, and identify, evaluate, and implement potential action requirements and capabilities (such as patch management).
+
+The basis for this should be manufacturer vulnerability advisories or publicly available CERT reports. In addition, organizational and technical weak point analysis audits can be performed.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### IND.1.A13 Emergency Planning for OT (A)
+
+With high availability, contingency plans for the failure and compromise of each zone SHOULD be defined, documented, tested after each major change, and regularly practiced (see also BSI Standard 100-4).
+
+In addition, an effective replacement procedure for the failure of the (remote) administration option SHOULD be defined, documented and tested.
+
+#### IND.1.A14 Strong Authentication to OT Components (CIA)
+
+For secure authentication of privileged users in control systems, a central directory service SHOULD be set up. The authentication SHOULD be additionally secured by the use of several factors (knowledge, possession, biometrics).
+
+When planning, it should be ensured that any resulting dependencies in the user authentication are known and taken into account during the implementation of the solution.
+
+The central directory service SHOULD NOT serve to authenticate operational technical accounts. When using a directory service, local system and application identifiers for emergency situations SHOULD be set up and securely stored.
+
+Authentication systems that manage sensitive authentication data SHOULD be adequately secured against unauthorized access, changes must be documented in a comprehensible manner and monitored for abnormalities.
+
+#### IND.1.A15 Permission Checking and Monitoring (CIA)
+
+To enable effective verification of privileges, the institution SHOULD maintain an inventory that includes all assigned access, access and access rights to critical systems. The directory SHOULD answer on the one hand, which rights a certain user has effectively, and on the other hand, who has rights on a certain system.
+
+All critical administrative activities SHOULD be logged. The IT operation SHOULD NOT be able to erase or manipulate the logs.
+
+#### IND.1.A16 Greater foreclosure of zones (IA)
+For ICS environments that are highly vulnerable or difficult to protect at the system and network level, preventative use of interface systems with safety testing functions is required to prevent risks from external connections.
+
+As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
+
+By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without adjustments the ICS system are necessary.
+
+The implementation of this requirement increases perimeter security. Supplementary organizational and technical measures SHOULD be identified and implemented to further reduce the risks of intentional and accidental circumvention of the perimeter, such as the use of removable media or mobile devices.
+
+#### IND.1.A17 Regular Security Check (I)
+
+The safety configuration of OT components SHOULD be checked in an appropriate cycle and / or as needed for sudden, new and unknown hazards. The security check SHOULD include at least the exposed systems with outside interfaces or user interaction.
+
+The realized security concept SHOULD be checked regularly.
+
+The security check SHOULD be done as a configuration check or through automated conformance checks.

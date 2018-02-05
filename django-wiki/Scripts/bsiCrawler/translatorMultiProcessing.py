@@ -136,6 +136,7 @@ def translate(fileMD):
         textEl += translator.translate(el, dest='en', src='de').text + '\n'
 
     if(component):
+        print(settings.CRAWLER_DIR + '/references/' + filenameEn.split('.md')[0]+'.txt')
         r = open(settings.CRAWLER_DIR + '/references/' + re.sub('/', '-', filenameEn.split('.md')[0]) + '.txt', 'w', encoding='utf-8')
         r.write(references)
         r.close()

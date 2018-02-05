@@ -48,3 +48,91 @@ If file servers are deployed in easily accessible locations, attackers can direc
 ### 2 7 Lack of or insufficient data protection concept
 
 If a file server fails completely, individual components are defective or an employee unintentionally deletes files, important data can be lost without a functioning backup. In addition, if no RAID (Redundant Array of Independent Disks) are used, the failure of a single disk has a direct effect on the current operation, since the files are no longer available.
+
+3 requirements
+---------------
+
+The following are specific requirements for the Fileserver area. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### APP.3.3.A1 Suitable installation [Building services]
+
+File servers MUST NOT be operated in offices or as workstations. They MUST be placed in locations to which only authorized persons have access. In addition, attention must be paid to a vibration-free or vibration-free environment of the file server. Even file servers with additional functions, such as NAS systems combined with a WLAN access point or with direct connections for memory cards, MUST be set up suitably. Furthermore, a safe power supply and according to the manufacturer's recommended ambient temperature and humidity MUST be ensured.
+
+#### APP.3.3.A2 Use of RAID systems
+
+It MUST be planned whether a RAID system is used in the file server. A decision against such a system MUST be documented comprehensible. If a RAID system is to be used, it MUST be decided:
+* which RAID level should be used to logically group the volumes
+* how long the period of time for a RAID Rebuild process may be and
+* whether a software or a hardware RAID should be used.
+The RAID levels MUST conform to the state of the art. For a hardware RAID, the RAID controller SHOULD be redundant. In a RAID, hot spare disks SHOULD be kept.
+
+#### APP.3.3.A3 Use of antivirus programs
+
+Depending on the operating system and other existing protection mechanisms, the file server MUST be included in the concept of protection against malicious programs of the institution. The used anti-virus program MUST regularly check files released via the file server. In addition to real-time and on-demand scans, the solution MUST also be able to search compressed files for malicious programs. In addition, she SHOULD be able to check encrypted files.
+
+All data MUST be scanned for malware by the antivirus solution before it is placed on the storage media. Both the virus signatures and the antivirus software itself MUST be updated on an ongoing basis. It MUST be ensured that users can not make any security-relevant changes to the settings of the antivirus solution.
+
+#### APP.3.3.A4 Regular backup
+
+All data stored on the file server MUST be backed up regularly. For this purpose, a data backup concept MUST be created, which defines among other things, in which intervals the backup should be performed. In addition, a backup MUST be performed if something is installed or reconfigured on the file server. All secured data MUST be restored at any time. The maximum recovery time SHOULD be collected and taken into account in the data backup concept.
+
+#### APP.3.3.A5 Restrictive allocation of rights
+
+Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can only access the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
+
+It MUST be checked on a regular basis to see if the access permissions are still up to date and comply with the security policy. In addition, there must be a defined process to re-establish, change, or revoke permissions. All access rights MUST be traceable documented.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​file servers. They SHOULD be implemented in principle.
+
+#### APP.3.3.A6 Obtaining a file server
+
+Before a file server is procured, a list of requirements SHOULD be created to evaluate the products available on the market. The performance, the storage capacity, the bandwidth and the number of users who should use the file server SHOULD be taken into account when purchasing the file server.
+
+#### APP.3.3.A7 Selecting a file system
+
+A REQUEST LIST SHOULD be created to evaluate the file systems. To ensure transaction security, the file system SHOULD provide a journaling feature. Also, it SHOULD have a protection mechanism that prevents two users or applications from writing to a file at the same time. A file system should be selected that does not exceed a defined overhead limit. For high availability solutions, distributed file systems SHOULD be used.
+
+#### APP.3.3.A8 Structured Data Management [User]
+It SHOULD be determined a structure, according to which data are to be stored. Users SHOULD be informed regularly about the required structured data management. It SHOULD be determined in writing which data may be stored locally and which on the file server. Program and work data SHOULD be stored separately. It SHOULD be checked regularly whether the specifications for structured data management are adhered to.
+
+#### APP.3.3.A9 Secure storage management
+
+All storage resources of the file server SHOULD be cataloged, eg. Hard disks, flash memory, tape drives. In addition, it should be checked regularly whether the memory is still working as intended. In order to be able to react quickly in the event of bottlenecks, replacement storage tanks SHOULD be reserved.
+
+If a memory hierarchy (primary, secondary or tertiary memory) has been set up, (partially) automated memory management SHOULD be used. If data is distributed automatically, it should be checked manually on a regular basis to see if it works correctly.
+
+Furthermore, the memories used SHOULD be included in the logging concept of the information network. The following events SHOULD at least be logged:
+
+* Activities (modification, addition or deletion of data),
+* unauthorized access to data and
+* Changes to access rights.
+#### APP.3.3.A10 Periodic tests of the backup or recovery concept
+
+It SHOULD be tested regularly to see if backup and recovery works properly. For this, a schedule SHOULD be worked out. Sufficient resources SHOULD be provided to plan, design, and execute the tests.
+
+The results SHOULD be sufficiently documented. Discovered shortcomings SHOULD cause the data protection concept to be revised.
+
+#### APP.3.3.A11 Use of Quotas
+
+It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file or operating system used should be used, which warn the user at a certain fill level of the hard disk or only give the system administrator write access.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### APP.3.3.A12 Encryption of the data (CI)
+
+All data on the file server SHOULD be encrypted. To do this, the volumes SHOULD be completely encrypted. It should be ensured that the virus protection can check the encrypted files for malicious software. Cryptographic pots SHOULD be safely generated and kept separate from the data (see also CON.1 Crypto Concept).
+
+#### APP.3.3.A13 Replicating Between Sites (A)
+
+For high-availability systems, adequate replication of data SHOULD take place on multiple volumes. Data SHOULD also be replicated between independent devices or standalone sites. For this, a suitable replication mechanism SHOULD be selected. For replication to work as intended, sufficiently accurate time services should be used and operated.
+
+#### APP.3.3.A14 Use of Error Correction Codes (I)
+In principle, error-detecting or error-correcting codes SHOULD be used to store data. The necessary redundant bits SHOULD be included in the planning. It should be noted that, depending on the method used, errors can only be detected with a certain degree of probability and can only be remedied to a limited extent.

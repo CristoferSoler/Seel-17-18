@@ -7,7 +7,7 @@ Hardly any institution still works today without service providers such as suppl
 
 It should also be noted that service providers also often rely on subcontractors to provide their services to the client. Disruptions, quality defects and failures on the part of the subcontractors can indirectly lead to adverse effects on the client.
 
-Due to downtimes of IT systems at the service provider or the communication links to this, business processes at the client can be affected.
+Due to downtimes of IT systems at the service provider or the communication links to this, business processes at the customer can be affected.
 
 An optionally necessary retrieval of outsourced processes can be severely hampered, for example because the outsourced processes are not sufficiently documented or because the previous service provider does not support the retrieval.
 

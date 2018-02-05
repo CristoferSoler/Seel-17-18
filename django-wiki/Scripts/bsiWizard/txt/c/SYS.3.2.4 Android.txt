@@ -49,4 +49,50 @@ If an attacker can authenticate himself through the Google ID, he can use all of
 
 With the operating system, manufacturers often ship deeply integrated and pre-installed apps (such as the Play Store and associated Play Services) and interfaces to third-party services (Twitter, Facebook, etc.). Some of these apps can not be removed by the user. This increases the attack surface of the Android operating system. The non-erasable or non-configurable interfaces are often not desired in institutions.
 
-Overall, the deep integration of apps and third-party interfaces increases the risk that the device will become infected with malicious software or that an attacker may gain unauthorized access. The protection of data on the device decreases.
+Overall, the deep integration of apps and third-party interfaces increases the risk that the device will be infected with malware or that an attacker could gain unauthorized access. The protection of data on the device decreases.
+
+3 requirements
+---------------
+
+The following are specific requirements for the Android section. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### SYS.3.2.4.A1 Selection of devices with Android
+
+When selecting a terminal with Android, it MUST be ensured that the manufacturer regularly provides security updates for this device. The device MUST be delivered with or updated to a current version of Android.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the field of Android. They SHOULD be implemented in principle.
+
+#### SYS.3.2.4.A2 Disable the developer options
+
+In all Android-based devices, the developer options SHOULD be disabled.
+
+#### SYS.3.2.4.A3 Using Multi-User and Guest Mode
+
+It should be regulated whether the multi-user and guest mode may or may be used. A user on the Android-based device SHOULD match a natural person.
+
+#### SYS.3.2.4.A4 Control and configuration of cloud print
+
+Cloud Print SHOULD only be allowed if it is ensured that the user can only select approved printers.
+
+#### SYS.3.2.4.A5 Advanced security settings
+
+Only the shared security apps SHOULD register as device administrators or trust agents. The security management SHOULD check this regularly.
+
+Furthermore, the "Access to usage data and access to notifications" settings should only allow allowed apps to access this sensitive data.
+
+### 3.3 Requirements for increased protection requirements
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### SYS.3.2.4.A6 Using a Malware Protection (CIA) Product
+
+It SHOULD be installed on Android-based devices, a software to protect against malware. The software SHOULD always be up to date. It SHOULD use a software that has been rated as very good in independent tests.
+
+#### SYS.3.2.4.A7 Additional Firewall (CI)
+
+On Android-based devices, a firewall SHOULD be installed and enabled.

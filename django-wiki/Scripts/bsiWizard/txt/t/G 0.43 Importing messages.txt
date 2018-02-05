@@ -8,7 +8,7 @@ Attackers use this form of attack to send specially prepared messages to systems
 There are two special cases of message loading that are important in practice:
 
 * In a "replay attack" (attacking messages) attackers record valid messages and play this information at a later date (almost) unchanged. It may also be sufficient to use only parts of a message, such as a password, to invade an IT system without authorization.
-In a man-in-the-middle attack, the attacker unnoticed takes on a mediation position in the communication between different participants. Usually, he pretends to the sender of a message to be the actual recipient, and he pretends the recipient to be the actual sender. If this succeeds, the attacker can thereby receive messages that are not intended for him and evaluate them before forwarding them to the actual recipient and manipulate them in a targeted manner.
+In a man-in-the-middle attack, the attacker unnoticed takes on a mediation position in the communication between different participants. Usually he pretends to the sender of a message to be the actual recipient, and he pretends the recipient to be the actual sender. If this succeeds, the attacker can thereby accept messages that are not intended for him, and evaluate them before forwarding them to the actual recipient and manipulate them in a targeted manner.
 An encryption of the communication offers no protection against man-in-the-middle attacks, if no secure authentication of the communication partners takes place.
 
 ** Examples **

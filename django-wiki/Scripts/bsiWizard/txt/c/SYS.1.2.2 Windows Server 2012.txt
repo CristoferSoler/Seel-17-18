@@ -5,7 +5,7 @@
 
 ### 1.1 Introduction
 
-With Windows Server 2012, Microsoft released a server operating system in September 2012 that brings several improvements in terms of security compared to previous versions of Windows (especially Windows Server 2008 R2). Technically, it is not built on the predecessor, but on the code base of the client operating system Windows 8. With the release of Windows Server 2012 R2 from October 2013, the operating system was further improved and extended to Windows 2012 R2 to the server counterpart to Windows 8.1 make the client side.
+With Windows Server 2012, Microsoft released a server operating system in September 2012 that brings several improvements in terms of security compared to previous versions of Windows (especially Windows Server 2008 R2). Technically, it is based not on the predecessor, but on the code base of the client operating system Windows 8. With the release Windows Server 2012 R2 from October 2013, the operating system was further improved and extended to Windows 2012 R2 to the server counterpart to Windows 8.1 make the client side.
 
 This module is equally concerned with securing Windows Server 2012 and Windows Server 2012 R2, with relevant differences and peculiarities being appropriately pointed out. The spelling "Windows Server 2012 (R2)" is used if both versions are meant. The expiration date for Mainstream Support and Extended Support ("End-of-Life", EOL) is 09.01.2018 or 10.01.2023 in both cases.
 
@@ -15,7 +15,7 @@ The objective of this module is to protect information and processes that are pr
 
 ### 1.3 Delimitation
 
-The block Windows Server 2012 (R2) is applicable to all target objects operating under the operating system Microsoft Windows Server 2012 (R2). It specifies and complements the aspects addressed in the SYS.1.1 General Server building block to specifics of Windows Server 2012 (R2) without repeating the requirements of the APP.2.2 Active Directory building block.
+The block Windows Server 2012 (R2) is to be applied to all target objects operating under the operating system Microsoft Windows Server 2012 (R2). It specifies and complements the aspects addressed in the SYS.1.1 General Server building block to specifics of Windows Server 2012 (R2) without repeating the requirements of the APP.2.2 Active Directory building block.
 
 This building block assumes default integration into an Active Directory domain, as is common in businesses and government agencies. Special features of stand-alone systems are mentioned only occasionally, where the differences appeared to be particularly relevant.
 
@@ -60,4 +60,77 @@ Regular work under standard user rights for administrators is now good practice.
 
 ### 2 9 Compromise of remote access
 
-Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. Often, other IT systems connected to the server can also be compromised.
+Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. In many cases, other IT systems connected to the server can also be compromised.
+
+3 requirements
+---------------
+
+The following are specific requirements for protecting Windows Server 2012 (R2). Basically, the * IT operation * is responsible for fulfilling the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### SYS.1.2.2.A1 Planning for Windows Server 2012
+
+The use of Windows Server 2012 (R2) MUST be carefully planned before installation. The requirements for the hardware MUST be checked before procurement. There must be a well-founded and documented decision for an appropriate Windows Server 2012 (R2) edition. The purpose of the server MUST be specified, including a planned integration into the Active Directory. The use of integrated into the operating system cloud services MUST be weighed and planned in principle. If not needed, the establishment of Microsoft accounts MUST be blocked on the server.
+
+#### SYS.1.2.2.A2 Secure installation of Windows Server 2012
+
+The installation medium MUST be obtained from a demonstrably integral source. NO other than the required server roles and features or functions may be installed. If sufficient in terms of functionality, the server core variant MUST be installed. Otherwise, MUST be justified, why the server core variant is not enough. As part of the installation, the server MUST first be brought to a current patch state.
+
+#### SYS.1.2.2.A3 Secure Administration of Windows Server 2012
+Local administration accounts MUST have unique, secure passwords. All administrators responsible for the server system MUST be trained in the security-related aspects of Windows Server 2012 or R2 administration. You MAY NOT use administrative rights where they are not mandatory. Browsers on the server MAY NOT be used to surf the web.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​Windows Server 2012. They SHOULD basically be implemented.
+
+#### SYS.1.2.2.A4 Secure configuration of Windows Server 2012
+
+It SHOULD NOT fulfill several essential functions or roles from a single server. Before commissioning, the system SHOULD be fundamentally hardened. For this purpose, function-specific institution-wide security templates SHOULD be created and maintained, which are rolled out to the server systems. The settings SHOULD be tested at the beginning and in case of changes before going live. Internet Explorer SHOULD ONLY be used on the server in Enhanced Security Configuration and Enhanced Protected Mode.
+
+#### SYS.1.2.2.A5 Protection against malware
+
+Except for Windows Server 2012 IT systems, which operate stand-alone without power and removable media, an antivirus program should be installed before connecting to the network or removable media for the first time. The signatures SHOULD be updated regularly. In addition, all hard drives SHOULD be completely scanned on a regular basis. It SHOULD have alerts configured for the administrators responsible for virus detections.
+
+#### SYS.1.2.2.A6 Secure Authentication and Authorization in Windows Server 2012
+
+In Windows Server 2012 R2, all users SHOULD be members of the Protected Users security group. Accounts for services and computers SHOULD NOT be a member of Protected Users. Service accounts in Windows Server 2012 (R2) SHOULD be members of the Managed Service Account group. The Local Credential Store LSA SHOULD be protected. The use of dynamic access rules on resources SHOULD be preferred.
+
+Administrators of Windows Server 2012 (R2) SHOULD work on their own limited-access clients.
+
+#### SYS.1.2.2.A7 Security Check of Windows Server 2012
+
+The security configuration of Windows Server 2012 (R2) SHOULD be regularly reviewed, documented, and improved using appropriate tools.
+
+#### SYS.1.2.2.A8 System Integrity Protection
+
+Secure Boot SHOULD be active. AppLocker SHOULD be activated and configured as strictly as possible. The effects of changes SHOULD be tested in advance.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### SYS.1.2.2.A9 Local Communication Filtering (CI)
+
+The local firewall SHOULD be activated for incoming and outgoing network traffic and set as strictly as possible. The identity of remote systems and the integrity of the connections to these SHOULD be cryptographically secured.
+
+#### SYS.1.2.2.A10 Disk Encryption on Windows Server 2012 (C)
+For Windows Server 2012 (R2) systems, the disks SHOULD be encrypted with BitLocker or another product. This SHOULD also apply to virtual machines with productive data. With higher protection requirements, not only should the TPM serve as key protection alone. The recovery password SHOULD be stored in Active Directory or another suitable safe location. For very high confidentiality or deniability requirements, Full Volume Encryption SHOULD be done.
+
+#### SYS.1.2.2.A11 Intrusion Detection on Windows Server 2012 (CIA)
+
+Security events in Windows Server 2012 (R2) SHOULD be collected and evaluated at a central point. Encrypted partitions SHOULD be locked after a defined number of decryption attempts.
+
+#### SYS.1.2.2.A12 Redundancy and High Availability (A)
+
+It SHOULD check which availability requirements can be met or supported by operating system features such as Failover Cluster and Network Load Balancing or NIC Teaming (LBFO). For branch offices, BranchCache SHOULD be activated.
+
+#### SYS.1.2.2.A13 Strong authentication with Windows Server 2012 (CI)
+
+A role-based administration model for the administration of different server functions SHOULD be designed and implemented. For critical services, a two-factor authentication SHOULD be implemented.
+
+#### SYS.1.2.2.A14 Shutting Down Encrypted Servers and Virtual Machines (CI)
+
+In order to protect the encrypted data during operation, unused servers (including virtual machines) SHOULD always be shut down or put into hibernation. This should be done as automated as possible. The decryption of the data SHOULD require an interactive step, or it SHOULD at least be recorded in the security log.

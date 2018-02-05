@@ -1,176 +1,19 @@
-#T
-%m
-G 0.41 Sabotage.md
-G 0.28 Software-Schwachstellen oder -Fehler.md
-G 0.37 Abstreiten von Handlungen.md
-G 0.40 Verhinderung von Diensten (Denial of Service).md
-G 0.4 Verschmutzung, Staub, Korrosion.md
-G 0.33 Personalausfall.md
-G 0.32 Missbrauch von Berechtigungen.md
-G 0.22 Manipulation von Informationen.md
-G 0.21 Manipulation von Hard- oder Software.md
-G 0.1 Feuer.md
-G 0.42 Social Engineering.md
-G 0.13 Abfangen kompromittierender Strahlung.md
-G 0.8 Ausfall oder Störung der Stromversorgung.md
-G 0.34 Anschlag.md
-G 0.3 Wasser.md
-G 0.27 Ressourcenmangel.md
-G 0.45 Datenverlust.md
-G 0.39 Schadprogramme.md
-G 0.43 Einspielen von Nachrichten.md
-G 0.38 Missbrauch personenbezogener Daten.md
-G 0.23 Unbefugtes Eindringen in IT-Systeme.md
-G 0.5 Naturkatastrophen.md
-G 0.18 Fehlplanung oder fehlende Anpassung.md
-G 0.6 Katastrophen im Umfeld.md
-%a
-%d
-G 0.46 Integritätsverlust schützenswerter Informationen.md
-G 0.19 Offenlegung schützenswerter Informationen.md
-G 0.26 Fehlfunktion von Geräten oder Systemen.md
-G 0.35 Nötigung, Erpressung oder Korruption.md
-G 0.25 Ausfall von Geräten oder Systemen.md
-G 0.47 Schädliche Seiteneffekte IT-gestützter Angriffe.md
-G 0.14 Ausspähen von Informationen (Spionage).md
-G 0.11 Ausfall oder Störung von Dienstleistern.md
-G 0.20 Informationen oder Produkte aus unzuverlässiger Quelle.md
-G 0.10 Ausfall oder Störung von Versorgungsnetzen.md
-G 0.31 Fehlerhafte Nutzung oder Administration von Geräten und Systemen.md
-G 0.36 Identitätsdiebstahl.md
-G 0.16 Diebstahl von Geräten, Datenträgern oder Dokumenten.md
-G 0.29 Verstoß gegen Gesetze oder Regelungen.md
-G 0.30 Unberechtigte Nutzung oder Administration von Geräten und Systemen.md
-G 0.2 Ungünstige klimatische Bedingungen.md
-G 0.17 Verlust von Geräten, Datenträgern oder Dokumenten.md
-G 0.7 Großereignisse im Umfeld.md
-G 0.12 Elektromagnetische Störstrahlung.md
-G 0.15 Abhören.md
-G 0.44 Unbefugtes Eindringen in Räumlichkeiten.md
-G 0.24 Zerstörung von Geräten oder Datenträgern.md
-G 0.9 Ausfall oder Störung von Kommunikationsnetzen.md
-#N
-%m
-Umsetzungshinweise zum Baustein OPS.1.2.4 Telearbeit.md
-Umsetzungshinweise zum Baustein CON.4 Auswahl und Einsatz von Standardsoftware.md
-Umsetzungshinweise zum Baustein APP.3.1 Webanwendungen.md
-Umsetzungshinweise zum Baustein OPS.2.4 Fernwartung.md
-Umsetzungshinweise zum Baustein INF.9 Mobiler Arbeitsplatz.md
-Umsetzungshinweise zum Baustein CON.7 Informationssicherheit auf Auslandsreisen.md
-Umsetzungshinweise zum Baustein ORP.2 Personal.md
-Umsetzungshinweise zum Baustein INF.3 Elektrotechnische Verkabelung.md
-Umsetzungshinweise zum Baustein APP.3.6 DNS-Server.md
-Umsetzungshinweise zum Baustein APP.2.2 Active Directory.md
-Umsetzungshinweise zum Baustein ORP.3 Sensibilisierung und Schulung.md
-Umsetzungshinweise zum Baustein ORP.1 Organisation.md
-Umsetzungshinweise zum Baustein IND.1 Betriebs- und Steuerungstechnik.md
-Umsetzungshinweise zum Baustein INF.4 IT-Verkabelung.md
-Umsetzungshinweise zum Baustein SYS.2.1 Allgemeiner Client.md
-Umsetzungshinweise zum Baustein SYS.3.2.3 iOS (for Enterprise).md
-Umsetzungshinweise zum Baustein CON.3 Datensicherungskonzept.md
-Umsetzungshinweise zum Baustein SYS.3.1 Laptops.md
-Umsetzungshinweise zum Baustein NET.2.2 WLAN-Nutzung.md
-Umsetzungshinweise zum Baustein ORP.5 Compliance Management (Anforderungsmanagement).md
-Umsetzungshinweise zum Baustein APP.1.1 Office-Produkte.md
-Umsetzungshinweise zum Baustein SYS.3.2.2 Mobile Device Management (MDM).md
-Umsetzungshinweise zum Baustein NET.2.1 WLAN-Betrieb.md
-Umsetzungshinweise zum Baustein SYS.1.2.2 Windows Server 2012.md
-Umsetzungshinweise zum Baustein ISMS.1 Sicherheitsmanagement.md
-Umsetzungshinweise zum Baustein SYS.1.1 Allgemeiner Server.md
-%a
-%d
-Umsetzungshinweise zum Baustein OPS.1.2.3 Informations- und Datenträgeraustausch.md
-Umsetzungshinweise zum Baustein SYS.4.4 Allgemeines IoT-Gerät.md
-Umsetzungshinweise zum Baustein SYS.3.4 Mobile Datenträger.md
-Umsetzungshinweise zum Baustein INF.1 Allgemeines Gebäude.md
-Umsetzungshinweise zum Baustein OPS.1.1.2 Ordnungsgemäße IT-Administration.md
-Umsetzungshinweise zum Baustein SYS.4.1 Drucker, Kopierer und Multifunktionsgeräte.md
-Umsetzungshinweise zum Baustein OPS.3.1 Outsourcing für Dienstleister.md
-Umsetzungshinweise zum Baustein INF.8 Häuslicher Arbeitsplatz.md
-Umsetzungshinweise zum Baustein DER.2.3 Bereinigung weitreichender Sicherheitsvorfälle.md
-Umsetzungshinweise zum Baustein OPS.1.1.3 Patch- und Änderungsmanagement.md
-Umsetzungshinweise zum Baustein OPS.2.1 Outsourcing für Kunden.md
 #C
 %m
-INF.9 Mobiler Arbeitsplatz.md
-CON.7 Informationssicherheit auf Auslandsreisen.md
-OPS.1.1.5 Protokollierung.md
-APP.2.2 Active Directory.md
-DER.3.1 Audits und Revisionen.md
-SYS.3.2.1 Allgemeine Smartphones und Tablets.md
-DER.1 Detektion von sicherheitsrelevanten Ereignissen.md
-SYS.1.3 Server unter Unix.md
-SYS.1.5 Virtualisierung.md
-OPS.1.2.4 Telearbeit.md
-APP.1.1 Office-Produkte.md
-SYS.3.2.3 iOS (for Enterprise).md
-OPS.1.1.4 Schutz vor Schadprogrammen.md
-INF.4 IT-Verkabelung.md
-CON.3 Datensicherungskonzept.md
-IND.2.2 Speicherprogrammierbare Steuerung (SPS).md
-SYS.3.2.2 Mobile Device Management (MDM).md
-APP.3.2 Webserver.md
-IND.2.4 Maschine.md
-NET.2.1 WLAN-Betrieb.md
-SYS.2.3 Clients unter Unix.md
-ORP.2 Personal.md
-NET.1.1 Netzarchitektur und -design.md
-APP.3.1 Webanwendungen.md
-NET.3.1 Router und Switches.md
-NET.3.3 VPN.md
-NET.3.2 Firewall.md
-APP.4.3 Relationale Datenbanksysteme.md
-APP.5.2 Microsoft Exchange und Outlook.md
 APP.1.2 Web-Browser.md
-ORP.5 Compliance Management (Anforderungsmanagement).md
-APP.2.1 Allgemeiner Verzeichnisdienst.md
-OPS.2.4 Fernwartung.md
-SYS.2.2.2 Clients unter Windows 8.1.md
-SYS.3.2.4 Android.md
-IND.1 Betriebs- und Steuerungstechnik.md
-DER.4 Notfallmanagement.md
-ORP.1 Organisation.md
-CON.2 Datenschutz.md
-INF.3 Elektrotechnische Verkabelung.md
+%a
+CON.7 Informationssicherheit auf Auslandsreisen.md
+%d
 APP.3.6 DNS-Server.md
-INF.2 Rechenzentrum sowie Serverraum.md
-OPS.1.1.6 Software-Tests und -Freigaben.md
-APP.3.4 Samba.md
-SYS.2.1 Allgemeiner Client.md
-SYS.1.1 Allgemeiner Server.md
-ORP.3 Sensibilisierung und Schulung.md
-SYS.3.1 Laptops.md
-APP.3.3 Fileserver.md
-OPS.1.2.2 Archivierung.md
-IND.2.3 Sensoren und Aktoren.md
-ISMS.1 Sicherheitsmanagement.md
-APP.5.1 Allgemeine Groupware.md
-CON.4 Auswahl und Einsatz von Standardsoftware.md
-SYS.1.2.2 Windows Server 2012.md
-NET.1.2 Netzmanagement.md
-CON.5 Entwicklung und Einsatz von Fachanwendungen.md
-IND.2.1 Allgemeine ICS-Komponente.md
-CON.1 Kryptokonzept.md
-NET.2.2 WLAN-Nutzung.md
+#T
+%m
+G 0.8 Ausfall oder Störung der Stromversorgung.md
 %a
 %d
-DER.2.1 Behandlung von Sicherheitsvorfällen.md
-DER.3.2 IS-Revision für Bundesbehörden.md
-INF.8 Häuslicher Arbeitsplatz.md
-INF.1 Allgemeines Gebäude.md
-OPS.3.1 Outsourcing für Dienstleister.md
-CON.6 Löschen und Vernichten.md
-DER.2.3 Bereinigung weitreichender Sicherheitsvorfälle.md
-SYS.4.4 Allgemeines IoT-Gerät.md
-DER.2.2 Vorsorge für die IT-Forensik.md
-SYS.2.2.3 Clients unter Windows 10.md
-SYS.1.8 Speicherlösungen.md
-INF.7 Büroarbeitsplatz.md
-INF.10 Besprechungs-, Veranstaltungs- und Schulungsräume.md
-OPS.2.1 Outsourcing für Kunden.md
-SYS.3.4 Mobile Datenträger.md
-OPS.1.1.3 Patch- und Änderungsmanagement.md
-OPS.1.2.3 Informations- und Datenträgeraustausch.md
-SYS.4.1 Drucker, Kopierer und Multifunktionsgeräte.md
-OPS.1.1.2 Ordnungsgemäße IT-Administration.md
-ORP.4 Identitäts- und Berechtigungsmanagement.md
+G 0.3 Wasser.md
+#N
+%m
+Umsetzungshinweise zum Baustein APP.3.6 DNS-Server.md
+%a
+%d
+Umsetzungshinweise zum Baustein INF.9 Mobiler Arbeitsplatz.md

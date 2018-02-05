@@ -1,561 +1,770 @@
 [
     {
-        "text": "Components",
         "nodes": [
             {
-                "text": "ISMS: Security Management",
                 "nodes": [
                     {
-                        "text": "ISMS.1 Security Management",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ISMS.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ISMS.1",
+                        "text": "ISMS.1 Security Management"
                     }
-                ]
+                ],
+                "text": "ISMS: Security Management"
             },
             {
-                "text": "ORP: organization and staff",
                 "nodes": [
                     {
-                        "text": "ORP.1 organization",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.1",
+                        "text": "ORP.1 organization"
                     },
                     {
-                        "text": "ORP.2 Personal",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.2",
+                        "text": "ORP.2 Personal"
                     },
                     {
-                        "text": "ORP.3 Sensitization and training",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.3",
+                        "text": "ORP.3 Sensitization and training"
                     },
                     {
-                        "text": "ORP.5 Compliance Management (Requirements Management) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.4",
+                        "text": "ORP.4 Identity and Permission Management"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/ORP.5",
+                        "text": "ORP.5 Compliance Management (Requirements Management) "
                     }
-                ]
+                ],
+                "text": "ORP: organization and staff"
             },
             {
-                "text": "CON: conception and procedure",
                 "nodes": [
                     {
-                        "text": "CON.1 crypto concept",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.1",
+                        "text": "CON.1 crypto concept"
                     },
                     {
-                        "text": "CON.2 Privacy",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.2",
+                        "text": "CON.2 Privacy"
                     },
                     {
-                        "text": "CON.3 data backup concept",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.3",
+                        "text": "CON.3 data backup concept"
                     },
                     {
-                        "text": "CON.4 Selection and use of standard software",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.4",
+                        "text": "CON.4 Selection and use of standard software"
                     },
                     {
-                        "text": "CON.5 Development and use of professional applications",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.5",
+                        "text": "CON.5 Development and use of professional applications"
                     },
                     {
-                        "text": "CON.7 Information security on trips abroad",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.7"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/CON.6",
+                        "text": "CON.6 Delete and destroy"
                     }
-                ]
+                ],
+                "text": "CON: conception and procedure"
             },
             {
-                "text": "OPS: operation",
                 "nodes": [
                     {
-                        "text": "OPS.1.1.4 Protection against malicious programs",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.2",
+                        "text": "OPS.1.1.2 Proper IT Administration"
                     },
                     {
-                        "text": "OPS.1.1.5 Logging",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.3",
+                        "text": "OPS.1.1.3 Patch and Change Management"
                     },
                     {
-                        "text": "OPS.1.1.6 Software tests and releases",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.6"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.4",
+                        "text": "OPS.1.1.4 Protection against malicious programs"
                     },
                     {
-                        "text": "OPS.1.2.2 Archiving",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.5",
+                        "text": "OPS.1.1.5 Logging"
                     },
                     {
-                        "text": "OPS.1.2.4 Telework",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.1.6",
+                        "text": "OPS.1.1.6 Software tests and releases"
                     },
                     {
-                        "text": "OPS.2.4 remote maintenance",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.2.2",
+                        "text": "OPS.1.2.2 Archiving"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.2.3",
+                        "text": "OPS.1.2.3 Information and media exchange"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.1.2.4",
+                        "text": "OPS.1.2.4 Telework"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.2.1",
+                        "text": "OPS.2.1 outsourcing for customers"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.2.4",
+                        "text": "OPS.2.4 remote maintenance"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/OPS.3.1",
+                        "text": "OPS.3.1 outsourcing for service providers"
                     }
-                ]
+                ],
+                "text": "OPS: operation"
             },
             {
-                "text": "DER: detection and reaction",
                 "nodes": [
                     {
-                        "text": "DER.1 Detection of safety-relevant events",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.1",
+                        "text": "DER.1 Detection of safety-relevant events"
                     },
                     {
-                        "text": "DER.3.1 Audits and revisions",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.3.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.2.1",
+                        "text": "DER.2.1 Treatment of security incidents"
                     },
                     {
-                        "text": "DER.4 emergency management",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.2.2",
+                        "text": "DER.2.2 Provision for IT forensics"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.2.3",
+                        "text": "DER.2.3 Clearance of far-reaching security incidents"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.3.1",
+                        "text": "DER.3.1 Audits and revisions"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.3.2",
+                        "text": "DER.3.2 IS revision for federal authorities"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/DER.4",
+                        "text": "DER.4 emergency management"
                     }
-                ]
+                ],
+                "text": "DER: detection and reaction"
             },
             {
-                "text": "APP: Applications",
                 "nodes": [
                     {
-                        "text": "APP.1.1 Office Products",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.1.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.1.1",
+                        "text": "APP.1.1 Office Products"
                     },
                     {
-                        "text": "APP.1.2 Web-Browser",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.1.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.1.2",
+                        "text": "APP.1.2 Web browser"
                     },
                     {
-                        "text": "APP.2.1 General Directory Service",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.2.1",
+                        "text": "APP.2.1 General Directory Service"
                     },
                     {
-                        "text": "APP.2.2 Active Directory",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.2.2",
+                        "text": "APP.2.2 Active Directory"
                     },
                     {
-                        "text": "APP.3.1 Web applications",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.1",
+                        "text": "APP.3.1 Web applications"
                     },
                     {
-                        "text": "APP.3.2 Webserver",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.2",
+                        "text": "APP.3.2 Webserver"
                     },
                     {
-                        "text": "APP.3.3 Fileserver",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.3",
+                        "text": "APP.3.3 Fileserver"
                     },
                     {
-                        "text": "APP.3.4 Samba",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.4",
+                        "text": "APP.3.4 Samba"
                     },
                     {
-                        "text": "APP.3.6 DNS server",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.6"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.3.6",
+                        "text": "APP.3.6 DNS server"
                     },
                     {
-                        "text": "APP.4.3 Relational Database Systems",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.4.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.4.3",
+                        "text": "APP.4.3 Relational Database Systems"
                     },
                     {
-                        "text": "APP.5.1 General Groupware",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.5.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.5.1",
+                        "text": "APP.5.1 General Groupware"
                     },
                     {
-                        "text": "APP.5.2 Microsoft Exchange and Outlook",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.5.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/APP.5.2",
+                        "text": "APP.5.2 Microsoft Exchange and Outlook"
                     }
-                ]
+                ],
+                "text": "APP: Applications"
             },
             {
-                "text": "SYS: IT systems",
                 "nodes": [
                     {
-                        "text": "SYS.1.1 General Server",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.1",
+                        "text": "SYS.1.1 General Server"
                     },
                     {
-                        "text": "SYS.1.2.2 Windows Server 2012",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.2.2",
+                        "text": "SYS.1.2.2 Windows Server 2012"
                     },
                     {
-                        "text": "SYS.1.3 server under Unix",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.3",
+                        "text": "SYS.1.3 server under Unix"
                     },
                     {
-                        "text": "SYS.1.5 Virtualization",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.5",
+                        "text": "SYS.1.5 Virtualization"
                     },
                     {
-                        "text": "SYS.2.1 General Client",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.1.8",
+                        "text": "SYS.1.8 Storage Solutions"
                     },
                     {
-                        "text": "SYS.2.2.2 Clients under Windows 8.1",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.1",
+                        "text": "SYS.2.1 General Client"
                     },
                     {
-                        "text": "SYS.2.3 Clients under Unix",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.2.2",
+                        "text": "SYS.2.2.2 Clients under Windows 8.1"
                     },
                     {
-                        "text": "SYS.3.1 Laptops",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.2.3",
+                        "text": "SYS.2.2.3 Clients on Windows 10"
                     },
                     {
-                        "text": "SYS.3.2.1 General Smartphones and Tablets",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.2.3",
+                        "text": "SYS.2.3 Clients under Unix"
                     },
                     {
-                        "text": "SYS.3.2.2 Mobile Device Management (MDM) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.1",
+                        "text": "SYS.3.1 Laptops"
                     },
                     {
-                        "text": "SYS.3.2.3 iOS (for Enterprise) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.1",
+                        "text": "SYS.3.2.1 General Smartphones and Tablets"
                     },
                     {
-                        "text": "SYS.3.2.4 Android",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.2",
+                        "text": "SYS.3.2.2 Mobile Device Management (MDM) "
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.3",
+                        "text": "SYS.3.2.3 iOS (for Enterprise) "
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.2.4",
+                        "text": "SYS.3.2.4 Android"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.3.4",
+                        "text": "SYS.3.4 Mobile Disk"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.4.1",
+                        "text": "SYS.4.1 printers, copiers and multifunction devices"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/SYS.4.4",
+                        "text": "SYS.4.4 General IoT device"
                     }
-                ]
+                ],
+                "text": "SYS: IT systems"
             },
             {
-                "text": "IND: Industrial IT",
                 "nodes": [
                     {
-                        "text": "IND.1 Operating and Control Technology",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.1",
+                        "text": "IND.1 Operating and Control Technology"
                     },
                     {
-                        "text": "IND.2.1 General ICS Component",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.1",
+                        "text": "IND.2.1 General ICS Component"
                     },
                     {
-                        "text": "IND.2.2 Programmable Logic Controller (PLC) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.2",
+                        "text": "IND.2.2 Programmable Logic Controller (PLC) "
                     },
                     {
-                        "text": "IND.2.3 Sensors and actuators",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.3",
+                        "text": "IND.2.3 Sensors and actuators"
                     },
                     {
-                        "text": "IND.2.4 Machine",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/IND.2.4",
+                        "text": "IND.2.4 Machine"
                     }
-                ]
+                ],
+                "text": "IND: Industrial IT"
             },
             {
-                "text": "NET: networks and communication",
                 "nodes": [
                     {
-                        "text": "NET.1.1 network architecture and design",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.1.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.1.1",
+                        "text": "NET.1.1 network architecture and design"
                     },
                     {
-                        "text": "NET.1.2 Network Management",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.1.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.1.2",
+                        "text": "NET.1.2 Network Management"
                     },
                     {
-                        "text": "NET.2.1 WLAN operation",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.2.1",
+                        "text": "NET.2.1 WLAN operation"
                     },
                     {
-                        "text": "NET.2.2 Wi-Fi usage",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.2.2",
+                        "text": "NET.2.2 Wi-Fi usage"
                     },
                     {
-                        "text": "NET.3.1 routers and switches",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.1",
+                        "text": "NET.3.1 routers and switches"
                     },
                     {
-                        "text": "NET.3.2 Firewall",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.2",
+                        "text": "NET.3.2 Firewall"
                     },
                     {
-                        "text": "NET.3.3 VPN",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/NET.3.3",
+                        "text": "NET.3.3 VPN"
                     }
-                ]
+                ],
+                "text": "NET: networks and communication"
             },
             {
-                "text": "INF: Infrastructure",
                 "nodes": [
                     {
-                        "text": "INF.2 data center and server room",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.1",
+                        "text": "INF.1 General Building"
                     },
                     {
-                        "text": "INF.3 Electrical wiring",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.2",
+                        "text": "INF.2 data center and server room"
                     },
                     {
-                        "text": "INF.4 IT cabling",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.3",
+                        "text": "INF.3 Electrical wiring"
                     },
                     {
-                        "text": "INF.9 Mobile Workplace",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.9"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.4",
+                        "text": "INF.4 IT cabling"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.7",
+                        "text": "INF.7 office workplace"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.8",
+                        "text": "INF.8 Domestic work place"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.9",
+                        "text": "INF.9 Mobile Workplace"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/components/INF.10",
+                        "text": "INF.10 meeting, event and training rooms"
                     }
-                ]
+                ],
+                "text": "INF: Infrastructure"
             }
-        ]
+        ],
+        "text": "Components"
     },
     {
-        "text": "Elementary hazards",
         "nodes": [
             {
-                "text": "Overview of elementary hazards",
                 "nodes": [
                     {
-                        "text": "G 0.1 fire",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.1",
+                        "text": "G 0.1 fire"
                     },
                     {
-                        "text": "G 0.3 water",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.2",
+                        "text": "G 0.2 Unfavorable climatic conditions"
                     },
                     {
-                        "text": "G 0.4 Contamination, dust, corrosion",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.3",
+                        "text": "G 0.3 water"
                     },
                     {
-                        "text": "G 0.5 natural catastrophes",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.4",
+                        "text": "G 0.4 Contamination, dust, corrosion"
                     },
                     {
-                        "text": "G 0.6 disasters in the area",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.6"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.5",
+                        "text": "G 0.5 natural catastrophes"
                     },
                     {
-                        "text": "G 0.8 Failure or malfunction of the power supply",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.8"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.6",
+                        "text": "G 0.6 disasters in the area"
                     },
                     {
-                        "text": "G 0.13 Interception of compromising radiation",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.13"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.7",
+                        "text": "G 0.7 Major events in the area"
                     },
                     {
-                        "text": "G 0.18 Misplanned planning or missing adjustment",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.18"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.8",
+                        "text": "G 0.8 Failure or malfunction of the power supply"
                     },
                     {
-                        "text": "G 0.21 Manipulation of hardware or software",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.21"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.9",
+                        "text": "G 0.9 Failure or malfunction of communication networks"
                     },
                     {
-                        "text": "G 0.22 Manipulation of information",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.22"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.10",
+                        "text": "G 0.10 Failure or malfunction of supply networks"
                     },
                     {
-                        "text": "G 0.23 Unauthorized intrusion into IT systems",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.23"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.11",
+                        "text": "G 0.11 Failure or disruption of service providers"
                     },
                     {
-                        "text": "G 0.27 Resource shortage",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.27"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.12",
+                        "text": "G 0.12 Electromagnetic interference"
                     },
                     {
-                        "text": "G 0.28 Software vulnerabilities or errors",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.28"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.13",
+                        "text": "G 0.13 Interception of compromising radiation"
                     },
                     {
-                        "text": "G 0.32 Abuse of permissions",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.32"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.14",
+                        "text": "G 0.14 Spying on information (spying) "
                     },
                     {
-                        "text": "G 0.33 Staff loss",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.33"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.15",
+                        "text": "G 0.15 Listening"
                     },
                     {
-                        "text": "G 0.34 stop",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.34"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.16",
+                        "text": "G 0.16 Theft of devices, data carriers or documents"
                     },
                     {
-                        "text": "G 0.37 Denying actions",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.37"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.17",
+                        "text": "G 0.17 Loss of equipment, data carriers or documents"
                     },
                     {
-                        "text": "G 0.38 Abuse of personal data",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.38"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.18",
+                        "text": "G 0.18 Misplanned planning or missing adjustment"
                     },
                     {
-                        "text": "G 0.39 Malware",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.39"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.19",
+                        "text": "G 0.19 Disclosure of information worthy of protection"
                     },
                     {
-                        "text": "G 0.40 Denial of Service ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.40"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.20",
+                        "text": "G 0.20 Information or products from unreliable source"
                     },
                     {
-                        "text": "G 0.41 sabotage",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.41"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.21",
+                        "text": "G 0.21 Manipulation of hardware or software"
                     },
                     {
-                        "text": "G 0.42 Social Engineering",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.42"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.22",
+                        "text": "G 0.22 Manipulation of information"
                     },
                     {
-                        "text": "G 0.43 Importing messages",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.43"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.23",
+                        "text": "G 0.23 Unauthorized intrusion into IT systems"
                     },
                     {
-                        "text": "G 0.45 data loss",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.45"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.24",
+                        "text": "G 0.24 Destruction of devices or data carriers"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.25",
+                        "text": "G 0.25 Failure of devices or systems"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.26",
+                        "text": "G 0.26 Malfunction of devices or systems"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.27",
+                        "text": "G 0.27 Resource shortage"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.28",
+                        "text": "G 0.28 Software vulnerabilities or errors"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.29",
+                        "text": "G 0.29 Violation of laws or regulations"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.30",
+                        "text": "G 0.30 Unauthorized use or administration of devices and systems"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.31",
+                        "text": "G 0.31 Incorrect use or administration of devices and systems"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.32",
+                        "text": "G 0.32 Abuse of permissions"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.33",
+                        "text": "G 0.33 Staff loss"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.34",
+                        "text": "G 0.34 stop"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.35",
+                        "text": "G 0.35 coercion, extortion or corruption"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.36",
+                        "text": "G 0.36 Identity theft"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.37",
+                        "text": "G 0.37 Denying actions"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.38",
+                        "text": "G 0.38 Abuse of personal data"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.39",
+                        "text": "G 0.39 Malware"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.40",
+                        "text": "G 0.40 Denial of Service "
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.41",
+                        "text": "G 0.41 sabotage"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.42",
+                        "text": "G 0.42 Social Engineering"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.43",
+                        "text": "G 0.43 Importing messages"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.44",
+                        "text": "G 0.44 Unauthorized intrusion into premises"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.45",
+                        "text": "G 0.45 data loss"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.46",
+                        "text": "G 0.46 Integrity loss of sensitive information"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.47",
+                        "text": "G 0.47 Adverse effects of IT-based attacks"
                     }
-                ]
+                ],
+                "text": "Overview of elementary hazards"
             }
-        ]
+        ],
+        "text": "Elementary hazards"
     },
     {
-        "text": "implementation notes",
         "nodes": [
             {
-                "text": "ISMS: Security Management",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the module ISMS.1 Sicherheitsmanagement",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ISMS.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ISMS.1",
+                        "text": "Implementation notes for the module ISMS.1 Sicherheitsmanagement"
                     }
-                ]
+                ],
+                "text": "ISMS: Security Management"
             },
             {
-                "text": "ORP: organization and staff",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the block ORP.1 Organization",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.1",
+                        "text": "Implementation notes for the block ORP.1 Organization"
                     },
                     {
-                        "text": "Implementation notes for the block ORP.2 Personal",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.2",
+                        "text": "Implementation notes for the block ORP.2 Personal"
                     },
                     {
-                        "text": "Implementation notes for the module ORP.3 Sensitization and Training",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.3",
+                        "text": "Implementation notes for the module ORP.3 Sensitization and Training"
                     },
                     {
-                        "text": "Implementation notes for the module ORP.5 Compliance Management (Request Management) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.5"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/ORP.5",
+                        "text": "Implementation notes for the module ORP.5 Compliance Management (Request Management) "
                     }
-                ]
+                ],
+                "text": "ORP: organization and staff"
             },
             {
-                "text": "CON: conception and procedure",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the module CON.3 Data backup concept",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.3",
+                        "text": "Implementation notes for the module CON.3 Data backup concept"
                     },
                     {
-                        "text": "Implementation notes for the module CON.4 Selection and use of standard software",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.4",
+                        "text": "Implementation notes for the module CON.4 Selection and use of standard software"
                     },
                     {
-                        "text": "Implementation notes for the module CON.7 Information security on trips abroad",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.7"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/CON.7",
+                        "text": "Implementation notes for the module CON.7 Information security on trips abroad"
                     }
-                ]
+                ],
+                "text": "CON: conception and procedure"
             },
             {
-                "text": "OPS: operation",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the OPS.1.2.4 Telework",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.1.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.1.1.2",
+                        "text": "Implementation notes for the block OPS.1.1.2 Proper IT administration"
                     },
                     {
-                        "text": "Implementation notes for the module OPS.2.4 Remote maintenance",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.2.4"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.1.1.3",
+                        "text": "Implementation notes for the block OPS.1.1.3 Patch and Change Management"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.1.2.3",
+                        "text": "Implementation notes for the module OPS.1.2.3 Information and data medium exchange"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.1.2.4",
+                        "text": "Implementation notes for the OPS.1.2.4 Telework"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.2.1",
+                        "text": "Implementation notes for the module OPS.2.1 Outsourcing for customers"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.2.4",
+                        "text": "Implementation notes for the module OPS.2.4 Remote maintenance"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/OPS.3.1",
+                        "text": "Implementation notes for the module OPS.3.1 Outsourcing for Dienstleister"
                     }
-                ]
+                ],
+                "text": "OPS: operation"
             },
             {
-                "text": "DER: detection and reaction",
-                "nodes": []
-            },
-            {
-                "text": "APP: Applications",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the module APP.1.1 Office Products",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.1.1"
-                    },
-                    {
-                        "text": "Implementation notes for the module APP.2.2 Active Directory",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.2.2"
-                    },
-                    {
-                        "text": "Implementation notes for the module APP.3.1 Web applications",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.3.1"
-                    },
-                    {
-                        "text": "Implementation notes for the block APP.3.6 DNS server",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.3.6"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/DER.2.3",
+                        "text": "Implementation notes for module DER.2.3 Clearance of far-reaching security incidents"
                     }
-                ]
+                ],
+                "text": "DER: detection and reaction"
             },
             {
-                "text": "SYS: IT systems",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the block SYS.1.1 General Server",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.1.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.1.1",
+                        "text": "Implementation notes for the module APP.1.1 Office Products"
                     },
                     {
-                        "text": "Implementation notes for the block SYS.1.2.2 Windows Server 2012",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.1.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.2.2",
+                        "text": "Implementation notes for the module APP.2.2 Active Directory"
                     },
                     {
-                        "text": "Implementation notes for the block SYS.2.1 General Client",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.2.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.3.1",
+                        "text": "Implementation notes for the module APP.3.1 Web applications"
                     },
                     {
-                        "text": "Implementation notes for the block SYS.3.1 Laptops",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.1"
-                    },
-                    {
-                        "text": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.2.2"
-                    },
-                    {
-                        "text": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) ",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.2.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/APP.3.6",
+                        "text": "Implementation notes for the module APP.3.6 DNS server"
                     }
-                ]
+                ],
+                "text": "APP: Applications"
             },
             {
-                "text": "IND: Industrial IT",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the module IND.1 Operating and Control Technology",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/IND.1"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.1.1",
+                        "text": "Implementation notes for the block SYS.1.1 General Server"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.1.2.2",
+                        "text": "Implementation notes for the block SYS.1.2.2 Windows Server 2012"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.2.1",
+                        "text": "Implementation notes for the block SYS.2.1 General Client"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.1",
+                        "text": "Implementation notes for the block SYS.3.1 Laptops"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.2.2",
+                        "text": "Implementation notes for the block SYS.3.2.2 Mobile Device Management (MDM) "
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.2.3",
+                        "text": "Implementation notes for the SYS.3.2.3 iOS (for Enterprise) "
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.3.4",
+                        "text": "Implementation notes for the block SYS.3.4 Mobile data carrier"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/SYS.4.1",
+                        "text": "Implementation notes for the block SYS.4.1 printers, copiers and multifunction devices"
                     }
-                ]
+                ],
+                "text": "SYS: IT systems"
             },
             {
-                "text": "NET: networks and communication",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the block NET.2.1 WLAN operation",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/NET.2.1"
-                    },
-                    {
-                        "text": "Implementation notes for the module NET.2.2 WLAN-Usage",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/NET.2.2"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/IND.1",
+                        "text": "Implementation notes for the module IND.1 Operating and Control Technology"
                     }
-                ]
+                ],
+                "text": "IND: Industrial IT"
             },
             {
-                "text": "INF: Infrastructure",
                 "nodes": [
                     {
-                        "text": "Implementation notes for the module INF.3 Electrotechnical cabling",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.3"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/NET.2.1",
+                        "text": "Implementation notes for the block NET.2.1 WLAN operation"
                     },
                     {
-                        "text": "Implementation notes for the module INF.4 IT- cabling",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.4"
-                    },
-                    {
-                        "text": "Implementation notes for module INF.9 Mobile workstation",
-                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.9"
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/NET.2.2",
+                        "text": "Implementation notes for the module NET.2.2 WLAN-Usage"
                     }
-                ]
+                ],
+                "text": "NET: networks and communication"
+            },
+            {
+                "nodes": [
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.1",
+                        "text": "Implementation notes for building block INF.1 General Building"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.3",
+                        "text": "Implementation notes for the module INF.3 Electrotechnical cabling"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.4",
+                        "text": "Implementation notes for the module INF.4 IT- cabling"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.8",
+                        "text": "Implementation notes for the module INF.8 Domestic workstation"
+                    },
+                    {
+                        "href": "http://it-gs.ziik.tu-berlin.de/bsi/implementationnotes/INF.9",
+                        "text": "Implementation notes for module INF.9 Mobile workstation"
+                    }
+                ],
+                "text": "INF: Infrastructure"
             }
-        ]
+        ],
+        "text": "implementation notes"
     }
 ]
