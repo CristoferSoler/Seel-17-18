@@ -30,7 +30,7 @@ def userInActive(sender, instance, *args, **kwargs):
     u = User.objects.filter(id=instance.id)
     if not u:
         return
-    if instance.is_active != u[0].is_active:
+    if instance.is_active != u[0].is_active and u[0].last_login:
         if(instance.is_active != True):
             user = instance
             subject = 'You got banned from ISAM!'
