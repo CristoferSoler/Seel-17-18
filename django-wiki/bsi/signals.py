@@ -27,11 +27,14 @@ def save(sender,instance,pk_set,action, **kwargs):
 
 @receiver(pre_save, sender=User)
 def userInActive(sender, instance, *args, **kwargs):
-    if instance.is_active != User.objects.get(id=instance.id).is_active:
+    u = User.objects.filter(id=instance.id)
+    if not u:
+        return
+    if instance.is_active != u[0].is_active and u[0].last_login:
         if(instance.is_active != True):
             user = instance
             subject = 'You got banned from ISAM!'
-            text = 'Thous to miss behavior you have been baned from the platform for an uncertain period of time'
+            text = 'Due to misbehavior you have been banned from the platform for an uncertain period of time'
             sendMail(user,subject,text)
         elif(instance.is_active != False):
             user = instance

@@ -1,5 +1,3 @@
-Table of content
-
 [toc]
  
 G 0.10 Failure or malfunction of supply networks
