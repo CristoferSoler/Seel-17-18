@@ -22,7 +22,7 @@ pathToUpgradedStopwordList = settings.TOPICGENERATION_DIR + '/stopwordlist/en-up
 # pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = settings.TOPICGENERATION_DIR + '/mallet-2.0.8/bin/mallet'
 output = settings.TOPICGENERATION_DIR + '/output/'
-lemmanizeCorpus = True
+lemmanizeCorpus = False
 
 
 def getStopWordList():
@@ -144,6 +144,7 @@ def deleteAllFilesInDirectory(directory):
 
 def addToStopwordList(words):
     with open(settings.TOPICGENERATION_DIR + '/stopwordlist/en-upgraded.txt', "a") as file:
+        print(words)
         for word in words:
             file.write(word + '\n')
 
