@@ -22,7 +22,7 @@ pathToUpgradedStopwordList = settings.TOPICGENERATION_DIR + '/stopwordlist/en-up
 # pathToMallet = '/Users/Jonathan/Downloads/mallet-2.0.8/bin/mallet'
 pathToMallet = settings.TOPICGENERATION_DIR + '/mallet-2.0.8/bin/mallet'
 output = settings.TOPICGENERATION_DIR + '/output/'
-lemmanizeCorpus = False
+lemmanizeCorpus = True
 
 
 def getStopWordList():
@@ -161,15 +161,22 @@ def removingWordsAppearInEachText(directory):
 
     wordsAppearInEachText = []
 
+    exampleCounter = 0
+
     for file in files:
         fileWithoutStopwordsArray, fileName = preprocessingOfFile(pathOfTxt + file)
         fileWithoutStopwords = fileWithoutStopwordsArray[0]
+
+
+        if('example' not in  fileWithoutStopwords):
+            print(fileName)
 
         if (len(wordsAppearInEachText) == 0):
             wordsAppearInEachText = fileWithoutStopwords[:]
         else:
             wordsAppearInEachText = set(wordsAppearInEachText).intersection(fileWithoutStopwords)
 
+    print(exampleCounter)
     addToStopwordList(list(wordsAppearInEachText))
 
 
