@@ -144,6 +144,7 @@ def deleteAllFilesInDirectory(directory):
 
 def addToStopwordList(words):
     with open(settings.TOPICGENERATION_DIR + '/stopwordlist/en-upgraded.txt', "a") as file:
+        print(words)
         for word in words:
             file.write(word + '\n')
 
@@ -160,15 +161,22 @@ def removingWordsAppearInEachText(directory):
 
     wordsAppearInEachText = []
 
+    exampleCounter = 0
+
     for file in files:
         fileWithoutStopwordsArray, fileName = preprocessingOfFile(pathOfTxt + file)
         fileWithoutStopwords = fileWithoutStopwordsArray[0]
+
+
+        if('example' not in  fileWithoutStopwords):
+            print(fileName)
 
         if (len(wordsAppearInEachText) == 0):
             wordsAppearInEachText = fileWithoutStopwords[:]
         else:
             wordsAppearInEachText = set(wordsAppearInEachText).intersection(fileWithoutStopwords)
 
+    print(exampleCounter)
     addToStopwordList(list(wordsAppearInEachText))
 
 

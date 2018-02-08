@@ -483,7 +483,9 @@ function showResults() {
         }
 
         sortedElementswithTopicLists.slice(0,counter).forEach(function (element) {
-            $("#list").append("<li class='list-group-item'><a class='test' href='" + element["path"] + "'>" + element["name"] + "</a></li>");
+            //$("#list").append("<li class='list-group-item'><a class='test' href='" + element["path"] + "'>" + element["name"] + "</a></li>");
+            //$("#list").append("<li class='list-group-item'><a class='test' href='" + element["path"] + "'>" + element["name"] + "</a></li>");
+            $('#list').append("<a class=\"list-group-item list-group-item-action\" href='" + element["path"] + "'>" + element["name"] +": "+ element["percentage"]+ "</a>");
         });
 
         var isExpanded = $('#collapse1').attr("aria-expanded");
