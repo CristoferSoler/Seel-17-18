@@ -240,7 +240,7 @@ function amountOfStates(changedTopicsOfElements,amountOfNoCorrect) {
     if (this.pick !== 'n') {
         var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
         var filteredTopicOfElementsDontKnow = changedTopicsOfElements.filter(filterState, {pick: 'd'});
-        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length;
+        amountOfCorrectTopics = filteredTopicOfElementsCorrect.length + amountOfNoCorrect;
         amountOfNotSureTopics = filteredTopicOfElementsDontKnow.length;
     } else {
         var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
@@ -347,6 +347,8 @@ function postprocessingCalculation() {
     $("#topic").text(sortedTopicList[amountOfTotalTopics]['topic'] + '?');
     showElements();
     showResults();
+    console.log(elementWithTopicsList);
+    console.log(amountOfTotalTopics + 1);
     checkExistsThereATopic();
 }
 
