@@ -150,8 +150,12 @@ def login_view(request):
         user = form.login(request)
         if user:
             login(request, user)
-            return render(request,"bsi/index.html")# Redirect to a success page.
-    return render(request, 'bsi/account/login.html', {'form': form })
+            return redirect('index')# Redirect to a success page.
+
+    elif(request.user.is_authenticated()):
+        return redirect('index')
+    else:
+        return render(request, 'bsi/account/login.html', {'form': form })
 
 
 def register(request):
