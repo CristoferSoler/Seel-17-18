@@ -2,8 +2,8 @@ import difflib
 import json
 import logging
 
-from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.query_utils import Q
 from django.http.response import HttpResponse
@@ -14,8 +14,6 @@ from formtools.wizard.views import SessionWizardView
 from wiki import forms as wiki_forms
 from wiki.core.plugins import registry as plugin_registry
 from wiki.core.utils import object_to_json_response
-#from wiki.decorators import get_article
-from .decorators import get_article
 from wiki.models import ArticleRevision, reverse
 from wiki.views.article import ChangeRevisionView
 from wiki.views.article import CreateRootView
@@ -23,8 +21,10 @@ from wiki.views.article import Edit, Delete, History, Preview
 
 from bsi import forms
 from bsi.models.article_extensions import BSI
-from .forms import AddLinksForm, CreateForm, get_available_links
 from bsi.models.article_extensions import UGA, ArticleRevisionValidation
+# from wiki.decorators import get_article
+from .decorators import get_article
+from .forms import AddLinksForm, CreateForm
 
 log = logging.getLogger(__name__)
 
@@ -65,7 +65,7 @@ class UGACreate(SessionWizardView):
         return [TEMPLATES[self.steps.current]]
 
     def done(self, form_list, **kwargs):
-        #slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
+        # slug = kwargs.get('form_dict')['creation'].cleaned_data['slug']
         links = kwargs.get('form_dict')['add_links'].cleaned_data['links']
         links_to_set = []
         for l in links:
@@ -73,12 +73,12 @@ class UGACreate(SessionWizardView):
                 links_to_set.append(BSI.objects.filter(Q(url=l))[0])
             except:
                 raise ObjectDoesNotExist("No such article object found: " + l)
+        slug = kwargs.get('form_dict')['creation'].create_slug()
         title = kwargs.get('form_dict')['creation'].cleaned_data['title']
         content = kwargs.get('form_dict')['creation'].cleaned_data['content']
         summary = kwargs.get('form_dict')['creation'].cleaned_data['summary']
-        self.uga = UGA.create_by_request(request=self.request, article=self.article,
-                                         parent=self.urlpath,
-                                         slug=title.strip().replace(' ', '_'), title=title,
+        self.uga = UGA.create_by_request(request=self.request,
+                                         slug=slug, title=title,
                                          content=content,
                                          summary=summary)
         for link in links_to_set:

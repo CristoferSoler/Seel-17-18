@@ -12,28 +12,6 @@
                     {% with edit_form as form %}
                         {% include "wiki/includes/editor.html" %}
                     {% endwith %}
-                    {#                #}
-                    {#                    {% for field in form.visible_fields %}#}
-                    {#                        <div class="form-group">#}
-                    {#                            <div class="wiki-label col-xs-3 col-lg-2">#}
-                    {#                                {{ field.label_tag }}#}
-                    {#                            </div>#}
-                    {#                            <div class="wiki-control col-xs-9 col-lg-10">#}
-                    {#                                {% if form.links == field %}#}
-                    {##}
-                    {#                                {% endif %}#}
-                    {#                                {{ field }}#}
-                    {#                                <p class="help-block">{{ field.help_text|safe }}</p>#}
-                    {#                                {% for error in field.errors %}#}
-                    {#                                    <p style="color: red">{{ error }}</p>#}
-                    {#                                {% endfor %}#}
-                    {#                            </div>#}
-                    {##}
-                    {##}
-                    {#                        </div>#}
-                    {##}
-                    {#                    {% endfor %}#}
-
 
                     <div class="form-group form-actions">
                         <div class="col-lg-12">
@@ -64,29 +42,29 @@
         </div>
     </div>
 
-    <div style="clear: both"></div>
-
-    {% include "wiki/includes/modals.html" %}
-
-    <div class="modal fade wiki-modal" id="previewModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <iframe name="previewWindow" frameborder="0"></iframe>
-                </div>
-                <div class="modal-footer">
-                    <a href="#" class="btn btn-default btn-lg" data-dismiss="modal">
-                        <span class="fa fa-arrow-circle-left"></span>
-                        {% trans "Back to editor" %}
-                    </a>
-                    <a class="btn btn-lg btn-success" id="id_preview_save_changes" href="#">
-                        <span class="fa fa-check"></span>
-                        {% trans "Save changes" %}
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+{#    <div style="clear: both"></div>#}
+{##}
+{#    {% include "wiki/includes/modals.html" %}#}
+{##}
+{#    <div class="modal fade wiki-modal" id="previewModal">#}
+{#        <div class="modal-dialog">#}
+{#            <div class="modal-content">#}
+{#                <div class="modal-body">#}
+{#                    <iframe name="previewWindow" frameborder="0"></iframe>#}
+{#                </div>#}
+{#                <div class="modal-footer">#}
+{#                    <a href="#" class="btn btn-default btn-lg" data-dismiss="modal">#}
+{#                        <span class="fa fa-arrow-circle-left"></span>#}
+{#                        {% trans "Back to editor" %}#}
+{#                    </a>#}
+{#                    <a class="btn btn-lg btn-success" id="id_preview_save_changes" href="#">#}
+{#                        <span class="fa fa-check"></span>#}
+{#                        {% trans "Save changes" %}#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
 
 
 

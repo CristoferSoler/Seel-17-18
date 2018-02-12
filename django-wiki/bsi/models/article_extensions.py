@@ -24,23 +24,24 @@ class UGA(models.Model):
     url = models.OneToOneField(URLPath, on_delete=models.CASCADE, primary_key=True)
 
     @classmethod
-    def create(cls, parent, slug, title, **rev_kwargs):
+    def create(cls, slug, title, **rev_kwargs):
+        parent = URLPath.get_by_path("uga")
         url = URLPath.create_urlpath(parent=parent, slug=slug, title=title, **rev_kwargs)
-        if not url.path.startswith('uga') or len(url.path) == 3:
-            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
+        # if not url.path.startswith('uga') or len(url.path) == 3:
+        #     raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
         uga.save()
         return uga
 
     @classmethod
     @transaction.atomic
-    def create_by_request(cls, request, article, parent, slug, title, content, summary):
-        url = URLPath._create_urlpath_from_request(request=request, perm_article=article, parent_urlpath=parent,
+    def create_by_request(cls, request, slug, title, content, summary):
+        parent = URLPath.get_by_path("uga")
+        url = URLPath._create_urlpath_from_request(request=request, perm_article=parent.article, parent_urlpath=parent,
                                                    slug=slug, title=title,
                                                    content=content, summary=summary)
-        set_permission(url.article, request.user)
-        if not url.path.startswith('uga') or len(url.path) == 3:
-            raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
+        # if not url.path.startswith('uga') or len(url.path) == 3:
+        #     raise ValueError("A user article is supposed to be a child of 'uga' and it cannot be 'uga' itself.")
         uga = cls(url=url)
         uga.save()
         return uga
