@@ -88,13 +88,15 @@ def has_permission(user):
 
 
 @login_required
-@user_passes_test(has_permission)
 def delete_question(request):
     if request.method == 'POST':
         q_id = request.POST.get('q_id')
         if q_id:
             q = Question.get_question(q_id)
-            q.delete_question()
+            if request.user.has_perm('infopage.delete_question') or q.user == request.user:
+                q.delete_question()
+            else:
+                raise PermissionDenied
     return HttpResponseRedirect(reverse('information'))
 
 
@@ -104,7 +106,8 @@ def delete_answer(request):
         a_id = request.POST.get('a_id')
         if a_id:
             a = Answer.get_answer(a_id)
-            if a.user == request.user or has_permission(request.user):
+            print(request.user.user_permissions.all())
+            if request.user.has_perm('info.change_question') or a.user == request.user:
                 a.delete_answer()
             else:
                 raise PermissionDenied
@@ -118,7 +121,7 @@ def edit_question(request):
         q_id = request.POST.get('q_id')
         if q_form.is_valid() and q_id:
             q = Question.get_question(q_id)
-            if q.user == request.user or has_permission(request.user):
+            if request.user.has_perm('infopage.change_question') or q.user == request.user:
                 q.edit_question(q_form.cleaned_data['question'], request.user)
     return HttpResponseRedirect(reverse('information'))
 
@@ -129,7 +132,7 @@ def edit_answer(request):
         a_form = AnswerForm(request.POST)
         if a_form.is_valid():
             a = Answer.get_answer(a_form.cleaned_data['answer_id'])
-            if a.user == request.user or has_permission(request.user):
+            if request.user.has_perm('infopage.change_answer') or a.user == request.user:
                 a.edit_answer(a_form.cleaned_data['answer'], request.user)
             else:
                 raise PermissionDenied
