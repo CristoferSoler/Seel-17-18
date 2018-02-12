@@ -371,8 +371,10 @@
         "text": "Components"
     },
     {
+        "text": "Elementary threats",
         "nodes": [
             {
+                "text": "Overview of elementary threats",
                 "nodes": [
                     {
                         "href": "http://it-gs.ziik.tu-berlin.de/bsi/threats/G0.1",

@@ -137,7 +137,7 @@ class PasswordResetForm(forms.Form):
 
 class LoginForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
-                               max_length=255, required=True)
+                               max_length=254, required=True)
     password = forms.CharField(widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'}),
                                required=True)
 
@@ -168,21 +168,19 @@ class UserRegistrationForm(forms.Form):
     username = forms.CharField(
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Username'}),
         required=True,
-        max_length=32
+        max_length=254,
     )
     email = forms.EmailField(
         widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Email'}),
         required=True,
-        max_length=32,
+        max_length=254,
     )
     password1 = forms.CharField(
         required=True,
-        max_length=32,
         widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Password'})
     )
     password2 = forms.CharField(
         required=True,
-        max_length=32,
         widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Retype password'})
     )
 
