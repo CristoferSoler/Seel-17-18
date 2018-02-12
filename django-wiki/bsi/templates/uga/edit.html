@@ -25,7 +25,7 @@
 
 
                                 <div class="btn-toolbar pull-right">
-                                    {% if article|can_delete:user and article|can_moderate:user %}
+                                    {% if article|is_owner:user or article|can_moderate:user %}
                                         <a href="{% url 'delete' path=urlpath.path %}"
                                            class="btn btn-danger">
                                             <span class="fa fa-trash-o"></span>

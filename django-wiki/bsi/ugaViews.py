@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import ObjectDoesNotExist
 from django.db.models.query_utils import Q
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
@@ -187,9 +187,11 @@ class UGDeleteView(Delete):
 
     def get_form(self, form_class=None):
         form = super(Delete, self).get_form(form_class=form_class)
-        # if self.article.can_moderate(self.request.user):
+        if self.article.can_moderate(self.request.user) or self.article.owner(self.request.user):
         #     form.fields['purge'].widget = forms.forms.CheckboxInput()
-        return form
+            return form
+        else:
+            raise Http404('You do not have sufficient permissions to delete this article.')
 
     def form_valid(self, form):
         form.cleaned_data['purge'] = True
