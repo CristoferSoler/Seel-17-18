@@ -48,18 +48,19 @@ def post_answer(request):
                     else:
                         q.add_answer(a_form.cleaned_data['answer'])
 
-                    sendResponseMail(q,a_form.cleaned_data['answer'])
+                    sendResponseMail(q, a_form.cleaned_data['answer'])
                 return HttpResponseRedirect(reverse('information'))
             return render(request, 'info.html', {'a_form': a_form})
 
-def sendResponseMail(q,answer):
+
+def sendResponseMail(q, answer):
     authorEmail = getEmailOfAuthor(q)
-    if(authorEmail != None):
+    if(authorEmail is not None):
         mail_subject = 'Somebody answered your question on the Information Page'
         message = render_to_string('email/answerQuestion.html', {
             'question': q.question,
             'author': q.user,
-            'date':q.timestamp,
+            'date': q.timestamp,
             'answer': answer,
         })
 
@@ -72,7 +73,7 @@ def sendResponseMail(q,answer):
 
 def getEmailOfAuthor(q):
     authorUsername = q.user
-    if(authorUsername == None):
+    if(authorUsername is None):
         return None
     else:
         author = User.objects.get(username=authorUsername)
@@ -111,14 +112,14 @@ def delete_answer(request):
 
 
 @login_required
-@user_passes_test(has_permission)
 def edit_question(request):
     if request.method == 'POST':
         q_form = QuestionForm(request.POST)
         q_id = request.POST.get('q_id')
         if q_form.is_valid() and q_id:
             q = Question.get_question(q_id)
-            q.edit_question(q_form.cleaned_data['question'], request.user)
+            if q.user == request.user or has_permission(request.user):
+                q.edit_question(q_form.cleaned_data['question'], request.user)
     return HttpResponseRedirect(reverse('information'))
 
 
