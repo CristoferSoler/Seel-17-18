@@ -44,7 +44,7 @@ def userInActive(sender, instance, *args, **kwargs):
 
 def sendMail(user,subject,text):
     userEmail = getEmailOfUser(user)
-    if(userEmail != None):
+    if userEmail:
         mail_subject = subject
         messageBody = text
 

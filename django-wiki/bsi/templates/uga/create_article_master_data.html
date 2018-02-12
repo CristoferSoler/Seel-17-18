@@ -33,24 +33,4 @@
         </div>
 
     {% endfor %}
-
-    <script type="text/javascript">
-        {% if not form.slug.value %}
-            //<![CDATA[
-            (function ($) {
-                $(document).ready(function () {
-                    $("#id_creation-title").keyup(function () {
-                        var e = $("#id_creation-slug")[0];
-                        if (!e._changed) {
-                            slug = URLify(this.value, 50);
-                            e.value = slug;
-                        }
-                    });
-
-
-                });
-            })(jQuery);
-            //]]>
-        {% endif %}
-    </script>
 {% endblock %}

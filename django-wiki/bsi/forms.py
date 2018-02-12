@@ -1,5 +1,6 @@
 import re
 
+import wiki
 from django import forms
 from django.contrib.auth import authenticate, get_user_model, password_validation
 from django.contrib.auth.models import User
@@ -17,7 +18,7 @@ from django.utils.translation import ugettext_lazy as _
 from profanity import profanity
 from wiki.core.diff import simple_merge
 from wiki.editors import getEditor
-from wiki.forms import SearchForm, SpamProtectionMixin
+from wiki.forms import SearchForm, SpamProtectionMixin, WikiSlugField, _clean_slug
 from wiki.models import URLPath
 
 from bsi.models import UGA, BSI
@@ -226,6 +227,8 @@ class CreateForm(forms.Form):
         self.urlpath_parent = URLPath.get_by_path('uga/')
 
     title = forms.CharField(label=_('Title'), )
+    # slug = WikiSlugField(label=_('Slug'),
+    #                      max_length=wiki.models.URLPath.SLUG_MAX_LENGTH, widget=HiddenInput)
     content = forms.CharField(
         label=_('Contents'),
         required=False,
@@ -241,6 +244,9 @@ class CreateForm(forms.Form):
         # self.check_spam()
         return self.cleaned_data
 
+    # def clean_slug(self):
+    #     return _clean_slug(self.cleaned_data['slug'], self.urlpath_parent)
+
     def clean_content(self):
         if profanity.contains_profanity(self.cleaned_data['content']):
             raise forms.ValidationError("The content is offensive.")
@@ -249,7 +255,14 @@ class CreateForm(forms.Form):
     def clean_title(self):
         if profanity.contains_profanity(self.cleaned_data['title']):
             raise forms.ValidationError("The title is offensive.")
+
+        slug = self.create_slug()
+
         return self.cleaned_data['title']
+
+    def create_slug(self):
+         slug = self.cleaned_data['title'].strip().replace(' ', '_')
+         return _clean_slug(slug, self.urlpath_parent)
 
     def clean_summary(self):
         if profanity.contains_profanity(self.cleaned_data['summary']):
@@ -277,9 +290,12 @@ def get_available_links():
         bsi_threat_subroot = URLPath.objects.filter(slug='threats', parent=bsi_root)[0]
         bsi_impl_subroot = URLPath.objects.filter(slug='implementationnotes', parent=bsi_root)[0]
 
-        bsi_comps = BSI.objects.filter(url__parent=bsi_comp_subroot).exclude(url__slug__in=[e.url.slug for e in new_comps])
-        bsi_threats = BSI.objects.filter(url__parent=bsi_threat_subroot).exclude(url__slug__in=[e.url.slug for e in new_threats])
-        bsi_impls = BSI.objects.filter(url__parent=bsi_impl_subroot).exclude(url__slug__in=[e.url.slug for e in new_impls])
+        bsi_comps = BSI.objects.filter(url__parent=bsi_comp_subroot).exclude(
+            url__slug__in=[e.url.slug for e in new_comps])
+        bsi_threats = BSI.objects.filter(url__parent=bsi_threat_subroot).exclude(
+            url__slug__in=[e.url.slug for e in new_threats])
+        bsi_impls = BSI.objects.filter(url__parent=bsi_impl_subroot).exclude(
+            url__slug__in=[e.url.slug for e in new_impls])
         return new_list | bsi_comps | bsi_threats | bsi_impls
 
     return BSI.objects.filter(url__parent__parent=bsi_root)
@@ -326,6 +342,7 @@ class UGEditForm(forms.Form, SpamProtectionMixin):
     current_revision = forms.IntegerField(
         required=False,
         widget=forms.HiddenInput())
+
     # checked = forms.BooleanField(label="Reviewed", required=False)
 
     def __init__(self, request, current_revision, checked, *args, **kwargs):
