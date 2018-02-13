@@ -9,7 +9,7 @@
 ### 2 6 Disclosure of security-related information in web applications
 ### 2 7 Abuse of a web application through automated use
 ### 2 8 Insufficient Session Management of Web Applications
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.3.1.A1 Web Application Authentication [Developer]
 #### APP.3.1.A2 Web Application Access Control [Developer]
 #### APP.3.1.A3 Secure Session Management [Developer]

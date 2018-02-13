@@ -6,7 +6,7 @@
 ### 2 3 Software vulnerabilities or errors
 ### 2 4 Bypassing the firewall rules
 ### 2 5 Incorrect configuration and operating error of a firewall
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### NET.3.2.A1 Creating a Security Policy [Information Security Officer (ISB)]
 #### NET.3.2.A2 Setting firewall rules
 #### NET.3.2.A3 Set up appropriate filter rules on the packet filter

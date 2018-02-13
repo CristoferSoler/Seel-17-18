@@ -9,7 +9,7 @@
 ### 2 6 Software vulnerabilities or errors
 ### 2 7 Missing or poor troubleshooting
 ### 2 8 Insufficient logging of security-relevant events
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.3.2.A1 Secure configuration of a web server
 #### APP.3.2.A2 Protection of web server files
 #### APP.3.2.A3 Securing file uploads and downloads

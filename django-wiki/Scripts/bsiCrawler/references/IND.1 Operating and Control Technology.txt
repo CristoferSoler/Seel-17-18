@@ -13,7 +13,7 @@
 ### 2 10 Use of unsafe protocols
 ### 2 11 Unsafe configurations
 ### 2 12 Dependencies of the TDC of IT networks
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### IND.1.A1 Integration into the security organization
 #### IND.1.A2 Awareness and training of staff
 #### IND.1.A3 Protection against malicious programs
@@ -35,7 +35,7 @@
 #### IND.1.A17 Regular Security Check (I)
 5 Appendix: Cross reference table for elementary hazards
 * G 0.5 natural disasters
-* G 0.6 disasters in the environment
+* G 0.6 Disasters in the environment
 * G 0.9 Failure or malfunction of communication networks
 * G 0.11 Failure or disruption of service providers
 * G 0.14 Spying out information (spying)

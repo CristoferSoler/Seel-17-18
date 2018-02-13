@@ -94,7 +94,7 @@ For all security-related tasks, both responsibilities and authority MUST be defi
 
 #### ORP.1.A2 Assignment of responsibility for information, applications and IT components [Head of IT, Information Security Officer (ISB), Head of Institution]
 
-All information, business processes, applications and IT components MUST be defined as who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
+All information, business processes, applications and IT components MUST be determined who is responsible for them and their security. All employees MUST be aware of what they are responsible for and in what ways.
 
 #### ORP.1.A3 Supervision or assistance of third parties [employees]
 
@@ -133,7 +133,7 @@ It SHOULD be regulated, which reactions take place in case of suspected violatio
 
 #### ORP.1.A11 Timely participation of the Staff Committee [Head of IT]
 
-The staff representatives (employees 'representatives, employees' representatives) SHOULD be informed in due time about any procedures and projects that affect them.
+The staff representatives (employees' representatives, employee representatives) SHOULD be informed in due time about any procedures and projects that affect them.
 
 #### ORP.1.A12 Regulations for maintenance and repair work [IT operation, building services, ICS information security officer]
 

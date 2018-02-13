@@ -9,7 +9,7 @@ Database systems (DBS) are a widely used tool for organizing, creating, modifyin
 
 ### 1.2 Objective
 
-The goal of the module is to be able to operate relational database systems safely and to adequately protect the information that is processed and stored in databases. For this purpose, requirements are described with which database systems can be safely planned, implemented and operated, and which can reduce specific hazards.
+The goal of the module is to be able to operate relational database systems safely and to adequately protect the information that is processed and stored in databases. For this purpose, requirements are described with which database systems can be safely planned, implemented and operated and which can be used to reduce specific hazards.
 
 ### 1.3 Delimitation
 
@@ -30,12 +30,12 @@ If the hardware of a database system does not have enough system resources, ther
 
 ### 2 2 Enabled standard user accounts
 
-During the initial installation or in the delivery state of a database management system, user and administration accounts are often not secured or only with passwords that are publicly known. There is a risk that these accounts will be misused. For example, an attacker with the publicly known credentials can log in to the database management system as a user or even as an administrator. Then he can read, manipulate or delete the configuration or the stored data.
+During the initial installation or in the delivery state of a database management system, user and administration accounts are often not secured or only with passwords that are known to the public. There is a risk that these accounts will be misused. For example, an attacker with the publicly known credentials can log in to the database management system as a user or even as an administrator. Then he can read, manipulate or delete the configuration or the stored data.
 
 ### 2 3 Insufficient allocation of authorizations
 If authorizations are assigned or managed incorrectly, persons in charge or users of the database management system can receive authorizations that go beyond what is absolutely necessary. Thus, it is possible that the overly entitled persons or users carry out unauthorized actions on the database management system that have far-reaching consequences, as the following example shows:
 
-An incorrect SQL statement (for example, in an installation script) unintentionally deletes a large number of records in the database. Afterwards it is determined that the user actually only needed reading rights for these datasets, but also possessed unnecessary deletion rights.
+An incorrect SQL statement (for example, in an installation script) unintentionally deletes a large number of records in the database. Afterwards it is determined that the user actually only needed read-only rights for these data records, but also unnecessarily had delete rights.
 
 ### 2 4 Unencrypted database connection
 
@@ -47,7 +47,7 @@ Hardware or software failure as well as human error may cause data loss in the d
 
 ### 2 6 Loss of integrity of stored data
 
-Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed in productive operation or not at all, not only the inconsistent data must be extensively cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) is concerned.
+Incorrectly configured databases, software errors, or manipulated data may violate the integrity of the information in the database. If this is not noticed or noticed late, the core processes of the institution can be severely impaired. For example, if the integrity relationships (referential integrity) between the tables are not defined correctly, it may cause the data in the database to be in a bad state. If this error is only noticed during productive operation or not at all, not only the inconsistent data must be laboriously cleaned up and reconstructed. Over time, the extent of damage can also have occurred, for example if critical data (tax-relevant data, billing data or even control data for entire production systems) is concerned.
 
 ### 2 7 SQL injections
 
@@ -55,7 +55,7 @@ One common attack on database systems is SQL injection. If an application access
 
 ### 2 8 Insufficient patch management
 
-Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, disrupt services or shut down entire production processes.
+Due to the extensive range of functions of the database management systems, errors or weaknesses occur relatively frequently, which are remedied by patches and updates by the manufacturer. However, if these are not brought in or are recorded too late, weak points can be exploited and the database management system successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, shut down services or shut down entire production processes.
 
 ### 2 9 Insecure configuration of the database management system
 Often, in the default configuration of the database management system, unneeded features are enabled that make it easier for a potential attacker to read or manipulate information from the database. For example, an attacker can connect to an unused programming interface by an unmodified default installation to administer the DBMS without having to authenticate. This allows him to access the databases of the institution without authorization.
@@ -77,7 +77,7 @@ The following requirements MUST be implemented as a priority:
 
 #### APP.4.3.A1 Creating a Security Policy for Database Systems [Information Security Officer (ISB)]
 
-On the basis of the institution's general security policy, a specific security policy for database systems MUST be created, which comprehensibly describes requirements and specifications on how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
+On the basis of the institution's general security policy, a specific security policy for database systems MUST be created in which comprehensible requirements and specifications are described, how database systems can be operated safely. The policy MUST be known to all staff responsible for database systems and fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented in a meaningful way.
 
 #### APP.4.3.A2 Installation of the database management system
 
@@ -94,11 +94,11 @@ New databases MUST be created according to a defined process. When a new databas
 
 The user and authorization concept (see ORP.4 * Identity and Authorization Management *) of the institution MUST be extended by the authorizations for roles, profiles and user groups required for database management systems.
 
-A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are necessary for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
+A process MUST be established that governs how database users and their privileges are created, approved, set up, modified and revoked or deleted. In this case, ONLY as many access rights must be granted as are required for the respective tasks (need-to-know principle). All changes SHOULD be documented. The configured users and their associated permissions MUST be periodically reviewed and adjusted as necessary.
 
 #### APP.4.3.A6 Change of password [responsible person]
 
-All database user passwords MUST conform to the institution's password policy (see ORP.4 * Identity and Permissions Management *). It MUST be ensured that the passwords are changed at the slightest suspicion of a security incident. Especially with privileged database accounts and service accounts, a password change SHOULD be carefully planned and, if necessary, coordinated with the users responsible for the application.
+All database user passwords MUST conform to the institution's password policy (see ORP.4 * Identity and Permissions Management *). It MUST be ensured that the passwords are changed at the slightest suspicion of a security incident. Especially with privileged database accounts and service accounts, a password change SHOULD be carefully planned and, if necessary, coordinated with those responsible for the application.
 
 #### APP.4.3.A7 Timely import of security updates
 
@@ -164,7 +164,7 @@ For all components of the database system SHOULD check regularly whether all def
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.4.3.A21 Use of a database firewall (CI)
 
@@ -189,4 +189,4 @@ The data in the databases SHOULD be encrypted. The following factors SHOULD be c
 * functional effects on the database, such as sorting options.
 #### APP.4.3.A25 Database System Security Checks (CIA)
 
-Database systems SHOULD regularly be audited using security audits. The security reviews SHOULD consider the systemic and vendor-specific aspects of the database infrastructure used (eg directory services) as well as the database management system used.
+Database systems SHOULD be regularly audited using security audits. The security reviews SHOULD consider the systemic and vendor-specific aspects of the database infrastructure used (eg directory services) as well as the database management system used.

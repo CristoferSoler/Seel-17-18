@@ -10,7 +10,7 @@
 ### 2 7 DNS hijacking
 ### 2 8 DNS-DoS
 ### 2 9 DNS Reflection
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.3.6.A1 Planning the DNS deployment
 #### APP.3.6.A2 Use of redundant DNS servers
 #### APP.3.6.A3 Use of separate DNS servers for internal and external requests

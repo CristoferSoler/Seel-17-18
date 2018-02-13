@@ -11,7 +11,7 @@
 ### 2 8 Power failure
 ### 2 9 pollution
 ### 2 10 Insufficient roadway dimensioning
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.2.A1 Definition of requirements [planner, IT operation, building services, information security officer (ISB)]
 #### INF.2.A2 Fire department formation [planner]
 #### INF.2.A3 Use of an Uninterruptible Power Supply [Building Services]
@@ -22,7 +22,7 @@
 #### INF.2.A8 Use of a fire alarm system [planner]
 #### INF.2.A9 Use of extinguishing or fire prevention system [Planner]
 #### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
-#### INF.2.A11 Automated monitoring of the infrastructure [IT operation, building services]
+#### INF.2.A11 Automated monitoring of infrastructure [IT operation, building services]
 ### 3.2 Standard requirements
 #### INF.2.A12 Design and implementation of a perimeter protection for the data center [planner, building services]
 #### INF.2.A13 Planning and installation of alarm systems [planner]
@@ -34,7 +34,7 @@
 #### INF.2.A19 Conducting functional tests of the technical infrastructure [building services]
 #### INF.2.A20 Regular updates of infrastructure and construction plans [planner]
 ### 3.3 Requirements for increased protection requirements
-#### INF.2.A21 Backup data center (A)
+#### INF.2.A21 Dodge Data Center (A)
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 #### INF.2.A24 Use of video surveillance systems [planners, building services, data protection officer] (IA)
@@ -44,7 +44,7 @@
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 5 Appendix: Cross reference table for elementary hazards
 * G 0.5 natural disasters
-* G 0.6 disasters in the environment
+* G 0.6 Disasters in the environment
 * G 0.4 Pollution, dust, corrosion
 * G 0.2 Unfavorable climatic conditions
 * G 0.3 water

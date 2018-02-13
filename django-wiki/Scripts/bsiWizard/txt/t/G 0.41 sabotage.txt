@@ -5,7 +5,7 @@ G 0.41 Sabotage
 
 Sabotage refers to the willful manipulation or damage of things or processes with the aim to harm the victim. Particularly attractive destinations can be data centers or communication links between public authorities and companies, since a relatively small amount of funds can be used to make a big impact.
 
-The complex infrastructure of a data center can be selectively manipulated by targeted influencing of important components, if necessary by perpetrators from the outside, but above all by perpetrators, in order to cause operational disturbances. Particularly threatened are not sufficiently protected building technical or communication technical infrastructure as well as central supply points, which are organisationally or technically possibly also not supervised and for external ones easily and unobserved accessible.
+The complex infrastructure of a data center can be selectively manipulated by targeted influencing of important components, if necessary by perpetrators from the outside, but above all by perpetrators, in order to cause operational disturbances. Particularly threatened are not sufficiently protected building technical or communication technical infrastructure as well as central supply points, which are organisationally or technically possibly also not supervised and for external easy and unobserved access.
 
 ** Examples **
 

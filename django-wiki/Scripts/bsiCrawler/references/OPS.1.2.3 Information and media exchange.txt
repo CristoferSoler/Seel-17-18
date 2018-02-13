@@ -10,7 +10,7 @@
 ### 2 7 Theft, tampering or destruction of data media
 ### 2 8 Malicious programs in transferred files or on data carriers
 ### 2 9 Unauthorized copying of information or data media
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.1.2.3.A1 Definition of permitted communication partners [Head of Organization]
 #### OPS.1.2.3.A2 Regulation of Information Exchange [Head of Organization]
 #### OPS.1.2.3.A3 Instructing the staff to exchange information [Specialists]
@@ -23,7 +23,7 @@
 #### OPS.1.2.3.A9 Eliminate Remaining Information in Files Before Redistributing [User]
 #### OPS.1.2.3.A10 Conclusion of Confidentiality Agreements [Head of Organization]
 #### OPS.1.2.3.A11 Compatibility check of the sender and receiver system [IT operation]
-#### OPS.1.2.3.A12 Appropriate marking of the data carrier during shipping [user]
+#### OPS.1.2.3.A12 Appropriate marking of data carriers during shipping [user]
 ### 3.3 Requirements for increased protection requirements
 #### OPS.1.2.3.A13 Encryption and Digital Signatures [User] (CI)
 #### OPS.1.2.3.A14 Disk Management [Head of Organization, IT Operations] (CIA)

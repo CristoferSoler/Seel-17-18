@@ -9,7 +9,7 @@ The basic equipment in offices typically includes copiers, printers and multifun
 
 Since there are some drawbacks when jobs are sent from the workstation PC directly to a network printer, most institutions use a central print server that accepts the jobs and distributes them among the available printers.
 
-The integration of paper processing equipment into a network is in many cases not limited to printers. For example, network-enabled document scanners can be made available to a variety of users to digitize paper documents. For example, in conjunction with a printer, a scanner may be operated as a copier.
+The integration of paper processing equipment into a network is in many cases not limited to printers. For example, network-enabled document scanners can be made available to a variety of users to digitize paper documents. For example, in conjunction with a printer, a scanner may be operated like a copier.
 
 Multifunction devices in this module are devices that offer several different paper processing functions, such as printing, copying and scanning or even fax services. For readability, not all device types are named individually. However, since security recommendations similar to those for network printers must be observed for digital copiers, the requirements apply to them analogously.
 
@@ -29,9 +29,9 @@ Based on the application scenarios, the requirements for the products to be proc
 
 **Implementation**
 
-Once all planning steps have been completed, it is time to commission the devices. It also depends on where the devices are positioned (see SYS.4.1.M2 * Suitable Setup of Printers, Copiers and Multifunction Devices *) and how to restrict access to the devices (see SYS.4.1.M6 * Access Restrictions) on printers, copiers and multifunction devices *).
+Once all the planning steps have been completed, it is about commissioning the devices. It also depends on where the devices are positioned (see SYS.4.1.M2 * Suitable Setup of Printers, Copiers and Multifunction Devices *) and how to restrict access to the devices (see SYS.4.1.M6 * Access Restrictions) on printers, copiers and multifunction devices *).
 
-Like any IT system, network-enabled printers, copiers, and MFPs should be protected from unauthorized use (see SYS.4.1.M13 * Authentication for printers, copiers, and MFPs *). But also the media on which the (digital) information is transmitted and stored must be adequately protected (see SYS.4.1.M14 * Information protection for printers, copiers and multifunction devices *).
+Like any IT system, network-enabled printers, copiers, and MFPs should be protected from unauthorized use (see SYS.4.1.M13 * Authentication for printers, copiers, and MFPs *). But also the media on which the (digital) information is transmitted and stored must be suitably secured (see SYS.4.1.M14 * Information protection for printers, copiers and multifunction devices *).
 In addition to print hardware, software components, such as print servers or clients, are important for secure operation. Depending on the operating system and printing system used, appropriate requirements and modules must be implemented, such as SYS.4.1.M4 * Secure use of CUPS * or APP.3.4 * Samba *.
 
 **Business**
@@ -96,7 +96,7 @@ Based on a rough concept for the overall system (see * SYS.4.1.M1 Creation of a 
 The following subconcepts should be considered when planning the use of printers, copiers, and multifunction devices:
 
 * General aspects:
-+ ** Buy or Rent: ** In some cases, it may be useful not to buy the equipment you need, but to rent it. If they are rented, it must be ensured that any documents stored in memory are securely deleted, so that they can not be restored by the next customer who rents the device. In this case, it must first be checked whether the devices can be returned without memory or whether the memory areas can be reliably deleted without physically destroying them.
++ ** Buy or Rent: ** In some cases, it may be useful not to buy the equipment you need, but to rent it. If they are rented, it must be ensured that any documents stored in the memory are securely deleted, so that they can not be restored by the next customer who leases the device. In this case, it must first be checked whether the devices can be returned without memory or whether the memory areas can be reliably deleted without physically destroying them.
 + ** Local or network-ready printers: ** It must be decided where local and network-connected printers should be used. Often, an intermediate solution also offers advantages: Users who often have to print out sensitive information receive a local printer for these printouts. For the printouts of the remaining users or for printouts of information with a lower protection requirement, the intermediate solution provides more powerful, centralized printers.
 + ** Print Servers: ** Network printers can be accessed directly from workstations or via one or more print servers. A print server accepts the print jobs from the IT systems and forwards them to the desired printers. In addition to central administration and logging, printers can be more efficiently protected against attacks if only the print servers are allowed to access the network printers. It is a suitable solution to select.
 + ** Guidelines for Use: ** In order to be able to use printers, copiers and multifunction devices safely and effectively in institutions, security standards must be created based on the existing security objectives as well as the requirements of the planned deployment scenarios. These specific security requirements must be aligned with the overarching security concept of the institution.
@@ -124,7 +124,7 @@ Based on this, the secure use of these devices must be regulated and security gu
 
  
 * ** Availability: ** It is recommended to take precautions against failure of print servers or individual devices. For example, maintenance contracts can reduce downtime if there are technical problems (see SYS.4.1.M15 * Emergency Preparedness for Printers, Copiers and Multifunction Devices *).
-* ** Encryption: ** Requirement SYS.4.1.M14 * Information Protection for Printers, Copiers and Multifunction Devices * addresses, among other things, the following questions that play an important role in planning:
+* ** Encryption: ** Requirement SYS.4.1.M14 * Information Protection for Printers, Copiers and Multifunction Devices * addresses, among other things, the following issues that play an important role in planning:
 
  
 + ** Hard Disk Encryption: ** Many printers and digital copiers have built-in storage media on which information is stored. If the device supports encryption, it should be used.
@@ -143,7 +143,7 @@ The security guidelines for the users should be summarized in a clear leaflet. T
 The following aspects have to be considered:
 
 * ** Access to the copier and printer compartments: ** If possible, access to rooms containing printers, copiers, and MFPs should be restricted (see also SYS.4.1.M2 * Suitable Setup of Printers, Copiers, and Multifunction Devices *). It makes sense to limit the access to, for example, the employees of a department or the users of a floor. The users are to be informed about the access restrictions and the authorized persons.
-* ** Handling unrecovered documents: ** Often, printed documents are not picked up, printed fax transmission reports are missed, or misprints are not disposed of. All users must be aware that they need to collect their printouts in a timely manner. Documents that can not be assigned to a user should be collected or better directly destroyed with a shredder.
+* ** Handling unrecovered documents: ** Often, printed documents are not collected, printed fax transmission reports are missed, or misprints are not disposed of. All users must be aware that they need to collect their printouts in a timely manner. Documents that can not be assigned to a user should be collected or better directly destroyed with a shredder.
 * ** Handling sensitive documents: ** Information classified as "highly confidential" should not be printed on general accessible printers or duplicated on copiers. Officially protected documents (classified information) must be protected in accordance with applicable regulations and instructions.
 * ** Authentication on the device: ** If authentication is to be carried out directly at the printer, copier or multifunction device (see SYS.4.1.M13 * Authentication for printers, copiers and multifunction devices *), users must be instructed in this procedure.
 * ** Distribution of printouts: ** If network-critical information is often printed out, it should be considered to have the printouts distributed to the respective recipients by trustworthy persons. This approach is an alternative to authentication on the device and has the advantage that only these people need access to the respective printers.
@@ -158,12 +158,12 @@ The following aspects must be considered when using CUPS.
 ** General aspects **
 
 * Local operation or central print server
-CUPS can be operated as a distributed application (client on workstation PC with remote server) or locally. Accordingly, a distinction must be made in the configuration as to whether the CUPS client and the CUPS server are located on the same IT system or on different IT systems. If they are located on different IT systems, the IP address or the computer name of the respective server must be defined in the configuration file (* client.conf *) of the CUPS client. For local use, however, the loopback address (* 127.0.0.1 *) or the computer name * localhost * must be entered there. When used locally, the CUPS server must be bound to the loopback address using the configuration entry * Listen * in the * cupsd.conf * file to prevent the service from being reachable from the network. Regardless of whether only local IT systems are allowed to access the printer, CUPS can be managed centrally. Services such as SSH or the CUPS web server (see Administration section) still allow settings to be made over the network.
+CUPS can be operated as a distributed application (client on workstation PC with remote server) or locally. Accordingly, a distinction must be made in the configuration as to whether the CUPS client and the CUPS server are located on the same IT system or on different IT systems. If they are located on different IT systems, the IP address or the computer name of the respective server must be defined in the configuration file (* client.conf *) of the CUPS client. For local use, however, the loopback address (* 127.0.0.1 *) or the computer name * localhost * must be entered there. When used locally, the CUPS server must be bound to the loopback address using the configuration entry * Listen * in the * cupsd.conf * file to prevent the service from being reachable from the network. Regardless of whether only local IT systems are allowed to access the printer, CUPS can be managed centrally. Services such as SSH or the CUPS web server (see Administration section) still allow you to make settings over the network.
 * Administrative and status information
- The clients must be informed regularly about the available printers and their status. In * Broadcasting *, the server sends a message to all print clients at regular intervals and without polling * polling * the print client retrieves the information from the server.
+ The clients must be informed regularly about the available printers and their status. In * Broadcasting *, the server sends a message to all print clients at regular intervals without being asked, and when * polling * the print client retrieves the information from the server.
  If the distribution of information about the available printers should not be done with * Polling * or * Broadcasting * but via manual entries, this must be disabled by the entry * Browsing * in * cupsd.conf * (* off *). If * browsing * is to be used, the access should only be restricted to the compulsory computers or, if necessary, to networks.
 * Encryption
- If the print jobs or status requests are to be transmitted encrypted, a protocol must be used to support this. The * Internet Printing Protocol * (IPP) preset at CUPS can communicate encrypted through the optional use of TLS / SSL (Transport Layer Security / Secure Sockets Layer).
+ If the print jobs or status requests are to be transmitted in encrypted form, a protocol must be used to support this. The * Internet Printing Protocol * (IPP) preset at CUPS can communicate encrypted through the optional use of TLS / SSL (Transport Layer Security / Secure Sockets Layer).
  Encryption requires the entry * Encryption * in the configuration file of the CUPS client (* client.conf *). It is recommended to set this value to * Always * if possible. In addition, TLS / SSL certificates and cryptographic keys must be provided on the CUPS server.
 * High availability
  CUPS can be operated as part of a high-availability printing system. This requires a detailed planning of the associated organizational and technical aspects. In particular, it must be determined which basic approach is used to achieve the desired level of availability, for example * failover-switching * or * load-balancing *. For * failover-switching *, so-called implicit pressure classes must be defined in the configuration file * cupsd.conf * (configuration entry * ImplicitClasses On *). More detailed information can be found in the documentation of CUPS.
@@ -171,9 +171,9 @@ CUPS can be operated as a distributed application (client on workstation PC with
 
 * User administration
  Print servers should only be accessible to authorized users. The required rights management can either be maintained on the print server itself or an existing authentication service can be integrated. Normal users should be able to use only the printer application on a print server and have no access to the files and directories of that server.
- Because users are typically supposed to use the print server for printing only and not want to log in directly to this server, for example, SSH, the system user group should be disconnected from the printer user group. Printer users should be set up so that they have no rights on the print server except for printing. For example, with the program call * lppasswd -a username * printer users can be created.
+ Because users are typically supposed to use the print server for printing only and not want to log in directly to that server, for example, SSH, the system user group should be disconnected from the printer user group. Printer users should be set up so that they have no rights on the print server except for printing. For example, with the program call * lppasswd -a username * printer users can be created.
 The assignment of which users can access which printers can be made in the * cupsd.conf * file. Here, too, the principle applies that users should only be granted the actual required access rights.
- The setting to allow all users to access all printers should be avoided. An exception in this regard is the operation of local printers. If there are only a few printer users for an IT system, and if all printer users are also system users at the same time, no separate printer users need to be created.
+ The setting to allow all users to access all printers should be avoided. An exception in this regard is the operation of local printers. If there are only a few printer users for an IT system, and if all printer users are system users anyway, no separate printer users need to be created.
 * Authentication method:
  CUPS supports various authentication methods, such as HTTP basic, HTTP digest, or certificate authentication. The authentication procedure can be defined via the entry * AuthType * in the configuration file * cupsd.conf *. Because HTTP Basic transfers usernames and passwords in plain text, this procedure should not be used without additional security. Instead, certificates or HTTP digest should be used as the authentication method.
 **Administration**
@@ -197,7 +197,7 @@ To complicate attacks on printers, copiers, and MFPs, access to these devices mu
 * Restriction to necessary access rights:
  If possible, only as few administrators as needed should have full access. At the same time, only the access rights that are necessary for performing the task should be assigned.
 * Security of administration accesses:
-Administrative areas and configuration should only be accessible to authorized persons. The access should be possible only after an authentication, for example by a password or a PIN. If printers, copiers or multifunction devices are administered via a network, it must be ensured that the administrators also have to authenticate themselves for this. If no authentication is supported on the system side, suitable substitute measures must be taken.
+Administrative areas and configuration should only be accessible to authorized persons. The access should be possible only after an authentication, for example by a password or a PIN. If printers, copiers or multifunction devices are administrated via a network, it must be ensured that the administrators must also authenticate themselves for this. If no authentication is supported on the system side, suitable substitute measures must be taken.
 * Securing the administration with remote access:
  All administration access should only take place over an encrypted channel so that no passwords or other sensitive information can be overheard. For example, some device types can encrypt the transmission of configuration data over HTTPS or SNMPv3. In this case, the unencrypted communication should be prevented, for example by deactivating the HTTP interface for the configuration.
 * Abandon unnecessary functions:
@@ -241,7 +241,7 @@ From a security point of view, the following events have proven to be particular
 * Failed and, in the case of a higher protection requirement, also successful authentication processes should be logged. This concerns both local applications and accesses via the network.
 * System resources and operational safety measurements should always be monitored for critical values. These include, for example, information about the temperature, the load and the free space.
 * To avoid bottlenecks in the supply, information on the consumption of paper and toner should be logged and evaluated.
-* Entries, who printed at what time or used the device, may also be recorded, but could lead to data protection issues.
+* Entries, who printed at what time or used the device, may also be recorded, but could lead to privacy problems.
 Depending on the device and the application, it may be useful to set the scope of logging differently or to look at additional events, such as when a device was turned on or off. In practice, the amount of logging also depends on the extent to which the respective device type technically supports the logging of the different events.
 
 In general, only authorized persons should be able to access the logged information. It should be prevented that e.g. On the displays of the devices or in print queue, you can see who is printing, scanning, or sending which document, or when printing, scanning, or sending.
@@ -277,7 +277,7 @@ With these devices documents can be scanned even without a connected PC. The doc
 For further processing, the devices must send the scanned documents to other IT systems in the network. The following transmission and storage methods are usually supported:
 
 * File on network drives.
- The scanned documents are transferred directly to a file server via a network protocol. Usually NFS and SMB shares or transfer via FTP are supported. Basically, it must be ensured that the group of people who have access to the target directories with the scanned data is as small as possible. With increased protection requirements, it may be necessary for only the user who scanned the information to access the scan results. Not all scanners make it possible to save the generated files in user-specific areas of the server. If only a general accessible directory can be selected, the documents must be deleted from these public directories as soon as possible. The users must be instructed accordingly. In addition, these directories should be automatically deleted once a day. The time must be announced to users and chosen so that no users work with the scanners at these times.
+ The scanned documents are transferred directly to a file server via a network protocol. Usually NFS and SMB shares or transfer via FTP are supported. Basically, it must be ensured that the group of people who have access to the target directories with the scanned data is as small as possible. With increased protection, it may be necessary for only the user who scanned the information to access the scan results. Not all scanners make it possible to save the generated files in user-specific areas of the server. If only a general accessible directory can be selected, the documents must be deleted from these public directories as soon as possible. The users must be instructed accordingly. In addition, these directories should be automatically deleted once a day. The time must be announced to the users and should be chosen so that no users work with the scanners at these times.
 * Scan-to-Mail:
  When scanning, the user has the option of specifying an e-mail address or a user ID to which an e-mail address is assigned. The generated file is sent to this e-mail address via a pre-set SMTP server. Since this way confidential information could leave the network anonymously, care should be taken that no external e-mail addresses can be entered. It is better to configure the SMTP server so that the network-capable document scanners can not send e-mails to external e-mail addresses.
 * Scan to Print:
@@ -286,7 +286,7 @@ For further processing, the devices must send the scanned documents to other IT 
  The Scan to Fax procedure allows you to send scanned documents directly by fax. For this, a fax number is specified during scanning. The generated document is then either sent via an integrated modem, or the scanner establishes a connection to a fax server via the LAN.
  When using scanners that have built-in fax or modem interfaces, special precautions must be taken to prevent unwanted communication links to external networks through these interfaces. Corresponding recommendations are described in the requirement SYS.4.1.M10 * Network separation when using multifunctional devices *.
  If possible, a central fax server should act as the interface between the scanner and the telephone network. In this case, in particular the measures recommendations listed in the NET.4.3 * Fax * module must be applied.
-If the components used support this, the communication links should be encrypted as much as possible to make it harder for attackers to listen to the transmitted information. Information on how to protect the transmission can also be found in the requirement SYS.4.1.M14 * Information protection for printers, copiers and multifunction devices *.
+If the components used support this, the communication links should be encrypted as much as possible to make it harder for attackers to listen to the transmitted information. Information on how to protect the transmission can also be found in the requirement SYS.4.1.M14 * Information protection for printers, copiers and multifunctional devices *.
 
 Scanners should also be protected against attacks from the network. The requirement SYS.4.1.M6 * Restricting access to printers, copiers and multifunction devices * should be taken into account.
 
@@ -298,7 +298,7 @@ Often, it is not practical from an economic or practical point of view to use se
 
 Multifunction devices usually have a lower administration overhead compared with single devices and require fewer connection cables (energy and possibly also data lines). Multifunction devices can usually be connected directly or via a LAN to workstations.
 
-Some devices provide fax and modem functionality that requires connection to a telephone network so that a physical connection between the LAN and the telephone network can be established by connecting to other IT systems. If this connection is not controlled by a security gateway, uncontrolled Internet access may be possible, allowing attackers to access the LAN from outside, for example. The unauthorized establishment of data connections and unwanted remote maintenance must be prevented in any case.
+Some devices provide fax and modem functionality that requires connection to a telephone network so that a physical connection between the LAN and the telephone network can be established through the link with other IT systems. If this connection is not controlled by a security gateway, uncontrolled Internet access may be possible, allowing attackers to access the LAN from outside, for example. The unauthorized establishment of data connections and unwanted remote maintenance must be prevented in any case.
 
 An exception are multifunction devices with fax functionality that do not need to be connected to a telephone network. These devices scan documents and send them via a data connection to a central fax server, which is typically also located on the LAN. Only the fax server, which is connected to the telephone network, sends the fax to the actual receiver. If a fax server is used, the measures recommended in the NET.4.3 * Fax * block must be implemented.
 
@@ -316,9 +316,9 @@ All these solutions must be systematically considered in the security concept an
 
 #### SYS.4.1.M12 Proper disposal of equipment worth protecting [Head of Building Services, User]
 
-Resources (eg paper, hard disks, flash memory or cards, but also special toner cartridges) will eventually no longer be needed or have to be eliminated due to defects. If they contain sensitive data, they must be disposed of in such a way that no conclusions can be drawn about previously stored data. For functional media found in printers, copiers, and MFPs, the data should be physically erased. Non-functioning data media must be mechanically destroyed (see OPS.1.18 * Deleting and destruction *).
+Resources (eg paper, hard disks, flash memory or cards, but also special toner cartridges) will eventually no longer be needed or have to be eliminated due to defects. If they contain sensitive data, they must be disposed of in such a way that no conclusions can be drawn about previously stored data. For functional media found in printers, copiers, and MFPs, the data should be physically erased. Non-functioning data carriers must be mechanically destroyed (see OPS.1.18 * Deletion and destruction *).
 
-The nature of the disposal of vulnerable material should be regulated in a specific safety policy. In the institution, the necessary disposal facilities must be present, for. B. Shredder.
+The nature of the disposal of vulnerable material should be regulated in a specific safety policy. In the institution, the necessary disposal facilities must be available, eg. B. Shredder.
 
 If sensitive material is first collected and then disposed of, the collection must be kept under lock and protected against unauthorized access.
 
@@ -326,7 +326,7 @@ Insofar as no environmentally sound and safe disposal can be carried out in the 
 
 #### SYS.4.1.M13 Safe decommissioning of printers, copiers and multifunction devices
 
-If printers, copiers, multifunctional devices or individual components of such devices are to be taken out of service or replaced, all safety-related information must be deleted from the devices (see OPS.1.18 Deleting and Destroying). This is especially true if the components are segregated and passed on to third parties. Examples include sales, return after leasing, replacement by the manufacturer and repair by a service company. But even if the devices are internally used or scrapped, all sensitive information on the devices must be erased.
+If printers, copiers, multifunctional devices or individual components of such devices are to be taken out of service or replaced, all safety-relevant information must be deleted from the devices (see OPS.1.18 Deleting and Destroying). This is especially true if the components are segregated and passed on to third parties. Examples include sales, return after leasing, replacement by the manufacturer and repair by a service company. But even if the devices are internally used or scrapped, all sensitive information on the devices must be erased.
 
 In the case of rented or loaned equipment, it must first be contractually clarified whether the data carriers with the devices must be returned or how the data on the data carriers can be reliably deleted.
 Depending on the purpose and type of device, the following safety-relevant information can be stored, for example:
@@ -349,7 +349,7 @@ The following are proposed measures that go beyond the state of the art level of
 In everyday office life, it is often easy to view printouts of confidential documents directly at the printer, as long as they have not yet been picked up. Therefore, measures must be taken that make accessing third-party documents more difficult.
 
 In general, only authorized persons should be able to access the printed or copied documents. The circle of authorized persons should be kept as small as possible.
-If access to a network printer can not be restricted, consideration should be given to using devices that provide an authentication feature to users. If this function is activated, the document will not be printed until the user who sent the corresponding print job has identified and authenticated on the device. In practice, smart cards or PINs are often used for authentication. Depending on the device type, PINs can be specified user-specific or document-specific. In the latter variant, a PIN is set when the print job is sent. Only after this PIN has been entered on the device will the document associated with the PIN be printed out. Print jobs that have been sent but not picked up must be deleted regularly. If possible, the printers should be configured in such a way that if a wrong PIN is entered several times, the print job is automatically deleted.
+If access to a network printer can not be restricted, consideration should be given to using devices that provide an authentication feature to users. If this function is activated, the document will not be printed until the user who sent the corresponding print job has identified himself and authenticated on the device. In practice, smart cards or PINs are often used for authentication. Depending on the device type, PINs can be specified user-specific or document-specific. In the latter variant, a PIN is set when the print job is sent. Only after this PIN has been entered on the device will the document associated with the PIN be printed out. Print jobs that have been sent but not picked up must be deleted regularly. If possible, the printers should be configured in such a way that if a wrong PIN is entered several times, the print job is automatically deleted.
 
 Another gain in security can be achieved if the document to be printed from the workstation PC encrypted transmitted to the printer and encrypted cached. Only after a successful authentication directly at the printer will the document be decrypted and printed out.
 
@@ -389,7 +389,7 @@ To be able to respond to emergencies, a distinction should be made between centr
 Decentralized components, such as printers, are often found on several floors or in different offices of a building. In general, the printer landscape should be designed so that users can easily use another printer if one printer fails.
 
 * It should be considered to provide replacement devices for local printers who have greater protection needs for availability and are connected directly to a workstation (* cold standby *). In case of failure, the defective printer could be replaced promptly against the replacement device.
-* For large copiers, printers, and multifunction devices used by multiple people, service contracts should be completed with a response time appropriate to the protection requirements.
+* For large copiers, printers, and multifunction devices used by multiple people, maintenance contracts should be completed with a response time appropriate to the protection needs.
 * A list of resellers should be kept where new equipment can be easily obtained.
 * If necessary spare parts can be stored, which are often needed. However, this only makes sense if appropriate expertise is available to replace the spare parts independently.
 3 Further information
@@ -419,9 +419,9 @@ Many devices can be retrofitted with corresponding accessories such as network c
 
  
 + Does the system support secure protocols for administration?
-For the devices to be managed from a central location, network-capable devices must support secure protocols for administration, for example, SSL / TLS in the case of a browser-based configuration.
+In order to be able to administer the devices from a central point, network-capable devices must support secure protocols for administration, for example, in a browser-based configuration, SSL / TLS.
 + Can information be stored encrypted?
-To prevent access to the data after an (unauthorized) removal of the hard disk, some devices encrypt the information on the hard disk.
+In order to prevent access to the data after an (unauthorized) removal of the hard disk, some devices encrypt the information on the hard disk.
 + Is there a possibility of authentication directly on the device (eg via password or PIN entries or chip cards) or can this function be retrofitted?
 Authentication is provided for many devices, but only for the administration in some cases in order to secure access to the configuration. However, there are devices that can secure all user access, so that information is not printed until the user authenticates to the device. This serves as protection against the fact that information transmitted to a network printer or scanned on a copier can be printed out by unauthorized persons. Such a function can also be used for cost control.
 + Are eyelets or other options available to physically protect the devices from theft?
@@ -434,7 +434,7 @@ It often happens, for example, that memory modules from printers, copiers or mul
 
  
 + Can the memory be deleted by the user after each copy?
-Many devices have memory built in, mostly in the form of hard drives. If data is stored there unencrypted, it may be read out by unauthorized persons. In addition, there is a danger that attackers will have the pages stored in the device reprinted. Some devices therefore offer functions for clearing the memory. If possible, they should be able to be set to automatically clear after each copy.
+Many devices have memory built in, mostly in the form of hard drives. If data is stored there unencrypted, it may be read out by unauthorized persons. In addition, there is a risk that attackers will have the pages stored in the device reprinted. Some devices therefore offer functions for clearing the memory. If possible, they should be able to be set to automatically clear after each copy.
 + Is it possible to delete the entire hard drive?
 For later disposal, the entire hard disk should be deleted by overwriting. This should only be possible after an appropriate deletion command has been entered by an authorized person. Alternatively, the memory should be removed and deleted separately.
 + Will information on the display be displayed?
@@ -449,7 +449,7 @@ If possible, it should be shown on the device's display if the last saved data o
 + Does the device need to be WLAN or Bluetooth enabled, or is a wired connection sufficient?
 The use of wireless technologies is associated with higher security risks than the connection via cable. Radio-based solutions therefore usually require additional security measures.
 + Does the device support the encryption of printer communication?
-If the information to be printed is transmitted via a network, it should be prevented that it can be read or changed. Therefore, network protocols should be used to support encryption of the information. An example of this is the Internet Printing Protocol (IPP) in conjunction with SSL (Secure Sockets Layer) or TLS (Transport Layer Security).
+If the information to be printed is transmitted over a network, it should be prevented that it can be read or changed. Therefore, network protocols should be used to support encryption of the information. An example of this is the Internet Printing Protocol (IPP) in conjunction with SSL (Secure Sockets Layer) or TLS (Transport Layer Security).
 + Can the device be integrated into an existing IEEE 802.1X environment?
 IEEE 802.1X enables the authentication of the terminals on the network. This protects against IT systems being operated unauthorized on the LAN.
 
@@ -459,10 +459,10 @@ IEEE 802.1X enables the authentication of the terminals on the network. This pro
 
  
 + Does the manufacturer offer regular updates and quick security patches?
-It is particularly important that the manufacturer responds promptly to known security flaws.
+It is particularly important that the manufacturer reacts promptly to known safety deficiencies.
 + Can maintenance contracts be concluded for the product?
 Often access to updates and support services of the manufacturer is only possible in conjunction with a valid maintenance contract. Can the maintenance contracts specify maximum response times for problem solving?
-A maintenance contract is only appropriate if the guaranteed reaction and recommissioning times can meet the specified availability requirements.
+A maintenance contract is only suitable if the guaranteed reaction and restart times can meet the specified availability requirements.
 + Does the dealer or manufacturer provide a technical support service (hotline) that is able to help in case of problems?
 This aspect should be part of a maintenance contract. When concluding the contract, it must be ensured that the hotline or support staff also speak the language of the people who will usually call there.
 
@@ -490,11 +490,11 @@ A printing system can fulfill the following tasks, among others:
 * Acceptance of the print job from the application,
 * Management of print jobs in a waiting list (spooling),
 * Supplementary additional information, such as separator pages, paper size or other properties,
-* Conversion into a data format understandable by the printer, such as PostScript or PCL,
+* Conversion to a data format understandable by the printer, such as PostScript or PCL,
 * Management of logical and physical printers,
 * User management and
 * Logging.
-Different operating systems favor different printing systems. Especially in heterogeneous IT landscapes, it is crucial that the printing systems are compatible with each other. Many systems provide interfaces to other printing systems. This allows, for example, a Unix system to access a printer managed by a Windows system.
+Different operating systems favor different printing systems. Especially in heterogeneous IT environments, it is crucial that the printing systems are compatible with each other. Many systems provide interfaces to other printing systems. This allows, for example, a Unix system to access a printer managed by a Windows system.
 
 Depending on the operating system, the following printing systems are the most widespread:
 
@@ -558,12 +558,12 @@ Between the individual components of a printing system, different communication 
 + SMB (Server Message Block) and
 + Appletalk or Bonjour.
 Depending on the printers used and the printing system selected, suitable protocols should be selected. Within a network as few as possible different printing protocols should be used. The decision has to be documented.
- Management also needs to share information on some printing systems. For example, the clients need to be regularly informed about the available printers and their status. Depending on the printing system, the following strategies can be followed:
+ Management also needs to share information on some printing systems. For example, the clients must be regularly informed about the available printers and their status. Depending on the printing system, the following strategies can be followed:
 
  
 + Broadcasting: Periodically, the server sends a message unsolicited to all clients in the broadcast domain.
 + Polling: The print client queries the information from the server.
-Broadcasting simplifies the administration, but is associated with further problems. If the clients and servers are in different broadcast domains, the packets do not reach all clients. In practice, problems can also occur if the print server has multiple network interfaces and sends the broadcast packets to the wrong interfaces. For the configuration a procedure has to be selected and documented.
+Broadcasting simplifies the administration, but it involves further problems. If the clients and servers are in different broadcast domains, the packets do not reach all clients. In practice, problems can also occur if the print server has multiple network interfaces and sends the broadcast packets to the wrong interfaces. For the configuration a procedure has to be selected and documented.
 
  
 * ** Communication between print server and printer **
@@ -591,7 +591,7 @@ The decisions made to build the printer landscape must be documented.
 
 ### 3.2 Literature
 
-Further information on hazards and safety measures in the area of ​​"printers, copiers and multifunction devices" can be found in the following publications, among others:
+Further information on hazards and safety measures in the area of ​​"printers, copiers and multifunctional devices" can be found in the following publications, among others:
 
 * #### [ACSD] Privacy and security in print infrastructures
 mc² management consulting GmbH, 12.2016 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/partner/161219\_mc2\_drucker\_sicherheit.pdf](https://www.allianz-fuer -cybersicherheit.de/ACS/DE/_/partner/161219_mc2_drucker_sicherheit.pdf)
@@ -609,7 +609,7 @@ mc² management consulting GmbH, 12.2016 [https://www.allianz-fuer-cybersicherhe
 
   
 
- CSE 015, V1.0, Alliance for Cybersecurity, 10.2012 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_015.html](https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_015.html)
+ CSE 015, V1.0, Alliance for Cybersecurity, 10.2012 [https://www.allianz-fuer-cybersicherheit.de/ACS/DE/\_/downloads/BSI-CS\_015.html]https:/ /www.allianz-fuer-cybersicherheit.de/ACS/DE/_/downloads/BSI-CS_015.html)
 
  
 * #### [CSE069] Secure passwords in embedded devices

@@ -6,7 +6,7 @@
 ### 2 3 Failure of a Wide Area Network (WAN)
 ### 2 4 Failure of a building
 ### 2 5 Failure of a supplier or service provider
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 ### 3.2 Standard requirements
 #### DER.4.A1 Creation of an emergency manual [Information Security Officer (ISB)]
 #### DER.4.A2 Integration of emergency management into organizational processes and processes [institutional management]

@@ -12,11 +12,11 @@
 ### 2 9 Use of unlicensed Office products
 ### 2 10 Data loss due to password protection of Office documents
 ### 2 11 Unauthorized exercise of rights in Office products
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.1.1.A1 Ensure the integrity of Office products
 #### APP.1.1.A2 Restricting Active Content [User]
 #### APP.1.1.A3 Opening documents from external sources
-#### APP.1.1.A4 Securing ongoing operation of Office products
+#### APP.1.1.A4 Securing ongoing operations of Office products
 ### 3.2 Standard requirements
 #### APP.1.1.A5 Selection of suitable office products
 #### APP.1.1.A6 Testing new versions of Office products

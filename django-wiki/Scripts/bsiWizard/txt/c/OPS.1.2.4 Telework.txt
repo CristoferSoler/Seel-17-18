@@ -76,7 +76,7 @@ All relevant aspects of teleworking MUST be regulated. For information purposes,
 
 All safety requirements that a telework computer must meet must be specified. All access and access to the institution's communication computers MUST be kept to the minimum necessary.
 
-It MUST be ensured that only authorized persons are allowed access to the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
+It MUST be ensured that only authorized persons can access the telework computers. In addition, the teleworking computer MUST be secured so that it can be used only for authorized purposes.
 
 #### OPS.1.2.4.A3 Safety requirements for the communication connection [Teleworker, IT Manager, IT Operations]
 
@@ -111,7 +111,7 @@ A regular in-house exchange of information between teleworkers, work colleagues 
 
 #### OPS.1.2.4.A9 Care and Maintenance Concept for Teleworking Places [Teleworker, IT Manager, IT Operations]
 
-For teleworking places, a special care and maintenance concept SHOULD be created. The following aspects SHOULD be regulated: contact person for the user service, maintenance appointments, remote maintenance, transport of the IT equipment and introduction of standard teleworking computers. In order for the teleworkers to remain operational, they should be named contact persons for hardware and software problems.
+For teleworking places, a special care and maintenance concept SHOULD be created. The following aspects SHOULD be regulated: contact person for the user service, maintenance appointments, remote maintenance, transport of IT equipment and introduction of standard teleworking computers. In order for the teleworkers to remain operational, they should be named contact persons for hardware and software problems.
 
 #### OPS.1.2.4.A10 Implementation of a requirement analysis for the teleworking station [Head IT, IT operation]
 
@@ -119,4 +119,4 @@ Before a teleworkstation is set up, a requirement analysis SHOULD be performed. 
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

@@ -33,7 +33,7 @@ The following specific threats and vulnerabilities are of particular importance 
 Just setting information security regulations does not guarantee that they will be respected. All employees must also be aware of the applicable regulations, in particular the officials. In many security incidents, ignoring regulations is not the sole cause of the incident, but a reason for its effectiveness. Vulnerabilities due to insufficient knowledge of regulations may compromise the confidentiality, availability and integrity of the information being processed. The fulfillment of tasks and the processing of business processes can be restricted in every respect (eg temporal, qualitative, with regard to liability).
 ### 2 2 Insufficient awareness of information security
 
-Experience shows that it is not enough just to order the implementation of certain security measures. Without an understanding of the reasons for the measures and the purpose they serve, the measures often fail or are ignored. If employees become insufficiently sensitized to information security issues, operational and implementation-related risks arise in the technical and organizational business processes. The security culture, security objectives and security strategy of the institution may be jeopardized if employees are unable to relate directly to their real world of work, unless they are taught the purpose of security measures. This leads to a lack of acceptance of security measures and deficiencies in compliance.
+Experience shows that it is not enough just to order the implementation of certain security measures. Without an understanding of the reasons for the actions and their purpose, the measures often fail or are ignored. If employees become insufficiently sensitized to information security issues, operational and implementation-related risks arise in the technical and organizational business processes. The security culture, security objectives and security strategy of the institution may be jeopardized if employees are unable to relate directly to their real world of work, unless they are taught the purpose of security measures. This leads to a lack of acceptance of security measures and deficiencies in compliance.
 
 ### 2 3 Little successful awareness-raising and training activities
 
@@ -84,7 +84,7 @@ The following requirements MUST be implemented as a priority:
 
 #### ORP.3.A1 Sensitization of Information Security Management [Supervisors, Institutional Management]
 
-Institutional leadership MUST strongly and actively support safety campaigns and training for employees. Therefore, the support of management MUST be obtained before the start of an information security awareness and training program. The management MUST be sufficiently sensitized to security issues.
+Institutional leadership MUST strongly and actively support safety campaigns and training for employees. Therefore, the support of management MUST be obtained before the start of an information security awareness and training program. The management MUST be sufficiently sensitized to safety issues.
 
 All supervisors MUST support information security by setting a good example. Managers MUST enforce safety standards and alert their employees to compliance.
 
@@ -98,7 +98,7 @@ All employees and external users MUST be instructed and sensitized in the safe h
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are in line with the state of the art in the field of awareness and training. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are in line with the state of the art in the area of ​​awareness and training. They SHOULD be implemented in principle.
 
 #### ORP.3.A4 Designing an information security awareness and training program
 
@@ -109,7 +109,7 @@ In order to sensitize the employees, a target group-oriented sensitization and t
 Awareness and training programs SHOULD be geared to the respective target groups. For this, a target group analysis SHOULD be carried out so that measures can be focused on special requirements and different backgrounds.
 
 #### ORP.3.A6 Planning and Conducting Information Security Education and Training
-All employees SHOULD be trained according to their responsibilities and responsibilities for information security issues. It SHOULD therefore provide awareness-raising and training measures to provide employees with all the information and skills needed to implement safety regulations and policies in place within the institution. For this reason, the awareness and training content SHOULD be structured and planned according to the target groups, tasks and responsibilities of the employees. The planned awareness-raising and training measures SHOULD be implemented in an appropriate manner according to this plan. Awareness and training programs SHOULD be regularly reviewed for up-to-dateness and adapted or further developed as the need arises.
+All employees SHOULD be trained according to their responsibilities and responsibilities for information security issues. It SHOULD therefore provide awareness-raising and training activities that provide employees with all the information and skills necessary to implement safety regulations and policies in place within the institution. For this reason, the awareness and training content SHOULD be structured and planned according to the target groups, tasks and responsibilities of the employees. The planned awareness-raising and training measures SHOULD be implemented in an appropriate manner according to this plan. Awareness and training programs SHOULD be regularly reviewed for up-to-dateness and adapted or further developed as the need arises.
 
 #### ORP.3.A7 Training on how to proceed according to IT-Grundschutz
 
@@ -121,7 +121,7 @@ The information security learning outcomes SHOULD be measured and evaluated by t
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.3.A9 Specialized Training of Exposed Persons and Institutions (CIA)
 

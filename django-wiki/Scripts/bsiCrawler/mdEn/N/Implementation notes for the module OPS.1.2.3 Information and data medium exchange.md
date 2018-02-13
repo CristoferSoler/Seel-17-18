@@ -25,7 +25,7 @@ The selection of suitable data media must be coordinated with the communication 
 
 **Implementation**
 
-In order to prevent security problems in the exchange of information, appropriate security measures should be established which are appropriate for the respective protection needs, types of data and transport routes. In order to minimize any possible damage caused by improper handling of the data carriers during transport, a suitable method of dispatch should be specified which, depending on the data carrier used (eg documents, CD-ROM, magnetic tape), may well be different.
+In order to prevent security problems in the exchange of information, appropriate security measures should be established, which are appropriate for the respective protection needs, types of data and transport routes. In order to minimize any possible damage caused by improper handling of the data carriers during transport, a suitable method of dispatch should be specified which, depending on the data carrier used (eg documents, CD-ROM, magnetic tape), may well be different.
 
 **Business**
 
@@ -33,7 +33,7 @@ When carrying out the information and data medium exchange, a number of measures
 
 ** ** segregation
 
-If data carriers are being exchanged with different communication partners, these data carriers should be physically deleted before they are used again in order to avoid transmitting information to the wrong recipient.
+If data carriers are being exchanged with different communication partners, these data carriers should be physically deleted before they are used again in order to prevent the transfer of information to the wrong recipient.
 
 ** Emergency Preparedness **
 
@@ -49,11 +49,11 @@ The following are specific implementation notes in the section "Information and 
 The following measures should be implemented as a priority:
 
 #### OPS.1.2.3.M1 Definition of permitted communication partners [Head of Organization]
-If information is to be transmitted to a communication partner outside of their own institution, it must be ensured that the recipient has the necessary authorizations to receive and process this information. Similarly, the identity of the communication partner must be verified before confidential information is disclosed. If information is exchanged between several communicating bodies, then it should be clear to all those involved who also received or will receive this information. In order to meet the above criteria, it must be determined which communication partners are allowed to receive which information. This requires that all information be classified according to its strategic importance to the institution.
+If information is to be transmitted to a communication partner outside of their own institution, it must be ensured that the recipient has the necessary authorizations to receive and process this information. Similarly, the identity of the communication partner must be verified before confidential information is disclosed. If information is exchanged between several communicating bodies, it should be clear to all those involved who has also received or will receive this information. In order to meet the above criteria, it is necessary to specify which communication partners may receive which information. This requires that all information be classified according to its strategic importance to the institution.
 
 #### OPS.1.2.3.M2 Regulation of Information Exchange [Head of Organization]
 
-Information can come in different forms. In most cases, in the field of IT-Grundschutz, paper-based information or electronically recorded information is considered. In general, all information needs to be adequately protected, from thoughts and ideas to written and printed presentations, electronic messages, voice, video or video recordings.
+Information can come in different forms. In most cases, in the field of IT-Grundschutz, paper-based information or electronically recorded information is considered. In general, all information needs to be adequately protected, from thoughts and ideas, through written and printed presentations, to electronic messages, voice, video or video recordings.
 
 If information is to be exchanged between two or more communication partners, a number of different aspects must be observed in order to protect it. For any type of information exchange, it must first be clarified
 
@@ -88,7 +88,7 @@ In addition, the employees involved in the exchange of information and data carr
 
 Before reading any digital media that was in the mailbox, even though it was not expected, you should ask the specified senders if they have actually sent the media (see also OPS1.1.4 Malware Protection). The same applies to e-mail or other communication. For unknown consignors or unexpected deliveries, the safety management should be informed if no other regulations have been adopted by the management level for this case.
 
-If certain IT-based procedures are used to protect the data during the exchange (such as encryption or checksum procedures), appropriate staff should be adequately trained in the handling of such procedures.
+If certain IT-based procedures are used to protect the data during the exchange (such as encryption or checksum procedures), the appropriate staff must be adequately trained in the handling of these procedures.
 
 #### OPS.1.2.3.M4 Malware Protection [User]
 
@@ -121,7 +121,7 @@ In a regular exchange of information with external partners, the framework condi
 * * how the security level established in the partner's information network is demonstrated, for example by means of an audit,
 * how security incidents should be reported to the partners,
 * how disputes about information handling are escalated,
-* how to get early warnings about potential security issues
+* how early warnings about potential security issues are exchanged,
 * which legal conditions are to be considered.
 
 In the event of security incidents or emergencies, the normal form of communication between the partners may be disrupted. It should be clarified whether in such cases the exchange of information should continue. If so, appropriate emergency plans should be developed together.
@@ -180,11 +180,11 @@ As a rule, the transmitted data are also worth protecting for the recipient. Ana
 
 The use of non-erasable data carriers (such as WORMs) is to be waived for the purpose of exchanging data if there are other non-recipient information that can not be deleted.
 
-#### OPS.1.2.3.M9 Eliminating Remaining Information in Files Before Redistributing [User]
+#### OPS.1.2.3.M9 Eliminate Remaining Information in Files before Submitting [User]
 
 Before sending a file via e-mail, IT networks or media exchange, or before publishing a file to a web server, it should be checked to see if it contains any residual information that is not intended for publication. Such residual information can be of different origin and, accordingly, the actions to be taken against it can be different. The most common causes of such residual information are described below.
 
-Generally, standard software such as For example, for word processing or spreadsheets, which additional information is stored in files created with it. Some of this information is saved with, others without the knowledge of the user.
+Generally, standard software such as For example, to check for word processing or spreadsheets, which additional information is stored in files created with it. Some of this information is saved with, others without the knowledge of the user.
 
 Before passing on files, they should at least be randomly checked for unwanted additional information. This should be done using a different editor than the one used to create the file.
 
@@ -198,7 +198,7 @@ In order to prevent the disclosure of information that was originally introduced
 
 If a file is deleted in the normal way, the operating system marks it as deleted in the file system only, without removing the actual contents. When distributing data carriers, this must be taken into account accordingly, since otherwise z. For example, deleted intermediate versions or temporary files could be recovered by the recipient. In addition, many applications have the problem that the respective program when editing a file does not consistently overwrite the used memory space with application data, so that gaps can arise that may also contain old data.
 
-So sensitive information files should not be edited directly on a redistributable. Instead, the final version of the file should be copied to a volume deleted before and after use before discarding, in accordance with OPS.1.2.3.M8 Physical Disk Erase.
+So sensitive information files should not be edited directly on a redistributable. Instead, the final version of the file should be copied to a volume deleted before and after use before discarding, as per OPS.1.2.3.M8 Physical Disk Erase.
 
 In addition, special features of the file system used must be taken into account. The Windows file system NTFS, for example, stores the contents of very small files (up to about 700 bytes) directly in the NTFS management structure, the so-called Master File Table (MFT). Files of this size are often configuration settings or meta-information. If these files grow later, the original contents in the MFT may be preserved. In addition, NTFS may store information in Alternate Data Streams (ADS) that are not directly visible. In the case of sensitive information, disclosure is normally undesirable. ADS can be viewed and removed with special tools, or the file can be copied to a file system that does not support ADS (such as FAT32 or exFAT).
 
@@ -212,7 +212,7 @@ When editing files, it may be useful to use change markers. Since these can be h
 
 ** versioning **
 
-In virtually all current Office suites, it is possible to save different versions of a document in a ** file. This serves to be able to resort to earlier revision statuses if necessary. But this can very quickly lead to huge files, eg. B. if graphics are included. Under no circumstances should the option "Automatically save version when closing" be selected, since the complete previous version is additionally saved here each time a file is closed.
+In virtually all current Office suites, it is possible to save different versions of a document in a ** file. This serves to be able to resort to earlier revision statuses if necessary. But this can very quickly lead to huge files, eg. B. if graphics are included. Under no circumstances should the option "Save version automatically when closing" be selected, as the complete previous version is additionally saved here each time a file is closed.
 
 ** File properties **
 As file properties or file info, information is stored in the file to help later find files. Depending on the application, information such as titles, directory structures, version levels, editors (not just the undersigned), comments, processing time, last print date, document names and descriptions may be included. Some of this information is created by the programs themselves and can not be influenced by the editor. Other information must be entered manually. Before passing on a file to external users, check which additional information of this type contains the file.
@@ -258,7 +258,7 @@ With data medium exchange, information can be transmitted more or less reliably 
 * Physical medium:
  When exchanging the media, it is of course necessary that the ** physical media ** of the receiver and transmitter system coincide. However, mechanical equivalence is not enough, because the mismatch of parameters such as speed in bands can lead to problems.
 * Character code (eg ASCII or EBCDIC):
- If the sender and receiver systems match the ** character code ** used, individual sectors or blocks in plain text that can be distributed unrelated on the data carrier can be read using physical reading. If the character codes used do not match, the transmitted data will be misinterpreted.
+ If the sender and receiver system match the ** character code ** used, individual sectors or blocks in plain text that can be distributed unrelated on the data carrier can be read using physical reading. If the character codes used do not match, the transmitted data will be misinterpreted.
 * Formatting the operating system or file system of media:
  In addition, if the sender and receiver systems have the same operating and file system for data medium exchange, or if the receiver operating system prefers to read formatting of other operating systems (eg not all Unix operating systems can read in NTFS data carriers), then all files can , as they were at the sender, be restored. This is sufficient for information that is not subject to any further formatting as done by most application programs (eg word processors).
 * Application software:
@@ -309,14 +309,14 @@ The use of cryptographic security mechanisms (eg encryption, digital signature) 
 * Key destruction: Keys that are no longer required (eg keys whose validity period has expired) must be securely deleted or destroyed (eg by multiple deletions / overwrites and / or mechanical destruction of the data medium).
 #### OPS.1.2.3.M14 Disk Management [Head of Organization, IT Operations] (CIA)
 
-For higher protection needs, a disk management should be set up to ensure access to disk to the required extent and within a reasonable time. This requires a regular management of the data carriers, which requires uniform labeling and inventory management. Furthermore, the proper handling and storage of the data carriers, their proper use and transport and, last but not least, the deletion or destruction of the data carriers must also be ensured in the context of data carrier management. For analog media, most institutions have a well-established and proven policy for their administrations, namely the classic file management. Therefore, in this measure the digital data carriers are placed in the foreground, but the individual recommendations apply mutatis mutandis to all types of data carriers.
+For higher protection needs, a disk management should be set up to ensure access to disk to the required extent and within a reasonable time. This requires a regular management of the data carriers, which requires uniform labeling and inventory management. Furthermore, in the context of data carrier management, the proper handling and storage of the data carriers, their proper use and transport and, last but not least, the deletion or destruction of the data carriers must be ensured. For analog media, most institutions have a well-established and proven policy for their administrations, namely the classic file management. Therefore, in this measure the digital data carriers are placed in the foreground, but the individual recommendations apply mutatis mutandis to all types of data carriers.
 ** Inventories ** provide fast and targeted access to media. Inventories, for example, provide information about repository, retention period, authorized recipients.
 
 The external identification of data media enables their rapid identification. However, the marking should not allow unauthorized persons to identify the content (eg the marking of a magnetic tape with the keyword "telephone charges") in order to make it more difficult to misuse. A defined structure of identification features (eg date, filing structure, serial number) facilitates the assignment to stock records.
 
 For the proper handling of data carriers, the manufacturer's instructions, which can usually be found on the packaging, are to be used. With regard to the storage of data storage devices on the one hand measures for storage (magnetic field / dust-proof, climate-friendly) and on the other hand measures to prevent unauthorized access (suitable containers, cabinets, rooms) to make.
 
-The shipping or transport of data media must be carried out in such a way that damage to the data carrier can be excluded as possible (eg magnetic tape mailing, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport methods (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion. If no tools are available for this, the data carrier should at least be formatted. It should be ensured that it is not possible to reverse the command with the underlying operating system.
+The shipping or transport of data media must be carried out in such a way that damage to the data carrier can be excluded as possible (eg magnetic tape mailing, air-cushioned envelopes). The packaging of the data carrier must be aligned with its need for protection (eg by means of lockable transport containers). Shipment or transport types (eg courier transport) must be defined in the same way as the proof of delivery procedure (eg accompanying note, dispatch notes) and receipt at the consignee (eg acknowledgment of receipt). The data carrier must not contain any "residual data" beyond the data to be sent. This can be achieved by physical deletion. If no tools are available for this, the data carrier should at least be formatted. It should be ensured that it is not possible to reverse the command with the underlying operating system.
 
 It should also be noted that a backup copy is created before the delivery of important data carriers. ,
 
@@ -330,7 +330,7 @@ A regulated procedure for the deletion or destruction of data carriers prevents 
 
 For information with increased protection needs, it should be examined how these can be adequately protected during a data medium exchange. For this purpose, a shipping method and packaging appropriate to the protection needs must be selected by the shipper. For example, one way to send information that requires high-security information is to use trusted couriers. Basically, the data should be encrypted.
 
-In addition to the implementation notes outlined in OPS.1.2.3.M14 Disk Management, the shipping packaging of data carriers should be such that any manipulation of the data media can be detected by changes to the packaging.
+In addition to the implementation notes presented in OPS.1.2.3.M14 Disk Management, the shipping packaging of data carriers should be such that manipulation of the data carriers can be detected by changes to the packaging.
 
 Possible measures are the use of
 

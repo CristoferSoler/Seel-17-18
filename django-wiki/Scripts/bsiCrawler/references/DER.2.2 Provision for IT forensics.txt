@@ -3,7 +3,7 @@
 ### 1.3 Delimitation
 ### 2 1 Infringement of legal framework
 ### 2 2 Loss of evidence through incorrect or incomplete preservation of evidence
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
 #### DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
 #### DER.2.2.A3 Preselection of forensic service providers

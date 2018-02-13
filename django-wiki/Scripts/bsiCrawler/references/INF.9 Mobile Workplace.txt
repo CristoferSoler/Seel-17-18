@@ -10,7 +10,7 @@
 ### 2 7 Confidentiality loss of sensitive information
 ### 2 8 Theft or loss of data carriers or documents
 ### 2 9 Lack of security awareness and carelessness in handling information
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.9.A1 Appropriate selection and use of a mobile workstation [supervisor, user]
 #### INF.9.A2 Arrangements for mobile workplaces [Head IT, user]
 #### INF.9.A3 Access and Access Protection [Staff]

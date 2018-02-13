@@ -7,7 +7,7 @@
 
 A file server (or file server) is a server in a network that centrally provides files for all authorized users or clients. The data can be used by authorized users at the same time, without this z. B. to removable media or to distribute by e-mail. By keeping the data central, the data can be structured and provided in different file versions. For file servers, rights can be assigned centrally and data backup can be done centrally.
 
-A file server usually manages mass storage devices that are connected to it via interfaces such as SCSI (Small Computer System Interface) or SAS (Serial Attached SCSI). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (Host Bus Adapter) in the server and SAN switches.
+A file server usually manages mass storage devices connected to it via interfaces such as Small Computer System Interface (SCSI) or Serial Attached SCSI (SAS). The memories are located either directly in the housing of the file server or are connected externally. The latter is often referred to as Directly Attached Storage (DAS). A file server can work on conventional server hardware or a dedicated appliance, such as a server. As a Network Attached Storage (NAS) operated. In the case of large volumes of data, central storage area networks (SANs) can often be connected via HBA (Host Bus Adapter) in the server and SAN switches.
 
 ### 1.2 Objective
 
@@ -15,7 +15,7 @@ This module describes the specific threats for a file server and the resulting r
 
 ### 1.3 Delimitation
 
-This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server module and in the corresponding operating system-specific components of the IT systems layer. For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
+This module contains basic requirements that must be observed and fulfilled when operating file servers. General and operating system-specific aspects of a server are not the subject of the present module, but are dealt with in the SYS1.1 General Server block and in the corresponding operating system-specific components of the IT systems layer, for example: For example, SYS.1.3 Unix Server or SYS.1.2.2 Windows Server 2012. Furthermore, no requirements for storage systems or storage networks are described; these can be found in the SYS.1.8 Storage Systems block. Also, it does not deal with dedicated services that can be used to run a file server, e.g. B. samba.
 
 2 risk situation
 -----------------
@@ -28,7 +28,7 @@ If a file server fails, the entire information network can be affected and thus 
 
 ### 2 2 Inadequate dimensioning of the file server
 
-If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means it is no longer possible to understand where data is stored and who owns the data.
+If the line connection or storage capacity of the file server is insufficiently dimensioned, access times may increase or memory bottlenecks occur. For example, there is a risk that employees will be frustrated by the lengthy wait times and begin storing data locally. This means that it is no longer possible to understand where data is stored and who owns the data.
 
 ### 2 3 Inadequate review of dropped files
 If a file server is insufficiently included in the concept of protection against malicious programs of the institution, there is a risk that attackers unnoticed place malicious software on the file server. As a result, the data on the file server can be viewed unauthorized or manipulated. But there are also security risks for all devices and applications that access the file server's data. For example, malware can quickly spread throughout the institution.
@@ -78,11 +78,11 @@ All data MUST be scanned for malware by the antivirus solution before it is plac
 
 #### APP.3.3.A4 Regular backup
 
-All data stored on the file server MUST be backed up regularly. For this purpose, a data backup concept MUST be created, which defines among other things, in which intervals the backup should be performed. In addition, a backup MUST be performed if something is installed or reconfigured on the file server. All secured data MUST be restored at any time. The maximum recovery time SHOULD be collected and taken into account in the data backup concept.
+All data stored on the file server MUST be backed up regularly. For this, a data backup concept MUST be created, which among other things defines in which intervals the backup should be carried out. In addition, a backup MUST be performed if something is installed or reconfigured on the file server. All secured data MUST be restored at any time. The maximum recovery time SHOULD be collected and taken into account in the data backup concept.
 
 #### APP.3.3.A5 Restrictive allocation of rights
 
-Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can only access the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
+Access rights to the files managed by the file server MUST be granted restrictively. It MUST be ensured that each user can access only the data he needs to perform his tasks. System directories and files MUST NOT be shared with unauthorized users.
 
 It MUST be checked on a regular basis to see if the access permissions are still up to date and comply with the security policy. In addition, there must be a defined process to re-establish, change, or revoke permissions. All access rights MUST be traceable documented.
 
@@ -124,7 +124,7 @@ It SHOULD be considered setting up Quotas. Alternatively, mechanisms of the file
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.3.3.A12 Encryption of the data (CI)
 

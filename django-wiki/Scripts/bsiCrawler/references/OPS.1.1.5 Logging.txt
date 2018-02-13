@@ -11,7 +11,7 @@
 ### 2 8 Insufficiently sized logging infrastructure
 ### 3.1 Basic Requirements
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
-#### OPS.1.1.5.A2 Definition of roles and responsibilities [Head IT]
+#### OPS.1.1.5.A2 Definition of Roles and Responsibilities [Head IT]
 #### OPS.1.1.5.A3 Configuration of logging at system and network level
 #### OPS.1.1.5.A4 Time synchronization of the IT systems
 #### OPS.1.1.5.A5 Compliance with legal framework [Information Security Officer (ISB)]

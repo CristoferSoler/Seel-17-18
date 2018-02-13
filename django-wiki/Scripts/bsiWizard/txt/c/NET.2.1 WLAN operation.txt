@@ -15,18 +15,18 @@ This module aims to systematically show how WLANs can be safely set up and opera
 
 ### 1.3 Delimitation
 
-The module contains basic requirements that must be observed and fulfilled when setting up and operating WLANs. Requirements for secure use of WLANs are not the subject of this module. Secure use of WLANs is covered in the NET.2.2 * WLAN usage * block. Likewise, the operation of hotspots (see NET.2.3 * Operation of hotspots *) is not discussed here.
+The module contains basic requirements that must be observed and fulfilled when setting up and operating WLANs. Requirements for secure use of WLANs are not the subject of this module. Secure use of WLANs is covered in the NET.2.2 * WLAN Usage * block. Likewise, the operation of hotspots (see NET.2.3 * Operation of hotspots *) is not discussed here.
 
-WLANs can be operated in two different modes according to the needs of an operator and the hardware equipment available. In ad hoc mode, two or more mobile devices equipped with a wireless network card communicate directly with each other. Since WLANs in ad-hoc mode can set up and configure autonomously, ie without fixed infrastructure, and thus establish a fully meshed parallel network infrastructure, the ad hoc mode is unsuitable in an environment to be protected. This will not be considered further below. In most cases, WLANs operate in infrastructure mode, which means H. the communication of the clients and the connection to wired LAN segments takes place via the access point.
+WLANs can be operated in two different modes according to the needs of an operator and the hardware equipment available. In ad hoc mode, two or more mobile devices equipped with a wireless network card communicate directly with each other. Since WLANs in ad-hoc mode can build up and configure independently, ie without fixed infrastructure, and thus establish a fully meshed parallel network infrastructure, the ad hoc mode is unsuitable in an environment to be protected. This will not be considered further below. In most cases, WLANs operate in infrastructure mode, which means H. the communication of the clients and the connection to wired LAN segments takes place via the access point.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in WLAN operation:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​WLAN operation:
 
 ### 2 1 Failure or malfunction of a wireless network
 
-In radio networks, information is transmitted by means of electromagnetic radio waves. If other electromagnetic sources in the same frequency spectrum emit energy, they can interfere with wireless communication and in extreme cases prevent the operation of the WLAN. This can be caused by other radio systems and devices, such as Bluetooth, microwave ovens or other wireless networks. In addition, denial-of-service attacks are possible. For example, sending certain control and management signals repeatedly may cause the wireless network to become unavailable.
+In radio networks, information is transmitted by means of electromagnetic radio waves. If other electromagnetic sources radiate energy in the same frequency spectrum, they can interfere with wireless communication and in extreme cases prevent the operation of the WLAN. This can be caused by other radio systems and devices, such as Bluetooth, microwave ovens or other wireless networks. In addition, denial-of-service attacks are possible. For example, sending certain control and management signals repeatedly may cause the wireless network to become unavailable.
 
 ### 2 2 Missing or inadequate planning of the WLAN deployment
 
@@ -59,7 +59,7 @@ An attacker can pretend to be part of the WLAN infrastructure by installing thei
 
 ### 2 9 Unprotected LAN access at the access point
 
-If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface but do not consider the Ethernet connection further.
+If access points are visible and mounted without physical protection, an attacker can switch between the access points and the switch infrastructure to monitor all network traffic. Even if the communication with WPA2 is encrypted, this poses a threat because these methods only secure the air interface, but do not consider the Ethernet connection further.
 
 ### 2 10 hardware damage
 
@@ -80,7 +80,7 @@ The following requirements MUST be implemented as a priority:
 
 #### NET.2.1.A1 Definition of a strategy for the use of WLANs [Head IT]
 
-Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and determined in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
+Before WLANs are used in an institution, it MUST be determined which general strategy the institution adopts with regard to WLAN usage. In particular, it MUST be clarified and stipulated in which organizational units, for which applications and for what purpose WLANs are used and what information may be transmitted here. Likewise MUST be determined in which spatial areas WLANs are to be built.
 In addition MUST be determined in the planning phase, who is responsible for the administration of different WLAN components, which interfaces there are between the persons involved in the operation, and when what information must be exchanged between the responsible.
 
 #### NET.2.1.A2 Selection of a suitable WLAN standard [planner]
@@ -154,10 +154,10 @@ For all components of the WLAN infrastructure (access points, distribution syste
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### NET.2.1.A15 Using a VPN to Secure WLANs (CI)
-With increased protection requirements, a VPN SHOULD be used to additionally secure communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
+With increased protection requirements, a VPN SHOULD be used to additionally secure the communication via the WLAN infrastructure. Further information can be found in the module NET.3.3 * VPN *.
 
 #### NET.2.1.A16 Additional protection for the connection of WLANs to a LAN (CIA)
 

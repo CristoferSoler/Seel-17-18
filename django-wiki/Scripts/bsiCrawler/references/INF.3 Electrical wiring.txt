@@ -4,11 +4,11 @@
 ### 2 1 Cable fire
 ### 2 2 Inadequate dimensioning of electrotechnical cabling
 ### 2 3 Insufficient documentation of the wiring
-### 2 4 Insufficient protected distributors
+### 2 4 Inadequate protected distributors
 ### 2 5 Line damage
 ### 2 6 Voltage fluctuations and overvoltage or undervoltage
 ### 2 7 Use of insufficient power strips
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.3.A1 Selection of suitable cable types
 #### INF.3.A2 Planning the cable management [Head IT]
 #### INF.3.A3 Professional installation

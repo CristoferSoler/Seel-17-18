@@ -7,7 +7,7 @@
 ### 2 4 Flying wiring
 ### 2 5 Theft
 ### 2 6 Confidentiality loss of sensitive information
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.10.A1 Secure use of meeting, event and training rooms [Head of IT, Building Services]
 #### INF.10.A2 Supervision of visitors [Staff]
 #### INF.10.A3 Closed windows and doors [Staff]

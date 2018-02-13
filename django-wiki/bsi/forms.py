@@ -152,8 +152,7 @@ class LoginForm(forms.Form):
 
         # banned or not activated
         if user != None and not user.is_active:
-            raise forms.ValidationError("Your account is not active yet. Please checkout your mails \n"
-                                        "or you are banned form the platform.")
+            raise forms.ValidationError("Your account is either not activated yet or banned. Please check your mails.")
 
         return self.cleaned_data
 

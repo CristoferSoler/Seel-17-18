@@ -11,7 +11,7 @@ Active Directory is mainly used in IT networks with predominantly Microsoft comp
 
 ### 1.2 Objective
 
-This module aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
+This building block aims to secure Active Directory in the regular operation of an institution (agency or company) that uses ADS to manage its infrastructure of Windows systems (client and server).
 
 ### 1.3 Delimitation
 
@@ -125,7 +125,7 @@ The number of Active Directory service administrators and data administrators MU
 The default account "Administrator" SHOULD be renamed and an unprivileged account named "Administrator" SHOULD be created. Everyday, non-administrative tasks MUST be done with unprivileged user accounts.
 
 It MUST be ensured that the administration of service administrator accounts is done exclusively by members of the service administrator group. The group "Account Operators" SHOULD be empty.
-Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Organization Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
+Administrators SHOULD only be assigned to the Schema Admins group temporarily for the duration of the schema changes. For the groups "Enterprise Admins" and "Domain Admins" for the administration of the root domain, a four-eye-principle SHOULD be established.
 
 The workstations for the administration of Active Directory MUST be adequately secured. For remote administration of the domain controllers, the traffic MUST be properly encrypted.
 
@@ -151,7 +151,7 @@ In the environment of the Active Directory STRICTLY the authentication protocol 
 
 #### APP.2.2.A10 Secure use of DNS for Active Directory
 
-Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be allowed by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
+Integrated DNS zones or secure dynamic update of DNS data SHOULD be used to prevent DNS client queries from unauthorized systems. The access to the configuration data of the DNS server SHOULD only be permitted by administrative accounts. The DNS cache on the DNS servers SHOULD be protected against unauthorized changes. Access to the DNS service of the domain controllers SHOULD be limited to the necessary extent. Network activities related to DNS requests SHOULD be monitored. Access to DNS data in Active Directory SHOULD be restricted to administrators using ACLs.
 
 Secondary DNS zones SHOULD be avoided. At a minimum, the zone file SHOULD be protected from unauthorized access.
 
@@ -163,14 +163,14 @@ The Active Directory infrastructure SHOULD be monitored and logged based on nati
 
 #### APP.2.2.A12 Data backup for domain controllers
 
-There SHOULD exist a domain controller backup and restore policy. The backup software used SHOULD be explicitly released by the manufacturer for the backup of domain controllers. For the domain controllers SHOULD be set up a separate backup account with service administrator rights. The number of members of the group "Backup Operators" SHOULD be limited to the necessary level. Access to the AdminSDHolder object SHOULD be specially protected to protect permissions.
+There SHOULD exist a domain controller backup and restore policy. The backup software used SHOULD be explicitly released by the manufacturer for the backup of domain controllers. A separate data backup account with service administrator rights SHOULD be set up for the domain controllers. The number of members of the group "Backup Operators" SHOULD be limited to the necessary level. Access to the AdminSDHolder object SHOULD be specially protected to protect permissions.
 The data of the domain controllers SHOULD be backed up at regular intervals. A method should be used that largely avoids obsolete objects.
 
 The backup media SHOULD be stored in a suitable location. The correct procedure and the re-loading of data backups of the domain controllers SHOULD be checked at regular intervals.
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.2.2.A13 Two-Factor Authentication (CIA)
 
@@ -182,4 +182,4 @@ The administration of Active Directory SHOULD be restricted to dedicated adminis
 
 #### APP.2.2.A15 Separation of administration and production environment (CIA)
 
-Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust in the direction of the production forest.
+Particularly critical systems, such as domain controllers and domain administration systems, SHOULD be spun off into their own forest, which has a one-sided trust towards the production forest.

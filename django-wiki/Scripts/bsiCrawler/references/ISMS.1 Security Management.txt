@@ -10,7 +10,7 @@
 ### 2 7 Breach of legal regulations and contractual agreements
 ### 2 8 Business disruption due to security incidents
 ### 2 9 Inefficient use of resources due to inadequate safety management
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ISMS.1.A1 Assumption of overall responsibility for information security by the management level [Institutional Management]
 #### ISMS.1.A2 Definition of security objectives and strategy [Institutional Management]
 #### ISMS.1.A3 Creation of an information security guideline [Head of Institution]

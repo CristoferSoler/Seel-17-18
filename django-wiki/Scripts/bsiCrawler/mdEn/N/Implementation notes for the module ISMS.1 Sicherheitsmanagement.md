@@ -13,7 +13,7 @@ A functioning security management must be embedded in the existing management st
 
 In the context of security management, a series of measures have to be implemented, beginning with the conception, through the development of suitable organizational structures, up to the regular revision. The steps to be taken and the actions to follow in each step are listed below. One of the cornerstones for achieving an adequate level of security is that the management level is behind the security objectives and aware of its responsibility for information security. The management level must initiate, control and monitor the security process so that it is implemented in the organization in all areas (see ISMS.1.M1 Assumption of overall responsibility for information security by the management level).
 
-Furthermore, a continuous security process must be established and a security strategy appropriate for the respective institution must be defined (see ISMS.1.M2 Definition of the security objectives and strategy). As with all other security questions, the management level must appoint a person as the main responsible person (see ISMS.1.M4 Appointment of an Information Security Officer). It is responsible for setting up and maintaining an appropriate information security organizational structure (see ISMS.1.M6 Building an Appropriate Information Security Organizational Structure). As one of the first actions, an information security guideline should be developed (see ISMS.1.M3, Guidance on Information Security).
+Furthermore, a continuous security process has to be established and a security strategy suitable for the respective institution has to be defined (see ISMS.1.M2 Definition of security objectives and strategy). As with all other security questions, the management level must designate a person as the main responsible person (see ISMS.1.M4 Appointment of an Information Security Officer). It is responsible for setting up and maintaining an appropriate information security organizational structure (see ISMS.1.M6 Building an Appropriate Information Security Organizational Structure). As one of the first actions, an information security guideline should be developed (see ISMS.1.M3, Guidance on Information Security).
 
 Information security must be practiced in all areas of the institution (see ISMS.1.M9 Integrating Information Security into Organization-wide Processes and Processes). In addition to the elaboration of a security concept (see ISMS.1.M10 Creation of a security concept), this also includes the integration of the employees in the security process (see ISMS.1.M8 Integration of the employees in the security process) as well as the creation of target group-oriented security policies (see ISMS. 1.M14 Creation of target group oriented security policies).
 
@@ -46,7 +46,7 @@ Although the management level is responsible for achieving the security objectiv
 * Define responsibilities
  The authorities designate the information security staff and equip them with the necessary skills and resources.
 * Steer and monitor
- The management level must actively initiate, steer and monitor the security process. To do this, management must be aware of the impact of security incidents on business operations, set security goals, and create framework conditions that will enable them to achieve those goals.
+ The management level must actively initiate, direct and monitor the security process. To do this, management must be aware of the impact of security incidents on business operations, set security goals, and create framework conditions that will enable them to achieve those goals.
 * Set reasonable goals
  Absolute information security does not exist. Therefore, it is important to set the security goals so that they are achievable on the one hand with a reasonable effort (staff, time, financial resources) and on the other hand the security risks are reduced to an acceptable level.
 * Role model function
@@ -63,16 +63,16 @@ The security objectives should be carefully determined at the beginning of each 
 
 When implementing security measures, a compromise between cost and effort usually has to be found. It should therefore be transparent which information and business processes contribute to the performance of the task and what value is assigned to them in order to formulate appropriate security goals.
 
-The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the consultations.
+The security objectives must be borne and held responsible by the management of the company or the authorities. They should be developed and documented by the information security management team with the involvement of senior management. Depending on the organizational structure, it is advisable to include the heads of larger business units (eg department heads or area managers) in the deliberations.
 
-A detailed description of how and in which depth the security strategy and objectives should be recorded can be found in the BSI standard 100-2 Approach to IT-Grundschutz.
+A detailed description of how and in which depth the security strategy and objectives should be recorded can be found in the BSI Standard 100-2 Approach to IT-Grundschutz.
 Security objectives and strategy need to be reviewed regularly to see if they are up to date and appropriate. In particular, changes in basic conditions, business processes or the IT environment, the security objectives and strategy must be reviewed and possibly adjusted.
 
 The security process can only be successful in the long term if the effectiveness and efficiency of the security strategy is regularly reviewed by senior management. The resulting improvements go into the adaptation of the security process.
 
 #### ISMS.1.M3 Creation of an information security guideline [Head of Institution]
 
-The security strategy messages need to be summarized in an information security guideline to document the security objectives to be followed and the desired level of security for all employees. With the security guideline, the public authorities / management commit themselves visibly to their responsibility for information security.
+Security Policy Guidance must be summarized in an information security guideline to document the security objectives to be followed and the desired level of security for all employees. With the security guideline, the public authorities / management commit themselves visibly to their responsibility for information security.
 
 When compiling the information security guideline, the following points should be noted:
 
@@ -113,12 +113,12 @@ In any institution, regardless of size, type or industry, a person must be desig
 * co-ordinate the creation of the security concept, the emergency preparedness concept and other sub-concepts and system security policies, as well as adopting further information security policies and regulations;
 * prepare the implementation plan for the security measures and initiate and verify their implementation,
 * to report to the management level and the IS management team on the status quo of information security,
-* coordinate security-related projects and ensure the flow of information between area IT, project and IT system security officers,
+* coordinate security-related projects and ensure the flow of information between area IT, project and IT system security officers
 * to investigate security-related incidents as well
 * To initiate and control awareness-raising and training on information security.
 The Information Security Officer must be involved in all major projects that have a significant impact on information processing, as well as in the introduction of new applications and IT systems, to ensure that security-relevant aspects are adequately addressed. These include z. For example, the procurement of IT systems or the design of IT-based business processes.
 
-The Information Security Officer must be able to report directly to the senior management if necessary. To ensure this, it is advisable to set up this role as a staff unit.
+The Information Security Officer must have the opportunity to report directly to senior management when needed. To ensure this, it is advisable to set up this role as a staff unit.
 In small institutions, the function of information security officer can also be performed by a qualified employee, among other tasks. The decisive factor is that the information security officer is given sufficient time for his tasks. Especially when setting up the security process for the first time, sufficient time resources must be planned for this purpose. Also, when planning the information security organization, a qualified representative of the information security officer must be named.
 
 ** Information Security Officer Selection **
@@ -131,13 +131,13 @@ The Information Security Officer must be adequately qualified and have sufficien
 * Ability to work independently
 * Assertiveness
 * Experience in project management
-#### ISMS.1.M5 Contract design when ordering an external information security officer [Institutional Management]
+#### ISMS.1.M5 Contract drafting when ordering an external information security officer [institutional director]
 
 If an external information security officer is appointed, the following instructions should be observed.
 
 In particular, in small companies or public authorities, it may be appropriate not to fill the role of information security officer by a separate employee, but to use the services of an external information security officer. To do this, you must first select a suitable, qualified information security expert. Information about the necessary qualifications, the function and the tasks of an information security officer can be found in the BSI Standard 100-2 and in the action ISMS.1.M4 Appointment of an Information Security Officer.
 
-Before appointing an external information security officer, a contract must be concluded between the service provider and his own institution, in which the tasks of the external information security officer and the mutual rights and obligations must be regulated as precisely as possible. It is important to ensure that the contract includes a suitable confidentiality agreement. The assignment of an external information security officer is thus a special form of outsourcing.
+Before appointing an external information security officer, a contract must be concluded between the service provider and the company's own institution, in which the tasks of the external information security officer and the mutual rights and obligations must be regulated as precisely as possible. It is important to ensure that the contract includes a suitable confidentiality agreement. The assignment of an external information security officer is thus a special form of outsourcing.
 
 The following aspects should at least be regulated in the contract:
 
@@ -153,7 +153,7 @@ The following aspects should at least be regulated in the contract:
 * Confidentiality agreement
 * Conflicts of interest
 * Consequences of contract violations
-* Regulations for the termination of the contractual relationship, eg. B. Transfer of tasks and documents
+* Regulations for the termination of the contractual relationship, z. B. Transfer of tasks and documents
 * Costs
 The contract requires the external information security officer to be required and able to perform his duties at least as well as an internal ISB. In addition, the contract must enable a controlled termination of the contractual relationship, including the transfer of tasks to the client.
 If the service of an external information security officer is used, the module OPS.2.1 Outsourcing usage must also be used. Particular attention should be paid here to the regulations for the use of external personnel.
@@ -198,7 +198,7 @@ At the management level, the information security task should be clearly assigne
 
 ** Definition of responsibilities (separation of functions) **
 
-Responsibilities and competencies within the information security organization (or IS organization for short) must be clearly defined and assigned. In addition, substitution regulations must be ensured for all important functions.
+Responsibilities and competences within the information security organization (or IS organization for short) must be clearly defined and assigned. In addition, substitution regulations must be ensured for all important functions.
 
 ** Definition of communication channels **
 
@@ -214,7 +214,7 @@ A once-structured IS organization is not static. Business processes and environm
  It must be checked regularly whether all processes and processes of the IS organization are used and implemented as planned. At the same time, it should be ensured that the established organizational structures for information security meet the requirements.
 * Assessment of the efficiency of processes and organizational regulations
  It must be regularly checked whether processes and organizational regulations of safety management are practicable and efficient.
- As soon as processes or regulations that have been set up for security reasons are too complicated or time-consuming, they are often ignored or deliberately bypassed despite the risk of security incidents.
+ As soon as processes or regulations that have been set up for security reasons are too complicated or time-consuming, they are frequently ignored or deliberately bypassed despite the danger of security incidents.
 * Management ratings
  The management must be regularly informed about the results of the above-mentioned reviews. Not only are the reports necessary to solve urgent or time-critical issues, they also provide important information that management needs to manage the security process.
 ** Customize and Improve Information Security Organization **
@@ -236,7 +236,7 @@ The security measures should be described in sufficient detail so that a third p
 
 #### ISMS.1.M8 Integration of employees into the security process [supervisors]
 
-Information security affects all employees without exception. Each individual must help through responsible and quality-conscious action to avoid damage and to contribute to the success of the institution. The integration of employees into the security process includes the following tasks:
+Information security affects all employees without exception. Each individual must help through responsible and quality-conscious actions to avoid damage and to contribute to the success of the institution. The integration of employees into the security process includes the following tasks:
 
 ** motivation and working conditions **
 
@@ -245,7 +245,7 @@ The authorities or management must create a positive working environment and enc
 * Use appropriate and easy-to-use security products.
 * Security concepts and policies must be realistic.
 * Information security must be practiced by senior management to ensure a high level of employee acceptance.
-#### ISMS.1.M9 Integrating Information Security into Organizational Procedures and Processes [Institutional Management]
+#### ISMS.1.M9 Integrating Information Security into Organizational Processes and Processes [Head of Institution]
 
 Information security must be integrated into all business processes. It must be ensured that not only new projects but also current ones take into account all the necessary safety aspects.
 
@@ -319,7 +319,7 @@ The protection needs assessment includes the following steps:
 * The potential impact on business or task performance from security incidents and other security risks is analyzed and assessed.
 These considerations can be used to estimate the risk for the company or the authority and to determine the protection requirements for information, applications and IT systems.
 
-From the general safety objectives, the identified protection requirements and the risk assessment, concrete safety measures are derived according to the considered information network (see ISMS.1.M7 Definition of Safety Measures). Security process and security concept must take into account the individual rules and regulations. In order to derive concrete security measures, concrete building blocks of the IT-Grundschutz catalogs for the security requirements of an information network have to be selected in order to receive a specific package of security measures as target specifications.
+From the general safety objectives, the identified protection requirements and the risk assessment, concrete safety measures are derived according to the considered information network (see ISMS.1.M7 Definition of Safety Measures). Security process and security concept must take into account the individual rules and regulations. In order to derive concrete security measures, concrete building blocks of the IT-Grundschutz catalogs for the security requirements of an information network must be selected in order to receive a specific package of security measures as target specifications.
 
 In order to determine which of the security measures have already been implemented and where there are still gaps, a basic security check is carried out.
 
@@ -353,7 +353,7 @@ The security concept is often used in practice to check specific security measur
 In addition, the individual security measures should be described in sufficient detail so that a third party can assume security-related tasks in the case of substitution.
 
 A security concept may include confidential information, such as: For example, information on weaknesses that have not yet been eliminated or information on measures that help prevent or overcome these measures. Such confidential information may only be disclosed to the appropriate persons. The security concept should therefore be structured in such a way that the areas that affect a broad group of addressees are separated from those that can only be passed on to a limited extent. Each employee should at least be informed about the parts of the security concept directly related to him.
-It is important to build a common understanding of information security in an institution. This includes the use of consistent and clear terms. Therefore, a glossary with the most important terms about information security should be prepared early. This glossary helps to create all security related documents. It can be published in the security concept or individually.
+It is important to build a common understanding of information security in an institution. This includes the use of consistent and clear terms. Therefore, a glossary with the most important terms around information security should be created early. This glossary helps to create all security related documents. It can be published in the security concept or individually.
 
 #### ISMS.1.M11 maintaining information security
 
@@ -363,13 +363,13 @@ Both the correct implementation and the feasibility of a security concept must b
 
 The security measures planned in the security concept must be implemented in accordance with the implementation plan. The implementation status must be documented. Target dates and resources must be monitored and controlled. The management level is to be informed regularly.
 
-These reviews should be conducted at set times (at least annually) and may be done in between. In particular, findings from security-relevant incidents, changes in the technical or technical-organizational environment as well as changes in security requirements or threats require an adaptation of the existing security measures. The results obtained in the individual reviews should be documented. It also needs to know what to do with the verification results, as information security can only be effectively maintained if the necessary corrective action is taken based on the verification results.
+These reviews should be conducted at set times (at least annually) and may be done in between. In particular, findings from security-relevant incidents, changes in the technical or technical-organizational environment as well as changes in security requirements or threats require an adaptation of the existing security measures. The results obtained in the individual reviews should be documented. It also needs to know what to do with the verification results, as information security can only be effectively maintained if the corrective action is taken based on the verification results.
 
-Occasionally, unannounced checks should also be carried out as announced checks often give a distorted picture of the subject of the investigation.
+Occasional unannounced checks should also be carried out, as announced controls often give a distorted picture of the subject of the investigation.
 
 Controls should above all be geared to remedying deficiencies. For the acceptance, it is important that this is recognizable to all participants as the aim of the controls and that the controls do not have the character of Schulmeisterei. It therefore makes sense to speak with the parties about possible solutions to problems during an inspection and to prepare appropriate remedies.
 
-It should be decided in the authority or company how to coordinate the activities related to these reviews. It is necessary to regulate which security measures are to be checked when and by whom, so that duplication of work is avoided and no areas within an institution remain unchecked.
+It should be decided in the authority or company how to coordinate the activities related to these reviews. It is necessary to regulate which security measures have to be checked when and by whom, so that duplication of work is avoided and no areas within an institution remain unchecked.
 
 Existing security measures should be reviewed at least once a year. In addition, they are always to consider when
 
@@ -411,7 +411,7 @@ Every check has to be planned carefully. All relevant findings and findings are 
 
 If special audit or diagnostic tools are used during the audit, as with the result documentation, it must be ensured that only authorized persons have access to it. Diagnostic and test tools as well as the test results must therefore be specially protected.
 
-When outsiders are involved in auditing, it is important to ensure that no information is misused by the institution (eg through appropriate confidentiality agreements) and that they can only access the information they need (eg through access rights or four-eye control ). If you use testing tools, their use must be precisely regulated.
+When outsiders are involved in auditing, it is important to ensure that no information is misused by the institution (eg through appropriate confidentiality agreements) and that they can only access the information they need (eg through access rights or four-eye control ). If you use testing tools, their use must be regulated exactly.
 
 **Corrective actions**
 
@@ -444,15 +444,15 @@ A management report should be short and concise. The following points may be rel
 * whether the information security activities were successful,
 * whether the security measures have proven to be adequate to achieve the security objectives or whether measures need to be amended or supplemented,
 * what feedback there was from customers, business partners, employees or the public on safety issues,
-* which resources have been spent on information security
+* which resources have been spent on information security,
 * whether and how the previous management decisions have been implemented and whether information security activities have been successful.
-It should also provide an outlook on the likely evolution of information security across the organization, as well as on technical developments and practices that could potentially help to improve the security process.
+It should also provide an outlook on the likely evolution of information security throughout the organization, as well as on technical developments and practices that could potentially help to improve the security process.
 
 ** Event-related management reports **
 
 In addition to the regular management reports, it may be necessary to create event-related management reports in the event of unexpected security issues or risks resulting from new technical developments. This is especially the case when these problems can not be solved at work level, because, for. B. Material resources outside the approved framework needed or more extensive staffing arrangements must be made.
 
-Again and again, security incidents such as global malware attacks attract the attention of the mass media. In these cases, it has proven useful to create management reports to show how your own institution has been affected by these security incidents. Even as the security situation changes (eg, new threats, new technologies, new laws), an on-demand management report can be useful.
+Again and again, security incidents such as global malware attacks attract the attention of the mass media. In these cases, it has proven useful to create management reports to show how your own institution has been affected by these security incidents. Even as the security situation changes (eg, new threats, new technologies, new laws), an on-demand management report may be useful.
 
 When drafting the management reports, it should be borne in mind that the readers are generally not composed of technical experts. Accordingly, the text should be characterized by the greatest possible clarity and scarcity, by specifically identifying the key points, such as existing vulnerabilities, but also achieved successes.
 
@@ -484,7 +484,7 @@ In addition to documents for security management and the security process, there
 
 ** Management reports **
 
-For the top management of a public agency or a company to make the right decisions to ensure information security at a reasonable level, it needs the information it needs. To do this, the information security officer or IS management team should regularly and on an occasion-by-case basis generate information security management reports (see also ISMS.1.M10 Information Security Management Reports).
+For the top management of a public agency or a company to make the right decisions to ensure information security at a reasonable level, it needs the information it needs. To do this, the information security officer or the IS management team should regularly and on an occasion-by-case basis generate information security management reports (see also ISMS.1.M10 Information Security Management Reports).
 
 ** Security process documents **
 
@@ -496,13 +496,13 @@ The following types of security process documentation should be created:
 * Results of audits and reviews (eg checklists and survey logs).
 ** Documentation of work processes **
 
-Workflows, organizational requirements and technical security measures must be documented in such a way that security incidents caused by ignorance or malpractice are avoided.
+Work processes, organizational requirements and technical safety measures must be documented in such a way that security incidents caused by ignorance or malpractice are avoided.
 
 In the case of faults or security incidents, it must be possible to restore the desired target status of the business processes and IT. Technical details and workflows should therefore be documented in a way that is reasonably possible.
 
 ** Documentation of security incidents **
 
-Security-related incidents must be prepared in such a way that all associated processes and decisions are traceable. Likewise, it should allow the documentation to make improvements to the emergency strategies and to avoid known errors. In addition, technical documents such as logs or system messages of particular relevance for the incident must be stored and archived to process security incidents. The rules of data protection must be complied with.
+Security-related incidents must be prepared in such a way that all associated processes and decisions are traceable. Likewise, it should allow the documentation to make improvements to the emergency strategies and to avoid known errors. In addition, technical documents such as logs or system messages of particular relevance for the incident must be stored and archived to handle security incidents. The rules of data protection must be complied with.
 
 **Technical Documentation**
 
@@ -534,7 +534,7 @@ It is the task of the information security officer or the IS management team to 
 * Documentation must be understandable. This also means that they have to be tailored to the target group. Reports to the management level have different requirements than technical documentation for administrators.
 * Documentation must be up to date. It must be determined who cares for them. They must be labeled and filed so that they can be found quickly if necessary. There must be information about creation date, version, sources and authors. Outdated documents must be immediately taken out of circulation and archived.
 * There should be a defined procedure for introducing, assessing and, if necessary, taking account of proposed changes (including the preparation of new documents).
-* In addition to the rapid transfer of information to authorized persons, on the other hand, the confidentiality of internal organizational details must be ensured. Confidential contents must be classified as such and the documents must be securely stored and processed.
+* In addition to the rapid transfer of information to authorized persons, on the other hand, the confidentiality of internal organization details must be ensured. Confidential contents must be classified as such and the documents must be securely stored and processed.
 When managing a multitude of security-relevant documents, document management can be helpful.
 
 Documentation does not always have to be in paper form. The documentation medium can be selected as needed. The documentation may include overview diagrams (eg, network map), short session logs (eg, annual management meeting to discuss the security strategy), handwritten notes, or software tools (eg, to document the security plan).
@@ -575,7 +575,7 @@ The initial establishment of the security process is usually associated with inc
 
 ** Provide resources for IT operations **
 
-The basic requirement for a secure IT operation is that it runs smoothly and is therefore reasonably planned and organized. Sufficient resources must be made available for IT operations. Typical problems of IT operations (tight budget, overburdened administrators, and an unstructured or poorly maintained IT environment) typically need to be addressed in order for the actual security measures to be effectively and efficiently implemented. Whether the resources provided are sufficient, for example, shows whether the users are adequately looked after or whether all hardware and software are tested as intended.
+The basic requirement for a secure IT operation is that it runs smoothly, ie is well planned and organized. Sufficient resources must be made available for IT operations. Typical problems of IT operations (tight budget, overburdened administrators, and an unstructured or poorly maintained IT environment) typically need to be addressed in order for the actual security measures to be effectively and efficiently implemented. Whether the resources provided are sufficient, for example, shows whether the users are adequately looked after or whether all hardware and software are tested as intended.
 
 ** Economic Aspects in the Security Strategy **
 
@@ -596,7 +596,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 ** Target group oriented mediation of security topics **
 
-An important factor for success in achieving an appropriate level of safety are responsible and competent employees who work together in a coordinated manner. In doing so, management, IT users, administrators and security experts bring very individual professional qualifications and perform various tasks. While company or government leadership has overall responsibility, sets goals, and defines framework conditions, administrators need to be technically highly skilled and have detailed knowledge to operate and securely configure IT systems.
+An important factor for success in achieving an adequate level of safety are responsible and competent employees who work together in a coordinated manner. In doing so, management, IT users, administrators and security experts bring very individual professional qualifications and perform various tasks. While company or government leadership has overall responsibility, sets goals, and defines framework conditions, administrators need to be technically highly skilled and have detailed knowledge to operate and securely configure IT systems.
 
 Security officers are in a position to create a holistic security concept with the IT Grundschutz catalogs. This will often include many pages if it covers all areas of information security. An additional target group-oriented preparation and mediation of the contents of the security concept is an important task of the security management. The goal is for all employees to know and respect the safety aspects that affect them and their work area.
 
@@ -610,7 +610,7 @@ When formulating policies, it has worked well to work at different levels.
 
 First, the first level should briefly and concisely formulate the general security objectives and the security strategy in an information security guideline (see ISMS.1.M3, Guidance on Information Security). The strategy contains no technical details and is approved by the management. At the next level, basic technical safety requirements should be derived.
 
-The general security concept includes documents that describe various aspects of information security (eg a policy on internet usage or an anti-virus concept), without going into concrete products.
+The general security concept includes documents that describe various aspects of information security (eg a policy on internet usage or an anti-virus concept), without going into specific products.
 The third level describes technical details, concrete measures and product-specific settings. It contains many documents that are regularly changed and typically only read by the appropriate experts.
 
 The following figure shows the structure described here graphically.

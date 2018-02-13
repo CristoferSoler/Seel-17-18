@@ -4,9 +4,9 @@
 ### 2 1 Lack of or insufficient processes for identity and entitlement management
 ### 2 2 Lack of central deactivation of user access
 ### 2 3 Inappropriate access, access and access rights management
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ORP.4.A1 Regulation for the creation of users and user groups [Administrator, IT Leader]
-#### ORP.4.A2 Regulation for setting up, changing and revoking privileges [Administrator, Head of IT]
+#### ORP.4.A2 Rules for setting up, changing, and revoking privileges [Administrator, Head of IT]
 #### ORP.4.A3 Authorized User and Rights Profile Documentation [Administrator, IT Leader]
 #### ORP.4.A4 Task distribution and separation of functions [Head IT]
 #### ORP.4.A5 Assignment of access authorizations [Head IT]

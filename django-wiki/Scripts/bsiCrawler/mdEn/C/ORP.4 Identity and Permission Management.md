@@ -93,7 +93,7 @@ User accounts with far-reaching permissions SHOULD be protected with at least tw
 
 #### ORP.4.A11 Reset Passwords [IT Manager]
 
-For resetting passwords, an appropriate secure procedure SHOULD be defined and implemented. Support staff who can reset passwords SHOULD be trained accordingly. If the password requires more protection, a strategy SHOULD be defined if the support staff can not take responsibility due to a lack of secure means of transmitting the password.
+For resetting passwords, an appropriate secure procedure SHOULD be defined and implemented. Support staff who can reset passwords SHOULD be trained accordingly. If the password requires more protection, a strategy SHOULD be defined if the support staff can not take responsibility due to the lack of secure means of transmitting the password.
 
 #### ORP.4.A12 Development of an authentication concept for IT systems and applications [Head IT]
 

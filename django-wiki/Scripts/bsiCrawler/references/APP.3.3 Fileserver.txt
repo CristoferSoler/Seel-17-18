@@ -8,7 +8,7 @@
 ### 2 5 Unstructured data management
 ### 2 6 Unsuitable installation of the file server
 ### 2 7 Lack of or insufficient data protection concept
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.3.3.A1 Suitable installation [Building services]
 #### APP.3.3.A2 Use of RAID systems
 #### APP.3.3.A3 Use of antivirus programs

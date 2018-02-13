@@ -7,5 +7,5 @@ Major events of all kinds can lead to obstacles to the proper operation of an au
 
 Examples:
 
-* During the hot summer months, a demonstration took place near a data center. The situation escalated and violence occurred. There was a window in the data center area in a side street, through which a protester penetrated and used the opportunity to steal hardware with important data.
+* During the hot summer months, a demonstration took place near a data center. The situation escalated and violence occurred. In a side street, there was a window in the data center area, through which a protester penetrated and used the opportunity to steal hardware with important data.
 * When constructing a major fairground, a power line was accidentally cut off. This led to a failure in a data center, which could be intercepted by the existing network backup system.

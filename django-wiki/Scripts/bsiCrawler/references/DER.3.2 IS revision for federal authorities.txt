@@ -11,7 +11,7 @@
 ### 2 8 Lack of coordination with the Staff Committee
 ### 2 9 Intentional concealment of deviations or problems
 ### 2 10 Confidentiality loss of sensitive information
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### DER.3.2.A1 Definition of responsibilities for the IS audit
 #### DER.3.2.A2 Creation of an IS-Revision-Manual
 #### DER.3.2.A3 Definition of the basis of the audit and a common rating scheme [IS audit team]
@@ -31,7 +31,7 @@
 #### DER.3.2.A16 On-Site Review Schedule [IS Revision Team]
 #### DER.3.2.A17 On-site inspection [IS-Revision-Team]
 #### DER.3.2.A18 Conducting Interviews [IS Revision Team]
-#### DER.3.2.A19 Review of the risk treatment plan [IS audit team]
+#### DER.3.2.A19 Review of the risk treatment plan [IS-Revision-Team]
 #### DER.3.2.A20 Follow-up of the on-site inspection [IS-Revision-Team]
 #### DER.3.2.A21 Creation of an IS audit report [IS audit team]
 #### DER.3.2.A22 Follow-up and initiation of follow-up [Information Security Officer (ISB)]

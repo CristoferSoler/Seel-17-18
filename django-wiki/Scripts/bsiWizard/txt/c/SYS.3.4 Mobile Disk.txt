@@ -21,7 +21,7 @@ The different and sometimes complex requirements for devices that can be used in
 
 Mobile data carriers can be exchanged during personal meetings or by mail. The exchange of digital and analog data carriers to transfer information between different communication partners and IT systems is not considered in this module. For this purpose, the requirements of block OPS.1.2.3 Data medium exchange must be implemented.
 
-In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data carriers and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multifunction_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
+In addition to the digital data carriers are z. B. also to consider information on paper or other analog media in the security design. These aspects go beyond the basic security features of mobile data media and are therefore covered in other modules (for example [* SYS.4.1 Printers, Copiers and Multifunction Devices *] (DE / topics / IT Grundschutz / IT Grundschutz Compendium / modules / SYS / SYS_4_1_Printers, _Copier_and_Multi-function_C3) % A4te.html? Nn = 10137184 "SYS.4.1 Printers, Copiers and Multifunction Devices"), NET.4.3 Fax, OPS.1.1.5 Data Backup or [* OPS.1.2.2 Archiving *] (DE / Themen / ITBrundschutz / ITBrundschutzKompendium /bausteins/OPS/OPS_1_2_2_Archivierung.html?nn=10137184 "OPS.1.2.2 Archiving")).
 
 2 risk situation
 -----------------
@@ -34,7 +34,7 @@ It is frequently observed that organizational regulations and technical security
 
 ### 2 2 Insufficient knowledge of regulations
 
-If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not adhere to it. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
+If employees and officials are not sufficiently familiar with the regulations for the correct handling of mobile data carriers, they can not comply with them. This can lead to numerous threats to information security, for example when USB sticks are thoughtlessly connected to IT systems in the institution.
 
 ### 2 3 Data loss in mobile use
 For mobile data carriers, the risk of data loss is higher than for stationary systems. One cause of this may be theft or loss of equipment, but also technical problems or simple lack of power. The information stored on the data carriers is often irretrievably lost.
@@ -99,7 +99,7 @@ In addition, it was intended to regulate how private mobile data carriers may be
 
 #### SYS.3.4.A5 Control of the transport of mobile data carriers
 
-There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data media may be transported outside the home, who may take them away from home and which basic security measures must be followed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
+There SHOULD set clear written rules that determine if and how mobile media may be taken. In particular, it should be determined which data carriers may be transported outside the home, who may take them away from home, and which basic security measures must be observed (virus protection, encryption of sensitive information, storage, etc.). The users SHOULD be advised of the regulations.
 
 #### SYS.3.4.A6 Disk Management [Specialists]
 
@@ -114,11 +114,11 @@ Before rewritable media are to be redistributed, they SHOULD be erased appropria
 The drives and interfaces of the IT systems for the use of mobile data carriers SHOULD be protected by technical and organizational measures in accordance with the security specifications. This is to prevent contents of inserted removable media from being automatically executed. Also, technical measures SHOULD be taken so that the IT system can not be booted from sources other than the intended ones and can not be connected to unauthorized external devices and data carriers.
 
 ### 3.3 Requirements for increased protection requirements
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.4.A9 Control and monitoring of interfaces (CI)
 
-The use of interfaces to which data carriers can be connected SHOULD be regulated by an appropriate assignment of rights at the level of the operating system or with the help of additional programs. It SHOULD be checked whether it can be monitored alternatively, whether devices are added. The connection of data carriers SHOULD be logged and the logs regularly evaluated by the persons in charge.
+The use of interfaces to which data carriers can be connected SHOULD be regulated by an appropriate assignment of rights at the level of the operating system or with the help of additional programs. It SHOULD be checked whether it can be monitored alternatively, whether devices are added. The connection of data carriers SHOULD be logged and the logs regularly evaluated by the responsible persons.
 
 #### SYS.3.4.A10 Disk Encryption (C)
 
@@ -126,4 +126,4 @@ Mobile data carriers SHOULD always be completely encrypted when the need for pro
 
 #### SYS.3.4.A11 Integrity Protection by Checksums or Digital Signatures (I)
 
-In order to ensure only the integrity of confidential information when exchanging data using mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error-correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.
+In order to ensure only the integrity of confidential information when exchanging data using mobile data carriers, a method should be used to protect against accidental or intentional changes. Examples are checksum procedures, error correcting codes, message authentication code (MAC) or "digital signatures". The procedures for protection against changes SHOULD comply with the current state of the art.

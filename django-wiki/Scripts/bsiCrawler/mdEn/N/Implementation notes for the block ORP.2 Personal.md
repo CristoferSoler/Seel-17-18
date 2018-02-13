@@ -15,11 +15,11 @@ A number of measures have to be implemented for the personnel working in a compa
 
 **Implementation**
 
-The company or the authority must announce existing regulations and instructions to new employees (see ORP.2.M1 * Regulated training of new employees *), so that they can be quickly integrated into existing processes. It is also essential to educate all employees about changes in these regulations and their specific impact on a process or individual employee. In particular, in safety-critical operating environments, it is advisable to obligate the employees accordingly and to have the trustworthiness of employees confirmed (see ORP.2.M6 * Candidate Selection Check *, ORP.2.M7 * Verification of the trustworthiness of employees *, ORP.2.M5 * Confidentiality Agreements * and ORP.2.M13 * Security Check *). Special emphasis is put on the trustworthiness of persons with special functions and authorizations, such as administrators.
+The company or the authority must announce existing regulations and instructions to new employees (see ORP.2.M1 * Regulated training of new employees *), so that they can be quickly integrated into existing processes. It is also essential to educate all employees about changes in these regulations and their specific impact on a process or individual employee. In particular, in safety-critical operating environments, it is advisable to obligate the employees accordingly and to have the trustworthiness of employees confirmed (see ORP.2.M6 * Candidate Selection Check *, ORP.2.M7 * Verification of the trustworthiness of employees *, ORP.2.M5 * Confidentiality Agreements * and ORP.2.M13 * Security Check *). Special emphasis should be put on the trustworthiness of people with special functions and permissions, such as administrators.
 
 **Business**
 
-The motivation of all employees to accept information security in the operating processes and also to implement it on their own responsibility must be motivated and supported by appropriate training and detailed knowledge of the applications at the technical level (see building block ORP.3: * Sensitization and training *).
+The motivation of all employees to accept information security in the operating processes and to implement it on their own responsibility must be motivated and supported by appropriate training and detailed knowledge of the applications at the technical level (see building block ORP.3: * Sensitization and training *).
 
 In order to achieve continuous availability of important processes, it must be ensured that key positions are always filled, if required by the procedures (see ORP.2.M3 * substitution regulations *).
 
@@ -52,11 +52,11 @@ If an employee leaves the institution or changes function, please note:
 
 * Prior to leaving, a timely briefing of the successor is required. For this it is desirable that the working periods overlap at least briefly.
 * The withdrawing party must recover all documents (as well as borrowed library books), keys handed over, borrowed equipment (eg portable computers, storage media, documentation). In particular, the official or company identity cards as well as other cards and access tokens as well as keys for access authorization are to be collected. Furthermore, in biometric procedures (eg iris scanners, fingerprints and hand-back recognition), corresponding access authorizations must be deleted or adapted to the representative regulation.
-* All access authorizations and access rights set up for the departing person must be withdrawn or deleted. This also applies to external access authorizations via data transmission facilities. If an access authorization to an IT system was shared between several persons in exceptional cases (eg by means of a common password), the access authorization must be changed after the departure of one of the persons.
+* All access authorizations and access rights set up for the departing person must be withdrawn or deleted. This also applies to external access authorizations via data transmission facilities. If, in exceptional cases, an access authorization to an IT system has been shared between several persons (eg by means of a shared password), the access authorization must be changed after the departure of one of the persons.
 * Prior to adoption, it should again be explicitly stated that all confidentiality statements remain in force and that no information received during the work may be disclosed.
 * If the departing person is an officer in an emergency plan, the emergency plan must be updated.
 * All persons entrusted with security tasks, in particular the porter service, are to be informed about the departure and functional changes of employees.
-* Excreted employees must be prevented from uncontrolled access to government or company premises, in particular to rooms with IT systems. Even in the case of functional changes, the access authorization to certain premises, such as server rooms, may have to be withdrawn.
+* Excreted employees must be prevented from uncontrolled access to government or company premises, in particular to rooms with IT systems. Even in the case of functional changes, the access authorization to certain premises such as server rooms may have to be withdrawn.
 * Optionally, even for the period between pronouncing a termination and the departure of withdrawal of all access and access rights to IT systems, as well as the prohibition to enter areas worthy of protection, pronounced and technically implemented.
 * All necessary activities when an employee leaves the institution or changes function must be clearly regulated. As a practical tool so-called runway have been found on which the individual activities of the departing person are predetermined, which he has to do before leaving the authority or the company.
 #### ORP.2.M3 Representation Rules [Supervisors]
@@ -72,7 +72,7 @@ The following boundary conditions must be observed for the substitution regulati
 * The representative may only obtain the necessary access, access and access authorizations in case of substitution.
 * If, in exceptional cases, it is not possible to name or train a competent representative for persons, it should be considered at an early stage which external forces can be used for the substitution case.
 #### ORP.2.M4 Regulations for the use of external personnel
-Often, outside authorities or companies rely on external support if the necessary human resources are not available in-house. In extreme cases, this can result in external personnel being employed in their own home for such long periods of time that many employees no longer know exactly whether they are their own or external employees. Here, it makes sense to oblige both internal and external employees to wear appropriate ID cards.
+Often, outside authorities or companies rely on external support if the necessary human resources are not available in-house. In extreme cases, this can lead to external staff being employed in their own home for such long periods of time that many employees no longer know exactly whether they are their own or external employees. Here, it makes sense to oblige both internal and external employees to wear appropriate ID cards.
 
 External employees who work in or for an organization for an extended period of time and who may be able to gain access to confidential records and data must make a written commitment to comply with applicable applicable laws, regulations and internal regulations.
 
@@ -125,7 +125,7 @@ The possibilities to have the trustworthiness of new or external personnel check
 * the submitted curriculum vitae of the candidate is meaningful and complete.
 In addition, it may be useful to have academic and professional qualifications certified, for example, by inquiring at the university or from previous employers or clients. The identity of the candidate should also be verified. B. by presentation of identity documents.
 
-If external personnel are deployed internally or can access internal applications and data in projects, collaborations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to perform such checks, to what extent these are carried out and how these are documented.
+If external personnel are deployed internally or if internal applications and data can be accessed through projects, cooperations or outsourcing projects, comparable checks should be carried out as for own employees. When drafting contracts with external service providers, it should be contractually stipulated which side has to perform such checks, to what extent these are carried out and how these are documented.
 
 ** Selection of trusted administrators **
 The IT system or TK system administrators and their representatives must be able to trust the operator with great confidence. They have - depending on the system used - extensive and often all powers. Administrators and their representatives are able to access and, if necessary, modify all stored data and grant permissions in a way that would allow substantial abuse.
@@ -134,7 +134,7 @@ Administrators of IT systems and their representatives must be carefully selecte
 
 Since the administrator has a key role regarding the functionality of the hardware and software used, the continuation of his activities must be guaranteed even in the event of his failure. For this, the named representatives must have the current state of the system configuration and have access to the passwords, keys and security tokens required for the administration.
 
-If a company or an authority has several administrators with comparable IT system knowledge, they can also represent each other if they still have spare capacity. In all areas in which only one administrator is mainly responsible for IT systems, two substitutes should be included, as experience has shown that the deputy is temporarily not available for administrative tasks if the administrator is absent for a long time.
+If a company or an authority has several administrators with comparable IT system knowledge, they can also represent each other if they still have spare capacity. In all areas in which only one administrator mainly responsible for IT systems care, two deputies should be incorporated, since in case of prolonged absence of the administrator experience has shown that the deputy is temporarily not available for administrative tasks.
 
 In order to ensure the functioning of the IT operation, it must be checked, in particular in the event of pending personnel changes or changes in the organizational structure, whether the required administrative activities can also be managed by the designated administrators and their representatives.
 
@@ -159,7 +159,7 @@ This topic is covered in detail in the module ORP.3: * Awareness and Training.
 
 A positive working atmosphere motivates employees on the one hand to comply with safety measures, on the other hand it reduces the risk of negligent or intentional acts that can disturb the operation. Disturbances of the working environment can have a variety of internal and external causes, but often occur in serious internal changes. Examples of such changes include restructuring, reorganization, sale or merger of organizational units and outsourcing projects. These can have a negative effect on the working climate as they usually cause fears of different kinds (eg loss of competence, fear of failure, loss of job). These can be better dealt with if the working climate is as good as possible even before the changes.
 
-From a safety perspective, attempts should therefore be made to achieve a positive working atmosphere and to maintain it permanently. The multitude of possibilities can not be cited here, therefore, here only a selection of possible measures is mentioned whose adequacy and feasibility should be examined in detail:
+From a safety perspective, attempts should therefore be made to achieve a positive working atmosphere and to maintain it permanently. The multitude of possibilities can not be cited here, so here only a selection of possible measures is mentioned whose suitability and feasibility should be examined in detail:
 
 * Establishment of a social space,
 * Avoiding overtime,
@@ -180,9 +180,9 @@ Often z. B. Protesting the selection of certain hardware or software in that the
 
 The working atmosphere and the behavior of employees can be of particular importance in the case of major changes, such as outsourcing projects: dissatisfied or angry employees can cause such a project to fail (eg dismissal of know-how carriers in critical areas) Phases of change or deliberate ignoring of safety instructions), which can be life-threatening for the company in succession. For major restructuring or outsourcing projects, the following aspects are recommended:
 
-* Employees should be involved early in decision-making processes such as the selection of an outsourcing service provider. In the further course of the project, they should be involved in the design of possible takeover agreements.
+* Employees should be involved early in decision-making processes such as the selection of an outsourcing service provider. In the further course of the project they should be involved in the design of possible takeover agreements.
 * Employees should be fully informed about changes at an early stage and have a point of contact for problems and questions. Indirect information through the media, e.g. For example, via newspapers, instead of direct by the company or government management creates distrust, destroys the basis of trust and prepares speculation and rumors the ground.
-* In the case of organizational changes, the employees concerned should be given future prospects. Often, outsourcing service providers depend on the highest possible proportion of employees in the outsourced area switching to them. Only in this way can a satisfactory quality of service be guaranteed. Employees who are worried about the future or who feel treated unfairly decline in their quality of work or even leave the company prematurely.
+* In the case of organizational changes, the employees concerned should be given future prospects. Often outsourcing service providers are dependent on the highest possible proportion of employees in the outsourced area switching to them. Only in this way can a satisfactory quality of service be guaranteed. Employees who are worried about the future or who feel treated unfairly decline in their quality of work or even leave the company prematurely.
 * Demanding or burdensome activities, which can not be avoided in the context of restructuring, should be adequately acknowledged and recognized. The extra work required should be rewarded.
 ### 2.3 Measures for increased protection requirements
 
@@ -190,7 +190,7 @@ The following are proposed measures that go beyond the state of the art level of
 
 #### ORP.2.M11 Safety Culture Analysis (CIA)
 
-One of the most important pillars of information security in an institution is its staff. Experience shows that even the most elaborate technical safety measures are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are essential.
+One of the most important pillars of information security in an institution is its staff. Experience shows that even the most elaborate technical safety measures are worthless without the proper behavior of the employees. An awareness of what information security means for the institution and its business processes, and the proper treatment of employees with the information to be protected by the institution are essential for this.
 
 The security measures chosen for the institution should always be based on the employees. Their knowledge and handling of information and IT should be included. Therefore, it makes sense to analyze the various factors that contribute to how employees behave from a security perspective. Building on this, it can then be examined where personal and organizational security can be improved, for example through awareness-raising and information security training.
 

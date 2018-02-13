@@ -4,7 +4,7 @@
 ### 2 1 Insufficient planning of safety limits
 ### 2 2 Too many or too lax relationships of trust
 ### 2 3 Lack of security features due to older operating systems and domain functional level
-### 2 4 Operating Other Roles and Services on Domain Controllers
+### 2 4 Operating additional roles and services on domain controllers
 ### 2 5 Abuse of Domain Admins
 ### 2 6 Inadequate monitoring and documentation of delegated rights
 ### 2 7 Unsafe authentication
@@ -13,7 +13,7 @@
 ### 2 10 Too powerful or poorly secured service accounts
 ### 2 11 Using the same local administrator password on multiple systems
 ### 2 12 Missing removal of unused accounts from AD
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.2.2.A1 Active Directory Planning [Responsible Person]
 #### APP.2.2.A2 Active Directory Administration Planning [Specialists]
 #### APP.2.2.A3 Planning Group Policy on Windows

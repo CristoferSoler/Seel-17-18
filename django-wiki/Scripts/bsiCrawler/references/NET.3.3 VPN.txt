@@ -7,7 +7,7 @@
 ### 2 4 Insecure configuration of VPN clients for remote access
 ### 2 5 Insecure default settings on VPN components
 ### 2 6 Theft of mobile devices with VPN client
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### NET.3.3.A1 Planning the VPN deployment
 #### NET.3.3.A2 Selection of a VPN Service Provider [Information Security Officer (ISB)]
 #### NET.3.3.A3 Secure installation of VPN terminals

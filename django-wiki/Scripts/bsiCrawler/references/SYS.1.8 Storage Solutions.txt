@@ -9,7 +9,7 @@
 ### 2 6 Overcoming the logical network separation
 ### 2 7 Failure of components of a storage solution
 ### 2 8 Obtaining Physical Access to SAN Switches
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.8.A1 Appropriate installation of storage systems [Building Services, IT Manager]
 #### SYS.1.8.A2 Secure basic configuration of storage solutions
 #### SYS.1.8.A3 Restrictive rights assignment

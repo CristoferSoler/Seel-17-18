@@ -9,5 +9,5 @@ Abuse of personal data may, for example, be the case if an institution collects 
 
 Examples:
 
-* Personal data may only be processed for the purpose for which it was collected or first stored. It is therefore inadmissible to use log files in which users log in and log out of IT systems solely for access control for presence and behavior control.
+* Personal data may only be processed for the purpose for which it was collected or first stored. It is therefore inadmissible to use log files that record the log-on and log-off of users on IT systems solely for access control for presence and behavior control.
 * Persons who have access to personal data could pass them on without authorization. For example, an employee at a hotel reception might sell the credentials of guests to advertising companies.

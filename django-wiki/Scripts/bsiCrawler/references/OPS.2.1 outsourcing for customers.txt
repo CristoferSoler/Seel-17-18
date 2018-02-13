@@ -12,7 +12,7 @@
 ### 2 9 Failure of the systems of an outsourcing service provider
 ### 2 10 Weaknesses when connecting to an outsourcing service provider
 ### 2 11 Lack of multi-client capability at the outsourcing service provider
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.2.1.A1 Definition of security requirements for outsourcing projects [ISB outsourcing customer]
 ### 3.2 Standard requirements
 #### OPS.2.1.A2 Timely participation of the Staff Committee [Head of Organization]

@@ -139,7 +139,7 @@ During the IS short revision, the bindingly defined inspection list from * Bindi
 
 #### DER.3.2.A13 Inspection and Checking of Documents [IS Revision Team]
 
-The document review SHOULD be done on the basis of the measures defined in the test plan. The IS audit team SHOULD verify that all relevant documents are current and complete. When checking the actuality, the granularity of the documents SHOULD be taken into account. When checking for completeness, care should be taken to ensure that all material aspects have been recorded and that the appropriate roles have been assigned.
+The document review SHOULD be done on the basis of the measures defined in the test plan. The IS audit team SHOULD verify that all relevant documents are current and complete. When checking the actuality, the granularity of the documents SHOULD be taken into account. When checking completeness, it is important to ensure that all material aspects have been recorded and that the appropriate roles have been assigned.
 
 Furthermore, it should be checked whether the documents available and the decisions made therein are comprehensible. The results of the document review SHOULD be documented and, where appropriate, incorporated into the on-site inspection.
 
@@ -195,13 +195,13 @@ IS audit reports SHOULD at least be classified as classified for "for business u
 
 #### DER.3.2.A22 Follow-up and initiation of follow-up [Information Security Officer (ISB)]
 
-The deviations noted in the IS audit report SHOULD be remedied within a reasonable time. The corrective actions to be performed SHOULD be documented with responsibilities, date of implementation and the respective status. The implementation SHOULD be tracked continuously and the implementation status should be updated.
+The deviations noted in the IS audit report SHOULD be remedied in a reasonable time. The corrective actions to be performed SHOULD be documented with responsibilities, date of implementation and the respective status. The implementation SHOULD be tracked continuously and the implementation status should be updated.
 
 In principle, it should be checked whether additional IS revisions are necessary. The person responsible for the IS audit SHOULD adapt the rough and detailed planning to the IS audit.
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### DER.3.2.A23 Security Review of IS Auditors (CI)
 

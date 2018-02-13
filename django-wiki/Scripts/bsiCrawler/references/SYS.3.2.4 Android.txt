@@ -6,7 +6,7 @@
 ### 2 3 Missing updates for the Android operating system
 ### 2 4 Risk concentration through a user account (Google ID) for all Google services
 ### 2 5 Integration for preinstalled apps and their functionality on Android-based devices
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.2.4.A1 Selection of devices with Android
 ### 3.2 Standard requirements
 #### SYS.3.2.4.A2 Disable the developer options

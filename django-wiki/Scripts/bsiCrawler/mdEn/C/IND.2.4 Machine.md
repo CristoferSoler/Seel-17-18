@@ -7,13 +7,13 @@
 
 A machine is a technical device that performs automated tasks. A typical example of this is a machine tool that processes products in a predefined manner. It is controlled by an IT system using a program that specifies the appropriate work instructions and steps. Such machines are also referred to as machines.
 
-In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. To enable the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
+In most cases, machines are designed by machine builders and equipped with certain predefined functions. However, the operator of the machine can still determine the parameters according to which they should work. For example, molds that are to be milled or calibrations for specific materials can be set. In order for the operator to change the parameters, machines have different interfaces, eg. B. for removable drives, specialized programming devices or network accesses.
 
 Often mechanical engineering also offers remote maintenance services to detect early wear or to react quickly in problem situations.
 
 ### 1.2 Objective
 
-The module describes how electronically controlled, semi-automatic or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, type of construction, special purpose and location.
+The module describes how electronically controlled, semi- or fully automatic machines (eg CNC machines) can be protected independently of manufacturer, design, special purpose and location.
 
 ### 1.3 Delimitation
 
@@ -28,7 +28,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Failure or malfunction due to insufficient maintenance
 
-If machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
+When machines are not regularly maintained, they will not work correctly or shut down completely. Due to malfunction z. For example, employees may be at risk or production may be significantly affected.
 
 ### 2 2 Targeted manipulations
 
@@ -60,4 +60,4 @@ Together with the basic requirements, the following requirements correspond to t
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

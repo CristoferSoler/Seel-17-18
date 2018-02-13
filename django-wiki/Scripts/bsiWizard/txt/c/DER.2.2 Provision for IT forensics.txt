@@ -20,7 +20,7 @@ The module shows what precautionary measures are necessary to enable IT forensic
 
 ### 1.3 Delimitation
 
-The module does not describe any requirements to ensure that attacks are detected. These are contained in the module DER.1 * Detection of safety-relevant events * and are assumed in the present block. Also, no criteria and processes are explained, by means of which the responsible persons can decide, whether an IT security incident must be examined forensisch or not. The decision is made while the incident is being handled (see DER.2.1 * Incident Management *).
+The module does not describe any requirements to ensure that attacks are detected. These are contained in block DER.1 * Detection of safety-relevant events * and are assumed in the present block. Also, no criteria and processes are explained, by means of which the responsible persons can decide, whether an IT security incident must be examined forensisch or not. The decision is made while the incident is being handled (see DER.2.1 * Incident Management *).
 
 Furthermore, the module deals only with precautionary measures, which are fundamental for later IT forensic investigations. How the actual forensic analysis is performed is therefore not the subject of this module.
 
@@ -32,7 +32,7 @@ Ultimately, the building block also does not address how IT infrastructures can 
 The following specific threats and vulnerabilities are of particular importance for provisioning for IT forensics:
 
 ### 2 1 Infringement of legal framework
-For IT forensic investigations, all data deemed necessary are often copied, saved and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
+For IT forensic investigations, all data deemed necessary are often copied, secured and evaluated. This usually includes personal data of employees or partners. Is it z. Unfounded and without the Privacy Commissioner is involved, accessed, the institution violates legal regulations, such. For example, if the earmarking is disregarded. It is also possible that, for example, it can be deduced from the collected data how employees behave, or a relationship to them can be established. As a result, there is a risk that internal regulations will also be violated.
 
 ### 2 2 Loss of evidence through incorrect or incomplete preservation of evidence
 
@@ -51,7 +51,7 @@ The following requirements MUST be implemented as a priority:
 
 #### DER.2.2.A1 Examination of the legal and regulatory framework for recording and evaluability [Head of Institution, Data Protection Officer]
 
-If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to weigh the interest of the institution against that of the employees. The company or staff council and the data protection officer MUST be involved.
+If forensic data is collected and evaluated, all legal and regulatory frameworks MUST be identified and adhered to (see ORP.5 * Requirements Management *). Also, DO NOT violate internal regulations and employee agreements. In individual cases, however, it may be necessary to balance the interest of the institution with that of the employee. The company or staff council and the data protection officer MUST be involved.
 
 #### DER.2.2.A2 Creation of a guideline for initial measures during an IT security incident
 
@@ -86,15 +86,15 @@ A forensic investigation SHOULD always begin by defining the goals or work assig
 
 #### DER.2.2.A9 Preliminary selection of forensically relevant data [Investigator]
 
-It SHOULD be determined which secondary data (eg log data or traffic recordings) are kept in the way and for how long within the legal framework for possible forensic evidence.
+It SHOULD be determined which secondary data (eg log data or traffic recordings) will be made available in which way and for how long within the legal framework for possible forensic evidences.
 
-#### DER.2.2.A10 IT forensic security of evidence [investigator, investigator]
+#### DER.2.2.A10 IT Forensic Security of Evidence [Investigator, Investigator]
 
-In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, in the case of volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
+In order to secure evidence, if possible, the entire volume should be forensically duplicated. If that is not possible, for. For example, for volatile data in RAM or in SAN partitions, a method should be chosen that changes as little data as possible.
 
 In order to prove that the data is integer, the original data carriers SHOULD be kept sealed. If cryptographic checksums of forensic copies or originals exist, integrity can also be proven. To do this, the written documented cryptographic checksums SHOULD be separated from the data carriers and kept in multiple copies. In addition, it should be ensured that the checksums documented in this way can not be changed. In order for the data to be judicially usable, a witness SHOULD confirm how it was done and authenticate the checksums that were created.
 
-It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of forensic service providers *) to forensic evidence to secure.
+It SHOULD use only trained personnel (see DER.2.2.A6 * Training of personnel for the implementation of forensic protection *) or a forensic service provider (see DER.2.2.A3 * Preselection of Forensic Service Providers *) to forensic evidence to secure.
 
 #### DER.2.2.A11 Documentation of the evidence [investigator, investigator]
 
@@ -105,7 +105,7 @@ All seized original data carriers SHOULD be physically stored in such a way that
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### DER.2.2.A13 Framework contracts with external service providers (CIA)
 
@@ -113,7 +113,7 @@ To enable IT security incidents to be investigated forensically more quickly, th
 
 #### DER.2.2.A14 Establishment of standard procedures for the preservation of evidence (CIA)
 
-For applications, IT systems or IT system groups with high protection requirements as well as for common system configurations, standard procedures SHOULD be created that allow to secure volatile and non-volatile data as completely as possible forensically.
+For applications, IT systems or IT system groups with high protection requirements as well as for widespread system configurations, standard procedures SHOULD be created, which make it possible to secure volatile and non-volatile data as completely as possible forensically.
 
 The respective system-specific standard procedures SHOULD be implemented by proven and possibly automated processes. They SHOULD also be supported by checklists and technical aids, such as: Through software, software tools on mobile devices, and IT forensic hardware such as write-blockers.
 

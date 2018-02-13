@@ -23,7 +23,7 @@ The present module specifies the basic requirements of the module NET.1.1 * Netw
 
 The management of the passive network infrastructure is dealt with in the building blocks of the infrastructure (building block layer INF) or industrial IT (building block layer IND). Therefore, these topics are not included in this module.
 
-The logging addressed in this module should be integrated in a comprehensive logging and archiving concept. (see OPS.1.1.5 * Logging *).
+The logging addressed in this module should be integrated into a comprehensive logging and archiving concept. (see OPS.1.1.5 * Logging *).
 
 The subject of outsourcing is not dealt with in detail in this module. Further requirements are described in the module OPS.2.1 * Outsourcing *.
 
@@ -92,7 +92,7 @@ All network management solutions MUST be integrated into the institution's data 
 
 #### NET.1.2.A7 Basic logging of events
 
-The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg in configuration distribution) as well as limited accessibility of network components.
+The network management solution MUST be integrated into the institution's logging concept (see OPS.1.1.5 * Logging *). In addition, at least the following events MUST be logged: unauthorized access attempts, power or availability fluctuations of the network, errors in automatic processes (eg during configuration distribution) as well as limited accessibility of network components.
 
 #### NET.1.2.A8 time synchronization
 
@@ -104,7 +104,7 @@ If network management communication is via the productive infrastructure, then s
 
 #### NET.1.2.A10 Limitation of SNMP communication
 
-Network management MUST NOT use insecure versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
+Network management MUST NOT use unsafe versions of the Simple Network Management Protocol (SNMP). However, if this is not possible, the SNMP communication MUST be either through a separate management network or MUST use SNMPv3 with authentication and encryption. Basically, SNMP should only be used with the minimum required access rights. The access authorization SHOULD be restricted to dedicated management servers.
 
 ### 3.2 Standard requirements
 
@@ -112,11 +112,11 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### NET.1.2.A11 Definition of a Security Policy for Network Management [Information Security Officer (ISB)]
 
-For network management, a security policy SHOULD be created and sustainably maintained. The guideline SHOULD be familiar to all persons involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
+For network management, a security policy SHOULD be created and maintained sustainably. The guideline SHOULD be known to all persons involved in network management and fundamental to their work. It SHOULD be checked regularly and comprehensibly that the contents required by the directive are implemented. The results MUST be documented in a meaningful way.
 
 The security policy SHOULD define which areas of network management are implemented through centralized management tools and services. It SHOULD also define to what extent tasks should be automated in the network management of the institution.
 
-In addition, framework conditions and requirements for network separation, access control, logging and communication protection, the network management tool used and the operational rules for network management SHOULD be specified.
+In addition, general conditions and requirements for network separation, access control, logging and protection of communications, the network management tool used and the operational rules for network management SHOULD be specified.
 
 #### NET.1.2.A12 Actual recording and documentation of network management
 A documentation describing how the management infrastructure of the network is constructed SHOULD be made. This should include the initial actual recording and all changes made to the network management. In particular, it should be documented which network components are managed with which management tools. In addition, all IT workstations and terminals used for network management, as well as all information inventories, management data and network management operation information, should be recorded. Ultimately, all interfaces to applications and services outside the network management SHOULD be documented.
@@ -212,7 +212,7 @@ If management networks are separated by VLANs, care should be taken that the ext
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### NET.1.2.A30 Highly available realization of the management solution (A)
 
@@ -226,7 +226,7 @@ For network management only secure protocols SHOULD be used. All security featur
 
 The management network SHOULD be physically separated.
 
-#### NET.1.2.A33 Physical separation of management segments [Network Manager] (CIA)
+#### NET.1.2.A33 Physical Separation of Management Segments [Network Manager] (CIA)
 
 The management network SHOULD be divided into physically separate security zones. At a minimum, physically separated security zones should be set up to manage LAN components, security components, and outdoor connectivity components.
 

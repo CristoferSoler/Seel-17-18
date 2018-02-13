@@ -124,7 +124,7 @@ Based on the specified requirements for a storage solution, a suitable supplier 
 
 #### SYS.1.8.A10 Creation and Maintenance of Operations Manual [Information Security Officer (ISB), IT Leader]
 
-It SHOULD be created an operating manual. It SHOULD document all the necessary rules, requirements and settings required to operate storage solutions. The operation manual SHOULD be updated regularly.
+It SHOULD be created an operating manual. It SHOULD document all the necessary regulations, requirements and settings required to operate storage solutions. The operation manual SHOULD be updated regularly.
 
 #### SYS.1.8.A11 Safe operation of a storage solution
 

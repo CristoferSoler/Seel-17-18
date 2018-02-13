@@ -52,7 +52,7 @@ Software vulnerabilities in Office products are often not fully discovered befor
 
 ### 2 9 Use of unlicensed Office products
 
-Unlicensed office products are a potential financial hazard for institutions. If Office products are used without a valid software license because, for example, the license volume has been exceeded unnoticed, this can lead to contractual penalties upon discovery. Conversely, excessive licensing costs may be incurred because office products are installed in workplaces where they are not needed.
+Unlicensed office products are a potential financial hazard for institutions. If Office products are used without a valid software license because, for example, the license volume has been exceeded unnoticed, this can result in contractual penalties upon discovery. Conversely, excessive licensing costs may be incurred because office products are installed in workplaces where they are not needed.
 
 ### 2 10 Data loss due to password protection of Office documents
 
@@ -60,7 +60,7 @@ Data loss on Office documents can block business processes. Typically, Office pr
 
 ### 2 11 Unauthorized exercise of rights in Office products
 
-Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise due to incorrect rights. Affected business processes can be corrupted, inadvertently process erroneous information or disclose sensitive information.
+Access rights are used as organizational measures to protect information, business processes and IT systems from unauthorized access. Improper access to Office products by unauthorized persons can compromise the confidentiality and integrity of the information by altering, deleting, or improperly creating information. Such vulnerabilities usually arise through incorrect rights. Affected business processes can be corrupted, inadvertently process incorrect information or disclose sensitive information.
 
 3 requirements
 ---------------
@@ -82,11 +82,11 @@ The automatic execution of embedded Active content, such as macros or ActiveX el
 
 All documents obtained from external sources MUST be checked for malware prior to opening. All classified as problematic and additionally all file formats that are not required within the institution MUST be banned. The users MUST be trained and sensitized to handle documents from external sources. The examination of documents from external sources SHOULD be enforced by technical measures.
 
-#### APP.1.1.A4 Securing ongoing operation of Office products
+#### APP.1.1.A4 Securing ongoing operations of Office products
 
 IT operations and ISB MUST regularly check for known security vulnerabilities in Office products. Existing patches MUST be recorded in a timely manner.
 
-Users SHOULD be advised of the capabilities and limitations of the security features of the software used and the storage formats used. The requirements for secure use of Office products SHOULD be integrated into the security policy.
+Users SHOULD be informed about the possibilities and limitations of the security features of the software used and the storage formats used. The requirements for secure use of Office products SHOULD be integrated into the security policy.
 
 ### 3.2 Standard requirements
 
@@ -98,7 +98,7 @@ As part of the procurement of office applications, the institution's requirement
 
 #### APP.1.1.A6 Testing new versions of Office products
 
-New versions of Office products SHOULD be checked for compatibility with established tools (such as document templates, forms) of the institution prior to production. For this purpose, test methods for the individual tests (test types, methods and tools) SHOULD be developed and released. It SHOULD be made sure that important work equipment works well even with the new software function. In case of detected incompatibilities, a migration plan for the affected documents SHOULD be created.
+New versions of Office products SHOULD be checked for compatibility with established tools (such as document templates, forms) of the institution prior to production. For this purpose, test methods for the individual tests (test types, methods and tools) SHOULD be developed and released. It SHOULD be ensured that important work equipment also works perfectly with the new software function. In case of detected incompatibilities, a migration plan for the affected documents SHOULD be created.
 
 #### APP.1.1.A7 Installation and configuration of Office products
 
@@ -109,11 +109,11 @@ There SHOULD be a regular check of the installed versions of Office products. Th
 
 #### APP.1.1.A9 Removal of residual information before forwarding documents [User]
 
-Before passing on documents to third parties, all unnecessary and confidential residual information from Office documents SHOULD be removed. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained in the risks of residual information as well as the possibilities of elimination in the office products used. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
+Before passing on any documents to third parties, you should remove any unwanted and confidential residual information from Office documents. In addition, the metadata SHOULD be cleaned up. All users SHOULD be sensitized and trained in the risks of residual information as well as the possibilities of elimination in the office products used. The transmission of documents SHOULD be done in a non-modifiable format if processing by the recipient is not required.
 
 #### APP.1.1.A10 End User Software Development [User]
 
-Binding rules for software development based on Office applications (eg macros, spreadsheets) by end users SHOULD be made, see also APP.5.2.A2 Restricting Active Content. First, in each institution SHOULD be made the fundamental decision whether such self-developments are desired or not. The decision SHOULD be documented in the affected security policy. If proprietary developments are allowed, a procedure should be developed for dealing with the corresponding functions of Office products for end users. Responsibilities SHOULD be clearly defined. All information about the created applications SHOULD be documented. Current versions SHOULD be made available to all affected users in a timely manner.
+Binding rules for software development based on Office applications (eg macros, spreadsheets) by end users SHOULD be made, see also APP.5.2.A2 Restricting Active Content. First, in each institution SHOULD be made the fundamental decision whether such self-developments are desired or not. The decision SHOULD be documented in the affected security policies. If proprietary developments are allowed, a procedure should be developed for dealing with the corresponding functions of Office products for end users. Responsibilities SHOULD be clearly defined. All information about the created applications SHOULD be documented. Current versions SHOULD be made available to all affected users in a timely manner.
 
 #### APP.1.1.A11 Regulated use of extensions for Office products
 
@@ -123,7 +123,7 @@ All Office product enhancements SHOULD be tested on new releases prior to produc
 
 The cloud storage features built into some Office products SHOULD be disabled. All cloud drives SHOULD be disabled. All documents SHOULD be stored on centrally managed file servers of the institution. To share documents with others for review or editing, use specialized applications such as appropriate data rooms that have security features such as encrypted data storage and distribution, and a suitable user and rights management system.
 
-#### APP.1.1.A13 Using Viewer Functions [User]
+#### APP.1.1.A13 Using Viewer Features [User]
 
 Data from potentially insecure sources such as the Internet or e-mail attachments SHOULD automatically be opened in a protected mode where they can not be edited immediately. Only a general navigation SHOULD be enabled. This feature SHOULD NOT be disabled by the user. SHOULD use appropriate viewer applications if they are available. A list of trusted places can be defined from which content can be opened and edited immediately.
 
@@ -136,7 +136,7 @@ Listed below are exemplary proposals for requirements that go beyond the level o
 
 #### APP.1.1.A15 Use of encryption and digital signatures (CI)
 
-Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD it check to see if it provides adequate protection, especially for older product versions. The IT systems of sender and recipient SHOULD ensure access protection to the method used for encryption. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
+Data with increased protection requirements SHOULD be encrypted prior to transmission or storage to ensure confidentiality. BEFORE using an encryption feature built into an Office product, SHOULD it check to see if it provides adequate protection, especially for older product versions. The IT systems of the sender and the recipient SHOULD ensure access protection for the encryption method used. Users SHOULD be trained and sensitized in handling the encryption functions. In addition, a method SHOULD be used to digitally sign macros and documents. The validity of the used certificates SHOULD be limited in time.
 
 #### APP.1.1.A16 Integrity check of documents (I)
 

@@ -6,7 +6,7 @@
 ### 2 3 Integrated cloud functionalities
 ### 2 4 Impairment of software functions due to compatibility issues
 ### 2 5 Incorrect administration or use of Windows 10
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.2.2.3.A1 Planning the use of cloud services
 #### SYS.2.2.3.A2 Appropriate selection of Windows 10 version and procurement
 #### SYS.2.2.3.A3 Appropriate patch and change management

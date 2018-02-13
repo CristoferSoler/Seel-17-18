@@ -32,7 +32,7 @@
 #### NET.1.2.A23 Logging of administrative access
 #### NET.1.2.A24 Central configuration management for network components
 #### NET.1.2.A25 Status monitoring of the network components
-#### NET.1.2.A26 Comprehensive logging, alarming and logging of events
+#### NET.1.2.A26 Comprehensive logging, alerting and logging of events
 #### NET.1.2.A27 Integration of network management in emergency planning
 #### NET.1.2.A28 Placement of management clients for in-band management
 #### NET.1.2.A29 Use of VLANs in the Management Zone

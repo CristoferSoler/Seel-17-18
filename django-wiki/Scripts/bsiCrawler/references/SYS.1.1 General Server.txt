@@ -6,7 +6,7 @@
 ### 2 3 Prevention of services
 ### 2 4 Provision of unused operating system components and applications
 ### 2 5 overloading of servers
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.1.A1 Suitable installation [building services]
 #### SYS.1.1.A2 user authentication
 #### SYS.1.1.A3 Restrictive rights assignment

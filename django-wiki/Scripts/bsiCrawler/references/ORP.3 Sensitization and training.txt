@@ -10,7 +10,7 @@
 ### 2 7 Carelessness in handling information
 ### 2 8 Poor acceptance of information security
 ### 2 9 Social Engineering
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ORP.3.A1 Sensitization of Information Security Management [Supervisors, Institutional Management]
 #### ORP.3.A2 Contact for security questions
 #### ORP.3.A3 Instruction of the staff in the safe handling of IT [Supervisors, Human Resources, IT Operations]

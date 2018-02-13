@@ -5,7 +5,7 @@
 ### 2 2 Using UPnP
 ### 2 3 Third Party Damage
 ### 2 4 espionage attacks using backdoors in IoT devices
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.4.4.A1 Usage criteria for IoT devices
 #### SYS.4.4.A2 authentication
 #### SYS.4.4.A3 Regular update

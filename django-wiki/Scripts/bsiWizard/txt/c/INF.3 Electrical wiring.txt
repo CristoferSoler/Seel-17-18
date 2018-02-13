@@ -87,7 +87,7 @@ Each electrically conductive network SHOULD be protected against overvoltages. F
 
 #### INF.3.A7 Removing and Disabling Unnecessary Lines
 
-When power cables are no longer needed, they should be removed properly and completely. Afterwards, the fireboards MUST be closed professionally. Cabling, which can be usefully used as reserve with the existing technology, SHOULD be maintained in an operable state. Such cables MUST be marked accordingly at least at the end points. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the corresponding documentation MUST be updated.
+When power cables are no longer needed, they should be removed properly and completely. Subsequently, the fireboards MUST be closed professionally. Cabling, which can be usefully used as reserve with the existing technology, SHOULD be maintained in an operable state. Such cables MUST be marked accordingly at least at the end points. Basically, an overview of cables that are no longer needed should be set up and the deactivation or dismantling / removal of the cables should be documented on the basis of this documentation. Subsequently, the corresponding documentation MUST be updated.
 
 #### INF.3.A8 Fire protection in paths
 
@@ -102,7 +102,7 @@ Each distributor SHOULD have a documentation showing the current status of shunt
 
 #### INF.3.A11 Control of electrical equipment and connections
 
-All electrotechnical equipment, distributors and drawers of the wiring SHOULD be regularly subjected to a (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out, as long as such a check has not already been carried out within the framework of the DGUV V3 examination. Any irregularities detected during visual inspections or functional inspections MUST be documented immediately and reported to the appropriate organizational units. The responsible organizational units MUST then review and correct the irregularities found.
+All electrotechnical equipment, distributors and drawers of the wiring SHOULD be regularly subjected to a (at least random) visual inspection. In addition to the pure visual inspection, a functional control SHOULD additionally be carried out, if such a check has not already been carried out within the framework of the DGUV V3 examination. Any irregularities detected during visual inspections or functional inspections MUST be documented immediately and reported to the appropriate organizational units. The responsible organizational units MUST then review and correct the irregularities found.
 
 #### INF.3.A12 Avoidance of electrical ignition sources
 
@@ -110,11 +110,11 @@ The use of private electrical appliances within an institution SHOULD be clearly
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### INF.3.A13 Secondary Power Supply (A)
 
-The primary energy supply from an energy supply company's network SHOULD be supplemented with emergency care measures in the event of increased availability requirements. For this purpose, a sufficiently dimensioned central UPS and a network backup system (NEA) SHOULD be set up for the areas to be protected. It SHOULD be checked if the connections to the network operator should be redundant. NEA and UPS MUST be serviced regularly.
+The primary energy supply from an energy supply company's network SHOULD be supplemented with emergency care measures in response to increased availability requirements. For this purpose, a sufficiently dimensioned central UPS and a network backup system (NEA) SHOULD be set up for the areas to be protected. It SHOULD be checked if the connections to the network operator should be redundant. NEA and UPS MUST be serviced regularly.
 
 #### INF.3.A14 A-B supply (A)
 

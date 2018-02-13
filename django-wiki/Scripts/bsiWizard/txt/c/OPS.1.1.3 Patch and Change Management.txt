@@ -24,7 +24,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Undefined responsibilities
 
-For example, poorly defined, overlapping, or unclarified responsibilities can slow down the categorization and prioritization of change requests, thereby delaying the distribution of patches and changes. Even if patches and changes are released prematurely without test run and consideration of all (technical) aspects, this can have a serious impact on safety.
+For example, poorly defined, overlapping, or unclear responsibilities can slow down the categorization and prioritization of change requests, thereby delaying the distribution of patches and changes. Even if patches and changes are released prematurely without test run and consideration of all (technical) aspects, this can have a serious impact on safety.
 
 In the extreme case, poorly defined responsibilities can affect the entire institution completely or to a large extent. Faults in the operation affect the availability. Confidentiality and integrity may be affected if security-related patches are not or are distributed late.
 
@@ -62,7 +62,7 @@ Patch and change management contributes to the technical implementation of infor
 
 ### 2 9 Misjudgment of the relevance of patches and changes
 
-If changes are prioritized incorrectly, for example, unimportant patches could be installed first. On the other hand, important patches will be installed too late and vulnerabilities will persist for longer. Patch and change management is often supported by software-based tools. These tools can also contain software errors, making insufficient or incorrect information about a change. If the information that such a tool makes about a change is not checked and tested for plausibility, there may be differences between the actual and assumed implementation of changes.
+If changes are prioritized incorrectly, for example, unimportant patches could be installed first. On the other hand, important patches will be installed too late and vulnerabilities will persist for longer. Patch and change management is often supported by software-based tools. These tools may also contain software errors, making inadequate or incorrect information about a change. If the information that such a tool makes about a change is not checked and tested for plausibility, there may be differences between the actual and assumed implementation of changes.
 
 ### 2 10 Manipulation of data and tools in change management
 
@@ -82,7 +82,7 @@ The following requirements MUST be implemented as a priority:
 If changes to IT components, software or configuration data are to be implemented, there must be guidelines for them that also take security aspects into account. All patches and changes MUST be planned, tested, approved and documented. If patches and changes are made, fallback solutions MUST be present. Major changes MUST also involve information security management. Overall, it MUST be ensured that the desired level of safety is maintained during and after the changes.
 
 #### OPS.1.1.3.A2 Definition of responsibilities [Head IT]
-For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. Everyone involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
+For all organizational areas, the persons responsible for patch and change management MUST be defined. The defined responsibilities MUST also be reflected in the authorization concept. In addition, a dedicated change manager SHOULD be named. All parties involved MUST be familiar with the concepts of patch and change management, information security, and cryptographic techniques.
 
 #### OPS.1.1.3.A3 Configuration of Auto Update Mechanisms [Administrator]
 

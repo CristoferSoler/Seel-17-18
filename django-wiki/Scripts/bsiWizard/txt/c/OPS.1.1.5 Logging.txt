@@ -19,18 +19,18 @@ The present module only considers general aspects that are necessary for adequat
 
 Logging functions already exist in many operating systems or applications or can be integrated there with additional products. To secure these functions and the stored logging data, the underlying operating system must be protected. This is not part of this module. For this purpose, the operating system-specific blocks are implemented, for. B. SYS.1.1 * General Server * and SYS.2.1 * Common Clients *.
 
-The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): Both aspects are not dealt with in the Logging module, or only in passing.
+The module must also be differentiated from the detection (see DER.1 * Detection of safety-relevant events *) as well as the reaction to security incidents (DER.2 * Incident Management *): Both aspects are not dealt with in the logging module, or only in passing.
 
 Guidelines on how to deal with personal data are regulated in the module CON.2 * Privacy *. How long and extensive logging data must be archived is also explained in the module OPS.1.1.2 * Archiving *.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in logging:
+The following specific threats and vulnerabilities are of particular importance in the area of ​​logging:
 
 ### 2 1 Missing or insufficient logging
 
-In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used for individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.
+In an information network, there are often IT systems or applications where logging has not been enabled by default. Sometimes individual IT systems and applications sometimes can not log at all. In both cases, important information can be lost and attacks can not be detected in time. However, this is also possible if logging is used with individual IT systems, but the logs are not merged at one central point. In information networks without central logging, it is difficult to ensure that the relevant log information of all IT systems is obtained and evaluated.
 Furthermore, logging data must contain meaningful information. Among other things, the events that are logged depend on the protection requirements of the respective IT systems or applications. If this is disregarded, for example, when logging only to default settings of the IT systems or applications, this can lead to particularly relevant security events not being logged. Thus, attacks may not be detected.
 
 ### 2 2 Incorrect selection of relevant logging data
@@ -62,7 +62,7 @@ If IT systems in an information network no longer provide the necessary logging 
 
 ### 2 8 Insufficiently sized logging infrastructure
 
-Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a great deal of logging data has to be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only inadequately evaluated and security incidents remain undetected.
+Due to the complex information networks and diverse attack scenarios, the requirements for logging increase, since a large number of logging data must be stored and processed. Furthermore, it is common in security incidents to increase the intensity of logging. However, if the logging infrastructure is not designed for this, there is a risk that logging data will be stored incompletely. Thus, security-relevant events can no longer or only inadequately evaluated and security incidents remain undetected.
 
 3 requirements
 ---------------
@@ -75,7 +75,7 @@ The following requirements MUST be implemented as a priority:
 
 #### OPS.1.1.5.A1 Creation of a Security Policy for Logging [Information Security Officer (ISB), Specialist]
 
-Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what to log. The nature and extent of the logging should be based on the protection requirements of the information.
+Based on the general security policy of the institution, a specific security policy MUST be drawn up in which comprehensible requirements and specifications are described, how the logging should be planned, constructed and operated safely. The directive MUST specify how, where and what should be logged. The nature and extent of the logging should be based on the protection requirements of the information.
 
 The guideline MUST be prepared by the ISB together with the responsible persons. It MUST be known to all employees responsible for logging and be fundamental to their work. If the policy is changed or deviated from the requirements, this MUST be agreed and documented with the ISB. It MUST be checked on a regular basis to see if the directive is still correctly implemented. The results MUST be documented.
 
@@ -100,7 +100,7 @@ Together with the basic requirements, the following requirements are state of th
 
 #### OPS.1.1.5.A6 Structure of a central logging infrastructure
 
-Especially in larger information networks, all collected security-related logging data SHOULD be stored in a central location. For this, a central logging infrastructure in the sense of a log server network SHOULD be set up and placed in a network segment set up for this purpose. The log server network SHOULD obtain the logging data of IT systems and applications exclusively according to the pull principle. If this is not supported by IT systems and applications, the logging data SHOULD be collected on upstream IT systems and retrieved there from the log server network. The necessary communication links SHOULD be restrictive.
+Especially in larger information networks, all collected security-relevant logging data SHOULD be stored in a central location. For this, a central logging infrastructure in the sense of a log server network SHOULD be set up and placed in a network segment set up for this purpose. The log server network SHOULD obtain the logging data of IT systems and applications exclusively according to the pull principle. If this is not supported by IT systems and applications, the logging data SHOULD be collected on upstream IT systems and retrieved there from the log server network. The necessary communication links SHOULD be restrictive.
 
 In addition to security-related events (see OPS.1.1.5.A3 * Configuring System-level and Network-Level Logging *), a central logging infrastructure should also log general operating events that indicate an error, such as an error message. B .:
 
@@ -127,7 +127,7 @@ It SHOULD be ensured that the logging data is only accessed if safety-relevant i
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.1.5.A11 Increase Logging Scope (CIA)
 

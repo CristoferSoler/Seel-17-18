@@ -43,7 +43,7 @@ If the IT and infrastructure operated in the data center are insufficiently supe
 
 ### 2 4 Insufficient air conditioning in the data center
 
-IT components require a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
+IT components need a certain operating temperature to function properly. They also convert their energy into additional heat. If a data center is not or insufficiently air-conditioned, the climatic conditions in the room can not be kept stable. If it is too cold or too hot, the devices may undercut or exceed their permissible operating temperature. The consequences are z. B. malfunctions and failures of technical components or damaged storage media.
 
 ### 2 5 fire
 
@@ -137,9 +137,9 @@ A fire alarm system MUST be installed in a data center. This MUST monitor all su
 
 In a data center, a state-of-the-art extinguishing or fire prevention system MUST be installed.
 
-In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
+In server rooms, manual fire extinguishers in sufficient numbers and sizes SHOULD be used. The fire extinguishers MUST be installed so that they are easily accessible in case of fire. Each extinguisher MUST be regularly inspected and maintained to ensure its proper functioning in the event of an emergency. All employees MUST be instructed in the use of hand fire extinguishers.
 
-#### INF.2.A10 Inspection and maintenance of the infrastructure [IT operation, building services, maintenance personnel]
+#### INF.2.A10 Inspection and maintenance of infrastructure [IT operation, building services, maintenance personnel]
 
 All components of the technical infrastructure MUST comply with at least the recommended or standard intervals and requirements for inspection and maintenance. In order to understand when which work has been carried out, inspections and maintenance MUST be logged.
 
@@ -167,12 +167,12 @@ The security measures for perimeter protection SHOULD be equivalent to those of 
 * outside person and vehicle identification.
 #### INF.2.A13 Planning and installation of alarm systems [planner]
 
-A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are needed and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
+A consistent protection concept for the considered building SHOULD be developed. Only then should it be planned which alarm systems are required and installed for which building areas of the data center and how to deal with alarm messages. The concept SHOULD always be adapted as the use of the building areas changes.
 A suitable alarm system (GMA) should be installed for the respective field of application. The messages of the GMA SHOULD be connected to an alarm receiving station in compliance with the applicable Technical Connection Conditions (TAB). The alarm receiving station SHOULD be reachable at all times and technically as well as personnel able to respond in a suitable manner to the reported hazard. The transmission path between the inserted GMA and the auxiliary service SHOULD be configured redundantly. All transmission paths SHOULD be tested regularly.
 
 #### INF.2.A14 Use of a network replacement system [planner, building services]
 
-The energy supply from the network of a power supply company () SHOULD be supplemented by a network backup system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
+The energy supply from the network of a power supply company () SHOULD be supplemented by a power supply system (NEA). The resources of a NEA SHOULD be checked regularly. In order to maintain the protective effect of an NEA, it SHOULD be regularly maintained (see INF.2.A10 * Infrastructure Inspection and Maintenance *). During these services, load and function tests as well as test runs under load should also be carried out.
 
 #### INF.2.A15 Surge protection device [Planner, building services]
 
@@ -209,7 +209,7 @@ Construction plans, route plans, circuit diagrams, escape route plans, fire brig
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### INF.2.A21 Dodge Data Center (A)
 
@@ -217,7 +217,7 @@ A geographically separated alternative data center SHOULD be set up and used. Th
 
 #### INF.2.A22 Implementation of dust control measures [Building Services] (IA)
 
-When an existing data center is expanded, appropriate dust control measures should be defined, planned and implemented. Persons who themselves are not involved in the construction measures should check at sufficiently close intervals whether the dust protection measures are functioning properly and the regulations on dust protection are complied with.
+When an existing data center is expanded, appropriate dust control measures should be defined, planned and implemented. Persons who are not themselves involved in the construction measures should check at sufficiently close intervals whether the dust protection measures are functioning properly and the regulations on dust protection are complied with.
 
 #### INF.2.A23 Secure Structured Cabling in the Data Center [Building Services] (A)
 
@@ -240,7 +240,7 @@ In the case of increased protection requirements, emergency power supply systems
 
 #### INF.2.A27 Conducting alerting and fire prevention exercises (CA)
 
-With the employees of the institution SHOULD be carried out regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
+The staff of the institution SHOULD have regular alerting and fire safety exercises. These SHOULD be based on an alerting plan that documents the actions to be taken. It SHOULD be checked regularly to see if the measures are still correct, current and workable.
 
 #### INF.2.A28 Use of higher-level alarm systems (IA)
 

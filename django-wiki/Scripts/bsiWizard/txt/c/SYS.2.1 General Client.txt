@@ -9,7 +9,7 @@ A "general client" is an IT system with any operating system that allows the sep
 
 ### 1.2 Objective
 
-The goal of this module is to protect information that is created, read, edited, stored or sent to clients, regardless of the operating system they run on.
+The goal of this module is to protect information that is created, read, processed, stored or sent to clients, regardless of the operating system they run on.
 
 ### 1.3 Delimitation
 
@@ -24,7 +24,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Malware
 
-Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker extensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
+Malicious programs are designed to perform unwanted and malicious functions on computers. They usually become secretly active without the users knowing or agreeing to it. Depending on their characteristics, they offer an attacker comprehensive communication and control options with many functions. Among other things, they could specifically search passwords, remotely control IT systems, deactivate protection software or spy on data.
 
 Clients are particularly vulnerable to malicious software: they are served directly by users and are often the gateway for malicious software. If users visit infected web pages, open emails with compromised content from private email accounts, or copy malicious software to the client through local disks, the malicious software spreads through clients into the institution's network. Central protection mechanisms, such as e.g. Virus protection on the file or email server can be bypassed so often.
 
@@ -69,7 +69,7 @@ Many clients have a microphone and a camera. These can be used by anyone who has
 3 requirements
 ---------------
 
-The following are specific requirements for protecting clients. Basically, the * IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
+The following are specific requirements for client protection. Basically, the * IT operation * is responsible for fulfilling the requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy. In addition, there may be other roles that have additional responsibilities in the implementation of requirements. These are then listed explicitly in square brackets in the heading of the respective requirements.
 
 ### 3.1 Basic requirements
 
@@ -87,14 +87,14 @@ Process, conditions and requirements for administrative tasks as well as the sep
 
 #### SYS.2.1.A3 Enable auto-update mechanisms
 
-Automatic update mechanisms (autoupdate) MUST be enabled unless other mechanisms such as regular manual maintenance or a centralized software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
+Automatic update mechanisms (auto-update) MUST be enabled unless other mechanisms such as regular manual maintenance or a central software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
 
 #### SYS.2.1.A4 Regular backup
 To avoid data loss, regular backups MUST be created. In most computer systems, these can be largely automated. Regulations MUST be made as to which locally stored data will be backed up by whom and when. At least the data that can not be derived from other information MUST be backed up on a regular basis. Clients MUST also be included in the institution's data protection concept. For confidential and paged backups, the backed up data SHOULD be stored encrypted. For deployed software SHOULD you decide separately whether it has to be recorded by the regular data backup. It must be regularly tested whether the backup works as desired, especially if backed up data can be easily replayed. Users SHOULD be informed about the rules of who and how backups are created.
 
 #### SYS.2.1.A5 Screen Lock [User]
 
-A screen lock MUST be used to prevent unauthorized access to the activated clients. It SHOULD be manually activated by the user as well as automatically started after a specified inactivity period. It MUST be ensured that the screen lock can only be deactivated after successful user authentication.
+A screen lock MUST be used to prevent unauthorized access to the activated clients. It SHOULD be manually activated by the user as well as be automatically started after a specified inactivity period. It MUST be ensured that the screen lock can only be deactivated after successful user authentication.
 
 #### SYS.2.1.A6 Use of virus protection programs
 
@@ -108,7 +108,7 @@ It MUST be decided which information should be logged on clients at least, how l
 
 #### SYS.2.1.A8 Hedging the boot process
 
-The starting process of the IT system ("booting") MUST be protected against manipulation. It MUST be specified from which media may be booted. It should be decided whether and how the boot process should be cryptographically protected. It MUST be ensured that only administrators can boot clients from non-default drives or external storage media. Only administrators MUST be able to boot from built-in optical or external storage media. The configuration settings of the boot process firmware MUST be changed only by users with administrative rights.
+The starting process of the IT system ("booting") MUST be secured against manipulation. It MUST be specified from which media may be booted. It should be decided whether and how the boot process should be cryptographically protected. It MUST be ensured that only administrators can boot clients from non-default drives or external storage media. Only administrators MUST be able to boot from built-in optical or external storage media. The configuration settings of the boot process firmware MUST be changed only by users with administrative rights.
 
 ### 3.2 Standard requirements
 
@@ -203,7 +203,7 @@ To make it difficult to exploit vulnerabilities in applications, ASLR and DEP / 
 When decommissioning a client SHOULD ensure that no important data that may be stored on the disks are lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on the IT systems. A checklist SHOULD be created that can be processed when decommissioning an IT system. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.1.A28 Encryption of clients (C)
 
@@ -225,7 +225,7 @@ On each computer, in addition to the central security gateways used, local packe
 
 #### SYS.2.1.A32 Use of Additional Exploit Prevention Measures (CIA)
 
-The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by on-board means, additional suitable safety products SHOULD be used. If it is not possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
+The IT system SHOULD include additional explicit protection against exploits (protection: mitigating successful execution). If necessary protective measures can not be met by means on board, additional suitable safety products SHOULD be used. If it is not possible to implement appropriate measures with on-board resources or a suitable security product, other appropriate (usually organizational) security measures SHOULD be taken.
 
 #### SYS.2.1.A33 Application Whitelisting (CIA)
 It should be ensured via application whitelisting that only permitted programs and scripts are executed. The rules SHOULD be made as narrow as possible. If paths and hashes can not be specified explicitly, alternatively certificate based or path rules should be used.

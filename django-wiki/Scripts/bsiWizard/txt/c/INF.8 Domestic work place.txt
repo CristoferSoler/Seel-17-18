@@ -15,7 +15,7 @@ This module shows how the infrastructure of a home-based workplace can be safely
 
 ### 1.3 Delimitation
 
-The module contains basic requirements which must be observed and fulfilled in order to be able to counteract the specific hazards for a domestic workplace. However, only specific infrastructure requirements for a fixed workplace with access by third parties are defined. However, security requirements for the IT systems used (eg computers) and in particular for the technical components of teleworking (eg communication links) are not the subject of this module but are described in OPS.1.2.4 * Telework * and described in the respective system-specific building blocks.
+The module contains basic requirements that must be observed and fulfilled in order to be able to counteract specific hazards to a home-based workplace. However, only specific infrastructure requirements for a fixed workplace with access by third parties are defined. However, security requirements for the IT systems used (eg computers) and in particular for the technical components of teleworking (eg communication links) are not the subject of this module but are described in OPS.1.2.4 * Telework * and described in the respective system-specific building blocks.
 
 2 risk situation
 -----------------
@@ -28,26 +28,26 @@ Since a home-based workplace is located outside the institution, the employees t
 
 ### 2 2 Unauthorized access to vulnerable areas of the home workplace
 
-Rooms in a home-based workplace where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
+Domestic workplaces where sensitive information is kept and processed, or where vulnerable equipment is located, become vulnerable spaces. If unauthorized persons can enter these rooms unattended, the confidentiality, integrity and availability of the data and information located there is considerably jeopardized.
 
 ** Examples **
 
 * One employee had set up a separate study at home but did not complete it consistently. When the toddlers were left unattended, they played in the unfastened study. Important documents were used as a basis for painting.
 * When a coworker at the domestic workplace was engrossed in a project work, he got a surprising visit. While he was making coffee in the kitchen, the visitor wanted to quickly research something on the Internet while he was not locked up, and inadvertently infected him with malicious software.
-### 2 3 Impairment of IT use due to unfavorable working conditions at home
+### 2 3 Impairment of IT use due to unfavorable working conditions at the home workplace
 
 A non-ergonomic workplace or an unfavorable working environment can result in undisturbed work or a lack of optimal use of IT. The disturbances range from noise or heavy traffic to unfavorable lighting and poor ventilation. As a result, work processes are restricted and employee potential is used insufficiently. There may also be errors in the work, the integrity of data can be reduced.
 
 ### 2 4 Unsecured file and disk transport
 
-When documents, media or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
+If documents, data carriers or files are transported between the institution and the home office, there is a risk that this data and information will be lost or stolen, read or manipulated by unauthorized third parties. File and disk transport can be insufficiently secured in several ways:
 
 * If unique items are transported (missing backup), goals and tasks can not be achieved as planned after loss.
 * If unencrypted data carriers fall into the wrong hands, this can lead to serious confidentiality losses.
 * If insufficient access protection is available on the way, files or data carriers can be copied or manipulated unnoticed.
 ### 2 5 Unsuitable disposal of data media and documents
 
-If employees at the domestic workplace are not able to dispose of data media and documents appropriately, there is a risk that they will be thrown into the household waste. However, attackers can gain valuable information that can be misused specifically for blackmail or industrial espionage. The consequences range from the loss of know-how to the threat to the existence of the institution, for example, if important orders fail to materialize or partnerships fail.
+If employees at the domestic workplace are not able to dispose of data media and documents properly, there is a risk that they will be thrown into the household waste. However, attackers can gain valuable information that can be misused specifically for blackmail or industrial espionage. The consequences range from the loss of know-how to the threat to the existence of the institution, for example, if important orders fail to materialize or partnerships fail.
 
 ### 2 6 Manipulation or destruction of IT, accessories, information and software at the home office
 
@@ -75,7 +75,7 @@ Official documents and data carriers MUST be stored in the home office in such a
 
 #### INF.8.A2 Transportation of work material to the home workplace [Home automation]
 
-It MUST be regulated which data carriers and documents can be processed at the home office and transported back and forth between the institution and the home office. In general, data carriers and other documents MUST be transported safely. The regulations MUST be appropriately communicated to the employees.
+It MUST be regulated which data carriers and documents can be processed at the home office and transported between the institution and the home office. In general, data carriers and other documents MUST be transported safely. The regulations MUST be appropriately communicated to the employees.
 
 #### INF.8.A3 Protection against unauthorized access to the home workplace [Home automation]
 
@@ -89,7 +89,7 @@ Together with the basic requirements, the following requirements are in line wit
 
 #### INF.8.A4 Adequate home-work equipment [Home automation]
 
-The home office SHOULD be separated from the private areas of the home by a suitable layout.
+The home workplace SHOULD be separated from the private areas of the home by a suitable layout.
 
 The home workplace SHOULD have a suitable device that meets the ergonomic requirements.
 

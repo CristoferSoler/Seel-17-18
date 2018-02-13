@@ -34,7 +34,7 @@ The following specific threats and vulnerabilities are of particular importance 
 
 In the development of IoT devices, the aspect of information security is typically a design goal that is not respected or only subordinate. Therefore, IoT devices could be abused again and again to gather information about the users or the field of application. So it has always come back to incidents with networked or IP-based surveillance cameras, z. B .:
 
-* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in financial institutions through the cameras.
+* In 2013, several banks in different countries were compromised via surveillance cameras as part of the "Carbanak" campaign. The perpetrators captured a three-digit million amount. These attacks spied screen content and keystrokes in the financial institutions through the cameras.
 * In 2014, video images and streams from 73,000 inadequately-protected webcams were made publicly available through the Insecam website.
 * In 2015, 8-year-old Malware Conficker infected a variety of bodycams from various police forces.
 ### 2 2 Using UPnP
@@ -45,7 +45,7 @@ LAN's built-in IoT devices often connect to the Internet on their own by configu
 
 If IoT devices are not regularly patched, known vulnerabilities remain open and can be exploited for large-scale attacks. One target of an attack could be to integrate the IoT devices into a botnet. In this case, they could be used, for example, to perform Distributed Denial of Service (DDoS) attacks and to limit the availability of services.
 
-Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet automatically scanned the Internet for additional devices to infect them with malware and add them to the botnet.
+Example: At the end of October 2016, a DDoS attack on an Internet service provider using a botnet consisting largely of IoT devices was used. Due to the large number of devices, the so-called Mirai botnet has reached a bandwidth that goes far beyond the previously known botnets. The webcams, cameras, DVR players, routers and printers that already belonged to the botnet independently scanned the Internet for other devices to infect them with malware and add them to the botnet.
 
 ### 2 4 espionage attacks using backdoors in IoT devices
 
@@ -65,7 +65,7 @@ The following requirements MUST be implemented as a priority:
 IoT devices MUST meet a minimum of security criteria so that they can be used in institutions. The devices MUST have update features and the manufacturer MUST offer an update process. The devices MUST allow authentication. There must NOT be hard-coded access data in the device.
 
 #### SYS.4.4.A2 authentication
-To use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such as. B. Certificate-based authentication.
+To use an IoT device in an institution, an authentication MUST be activated. If passwords are used for this, secure passwords MUST be used. There should be a password policy for this. These passwords MUST be complex enough to be kept secret and changed regularly. Preset passwords MUST be changed. In addition, the use of alternative authentication mechanisms, such. B. Certificate-based authentication.
 
 #### SYS.4.4.A3 Regular update
 
@@ -73,7 +73,7 @@ It MUST be checked periodically to see if the IoT devices and associated compone
 
 #### SYS.4.4.A4 Enable auto-update mechanisms
 
-Automatic update mechanisms (autoupdate) MUST be enabled unless other mechanisms such as regular manual maintenance or a centralized software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
+Automatic update mechanisms (auto-update) MUST be enabled unless other mechanisms such as regular manual maintenance or a central software distribution system are used for updates. If a time interval can be specified for auto-update mechanisms, you should automatically check for and install updates at least once a day.
 
 #### SYS.4.4.A5 Network access restriction
 
@@ -149,7 +149,7 @@ Depending on whether IoT devices are administered locally, directly via the netw
 
 #### SYS.4.4.A20 Regulated decommissioning of IoT devices
 
-When decommissioning IoT devices, make sure that no important data that may be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be used when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
+When decommissioning IoT devices, make sure that no important data that might be stored on the installed data carriers is lost, and that no sensitive data is left behind. It SHOULD give an overview of what data is stored on IoT devices. A checklist SHOULD be created that can be used when decommissioning IoT devices. This checklist SHOULD include at least aspects for data backup of the data that is still required and the subsequent secure deletion of all data.
 
 ### 3.3 Requirements for increased protection requirements
 

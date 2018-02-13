@@ -15,11 +15,11 @@ On the one hand, with the implementation of this module, the institution ensures
 
 ### 1.3 Delimitation
 
-The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from the remote administration of IT systems via external interfaces, as well as the remote maintenance of devices and components by the respective manufacturer or supplier, which is considered in the module * OPS.2.4 Remote maintenance *.
+The module describes general security requirements for proper IT administration. It considers ongoing administrative activities carried out by designated personnel at the institution's sites. It must be distinguished from remote administration of IT systems via external interfaces as well as remote maintenance of devices and components by the respective manufacturers or suppliers, which is considered in the module * OPS.2.4 Remote maintenance *.
 
 The subject of the module are general requirements for the administration process as such. Specific requirements for the management of individual IT systems and components are dealt with in the module * OPS.1.1.2 Network and System Management *. There are corresponding requirements, such as systems installed and put into operation, such as changes and maintenance performed or systems are discarded.
 
-The other building blocks of the area * OPS.1.1 core IT operations * describe aspects of IT operation that are relevant in addition to the present building block. They should therefore additionally be considered and modeled in addition to this module.
+The other building blocks of the area * OPS.1.1 core IT operation * describe aspects of IT operation that are relevant in addition to the present building block. They should therefore additionally be considered and modeled in addition to this module.
 
 A particular security relevance in an institution is the proper administration of users and rights. Therefore, this topic is also covered in a separate building block * * (see * ORP.4 Identity and Permission Management) *.
 
@@ -134,7 +134,7 @@ Administrators SHOULD keep up to date with the security of the systems, services
 
 #### OPS.1.1.2.A11 Documentation of IT Administration Activities [IT Operations]
 
-System changes SHOULD be comprehensibly documented in a suitable form. From the documentation SHOULD emerge,
+System changes SHOULD be comprehensibly documented in an appropriate form. From the documentation SHOULD emerge,
 
 * which changes have been made,
 * when the changes have been made,
@@ -150,7 +150,7 @@ Remote maintenance SHOULD only be performed if adequate security measures have b
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.1.2.A14 Administrators Security Check (CIA)
 

@@ -14,14 +14,14 @@
 ### 2 11 Abusive access to outsourced data
 ### 2 12 Web-based attacks on browsers
 ### 2 13 Insufficient requirements for license management
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.2.3.A1 iOS usage strategy
 #### SYS.3.2.3.A2 Planning the Use of Cloud Services
 #### SYS.3.2.3.A3 Using the device code
 #### SYS.3.2.3.A4 Using the Automatic Lock Configuration Option
 #### SYS.3.2.3.A5 Using the device locking configuration option
 #### SYS.3.2.3.A6 Using the configuration option "Maximum number of failed attempts"
-#### SYS.3.2.3.A7 Preventing unauthorized deletion of configuration profiles
+#### SYS.3.2.3.A7 Prevent unauthorized deletion of configuration profiles
 #### SYS.3.2.3.A8 Timely update of the operating system
 ### 3.2 Standard requirements
 #### SYS.3.2.3.A9 Using a complex device code

@@ -9,8 +9,8 @@
 ### 2 6 Inappropriate rights management in the MDM
 ### 2 7 No or weak encryption of communication between MDM and terminal
 ### 2 8 Unauthorized creation of motion profiles by the MDM
-### 2 9 Hazards of Bring Your Own Device (BYOD)
-### 3.1 Basic Requirements
+### 2 9 Dangers of Bring Your Own Device (BYOD)
+### 3.1 Basic requirements
 #### SYS.3.2.2.A1 Definition of a strategy for Mobile Device Management
 #### SYS.3.2.2.A2 Setting Allowed Mobile Devices
 #### SYS.3.2.2.A3 Selection of an MDM product

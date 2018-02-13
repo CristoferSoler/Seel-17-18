@@ -9,7 +9,7 @@
 ### 2 6 Incorrect configuration of Microsoft Exchange
 ### 2 7 Incorrect configuration of Outlook
 ### 2 8 Malfunctions and misuse of self-developed macros and programming interfaces under Microsoft Outlook
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.5.2.A1 Planning the Use of Microsoft Exchange and Outlook [IT Director, Information Security Officer (ISB)]
 #### APP.5.2.A2 Choosing a Suitable Microsoft Exchange Infrastructure [IT Leader]
 #### APP.5.2.A3 Authorization Management

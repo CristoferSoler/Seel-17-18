@@ -13,7 +13,7 @@ The maintenance of information security must therefore be integrated into a comp
 
 ### 1.2 Objective
 
-The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
+The aim of the module emergency management is to describe requirements that ensure information security even in critical situations. To this end, the corresponding measures are to be embedded in a holistic continuity management and to consider all aspects that are necessary in order to be able to maintain information security even in the event of a damaging event. This ranges from planning to checking all processes.
 
 ### 1.3 Delimitation
 
@@ -96,7 +96,7 @@ The financial, technical and human resources for the intended goals of emergency
 
 #### DER.4.A7 Creation of an emergency concept [institutional management] (CIA)
 
-All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept SHOULD information security be considered and appropriate security concepts for emergency solutions developed.
+All critical business processes and resources SHOULD be identified (for example, with a Business Impact Analysis (BIA)). It SHOULD identify the most relevant, relevant risks to critical business processes and resources. For each identified risk SHOULD decide which risk strategies should be used for risk treatment. Continuity strategies should be developed that enable a recovery and recovery of critical business processes in the required time. An emergency concept SHOULD be created. Emergency plans and measures SHOULD be developed and implemented to enable effective emergency response and rapid resumption of critical business processes. In the emergency concept, information security SHOULD be considered and appropriate security concepts for emergency solutions developed.
 
 #### DER.4.A8 Integration of Employees in the Emergency Management Process [Supervisors, Head of Human Resources] (CIA)
 
@@ -108,7 +108,7 @@ It SHOULD be ensured that aspects of emergency management are taken into account
 
 #### DER.4.A10 Tests and Emergency Exercises [Head of Institution] (CIA)
 
-An exercise plan SHOULD be prepared so that all major emergency management plans and measures are tested and practiced on a regular and case-by-case basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
+An exercise plan SHOULD be created so that all major emergency management plans and measures are tested and practiced regularly and on an ad hoc basis. In emergency management, sufficient resources should be provided for the planning, design, implementation and evaluation of the tests and exercises.
 #### DER.4.A11 Review and maintenance of emergency preparedness and response (CIA) measures
 
 The identified measures for emergency preparedness and response SHOULD be reviewed regularly and on an ad hoc basis. The checks SHOULD be planned so that no relevant part is left out. The results of the reviews SHOULD be evaluated and, where appropriate, implemented in corrective actions. The corrective measures SHOULD be planned and the implementation monitored.

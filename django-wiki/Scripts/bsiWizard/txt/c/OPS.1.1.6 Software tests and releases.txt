@@ -39,7 +39,7 @@ It is often assumed that trained developers and software testers have sufficient
 
 Software tests with productive data or in productive operation are necessary, because only with the productive data the function and the performance of the product can be evaluated. Often, developers also have a different view of the product being developed; for example, they have a different level of security awareness, they trust the software they are developing too much, and they can not correctly interpret the potential impact of problems.
 
-Although software tests with productive data are necessary, this can lead to security problems. In particular, confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
+Although software tests with productive data are necessary, this can lead to security problems. In particular confidential productive data can be viewed for the software tests by unauthorized employees or third parties who have been commissioned with the respective software test.
 
 Through software tests in productive operation, the operation could be massively disrupted. Malfunctions of the software under test may affect other applications and IT systems that are severely disrupted. If you are using the "original" productive data in production mode and not with copies of the data, they could be changed or deleted unintentionally.
 
@@ -124,7 +124,7 @@ Only anonymized or pseudonymized test data should be used for software testing. 
 
 #### OPS.1.1.6.A12 Performing Regression Tests [Tester]
 
-If software tests are to be performed after a software change, regression tests should be performed. Regression tests SHOULD be completed. The omission of test cases SHOULD be substantiated and documented. The test cases and the test results SHOULD be documented.
+If software tests are to be performed after a change in the software, regression tests should be performed. Regression tests SHOULD be completed. The omission of test cases SHOULD be substantiated and documented. The test cases and the test results SHOULD be documented.
 
 #### OPS.1.1.6.A13 Separation of Test and Quality Management Environment from the Production Environment [IT Operations]
 
@@ -132,7 +132,7 @@ Software SHOULD only be tested in a dedicated test and quality management enviro
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.1.6.A14 Performing Penetration Tests [Tester] (CIA)
 

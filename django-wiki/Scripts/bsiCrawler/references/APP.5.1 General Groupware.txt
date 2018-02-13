@@ -9,14 +9,14 @@
 ### 2 6 Data loss in groupware applications
 ### 2 7 Attacks on groupware systems and applications
 ### 2 8 Unreliability of groupware
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.5.1.A1 Secure installation of groupware systems [IT Manager]
 #### APP.5.1.A2 Secure configuration of groupware clients [IT, user]
 #### APP.5.1.A3 Secure Operation of Groupware Systems [Head of IT, Information Security Officer (ISB)]
 #### APP.5.1.A4 Data Protection Archiving at Groupware [Information Security Officer (ISB), Data Protection Officer, User]
 ### 3.2 Standard requirements
 #### APP.5.1.A5 Definition of the communication partners [Head of Organization, Head of IT, Information Security Officer (ISB), Data Protection Officer]
-#### APP.5.1.A6 Representation rules for e-mail usage [supervisors, information security officer (ISB), users]
+#### APP.5.1.A6 Representation rules for e-mail usage [supervisor, information security officer (ISB), user]
 #### APP.5.1.A7 Planning the Safe Use of Groupware Systems [IT Leader, Information Security Officer (ISB)]
 #### APP.5.1.A8 Definition of a security policy for groupware [IT chief, information security officer (ISB), user]
 #### APP.5.1.A9 Secure administration of groupware systems [Head IT]

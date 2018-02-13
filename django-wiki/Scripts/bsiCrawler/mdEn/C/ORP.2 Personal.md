@@ -34,7 +34,7 @@ If information security regulations are lacking, inadequate, unworkable or incom
 
 ### 2 4 Insufficient knowledge of regulations
 
-The establishment of regulations alone does not ensure their compliance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
+The definition of regulations alone does not ensure their observance and trouble-free operation. All employees must also be aware of the applicable regulations, above all the officials. Damage that arises because existing regulations are not known, may not be excused with the statements: "I did not know that I am responsible." or "I did not know how to handle it."
 
 ### 2 5 Misconduct
 
@@ -53,7 +53,7 @@ The unauthorized use of own IT systems by employees can generally be difficult t
 
 ### 2 9 Abuse of social networks
 
-Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed in "acquaintance" can be exploited.
+Social networks are very successful as platforms. However, in addition to the various advantages, there are also security risks that users should not lose sight of. So the data published on social networks can be used for the skillful password rate. In addition, social networks are particularly suitable for social engineering attacks, as here, on the one hand, a lot of background information can be collected and, on the other hand, the confidence assumed under "acquaintance" can be exploited.
 
 ### 2 10 Manipulation or destruction of equipment, information or software
 
@@ -83,15 +83,15 @@ The IT administration must also ensure that former employees are deprived of all
 
 Before the adoption MUST again be made explicit on confidentiality obligations.
 
-Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security personnel, MUST also be informed of the employee's departure. In order to handle all activities that accompany the departure of employees in a regulated manner, the setting and the processing of a checklist SHOULD be helpful in a similar way to the attitude here.
+Furthermore, emergency and other schedules MUST be updated. All affected entities within the institution, such as the security staff, MUST also be informed of the employee's departure. In order to be able to process all activities that accompany the departure of employees in a regulated manner, the creation and the processing of a checklist SHOULD be helpful, similar to the attitude.
 
 #### ORP.2.A3 Representation Rules [Supervisors]
 
-Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and workable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. In this case, the simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to name or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external forces can be used for the substitution case.
+Supervisors MUST ensure the establishment and maintenance of representation arrangements. It must be ensured that appropriate and practicable representation arrangements exist for all essential business processes and tasks. In these regulations, the scope of the representation must be clearly defined in advance. The simple naming of a representative is not sufficient, but it MUST be ensured that he has the knowledge required for the representation. If this is not the case, MUST be checked as to how to train the representative or whether it is sufficient to document the current process or project status sufficiently. If, in exceptional cases, it is not possible to name or train a competent representative for individual employees, it must be considered at an early stage whether and, if so, which external forces can be used for the substitution case.
 
 #### ORP.2.A4 Regulations for the use of external personnel
 
-In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated as visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be instructed in their tasks similar to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
+In the case of employment of external personnel, this must, like all employees, be obliged to comply with applicable laws, regulations and internal regulations. External or non-permanent deployed personnel can be treated like visitors and MUST be supervised in security relevant areas. In the case of long-term employed third-party personnel, in turn, this MUST be assigned to his or her duties in a similar way to their own employees. For such employees, a substitution regime MUST also be introduced. On their departure MUST be carried out in accordance with its own personnel a regulated transfer and return of the work results and possibly handed out access permissions.
 
 #### ORP.2.A5 Confidentiality agreements for the use of outside personnel
 
@@ -124,14 +124,14 @@ From the point of view of information security, measures SHOULD be taken to ensu
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.2.A11 Safety culture analysis (CIA)
 The security measures selected for the institution SHOULD always be based on the institution and its employees. While maintaining the legal framework, it should be analyzed how exactly the employees behave from a security point of view. Based on this, SHOULD investigate where the personal and organizational security can be improved.
 
 #### ORP.2.A12 Designation of separate contact persons (CIA)
 
-To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact should be checked.
+To the satisfaction of the coworkers a responsible person SHOULD be named as a trustworthy contact person. In case of major organizational or technical changes, the designation of such a contact person SHOULD be checked.
 
 #### ORP.2.A13 Security Check (CIA)
 

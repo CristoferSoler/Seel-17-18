@@ -11,7 +11,7 @@ Businesses and governments are storing more and more data and at the same time r
 
 ** planning and conception **
 
-In order to set up an effective data backup, possible influencing factors must first be identified (see CON.3.M1 * Survey of influencing factors of the data backup *) and then an appropriate procedure established (see CON.3.M2 * Definition of the procedure for data backup *). Based on this, the responsible persons must develop a minimum data security concept (see CON.3.M4 * Creation of a minimum data protection concept *) and a data backup concept (see CON.3.M6 * Development of a data protection concept *).
+In order to set up an effective data backup, possible influencing factors must first be identified (see CON.3.M1 * Survey of factors influencing data backup *) and then an appropriate procedure established (see CON.3.M2 * Definition of the procedure for data backup *). Based on this, the responsible persons must develop a minimum data security concept (see CON.3.M4 * Creation of a minimum data protection concept *) and a data backup concept (see CON.3.M6 * Development of a data protection concept *).
 
 **Procurement**
 
@@ -36,7 +36,7 @@ Backups must also work in an emergency, d. H. the backed-up data must be easy an
 2 measures
 -----------
 
-In the following, specific implementation notes are listed in the "Data backup concept" section.
+In the following, specific implementation instructions are listed in the "Data backup concept" section.
 
 ### 2.1 Basic measures
 
@@ -47,13 +47,13 @@ The following measures should be implemented as a priority:
 For each IT system, possibly even for individual IT applications of particular importance, the following influencing factors must be determined. For this, the system administrators and the persons responsible for the individual IT applications can be interviewed. The results are comprehensible to document. In detail must be determined:
 
 * Specification of the data to be backed up: The data stock of the IT system (the IT application) required for the specialized tasks should be determined. These include the application and operating software, the system data (eg, initialization files, macro definitions, configuration data, phrases, password files, access rights files), the application data itself, and log data (e.g., login log, security breach logs, data transfer logs).
-* Availability requirements of the IT applications to the data: For the data specified in the first step, the availability requirements must now be specified. A proven measure of this is the indication of the maximum tolerable downtime. It specifies the period of time during which the specialist task can be continued without this data, without having to resort to data backups.
-* Reconstruction of the data without data backup: To develop an economical data protection concept (see CON.3.M6 Development of a data protection concept), it is necessary to know if and with which effort destroyed data can be reconstructed if a data backup is not available is. It should be examined from which sources the data can be reconstructed and how long that would take. Examples include the file situation, printouts, surveys and surveys.
+* Availability requirements of the IT applications to the data: For the data specified in the first step, the availability requirements must now be specified. A proven measure of this is the indication of the maximum tolerable downtime. It specifies the period of time over which the specialist task can be continued without this data, without having to resort to backup data.
+* Reconstruction of the data without data backup: To develop a data protection concept which is economically appropriate (see CON.3.M6 Development of a data protection concept), it is necessary to know if and at what cost destroyed data can be reconstructed if a data backup is not available is. It should be examined from which sources the data can be reconstructed and how long that would take. Examples include the file situation, printouts, surveys and surveys.
 * Data volume: For the selection of the storage medium, a decisive factor is the stored and secured data volume.
 * Volume of change: To determine the frequency of backup and the adequate backup procedure, it is important to know how much data changes over a given period of time. It is necessary to provide information as to whether existing files are changed in content or whether new files are being created.
 * Change dates of the data: There are IT applications in which data changes only occur on certain dates, such as the payroll accounting run at the end of the month. In such cases, data backup immediately after such an appointment makes sense. Therefore, for the data to be backed up, it should be indicated whether they change daily, weekly or on specific dates.
 * Deadlines: For the data, it must be clarified whether certain deadlines must be met. These may be retention periods or deletion periods in connection with personal data. These deadlines are to be considered in the data backup.
-* Confidentiality requirement of the data: The confidentiality requirement of a file is transferred to the backup copy during a data backup.
+* Confidentiality of the data: The confidentiality requirement of a file is transferred to the backup copy during a data backup.
 * Data integrity requirements: For data backups it must be ensured that the data has been stored with integrity and is not changed during the retention period. This is all the more important the higher the need for integrity of the user data. Therefore, the data backups should indicate how high the integrity requirement is.
 * Knowledge and skills of IT users: Deciding who is responsible for data backup, the IT user himself, or dedicated staff or system administrators is what determines the knowledge and skills of IT users and what tools they have can be made available. If the time required to perform a backup for IT users is too high, this should be stated.
 #### CON.3.M2 Definition of the procedure for the data backup [IT-Betrieb, Fachverantwortliche]
@@ -86,7 +86,7 @@ The following types of backup exist:
 A special form of the mentioned data security strategies is the image data backup. Here, not the individual files of a disk stack are backed up, but the physical sectors of the disk. It is a full backup that can be restored very quickly to a similar hard drive.
 
 Another form is Hierarchical Storage Management (HSM). This is primarily about using existing storage as economically as possible. Depending on the frequency with which they are accessed, files are kept on fast online storage (hard drives), swapped out to nearline storage (automatic data carrier systems), or archived to offline storage devices (magnetic tapes). At the same time, these HSM systems also offer automatic data backup routines combined from incremental data backup and full data backup.
-A redundant data storage offer RAID systems (Redundant Array of Inexpensive Disks). The RAID concept describes the connection of several hard disks under the command of a so-called array controller. There are several RAID levels, of which RAID level 1 describes data mirroring. However, RAID systems do not replace data backup! They do not help with theft or fire, so the data stored on RAID systems must also be backed up to additional media and these media must also be stored in other fire sections.
+A redundant data storage offer RAID systems (Redundant Array of Inexpensive Disks). The RAID concept describes the connection of several hard disks under the command of a so-called array controller. There are several RAID levels, of which RAID level 1 describes data mirroring. However, RAID systems do not replace data backup! They do not help with theft or fire, so the data stored on RAID systems must be backed up to additional media and these media must also be stored in other fire sections.
 
 In order to decide which data protection strategy should be used, the following influencing factors (see CON.3.M1 * Survey of factors influencing data backup *) must be taken into account in order to find a form that is suitable for the requirements and at the same time economical:
 
@@ -100,26 +100,26 @@ If a data loss occurs, all data is lost until the last backup. The more up-to-da
 
 When selecting the frequency and time of the data backup, the following influencing factors (see CON.3.M1 * Survey of the influencing factors of the data backup *) must be observed:
 
-* Availability requirements, recovery effort without data backup and change volume: The time interval of the data backups should be selected so that the restoration and post-acquisition time (reconstruction effort of the changed data for which no data backup exists) of the data changed during this period (change volume) is smaller than the maximum tolerable downtime is.
-* Change dates of the data: If there are times when the data changes on a large scale (eg program run for salary payment or software version change) or at which the complete dataset must be available, then it is advisable to carry out a full data backup immediately afterwards , In addition to the periodic ones, the event-dependent data backup times must be defined.
+* Availability requirements, recovery effort without data backup and change volume: The time interval of the data backups should be selected so that the restoration and re-acquisition time (reconstruction effort of the changed data for which no data backup exists) of the data changed during this period (change volume) is smaller than the maximum tolerable downtime is.
+* Change dates of the data: If there are times when the data change on a large scale (eg program run for salary payment or software version change) or where the complete dataset must be available, it is advisable to carry out a full data backup immediately afterwards , In addition to the periodic ones, the event-dependent data backup times must be defined.
 ** number of generations **
 On the one hand, data backups are repeated at short intervals in order to have a copy of an up-to-date dataset available, on the other hand, the data backup must ensure that stored data is kept as long as possible. A full data backup is called generation. The number of generations to keep and the time gap between generations should be set. These requirements can be explained by the following examples:
 
 * If a file is intentionally or unintentionally deleted, this file is no longer available in all subsequent backups. If it turns out that this deleted file is still needed, an older data backup must be used for the restoration, which was created before the deletion. If such a generation is no longer available, then the file must be recaptured.
 * If a loss of integrity occurs in a file, such as As by malware, it is likely that this is not noticed directly, but only offset in time. To restore the integrity of the file, you need to resort to a generation that was created before the loss of integrity.
 * It can not be ruled out that a data backup was created incorrectly or incompletely. That is why it is often helpful to use another generation.
-In order to be able to maintain these advantages of the generation principle, however, a boundary condition must be adhered to: the time interval between the generations must not be less than a minimum. Example: In an automated data backup process, repeated crashes of the backup run occur. This would successively overwrite all generations. This can be prevented by checking the minimum age before overwriting a generation and only overwriting it when that age is exceeded.
+In order to be able to maintain these advantages of the generation principle, however, a boundary condition must be adhered to: the time interval between generations must not be less than a minimum. Example: In an automated data backup process, repeated crashes of the backup run occur. This would successively overwrite all generations. This can be prevented by checking the minimum age before overwriting a generation and only overwriting it when that age is exceeded.
 
 A generational principle can be characterized by two variables: the minimum age of the oldest generation and the number of available generations. Where:
 
 * the higher the minimum age of the oldest generation, the greater the likelihood that a file with integrity loss (a deleted file, which is subsequently recognized as necessary) is still a precursor version,
-* The larger the number of available generations, the more recent the requested legacy version.
+* The larger the number of available generations, the more current the requested legacy version.
 The number of generations, however, is directly related to the cost of data backup because there must be sufficient volumes of data. Since a separate data medium should be used for each generation, the number of generations must be limited to an economically reasonable level.
 
 The following influences result for the selection of the parameters of the generation principle (see CON.3.M1 * Survey of the influencing factors of the data backup *):
 
 * Data availability requirements and data integrity requirements: The higher the availability or integrity requirements of the data, the more generations it will take to minimize the recovery time in the event of integrity loss.
-* If the loss of a file or an integrity violation may not be noticed until very late, additional quarterly or yearly backup records are recommended.
+* If the loss of a file or an integrity violation may not be noticed until very late, additional quarterly or yearly backup data sets are recommended.
 * Recovery effort without data backup: If the data is extensive, but can also be reconstructed without data backup, then this can be taken into account as another pseudo-generation.
 * Data volume: The higher the data volume, the more space is needed and the higher the cost of a generation. A high volume of data can therefore limit the number of generations for economic reasons.
 * Volume of Change: The higher the volume of change, the shorter the inter-generational interval should be to have as timely a version of the file as possible and to minimize the recovery effort.
@@ -127,7 +127,7 @@ The following influences result for the selection of the parameters of the gener
 
 Now that you have determined the type of backup, the frequency, and the generation principle, you should now select the procedure and the appropriate storage medium.
 
-To minimize the volume of data on the storage medium, data compression algorithms can be used. In some cases, the volume of data can be greatly reduced. However, it is important to ensure that the chosen parameters and algorithms are documented and retained for the restoration of the data (decompression).
+To minimize the volume of data on the storage medium, data compression algorithms can be applied. In some cases, the volume of data can be greatly reduced. However, it is important to ensure that the chosen parameters and algorithms are documented and retained for the restoration of the data (decompression).
 
 There are two parameters for the ** procedure ** that must be specified: the degree of automation and the centralization (storage location).
 
@@ -138,7 +138,7 @@ For the degree of automation, a distinction must be made between manual and auto
 With regard to centralization, centralized and decentralized data backups can be distinguished:
 
 * Central data backups are characterized by the fact that the storage location and the data backup are carried out on the central IT system. This procedure has the advantage that only one employee has to be intensively trained and the users are relieved of this work. A further advantage is that more cost-effective storage media can be used by the higher central data volume. The disadvantage is that possibly confidential data could be transferred and viewed by unauthorized persons.
-* Decentralized data backups are performed by the users themselves, without having to transfer the data to a central IT system. It is advantageous that the user retains control of the data and the backup volumes, especially if they are confidential data. The disadvantage is that the consistent data backup depends on the reliability of the user and that decentralized solutions demand time from the users.
+* Decentralized data backups are performed by the users themselves, without having to transfer the data to a central IT system. It is advantageous that the user retains control of the data and the backup volumes, especially if they are confidential data. The disadvantage is that consistent data protection depends on the reliability of the user and that decentralized solutions demand time from the users.
 After deciding whether the data backup is performed manually or automatically, centrally or remotely, the appropriate data medium or the appropriate storage medium for data backup must now be found. The following parameters can be considered for this:
 
 * Volume Request Time: How long may it take for a backup volume to be available for recovery? Robot systems can do that within minutes, outsourced tapes may need to be transported and laid down consuming.
@@ -147,15 +147,15 @@ After deciding whether the data backup is performed manually or automatically, c
 * Costs: The costs of the data backup must be in reasonable proportion to the security purpose. In this case, the lifetime of the disk is to be considered.
 The following influencing factors (see CON.3.M1 * Survey of influencing factors of the data backup *) must be observed:
 
-* Availability Requirements: The higher the availability requirements, the faster the media must be accessed as the storage medium of the backup, and the faster the required data must be re-recordable from the media.
+* Availability Requirements: The higher the availability requirements, the faster the media must be accessed as the storage medium of the backup and the faster the required data from the media must be re-recordable.
 * It must be ensured that the storage media can be used for recovery even if one of the readers fails. The compatibility and function of a replacement device must be ensured.
 * Data and change volume: As data volumes increase, inexpensive storage media are often used.
 * Deadlines: If deletion periods must be adhered to (eg for personal data), the selected storage medium must enable the deletion. Storage media that are not or only with great effort erasable (eg WORM), should be avoided in this case.
 * Confidentiality requirements and integrity requirements of the data: If the confidentiality or integrity requirement of the data to be protected is high, this protection requirement is also transferred to the data carriers used for data backup. If encryption of the data backup is not possible, consideration can be given to the selection of data carriers which, due to their compact design, can be stored in data cabinets or vaults.
-* Knowledge of IT users: The knowledge and data-processing capabilities of IT users determine whether a policy can be chosen in which the user can manually manually backup, whether other trained individuals perform data protection remotely, or whether they are automated Data backup is more practical.
+* Knowledge of IT users: The knowledge and data-processing capabilities of IT users determine whether or not to choose a policy in which the user himself or herself manually acts for data backup, whether other trained individuals perform data backup remotely, or if an automated one Data backup is more practical.
 ** Responsibility for data backup **
 
-There are three groups of people responsible for deciding who is responsible for data protection: first, it can be the user himself (typically for decentralized and non-networked IT systems), the system administrator or an administrator specially trained for data protection. If the data backup is not carried out by the user, those responsible must be obliged to maintain secrecy regarding the data content. Maybe the data should also be encrypted.
+There are three groups of people responsible for deciding who is responsible for data protection: First, it may be the user himself (typically for decentralized and non-networked IT systems), the system administrator or an administrator specially trained for data protection. If the data backup is not carried out by the user, those responsible must be obliged to maintain secrecy regarding the data content. Maybe the data should also be encrypted.
 
 In addition, the decision makers must be named, which can cause a recovery. It remains to be clarified who has the right to access data carriers, especially if they are outsourced to backup archives. It must be ensured that only authorized persons gain access. Finally, it must be defined who is authorized to carry out a restoration of the entire database or selected individual files.
 
@@ -179,9 +179,9 @@ In addition, it must be ensured by organizational and personnel measures (disk m
 The following influencing factors (see CON.3.M1 * Survey of influencing factors of the data backup *) must be observed:
 
 * Availability requirements: The higher the availability requirements, the faster the targeted access to required volumes must be possible. If manual inventory management does not meet availability requirements, automated access methods can be used.
-* Data volume: The data volume ultimately determines the type and number of storage media or the size of the online storage. For correspondingly large volumes of data, sufficient storage capacity must be provided in the data medium archive.
+* Data volume: The data volume ultimately determines the type and number of storage media or the size of the online storage. For a correspondingly large volume of data, sufficient storage capacity must be provided in the data medium archive.
 * Deadlines: If deletion deadlines are met, the organization of the backup archive must ensure that the data is deleted at the specified times. The process must be documented.
-* Confidentiality and integrity of the data: the higher this requirement is, the more carefully it must be prevented that it can be manipulated on the data carriers. The necessary access control can be achieved through appropriate infrastructural and organizational measures.
+* Confidentiality and integrity of the data: The higher this need is, the more carefully it must be prevented that can be manipulated on the media. The necessary access control can be achieved through appropriate infrastructural and organizational measures.
 ** transport modalities **
 
 During a data backup, data is transported. Be it that they are transmitted over a network or a line, whether it is that data carriers are transported to the data medium archive. The following should be noted:
@@ -189,7 +189,7 @@ During a data backup, data is transported. Be it that they are transmitted over 
 * Availability requirements: The higher the availability requirements, the faster the data must be available for recovery. This must be taken into account when selecting the data transmission medium or when selecting the data carrier transport path.
 * Data volume: If the data is transferred over a network for restoration, the transmission capacity of the network must be taken into account. It must be ensured that the data volume can be transferred within the required time (availability requirement).
 * Change dates of the data: If data backups are carried out over a network (especially on selected dates), a capacity bottleneck can arise due to the volume of data to be transferred. Therefore, at the time of data backup, ensure sufficient data transfer capacity.
-* Confidentiality and integrity of the data: the higher this requirement is, the more carefully it must be prevented that the data is intercepted, unauthorized copied or manipulated during transport. Finally, in the case of data transmissions, encryption or cryptographic protection against tampering must be considered. In the case of physical transport, secure containers and ways are to be used and, if necessary, the benefits and costs of encryption must also be weighed.
+* Confidentiality and integrity of the data: the higher this requirement is, the more carefully it must be prevented that the data is intercepted, unauthorized copied or manipulated during transport. Finally, in the case of data transmissions, encryption or cryptographic protection against tampering must be considered. In the case of physical transport, secure containers and ways are to be used and, if necessary, also the benefits and costs of encryption must be weighed.
 ** ** Aufbewahrungsmodalität
 
 As part of the data protection concept (see CON.3.M6 * Development of a data protection concept *), it should be considered whether storage or deletion periods must be adhered to for certain data.
@@ -220,18 +220,18 @@ At least the data that can not be derived from other information must be backed 
 
 It is recommended to create a data protection concept (see CON.3.M6 * Development of a data protection concept *).
 
-Depending on the amount and importance of the data being re-stored and the possible damage caused by loss of this data, the following must be specified:
+Depending on the amount and importance of the data being re-stored and the possible damage caused by loss of this data, the following should be specified:
 
 * Time interval examples: daily, weekly, monthly
-* Timing examples: at night, on Fridays in the evening
+* Timing examples: at night, on Friday evenings
 * Number of generations to keep. Example: Daily full backup will keep the last seven backups, as well as Friday evening backups for the past two months.
-* Scope of data to backup The easiest way is to specify partitions or directories that will be considered during regular backup. A suitable differentiation can increase the clarity and save effort and costs. Example: self-created files and individual configuration files
+* Scope of data to backup The easiest way is to specify partitions or directories that will be taken into account in regular backups. A suitable differentiation can increase the clarity and save effort and costs. Example: self-created files and individual configuration files
 * Storage media (depending on the amount of data) Examples: DVDs, USB storage or hard drives
 * Previous deletion of the media before reuse (eg for hard disks)
 * Responsibility for implementation (administrator, user)
 * Responsibility for monitoring the backup, especially in the case of automatic execution (error messages, remaining space on the storage media)
 * Documentation of the created backups (date, type of execution of the backup as well as selected parameters, labeling of the data carriers)
-Due to the great effort, full backups can usually be done at most once a day. The data created since the last backup can not be restored. Therefore, and to reduce costs, differential or incremental backups should be regularly performed between the full backups. Notes on the different types of backups can be found in CON.3.M2 * Setting the Backup Method *.
+Due to the great effort, full backups can usually be done at most once a day. The data created since the last backup can not be restored. Therefore, and to reduce costs, differential or incremental backups should be performed regularly between the full backups. Notes on the different types of backups can be found in CON.3.M2 * Specifying the Backup Methodology *.
 
 A differential or incremental backup can be more frequent, for example immediately after important files have been created or several times a day. Compatibility with ongoing operations must be ensured.
 
@@ -239,7 +239,7 @@ For software used, it must be decided separately whether it has to be recorded b
 
 All users should be informed about the data protection regulations (see CON.3.M10 * Data backup obligation *).
 
-If only the server disks are backed up on networked computers, it must be ensured that the data to be backed up is regularly transferred by the users or automatically there. For major changes to IT systems or in the information network, the data backup process must be adapted accordingly.
+If only the server disks are backed up in networked computers, it must be ensured that the data to be backed up is regularly transferred by the users or automatically there. For major changes to IT systems or in the information network, the data backup process must be adapted accordingly.
 
 Confidential data should be encrypted as far as possible before the backup, whereby it must be ensured that a decryption must be possible even after a longer period of time (see CON.3.M13 * Use of cryptographic procedures for data backup *).
 
@@ -251,8 +251,8 @@ Together with the basic measures, the following measures correspond to the state
 
 #### CON.3.M6 Development of a data protection concept [Head of IT, specialist responsible]
 
-The data protection procedure is determined by a large number of influencing factors: the IT system, the data volume, the frequency of the data change and the availability requirements are some of these factors. In the data protection concept, it is important to find a solution that takes these factors into account and at the same time is economically justifiable from a cost point of view.
-The technical possibilities to carry out data backups are manifold. However, the selection is always determined by the factors mentioned. For this reason, it is first of all necessary to determine the influencing variables of the IT systems and the IT applications realized with them and document them comprehensibly (see CON.3.M1 * Survey of influencing factors of the data backup) *. Subsequently, the appropriate procedure must be developed and documented (see CON.3.M2 * Definition of the procedure for data backup *). Finally, the implementation must be arranged by the institution's management. Also, the data protection concept must provide for a regular bump test for data backup (see CON.3.M9 * Bump Tests and Recoverability Check *)
+The data protection procedure is determined by a large number of influencing factors: the IT system, the data volume, the frequency of data changes and the availability requirements are some of these factors. The data protection concept is to find a solution that takes these factors into account and at the same time is economically justifiable from a cost point of view.
+The technical possibilities to carry out data backups are manifold. However, the selection is always determined by the factors mentioned. For this reason, it is first of all necessary to determine the influencing variables of the IT systems and the IT applications realized with them and document them comprehensibly (see CON.3.M1 * Survey of influencing factors of the data backup) *. Subsequently, the appropriate procedure must be developed and documented (see CON.3.M2 * Definition of the procedure for data backup *). Finally, the implementation must be arranged by the institution's management. The data protection concept must also provide for regular functional tests for data backup (see CON.3.M9 * Functional tests and check of recoverability *)
 
 The results should be updatable and extensible in a data protection concept. A possible structure of a data protection concept is shown by way of example in the following table of contents:
 
@@ -301,7 +301,7 @@ The results should be updatable and extensible in a data protection concept. A p
 + Refresh cycles of data backup
 + Inventory
 + Delete backups
-+ Destruction of unusable data carriers
++ Destruction of unusable data media
 + Provision of workable readers
 
 
@@ -322,11 +322,11 @@ The backup software should meet the following requirements:
 
 * The backup software should be able to detect an incorrect or corrupted media in the backup drive.
 * It should work well with existing hardware.
-* It should be possible to have backups done automatically at pre-selectable times or at adjustable intervals without the need for manual intervention (other than the need to provide backup media).
+* It should be possible to have backups done automatically at pre-selectable times or at adjustable intervals, without the need for manual intervention (except for possibly providing backup media).
 * It should be possible to automatically inform one or more selected users about the backup result and any error messages via e-mail or similar mechanisms. The execution of data backups including the backup result and possible error messages should be saved in a log file.
 * The backup software should support backing up the backup media by password or even better by encryption. Furthermore, it should be able to store the saved data in compressed form.
 * By specifying appropriate include and exclude lists for the file and directory selection, it should be possible to specify exactly which data should be saved and which should not. It should be possible to combine these lists into backup profiles, save them and reuse them for later backup runs.
-* It should be possible to select the data to be backed up depending on the creation date or its last modification.
+* It should be possible to select the data to be backed up depending on the date of creation or its last modification.
 * The backup software should be able to generate logical and physical full copies as well as incremental copies (differential backups).
 * The data to be backed up should also be stored on network drives or in online data stores.
 * The backup software should be able to perform an automatic comparison of the backed up data with the original after the backup, and perform an appropriate comparison between the reconstructed data and the contents of the backup media after the data recovery.
@@ -348,13 +348,13 @@ Furthermore, after a patch or update for the backup program, it must be checked 
 #### CON.3.M9 Prerequisites for online data backup [Head of IT, IT operation]
 Creating a backup using an online storage service is typically initiated through a corresponding application on a user's client or on an institution's server. Also possible is z. For example, a hybrid model through an appliance: Here, the data is held locally on the appliance and additionally in an online storage service. In all cases, the data to be backed up over the Internet from a computer within the institution to a server of the online storage provider.
 
-Depending on the provider, the handling of the transmitted data may vary. For example, many vendors support the storage and recovery of different versions of a file to be transferred. On the other hand, if the online storage vendor does not offer versioning of files, the older file will be overwritten without any additional query and is therefore no longer available for a restore. In this case, however, online storage does not meet the requirements for backup in the corporate or government environment. Institutions should therefore pay particular attention to the existing versioning of the data in order to prevent the unwanted deletion of older versions of data.
+Depending on the provider, the handling of the transmitted data may vary. For example, many vendors support the storage and recovery of different versions of a file to be transferred. On the other hand, if the online storage provider does not offer versioning of files, the older file will be overwritten without any additional query and is thus no longer available for a restore. In this case, however, online storage does not meet the requirements for backup in the corporate or government environment. Institutions should therefore pay particular attention to the existing versioning of the data in order to prevent unwanted deletion of older versions of data.
 
 As a general rule, the main focus should always be on the question of which protection requirements the secured data have, which legal obligations regarding the business-relevant data an institution is subject to and how it will be affected if data is lost or altered by unauthorized persons.
 
 Many providers of online storage services are well aware that institutions place a high value on the availability of their data and keep their customers' data redundant. Institutions should make sure that the provider stores the data in different locations or in spatially separated data centers. If there are problems in one data center, the data will still be available in another data center.
 
-Companies and authorities should not only value the secure storage of their data, but also question the implementation of the access options to the user accounts created. In corporate and governmental environments targeted attacks are conceivable, the intention of which is to block the user account and thus prevent access to the backup of the data. Such a denial-of-service attack usually uses different vulnerabilities, such as a combination of automatically locking a user account in the event of failed login attempts and an unvalidated e-mail address. As a protective measure, the time-out principle can counteract such a targeted denial-of-service attack. The user account is not completely blocked, but only a renewed attempt to log in for a predetermined period prevented.
+Companies and authorities should not only attach importance to the secure storage of their data, but also question the implementation of the access options to the user accounts created. In corporate and governmental environments targeted attacks are conceivable, the intention of which is to block the user account and thus prevent access to the backup of the data. Such a denial-of-service attack usually uses different vulnerabilities, such as a combination of automatically locking a user account in the event of failed login attempts and an unvalidated e-mail address. As a protective measure, the time-out principle can counteract such a targeted denial-of-service attack. The user account is not completely blocked, but only a renewed attempt to log in for a predetermined period prevented.
 
 Not only are completeness and availability of their backed-up data of interest to institutions, but they place, among other things, to avoid legal consequences or a loss of image, also great value on their confidentiality and integrity. Institutions should therefore use encryption techniques to increase the level of security of transmission and data storage with external service providers.
 Many providers of online storage solutions advertise the increased security through encryption. Here, however, must be analyzed in more detail how the encryption is implemented in practice. As a rule, only the actual transmission of the data is encrypted, for example via the establishment of an https connection (Hyper Text Transfer Protocol Secure). Before and after transport, however, the data is available in plain text in clear text. Some vendors provide their customers with additional encryption methods regardless of how the data is transported. However, the institution can often not rule out that an innate perpetrator, ie an employee of the online storage provider, procures the corresponding keys and thus can access the encrypted information, distort it or publish it. If an attacker gains access to the data by compromising the authentication, the provider's encryption is also ineffective.
@@ -376,7 +376,7 @@ Employees who are tasked with creating backups should be informed and required t
 
 In case of problems with IT systems, it is often necessary to reinstall the operating systems and applications used in a timely manner. For this, all files required for installation must be available. Therefore, it is necessary to make copies and archive them in an appropriate location.
 
-If the software is delivered on data media (eg DVDs or USB sticks), a backup copy of the original data media or of the original software should be created for self-development, from which the software can be restored. The original data media and the backup copies must be kept separate from each other.
+If the software is delivered on data carriers (eg DVDs or USB sticks), a backup copy of the original data media or of the original software should be created for self-development, from which the software can be restored. The original data media and the backup copies must be kept separate from each other.
 
 In particular, applications are often not delivered on data carriers, but only as separate installation files, as part of a package or software management or as source code packages. These installation sources should also be stored in a suitable location.
 
@@ -416,7 +416,7 @@ Supplementary information is listed here that is not included in the measures, b
 
 ### 3.2 Literature
 
-Additional information on hazards and security measures in the area of ​​"data protection concept" can be found in the following publications, among others:
+Additional information on threats and security measures in the "data protection concept" can be found in the following publications, among others:
 
 * #### [27001] ISO / IEC 27001: 2013
 

@@ -5,11 +5,11 @@
 
 ### 1.1 Introduction
 
-As a rule, each institution has one or more rooms where meetings, trainings or other events can be held. For this purpose, specially equipped rooms are often provided. Meeting, event and training rooms are characterized by the fact that they are used by changing people or groups of people and visitors and usually only for a limited period of time. IT systems brought along are often operated in conjunction with devices of the institution, such as third-party laptops on permanently installed projectors. These different usage scenarios result in a risk situation that is hardly comparable with those of other rooms.
+As a rule, each institution has one or more rooms in which meetings, trainings or other events can be held. For this purpose, specially equipped rooms are often provided. Meeting, event and training rooms are characterized by the fact that they are used by changing people or groups of people and visitors and usually only for a limited period of time. IT systems brought along are often operated in conjunction with devices of the institution, such as third-party laptops on permanently installed projectors. These different usage scenarios result in a risk situation that is hardly comparable with those of other rooms.
 
 ### 1.2 Objective
 
-The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the right handling of visitors who use appropriate spaces, treated.
+The aim of the module is to protect the information that is processed in meeting, event and training rooms, as well as the IT equipment that operates in these rooms. In addition, the proper handling of visitors who use appropriate rooms, treated.
 
 ### 1.3 Delimitation
 
@@ -29,11 +29,11 @@ If z. For example, if employees do not close the windows and doors when they lea
 IT systems are becoming increasingly mobile and increasingly used in different environments. Mobile IT users often find scenarios in which the IT systems can not be used as planned due to incompatibility. For example, older devices do not have the same connectors and connectors as newer devices. In addition, devices are manufactured that are not compatible with other devices without a suitable adapter. So is z. For example, if a matching adapter is not available, a laptop that has been prepared with all the important data for a meeting can not be used on a projector. In addition, attempts to connect the IT systems may cause damage to the equipment or stored data.
 
 ### 2 3 Danger to visitors
-It is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
+It is not always easy to sensitize and train your own employees to handle sensitive information and IT systems properly. Visitors can generally not be expected to handle the information and information technology available to them in accordance with the requirements of the institution visited, especially since they are often unaware of these requirements. Visitors can generally access confidential information by carelessness of their own employees. Likewise, this can happen out of ignorance, for example, when the visitors are on the way to the toilet in the door err and enter a staff office, on the whiteboard confidential information. Visitors may also intentionally destroy or damage equipment to obtain confidential information.
 
 ### 2 4 Flying wiring
 
-In meeting, event, and training rooms, users often change the way the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even over traffic routes away, be laid. Not only people are endangered by these tripping hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
+In meeting, event, and training rooms, users often change as well as how the rooms are used. This will sometimes change the equipment and thus of course the wiring in such rooms permanently. Cables can thus, depending on the location of the connection points in the room (sockets of the power supply and the data network) transitionally across the room, even across traffic routes, laid. Not only people are endangered by these trip hazards, even IT equipment can be damaged if people tear the "flying" cables with them.
 
 ### 2 5 Theft
 
@@ -43,7 +43,7 @@ In addition to expensive IT systems, mobile devices are often stolen, which are 
 
 ### 2 6 Confidentiality loss of sensitive information
 
-By technical failure, carelessness, ignorance also by intentional acts confidential information can be disclosed. This confidential information may be available in different places, such. For example, on storage media within computers (such as hard drives), on removable storage media (such as USB sticks or optical media), in printed form on paper and on whiteboards or flipcharts. If information is read or disclosed unjustifiably, it can have serious consequences for the institution, such as violations of laws, competitive disadvantages or financial repercussions.
+By technical failure, carelessness, ignorance also by intentional acts confidential information can be disclosed. This confidential information may be available in different places, such. For example, on storage media within computers (such as hard drives), on removable storage media (such as USB sticks or optical media), in printed form on paper and on whiteboards or flipcharts. If information is read or disclosed unjustifiably, it can have serious consequences for the institution, such as violations of law, competitive disadvantages or financial repercussions.
 
 3 requirements
 ---------------
@@ -71,7 +71,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.10.A4 Planning of meeting, event and training rooms
 
-When planning meeting, event and training rooms, the location of the rooms SHOULD be taken into account. In particular, premises that are often used by visitors SHOULD NOT be located in parts of the building where confidential information is regularly processed. It should be determined for each room how confidential the information may be, which may be discussed or processed in the premises.
+When planning meeting, event and training rooms, the location of the rooms SHOULD be taken into account. In particular, premises that are often used by visitors SHOULD NOT be located in parts of the building where confidential information is routinely processed. It should be determined for each room how confidential the information may be, which may be discussed or processed in the premises.
 
 #### INF.10.A5 Flying Wiring
 
@@ -92,7 +92,7 @@ Depending on the type of use of the meeting, event and training rooms, it should
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### INF.10.A9 Resetting Training and Presentation Computers [IT Leader] (CA)
 

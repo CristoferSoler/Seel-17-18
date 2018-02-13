@@ -1,6 +1,6 @@
 [toc]
  
-G 0.40 Denial of service
+G 0.40 Denial of Service
 ================================================== ==
 
 There are a variety of different forms of attack aimed at preventing the intended use of certain services, functions or devices. The generic term for such attacks is "Denial of Services" (English: "Denial of Service"). Often, the term "DoS Attack" is also used.

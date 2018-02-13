@@ -9,7 +9,7 @@
 ### 2 6 Manipulation or destruction of IT, accessories, information and software at the home office
 ### 2 7 Danger by cleaning or external personnel
 ### 2 8 Increased theft risk at the home workplace
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### INF.8.A1 Securing official documents at the home office
 #### INF.8.A2 Transportation of work material to the home workplace [Home automation]
 #### INF.8.A3 Protection against unauthorized access to the home workplace [Home automation]

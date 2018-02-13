@@ -115,7 +115,7 @@ The network architecture SHOULD pursue a multi-tiered approach (multi-tier archi
 
 The software architecture of the web application SHOULD be documented with all components and dependencies. The documentation SHOULD already be updated and adapted during the course of the project, so that it can be used right from the development phase and that decision-making processes are comprehensible. The documentation should identify all components necessary for operation that are not part of the web application as such. Likewise SHOULD emerge from which components implement which security mechanisms, how the web application is integrated into an existing infrastructure and which cryptographic functions and procedures are used.
 
-#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurer, Developer]
+#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurator, Developer]
 
 When purchasing products for web applications, a requirements catalog SHOULD be created. To be able to compare different products, a rating scale SHOULD be developed.
 
@@ -130,7 +130,7 @@ Before web applications or extensions that have been developed either on their o
 
 #### APP.3.1.A11 Secure connection of background systems
 
-Background systems of web applications where functionality and data are outsourced SHOULD be sufficiently protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
+Background systems of web applications where functionalities and data are outsourced SHOULD be adequately protected. Access to background systems SHOULD only be possible via defined interfaces and defined systems. The traffic between the users and the web application (s) and other services and the background systems SHOULD be regulated by security gateways (firewalls). In addition, the traffic SHOULD be encrypted. Web application access to background systems SHOULD also be done with minimal rights.
 
 When using an Enterprise Service Bus (ESB), ensure that all services authenticate to the ESB before they are allowed access. There SHOULD be a separate logical network segment for the ESB. Access to the ESB SHOULD only be possible through the connected applications and services. All access to the ESB SHOULD be authenticated and encrypted when communicating across site and network boundaries.
 
@@ -152,7 +152,7 @@ Web pages and Web application responses SHOULD NOT contain information that coul
 * limited access to security-related documentation
 * regular deletion of unneeded files
 * secure registration by external search engines as well as the renunciation of absolute path information
-The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network, be limited. Configuration files of the web application SHOULD be stored outside the web root directory.
+The web application SHOULD NOT be administered from insecure networks. Administration accesses SHOULD address trusted network segments and IT systems, such as: B. from the administration network. Configuration files of the web application SHOULD be stored outside the web root directory.
 
 #### APP.3.1.A14 Protection of confidential data [developer]
 
@@ -194,7 +194,7 @@ To filter data at higher protocol levels, institutions SHOULD use Web Applicatio
 
 #### APP.3.1.A21 Prevention of Clickjacking [Developer] (CI)
 
-To avoid clickjacking attacks, make sure that the content on all Web application web pages is displayed only at the top level of the browser window. In addition, the Web application HTTP response headers SHOULD set the * X-FRAME-OPTIONS * directive.
+To avoid clickjacking attacks, make sure that content is displayed on all Web application web pages only at the top level of the browser window. In addition, the Web application HTTP response headers SHOULD set the * X-FRAME-OPTIONS * directive.
 
 #### APP.3.1.A22 Performing Penetration Tests (CIA)
 
@@ -206,4 +206,4 @@ To complicate cross-site request forgery (CSFR) attacks, the web application SHO
 
 #### APP.3.1.A24 Preventing Blockage of Resources [Developer] (A)
 
-To protect against denial of service (DoS) attacks, resource-intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.
+To protect against denial-of-service (DoS) attacks, resource intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.

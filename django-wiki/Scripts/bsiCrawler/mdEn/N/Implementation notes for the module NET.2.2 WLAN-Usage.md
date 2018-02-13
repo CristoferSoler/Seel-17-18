@@ -7,7 +7,7 @@
 
 Wireless LANs (WLANs) can be used to set up wireless local area networks or extend existing wired networks. To date, almost all WLAN components available on the market are based on the IEEE 802.11 standard and its additions. A special role is played by the manufacturer consortium Wi-Fi Alliance, which has created an industry standard based on the IEEE 802.11 standard with "Wi-Fi". The Wi-Fi Alliance confirms with the Wi-Fi seal of approval that a device has passed certain interoperability and conformance tests.
 
-All users (including management of the institution) must be informed about WLAN basics and sensitized to possible dangers that may arise if WLANs are used improperly. They must have the necessary knowledge to properly understand and apply safety measures. In particular, they must be aware of what is expected of them in terms of information security and how they should respond to the use of WLANs in certain situations.
+All users (including management of the institution) must be informed about WLAN basics and sensitized to possible dangers that may arise if WLANs are used improperly. They must have the necessary knowledge to properly understand and apply safety measures. In particular, they must be aware of what is expected of them in terms of information security and how they should react in certain situations when using WLANs.
 
 ### 1.2 Life cycle
 
@@ -38,7 +38,7 @@ The following measures should be implemented as a priority:
 
 #### NET.2.2.M1 Creation of a user policy for WLAN [Head IT]
 
-In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key aspects of how to use WLANs safely. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
+In order not to overload users with too much operational and security-related details of a WLAN infrastructure, a separate WLAN policy should be created especially for this target group. The user policy builds on the institution's overall security policy and pinpoints the key issues to make sure that the WLAN is safe. In such a user policy then briefly the specifics of the Wi-Fi use should be described, such. B.
 
 * with which internal and external networks the WLAN clients may be connected,
 * Under what conditions you are allowed to log in to internal or external WLANs,
@@ -57,7 +57,7 @@ It is necessary to check regularly whether the contents required by the directiv
 
 #### NET.2.2.M2 Sensitization and training of WLAN users [Supervisors, Head of IT]
 
-Today almost every employee is equipped with a mobile device and can connect to a public or internal WLAN. Mobile devices (eg smartphones) can be used to create WLAN hotspots for others or to set up ad hoc WLANs. These versatile uses can create security issues if the devices are used improperly. Therefore, all employees must be sensitized accordingly. This can be done, for example, by means of a leaflet on possible dangers associated with the use of WLANs. The leaflet should also contain the most important measures and behaviors in order to counteract the corresponding hazards. The leaflet should be handed over together with the devices so that the users can handle the devices responsibly and conscientiously use them. Should users be allowed to provide themselves or others with a WLAN (as a hotspot) via their device, the training content should also contain the associated hazards and measures. For example, it may be pointed out that WLAN communication can be protected by configuring a complex password.
+Today almost every employee is equipped with a mobile device and can connect to a public or internal WLAN. Mobile devices (eg smartphones) can be used to create WLAN hotspots for others or to set up ad hoc WLANs. These versatile uses can cause security issues if the devices are used improperly. Therefore, all employees must be sensitized accordingly. This can be done, for example, by means of a leaflet on possible dangers associated with the use of WLANs. The leaflet should also contain the most important measures and behaviors in order to counteract the corresponding hazards. The leaflet should be handed over together with the devices so that the users can handle the devices responsibly and conscientiously use them. Should users be allowed to provide themselves or others with a WLAN (as a hotspot) via their device, the training content should also contain the associated hazards and measures. For example, it may be pointed out that WLAN communication can be protected by configuring a complex password.
 
 Sensitization, especially of users who are allowed to access confidential information, should be practiced and supported by means of practical examples.
 
@@ -76,8 +76,8 @@ The operators of hotspots can do a lot for the security of the radio link and ot
 * Registration at the hotspot is usually via a web portal or via a web application. This must ensure the protection of the registration information. Authentication should always be encrypted.
 * WLANs that were only sporadically used should be removed by the users from the history. For this purpose, the identifier of the WLAN (SSID) is removed from the list. This prevents the device from unintentionally logging into the WLAN.
 * If possible, special user accounts with secure basic configuration and restrictive rights should be created for the use of hotspots. Under no circumstances should a user with administrator rights log on to external WLANs from his client.
-* At the latest when financial, personal or other sensitive data such as credit card numbers, PINs, passwords or emails are to be transmitted, it must be ensured that all necessary security measures on the clients, especially encryption, are activated. An example of this would be the secure processing of e-mails via an HTTPS web interface. Confidential information may never be transmitted unencrypted over foreign networks.
-* Users can only access the institution's internal resources via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots). As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
+* At the latest when financial, personal or other sensitive data such as credit card numbers, PINs, passwords or e-mails are to be transmitted, it must be ensured that all necessary security measures on the clients, especially encryption, are activated. An example of this would be the secure processing of e-mails via an HTTPS web interface. Confidential information may never be transmitted unencrypted over foreign networks.
+* Users are only allowed to access internal resources of the institution via VPNs via third-party WLANs (eg provided guest access by third-party institutions or public hotspots). As a result, communication to one's own institution can be additionally secured independently of the established protection mechanisms of the WLAN infrastructure used. Further information can be found in the NET.3.3 VPN block or in the associated implementation notes.
 ### 2.2 Standard measures
 
 Together with the basic measures, the following measures correspond to the state of the art in the area of ​​"WLAN use".
@@ -89,7 +89,7 @@ If the WLAN behaves in an unintended manner (eg WLAN is not available for a long
 The Wi-Fi users should do the following:
 
 * You should back up your work, stop Wi-Fi access, and disable your client's Wi-Fi interface.
-* If error messages appear or the client did not behave normally, they should be documented by the users. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to more quickly pinpoint the cause and impact of the incident and more effectively initiate countermeasures.
+* If error messages appear or the client did not behave normally, they should be documented by the users. It should also be documented what the user did before or during the security incident. With this information, IT operations may be able to pinpoint the cause and impact of the incident more quickly and take more targeted action.
 * In addition, they should notify the IT operation via an appropriate escalation level.
 ### 2.3 Measures for increased protection requirements
 

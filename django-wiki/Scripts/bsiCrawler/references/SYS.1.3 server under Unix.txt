@@ -4,7 +4,7 @@
 ### 2 1 Spying on system and user information
 ### 2 2 Exploitation of the script environment
 ### 2 3 Dynamic loading of shared libraries
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.3.A1 User authentication under Unix
 #### SYS.1.3.A2 Careful assignment of IDs
 #### SYS.1.3.A3 Automatic integration of removable drives

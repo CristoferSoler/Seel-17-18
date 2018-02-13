@@ -47,7 +47,7 @@ Access rights to an IT system and access rights to stored data and IT applicatio
 
 ### 2 5 Incorrect configuration of access to directory services
 
-In many usage scenarios, other applications, such as Internet or intranet applications, must access the directory service. A misconfiguration can lead to incorrect access to access rights or unauthorized access to the directory service, or to the fact that data for authentication can be transmitted in plain text and thus unencrypted information can be spied out.
+In many usage scenarios, other applications, such as Internet or intranet applications, must access the directory service. A misconfiguration can result in incorrect access to access rights or unauthorized access to the directory service, or the transmission of data for authentication in plain text, thus allowing unencrypted information to be spied out.
 
 ### 2 6 Directory Services Failure and Encryption Failure
 
@@ -69,7 +69,7 @@ The following requirements MUST be implemented as a priority:
 
 A security policy for the directory service MUST be created. This SHOULD be coordinated with the overarching security concept of the entire institution.
 
-#### APP.2.1.A2 Planning of the use of directory services [Data protection officer, specialist responsible persons]
+#### APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
 
 The use of directory services MUST be carefully planned. In addition to determining the use of the directory service, a model of object classes and attribute types MUST be developed that meets the requirements of the intended use. During the planning of the directory service, staff representatives and data protection officers MUST be involved. A needs-based authorization concept for directory service MUST be designed. In general, the planned directory service structure SHOULD be fully documented. Actions SHOULD be planned to prevent the unauthorized collection of data from the directory service.
 
@@ -114,7 +114,7 @@ Administrators SHOULD be familiar with all security mechanisms and aspects of di
 
 #### APP.2.1.A11 Setting up access to directory services
 
-Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended purpose.
+Access to the directory service SHOULD be configured according to the security policy. If the directory service is used as a server on the Internet, then it SHOULD be protected accordingly by a security gateway. If anonymous users are to be granted further access to individual subareas of the directory tree, a separate user account, a so-called proxy user, SHOULD be set up for anonymous access. Furthermore, the access rights for this proxy user SHOULD be granted sufficiently restrictive. They SHOULD be completely withdrawn again when the account is no longer needed. In order to prevent the unnecessary release of security-sensitive information, the search function of the directory service should be suitably limited to the intended use.
 
 #### APP.2.1.A12 Directory Services Monitoring
 
@@ -125,7 +125,7 @@ The data exchange between client and directory service server SHOULD be secured,
 
 #### APP.2.1.A14 Regulated decommissioning of a directory service [specialist responsible]
 
-When decommissioning the directory service SHOULD be made sure that further required rights or information are sufficiently available, but all others are deleted. In addition, users SHOULD be notified when a directory service is taken out of service. When decommissioning individual partitions of a directory service, care should be taken not to affect other partitions.
+When decommissioning the directory service SHOULD be made sure that further required rights or information will be available to a sufficient extent, but all others are deleted. In addition, users SHOULD be notified when a directory service is taken out of service. When decommissioning individual partitions of a directory service, care should be taken not to affect other partitions.
 
 #### APP.2.1.A15 Migration of directory services
 
@@ -133,7 +133,7 @@ For a planned migration of directory services, a migration concept SHOULD be cre
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.2.1.A16 Creation of a directory service failure plan (CIA)
 

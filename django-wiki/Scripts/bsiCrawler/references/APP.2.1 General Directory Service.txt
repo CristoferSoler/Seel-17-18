@@ -8,9 +8,9 @@
 ### 2 5 Incorrect configuration of access to directory services
 ### 2 6 Directory Services Failure and Encryption Failure
 ### 2 7 Compromise of directory services due to unauthorized access
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### APP.2.1.A1 Creating a directory services security policy
-#### APP.2.1.A2 Planning of the use of directory services [Data protection officer, specialist responsible persons]
+#### APP.2.1.A2 Planning the Use of Directory Services [Data Protection Officer, Specialist Responsible]
 #### APP.2.1.A3 Establishment of Access Permissions on Directory Services [Specialists]
 #### APP.2.1.A4 Secure installation of directory services
 #### APP.2.1.A5 Secure configuration and configuration changes of directory services

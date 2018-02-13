@@ -8,7 +8,7 @@
 ### 2 5 Failure of the management server for virtualization systems
 ### 2 6 Misuse of guest tools
 ### 2 7 Compromising the virtualization software
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.5.A1 Importing Updates and Security Updates
 #### SYS.1.5.A2 Secure use of virtual IT systems
 #### SYS.1.5.A3 Secure configuration of virtual IT systems

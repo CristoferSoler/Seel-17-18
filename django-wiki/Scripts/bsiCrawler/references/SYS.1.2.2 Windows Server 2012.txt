@@ -10,7 +10,7 @@
 ### 2 7 Software vulnerabilities or errors
 ### 2 8 Unauthorized acquisition or misuse of administrator rights
 ### 2 9 Compromise of remote access
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.1.2.2.A1 Planning for Windows Server 2012
 #### SYS.1.2.2.A2 Secure installation of Windows Server 2012
 #### SYS.1.2.2.A3 Secure Administration of Windows Server 2012

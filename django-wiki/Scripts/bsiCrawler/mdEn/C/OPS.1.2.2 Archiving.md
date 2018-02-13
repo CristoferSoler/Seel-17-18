@@ -107,11 +107,11 @@ All access to electronic archives MUST be logged. To do this, the date, time, us
 
 The log data of the archive accesses SHOULD be evaluated regularly. In doing so, the institution's internal guidelines SHOULD be observed.
 
-Also, SHOULD be defined which events (eg system errors, timouts or data records) are to be signaled to which employees are displayed. Critical events SHOULD be checked immediately after signaling and, if necessary, further escalated.
+Also, SHOULD be defined which events (eg system errors, timouts or data records copy) should be signaled to which employees are displayed. Critical events SHOULD be checked immediately after signaling and, if necessary, further escalated.
 
 #### OPS.1.2.2.A9 Selection of suitable data formats for the archiving of documents [Head IT, IT operation]
 
-For archiving a suitable data format MUST be selected. It MUST ensure that archive data as well as selected features of the original document medium can be reproduced in the long term and true to the original.
+For archiving a suitable data format MUST be selected. It MUST ensure that archive data as well as selected characteristics of the original document medium can be reproduced long-term and true to the original.
 
 The document structure of the selected data format MUST be clearly interpretable and electronically processable. The syntax and semantics of the data formats used SHOULD be documented and published by a standardization organization. It was intended to use a lossless image compression method for proof-proof and audit-proof archiving.
 
@@ -187,7 +187,7 @@ For archiving, there should be regular functional and recovery tests. The archiv
 Furthermore, the hardware components of the archive system SHOULD regularly be checked for proper operation. It SHOULD be checked regularly if all archiving processes are working properly.
 
 ### 3.3 Requirements for increased protection requirements
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### OPS.1.2.2.A20 Appropriate use of cryptographic procedures in archiving [Head of IT] (CI)
 

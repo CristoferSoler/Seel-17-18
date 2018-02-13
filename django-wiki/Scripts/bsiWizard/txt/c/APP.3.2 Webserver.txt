@@ -15,7 +15,7 @@ The goal of the module is to protect the web server and the information provided
 
 ### 1.3 Delimitation
 
-The term web server is used for both the software that answers the HTTP requests and the IT systems that run this software. This module primarily looks at the web server software. Security aspects of the IT system on which the web server software is installed are handled in the corresponding building blocks of the IT systems layer (see SYS.1.1 * General Server * and, for example, SYS.1.3 * Server under Linux or * SYS.1.2. 2 * Windows Server 2012 *).
+The term web server is used for both the software that answers the HTTP requests and the IT systems that run this software. This module primarily looks at the web server software. Security aspects of the IT system on which the web server software is installed are handled in the appropriate building blocks of the IT systems layer (see SYS.1.1 * General Server * and, for example, SYS.1.3 * Server under Linux or * SYS.1.2. 2 * Windows Server 2012 *).
 
 Recommendations on how to integrate web servers into the network architecture and secure them with firewalls can be found in the building blocks NET.1.1 * Network Architecture and Design * or NET.3.2 * Firewall *.
 
@@ -38,12 +38,12 @@ An attacker can gain access to a web server to manipulate files. For example, he
 
 ### 2 3 Distributed Denial of Service (DDoS)
 
-Due to DDoS attacks, a web server can partially or completely fail. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.
+DDoS attacks can partially or completely disable a web server. For users, the web site is then only very slow or no longer available. For many institutions, such a failure is quickly critical to business, eg. B. for an online store.
 In addition to DDoS, other types of denial-of-service attacks can affect the availability of a website specifically for individual users by, for example, blocking individual accounts from incorrect logins. An attacker could z. For example, a user account lock could be triggered by invalid login attempts.
 
 ### 2 4 Loss of confidential data
 
-Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to attackers being able to read or change the communication between the clients and the servers or between the servers.
+Many web servers still use outdated cryptographic techniques, such as RC4 or SSL. Inadequate authentication or inappropriate encryption can lead to an attacker being able to read or change the communication between the clients and the servers or between the servers.
 
 ### 2 5 Violation of laws or regulations
 
@@ -118,7 +118,7 @@ In order to select suitable security measures for the web server, it should be p
 
 #### APP.3.2.A9 Defining a Security Policy for the Web Server [Information Security Officer (ISB)]
 
-A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how security measures are implemented and how to proceed when security incidents occur.
+A security policy should be created that identifies the required actions and responsibilities. It should also regulate how to get information on current vulnerabilities, how to implement security measures, and how to proceed when security incidents occur.
 
 #### APP.3.2.A10 Selection of a suitable web host [Information Security Officer (ISB), Head IT]
 If the web server is not operated by the institutions themselves, but offers from external service providers are used (web hosting), the institution SHOULD pay attention to the following points when selecting a suitable web host:
@@ -145,7 +145,7 @@ It SHOULD be checked regularly if the files and web content are still integer an
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.3.2.A15 Redundancy (A)
 
@@ -164,4 +164,4 @@ To detect denial-of-service attacks at an early stage, the web server SHOULD be 
 
 #### APP.3.2.A19 Creation of an Internet Editorial Team [Specialist, Head of IT] (CIA)
 
-To maintain web offers, a self-employed Internet editorial team should be set up. The Internet editorial team SHOULD include all the roles that were named in the concept for web offers. For extensive web offers, a contact person for web applications SHOULD also be determined. Likewise, processes, procedures, and people responsible should be named in case of problems or security incidents.
+To maintain web offers, a self-employed Internet editorial team should be set up. The Internet editorial team SHOULD include all the roles that were named in the concept for web offers. For extensive web offers, a contact person for web applications SHOULD additionally be determined. Likewise, processes, procedures, and people responsible should be named in case of problems or security incidents.

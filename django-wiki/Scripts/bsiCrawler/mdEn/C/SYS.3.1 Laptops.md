@@ -39,7 +39,7 @@ When employees seldom need mobile IT systems, such as infrequent business travel
 
 ### 2 4 Synchronization error
 
-When data is edited locally on a laptop, it must be synchronized with the institution's file servers whenever possible, e.g. For example, if the employee logs in again via the VPN. However, the data can also be destroyed. In general, before synchronization, you have to set how to handle conflicting data reconciliation: whether, for example, the version on the laptop or the version also edited by another employee on the server is updated on the server without being asked, or if the user should decide. This is often configured once and often forgotten afterwards. But if data is changed in a different order than originally thought, then important information is quickly lost.
+When data is edited locally on a laptop, it must be synchronized with the institution's file servers whenever possible, e.g. For example, if the employee logs in again via the VPN. However, the data can also be destroyed. In general, before synchronization, you have to set how to handle conflicting data reconciliation: whether, for example, the version on the laptop or the version also edited by another employee on the server is updated on the server without being asked, or if the user should decide. This is often configured once and often forgotten afterwards. But if data is changed in a different order than originally thought, important information will quickly be lost.
 
 ### 2 5 Data loss in mobile use
 
@@ -102,7 +102,7 @@ It was intended to regulate how laptops are securely connected to own or foreign
 
 Data transmitted between a laptop from outside and the institution's internal network SHOULD be adequately protected by appropriate means, such as a VPN or TLS. Also, the laptop SHOULD be secured by itself when sharing data with other IT systems.
 
-#### SYS.3.1.A10 Synchronization of Laptop Datasets [User]
+#### SYS.3.1.A10 Synchronization of Laptop Databases [User]
 
 It was intended to regulate how data from laptops are transferred to the information network of the institution. When using a synchronization tool, make sure that synchronization conflicts can be resolved, the synchronization process is logged, and users are instructed to check the synchronization logs.
 
@@ -124,14 +124,14 @@ All users SHOULD be advised on how to keep laptops outside the institution prope
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.1.A15 Appropriate Selection of Laptops [Procurement] (A)
 
 Before laptops are procured, the people in charge SHOULD perform a requirements analysis. It SHOULD also focus on additional hardware needed, such as: As docking stations and monitors to be extended. Based on the results, all candidate devices SHOULD be evaluated. The procurement decision SHOULD be coordinated with the administrators and the technical staff.
 
 #### SYS.3.1.A16 Central administration of laptops (CI)
-It should be defined a suitable approach, how to centrally manage laptops, as not only easier to distribute software and information, but also the institution's own security policies can be better enforced. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
+It was intended to define a suitable way of administering laptops centrally, as this not only makes software and information easier to distribute, but also better enforces the institution's own security policies. Therefore, a suitable procedure should be defined, as laptops are centrally administered. A tool for centralized laptop management SHOULD support as many operating systems as possible.
 
 #### SYS.3.1.A17 Collective Storage (A)
 

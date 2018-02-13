@@ -7,7 +7,7 @@
 
 Advanced Persistent Threats (APT) are targeted cyber attacks on selected institutions and facilities where an attacker gains permanent access to a network and subsequently broadens it to other IT systems. The attacks are characterized by a very high use of resources and considerable technical capabilities on the part of the attackers and are usually difficult to detect.
 
-After an APT attack is discovered, those in charge in the affected institutions face the challenge of having to clean up beyond the usual IT incident handling procedures. Because it can be assumed that the discovered attackers have been able to access the affected IT infrastructure for some time and use complex attack tools to bypass the standard security mechanisms and to establish various backdoors. In addition, there is a danger that the attackers will closely monitor the infected environment and respond to cleanup attempts by blurring their tracks and sabotaging the investigation.
+After an APT attack is discovered, those in charge in the affected institutions face the challenge of having to clean up beyond the usual IT incident handling procedures. Because it can be assumed that the discovered attackers have been able to access the affected IT infrastructure for some time and use complex attack tools to bypass the standard security mechanisms and to establish various backdoors. In addition, there is a risk that attackers will closely monitor the infected environment and respond to cleanup attempts by blurring their tracks and sabotaging the investigation.
 
 In general, the building block assumes a high threat situation through a targeted, motivated attacker with above-average resources. In principle, a (certified) forensic service provider should always be involved in such an incident if the institution itself does not have its own forensic experts. Forensic service providers should already be consulted during the forensic analysis phase, but the service provider should also be consulted at least in an advisory capacity
 
@@ -17,7 +17,7 @@ This module describes how an institution should proceed to clean up the IT syste
 
 ### 1.3 Delimitation
 
-An information network can only be purged if the APT incident was previously successfully detected and forensically analyzed. However, detection and forensics are not the subject of this module, but are dealt with in DER.1 * Detection of Security-Relevant Events * and DER.2.2 * Precaution for IT Forensics *.
+An information network can only be purged if the APT incident was previously successfully detected and forensically analyzed. Detection and forensics, however, are not the subject of this module, but are dealt with in DER.1 * Detection of security-relevant events * and DER.2.2 * Precaution for IT forensics *.
 
 In this module, only the cleanup of APT incidents is considered. Common incidents are dealt with in module DER.2.1 * Incident Management *. Also, the building block does not describe how so-called "Indicators of Compromise" (IOCs), ie burglary traces, are derived and how they can be used to detect recurring attackers. It also does not discuss how any backdoors overlooked during analysis and cleanup can be found. Furthermore, the building block has to be demarcated from the higher-level incident management process (see DER.2.1 * Incident Management *), in which the cleanup is embedded.
 
@@ -86,7 +86,7 @@ Since it must be assumed that the attacker has acquired all the access data avai
 
 If the central authentication server (domain controller or LDAP server) is compromised, all accesses existing there MUST be blocked and their passwords exchanged. This MUST be done by experienced administrators, if necessary using internal or external forensics experts.
 
-If TLS keys or an internal Certification Authority (CA) have been compromised by the APT attack, the corresponding keys and infrastructures MUST be recreated and redistributed. Also, the compromised keys MUST be locked reliably.
+If TLS keys or an internal Certification Authority (CA) have been compromised by the APT attack, the corresponding keys and infrastructure MUST be recreated and redistributed. Also, the compromised keys MUST be locked reliably.
 
 #### DER.2.3.A5 Closing the initial break-in path
 
@@ -98,11 +98,11 @@ After the network has been successfully cleaned up, the IT systems MUST be retur
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are state-of-the-art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clearing up far-reaching security incidents. They SHOULD be implemented in principle.
 
 #### DER.2.3.A7 Targeted system hardening
 
-After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of the forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
+After an APT attack, all affected IT systems SHOULD be hardened. The basis for this should be the results of forensic investigations (see DER.2.X * IT Forensic Analysis *). In addition, it SHOULD be rechecked if the affected environment is still safe, e.g. B. with the results of the detailed forensic analyzes.
 
 If possible, IT systems should already be hardened during cleanup. Measures that can not be implemented in the short term SHOULD be included in an action plan and implemented in the medium term. The ISB SHOULD be responsible for drawing up the plan and checking that it has been implemented correctly.
 
@@ -111,7 +111,7 @@ If possible, IT systems should already be hardened during cleanup. Measures that
 It SHOULD establish secure communication channels for the governing body and staff responsible for the cleanup. It SHOULD be ensured that the most secure communication channel is selected.
 
 ### 3.3 Requirements for increased protection requirements
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### DER.2.3.A9 hardware replacement of affected IT systems (CIA)
 

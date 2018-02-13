@@ -26,9 +26,9 @@ The following specific threats and vulnerabilities are of particular importance 
 
 ### 2 1 Lacking or inadequate planning and regulation of VPN deployment
 
-If the VPN is not carefully planned, set up, or configured, security vulnerabilities may occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
+If the VPN is not carefully planned, set up, or configured, security vulnerabilities can occur that affect all IT systems networked to the VPN. Attackers may thus be able to access confidential information of the institution.
 
-For example, with inadequate VPN scheduling and regimentation, it is possible that users were not properly trained, thereby using the VPN in an insecure environment or dialing in from an insecure client. This may allow attackers to access the entire corporate network.
+For example, with inadequate VPN scheduling and regimentation, users may not be properly trained, thereby using the VPN in an insecure environment or dialing in from an insecure client. This may allow attackers to access the entire corporate network.
 
 Even if the regular monitoring of access to the VPN was inadequately planned, attacks could not be detected in time. Thus, it is not possible to react promptly and an attacker can steal data unnoticed or sabotage entire processes.
 
@@ -37,7 +37,7 @@ Even if the regular monitoring of access to the VPN was inadequately planned, at
 VPN connections can reach into critical areas of the network. If the institution uses a VPN service provider and has not chosen it carefully, this could make the entire network of the institution unsafe. For example, an insecure VPN service offered by attackers could be used by attackers to steal targeted information.
 
 ### 2 3 Problems with local storage of authentication data for VPNs
-Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in accessing the VPN client, he may be able to read access data and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
+Many VPN clients for remote access allow the data required for authentication to be saved locally so that the user does not have to enter them again when reconnecting. If an attacker succeeds in gaining access to the VPN client, he may be able to read the credentials and log in to the network as a legitimate user. Thus, he can access the local networks and the information and services of the institution that can be accessed therein.
 
 ### 2 4 Insecure configuration of VPN clients for remote access
 
@@ -114,9 +114,9 @@ For VPNs, an operating concept SHOULD be created. This should include the aspect
 If a VPN is used to connect to an external network, then in the current state of the art, safer authentication and encryption methods with sufficient key length SHOULD be used. Also the chosen method of key exchange SHOULD conform to the state of the art. It should be ensured that VPN connections are established only between the IT systems and services provided for this purpose. The tunnel protocols used in this case SHOULD be suitable for use.
 
 #### NET.3.3.A12 User and Access Management for Remote Access VPNs
-For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * identity and authorization management module *.
+For remote access VPNs, a centralized and consistent user and access management SHOULD be ensured. The authentication methods used SHOULD meet the requirements of the ORP.4 * Identity and Authorization Management * module.
 
-When using stand-alone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
+When using standalone servers for user and access management, MAKE SURE they are set up and operated securely and consistently to the requirements of the ORP.4 * Identity and Permissions Management * building block. Furthermore, the servers used SHOULD be protected against unauthorized access.
 
 #### NET.3.3.A13 Integration of VPN components in a firewall
 
@@ -124,4 +124,4 @@ The VPN components SHOULD be integrated into the firewall so that traffic can be
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

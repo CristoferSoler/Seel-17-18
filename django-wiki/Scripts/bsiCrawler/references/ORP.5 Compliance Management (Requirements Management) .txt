@@ -5,9 +5,9 @@
 ### 2 2 Improper disclosure of information
 ### 2 3 Inadequate identification check of communication partners
 ### 2 4 Accidental disclosure of internal information
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ORP.5.A1 Identification of the legal framework [Head of Organization, Head of Institution]
-#### ORP.5.A2 Observance of legal framework conditions [Supervisors, Head of Organization, Institution Management]
+#### ORP.5.A2 Compliance with legal frameworks [Supervisors, Head of Organization, Institution Management]
 #### ORP.5.A3 Employee commitment to comply with applicable laws, regulations and regulations [Supervisor, Human Resources]
 ### 3.2 Standard requirements
 #### ORP.5.A4 Conception and Organization of Compliance Management [Institutional Management]

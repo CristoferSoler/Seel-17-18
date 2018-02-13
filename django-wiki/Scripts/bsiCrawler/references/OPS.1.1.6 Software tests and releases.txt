@@ -8,7 +8,7 @@
 ### 2 5 Missing or inadequate clearance procedure
 ### 2 6 Missing or inadequate documentation of tests and test results
 ### 2 7 Missing or inadequate documentation of the approval criteria
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.1.1.6.A1 Planning the software tests
 #### OPS.1.1.6.A2 Performing Functional Software Tests [Tester]
 #### OPS.1.1.6.A3 Evaluation of test results [Tester]

@@ -11,7 +11,7 @@
 ### 2 8 Misuse of sensitive data in the lock screen
 ### 2 9 Dangers from private use of mobile devices
 ### 2 10 Dangers of Bring Your Own Device (BYOD)
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.2.1.A1 Defining a Strategy for Smartphones and Tablets
 #### SYS.3.2.1.A2 Defining a strategy for cloud deployment
 #### SYS.3.2.1.A3 Secure basic configuration for mobile devices

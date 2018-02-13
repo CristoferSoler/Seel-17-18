@@ -7,7 +7,7 @@
 ### 2 4 Exploitation of the script environment
 ### 2 5 Dynamic loading of shared libraries
 ### 2 6 Incorrect configuration
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.2.3.A1 Authentication of administrators and users [user]
 #### SYS.2.3.A2 Selection of a suitable distribution
 #### SYS.2.3.A3 Cloud and Online Content [User]

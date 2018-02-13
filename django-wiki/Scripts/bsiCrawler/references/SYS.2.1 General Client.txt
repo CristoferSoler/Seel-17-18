@@ -9,7 +9,7 @@
 ### 2 6 Unauthorized use of IT
 ### 2 7 Provision of unneeded operating system components and applications
 ### 2 8 Listening to rooms using a microphone and a camera
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.2.1.A1 user authentication
 #### SYS.2.1.A2 Role separation
 #### SYS.2.1.A3 Enable auto-update mechanisms

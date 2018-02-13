@@ -13,9 +13,9 @@ The goal of this module is to protect information that is processed, offered or 
 
 ### 1.3 Delimitation
 
-Usually, server systems are run under operating systems that have specific security requirements in each case. For common server operating systems, the IT-Grundschutz Compendium has its own modules that specify this module. The module "general server" forms the basis for the concrete building blocks on which they are based. If a concrete block exists for a considered system, it must be used in addition to the module General Server. If no specific module exists for server systems used, the requirements of this module must be suitably specified.
+Usually, server systems are run under operating systems that have specific security requirements in each case. For common server operating systems, the IT-Grundschutz Compendium has its own modules that specify this module. The module "general server" forms the basis for the concrete building blocks on which they are based. If a specific block exists for a considered system, it must be used in addition to the module General Server. If no specific module exists for server systems used, the requirements of this module must be suitably specified.
 
-The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are likewise to be considered separately, for example by applying the corresponding specified blocks.
+The specific services offered by the server are not part of this module. For these server services, additional blocks must be implemented in addition to this block, according to the results of the modeling according to IT-Grundschutz. Insofar as an interactive use by users is provided for a server system in individual cases (eg terminal server), the associated security aspects are also to be considered separately, for example by applying the corresponding concretized components.
 
 2 risk situation
 -----------------
@@ -33,7 +33,7 @@ In particular, errors in server services can have serious consequences. In the c
 ### 2 2 Data loss
 
 The loss of data can have a significant impact on business processes and thus on the entire institution, especially for servers. Many IT systems, such as clients or other servers, often rely on the central data stored there being available.
-If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, in particular to long-term consequences, such as loss of confidence among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
+If business-relevant information of any kind is destroyed or falsified, business processes and specialized tasks can be delayed or even prevented from running. Overall, the loss of stored data, in addition to the loss and cost of recovering the data, especially long-term consequences, such as loss of trust among customers and partners, legal effects and a negative impact on the public lead. In many institutions regulations exist that no data may be stored on the local clients, but centralized storage on the servers must be used for this purpose. Data loss of this data then has serious consequences; the direct and indirect damage caused may even threaten the existence of institutions.
 
 ### 2 3 Prevention of services
 
@@ -47,15 +47,15 @@ Such unused applications and services can contain vulnerabilities. If the applic
 
 ### 2 5 overloading of servers
 
-If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative effects, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
+If servers are not adequately dimensioned, then at some point the point is reached where they no longer meet the requirements of the users. Depending on the type of systems involved, this can have a variety of negative consequences, such as the servers or services being temporarily unavailable, or data loss. Overloading a single server in complex IT landscapes can cause problems or failures for other servers.
 
 Triggers for the overload of information systems can be that
 
 * installed services or applications are misconfigured, unnecessarily consuming memory
-* existing storage capacities are exceeded,
+* existing storage capacities are exceeded
 Numerous requests at the same time overstrain a system and overload the processors,
 * too much computing power is claimed by the services or
-* a large number of messages will be sent at the same time.
+* a large number of messages are sent at the same time.
 3 requirements
 ---------------
 The following are specific requirements for general server protection. Basically, the IT operation is responsible for meeting the requirements. Deviations from this are mentioned separately in the corresponding requirements. The Information Security Officer (ISB) should always be involved in strategic decisions. In addition, the ISB is responsible for ensuring that all requirements are met and verified in accordance with the established security policy.
@@ -197,7 +197,7 @@ The server system SHOULD be integrated into a suitable system monitoring or moni
 
 #### SYS.1.1.A24 security checks
 
-Server systems SHOULD undergo regular security testing that verifies compliance with security requirements and identifies any vulnerabilities that may exist. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
+Server systems SHOULD undergo regular security testing to verify compliance with security requirements and identify any vulnerabilities. This SHOULD be especially true for systems with external interfaces. In view of indirect attacks on infected systems in their own network, however, internal server systems SHOULD also be checked in defined cycles. It SHOULD be checked if the security checks are also automated, eg. B. by means of suitable scripts can be realized.
 
 #### SYS.1.1.A25 Regulated decommissioning of a server
 
@@ -206,7 +206,7 @@ It SHOULD create a checklist that can be processed when a server is decommission
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.1.1.A26 Multi-factor authentication (C)
 
@@ -224,7 +224,7 @@ Server systems with high availability requirements SHOULD be suitably protected 
 
 #### SYS.1.1.A29 Setting up a test environment (CIA)
 
-In order to be able to test changes to the system or the configuration without jeopardizing productive operation, appropriate test systems should be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
+In order to be able to test changes to the system or the configuration without jeopardizing the productive operation, appropriate test systems SHOULD be provided or made available as needed (eg as virtual images). The test systems SHOULD conform to the production systems as far as possible (software versions, configuration). For application systems, appropriate test data SHOULD be generated that does not include any sensitive or personal content of the productive data.
 
 #### SYS.1.1.A30 One service per server (CIA)
 

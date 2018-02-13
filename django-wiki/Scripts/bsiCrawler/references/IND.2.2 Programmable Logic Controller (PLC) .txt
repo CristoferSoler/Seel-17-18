@@ -2,7 +2,7 @@
 ### 1.2 Objective
 ### 1.3 Delimitation
 ### 2 1 Incomplete documentation
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 ### 3.2 Standard requirements
 #### IND.2.2.A1 Advanced System Documentation for Programmable Logic Controllers [ICS Administrator]
 #### IND.2.2.A2 User Account Control and Restricted Rights Assignment [ICS Administrator]

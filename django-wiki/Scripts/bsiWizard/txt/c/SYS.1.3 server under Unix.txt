@@ -5,7 +5,7 @@
 
 ### 1.1 Introduction
 
-Server systems often use the Linux or Unix operating systems. Examples of classic Unix systems are the BSD series (FreeBSD, OpenBSD and NetBSD), Solaris and AIX. Linux is not a classic Unix (the kernel is not based on the original source code from which the various Unix derivatives have developed), but a functional Unix system. This module considers all operating systems of the Unix family, including Linux as a functional Unix system.
+Server systems often use the Linux or Unix operating systems. Examples of classic Unix systems are the BSD series (FreeBSD, OpenBSD and NetBSD), Solaris and AIX. Linux is not a classic Unix (the kernel is not based on the original source code that made the various Unix derivatives), but a functional Unix system. This module considers all operating systems of the Unix family, including Linux as a functional Unix system.
 
 Linux is free software and is developed by the open source community. In addition, there are providers who combine the various software components into a distribution and maintain, as well as offer other services. For Linux servers are often the distributions
 
@@ -25,7 +25,7 @@ The goal of the module is to protect information processed by Unix servers. The 
 
 The module contains basic requirements for setting up and operating Unix servers. It concretizes and complements the aspects that are dealt with in the module SYS.1.1 General Server to specifics of Unix systems.
 
-If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing Usage must additionally be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board resources, regardless of the intended use of the server.
+If the server is not to be managed by itself, but is hosted by third parties, the requirements of the module OPS.3.1 Outsourcing usage must also be taken into account. Security requirements of possible server functions such as web server (APP.3.2 web server) or server for groupware (see APP.5.1 groupware) are the subject of our own building blocks, with the exception of the Unix-specific server services NIS, NFS and SSH, which are also included in this module be treated. The topic of virtualization is illuminated in the module SYS.1.5 Server Virtualization. This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
 
 2 risk situation
 -----------------
@@ -97,7 +97,7 @@ When booting, the integrity of the (pre-) bootloader to the kernel SHOULD be che
 
 #### SYS.1.3.A10 Prevention of spread when exploiting vulnerabilities
 
-Services and applications SHOULD be secured with individual security policies (eg with AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
+Services and applications SHOULD be secured with individual security policies (for example, AppArmor or SELinux). Also chroot environments as well as LXC- or Docker-container SHOULD be considered. It SHOULD be ensured that the supplied standard profiles or rules are activated.
 
 #### SYS.1.3.A11 Use of the security mechanisms of NFS
 
@@ -109,7 +109,7 @@ NIS (Network Information Service) SHOULD ONLY be used in a secure environment. I
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.1.3.A13 Additional protection of privileged credentials (CI)
 

@@ -10,7 +10,7 @@
 ### 2 7 Manipulation of information and devices
 ### 2 8 Destruction, vandalism, sabotage
 ### 2 9 Theft and loss of information and equipment
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### ORP.1.A1 Definition of Responsibilities and Regulations [Institutional Management]
 #### ORP.1.A2 Assignment of responsibility for information, applications and IT components [Head of IT, Information Security Officer (ISB), Head of Institution]
 #### ORP.1.A3 Supervision or assistance of third parties [employees]
@@ -18,7 +18,7 @@
 #### ORP.1.A5 Authorization [Head IT]
 ### 3.2 Standard requirements
 #### ORP.1.A6 The tidy workplace [employee]
-#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Domestic Engineering]
+#### ORP.1.A7 Device Management [Head of IT, Head of Production and Production, Head of Building Services]
 #### ORP.1.A8 Resource Management [IT Leader]
 #### ORP.1.A9 Proper Disposal of Protected Equipment [Staff, Information Security Officer (ISB)]
 #### ORP.1.A10 Responding to security breaches [Information Security Officer (ISB)]

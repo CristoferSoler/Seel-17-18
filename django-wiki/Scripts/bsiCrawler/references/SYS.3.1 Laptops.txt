@@ -7,7 +7,7 @@
 ### 2 4 Synchronization error
 ### 2 5 Data loss in mobile use
 ### 2 6 Data theft with laptops
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### SYS.3.1.A1 Regulations for the mobile use of laptops
 #### SYS.3.1.A2 Laptop access protection [user]
 #### SYS.3.1.A3 Use of personal firewalls

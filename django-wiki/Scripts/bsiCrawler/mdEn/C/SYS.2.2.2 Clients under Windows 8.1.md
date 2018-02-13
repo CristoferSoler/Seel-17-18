@@ -33,7 +33,7 @@ Windows 8.1 includes many features that store and synchronize data in Microsoft'
 
 ### 2 4 Impairment of software functions due to compatibility issues
 
-Software that was successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
+Software that has been successfully run on previous versions of Windows does not have to work with a current version of the operating system. Possible causes are new security features or operating system features, as well as the omission of functionalities or services. As a result, the software can not be used or only with restrictions. For example, new versions of Windows can cause the activation of new security features to cause compatibility issues. Examples include User Account Control (UAC) or 64-bit versions of the Kernel Patch Guard operating system, and the need for signed drivers. For newer versions of Windows but also eliminated functionality. An example of this is the omission of the GINA login component in newer versions of Windows, the z. B. was used by some fingerprint readers.
 
 ### 2 5 Incorrect administration or use of devices and systems
 
@@ -84,7 +84,7 @@ In addition to authorizations on the local file system, the authorization and ac
 To support restrictive rights allocation, the user account control (UAC) SHOULD be enabled. For default users, SHOULD be set to automatically decline the password prompt for elevated privileges. For administrator accounts, the UAC setting SHOULD balance the usability and security level. The decision SHOULD be documented and the corresponding settings configured. It SHOULD be checked regularly if the need still exists and the rights are adjusted or withdrawn accordingly.
 #### SYS.2.2.2.A8 Using the homegroup feature [User]
 
-Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in handling homegroup permissions.
+Clients SHOULD NOT offer services such as file or printer sharing. A security policy (GPO) with the setting "Prevent the computer from joining a homegroup" SHOULD apply to all clients. If the feature is used for operational reasons, users SHOULD be trained in using homegroup permissions.
 
 #### SYS.2.2.2.A9 Privacy and Data Saving on Windows 8.1 Clients [User]
 
@@ -92,7 +92,7 @@ If Microsoft accounts are created for the users, only absolutely necessary infor
 
 #### SYS.2.2.2.A10 Integration of online accounts in the operating system
 
-The registration on the IT system and the domain SHOULD only be done with an account of a self-operated directory service, such Active Directory. A local login SHOULD be reserved for administrators. When using online accounts to log in, eg. For example, a Microsoft account or accounts from other providers of identity management services SHOULD be made aware of the security of the provider and privacy.
+The login to the IT system and the domain SHOULD only be done with an account of a self-operated directory service, such Active Directory. A local login SHOULD be reserved for administrators. When using online accounts to log in, eg. For example, a Microsoft account or accounts from other providers of identity management services SHOULD be made aware of the security of the provider and privacy.
 
 #### SYS.2.2.2.A11 Configuration of Synchronization Mechanisms in Windows 8.1
 
@@ -108,16 +108,16 @@ The ability to install apps from the Microsoft AppStore SHOULD be disabled if no
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.2.2.A14 Application Control with Software Restriction Policies and AppLocker (CIA)
 
-Applications in user-writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The management of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
+Applications in user writable paths SHOULD be prevented from running by Software Restriction Policies (SRP) or AppLocker. The management of the AppLocker and SRP GPOs in a domain-based network SHOULD be centralized by means of GPOs per user / user group.
 
 AppLocker SHOULD be used after the approach of a positive list. Everything should be forbidden, which is not explicitly allowed. AppLocker prefers to use rules based on application signatures of defined publishers. Attempted rule violations SHOULD be logged and suitably evaluated.
 For clients with particularly high security requirements, AppLocker SHOULD prevent all unauthorized applications from running instead of logging them.
 
-Implementation of the SRP and AppLocker rules SHOULD be tested on a test system or by operation in monitoring mode before being used on a productive system.
+Implementation of the SRP and AppLocker rules SHOULD be tested on a test system or operating in monitor mode before being used on a productive system.
 
 #### SYS.2.2.2.A15 Encrypting the file system with EFS (CI)
 

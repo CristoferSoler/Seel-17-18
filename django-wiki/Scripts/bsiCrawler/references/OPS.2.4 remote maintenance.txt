@@ -12,7 +12,7 @@
 ### 2 9 Unsafe cryptographic algorithms for remote maintenance
 ### 2 10 Insecure and uncontrolled external use of remote maintenance access
 ### 2 11 Use of online services for remote maintenance
-### 3.1 Basic Requirements
+### 3.1 Basic requirements
 #### OPS.2.4.A1 Planning the use of remote maintenance [IT operation]
 #### OPS.2.4.A2 Secure connection setup for remote maintenance [user]
 #### OPS.2.4.A3 Hedging communication links for remote maintenance [IT operation]

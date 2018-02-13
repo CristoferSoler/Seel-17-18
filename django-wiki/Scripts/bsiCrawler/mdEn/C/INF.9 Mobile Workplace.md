@@ -5,7 +5,7 @@ description
 
 ### 1.1 Introduction
 
-Good network coverage and powerful IT equipment, such as: For example, laptops, smartphones or tablets allow employees to work almost anywhere, from anywhere. This means that official tasks are often performed not only in the rooms and buildings of the institution, but in changing workplaces in different environments, eg. In hotel rooms, trains or at customers. The information processed must be adequately protected.
+Good network coverage and powerful IT equipment, such as: For example, laptops, smartphones, or tablets allow employees to work almost anywhere, from anywhere. This means that official tasks are often performed not only in the rooms and buildings of the institution, but in changing workplaces in different environments, eg. In hotel rooms, trains or at customers. The information processed must be adequately protected.
 
 On the one hand, mobile work changes the duration, location, and distribution of working hours, and on the other hand, it increases information security requirements because mobile workplace environments can not assume the security of an IT infrastructure found in an office environment.
 
@@ -17,9 +17,9 @@ The module describes security requirements for mobile workstations. The aim is t
 
 The module contains fundamental requirements that must be observed and fulfilled when employees often work not only within the premises of the institution, but at changing workplaces outside.
 
-Above all, it depicts the organizational, technical and personnel requirements for wholly or partially mobile work. In order to secure IT systems, data media or documents used in mobile work, all relevant components must be used, such as SYS.3.1 * laptop *, SYS.3.2 * tablet and smartphone, * SYS.3.4 * mobile data carrier, * NET .3.3 * VPN, * SYS.2.1 * Common Client, INF.1 Building or INF.8 Home Workplace * are considered separately.
+Above all, it depicts the organizational, technical and personnel requirements for wholly or partially mobile work. In order to secure IT systems, data carriers or documents used during mobile work, all relevant components must be used, such as SYS.3.1 * laptop *, SYS.3.2 * tablet and smartphone, * SYS.3.4 * mobile data carrier, * NET .3.3 * VPN, * SYS.2.1 * General Client, INF.1 Building or INF.8 Home Workplace * must be considered separately.
 
-Likewise, the security requirements for VDU workplaces that are fixed by the employer (teleworking) are not the subject of this module, but are described in OPS.1.2.4 * Teleworking *.
+Likewise, the security requirements for VDU workplaces, which are fixed by the employer (teleworking) are not the subject of this module, but are described in OPS.1.2.4 * Teleworking *.
 
 2 risk situation
 -----------------
@@ -34,7 +34,7 @@ If the mobile work is not or only insufficiently regulated, the institution may 
 
 Because mobile data carriers and end devices are used in very different environments, they are exposed to a variety of threats. These include, for example, damaging environmental influences (for example, high or too low temperatures), as well as dust, moisture or transport damage.
 
-In addition to these influences, the operating environments with their different levels of security must be taken into account. Especially smartphones, tablets, laptops and similar mobile devices are not only mobile, but can also communicate with other IT systems. In this case, for example, malicious programs can be transmitted or sensitive information can be copied. In this way, tasks may no longer be fulfilled, customer appointments may not be performed, or IT systems may be damaged.
+In addition to these influences, the operating environments with their different levels of security must also be taken into account. Especially smartphones, tablets, laptops and similar mobile devices are not only mobile, but can also communicate with other IT systems. In this case, for example, malicious programs can be transmitted or sensitive information can be copied. In this way, tasks may no longer be fulfilled, customer appointments may not be performed, or IT systems may be damaged.
 
 ### 2 3 Manipulation or destruction of IT systems, accessories, information and software on the mobile workstation
 It may be easier to manipulate or destroy IT systems, accessories, information and software that are used on a mobile device than in the institution. The mobile workstation is often accessible to third parties. Also here the central protective measures of the institution are not present, for example, porter services. If IT systems, accessories, information or software are manipulated or destroyed, the employee at the mobile workstation is often only able to work to a limited extent. In addition, destroyed IT components or software solutions may need to be replaced, which requires both financial and time resources.
@@ -103,7 +103,7 @@ If rooms are left only briefly, the clients used MUST be locked or shut down so 
 
 #### INF.9.A4 Working with external IT systems [supervisors, users]
 
-The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. If employees are working with external IT systems, it MUST always be ensured that all temporary data created during this process is deleted.
+The institution MUST regulate how employees should work with external IT systems. Because the level of protection afforded by such IT systems can vary widely from that of one's own institution, each mobile employee MUST be aware of the dangers of using third-party IT systems. The regulations MUST specify whether and how sensitive information may be processed on external IT systems and how it prevents unauthorized persons from viewing the information. When employees work with third-party IT systems, it is essential to ensure that all temporary data created during this process is deleted.
 
 ### 3.2 Standard requirements
 
@@ -111,7 +111,7 @@ Together with the basic requirements, the following requirements correspond to t
 
 #### INF.9.A5 Timely loss report [employee]
 
-Employees SHOULD immediately report to their institution if information, IT systems, or data carriers were lost or stolen. For this purpose, there should be clear reporting channels and contact persons within the institution.
+Employees SHOULD immediately report to their institution if information, IT systems or data media were lost or stolen. For this purpose, there should be clear reporting channels and contact persons within the institution.
 
 #### INF.9.A6 Disposal of confidential information [staff, building services]
 
