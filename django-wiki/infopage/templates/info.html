@@ -182,7 +182,7 @@
 
                                         <div class="btn-group pull-right" >
 
-                                            {% if request.user|has_group:"administrators" or request.user|has_group:"moderators" or request.user == a.user %}
+                                            {% if request.user|info_delete_answer:a %}
                                                 <form action="{% url 'delete_a' %}" method="post">
                                                     {% csrf_token %}
                                                     <input type="hidden" name="a_id" value="{{ a.id }}"/>
@@ -190,16 +190,16 @@
                                                             class="glyphicon glyphicon-trash"
                                                             style="color: #00A000"></i></button>
                                                 </form>
-
+                                            {% endif %}
 
                                         </div>
-
+                                        {% if request.user|info_change_answer:a %}
                                         <div class="btn-group pull-right">
                                             <button type="submit" class="btn btn-link" data-toggle="modal"
                                                     data-target="#{{ a.id }}">
                                                 <i class="fa fa-pencil" style="color: #00A000"></i></button>
-                                              {% endif %}
                                         </div>
+                                        {% endif %}
                                         <!-- modal edit form-->
                                         <div id="{{ a.id }}" class="modal fade" role="dialog">
                                             <div class="modal-dialog">

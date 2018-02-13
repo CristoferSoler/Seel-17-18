@@ -346,10 +346,10 @@
         ]
     },
     {
-        "text": "Elementary hazards",
+        "text": "Elementary threats",
         "nodes": [
             {
-                "text": "Overview of elementary hazards",
+                "text": "Overview of elementary threats",
                 "nodes": [
                     {
                         "href": "http://localhost:8000/bsi/threats/G0.1",

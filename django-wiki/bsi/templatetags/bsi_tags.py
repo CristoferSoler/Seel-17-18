@@ -40,6 +40,11 @@ def is_uga(url):
 
 
 @register.filter
+def is_owner(article, user):
+    return article.owner == user
+
+
+@register.filter
 def is_admin(user):
     return permissions.can_add_change_delete_users(user)
 
