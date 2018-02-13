@@ -268,7 +268,14 @@ function amountOfStates(changedTopicsOfElements,amountOfNoCorrect) {
 
 }
 
-function calculatePercentage(amountOfCorrent, amountOfNotSure) {
+function countNotSure(value) {
+    return value === 'd';
+}
+
+function calculatePercentage(amountOfCorrent, amountOfNotSure1) {
+
+    var amountOfNotSure = answerList.filter(countNotSure).length;
+
     var dividend = amountOfCorrent + 0.5 * amountOfNotSure + 1;
     var divisor = amountOfTotalTopics + 1;
     result = dividend / divisor;
@@ -396,6 +403,7 @@ function checkGui() {
 function topicBack() {
     if ((amountOfTotalTopics - 1) >= 0) {
         var lastAnswer = answerList.pop();
+
         checkTopics(lastAnswer, true);
         checkGui();
     } else {
