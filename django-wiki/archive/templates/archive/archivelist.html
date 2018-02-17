@@ -1,32 +1,31 @@
-
 {% extends 'uga/overview_base.html' %}
 
 
 {% block title_overview %}
-     <h1 >Archive</h1>
+    <h1>Archive</h1>
 {% endblock %}
 
 {% block header_overview %}
- <p>Archive List</p>
+    <p>Archive List</p>
 {% endblock %}
 
 {% block tbody_overview %}
 
     <tbody>
-                    {% for archive in archives %}
-                        <tr>
-                            <td class="col-xs-7">
-                                    {% if archive.parent.slug == 'archive' %}
-                                      <a href="{% url 'archive_dir' path=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
-                                    {% else %}
-                                      <a href="{% url 'archive_get' path=archive.parent.slug article=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
-                                    {% endif %}
-                            </td>
-                            <td class="col-xs-3">{{ archive.article.owner }}</td>
-                            <td class="col-xs-2">{{ archive.article.created }}</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
+    {% for archive in archives %}
+        <tr>
+            <td class="col-xs-7">
+                {% if archive.parent.slug == 'archive' %}
+                    <a href="{% url 'archive_dir' path=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
+                {% else %}
+                    <a href="{% url 'archive_get' path=archive.parent.slug article=archive.slug %}"> {{ archive.article.current_revision.title }} </a>
+                {% endif %}
+            </td>
+            <td class="col-xs-3">{{ archive.article.owner }}</td>
+            <td class="col-xs-2">{{ archive.article.created }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
 
 {% endblock %}
 

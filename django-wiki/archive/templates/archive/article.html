@@ -1,37 +1,38 @@
 {% extends 'bsi/article_base.html' %}
 {% block contents_article %}
 
-        <div class="col-xs-12 col-sm-12 col-lg-12">
+    <div class="col-xs-12 col-sm-12 col-lg-12">
 
-    <h1 >
-          {{ article.current_revision.title }}
-          <small style="font-size: 14px;">
-            {% if urlpath.parent %}
-            <a href="{% url 'wiki:get' path=urlpath.path %}"><span class="fa fa-bookmark"></span> {{ urlpath.slug }}</a>
-            {% endif %}
-            {% if article.current_revision.locked %}
-              <span class="fa fa-lock"></span>
-            {% endif %}
-          </small>
- </h1>
-        <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
-<hr>
-            <div style="word-wrap: break-word;">
-                {% if not preview %}
-                    {% if article.current_revision %}
-                        {{ article.get_cached_content }}
-                    {% endif %}
-                {% else %}
-                    {{ content|default:"" }}
-
+        <h1>
+            {{ article.current_revision.title }}
+            <small style="font-size: 14px;">
+                {% if urlpath.parent %}
+                    <a href="{% url 'wiki:get' path=urlpath.path %}"><span
+                            class="fa fa-bookmark"></span> {{ urlpath.slug }}</a>
                 {% endif %}
+                {% if article.current_revision.locked %}
+                    <span class="fa fa-lock"></span>
+                {% endif %}
+            </small>
+        </h1>
+        <p class="small text-muted">This article was last modified:{{ article.current_revision.modified }}</p>
+        <hr>
+        <div style="word-wrap: break-word;">
+            {% if not preview %}
+                {% if article.current_revision %}
+                    {{ article.get_cached_content }}
+                {% endif %}
+            {% else %}
+                {{ content|default:"" }}
+
+            {% endif %}
 
             {% include "bsi/includes/seealso.html" %}
-            </div>
-
-            <hr>
-
-
         </div>
+
+        <hr>
+
+
+    </div>
 
 {% endblock %}
