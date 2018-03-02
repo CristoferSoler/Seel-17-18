@@ -33,7 +33,7 @@ The following specific threats and vulnerabilities are of particular importance 
 Just setting information security regulations does not guarantee that they will be respected. All employees must also be aware of the applicable regulations, in particular the officials. In many security incidents, ignoring regulations is not the sole cause of the incident, but a reason for its effectiveness. Vulnerabilities due to insufficient knowledge of regulations may compromise the confidentiality, availability and integrity of the information being processed. The fulfillment of tasks and the processing of business processes can be limited in every respect (eg temporal, qualitative, with regard to liability).
 ### 2 2 Insufficient awareness of information security
 
-Experience shows that it is not enough just to order the implementation of certain security measures. Without an understanding of the reasons for the measures and the purpose they serve, the measures often fail or are ignored. If employees become insufficiently sensitized to information security issues, operational and implementation-related risks arise in the technical and organizational business processes. The security culture, security objectives and security strategy of the institution may be jeopardized if employees are unable to relate directly to their real world of work, unless they are taught the purpose of security measures. This leads to a lack of acceptance of security measures and deficiencies in compliance.
+Experience shows that it is not enough just to order the implementation of certain security measures. Without an understanding of the reasons for the actions and their purpose, the measures often fail or are ignored. If employees become insufficiently sensitized to information security issues, operational and implementation-related risks arise in the technical and organizational business processes. The security culture, security objectives and security strategy of the institution may be jeopardized if employees are unable to relate directly to their real world of work, unless they are taught the purpose of security measures. This leads to a lack of acceptance of security measures and deficiencies in compliance.
 
 ### 2 3 Little successful awareness-raising and training activities
 
@@ -98,7 +98,7 @@ All employees and external users MUST be instructed and sensitized in the safe h
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements are in line with the state of the art in the field of awareness and training. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are in line with the state of the art in the area of ​​awareness and training. They SHOULD be implemented in principle.
 
 #### ORP.3.A4 Designing an information security awareness and training program
 
@@ -121,7 +121,7 @@ The information security learning outcomes SHOULD be measured and evaluated by t
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### ORP.3.A9 Specialized Training of Exposed Persons and Institutions (CIA)
 

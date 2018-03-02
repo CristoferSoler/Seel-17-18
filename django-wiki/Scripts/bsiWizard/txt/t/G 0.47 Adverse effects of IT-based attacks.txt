@@ -1,9 +1,5 @@
 [toc]
  
-Table of content
-
-[Toc]
-
 G 0.47 Adverse effects of IT-based attacks
 ================================================== ====
 
@@ -20,4 +16,4 @@ Among other things, this can lead to the misjudgment of the actual protection re
 
 * Bots installed on IT systems, with which the perpetrators can carry out distributed denial-of-service attacks (DDoS attacks), often pose no direct threat to the infected IT systems themselves, since the DDoS attacks in the Rule against IT systems of third parties.
 * Weak points on IoT devices in WLANs can be used by perpetrators as a gateway to attack other major devices on the same WLAN. Therefore, such IoT devices must be protected even if they themselves have only a low protection requirement.
-* Ransomware attacks on IT systems may trigger chain reactions and thus critical infrastructures. This, in turn, could lead to supply bottlenecks for the population, even if the perpetrators may not have intended it.
+* Ransomware attacks on IT systems may trigger chain reactions and therefore critical infrastructures. This, in turn, could lead to supply bottlenecks for the population, even if the perpetrators may not have intended it.

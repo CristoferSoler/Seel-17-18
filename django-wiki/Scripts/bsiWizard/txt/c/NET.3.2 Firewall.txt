@@ -9,7 +9,7 @@ A firewall is a system of software and hardware components that is used to secur
 
 In order to secure gateways, it is often no longer a single component that is used, but a whole range of IT systems that perform different tasks, such as: For example, you can only filter packets or strictly disconnect network connections using proxy functions. The term Application Level Gateway (ALG) used in this module refers to a firewall component that regulates data streams based on security proxies.
 
-A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, eg. For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
+A firewall is used at the central junction between trusted networks. Differently trusted networks do not necessarily represent only the combination of Internet / Intranet. Rather, two institution-internal networks can also have different levels of protection requirements, for example: For example, the network of office communication usually has a different need for protection than the network of the personnel department, in which particularly sensitive personal data is transmitted.
 
 ### 1.2 Objective
 
@@ -21,7 +21,7 @@ The building block builds on the building block NET.1.1 * Network Architecture a
 
 In order to secure networks, more network components are usually required, eg. For example, routers and switches. Requirements for this are not listed in this module, but can be found in NET.3.1 * Routers and Switches *. If a firewall takes on the role of a router or switch, it also has to meet the requirements of the NET.3.1 * Router and Switches * block.
 
-In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management Firewalls, which also contain functional enhancements, such as: Eg VPN, intrusion detection and intrusion prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
+In addition, it does not cover products such as Next Generation Firewalls (NGFW) or Unified Threat Management firewalls, which contain additional functional enhancements, such as: Eg VPN, intrusion detection and intrusion prevention (IDS / IPS) systems, virus scanners or spam filters. Safety aspects of these functional extensions are not the subject of the present module, but z. This is, for example, covered in the blocks NET.3.3 * VPN *, NET.3.4 * IDS / IPS *, OPS1.1.4 * Protection against malicious programs *.
 
 Likewise, no application recognition or filtering is discussed. It is a common feature of Next Generation Firewalls and IDS / IPS. Since the implementations differ between the products, it is recommended that they be viewed individually depending on the application scenario. In this module is also not discussed on the individual protection options for externally offered server services, z. For example, through a reverse proxy or for web services using a Web Application Firewall (WAF). In addition, aspects of infrastructural safety (eg suitable installation or power supply) are not listed in this module, but can be found in the respective building blocks of the INF layer.
 
@@ -39,7 +39,7 @@ If an attacker succeeds in gaining unauthorized access to a firewall system or a
 
 ### 2 3 Software vulnerabilities or errors
 
-Firewalls are complex systems and are subject to numerous attacks, especially at the transition from the intranet to the Internet. Therefore, firewall manufacturers regularly release updates and patches to address software bugs and known vulnerabilities in their products. However, if these are not recorded or played too late, the firewall system can be successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, disrupt services or shut down entire production processes.
+Firewalls are complex systems and are subject to numerous attacks, especially at the transition from the intranet to the Internet. Therefore, firewall manufacturers regularly release updates and patches to address software bugs and known vulnerabilities in their products. However, if these are not recorded or played too late, the firewall system can be successfully attacked. This makes it possible for attackers to manipulate the systems to drain business-critical data, shut down services or shut down entire production processes.
 
 ### 2 4 Bypassing the firewall rules
 

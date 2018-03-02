@@ -49,7 +49,7 @@ Routers and switches ship with a standard configuration in which many services a
 
 ### 2 5 Incorrect planning and conception
 
-Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when used for the first time. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
+Many institutions plan and design the use of routers and switches incorrectly. Among other devices are procured, which are not sufficiently dimensioned, z. For example, in terms of port number or performance. As a result, a router or switch is already overloaded when it is first used. As a result, services or entire networks may not be accessible and the error must be corrected consuming.
 
 ### 2 6 Incompatible active network components
 
@@ -61,7 +61,7 @@ In MAC flooding, an attacker sends many requests with changing source MAC addres
 
 ### 2 8 spanning tree attacks
 
-In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network to rebuild the spanning tree topology, causing the network to fail due to incorrect BPDUs.
+In spanning tree attacks, an attacker sends so-called Bridge Protocol Data Units (BPDUs) with the aim of making the switches look at their own (malicious) switch as a root bridge. This redirects network traffic through the attacker's switch so that it can log all information sent through it. As a result, he can initiate DDoS attacks and force the network, through false BPDUs, to rebuild the spanning tree topology, causing the network to fail.
 
 ### 2 9 GARP attacks
 
@@ -99,9 +99,9 @@ It must be regulated, who may access a router or switch. ONLY ONCE as many acces
 
 #### NET.3.1.A4 Protection of the administration interfaces
 
-All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from untrusted networks.
+All administration and management accesses of the routers and switches MUST be restricted to individual source IP addresses or address ranges. It MUST be ensured that it is not possible to access the administration interfaces directly from non-trusted networks.
 
-To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
+To administer and monitor routers and switches, sufficiently encrypted protocols should be used. If unencrypted and therefore insecure protocols are still used, a separate administration network (out-of-band management) MUST be used for the administration. The management interfaces and the administration connections MUST be protected by a separate firewall. Suitable time limits MUST be specified for the interfaces.
 
 All services not required for the management interface MUST be deactivated. If a network component has a dedicated hardware interface, unauthorized access to it MUST be prevented.
 
@@ -156,7 +156,7 @@ Routers and switches SHOULD only be administered via a separate management netwo
 IT SHOULD be ensured that the ICMP and ICMPv6 protocols are filtered restrictively.
 
 #### NET.3.1.A15 Bogon and spoofing filtering
-It SHOULD prevent intruders from entering the routers and switches using forged, reserved or unassigned IP addresses.
+It SHOULD prevent intruders from entering the routers and switches using forged, reserved, or unassigned IP addresses.
 
 #### NET.3.1.A16 Protection against "IPv6 Routing Header Type-0" attacks
 
@@ -188,7 +188,7 @@ Routers and switches SHOULD be connected to a central identity and authorization
 
 To be able to react effectively and quickly in disruptive situations, diagnosis and troubleshooting should be planned and prepared in advance. For typical failure scenarios, appropriate action instructions SHOULD be defined.
 
-The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
+The emergency plans for routers and switches SHOULD be aligned with the comprehensive incident and emergency preparedness and are based on the general emergency preparedness concept (see DER.4 * emergency management *). It SHOULD be ensured that the documentation on emergency preparedness and the instructions contained therein exist in paper form. The procedure descriptions necessary in the emergency preparedness SHOULD be rehearsed regularly.
 
 #### NET.3.1.A23 Revision and Penetration Tests
 
@@ -196,7 +196,7 @@ Routers and switches SHOULD regularly check for known security issues. Also, reg
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### NET.3.1.A24 Use of network access controls (IA)
 

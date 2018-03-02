@@ -55,7 +55,7 @@ Windows 10-based devices are closely interlinked with the cloud services of the 
 
 #### SYS.2.2.3.A2 Appropriate selection of Windows 10 version and procurement
 
-The functional scope and the supply of functional changes of a Windows 10 version MUST be selected taking into account the identified protection needs and purpose and the feasibility of the necessary safeguards must be checked. Based on the result of the review, the established procurement process MUST be extended to include the appropriate license model and release path (CB, CBB or LTSB).
+The functional scope and the supply of functional changes of a Windows 10 version MUST be selected taking into account the identified protection needs and the purpose of use and the feasibility of the required safeguards must be checked. Based on the result of the review, the established procurement process MUST be extended to include the appropriate license model and release path (CB, CBB or LTSB).
 
 #### SYS.2.2.3.A3 Appropriate patch and change management
 
@@ -78,7 +78,7 @@ The registration on the system and the domain MAY ONLY be possible with the acco
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​clients under Windows 10. They SHOULD be implemented in principle.
 
 #### SYS.2.2.3.A7 Local Security Policy
-All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other IT security or organization requirements. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
+All security-relevant settings SHOULD be configured, tested and regularly checked as needed. The security policies SHOULD be configured in accordance with the operating system manufacturer's recommendations and the default default behavior, unless the default behavior conflicts with other requirements of IT Baseline Protection or the organization. Deviations MUST be documented and justified. All unnecessary applications and components SHOULD be disabled. Security policies SHOULD be set in any case, even if the setting does not deviate from the default behavior of an unset security policy.
 
 #### SYS.2.2.3.A8 Central management of client security policies
 
@@ -142,7 +142,7 @@ The configuration parameters of the User Account Control (UAC) SHOULD be used fo
 Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.2.2.3.A21 Use of the Encrypting File System EFS (CI)
-Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in the correct handling of EFS.
+Since the Encrypting File System (EFS) protects the keys used with the password of the user account, a complex password SHOULD be used. In addition, restrictive access rights SHOULD protect EFS encrypted files. Instead of the administrator, a dedicated account SHOULD be the recovery agent. In this context, its private key SHOULD be saved and removed from the system. In doing so, backups of all private keys SHOULD be created. When using EFS with local user accounts, encryption of the local password storage using Syskey SHOULD be used. This can be omitted if the operating system function Credential Guard is used. When using EFS, users should be trained in using EFS correctly.
 
 #### SYS.2.2.3.A22 Windows PowerShell (CIA)
 

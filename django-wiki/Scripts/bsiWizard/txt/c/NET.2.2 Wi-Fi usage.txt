@@ -69,7 +69,7 @@ The training contents MUST always be adapted according to the respective applica
 #### NET.2.2.A3 Securing WLAN Usage in Unsafe Environments [IT Operations]
 MUST use external hotspots MUST be implemented:
 
-* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide if and under what conditions he is allowed to use the hotspot.
+* Any user of a hotspot MUST know his or her security requirements (see NET.2.2.A2 Wi-Fi Users' Awareness and Training) and then decide whether or under what conditions he is allowed to use the hotspot.
 * WLANs that are only used sporadically SHOULD be deleted by the users from the history.
 * If possible, separate user accounts with a secure base configuration and restrictive permissions SHOULD be used.
 * It should be ensured that no user with administrator rights can log on to external WLANs from his client.
@@ -88,4 +88,4 @@ For WLAN security incidents, users SHOULD implement the following:
 * Users SHOULD notify IT operations through a suitable escalation level (eg User Help Desk).
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).

@@ -5,7 +5,7 @@
 
 ### 1.1 Introduction
 
-With Windows Server 2012, Microsoft released a server operating system in September 2012 that brings several improvements in terms of security compared to previous versions of Windows (especially Windows Server 2008 R2). Technically, it is based not on the predecessor, but on the code base of the client operating system Windows 8. With the release Windows Server 2012 R2 from October 2013, the operating system was further improved and extended to Windows 2012 R2 to the server counterpart to Windows 8.1 make the client side.
+With Windows Server 2012, Microsoft released a server operating system in September 2012 that brings several improvements in terms of security compared to previous versions of Windows (especially Windows Server 2008 R2). Technically, it is based not on the predecessor, but on the code base of the client operating system Windows 8. With the release of Windows Server 2012 R2 from October 2013, the operating system was further improved and extended to Windows 2012 R2 to the server counterpart to Windows 8.1 make the client side.
 
 This module is equally concerned with securing Windows Server 2012 and Windows Server 2012 R2, with relevant differences and peculiarities being appropriately pointed out. The spelling "Windows Server 2012 (R2)" is used if both versions are meant. The expiration date for Mainstream Support and Extended Support ("End-of-Life", EOL) is 09.01.2018 or 10.01.2023 in both cases.
 
@@ -17,14 +17,14 @@ The objective of this module is to protect information and processes that are pr
 
 The block Windows Server 2012 (R2) is to be applied to all target objects operating under the operating system Microsoft Windows Server 2012 (R2). It specifies and complements the aspects addressed in the SYS.1.1 General Server building block to specifics of Windows Server 2012 (R2) without repeating the requirements of the APP.2.2 Active Directory building block.
 
-This building block assumes default integration into an Active Directory domain, as is common in businesses and government agencies. Special features of stand-alone systems are mentioned only occasionally, where the differences appeared to be particularly relevant.
+This building block assumes default integration with an Active Directory domain, as is common in businesses and government agencies. Special features of stand-alone systems are mentioned only occasionally, where the differences appeared to be particularly relevant.
 
-Security requirements of possible server roles and functions such as file server (APP.3.3 file server), web server (APP.3.2 web server) or Exchange (APP.5.2 Exchange / Outlook) are the subject of our own components, just like the topic of virtualization (SYS.1.5 server virtualization) , This module is about the basic protection at the operating system level with on-board resources, regardless of the intended use of the server.
+Security requirements of possible server roles and functions such as file server (APP.3.3 file server), web server (APP.3.2 web server) or Exchange (APP.5.2 Exchange / Outlook) are the subject of our own components, just like the topic of virtualization (SYS.1.5 server virtualization) , This module is about the basic protection at the operating system level with on-board means independent of the intended use of the server.
 
 2 risk situation
 -----------------
 
-The following specific threats and vulnerabilities are of particular importance in Windows Server 2012 (R2):
+The following specific threats and vulnerabilities are of particular importance in the Windows Server 2012 (R2) area:
 
 ### 2 1 Insufficient Planning for Windows Server 2012 (R2)
 
@@ -60,7 +60,7 @@ Regular work under standard user rights for administrators is now good practice.
 
 ### 2 9 Compromise of remote access
 
-Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. In many cases, other IT systems connected to the server can also be compromised.
+Because Windows Server 2012 (R2) has a variety of ways to be remotely managed, they can generally be misused. Remote access, such. RDP user sessions may be reachable to third parties due to insecure or insecure protocols, weak authentication (e.g., weak passwords), or faulty configuration. As a result, the server and the information stored there can be largely compromised. Often, other IT systems connected to the server can also be compromised.
 
 3 requirements
 ---------------
@@ -73,11 +73,11 @@ The following requirements MUST be implemented as a priority:
 
 #### SYS.1.2.2.A1 Planning for Windows Server 2012
 
-The use of Windows Server 2012 (R2) MUST be carefully planned before installation. The requirements for the hardware MUST be checked before procurement. There must be a well-founded and documented decision for an appropriate Windows Server 2012 (R2) edition. The purpose of the server MUST be specified, including a planned integration into the Active Directory. The use of integrated into the operating system cloud services MUST be weighed and planned in principle. If not needed, the establishment of Microsoft accounts MUST be blocked on the server.
+The use of Windows Server 2012 (R2) MUST be carefully planned before installation. Hardware requirements MUST be checked prior to procurement. There must be a well-founded and documented decision for an appropriate Windows Server 2012 (R2) edition. The purpose of the server MUST be specified, including a planned integration into the Active Directory. The use of integrated into the operating system cloud services MUST be weighed and planned in principle. If not needed, the establishment of Microsoft accounts MUST be blocked on the server.
 
 #### SYS.1.2.2.A2 Secure installation of Windows Server 2012
 
-The installation medium MUST be obtained from a demonstrably integral source. NO other than the required server roles and features or functions may be installed. If sufficient in terms of functionality, the server core variant MUST be installed. Otherwise, MUST be justified, why the server core variant is not enough. As part of the installation, the server MUST first be brought to a current patch state.
+The installation medium MUST be obtained from a demonstrably integral source. NO other than the required server roles and features or functions may be installed. If sufficient in terms of functionality, the server core variant MUST be installed. Otherwise MUST be justified, why the server core variant is not enough. As part of the installation, the server MUST first be brought to a current patch state.
 
 #### SYS.1.2.2.A3 Secure Administration of Windows Server 2012
 Local administration accounts MUST have unique, secure passwords. All administrators responsible for the server system MUST be trained in the security-related aspects of Windows Server 2012 or R2 administration. You MAY NOT use administrative rights where they are not mandatory. Browsers on the server MAY NOT be used to surf the web.

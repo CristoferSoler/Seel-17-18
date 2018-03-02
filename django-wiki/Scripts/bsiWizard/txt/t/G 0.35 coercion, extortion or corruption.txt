@@ -5,7 +5,7 @@ G 0.35 coercion, blackmail or corruption
 
 Coercion, blackmail, or corruption can compromise the security of information or business processes. By threatening violence or other disadvantages, an attacker may, for example, attempt to bring the victim to disregard safety guidelines or circumvent security measures (coercion).
 
-Instead of threatening, attackers can also target money or other benefits to make employees or other persons a security breach (corruption). For example, there is a risk that a corrupt employee forwards confidential documents to unauthorized persons.
+Instead of threatening, attackers can also target money or other benefits to make employees or other people a security breach (corruption). For example, there is a risk that a corrupt employee forwards confidential documents to unauthorized persons.
 
 Coercion or corruption can fundamentally affect all basic information security values. Attacks may target, among other things, the misdirection of confidential information, the manipulation of business-critical information, or the disruption of business processes.
 

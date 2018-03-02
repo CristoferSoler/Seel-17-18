@@ -5,9 +5,9 @@
 
 ### 1.1 Introduction
 
-Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mail, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional server software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
+Microsoft Exchange is a groupware solution for medium to large institutions. It can be used to electronically deliver messages and has additional services to support workflows and to manage mobile devices via Microsoft Exchange ActiveSync. Messages, such as e-mail, can be centrally managed, delivered, filtered and sent using Microsoft Exchange. Also, typical groupware applications, such as newsgroups, calendars, and task lists, as well as Microsoft Exchange Unified Messaging, can be offered and managed. In order to use the functions of Microsoft Exchange, additional client software is required in addition to the server service. The combination of Microsoft Exchange servers and Outlook clients is referred to here as the Microsoft Exchange system.
 
-Microsoft Outlook is a client made available directly from mobile devices by installing the Microsoft Office suite or integrating with operating systems. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
+Microsoft Outlook is a client made directly available by installing the Microsoft Office suite or integrating with the operating systems of mobile devices. In addition, the web application "Outlook Web App" via the browser z. For example, you can access emails, contacts, and the calendar. This service is already included in the Microsoft Exchange package.
 
 ### 1.2 Objective
 
@@ -37,7 +37,7 @@ If the migration is not carefully planned and executed, internal communication t
 
 With Microsoft Exchange, users can access their own e-mail account via a browser. This is done using Internet Information Services (IIS), which are an integral part of the Microsoft Exchange Server. If this function is improperly planned and configured incorrectly, the internal network may be uncontrollably accessed from the outside.
 
-If e-mails are to be accessed via a browser that is used from the Internet, there is a great potential for danger. Without direct access to the institution's network, attackers could access e-mail, spying on email addresses and content, abusing email, sending spam, and gaining access to in-house information, among other things.
+If e-mails are to be accessed via a browser that is used from the Internet, this presents a great potential for danger. Without direct access to the institution's network, attackers could access e-mail, spying on email addresses and content, abusing email, sending spam, and gaining access to in-house information, among other things.
 
 ### 2 4 Unauthorized connection of other systems to Microsoft Exchange
 
@@ -87,7 +87,11 @@ Before Microsoft Exchange and Outlook can be used, the use of Microsoft Exchange
 It MUST be decided with which systems and application components, as well as in which hierarchical gradation the Microsoft Exchange infrastructure should be realized. The selection MUST also decide whether to run the systems as a cloud or local service.
 
 #### APP.5.2.A3 Authorization Management
+<<<<<<< HEAD
 For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as is necessary for the task fulfillment (minimum principle). It MUST be checked regularly to see if the allocated rights are still appropriate.
+=======
+For the systems of the Microsoft Exchange infrastructure, a correction concept MUST be created, suitably documented and applied. The privileged users as well as the administrators MUST only have as many authorizations as is necessary for the task fulfillment (minimum principle). It MUST be checked on a regular basis to see if the allocated rights are still appropriate.
+>>>>>>> origin/django-wiki
 
 #### APP.5.2.A4 Access rights to Microsoft Exchange objects
 
@@ -155,10 +159,10 @@ The contents of the operating manual for Microsoft Exchange SHOULD be comprehens
 
 #### APP.5.2.A16 Creation of a contingency plan for the failure of Microsoft Exchange and Outlook [Emergency Response Officer]
 
-As part of the emergency preparedness SHOULD be designed a concept that can be minimized the consequences of a failure of the Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
+As part of the emergency preparedness SHOULD be designed a concept that can minimize the consequences of a failure of Microsoft Exchange and Outlook components. The emergency plan SHOULD define what to do in the event of a failure to ensure a timely restoration of normal operation.
 
 ### 3.3 Requirements for increased protection requirements
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### APP.5.2.A17 Encryption of Microsoft Exchange System Databases (CIA)
 
@@ -171,7 +175,7 @@ Mechanisms such. B. Encrypting File System or Windows BitLocker Drive Encryption
 
 #### APP.5.2.A18 Regular Security Checks for Microsoft Exchange Systems (CIA)
 
-The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during a test:
+The Microsoft Exchange system SHOULD regularly be checked for misconfigurations and vulnerabilities. For this purpose, it should be regularly subjected to a safety test by different people. It is recommended to set up a checklist to ensure a defined scope of testing. The following aspects SHOULD be taken into consideration during an examination:
 
 * regular searches of safety-related information,
 * Authorizations for revision users,

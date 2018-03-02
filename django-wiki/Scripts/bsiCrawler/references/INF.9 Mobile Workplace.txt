@@ -1,0 +1,43 @@
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Lack of or inadequate regulations for mobile workplaces
+### 2 2 Impaired by changing operating environment
+### 2 3 Manipulation or destruction of IT systems, accessories, information and software on the mobile workstation
+### 2 4 Delays due to temporarily limited accessibility
+### 2 5 Unsecured file and disk transport
+### 2 6 Inappropriate disposal of data media and documents
+### 2 7 Confidentiality loss of sensitive information
+### 2 8 Theft or loss of data carriers or documents
+### 2 9 Lack of security awareness and carelessness in handling information
+### 3.1 Basic requirements
+#### INF.9.A1 Appropriate selection and use of a mobile workstation [supervisor, user]
+#### INF.9.A2 Arrangements for mobile workplaces [Head IT, user]
+#### INF.9.A3 Access and Access Protection [Staff]
+#### INF.9.A4 Working with external IT systems [supervisors, users]
+### 3.2 Standard requirements
+#### INF.9.A5 Timely loss report [employee]
+#### INF.9.A6 Disposal of confidential information [staff, building services]
+#### INF.9.A7 Legal framework for mobile work [Head of Human Resources, Human Resources]
+#### INF.9.A8 Mobile Workplace Security Policy [IT Leader]
+#### INF.9.A9 Encryption of Portable IT Systems and Media [User]
+### 3.3 Requirements for increased protection requirements
+#### INF.9.A10 Using anti-theft devices (CIA)
+#### INF.9.A11 Ban on the use of unsafe environments (CIA)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.14 Spying out information (spying)
+* G 0.16 Theft of devices, data carriers or documents
+* G 0.17 Loss of equipment, data carriers or documents
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.21 Manipulation of hardware or software
+* G 0.22 Manipulation of information
+* G 0.23 Unauthorized intrusion into IT systems
+* G 0.24 Destruction of equipment or data media
+* G 0.25 Failure of devices or systems
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.44 Unauthorized intrusion into premises
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

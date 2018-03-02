@@ -177,11 +177,11 @@ Measurement or control data SHOULD be protected against unauthorized access or m
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### IND.2.1.A18 Communication in the event of a fault [Control Center Operator, ICS Administrator] (A)
 
-It SHOULD provide alternative and independent means of communication that can be used in the event of a malfunction in order to remain able to act.
+It SHOULD provide alternative and independent communication options that can be used in the event of a malfunction in order to remain able to act.
 
 #### IND.2.1.A19 Security Tests [ICS Administrator] (CIA)
 

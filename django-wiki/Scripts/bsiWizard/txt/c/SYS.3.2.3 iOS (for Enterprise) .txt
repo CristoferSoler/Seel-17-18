@@ -84,7 +84,7 @@ The following are the specific requirements for iOS-based systems. Basically, th
 The following requirements MUST be implemented as a priority:
 
 #### SYS.3.2.3.A1 iOS usage strategy
-This building block assumes that iOS devices to be managed are integrated into an MDM infrastructure. A reasonable exception, considering economic considerations, may be the management of a smaller, single-digit number of devices without the use of an MDM. If an MDM is used, the management of the devices MUST be done via the MDM for the purpose of simplified administration and the uniform presentation of security-related and other settings. To do this, there must be an iOS usage strategy that defines aspects such as device selection or backup strategies. It also MUST be regulated whether additional apps should be used by third-party providers.
+This building block assumes that iOS devices to be managed are integrated into an MDM infrastructure. A reasonable exception, considering economic considerations, may be the management of a smaller, single-digit number of devices without the use of an MDM. If an MDM is used, the management of the devices MUST be done via the MDM for the purpose of simplified administration and uniform distribution of security-related and other settings. To do this, there must be an iOS usage strategy that defines aspects such as device selection or backup strategies. It also MUST be regulated whether additional apps should be used by third-party providers.
 
 #### SYS.3.2.3.A2 Planning the Use of Cloud Services
 
@@ -96,7 +96,7 @@ Activating the device code increases the security of the data on the iOS-based d
 
 #### SYS.3.2.3.A4 Using the Automatic Lock Configuration Option
 
-Based on the purpose of the application and the need for protection, the time interval for the device's "automatic lock" MUST be set to the lowest possible value. A low value ensures that no unauthorized use of the unattended device is possible. A reasonably short auto-lock period assists the user in complying with the institution's security policies, provided that the device does not linger in the unlocked state by interacting with the user interface. When defining the time period until the passcode query, the requirements for protection requirements and usability MUST be observed.
+Based on the purpose of the application and the need for protection, the time interval for the device's "automatic lock" MUST be set to the lowest possible value. A low value ensures that no unauthorized use of the unattended device is possible. A reasonably short auto-lock period assists the user in complying with the institution's security policies, provided the device does not linger in an unlocked state through interaction with the user interface. When defining the time period until the passcode query, the requirements for protection requirements and usability MUST be observed.
 
 #### SYS.3.2.3.A5 Using the device locking configuration option
 
@@ -108,7 +108,7 @@ In order to prevent the systematic spying of the passcode, a number of maximum p
 
 #### SYS.3.2.3.A7 Prevent unauthorized deletion of configuration profiles
 
-In order to prevent an unauthorized deletion of configuration profiles, suitable regulations MUST be made and implemented by those responsible. For example, the deletion can be technically realized by a password-protected authentication or organizationally prohibited.
+In order to prevent an unauthorized deletion of configuration profiles, suitable regulations MUST be made and implemented by those responsible. For example, the deletion can be technically realized by password-protected authentication or organizationally prohibited.
 
 #### SYS.3.2.3.A8 Timely update of the operating system
 Apple will periodically release new versions of iOS integrated security updates for currently supported devices. Before all the institution's iOS-based devices are updated to a new version, they MUST have been tested. The aim of this validation process is the verification of existing functions, security mechanisms and the enforceability of compliance requirements. In order to close any security gaps, an update of the installed operating system MUST be rolled out soon after it has been released to the devices. By actively participating in Apple's beta program, in most cases, the new operating system version can be pre-tested to enable timely release for those issues. Older devices that are no longer running iOS versions MUST be discarded and replaced with supported devices.
@@ -175,7 +175,7 @@ All shared applications SHOULD be published internally in a standard catalog and
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.3.A22 Enforcement of compliance requirements (CI)
 
@@ -185,7 +185,7 @@ If a violation or manipulation is suspected, an alert must be sent to the respon
 
 #### SYS.3.2.3.A23 Using Automatic Configuration Profile Deletion (CI)
 
-By using the automatic configuration profile deletion SHOULD be ensured that even non-permanently accessible devices without the intervention of IT managers lose the access granted to the internal infrastructure after a defined period or on a certain day, unless the period by accessing the internal network is renewed. To ensure that the user still owns the device, this methodology can also be used preventively.
+By using the automatic configuration profile deletion SHOULD be ensured that even non-permanently accessible devices without the intervention of IT managers lose the access granted to the internal infrastructure after a defined period or on a certain day, if the period is not accessible by the internal network is renewed. To ensure that the user still owns the device, this methodology can also be used preventively.
 
 #### SYS.3.2.3.A24 Use of location-based policies (CI)
 By depositing a geofencing policy SHOULD ensure that devices with information of high protection need do not leave the previously defined geographic area. Should the geographical area be left, a selective erasure of the classified information or a complete erasure of the device should be made. Before a selective or complete deletion of the device, the responsible administrators and security management as well as the user must provide information, eg. B. via push message, e-mail or SMS, about this issue. For the sake of better acceptance and to give the user the opportunity to return to the permitted geographic area, the selective or complete deletion should be delayed for a period of time temporarily. The use of geofencing policies must not violate internal and legal requirements.

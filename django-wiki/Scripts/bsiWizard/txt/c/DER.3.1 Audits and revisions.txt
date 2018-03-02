@@ -15,7 +15,7 @@ The module defines requirements for audits and audits with the aim of improving 
 
 ### 1.3 Delimitation
 
-The module describes how audits and revisions can be planned, executed and followed up from the point of view of the ISMS. This concerns internal audits (so-called first-party audits) and audits as well as audits of service providers and partners (so-called second-party audits) of the institution. Certification audits (so-called third-party audits) are not included in this module.
+The module describes how audits and revisions can be planned, carried out and followed up from the point of view of the ISMS. This concerns internal audits (so-called first-party audits) and audits as well as audits of service providers and partners (so-called second-party audits) of the institution. Certification audits (so-called third-party audits) are not included in this module.
 
 Similarly, the mandatory for Federal authorities IS audit is not considered. This is dealt with in module DER 3.2: * IS-Revision *. Furthermore, it does not take into account how audits and revisions can be integrated into any existing, higher-level test organization of an institution.
 
@@ -47,7 +47,7 @@ If audits and revisions are not planned on a long-term and centralized basis, it
 
 ### 2 6 Lack of planning and coordination when conducting an audit
 
-If an audit is poorly scheduled and has not been agreed with all of the institution's employees concerned, it may not have the required or the wrong contacts available during the on-site audit. As a result, individual areas may not be audited at all. Even if the auditor has set the appointments too narrowly for the individual areas, the planned examination could only be carried out superficially if there is not enough time available.
+If an audit is poorly scheduled and not reconciled with all affected employees of the institution, the required or the wrong contacts may not be available during the on-site inspection. As a result, individual areas may not be audited at all. Even though the auditor has set appointments too narrowly for the individual areas, the planned investigation could only be superficial if there is not enough time available.
 
 ### 2 7 Lack of coordination with the Staff Committee
 
@@ -68,7 +68,7 @@ The following requirements MUST be implemented as a priority:
 
 #### DER.3.1.A1 Definition of Responsibilities [Institutional Management]
 
-The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department should be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
+The institution's management MUST designate an employee who is responsible for planning and initiating audits or revisions. It MUST be taken to ensure that no conflicts of interest arise, for. For example, if the own department is to be checked. The person responsible MUST monitor that the results of the audits and revisions are processed.
 
 #### DER.3.1.A2 Preparation for an audit or revision
 
@@ -134,7 +134,7 @@ There should be an initial interview between the audit team or audit team and th
 
 #### DER.3.1.A13 Inspection and verification of documents [audit team]
 
-The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. These SHOULD be included in the on-site exam, if that makes sense.
+The document review in the course of audits SHOULD be done on the basis of the requirements specified in the test plan. All relevant documents SHOULD then be checked to see if they are up-to-date, complete and traceable. The results of the document review SHOULD be documented. They SHOULD include in the on-site exam, if that makes sense.
 
 #### DER.3.1.A14 Selection of samples [audit team]
 

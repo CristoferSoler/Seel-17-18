@@ -79,7 +79,7 @@ Host operating system, management software and hardware firmware MUST be updated
 
 Any virtual IT systems administrator MUST know how virtualization affects the IT systems and applications they run. The access rights for administrators to virtual IT systems MUST be reduced to the actual necessary level.
 
-It MUST be ensured that the network connections necessary for the virtual IT systems are available in the virtual infrastructure. It MUST also be examined whether the requirements for the isolation and encapsulation of the virtual IT systems and the applications operated thereon are sufficiently fulfilled. Furthermore, the virtual IT systems used MUST meet the requirements for availability and data throughput. During operation, the performance of the virtual IT systems MUST be monitored.
+It MUST be ensured that the network connections necessary for the virtual IT systems are available in the virtual infrastructure. It MUST also be checked whether the requirements for the isolation and encapsulation of the virtual IT systems and the applications run on them are sufficiently fulfilled. Furthermore, the virtual IT systems used MUST meet the requirements for availability and data throughput. During operation, the performance of the virtual IT systems MUST be monitored.
 
 #### SYS.1.5.A3 Secure configuration of virtual IT systems
 

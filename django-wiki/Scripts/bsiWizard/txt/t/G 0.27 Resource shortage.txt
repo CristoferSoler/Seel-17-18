@@ -12,7 +12,7 @@ Resources can also be deliberately overloaded if someone intentionally generates
 Examples:
 
 * Overloaded electric cables heat up, this can lead to a smoldering fire in case of unfavorable laying.
-* Running new applications on the network at a higher bandwidth than planned at the time of planning can result in a loss of network availability if the network infrastructure can not scale sufficiently.
+* Running new applications on the network at a higher bandwidth than planned at the time of planning can result in a loss of overall network availability if the network infrastructure can not be sufficiently scaled.
 * If the administrators only have sporadic control over the log files of their IT because of overloading, attacks may not be detected promptly.
 * Web servers can be overloaded by a large amount of concurrent incoming requests, making controlled access to data almost impossible.
 * When a company is in bankruptcy, it can happen that there is no money for urgently needed spare parts or that important service providers can not be paid.

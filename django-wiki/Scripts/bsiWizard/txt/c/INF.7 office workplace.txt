@@ -81,7 +81,7 @@ It SHOULD be ensured that unauthorized persons can not enter the office. For thi
 
 #### INF.7.A5 Ergonomic workplace [Head of Domestic Engineering]
 
-The workplaces of all employees SHOULD be ergonomically designed. Above all, the screens SHOULD be set up so that an ergonomic and undisturbed work is possible. It should be noted that screens can not be viewed by unauthorized persons. The Bildschirmarbeitsschutzverordnung (BildscharbV) SHOULD be implemented. All workstations SHOULD be individually adjustable for the most error-free operation of IT.
+The workplaces of all employees SHOULD be ergonomically designed. Above all, the screens SHOULD be set up so that an ergonomic and undisturbed work is possible. It should be noted that screens can not be viewed by unauthorized persons. The Bildschirmarbeitsschutzverordnung (BildscharbV) SHOULD be implemented. All workstations SHOULD be individually adjustable for a flawless operation of the IT.
 
 #### INF.7.A6 Tidy Workplace [Staff]
 
@@ -93,7 +93,7 @@ Employees SHOULD be instructed to keep confidential documents and data carriers 
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### INF.7.A8 Use of anti-theft devices [Staff, Head of IT] (CIA)
 

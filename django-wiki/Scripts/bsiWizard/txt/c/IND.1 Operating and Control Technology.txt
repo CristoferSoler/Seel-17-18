@@ -19,7 +19,7 @@ Another major difference for OT is the high availability and integrity requireme
 
 The goal of the module is to demonstrate suitable requirements for the information security of the OT. He addresses cross-component, conceptual and architectural security requirements.
 
-The module is to be modeled and implemented across the board. Multiple use in different areas of the OT in an institution (operator within the meaning of VDI 2182) can not be ruled out, since they have different requirements with regard to information security.
+The module is to be modeled and implemented across the board. In this case, multiple use in different areas of OT in an institution (operator within the meaning of VDI 2182) can not be ruled out since there are different requirements with regard to information security.
 
 ### 1.3 Delimitation
 
@@ -62,7 +62,7 @@ Further dangers may arise from unsafe development environments, improper storage
 
 ### 2 6 Insecure administration concept and remote administration
 
-The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
+The management of industrial control systems takes place in certain cases remotely via network access. Here are different public and private networks such. As telephone networks, wireless networks, mobile networks and increasingly the Internet. If these accesses are inadequately planned, configured insecure or are not monitored, then attackers may be able to access individual OT components or the infrastructure unauthorized and thus circumvent the security mechanisms at the perimeter.
 
 Local administrators also have privileged rights that make abusive intrusion or compromised accounts attractive to attackers.
 
@@ -91,11 +91,11 @@ The long operating times can also lead to problems in the procurement of spare p
 
 The OT components communicate with each other via various network protocols and technologies. In addition to protocols and technologies from office IT (eg Ethernet, TCP / IP, WLAN, GSM), ICS-specific protocols are used. These have not always been developed from the point of view of information security and accordingly provide, in part, no or only limited security mechanisms. Information is often transmitted in plain text and without integrity assurance or authentication.
 
-An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by faking sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
+An attacker with access to the network could read or modify the contents of the communication and thus influence the processes, for example by feigning sensor data or falsifying control commands. This applies in particular to protocols used for communication over freely accessible areas, such as radio protocols or in the context of site networking (telecontrol).
 
 ### 2 11 Unsafe configurations
 
-In the default configuration of OT components, security measures are not always enabled, which makes it much easier for unauthorized access. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or trusted by other systems.
+In the default configuration of OT components, security measures are not always enabled, which makes unauthorized access much easier. Operating insecurely configured components can also threaten the security of other components of the environment, such as when credentials can be retrieved or in trust with other systems.
 
 Examples of insecure configurations include the use of standard passwords, the use of system administration plaintext protocols, the operation of unneeded services, unsecured interfaces, such as: USB or Firewire ports, or disabled security features.
 
@@ -148,13 +148,13 @@ Together with the basic requirements, the following requirements correspond to t
 
 The safety-relevant parameters of the OT infrastructure SHOULD be documented. All software and system components SHOULD be kept in an inventory. From this, the product and protocol versions used as well as the responsibilities should emerge. The components used SHOULD include any manufacturer restrictions or regulatory requirements such as certifications. This documentation and a system inventory SHOULD be kept in a control system, for example.
 
-In addition, a current network SHOULD document zones, conduit transitions, communication protocols and procedures used, and outside interfaces. The interfaces SHOULD consider active network components as well as manual data transfer methods (eg using removable data carriers). The documentation SHOULD capture redundancies, IP addresses or ranges, and the assignment to physical security zones.
+In addition, a current network SHOULD document zones, zone transitions, established communication protocols and procedures, and external interfaces. The interfaces SHOULD consider active network components as well as manual data transfer methods (eg using removable data carriers). The documentation SHOULD capture redundancies, IP addresses or ranges, and the assignment to physical security zones.
 
 Since the documentation contains confidential information, all documents must be stored securely and given a classification regarding protection requirements.
 
 #### IND.1.A5 Development of a suitable zone concept [IT operation]
 
-There SHOULD be a zone concept that defines different levels with different protection requirements and includes the complete OT infrastructure and at least the transition to Office IT. The network SHOULD be segmented according to the zones and the flow of data between the zones should be properly controlled to make attacks more cumbersome, unlikely and easier to detect.
+There SHOULD be a zone concept that defines different levels with different protection requirements and includes the complete OT infrastructure and at least the transition to Office IT. The network SHOULD be segmented according to the zones and the flow of data between the zones should be properly controlled to make attacks more complex, unlikely and easier to detect.
 
 It should also be a horizontal segmentation in independent functional areas (such as plants) done. The individual zones SHOULD be independent of each other as much as possible during operation. In particular, the zones in which the technical process is controlled SHOULD continue to be operable for a predetermined period of time in the event of failure of the other zones or their intentional decoupling following compromise. This period SHOULD be defined and documented as part of the risk analysis or alternatively in the context of emergency planning. The network SHOULD therefore be designed stably in the sense of manipulation- and error-resistant.
 
@@ -177,11 +177,11 @@ Further information is described in the module ORP.4 Identity and Authorization 
 
 #### IND.1.A8 Secure Administration [IT Operations]
 
-For initial configuration, administration and remote maintenance in the OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions needed for the respective administration task.
+For initial configuration, administration and remote maintenance in the OT, either secure protocols or separate administration networks with the corresponding protection requirements SHOULD be used. Access to these interfaces SHOULD be restricted to the authorized persons. It SHOULD only be granted access to the systems and functions required for the respective administration task.
 
 The systems and communication channels used for administration or remote maintenance should have the same level of protection as the managed OT components. All remote maintenance and monitoring SHOULD be authorized, monitored and controlled by the institution. For this, the remote maintenance access SHOULD only be activated for use and then deactivated again. This SHOULD be documented
 
-It should be ensured that it is not possible to build up unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
+It should be ensured that it is not possible to build unwanted tunnels to bypass security measures. In the case of higher protection requirements, a four-eye principle SHOULD also apply to critical administrative steps.
 
 #### IND.1.A9 Restrictive use of removable media and mobile devices
 
@@ -189,17 +189,17 @@ For the use of removable media and mobile devices SHOULD regulations for handlin
 
 On the OT components, all unnecessary interfaces SHOULD be disabled. At the active interfaces, the use of certain devices or media can be restricted.
 
-Further information is described in block SYS.3.4 Mobile data carriers.
+Further information is described in the block SYS.3.4 Mobile data carrier.
 
 #### IND.1.A10 Monitoring, Logging and Detection [Area Safety Officer]
 
 To limit the potential impact of security incidents, business and security-related events SHOULD be identified promptly. For this, a suitable log and event management SHOULD be developed and implemented. Log and event management SHOULD include appropriate measures for the collection and detection of security-related events and a response plan (security incident response).
 
-The response plan SHOULD set procedures for incident handling. It should cover the classification of events, reporting routes and determination of the organizational units to be included, damage limitation response plans, analysis and recovery of systems and services, and the documentation and follow-up of incidents. The reaction plan SHOULD be tested regularly and checked for up-to-dateness.
+The response plan SHOULD set procedures for incident handling. It should cover the classification of events, reporting channels and the definition of the organizational units to be included, damage limitation reaction plans, analysis and restoration of systems and services, and the documentation and follow-up of incidents. The reaction plan SHOULD be tested regularly and checked for up-to-dateness.
 
 #### IND.1.A11 Secure Procurement and System Development
 
-For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the tender.
+For procurements, plans or developments of ICS, information security regulations SHOULD be met and documented. The documents SHOULD be part of the invitation to tender.
 In procurement, planning or development, information security SHOULD be considered throughout the lifecycle. Requirements and implementation instructions for safe operation of OT components from manufacturers or integrators SHOULD be planned and implemented early. Compliance and implementation SHOULD be documented
 
 The institution SHOULD document how the system fits in with the concepts of zoning, entitlement, vulnerability management, and antivirus protection, and adjust it if necessary. It should be regulated how the operation can be maintained if one of the partners stops providing services.
@@ -214,7 +214,7 @@ The basis for this should be manufacturer vulnerability advisories or publicly a
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### IND.1.A13 Emergency Planning for OT (A)
 
@@ -243,7 +243,7 @@ For ICS environments that are highly vulnerable or difficult to protect at the s
 
 As required in IND.1.A5 development of a suitable zone concept, all external interfaces of the environment should be risk assessed. From the risks identified, specific individual security measures SHOULD be derived.
 
-By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without adjustments the ICS system are necessary.
+By implementing one or more connection zones (DMZs) in a PAP structure (firewall-encapsulated Application Layer Gateways), end-to-end external connections can be terminated and required security checks (virus protection, formatting of data, checking and filtering of content, media breaks) can be carried out without any adjustments the ICS system are necessary.
 
 The implementation of this requirement increases perimeter security. Supplementary organizational and technical measures SHOULD be identified and implemented to further reduce the risks of intentional and accidental circumvention of the perimeter, such as the use of removable media or mobile devices.
 

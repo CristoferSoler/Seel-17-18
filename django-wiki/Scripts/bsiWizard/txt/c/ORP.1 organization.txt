@@ -133,7 +133,7 @@ It SHOULD be regulated, which reactions take place in case of suspected violatio
 
 #### ORP.1.A11 Timely participation of the Staff Committee [Head of IT]
 
-The staff representatives (employees 'representatives, employees' representatives) SHOULD be informed in due time about any procedures and projects that affect them.
+The staff representatives (employees' representatives, employee representatives) SHOULD be informed in due time about any procedures and projects that affect them.
 
 #### ORP.1.A12 Regulations for maintenance and repair work [IT operation, building services, ICS information security officer]
 

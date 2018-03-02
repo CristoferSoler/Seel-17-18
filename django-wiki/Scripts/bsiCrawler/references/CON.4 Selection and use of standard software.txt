@@ -1,0 +1,37 @@
+### 1.1 Introduction
+### 1.2 Objective
+### 1.3 Delimitation
+### 2 1 Lack of adaptation of the standard software to the needs of the institution
+### 2 2 Disclosure of information worthy of protection due to incorrect configuration
+### 2 3 Obtaining standard software and updates from unreliable sources
+### 2 4 Manipulation of data by users
+### 2 5 Software vulnerabilities in standard software
+### 2 6 Use of non-licensed standard software
+### 2 7 Unauthorized exercise of rights in standard software
+### 2 8 Data loss due to incorrect use of standard software
+### 3.1 Basic Requirements
+#### CON.4.A1 Ensure the integrity of standard software
+#### CON.4.A2 Development of the installation instructions for standard software
+#### CON.4.A3 Secure installation and configuration of standard software
+### 3.2 Standard requirements
+#### CON.4.A4 Definition of responsibilities in the area of ​​standard software [department]
+#### CON.4.A5 Creation of a requirement catalog for standard software [department]
+#### CON.4.A6 Selection of suitable standard software [department, procurement office]
+#### CON.4.A7 Verification of Delivery of Standard Software [Department]
+#### CON.4.A8 License management and version control of standard software
+#### CON.4.A9 Uninstalling standard software
+### 3.3 Requirements for increased protection requirements
+#### CON.4.A10 Implementation of Additional Security Features (CIA)
+#### CON.4.A11 Use of certified standard software (CIA)
+#### CON.4.A12 Use of encryption, checksums or digital signatures (CI)
+5 Appendix: Cross reference table for elementary hazards
+* G 0.18 Missing planning or missing adjustment
+* G 0.19 Disclosure of information worthy of protection
+* G 0.20 Information or products from unreliable sources
+* G 0.22 Manipulation of information
+* G 0.28 Software vulnerabilities or errors
+* G 0.29 Violation of laws or regulations
+* G 0.30 Unauthorized use or administration of devices and systems
+* G 0.31 Incorrect use or administration of devices and systems
+* G 0.45 data loss
+* G 0.46 Loss of integrity of sensitive information

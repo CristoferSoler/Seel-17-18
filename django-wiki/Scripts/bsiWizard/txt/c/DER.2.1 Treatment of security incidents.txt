@@ -9,9 +9,9 @@ To limit damage and prevent further damage, detected security incidents must be 
 
 A security incident can have a strong impact on an institution and cause major damage. For example, such incidents are misconfigurations that cause confidential information to be disclosed or criminal acts such Hacking of servers, theft of confidential information, sabotage or IT-related blackmail.
 
-The causes of security incidents are manifold: Malware, obsolete system infrastructures, or perpetrators play a role. Attackers often exploit zero-day exploits. Another growing threat is Advanced Persistent Threats (APT).
+The causes of security incidents are manifold: Malware, obsolete system infrastructures or culprits play a role. Attackers often exploit zero-day exploits. Another growing threat is Advanced Persistent Threats (APT).
 
-In addition, users, administrators, or external service providers may not behave correctly, causing system parameters to change security-critical or violate internal policies. Furthermore, the cause may be that access rights are violated, that software, hardware, or rooms and buildings in need of protection are insufficiently secured.
+In addition, users, administrators, or external service providers may not behave properly, causing system parameters to change security-critical or violate internal policies. Furthermore, the cause may be that access rights are violated, that software, hardware, or rooms and buildings in need of protection are insufficiently secured.
 
 ### 1.2 Objective
 
@@ -38,7 +38,7 @@ Failure to take appropriate action to handle security incidents can result in wr
 
 In the daily operation of an institution many errors and errors can occur. It may happen that security incidents are not identified as such by the personnel and an attack or attempted attack remains unrecognized. Even though the employees are sufficiently sensitized or trained for the interests of information security, it can not be ruled out that they do not recognize security incidents. Examples for this are:
 
-* A user who has not been logged into their institution's local area network for a long time thinks their laptop's significant slowdown during Internet access for one week is normal and does not realize that a malicious program is running in the background. He was not or insufficiently trained to inform the security officer in case of suspicious abnormalities.
+* A user who has not been logged into the institution's local area network for a long time thinks that the significant slowdown in their notebook during the internet access that occurred a week ago is normal and does not detect that a malicious program is running in the background. He was not or insufficiently trained to inform the security officer in case of suspicious abnormalities.
 * A production manager does not notice that the data in the production systems and also the control display systems have been secretly changed. He does not suspect, as the SCADA control of the production plant shows strange values, since this was only for a short time. The incident is not reported because all values ​​are back to the expected display values. Nobody is struck by the fact that a malicious software has manipulated the display values.
 * A burglary in a store is considered a case of procuring crime as notebooks and flat screens have been stolen. The fact that the notebooks contained confidential information and access data for IT systems on the intranet is given no greater importance and the ISB is not informed. Therefore, the institution is not prepared for the subsequent attacks on the IT systems of other locations and the company headquarters. The attack uses the data found on the stolen notebooks.
 ### 2 3 Destruction of evidence traces in the handling of security incidents
@@ -47,7 +47,7 @@ Careless or non-compliant handling of security incidents may result in the inadv
 
 Examples for this are:
 
-* An attacker placed malicious software on a workstation, whose operation and target can only be analyzed while it is still running. For this, information about the active processes and the contents of the main memory would have to be backed up and evaluated. If the workstation is now shut down prematurely, the information from the current state can no longer be used to analyze and clarify the security incident.
+* An attacker placed malicious software on a workstation, whose operation and target can only be analyzed while it is still running. This would require information about the active processes and the contents of the main memory to be backed up and evaluated. If the workstation is now shut down prematurely, the information from the current state can no longer be used to analyze and clarify the security incident.
 * An administrator finds a running process on a server that causes an above-average CPU usage. In addition, this process creates temporary files and sends unknown information over the Internet. If the process is terminated prematurely and the temporary files are simply deleted, it can not be determined if confidential information has been successfully stolen.
 * An important server is compromised because the administrator could not bring in the latest security updates as planned due to the heavy workload and a lack of maintenance window. In order to avoid possible disciplinary consequences, the administrator enters the missing updates before a security team can analyze the reason for the break-in and the damage incurred. Lack of error culture has thus prevented an analysis of the problem.
 3 requirements
@@ -76,11 +76,11 @@ It must be regulated who is responsible for what happens in the event of a secur
 The contact persons for all types of security incidents MUST be known to the employees. Contact Information MUST always be up to date and available in a workable format.
 
 #### DER.2.1.A4 Notification of affected persons in case of security incidents [Head of IT, Emergency Representative, Press Office, Data Protection Officer, Head of Institution]
-A security incident MUST inform all relevant internal and external bodies in a timely manner. It MUST be checked whether the data protection officer, the works council / staff council and employees from the legal department must be involved. Likewise, the reporting requirements for authorities and regulated industries MUST be taken into account. It is also necessary to ensure that affected bodies are informed of the necessary measures.
+A security incident MUST inform all relevant internal and external bodies in a timely manner. It MUST be checked whether the data protection officer, the works council / staff council and employees from the legal department must be involved. Likewise, the reporting requirements for public authorities and regulated industries MUST be taken into account. It is also necessary to ensure that affected bodies are informed of the necessary measures.
 
 #### DER.2.1.A5 Security Incident [Head IT, IT Operations]
 
-For a security incident to be resolved successfully, the person responsible first has to narrow down the problem and find the cause. He then has to select the necessary remedial action and obtain approval from the IT supervisor before implementing it. Subsequently, the cause MUST be removed and a safe state established (see DER.2.1.A6 * Restoring the operating environment after security incidents *).
+For a security incident to be successfully resolved, the person responsible first has to narrow down the problem and find the cause. He then has to select the necessary remedial action and obtain approval from the IT supervisor before implementing it. Subsequently, the cause MUST be removed and a safe state established (see DER.2.1.A6 * Restoring the operating environment after security incidents *).
 
 There must be an up-to-date list of internal and external security experts who can be involved in security incidents for questions from the various required subject areas. Secure communication procedures with these internal and external agencies MUST be established.
 
@@ -115,7 +115,7 @@ There SHOULD be a communication and contact strategy. In this SHOULD be regulate
 
 #### DER.2.1.A10 Damming the impact of security incidents [Emergency Representative, IT Manager, IT Operations]
 
-In parallel to analyzing the causes of a security incident, it should be decided whether it is more important to contain or clarify the damage that has occurred. In order to assess the impact of a security incident, sufficient information should be available. For selected security incident scenarios, worst-case considerations SHOULD be carried out in advance.
+In parallel with the analysis of the causes of a security incident, it should be decided whether it is more important to contain or clarify the damage that has occurred. In order to assess the impact of a security incident, sufficient information should be available. For selected security incident scenarios, worst-case considerations SHOULD be carried out in advance.
 
 #### DER.2.1.A11 Classification of security incidents [Head of IT, IT operations]
 

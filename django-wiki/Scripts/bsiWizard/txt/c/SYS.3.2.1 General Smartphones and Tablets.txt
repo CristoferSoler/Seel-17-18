@@ -55,11 +55,11 @@ Many mobile operating systems have a feature to display messages from enabled wi
 
 ### 2 9 Dangers from private use of mobile devices
 
-If employees are given proprietary smartphones, tablets and phablets, they may be allowed to use the devices privately without permission. This creates several problems for the information security of the institution. So a user could independently install apps that contain malicious features or visit a web page that infects the device with malware. Likewise, many user-privately-installed apps pose a risk to the institution's information stored on the device, as they may be compromised. For example, transfer address books to unknown servers or access e-mail or documents directly. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and chat apps.
+If employees are given proprietary smartphones, tablets and phablets, they may be allowed to use the devices privately without permission. This creates several problems for the information security of the institution. So a user could independently install apps that contain malicious features or visit a web page that infects the device with malware. Likewise, many user-privately installed apps pose a risk to the institution's information stored on the device, as they may be compromised. For example, transfer address books to unknown servers or access e-mail or documents directly. This allows data to flow away or conversely enter the institution in an uncontrolled manner. Well-known examples are social media and chat apps.
 
 ### 2 10 Dangers of Bring Your Own Device (BYOD)
 
-If private devices are used for business purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in case of emergency, the user may not agree.
+If private devices are used for work purposes, legal problems may arise, for example with regard to software licenses. Even if all data needs to be erased by the MDM on the device in an emergency, the user may not agree.
 
 Often IT managers can no longer check every single device brought by the employee to see if it can also be used in the workplace. As a result, inappropriate devices can be used, violating internal privacy and security requirements. In addition, users are often responsible for maintaining and repairing their equipment. In such a repair, for example, corporate data could be viewed without authorization. If it is not regulated what should happen to the data on the device, if the employee leaves the company, they could be abused.
 
@@ -95,7 +95,7 @@ It SHOULD use a complex device password.
 
 #### SYS.3.2.1.A5 Automatic updates of operating system and apps
 
-A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices that are no longer supplied with current versions MUST be discarded and replaced with devices supported by the manufacturer.
+A process MUST be established for automatic updates of the operating system and the apps used. The updates MUST be tested. After the release, the updates MUST be rolled out in a timely manner. Already when selecting mobile devices to be procured, the institution MUST make sure that the manufacturer provides updates for the devices over the planned period of use. Older devices for which no more current versions are provided MUST be discarded and replaced with devices supported by the manufacturer.
 
 #### SYS.3.2.1.A6 privacy settings
 
@@ -173,7 +173,7 @@ Mobile devices SHOULD only be integrated into the institution's infrastructure v
 
 ### 3.3 Requirements for increased protection requirements
 
-Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+Listed below are exemplary proposals for requirements that go beyond the level of protection afforded by the state of the art and should BE considered AT INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
 
 #### SYS.3.2.1.A23 Additional password for confidential applications (CI)
 
@@ -185,7 +185,7 @@ The password for the access point name (APN) of a closed user group SHOULD be co
 
 #### SYS.3.2.1.A25 Use of Separate Work Environments (CI)
 
-It was intended to use solutions for separate work environments. For this, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
+It was intended to use solutions for separate work environments. For this purpose, only certified products SHOULD be procured. The working data SHOULD remain in the official environment.
 
 #### SYS.3.2.1.A26 Use of PIM containers (CIA)
 

@@ -246,11 +246,24 @@ function amountOfStates(changedTopicsOfElements,amountOfNoCorrect) {
         var filteredTopicOfElementsCorrect = changedTopicsOfElements.filter(filterState, {pick: 'y'});
         var filteredCurrentTopicInElementsTopic = changedTopicsOfElements.filter(filterTopic, {currentTopic: this.currentTopic});
 
-        if (filteredCurrentTopicInElementsTopic.length === 0) {
-            if(answerList !== null && answerList.length >= 1){
-                amountOfNoCorrect += 1;
-            } else {
-                amountOfNoCorrect = 0;
+        if(this.goBack == true){
+            if(answerList.length == 0){
+                if (filteredCurrentTopicInElementsTopic.length === 0) {
+                    amountOfNoCorrect -=1;
+                }
+            } else{
+                var secondfilteredCurrentTopicInElementsTopic = changedTopicsOfElements.filter(filterTopic, {currentTopic: sortedTopicList[amountOfTotalTopics].topic});
+                if (secondfilteredCurrentTopicInElementsTopic.length === 0) {
+                    amountOfNoCorrect -= 1;
+                }
+            }
+        } else{
+            if (filteredCurrentTopicInElementsTopic.length === 0) {
+                if(answerList !== null && answerList.length >= 1){
+                    amountOfNoCorrect += 1;
+                } else {
+                    amountOfNoCorrect = 0;
+                }
             }
         }
 
@@ -268,7 +281,14 @@ function amountOfStates(changedTopicsOfElements,amountOfNoCorrect) {
 
 }
 
-function calculatePercentage(amountOfCorrent, amountOfNotSure) {
+function countNotSure(value) {
+    return value === 'd';
+}
+
+function calculatePercentage(amountOfCorrent, amountOfNotSure1) {
+
+    var amountOfNotSure = answerList.filter(countNotSure).length;
+
     var dividend = amountOfCorrent + 0.5 * amountOfNotSure + 1;
     var divisor = amountOfTotalTopics + 1;
     result = dividend / divisor;
@@ -284,6 +304,7 @@ function calculatePercentageOfOneElement(element) {
             name: element['name'],
             currentTopic: this.currentTopic
         });
+
     } else {
         changedTopicsOfElements = topicsOfElement.map(setStateForTopic, {
             pick: this.pick,
@@ -297,6 +318,7 @@ function calculatePercentageOfOneElement(element) {
     element.topics = changedTopicsOfElements;
     element.percentage = percentage;
     element.amountOfNoCorrect = amount.correctNo;
+
 
     return element;
 }
@@ -396,6 +418,7 @@ function checkGui() {
 function topicBack() {
     if ((amountOfTotalTopics - 1) >= 0) {
         var lastAnswer = answerList.pop();
+        //var lastAnswer = answerList.slice(-2)[0];
         checkTopics(lastAnswer, true);
         checkGui();
     } else {

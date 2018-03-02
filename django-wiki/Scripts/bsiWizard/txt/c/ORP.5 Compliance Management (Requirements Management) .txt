@@ -34,7 +34,7 @@ The inadequate implementation of information security can lead to violations of 
 Due to the misconduct of persons, it may happen that information worth protecting is inadmissible. Examples for this are:
 
 * Confidential information is discussed within earshot of other people, for example, during breaks in meetings or via mobile phones in public environments.
-* The manager of a department suspects an employee to work with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
+* The manager of a department suspects an employee to cooperate with the competition. To prove this to him, he asks the head of IT operations to give him "on the small way" insight into the emails of this employee. The IT operations manager instructs the mail administrator to set up access for this without obtaining the necessary consents.
 ### 2 3 Inadequate identification check of communication partners
 In personal conversations, on the phone or even in e-mails, many people are willing to divulge much more information than they would in writing or in large groups. Often the communication partner is tacitly expected to treat the conversation or e-mail content confidentially. In addition, there is a tendency not to question the identity of the communication partner, as this is perceived as rude. Likewise, permissions are often not checked sufficiently, but implicitly derived from the (claimed) role. Typical examples are:
 
@@ -68,23 +68,23 @@ Managers who have the legal responsibility for the local institution MUST ensure
 Appropriate measures MUST be identified and implemented to avoid violations of relevant requirements. If violations of relevant requirements are identified, appropriate corrective actions MUST be taken to correct the deviations.
 
 #### ORP.5.A3 Employee commitment to comply with applicable laws, regulations and regulations [Supervisor, Human Resources]
-All employees MUST be trained in and required to comply with applicable laws (eg privacy), regulations and internal regulations. Employees MUST know which legal framework determines their activity.
+All employees MUST be trained in and required to comply with applicable laws (such as privacy), regulations and internal regulations. Employees MUST know which legal framework determines their activity.
 
 Together with the basic requirements, the following requirements correspond to the state of the art in the area of ​​compliance management. They SHOULD be implemented in principle.
 
 ### 3.2 Standard requirements
 
-Together with the basic requirements, the following requirements correspond to the state of the art in the field of compliance management. They SHOULD be implemented in principle.
+Together with the basic requirements, the following requirements are in line with the state of the art in the area of ​​compliance management (requirements management). They SHOULD be implemented in principle.
 
 #### ORP.5.A4 Conception and Organization of Compliance Management [Institutional Management]
 
-Appropriate processes and organizational structures SHOULD be established to provide an overview of the different legal requirements for each area of ​​the institution. For this purpose, responsible persons SHOULD be named and their duties in relation to compliance management determined.
+Appropriate processes and organizational structures SHOULD be established to provide an overview of the different legal requirements for each area of ​​the institution. For this purpose, responsible persons SHOULD be named and their responsibilities with regard to compliance management determined.
 
 Compliance Managers and ISB SHOULD collaborate regularly. Together, they SHOULD integrate security requirements into compliance management, translate security-relevant requirements into security measures and monitor their implementation.
 
 #### ORP.5.A5 Exemptions [Supervisors, Information Security Officer (ISB)]
 
-In individual cases, it may be necessary to deviate from the provisions made. However, justified exceptions SHOULD in any case be approved by an authorized body after a risk assessment. It SHOULD give an approval procedure for exemptions. It SHOULD give an overview of all issued exemptions. An appropriate procedure for documentation and a review process SHOULD be established. All exemptions SHOULD be temporary.
+In individual cases, it may be necessary to deviate from the provisions made. However, justified exceptions SHOULD in any case be approved by an authorized body after a risk assessment. It SHOULD give an approval procedure for exemptions. It SHOULD give an overview of all issued exemptions. A corresponding procedure for documentation and a review process SHOULD be established. All exemptions SHOULD be temporary.
 
 #### ORP.5.A6 Instructing the staff in the safe handling of IT [Supervisors, Human Resources]
 

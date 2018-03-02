@@ -115,7 +115,7 @@ The network architecture SHOULD pursue a multi-tiered approach (multi-tier archi
 
 The software architecture of the web application SHOULD be documented with all components and dependencies. The documentation SHOULD already be updated and adapted during the course of the project, so that it can be used right from the development phase and that decision-making processes are comprehensible. The documentation should identify all components necessary for operation that are not part of the web application as such. Likewise SHOULD emerge from which components implement which security mechanisms, how the web application is integrated into an existing infrastructure and which cryptographic functions and procedures are used.
 
-#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurer, Developer]
+#### APP.3.1.A9 Web Application Procurement, Development and Extension [Tester, Development Manager, Procurator, Developer]
 
 When purchasing products for web applications, a requirements catalog SHOULD be created. To be able to compare different products, a rating scale SHOULD be developed.
 
@@ -194,7 +194,7 @@ To filter data at higher protocol levels, institutions SHOULD use Web Applicatio
 
 #### APP.3.1.A21 Prevention of Clickjacking [Developer] (CI)
 
-To avoid clickjacking attacks, make sure that the content on all Web application web pages is displayed only at the top level of the browser window. In addition, the Web application HTTP response headers SHOULD set the * X-FRAME-OPTIONS * directive.
+To avoid clickjacking attacks, make sure that content is displayed on all Web application web pages only at the top level of the browser window. In addition, the Web application HTTP response headers SHOULD set the * X-FRAME-OPTIONS * directive.
 
 #### APP.3.1.A22 Performing Penetration Tests (CIA)
 
@@ -206,4 +206,4 @@ To complicate cross-site request forgery (CSFR) attacks, the web application SHO
 
 #### APP.3.1.A24 Preventing Blockage of Resources [Developer] (A)
 
-To protect against denial of service (DoS) attacks, resource-intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.
+To protect against denial-of-service (DoS) attacks, resource intensive operations SHOULD be avoided and particularly secured. Likewise, a possible overflow of log data in web applications SHOULD be monitored and prevented. SOAP messages SHOULD be validated against a corresponding XML schema. For critical services and applications SHOULD be tested to work with anti-DoS service providers.

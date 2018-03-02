@@ -1,0 +1,133 @@
+[toc]
+ 
+1 description
+--------------
+
+### 1.1 Introduction
+
+Web browsers are application programs that retrieve, process, display, output and store (hypertext) documents, images, video, audio and other data formats from the Internet, and store them on local IT systems. Similarly, web browsers can also transfer data to the Internet. Stationary and mobile client systems are unimaginable today without a web browser, because many private and business applications use appropriate content.
+
+At the same time, these contents are becoming ever more diverse on the internet. Fewer and fewer websites can do without embedded videos, animated elements, and other active content. Modern web browsers also cover a wide range of additional features by incorporating plug-ins and external libraries. There are also extensions for certain functions, data formats and content. The complexity of modern web browsers offers a high potential for serious conceptual errors and program weaknesses. Not only does it increase the potential threat of attacks from the Internet, it also poses additional risks due to programming and operating errors.
+
+The consequences for the confidentiality and integrity of data are significant. Similarly, the availability of the entire IT system is threatened by such vulnerabilities. As a result, Internet content must, as a rule, be regarded as untrustworthy from the point of view of the Web browser.
+
+### 1.2 Objective
+
+This module describes security requirements for web browsers that are used on client systems, ie on stationary and mobile computers as well as partially on tablets and smartphones. Both centrally managed and individual operating environments are considered.
+
+### 1.3 Delimitation
+
+This module contains basic security requirements that must be observed and complied with when installing and operating web browsers for accessing data from the Internet. Browsers for access to all-local or data in internal data networks without Internet access are not covered in this module.
+
+Web browsers are closely interlinked with the operating system of the client system and access the interfaces and functions provided there. In order to secure the operating systems, therefore, the requirements of the building blocks of the layers SYS.2.2 * desktop systems * and SYS.3.2 * tablet and smartphone * should be met.
+
+Many plug-ins, such as Java, run through the Web browser instances and typically run in separate execution environments. Requirements for this can be found in the block SYS.2.7 * Internet-PC *.
+
+Web applications used by browsers as well as responsible servers are handled in the blocks APP.3.1 * Web applications * and APP.3.2 * Web server *.
+
+2 risk situation
+-----------------
+
+The following specific threats and vulnerabilities are of particular importance in the area of ​​Web browsers:
+
+### 2 1 Execution of malicious code by web browser
+
+Web browsers can load data from untrusted or potentially compromised sources. Such data may contain executable code with malicious code that can exploit vulnerabilities and infect the user's device without his knowledge and thus unnoticed.
+This can be code that can be directly executed by the web browser, such as JavaScript. Likewise, it may also be executable code of a plug-in or an extension in the context of the browser, such as Adobe Flash, Java or components of PDF documents. Finally, it can also be code that is loaded from the Web browser to the client and executed outside of the browser process. In many cases, additional malicious software will be reloaded by the malicious code, which will then be executed on the client with the rights of the user. Failure to adequately address the basic protections of modern web browsers threatens the confidentiality, integrity, or availability of information or services of the client or the potentially connected networks.
+
+### 2 2 Exploit Kits
+
+Vulnerability lists and so-called exploit kits greatly facilitate the development of individual malware. Cyber ​​attacks can be automated to easily use drive-by downloads or other distribution channels without expert knowledge. Attackers can exploit known Web browser vulnerabilities or any associated resource or extension to prepare for follow-up attacks or to download and install malicious code on the client.
+
+### 2 3 Reading the Internet communication
+
+The basic security of communication on the Internet depends very much on the authentication method used and the encryption of the data in transit. The necessary procedures are often poorly implemented.
+
+Weak implementations of the necessary procedures are widespread and prevent effective authentication and encryption. Many web services still use outdated encryption techniques. Thus, an attacker can undermine the authentication of servers or the communication or data is not encrypted effectively. This information can be read or changed on the transmission path. In the past, CAs were also compromised, allowing attackers to obtain certificates for third-party sites.
+
+### 2 4 Loss of integrity in web browsers
+
+If browsers, plug-ins or extensions are taken from untrusted sources, malicious functions can be carried out unintentionally and unnoticed. For example, attackers can spoof components such as toolbars on web browsers to trick users into manipulated copies of web pages that cause phishing attacks. Malicious extensions can manipulate the content of the websites in question or spy on data and send it to the attacker.
+
+### 2 5 Loss of privacy
+
+If browsers are configured insecure, trusted data can be made available to unauthorized third parties at random or maliciously. Also passwords can be passed on unintentionally. If cookies, passwords, histories, input data and search queries are stored or unnecessary extensions are activated, data from third parties or malicious programs can be more easily misused.
+
+### 2 6 Error during administration and operation
+
+Errors in the administration of the web browser can lead to unsafe configuration and unsafe operation. An essential threat potential arises in the lack of timeliness and maintenance of the web browser used. In addition, browser manufacturers often do not provide security updates in a timely manner. This significantly increases the spread of exploitable vulnerabilities.
+
+3 requirements
+---------------
+The following are the specific requirements for Web browsers. Basically, the IT operation is responsible for meeting the requirements. The Information Security Officer should always be involved in strategic decisions. In addition, the Information Security Officer is responsible for ensuring that all requirements are met and verified in accordance with the security policy.
+
+### 3.1 Basic requirements
+
+The following requirements MUST be implemented as a priority:
+
+#### APP.1.2.A1 Using sandboxing
+
+The web browser MUST use to ensure that each instance and each processing process can only access its own resources (sandboxing). Web pages MUST be isolated as stand-alone processes or at least as separate threads. Plug-ins and extensions MUST also run in isolated areas. The web browser used SHOULD implement the content security policy according to the W3C specifications.
+
+#### APP.1.2.A2 Encryption of communication
+
+The web browser MUST support Transport Layer Security (TLS) in a secure version. Unsafe versions of TLS version SHOULD be disabled. The web browser MUST support the HTTP Strict Transport Security (HSTS) security mechanism as per RFC 6797. For all major public TLS encrypted web services, the domains SHOULD be inserted in the HSTS preload list of the browser.
+
+#### APP.1.2.A3 Use of certificates [user]
+
+The web browser MUST provide a list of trusted root certificate issuers and accept the certificates provided by the institution itself. The web browser MUST support extended validation certificates. Root certificates MAY only be added, changed, or deleted with administrative rights. Certificates MUST be revoked by the web browser (locally).
+
+The web browser MUST fully validate the validity of server certificates using the public key and the validity period. The revocation status of the server certificates MUST be checked by the web browser. The certificate chain including the root certificate MUST be verified.
+
+The web browser MUST clearly and clearly show the user whether the communication is in plain text or encrypted. The web browser SHOULD enable the user to view the server certificate used on request. The web browser MUST signal the user if any certificates are missing, invalid, or revoked. The encrypted connection may in such a case be made ONLY after express confirmation by the user.
+
+#### APP.1.2.A4 Version check and update of the web browser
+
+The web browser MUST have a mechanism that can reliably detect and display its own version as well as those of all loaded or enabled extensions and plug-ins.
+
+Updates for the web browser, plug-ins and extensions MUST be installed immediately. The web browser should be able to import updates automatically. If no update is available for a known critical vulnerability, measures for mitigation MUST be taken in a timely manner.
+
+### 3.2 Standard requirements
+
+Together with the basic requirements, the following requirements are state of the art in the field of web browsers. They SHOULD be implemented in principle.
+
+#### APP.1.2.A5 basic configuration
+
+The browser SHOULD be able to be centrally configured. Central settings may NOT be changed by users. The web browser SHOULD NOT run permanently with extended privileges.
+
+#### APP.1.2.A6 Password Management in Web Browser [User]
+When a password manager is used in the browser, it SHOULD establish a direct and unique relationship between the web page and the password stored therefor. The password store SHOULD be protected. The passwords stored in the password manager SHOULD only be accessible after entering a master password. Authentication for password protected access SHOULD only be valid for the current session. The password manager SHOULD set the quality of the passwords according to the security policy of the institution. The stored passwords SHOULD be erasable by the user.
+
+#### APP.1.2.A7 Protection of data [user]
+
+Third party cookies SHOULD BE REJECTED. Saved cookies SHOULD be erasable by the user.
+
+The autocomplete feature SHOULD be disabled. If the function is used, the user should be able to delete the completion data. The user SHOULD also be able to delete the history data of the browser.
+
+If available, a synchronization of the browser with cloud services should be disabled. Telemetry functions as well as the automatic transmission of crash reports to the manufacturer SHOULD be deactivated as far as possible.
+
+If peripherals such as microphone or webcam are connected, they SHOULD be disabled in the browser. The browser SHOULD provide a way to configure or disable WebRTC, HSTS, and JavaScript.
+
+#### APP.1.2.A8 Using plug-ins and extensions [User]
+
+It SHOULD only essential plug-ins and extensions are installed. Plug-ins and extensions for the browser SHOULD only be installed with administration rights. The execution of plug-ins SHOULD always be confirmed by the user. The browser SHOULD provide the ability to configure and disable extensions.
+
+### 3.3 Requirements for increased protection requirements
+
+Listed below are exemplary proposals for requirements that exceed the state of the art level of protection and should be considered IN THE EVENT OF INCREASED PROTECTION. The concrete determination takes place within the framework of a risk analysis. The letters in parentheses indicate which basic values ​​are given priority protection by the requirement (C = confidentiality, I = integrity, A = availability).
+
+#### APP.1.2.A9 Use of an isolated browser environment
+
+With increased protection needs, web browsers should be deployed running in an isolated environment (such as ReCoBS) or on dedicated IT systems.
+
+#### APP.1.2.A10 Using private mode [user]
+
+The browser SHOULD be executed in the so-called private mode with increased confidentiality requirements, so that no information or content is stored persistently on the user's IT system. The browser SHOULD be configured to delete local content on exit.
+
+#### APP.1.2.A11 Check for harmful content
+
+Called Internet addresses SHOULD be checked by the browser for potentially harmful content. The browser SHOULD alert the user appropriately if there is information about malicious content. A connection classified as malicious should NOT be able to be called. The verification procedure used must NOT violate any privacy or privacy policy.
+
+#### APP.1.2.A12 two-browser strategy
+
+In the event of unresolved security problems with the web browser used, an alternative browser from another manufacturer SHOULD be installed to serve as an alternative.
